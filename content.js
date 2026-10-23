@@ -1519,6 +1519,7 @@ const CONTENT = {
  ],
  "vocab": [
   {
+   "topic": "Học tập và giáo dục",
    "theme": "Education - Giáo dục",
    "cards": [
     {
@@ -1684,6 +1685,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "theme": "Environment - Môi trường",
    "cards": [
     {
@@ -1849,6 +1851,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "theme": "Health - Sức khỏe",
    "cards": [
     {
@@ -2014,6 +2017,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công nghệ và truyền thông",
    "theme": "Technology - Công nghệ",
    "cards": [
     {
@@ -2179,6 +2183,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công việc và nghề nghiệp",
    "theme": "Work & Careers - Công việc và sự nghiệp",
    "cards": [
     {
@@ -2344,6 +2349,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Society - Xã hội",
    "cards": [
     {
@@ -2509,6 +2515,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Crime & Law - Tội phạm và luật pháp",
    "cards": [
     {
@@ -2674,6 +2681,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công nghệ và truyền thông",
    "theme": "Science - Khoa học",
    "cards": [
     {
@@ -2839,6 +2847,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Culture & Arts - Văn hóa và nghệ thuật",
    "cards": [
     {
@@ -3004,6 +3013,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Mua sắm và tiền bạc",
    "theme": "Business & Marketing - Kinh doanh và tiếp thị",
    "cards": [
     {
@@ -3169,6 +3179,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Du lịch và giao thông",
    "theme": "Transport - Giao thông vận tải",
    "cards": [
     {
@@ -3334,6 +3345,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công nghệ và truyền thông",
    "theme": "Media & Advertising - Truyền thông và quảng cáo",
    "cards": [
     {
@@ -3499,6 +3511,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "theme": "Food & Nutrition - Thực phẩm và dinh dưỡng",
    "cards": [
     {
@@ -3664,6 +3677,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Psychology - Tâm lý học",
    "cards": [
     {
@@ -3829,6 +3843,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "theme": "Geography - Địa lý",
    "cards": [
     {
@@ -3994,6 +4009,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Du lịch và giao thông",
    "theme": "Tourism - Du lịch",
    "cards": [
     {
@@ -4159,6 +4175,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "theme": "Agriculture - Nông nghiệp",
    "cards": [
     {
@@ -4324,6 +4341,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "theme": "Energy - Năng lượng",
    "cards": [
     {
@@ -4489,6 +4507,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Nhà ở và nơi sống",
    "theme": "Urbanisation - Đô thị hóa",
    "cards": [
     {
@@ -4654,6 +4673,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Globalisation - Toàn cầu hóa",
    "cards": [
     {
@@ -4819,6 +4839,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "theme": "Animals & Wildlife - Động vật hoang dã",
    "cards": [
     {
@@ -4984,6 +5005,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "History & Heritage - Lịch sử và di sản",
    "cards": [
     {
@@ -5149,6 +5171,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thể thao và vận động",
    "theme": "Sports & Leisure - Thể thao và giải trí",
    "cards": [
     {
@@ -5314,6 +5337,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Family & Relationships - Gia đình và các mối quan hệ",
    "cards": [
     {
@@ -5479,6 +5503,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bảng chữ cái và phát âm",
    "theme": "Từ vựng quanh bảng chữ cái - Words about the Alphabet",
    "cards": [
     {
@@ -5645,6 +5670,7 @@ const CONTENT = {
    "band": "Band 0"
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Số đếm và thời gian - Numbers and Time",
    "cards": [
     {
@@ -5811,6 +5837,7 @@ const CONTENT = {
    "band": "Band 2.0"
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Gia đình và con người - Family and People",
    "cards": [
     {
@@ -5977,6 +6004,7 @@ const CONTENT = {
    "band": "Band 2.0"
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Sinh hoạt hằng ngày - Daily Life",
    "cards": [
     {
@@ -6143,6 +6171,7 @@ const CONTENT = {
    "band": "Band 2.5"
   },
   {
+   "topic": "Công việc và nghề nghiệp",
    "theme": "Workplace Communication - Giao tiếp nơi công sở",
    "band": "Band 5.5",
    "cards": [
@@ -6309,6 +6338,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công việc và nghề nghiệp",
    "theme": "Job Interviews and Careers - Phỏng vấn xin việc và nghề nghiệp",
    "band": "Band 6.0",
    "cards": [
@@ -6475,6 +6505,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Du lịch và giao thông",
    "theme": "Travel and Hotels - Du lịch và khách sạn",
    "band": "Band 5.0",
    "cards": [
@@ -6641,6 +6672,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Du lịch và giao thông",
    "theme": "Airports and Getting Around - Sân bay và di chuyển",
    "band": "Band 5.0",
    "cards": [
@@ -6807,6 +6839,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "theme": "At the Clinic and Pharmacy - Khám bệnh và hiệu thuốc",
    "band": "Band 5.0",
    "cards": [
@@ -6973,6 +7006,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "theme": "Health and Daily Habits - Sức khỏe và thói quen hằng ngày",
    "band": "Band 5.5",
    "cards": [
@@ -7139,6 +7173,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công việc và nghề nghiệp",
    "theme": "Customer Service - Dịch vụ khách hàng",
    "band": "Band 5.5",
    "cards": [
@@ -7305,6 +7340,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Mua sắm và tiền bạc",
    "theme": "Banking and Money - Ngân hàng và tiền bạc",
    "band": "Band 5.5",
    "cards": [
@@ -7471,6 +7507,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "theme": "Restaurants and Ordering Food - Nhà hàng và gọi món",
    "band": "Band 5.0",
    "cards": [
@@ -7637,6 +7674,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Mua sắm và tiền bạc",
    "theme": "Shopping and Bargaining - Mua sắm và mặc cả",
    "band": "Band 5.0",
    "cards": [
@@ -7803,6 +7841,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Feelings and Emotions - Cảm xúc và tâm trạng",
    "band": "Band 5.5",
    "cards": [
@@ -7969,6 +8008,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Social Small Talk - Trò chuyện xã giao",
    "band": "Band 5.0",
    "cards": [
@@ -8135,6 +8175,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "theme": "Study Skills - Kỹ năng học tập",
    "band": "Band 6.0",
    "cards": [
@@ -8301,6 +8342,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "theme": "Basic Academic Words - Từ học thuật cơ bản",
    "band": "Band 6.0",
    "cards": [
@@ -8467,6 +8509,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Native Chunks 1: Verb and Noun Pairs - Cụm bản địa 1: động từ đi với danh từ",
    "band": "Band 5.5",
    "cards": [
@@ -8633,6 +8676,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Native Chunks 2: Everyday Fixed Phrases - Cụm bản địa 2: cụm cố định hằng ngày",
    "band": "Band 5.0",
    "cards": [
@@ -8799,6 +8843,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Native Chunks 3: Polite and Social Phrases - Cụm bản địa 3: cụm lịch sự và xã giao",
    "band": "Band 5.0",
    "cards": [
@@ -8965,6 +9010,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công việc và nghề nghiệp",
    "theme": "Native Chunks 4: Chunks at Work - Cụm bản địa 4: cụm dùng nơi công việc",
    "band": "Band 6.0",
    "cards": [
@@ -9131,6 +9177,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Nhà ở và nơi sống",
    "theme": "Renting a Home - Thuê nhà và chỗ ở",
    "band": "Band 5.0",
    "cards": [
@@ -9297,6 +9344,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công nghệ và truyền thông",
    "theme": "Phone Calls and Messages - Gọi điện và nhắn tin",
    "band": "Band 5.0",
    "cards": [
@@ -9463,6 +9511,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Sở thích và giải trí",
    "theme": "Weekend Activities - Hoạt động cuối tuần",
    "band": "Band 5.0",
    "cards": [
@@ -9629,6 +9678,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "theme": "Weather in Daily Life - Thời tiết trong đời sống",
    "band": "Band 5.0",
    "cards": [
@@ -9795,6 +9845,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công nghệ và truyền thông",
    "theme": "Technology in Daily Life - Công nghệ trong đời sống",
    "band": "Band 5.5",
    "cards": [
@@ -9961,6 +10012,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Safety and Emergencies - An toàn và tình huống khẩn cấp",
    "band": "Band 5.5",
    "cards": [
@@ -10127,6 +10179,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Du lịch và giao thông",
    "theme": "Getting Around the City - Đi lại trong thành phố",
    "band": "Band 5.0",
    "cards": [
@@ -10293,6 +10346,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "theme": "School Friends and Teachers - Bạn bè và thầy cô ở trường",
    "band": "Band 5.0",
    "cards": [
@@ -10459,6 +10513,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Family Events and Festivals - Sự kiện gia đình và lễ tết",
    "band": "Band 5.5",
    "cards": [
@@ -10625,6 +10680,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Mua sắm và tiền bạc",
    "theme": "Online Shopping - Mua sắm trực tuyến",
    "band": "Band 5.5",
    "cards": [
@@ -10791,6 +10847,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Nhà ở và nơi sống",
    "theme": "Looking After Your Home - Chăm sóc nhà cửa",
    "band": "Band 5.0",
    "cards": [
@@ -10957,6 +11014,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công việc và nghề nghiệp",
    "theme": "Presentations and Meetings - Thuyết trình và họp nhóm",
    "band": "Band 6.0",
    "cards": [
@@ -11123,6 +11181,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Du lịch và giao thông",
    "theme": "Travel Experiences - Trải nghiệm du lịch",
    "band": "Band 6.0",
    "cards": [
@@ -11289,6 +11348,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Public Services - Dịch vụ công cộng",
    "band": "Band 5.5",
    "cards": [
@@ -11455,6 +11515,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Nhà ở và nơi sống",
    "theme": "Việc nhà và khả năng - Housework and Abilities",
    "band": "Band 2.5",
    "cards": [
@@ -11621,6 +11682,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Thời gian và quá khứ - Time and the Past",
    "band": "Band 3.0",
    "cards": [
@@ -11787,6 +11849,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Miêu tả người và đồ vật - Describing People and Things",
    "band": "Band 3.0",
    "cards": [
@@ -11953,6 +12016,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Du lịch và giao thông",
    "theme": "Du lịch và phương tiện - Travel and Transport",
    "band": "Band 3.5",
    "cards": [
@@ -12119,6 +12183,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Kế hoạch và tương lai gần - Plans and the Near Future",
    "band": "Band 3.5",
    "cards": [
@@ -12285,6 +12350,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "theme": "Học tập và công việc - Study and Work B1",
    "band": "Band 4.0",
    "cards": [
@@ -12451,6 +12517,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "theme": "Cơ thể và sức khỏe - Body and Health B1",
    "band": "Band 4.0",
    "cards": [
@@ -12617,6 +12684,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "theme": "Thiên nhiên và môi trường - Nature and Environment B1",
    "band": "Band 4.5",
    "cards": [
@@ -12783,6 +12851,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "theme": "Cảm xúc và ý kiến - Feelings and Opinions B1",
    "band": "Band 4.5",
    "cards": [
@@ -12948,8 +13017,9 @@ const CONTENT = {
     }
    ]
   }
- ,{"theme":"Bước 1: Học 26 chữ cái A-Z - The Alphabet","band":"Band 0","cards":[{"w":"A","ipa":"/eɪ/","vi":"Chữ A - đọc là 'ây', viết thường là a.","col":"A - apple: quả táo","ex":"A is for apple.","exv":"A là chữ đầu của từ apple (quả táo).","vid":"KGZFmW3uPJE","ex2":"A - ant: con kiến","tip":"Chữ A giống một cái thang hình tam giác có một thanh ngang ở giữa.","kind":"vowel","ngrp":"ei"},{"w":"B","ipa":"/biː/","vi":"Chữ B - đọc là 'bi', viết thường là b.","col":"B - ball: quả bóng","ex":"B is for ball.","exv":"B là chữ đầu của từ ball (quả bóng).","vid":"f1bcER1Zzak","ex2":"B - book: quyển sách","tip":"Chữ B có hai cái bụng tròn xếp chồng lên nhau, tròn như hai quả bóng ball.","kind":"consonant","ngrp":"ii"},{"w":"C","ipa":"/siː/","vi":"Chữ C - đọc là 'xi', viết thường là c.","col":"C - cat: con mèo","ex":"C is for cat.","exv":"C là chữ đầu của từ cat (con mèo).","vid":"SNgUoinyQUU","ex2":"C - cake: cái bánh","tip":"Chữ C giống vầng trăng khuyết đang mở miệng về phía phải.","kind":"consonant","ngrp":"ii"},{"w":"D","ipa":"/diː/","vi":"Chữ D - đọc là 'đi', viết thường là d.","col":"D - dog: con chó","ex":"D is for dog.","exv":"D là chữ đầu của từ dog (con chó).","vid":"SizYpeJL_UE","ex2":"D - door: cánh cửa","tip":"Chữ D giống cánh cửa cong: một nét thẳng đứng và một cái bụng to.","kind":"consonant","ngrp":"ii"},{"w":"E","ipa":"/iː/","vi":"Chữ E - đọc là 'i', viết thường là e.","col":"E - egg: quả trứng","ex":"E is for egg.","exv":"E là chữ đầu của từ egg (quả trứng).","vid":"BMLtpWCdBeY","ex2":"E - elephant: con voi","tip":"Chữ E giống cái lược có ba răng chĩa ra phía phải.","kind":"vowel","ngrp":"ii"},{"w":"F","ipa":"/ef/","vi":"Chữ F - đọc là 'ép', viết thường là f.","col":"F - fish: con cá","ex":"F is for fish.","exv":"F là chữ đầu của từ fish (con cá).","vid":"LWMED_3Nvig","ex2":"F - frog: con ếch","tip":"Chữ F giống chữ E bị rụng hai răng dưới, chỉ còn hai nét ngang ở trên.","kind":"consonant","ngrp":"e"},{"w":"G","ipa":"/dʒiː/","vi":"Chữ G - đọc là 'gi', viết thường là g.","col":"G - girl: cô gái","ex":"G is for girl.","exv":"G là chữ đầu của từ girl (cô gái).","vid":"39prtfpkRkU","ex2":"G - goat: con dê","tip":"Chữ G giống chữ C có thêm một nét ngang nhỏ chui vào trong như cái móc.","kind":"consonant","ngrp":"ii"},{"w":"H","ipa":"/eɪtʃ/","vi":"Chữ H - đọc là 'ếch', viết thường là h.","col":"H - hat: cái mũ","ex":"H is for hat.","exv":"H là chữ đầu của từ hat (cái mũ).","vid":"PUI5-AphjMg","ex2":"H - hand: bàn tay","tip":"Chữ H giống hai người đứng song song, nắm tay nhau bằng một nét ngang ở giữa.","kind":"consonant","ngrp":"ei"},{"w":"I","ipa":"/aɪ/","vi":"Chữ I - đọc là 'ai', viết thường là i.","col":"I - ice: nước đá","ex":"I is for ice.","exv":"I là chữ đầu của từ ice (nước đá).","vid":"b_gJVJvOA3Q","ex2":"I - insect: con côn trùng","tip":"Chữ I chỉ là một nét thẳng đơn giản; viết thường thì có thêm một dấu chấm ở trên đầu.","kind":"vowel","ngrp":"ai"},{"w":"J","ipa":"/dʒeɪ/","vi":"Chữ J - đọc là 'giây', viết thường là j.","col":"J - juice: nước ép","ex":"J is for juice.","exv":"J là chữ đầu của từ juice (nước ép).","vid":"8wNIYNyG37g","ex2":"J - jacket: cái áo khoác","tip":"Chữ J giống cái móc câu cong lên ở cuối; viết thường cũng có dấu chấm ở trên đầu.","kind":"consonant","ngrp":"ei"},{"w":"K","ipa":"/keɪ/","vi":"Chữ K - đọc là 'cây', viết thường là k.","col":"K - kite: cái diều","ex":"K is for kite.","exv":"K là chữ đầu của từ kite (cái diều).","vid":"jdI2ad0lNpA","ex2":"K - key: cái chìa khóa","tip":"Chữ K giống một người đứng thẳng, giơ một tay lên và đá một chân ra.","kind":"consonant","ngrp":"ei"},{"w":"L","ipa":"/el/","vi":"Chữ L - đọc là 'eo', viết thường là l.","col":"L - lion: con sư tử","ex":"L is for lion.","exv":"L là chữ đầu của từ lion (con sư tử).","vid":"F4BgJ_SAgZ8","ex2":"L - leg: cái chân","tip":"Chữ L giống góc nhà: một nét đứng rồi một nét nằm ở dưới chân.","kind":"consonant","ngrp":"e"},{"w":"M","ipa":"/em/","vi":"Chữ M - đọc là 'em', viết thường là m.","col":"M - milk: sữa","ex":"M is for milk.","exv":"M là chữ đầu của từ milk (sữa).","vid":"WFMI-cV9sq8","ex2":"M - moon: mặt trăng","tip":"Chữ M giống hai ngọn núi đứng sát cạnh nhau.","kind":"consonant","ngrp":"e"},{"w":"N","ipa":"/en/","vi":"Chữ N - đọc là 'en', viết thường là n.","col":"N - nose: cái mũi","ex":"N is for nose.","exv":"N là chữ đầu của từ nose (cái mũi).","vid":"xZx53RedAZ0","ex2":"N - night: ban đêm","tip":"Chữ N giống chữ M bị thiếu một chân: hai nét đứng nối nhau bằng một nét chéo.","kind":"consonant","ngrp":"e"},{"w":"O","ipa":"/əʊ/","vi":"Chữ O - đọc là 'âu', viết thường là o.","col":"O - orange: quả cam","ex":"O is for orange.","exv":"O là chữ đầu của từ orange (quả cam).","vid":"RWbvHZBmrqk","ex2":"O - owl: con cú mèo","tip":"Chữ O tròn xoe như quả cam orange và như cái miệng đang đọc 'âu'.","kind":"vowel","ngrp":"ou"},{"w":"P","ipa":"/piː/","vi":"Chữ P - đọc là 'pi', viết thường là p.","col":"P - pig: con lợn","ex":"P is for pig.","exv":"P là chữ đầu của từ pig (con lợn).","vid":"14hXRz94jRQ","ex2":"P - pen: cái bút","tip":"Chữ P giống lá cờ trên cột: một nét đứng và một cái bụng tròn ở phía trên.","kind":"consonant","ngrp":"ii"},{"w":"Q","ipa":"/kjuː/","vi":"Chữ Q - đọc là 'kiu', viết thường là q.","col":"Q - queen: nữ hoàng","ex":"Q is for queen.","exv":"Q là chữ đầu của từ queen (nữ hoàng).","vid":"L987a64I2cY","ex2":"Q - question: câu hỏi","tip":"Chữ Q giống chữ O có thêm một cái đuôi nhỏ ở góc dưới bên phải.","kind":"consonant","ngrp":"juu"},{"w":"R","ipa":"/ɑː/","vi":"Chữ R - đọc là 'a', viết thường là r.","col":"R - rabbit: con thỏ","ex":"R is for rabbit.","exv":"R là chữ đầu của từ rabbit (con thỏ).","vid":"W5z941Xx2fM","ex2":"R - red: màu đỏ","tip":"Chữ R giống chữ P có thêm một cái chân đá ra phía trước.","kind":"consonant","ngrp":"aa"},{"w":"S","ipa":"/es/","vi":"Chữ S - đọc là 'ét', viết thường là s.","col":"S - sun: mặt trời","ex":"S is for sun.","exv":"S là chữ đầu của từ sun (mặt trời).","vid":"IaFlt1TjM-k","ex2":"S - star: ngôi sao","tip":"Chữ S cong cong như con rắn đang bò, đọc lên nghe 'xì xì' như tiếng rắn.","kind":"consonant","ngrp":"e"},{"w":"T","ipa":"/tiː/","vi":"Chữ T - đọc là 'ti', viết thường là t.","col":"T - tree: cái cây","ex":"T is for tree.","exv":"T là chữ đầu của từ tree (cái cây).","vid":"1yl9p--gElU","ex2":"T - table: cái bàn","tip":"Chữ T giống cái ô nhìn thẳng: một nét ngang ở trên và một cột thẳng ở giữa.","kind":"consonant","ngrp":"ii"},{"w":"U","ipa":"/juː/","vi":"Chữ U - đọc là 'iu', viết thường là u.","col":"U - umbrella: cái ô","ex":"U is for umbrella.","exv":"U là chữ đầu của từ umbrella (cái ô).","vid":"IF59Xs60uRM","ex2":"U - uncle: chú, bác trai","tip":"Chữ U giống cái cốc có hai thành cao và đáy cong, đang chờ rót nước.","kind":"vowel","ngrp":"juu"},{"w":"V","ipa":"/viː/","vi":"Chữ V - đọc là 'vi', viết thường là v.","col":"V - van: xe tải nhỏ","ex":"V is for van.","exv":"V là chữ đầu của từ van (xe tải nhỏ).","vid":"yZjEtwr8Q4o","ex2":"V - violin: cây đàn vĩ cầm","tip":"Chữ V là hai nét chéo gặp nhau ở một điểm nhọn phía dưới.","kind":"consonant","ngrp":"ii"},{"w":"W","ipa":"/ˈdʌbljuː/","vi":"Chữ W - đọc là 'đắp-biu', viết thường là w.","col":"W - water: nước","ex":"W is for water.","exv":"W là chữ đầu của từ water (nước).","vid":"mQZ-c3_EDj4","ex2":"W - window: cửa sổ","tip":"Chữ W là hai chữ V đứng cạnh nhau, nhìn như hai thung lũng liền nhau.","kind":"consonant","ngrp":"juu"},{"w":"X","ipa":"/eks/","vi":"Chữ X - đọc là 'ếch-x', viết thường là x.","col":"X - box: cái hộp","ex":"X is for box.","exv":"X là chữ đầu của từ box (cái hộp).","vid":"3AQUDbEhTm8","ex2":"X - fox: con cáo","tip":"Chữ X là hai nét chéo bắt chéo nhau như dấu nhân.","kind":"consonant","ngrp":"e"},{"w":"Y","ipa":"/waɪ/","vi":"Chữ Y - đọc là 'oai', viết thường là y.","col":"Y - yellow: màu vàng","ex":"Y is for yellow.","exv":"Y là chữ đầu của từ yellow (màu vàng).","vid":"Wa_9FdUyrJ0","ex2":"Y - yo-yo: đồ chơi yo-yo","tip":"Chữ Y giống cái chạc cây: hai nhánh ở trên chụm lại thành một thân ở dưới.","kind":"consonant","ngrp":"ai"},{"w":"Z","ipa":"/zed/","vi":"Chữ Z - đọc là 'dét', viết thường là z.","col":"Z - zoo: vườn thú","ex":"Z is for zoo.","exv":"Z là chữ đầu của từ zoo (vườn thú).","vid":"IDeUZy_iNT4","ex2":"Z - zebra: con ngựa vằn","tip":"Chữ Z đi theo đường zíc zắc: ngang, chéo xuống, rồi ngang. Chú ý cách đọc tên chữ: video đọc 'zee' theo kiểu Mỹ; người Anh và kỳ thi IELTS thường đọc là 'zed'. Bạn học cả hai cách đọc, và ưu tiên đọc 'zed' nhé.","kind":"consonant","ngrp":"e"}]},
+ ,{"theme":"Bước 1: Học 26 chữ cái A-Z - The Alphabet","topic":"Bảng chữ cái và phát âm","band":"Band 0","cards":[{"w":"A","ipa":"/eɪ/","vi":"Chữ A - đọc là 'ây', viết thường là a.","col":"A - apple: quả táo","ex":"A is for apple.","exv":"A là chữ đầu của từ apple (quả táo).","vid":"KGZFmW3uPJE","ex2":"A - ant: con kiến","tip":"Chữ A giống một cái thang hình tam giác có một thanh ngang ở giữa.","kind":"vowel","ngrp":"ei"},{"w":"B","ipa":"/biː/","vi":"Chữ B - đọc là 'bi', viết thường là b.","col":"B - ball: quả bóng","ex":"B is for ball.","exv":"B là chữ đầu của từ ball (quả bóng).","vid":"f1bcER1Zzak","ex2":"B - book: quyển sách","tip":"Chữ B có hai cái bụng tròn xếp chồng lên nhau, tròn như hai quả bóng ball.","kind":"consonant","ngrp":"ii"},{"w":"C","ipa":"/siː/","vi":"Chữ C - đọc là 'xi', viết thường là c.","col":"C - cat: con mèo","ex":"C is for cat.","exv":"C là chữ đầu của từ cat (con mèo).","vid":"SNgUoinyQUU","ex2":"C - cake: cái bánh","tip":"Chữ C giống vầng trăng khuyết đang mở miệng về phía phải.","kind":"consonant","ngrp":"ii"},{"w":"D","ipa":"/diː/","vi":"Chữ D - đọc là 'đi', viết thường là d.","col":"D - dog: con chó","ex":"D is for dog.","exv":"D là chữ đầu của từ dog (con chó).","vid":"SizYpeJL_UE","ex2":"D - door: cánh cửa","tip":"Chữ D giống cánh cửa cong: một nét thẳng đứng và một cái bụng to.","kind":"consonant","ngrp":"ii"},{"w":"E","ipa":"/iː/","vi":"Chữ E - đọc là 'i', viết thường là e.","col":"E - egg: quả trứng","ex":"E is for egg.","exv":"E là chữ đầu của từ egg (quả trứng).","vid":"BMLtpWCdBeY","ex2":"E - elephant: con voi","tip":"Chữ E giống cái lược có ba răng chĩa ra phía phải.","kind":"vowel","ngrp":"ii"},{"w":"F","ipa":"/ef/","vi":"Chữ F - đọc là 'ép', viết thường là f.","col":"F - fish: con cá","ex":"F is for fish.","exv":"F là chữ đầu của từ fish (con cá).","vid":"LWMED_3Nvig","ex2":"F - frog: con ếch","tip":"Chữ F giống chữ E bị rụng hai răng dưới, chỉ còn hai nét ngang ở trên.","kind":"consonant","ngrp":"e"},{"w":"G","ipa":"/dʒiː/","vi":"Chữ G - đọc là 'gi', viết thường là g.","col":"G - girl: cô gái","ex":"G is for girl.","exv":"G là chữ đầu của từ girl (cô gái).","vid":"39prtfpkRkU","ex2":"G - goat: con dê","tip":"Chữ G giống chữ C có thêm một nét ngang nhỏ chui vào trong như cái móc.","kind":"consonant","ngrp":"ii"},{"w":"H","ipa":"/eɪtʃ/","vi":"Chữ H - đọc là 'ếch', viết thường là h.","col":"H - hat: cái mũ","ex":"H is for hat.","exv":"H là chữ đầu của từ hat (cái mũ).","vid":"PUI5-AphjMg","ex2":"H - hand: bàn tay","tip":"Chữ H giống hai người đứng song song, nắm tay nhau bằng một nét ngang ở giữa.","kind":"consonant","ngrp":"ei"},{"w":"I","ipa":"/aɪ/","vi":"Chữ I - đọc là 'ai', viết thường là i.","col":"I - ice: nước đá","ex":"I is for ice.","exv":"I là chữ đầu của từ ice (nước đá).","vid":"b_gJVJvOA3Q","ex2":"I - insect: con côn trùng","tip":"Chữ I chỉ là một nét thẳng đơn giản; viết thường thì có thêm một dấu chấm ở trên đầu.","kind":"vowel","ngrp":"ai"},{"w":"J","ipa":"/dʒeɪ/","vi":"Chữ J - đọc là 'giây', viết thường là j.","col":"J - juice: nước ép","ex":"J is for juice.","exv":"J là chữ đầu của từ juice (nước ép).","vid":"8wNIYNyG37g","ex2":"J - jacket: cái áo khoác","tip":"Chữ J giống cái móc câu cong lên ở cuối; viết thường cũng có dấu chấm ở trên đầu.","kind":"consonant","ngrp":"ei"},{"w":"K","ipa":"/keɪ/","vi":"Chữ K - đọc là 'cây', viết thường là k.","col":"K - kite: cái diều","ex":"K is for kite.","exv":"K là chữ đầu của từ kite (cái diều).","vid":"jdI2ad0lNpA","ex2":"K - key: cái chìa khóa","tip":"Chữ K giống một người đứng thẳng, giơ một tay lên và đá một chân ra.","kind":"consonant","ngrp":"ei"},{"w":"L","ipa":"/el/","vi":"Chữ L - đọc là 'eo', viết thường là l.","col":"L - lion: con sư tử","ex":"L is for lion.","exv":"L là chữ đầu của từ lion (con sư tử).","vid":"F4BgJ_SAgZ8","ex2":"L - leg: cái chân","tip":"Chữ L giống góc nhà: một nét đứng rồi một nét nằm ở dưới chân.","kind":"consonant","ngrp":"e"},{"w":"M","ipa":"/em/","vi":"Chữ M - đọc là 'em', viết thường là m.","col":"M - milk: sữa","ex":"M is for milk.","exv":"M là chữ đầu của từ milk (sữa).","vid":"WFMI-cV9sq8","ex2":"M - moon: mặt trăng","tip":"Chữ M giống hai ngọn núi đứng sát cạnh nhau.","kind":"consonant","ngrp":"e"},{"w":"N","ipa":"/en/","vi":"Chữ N - đọc là 'en', viết thường là n.","col":"N - nose: cái mũi","ex":"N is for nose.","exv":"N là chữ đầu của từ nose (cái mũi).","vid":"xZx53RedAZ0","ex2":"N - night: ban đêm","tip":"Chữ N giống chữ M bị thiếu một chân: hai nét đứng nối nhau bằng một nét chéo.","kind":"consonant","ngrp":"e"},{"w":"O","ipa":"/əʊ/","vi":"Chữ O - đọc là 'âu', viết thường là o.","col":"O - orange: quả cam","ex":"O is for orange.","exv":"O là chữ đầu của từ orange (quả cam).","vid":"RWbvHZBmrqk","ex2":"O - owl: con cú mèo","tip":"Chữ O tròn xoe như quả cam orange và như cái miệng đang đọc 'âu'.","kind":"vowel","ngrp":"ou"},{"w":"P","ipa":"/piː/","vi":"Chữ P - đọc là 'pi', viết thường là p.","col":"P - pig: con lợn","ex":"P is for pig.","exv":"P là chữ đầu của từ pig (con lợn).","vid":"14hXRz94jRQ","ex2":"P - pen: cái bút","tip":"Chữ P giống lá cờ trên cột: một nét đứng và một cái bụng tròn ở phía trên.","kind":"consonant","ngrp":"ii"},{"w":"Q","ipa":"/kjuː/","vi":"Chữ Q - đọc là 'kiu', viết thường là q.","col":"Q - queen: nữ hoàng","ex":"Q is for queen.","exv":"Q là chữ đầu của từ queen (nữ hoàng).","vid":"L987a64I2cY","ex2":"Q - question: câu hỏi","tip":"Chữ Q giống chữ O có thêm một cái đuôi nhỏ ở góc dưới bên phải.","kind":"consonant","ngrp":"juu"},{"w":"R","ipa":"/ɑː/","vi":"Chữ R - đọc là 'a', viết thường là r.","col":"R - rabbit: con thỏ","ex":"R is for rabbit.","exv":"R là chữ đầu của từ rabbit (con thỏ).","vid":"W5z941Xx2fM","ex2":"R - red: màu đỏ","tip":"Chữ R giống chữ P có thêm một cái chân đá ra phía trước.","kind":"consonant","ngrp":"aa"},{"w":"S","ipa":"/es/","vi":"Chữ S - đọc là 'ét', viết thường là s.","col":"S - sun: mặt trời","ex":"S is for sun.","exv":"S là chữ đầu của từ sun (mặt trời).","vid":"IaFlt1TjM-k","ex2":"S - star: ngôi sao","tip":"Chữ S cong cong như con rắn đang bò, đọc lên nghe 'xì xì' như tiếng rắn.","kind":"consonant","ngrp":"e"},{"w":"T","ipa":"/tiː/","vi":"Chữ T - đọc là 'ti', viết thường là t.","col":"T - tree: cái cây","ex":"T is for tree.","exv":"T là chữ đầu của từ tree (cái cây).","vid":"1yl9p--gElU","ex2":"T - table: cái bàn","tip":"Chữ T giống cái ô nhìn thẳng: một nét ngang ở trên và một cột thẳng ở giữa.","kind":"consonant","ngrp":"ii"},{"w":"U","ipa":"/juː/","vi":"Chữ U - đọc là 'iu', viết thường là u.","col":"U - umbrella: cái ô","ex":"U is for umbrella.","exv":"U là chữ đầu của từ umbrella (cái ô).","vid":"IF59Xs60uRM","ex2":"U - uncle: chú, bác trai","tip":"Chữ U giống cái cốc có hai thành cao và đáy cong, đang chờ rót nước.","kind":"vowel","ngrp":"juu"},{"w":"V","ipa":"/viː/","vi":"Chữ V - đọc là 'vi', viết thường là v.","col":"V - van: xe tải nhỏ","ex":"V is for van.","exv":"V là chữ đầu của từ van (xe tải nhỏ).","vid":"yZjEtwr8Q4o","ex2":"V - violin: cây đàn vĩ cầm","tip":"Chữ V là hai nét chéo gặp nhau ở một điểm nhọn phía dưới.","kind":"consonant","ngrp":"ii"},{"w":"W","ipa":"/ˈdʌbljuː/","vi":"Chữ W - đọc là 'đắp-biu', viết thường là w.","col":"W - water: nước","ex":"W is for water.","exv":"W là chữ đầu của từ water (nước).","vid":"mQZ-c3_EDj4","ex2":"W - window: cửa sổ","tip":"Chữ W là hai chữ V đứng cạnh nhau, nhìn như hai thung lũng liền nhau.","kind":"consonant","ngrp":"juu"},{"w":"X","ipa":"/eks/","vi":"Chữ X - đọc là 'ếch-x', viết thường là x.","col":"X - box: cái hộp","ex":"X is for box.","exv":"X là chữ đầu của từ box (cái hộp).","vid":"3AQUDbEhTm8","ex2":"X - fox: con cáo","tip":"Chữ X là hai nét chéo bắt chéo nhau như dấu nhân.","kind":"consonant","ngrp":"e"},{"w":"Y","ipa":"/waɪ/","vi":"Chữ Y - đọc là 'oai', viết thường là y.","col":"Y - yellow: màu vàng","ex":"Y is for yellow.","exv":"Y là chữ đầu của từ yellow (màu vàng).","vid":"Wa_9FdUyrJ0","ex2":"Y - yo-yo: đồ chơi yo-yo","tip":"Chữ Y giống cái chạc cây: hai nhánh ở trên chụm lại thành một thân ở dưới.","kind":"consonant","ngrp":"ai"},{"w":"Z","ipa":"/zed/","vi":"Chữ Z - đọc là 'dét', viết thường là z.","col":"Z - zoo: vườn thú","ex":"Z is for zoo.","exv":"Z là chữ đầu của từ zoo (vườn thú).","vid":"IDeUZy_iNT4","ex2":"Z - zebra: con ngựa vằn","tip":"Chữ Z đi theo đường zíc zắc: ngang, chéo xuống, rồi ngang. Chú ý cách đọc tên chữ: video đọc 'zee' theo kiểu Mỹ; người Anh và kỳ thi IELTS thường đọc là 'zed'. Bạn học cả hai cách đọc, và ưu tiên đọc 'zed' nhé.","kind":"consonant","ngrp":"e"}]},
   {
+   "topic": "Công nghệ và truyền thông",
    "theme": "Technology and Society - Công nghệ và xã hội",
    "band": "Band 6.5",
    "cards": [
@@ -13116,6 +13186,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "theme": "Advanced Education - Giáo dục nâng cao",
    "band": "Band 6.5",
    "cards": [
@@ -13282,6 +13353,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công nghệ và truyền thông",
    "theme": "Media and Social Change - Truyền thông và biến đổi xã hội",
    "band": "Band 6.5",
    "cards": [
@@ -13448,6 +13520,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "theme": "Environment and Climate - Môi trường và khí hậu",
    "band": "Band 7.0",
    "cards": [
@@ -13614,6 +13687,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Globalisation and Culture - Toàn cầu hóa và văn hóa",
    "band": "Band 7.0",
    "cards": [
@@ -13780,6 +13854,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Mua sắm và tiền bạc",
    "theme": "Economics and Business - Kinh tế và kinh doanh",
    "band": "Band 7.0",
    "cards": [
@@ -13946,6 +14021,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "theme": "Abstract Academic Concepts - Khái niệm học thuật trừu tượng",
    "band": "Band 7.5+",
    "cards": [
@@ -14112,6 +14188,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công nghệ và truyền thông",
    "theme": "Science and Research - Khoa học và nghiên cứu",
    "band": "Band 7.5+",
    "cards": [
@@ -14278,6 +14355,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "theme": "Philosophy and Life Values - Triết lý và giá trị sống",
    "band": "Band 7.5+",
    "cards": [
@@ -14446,6 +14524,8 @@ const CONTENT = {
  ],
  "grammar": [
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Việc xảy ra mỗi ngày dùng hiện tại đơn như mặt trời mọc mỗi sáng; việc đang diễn ra ngay lúc này thì thêm -ing như nước đang sôi trên bếp.",
    "level": "Band 4.0",
    "name": "Hiện tại đơn và hiện tại tiếp diễn",
    "explain": "Hiện tại đơn diễn tả sự thật, thói quen (Water boils at 100°C). Hiện tại tiếp diễn diễn tả việc đang xảy ra hoặc xu hướng tạm thời. Trong IELTS, hai thì này dùng để mở bài Reading/Writing và mô tả quy trình, thói quen.",
@@ -14557,6 +14637,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Biểu đồ đã qua là câu chuyện đã kể xong: cứ lùi về quá khứ đơn, như đóng cuốn sách lại và kể từ đầu đến cuối.",
    "level": "Band 4.0",
    "name": "Quá khứ đơn cho biểu đồ Task 1",
    "explain": "Hầu hết biểu đồ Task 1 có mốc thời gian trong quá khứ, nên động từ phải ở quá khứ đơn (rose, fell, remained). Luôn ghi rõ năm khi nêu số liệu quá khứ.",
@@ -14668,6 +14750,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Tính từ, trạng từ và so sánh",
+   "hook": "So sánh giống cái cân hai đĩa: một bên nặng hơn thì thêm -er hoặc more, muốn nặng nhất thì dùng -est hoặc the most.",
    "level": "Band 5.0",
    "name": "So sánh cho Task 1",
    "explain": "Task 1 luôn cần so sánh: comparative (higher than), superlative (the highest), và cấu trúc twice as much as, slightly/considerably + comparative để chỉ mức độ chênh lệch.",
@@ -14779,6 +14863,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Câu bị động",
+   "hook": "Bị động là ống kính quay vào đồ vật: cái bánh được làm ra quan trọng hơn người làm bánh, nên be + V3 được đưa lên trước.",
    "level": "Band 4.5",
    "name": "Câu bị động nền tảng",
    "explain": "Bị động (be + V3) rất quan trọng trong Task 1 miêu tả quy trình (The glass is heated) và văn phong học thuật khi không cần nêu người thực hiện.",
@@ -14890,6 +14976,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Mẫu động từ",
+   "hook": "Động từ khuyết thiếu như núm chỉnh âm lượng cho ý kiến: might là nói khẽ, should là nói chắc, must là nói to nhất.",
    "level": "Band 4.5",
    "name": "Động từ khuyết thiếu nêu quan điểm",
    "explain": "should, must, can, may giúp nêu đề xuất và mức độ chắc chắn trong Task 2: Governments should invest...; This may lead to... Sau động từ khuyết thiếu dùng động từ nguyên thể.",
@@ -15001,6 +15089,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Giới từ và liên từ",
+   "hook": "Liên từ là cầu nối hai bờ câu: because bắc cầu lý do, but là cầu quặt ngược lại, so là cầu đi thẳng tới kết quả.",
    "level": "Band 4.0",
    "name": "Liên từ cơ bản: because, although, so, but",
    "explain": "Các liên từ này nối hai mệnh đề thành câu phức đơn giản - nền tảng để thoát khỏi toàn câu đơn trong IELTS Writing: because (nguyên nhân), although (nhượng bộ), so (kết quả), but (tương phản).",
@@ -15112,6 +15202,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Hiện tại hoàn thành là sợi dây nối quá khứ với hôm nay: việc bắt đầu ngày xưa mà kết quả vẫn còn đứng ngay trước mặt.",
    "level": "Band 5.5",
    "name": "Hiện tại hoàn thành cho xu hướng",
    "explain": "Hiện tại hoàn thành (have/has + V3) nối quá khứ với hiện tại: diễn tả thay đổi kéo dài đến nay (Prices have risen) và kinh nghiệm (has never been). Hay dùng trong mở bài và mô tả xu hướng dài hạn.",
@@ -15223,6 +15315,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Câu điều kiện và giả định",
+   "hook": "Điều kiện loại 1 là dự báo thời tiết có thể thành thật, loại 2 là giấc mơ giữa ban ngày: If I were you chỉ sống trong tưởng tượng.",
    "level": "Band 5.5",
    "name": "Câu điều kiện loại 1 và 2",
    "explain": "Loại 1 (If + hiện tại, will + V) cho hệ quả thật trong tương lai - dùng khi đề xuất giải pháp. Loại 2 (If + quá khứ, would + V) cho giả định trái hiện tại.",
@@ -15334,6 +15428,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Mệnh đề quan hệ",
+   "hook": "Mệnh đề quan hệ như sợi dây buộc thêm thông tin vào danh từ: who buộc vào người, which buộc vào vật, that buộc được cả hai.",
    "level": "Band 4.5",
    "name": "Mệnh đề quan hệ cơ bản",
    "explain": "Mệnh đề quan hệ (who cho người, which cho vật, that cho cả hai) giúp nối ý và tăng độ phức của câu - tiêu chí Grammatical Range trong IELTS.",
@@ -15445,6 +15541,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Giới từ và liên từ",
+   "hook": "Cụm giới từ như biển chỉ đường trong câu: in terms of, as a result of giúp ý đi đúng hướng mà không lạc đường.",
    "level": "Band 5.5",
    "name": "Cụm giới từ học thuật",
    "explain": "Các cụm như in terms of (xét về), due to (do), as a result of (do kết quả của), in addition to (thêm vào) giúp văn phong trang trọng và nối ý mạch lạc trong Writing.",
@@ -15556,6 +15654,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Danh từ và lượng từ",
+   "hook": "Lượng từ trong Task 1 như gia vị nêm vừa tay: the number of cho thứ đếm được từng cái, the amount of cho thứ đong bằng lượng.",
    "level": "Band 5.5",
    "name": "Lượng từ và danh từ số liệu trong Task 1",
    "explain": "Phân biệt number (đếm được), amount (không đếm được), proportion/percentage (tỷ lệ). Dùng đúng lượng từ là điểm ngữ pháp trực tiếp trong Task 1: the number of students, the amount of water, the proportion of income.",
@@ -15667,6 +15767,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Giới từ và liên từ",
+   "hook": "However, therefore, moreover như biển báo rẽ trên đường viết: báo trước câu sắp đối lập, sắp ra kết quả hay sắp bồi thêm ý.",
    "level": "Band 5.5",
    "name": "Phó từ liên kết: however, therefore, moreover",
    "explain": "Phó từ liên kết nối hai câu độc lập và phải đứng sau dấu chấm/chấm phẩy, kèm dấu phẩy: The course was expensive. However, it was worth it. Đây là lỗi nhiều thí sinh Việt Nam hay mắc (chạy câu - run-on).",
@@ -15778,6 +15880,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Giới từ và liên từ",
+   "hook": "When, while, as như đèn tín hiệu thời gian: bật lên là biết hai việc xảy ra cùng lúc hay nối đuôi nhau.",
    "level": "Band 6.0",
    "name": "Mệnh đề trạng ngữ thời gian",
    "explain": "when, while, before, after, until, as soon as tạo câu phức thời gian - rất hữu ích khi mô tả trình tự trong Task 1 (quy trình) và diễn biến trong Task 2.",
@@ -15889,6 +15993,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Câu bị động",
+   "hook": "Quy trình làm giấy hay làm sô-cô-la không cần nêu ai làm: bị động giúp các bước tự nối nhau như dây chuyền trong nhà máy.",
    "level": "Band 6.0",
    "name": "Bị động cho quy trình Task 1",
    "explain": "Đề quy trình (process) bắt buộc dùng bị động + liên từ trình tự: First, the clay is dug... Then it is baked... Người ta không nêu người làm mà nhấn mạnh các bước.",
@@ -16000,6 +16106,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Tính từ, trạng từ và so sánh",
+   "hook": "So sánh nâng cao như thước đo có nhiều nấc nhỏ: considerably là hơn hẳn một đoạn, slightly chỉ hơn một chút xíu.",
    "level": "Band 6.0",
    "name": "So sánh nâng cao",
    "explain": "Dùng much/far/considerably trước so sánh hơn để nhấn mạnh độ chênh; cấu trúc the more..., the more...; và as形容词as cho so sánh bằng - tất cả giúp Task 1 và Task 2 đạt band 6+.",
@@ -16111,6 +16219,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Giới từ và liên từ",
+   "hook": "Whereas đặt hai ý lên hai đĩa cân, nevertheless nghĩa là dù vậy vẫn tiến lên, consequently là quân domino đổ tới kết quả.",
    "level": "Band 6.0",
    "name": "Liên từ học thuật: whereas, nevertheless, consequently",
    "explain": "Whereas đối chiếu hai sự thật (rất hợp Task 1), Nevertheless = tuy nhiên (trang trọng hơn however), Consequently = do đó. Dùng đúng các từ này nâng điểm Coherence và Lexical Resource.",
@@ -16222,6 +16332,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Đổi từ loại như đổi áo cho ý: grow khoác áo danh từ thành growth, câu trông mới hẳn mà nghĩa vẫn nguyên.",
    "level": "Band 6.0",
    "name": "Paraphrase bằng cách đổi từ loại",
    "explain": "Kỹ năng cốt lõi của IELTS: viết lại ý bằng từ loại khác - increase (v) → an increase (n); decide (v) → make a decision; because → due to the fact that. Mở bài tốt luôn paraphrase lại đề bài.",
@@ -16333,6 +16445,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Đường biểu đồ chưa vẽ hết thì dùng will và is expected to, như nhìn mây đoán mưa cho những năm sắp tới.",
    "level": "Band 6.0",
    "name": "Dự đoán tương lai cho biểu đồ",
    "explain": "Khi biểu đồ kéo dài tới tương lai hoặc đề yêu cầu dự đoán, dùng will, is expected to, is predicted to, is likely to: The figure is expected to reach 50% by 2030.",
@@ -16444,6 +16558,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Mệnh đề quan hệ",
+   "hook": "Mệnh đề quan hệ nâng cao như dòng chú thích dưới trang sách: bổ sung ý phụ êm ái mà không làm đứt mạch câu chính.",
    "level": "Band 6.5",
    "name": "Mệnh đề quan hệ nâng cao",
    "explain": "Dùng which để bình luận cả mệnh đề trước (He passed, which surprised everyone), và giới từ + which/whom trong văn trang trọng (the reason for which, the people with whom).",
@@ -16555,6 +16671,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Câu điều kiện và giả định",
+   "hook": "Điều kiện loại 3 là cỗ máy thời gian không có thật: If I had studied gợi tiếc nuối chuyện đã rồi, chỉ để rút bài học.",
    "level": "Band 6.5",
    "name": "Điều kiện loại 3 và điều kiện trong lập luận",
    "explain": "Loại 3 (If + had V3, would have V3) diễn tả hối tiếc/giả định quá khứ. Trong Task 2, các cấu trúc If governments had acted earlier... giúp lập luận sâu và đa dạng cấu trúc.",
@@ -16666,6 +16784,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Liệt kê song song như hàng quân đứng đều hàng: các ý cùng một khuôn ngữ pháp thì đoạn văn nhìn ngay ngắn, dễ đọc.",
    "level": "Band 6.5",
    "name": "Cấu trúc song song khi liệt kê",
    "explain": "Khi liệt kê, các thành phần phải cùng dạng ngữ pháp (danh từ với danh từ, V-ing với V-ing). Lỗi song song làm mất điểm nặng: reading books, listening to music and playing sports (đúng).",
@@ -16777,6 +16897,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Hedging là đi nhẹ nói khẽ trong học thuật: tend to, may, often giúp câu không khẳng định quá tay.",
    "level": "Band 6.5",
    "name": "Hedging - ngôn ngữ thận trọng học thuật",
    "explain": "Văn học thuật tránh khẳng định tuyệt đối: dùng tend to, may, might, appears to, relatively, generally, in most cases. Hedging đúng lúc là dấu hiệu band 6.5+ trong Writing và Speaking Part 3.",
@@ -16888,6 +17010,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Danh hóa là ép lấy nước cốt: decide vắt thành decision, câu văn đặc lại, trang trọng hơn hẳn.",
    "level": "Band 6.5",
    "name": "Danh hóa - nominalisation",
    "explain": "Biến động từ/tính từ thành cụm danh từ: decide → decision; fail → failure; because the city grew → the growth of the city. Danh hóa làm câu ngắn gọn, trang trọng - đặc trưng văn phong band cao.",
@@ -16999,6 +17123,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Giới từ và liên từ",
+   "hook": "Câu chủ đề như biển hiệu đầu đoạn: nhìn vào biết ngay đoạn nói về gì, còn từ nối là lối đi nối các phòng ý với nhau.",
    "level": "Band 6.5",
    "name": "Câu chủ đề và từ nối trong đoạn văn",
    "explain": "Mỗi đoạn thân bài cần một câu chủ đề (topic sentence) nêu ý chính, sau đó là giải thích và ví dụ. Từ nối First and foremost, For instance, As a result giúp đoạn mạch lạc.",
@@ -17110,6 +17236,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Câu chẻ như đèn sân khấu chiếu đúng một điểm: It was X that... để mọi ánh mắt dồn vào điều cần nhấn mạnh.",
    "level": "Band 7.0",
    "name": "Câu chẻ nhấn mạnh (cleft sentences)",
    "explain": "It is/was + thành phần nhấn mạnh + that... dùng để làm nổi bật một yếu tố: It was the cost that surprised everyone. What-cleft: What matters most is... Rất hiệu quả trong Task 2.",
@@ -17221,6 +17349,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Never và rarely đứng đầu câu thì trợ động từ phải đảo lên trước như cúi chào: Never have I seen... nghe trang trọng hơn hẳn.",
    "level": "Band 7.0",
    "name": "Đảo ngữ sau trạng từ phủ định",
    "explain": "Sau Never, Rarely, Seldom, Not only, Hardly...when, động từ trợ đảo lên trước chủ ngữ: Never have I seen... Đây là cấu trúc band 7+ dùng điểm nhấn mạnh.",
@@ -17332,6 +17462,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Câu bị động",
+   "hook": "It is said that như câu mở đầu bản tin: người ta nói rằng, không cần nêu tên người nói mà vẫn đáng tin cậy.",
    "level": "Band 7.0",
    "name": "Bị động tường thuật (passive reporting)",
    "explain": "It is believed/said/thought that... và be believed to + V dùng để dẫn quan điểm chung một cách khách quan - cực kỳ hữu ích khi mở bài và dẫn chứng Task 2.",
@@ -17443,6 +17575,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Mệnh đề phân từ là câu được gấp gọn như vali nén: Walking home thay cho While I was walking home mà nghĩa không vơi đi.",
    "level": "Band 7.0",
    "name": "Mệnh đề phân từ (participle clauses)",
    "explain": "Dùng V-ing/V3 để rút gọn mệnh đề phụ khi cùng chủ ngữ: Walking home, I... (đang đi), Built in 1900, the house... (được xây). Giúp câu gọn và đa dạng - dấu hiệu band 7.",
@@ -17554,6 +17688,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Câu điều kiện và giả định",
+   "hook": "Had I known chính là If I had known đã bỏ chữ if và đội chiếc nón trang trọng, hay gặp trong văn viết band cao.",
    "level": "Band 7.0",
    "name": "Đảo ngữ trong câu điều kiện",
    "explain": "Thay If bằng đảo ngữ: Had I known (= If I had known), Were it not for (= If it were not for), Should you need (= If you need). Văn phong rất trang trọng, thường gặp trong bài band 8+.",
@@ -17665,6 +17801,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "It và there như giá đỡ mở màn: It is clear that, there is giúp câu đứng vững trước khi ý chính bước ra.",
    "level": "Band 7.0",
    "name": "Cấu trúc It và There học thuật",
    "explain": "It is important to note that..., It appears that..., There is evidence that..., There has been a tendency to... Những cấu trúc khách quan này là xương sống của văn học thuật band cao.",
@@ -17776,6 +17914,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Đảo ngữ toàn diện như mặc lễ phục cho câu: trật tự lạ mắt nhưng đúng nghi thức, dành cho lúc muốn thật trang trọng.",
    "level": "Band 7.5+",
    "name": "Đảo ngữ nâng cao toàn diện",
    "explain": "Đảo ngữ với Only after/Only when, So + adj, Such + be, và đảo ngữ địa điểm (Down the hill came...). Dùng tiết chế 1-2 lần trong bài sẽ tạo ấn tượng band cao rõ rệt.",
@@ -17887,6 +18027,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Câu điều kiện và giả định",
+   "hook": "Thể giả định nghe như lời vua chúa ngày xưa: It is essential that he be present, động từ trở về nguyên mẫu, không chia.",
    "level": "Band 7.5+",
    "name": "Thể giả định trong văn trang trọng",
    "explain": "Sau demand/suggest/essential/insist, mệnh đề that dùng động từ nguyên thể không chia: It is essential that he be present. Đây là điểm ngữ pháp tinh tế thường chỉ xuất hiện ở band 7.5+.",
@@ -17998,6 +18140,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Cụm tuyệt đối như diễn viên phụ đứng cạnh cảnh chính: Weather permitting, we will go - thêm bối cảnh mà không tốn một câu riêng.",
    "level": "Band 7.5+",
    "name": "Cụm tuyệt đối và rút gọn nâng cao",
    "explain": "Cụm tuyệt đối (Noun + phân từ) bổ sung thông tin nền: The weather being fine, we... With + noun + phân từ: With prices rising, many... Đây là cấu trúc văn viết tinh gọn bậc cao.",
@@ -18109,6 +18253,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Thêm do trước động từ như gạch chân bằng bút đỏ: I do agree nghĩa là tôi thật sự đồng ý, không phải nói cho qua chuyện.",
    "level": "Band 7.5+",
    "name": "Nhấn mạnh bằng trợ động từ do",
    "explain": "Thêm do/does/did trước động từ thường để nhấn mạnh hoặc tương phản lịch sự: I do agree, but... / He does work hard. Tinh tế này hay gặp trong Speaking Part 3 và tranh luận Task 2.",
@@ -18220,6 +18366,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Dấu chấm phẩy là dấu phẩy học cao hơn một bậc, nối hai ý ngang hàng; dấu hai chấm là cánh cửa mở ra phần giải thích.",
    "level": "Band 7.5+",
    "name": "Dấu chấm phẩy và dấu hai chấm trong câu dài",
    "explain": "Chấm phẩy nối hai mệnh đề độc lập liên quan chặt (thay dấu chấm), hai chấm mở ra giải thích hoặc danh sách. Dùng đúng dấu câu nâng cấp câu dài đa mệnh đề mà không bị lỗi run-on.",
@@ -18331,6 +18479,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Paraphrase band cao như kể lại một bộ phim bằng lời của chính mình: đổi cấu trúc, đổi từ ngữ, giữ nguyên cốt truyện.",
    "level": "Band 7.5+",
    "name": "Paraphrase trình độ cao",
    "explain": "Ở band cao, paraphrase là viết lại toàn bộ cấu trúc: đổi chủ động ↔ bị động, đổi mệnh đề thành cụm danh từ, thay hệ thống từ đồng nghĩa học thuật (a significant number of, it is often the case that).",
@@ -18442,6 +18592,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Be là xương sống của câu: am đi với I, is đi với một người hay một vật, are đi với nhiều người và nhiều vật.",
    "level": "Band 2.0",
    "name": "Động từ be - am, is, are",
    "explain": "Nhìn ví dụ trước nhé. Mẹ đi chợ về và nói: I am tired. Lan giới thiệu bố: He is a farmer. Cả nhà đang ở nhà: We are at home. Sau ví dụ là quy tắc. Ta dùng động từ be (là, thì, ở - động từ đặc biệt dùng để giới thiệu và mô tả) để giới thiệu và tả người hay vật. I đi với am. He, she, it và một người hay một vật đi với is. You, we, they và nhiều người hay nhiều vật đi với are.",
@@ -18533,6 +18685,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Thói quen mỗi ngày như đồng hồ báo thức điểm giờ đều đặn: I get up, she gets up - nhớ cộng thêm s cho ngôi thứ ba số ít.",
    "level": "Band 2.0",
    "name": "Hiện tại đơn cơ bản - thói quen mỗi ngày",
    "explain": "Nhìn ví dụ trước nhé. Sáng nào mẹ cũng dậy sớm: My mother gets up at five. Em trai đi học bằng xe buýt mỗi ngày: My brother goes to school by bus. Sau ví dụ là quy tắc. Ta dùng thì hiện tại đơn (cách nói về việc làm lặp lại hằng ngày) cho thói quen. I, you, we, they dùng động từ gốc. He, she, it thì thêm s hoặc es vào động từ.",
@@ -18624,6 +18778,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Danh từ và lượng từ",
+   "hook": "Một vật chưa rõ thì gọi a hoặc an, vật đã rõ thì gọi the, nhiều vật thì thêm s: như điểm danh từng món đồ trong phòng.",
    "level": "Band 3.0",
    "name": "Danh từ số nhiều và a, an, the",
    "explain": "Nhìn ví dụ trước nhé. Minh mua một quyển sách ở hiệu sách: Minh buys a book. Lan ăn một quả táo ở nhà: Lan eats an apple. Quyển sách trên bàn của cô giáo thì ai cũng biết rõ: The book is on the desk. Sau ví dụ là quy tắc. Mạo từ (từ nhỏ đứng trước danh từ: a, an, the) đứng trước danh từ. Dùng a trước từ bắt đầu bằng phụ âm. Dùng an trước từ bắt đầu bằng nguyên âm a, e, i, o, u. Dùng the khi người nghe đã biết rõ vật đó. Danh từ số nhiều thường thêm s. Từ kết thúc bằng s, ch, sh, x thì thêm es.",
@@ -18715,6 +18871,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Danh từ và lượng từ",
+   "hook": "My, your, his, her như nhãn dán tên trên đồ đạc: nhìn nhãn là biết của ai, khỏi phải nhắc lại tên người sở hữu.",
    "level": "Band 3.0",
    "name": "Đại từ và tính từ sở hữu",
    "explain": "Nhìn ví dụ trước nhé. Lan tự giới thiệu: I am Lan. Lan chỉ vào cặp của mình: This is my bag. Nam rất yêu mẹ của mình: He loves his mother. Sau ví dụ là quy tắc. Đại từ (từ thay cho tên người/vật: I, you, he, she) dùng thay cho tên người. I là tôi, you là bạn, he là anh ấy, she là cô ấy, we là chúng ta, they là họ. Tính từ sở hữu (từ chỉ của ai: my, your, his, her) đứng trước danh từ. My là của tôi, your là của bạn, his là của anh ấy, her là của cô ấy, our là của chúng ta, their là của họ.",
@@ -18806,6 +18964,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Giới từ và liên từ",
+   "hook": "In như chiếc hộp lớn chứa tháng và năm, on là mặt bàn chứa ngày tháng, at là chấm nhỏ chứa giờ: hộp càng to, giới từ càng là in.",
    "level": "Band 2.5",
    "name": "Giới từ in, on, at",
    "explain": "Nhìn ví dụ trước nhé. Lớp học bắt đầu lúc bảy giờ: The class starts at seven. Gia đình tôi sống ở Hà Nội: My family lives in Hanoi. Quyển sách nằm trên bàn học: The book is on the desk. Sau ví dụ là quy tắc. Giới từ (từ chỉ vị trí/thời gian: in, on, at) là từ nhỏ chỉ nơi chốn và thời gian. In dùng cho tháng, năm, thành phố và buổi trong ngày. On dùng cho thứ trong tuần và bề mặt. At dùng cho giờ cụ thể và các cụm quen thuộc như at home và at school.",
@@ -18897,6 +19057,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Mẫu động từ",
+   "hook": "Can là giơ tay xung phong nói tôi làm được, can't là lắc đầu nói chưa làm được; muốn hỏi thì đưa can lên đầu câu.",
    "level": "Band 2.5",
    "name": "Can và can't, câu hỏi đơn giản",
    "explain": "Nhìn ví dụ trước nhé. Em gái tôi biết bơi ở bể bơi gần nhà: My sister can swim. Bố tôi không biết lái xe ô tô: My father can't drive a car. Bạn hỏi bạn cùng lớp: Can you ride a bike? Sau ví dụ là quy tắc. Can nghĩa là có thể làm được một việc. Can't nghĩa là không thể làm được. Sau can luôn dùng động từ gốc, không thêm to và không thêm s. Muốn hỏi thì đưa Can lên đầu câu. Các câu hỏi quen thuộc khác là What is your name, Where are you from và Do you like music.",
@@ -18988,6 +19150,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Việc đang làm lúc này thì mặc chiếc áo -ing: I am cooking, như khói bếp đang bốc ngay trước mắt bạn.",
    "level": "Band 3.0",
    "name": "Hiện tại tiếp diễn cơ bản",
    "explain": "Nghe ví dụ đời thường trước nhé. Mẹ đang nấu cơm trong bếp: My mother is cooking now. Các em đang chơi ở sân trường: The children are playing at school. Sau ví dụ là quy tắc. Ta dùng thì hiện tại tiếp diễn (cách nói về việc đang xảy ra ngay lúc này) khi việc đang diễn ra. Cách làm rất đơn giản. Dùng am, is hoặc are rồi cộng động từ thêm ing. I đi với am. He, she, it và một người hay một vật đi với is. You, we, they và nhiều người hay nhiều vật đi với are.",
@@ -19079,6 +19243,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Việc hôm qua đã khép lại như trang sách đã lật qua: thêm -ed hoặc dùng động từ bất quy tắc, rồi nhẹ nhàng đóng sách.",
    "level": "Band 3.5",
    "name": "Quá khứ đơn cơ bản - kể việc đã qua",
    "explain": "Nhớ lại chuyện hôm qua nhé. Hôm qua tôi đi chợ với mẹ: I went to the market yesterday. Tuần trước cả nhà ăn phở ở quán gần nhà: My family ate pho last week. Sau ví dụ là quy tắc. Ta dùng thì quá khứ đơn (cách nói về việc đã xảy ra và đã kết thúc) cho việc đã xong. Nhiều động từ chỉ cần thêm ed, ví dụ work thành worked và watch thành watched. Một số động từ đổi hẳn dạng và phải nhớ riêng. Go thành went, have thành had, see thành saw và eat thành ate.",
@@ -19170,6 +19336,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Câu tường thuật",
+   "hook": "Tường thuật như người đưa tin lùi lại một bước: is thành was, today thành that day, vì ta kể lại lời người khác về sau.",
    "level": "Band 6.0",
    "name": "Câu tường thuật cơ bản và đầy đủ",
    "explain": "Ví dụ đời sống trước nhé: Mẹ nói với Hùng: 'Mẹ sẽ nấu cơm lúc sáu giờ tối nay.' Hùng kể lại cho chị gái: Hùng said his mother would cook dinner at six that night. Bạn thấy will đã thành would và tonight đã thành that night. Đó là câu tường thuật (câu kể lại lời của người khác mà không chép nguyên văn). Quy tắc một: với câu trần thuật (câu kể lại một sự việc), động từ thường lùi thì (lùi về quá khứ một nấc, như is thành was và will thành would). Quy tắc hai: với câu hỏi yes/no (câu hỏi chỉ cần đáp có hoặc không), ta dùng if hoặc whether rồi viết tiếp như câu kể, không đảo trợ động từ (từ phụ như do hay did) lên trước chủ ngữ. Quy tắc ba: với câu hỏi có từ hỏi như what, where hay when, ta giữ nguyên từ hỏi rồi cũng viết tiếp như câu kể. Quy tắc bốn: với câu mệnh lệnh và câu yêu cầu (câu bảo hoặc nhờ ai làm một việc), ta dùng tell hoặc ask rồi cộng to và động từ nguyên thể (dạng gốc chưa chia của động từ). Các từ chỉ thời gian cũng đổi theo lúc kể, như today thành that day và tomorrow thành the next day.",
@@ -19281,6 +19449,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Used to là thói quen đã về hưu: ngày xưa hay làm, giờ không làm nữa, như chiếc xe đạp cũ dựng yên trong kho.",
    "level": "Band 4.5",
    "name": "Used to - thói quen và trạng thái trong quá khứ",
    "explain": "Ví dụ đời sống trước nhé: Khi còn ở quê, ông tôi thường dậy lúc bốn giờ sáng để ra đồng, nhưng nay ông sống ở thành phố nên không dậy sớm nữa. Câu tiếng Anh là: My grandfather used to get up at four in the morning. Quy tắc một: used to cộng động từ nguyên thể (dạng gốc chưa chia của động từ) tả một thói quen hoặc một trạng thái (một tình trạng kéo dài, như từng rất nhút nhát) ở quá khứ mà nay không còn nữa. Quy tắc hai: câu phủ định (câu nói không) là did not use to, bỏ chữ d ở used vì đã có did. Quy tắc ba: câu hỏi là Did cộng chủ ngữ cộng use to, cũng bỏ chữ d ở used. Cần phân biệt nhẹ: be used to cộng động từ thêm ing nghĩa là đã quen với một việc ở hiện tại, như I am used to getting up early nghĩa là tôi đã quen dậy sớm.",
@@ -19392,6 +19562,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Quá khứ tiếp diễn là cảnh nền đang chạy thì một việc khác chen vào: I was sleeping when the phone rang.",
    "level": "Band 4.5",
    "name": "Quá khứ tiếp diễn",
    "explain": "Ví dụ đời sống trước nhé: Tối qua lúc tám giờ, cả nhà đang ăn cơm thì bỗng mất điện. Câu tiếng Anh là: We were having dinner when the lights went out. Quy tắc một: thì quá khứ tiếp diễn (thì tả một việc đang diễn ra dở dang tại một lúc trong quá khứ) có dạng was hoặc were cộng động từ thêm ing. Quy tắc hai: một việc ngắn đã xong xen vào thường dùng thì quá khứ đơn (thì kể một việc đã xong hẳn trong quá khứ), như the lights went out trong ví dụ trên. Quy tắc ba: hai việc cùng đang diễn ra song song trong quá khứ thì nối bằng while (từ nối nghĩa là trong lúc), và cả hai việc đều dùng quá khứ tiếp diễn.",
@@ -19503,6 +19675,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Quá khứ đơn là tấm ảnh chụp một thời điểm đã qua, hiện tại hoàn thành là cuộn phim kéo dài từ quá khứ tới tận bây giờ.",
    "level": "Band 5.5",
    "name": "Hiện tại hoàn thành đối chiếu quá khứ đơn",
    "explain": "Ví dụ đời sống trước nhé: Sáng nay Lan nói: 'Em làm mất chìa khóa rồi, bây giờ không vào nhà được.' Câu tiếng Anh là: I have lost my key. Không ai nói rõ Lan mất chìa khóa lúc mấy giờ, điều quan trọng là kết quả ở hiện tại: bây giờ Lan không vào nhà được. Nhưng nếu kể kèm một mốc giờ rõ ràng thì khác hẳn: Lan lost her key yesterday. Quy tắc một: thì hiện tại hoàn thành (thì nối một việc đã làm xong với kết quả còn thấy ở hiện tại) có dạng have hoặc has cộng phân từ hai (dạng thứ ba của động từ, như done hay lost). Quy tắc hai: thì quá khứ đơn (thì kể một việc đã xong hẳn) bắt buộc dùng khi có mốc thời gian rõ như yesterday, last week hay in 2019. Quy tắc ba: các dấu hiệu just, already, yet, ever và since thường đi với hiện tại hoàn thành.",
@@ -19614,6 +19788,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Mệnh đề quan hệ",
+   "hook": "Whose nói về đồ của ai, whom chỉ người ở vị trí tân ngữ: như hai chiếc chìa khóa mở hai ổ khóa khác nhau trong câu dài.",
    "level": "Band 6.5",
    "name": "Mệnh đề quan hệ chuyên sâu: whose, whom và giới từ đứng trước",
    "explain": "Ví dụ đời sống trước nhé: Bà Tư ở đầu ngõ có con trai làm bác sĩ ở Đà Nẵng, ai cũng quý bà. Câu tiếng Anh là: The woman whose son is a doctor in Da Nang is my neighbour. Quy tắc một: whose (từ thay cho tên người hoặc vật và cho biết của ai) luôn đứng trước một danh từ, như whose son hay whose roof. Quy tắc hai: whom (từ thay cho tên người khi người đó là người nhận hành động, hay gặp trong văn trang trọng) đứng sau động từ hoặc sau giới từ (từ nhỏ như to, with hay for đứng trước danh từ). Quy tắc ba: khi giới từ đứng ngay trước từ thay thế thì chỉ dùng whom cho người và which cho vật, không dùng that hay who. Quy tắc bốn: mệnh đề quan hệ không xác định (phần thêm thông tin phụ, bỏ đi vẫn hiểu đang nói về ai, luôn có dấu phẩy ở hai đầu hoặc một đầu) không dùng that và không bỏ được từ thay thế.",
@@ -19725,6 +19901,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Mạo từ",
+   "hook": "The giống ngón tay chỉ vào đúng một vật mà cả hai người cùng thấy; khi nói điều chung chung như water hay honesty thì bỏ mạo từ.",
    "level": "Band 6.0",
    "name": "Mạo từ nâng cao",
    "explain": "Ví dụ đời sống trước nhé: Mỗi tối, em gái tôi ngồi vào đàn và chơi piano rất hay: My sister plays the piano. Nhưng khi em đi học thì ta nói go to school, không có the trước school. Quy tắc một: mạo từ (từ nhỏ a, an hoặc the đặt ngay trước danh từ) là the dùng với nhạc cụ, với biển, sông và đại dương, và trong cụm the cộng tính từ để chỉ cả một nhóm người, như the elderly nghĩa là những người cao tuổi. Quy tắc hai: mạo từ rỗng (trường hợp không đặt mạo từ nào trước danh từ) dùng khi nói trường học, bệnh viện hay nhà thờ theo đúng mục đích chính, như đi học hay đi khám chữa bệnh, và cũng dùng cho bữa ăn, môn thể thao và tên ngôn ngữ. Quy tắc ba: a hay an chọn theo âm nghe được đầu tiên, không theo chữ cái, nên ta nói an hour vì chữ h không phát âm, nhưng a university vì từ này bắt đầu bằng âm yu.",
@@ -19836,6 +20014,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Tính từ, trạng từ và so sánh",
+   "hook": "So sánh hơn như cuộc chạy đua hai người: taller là cao hơn đối thủ, the tallest là cao nhất trong cả đoàn.",
    "level": "Band 3.5",
    "name": "So sánh cơ bản - hơn và nhất",
    "explain": "Nhìn ví dụ trước nhé. Anh trai cao hơn em gái: My brother is taller than my sister. Hà Nội là thành phố lớn nhất miền Bắc trong ba thành phố được nhắc: Hanoi is the biggest city of the three. Sau ví dụ là quy tắc. Khi so sánh hai người hay hai vật, ta thêm -er vào tính từ ngắn (từ chỉ tính chất như tall, big) rồi thêm than (hơn). Khi nói một người hay vật đứng đầu trong một nhóm, ta dùng the và thêm -est: the tallest (cao nhất). Tính từ dài như beautiful thì dùng more (hơn) và the most (nhất): more beautiful, the most beautiful. Ba từ hay gặp bất quy tắc (không theo quy tắc chung): good thành better, the best; bad thành worse, the worst.",
@@ -19949,6 +20129,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Going to là kế hoạch đã ghi vào sổ tay: I am going to travel - ý định rõ ràng hơn will buột miệng nói ngay lúc nghĩ.",
    "level": "Band 3.5",
    "name": "Going to - kế hoạch và dự đoán gần",
    "explain": "Nhìn ví dụ trước nhé. Tối nay Lan đã mua vé xem phim và nói: I am going to watch a film tonight. Nhìn trời đầy mây đen, bố nói: It is going to rain. Sau ví dụ là quy tắc. Ta dùng be going to (sắp, sẽ - nói về việc đã có dự định hoặc sắp xảy ra) khi nói về kế hoạch đã nghĩ trước, hoặc dự đoán dựa trên điều mắt đang thấy. Cách tạo: chủ ngữ + am/is/are + going to + động từ nguyên thể (động từ gốc chưa chia). Câu hỏi: đảo am/is/are lên đầu câu. Phủ định: thêm not sau am/is/are. Đừng nhầm với will: will hay dùng cho quyết định ngay lúc nói, còn going to dùng cho việc đã định trước.",
@@ -20062,6 +20244,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Have hoặc has cộng V3 như cánh cửa mở từ quá khứ tới hiện tại: I have eaten nghĩa là đã ăn rồi và bụng còn no đến giờ.",
    "level": "Band 4.0",
    "name": "Hiện tại hoàn thành mở đầu - have, has + V3",
    "explain": "Nhìn ví dụ trước nhé. Tuấn khoe: I have visited Hue twice. Cô giáo hỏi: Have you finished your homework? Sau ví dụ là quy tắc. Thì hiện tại hoàn thành (cách nói về việc đã làm xong hoặc đã từng làm, mà kết quả còn liên quan đến bây giờ) tạo bằng have hoặc has + V3 (động từ ở cột thứ ba, dạng đã chia sẵn như visited, finished, seen). I, you, we, they đi với have. He, she, it đi với has. Ta dùng thì này khi nói kinh nghiệm đã từng làm (đã đi, đã ăn, đã xem) mà không nói rõ thời điểm, hoặc việc vừa xong và kết quả còn đây. Khác với quá khứ đơn: quá khứ đơn luôn gắn với một mốc thời gian đã qua như yesterday, last week.",
@@ -20175,6 +20359,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Câu điều kiện và giả định",
+   "hook": "Điều kiện loại 1 như lời hẹn có thật: If it rains tomorrow, we will stay home - mưa có thể xảy ra thật, kết quả cũng thật.",
    "level": "Band 4.0",
    "name": "Câu điều kiện loại 1 - việc có thể xảy ra",
    "explain": "Nhìn ví dụ trước nhé. Mẹ dặn: If it rains tomorrow, we will stay at home. Bạn hứa: If I have time, I will help you. Sau ví dụ là quy tắc. Câu điều kiện loại 1 (câu 'nếu... thì...' nói về việc thật sự có thể xảy ra trong tương lai) có hai vế: vế if (vế điều kiện, phần bắt đầu bằng if - nếu) dùng hiện tại đơn, vế chính dùng will + động từ nguyên thể. Đừng dùng will trong vế if. Hai vế đổi chỗ cho nhau được: We will stay at home if it rains tomorrow - khi vế if đứng sau thì không cần dấu phẩy. Ngoài will, vế chính còn dùng can hoặc should khi muốn nói khả năng hay lời khuyên.",
@@ -20288,6 +20474,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Since chỉ mốc bắt đầu như ngày khắc trên thân cây, for chỉ độ dài như thước đo: since 2020, for three years.",
    "level": "Band 4.5",
    "name": "Hiện tại hoàn thành - for, since, just, already, yet",
    "explain": "Nhìn ví dụ trước nhé. Cô ấy nói: I have known Mai since 2020. Anh ấy khoe: I have lived here for ten years. Sau ví dụ là quy tắc. Với thì hiện tại hoàn thành, ta dùng for (trong khoảng - đi với một khoảng thời gian như for two weeks, for a long time) và since (từ khi - đi với một mốc thời gian như since Monday, since 2019). Ba từ hay đi kèm nữa: just (vừa mới - việc vừa xảy ra xong), already (đã rồi - việc xong sớm hơn mong đợi), yet (chưa - chỉ dùng trong câu phủ định và câu hỏi, đặt cuối câu). Nhớ phân biệt: muốn nói một việc đã kết thúc hẳn ở một thời điểm rõ ràng trong quá khứ thì quay về quá khứ đơn, không dùng hiện tại hoàn thành.",
@@ -20402,6 +20590,8 @@ const CONTENT = {
   }
  ,
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "There is như đưa tay giới thiệu một vật: There is a cat. Nhiều vật thì there are, như mở ra cả một hộp đồ.",
    "level": "Band 2.0",
    "name": "There is và there are - giới thiệu đồ vật và nơi chốn",
    "explain": "Khi muốn nói có cái gì ở đâu, ta dùng there is với danh từ số ít và there are với danh từ số nhiều. Ví dụ: There is a book on the table (Có một quyển sách trên bàn). Mẫu câu này rất hay dùng khi miêu tả phòng, lớp học và thành phố trong IELTS Speaking Part 1.",
@@ -20493,6 +20683,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Cấu trúc nhấn mạnh và đặc biệt",
+   "hook": "Mệnh lệnh là câu ra lệnh ngắn gọn: Sit down. Còn let's là lời rủ rê: Let's go, như nắm tay kéo bạn đi cùng.",
    "level": "Band 2.0",
    "name": "Câu mệnh lệnh và lời rủ rê - imperatives và let's",
    "explain": "Câu mệnh lệnh dùng động từ nguyên thể để bảo hoặc nhắc ai làm gì: Sit down, please (Mời ngồi). Lời rủ rê dùng Let's + động từ nguyên thể: Let's go (Chúng ta đi thôi). Trong lớp học và đời sống hằng ngày, hai mẫu câu này xuất hiện rất nhiều.",
@@ -20584,6 +20776,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Câu hỏi và phủ định",
+   "hook": "Do và does như người trợ giúp mở cửa cho câu hỏi: does đi với he, she, it và động từ chính trở về nguyên mẫu.",
    "level": "Band 2.5",
    "name": "Câu hỏi và câu phủ định ở hiện tại đơn - do, does",
    "explain": "Muốn hỏi hoặc phủ định ở hiện tại đơn, ta mượn trợ động từ do (với I, you, we, they) và does (với he, she, it). Sau do và does, động từ chính trở về nguyên thể: Does she like coffee? (Cô ấy có thích cà phê không?) - động từ like không thêm s vì đã có does đứng trước.",
@@ -20675,6 +20869,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Danh từ và lượng từ",
+   "hook": "Many đếm từng cái một, much đong cả thể không đếm được, some dùng trong câu khẳng định, any hay đi với câu hỏi và phủ định.",
    "level": "Band 2.5",
    "name": "Lượng từ đời sống - much, many, some, any",
    "explain": "Many đi với danh từ đếm được số nhiều (many books - nhiều quyển sách), much đi với danh từ không đếm được (much water - nhiều nước). Some thường dùng trong câu khẳng định, any dùng trong câu hỏi và câu phủ định. Ví dụ: I have some friends here (Tôi có vài người bạn ở đây), nhưng Do you have any questions? (Bạn có câu hỏi nào không?).",
@@ -20766,6 +20962,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Tính từ, trạng từ và so sánh",
+   "hook": "Tính từ tô màu cho danh từ như sơn lên tường, trạng từ thêm -ly chỉ cách làm việc: quick là nhanh, quickly là làm một cách nhanh.",
    "level": "Band 3.0",
    "name": "Tính từ và trạng từ - miêu tả và cách thức",
    "explain": "Tính từ đứng trước danh từ hoặc sau động từ be để miêu tả: a careful driver (một tài xế cẩn thận), she is careful (cô ấy cẩn thận). Trạng từ thường thêm -ly vào tính từ và bổ nghĩa cho động từ, cho biết hành động xảy ra như thế nào: He drives carefully (Anh ấy lái xe cẩn thận). Một số trạng từ có dạng đặc biệt cần nhớ riêng: good - well, fast - fast, hard - hard.",
@@ -20857,6 +21055,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Thì và thể của động từ",
+   "hook": "Động từ bất quy tắc như những người bạn cá tính: go thành went, see thành saw - không theo luật thêm -ed, phải nhớ từng bạn một.",
    "level": "Band 3.5",
    "name": "Động từ bất quy tắc thường gặp ở quá khứ đơn",
    "explain": "Nhiều động từ quen thuộc không thêm -ed ở quá khứ mà đổi hẳn dạng: go - went, see - saw, take - took, have - had, make - made. Muốn kể chuyện quá khứ trôi chảy trong IELTS Speaking Part 2, bạn cần thuộc lòng các động từ bất quy tắc hay gặp nhất và dùng chúng thật chính xác.",
@@ -20968,6 +21168,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Mạo từ",
+   "hook": "A là một vật bất kỳ mới nhắc lần đầu, the là chính vật đó khi nhắc lại: như nhân vật xuất hiện lần hai trong truyện thì được gọi rõ tên.",
    "level": "Band 5.0",
    "name": "Mạo từ a, an, the và không mạo từ - dùng đúng trong bài viết",
    "explain": "Mạo từ là lỗi nhỏ nhưng rất hay bị trừ điểm ở dải Band 5.0-6.0. Nguyên tắc cốt lõi: dùng a hoặc an khi nhắc một vật chưa xác định ở lần đầu (a university, an hour - chú ý nhìn vào âm đầu tiên chứ không phải chữ đầu tiên); dùng the khi người đọc đã biết rõ đang nói về vật nào; không dùng mạo từ trước danh từ nói về khái niệm chung (Education is important). Nắm chắc ba nguyên tắc này sẽ giúp bài Writing sạch lỗi hơn hẳn.",
@@ -21079,6 +21281,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Mẫu động từ",
+   "hook": "Want rủ to đi cùng, enjoy lại thích đi với -ing: mỗi động từ có bạn đồng hành riêng, học theo cặp thì nhớ rất lâu.",
    "level": "Band 5.0",
    "name": "Mẫu động từ - V + to V và V + V-ing",
    "explain": "Khi hai động từ đứng cạnh nhau, động từ thứ hai phải đi theo mẫu của động từ đứng trước: want, decide, hope đi với to V (I decided to study abroad - Tôi quyết định đi du học); enjoy, avoid, finish đi với V-ing (She enjoys reading - Cô ấy thích đọc sách). Một số động từ như stop và remember còn đổi nghĩa theo mẫu đi kèm. Đây là điểm ngữ pháp xuất hiện dày đặc trong Writing Task 2 ở dải Band 5.0-6.5 nên cần nắm thật chắc.",
@@ -21190,6 +21394,8 @@ const CONTENT = {
    ]
   },
   {
+   "fam": "Giới từ và liên từ",
+   "hook": "Despite như mang ô đi xuyên qua mưa: Despite the rain, ta vẫn đi - sau despite là danh từ hoặc V-ing, không phải cả câu đầy đủ.",
    "level": "Band 5.0",
    "name": "Despite và in spite of - nhượng bộ với danh từ và V-ing",
    "explain": "Although đi với một mệnh đề đầy đủ (Although it rained, we went out - Mặc dù trời mưa, chúng tôi vẫn ra ngoài), còn despite và in spite of chỉ đi với danh từ hoặc V-ing: Despite the rain, we went out. Lẫn lộn hai mẫu này là lỗi kinh điển ở dải Band 5.0-5.5. Dùng đúng despite và in spite of sẽ giúp câu văn gọn gàng và học thuật hơn trong Writing Task 2.",
@@ -21303,6 +21509,7 @@ const CONTENT = {
  ],
  "reading": [
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 6.0",
    "title": "The Rise of Urban Farming",
    "text": "In recent decades, cities around the world have witnessed an unexpected agricultural movement: urban farming. Rooftops, abandoned warehouses and even underground tunnels are being converted into spaces where vegetables and herbs are grown. Supporters argue that producing food inside cities reduces the distance food travels, known as 'food miles', and therefore cuts carbon emissions.\n\nOne of the most advanced forms of urban farming is vertical farming, in which crops are grown in stacked layers under artificial light. Because the environment is fully controlled, vertical farms use up to 95 per cent less water than traditional fields and can produce crops throughout the year, regardless of the weather outside. However, the electricity needed to power the lights is expensive, and critics point out that this can cancel out the environmental benefits.\n\nDespite these challenges, urban farming is unlikely to disappear. In Singapore, which imports more than 90 per cent of its food, the government aims to produce 30 per cent of the country's nutritional needs locally by 2030. Experts stress that urban farms will never completely replace rural agriculture, but they can play an important supporting role, especially for fresh produce such as leafy greens and herbs.",
@@ -21390,6 +21597,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "level": "Band 6.5",
    "title": "Why We Sleep",
    "text": "For most of human history, sleep was regarded simply as a passive state in which the body rested. Modern neuroscience has overturned this view. During sleep, the brain is remarkably active: it sorts through the experiences of the day, strengthens important memories and discards information that is not needed.\n\nOne influential theory is that sleep helps to flush toxic waste products from the brain. In experiments on mice, researchers found that during sleep, the spaces between brain cells expand, allowing fluid to wash away proteins that build up during waking hours. Some of these proteins are associated with Alzheimer's disease, which may explain why long-term sleep deprivation is linked to a higher risk of dementia.\n\nSleep also regulates hormones that control hunger. People who sleep for fewer than six hours a night tend to produce more ghrelin, a hormone that stimulates appetite, and less leptin, which signals fullness. As a result, chronic lack of sleep is strongly connected with weight gain and obesity.\n\nDespite this evidence, modern lifestyles increasingly cut into sleep. Artificial light, shift work and the constant presence of screens have reduced average sleep duration in many countries. Sleep scientists warn that treating sleep as a luxury, rather than a biological necessity, may carry serious long-term costs for public health.",
@@ -21477,6 +21685,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Du lịch và giao thông",
    "level": "Band 5.5",
    "title": "The History of the Bicycle",
    "text": "A. The earliest bicycle, built in Germany in 1817, had two wooden wheels and no pedals. Riders pushed themselves along with their feet. Despite its simple design, it quickly became popular with young men of fashion in London and Paris.\n\nB. In the 1860s, French engineers added pedals to the front wheel, creating the machine known as the 'boneshaker' because of its hard wooden wheels and iron frame. Riding it over rough roads was so uncomfortable that many riders preferred to walk.\n\nC. The 1870s saw the arrival of the penny-farthing, with its enormous front wheel. It could travel fast, but mounting and stopping were dangerous, and falls often caused serious injuries. Cycling at this time remained a sport for daring young men rather than the general public.\n\nD. The breakthrough came in the 1880s with the 'safety bicycle', which had two equal wheels and a chain driving the back wheel. With the later addition of air-filled tyres, cycling became comfortable and affordable. By the 1890s, millions of ordinary people, including women, had taken up cycling, and the bicycle began to transform daily transport.",
@@ -21565,6 +21774,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 6.5",
    "title": "The Plastic Problem in Our Oceans",
    "text": "Every year, an estimated eight million tonnes of plastic enter the world's oceans. Much of it begins its journey far inland, carried by rivers from cities where waste collection is poor or non-existent. Once at sea, larger items are broken down by sunlight and waves into tiny fragments known as microplastics, which have now been found in the most remote waters on Earth, and even in Arctic ice.\n\nThe impact on wildlife is severe. Sea turtles mistake plastic bags for jellyfish, a favourite food, while seabirds feed fragments of plastic to their chicks. Perhaps more worrying is what happens to microplastics: they are eaten by tiny sea creatures, which are in turn eaten by fish, meaning plastic particles move up the food chain and may eventually reach human dinner tables, although the health effects are not yet fully understood.\n\nEfforts to tackle the problem operate at several levels. Some countries have banned single-use items such as plastic straws and bags, or introduced deposit schemes that pay consumers to return bottles. Meanwhile, engineers have developed floating barriers designed to collect plastic in rivers before it reaches the sea. Environmental groups argue, however, that the only long-term solution is to reduce the production of plastic in the first place, since recycling rates remain low worldwide.",
@@ -21653,6 +21863,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "level": "Band 7.0",
    "title": "The Psychology of Colour",
    "text": "A. Colour surrounds us, yet its influence on behaviour is only partly understood. Psychologists have long debated whether responses to colour are learned through culture or rooted in biology. Red, for instance, is associated with danger and excitement in many societies, but with luck and prosperity in China.\n\nB. The strongest evidence concerns the colour red in competitive situations. In one well-known study, athletes wearing red won significantly more contests than those in blue, a finding the researchers linked to red's association with dominance. Similar results have been reported in academic settings, where students exposed to red before a test sometimes performed worse, possibly because red triggers avoidance of failure.\n\nC. Marketers have exploited colour psychology for decades. Fast-food chains famously favour red and yellow, colours said to stimulate appetite and a sense of urgency. By contrast, banks and technology firms often choose blue, which conveys trust and stability, while green is used to suggest environmental responsibility - sometimes, critics argue, misleadingly.\n\nD. More recently, researchers have urged caution. Many early studies were small, and their results have proved hard to replicate. Individual experience, context and culture all shape how a colour is perceived, so broad claims that a particular shade will always produce a particular effect should be treated with scepticism. Colour matters, it seems, but rarely in the simple way that popular accounts suggest.",
@@ -21742,6 +21953,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "level": "Band 5.5",
    "title": "Coffee: A Global Habit",
    "text": "Legend has it that coffee was first discovered in Ethiopia, where a goat herder noticed his animals becoming unusually lively after eating red berries from a certain bush. Whether or not the story is true, coffee drinking spread from Ethiopia to the Arabian Peninsula, and by the seventeenth century coffee houses had appeared across Europe, where they became centres of business and debate.\n\nToday, coffee is one of the most valuable trading goods in the world, second only to oil in some estimates. More than two billion cups are consumed every day. The industry employs around 25 million farmers, most of them in developing countries in Africa, Asia and Latin America, where coffee is often a vital source of income.\n\nHowever, the future of coffee is uncertain. The coffee plant grows best in a narrow range of temperatures, and climate change is shrinking the areas where it can be cultivated. Scientists are working to breed new varieties that can survive hotter, drier conditions. Without such efforts, the world's favourite drink could become a luxury that few can afford.",
@@ -21829,6 +22041,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "level": "Band 6.0",
    "title": "The Future of Public Libraries",
    "text": "A. When public libraries first opened in the nineteenth century, their purpose was clear: to lend books to people who could not afford to buy them. For over a hundred years, rows of shelves and silent reading rooms defined what a library was.\n\nB. The arrival of the internet led many commentators to predict the death of the library. Why visit a building, they asked, when almost any book or fact is available on a screen at home? Library budgets were cut in many countries, and hundreds of branches closed.\n\nC. Yet reports of the library's death appear to have been exaggerated. Many libraries have reinvented themselves as community hubs. Alongside books, they now offer computer classes for the elderly, homework clubs for teenagers, language conversation groups and even help with filling in official forms. In some cities, libraries lend tools, musical instruments and seeds, not just books.\n\nD. Librarians argue that the library's core value was never really the books themselves, but free and equal access to knowledge and a shared public space. As long as those needs exist, they suggest, the library will survive, though its shelves may look very different from those of a century ago.",
@@ -21918,6 +22131,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "level": "Band 7.0",
    "title": "Antibiotic Resistance: A Silent Threat",
    "text": "When Alexander Fleming discovered penicillin in 1928, medicine entered a new era. Infections that had once killed millions became routinely curable, and surgery grew far safer. Few at the time could have predicted that, less than a century later, doctors would be warning of a return to a pre-antibiotic age.\n\nThe problem is evolution. When antibiotics are used, most bacteria die, but a few with natural resistance survive and multiply. The more often antibiotics are used, the faster resistant strains spread. This process has been accelerated by decades of over-prescription for minor illnesses, and by the widespread use of antibiotics in farming, where they are given to healthy animals to promote growth.\n\nThe consequences are already visible. Infections such as tuberculosis are reappearing in forms that resist standard drugs, requiring treatments that are longer, more toxic and far more expensive. The World Health Organization estimates that resistant infections already contribute to millions of deaths each year.\n\nFinding new antibiotics is scientifically difficult and commercially unattractive: a new drug may be held in reserve and used rarely, so pharmaceutical companies struggle to recover their investment. Experts argue that governments must create new incentives for research, while also reducing unnecessary use. Without coordinated global action, they warn, routine operations and even minor injuries could once again become life-threatening.",
@@ -22005,6 +22219,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 6.5",
    "title": "Cooling Our Cities",
    "text": "Cities are often several degrees warmer than the countryside around them, a phenomenon known as the urban heat island effect. The main causes are dark surfaces such as asphalt, which absorb heat during the day and release it at night, and a lack of vegetation. As climate change raises global temperatures, already hot cities are becoming increasingly uncomfortable, and in extreme cases dangerous, particularly for the elderly.\n\nOne of the simplest remedies is to plant more trees. A single large tree can provide the cooling effect of several air conditioners, shading buildings and releasing moisture into the air. Cities such as Singapore and Melbourne have set ambitious targets to expand their tree cover, treating urban forests as essential infrastructure rather than decoration.\n\nTechnology also offers solutions. 'Cool pavements' made of reflective materials can lower surface temperatures substantially, while green roofs, covered in plants, insulate buildings and absorb rainwater. In Los Angeles, streets have even been painted white in experimental projects to reflect sunlight.\n\nSuch measures are not merely about comfort. Heatwaves already kill more people in many countries than any other weather-related disaster, and air conditioning, the obvious individual response, worsens the problem by consuming huge amounts of energy and pushing hot air outside. Cooling our cities, planners argue, is fast becoming a public health necessity.",
@@ -22093,6 +22308,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "level": "Band 7.5+",
    "title": "The Science of Habit",
    "text": "Why is it so difficult to break a bad habit, even when we know it harms us? Behavioural scientists argue that habits are not stored in the same way as conscious decisions. Once a behaviour has been repeated in a stable context, it becomes linked to environmental cues - a place, a time of day, the preceding action - and can be triggered automatically, with little conscious thought.\n\nThis automaticity explains both the power and the persistence of habits. In a classic experiment, cinema-goers ate stale popcorn they did not even like, simply because the cinema context triggered their popcorn-eating habit. When the same people ate in a meeting room, the effect disappeared. Intention, it seemed, mattered less than environment.\n\nSuch findings have practical implications. Rather than relying on willpower, behaviour-change programmes increasingly focus on redesigning environments: placing fruit at eye level in canteens, for example, or making staircases more visible than lifts. If cues drive behaviour, changing the cues may be more effective than lecturing people about their choices.\n\nNone of this denies personal responsibility, but it reframes it. The most successful changers appear to be those who engineer their surroundings so that the desired behaviour becomes the easy, default option. Willpower, in this view, is less a matter of character than of design.",
@@ -22181,6 +22397,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "level": "Band 5.0",
    "title": "The Story of Chocolate",
    "text": "Chocolate comes from cacao beans. These beans grow on small trees in hot countries in Central America. Long ago, the Maya people used the beans to make a drink. The drink was bitter and had no sugar. The Aztec people also liked cacao. They used the beans as money to buy food in markets. They picked the beans by hand.\n\nPeople from Spain took cacao to Europe about 500 years ago. At first, only rich people drank chocolate because it was very expensive. Later, people added sugar to the drink, so it tasted sweet. Chocolate became popular in Spain, France and England. People met in special shops to drink it and talk with friends.\n\nThen, in the 1800s, new machines changed chocolate. The machines could make hard chocolate bars. A company in England sold the first bar in 1847. Big factories made chocolate faster and cheaper. Workers in the factories made many bars every day. Soon, normal families could buy it too. Children liked it as a small treat after meals.\n\nToday, people all over the world eat chocolate. Most cacao now grows in West Africa, in countries like Ivory Coast and Ghana. Dark chocolate can be good for the heart in small amounts. But many chocolate bars have a lot of sugar and fat. Doctors say we should not eat too much. It is best to eat a little at a time and choose dark chocolate.",
@@ -22270,6 +22487,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 5.0",
    "title": "Why Cities Need Parks",
    "text": "Every big city needs parks. A park is a green place with trees, grass and paths. People go there to walk, sit and rest. The air in a park is clean and cool. Trees take in bad gases and give out oxygen. In summer, the park is cooler than busy streets with many cars.\n\nParks are good for our health. Doctors tell people to walk in the park every day. People can run, ride a bike or play football there for free. Children can play outside with friends. This helps them grow strong and happy. People also feel calm in a park. They sleep better at night after time in green places.\n\nAnimals and insects also need parks. Birds can live in old trees and find food there. Bees and butterflies visit flowers in the grass. Some parks do not cut the grass in some areas. This helps small animals find a safe home in the middle of the city. Ponds give water to birds and frogs.\n\nIt costs money to build a park and look after it. Some city leaders want to sell park land for shops or flats. But this is a bad idea. Homes near a nice park cost more money. Local shops also earn more from visitors to the park. A park is not a waste of land. It keeps people healthy, helps nature and makes the city a better place to live.",
@@ -22358,6 +22576,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công nghệ và truyền thông",
    "level": "Band 5.5",
    "title": "The Postal Service: A History",
    "text": "Long before telephones and the internet, letters were the main way for people to communicate over long distances. In ancient Egypt and China, rulers employed messengers who travelled on foot or on horseback to carry official messages. These early systems served only kings and governments. Ordinary people had to find a traveller who was willing to carry a letter for them, and delivery could take many months.\n\nThe first public postal service in Britain began in 1635, when anyone could pay to send a letter through royal messengers. At that time, the person who received the letter usually paid the charge, and the price depended on the distance and the number of pages. Because of this system, some people refused letters they did not want, and the service lost money.\n\nA major reform came in 1840 with the introduction of the postage stamp. Sir Rowland Hill suggested that the sender should pay a single low price for any letter inside the country, whatever the distance. The first stamp, known as the Penny Black, showed the head of Queen Victoria. Letter writing quickly became popular, and the number of letters sent in Britain doubled within a few years.\n\nIn the twentieth century, aeroplanes made international mail much faster, and sorting machines replaced workers who had sorted letters by hand. Today, email and messaging applications have greatly reduced the number of personal letters. Nevertheless, postal services remain busy delivering parcels, as online shopping continues to grow around the world. The modern post is therefore less about letters and more about packages in most countries today.",
@@ -22447,6 +22666,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 6.0",
    "title": "How Volcanoes Shape the Earth",
    "text": "A volcano begins deep below the surface of the Earth, where extremely hot rock, called magma, collects in underground chambers. Pressure builds slowly over hundreds or thousands of years. When the pressure becomes too great, the magma forces its way upwards through cracks and erupts at the surface as lava, ash and gas. Some eruptions are gentle flows, while others explode with a force greater than any weapon made by humans.\n\nOver long periods, volcanic activity creates new land. The Hawaiian Islands, for example, were formed entirely by underwater volcanoes that grew until they rose above the sea. Lava that cools and hardens adds fresh layers of rock, so an island can continue to grow with each eruption. Volcanoes also form rich soil, because ash breaks down into minerals that plants need. This explains why farmers often live and work on volcanic slopes, despite the obvious dangers.\n\nThose dangers, however, are considerable. In 1991, Mount Pinatubo in the Philippines produced one of the largest eruptions of the twentieth century. Ash clouds reduced global temperatures by about 0.5 degrees Celsius for more than a year, because tiny particles blocked sunlight. Fast-moving flows of hot gas have destroyed whole towns in minutes, and poisonous gases can remain a threat long after an eruption has ended.\n\nToday, scientists monitor active volcanoes with instruments that measure small earthquakes, ground movement and gas emissions. These observations cannot prevent an eruption, but they can provide warnings that save lives by allowing towns to be evacuated in time. Understanding volcanoes is therefore essential, both for appreciating how the surface of our planet was built and for protecting the millions of people who live in its shadow.",
@@ -22535,6 +22755,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Sở thích và giải trí",
    "level": "Band 5.5",
    "title": "The Revival of Vinyl Records",
    "text": "For most of the twentieth century, music lovers bought their favourite songs on vinyl records. These black discs were played on turntables. A needle read tiny grooves in the surface. Then, in the 1980s, compact discs arrived. They had cleaner sound and greater convenience. Vinyl almost disappeared from shops, and many people thought it would never return.\n\nThose people were wrong. Sales of vinyl records have risen every year since the mid-2000s. In several countries, they now earn more money than compact discs. Young listeners grew up with downloads and streaming. They are among the most enthusiastic buyers. In record shops, customers enjoy looking through boxes of albums and talking about music with staff. A phone screen cannot give this experience.\n\nSeveral reasons explain this revival. Many fans say vinyl gives a warmer and richer sound. But scientists say people cannot always hear the difference. Other fans like the large album covers. The covers show artwork and song information, and digital music does not have these. Buying a record also feels like a deliberate act of support for musicians. Streaming pays artists only a tiny amount for each play.\n\nThe revival has created problems as well. Demand is now so high that pressing factories cannot produce records quickly enough. Most of these factories closed many years ago. New releases may be delayed for months, and prices have risen sharply. Even so, industry experts believe vinyl will remain a healthy specialist market, coexisting with streaming rather than replacing it. The old black disc still has a long life ahead.",
@@ -22624,6 +22845,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 6.0",
    "title": "Coral Reefs under Threat",
    "text": "Coral reefs occupy less than one per cent of the ocean floor, yet they support roughly a quarter of all marine species. Corals may look like colourful rocks, but they are in fact colonies of tiny animals. Each animal builds a hard skeleton around itself, and over thousands of years these skeletons grow into the complex structures that shelter fish, turtles, sharks and countless smaller creatures. For this reason, scientists often describe reefs as the cities of the sea.\n\nThe greatest threat to reefs today is warming water. Corals live in partnership with microscopic algae, which provide them with food and give them their bright colours. When the sea becomes too warm for too long, corals expel these algae and turn white, a process known as bleaching. Without their partners, corals starve and may die. The Great Barrier Reef in Australia, the largest reef system on Earth, has suffered several mass bleaching events since 2016.\n\nHuman activity adds further pressure. Fertilisers washed from farms encourage the growth of seaweed, which blocks the sunlight that corals need. Careless tourism damages fragile colonies, and plastic waste is increasingly found even on remote reefs. In addition, the ocean absorbs much of the carbon dioxide that humans produce, becoming more acidic. Acidic water makes it harder for corals to build their skeletons, slowing their growth still further.\n\nDespite these problems, there are signs of hope. Marine reserves where fishing is banned allow damaged reefs to recover surprisingly quickly. Scientists are also breeding corals that can tolerate warmer water and planting them on damaged reefs. Such projects cannot succeed, however, unless global emissions fall. Protecting reefs therefore requires action at every level, from individual tourists to international governments.",
@@ -22712,6 +22934,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "level": "Band 6.5",
    "title": "The Science of Memory",
    "text": "Human memory is not a single system but a set of connected processes. Psychologists usually divide it into three stages: taking in information, storing it, and retrieving it when needed. Short-term memory holds only a small amount of material, typically about seven items, for less than a minute. Long-term memory, by contrast, appears to have almost no limit, although finding a particular item within it can be surprisingly difficult.\n\nOne of the most reliable findings in memory research is that repetition alone is a poor way to learn. Students who simply reread their notes often feel confident, yet they forget most of the material within days. Far more effective is retrieval practice, in which learners test themselves and actively recall answers. Experiments consistently show that a single test after studying produces better long-term results than several extra hours of rereading.\n\nSleep also plays a crucial role. During deep sleep, the brain replays the experiences of the day and transfers selected information from short-term storage into long-term memory, a process called consolidation. People who sleep well after learning a new skill, such as playing a piece of music, usually perform it more accurately the next day than those who stay awake. This is one reason why studying all night before an examination is often counterproductive.\n\nMemory is not a perfect recording, however. Each time we recall an event, we partly rebuild it, and details from later conversations or photographs can be absorbed into the original memory. Psychologists call these errors false memories, and they explain why eyewitnesses in court cases sometimes describe events with great confidence but limited accuracy. Understanding that memory is reconstructive, rather than reproductive, has important consequences for education, medicine and the law.",
@@ -22801,6 +23024,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công nghệ và truyền thông",
    "level": "Band 6.5",
    "title": "Drones in Modern Agriculture",
    "text": "Unmanned aerial vehicles, commonly known as drones, are rapidly changing the way farmers manage their land. Equipped with cameras and sensors, a drone can survey hundreds of hectares in a single morning, collecting images that would take a worker days to gather on foot. Modern software then converts these images into detailed maps showing crop health, soil moisture and the early signs of disease or insect damage.\n\nThe greatest advantage of this technology is precision. Instead of spraying an entire field with fertiliser or pesticide, farmers can treat only the small areas that actually need it. Trials in several countries suggest that targeted spraying can reduce chemical use by as much as 30 per cent, lowering costs while limiting the pollution of nearby rivers. Drones fitted with special cameras can even identify individual plants that are short of water, allowing irrigation to be directed exactly where it is required.\n\nDrones are also beginning to perform physical tasks. Larger models can carry tanks of liquid or bags of seed, planting rice in flooded fields that are difficult for heavy machinery to enter. In mountainous regions of Japan and China, drones deliver supplies to isolated farms and monitor terraces for landslides after heavy rain. Such applications are especially valuable where the agricultural workforce is ageing and young people are leaving villages for city jobs.\n\nNevertheless, significant obstacles remain. Professional drones are expensive, batteries typically last less than an hour, and strict aviation regulations limit where and how high they may fly. There are also concerns about privacy when drones cross neighbouring properties. Most specialists therefore predict a gradual adoption: drones will complement, rather than wholly replace, traditional farming knowledge for many years to come.",
@@ -22890,6 +23114,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Du lịch và giao thông",
    "level": "Band 6.5",
    "title": "The Economics of Tourism",
    "text": "Tourism is one of the largest industries in the world, employing roughly one in ten workers globally. Visitors spend money on hotels, restaurants, transport and entertainment, and that spending supports jobs far beyond the businesses they visit directly. When a hotel buys food from local farmers or hires local builders, tourist money circulates through the wider economy. Economists call this the multiplier effect, and it is the main reason governments invest heavily in promoting their countries abroad.\n\nThe benefits, however, are not shared equally. In many developing destinations, a large proportion of tourist spending leaks abroad. International hotel chains may import food, employ foreign managers and transfer their profits to another country. This process, known as economic leakage, explains why some resorts that welcome millions of visitors each year leave nearby communities with relatively low incomes and poorly paid seasonal work.\n\nTourism also imposes costs that rarely appear in official statistics. Popular cities must pay for extra cleaning, policing and road repairs, while residents may face rising rents as flats are converted into short-term holiday lets. Environmental damage is another hidden cost: flights generate substantial carbon emissions, and fragile sites can be worn away by sheer numbers of feet. Several destinations, including Venice and Barcelona, have therefore introduced entry charges or strict limits on visitor numbers.\n\nThe challenge for policy makers is to keep the economic gains while reducing the losses. Encouraging visitors to stay longer, travel outside the peak season and spend money with locally owned businesses can all help. So can tourism taxes, provided the revenue is visibly reinvested in the community. Tourism will remain a powerful economic force, but its long-term success depends on managing it as carefully as any other industry.",
@@ -22978,6 +23203,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 7.0",
    "title": "Rewilding: Bringing Nature Back",
    "text": "Rewilding is an approach to conservation that aims to restore ecosystems by allowing natural processes to resume with minimal human management. Unlike traditional conservation, which often tries to preserve a landscape exactly as it is, rewilding accepts change. Its central technique is the reintroduction of keystone species - animals whose behaviour shapes the whole environment. When such species disappear, ecosystems simplify; when they return, complexity and diversity frequently follow.\n\nThe most celebrated example began in 1995, when wolves were reintroduced to Yellowstone National Park in the United States after an absence of some seventy years. The wolves reduced deer numbers and, more importantly, changed deer behaviour, as herds avoided valleys where they could easily be ambushed. Trees and shrubs that had been heavily grazed began to recover along riverbanks. This stabilised the soil, altered the course of rivers, and created habitats for beavers, songbirds and fish - a chain of effects scientists call a trophic cascade.\n\nIn Europe, rewilding projects have reintroduced bison to the Carpathian Mountains and beavers to British rivers, from which they had been absent for centuries. Supporters argue that these animals perform ecological work - grazing, damming and disturbing the soil - far more cheaply and continuously than human teams with machinery. Farmers, however, sometimes object: beavers flood fields, wolves occasionally kill livestock, and expanding wild populations require land that agriculture also needs.\n\nWhether rewilding can be applied at a scale large enough to address biodiversity loss and climate change remains an open question. Critics warn against romanticising a wilderness that never truly existed, since human influence stretches back thousands of years. Supporters reply that rewilding is not about recreating the past but about securing a richer future. The debate continues, but the early evidence suggests that giving nature more autonomy can deliver benefits that intensive management cannot.",
@@ -23067,6 +23293,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 7.0",
    "title": "How Trees Communicate",
    "text": "A forest looks like a collection of individuals competing for light and space, yet research over the past three decades has revealed that trees are connected in ways that resemble a community. Beneath the soil, the roots of most trees are joined by networks of fungi. In return for sugars produced by photosynthesis, the fungi supply trees with water and minerals gathered from a far larger area of soil than roots alone could reach.\n\nThese fungal networks, sometimes nicknamed the wood wide web, do more than distribute food. Experiments using radioactive carbon have demonstrated that older trees can transfer nutrients to shaded seedlings of their own species, effectively subsidising the young plants until they reach the light. Trees under attack by insects release chemical signals into the network - and into the air - prompting neighbours to raise the levels of defensive compounds in their leaves before the insects arrive.\n\nSuch findings have forced scientists to reconsider what competition means in a forest. It is now clear that natural selection has favoured not only rivalry but also a degree of cooperation, since a healthy surrounding forest protects each tree from wind, drought and disease. Nevertheless, some researchers urge caution. They point out that the amounts of nutrients transferred are often small, and they question whether describing trees as talking or altruistic misleads the public by importing human social language into biology.\n\nWhatever terminology is preferred, the practical implications are significant. Forestry practices that clear entire areas and plant a single species destroy fungal networks that may take decades to rebuild. Managers who retain some mature trees when harvesting, by contrast, preserve the network and help newly planted seedlings to establish themselves. The hidden life of the forest, once understood, changes how it should be treated.",
@@ -23156,6 +23383,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công nghệ và truyền thông",
    "level": "Band 7.0",
    "title": "The Ethics of Artificial Intelligence",
    "text": "Artificial intelligence systems now influence decisions that were once reserved for human judgement, from selecting candidates for a job interview to approving loans and even recommending medical treatment. Because these systems learn patterns from enormous quantities of past data, they can operate at a speed and scale no human team could match. Yet this very strength raises an ethical problem: if the data reflect historical prejudice, the system will reproduce that prejudice, often in ways that are difficult to detect.\n\nA frequently cited concern is bias in recruitment software. If a company has historically hired mostly men for senior technical roles, an algorithm trained on its records may learn to favour male applicants, even though gender was never explicitly supplied as a criterion. Similarly, facial recognition systems have repeatedly been shown to perform less accurately on darker skin tones, because the images used to train them were not sufficiently diverse. Such errors are not merely technical faults; they can deny people opportunities and reinforce existing inequalities.\n\nA second challenge is accountability. When a self-driving car causes an accident, who bears responsibility - the owner, the manufacturer, or the programmer who wrote the code? Traditional legal frameworks assume a human decision maker, but an AI system may reach a conclusion through a process so complex that even its designers cannot fully explain it. This opacity, often called the black box problem, undermines public trust and complicates the search for compensation after harm has occurred.\n\nGovernments are beginning to respond. The European Union has introduced legislation that classifies AI applications by risk and imposes the strictest requirements on those affecting health, safety and fundamental rights. Ethicists argue, however, that regulation alone is insufficient. Developers must test systems for bias before release, companies must allow independent audits, and affected individuals must have a genuine right to appeal. Only by combining law with professional responsibility can societies gain the benefits of AI without surrendering fairness.",
@@ -23244,6 +23472,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "level": "Band 7.5+",
    "title": "What Makes a Language Die?",
    "text": "Of the roughly 7,000 languages spoken in the world today, linguists estimate that one disappears approximately every two weeks. A language is considered dead not when its last elderly speaker passes away, but earlier, at the moment when children cease to learn it as their mother tongue. Once that intergenerational transmission is broken, the countdown becomes almost impossible to reverse, because a language survives only through daily use in homes, markets and playgrounds.\n\nThe forces behind this collapse are rarely mysterious. Economic pressure is usually foremost: parents rationally conclude that fluency in a dominant language such as English, Mandarin or Spanish will secure better employment for their children, and so they stop speaking the ancestral language at home. Formal education reinforces the shift when schools teach exclusively in the national language and treat local tongues as obstacles to progress. Mass media and, more recently, social platforms intensify the effect by rewarding competence in majority languages with visibility and status.\n\nWhat is lost when a language dies extends far beyond vocabulary. Many indigenous languages encode sophisticated ecological knowledge - names for plants with medicinal properties, classifications of soil, and seasonal calendars refined over centuries - that has never been written down in any other form. Languages also embody distinct ways of carving up reality: some oblige speakers to specify the source of their knowledge, while others organise space by absolute directions rather than by left and right. When the language vanishes, an entire framework for interpreting the world vanishes with it.\n\nRevival is difficult but not hopeless. Hebrew, once confined largely to religious texts, was successfully restored as an everyday vernacular in the twentieth century, and Welsh and Maori have both been strengthened by immersion schools in which young children are taught entirely through the threatened language. Such programmes succeed only when communities themselves demand them and when governments fund them over decades, not years. The fate of a language, ultimately, is decided less by linguists than by the daily choices of ordinary families.",
@@ -23333,6 +23562,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "level": "Band 7.5+",
    "title": "Why Time Seems to Speed Up",
    "text": "Most adults share a curious impression: the years appear to pass more rapidly now than they did in childhood, when a single summer holiday could feel almost endless. Psychologists argue that this acceleration is not an illusion in any simple sense, but a predictable consequence of how the brain records experience. Subjective time, unlike clock time, is constructed retrospectively from memory, and it expands or contracts according to the density of memorable events a period contains.\n\nThe most influential explanation is known as the proportional theory. For a ten-year-old, one year represents a tenth of an entire lifetime, whereas for a fifty-year-old it represents merely a fiftieth. Each new year therefore feels proportionally smaller against the accumulated total. Although elegant, this theory cannot be the whole story, since it predicts a smooth, steady acceleration, while people in fact report sudden changes - decades that crawl in routine jobs and months that vanish during periods of upheaval.\n\nA complementary account focuses on novelty and attention. The brain devotes little encoding effort to familiar, repetitive activity: a commuter who has driven the same route a thousand times will retain almost nothing of today's journey, and in retrospect the week compresses into a blur. Novel experiences, by contrast, are encoded in rich detail. This is why the first days in an unfamiliar city feel long - the mind is registering an unusually large number of distinct impressions - and why returning travellers often insist their holiday lasted far longer than the calendar allows.\n\nThese insights carry practical implications that are almost paradoxical. To make life feel longer, one should not attempt to cram more activity into each day, since frantic busyness without reflection leaves few durable memories. Instead, researchers recommend deliberately introducing modest novelty - a new route, a new skill, regular breaks in routine - and periodically reviewing photographs or journals to consolidate what happened. Time cannot be slowed, but the remembered life can be lengthened, and for human beings it is the remembered life that ultimately counts.",
@@ -23422,6 +23652,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "level": "Band 2.0",
    "title": "My Family",
    "text": "My name is Lan. I live in Hanoi with my family. There are four people in my family.\n\nMy father is a teacher. He works at a school. My mother is a doctor. She works at a hospital. I have one brother. His name is Minh. He is ten years old.\n\nWe are happy together. In the evening, we eat dinner and talk. I love my family very much.",
@@ -23507,6 +23738,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "level": "Band 2.5",
    "title": "My Day",
    "text": "I am Nam. I am a student. I get up at six o'clock every day.\n\nI go to school at seven o'clock. At school, I learn English and maths. I like English very much. I have lunch at school with my friends.\n\nIn the evening, I do my homework. Then I read a book. I go to bed at nine o'clock. I feel happy every day.",
@@ -23592,6 +23824,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Mua sắm và tiền bạc",
    "level": "Band 3.0",
    "title": "At the Market",
    "text": "Today I go to the market with my mother. The market is near my house. There are many people there.\n\nWe buy vegetables and fruit. We buy tomatoes, carrots and bananas. The tomatoes are red and the bananas are yellow.\n\nThe tomatoes cost ten thousand dong. The bananas cost fifteen thousand dong. We go home and cook lunch together. I like the market very much.",
@@ -23677,6 +23910,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Sở thích và giải trí",
    "level": "Band 4.0",
    "title": "A Picnic Invitation from a Friend",
    "text": "Hi Linh,\n\nHow are you? I hope you are well. I am writing to invite you to a picnic this Saturday afternoon in Green Park. My brother Tom and I want to spend a sunny day outside and we hope you can join us.\n\nWe will meet at the park gate at 11 a.m. and walk to a quiet place near the lake. Tom will bring sandwiches and fruit, and I will bring cakes and orange juice. Please bring a hat and a bottle of water because the weather will be warm and sunny.\n\nAfter lunch, we can play badminton and take photos near the flowers. If it rains, we will go to my house and watch a film instead. I really hope the weather stays fine.\n\nPlease tell me before Thursday evening if you can come, so I can buy enough food. You can bring your cousin Mai if you want. The more friends we have, the more fun we will have.\n\nI am really looking forward to seeing you soon.\n\nBest wishes,\nAnna",
@@ -23767,6 +24001,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "level": "Band 4.0",
    "title": "Asking about an English Course",
    "text": "Dear Sir or Madam,\n\nI am writing to ask for information about your English course for teachers at the Riverdale Language Centre. I saw your advertisement in a local newspaper last week and I am very interested in joining the course in September.\n\nI would like to know the exact starting date and the total cost of the course. Could you also tell me whether the price includes textbooks and examination fees? I have a degree in education and three years of teaching experience, so I would also like to ask whether I can join the advanced class directly.\n\nIn addition, I live outside the city, so I need information about accommodation near the centre. Does the centre help students find a room, and how much does a single room usually cost each month?\n\nFinally, could you send me an application form and tell me the deadline for applying? I would be grateful if you could reply before the end of this month, as I need to ask my school for leave.\n\nThank you for your help. I look forward to hearing from you.\n\nYours faithfully,\nNguyen Thanh Ha",
@@ -23855,6 +24090,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "level": "Band 4.5",
    "title": "School Library Hours and New Clubs",
    "text": "Greenfield School Notice - Library Hours and New Clubs\n\nFrom this Monday, the school library will open from 7:30 a.m. to 5:30 p.m. on school days. Students can borrow up to three books at a time and keep them for two weeks. Books must be returned on time, and students who return books late will pay a small fine of five thousand dong per day. The library will also open on Saturday mornings from 8 a.m. to 11 a.m. for students who want a quiet place to study.\n\nWe are also happy to announce two new clubs this term. The Gardening Club will meet every Tuesday afternoon in the school garden, and the Chess Club will meet every Thursday in Room 12. Both clubs are free and open to all students from Grade 6 to Grade 9. Students who want to join should write their names on the list outside the library before Friday.\n\nPlease remember to keep your library card safe and to stay quiet inside the library so that everyone can read and study comfortably.",
@@ -23945,6 +24181,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Công việc và nghề nghiệp",
    "level": "Band 5.5",
    "title": "A New Flexible Working Policy",
    "text": "Company Announcement: Flexible Working from Next Month\n\nDear colleagues,\n\nFrom 1 June, our company will introduce a new flexible working policy for all office staff. Employees may work from home on up to two days each week, as long as they attend all team meetings either in person or online. Staff who wish to work from home must inform their manager at least one day in advance and must be available by phone and email during normal working hours.\n\nCore hours will remain from 10 a.m. to 3 p.m., when everyone must be working, either in the office or at home. Outside these hours, employees can choose to start earlier or finish later, provided they complete eight hours of work each day.\n\nThe office will stay open five days a week for staff who prefer to work there. However, the company will close the third floor to save energy, so staff who come in must book a desk on the second floor through the company app.\n\nWe believe this policy will reduce travel time, help parents with young children, and make our company a better place to work. Managers will review the policy after three months and ask staff for their opinions before making any changes.",
@@ -24032,6 +24269,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "level": "Band 5.5",
    "title": "Learn a Language with LinguaGo",
    "text": "Learn a Language Anywhere with LinguaGo!\n\nDo you want to speak English, French or Japanese with confidence? LinguaGo is a friendly language app that helps you learn a little every day, wherever you are. With more than two million users around the world, LinguaGo turns short breaks into useful study time.\n\nEach lesson takes only ten minutes and focuses on real-life conversations, such as ordering food, asking for directions and talking about your job. New words are introduced with clear pictures and native-speaker recordings, so you can practise listening and pronunciation at the same time. The app also sends you gentle reminders and interesting quizzes to test your progress each week.\n\nYou can download LinguaGo for free and use the basic lessons without paying anything. If you want full access to all courses, grammar guides and speaking tests, Premium membership costs only 6 dollars a month. New users who register this month will receive the first Premium month free of charge.\n\nDownload LinguaGo today from your app store and start your first lesson in minutes. Learning a language has never been easier or more fun!",
@@ -24122,6 +24360,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Nhà ở và nơi sống",
    "level": "Band 5.5",
    "title": "Sunrise Apartments for Rent",
    "text": "Sunrise Apartments - Modern Living near the City Centre\n\nAre you looking for a comfortable home within walking distance of the city centre? Sunrise Apartments offers one-bedroom and two-bedroom flats for rent in a quiet street, just ten minutes on foot from Central Station and the main shopping area.\n\nEach flat has a bright living room, a modern kitchen with a cooker and fridge, and a bathroom with a shower. Two-bedroom flats also have a small balcony where you can enjoy your morning coffee. All flats are furnished, and rents include water and internet bills. Electricity is paid separately by the tenant.\n\nResidents can use a shared garden, a bicycle storage room and a laundry room in the basement. Parking spaces are available in the underground garage for an extra charge of 50 dollars a month. Small pets are welcome, but tenants must inform the manager in advance.\n\nOne-bedroom flats cost 700 dollars a month and two-bedroom flats cost 950 dollars a month. A deposit equal to one month of rent is required before moving in. The minimum rental period is six months. To arrange a viewing, please call our office between 9 a.m. and 6 p.m. from Monday to Saturday.",
@@ -24209,6 +24448,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "level": "Band 5.5",
    "title": "Saigon Corner - A Vietnamese Restaurant in London",
    "text": "SAIGON CORNER - Vietnamese Restaurant, London\n\nWelcome to Saigon Corner, a small family restaurant in east London serving fresh Vietnamese food every day. Our most popular dish is pho, a hot noodle soup with beef or chicken, fresh herbs and soft rice noodles. We also serve crispy spring rolls, grilled pork with rice, and banh mi sandwiches with pickled vegetables.\n\nVegetarian guests can choose tofu pho, vegetable curry with rice, or a fresh papaya salad. Most main dishes cost between 9 and 13 pounds. A set lunch with a main dish, spring rolls and a drink is available on weekdays for only 11 pounds.\n\nHow to order: First, choose your table and take a menu. Then write your table number and your choices on the order card and give it to a waiter. Drinks and spring rolls usually arrive within five minutes, and main dishes take about fifteen minutes. Please tell our staff if you have any food allergies, especially to peanuts or seafood, because many sauces contain these ingredients.\n\nWe are open from 11 a.m. to 10 p.m. from Tuesday to Sunday and closed on Mondays. You can book a table by phone or just walk in.",
@@ -24299,6 +24539,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Nhà ở và nơi sống",
    "level": "Band 6.0",
    "title": "How to Use a Self-Service Laundry",
    "text": "BrightWash Self-Service Laundry - How to Use Our Machines\n\nWelcome to BrightWash. Our laundry is open every day from 6 a.m. to 11 p.m., and staff are available until 8 p.m. if you need help. Follow these steps to wash your clothes quickly and safely.\n\nFirst, choose a machine of the right size. Small machines hold up to 6 kilograms and are suitable for everyday clothes, while large machines hold 12 kilograms and are better for blankets and curtains. Put your clothes inside and close the door firmly. Next, add washing powder to the drawer marked A. Do not use more than the recommended amount, as too much powder can damage the machine and leave marks on your clothes.\n\nThen pay at the central payment machine with coins or a bank card and select your programme. A normal wash at 40 degrees takes 35 minutes. Machines cannot be opened once the programme has started, so check your pockets carefully before you begin.\n\nWhen the wash finishes, please remove your clothes promptly so that other customers can use the machine. Tumble dryers are available next to the washing machines and cost 1 pound for ten minutes.\n\nFor the comfort of everyone, eating and smoking are not allowed inside, children must stay with an adult at all times, and the laundry accepts no responsibility for clothes left unattended for more than 24 hours.",
@@ -24386,6 +24627,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "level": "Band 6.0",
    "title": "Planning a Group Presentation",
    "text": "Two students, Minh and Sarah, are planning a group presentation about renewable energy.\n\nMinh: Hi Sarah. We have only two weeks before our presentation, so I think we should divide the work today.\nSarah: I agree. There are three main parts: solar energy, wind energy and the conclusion. I have already found some useful articles about solar energy, so I can prepare that part if you like.\nMinh: That sounds good. I will research wind energy, then. My uncle works at a wind farm, so I can interview him this weekend and use his answers in my slides.\nSarah: Great idea. Who will write the conclusion? Perhaps we should do that together next Tuesday after we finish our own parts.\nMinh: Yes, let us meet in the library at 4 p.m. on Tuesday. I will book a study room. We also need to decide who will design the slides. I am not very good at design, but I can prepare the charts and numbers.\nSarah: I can design the slides, then. I enjoy choosing colours and pictures. But please send me your charts by Monday evening so I have enough time.\nMinh: No problem. One more thing - we should practise together at least twice before the real presentation, and each part should take about five minutes.\nSarah: Agreed. Let us practise on Thursday and again on Friday morning in the empty classroom.",
@@ -24476,6 +24718,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Mua sắm và tiền bạc",
    "level": "Band 6.0",
    "title": "A Delayed Delivery - A Support Call",
    "text": "A customer, Mr David Lee, is calling the customer support line of an online shop about a delayed order.\n\nAgent: Good morning, ShopFast customer support. My name is Emma. How can I help you?\nDavid: Good morning. I ordered a laptop bag on 3 May, and the website said delivery would take three to five working days. It is now 12 May and my parcel has still not arrived.\nAgent: I am very sorry about that, Mr Lee. Could I have your order number, please?\nDavid: Yes, it is SF-20481.\nAgent: Thank you. Let me check. I can see that your parcel left our warehouse on 5 May, but it was delayed at the delivery centre because the address label was damaged. A new label was printed yesterday, and the parcel is now out for delivery.\nDavid: When will it arrive, then?\nAgent: It should arrive tomorrow before noon. If it does not arrive by 1 p.m., please call us again and we will contact the driver directly.\nDavid: I need the bag for a business trip on Thursday. Tomorrow is fine, but what happens if it is late again?\nAgent: In that case, we can offer you a full refund or a replacement bag sent by express delivery at no extra cost. As an apology for this delay, we will also add a 10 per cent discount code to your account for your next order.\nDavid: That sounds fair. Thank you for your help.\nAgent: You are welcome, Mr Lee. Is there anything else I can do for you today?",
@@ -24564,6 +24807,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "level": "Band 6.5",
    "title": "Short Naps and Memory",
    "text": "For many people, a short sleep in the early afternoon is seen as a sign of laziness. However, research in recent decades suggests that a brief nap can be a powerful tool for the brain. Studies of students, pilots and office workers all point in the same direction: people who nap for a short period often remember new information better than those who stay awake for the same length of time. Far from wasting time, a well-timed nap may help the mind organise what it has just learned.\n\nIn one well-known experiment, volunteers learned a list of word pairs in the morning and were tested again in the evening. One group was allowed to sleep for about one hour after lunch, while the other group watched a film. The nap group remembered significantly more word pairs than the group that stayed awake. Similar results have been found with motor skills: after a short sleep, participants typed a learned sequence faster and with fewer mistakes than participants who had only rested.\n\nScientists believe these benefits are linked to what the brain does during sleep. Even in a short nap, the brain enters light sleep and begins to replay recent experiences. This replay is thought to strengthen the connections between brain cells and to move information from short-term storage towards more stable long-term memory, a process known as consolidation. A nap that is too short may not allow this process to begin, which is why naps of around twenty minutes are often recommended.\n\nNevertheless, napping is not a cure for poor sleep at night, and longer is not always better. People who sleep for more than an hour in the afternoon often wake up feeling heavy and confused, a state called sleep inertia, and they may then find it harder to fall asleep at night. Experts therefore advise keeping naps short, taking them before 3 p.m., and treating them as a supplement to, rather than a replacement for, a full night of rest.",
@@ -24654,6 +24898,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 7.0",
    "title": "Green Cities and Green Roofs",
    "text": "Modern cities are often several degrees warmer than the countryside around them, a phenomenon known as the urban heat island effect. Roads, pavements and dark roofs absorb heat from the sun during the day and release it slowly at night, while air conditioners push even more warm air into the streets. As climate change makes heatwaves longer and more intense, city governments are searching for practical ways to cool their streets and protect public health.\n\nOne increasingly popular solution is the green roof, in which the top of a building is partly or completely covered with plants growing in a shallow layer of soil. The plants shade the roof surface and release water vapour into the air, which lowers the temperature of the roof itself by as much as 30 degrees on a hot day. Inside the building, the soil and plants act as insulation, so rooms below stay cooler in summer and warmer in winter.\n\nThe advantages of green roofs extend well beyond temperature control. During heavy rain, the soil absorbs a large share of the water that falls on the roof, reducing the pressure on city drains and lowering the risk of flooding. Plants also filter dust and pollutants from the air, and a roof garden can provide a valuable habitat for bees, butterflies and birds in areas where ground-level green space is scarce. For building owners, lower energy bills for heating and cooling can gradually repay the cost of installation.\n\nGreen roofs nevertheless present real challenges. They are considerably more expensive to install than a conventional roof, and older buildings may need structural work to support the extra weight of wet soil. The plants also require regular care, including watering during dry periods and the removal of unwanted weeds. Despite these difficulties, cities such as Toronto and Copenhagen now require green roofs on many new buildings, and most specialists expect them to become a standard feature of urban design rather than a rare experiment.",
@@ -24746,6 +24991,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "level": "Band 2.0",
    "title": "My School",
    "text": "My name is Nam. I am ten years old. I am a student at a small school in my town.\n\nMy school has eight classrooms, one library and a big yard. There are 200 students and 12 teachers in my school. My classroom is on the second floor. It has 30 desks and a green board.\n\nSchool starts at 7 o'clock in the morning. I go to school by bike with my friend Tuan. My favourite subject is maths because I love numbers. After school, I play football in the yard with my classmates.",
@@ -24832,6 +25078,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "level": "Band 2.5",
    "title": "Lucy and Her Dog",
    "text": "Lucy is twelve years old. She lives in a small house with her parents and her dog, Milo.\n\nEvery morning, Lucy gets up at 6 o'clock. She feeds Milo and takes him to the park. Milo can run very fast, and he can catch a ball. Lucy walks to school at 7.30. She studies English, maths and art. She can draw nice pictures, but she cannot sing very well.\n\nIn the evening, Lucy does her homework and reads a book. Milo sleeps under her desk. At the weekend, Lucy and her father take Milo to the river. Milo can swim, and he loves the water.",
@@ -24918,6 +25165,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "level": "Band 3.0",
    "title": "A Rainy Day",
    "text": "Yesterday was a rainy day. In the morning, the sky was dark and the wind was strong. Anna looked out of the window and saw big black clouds.\n\nAnna's mother said, 'Take your umbrella. It is raining now.' Anna walked to the bus stop with her red umbrella. The streets were wet, and many people were waiting for the bus. A little boy was jumping in the water and laughing.\n\nAt school, Anna's clothes were a little wet, but she was happy. In the art lesson, the children drew pictures of the rain. Anna drew her red umbrella and the happy little boy. Her teacher said, 'What a lovely picture!'",
@@ -25004,6 +25252,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "level": "Band 3.5",
    "title": "The Class Trip to the Farm",
    "text": "Last Saturday, our class went on a trip to a farm near the mountains. We left school at 7 o'clock in the morning and travelled by bus. The journey took two hours, but we sang songs and looked at the green fields, so nobody felt bored.\n\nAt the farm, a friendly farmer showed us his animals. We fed the chickens and gave grass to the goats. Then we picked strawberries in a big garden. The strawberries were redder and sweeter than the ones in the shops. After lunch, we rode horses around a small lake. My horse was slower than my friend's horse, but it was very gentle.\n\nWe arrived home at 6 o'clock in the evening. Everyone was tired but happy. It was the most interesting trip of the year, and we all want to go back next spring.",
@@ -25090,6 +25339,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Bản thân và gia đình",
    "level": "Band 3.5",
    "title": "Tom's Plan for the Summer",
    "text": "Tom is fourteen, and the summer holiday is coming. This year, he has many plans. 'I am going to learn to swim,' he says. 'My cousin is a good swimmer, and he is going to teach me at the town pool.'\n\nTom is also going to help his grandfather in the garden. They are going to plant tomatoes and beans. In the evenings, Tom is going to read two English books and write about them in a small notebook. 'The books are going to be difficult,' he says, 'but I am going to try.'\n\nOn the last weekend of the holiday, Tom's family is going to travel to the sea. They are going to stay in a small hotel near the beach for three days. Tom hopes the weather is going to be sunny, because he wants to swim in the sea with his new skill.",
@@ -25176,6 +25426,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Mua sắm và tiền bạc",
    "level": "Band 4.5",
    "title": "The Night Market in Our Town",
    "text": "Every Saturday evening, a night market opens in the main square of our town. It has been a popular meeting place for local people since 2010. More than eighty stalls sell food, clothes and handmade gifts, and the smell of grilled corn and fresh bread fills the air.\n\nThe market is especially famous for its food. Visitors can try dishes from different regions of the country in one place. The most popular stall belongs to Mrs Lan, who has sold noodle soup there for ten years. Her soup is cheaper than the soup in restaurants, but many people say it tastes even better.\n\nFor young people, the market is more than a place to shop. Musicians play traditional songs in the centre of the square, and families sit on small plastic chairs, talking and laughing together. In my opinion, the night market shows the warm heart of our town better than any modern shopping centre.",
@@ -25260,6 +25511,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "level": "Band 7.5+",
    "title": "The Science of Sleep and Dreams",
    "text": "For roughly a third of our lives, we are asleep, yet the purpose of sleep puzzled scientists for centuries. Only in the last few decades has research begun to reveal how much work the sleeping brain quietly performs. Far from being a period of inactivity, sleep is now understood as an active, highly organised state that supports memory, emotion and physical repair.\n\nOne of the most important discoveries concerns memory consolidation. During deep sleep, the brain replays experiences from the day and transfers selected information from short-term storage into long-term memory. Students who sleep well after studying consistently recall more than those who stay up late revising, a finding that challenges the culture of the all-night study session. Sleep, in other words, is not the enemy of learning but one of its essential stages.\n\nDreams occur mainly during rapid eye movement, or REM, sleep, when the brain is almost as active as it is while awake. Some researchers argue that dreams help us process emotions, allowing painful experiences to be revisited in a calmer chemical state. Others are more cautious: they point out that most dreams are forgotten within minutes and may simply be the by-product of the brain tidying its memory stores.\n\nWhat is clear is that modern life is steadily eroding sleep. Artificial light, late-night screens and irregular working hours have cut average sleep by more than an hour compared with a century ago. The consequences reach beyond tiredness: chronic sleep loss is linked to obesity, weakened immunity and a higher risk of accidents.\n\nIn my view, societies should treat sleep as seriously as diet and exercise. Schools start too early for teenage brains, and employers who praise exhausted workers are, I believe, damaging both health and productivity. Recognising sleep as a public health priority would be a small step with enormous benefits.",
@@ -25341,6 +25593,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 7.5+",
    "title": "Why Cities Are Planting Urban Forests",
    "text": "A. In the summer of 2023, several European capitals recorded temperatures above 40°C, and the streets with the least shade suffered most. In response, city governments have begun an ambitious experiment: planting forests inside the city itself. Paris plans to add 170,000 trees, while Milan has promised three million. These are not decorative parks but dense, carefully designed woodlands intended to cool neighbourhoods, clean the air and restore urban wildlife.\n\nB. The science behind the movement is persuasive. A single mature tree can absorb around 22 kilograms of carbon dioxide a year, and a canopy of leaves can reduce the temperature of the street below by several degrees. In districts where trees have been planted, residents report sleeping better during heatwaves, and local shops even record higher sales because people linger longer in pleasant, shaded streets.\n\nC. Critics, however, raise practical objections. Young trees need years of watering and care, and in dry cities this consumes scarce water. Others worry that greener districts become more fashionable, pushing rents up and forcing poorer residents out - a process known as green gentrification. A forest planted for everyone, they argue, may end up serving only the wealthy.\n\nD. Supporters accept these risks but insist they can be managed. Choosing native species reduces water needs, and planting first in the poorest districts prevents greening from becoming a luxury. What matters, they say, is that cities plan for decades ahead: a tree planted today will give its greatest benefits to people not yet born.\n\nE. Personally, I find the movement hopeful. For two centuries, progress meant replacing nature with concrete; now the most advanced cities compete to bring nature back. If governments protect these young forests with the same energy they protect new roads, future generations will inherit cooler, kinder cities.",
@@ -25430,6 +25683,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 6.5",
    "title": "Growing Food on City Roofs",
    "text": "A. On the roof of a supermarket in Montreal, rows of tomatoes and lettuces grow under the open sky. The store below sells the vegetables on the same day they are picked, and customers can watch their food growing through a glass floor. This rooftop farm, one of the largest in the world, symbolises a movement that is spreading through cities on every continent: urban farming.\n\nB. The reasons for the trend are partly environmental. Food in a typical supermarket may travel 2,000 kilometres before it reaches the shelf, producing large amounts of carbon emissions. Vegetables grown on a roof travel only a few metres. Urban farms also use far less water than traditional agriculture, because modern systems recycle the water that plants do not absorb.\n\nC. There are social benefits, too. Community gardens have appeared on empty land in poor districts, where fresh vegetables were once expensive or unavailable. Elderly residents gain gentle exercise and company, while children who plant seeds often become more willing to taste the vegetables they have grown themselves. Several studies suggest that such gardens reduce stress and even local crime.\n\nD. Nevertheless, urban farming faces real limits. Land in cities is expensive, and a rooftop cannot feed a whole population. Critics point out that growing salad leaves is easy, but producing the grains and potatoes that supply most of our calories will always require countryside fields. Urban farms, in their view, are a useful addition, not a replacement.\n\nE. Whatever its limits, urban farming has changed how many city dwellers think about food. A generation that once saw vegetables only in plastic packaging is now learning how food grows. That knowledge, farmers say, may be the movement's most valuable harvest of all.",
@@ -25514,6 +25768,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Sở thích và giải trí",
    "level": "Band 6.5",
    "title": "How Music Training Changes the Brain",
    "text": "A. Parents who pay for piano lessons often hope their child will simply learn to play an instrument. Research in the last twenty years suggests the benefits go much further. Children who receive regular musical training show measurable differences in the brain, particularly in areas connected with language, memory and attention.\n\nB. Learning an instrument is a demanding workout for the brain. Both hands must perform different movements, the eyes must read symbols, and the ears must judge sound - all at the same time. Studies using brain scans have found that the connection between the two halves of the brain is thicker in musicians, allowing information to travel faster between them.\n\nC. The effects on language are among the most surprising. Because music and speech share several processing systems, musically trained children often find it easier to distinguish similar sounds in a foreign language and to remember new words. Some schools have therefore introduced music programmes specifically to support reading skills among struggling pupils.\n\nD. Sceptics warn that the evidence is not perfect. Families who can afford music lessons are often wealthier and better educated, so their children might succeed for other reasons. Careful recent studies that compare children from similar backgrounds, however, still find advantages for the musical groups, though the effects are smaller than early headlines suggested.\n\nE. The conclusion most scientists now accept is modest but encouraging: music training will not turn an average child into a genius, but it strengthens real abilities in a way few other activities can match. Few hobbies, after all, train the body, the senses and the mind in a single hour.",
@@ -25603,6 +25858,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Du lịch và giao thông",
    "level": "Band 6.0",
    "title": "The Bicycle: A Simple Machine That Changed Travel",
    "text": "A. Few inventions have changed everyday life as quietly as the bicycle. The earliest version appeared in Germany in 1817: a wooden machine with two wheels that the rider pushed along with his feet. It had no pedals, no chain and no brakes, yet it allowed people to travel two or three times faster than walking.\n\nB. In the 1860s, French makers added pedals to the front wheel, creating the machine nicknamed the boneshaker because of its hard wooden wheels on rough stone roads. Then, in the 1870s, came the penny-farthing, with an enormous front wheel that let riders travel faster but made falling dangerous and mounting difficult. Cycling at this stage remained a sport for daring young men.\n\nC. The breakthrough arrived in 1885 with the safety bicycle, whose design - two equal wheels, a chain driving the back wheel and a diamond-shaped frame - is recognisably the bicycle we know today. A few years later, air-filled tyres made riding comfortable. Prices fell rapidly, and factories began producing bicycles by the hundred thousand.\n\nD. The social effects were enormous, especially for women. The bicycle offered freedom of movement that many had never known: a woman could visit friends, attend classes or reach a job without depending on anyone. Fashion changed, too, as long skirts made cycling impossible and simpler clothes became acceptable. Some doctors at the time even warned against cycling, which only made it more attractive to the young.\n\nE. Today there are an estimated two billion bicycles in the world. In rich cities they are returning as a serious form of transport, supported by bike-sharing schemes and protected lanes. Two centuries after that first wooden machine, the bicycle remains one of humanity's simplest and smartest answers to moving around.",
@@ -25688,6 +25944,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Học tập và giáo dục",
    "level": "Band 6.0",
    "title": "Learning a Second Language as an Adult",
    "text": "Many adults believe they have missed their chance to learn a foreign language. Children, they say, absorb languages like sponges, while adult brains are simply too old. Language researchers, however, paint a more balanced picture: adults and children learn in different ways, and each group has its own advantages.\n\nChildren are certainly better at acquiring a perfect accent. A child who grows up hearing two languages will usually speak both without a foreign accent, something very few adult learners achieve. Children also learn through play and imitation, without worrying about mistakes. For an adult sitting in a classroom, that fear of embarrassment can be the biggest obstacle of all.\n\nAdults, on the other hand, bring powerful tools to the task. They understand grammar rules, can compare the new language with their own, and usually have clearer reasons for learning - a job, an exam or travel. In studies, adults actually learn vocabulary and grammar faster than children in the first year. It is mainly pronunciation, not overall ability, where children keep their advantage.\n\nExperience also matters. An adult learner already knows how the world works: a Turkish businessman learning English, for example, already understands meetings and negotiations, and only needs the words. A child must learn the concept and the word together.\n\nIn my opinion, adults should stop comparing themselves with children and start using their strengths. Progress may be slower in accent, but with regular practice, clear goals and a willingness to make mistakes, adult learners can reach a very high level. Age, I believe, is an excuse far more often than it is a real barrier.",
@@ -25776,6 +26033,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thức ăn và sức khỏe",
    "level": "Band 5.5",
    "title": "Chocolate: From Bitter Drink to Sweet Treat",
    "text": "A. Chocolate is loved all over the world, but it began as something quite different: a bitter drink. Around 3,000 years ago, people in Central America grew cacao trees and used the beans to make a spicy, frothy drink. The beans were so valuable that they were even used as money.\n\nB. In the 1500s, Spanish explorers brought cacao beans back to Europe. At first, only rich people could afford the drink, which was served in special chocolate houses in cities like London and Paris. Sugar was added to make it sweeter, but chocolate remained a luxury for more than 200 years.\n\nC. The Industrial Revolution changed everything. New machines could press the beans and mix them quickly, so chocolate became cheaper. In 1847, a British company produced the first modern chocolate bar, and milk chocolate followed thirty years later in Switzerland. Chocolate was no longer just a drink for the rich; it was a sweet for everyone.\n\nD. Today, most cacao comes from West Africa, where millions of small farmers grow the trees. Growing cacao is hard work: the pods must be cut by hand and the beans dried under the sun. Fair-trade schemes try to make sure farmers receive a fair price, but many still earn very little.\n\nE. Modern research has added one more chapter to the story. Dark chocolate contains substances that appear to be good for the heart, though scientists warn that chocolate also contains sugar and fat. In my view, a small piece of good chocolate, enjoyed slowly, is one of life's simple and harmless pleasures.",
@@ -25859,6 +26117,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "level": "Band 5.5",
    "title": "Volunteering in the Local Community",
    "text": "Last year, our town library started a programme that has quietly changed many lives. Every Saturday morning, volunteers of all ages meet there to help their neighbours. Some teach elderly people to use smartphones, some read stories to children, and others repair broken bicycles in the yard outside.\n\nThe programme began with just six volunteers. The idea came from Mrs Hoa, a retired teacher who believed that older people had skills the town was wasting. 'A retired electrician can fix lamps,' she said. 'A retired cook can teach young families to make cheap, healthy meals. Everyone knows something useful.'\n\nToday there are more than eighty regular volunteers, and the library lends tools as well as books. A recent survey found that volunteers themselves feel happier and less lonely than before. Students who help on Saturdays also report better communication skills, which several local employers say makes them stronger job candidates.\n\nThe programme is not expensive to run. The library provides the rooms, local shops donate materials, and a small town grant pays for insurance. What it really costs is time - and, as Mrs Hoa points out, time given to neighbours is rarely time wasted.\n\nOther towns have begun to copy the model. Their experience suggests that successful volunteering depends less on money than on organisation: clear tasks, regular hours and a warm welcome for newcomers.",
@@ -25942,6 +26201,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Thể thao và vận động",
    "level": "Band 5.0",
    "title": "The Benefits of Daily Walking",
    "text": "A. Walking is the simplest form of exercise in the world. It needs no special equipment, no gym membership and no training. Yet doctors agree that a daily walk of about thirty minutes can improve health in many different ways.\n\nB. The first benefit is for the heart. Regular walking makes the heart stronger and reduces the risk of heart disease. Studies show that people who walk to work are generally fitter than people who drive, even if the walk is quite short.\n\nC. Walking also helps the mind. After a walk in a park, people usually feel calmer and think more clearly. Many writers and scientists in history took long walks every day because their best ideas came to them while they were moving.\n\nD. A daily walk is also good for the body in smaller ways. It keeps the legs and back strong, helps people control their weight, and improves sleep at night. Unlike running, walking is gentle, so it is suitable for older people and beginners.\n\nE. For all these reasons, health experts advise everyone to find time to walk. You do not need to walk far. The important thing is to walk a little every day and to make it part of your normal routine.",
@@ -26025,8 +26285,9 @@ const CONTENT = {
     }
    ]
   }
- ,{"level":"Band 0","title":"Hello! I Am Nam","text":"Hello! My name is Nam. I am a student. I am from Vietnam. I live in a small town.\n\nThis is my friend. Her name is Anna. She is from England. She is a student too.\n\nWe say hello every morning. We are happy at school.","questions":[{"type":"MC","q":"What is the boy's name?","options":["Nam","Anna","Minh"],"a":0,"why":"Trong bài, bạn nam tự giới thiệu tên là Nam. Vì vậy đáp án đúng là Nam."},{"type":"MC","q":"Where is Nam from?","options":["England","Vietnam","Japan"],"a":1,"why":"Trong bài, Nam nói mình đến từ Việt Nam. Vì vậy đáp án đúng là Việt Nam."},{"type":"MC","q":"What is Anna?","options":["A teacher","A doctor","A student"],"a":2,"why":"Trong bài, Anna cũng là học sinh. Vì vậy đáp án đúng là học sinh."},{"type":"MC","q":"Where is Anna from?","options":["Vietnam","England","France"],"a":1,"why":"Trong bài, Anna đến từ nước Anh. Vì vậy đáp án đúng là nước Anh."},{"type":"MC","q":"When do Nam and Anna say hello?","options":["In the evening","At night","Every morning"],"a":2,"why":"Trong bài, hai bạn chào nhau vào mỗi buổi sáng. Vì vậy đáp án đúng là mỗi buổi sáng."}],"translation":"Xin chào! Tên tôi là Nam. Tôi là học sinh. Tôi đến từ Việt Nam. Tôi sống ở một thị trấn nhỏ.\n\nĐây là bạn của tôi. Bạn ấy tên là Anna. Bạn ấy đến từ nước Anh. Bạn ấy cũng là học sinh.\n\nChúng tôi chào nhau vào mỗi buổi sáng. Chúng tôi vui vẻ ở trường.","phrases":[{"en":"My name is Nam","vi":"Tên tôi là Nam"},{"en":"I am from Vietnam","vi":"Tôi đến từ Việt Nam"},{"en":"This is my friend","vi":"Đây là bạn của tôi"},{"en":"every morning","vi":"mỗi buổi sáng"}]},{"level":"Band 0","title":"My Classroom","text":"This is my classroom. It is small and clean.\n\nThis is my desk. My book is on the desk. My pen is red. My bag is blue. There are ten chairs in the classroom.\n\nI like my classroom. I learn English here every day.","questions":[{"type":"MC","q":"How is the classroom?","options":["Big","Small","Old"],"a":1,"why":"Trong bài, lớp học được tả là nhỏ và sạch. Vì vậy đáp án đúng là nhỏ."},{"type":"MC","q":"What colour is the pen?","options":["Blue","Green","Red"],"a":2,"why":"Trong bài, cây bút có màu đỏ. Vì vậy đáp án đúng là màu đỏ."},{"type":"MC","q":"What colour is the bag?","options":["Red","Blue","Black"],"a":1,"why":"Trong bài, chiếc cặp có màu xanh dương. Vì vậy đáp án đúng là màu xanh dương."},{"type":"MC","q":"How many chairs are there in the classroom?","options":["Ten","Five","Two"],"a":0,"why":"Trong bài, lớp học có mười chiếc ghế. Vì vậy đáp án đúng là mười."},{"type":"MC","q":"Where is the book?","options":["In the bag","Under the desk","On the desk"],"a":2,"why":"Trong bài, quyển sách nằm trên bàn học. Vì vậy đáp án đúng là trên bàn học."}],"translation":"Đây là lớp học của tôi. Lớp học nhỏ và sạch.\n\nĐây là bàn học của tôi. Quyển sách của tôi ở trên bàn. Cây bút của tôi màu đỏ. Chiếc cặp của tôi màu xanh dương. Trong lớp có mười chiếc ghế.\n\nTôi thích lớp học của mình. Tôi học tiếng Anh ở đây mỗi ngày.","phrases":[{"en":"my classroom","vi":"lớp học của tôi"},{"en":"on the desk","vi":"trên bàn học"},{"en":"My pen is red","vi":"Cây bút của tôi màu đỏ"},{"en":"every day","vi":"mỗi ngày"}]},
+ ,{"level":"Band 0","title":"Hello! I Am Nam","topic":"Bản thân và gia đình","text":"Hello! My name is Nam. I am a student. I am from Vietnam. I live in a small town.\n\nThis is my friend. Her name is Anna. She is from England. She is a student too.\n\nWe say hello every morning. We are happy at school.","questions":[{"type":"MC","q":"What is the boy's name?","options":["Nam","Anna","Minh"],"a":0,"why":"Trong bài, bạn nam tự giới thiệu tên là Nam. Vì vậy đáp án đúng là Nam."},{"type":"MC","q":"Where is Nam from?","options":["England","Vietnam","Japan"],"a":1,"why":"Trong bài, Nam nói mình đến từ Việt Nam. Vì vậy đáp án đúng là Việt Nam."},{"type":"MC","q":"What is Anna?","options":["A teacher","A doctor","A student"],"a":2,"why":"Trong bài, Anna cũng là học sinh. Vì vậy đáp án đúng là học sinh."},{"type":"MC","q":"Where is Anna from?","options":["Vietnam","England","France"],"a":1,"why":"Trong bài, Anna đến từ nước Anh. Vì vậy đáp án đúng là nước Anh."},{"type":"MC","q":"When do Nam and Anna say hello?","options":["In the evening","At night","Every morning"],"a":2,"why":"Trong bài, hai bạn chào nhau vào mỗi buổi sáng. Vì vậy đáp án đúng là mỗi buổi sáng."}],"translation":"Xin chào! Tên tôi là Nam. Tôi là học sinh. Tôi đến từ Việt Nam. Tôi sống ở một thị trấn nhỏ.\n\nĐây là bạn của tôi. Bạn ấy tên là Anna. Bạn ấy đến từ nước Anh. Bạn ấy cũng là học sinh.\n\nChúng tôi chào nhau vào mỗi buổi sáng. Chúng tôi vui vẻ ở trường.","phrases":[{"en":"My name is Nam","vi":"Tên tôi là Nam"},{"en":"I am from Vietnam","vi":"Tôi đến từ Việt Nam"},{"en":"This is my friend","vi":"Đây là bạn của tôi"},{"en":"every morning","vi":"mỗi buổi sáng"}]},{"level":"Band 0","title":"My Classroom","topic":"Học tập và giáo dục","text":"This is my classroom. It is small and clean.\n\nThis is my desk. My book is on the desk. My pen is red. My bag is blue. There are ten chairs in the classroom.\n\nI like my classroom. I learn English here every day.","questions":[{"type":"MC","q":"How is the classroom?","options":["Big","Small","Old"],"a":1,"why":"Trong bài, lớp học được tả là nhỏ và sạch. Vì vậy đáp án đúng là nhỏ."},{"type":"MC","q":"What colour is the pen?","options":["Blue","Green","Red"],"a":2,"why":"Trong bài, cây bút có màu đỏ. Vì vậy đáp án đúng là màu đỏ."},{"type":"MC","q":"What colour is the bag?","options":["Red","Blue","Black"],"a":1,"why":"Trong bài, chiếc cặp có màu xanh dương. Vì vậy đáp án đúng là màu xanh dương."},{"type":"MC","q":"How many chairs are there in the classroom?","options":["Ten","Five","Two"],"a":0,"why":"Trong bài, lớp học có mười chiếc ghế. Vì vậy đáp án đúng là mười."},{"type":"MC","q":"Where is the book?","options":["In the bag","Under the desk","On the desk"],"a":2,"why":"Trong bài, quyển sách nằm trên bàn học. Vì vậy đáp án đúng là trên bàn học."}],"translation":"Đây là lớp học của tôi. Lớp học nhỏ và sạch.\n\nĐây là bàn học của tôi. Quyển sách của tôi ở trên bàn. Cây bút của tôi màu đỏ. Chiếc cặp của tôi màu xanh dương. Trong lớp có mười chiếc ghế.\n\nTôi thích lớp học của mình. Tôi học tiếng Anh ở đây mỗi ngày.","phrases":[{"en":"my classroom","vi":"lớp học của tôi"},{"en":"on the desk","vi":"trên bàn học"},{"en":"My pen is red","vi":"Cây bút của tôi màu đỏ"},{"en":"every day","vi":"mỗi ngày"}]},
   {
+   "topic": "Du lịch và giao thông",
    "level": "Band 6.0",
    "title": "The Night Trains of Europe Are Back",
    "text": "For decades, night trains were disappearing from Europe. Cheap flights and fast day trains pushed sleeper services out of business, and many routes closed completely. In recent years, however, the night train has returned. Travellers who worry about the climate are choosing the train again, and operators are reopening routes that had been closed for years.\n\nThree operators now lead this revival, but each follows a different strategy. A. ÖBB Nightjet, the Austrian operator, has invested in brand-new carriages with private mini-cabins for passengers who want more comfort and privacy. B. SNCF, the French operator, has taken a different approach, selling couchette tickets from 29 euros to attract younger travellers with little money. C. SJ, the Swedish operator, runs some of the longest routes, including a service from Stockholm to the Arctic Circle for tourists who hope to see the northern lights.\n\nThe design of a modern sleeper carriage is shown in railway diagrams. By the door there is a luggage area for large suitcases, so passengers do not block the way. Along one side of the carriage runs a narrow corridor, and on the other side are the compartments. Each compartment contains bunk beds that are folded down at night, a small washbasin with a mirror, and reading lights above every bed.\n\nRunning night trains is still expensive, because the carriages earn money only at night and staff costs are high. Nevertheless, bookings keep rising, especially on holiday routes, and several governments now support sleeper services as part of their climate plans. The night train, it seems, has a future again.",
@@ -26103,6 +26364,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Môi trường và thiên nhiên",
    "level": "Band 6.5",
    "title": "The Dance of the Honeybees",
    "text": "When a honeybee finds a rich source of food, she returns to the hive and performs a remarkable dance that tells the other bees where the food is. This behaviour, known as the waggle dance, has fascinated scientists for more than a century, because it is one of the few examples of symbolic communication in insects.\n\nThree researchers shaped the modern understanding of the dance. A. Karl von Frisch, an Austrian scientist, argued that the dance is a true language: the direction of its central run shows the direction of the food, and the length of the run shows the distance. B. Adrian Wenner, an American researcher, disagreed strongly. In his view, returning bees mainly follow odours carried back by successful bees, and the dance itself tells the colony very little. C. James Gould, also from the United States, designed careful experiments in the 1970s which convinced most scientists that von Frisch was largely correct, although smell also plays a smaller part.\n\nThe dance itself takes place on the vertical surface of the honeycomb and follows the shape of a figure eight. In the middle of the pattern, the bee walks in a straight line called the waggle run, shaking her abdomen quickly from side to side. She then loops back, first on one side and then on the other, and begins again. The angle between the waggle run and the vertical line on the comb represents the angle between the sun and the food source.\n\nModern technology has added new details. Using tiny radar devices, scientists have tracked bees that watched a dance and confirmed that most of them fly directly to the place the dancer described. The waggle dance, once a complete mystery, is now one of the best understood forms of animal communication.",
@@ -26179,6 +26441,7 @@ const CONTENT = {
    ]
   },
   {
+   "topic": "Xã hội và văn hóa",
    "level": "Band 7.0",
    "title": "Great Rivers, Great Civilisations",
    "text": "The world's great rivers have shaped human history. Civilisations grew along their banks because rivers provide water, fertile soil and a natural road for trade. Yet each of the three rivers below has played a quite different role.\n\nA. The Nile, at about 6,650 kilometres, is generally considered the longest river on Earth. It flows through eleven African countries before reaching the Mediterranean Sea, and its annual floods once made farming possible in the Egyptian desert. B. The Amazon, in South America, is far shorter than the Nile but carries more water than any other river on the planet; indeed, it carries more than the next seven largest rivers combined. C. The Mekong flows through six countries in Southeast Asia, and its waters support rice farming and fishing for more than sixty million people.\n\nThe journey of a river follows a clear pattern, shown in geography diagrams of a river course. Every river begins at its source, often high in the mountains, where the water is cold and flows fast. As the land becomes flatter, the river slows and bends into wide curves called meanders. Finally, the river reaches the sea and drops the mud and sand it has carried, slowly building a flat area of new land known as a delta.\n\nRivers now face serious threats. Dams block the movement of fish and change the flow of water, while pollution and climate change reduce the amount of water available. Protecting the great rivers, scientists argue, means protecting the communities that still depend on them.",
@@ -27285,6 +27548,8 @@ const CONTENT = {
  ],
  "speaking": [
   {
+   "partNum": 1,
+   "topicStd": "Nhà ở và nơi sống",
    "part": "Part 1",
    "topic": "Hometown - Quê hương",
    "band": "Band 6.0",
@@ -27354,6 +27619,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Công việc và nghề nghiệp",
    "part": "Part 1",
    "topic": "Work and Study - Công việc và học tập",
    "band": "Band 6.0",
@@ -27423,6 +27690,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Sở thích và giải trí",
    "part": "Part 1",
    "topic": "Hobbies - Sở thích",
    "band": "Band 6.5",
@@ -27492,6 +27761,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "Daily Routine - Thói quen hằng ngày",
    "band": "Band 6.0",
@@ -27561,6 +27832,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Sở thích và giải trí",
    "part": "Part 2",
    "topic": "Describe a book you enjoyed reading",
    "band": "Band 7.0",
@@ -27640,6 +27913,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Du lịch và giao thông",
    "part": "Part 2",
    "topic": "Describe a place you visited and liked",
    "band": "Band 7.0",
@@ -27719,6 +27994,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Học tập và giáo dục",
    "part": "Part 2",
    "topic": "Describe a skill you would like to learn",
    "band": "Band 6.5",
@@ -27793,6 +28070,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 2",
    "topic": "Describe a person who has influenced you",
    "band": "Band 7.0",
@@ -27867,6 +28146,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Học tập và giáo dục",
    "part": "Part 3",
    "topic": "Education - Giáo dục trong tương lai",
    "band": "Band 7.0",
@@ -27936,6 +28217,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Công nghệ và truyền thông",
    "part": "Part 3",
    "topic": "Technology and Society - Công nghệ và xã hội",
    "band": "Band 7.5+",
@@ -28005,6 +28288,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Môi trường và thiên nhiên",
    "part": "Part 3",
    "topic": "Environment - Ai chịu trách nhiệm bảo vệ môi trường?",
    "band": "Band 7.0",
@@ -28074,6 +28359,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 3",
    "topic": "Success and Happiness - Thành công và hạnh phúc",
    "band": "Band 7.5+",
@@ -28143,6 +28430,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Sở thích và giải trí",
    "part": "Part 1",
    "topic": "Music - Âm nhạc",
    "band": "Band 6.0",
@@ -28212,6 +28501,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Môi trường và thiên nhiên",
    "part": "Part 1",
    "topic": "Weather - Thời tiết",
    "band": "Band 4.5",
@@ -28281,6 +28572,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Mua sắm và tiền bạc",
    "part": "Part 1",
    "topic": "Shopping - Mua sắm",
    "band": "Band 6.5",
@@ -28350,6 +28643,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Sở thích và giải trí",
    "part": "Part 1",
    "topic": "Books - Sách",
    "band": "Band 5.5",
@@ -28419,6 +28714,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Du lịch và giao thông",
    "part": "Part 1",
    "topic": "Travel - Du lịch",
    "band": "Band 6.5",
@@ -28488,6 +28785,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Công nghệ và truyền thông",
    "part": "Part 1",
    "topic": "Mobile Phones - Điện thoại di động",
    "band": "Band 6.5",
@@ -28557,6 +28856,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 2",
    "topic": "Describe a gift you received that you liked - Mô tả một món quà bạn nhận được mà bạn thích",
    "band": "Band 7.0",
@@ -28631,6 +28932,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Du lịch và giao thông",
    "part": "Part 2",
    "topic": "Describe a journey you took that you remember well - Mô tả một chuyến đi bạn nhớ rõ",
    "band": "Band 6.5",
@@ -28705,6 +29008,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Công nghệ và truyền thông",
    "part": "Part 2",
    "topic": "Describe a piece of technology you find useful - Mô tả một thiết bị công nghệ bạn thấy hữu ích",
    "band": "Band 7.0",
@@ -28779,6 +29084,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Xã hội và văn hóa",
    "part": "Part 2",
    "topic": "Describe a traditional festival in your country - Mô tả một lễ hội truyền thống ở đất nước bạn",
    "band": "Band 6.5",
@@ -28853,6 +29160,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Công việc và nghề nghiệp",
    "part": "Part 2",
    "topic": "Describe a person who is good at their job - Mô tả một người giỏi trong công việc của mình",
    "band": "Band 7.0",
@@ -28927,6 +29236,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Môi trường và thiên nhiên",
    "part": "Part 2",
    "topic": "Describe a garden or park you enjoy visiting - Mô tả một khu vườn hoặc công viên bạn thích đến",
    "band": "Band 6.5",
@@ -29001,6 +29312,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Nhà ở và nơi sống",
    "part": "Part 3",
    "topic": "Housing - Nhà ở và đô thị",
    "band": "Band 7.0",
@@ -29070,6 +29383,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Thức ăn và sức khỏe",
    "part": "Part 3",
    "topic": "Food and Health - Ẩm thực và sức khỏe",
    "band": "Band 7.0",
@@ -29139,6 +29454,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Du lịch và giao thông",
    "part": "Part 3",
    "topic": "Future Transport - Tương lai của giao thông",
    "band": "Band 7.5+",
@@ -29208,6 +29525,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Sở thích và giải trí",
    "part": "Part 3",
    "topic": "Reading Habits - Thói quen đọc sách",
    "band": "Band 7.0",
@@ -29277,6 +29596,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Xã hội và văn hóa",
    "part": "Part 3",
    "topic": "Older People in Society - Người cao tuổi trong xã hội",
    "band": "Band 7.5+",
@@ -29346,6 +29667,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Xã hội và văn hóa",
    "part": "Part 3",
    "topic": "Fame - Sự nổi tiếng",
    "band": "Band 7.0",
@@ -29415,6 +29738,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "Greetings - Chào hỏi và làm quen",
    "band": "Band 0",
@@ -29484,6 +29809,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "Introducing Yourself - Giới thiệu bản thân",
    "band": "Band 0",
@@ -29553,6 +29880,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Du lịch và giao thông",
    "part": "Part 1",
    "topic": "Asking the Way and Time - Hỏi đường và hỏi giờ",
    "band": "Band 2.0",
@@ -29622,6 +29951,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Công việc và nghề nghiệp",
    "part": "Roleplay",
    "topic": "Part-time Job Interview - Phỏng vấn xin việc bán thời gian",
    "band": "Band 6.0",
@@ -29777,6 +30108,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Du lịch và giao thông",
    "part": "Roleplay",
    "topic": "Checking in at a Hotel - Nhận phòng khách sạn và hỏi dịch vụ",
    "band": "Band 5.0",
@@ -29932,6 +30265,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Thức ăn và sức khỏe",
    "part": "Roleplay",
    "topic": "Booking a Clinic Appointment by Phone - Gọi điện đặt lịch hẹn với phòng khám",
    "band": "Band 5.0",
@@ -30085,6 +30420,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Thức ăn và sức khỏe",
    "part": "Roleplay",
    "topic": "At the Doctor - Đi khám bệnh và kể triệu chứng cho Bác sĩ",
    "band": "Band 5.5",
@@ -30243,6 +30580,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Du lịch và giao thông",
    "part": "Roleplay",
    "topic": "Asking the Way and Choosing Transport - Hỏi đường và chọn phương tiện đi lại",
    "band": "Band 5.0",
@@ -30403,6 +30742,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Học tập và giáo dục",
    "part": "Roleplay",
    "topic": "Class Product Presentation - Thuyết trình giới thiệu sản phẩm trong lớp học",
    "band": "Band 6.0",
@@ -30556,6 +30897,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Công việc và nghề nghiệp",
    "part": "Roleplay",
    "topic": "Small Talk with a New Colleague - Trò chuyện xã giao với đồng nghiệp mới",
    "band": "Band 4.5",
@@ -30709,6 +31052,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Học tập và giáo dục",
    "part": "Roleplay",
    "topic": "Group Meeting: Dividing Project Work - Họp nhóm phân công bài tập",
    "band": "Band 6.0",
@@ -30874,6 +31219,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Thức ăn và sức khỏe",
    "part": "Roleplay",
    "topic": "A Polite Complaint about Food Delivery - Phàn nàn lịch sự về dịch vụ giao đồ ăn",
    "band": "Band 5.5",
@@ -31034,6 +31381,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Mua sắm và tiền bạc",
    "part": "Roleplay",
    "topic": "Shopping and Bargaining at the Market - Mua sắm và trả giá ở chợ",
    "band": "Band 5.0",
@@ -31194,6 +31543,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Du lịch và giao thông",
    "part": "Roleplay",
    "topic": "Checking in at the Airport - Làm thủ tục ở sân bay",
    "band": "Band 5.5",
@@ -31359,6 +31710,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Nhà ở và nơi sống",
    "part": "Roleplay",
    "topic": "Viewing a Flat and Agreeing the Rent - Đi xem phòng và thỏa thuận thuê nhà",
    "band": "Band 6.0",
@@ -31519,6 +31872,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Thức ăn và sức khỏe",
    "part": "Part 1",
    "topic": "Tea and Coffee - Trà và cà phê",
    "band": "Band 5.5",
@@ -31650,6 +32005,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Du lịch và giao thông",
    "part": "Part 1",
    "topic": "Public Transport - Phương tiện công cộng",
    "band": "Band 6.0",
@@ -31781,6 +32138,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Thức ăn và sức khỏe",
    "part": "Part 2",
    "topic": "Describe a meal you enjoyed with your family - Mô tả một bữa ăn ngon với gia đình",
    "band": "Band 6.5",
@@ -31908,6 +32267,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 2",
    "topic": "Describe a decision that changed your life - Mô tả một quyết định đã thay đổi cuộc đời bạn",
    "band": "Band 7.0",
@@ -32033,6 +32394,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Nhà ở và nơi sống",
    "part": "Part 3",
    "topic": "Housing and Future Cities - Nhà ở và thành phố tương lai",
    "band": "Band 7.0",
@@ -32177,6 +32540,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 3,
+   "topicStd": "Công nghệ và truyền thông",
    "part": "Part 3",
    "topic": "Media and Truth - Truyền thông và sự thật",
    "band": "Band 7.5+",
@@ -32323,6 +32688,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "Family - Gia đình",
    "band": "Band 2.0",
@@ -32431,6 +32798,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Học tập và giáo dục",
    "part": "Part 1",
    "topic": "School - Trường học",
    "band": "Band 2.0",
@@ -32538,6 +32907,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "My Day - Một ngày của tôi",
    "band": "Band 2.5",
@@ -32646,6 +33017,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Sở thích và giải trí",
    "part": "Part 1",
    "topic": "Free Time - Thời gian rảnh",
    "band": "Band 2.5",
@@ -32752,6 +33125,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "Yesterday - Hôm qua của tôi",
    "band": "Band 3.0",
@@ -32860,6 +33235,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Môi trường và thiên nhiên",
    "part": "Part 1",
    "topic": "The Weather Today - Thời tiết hôm nay",
    "band": "Band 3.0",
@@ -32968,6 +33345,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "A Happy Memory - Một kỷ niệm vui",
    "band": "Band 3.5",
@@ -33077,6 +33456,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "My Future Plans - Kế hoạch tương lai của tôi",
    "band": "Band 3.5",
@@ -33186,6 +33567,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Học tập và giáo dục",
    "part": "Part 1",
    "topic": "Learning English - Học tiếng Anh",
    "band": "Band 4.0",
@@ -33294,6 +33677,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Nhà ở và nơi sống",
    "part": "Part 1",
    "topic": "My Neighbourhood - Khu phố của tôi",
    "band": "Band 4.0",
@@ -33403,6 +33788,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Sở thích và giải trí",
    "part": "Part 1",
    "topic": "Photos - Ảnh chụp",
    "band": "Band 5.0",
@@ -33511,6 +33898,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 1,
+   "topicStd": "Mua sắm và tiền bạc",
    "part": "Part 1",
    "topic": "Shopping Habits - Thói quen mua sắm",
    "band": "Band 5.0",
@@ -33618,6 +34007,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Du lịch và giao thông",
    "part": "Part 2",
    "topic": "Describe a Trip That Was Special to You - Một chuyến đi đặc biệt với bạn",
    "band": "Band 5.5",
@@ -33728,6 +34119,8 @@ const CONTENT = {
    ]
   },
   {
+   "partNum": 2,
+   "topicStd": "Học tập và giáo dục",
    "part": "Part 2",
    "topic": "Describe a Skill You Learned as a Child - Một kỹ năng bạn học khi còn nhỏ",
    "band": "Band 5.5",
@@ -33840,6 +34233,7 @@ const CONTENT = {
  ],
  "writing": [
   {
+   "wtype": "Biểu đồ đường",
    "type": "Task 1",
    "band": "Band 7.0",
    "title": "Biểu đồ đường: người dùng Internet",
@@ -33871,6 +34265,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Biểu đồ cột",
    "type": "Task 1",
    "band": "Band 6.5",
    "title": "Biểu đồ cột: phương tiện đi lại",
@@ -33902,6 +34297,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Bảng số liệu",
    "type": "Task 1",
    "band": "Band 7.0",
    "title": "Bảng số liệu: chi tiêu hộ gia đình",
@@ -33933,6 +34329,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Biểu đồ tròn",
    "type": "Task 1",
    "band": "Band 6.5",
    "title": "Biểu đồ tròn: nguồn năng lượng",
@@ -33964,6 +34361,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Quy trình",
    "type": "Task 1",
    "band": "Band 7.0",
    "title": "Quy trình: tái chế giấy",
@@ -33995,6 +34393,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Bản đồ",
    "type": "Task 1",
    "band": "Band 7.0",
    "title": "Bản đồ: sự thay đổi của một ngôi làng",
@@ -34026,6 +34425,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Ý kiến",
    "type": "Task 2",
    "band": "Band 7.0",
    "title": "Opinion: Đại học miễn phí",
@@ -34057,6 +34457,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thảo luận hai chiều",
    "type": "Task 2",
    "band": "Band 7.0",
    "title": "Discussion: Công nghệ gắn kết hay cô lập?",
@@ -34088,6 +34489,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Nguyên nhân và giải pháp",
    "type": "Task 2",
    "band": "Band 6.5",
    "title": "Problem-Solution: Ùn tắc giao thông",
@@ -34119,6 +34521,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Ưu và nhược điểm",
    "type": "Task 2",
    "band": "Band 6.5",
    "title": "Advantages-Disadvantages: Làm việc tại nhà",
@@ -34150,6 +34553,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Ý kiến",
    "type": "Task 2",
    "band": "Band 7.0",
    "title": "Opinion: Trẻ em và điện thoại thông minh",
@@ -34181,6 +34585,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thảo luận hai chiều",
    "type": "Task 2",
    "band": "Band 7.5+",
    "title": "Discussion: Bảo tàng miễn phí hay thu phí?",
@@ -34212,6 +34617,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Nguyên nhân và giải pháp",
    "type": "Task 2",
    "band": "Band 7.0",
    "title": "Problem-Solution: Béo phì ở trẻ em",
@@ -34243,6 +34649,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Câu hỏi hai phần",
    "type": "Task 2",
    "band": "Band 7.5+",
    "title": "Câu hỏi hai phần: Thành công đo bằng tiền?",
@@ -34274,6 +34681,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Biểu đồ đường",
    "type": "Task 1",
    "band": "Band 6.5",
    "title": "Biểu đồ đường: lượng khí thải carbon",
@@ -34305,6 +34713,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Biểu đồ cột",
    "type": "Task 1",
    "band": "Band 7.0",
    "title": "Biểu đồ cột: thời gian rảnh của học sinh",
@@ -34336,6 +34745,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Bảng số liệu",
    "type": "Task 1",
    "band": "Band 6.5",
    "title": "Bảng số liệu: cơ cấu việc làm theo ngành",
@@ -34367,6 +34777,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Quy trình",
    "type": "Task 1",
    "band": "Band 7.0",
    "title": "Quy trình: sản xuất sô-cô-la",
@@ -34398,6 +34809,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Ý kiến",
    "type": "Task 2",
    "band": "Band 7.0",
    "title": "Opinion: Học trực tuyến có thay thế lớp học truyền thống?",
@@ -34429,6 +34841,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thảo luận hai chiều",
    "type": "Task 2",
    "band": "Band 7.5+",
    "title": "Discussion: Du lịch quốc tế và văn hóa bản địa",
@@ -34460,6 +34873,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Nguyên nhân và giải pháp",
    "type": "Task 2",
    "band": "Band 6.5",
    "title": "Problem-Solution: Ô nhiễm tiếng ồn ở đô thị",
@@ -34491,6 +34905,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Ưu và nhược điểm",
    "type": "Task 2",
    "band": "Band 6.5",
    "title": "Advantages-Disadvantages: Mạng xã hội với thanh thiếu niên",
@@ -34522,6 +34937,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Câu hỏi hai phần",
    "type": "Task 2",
    "band": "Band 7.0",
    "title": "Câu hỏi hai phần: Ổn định hay lương cao?",
@@ -34553,6 +34969,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Ý kiến",
    "type": "Task 2",
    "band": "Band 7.5+",
    "title": "Opinion: Bảo tồn di sản hay phát triển hiện đại?",
@@ -34584,6 +35001,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thư và email",
    "type": "Email trang trọng",
    "band": "Band 6.0",
    "title": "Email hỏi thông tin và đăng ký khóa học ngắn hạn",
@@ -34615,6 +35033,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thư và email",
    "type": "Email trang trọng",
    "band": "Band 6.5",
    "title": "Email khiếu nại về sản phẩm giao trễ và bị lỗi",
@@ -34646,6 +35065,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thư và email",
    "type": "Email thân mật",
    "band": "Band 5.5",
    "title": "Email kể về chuyến đi và rủ bạn đi cùng lần tới",
@@ -34677,6 +35097,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thư và email",
    "type": "Email thân mật",
    "band": "Band 5.5",
    "title": "Email cảm ơn và xin lỗi vì đến muộn",
@@ -34708,6 +35129,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thư và email",
    "type": "Tin nhắn công việc",
    "band": "Band 5.5",
    "title": "Tin nhắn xin đổi ca làm và xác nhận lại lịch",
@@ -34739,6 +35161,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thư và email",
    "type": "Tin nhắn công việc",
    "band": "Band 6.0",
    "title": "Tin nhắn báo cáo tiến độ và xin gia hạn một ngày",
@@ -34770,6 +35193,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thư và email",
    "type": "Thư xin việc",
    "band": "Band 6.5",
    "title": "Thư xin việc vị trí trợ lý bán hàng bán thời gian",
@@ -34801,6 +35225,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Thư và email",
    "type": "Thư xin việc",
    "band": "Band 7.0",
    "title": "Thư xin việc vị trí điều phối viên dự án tại tổ chức giáo dục",
@@ -34832,6 +35257,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Biểu đồ hỗn hợp",
    "type": "Task 1",
    "band": "Band 6.5",
    "title": "Biểu đồ hỗn hợp cột và đường: khách du lịch và nhiệt độ",
@@ -34863,6 +35289,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Biểu đồ hỗn hợp",
    "type": "Task 1",
    "band": "Band 7.0",
    "title": "Biểu đồ hỗn hợp cột và đường: sản lượng lúa mì và lượng mưa",
@@ -34894,6 +35321,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Biểu đồ tròn",
    "type": "Task 1",
    "band": "Band 6.5",
    "title": "Biểu đồ tròn: chi tiêu của hộ gia đình",
@@ -34925,6 +35353,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Bản đồ",
    "type": "Task 1",
    "band": "Band 7.0",
    "title": "Bản đồ: một thị trấn thay đổi từ năm 1995 đến năm 2024",
@@ -34956,6 +35385,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Biểu đồ cột",
    "type": "Task 1",
    "band": "Band 6.5",
    "title": "Biểu đồ cột: tỷ lệ hộ gia đình tái chế rác",
@@ -34987,6 +35417,7 @@ const CONTENT = {
    ]
   },
   {
+   "wtype": "Quy trình",
    "type": "Task 1",
    "band": "Band 7.0",
    "title": "Quy trình: tái chế chai nhựa",
