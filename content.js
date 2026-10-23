@@ -1515,6 +1515,22 @@ const CONTENT = {
     "We decided to leave early so that we could avoid the traffic.",
     "The village where I was born is near a wide river."
    ]
+  },
+  {
+   "level": "Band 5.5",
+   "title": "Câu giao tiếp y tế - hỏi bệnh và dặn dò bệnh nhân",
+   "sentences": [
+    "How long have you had this pain?",
+    "Where exactly does it hurt?",
+    "Are you allergic to any medicine?",
+    "Have you taken any medicine for it?",
+    "Please take this medicine after meals.",
+    "You should drink plenty of water and rest.",
+    "Your blood pressure is a little high today.",
+    "Do not worry, it is not serious.",
+    "Come back next week for a check-up.",
+    "If the fever gets higher, go to hospital at once."
+   ]
   }
  ],
  "vocab": [
@@ -14520,6 +14536,340 @@ const CONTENT = {
      "exv": "Cô ấy có thể ngủ ngon với lương tâm thanh thản sau khi nói ra sự thật."
     }
    ]
+  },
+  {
+   "topic": "Y tế và chăm sóc sức khỏe",
+   "theme": "Từ vựng y tế 1 - Khám bệnh và triệu chứng",
+   "band": "Band 5.0",
+   "cards": [
+    {
+     "w": "symptom",
+     "ipa": "/ˈsɪmptəm/",
+     "vi": "triệu chứng",
+     "col": "a symptom of flu",
+     "ex": "A high fever is a common symptom of flu.",
+     "exv": "Sốt cao là một triệu chứng phổ biến của bệnh cúm."
+    },
+    {
+     "w": "fever",
+     "ipa": "/ˈfiːvə/",
+     "vi": "cơn sốt",
+     "col": "have a fever",
+     "ex": "She has had a fever since yesterday.",
+     "exv": "Cô ấy bị sốt từ hôm qua."
+    },
+    {
+     "w": "cough",
+     "ipa": "/kɒf/",
+     "vi": "cơn ho; ho",
+     "col": "a dry cough",
+     "ex": "He has a dry cough and cannot sleep well.",
+     "exv": "Anh ấy bị ho khan và không ngủ ngon được."
+    },
+    {
+     "w": "headache",
+     "ipa": "/ˈhedeɪk/",
+     "vi": "đau đầu",
+     "col": "a bad headache",
+     "ex": "I have a bad headache, so I need to rest.",
+     "exv": "Tôi bị đau đầu dữ dội nên cần nghỉ ngơi."
+    },
+    {
+     "w": "blood pressure",
+     "ipa": "/blʌd ˈpreʃə/",
+     "vi": "huyết áp",
+     "col": "high blood pressure",
+     "ex": "The nurse checks my blood pressure every morning.",
+     "exv": "Y tá kiểm tra huyết áp của tôi mỗi buổi sáng."
+    },
+    {
+     "w": "appointment",
+     "ipa": "/əˈpɔɪntmənt/",
+     "vi": "cuộc hẹn, lịch hẹn khám",
+     "col": "make an appointment",
+     "ex": "I made an appointment with the doctor for Friday.",
+     "exv": "Tôi đã đặt lịch hẹn với bác sĩ vào thứ Sáu."
+    },
+    {
+     "w": "prescription",
+     "ipa": "/prɪˈskrɪpʃn/",
+     "vi": "đơn thuốc",
+     "col": "write a prescription",
+     "ex": "The doctor wrote a prescription for some painkillers.",
+     "exv": "Bác sĩ đã kê một đơn thuốc giảm đau."
+    },
+    {
+     "w": "pain",
+     "ipa": "/peɪn/",
+     "vi": "cơn đau",
+     "col": "chest pain",
+     "ex": "He felt a sharp pain in his chest.",
+     "exv": "Anh ấy cảm thấy một cơn đau nhói ở ngực."
+    },
+    {
+     "w": "allergy",
+     "ipa": "/ˈælədʒi/",
+     "vi": "dị ứng",
+     "col": "a food allergy",
+     "ex": "She has an allergy to peanuts, so she never eats them.",
+     "exv": "Cô ấy bị dị ứng với đậu phộng nên không bao giờ ăn chúng."
+    },
+    {
+     "w": "infection",
+     "ipa": "/ɪnˈfekʃn/",
+     "vi": "nhiễm trùng, nhiễm khuẩn",
+     "col": "a throat infection",
+     "ex": "The infection made her throat very sore.",
+     "exv": "Chỗ nhiễm trùng khiến cổ họng cô ấy rất đau."
+    },
+    {
+     "w": "treatment",
+     "ipa": "/ˈtriːtmənt/",
+     "vi": "điều trị, phương pháp điều trị",
+     "col": "receive treatment",
+     "ex": "He is receiving treatment at a hospital in the city.",
+     "exv": "Anh ấy đang được điều trị tại một bệnh viện trong thành phố."
+    },
+    {
+     "w": "medicine",
+     "ipa": "/ˈmedɪsn/",
+     "vi": "thuốc",
+     "col": "take medicine",
+     "ex": "Take this medicine twice a day after meals.",
+     "exv": "Hãy uống thuốc này hai lần một ngày sau bữa ăn."
+    },
+    {
+     "w": "patient",
+     "ipa": "/ˈpeɪʃnt/",
+     "vi": "bệnh nhân",
+     "col": "treat a patient",
+     "ex": "The doctor listened carefully to the patient.",
+     "exv": "Bác sĩ lắng nghe bệnh nhân một cách cẩn thận."
+    },
+    {
+     "w": "clinic",
+     "ipa": "/ˈklɪnɪk/",
+     "vi": "phòng khám",
+     "col": "a local clinic",
+     "ex": "There is a small clinic near my house.",
+     "exv": "Có một phòng khám nhỏ gần nhà tôi."
+    },
+    {
+     "w": "check-up",
+     "ipa": "/ˈtʃek ʌp/",
+     "vi": "khám sức khỏe tổng quát",
+     "col": "an annual check-up",
+     "ex": "Everyone should have a check-up once a year.",
+     "exv": "Mọi người nên khám sức khỏe tổng quát mỗi năm một lần."
+    },
+    {
+     "w": "dizzy",
+     "ipa": "/ˈdɪzi/",
+     "vi": "chóng mặt",
+     "col": "feel dizzy",
+     "ex": "Stand up slowly, or you may feel dizzy.",
+     "exv": "Hãy đứng dậy từ từ, nếu không bạn có thể bị chóng mặt."
+    },
+    {
+     "w": "sore throat",
+     "ipa": "/sɔː θrəʊt/",
+     "vi": "đau họng",
+     "col": "have a sore throat",
+     "ex": "I have a sore throat, so drinking warm water helps.",
+     "exv": "Tôi bị đau họng nên uống nước ấm giúp dễ chịu hơn."
+    },
+    {
+     "w": "stomachache",
+     "ipa": "/ˈstʌməkeɪk/",
+     "vi": "đau bụng",
+     "col": "a stomachache after lunch",
+     "ex": "The child had a stomachache after eating too much candy.",
+     "exv": "Đứa trẻ bị đau bụng sau khi ăn quá nhiều kẹo."
+    },
+    {
+     "w": "temperature",
+     "ipa": "/ˈtemprətʃə/",
+     "vi": "nhiệt độ, thân nhiệt",
+     "col": "take your temperature",
+     "ex": "The nurse took my temperature and said it was normal.",
+     "exv": "Y tá đo thân nhiệt cho tôi và nói rằng nó bình thường."
+    },
+    {
+     "w": "recover",
+     "ipa": "/rɪˈkʌvə/",
+     "vi": "hồi phục, khỏi bệnh",
+     "col": "recover from an illness",
+     "ex": "It took him two weeks to recover from the flu.",
+     "exv": "Anh ấy mất hai tuần để hồi phục sau trận cúm."
+    }
+   ]
+  },
+  {
+   "topic": "Y tế và chăm sóc sức khỏe",
+   "theme": "Từ vựng y tế 2 - Bệnh viện và điều trị",
+   "band": "Band 6.5",
+   "cards": [
+    {
+     "w": "diagnosis",
+     "ipa": "/ˌdaɪəɡˈnəʊsɪs/",
+     "vi": "chẩn đoán",
+     "col": "make a diagnosis",
+     "ex": "The diagnosis was confirmed after the blood test results came back.",
+     "exv": "Chẩn đoán được xác nhận sau khi có kết quả xét nghiệm máu."
+    },
+    {
+     "w": "surgery",
+     "ipa": "/ˈsɜːdʒəri/",
+     "vi": "phẫu thuật, ca mổ",
+     "col": "have surgery",
+     "ex": "He had surgery on his knee last month.",
+     "exv": "Anh ấy đã phẫu thuật đầu gối vào tháng trước."
+    },
+    {
+     "w": "vaccination",
+     "ipa": "/ˌvæksɪˈneɪʃn/",
+     "vi": "tiêm chủng, tiêm vắc xin",
+     "col": "a vaccination programme",
+     "ex": "Vaccination has greatly reduced the number of measles cases.",
+     "exv": "Tiêm chủng đã làm giảm mạnh số ca bệnh sởi."
+    },
+    {
+     "w": "chronic",
+     "ipa": "/ˈkrɒnɪk/",
+     "vi": "mạn tính, kéo dài",
+     "col": "a chronic disease",
+     "ex": "Diabetes is a chronic disease that needs long-term care.",
+     "exv": "Tiểu đường là một bệnh mạn tính cần được chăm sóc lâu dài."
+    },
+    {
+     "w": "antibiotic",
+     "ipa": "/ˌæntibaɪˈɒtɪk/",
+     "vi": "thuốc kháng sinh",
+     "col": "take antibiotics",
+     "ex": "Doctors should only prescribe antibiotics when they are really needed.",
+     "exv": "Bác sĩ chỉ nên kê kháng sinh khi thật sự cần thiết."
+    },
+    {
+     "w": "side effect",
+     "ipa": "/saɪd ɪˈfekt/",
+     "vi": "tác dụng phụ",
+     "col": "a common side effect",
+     "ex": "Drowsiness is a common side effect of this medicine.",
+     "exv": "Buồn ngủ là một tác dụng phụ phổ biến của loại thuốc này."
+    },
+    {
+     "w": "dose",
+     "ipa": "/dəʊs/",
+     "vi": "liều thuốc (dosage là liều lượng quy định)",
+     "col": "a daily dose",
+     "ex": "Take one dose in the morning and one in the evening.",
+     "exv": "Hãy uống một liều vào buổi sáng và một liều vào buổi tối."
+    },
+    {
+     "w": "emergency",
+     "ipa": "/ɪˈmɜːdʒənsi/",
+     "vi": "cấp cứu, trường hợp khẩn cấp",
+     "col": "the emergency department",
+     "ex": "Call an ambulance immediately in an emergency.",
+     "exv": "Hãy gọi xe cấp cứu ngay trong trường hợp khẩn cấp."
+    },
+    {
+     "w": "ward",
+     "ipa": "/wɔːd/",
+     "vi": "buồng bệnh, khoa điều trị nội trú",
+     "col": "a children's ward",
+     "ex": "She works as a nurse in the children's ward.",
+     "exv": "Cô ấy làm điều dưỡng tại khoa nhi."
+    },
+    {
+     "w": "specialist",
+     "ipa": "/ˈspeʃəlɪst/",
+     "vi": "bác sĩ chuyên khoa",
+     "col": "a heart specialist",
+     "ex": "The GP referred him to a heart specialist.",
+     "exv": "Bác sĩ đa khoa đã giới thiệu anh ấy đến một bác sĩ chuyên khoa tim mạch."
+    },
+    {
+     "w": "therapy",
+     "ipa": "/ˈθerəpi/",
+     "vi": "liệu pháp, trị liệu",
+     "col": "physical therapy",
+     "ex": "After the accident, she needed months of physical therapy.",
+     "exv": "Sau tai nạn, cô ấy cần nhiều tháng vật lý trị liệu."
+    },
+    {
+     "w": "immune",
+     "ipa": "/ɪˈmjuːn/",
+     "vi": "miễn dịch",
+     "col": "the immune system",
+     "ex": "A balanced diet helps to keep the immune system strong.",
+     "exv": "Một chế độ ăn cân bằng giúp hệ miễn dịch khỏe mạnh."
+    },
+    {
+     "w": "inflammation",
+     "ipa": "/ˌɪnfləˈmeɪʃn/",
+     "vi": "viêm, tình trạng viêm",
+     "col": "reduce inflammation",
+     "ex": "This cream reduces inflammation and stops the itching.",
+     "exv": "Loại kem này làm giảm viêm và hết ngứa."
+    },
+    {
+     "w": "procedure",
+     "ipa": "/prəˈsiːdʒə/",
+     "vi": "thủ thuật, quy trình y khoa",
+     "col": "a surgical procedure",
+     "ex": "The procedure usually takes less than an hour.",
+     "exv": "Thủ thuật này thường kéo dài chưa đến một giờ."
+    },
+    {
+     "w": "discharge",
+     "ipa": "/dɪsˈtʃɑːdʒ/",
+     "vi": "xuất viện; cho xuất viện",
+     "col": "be discharged from hospital",
+     "ex": "He was discharged from hospital three days after the operation.",
+     "exv": "Anh ấy được xuất viện ba ngày sau ca phẫu thuật."
+    },
+    {
+     "w": "referral",
+     "ipa": "/rɪˈfɜːrəl/",
+     "vi": "giấy giới thiệu, chuyển tuyến",
+     "col": "a referral letter",
+     "ex": "You need a referral from your GP to see this specialist.",
+     "exv": "Bạn cần giấy giới thiệu từ bác sĩ gia đình để gặp bác sĩ chuyên khoa này."
+    },
+    {
+     "w": "examine",
+     "ipa": "/ɪɡˈzæmɪn/",
+     "vi": "khám, kiểm tra (bệnh nhân)",
+     "col": "examine a patient",
+     "ex": "The doctor examined the patient's throat and chest.",
+     "exv": "Bác sĩ đã khám cổ họng và lồng ngực của bệnh nhân."
+    },
+    {
+     "w": "condition",
+     "ipa": "/kənˈdɪʃn/",
+     "vi": "tình trạng bệnh, bệnh trạng",
+     "col": "a serious condition",
+     "ex": "His condition is stable, and he is improving day by day.",
+     "exv": "Tình trạng của anh ấy ổn định và đang tốt lên từng ngày."
+    },
+    {
+     "w": "prevention",
+     "ipa": "/prɪˈvenʃn/",
+     "vi": "phòng ngừa, phòng bệnh",
+     "col": "disease prevention",
+     "ex": "Prevention is always better and cheaper than cure.",
+     "exv": "Phòng bệnh luôn tốt hơn và rẻ hơn chữa bệnh."
+    },
+    {
+     "w": "complication",
+     "ipa": "/ˌkɒmplɪˈkeɪʃn/",
+     "vi": "biến chứng",
+     "col": "a serious complication",
+     "ex": "If the infection is not treated early, it may lead to serious complications.",
+     "exv": "Nếu nhiễm trùng không được điều trị sớm, nó có thể dẫn đến những biến chứng nghiêm trọng."
+    }
+   ]
   }
  ],
  "grammar": [
@@ -26516,6 +26866,186 @@ const CONTENT = {
      "vi": "châu thổ, vùng đất nơi sông đổ ra biển"
     }
    ]
+  },
+  {
+   "topic": "Y tế và chăm sóc sức khỏe",
+   "level": "Band 5.5",
+   "title": "Regular Health Check-ups and the Prevention of Disease",
+   "text": "Many people only visit a doctor when they feel ill. However, doctors around the world agree that regular health check-ups are one of the simplest ways to protect our health. A check-up usually includes measuring blood pressure, testing the blood, and checking weight and heart rate. These simple tests take less than an hour, but they can reveal problems long before any symptoms appear.\n\nEarly detection is the main benefit of regular check-ups. Serious diseases such as diabetes and high blood pressure often develop slowly and silently. A person may feel completely healthy while the disease is already damaging the body. If doctors discover these conditions early, treatment is usually easier, cheaper and more successful. In contrast, late treatment often requires surgery or long stays in hospital.\n\nCheck-ups are also a chance to build healthy habits. During the visit, doctors can advise patients about diet, exercise and sleep, and remind them about vaccinations. Studies show that people who attend regular check-ups are more likely to quit smoking and control their weight. In this way, the check-up is not only about finding disease, but also about preventing it.\n\nHow often should we have a check-up? Most doctors recommend once a year for adults, although older people and those with chronic conditions may need to go more often. The appointment is short and the cost is small, but the benefit, a longer and healthier life, is enormous.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "What does a typical health check-up include?",
+     "o": [
+      "An operation and a long stay in hospital",
+      "Measuring blood pressure and testing the blood",
+      "A course of antibiotics",
+      "An X-ray of every part of the body"
+     ],
+     "a": 1,
+     "why": "Đoạn 1 nêu buổi khám gồm \"measuring blood pressure, testing the blood, and checking weight and heart rate\"."
+    },
+    {
+     "type": "MC",
+     "q": "Why is early detection important?",
+     "o": [
+      "It makes diseases develop more slowly",
+      "It means treatment can be easier and cheaper",
+      "It removes the need for healthy habits",
+      "It helps doctors finish work faster"
+     ],
+     "a": 1,
+     "why": "Đoạn 2: nếu phát hiện sớm, \"treatment is usually easier, cheaper and more successful\"."
+    },
+    {
+     "type": "MC",
+     "q": "According to the passage, people who attend regular check-ups are more likely to...",
+     "o": [
+      "avoid all vaccinations",
+      "need more surgery",
+      "quit smoking and control their weight",
+      "visit hospitals every week"
+     ],
+     "a": 2,
+     "why": "Đoạn 3: người đi khám định kỳ \"are more likely to quit smoking and control their weight\"."
+    },
+    {
+     "type": "TFNG",
+     "q": "Diabetes and high blood pressure always produce clear symptoms at an early stage.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 1,
+     "why": "Đoạn 2 nói các bệnh này \"develop slowly and silently\" và người bệnh \"may feel completely healthy\", nên khẳng định luôn có triệu chứng rõ từ sớm là False."
+    },
+    {
+     "type": "TFNG",
+     "q": "Most doctors recommend that adults have a health check-up once a month.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 1,
+     "why": "Đoạn 4: \"Most doctors recommend once a year for adults\" - mỗi năm một lần, không phải mỗi tháng, nên đáp án là False."
+    }
+   ],
+   "translation": "Nhiều người chỉ đến gặp bác sĩ khi cảm thấy ốm. Tuy nhiên, các bác sĩ trên khắp thế giới đều đồng ý rằng khám sức khỏe định kỳ là một trong những cách đơn giản nhất để bảo vệ sức khỏe. Một buổi khám thường bao gồm đo huyết áp, xét nghiệm máu, và kiểm tra cân nặng cùng nhịp tim. Những xét nghiệm đơn giản này tốn chưa đến một giờ, nhưng có thể phát hiện các vấn đề từ rất lâu trước khi bất kỳ triệu chứng nào xuất hiện.\n\nPhát hiện sớm là lợi ích chính của việc khám định kỳ. Các bệnh nghiêm trọng như tiểu đường và cao huyết áp thường phát triển chậm và âm thầm. Một người có thể cảm thấy hoàn toàn khỏe mạnh trong khi bệnh đã đang gây hại cho cơ thể. Nếu bác sĩ phát hiện những tình trạng này sớm, việc điều trị thường dễ dàng hơn, rẻ hơn và thành công hơn. Ngược lại, điều trị muộn thường đòi hỏi phẫu thuật hoặc nằm viện dài ngày.\n\nKhám định kỳ cũng là cơ hội để xây dựng những thói quen lành mạnh. Trong buổi khám, bác sĩ có thể tư vấn cho bệnh nhân về chế độ ăn, vận động và giấc ngủ, đồng thời nhắc họ về việc tiêm chủng. Các nghiên cứu cho thấy những người đi khám định kỳ có khả năng bỏ thuốc lá và kiểm soát cân nặng cao hơn. Bằng cách này, buổi khám không chỉ là để tìm bệnh, mà còn để phòng bệnh.\n\nVậy chúng ta nên khám sức khỏe bao lâu một lần? Hầu hết bác sĩ khuyên mỗi năm một lần đối với người trưởng thành, mặc dù người cao tuổi và những người mắc bệnh mạn tính có thể cần đi khám thường xuyên hơn. Buổi hẹn ngắn và chi phí nhỏ, nhưng lợi ích, một cuộc sống dài hơn và khỏe mạnh hơn, là vô cùng lớn.",
+   "phrases": [
+    {
+     "en": "regular health check-ups",
+     "vi": "khám sức khỏe định kỳ"
+    },
+    {
+     "en": "early detection",
+     "vi": "phát hiện sớm"
+    },
+    {
+     "en": "develop slowly and silently",
+     "vi": "phát triển chậm và âm thầm"
+    },
+    {
+     "en": "quit smoking",
+     "vi": "bỏ thuốc lá"
+    },
+    {
+     "en": "chronic conditions",
+     "vi": "các bệnh mạn tính"
+    }
+   ]
+  },
+  {
+   "topic": "Y tế và chăm sóc sức khỏe",
+   "level": "Band 6.5",
+   "title": "Antibiotic Resistance: A Global Health Threat",
+   "text": "Antibiotics are among the most important medicines ever discovered, saving millions of lives since the 1940s. However, the bacteria they are designed to kill are learning to resist them, and this growing problem, known as antibiotic resistance, is now considered one of the greatest threats to global health.\n\nA. The main cause of resistance is the overuse and misuse of antibiotics in humans. Too often, patients demand antibiotics for viral infections such as colds, against which the drugs have no effect. Others stop taking their medicine as soon as they feel better, leaving the strongest bacteria alive. These surviving bacteria multiply and pass their resistance to future generations.\n\nB. Agriculture is another major driver of the crisis. On many farms, antibiotics are given to healthy animals not to cure disease but to make them grow faster and to prevent infection in crowded conditions. In some countries, more antibiotics are used in animals than in people, and resistant bacteria can reach humans through food and water.\n\nC. The consequences are already visible in hospitals worldwide. Infections that were once easy to treat, such as pneumonia and urinary infections, are becoming harder and sometimes impossible to cure. Patients must stay in hospital longer, doctors are forced to use stronger and more expensive drugs, and the risk of death rises, particularly for the elderly and those with weak immune systems.\n\nD. Solving the problem requires action at every level. Governments should restrict the use of antibiotics in farming and invest in research into new drugs. Doctors must prescribe antibiotics only when they are truly necessary, and patients should always finish the full course of treatment. Meanwhile, better hygiene, clean water and vaccination can reduce the number of infections and therefore the need for antibiotics in the first place.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "According to paragraph A, why do some bacteria survive a course of antibiotics?",
+     "o": [
+      "Patients take the medicine for too long",
+      "Patients stop the medicine as soon as they feel better",
+      "The drugs are too expensive for most people",
+      "Bacteria are unable to multiply"
+     ],
+     "a": 1,
+     "why": "Đoạn A: nhiều người \"stop taking their medicine as soon as they feel better, leaving the strongest bacteria alive\"."
+    },
+    {
+     "type": "MC",
+     "q": "What is one result of antibiotic resistance mentioned in paragraph C?",
+     "o": [
+      "Hospitals become less crowded",
+      "Simple infections become easier to cure",
+      "Patients have to stay in hospital longer",
+      "Doctors stop using expensive drugs"
+     ],
+     "a": 2,
+     "why": "Đoạn C: \"Patients must stay in hospital longer\" và bác sĩ buộc phải dùng thuốc mạnh hơn, đắt hơn."
+    },
+    {
+     "type": "MC",
+     "q": "Paragraph D suggests that vaccination can help fight resistance because it...",
+     "o": [
+      "kills resistant bacteria directly",
+      "reduces the number of infections",
+      "replaces all antibiotics completely",
+      "makes new drugs cheaper to produce"
+     ],
+     "a": 1,
+     "why": "Đoạn D: tiêm chủng cùng vệ sinh và nước sạch \"can reduce the number of infections and therefore the need for antibiotics\"."
+    },
+    {
+     "type": "MH",
+     "q": "Which paragraph explains how farming contributes to antibiotic resistance?",
+     "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "a": 1,
+     "why": "Đoạn B nói về việc dùng kháng sinh cho vật nuôi khỏe mạnh tại các trang trại để tăng trưởng nhanh và phòng nhiễm trùng."
+    },
+    {
+     "type": "MH",
+     "q": "Which paragraph describes the effects of resistance on patients in hospitals?",
+     "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "a": 2,
+     "why": "Đoạn C mô tả hậu quả tại bệnh viện: nằm viện lâu hơn, phải dùng thuốc mạnh và đắt hơn, nguy cơ tử vong tăng."
+    }
+   ],
+   "translation": "Kháng sinh là một trong những loại thuốc quan trọng nhất từng được phát hiện, đã cứu sống hàng triệu người kể từ những năm 1940. Tuy nhiên, những vi khuẩn mà chúng được tạo ra để tiêu diệt đang học cách chống lại chúng, và vấn đề ngày càng lớn này, được gọi là kháng kháng sinh, nay được coi là một trong những mối đe dọa lớn nhất đối với sức khỏe toàn cầu.\n\nA. Nguyên nhân chính của tình trạng kháng thuốc là việc lạm dụng và dùng sai kháng sinh ở người. Quá thường xuyên, bệnh nhân đòi dùng kháng sinh cho các bệnh nhiễm vi-rút như cảm lạnh, mà thuốc không có tác dụng với chúng. Những người khác ngừng uống thuốc ngay khi cảm thấy đỡ, để sót lại những vi khuẩn khỏe nhất còn sống. Những vi khuẩn sống sót này nhân lên và truyền khả năng kháng thuốc cho các thế hệ sau.\n\nB. Nông nghiệp là một tác nhân lớn khác của cuộc khủng hoảng. Tại nhiều trang trại, kháng sinh được cho vật nuôi khỏe mạnh không phải để chữa bệnh mà để giúp chúng lớn nhanh hơn và phòng nhiễm trùng trong điều kiện chăn nuôi chật chội. Ở một số quốc gia, lượng kháng sinh dùng cho vật nuôi còn nhiều hơn cho người, và vi khuẩn kháng thuốc có thể đến với con người qua thực phẩm và nguồn nước.\n\nC. Hậu quả đã hiển hiện tại các bệnh viện trên toàn thế giới. Những bệnh nhiễm trùng từng dễ điều trị, như viêm phổi và nhiễm trùng đường tiết niệu, đang trở nên khó chữa hơn và đôi khi không thể chữa khỏi. Bệnh nhân phải nằm viện lâu hơn, bác sĩ buộc phải dùng các loại thuốc mạnh hơn và đắt hơn, và nguy cơ tử vong tăng lên, đặc biệt ở người cao tuổi và những người có hệ miễn dịch yếu.\n\nD. Giải quyết vấn đề đòi hỏi hành động ở mọi cấp độ. Chính phủ nên hạn chế việc dùng kháng sinh trong chăn nuôi và đầu tư vào nghiên cứu thuốc mới. Bác sĩ chỉ nên kê kháng sinh khi thật sự cần thiết, và bệnh nhân nên luôn uống đủ toàn bộ liệu trình điều trị. Trong khi đó, vệ sinh tốt hơn, nước sạch và tiêm chủng có thể làm giảm số ca nhiễm trùng và do đó giảm nhu cầu dùng kháng sinh ngay từ đầu.",
+   "phrases": [
+    {
+     "en": "antibiotic resistance",
+     "vi": "kháng kháng sinh, tình trạng kháng thuốc"
+    },
+    {
+     "en": "overuse and misuse",
+     "vi": "lạm dụng và dùng sai cách"
+    },
+    {
+     "en": "pass their resistance to future generations",
+     "vi": "truyền khả năng kháng thuốc cho các thế hệ sau"
+    },
+    {
+     "en": "weak immune systems",
+     "vi": "hệ miễn dịch yếu"
+    },
+    {
+     "en": "in the first place",
+     "vi": "ngay từ đầu, vốn dĩ"
+    }
+   ]
   }
  ],
  "listening": [
@@ -27544,6 +28074,66 @@ const CONTENT = {
    "topic": "Chuẩn bị thuyết trình",
    "text": "The slides were prepared by Lan, who is the best designer in our group.",
    "band": "Band 4.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Kể triệu chứng với bác sĩ",
+   "text": "I have had a terrible headache and a high fever since Monday.",
+   "band": "Band 5.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Hỏi về dị ứng thuốc",
+   "text": "Before I prescribe anything, I need to know if you are allergic to any medicine.",
+   "band": "Band 5.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Dặn dò uống thuốc",
+   "text": "Take one tablet twice a day after meals, and finish the whole course.",
+   "band": "Band 5.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Hẹn tái khám",
+   "text": "Please come back in one week so that I can check your blood pressure again.",
+   "band": "Band 5.0"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Hướng dẫn tiêm chủng",
+   "text": "The vaccination is free for all patients over sixty-five this winter.",
+   "band": "Band 5.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Khai tiền sử bệnh gia đình",
+   "text": "My father has had diabetes for ten years, and he takes medicine every day.",
+   "band": "Band 5.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Đo thân nhiệt",
+   "text": "The nurse took my temperature and told me it was slightly above normal.",
+   "band": "Band 5.0"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Lời khuyên phòng bệnh",
+   "text": "Regular exercise and enough sleep are the simplest ways to strengthen your immune system.",
+   "band": "Band 6.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Triệu chứng cảm cúm",
+   "text": "She has been coughing all night, so she could not sleep properly.",
+   "band": "Band 5.0"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Tác dụng phụ của thuốc",
+   "text": "This medicine may make you feel sleepy, so you should not drive after taking it.",
+   "band": "Band 6.0"
   }
  ],
  "speaking": [
@@ -34581,6 +35171,388 @@ const CONTENT = {
      "why": "Candidate nói: some host cities have been left with debts and stadiums that nobody uses."
     }
    ]
+  },
+  {
+   "partNum": 1,
+   "topicStd": "Y tế và chăm sóc sức khỏe",
+   "part": "Part 1",
+   "topic": "Health and Daily Life - Sức khỏe và đời sống",
+   "band": "Band 5.5",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let's talk about health. What do you do to stay healthy?",
+     "vi": "Chúng ta hãy nói về sức khỏe. Bạn làm gì để giữ sức khỏe?",
+     "ipa": "lets tɔːk əˈbaʊt helθ. wɒt də jə duː tə steɪ ˈhelθi",
+     "link": "Âm /θ/ ở cuối health đọc rõ; stay healthy là cụm cố định.",
+     "chunks": [
+      "Let's talk about health",
+      "stay healthy"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "As a doctor, I try to set a good example for my patients. I exercise for thirty minutes every morning and eat plenty of vegetables and fruit.",
+     "vi": "Là một bác sĩ, tôi cố gắng làm gương tốt cho bệnh nhân của mình. Tôi tập thể dục 30 phút mỗi sáng và ăn nhiều rau cùng trái cây.",
+     "ipa": "əz ə ˈdɒktə aɪ traɪ tə set ə ɡʊd ɪɡˈzɑːmpəl fə maɪ ˈpeɪʃənts. aɪ ˈeksəsaɪz fə ˈθɜːti ˈmɪnɪts ˈevri ˈmɔːnɪŋ ənd iːt ˈplenti əv ˈvedʒtəbəlz ənd fruːt",
+     "link": "'set a good example' là cụm rất hay ở Part 1, nghĩa là làm gương tốt; plenty of nối âm nhẹ.",
+     "chunks": [
+      "As a doctor",
+      "set a good example for my patients",
+      "plenty of vegetables and fruit"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Do you have regular health check-ups?",
+     "vi": "Bạn có khám sức khỏe định kỳ không?",
+     "ipa": "də jə hæv ˈreɡjələ helθ ˈtʃek ʌps",
+     "link": "regular nhấn âm đầu; check-ups là danh từ ghép, có -s ở dạng số nhiều.",
+     "chunks": [
+      "regular health check-ups"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, I have a full check-up once a year. I check my blood pressure and do blood tests, because prevention is always better than cure.",
+     "vi": "Có, tôi khám sức khỏe tổng quát mỗi năm một lần. Tôi kiểm tra huyết áp và làm xét nghiệm máu, vì phòng bệnh luôn tốt hơn chữa bệnh.",
+     "ipa": "jes aɪ hæv ə fʊl ˈtʃek ʌp wʌns ə jɪə. aɪ tʃek maɪ blʌd ˈpreʃə ənd duː blʌd tests bɪˈkɒz prɪˈvenʃən ɪz ˈɔːlweɪz ˈbetə ðən kjʊə",
+     "link": "'once a year' là cụm tần suất chuẩn; prevention is better than cure là câu nói nổi tiếng về phòng bệnh.",
+     "chunks": [
+      "a full check-up once a year",
+      "check my blood pressure",
+      "prevention is always better than cure"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "How many hours do you sleep every night?",
+     "vi": "Mỗi đêm bạn ngủ bao nhiêu tiếng?",
+     "ipa": "haʊ ˈmeni ˈaʊəz də jə sliːp ˈevri naɪt",
+     "link": "How many đi với danh từ đếm được hours; âm /aʊ/ trong how và hours giống nhau.",
+     "chunks": [
+      "How many hours",
+      "sleep every night"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I usually sleep about seven hours a night. However, when I am on night duty at the hospital, I sometimes sleep only four or five hours.",
+     "vi": "Tôi thường ngủ khoảng bảy tiếng mỗi đêm. Tuy nhiên, khi trực đêm ở bệnh viện, đôi khi tôi chỉ ngủ bốn hoặc năm tiếng.",
+     "ipa": "aɪ ˈjuːʒuəli sliːp əˈbaʊt ˈsevən ˈaʊəz ə naɪt. haʊˈevə wen aɪ əm ɒn naɪt ˈdjuːti ət ðə ˈhɒspɪtəl aɪ ˈsʌmtaɪmz sliːp ˈəʊnli fɔː ɔː faɪv ˈaʊəz",
+     "link": "'on night duty' nghĩa là đang trực đêm, cụm rất đặc trưng của ngành y; However mở đầu ý đối lập.",
+     "chunks": [
+      "seven hours a night",
+      "on night duty at the hospital",
+      "only four or five hours"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Is your job stressful?",
+     "vi": "Công việc của bạn có căng thẳng không?",
+     "ipa": "ɪz jə dʒɒb ˈstresfəl",
+     "link": "stressful nhấn âm đầu; câu hỏi Yes/No lên giọng nhẹ ở cuối.",
+     "chunks": [
+      "Is your job",
+      "stressful"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, it can be very stressful, especially in the emergency department during the night shift. To relax, I usually listen to music and spend time with my family.",
+     "vi": "Có, đôi khi rất căng thẳng, đặc biệt là ở khoa cấp cứu trong ca trực đêm. Để thư giãn, tôi thường nghe nhạc và dành thời gian cho gia đình.",
+     "ipa": "jes ɪt kən bi ˈveri ˈstresfəl ɪˈspeʃəli ɪn ði ɪˈmɜːdʒənsi dɪˈpɑːtmənt ˈdjʊərɪŋ ðə naɪt ʃɪft. tə rɪˈlæks aɪ ˈjuːʒuəli ˈlɪsən tə ˈmjuːzɪk ənd spend taɪm wɪð maɪ ˈfæməli",
+     "link": "'night shift' là ca trực đêm; spend time with somebody là cụm dành thời gian cho ai đó.",
+     "chunks": [
+      "in the emergency department",
+      "during the night shift",
+      "spend time with my family"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Người nói làm nghề gì và làm gì để giữ sức khỏe?",
+     "o": [
+      "Là giáo viên, tập yoga mỗi tối",
+      "Là bác sĩ, tập thể dục mỗi sáng và ăn nhiều rau quả",
+      "Là sinh viên, chú trọng ngủ đủ giấc"
+     ],
+     "a": 1,
+     "why": "Candidate nói: \"As a doctor, I try to set a good example... I exercise for thirty minutes every morning and eat plenty of vegetables and fruit.\""
+    },
+    {
+     "q": "Người nói khám sức khỏe định kỳ bao lâu một lần?",
+     "o": [
+      "Mỗi tháng một lần",
+      "Mỗi năm một lần",
+      "Hai năm một lần"
+     ],
+     "a": 1,
+     "why": "Candidate nói: \"I have a full check-up once a year.\""
+    },
+    {
+     "q": "Khi trực đêm ở bệnh viện, người nói thường ngủ mấy tiếng?",
+     "o": [
+      "Khoảng bảy tiếng",
+      "Tám tiếng",
+      "Chỉ bốn hoặc năm tiếng"
+     ],
+     "a": 2,
+     "why": "Candidate nói: \"when I am on night duty at the hospital, I sometimes sleep only four or five hours.\""
+    }
+   ]
+  },
+  {
+   "partNum": 2,
+   "topicStd": "Y tế và chăm sóc sức khỏe",
+   "part": "Part 2",
+   "topic": "Describe a medical professional you admire - Mô tả một nhân viên y tế mà bạn ngưỡng mộ",
+   "band": "Band 6.0",
+   "lines": [
+    {
+     "who": "Cue card",
+     "en": "Describe a medical professional you admire. You should say: who this person is, how you know him or her, what he or she does, and explain why you admire this person.",
+     "vi": "Hãy mô tả một nhân viên y tế mà bạn ngưỡng mộ. Bạn nên nói: người đó là ai, bạn biết người đó như thế nào, người đó làm công việc gì, và giải thích vì sao bạn ngưỡng mộ người đó."
+    },
+    {
+     "who": "Candidate",
+     "en": "I'm going to talk about Doctor Minh, a cardiologist at the hospital where I work, and someone I have admired ever since I was a medical student.",
+     "vi": "Tôi sẽ nói về bác sĩ Minh, một bác sĩ tim mạch tại bệnh viện nơi tôi làm việc, và là người tôi ngưỡng mộ kể từ khi còn là sinh viên y khoa.",
+     "ipa": "aɪm ˈɡəʊɪŋ tə tɔːk əˈbaʊt ˈdɒktə mɪŋ ə ˌkɑːdiˈɒlədʒɪst ət ðə ˈhɒspɪtəl weə aɪ wɜːk ənd ˈsʌmwʌn aɪ həv ədˈmaɪəd ˈevə sɪns aɪ wəz ə ˈmedɪkəl ˈstjuːdənt",
+     "link": "cardiologist nhấn âm ba; ever since mở khung thời gian từ quá khứ kéo dài đến hiện tại.",
+     "chunks": [
+      "I'm going to talk about",
+      "a cardiologist at the hospital",
+      "ever since I was a medical student"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I first met him about ten years ago when I was doing my training at his hospital. At that time, I was just a shy medical student, while he was already a well-known heart specialist with over twenty years of experience.",
+     "vi": "Tôi gặp bác sĩ lần đầu khoảng mười năm trước, khi tôi đang thực tập tại bệnh viện của bác sĩ. Khi đó, tôi chỉ là một sinh viên y khoa nhút nhát, còn bác sĩ đã là một chuyên gia tim mạch nổi tiếng với hơn hai mươi năm kinh nghiệm.",
+     "ipa": "aɪ fɜːst met hɪm əˈbaʊt ten jɪəz əˈɡəʊ wen aɪ wəz ˈduːɪŋ maɪ ˈtreɪnɪŋ ət hɪz ˈhɒspɪtəl. ət ðæt taɪm aɪ wəz dʒʌst ə ʃaɪ ˈmedɪkəl ˈstjuːdənt waɪl hi wəz ɔːlˈredi ə wel nəʊn hɑːt ˈspeʃəlɪst wɪð ˈəʊvə ˈtwenti jɪəz əv ɪkˈspɪəriəns",
+     "link": "'ten years ago' mở mốc quá khứ rõ ràng; well-known là tính từ ghép nghĩa là nổi tiếng.",
+     "chunks": [
+      "I first met him",
+      "doing my training",
+      "a well-known heart specialist"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "As head of the cardiology department, he treats hundreds of patients with heart disease every month. He also carries out complex operations and gives lectures to young doctors.",
+     "vi": "Là trưởng khoa tim mạch, bác sĩ điều trị hàng trăm bệnh nhân mắc bệnh tim mỗi tháng. Bác sĩ cũng thực hiện các ca phẫu thuật phức tạp và giảng dạy cho các bác sĩ trẻ.",
+     "ipa": "əz hed əv ðə ˌkɑːdiˈɒlədʒi dɪˈpɑːtmənt hi triːts ˈhʌndrədz əv ˈpeɪʃənts wɪð hɑːt dɪˈziːz ˈevri mʌnθ. hi ˈɔːlsəʊ ˈkæriz aʊt ˈkɒmpleks ˌɒpəˈreɪʃənz ənd ɡɪvz ˈlektʃəz tə jʌŋ ˈdɒktəz",
+     "link": "carry out là cụm động từ trang trọng nghĩa là thực hiện; hundreds of nhấn mạnh số lượng lớn.",
+     "chunks": [
+      "head of the cardiology department",
+      "patients with heart disease",
+      "carries out complex operations"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "What I admire most about him is not only his medical skill but also his patience with patients. He always listens carefully and explains their condition in simple words that anyone can understand.",
+     "vi": "Điều tôi ngưỡng mộ nhất ở bác sĩ không chỉ là tay nghề y khoa mà còn là sự kiên nhẫn với bệnh nhân. Bác sĩ luôn lắng nghe cẩn thận và giải thích tình trạng bệnh bằng những lời lẽ đơn giản mà ai cũng hiểu được.",
+     "ipa": "wɒt aɪ ədˈmaɪə məʊst əˈbaʊt hɪm ɪz nɒt ˈəʊnli hɪz ˈmedɪkəl skɪl bət ˈɔːlsəʊ hɪz ˈpeɪʃəns wɪð ˈpeɪʃənts. hi ˈɔːlweɪz ˈlɪsənz ˈkeəfəli ənd ɪkˈspleɪnz ðeə kənˈdɪʃn ɪn ˈsɪmpəl wɜːdz ðət ˈeniwʌn kən ˌʌndəˈstænd",
+     "link": "Cấu trúc not only... but also... giúp câu chắc và đạt band cao; patience và patients phát âm gần giống nhau nên cần phân biệt rõ.",
+     "chunks": [
+      "What I admire most about him",
+      "not only his medical skill but also",
+      "in simple words"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I will never forget one night shift when an elderly patient arrived in a critical condition. Doctor Minh stayed at the hospital all night, checking on the man every hour, and in the end he saved his life.",
+     "vi": "Tôi không bao giờ quên một ca trực đêm khi một bệnh nhân lớn tuổi được đưa đến trong tình trạng nguy kịch. Bác sĩ Minh đã ở lại bệnh viện suốt đêm, kiểm tra cho ông cụ mỗi giờ, và cuối cùng đã cứu sống ông.",
+     "ipa": "aɪ wɪl ˈnevə fəˈɡet wʌn naɪt ʃɪft wen ən ˈeldəli ˈpeɪʃənt əˈraɪvd ɪn ə ˈkrɪtɪkəl kənˈdɪʃn. ˈdɒktə mɪŋ steɪd ət ðə ˈhɒspɪtəl ɔːl naɪt ˈtʃekɪŋ ɒn ðə mæn ˈevri ˈaʊə ənd ɪn ði end hi seɪvd hɪz laɪf",
+     "link": "'in a critical condition' nghĩa là trong tình trạng nguy kịch; in the end kết lại câu chuyện.",
+     "chunks": [
+      "one night shift",
+      "in a critical condition",
+      "in the end he saved his life"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "To me, he is a real role model for young doctors. Working with him has taught me that a good doctor needs both skilled hands and a warm heart.",
+     "vi": "Với tôi, bác sĩ là một tấm gương thực sự cho các bác sĩ trẻ. Làm việc cùng bác sĩ đã dạy tôi rằng một bác sĩ giỏi cần cả đôi tay lành nghề và một trái tim ấm áp.",
+     "ipa": "tə miː hi ɪz ə rɪəl rəʊl ˈmɒdəl fə jʌŋ ˈdɒktəz. ˈwɜːkɪŋ wɪð hɪm həz tɔːt mi ðət ə ɡʊd ˈdɒktə niːdz bəʊθ skɪld hændz ənd ə wɔːm hɑːt",
+     "link": "Cặp đối xứng 'skilled hands and a warm heart' là hình ảnh kết bài rất đắt: tay nghề giỏi và trái tim ấm áp.",
+     "chunks": [
+      "a real role model",
+      "has taught me that",
+      "both skilled hands and a warm heart"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Bác sĩ Minh làm việc ở khoa nào?",
+     "o": [
+      "Khoa nhi",
+      "Khoa tim mạch",
+      "Khoa cấp cứu"
+     ],
+     "a": 1,
+     "why": "Bài nói giới thiệu: Doctor Minh, a cardiologist... head of the cardiology department."
+    },
+    {
+     "q": "Điều người nói ngưỡng mộ nhất ở bác sĩ Minh là gì?",
+     "o": [
+      "Chỉ là tay nghề phẫu thuật",
+      "Tay nghề và sự kiên nhẫn với bệnh nhân",
+      "Sự nổi tiếng của bác sĩ"
+     ],
+     "a": 1,
+     "why": "Candidate nói: \"What I admire most about him is not only his medical skill but also his patience with patients.\""
+    },
+    {
+     "q": "Trong câu chuyện ca trực đêm, bác sĩ Minh đã làm gì?",
+     "o": [
+      "Về nhà nghỉ sớm",
+      "Ở lại bệnh viện suốt đêm và cứu sống bệnh nhân",
+      "Chuyển bệnh nhân sang bệnh viện khác"
+     ],
+     "a": 1,
+     "why": "Candidate kể: \"Doctor Minh stayed at the hospital all night... and in the end he saved his life.\""
+    }
+   ]
+  },
+  {
+   "partNum": 3,
+   "topicStd": "Y tế và chăm sóc sức khỏe",
+   "part": "Part 3",
+   "topic": "Healthcare Systems - Hệ thống y tế",
+   "band": "Band 6.5",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "What are the main differences between public and private healthcare?",
+     "vi": "Những khác biệt chính giữa y tế công và y tế tư là gì?",
+     "ipa": "wɒt ə ðə meɪn ˈdɪfrənsɪz bɪˈtwiːn ˈpʌblɪk ənd ˈpraɪvət ˈhelθkeə",
+     "link": "public và private đều nhấn âm đầu; healthcare là danh từ ghép.",
+     "chunks": [
+      "the main differences between",
+      "public and private healthcare"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Public hospitals are funded by the government, so treatment is cheaper or even free, but they are often crowded and patients may wait a long time. Private hospitals, on the other hand, offer faster service and better facilities, although their fees are much higher.",
+     "vi": "Bệnh viện công được nhà nước cấp ngân sách nên chi phí điều trị rẻ hơn hoặc thậm chí miễn phí, nhưng thường quá tải và bệnh nhân có thể phải chờ lâu. Ngược lại, bệnh viện tư cung cấp dịch vụ nhanh hơn và cơ sở vật chất tốt hơn, dù viện phí cao hơn nhiều.",
+     "ipa": "ˈpʌblɪk ˈhɒspɪtəlz ə ˈfʌndɪd baɪ ðə ˈɡʌvənmənt səʊ ˈtriːtmənt ɪz ˈtʃiːpə ɔːr ˈiːvən friː bət ðeɪ ər ˈɒfən ˈkraʊdɪd ənd ˈpeɪʃənts meɪ weɪt ə lɒŋ taɪm. ˈpraɪvət ˈhɒspɪtəlz ɒn ði ˈʌðə hænd ˈɒfə ˈfɑːstə ˈsɜːvɪs ənd ˈbetə fəˈsɪlətiz ɔːlˈðəʊ ðeə fiːz ə mʌtʃ ˈhaɪə",
+     "link": "'on the other hand' là cụm chuyển ý đối lập kinh điển ở Part 3; funded by the government là cấu trúc bị động hay dùng.",
+     "chunks": [
+      "funded by the government",
+      "on the other hand",
+      "faster service and better facilities"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Why do many people say that prevention is better than cure?",
+     "vi": "Vì sao nhiều người nói phòng bệnh tốt hơn chữa bệnh?",
+     "ipa": "waɪ də ˈmeni ˈpiːpəl seɪ ðət prɪˈvenʃən ɪz ˈbetə ðən kjʊə",
+     "link": "prevention nhấn âm hai; cure đọc là /kjʊə/.",
+     "chunks": [
+      "prevention is better than cure"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Because preventing a disease is usually far cheaper and less painful than treating it. For example, vaccination programmes and regular screening can stop serious illnesses at an early stage, which saves both money and lives.",
+     "vi": "Vì phòng bệnh thường rẻ hơn và ít đau đớn hơn nhiều so với chữa bệnh. Ví dụ, các chương trình tiêm chủng và sàng lọc định kỳ có thể ngăn chặn bệnh nặng từ giai đoạn sớm, giúp tiết kiệm cả tiền bạc và sinh mạng.",
+     "ipa": "bɪˈkɒz prɪˈventɪŋ ə dɪˈziːz ɪz ˈjuːʒuəli fɑː ˈtʃiːpə ənd les ˈpeɪnfəl ðən ˈtriːtɪŋ ɪt. fər ɪɡˈzɑːmpəl ˌvæksɪˈneɪʃn ˈprəʊɡræmz ənd ˈreɡjələ ˈskriːnɪŋ kən stɒp ˈsɪəriəs ˈɪlnəsɪz ət ən ˈɜːli steɪdʒ wɪtʃ seɪvz bəʊθ ˈmʌni ənd laɪvz",
+     "link": "'at an early stage' là cụm chỉ giai đoạn sớm; saves both money and lives kết câu gọn và mạnh.",
+     "chunks": [
+      "far cheaper and less painful",
+      "vaccination programmes and regular screening",
+      "at an early stage"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "How has technology changed the way doctors work?",
+     "vi": "Công nghệ đã thay đổi cách làm việc của bác sĩ như thế nào?",
+     "ipa": "haʊ həz tekˈnɒlədʒi tʃeɪndʒd ðə weɪ ˈdɒktəz wɜːk",
+     "link": "technology nhấn âm hai; thì hiện tại hoàn thành has changed phù hợp khi nói về thay đổi kéo dài đến ngày nay.",
+     "chunks": [
+      "has technology changed",
+      "the way doctors work"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Technology has transformed medicine in many ways. Doctors can now keep electronic health records, examine patients online through telemedicine, and use advanced machines to diagnose diseases more accurately than before.",
+     "vi": "Công nghệ đã thay đổi y học theo nhiều cách. Bác sĩ giờ đây có thể lưu hồ sơ sức khỏe điện tử, khám bệnh trực tuyến qua y tế từ xa và dùng máy móc hiện đại để chẩn đoán bệnh chính xác hơn trước.",
+     "ipa": "tekˈnɒlədʒi həz trænsˈfɔːmd ˈmedsn ɪn ˈmeni weɪz. ˈdɒktəz kən naʊ kiːp ɪˌlekˈtrɒnɪk helθ ˈrekɔːdz ɪɡˈzæmɪn ˈpeɪʃənts ˌɒnˈlaɪn θruː ˌteliˈmedsn ənd juːz ədˈvɑːnst məˈʃiːnz tə ˈdaɪəɡnəʊz dɪˈziːzɪz mɔːr ˈækjərətli ðən bɪˈfɔː",
+     "link": "telemedicine là từ khóa của y tế hiện đại; diagnose nhấn âm đầu.",
+     "chunks": [
+      "electronic health records",
+      "through telemedicine",
+      "diagnose diseases more accurately"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Do you think every family should have their own family doctor?",
+     "vi": "Bạn có nghĩ mỗi gia đình nên có một bác sĩ gia đình riêng không?",
+     "ipa": "də jə θɪŋk ˈevri ˈfæməli ʃʊd hæv ðeər əʊn ˈfæməli ˈdɒktə",
+     "link": "Câu hỏi ý kiến ở Part 3 thường mở đầu bằng Do you think...; trả lời nên nêu quan điểm ngay ở câu đầu.",
+     "chunks": [
+      "every family",
+      "their own family doctor"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, I believe so. A family doctor knows the medical history of the whole family, so he or she can give better advice and notice health problems early, before they become serious.",
+     "vi": "Có, tôi nghĩ vậy. Bác sĩ gia đình nắm rõ tiền sử bệnh của cả gia đình, nên có thể đưa ra lời khuyên tốt hơn và phát hiện sớm các vấn đề sức khỏe, trước khi chúng trở nên nghiêm trọng.",
+     "ipa": "jes aɪ bɪˈliːv səʊ. ə ˈfæməli ˈdɒktə nəʊz ðə ˈmedɪkəl ˈhɪstəri əv ðə həʊl ˈfæməli səʊ hi ɔː ʃi kən ɡɪv ˈbetər ədˈvaɪs ənd ˈnəʊtɪs helθ ˈprɒbləmz ˈɜːli bɪˈfɔː ðeɪ bɪˈkʌm ˈsɪəriəs",
+     "link": "'medical history' là tiền sử bệnh, thuật ngữ bác sĩ dùng hằng ngày; before they become serious là mệnh đề thời gian kết câu.",
+     "chunks": [
+      "the medical history of the whole family",
+      "give better advice",
+      "before they become serious"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Theo bài nói, nhược điểm chính của bệnh viện công là gì?",
+     "o": [
+      "Viện phí rất cao",
+      "Thường quá tải và bệnh nhân phải chờ lâu",
+      "Cơ sở vật chất quá hiện đại"
+     ],
+     "a": 1,
+     "why": "Candidate nói bệnh viện công thường \"crowded\" và bệnh nhân \"may wait a long time\"."
+    },
+    {
+     "q": "Ví dụ nào được nêu cho việc phòng bệnh hiệu quả?",
+     "o": [
+      "Phẫu thuật từ sớm",
+      "Tiêm chủng và sàng lọc định kỳ",
+      "Uống nhiều thuốc bổ"
+     ],
+     "a": 1,
+     "why": "Candidate nêu \"vaccination programmes and regular screening\" có thể ngăn bệnh nặng từ giai đoạn sớm."
+    },
+    {
+     "q": "Vì sao bác sĩ gia đình có lợi cho các gia đình?",
+     "o": [
+      "Vì họ khám bệnh miễn phí",
+      "Vì họ nắm rõ tiền sử bệnh của cả gia đình",
+      "Vì họ làm việc tại bệnh viện lớn"
+     ],
+     "a": 1,
+     "why": "Candidate nói: \"A family doctor knows the medical history of the whole family.\""
+    }
+   ]
   }
  ],
  "writing": [
@@ -35797,6 +36769,70 @@ const CONTENT = {
     {
      "en": "rather than thrown away",
      "vi": "thay vì bị vứt bỏ"
+    }
+   ]
+  },
+  {
+   "wtype": "Ý kiến",
+   "type": "Task 2",
+   "band": "Band 6.5",
+   "title": "Opinion: Chi tiền cho phòng bệnh thay vì chữa bệnh",
+   "prompt": "Some people believe that governments should spend more money on preventing diseases than on treating them. To what extent do you agree or disagree?",
+   "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase đề bài và nêu quan điểm đồng ý phần lớn. Thân 1 (phòng bệnh hiệu quả hơn): chương trình tiêm chủng rẻ mà bảo vệ cả cộng đồng; sàng lọc định kỳ phát hiện sớm tiểu đường và ung thư khi còn dễ chữa và ít tốn kém; điều trị muộn cần phẫu thuật, nằm viện dài và thuốc đắt, gây quá tải bệnh viện. Thân 2 (thừa nhận điều trị vẫn thiết yếu): người đã mắc bệnh nặng cần chăm sóc ngay, không thể cắt giảm chi tiêu điều trị trong một sớm một chiều; cần đầu tư cả hai, nhưng cán cân nên chuyển dần sang phòng bệnh. Kết bài - khẳng định chuyển trọng tâm ngân sách sang phòng bệnh là chính sách dài hạn khôn ngoan.",
+   "model": "In many countries, most of the health budget is spent on hospitals and treatment, while only a small part goes to prevention. I largely agree that governments should increase spending on preventing diseases rather than focusing mainly on curing them.\n\nPrevention is usually far cheaper and more effective than treatment. A vaccination programme, for example, costs very little per person, yet it can protect a whole community from dangerous diseases. Similarly, regular screening can detect conditions such as diabetes and cancer at an early stage, when they are easier and less expensive to treat. By contrast, late treatment often requires surgery, long hospital stays and costly medicines, which puts enormous pressure on hospitals.\n\nAdmittedly, spending on treatment cannot be reduced overnight. Patients who are already seriously ill need immediate care, and investment in hospitals, emergency services and medical research remains essential. Prevention works slowly over many years, so governments must fund both areas at the same time. The key point is that the balance should gradually change.\n\nIn conclusion, although treatment will always be necessary, shifting more money towards prevention is a wise long-term policy. It saves public money, reduces suffering and leads to a healthier population.",
+   "analysis": "Dạng Opinion với lập trường 'largely agree' (đồng ý phần lớn) và giữ nhất quán từ mở bài đến kết bài. Thân 1 dùng cặp ví dụ song song vaccination programme và regular screening, kèm cấu trúc đối chiếu By contrast để so sánh chi phí. Thân 2 thừa nhận vai trò không thể thay thế của điều trị (cannot be reduced overnight) rồi hóa giải bằng ý 'the balance should gradually change'. Cụm đắt giá: puts enormous pressure on hospitals, at an early stage, a wise long-term policy.",
+   "phrases": [
+    {
+     "en": "spending on preventing diseases",
+     "vi": "chi tiêu cho việc phòng bệnh"
+    },
+    {
+     "en": "at an early stage",
+     "vi": "ở giai đoạn sớm"
+    },
+    {
+     "en": "puts enormous pressure on hospitals",
+     "vi": "gây áp lực khổng lồ lên các bệnh viện"
+    },
+    {
+     "en": "cannot be reduced overnight",
+     "vi": "không thể cắt giảm trong một sớm một chiều"
+    },
+    {
+     "en": "a wise long-term policy",
+     "vi": "một chính sách dài hạn khôn ngoan"
+    }
+   ]
+  },
+  {
+   "wtype": "Biểu đồ cột",
+   "type": "Task 1",
+   "band": "Band 6.0",
+   "title": "Biểu đồ cột: số lượt khám ngoại trú tại một bệnh viện",
+   "prompt": "The bar chart below shows the number of outpatient visits at a city hospital from 2020 to 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "dataDesc": "Biểu đồ cột đơn, đơn vị nghìn lượt khám ngoại trú tại một bệnh viện thành phố qua 4 năm. Năm 2020: 120 nghìn lượt. Năm 2021: giảm xuống 105 nghìn lượt, mức thấp nhất của cả giai đoạn. Năm 2022: tăng trở lại lên 140 nghìn lượt, tức tăng 35 nghìn lượt so với năm trước. Năm 2023: đạt 165 nghìn lượt, mức cao nhất, cao hơn năm thấp nhất 60 nghìn lượt và cao hơn năm 2020 là 45 nghìn lượt, tương đương mức tăng 37,5%. Xu hướng chính: giảm nhẹ vào năm 2021 rồi tăng liên tục và rõ rệt trong hai năm cuối.",
+   "model": "The bar chart shows how many outpatient visits were recorded at a city hospital between 2020 and 2023.\n\nOverall, the number of visits fell slightly in 2021, but then rose steadily over the following two years. The highest figure was recorded in 2023, while the lowest was in 2021.\n\nIn 2020, the hospital received 120 thousand outpatient visits. In the following year, this figure dropped to 105 thousand, the lowest level of the whole period.\n\nFrom 2021 onwards, however, the trend reversed. Visits climbed to 140 thousand in 2022, an increase of 35 thousand compared with the previous year. The growth continued in 2023, when the hospital recorded 165 thousand visits. This final figure was 60 thousand higher than the lowest point in 2021 and 45 thousand above the level in 2020.",
+   "analysis": "Cấu trúc 4 đoạn chuẩn Task 1: đoạn 1 paraphrase đề bài, đoạn 2 overview nêu xu hướng chung cùng điểm cao nhất và thấp nhất, đoạn 3 mô tả hai năm đầu có xu hướng giảm, đoạn 4 mô tả giai đoạn tăng. Điểm ghi điểm: dùng the trend reversed để đánh dấu điểm đảo chiều xu hướng, và luôn kèm số chênh lệch tuyệt đối (an increase of 35 thousand) thay vì chỉ lặp lại số gốc. Đơn vị thousand được giữ nhất quán trong toàn bài.",
+   "phrases": [
+    {
+     "en": "the number of outpatient visits",
+     "vi": "số lượt khám ngoại trú"
+    },
+    {
+     "en": "the lowest level of the whole period",
+     "vi": "mức thấp nhất của cả giai đoạn"
+    },
+    {
+     "en": "the trend reversed",
+     "vi": "xu hướng đã đảo chiều"
+    },
+    {
+     "en": "an increase of 35 thousand",
+     "vi": "mức tăng 35 nghìn lượt"
+    },
+    {
+     "en": "60 thousand higher than",
+     "vi": "cao hơn 60 nghìn lượt so với"
     }
    ]
   }
@@ -38012,6 +39048,369 @@ const CONTENT = {
      ]
     }
    ]
+  },
+  {
+   "title": "At the Doctor's - Khám bệnh tại phòng khám",
+   "setting": "Bạn cảm thấy không khỏe đã ba ngày nay nên đến một phòng khám gần nhà. Bác sĩ hỏi về các triệu chứng, đo thân nhiệt, kiểm tra tiền sử dị ứng và kê đơn thuốc cho bạn.",
+   "partner": "Bác sĩ tại phòng khám",
+   "goal": "Kể rõ các triệu chứng của mình (đau họng, ho và sốt ba ngày), nói rõ tiền sử dị ứng penicillin và hỏi rõ cách uống thuốc cùng lịch tái khám.",
+   "band": "Band 5.0",
+   "chunks": [
+    "I have had a sore throat",
+    "my temperature is 38.5 degrees",
+    "I am allergic to penicillin",
+    "How many days should I take this medicine",
+    "Thank you very much, doctor"
+   ],
+   "turns": [
+    {
+     "from": "partner",
+     "text": "Good morning. Please take a seat. What seems to be the problem today?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bác sĩ. Tôi bị đau họng và ho đã ba ngày nay. Tôi cũng cảm thấy rất mệt.",
+     "expect": "Good morning, doctor. I have had a sore throat and a cough for three days. I also feel very tired.",
+     "keywords": [
+      "sore",
+      "throat",
+      "cough",
+      "three",
+      "days"
+     ],
+     "hint": "Good morning, doctor. I have had a sore throat...",
+     "tip": "Thì hiện tại hoàn thành have had đi với for three days diễn tả triệu chứng kéo dài đến hiện tại - mẫu câu kể bệnh kinh điển khi đi khám.",
+     "chunks": [
+      "I have had a sore throat"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "I see. Do you have a fever as well? Have you taken your temperature?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Có ạ, tôi có sốt. Thân nhiệt của tôi là 38,5 độ vào sáng nay, và tôi còn thấy ớn lạnh.",
+     "expect": "Yes, I have a fever. My temperature is 38.5 degrees this morning, and I feel chilly.",
+     "keywords": [
+      "fever",
+      "temperature",
+      "degrees",
+      "morning",
+      "chilly"
+     ],
+     "hint": "Yes, I have a fever. My temperature is...",
+     "tip": "Nói nhiệt độ: thirty-eight point five degrees. feel chilly nghĩa là thấy ớn lạnh, rét run.",
+     "chunks": [
+      "my temperature is 38.5 degrees"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Let me examine your throat. Open your mouth, please... Your throat is quite red. Before I prescribe anything, are you allergic to any medicine?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi bị dị ứng với penicillin, bác sĩ ạ. Tôi không dị ứng với bất kỳ loại thuốc nào khác.",
+     "expect": "I am allergic to penicillin, doctor. I am not allergic to any other medicine.",
+     "keywords": [
+      "allergic",
+      "penicillin",
+      "doctor",
+      "other",
+      "medicine"
+     ],
+     "hint": "I am allergic to penicillin, doctor.",
+     "tip": "Cấu trúc khai dị ứng bắt buộc phải thuộc lòng: I am allergic to + tên thuốc. Luôn nói rõ điều này trước khi được kê đơn.",
+     "chunks": [
+      "I am allergic to penicillin"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Thank you for telling me. I will prescribe a different antibiotic for you, plus some medicine for your fever. Take one tablet twice a day after meals."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi nên uống thuốc này trong bao nhiêu ngày ạ? Và khi nào tôi nên quay lại tái khám?",
+     "expect": "How many days should I take this medicine? And when should I come back for a check-up?",
+     "keywords": [
+      "many",
+      "days",
+      "take",
+      "medicine",
+      "back"
+     ],
+     "hint": "How many days should I take this medicine?",
+     "tip": "Hỏi thời gian dùng thuốc: How many days should I take it? come back for a check-up nghĩa là quay lại tái khám.",
+     "chunks": [
+      "How many days should I take this medicine"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Take it for five days. If your fever does not go down after three days, please come back and see me again."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, tôi hiểu rồi. Cảm ơn bác sĩ rất nhiều.",
+     "expect": "Yes, I understand. Thank you very much, doctor.",
+     "keywords": [
+      "understand",
+      "thank",
+      "very",
+      "much",
+      "doctor"
+     ],
+     "hint": "Yes, I understand. Thank you...",
+     "tip": "Câu kết lịch sự khi khám bệnh: Thank you very much, doctor. Âm /θ/ trong thank đọc nhẹ, đầu lưỡi chạm răng trên.",
+     "chunks": [
+      "Thank you very much, doctor"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Explaining a Treatment Plan - Giải thích phác đồ điều trị",
+   "setting": "Bạn là bác sĩ điều trị. Bệnh nhân của bạn vừa được chẩn đoán viêm phế quản và đang lo lắng. Bạn cần giải thích phác đồ điều trị, cách uống kháng sinh, tác dụng phụ có thể gặp và lịch tái khám bằng lời lẽ đơn giản, dễ hiểu.",
+   "partner": "Bệnh nhân đang lo lắng",
+   "goal": "Giải thích rõ phác đồ: uống kháng sinh hai lần một ngày sau bữa ăn trong 7 ngày và phải uống đủ liệu trình, thuốc có thể gây buồn ngủ, tái khám sau một tuần hoặc quay lại ngay nếu sốt cao hơn.",
+   "band": "Band 6.0",
+   "chunks": [
+    "You have a mild chest infection",
+    "take this antibiotic twice a day",
+    "after meals for seven days",
+    "may make you feel a little sleepy",
+    "come back if your fever gets higher"
+   ],
+   "turns": [
+    {
+     "from": "partner",
+     "text": "Doctor, I am quite worried. What is wrong with me?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn (vai bác sĩ) - hãy nói bằng tiếng Anh ý này: Bạn đừng lo lắng quá. Bạn bị viêm phế quản nhẹ. Bệnh này chữa được nếu bạn uống thuốc đúng và nghỉ ngơi đầy đủ.",
+     "expect": "Please do not worry too much. You have a mild chest infection. It can be treated if you take your medicine correctly and get enough rest.",
+     "keywords": [
+      "worry",
+      "mild",
+      "chest",
+      "infection",
+      "rest"
+     ],
+     "hint": "Please do not worry too much. You have a mild...",
+     "tip": "Trấn an bệnh nhân trước khi giải thích: Please do not worry too much. mild nghĩa là nhẹ, trái nghĩa với severe là nặng.",
+     "chunks": [
+      "You have a mild chest infection"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "I see. What medicine do I need to take, doctor?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn (vai bác sĩ) - hãy nói bằng tiếng Anh ý này: Bạn cần uống thuốc kháng sinh này hai lần một ngày, sau bữa ăn, trong bảy ngày, mỗi lần một viên.",
+     "expect": "You need to take this antibiotic twice a day after meals for seven days, one tablet each time.",
+     "keywords": [
+      "take",
+      "antibiotic",
+      "twice",
+      "meals",
+      "tablet"
+     ],
+     "hint": "You need to take this antibiotic twice a day...",
+     "tip": "Hướng dẫn dùng thuốc chuẩn quốc tế: tên thuốc, tần suất (twice a day), thời điểm (after meals), thời gian (for seven days) - đủ bốn yếu tố trong một câu ngắn rõ ràng.",
+     "chunks": [
+      "take this antibiotic twice a day"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Seven days. Do I have to finish all of it, even if I feel better sooner?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn (vai bác sĩ) - hãy nói bằng tiếng Anh ý này: Đúng vậy. Bạn phải uống thuốc sau bữa ăn đủ bảy ngày, ngay cả khi đã thấy khỏe hơn. Nếu dừng sớm, bệnh có thể quay trở lại và khó chữa hơn.",
+     "expect": "Yes, that is right. You must take it after meals for seven days, even if you feel better. If you stop early, the infection may come back and become harder to treat.",
+     "keywords": [
+      "must",
+      "after",
+      "meals",
+      "seven",
+      "better"
+     ],
+     "hint": "Yes, that is right. You must take it after meals...",
+     "tip": "after meals for seven days là cụm chốt của phác đồ. even if mở mệnh đề nhượng bộ: dù thế nào cũng phải uống đủ liệu trình.",
+     "chunks": [
+      "after meals for seven days"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Are there any side effects I should know about?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn (vai bác sĩ) - hãy nói bằng tiếng Anh ý này: Tác dụng phụ thường gặp nhất là thuốc này có thể làm bạn hơi buồn ngủ. Vì vậy xin đừng lái xe sau khi uống thuốc.",
+     "expect": "The most common side effect is that this medicine may make you feel a little sleepy. So please do not drive after taking it.",
+     "keywords": [
+      "common",
+      "side",
+      "effect",
+      "sleepy",
+      "drive"
+     ],
+     "hint": "The most common side effect is that this medicine may...",
+     "tip": "may make you feel sleepy là cách nói nhẹ nhàng về tác dụng phụ. do not drive after taking it là lời dặn an toàn quan trọng khi kê đơn.",
+     "chunks": [
+      "may make you feel a little sleepy"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Thank you, doctor. When should I come back to see you?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn (vai bác sĩ) - hãy nói bằng tiếng Anh ý này: Hãy quay lại sau một tuần để tôi kiểm tra lại cho bạn. Nhưng hãy quay lại ngay nếu sốt cao hơn hoặc bạn bị khó thở. Đừng chờ đợi.",
+     "expect": "Please come back in one week so I can check you again. But come back if your fever gets higher or you have difficulty breathing. Do not wait.",
+     "keywords": [
+      "come",
+      "back",
+      "week",
+      "fever",
+      "higher"
+     ],
+     "hint": "Please come back in one week...",
+     "tip": "come back if your fever gets higher là câu dặn an toàn sống còn khi kê đơn xuất viện. difficulty breathing nghĩa là khó thở.",
+     "chunks": [
+      "come back if your fever gets higher"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Booking a Specialist Appointment - Đặt lịch khám chuyên khoa",
+   "setting": "Bạn gọi điện đến phòng khám tim mạch để đặt lịch khám cho bố của mình. Lễ tân hỏi về giấy giới thiệu từ bác sĩ gia đình, bảo hiểm y tế và đề xuất các khung giờ còn trống.",
+   "partner": "Lễ tân phòng khám tim mạch",
+   "goal": "Đặt được lịch khám chuyên khoa tim mạch cho bố: xác nhận có giấy giới thiệu từ bác sĩ gia đình và thẻ bảo hiểm y tế, rồi chọn khung giờ sớm nhất còn trống vào sáng thứ Ba.",
+   "band": "Band 5.5",
+   "chunks": [
+    "book an appointment with a cardiologist",
+    "a referral letter from his GP",
+    "health insurance card",
+    "the earliest available slot",
+    "on Tuesday morning"
+   ],
+   "turns": [
+    {
+     "from": "partner",
+     "text": "Good morning, Heart Care Clinic. How can I help you?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào buổi sáng. Tôi muốn đặt lịch khám với bác sĩ chuyên khoa tim mạch cho bố tôi.",
+     "expect": "Good morning. I would like to book an appointment with a cardiologist for my father.",
+     "keywords": [
+      "book",
+      "appointment",
+      "with",
+      "cardiologist",
+      "father"
+     ],
+     "hint": "Good morning. I would like to book an appointment...",
+     "tip": "book an appointment là cụm đặt lịch hẹn chuẩn. cardiologist nhấn âm ba, chỉ bác sĩ chuyên khoa tim mạch.",
+     "chunks": [
+      "book an appointment with a cardiologist"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Certainly. Does your father have a referral letter from his GP? Our specialists only see patients with a referral."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Có ạ. Bố tôi có giấy giới thiệu từ bác sĩ gia đình của ông. Tôi có cần mang theo giấy đó vào ngày khám không?",
+     "expect": "Yes, he does. He has a referral letter from his GP. Do I need to bring it on the day of the appointment?",
+     "keywords": [
+      "referral",
+      "letter",
+      "GP",
+      "bring",
+      "day"
+     ],
+     "hint": "Yes, he does. He has a referral letter...",
+     "tip": "referral letter là giấy giới thiệu chuyển tuyến. GP là viết tắt của general practitioner, bác sĩ đa khoa gia đình.",
+     "chunks": [
+      "a referral letter from his GP"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Yes, please bring the letter with you. May I also ask whether your father has health insurance?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Bố tôi có bảo hiểm y tế ạ. Tôi sẽ mang theo thẻ bảo hiểm y tế của ông vào ngày khám.",
+     "expect": "Yes, he has health insurance. I will bring his health insurance card with me on the day.",
+     "keywords": [
+      "health",
+      "insurance",
+      "bring",
+      "card",
+      "day"
+     ],
+     "hint": "Yes, he has health insurance. I will bring his...",
+     "tip": "health insurance là bảo hiểm y tế - từ khóa bắt buộc khi làm thủ tục khám chữa bệnh bằng tiếng Anh.",
+     "chunks": [
+      "health insurance card"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Thank you. The earliest available slot with Doctor Lan is on Tuesday morning at 9:30, or Thursday afternoon at 3 o'clock. Which do you prefer?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Khung giờ sớm nhất còn trống vào sáng thứ Ba lúc 9 giờ 30 rất hợp với chúng tôi. Tôi chọn giờ đó.",
+     "expect": "The earliest available slot on Tuesday morning at 9:30 suits us well. I will take that one, please.",
+     "keywords": [
+      "earliest",
+      "available",
+      "slot",
+      "Tuesday",
+      "morning"
+     ],
+     "hint": "The earliest available slot on Tuesday morning...",
+     "tip": "available slot là khung giờ còn trống - cụm cực kỳ hữu ích khi đặt lịch qua điện thoại.",
+     "chunks": [
+      "the earliest available slot"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Done. Your father is booked for Tuesday at 9:30. Please arrive fifteen minutes early and bring the referral letter and the insurance card."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn rất nhiều. Chúng tôi sẽ đến sớm mười lăm phút vào sáng thứ Ba.",
+     "expect": "Thank you very much. We will arrive fifteen minutes early on Tuesday morning.",
+     "keywords": [
+      "thank",
+      "arrive",
+      "fifteen",
+      "minutes",
+      "Tuesday"
+     ],
+     "hint": "Thank you very much. We will arrive...",
+     "tip": "on Tuesday morning là cụm chốt xác nhận lịch hẹn. arrive early nghĩa là đến sớm.",
+     "chunks": [
+      "on Tuesday morning"
+     ]
+    }
+   ]
   }
  ],
  "listeningPlus": [
@@ -38714,6 +40113,100 @@ const CONTENT = {
      "q": "Which group of residents faces the greatest health risks during heatwaves?",
      "answer": "elderly residents|the elderly|elderly people|old people",
      "why": "Bài giảng nói người cao tuổi đối mặt nguy cơ sức khỏe lớn nhất trong các đợt nắng nóng."
+    }
+   ]
+  },
+  {
+   "section": "Section 1",
+   "band": "Band 5.0",
+   "topic": "Bệnh nhân đặt lịch khám qua điện thoại",
+   "text": "A: Good morning, City Medical Clinic. How can I help you? B: Good morning. I would like to book an appointment with a doctor, please. A: Certainly. May I have your full name, please? B: It is Nguyen Thanh Hoa. A: Thank you. And your date of birth? B: The 12th of March, 1990. A: Thank you. And what is the problem? B: I have had a bad cough and a sore throat for four days. A: I see. Doctor Pham can see you tomorrow, Thursday, at 10:30 in the morning. Is that convenient for you? B: Yes, that is perfect. Thank you. A: Please bring your health insurance card and arrive ten minutes early.",
+   "questions": [
+    {
+     "type": "COMP",
+     "q": "Patient's full name: ___",
+     "answer": "Nguyen Thanh Hoa",
+     "why": "Bệnh nhân đọc tên đầy đủ của mình cho lễ tân: Nguyen Thanh Hoa."
+    },
+    {
+     "type": "COMP",
+     "q": "Date of birth: 12th of ___ 1990",
+     "answer": "March|march",
+     "why": "Ngày sinh là ngày 12 tháng Ba năm 1990 (The 12th of March, 1990)."
+    },
+    {
+     "type": "COMP",
+     "q": "Main symptoms: a bad cough and a ___ throat",
+     "answer": "sore",
+     "why": "Triệu chứng chính được nêu rõ: \"a bad cough and a sore throat\" - ho nặng và đau họng."
+    },
+    {
+     "type": "COMP",
+     "q": "Appointment time: ___ on Thursday morning",
+     "answer": "10:30|half past ten|10.30",
+     "why": "Lễ tân hẹn bác sĩ Pham khám vào 10:30 sáng thứ Năm (tomorrow, Thursday, at 10:30)."
+    },
+    {
+     "type": "SA",
+     "q": "What must the patient bring to the appointment?",
+     "answer": "her health insurance card|health insurance card|the health insurance card",
+     "why": "Lễ tân dặn: \"Please bring your health insurance card and arrive ten minutes early.\""
+    }
+   ]
+  },
+  {
+   "section": "Section 2",
+   "band": "Band 6.0",
+   "topic": "Giới thiệu chương trình tiêm chủng tại phòng khám",
+   "text": "Good afternoon, everyone. My name is Doctor Linh, and I would like to introduce our clinic's new vaccination programme for this winter. The programme offers free flu vaccines to all patients over sixty-five, as well as to young children and people with chronic diseases such as diabetes. Vaccination protects not only you, but also the people around you, because it slows the spread of the virus in the community. This year, the programme will run from the 1st of October to the end of November, from Monday to Saturday. There is no need to book an appointment; you can simply come to the clinic with your health card. After the injection, please stay in the waiting room for fifteen minutes so that our nurses can check that you feel fine. A small number of people may have a sore arm or a mild fever for a day, but serious side effects are extremely rare. Thank you for listening, and please help us spread the word to your family and neighbours.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "Who can receive the flu vaccine for free?",
+     "o": [
+      "Only clinic staff",
+      "Patients over sixty-five, young children and people with chronic diseases",
+      "Everyone, whatever their age",
+      "Only people with diabetes"
+     ],
+     "a": 1,
+     "why": "Bài nói nêu chương trình miễn phí cho \"patients over sixty-five, as well as to young children and people with chronic diseases\"."
+    },
+    {
+     "type": "MC",
+     "q": "Why does vaccination also protect other people?",
+     "o": [
+      "It makes the virus disappear in one day",
+      "It slows the spread of the virus in the community",
+      "It gives everyone free medicine",
+      "It keeps sick people away from the clinic"
+     ],
+     "a": 1,
+     "why": "Tiêm chủng bảo vệ cả cộng đồng vì nó \"slows the spread of the virus in the community\" - làm chậm sự lây lan của vi-rút."
+    },
+    {
+     "type": "COMP",
+     "q": "The programme runs from the 1st of October to the end of ___.",
+     "answer": "November|november",
+     "why": "Chương trình kéo dài đến hết tháng Mười một (the end of November)."
+    },
+    {
+     "type": "COMP",
+     "q": "After the injection, patients should stay in the waiting room for ___ minutes.",
+     "answer": "fifteen|15",
+     "why": "Sau khi tiêm, bệnh nhân cần ở lại phòng chờ fifteen minutes để điều dưỡng theo dõi."
+    },
+    {
+     "type": "MC",
+     "q": "What do patients need to bring to the clinic?",
+     "o": [
+      "A referral letter",
+      "Their health card",
+      "A doctor's note",
+      "Cash to pay for the vaccine"
+     ],
+     "a": 1,
+     "why": "Bài nói: \"you can simply come to the clinic with your health card\" - chỉ cần mang thẻ y tế, không cần đặt lịch trước."
     }
    ]
   }
