@@ -12948,7 +12948,1502 @@ const CONTENT = {
     }
    ]
   }
- ,{"theme":"Bước 1: Học 26 chữ cái A-Z - The Alphabet","band":"Band 0","cards":[{"w":"A","ipa":"/eɪ/","vi":"Chữ A - đọc là 'ây', viết thường là a.","col":"A - apple: quả táo","ex":"A is for apple.","exv":"A là chữ đầu của từ apple (quả táo)."},{"w":"B","ipa":"/biː/","vi":"Chữ B - đọc là 'bi', viết thường là b.","col":"B - ball: quả bóng","ex":"B is for ball.","exv":"B là chữ đầu của từ ball (quả bóng)."},{"w":"C","ipa":"/siː/","vi":"Chữ C - đọc là 'xi', viết thường là c.","col":"C - cat: con mèo","ex":"C is for cat.","exv":"C là chữ đầu của từ cat (con mèo)."},{"w":"D","ipa":"/diː/","vi":"Chữ D - đọc là 'đi', viết thường là d.","col":"D - dog: con chó","ex":"D is for dog.","exv":"D là chữ đầu của từ dog (con chó)."},{"w":"E","ipa":"/iː/","vi":"Chữ E - đọc là 'i', viết thường là e.","col":"E - egg: quả trứng","ex":"E is for egg.","exv":"E là chữ đầu của từ egg (quả trứng)."},{"w":"F","ipa":"/ef/","vi":"Chữ F - đọc là 'ép', viết thường là f.","col":"F - fish: con cá","ex":"F is for fish.","exv":"F là chữ đầu của từ fish (con cá)."},{"w":"G","ipa":"/dʒiː/","vi":"Chữ G - đọc là 'gi', viết thường là g.","col":"G - girl: cô gái","ex":"G is for girl.","exv":"G là chữ đầu của từ girl (cô gái)."},{"w":"H","ipa":"/eɪtʃ/","vi":"Chữ H - đọc là 'ếch', viết thường là h.","col":"H - hat: cái mũ","ex":"H is for hat.","exv":"H là chữ đầu của từ hat (cái mũ)."},{"w":"I","ipa":"/aɪ/","vi":"Chữ I - đọc là 'ai', viết thường là i.","col":"I - ice: nước đá","ex":"I is for ice.","exv":"I là chữ đầu của từ ice (nước đá)."},{"w":"J","ipa":"/dʒeɪ/","vi":"Chữ J - đọc là 'giây', viết thường là j.","col":"J - juice: nước ép","ex":"J is for juice.","exv":"J là chữ đầu của từ juice (nước ép)."},{"w":"K","ipa":"/keɪ/","vi":"Chữ K - đọc là 'cây', viết thường là k.","col":"K - kite: cái diều","ex":"K is for kite.","exv":"K là chữ đầu của từ kite (cái diều)."},{"w":"L","ipa":"/el/","vi":"Chữ L - đọc là 'eo', viết thường là l.","col":"L - lion: con sư tử","ex":"L is for lion.","exv":"L là chữ đầu của từ lion (con sư tử)."},{"w":"M","ipa":"/em/","vi":"Chữ M - đọc là 'em', viết thường là m.","col":"M - milk: sữa","ex":"M is for milk.","exv":"M là chữ đầu của từ milk (sữa)."},{"w":"N","ipa":"/en/","vi":"Chữ N - đọc là 'en', viết thường là n.","col":"N - nose: cái mũi","ex":"N is for nose.","exv":"N là chữ đầu của từ nose (cái mũi)."},{"w":"O","ipa":"/əʊ/","vi":"Chữ O - đọc là 'âu', viết thường là o.","col":"O - orange: quả cam","ex":"O is for orange.","exv":"O là chữ đầu của từ orange (quả cam)."},{"w":"P","ipa":"/piː/","vi":"Chữ P - đọc là 'pi', viết thường là p.","col":"P - pig: con lợn","ex":"P is for pig.","exv":"P là chữ đầu của từ pig (con lợn)."},{"w":"Q","ipa":"/kjuː/","vi":"Chữ Q - đọc là 'kiu', viết thường là q.","col":"Q - queen: nữ hoàng","ex":"Q is for queen.","exv":"Q là chữ đầu của từ queen (nữ hoàng)."},{"w":"R","ipa":"/ɑː/","vi":"Chữ R - đọc là 'a', viết thường là r.","col":"R - rabbit: con thỏ","ex":"R is for rabbit.","exv":"R là chữ đầu của từ rabbit (con thỏ)."},{"w":"S","ipa":"/es/","vi":"Chữ S - đọc là 'ét', viết thường là s.","col":"S - sun: mặt trời","ex":"S is for sun.","exv":"S là chữ đầu của từ sun (mặt trời)."},{"w":"T","ipa":"/tiː/","vi":"Chữ T - đọc là 'ti', viết thường là t.","col":"T - tree: cái cây","ex":"T is for tree.","exv":"T là chữ đầu của từ tree (cái cây)."},{"w":"U","ipa":"/juː/","vi":"Chữ U - đọc là 'iu', viết thường là u.","col":"U - umbrella: cái ô","ex":"U is for umbrella.","exv":"U là chữ đầu của từ umbrella (cái ô)."},{"w":"V","ipa":"/viː/","vi":"Chữ V - đọc là 'vi', viết thường là v.","col":"V - van: xe tải nhỏ","ex":"V is for van.","exv":"V là chữ đầu của từ van (xe tải nhỏ)."},{"w":"W","ipa":"/ˈdʌbljuː/","vi":"Chữ W - đọc là 'đắp-biu', viết thường là w.","col":"W - water: nước","ex":"W is for water.","exv":"W là chữ đầu của từ water (nước)."},{"w":"X","ipa":"/eks/","vi":"Chữ X - đọc là 'ếch-x', viết thường là x.","col":"X - box: cái hộp","ex":"X is for box.","exv":"X là chữ đầu của từ box (cái hộp)."},{"w":"Y","ipa":"/waɪ/","vi":"Chữ Y - đọc là 'oai', viết thường là y.","col":"Y - yellow: màu vàng","ex":"Y is for yellow.","exv":"Y là chữ đầu của từ yellow (màu vàng)."},{"w":"Z","ipa":"/zed/","vi":"Chữ Z - đọc là 'dét', viết thường là z.","col":"Z - zoo: vườn thú","ex":"Z is for zoo.","exv":"Z là chữ đầu của từ zoo (vườn thú)."}]}],
+ ,{"theme":"Bước 1: Học 26 chữ cái A-Z - The Alphabet","band":"Band 0","cards":[{"w":"A","ipa":"/eɪ/","vi":"Chữ A - đọc là 'ây', viết thường là a.","col":"A - apple: quả táo","ex":"A is for apple.","exv":"A là chữ đầu của từ apple (quả táo)."},{"w":"B","ipa":"/biː/","vi":"Chữ B - đọc là 'bi', viết thường là b.","col":"B - ball: quả bóng","ex":"B is for ball.","exv":"B là chữ đầu của từ ball (quả bóng)."},{"w":"C","ipa":"/siː/","vi":"Chữ C - đọc là 'xi', viết thường là c.","col":"C - cat: con mèo","ex":"C is for cat.","exv":"C là chữ đầu của từ cat (con mèo)."},{"w":"D","ipa":"/diː/","vi":"Chữ D - đọc là 'đi', viết thường là d.","col":"D - dog: con chó","ex":"D is for dog.","exv":"D là chữ đầu của từ dog (con chó)."},{"w":"E","ipa":"/iː/","vi":"Chữ E - đọc là 'i', viết thường là e.","col":"E - egg: quả trứng","ex":"E is for egg.","exv":"E là chữ đầu của từ egg (quả trứng)."},{"w":"F","ipa":"/ef/","vi":"Chữ F - đọc là 'ép', viết thường là f.","col":"F - fish: con cá","ex":"F is for fish.","exv":"F là chữ đầu của từ fish (con cá)."},{"w":"G","ipa":"/dʒiː/","vi":"Chữ G - đọc là 'gi', viết thường là g.","col":"G - girl: cô gái","ex":"G is for girl.","exv":"G là chữ đầu của từ girl (cô gái)."},{"w":"H","ipa":"/eɪtʃ/","vi":"Chữ H - đọc là 'ếch', viết thường là h.","col":"H - hat: cái mũ","ex":"H is for hat.","exv":"H là chữ đầu của từ hat (cái mũ)."},{"w":"I","ipa":"/aɪ/","vi":"Chữ I - đọc là 'ai', viết thường là i.","col":"I - ice: nước đá","ex":"I is for ice.","exv":"I là chữ đầu của từ ice (nước đá)."},{"w":"J","ipa":"/dʒeɪ/","vi":"Chữ J - đọc là 'giây', viết thường là j.","col":"J - juice: nước ép","ex":"J is for juice.","exv":"J là chữ đầu của từ juice (nước ép)."},{"w":"K","ipa":"/keɪ/","vi":"Chữ K - đọc là 'cây', viết thường là k.","col":"K - kite: cái diều","ex":"K is for kite.","exv":"K là chữ đầu của từ kite (cái diều)."},{"w":"L","ipa":"/el/","vi":"Chữ L - đọc là 'eo', viết thường là l.","col":"L - lion: con sư tử","ex":"L is for lion.","exv":"L là chữ đầu của từ lion (con sư tử)."},{"w":"M","ipa":"/em/","vi":"Chữ M - đọc là 'em', viết thường là m.","col":"M - milk: sữa","ex":"M is for milk.","exv":"M là chữ đầu của từ milk (sữa)."},{"w":"N","ipa":"/en/","vi":"Chữ N - đọc là 'en', viết thường là n.","col":"N - nose: cái mũi","ex":"N is for nose.","exv":"N là chữ đầu của từ nose (cái mũi)."},{"w":"O","ipa":"/əʊ/","vi":"Chữ O - đọc là 'âu', viết thường là o.","col":"O - orange: quả cam","ex":"O is for orange.","exv":"O là chữ đầu của từ orange (quả cam)."},{"w":"P","ipa":"/piː/","vi":"Chữ P - đọc là 'pi', viết thường là p.","col":"P - pig: con lợn","ex":"P is for pig.","exv":"P là chữ đầu của từ pig (con lợn)."},{"w":"Q","ipa":"/kjuː/","vi":"Chữ Q - đọc là 'kiu', viết thường là q.","col":"Q - queen: nữ hoàng","ex":"Q is for queen.","exv":"Q là chữ đầu của từ queen (nữ hoàng)."},{"w":"R","ipa":"/ɑː/","vi":"Chữ R - đọc là 'a', viết thường là r.","col":"R - rabbit: con thỏ","ex":"R is for rabbit.","exv":"R là chữ đầu của từ rabbit (con thỏ)."},{"w":"S","ipa":"/es/","vi":"Chữ S - đọc là 'ét', viết thường là s.","col":"S - sun: mặt trời","ex":"S is for sun.","exv":"S là chữ đầu của từ sun (mặt trời)."},{"w":"T","ipa":"/tiː/","vi":"Chữ T - đọc là 'ti', viết thường là t.","col":"T - tree: cái cây","ex":"T is for tree.","exv":"T là chữ đầu của từ tree (cái cây)."},{"w":"U","ipa":"/juː/","vi":"Chữ U - đọc là 'iu', viết thường là u.","col":"U - umbrella: cái ô","ex":"U is for umbrella.","exv":"U là chữ đầu của từ umbrella (cái ô)."},{"w":"V","ipa":"/viː/","vi":"Chữ V - đọc là 'vi', viết thường là v.","col":"V - van: xe tải nhỏ","ex":"V is for van.","exv":"V là chữ đầu của từ van (xe tải nhỏ)."},{"w":"W","ipa":"/ˈdʌbljuː/","vi":"Chữ W - đọc là 'đắp-biu', viết thường là w.","col":"W - water: nước","ex":"W is for water.","exv":"W là chữ đầu của từ water (nước)."},{"w":"X","ipa":"/eks/","vi":"Chữ X - đọc là 'ếch-x', viết thường là x.","col":"X - box: cái hộp","ex":"X is for box.","exv":"X là chữ đầu của từ box (cái hộp)."},{"w":"Y","ipa":"/waɪ/","vi":"Chữ Y - đọc là 'oai', viết thường là y.","col":"Y - yellow: màu vàng","ex":"Y is for yellow.","exv":"Y là chữ đầu của từ yellow (màu vàng)."},{"w":"Z","ipa":"/zed/","vi":"Chữ Z - đọc là 'dét', viết thường là z.","col":"Z - zoo: vườn thú","ex":"Z is for zoo.","exv":"Z là chữ đầu của từ zoo (vườn thú)."}]},
+  {
+   "theme": "Technology and Society - Công nghệ và xã hội",
+   "band": "Band 6.5",
+   "cards": [
+    {
+     "w": "automation",
+     "ipa": "/ˌɔːtəˈmeɪʃn/",
+     "vi": "tự động hóa",
+     "col": "factory automation",
+     "ex": "Automation has replaced many repetitive jobs in factories.",
+     "exv": "Tự động hóa đã thay thế nhiều công việc lặp đi lặp lại trong các nhà máy."
+    },
+    {
+     "w": "surveillance",
+     "ipa": "/səˈveɪləns/",
+     "vi": "sự giám sát",
+     "col": "camera surveillance",
+     "ex": "Surveillance cameras are now common in public places.",
+     "exv": "Camera giám sát hiện nay rất phổ biến ở nơi công cộng."
+    },
+    {
+     "w": "algorithm",
+     "ipa": "/ˈælɡərɪðəm/",
+     "vi": "thuật toán",
+     "col": "a search algorithm",
+     "ex": "The algorithm decides which posts users see first.",
+     "exv": "Thuật toán quyết định người dùng nhìn thấy bài đăng nào trước."
+    },
+    {
+     "w": "breakthrough",
+     "ipa": "/ˈbreɪkθruː/",
+     "vi": "bước đột phá",
+     "col": "a major breakthrough",
+     "ex": "Scientists have made a major breakthrough in cancer research.",
+     "exv": "Các nhà khoa học đã đạt được một bước đột phá lớn trong nghiên cứu ung thư."
+    },
+    {
+     "w": "obsolete",
+     "ipa": "/ˈɒbsəliːt/",
+     "vi": "lỗi thời",
+     "col": "become obsolete",
+     "ex": "DVD players became obsolete after streaming services appeared.",
+     "exv": "Đầu đĩa DVD trở nên lỗi thời sau khi các dịch vụ xem trực tuyến xuất hiện."
+    },
+    {
+     "w": "streamline",
+     "ipa": "/ˈstriːmlaɪn/",
+     "vi": "tinh gọn, hợp lý hóa (quy trình)",
+     "col": "streamline the process",
+     "ex": "The company streamlined the process to save time and money.",
+     "exv": "Công ty đã tinh gọn quy trình để tiết kiệm thời gian và tiền bạc."
+    },
+    {
+     "w": "encryption",
+     "ipa": "/ɪnˈkrɪpʃn/",
+     "vi": "sự mã hóa",
+     "col": "data encryption",
+     "ex": "Encryption protects personal messages from hackers.",
+     "exv": "Mã hóa giúp bảo vệ tin nhắn cá nhân khỏi tin tặc."
+    },
+    {
+     "w": "cybercrime",
+     "ipa": "/ˈsaɪbəkraɪm/",
+     "vi": "tội phạm mạng",
+     "col": "commit cybercrime",
+     "ex": "Cybercrime costs the world economy billions of dollars every year.",
+     "exv": "Tội phạm mạng khiến kinh tế thế giới thiệt hại hàng tỷ đô la mỗi năm."
+    },
+    {
+     "w": "sensor",
+     "ipa": "/ˈsensə(r)/",
+     "vi": "cảm biến",
+     "col": "a temperature sensor",
+     "ex": "The sensor turns the lights on when someone enters the room.",
+     "exv": "Cảm biến bật đèn khi có người bước vào phòng."
+    },
+    {
+     "w": "robotics",
+     "ipa": "/rəʊˈbɒtɪks/",
+     "vi": "ngành robot học",
+     "col": "industrial robotics",
+     "ex": "Robotics is changing the way cars are manufactured.",
+     "exv": "Ngành robot học đang thay đổi cách sản xuất ô tô."
+    },
+    {
+     "w": "bandwidth",
+     "ipa": "/ˈbændwɪdθ/",
+     "vi": "băng thông",
+     "col": "internet bandwidth",
+     "ex": "Video calls need a lot of bandwidth to work smoothly.",
+     "exv": "Cuộc gọi video cần nhiều băng thông để hoạt động trơn tru."
+    },
+    {
+     "w": "virtual",
+     "ipa": "/ˈvɜːtʃuəl/",
+     "vi": "ảo, trên môi trường trực tuyến",
+     "col": "a virtual meeting",
+     "ex": "Many employees now attend virtual meetings from home.",
+     "exv": "Nhiều nhân viên hiện nay tham dự các cuộc họp trực tuyến từ nhà."
+    },
+    {
+     "w": "innovation",
+     "ipa": "/ˌɪnəˈveɪʃn/",
+     "vi": "sự đổi mới, sáng tạo",
+     "col": "technological innovation",
+     "ex": "Technological innovation has transformed the banking industry.",
+     "exv": "Đổi mới công nghệ đã làm thay đổi ngành ngân hàng."
+    },
+    {
+     "w": "database",
+     "ipa": "/ˈdeɪtəbeɪs/",
+     "vi": "cơ sở dữ liệu",
+     "col": "a customer database",
+     "ex": "The hospital stores patient records in a secure database.",
+     "exv": "Bệnh viện lưu hồ sơ bệnh nhân trong một cơ sở dữ liệu an toàn."
+    },
+    {
+     "w": "upgrade",
+     "ipa": "/ʌpˈɡreɪd/",
+     "vi": "nâng cấp",
+     "col": "upgrade the software",
+     "ex": "You should upgrade the software to fix security problems.",
+     "exv": "Bạn nên nâng cấp phần mềm để khắc phục các vấn đề bảo mật."
+    },
+    {
+     "w": "privacy",
+     "ipa": "/ˈprɪvəsi/",
+     "vi": "quyền riêng tư, sự riêng tư",
+     "col": "respect privacy",
+     "ex": "Social media users are increasingly worried about privacy.",
+     "exv": "Người dùng mạng xã hội ngày càng lo lắng về quyền riêng tư."
+    },
+    {
+     "w": "gadget",
+     "ipa": "/ˈɡædʒɪt/",
+     "vi": "thiết bị nhỏ, đồ công nghệ",
+     "col": "electronic gadgets",
+     "ex": "Young people love buying the latest electronic gadgets.",
+     "exv": "Giới trẻ thích mua những thiết bị điện tử mới nhất."
+    },
+    {
+     "w": "interactive",
+     "ipa": "/ˌɪntərˈæktɪv/",
+     "vi": "có tính tương tác",
+     "col": "interactive lessons",
+     "ex": "Interactive lessons help students remember new words better.",
+     "exv": "Các bài học tương tác giúp học sinh nhớ từ mới tốt hơn."
+    },
+    {
+     "w": "platform",
+     "ipa": "/ˈplætfɔːm/",
+     "vi": "nền tảng (số, công nghệ)",
+     "col": "an online platform",
+     "ex": "The platform allows students to learn English from anywhere.",
+     "exv": "Nền tảng này cho phép học sinh học tiếng Anh từ bất cứ đâu."
+    },
+    {
+     "w": "drone",
+     "ipa": "/drəʊn/",
+     "vi": "thiết bị bay không người lái",
+     "col": "a delivery drone",
+     "ex": "Drones are now used to deliver medicine to remote areas.",
+     "exv": "Thiết bị bay không người lái hiện được dùng để giao thuốc tới các vùng xa xôi."
+    }
+   ]
+  },
+  {
+   "theme": "Advanced Education - Giáo dục nâng cao",
+   "band": "Band 6.5",
+   "cards": [
+    {
+     "w": "postgraduate",
+     "ipa": "/ˌpəʊstˈɡrædʒuət/",
+     "vi": "sau đại học; học viên sau đại học",
+     "col": "a postgraduate course",
+     "ex": "She is doing a postgraduate course in public health.",
+     "exv": "Cô ấy đang theo học một khóa sau đại học về y tế công cộng."
+    },
+    {
+     "w": "dissertation",
+     "ipa": "/ˌdɪsəˈteɪʃn/",
+     "vi": "luận văn (bậc thạc sĩ, tiến sĩ)",
+     "col": "write a dissertation",
+     "ex": "He spent six months writing his dissertation on climate policy.",
+     "exv": "Anh ấy dành sáu tháng để viết luận văn về chính sách khí hậu."
+    },
+    {
+     "w": "thesis",
+     "ipa": "/ˈθiːsɪs/",
+     "vi": "luận án; luận điểm chính",
+     "col": "a doctoral thesis",
+     "ex": "Her thesis argues that cities should invest more in public transport.",
+     "exv": "Luận án của cô ấy cho rằng các thành phố nên đầu tư nhiều hơn vào giao thông công cộng."
+    },
+    {
+     "w": "seminar",
+     "ipa": "/ˈsemɪnɑː(r)/",
+     "vi": "buổi hội thảo chuyên đề, thảo luận nhóm nhỏ",
+     "col": "attend a seminar",
+     "ex": "Students attend a weekly seminar to discuss research papers.",
+     "exv": "Sinh viên tham dự một buổi hội thảo chuyên đề hằng tuần để thảo luận các bài nghiên cứu."
+    },
+    {
+     "w": "faculty",
+     "ipa": "/ˈfæklti/",
+     "vi": "khoa (của trường đại học)",
+     "col": "the faculty of medicine",
+     "ex": "The faculty of medicine is the oldest in the university.",
+     "exv": "Khoa Y là khoa lâu đời nhất của trường đại học."
+    },
+    {
+     "w": "accreditation",
+     "ipa": "/əˌkredɪˈteɪʃn/",
+     "vi": "sự kiểm định, công nhận chất lượng",
+     "col": "official accreditation",
+     "ex": "The programme received official accreditation last year.",
+     "exv": "Chương trình đã được kiểm định chính thức vào năm ngoái."
+    },
+    {
+     "w": "syllabus",
+     "ipa": "/ˈsɪləbəs/",
+     "vi": "đề cương môn học",
+     "col": "the course syllabus",
+     "ex": "The syllabus lists all the topics students must study.",
+     "exv": "Đề cương môn học liệt kê tất cả các chủ đề sinh viên phải học."
+    },
+    {
+     "w": "plagiarism",
+     "ipa": "/ˈpleɪdʒərɪzəm/",
+     "vi": "đạo văn",
+     "col": "commit plagiarism",
+     "ex": "Students who commit plagiarism may fail the course.",
+     "exv": "Sinh viên đạo văn có thể bị trượt môn học."
+    },
+    {
+     "w": "citation",
+     "ipa": "/saɪˈteɪʃn/",
+     "vi": "sự trích dẫn, ghi nguồn",
+     "col": "a correct citation",
+     "ex": "Every quotation in your essay needs a correct citation.",
+     "exv": "Mọi trích dẫn trong bài luận của bạn đều cần ghi nguồn đúng quy cách."
+    },
+    {
+     "w": "fieldwork",
+     "ipa": "/ˈfiːldwɜːk/",
+     "vi": "nghiên cứu thực địa",
+     "col": "carry out fieldwork",
+     "ex": "The students carried out fieldwork in three rural villages.",
+     "exv": "Các sinh viên đã tiến hành nghiên cứu thực địa tại ba ngôi làng ở nông thôn."
+    },
+    {
+     "w": "internship",
+     "ipa": "/ˈɪntɜːnʃɪp/",
+     "vi": "kỳ thực tập",
+     "col": "a summer internship",
+     "ex": "A summer internship gave her valuable experience in marketing.",
+     "exv": "Một kỳ thực tập mùa hè đã cho cô ấy kinh nghiệm quý báu trong lĩnh vực tiếp thị."
+    },
+    {
+     "w": "vocational",
+     "ipa": "/vəʊˈkeɪʃənl/",
+     "vi": "thuộc về dạy nghề, hướng nghiệp",
+     "col": "vocational training",
+     "ex": "Vocational training helps young people find jobs more quickly.",
+     "exv": "Đào tạo nghề giúp người trẻ tìm việc làm nhanh hơn."
+    },
+    {
+     "w": "interdisciplinary",
+     "ipa": "/ˌɪntəˈdɪsəplɪnəri/",
+     "vi": "liên ngành",
+     "col": "an interdisciplinary approach",
+     "ex": "Climate change requires an interdisciplinary approach.",
+     "exv": "Biến đổi khí hậu đòi hỏi một cách tiếp cận liên ngành."
+    },
+    {
+     "w": "pedagogy",
+     "ipa": "/ˈpedəɡɒdʒi/",
+     "vi": "khoa sư phạm, phương pháp giảng dạy",
+     "col": "modern pedagogy",
+     "ex": "Modern pedagogy focuses on active learning rather than lectures.",
+     "exv": "Sư phạm hiện đại tập trung vào học tập chủ động thay vì nghe giảng thụ động."
+    },
+    {
+     "w": "enrol",
+     "ipa": "/ɪnˈrəʊl/",
+     "vi": "ghi danh, đăng ký học",
+     "col": "enrol on a course",
+     "ex": "More than 500 students enrol on this course every year.",
+     "exv": "Hơn 500 sinh viên ghi danh khóa học này mỗi năm."
+    },
+    {
+     "w": "assignment",
+     "ipa": "/əˈsaɪnmənt/",
+     "vi": "bài tập được giao",
+     "col": "hand in an assignment",
+     "ex": "Students must hand in the assignment by Friday.",
+     "exv": "Sinh viên phải nộp bài tập trước thứ Sáu."
+    },
+    {
+     "w": "peer review",
+     "ipa": "/pɪə rɪˈvjuː/",
+     "vi": "bình duyệt đồng cấp",
+     "col": "peer-reviewed research",
+     "ex": "The journal only publishes peer-reviewed research.",
+     "exv": "Tạp chí chỉ đăng các nghiên cứu đã qua bình duyệt đồng cấp."
+    },
+    {
+     "w": "tuition",
+     "ipa": "/tjuˈɪʃn/",
+     "vi": "học phí; việc dạy học",
+     "col": "tuition fees",
+     "ex": "Tuition fees have risen sharply in the last decade.",
+     "exv": "Học phí đã tăng mạnh trong thập kỷ vừa qua."
+    },
+    {
+     "w": "distance learning",
+     "ipa": "/ˈdɪstəns ˌlɜːnɪŋ/",
+     "vi": "học từ xa",
+     "col": "distance learning courses",
+     "ex": "Distance learning allows workers to study without leaving their jobs.",
+     "exv": "Học từ xa cho phép người đi làm học mà không cần nghỉ việc."
+    },
+    {
+     "w": "dean",
+     "ipa": "/diːn/",
+     "vi": "trưởng khoa",
+     "col": "the dean of the faculty",
+     "ex": "The dean announced new scholarships for poor students.",
+     "exv": "Trưởng khoa đã công bố các học bổng mới cho sinh viên nghèo."
+    }
+   ]
+  },
+  {
+   "theme": "Media and Social Change - Truyền thông và biến đổi xã hội",
+   "band": "Band 6.5",
+   "cards": [
+    {
+     "w": "broadcast",
+     "ipa": "/ˈbrɔːdkɑːst/",
+     "vi": "phát sóng; chương trình phát sóng",
+     "col": "a live broadcast",
+     "ex": "The match was shown in a live broadcast around the world.",
+     "exv": "Trận đấu được trình chiếu trong một buổi phát sóng trực tiếp trên toàn thế giới."
+    },
+    {
+     "w": "headline",
+     "ipa": "/ˈhedlaɪn/",
+     "vi": "tiêu đề bài báo; tin chính",
+     "col": "make headlines",
+     "ex": "The story made headlines in every national newspaper.",
+     "exv": "Câu chuyện đã trở thành tin chính trên mọi tờ báo quốc gia."
+    },
+    {
+     "w": "bias",
+     "ipa": "/ˈbaɪəs/",
+     "vi": "thiên kiến, sự thiên vị",
+     "col": "media bias",
+     "ex": "Viewers complained about bias in the news report.",
+     "exv": "Khán giả phàn nàn về sự thiên vị trong bản tin."
+    },
+    {
+     "w": "censorship",
+     "ipa": "/ˈsenʃəʃɪp/",
+     "vi": "sự kiểm duyệt",
+     "col": "press censorship",
+     "ex": "Censorship prevents journalists from reporting the truth.",
+     "exv": "Kiểm duyệt ngăn cản nhà báo đưa tin về sự thật."
+    },
+    {
+     "w": "propaganda",
+     "ipa": "/ˌprɒpəˈɡændə/",
+     "vi": "tuyên truyền",
+     "col": "political propaganda",
+     "ex": "The channel was accused of spreading propaganda.",
+     "exv": "Kênh truyền hình bị cáo buộc phát tán tuyên truyền."
+    },
+    {
+     "w": "viral",
+     "ipa": "/ˈvaɪrəl/",
+     "vi": "lan truyền nhanh trên mạng",
+     "col": "go viral",
+     "ex": "The video went viral within a few hours.",
+     "exv": "Đoạn video đã lan truyền chóng mặt chỉ trong vài giờ."
+    },
+    {
+     "w": "influencer",
+     "ipa": "/ˈɪnfluənsə(r)/",
+     "vi": "người có ảnh hưởng trên mạng",
+     "col": "a social media influencer",
+     "ex": "Brands pay influencers to promote their products online.",
+     "exv": "Các thương hiệu trả tiền cho người có ảnh hưởng để quảng bá sản phẩm trên mạng."
+    },
+    {
+     "w": "campaign",
+     "ipa": "/kæmˈpeɪn/",
+     "vi": "chiến dịch",
+     "col": "an awareness campaign",
+     "ex": "The campaign aims to raise awareness about plastic waste.",
+     "exv": "Chiến dịch nhằm nâng cao nhận thức về rác thải nhựa."
+    },
+    {
+     "w": "stereotype",
+     "ipa": "/ˈsteriətaɪp/",
+     "vi": "khuôn mẫu, định kiến rập khuôn",
+     "col": "challenge stereotypes",
+     "ex": "Films can help challenge stereotypes about old people.",
+     "exv": "Phim ảnh có thể giúp phá vỡ các định kiến rập khuôn về người cao tuổi."
+    },
+    {
+     "w": "coverage",
+     "ipa": "/ˈkʌvərɪdʒ/",
+     "vi": "sự đưa tin",
+     "col": "media coverage",
+     "ex": "The election received extensive media coverage.",
+     "exv": "Cuộc bầu cử được truyền thông đưa tin rộng rãi."
+    },
+    {
+     "w": "editorial",
+     "ipa": "/ˌedɪˈtɔːriəl/",
+     "vi": "bài xã luận",
+     "col": "a newspaper editorial",
+     "ex": "The editorial criticised the government's new policy.",
+     "exv": "Bài xã luận đã chỉ trích chính sách mới của chính phủ."
+    },
+    {
+     "w": "controversial",
+     "ipa": "/ˌkɒntrəˈvɜːʃl/",
+     "vi": "gây tranh cãi",
+     "col": "a controversial decision",
+     "ex": "The new law proved highly controversial.",
+     "exv": "Luật mới tỏ ra rất gây tranh cãi."
+    },
+    {
+     "w": "public opinion",
+     "ipa": "/ˈpʌblɪk əˈpɪnjən/",
+     "vi": "dư luận",
+     "col": "shape public opinion",
+     "ex": "Television still shapes public opinion in many countries.",
+     "exv": "Truyền hình vẫn định hình dư luận ở nhiều nước."
+    },
+    {
+     "w": "audience",
+     "ipa": "/ˈɔːdiəns/",
+     "vi": "khán giả, độc giả",
+     "col": "a younger audience",
+     "ex": "The programme attracts a younger audience than before.",
+     "exv": "Chương trình thu hút khán giả trẻ hơn trước đây."
+    },
+    {
+     "w": "representation",
+     "ipa": "/ˌreprɪzenˈteɪʃn/",
+     "vi": "sự đại diện; cách thể hiện trên truyền thông",
+     "col": "media representation",
+     "ex": "The representation of women in films has improved gradually.",
+     "exv": "Cách thể hiện phụ nữ trong phim đã dần cải thiện."
+    },
+    {
+     "w": "publish",
+     "ipa": "/ˈpʌblɪʃ/",
+     "vi": "xuất bản, đăng tải",
+     "col": "publish an article",
+     "ex": "The newspaper refused to publish the article.",
+     "exv": "Tòa soạn từ chối đăng bài báo đó."
+    },
+    {
+     "w": "subscription",
+     "ipa": "/səbˈskrɪpʃn/",
+     "vi": "sự đăng ký thuê bao, gói cước",
+     "col": "a monthly subscription",
+     "ex": "Many readers now pay a monthly subscription for online news.",
+     "exv": "Nhiều độc giả hiện trả phí thuê bao hằng tháng cho báo mạng."
+    },
+    {
+     "w": "fake news",
+     "ipa": "/feɪk njuːz/",
+     "vi": "tin giả",
+     "col": "spread fake news",
+     "ex": "Fake news can spread faster than the truth on social media.",
+     "exv": "Tin giả có thể lan nhanh hơn sự thật trên mạng xã hội."
+    },
+    {
+     "w": "journalism",
+     "ipa": "/ˈdʒɜːnəlɪzəm/",
+     "vi": "nghề báo, báo chí",
+     "col": "investigative journalism",
+     "ex": "Investigative journalism uncovered the corruption scandal.",
+     "exv": "Báo chí điều tra đã phanh phui vụ bê bối tham nhũng."
+    },
+    {
+     "w": "trending",
+     "ipa": "/ˈtrendɪŋ/",
+     "vi": "đang thịnh hành, theo xu hướng",
+     "col": "a trending topic",
+     "ex": "The hashtag became a trending topic overnight.",
+     "exv": "Thẻ hashtag đã trở thành chủ đề thịnh hành chỉ sau một đêm."
+    }
+   ]
+  },
+  {
+   "theme": "Environment and Climate - Môi trường và khí hậu",
+   "band": "Band 7.0",
+   "cards": [
+    {
+     "w": "emission",
+     "ipa": "/ɪˈmɪʃn/",
+     "vi": "khí thải, sự phát thải",
+     "col": "carbon emissions",
+     "ex": "The country has promised to cut carbon emissions by 2030.",
+     "exv": "Đất nước này đã hứa cắt giảm khí thải carbon vào năm 2030."
+    },
+    {
+     "w": "deforestation",
+     "ipa": "/diːˌfɒrɪˈsteɪʃn/",
+     "vi": "nạn phá rừng",
+     "col": "tropical deforestation",
+     "ex": "Deforestation destroys the homes of thousands of species.",
+     "exv": "Nạn phá rừng phá hủy nơi sống của hàng nghìn loài sinh vật."
+    },
+    {
+     "w": "biodiversity",
+     "ipa": "/ˌbaɪəʊdaɪˈvɜːsəti/",
+     "vi": "đa dạng sinh học",
+     "col": "protect biodiversity",
+     "ex": "Rainforests are essential for protecting biodiversity.",
+     "exv": "Rừng mưa nhiệt đới rất cần thiết để bảo vệ đa dạng sinh học."
+    },
+    {
+     "w": "ecosystem",
+     "ipa": "/ˈiːkəʊsɪstəm/",
+     "vi": "hệ sinh thái",
+     "col": "a fragile ecosystem",
+     "ex": "Pollution can damage a fragile ecosystem for decades.",
+     "exv": "Ô nhiễm có thể hủy hoại một hệ sinh thái mỏng manh trong nhiều thập kỷ."
+    },
+    {
+     "w": "habitat",
+     "ipa": "/ˈhæbɪtæt/",
+     "vi": "môi trường sống của sinh vật",
+     "col": "a natural habitat",
+     "ex": "The panda's natural habitat is disappearing quickly.",
+     "exv": "Môi trường sống tự nhiên của gấu trúc đang biến mất nhanh chóng."
+    },
+    {
+     "w": "extinction",
+     "ipa": "/ɪkˈstɪŋkʃn/",
+     "vi": "sự tuyệt chủng",
+     "col": "face extinction",
+     "ex": "Many species face extinction because of hunting and habitat loss.",
+     "exv": "Nhiều loài đối mặt với tuyệt chủng vì săn bắt và mất môi trường sống."
+    },
+    {
+     "w": "fossil fuel",
+     "ipa": "/ˈfɒsl fjuːəl/",
+     "vi": "nhiên liệu hóa thạch",
+     "col": "burn fossil fuels",
+     "ex": "Burning fossil fuels is the main cause of global warming.",
+     "exv": "Đốt nhiên liệu hóa thạch là nguyên nhân chính của sự nóng lên toàn cầu."
+    },
+    {
+     "w": "greenhouse gas",
+     "ipa": "/ˈɡriːnhaʊs ɡæs/",
+     "vi": "khí nhà kính",
+     "col": "greenhouse gas emissions",
+     "ex": "Greenhouse gases trap heat in the atmosphere.",
+     "exv": "Các khí nhà kính giữ nhiệt trong khí quyển."
+    },
+    {
+     "w": "conservation",
+     "ipa": "/ˌkɒnsəˈveɪʃn/",
+     "vi": "sự bảo tồn",
+     "col": "wildlife conservation",
+     "ex": "Wildlife conservation needs support from local communities.",
+     "exv": "Bảo tồn động vật hoang dã cần sự ủng hộ của cộng đồng địa phương."
+    },
+    {
+     "w": "erosion",
+     "ipa": "/ɪˈrəʊʒn/",
+     "vi": "sự xói mòn",
+     "col": "soil erosion",
+     "ex": "Heavy rain causes soil erosion on the hills.",
+     "exv": "Mưa lớn gây xói mòn đất trên các sườn đồi."
+    },
+    {
+     "w": "desertification",
+     "ipa": "/dɪˌzɜːtɪfɪˈkeɪʃn/",
+     "vi": "sa mạc hóa",
+     "col": "combat desertification",
+     "ex": "Planting trees is one way to combat desertification.",
+     "exv": "Trồng cây là một cách để chống sa mạc hóa."
+    },
+    {
+     "w": "glacier",
+     "ipa": "/ˈɡlæsiə(r)/",
+     "vi": "sông băng",
+     "col": "a melting glacier",
+     "ex": "The glacier has shrunk by half in fifty years.",
+     "exv": "Sông băng đã thu hẹp một nửa trong năm mươi năm."
+    },
+    {
+     "w": "sustainability",
+     "ipa": "/səˌsteɪnəˈbɪləti/",
+     "vi": "tính bền vững",
+     "col": "environmental sustainability",
+     "ex": "Environmental sustainability should guide every development project.",
+     "exv": "Tính bền vững về môi trường cần dẫn dắt mọi dự án phát triển."
+    },
+    {
+     "w": "atmosphere",
+     "ipa": "/ˈætməsfɪə(r)/",
+     "vi": "khí quyển",
+     "col": "the upper atmosphere",
+     "ex": "Carbon dioxide stays in the atmosphere for hundreds of years.",
+     "exv": "Khí carbon dioxide tồn tại trong khí quyển hàng trăm năm."
+    },
+    {
+     "w": "drought",
+     "ipa": "/draʊt/",
+     "vi": "hạn hán",
+     "col": "a severe drought",
+     "ex": "The region suffered a severe drought last summer.",
+     "exv": "Khu vực đã chịu một đợt hạn hán nghiêm trọng vào mùa hè năm ngoái."
+    },
+    {
+     "w": "renewable",
+     "ipa": "/rɪˈnjuːəbl/",
+     "vi": "có thể tái tạo",
+     "col": "renewable energy",
+     "ex": "Renewable energy now provides a third of the country's electricity.",
+     "exv": "Năng lượng tái tạo hiện cung cấp một phần ba lượng điện của đất nước."
+    },
+    {
+     "w": "contamination",
+     "ipa": "/kənˌtæmɪˈneɪʃn/",
+     "vi": "sự ô nhiễm, làm bẩn nguồn nước và đất",
+     "col": "water contamination",
+     "ex": "Water contamination made hundreds of villagers ill.",
+     "exv": "Ô nhiễm nguồn nước khiến hàng trăm người dân trong làng bị ốm."
+    },
+    {
+     "w": "landfill",
+     "ipa": "/ˈlændfɪl/",
+     "vi": "bãi chôn rác",
+     "col": "a landfill site",
+     "ex": "Most household waste still ends up in landfill sites.",
+     "exv": "Phần lớn rác thải sinh hoạt vẫn kết thúc ở các bãi chôn rác."
+    },
+    {
+     "w": "carbon footprint",
+     "ipa": "/ˌkɑːbən ˈfʊtprɪnt/",
+     "vi": "dấu chân carbon, lượng phát thải của một cá nhân hoặc tổ chức",
+     "col": "reduce your carbon footprint",
+     "ex": "Flying less is an effective way to reduce your carbon footprint.",
+     "exv": "Đi máy bay ít hơn là cách hiệu quả để giảm dấu chân carbon của bạn."
+    },
+    {
+     "w": "endangered",
+     "ipa": "/ɪnˈdeɪndʒəd/",
+     "vi": "có nguy cơ tuyệt chủng, bị đe dọa",
+     "col": "an endangered species",
+     "ex": "The saola is one of the world's most endangered species.",
+     "exv": "Sao la là một trong những loài có nguy cơ tuyệt chủng cao nhất thế giới."
+    }
+   ]
+  },
+  {
+   "theme": "Globalisation and Culture - Toàn cầu hóa và văn hóa",
+   "band": "Band 7.0",
+   "cards": [
+    {
+     "w": "globalisation",
+     "ipa": "/ˌɡləʊbəlaɪˈzeɪʃn/",
+     "vi": "toàn cầu hóa",
+     "col": "the pace of globalisation",
+     "ex": "Globalisation has connected markets across the world.",
+     "exv": "Toàn cầu hóa đã kết nối các thị trường trên khắp thế giới."
+    },
+    {
+     "w": "multinational",
+     "ipa": "/ˌmʌltiˈnæʃnəl/",
+     "vi": "đa quốc gia",
+     "col": "a multinational corporation",
+     "ex": "Multinational corporations operate in dozens of countries.",
+     "exv": "Các tập đoàn đa quốc gia hoạt động ở hàng chục quốc gia."
+    },
+    {
+     "w": "outsourcing",
+     "ipa": "/ˈaʊtsɔːsɪŋ/",
+     "vi": "thuê ngoài",
+     "col": "outsource production",
+     "ex": "Many firms outsource production to countries with cheaper labour.",
+     "exv": "Nhiều công ty thuê sản xuất ở các nước có lao động rẻ hơn."
+    },
+    {
+     "w": "migration",
+     "ipa": "/maɪˈɡreɪʃn/",
+     "vi": "sự di cư",
+     "col": "international migration",
+     "ex": "International migration has increased steadily since 2000.",
+     "exv": "Di cư quốc tế đã tăng đều đặn kể từ năm 2000."
+    },
+    {
+     "w": "assimilation",
+     "ipa": "/əˌsɪməˈleɪʃn/",
+     "vi": "sự đồng hóa, hòa nhập văn hóa",
+     "col": "cultural assimilation",
+     "ex": "Assimilation can help immigrants integrate but may weaken their traditions.",
+     "exv": "Sự đồng hóa có thể giúp người nhập cư hòa nhập nhưng có thể làm phai nhạt truyền thống của họ."
+    },
+    {
+     "w": "diversity",
+     "ipa": "/daɪˈvɜːsəti/",
+     "vi": "sự đa dạng",
+     "col": "cultural diversity",
+     "ex": "Cultural diversity makes big cities more creative and lively.",
+     "exv": "Đa dạng văn hóa khiến các thành phố lớn trở nên sáng tạo và sôi động hơn."
+    },
+    {
+     "w": "heritage",
+     "ipa": "/ˈherɪtɪdʒ/",
+     "vi": "di sản",
+     "col": "cultural heritage",
+     "ex": "Traditional festivals are an important part of our cultural heritage.",
+     "exv": "Các lễ hội truyền thống là một phần quan trọng của di sản văn hóa."
+    },
+    {
+     "w": "identity",
+     "ipa": "/aɪˈdentəti/",
+     "vi": "bản sắc, danh tính",
+     "col": "national identity",
+     "ex": "Language plays a central role in national identity.",
+     "exv": "Ngôn ngữ đóng vai trò trung tâm trong bản sắc quốc gia."
+    },
+    {
+     "w": "consumerism",
+     "ipa": "/kənˈsjuːmərɪzəm/",
+     "vi": "chủ nghĩa tiêu dùng",
+     "col": "a culture of consumerism",
+     "ex": "Consumerism encourages people to buy things they do not need.",
+     "exv": "Chủ nghĩa tiêu dùng khuyến khích mọi người mua những thứ họ không cần."
+    },
+    {
+     "w": "remittance",
+     "ipa": "/rɪˈmɪtns/",
+     "vi": "kiều hối, tiền gửi về quê",
+     "col": "send remittances",
+     "ex": "Workers abroad send remittances to their families every month.",
+     "exv": "Người lao động ở nước ngoài gửi kiều hối về cho gia đình mỗi tháng."
+    },
+    {
+     "w": "workforce",
+     "ipa": "/ˈwɜːkfɔːs/",
+     "vi": "lực lượng lao động",
+     "col": "the local workforce",
+     "ex": "Factories need a skilled workforce to compete globally.",
+     "exv": "Các nhà máy cần lực lượng lao động có tay nghề để cạnh tranh toàn cầu."
+    },
+    {
+     "w": "integration",
+     "ipa": "/ˌɪntɪˈɡreɪʃn/",
+     "vi": "sự hội nhập, hòa nhập",
+     "col": "economic integration",
+     "ex": "Economic integration has brought the region closer together.",
+     "exv": "Hội nhập kinh tế đã đưa khu vực xích lại gần nhau hơn."
+    },
+    {
+     "w": "custom",
+     "ipa": "/ˈkʌstəm/",
+     "vi": "phong tục, tập quán",
+     "col": "an ancient custom",
+     "ex": "Giving lucky money at Tet is an ancient custom in Vietnam.",
+     "exv": "Mừng tuổi vào dịp Tết là một phong tục lâu đời ở Việt Nam."
+    },
+    {
+     "w": "trade",
+     "ipa": "/treɪd/",
+     "vi": "thương mại, buôn bán",
+     "col": "international trade",
+     "ex": "International trade creates jobs in both rich and poor countries.",
+     "exv": "Thương mại quốc tế tạo việc làm ở cả nước giàu và nước nghèo."
+    },
+    {
+     "w": "export",
+     "ipa": "/ˈekspɔːt/",
+     "vi": "sự xuất khẩu; hàng xuất khẩu",
+     "col": "export goods",
+     "ex": "Vietnam exports large quantities of rice and coffee.",
+     "exv": "Việt Nam xuất khẩu một lượng lớn gạo và cà phê."
+    },
+    {
+     "w": "import",
+     "ipa": "/ˈɪmpɔːt/",
+     "vi": "sự nhập khẩu; hàng nhập khẩu",
+     "col": "import taxes",
+     "ex": "The country imports most of its oil from abroad.",
+     "exv": "Đất nước này nhập khẩu phần lớn dầu mỏ từ nước ngoài."
+    },
+    {
+     "w": "barrier",
+     "ipa": "/ˈbæriə(r)/",
+     "vi": "rào cản",
+     "col": "a language barrier",
+     "ex": "The language barrier made it hard for her to find a job abroad.",
+     "exv": "Rào cản ngôn ngữ khiến cô ấy khó tìm việc ở nước ngoài."
+    },
+    {
+     "w": "trend",
+     "ipa": "/trend/",
+     "vi": "xu hướng",
+     "col": "a growing trend",
+     "ex": "There is a growing trend towards working for foreign companies.",
+     "exv": "Đang có xu hướng ngày càng tăng là làm việc cho các công ty nước ngoài."
+    },
+    {
+     "w": "perspective",
+     "ipa": "/pəˈspektɪv/",
+     "vi": "góc nhìn, quan điểm",
+     "col": "a different perspective",
+     "ex": "Living abroad gives students a different perspective on their own culture.",
+     "exv": "Sống ở nước ngoài cho sinh viên một góc nhìn khác về văn hóa của chính mình."
+    },
+    {
+     "w": "urbanisation",
+     "ipa": "/ˌɜːbənaɪˈzeɪʃn/",
+     "vi": "đô thị hóa",
+     "col": "rapid urbanisation",
+     "ex": "Rapid urbanisation has put pressure on housing in big cities.",
+     "exv": "Đô thị hóa nhanh đã gây áp lực lên nhà ở tại các thành phố lớn."
+    }
+   ]
+  },
+  {
+   "theme": "Economics and Business - Kinh tế và kinh doanh",
+   "band": "Band 7.0",
+   "cards": [
+    {
+     "w": "inflation",
+     "ipa": "/ɪnˈfleɪʃn/",
+     "vi": "lạm phát",
+     "col": "a high rate of inflation",
+     "ex": "Inflation reduces the value of people's savings.",
+     "exv": "Lạm phát làm giảm giá trị tiền tiết kiệm của người dân."
+    },
+    {
+     "w": "recession",
+     "ipa": "/rɪˈseʃn/",
+     "vi": "suy thoái kinh tế",
+     "col": "an economic recession",
+     "ex": "The recession caused thousands of workers to lose their jobs.",
+     "exv": "Suy thoái kinh tế khiến hàng nghìn lao động mất việc."
+    },
+    {
+     "w": "investment",
+     "ipa": "/ɪnˈvestmənt/",
+     "vi": "sự đầu tư, khoản đầu tư",
+     "col": "foreign investment",
+     "ex": "Foreign investment has created millions of jobs in the region.",
+     "exv": "Đầu tư nước ngoài đã tạo ra hàng triệu việc làm trong khu vực."
+    },
+    {
+     "w": "entrepreneur",
+     "ipa": "/ˌɒntrəprəˈnɜː(r)/",
+     "vi": "doanh nhân, người khởi nghiệp",
+     "col": "a young entrepreneur",
+     "ex": "The young entrepreneur started her company with very little money.",
+     "exv": "Nữ doanh nhân trẻ khởi nghiệp công ty của mình với số vốn rất ít."
+    },
+    {
+     "w": "bankruptcy",
+     "ipa": "/ˈbæŋkrʌptsi/",
+     "vi": "sự phá sản",
+     "col": "face bankruptcy",
+     "ex": "Many small restaurants faced bankruptcy during the pandemic.",
+     "exv": "Nhiều nhà hàng nhỏ đối mặt với phá sản trong đại dịch."
+    },
+    {
+     "w": "taxation",
+     "ipa": "/tækˈseɪʃn/",
+     "vi": "thuế khóa, sự đánh thuế",
+     "col": "a taxation system",
+     "ex": "A fair taxation system is essential for public services.",
+     "exv": "Một hệ thống thuế công bằng là điều thiết yếu cho các dịch vụ công."
+    },
+    {
+     "w": "subsidy",
+     "ipa": "/ˈsʌbsədi/",
+     "vi": "khoản trợ cấp, trợ giá",
+     "col": "a government subsidy",
+     "ex": "Farmers receive a government subsidy for growing rice.",
+     "exv": "Nông dân nhận trợ cấp của chính phủ để trồng lúa."
+    },
+    {
+     "w": "monopoly",
+     "ipa": "/məˈnɒpəli/",
+     "vi": "sự độc quyền",
+     "col": "a state monopoly",
+     "ex": "A monopoly can push prices up because there is no competition.",
+     "exv": "Độc quyền có thể đẩy giá lên vì không có cạnh tranh."
+    },
+    {
+     "w": "shareholder",
+     "ipa": "/ˈʃeəhəʊldə(r)/",
+     "vi": "cổ đông",
+     "col": "major shareholders",
+     "ex": "Shareholders were disappointed by the fall in profits.",
+     "exv": "Các cổ đông thất vọng vì lợi nhuận giảm."
+    },
+    {
+     "w": "revenue",
+     "ipa": "/ˈrevənjuː/",
+     "vi": "doanh thu",
+     "col": "annual revenue",
+     "ex": "The company's annual revenue doubled in three years.",
+     "exv": "Doanh thu hằng năm của công ty đã tăng gấp đôi trong ba năm."
+    },
+    {
+     "w": "expenditure",
+     "ipa": "/ɪkˈspendɪtʃə(r)/",
+     "vi": "chi tiêu, khoản chi",
+     "col": "government expenditure",
+     "ex": "Government expenditure on healthcare has increased.",
+     "exv": "Chi tiêu của chính phủ cho y tế đã tăng lên."
+    },
+    {
+     "w": "demand",
+     "ipa": "/dɪˈmɑːnd/",
+     "vi": "nhu cầu của thị trường",
+     "col": "consumer demand",
+     "ex": "Consumer demand for electric cars is rising rapidly.",
+     "exv": "Nhu cầu của người tiêu dùng đối với xe điện đang tăng nhanh."
+    },
+    {
+     "w": "supply",
+     "ipa": "/səˈplaɪ/",
+     "vi": "nguồn cung",
+     "col": "supply and demand",
+     "ex": "When supply falls, prices usually go up.",
+     "exv": "Khi nguồn cung giảm, giá thường tăng lên."
+    },
+    {
+     "w": "profit",
+     "ipa": "/ˈprɒfɪt/",
+     "vi": "lợi nhuận",
+     "col": "make a profit",
+     "ex": "Small shops find it hard to make a profit nowadays.",
+     "exv": "Các cửa hàng nhỏ ngày nay khó kiếm được lợi nhuận."
+    },
+    {
+     "w": "budget",
+     "ipa": "/ˈbʌdʒɪt/",
+     "vi": "ngân sách",
+     "col": "a state budget",
+     "ex": "The government announced a new budget for education.",
+     "exv": "Chính phủ đã công bố ngân sách mới cho giáo dục."
+    },
+    {
+     "w": "deficit",
+     "ipa": "/ˈdefɪsɪt/",
+     "vi": "thâm hụt",
+     "col": "a budget deficit",
+     "ex": "The country has run a budget deficit for five years.",
+     "exv": "Đất nước này đã thâm hụt ngân sách trong năm năm."
+    },
+    {
+     "w": "productivity",
+     "ipa": "/ˌprɒdʌkˈtɪvəti/",
+     "vi": "năng suất",
+     "col": "improve productivity",
+     "ex": "New technology can improve productivity in offices.",
+     "exv": "Công nghệ mới có thể cải thiện năng suất trong các văn phòng."
+    },
+    {
+     "w": "consumer",
+     "ipa": "/kənˈsjuːmə(r)/",
+     "vi": "người tiêu dùng",
+     "col": "consumer rights",
+     "ex": "Consumers are now better protected by law.",
+     "exv": "Người tiêu dùng hiện được pháp luật bảo vệ tốt hơn."
+    },
+    {
+     "w": "market share",
+     "ipa": "/ˈmɑːkɪt ʃeə(r)/",
+     "vi": "thị phần",
+     "col": "gain market share",
+     "ex": "The brand gained market share after cutting its prices.",
+     "exv": "Thương hiệu đã tăng thị phần sau khi giảm giá."
+    },
+    {
+     "w": "start-up",
+     "ipa": "/ˈstɑːt ʌp/",
+     "vi": "công ty khởi nghiệp",
+     "col": "a tech start-up",
+     "ex": "He left his job to join a tech start-up.",
+     "exv": "Anh ấy bỏ việc để gia nhập một công ty khởi nghiệp công nghệ."
+    }
+   ]
+  },
+  {
+   "theme": "Abstract Academic Concepts - Khái niệm học thuật trừu tượng",
+   "band": "Band 7.5+",
+   "cards": [
+    {
+     "w": "phenomenon",
+     "ipa": "/fɪˈnɒmɪnən/",
+     "vi": "hiện tượng",
+     "col": "a natural phenomenon",
+     "ex": "Urbanisation is a phenomenon seen in almost every developing country.",
+     "exv": "Đô thị hóa là một hiện tượng thấy ở hầu hết các nước đang phát triển."
+    },
+    {
+     "w": "hypothesis",
+     "ipa": "/haɪˈpɒθəsɪs/",
+     "vi": "giả thuyết",
+     "col": "test a hypothesis",
+     "ex": "The experiment was designed to test this hypothesis.",
+     "exv": "Thí nghiệm được thiết kế để kiểm tra giả thuyết này."
+    },
+    {
+     "w": "assumption",
+     "ipa": "/əˈsʌmpʃn/",
+     "vi": "giả định",
+     "col": "a basic assumption",
+     "ex": "The theory rests on the assumption that people act rationally.",
+     "exv": "Lý thuyết này dựa trên giả định rằng con người hành động có lý trí."
+    },
+    {
+     "w": "implication",
+     "ipa": "/ˌɪmplɪˈkeɪʃn/",
+     "vi": "hệ quả, hàm ý",
+     "col": "serious implications",
+     "ex": "The findings have serious implications for public policy.",
+     "exv": "Các kết quả nghiên cứu này có hệ quả nghiêm trọng đối với chính sách công."
+    },
+    {
+     "w": "paradigm",
+     "ipa": "/ˈpærədaɪm/",
+     "vi": "mô hình tư duy, khuôn mẫu lý thuyết",
+     "col": "a paradigm shift",
+     "ex": "The internet caused a paradigm shift in education.",
+     "exv": "Internet đã gây ra một sự thay đổi mô hình tư duy trong giáo dục."
+    },
+    {
+     "w": "framework",
+     "ipa": "/ˈfreɪmwɜːk/",
+     "vi": "khuôn khổ, khung lý thuyết",
+     "col": "a theoretical framework",
+     "ex": "The report provides a framework for future research.",
+     "exv": "Báo cáo cung cấp một khuôn khổ cho các nghiên cứu trong tương lai."
+    },
+    {
+     "w": "correlation",
+     "ipa": "/ˌkɒrəˈleɪʃn/",
+     "vi": "sự tương quan",
+     "col": "a strong correlation",
+     "ex": "There is a strong correlation between income and life expectancy.",
+     "exv": "Có một mối tương quan chặt chẽ giữa thu nhập và tuổi thọ."
+    },
+    {
+     "w": "variable",
+     "ipa": "/ˈveəriəbl/",
+     "vi": "biến số",
+     "col": "an independent variable",
+     "ex": "Age is an important variable in this study.",
+     "exv": "Tuổi là một biến số quan trọng trong nghiên cứu này."
+    },
+    {
+     "w": "criterion",
+     "ipa": "/kraɪˈtɪəriən/",
+     "vi": "tiêu chí (số nhiều: criteria)",
+     "col": "meet the criteria",
+     "ex": "Applicants must meet all the criteria to be selected.",
+     "exv": "Ứng viên phải đáp ứng mọi tiêu chí để được chọn."
+    },
+    {
+     "w": "methodology",
+     "ipa": "/ˌmeθəˈdɒlədʒi/",
+     "vi": "phương pháp luận",
+     "col": "research methodology",
+     "ex": "The methodology of the study was criticised by other scientists.",
+     "exv": "Phương pháp luận của nghiên cứu bị các nhà khoa học khác chỉ trích."
+    },
+    {
+     "w": "interpretation",
+     "ipa": "/ɪnˌtɜːprɪˈteɪʃn/",
+     "vi": "cách lý giải, diễn giải",
+     "col": "open to interpretation",
+     "ex": "The data is open to more than one interpretation.",
+     "exv": "Dữ liệu này có thể được lý giải theo nhiều cách."
+    },
+    {
+     "w": "significance",
+     "ipa": "/sɪɡˈnɪfɪkəns/",
+     "vi": "tầm quan trọng, ý nghĩa",
+     "col": "of great significance",
+     "ex": "This discovery is of great significance for medicine.",
+     "exv": "Khám phá này có tầm quan trọng lớn đối với y học."
+    },
+    {
+     "w": "tendency",
+     "ipa": "/ˈtendənsi/",
+     "vi": "xu hướng, khuynh hướng",
+     "col": "a tendency to do something",
+     "ex": "There is a tendency for house prices to rise in spring.",
+     "exv": "Giá nhà có khuynh hướng tăng vào mùa xuân."
+    },
+    {
+     "w": "dimension",
+     "ipa": "/daɪˈmenʃn/",
+     "vi": "khía cạnh; chiều (không gian)",
+     "col": "a new dimension",
+     "ex": "The study adds a new dimension to the debate.",
+     "exv": "Nghiên cứu bổ sung một khía cạnh mới cho cuộc tranh luận."
+    },
+    {
+     "w": "component",
+     "ipa": "/kəmˈpəʊnənt/",
+     "vi": "thành phần",
+     "col": "a key component",
+     "ex": "Trust is a key component of any successful team.",
+     "exv": "Niềm tin là thành phần then chốt của bất kỳ nhóm thành công nào."
+    },
+    {
+     "w": "sequence",
+     "ipa": "/ˈsiːkwəns/",
+     "vi": "trình tự, chuỗi sự việc",
+     "col": "a sequence of events",
+     "ex": "The book describes the sequence of events leading to the war.",
+     "exv": "Cuốn sách mô tả trình tự các sự kiện dẫn đến chiến tranh."
+    },
+    {
+     "w": "outcome",
+     "ipa": "/ˈaʊtkʌm/",
+     "vi": "kết quả cuối cùng",
+     "col": "the final outcome",
+     "ex": "The outcome of the election surprised many voters.",
+     "exv": "Kết quả cuối cùng của cuộc bầu cử khiến nhiều cử tri bất ngờ."
+    },
+    {
+     "w": "validity",
+     "ipa": "/vəˈlɪdəti/",
+     "vi": "tính xác thực, tính hợp lệ",
+     "col": "question the validity",
+     "ex": "Critics questioned the validity of the research.",
+     "exv": "Các nhà phê bình đặt câu hỏi về tính xác thực của nghiên cứu."
+    },
+    {
+     "w": "ambiguity",
+     "ipa": "/ˌæmbɪˈɡjuːəti/",
+     "vi": "sự mơ hồ, đa nghĩa",
+     "col": "remove ambiguity",
+     "ex": "Clear definitions remove ambiguity from academic writing.",
+     "exv": "Các định nghĩa rõ ràng loại bỏ sự mơ hồ trong văn viết học thuật."
+    },
+    {
+     "w": "proportion",
+     "ipa": "/prəˈpɔːʃn/",
+     "vi": "tỷ lệ, tỷ trọng",
+     "col": "a large proportion",
+     "ex": "A large proportion of students work part-time.",
+     "exv": "Một tỷ lệ lớn sinh viên làm thêm bán thời gian."
+    }
+   ]
+  },
+  {
+   "theme": "Science and Research - Khoa học và nghiên cứu",
+   "band": "Band 7.5+",
+   "cards": [
+    {
+     "w": "specimen",
+     "ipa": "/ˈspesɪmɪn/",
+     "vi": "mẫu vật",
+     "col": "collect specimens",
+     "ex": "The team collected specimens from the forest floor.",
+     "exv": "Nhóm đã thu thập các mẫu vật từ nền rừng."
+    },
+    {
+     "w": "laboratory",
+     "ipa": "/ləˈbɒrətri/",
+     "vi": "phòng thí nghiệm",
+     "col": "a research laboratory",
+     "ex": "The samples were analysed in a research laboratory.",
+     "exv": "Các mẫu được phân tích trong một phòng thí nghiệm nghiên cứu."
+    },
+    {
+     "w": "observation",
+     "ipa": "/ˌɒbzəˈveɪʃn/",
+     "vi": "sự quan sát",
+     "col": "careful observation",
+     "ex": "Careful observation of the animals revealed new behaviour.",
+     "exv": "Sự quan sát cẩn thận các con vật đã hé lộ hành vi mới."
+    },
+    {
+     "w": "measurement",
+     "ipa": "/ˈmeʒəmənt/",
+     "vi": "sự đo lường, số đo",
+     "col": "accurate measurement",
+     "ex": "Accurate measurement is essential in any experiment.",
+     "exv": "Đo lường chính xác là điều thiết yếu trong mọi thí nghiệm."
+    },
+    {
+     "w": "evidence",
+     "ipa": "/ˈevɪdəns/",
+     "vi": "bằng chứng",
+     "col": "scientific evidence",
+     "ex": "There is strong scientific evidence that exercise improves memory.",
+     "exv": "Có bằng chứng khoa học vững chắc rằng vận động cải thiện trí nhớ."
+    },
+    {
+     "w": "findings",
+     "ipa": "/ˈfaɪndɪŋz/",
+     "vi": "kết quả nghiên cứu, phát hiện",
+     "col": "research findings",
+     "ex": "The findings suggest that sleep affects learning ability.",
+     "exv": "Các kết quả nghiên cứu cho thấy giấc ngủ ảnh hưởng đến khả năng học tập."
+    },
+    {
+     "w": "sample",
+     "ipa": "/ˈsɑːmpl/",
+     "vi": "mẫu (trong nghiên cứu)",
+     "col": "a sample of students",
+     "ex": "The survey used a sample of 2,000 students.",
+     "exv": "Cuộc khảo sát sử dụng một mẫu gồm 2.000 sinh viên."
+    },
+    {
+     "w": "participant",
+     "ipa": "/pɑːˈtɪsɪpənt/",
+     "vi": "người tham gia nghiên cứu",
+     "col": "research participants",
+     "ex": "All participants completed a questionnaire after the test.",
+     "exv": "Mọi người tham gia đều hoàn thành một bảng câu hỏi sau bài kiểm tra."
+    },
+    {
+     "w": "statistic",
+     "ipa": "/stəˈtɪstɪk/",
+     "vi": "con số thống kê",
+     "col": "an official statistic",
+     "ex": "This statistic shows a clear fall in unemployment.",
+     "exv": "Con số thống kê này cho thấy tỷ lệ thất nghiệp giảm rõ rệt."
+    },
+    {
+     "w": "accuracy",
+     "ipa": "/ˈækjərəsi/",
+     "vi": "độ chính xác",
+     "col": "check the accuracy",
+     "ex": "Journalists must check the accuracy of their information.",
+     "exv": "Nhà báo phải kiểm tra độ chính xác của thông tin."
+    },
+    {
+     "w": "precision",
+     "ipa": "/prɪˈsɪʒn/",
+     "vi": "độ chính xác cao, sự tỉ mỉ",
+     "col": "with great precision",
+     "ex": "The instruments measure temperature with great precision.",
+     "exv": "Các thiết bị đo nhiệt độ với độ chính xác rất cao."
+    },
+    {
+     "w": "conduct",
+     "ipa": "/kənˈdʌkt/",
+     "vi": "tiến hành (nghiên cứu, khảo sát)",
+     "col": "conduct a survey",
+     "ex": "The university conducted a survey of 5,000 graduates.",
+     "exv": "Trường đại học đã tiến hành một cuộc khảo sát với 5.000 cựu sinh viên."
+    },
+    {
+     "w": "analyse",
+     "ipa": "/ˈænəlaɪz/",
+     "vi": "phân tích",
+     "col": "analyse the data",
+     "ex": "Researchers analysed the data over a period of two years.",
+     "exv": "Các nhà nghiên cứu đã phân tích dữ liệu trong khoảng thời gian hai năm."
+    },
+    {
+     "w": "ethics",
+     "ipa": "/ˈeθɪks/",
+     "vi": "đạo đức (trong nghiên cứu, nghề nghiệp)",
+     "col": "research ethics",
+     "ex": "Research ethics require informed consent from participants.",
+     "exv": "Đạo đức nghiên cứu yêu cầu có sự đồng ý có hiểu biết của người tham gia."
+    },
+    {
+     "w": "peer-reviewed",
+     "ipa": "/ˌpɪə rɪˈvjuːd/",
+     "vi": "được bình duyệt đồng cấp",
+     "col": "a peer-reviewed journal",
+     "ex": "The results were published in a peer-reviewed journal.",
+     "exv": "Kết quả đã được đăng trên một tạp chí được bình duyệt đồng cấp."
+    },
+    {
+     "w": "discovery",
+     "ipa": "/dɪˈskʌvəri/",
+     "vi": "khám phá, phát hiện",
+     "col": "a major discovery",
+     "ex": "The discovery of penicillin changed medicine forever.",
+     "exv": "Việc phát hiện ra penicillin đã thay đổi y học mãi mãi."
+    },
+    {
+     "w": "theory",
+     "ipa": "/ˈθɪəri/",
+     "vi": "lý thuyết",
+     "col": "in theory",
+     "ex": "In theory, the plan should work, but practice may differ.",
+     "exv": "Về lý thuyết, kế hoạch này sẽ hiệu quả, nhưng thực tế có thể khác."
+    },
+    {
+     "w": "data",
+     "ipa": "/ˈdeɪtə/",
+     "vi": "dữ liệu",
+     "col": "collect data",
+     "ex": "The team collected data from fifty hospitals.",
+     "exv": "Nhóm đã thu thập dữ liệu từ năm mươi bệnh viện."
+    },
+    {
+     "w": "trial",
+     "ipa": "/ˈtraɪəl/",
+     "vi": "cuộc thử nghiệm (lâm sàng)",
+     "col": "a clinical trial",
+     "ex": "The new drug is now in clinical trials.",
+     "exv": "Loại thuốc mới hiện đang trong giai đoạn thử nghiệm lâm sàng."
+    },
+    {
+     "w": "publication",
+     "ipa": "/ˌpʌblɪˈkeɪʃn/",
+     "vi": "ấn phẩm; sự công bố",
+     "col": "a scientific publication",
+     "ex": "Her first scientific publication appeared in 2021.",
+     "exv": "Ấn phẩm khoa học đầu tiên của cô ấy xuất hiện vào năm 2021."
+    }
+   ]
+  },
+  {
+   "theme": "Philosophy and Life Values - Triết lý và giá trị sống",
+   "band": "Band 7.5+",
+   "cards": [
+    {
+     "w": "morality",
+     "ipa": "/məˈræləti/",
+     "vi": "đạo đức, luân lý",
+     "col": "public morality",
+     "ex": "Questions of morality are central to debates about technology.",
+     "exv": "Các vấn đề về đạo đức là trung tâm của những tranh luận về công nghệ."
+    },
+    {
+     "w": "virtue",
+     "ipa": "/ˈvɜːtʃuː/",
+     "vi": "đức tính, phẩm chất tốt",
+     "col": "patience is a virtue",
+     "ex": "Patience is a virtue that leaders should develop.",
+     "exv": "Kiên nhẫn là một đức tính mà người lãnh đạo nên trau dồi."
+    },
+    {
+     "w": "wisdom",
+     "ipa": "/ˈwɪzdəm/",
+     "vi": "sự khôn ngoan, minh triết",
+     "col": "words of wisdom",
+     "ex": "Old people often share words of wisdom with the young.",
+     "exv": "Người cao tuổi thường chia sẻ những lời minh triết với người trẻ."
+    },
+    {
+     "w": "existence",
+     "ipa": "/ɪɡˈzɪstəns/",
+     "vi": "sự tồn tại",
+     "col": "human existence",
+     "ex": "The novel explores questions about human existence.",
+     "exv": "Cuốn tiểu thuyết khám phá những câu hỏi về sự tồn tại của con người."
+    },
+    {
+     "w": "consciousness",
+     "ipa": "/ˈkɒnʃəsnəs/",
+     "vi": "ý thức; sự tỉnh táo",
+     "col": "lose consciousness",
+     "ex": "After the accident, he lost consciousness for several minutes.",
+     "exv": "Sau tai nạn, anh ấy bất tỉnh trong vài phút."
+    },
+    {
+     "w": "free will",
+     "ipa": "/ˌfriː ˈwɪl/",
+     "vi": "ý chí tự do",
+     "col": "believe in free will",
+     "ex": "Philosophers still debate whether free will truly exists.",
+     "exv": "Các triết gia vẫn tranh luận liệu ý chí tự do có thực sự tồn tại hay không."
+    },
+    {
+     "w": "destiny",
+     "ipa": "/ˈdestɪni/",
+     "vi": "định mệnh, số phận",
+     "col": "believe in destiny",
+     "ex": "Some people believe in destiny, while others trust hard work.",
+     "exv": "Một số người tin vào định mệnh, trong khi số khác tin vào sự chăm chỉ."
+    },
+    {
+     "w": "fulfilment",
+     "ipa": "/fʊlˈfɪlmənt/",
+     "vi": "sự mãn nguyện, thỏa mãn sâu sắc",
+     "col": "a sense of fulfilment",
+     "ex": "Helping others gives many people a sense of fulfilment.",
+     "exv": "Giúp đỡ người khác mang lại cho nhiều người cảm giác mãn nguyện."
+    },
+    {
+     "w": "well-being",
+     "ipa": "/wel ˈbiːɪŋ/",
+     "vi": "sức khỏe và hạnh phúc tổng thể",
+     "col": "mental well-being",
+     "ex": "Regular exercise is important for mental well-being.",
+     "exv": "Tập thể dục đều đặn rất quan trọng cho sức khỏe tinh thần."
+    },
+    {
+     "w": "contentment",
+     "ipa": "/kənˈtentmənt/",
+     "vi": "sự hài lòng, an nhiên",
+     "col": "quiet contentment",
+     "ex": "He found contentment in a simple life in the countryside.",
+     "exv": "Ông tìm thấy sự an nhiên trong cuộc sống giản dị ở nông thôn."
+    },
+    {
+     "w": "humility",
+     "ipa": "/hjuːˈmɪləti/",
+     "vi": "sự khiêm tốn",
+     "col": "show humility",
+     "ex": "True leaders show humility and listen to others.",
+     "exv": "Người lãnh đạo thực sự thể hiện sự khiêm tốn và lắng nghe người khác."
+    },
+    {
+     "w": "compassion",
+     "ipa": "/kəmˈpæʃn/",
+     "vi": "lòng trắc ẩn, thương cảm",
+     "col": "show compassion",
+     "ex": "Doctors should show compassion towards their patients.",
+     "exv": "Bác sĩ nên thể hiện lòng trắc ẩn đối với bệnh nhân của mình."
+    },
+    {
+     "w": "integrity",
+     "ipa": "/ɪnˈteɡrəti/",
+     "vi": "sự chính trực, liêm chính",
+     "col": "personal integrity",
+     "ex": "Integrity is essential for anyone in public office.",
+     "exv": "Sự chính trực là điều thiết yếu đối với bất kỳ ai giữ chức vụ công."
+    },
+    {
+     "w": "tolerance",
+     "ipa": "/ˈtɒlərəns/",
+     "vi": "sự khoan dung",
+     "col": "religious tolerance",
+     "ex": "Tolerance allows people of different beliefs to live together peacefully.",
+     "exv": "Sự khoan dung cho phép những người có tín ngưỡng khác nhau sống chung hòa bình."
+    },
+    {
+     "w": "prejudice",
+     "ipa": "/ˈpredʒədɪs/",
+     "vi": "định kiến, thành kiến",
+     "col": "overcome prejudice",
+     "ex": "Education is the best way to overcome prejudice.",
+     "exv": "Giáo dục là cách tốt nhất để vượt qua định kiến."
+    },
+    {
+     "w": "ambition",
+     "ipa": "/æmˈbɪʃn/",
+     "vi": "tham vọng, hoài bão",
+     "col": "a lifelong ambition",
+     "ex": "Her lifelong ambition was to become a surgeon.",
+     "exv": "Hoài bão cả đời của cô ấy là trở thành một bác sĩ phẫu thuật."
+    },
+    {
+     "w": "purpose",
+     "ipa": "/ˈpɜːpəs/",
+     "vi": "mục đích, ý nghĩa sống",
+     "col": "a sense of purpose",
+     "ex": "A sense of purpose helps people overcome difficulties.",
+     "exv": "Cảm giác có mục đích giúp con người vượt qua khó khăn."
+    },
+    {
+     "w": "value",
+     "ipa": "/ˈvæljuː/",
+     "vi": "giá trị",
+     "col": "core values",
+     "ex": "Honesty and respect are core values in this school.",
+     "exv": "Trung thực và tôn trọng là những giá trị cốt lõi ở ngôi trường này."
+    },
+    {
+     "w": "belief",
+     "ipa": "/bɪˈliːf/",
+     "vi": "niềm tin",
+     "col": "a strong belief",
+     "ex": "He has a strong belief in the power of education.",
+     "exv": "Anh ấy có niềm tin mạnh mẽ vào sức mạnh của giáo dục."
+    },
+    {
+     "w": "conscience",
+     "ipa": "/ˈkɒnʃəns/",
+     "vi": "lương tâm",
+     "col": "a clear conscience",
+     "ex": "She could sleep with a clear conscience after telling the truth.",
+     "exv": "Cô ấy có thể ngủ ngon với lương tâm thanh thản sau khi nói ra sự thật."
+    }
+   ]
+  }
+ ],
  "grammar": [
   {
    "level": "Band 4.0",
@@ -18905,6 +20400,906 @@ const CONTENT = {
     }
    ]
   }
+ ,
+  {
+   "level": "Band 2.0",
+   "name": "There is và there are - giới thiệu đồ vật và nơi chốn",
+   "explain": "Khi muốn nói có cái gì ở đâu, ta dùng there is với danh từ số ít và there are với danh từ số nhiều. Ví dụ: There is a book on the table (Có một quyển sách trên bàn). Mẫu câu này rất hay dùng khi miêu tả phòng, lớp học và thành phố trong IELTS Speaking Part 1.",
+   "examples": [
+    "There is a small park near my house.",
+    "There are thirty students in my class."
+   ],
+   "quiz": [
+    {
+     "q": "___ a big library in my town.",
+     "o": [
+      "There is",
+      "There are",
+      "There be"
+     ],
+     "a": 0,
+     "why": "a big library là danh từ số ít nên dùng There is."
+    },
+    {
+     "q": "___ many flowers in the garden.",
+     "o": [
+      "There is",
+      "There are",
+      "Is there"
+     ],
+     "a": 1,
+     "why": "many flowers là số nhiều nên dùng There are."
+    },
+    {
+     "q": "___ a cat under the table.",
+     "o": [
+      "There are",
+      "There is",
+      "Are there"
+     ],
+     "a": 1,
+     "why": "a cat là danh từ số ít nên dùng There is."
+    },
+    {
+     "q": "___ two hospitals in this district.",
+     "o": [
+      "There is",
+      "There be",
+      "There are"
+     ],
+     "a": 2,
+     "why": "two hospitals là số nhiều nên dùng There are."
+    },
+    {
+     "q": "___ any milk in the fridge?",
+     "o": [
+      "Is there",
+      "Are there",
+      "There is"
+     ],
+     "a": 0,
+     "why": "milk không đếm được, câu hỏi dùng Is there."
+    },
+    {
+     "q": "There ___ a problem with this computer.",
+     "o": [
+      "is",
+      "are",
+      "be"
+     ],
+     "a": 0,
+     "why": "a problem là danh từ số ít nên dùng is."
+    },
+    {
+     "q": "___ some chairs in the room.",
+     "o": [
+      "There is",
+      "There are",
+      "Is there"
+     ],
+     "a": 1,
+     "why": "some chairs là số nhiều nên dùng There are."
+    },
+    {
+     "q": "There is ___ supermarket next to my school.",
+     "o": [
+      "a",
+      "an",
+      "the"
+     ],
+     "a": 0,
+     "why": "supermarket bắt đầu bằng phụ âm và được nhắc lần đầu nên dùng a."
+    }
+   ]
+  },
+  {
+   "level": "Band 2.0",
+   "name": "Câu mệnh lệnh và lời rủ rê - imperatives và let's",
+   "explain": "Câu mệnh lệnh dùng động từ nguyên thể để bảo hoặc nhắc ai làm gì: Sit down, please (Mời ngồi). Lời rủ rê dùng Let's + động từ nguyên thể: Let's go (Chúng ta đi thôi). Trong lớp học và đời sống hằng ngày, hai mẫu câu này xuất hiện rất nhiều.",
+   "examples": [
+    "Please open your book and read the text.",
+    "Let's study together this weekend."
+   ],
+   "quiz": [
+    {
+     "q": "___ your name at the top of the page, please.",
+     "o": [
+      "Write",
+      "Writes",
+      "Writing"
+     ],
+     "a": 0,
+     "why": "Câu mệnh lệnh dùng động từ nguyên thể: Write."
+    },
+    {
+     "q": "___ go to the park after school.",
+     "o": [
+      "Let's",
+      "Let",
+      "Lets to"
+     ],
+     "a": 0,
+     "why": "Lời rủ rê dùng Let's + động từ nguyên thể."
+    },
+    {
+     "q": "___ quiet, please. The baby is sleeping.",
+     "o": [
+      "Is",
+      "Be",
+      "Are"
+     ],
+     "a": 1,
+     "why": "Mệnh lệnh với tính từ dùng Be: Be quiet."
+    },
+    {
+     "q": "Don't ___ late for class again.",
+     "o": [
+      "be",
+      "is",
+      "are"
+     ],
+     "a": 0,
+     "why": "Sau Don't dùng động từ nguyên thể be."
+    },
+    {
+     "q": "___ the window, please. It is hot in here.",
+     "o": [
+      "Opens",
+      "Open",
+      "Opening"
+     ],
+     "a": 1,
+     "why": "Câu mệnh lệnh bắt đầu bằng động từ nguyên thể Open."
+    },
+    {
+     "q": "Let's ___ football this afternoon.",
+     "o": [
+      "plays",
+      "play",
+      "playing"
+     ],
+     "a": 1,
+     "why": "Sau Let's dùng động từ nguyên thể play."
+    },
+    {
+     "q": "___ careful! The floor is wet.",
+     "o": [
+      "Be",
+      "Is",
+      "Are"
+     ],
+     "a": 0,
+     "why": "Lời nhắc nhở với tính từ dùng Be careful."
+    },
+    {
+     "q": "Please ___ your homework before dinner.",
+     "o": [
+      "finishes",
+      "finish",
+      "finishing"
+     ],
+     "a": 1,
+     "why": "Câu mệnh lệnh lịch sự với Please dùng động từ nguyên thể finish."
+    }
+   ]
+  },
+  {
+   "level": "Band 2.5",
+   "name": "Câu hỏi và câu phủ định ở hiện tại đơn - do, does",
+   "explain": "Muốn hỏi hoặc phủ định ở hiện tại đơn, ta mượn trợ động từ do (với I, you, we, they) và does (với he, she, it). Sau do và does, động từ chính trở về nguyên thể: Does she like coffee? (Cô ấy có thích cà phê không?) - động từ like không thêm s vì đã có does đứng trước.",
+   "examples": [
+    "Do you speak English?",
+    "He does not play football on weekdays."
+   ],
+   "quiz": [
+    {
+     "q": "___ your sister work in a hospital?",
+     "o": [
+      "Does",
+      "Do",
+      "Is"
+     ],
+     "a": 0,
+     "why": "your sister là ngôi thứ ba số ít nên dùng Does."
+    },
+    {
+     "q": "They ___ like spicy food.",
+     "o": [
+      "does not",
+      "do not",
+      "not"
+     ],
+     "a": 1,
+     "why": "They đi với do not, viết tắt là don't."
+    },
+    {
+     "q": "___ you get up early every day?",
+     "o": [
+      "Does",
+      "Do",
+      "Are"
+     ],
+     "a": 1,
+     "why": "Chủ ngữ you dùng trợ động từ Do."
+    },
+    {
+     "q": "He ___ watch TV in the morning.",
+     "o": [
+      "do not",
+      "does not",
+      "not"
+     ],
+     "a": 1,
+     "why": "He là ngôi thứ ba số ít nên dùng does not."
+    },
+    {
+     "q": "Does Tom ___ to school by bike?",
+     "o": [
+      "goes",
+      "go",
+      "going"
+     ],
+     "a": 1,
+     "why": "Sau Does, động từ chính về nguyên thể: go."
+    },
+    {
+     "q": "___ your parents live in the countryside?",
+     "o": [
+      "Does",
+      "Do",
+      "Is"
+     ],
+     "a": 1,
+     "why": "your parents là số nhiều nên dùng Do."
+    },
+    {
+     "q": "She does not ___ meat. She is a vegetarian.",
+     "o": [
+      "eats",
+      "eat",
+      "eating"
+     ],
+     "a": 1,
+     "why": "Sau does not, động từ về nguyên thể: eat."
+    },
+    {
+     "q": "What ___ your father do? - He is a teacher.",
+     "o": [
+      "does",
+      "do",
+      "is"
+     ],
+     "a": 0,
+     "why": "your father là ngôi thứ ba số ít nên dùng does."
+    }
+   ]
+  },
+  {
+   "level": "Band 2.5",
+   "name": "Lượng từ đời sống - much, many, some, any",
+   "explain": "Many đi với danh từ đếm được số nhiều (many books - nhiều quyển sách), much đi với danh từ không đếm được (much water - nhiều nước). Some thường dùng trong câu khẳng định, any dùng trong câu hỏi và câu phủ định. Ví dụ: I have some friends here (Tôi có vài người bạn ở đây), nhưng Do you have any questions? (Bạn có câu hỏi nào không?).",
+   "examples": [
+    "How many students are there in your class?",
+    "We do not have much time today."
+   ],
+   "quiz": [
+    {
+     "q": "How ___ brothers and sisters do you have?",
+     "o": [
+      "much",
+      "many",
+      "any"
+     ],
+     "a": 1,
+     "why": "brothers and sisters đếm được nên dùng many."
+    },
+    {
+     "q": "I need ___ sugar for this cake.",
+     "o": [
+      "many",
+      "some",
+      "any"
+     ],
+     "a": 1,
+     "why": "Câu khẳng định dùng some với danh từ không đếm được."
+    },
+    {
+     "q": "There is not ___ coffee in the cup.",
+     "o": [
+      "many",
+      "any",
+      "much"
+     ],
+     "a": 2,
+     "why": "coffee không đếm được, câu phủ định dùng much."
+    },
+    {
+     "q": "Do you have ___ pets at home?",
+     "o": [
+      "much",
+      "any",
+      "some"
+     ],
+     "a": 1,
+     "why": "Trong câu hỏi thông thường dùng any."
+    },
+    {
+     "q": "She eats ___ vegetables every day.",
+     "o": [
+      "much",
+      "a lot of",
+      "any"
+     ],
+     "a": 1,
+     "why": "Câu khẳng định với danh từ đếm được số nhiều dùng a lot of."
+    },
+    {
+     "q": "How ___ money do you need?",
+     "o": [
+      "many",
+      "much",
+      "some"
+     ],
+     "a": 1,
+     "why": "money không đếm được nên dùng much."
+    },
+    {
+     "q": "He has ___ good ideas for the project.",
+     "o": [
+      "much",
+      "many",
+      "any"
+     ],
+     "a": 1,
+     "why": "ideas đếm được số nhiều, câu khẳng định dùng many."
+    },
+    {
+     "q": "Is there ___ bus to the airport at night?",
+     "o": [
+      "some",
+      "any",
+      "much"
+     ],
+     "a": 1,
+     "why": "Câu hỏi với danh từ số ít đếm được dùng any."
+    }
+   ]
+  },
+  {
+   "level": "Band 3.0",
+   "name": "Tính từ và trạng từ - miêu tả và cách thức",
+   "explain": "Tính từ đứng trước danh từ hoặc sau động từ be để miêu tả: a careful driver (một tài xế cẩn thận), she is careful (cô ấy cẩn thận). Trạng từ thường thêm -ly vào tính từ và bổ nghĩa cho động từ, cho biết hành động xảy ra như thế nào: He drives carefully (Anh ấy lái xe cẩn thận). Một số trạng từ có dạng đặc biệt cần nhớ riêng: good - well, fast - fast, hard - hard.",
+   "examples": [
+    "She is a good student and she studies hard.",
+    "The teacher speaks slowly and clearly."
+   ],
+   "quiz": [
+    {
+     "q": "He is a ___ driver. He never has accidents.",
+     "o": [
+      "careful",
+      "carefully",
+      "care"
+     ],
+     "a": 0,
+     "why": "Trước danh từ driver cần tính từ careful."
+    },
+    {
+     "q": "Please speak ___. I cannot hear you.",
+     "o": [
+      "loud",
+      "loudly",
+      "loudness"
+     ],
+     "a": 1,
+     "why": "Bổ nghĩa cho động từ speak cần trạng từ loudly."
+    },
+    {
+     "q": "She sings very ___. Everyone loves her voice.",
+     "o": [
+      "beautiful",
+      "beautifully",
+      "beauty"
+     ],
+     "a": 1,
+     "why": "Bổ nghĩa cho động từ sings cần trạng từ beautifully."
+    },
+    {
+     "q": "The test was ___ and I finished it quickly.",
+     "o": [
+      "easy",
+      "easily",
+      "ease"
+     ],
+     "a": 0,
+     "why": "Sau động từ was cần tính từ easy."
+    },
+    {
+     "q": "My brother plays football very ___.",
+     "o": [
+      "good",
+      "well",
+      "nice"
+     ],
+     "a": 1,
+     "why": "Trạng từ của good là well, dùng để bổ nghĩa cho plays."
+    },
+    {
+     "q": "The streets are ___ at night. Nobody goes out.",
+     "o": [
+      "quiet",
+      "quietly",
+      "quite"
+     ],
+     "a": 0,
+     "why": "Sau are cần tính từ quiet; quite là từ khác nghĩa (khá)."
+    },
+    {
+     "q": "He runs ___ and wins many races.",
+     "o": [
+      "fast",
+      "fastly",
+      "faster"
+     ],
+     "a": 0,
+     "why": "fast vừa là tính từ vừa là trạng từ, không có dạng fastly."
+    },
+    {
+     "q": "It rained ___ yesterday, so we stayed at home.",
+     "o": [
+      "heavy",
+      "heavily",
+      "heaviness"
+     ],
+     "a": 1,
+     "why": "Bổ nghĩa cho động từ rained cần trạng từ heavily."
+    }
+   ]
+  },
+  {
+   "level": "Band 3.5",
+   "name": "Động từ bất quy tắc thường gặp ở quá khứ đơn",
+   "explain": "Nhiều động từ quen thuộc không thêm -ed ở quá khứ mà đổi hẳn dạng: go - went, see - saw, take - took, have - had, make - made. Muốn kể chuyện quá khứ trôi chảy trong IELTS Speaking Part 2, bạn cần thuộc lòng các động từ bất quy tắc hay gặp nhất và dùng chúng thật chính xác.",
+   "examples": [
+    "We went to Da Lat last summer and took many photos.",
+    "She bought a new bike and rode it to school."
+   ],
+   "quiz": [
+    {
+     "q": "They ___ to the beach last Sunday.",
+     "o": [
+      "go",
+      "went",
+      "gone"
+     ],
+     "a": 1,
+     "why": "Dạng quá khứ của go là went."
+    },
+    {
+     "q": "I ___ a great film at the cinema yesterday.",
+     "o": [
+      "see",
+      "saw",
+      "seen"
+     ],
+     "a": 1,
+     "why": "Dạng quá khứ của see là saw."
+    },
+    {
+     "q": "My mother ___ me a new bag for my birthday.",
+     "o": [
+      "buy",
+      "buys",
+      "bought"
+     ],
+     "a": 2,
+     "why": "Dạng quá khứ của buy là bought."
+    },
+    {
+     "q": "We ___ a picnic in the park two days ago.",
+     "o": [
+      "have",
+      "had",
+      "has"
+     ],
+     "a": 1,
+     "why": "Dạng quá khứ của have là had."
+    },
+    {
+     "q": "He ___ the bus to work this morning.",
+     "o": [
+      "take",
+      "takes",
+      "took"
+     ],
+     "a": 2,
+     "why": "Dạng quá khứ của take là took."
+    },
+    {
+     "q": "She ___ a cake for the party last night.",
+     "o": [
+      "made",
+      "make",
+      "makes"
+     ],
+     "a": 0,
+     "why": "Dạng quá khứ của make là made."
+    },
+    {
+     "q": "My uncle ___ home late last night.",
+     "o": [
+      "come",
+      "came",
+      "comes"
+     ],
+     "a": 1,
+     "why": "Dạng quá khứ của come là came."
+    },
+    {
+     "q": "I ___ a letter from my friend yesterday.",
+     "o": [
+      "get",
+      "got",
+      "gets"
+     ],
+     "a": 1,
+     "why": "Dạng quá khứ của get là got."
+    },
+    {
+     "q": "The lesson ___ at seven o'clock this morning.",
+     "o": [
+      "began",
+      "begin",
+      "begun"
+     ],
+     "a": 0,
+     "why": "Dạng quá khứ của begin là began; begun là dạng phân từ (V3)."
+    },
+    {
+     "q": "He ___ three emails to his teacher last week.",
+     "o": [
+      "write",
+      "wrote",
+      "written"
+     ],
+     "a": 1,
+     "why": "Dạng quá khứ của write là wrote; written là dạng phân từ (V3)."
+    }
+   ]
+  },
+  {
+   "level": "Band 5.0",
+   "name": "Mạo từ a, an, the và không mạo từ - dùng đúng trong bài viết",
+   "explain": "Mạo từ là lỗi nhỏ nhưng rất hay bị trừ điểm ở dải Band 5.0-6.0. Nguyên tắc cốt lõi: dùng a hoặc an khi nhắc một vật chưa xác định ở lần đầu (a university, an hour - chú ý nhìn vào âm đầu tiên chứ không phải chữ đầu tiên); dùng the khi người đọc đã biết rõ đang nói về vật nào; không dùng mạo từ trước danh từ nói về khái niệm chung (Education is important). Nắm chắc ba nguyên tắc này sẽ giúp bài Writing sạch lỗi hơn hẳn.",
+   "examples": [
+    "She is a doctor, and she works at the hospital near my house.",
+    "Honesty is an important quality in life."
+   ],
+   "quiz": [
+    {
+     "q": "He is ___ honest man, so everyone trusts him.",
+     "o": [
+      "a",
+      "an",
+      "the"
+     ],
+     "a": 1,
+     "why": "honest bắt đầu bằng âm nguyên âm (chữ h câm) nên dùng an."
+    },
+    {
+     "q": "___ sun rises in the east.",
+     "o": [
+      "A",
+      "An",
+      "The"
+     ],
+     "a": 2,
+     "why": "Mặt trời là vật duy nhất nên dùng The."
+    },
+    {
+     "q": "She wants to be ___ engineer in the future.",
+     "o": [
+      "a",
+      "an",
+      "the"
+     ],
+     "a": 1,
+     "why": "engineer bắt đầu bằng nguyên âm, nghề nghiệp nhắc lần đầu nên dùng an."
+    },
+    {
+     "q": "I saw a film last night. ___ film was very interesting.",
+     "o": [
+      "A",
+      "The",
+      "An"
+     ],
+     "a": 1,
+     "why": "Ở lần nhắc thứ hai, bộ phim đã được xác định nên dùng The."
+    },
+    {
+     "q": "___ education is the key to a better life.",
+     "o": [
+      "An",
+      "The",
+      "Không mạo từ"
+     ],
+     "a": 2,
+     "why": "Danh từ trừu tượng nói về khái niệm chung không dùng mạo từ."
+    },
+    {
+     "q": "He studies at ___ university in Hanoi.",
+     "o": [
+      "a",
+      "an",
+      "the"
+     ],
+     "a": 0,
+     "why": "university đọc bắt đầu bằng âm /j/ là phụ âm nên dùng a."
+    },
+    {
+     "q": "We stayed at a hotel near ___ beach.",
+     "o": [
+      "a",
+      "the",
+      "an"
+     ],
+     "a": 1,
+     "why": "the beach được xác định theo ngữ cảnh (bãi biển gần khách sạn đó) nên dùng the."
+    },
+    {
+     "q": "It takes ___ hour to get to the airport.",
+     "o": [
+      "a",
+      "an",
+      "the"
+     ],
+     "a": 1,
+     "why": "hour có chữ h câm, bắt đầu bằng âm nguyên âm nên dùng an."
+    },
+    {
+     "q": "___ children in my neighbourhood play football every afternoon.",
+     "o": [
+      "The",
+      "A",
+      "An"
+     ],
+     "a": 0,
+     "why": "Nhóm trẻ em xác định (ở khu phố của tôi) nên dùng The."
+    },
+    {
+     "q": "She plays ___ piano very well.",
+     "o": [
+      "a",
+      "the",
+      "an"
+     ],
+     "a": 1,
+     "why": "Sau động từ play với nhạc cụ, tiếng Anh dùng the piano."
+    }
+   ]
+  },
+  {
+   "level": "Band 5.0",
+   "name": "Mẫu động từ - V + to V và V + V-ing",
+   "explain": "Khi hai động từ đứng cạnh nhau, động từ thứ hai phải đi theo mẫu của động từ đứng trước: want, decide, hope đi với to V (I decided to study abroad - Tôi quyết định đi du học); enjoy, avoid, finish đi với V-ing (She enjoys reading - Cô ấy thích đọc sách). Một số động từ như stop và remember còn đổi nghĩa theo mẫu đi kèm. Đây là điểm ngữ pháp xuất hiện dày đặc trong Writing Task 2 ở dải Band 5.0-6.5 nên cần nắm thật chắc.",
+   "examples": [
+    "Many students hope to study at a good university.",
+    "Young people should avoid spending too much time on social media."
+   ],
+   "quiz": [
+    {
+     "q": "She decided ___ abroad next year.",
+     "o": [
+      "to study",
+      "studying",
+      "study"
+     ],
+     "a": 0,
+     "why": "decide đi với to V: decided to study."
+    },
+    {
+     "q": "He enjoys ___ photos in his free time.",
+     "o": [
+      "to take",
+      "taking",
+      "take"
+     ],
+     "a": 1,
+     "why": "enjoy đi với V-ing: enjoys taking."
+    },
+    {
+     "q": "We hope ___ the exam with a high score.",
+     "o": [
+      "passing",
+      "to pass",
+      "pass"
+     ],
+     "a": 1,
+     "why": "hope đi với to V: hope to pass."
+    },
+    {
+     "q": "You should avoid ___ too much fast food.",
+     "o": [
+      "to eat",
+      "eating",
+      "eat"
+     ],
+     "a": 1,
+     "why": "avoid đi với V-ing: avoid eating."
+    },
+    {
+     "q": "They agreed ___ us with the project.",
+     "o": [
+      "helping",
+      "to help",
+      "help"
+     ],
+     "a": 1,
+     "why": "agree đi với to V: agreed to help."
+    },
+    {
+     "q": "She finished ___ her homework and went to bed.",
+     "o": [
+      "to do",
+      "doing",
+      "do"
+     ],
+     "a": 1,
+     "why": "finish đi với V-ing: finished doing."
+    },
+    {
+     "q": "He stopped ___ because he wanted to protect his health. (dừng hẳn một thói quen)",
+     "o": [
+      "to smoke",
+      "smoking",
+      "smoke"
+     ],
+     "a": 1,
+     "why": "stop + V-ing nghĩa là dừng hẳn một thói quen: stopped smoking."
+    },
+    {
+     "q": "Remember ___ the door when you leave.",
+     "o": [
+      "to lock",
+      "locking",
+      "lock"
+     ],
+     "a": 0,
+     "why": "remember + to V nghĩa là nhớ phải làm việc sắp tới: remember to lock."
+    },
+    {
+     "q": "The teacher suggested ___ the lesson again at home.",
+     "o": [
+      "to review",
+      "reviewing",
+      "review"
+     ],
+     "a": 1,
+     "why": "suggest đi với V-ing: suggested reviewing."
+    },
+    {
+     "q": "More and more people choose ___ from home.",
+     "o": [
+      "to work",
+      "working",
+      "work"
+     ],
+     "a": 0,
+     "why": "choose đi với to V: choose to work."
+    }
+   ]
+  },
+  {
+   "level": "Band 5.0",
+   "name": "Despite và in spite of - nhượng bộ với danh từ và V-ing",
+   "explain": "Although đi với một mệnh đề đầy đủ (Although it rained, we went out - Mặc dù trời mưa, chúng tôi vẫn ra ngoài), còn despite và in spite of chỉ đi với danh từ hoặc V-ing: Despite the rain, we went out. Lẫn lộn hai mẫu này là lỗi kinh điển ở dải Band 5.0-5.5. Dùng đúng despite và in spite of sẽ giúp câu văn gọn gàng và học thuật hơn trong Writing Task 2.",
+   "examples": [
+    "Despite the high cost, many families send their children to private schools.",
+    "In spite of working hard, he failed the exam."
+   ],
+   "quiz": [
+    {
+     "q": "___ the bad weather, the match continued.",
+     "o": [
+      "Despite",
+      "Although",
+      "Because"
+     ],
+     "a": 0,
+     "why": "Sau Despite là cụm danh từ the bad weather; Although phải đi với mệnh đề đầy đủ."
+    },
+    {
+     "q": "In spite of ___ very tired, she kept working.",
+     "o": [
+      "being",
+      "she is",
+      "is"
+     ],
+     "a": 0,
+     "why": "Sau in spite of dùng V-ing: being tired."
+    },
+    {
+     "q": "___ he was ill, he went to school.",
+     "o": [
+      "Despite",
+      "Although",
+      "In spite of"
+     ],
+     "a": 1,
+     "why": "Trước mệnh đề đầy đủ he was ill phải dùng Although."
+    },
+    {
+     "q": "Despite ___ a lot of money, he is not happy.",
+     "o": [
+      "having",
+      "has",
+      "have"
+     ],
+     "a": 0,
+     "why": "despite + V-ing: having a lot of money."
+    },
+    {
+     "q": "___ the traffic jam, we arrived on time.",
+     "o": [
+      "Although",
+      "In spite of",
+      "But"
+     ],
+     "a": 1,
+     "why": "in spite of + cụm danh từ the traffic jam; But không dùng để mở đầu câu nhượng bộ kiểu này."
+    },
+    {
+     "q": "She passed the exam despite ___ little time to prepare.",
+     "o": [
+      "having",
+      "has",
+      "had"
+     ],
+     "a": 0,
+     "why": "despite + V-ing: having little time."
+    },
+    {
+     "q": "___ his age, the old man still works in the garden every day.",
+     "o": [
+      "Although",
+      "Despite",
+      "Because"
+     ],
+     "a": 1,
+     "why": "Sau Despite là cụm danh từ his age."
+    },
+    {
+     "q": "In spite of ___, the team won the game. (Cần một cụm danh từ: chấn thương của hai cầu thủ chủ chốt)",
+     "o": [
+      "the injuries of two key players",
+      "two key players were injured",
+      "two key players injuring"
+     ],
+     "a": 0,
+     "why": "in spite of cần cụm danh từ, không đi với mệnh đề đầy đủ."
+    },
+    {
+     "q": "___ the price of the course was high, many students enrolled.",
+     "o": [
+      "Despite",
+      "Although",
+      "In spite of"
+     ],
+     "a": 1,
+     "why": "Câu chứa mệnh đề đầy đủ với động từ was nên dùng Although."
+    },
+    {
+     "q": "Despite ___ near the sea, the town rarely has storms.",
+     "o": [
+      "being",
+      "is",
+      "be"
+     ],
+     "a": 0,
+     "why": "despite + V-ing: being near the sea."
+    }
+   ]
+  }
  ],
  "reading": [
   {
@@ -23630,7 +26025,236 @@ const CONTENT = {
     }
    ]
   }
- ,{"level":"Band 0","title":"Hello! I Am Nam","text":"Hello! My name is Nam. I am a student. I am from Vietnam. I live in a small town.\n\nThis is my friend. Her name is Anna. She is from England. She is a student too.\n\nWe say hello every morning. We are happy at school.","questions":[{"type":"MC","q":"What is the boy's name?","options":["Nam","Anna","Minh"],"a":0,"why":"Trong bài, bạn nam tự giới thiệu tên là Nam. Vì vậy đáp án đúng là Nam."},{"type":"MC","q":"Where is Nam from?","options":["England","Vietnam","Japan"],"a":1,"why":"Trong bài, Nam nói mình đến từ Việt Nam. Vì vậy đáp án đúng là Việt Nam."},{"type":"MC","q":"What is Anna?","options":["A teacher","A doctor","A student"],"a":2,"why":"Trong bài, Anna cũng là học sinh. Vì vậy đáp án đúng là học sinh."},{"type":"MC","q":"Where is Anna from?","options":["Vietnam","England","France"],"a":1,"why":"Trong bài, Anna đến từ nước Anh. Vì vậy đáp án đúng là nước Anh."},{"type":"MC","q":"When do Nam and Anna say hello?","options":["In the evening","At night","Every morning"],"a":2,"why":"Trong bài, hai bạn chào nhau vào mỗi buổi sáng. Vì vậy đáp án đúng là mỗi buổi sáng."}],"translation":"Xin chào! Tên tôi là Nam. Tôi là học sinh. Tôi đến từ Việt Nam. Tôi sống ở một thị trấn nhỏ.\n\nĐây là bạn của tôi. Bạn ấy tên là Anna. Bạn ấy đến từ nước Anh. Bạn ấy cũng là học sinh.\n\nChúng tôi chào nhau vào mỗi buổi sáng. Chúng tôi vui vẻ ở trường.","phrases":[{"en":"My name is Nam","vi":"Tên tôi là Nam"},{"en":"I am from Vietnam","vi":"Tôi đến từ Việt Nam"},{"en":"This is my friend","vi":"Đây là bạn của tôi"},{"en":"every morning","vi":"mỗi buổi sáng"}]},{"level":"Band 0","title":"My Classroom","text":"This is my classroom. It is small and clean.\n\nThis is my desk. My book is on the desk. My pen is red. My bag is blue. There are ten chairs in the classroom.\n\nI like my classroom. I learn English here every day.","questions":[{"type":"MC","q":"How is the classroom?","options":["Big","Small","Old"],"a":1,"why":"Trong bài, lớp học được tả là nhỏ và sạch. Vì vậy đáp án đúng là nhỏ."},{"type":"MC","q":"What colour is the pen?","options":["Blue","Green","Red"],"a":2,"why":"Trong bài, cây bút có màu đỏ. Vì vậy đáp án đúng là màu đỏ."},{"type":"MC","q":"What colour is the bag?","options":["Red","Blue","Black"],"a":1,"why":"Trong bài, chiếc cặp có màu xanh dương. Vì vậy đáp án đúng là màu xanh dương."},{"type":"MC","q":"How many chairs are there in the classroom?","options":["Ten","Five","Two"],"a":0,"why":"Trong bài, lớp học có mười chiếc ghế. Vì vậy đáp án đúng là mười."},{"type":"MC","q":"Where is the book?","options":["In the bag","Under the desk","On the desk"],"a":2,"why":"Trong bài, quyển sách nằm trên bàn học. Vì vậy đáp án đúng là trên bàn học."}],"translation":"Đây là lớp học của tôi. Lớp học nhỏ và sạch.\n\nĐây là bàn học của tôi. Quyển sách của tôi ở trên bàn. Cây bút của tôi màu đỏ. Chiếc cặp của tôi màu xanh dương. Trong lớp có mười chiếc ghế.\n\nTôi thích lớp học của mình. Tôi học tiếng Anh ở đây mỗi ngày.","phrases":[{"en":"my classroom","vi":"lớp học của tôi"},{"en":"on the desk","vi":"trên bàn học"},{"en":"My pen is red","vi":"Cây bút của tôi màu đỏ"},{"en":"every day","vi":"mỗi ngày"}]}],
+ ,{"level":"Band 0","title":"Hello! I Am Nam","text":"Hello! My name is Nam. I am a student. I am from Vietnam. I live in a small town.\n\nThis is my friend. Her name is Anna. She is from England. She is a student too.\n\nWe say hello every morning. We are happy at school.","questions":[{"type":"MC","q":"What is the boy's name?","options":["Nam","Anna","Minh"],"a":0,"why":"Trong bài, bạn nam tự giới thiệu tên là Nam. Vì vậy đáp án đúng là Nam."},{"type":"MC","q":"Where is Nam from?","options":["England","Vietnam","Japan"],"a":1,"why":"Trong bài, Nam nói mình đến từ Việt Nam. Vì vậy đáp án đúng là Việt Nam."},{"type":"MC","q":"What is Anna?","options":["A teacher","A doctor","A student"],"a":2,"why":"Trong bài, Anna cũng là học sinh. Vì vậy đáp án đúng là học sinh."},{"type":"MC","q":"Where is Anna from?","options":["Vietnam","England","France"],"a":1,"why":"Trong bài, Anna đến từ nước Anh. Vì vậy đáp án đúng là nước Anh."},{"type":"MC","q":"When do Nam and Anna say hello?","options":["In the evening","At night","Every morning"],"a":2,"why":"Trong bài, hai bạn chào nhau vào mỗi buổi sáng. Vì vậy đáp án đúng là mỗi buổi sáng."}],"translation":"Xin chào! Tên tôi là Nam. Tôi là học sinh. Tôi đến từ Việt Nam. Tôi sống ở một thị trấn nhỏ.\n\nĐây là bạn của tôi. Bạn ấy tên là Anna. Bạn ấy đến từ nước Anh. Bạn ấy cũng là học sinh.\n\nChúng tôi chào nhau vào mỗi buổi sáng. Chúng tôi vui vẻ ở trường.","phrases":[{"en":"My name is Nam","vi":"Tên tôi là Nam"},{"en":"I am from Vietnam","vi":"Tôi đến từ Việt Nam"},{"en":"This is my friend","vi":"Đây là bạn của tôi"},{"en":"every morning","vi":"mỗi buổi sáng"}]},{"level":"Band 0","title":"My Classroom","text":"This is my classroom. It is small and clean.\n\nThis is my desk. My book is on the desk. My pen is red. My bag is blue. There are ten chairs in the classroom.\n\nI like my classroom. I learn English here every day.","questions":[{"type":"MC","q":"How is the classroom?","options":["Big","Small","Old"],"a":1,"why":"Trong bài, lớp học được tả là nhỏ và sạch. Vì vậy đáp án đúng là nhỏ."},{"type":"MC","q":"What colour is the pen?","options":["Blue","Green","Red"],"a":2,"why":"Trong bài, cây bút có màu đỏ. Vì vậy đáp án đúng là màu đỏ."},{"type":"MC","q":"What colour is the bag?","options":["Red","Blue","Black"],"a":1,"why":"Trong bài, chiếc cặp có màu xanh dương. Vì vậy đáp án đúng là màu xanh dương."},{"type":"MC","q":"How many chairs are there in the classroom?","options":["Ten","Five","Two"],"a":0,"why":"Trong bài, lớp học có mười chiếc ghế. Vì vậy đáp án đúng là mười."},{"type":"MC","q":"Where is the book?","options":["In the bag","Under the desk","On the desk"],"a":2,"why":"Trong bài, quyển sách nằm trên bàn học. Vì vậy đáp án đúng là trên bàn học."}],"translation":"Đây là lớp học của tôi. Lớp học nhỏ và sạch.\n\nĐây là bàn học của tôi. Quyển sách của tôi ở trên bàn. Cây bút của tôi màu đỏ. Chiếc cặp của tôi màu xanh dương. Trong lớp có mười chiếc ghế.\n\nTôi thích lớp học của mình. Tôi học tiếng Anh ở đây mỗi ngày.","phrases":[{"en":"my classroom","vi":"lớp học của tôi"},{"en":"on the desk","vi":"trên bàn học"},{"en":"My pen is red","vi":"Cây bút của tôi màu đỏ"},{"en":"every day","vi":"mỗi ngày"}]},
+  {
+   "level": "Band 6.0",
+   "title": "The Night Trains of Europe Are Back",
+   "text": "For decades, night trains were disappearing from Europe. Cheap flights and fast day trains pushed sleeper services out of business, and many routes closed completely. In recent years, however, the night train has returned. Travellers who worry about the climate are choosing the train again, and operators are reopening routes that had been closed for years.\n\nThree operators now lead this revival, but each follows a different strategy. A. ÖBB Nightjet, the Austrian operator, has invested in brand-new carriages with private mini-cabins for passengers who want more comfort and privacy. B. SNCF, the French operator, has taken a different approach, selling couchette tickets from 29 euros to attract younger travellers with little money. C. SJ, the Swedish operator, runs some of the longest routes, including a service from Stockholm to the Arctic Circle for tourists who hope to see the northern lights.\n\nThe design of a modern sleeper carriage is shown in railway diagrams. By the door there is a luggage area for large suitcases, so passengers do not block the way. Along one side of the carriage runs a narrow corridor, and on the other side are the compartments. Each compartment contains bunk beds that are folded down at night, a small washbasin with a mirror, and reading lights above every bed.\n\nRunning night trains is still expensive, because the carriages earn money only at night and staff costs are high. Nevertheless, bookings keep rising, especially on holiday routes, and several governments now support sleeper services as part of their climate plans. The night train, it seems, has a future again.",
+   "questions": [
+    {
+     "type": "MF",
+     "q": "Which operator has invested in private mini-cabins for passengers who want more comfort?",
+     "o": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 0,
+     "why": "A là ÖBB Nightjet của Áo, hãng đầu tư toa mới với khoang nhỏ riêng tư (private mini-cabins)."
+    },
+    {
+     "type": "MF",
+     "q": "Which operator sells very cheap tickets to attract younger travellers?",
+     "o": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 1,
+     "why": "B là SNCF của Pháp, bán vé couchette giá rẻ để thu hút du khách trẻ."
+    },
+    {
+     "type": "DLC",
+     "q": "Sơ đồ toa tàu giường nằm: nhãn 1 chỉ khu vực cạnh cửa ra vào, nơi hành khách để các vali lớn. Từ trong bài cho khu vực này là ___ area.",
+     "a": "luggage",
+     "why": "Bài viết: 'there is a luggage area for large suitcases' - khu vực hành lý nằm ngay cạnh cửa ra vào."
+    },
+    {
+     "type": "DLC",
+     "q": "Sơ đồ toa tàu giường nằm: nhãn 2 chỉ loại giường trong các khoang được gấp xuống vào ban đêm. Từ trong bài là ___ beds.",
+     "a": "bunk",
+     "why": "Bài viết: 'bunk beds that are folded down at night' - giường tầng được gấp xuống ban đêm."
+    },
+    {
+     "type": "SAQ",
+     "q": "What is the cheapest couchette ticket price mentioned in the passage?",
+     "answer": "29 euros|€29|twenty-nine euros",
+     "why": "SNCF bán vé couchette từ 29 euro để thu hút người trẻ ít tiền."
+    },
+    {
+     "type": "SAQ",
+     "q": "Where does the SJ night train from Stockholm travel to?",
+     "answer": "the Arctic Circle|Arctic Circle",
+     "why": "Tuyến của SJ chạy từ Stockholm tới vòng Bắc Cực (the Arctic Circle) cho du khách ngắm cực quang."
+    }
+   ],
+   "translation": "Trong nhiều thập kỷ, tàu đêm dần biến mất khỏi châu Âu. Các chuyến bay giá rẻ và tàu cao tốc ban ngày đã đẩy dịch vụ tàu giường nằm vào cảnh phá sản, và nhiều tuyến đường đóng cửa hoàn toàn. Tuy nhiên, trong những năm gần đây, tàu đêm đã quay trở lại. Du khách lo lắng về khí hậu đang chọn tàu hỏa trở lại, và các hãng đang mở lại những tuyến từng bị đóng trong nhiều năm.\n\nBa hãng hiện dẫn đầu sự hồi sinh này, nhưng mỗi hãng theo một chiến lược khác nhau. A. ÖBB Nightjet, hãng của Áo, đã đầu tư vào các toa hoàn toàn mới với khoang nhỏ riêng tư cho hành khách muốn thoải mái và riêng tư hơn. B. SNCF, hãng của Pháp, đi theo hướng khác: bán vé couchette (giường nằm khoang chung) từ 29 euro để thu hút du khách trẻ ít tiền. C. SJ, hãng của Thụy Điển, vận hành một số tuyến dài nhất, trong đó có tuyến từ Stockholm tới vòng Bắc Cực cho du khách hy vọng được ngắm cực quang.\n\nThiết kế của một toa giường nằm hiện đại được thể hiện trong các sơ đồ đường sắt. Cạnh cửa ra vào có khu vực để hành lý cho các vali lớn, để hành khách không chắn lối đi. Dọc một bên toa là hành lang hẹp, phía bên kia là các khoang. Mỗi khoang có giường tầng được gấp xuống vào ban đêm, một chậu rửa nhỏ có gương, và đèn đọc sách phía trên mỗi giường.\n\nVận hành tàu đêm vẫn tốn kém, vì toa tàu chỉ kiếm tiền vào ban đêm và chi phí nhân viên cao. Tuy vậy, lượng đặt vé vẫn tăng, đặc biệt trên các tuyến du lịch nghỉ dưỡng, và một số chính phủ hiện hỗ trợ dịch vụ tàu giường nằm như một phần trong kế hoạch khí hậu của họ. Có vẻ như tàu đêm lại có tương lai.",
+   "phrases": [
+    {
+     "en": "sleeper services",
+     "vi": "dịch vụ tàu giường nằm"
+    },
+    {
+     "en": "private mini-cabins",
+     "vi": "khoang nhỏ riêng tư"
+    },
+    {
+     "en": "couchette tickets",
+     "vi": "vé giường nằm khoang chung"
+    },
+    {
+     "en": "the northern lights",
+     "vi": "cực quang (ánh sáng phương bắc)"
+    },
+    {
+     "en": "fold down",
+     "vi": "gấp xuống, hạ xuống"
+    }
+   ]
+  },
+  {
+   "level": "Band 6.5",
+   "title": "The Dance of the Honeybees",
+   "text": "When a honeybee finds a rich source of food, she returns to the hive and performs a remarkable dance that tells the other bees where the food is. This behaviour, known as the waggle dance, has fascinated scientists for more than a century, because it is one of the few examples of symbolic communication in insects.\n\nThree researchers shaped the modern understanding of the dance. A. Karl von Frisch, an Austrian scientist, argued that the dance is a true language: the direction of its central run shows the direction of the food, and the length of the run shows the distance. B. Adrian Wenner, an American researcher, disagreed strongly. In his view, returning bees mainly follow odours carried back by successful bees, and the dance itself tells the colony very little. C. James Gould, also from the United States, designed careful experiments in the 1970s which convinced most scientists that von Frisch was largely correct, although smell also plays a smaller part.\n\nThe dance itself takes place on the vertical surface of the honeycomb and follows the shape of a figure eight. In the middle of the pattern, the bee walks in a straight line called the waggle run, shaking her abdomen quickly from side to side. She then loops back, first on one side and then on the other, and begins again. The angle between the waggle run and the vertical line on the comb represents the angle between the sun and the food source.\n\nModern technology has added new details. Using tiny radar devices, scientists have tracked bees that watched a dance and confirmed that most of them fly directly to the place the dancer described. The waggle dance, once a complete mystery, is now one of the best understood forms of animal communication.",
+   "questions": [
+    {
+     "type": "MF",
+     "q": "Which scientist believed that bees are guided mainly by smell rather than by the dance?",
+     "o": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 1,
+     "why": "B là Adrian Wenner, người cho rằng ong lần theo mùi do những con ong thành công mang về, chứ không phải điệu nhảy."
+    },
+    {
+     "type": "MF",
+     "q": "Which scientist's experiments persuaded most researchers that the dance carries real information?",
+     "o": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 2,
+     "why": "C là James Gould, tác giả các thí nghiệm cẩn thận những năm 1970 đã thuyết phục giới khoa học."
+    },
+    {
+     "type": "DLC",
+     "q": "Sơ đồ điệu nhảy của ong trên tổ: nhãn 1 chỉ đoạn chạy thẳng ở giữa hình số 8, trong đó con ong lắc phần bụng sang hai bên. Đoạn chạy này trong bài gọi là waggle ___.",
+     "a": "run",
+     "why": "Bài viết gọi đoạn chạy thẳng ở giữa điệu nhảy là 'the waggle run'."
+    },
+    {
+     "type": "DLC",
+     "q": "Sơ đồ điệu nhảy của ong trên tổ: nhãn 2 chỉ đường mốc trên mặt tổ dùng để so sánh hướng của đoạn chạy. Từ trong bài chỉ đường mốc này là the ___.",
+     "a": "vertical",
+     "why": "Góc của đoạn chạy được đo so với 'the vertical line' - đường thẳng đứng trên mặt tổ."
+    },
+    {
+     "type": "SAQ",
+     "q": "What does the length of the waggle run show?",
+     "answer": "the distance to the food source|the distance to the food|how far away the food is|the distance",
+     "why": "Theo von Frisch, hướng của đoạn chạy cho hướng đi, còn độ dài của nó cho biết khoảng cách tới nguồn thức ăn."
+    },
+    {
+     "type": "SAQ",
+     "q": "What shape does the complete dance pattern follow?",
+     "answer": "a figure eight|the figure eight|figure eight|a figure of eight",
+     "why": "Điệu nhảy diễn ra trên mặt tổ theo hình số 8 (figure eight)."
+    }
+   ],
+   "translation": "Khi một con ong mật tìm thấy một nguồn thức ăn dồi dào, nó quay về tổ và thực hiện một điệu nhảy đặc biệt cho các con ong khác biết thức ăn ở đâu. Hành vi này, gọi là điệu nhảy lắc bụng (waggle dance), đã làm say mê các nhà khoa học trong hơn một thế kỷ, vì đây là một trong số ít ví dụ về giao tiếp bằng ký hiệu ở côn trùng.\n\nBa nhà nghiên cứu đã định hình hiểu biết hiện đại về điệu nhảy này. A. Karl von Frisch, nhà khoa học người Áo, cho rằng điệu nhảy là một ngôn ngữ thực sự: hướng của đoạn chạy trung tâm cho biết hướng của thức ăn, và độ dài của đoạn chạy cho biết khoảng cách. B. Adrian Wenner, nhà nghiên cứu người Mỹ, phản đối mạnh mẽ. Theo ông, ong trở về chủ yếu lần theo mùi do những con ong thành công mang về, và bản thân điệu nhảy cho tổ ong biết rất ít thông tin. C. James Gould, cũng là người Mỹ, đã thiết kế các thí nghiệm cẩn thận vào những năm 1970, thuyết phục hầu hết các nhà khoa học rằng von Frisch về cơ bản là đúng, dù mùi cũng đóng một vai trò nhỏ hơn.\n\nBản thân điệu nhảy diễn ra trên bề mặt thẳng đứng của tổ ong và theo hình số 8. Ở giữa hình, con ong đi thẳng một đoạn gọi là đoạn chạy lắc bụng (waggle run), đồng thời lắc phần bụng nhanh sang hai bên. Sau đó nó vòng lại, lần đầu ở một phía rồi phía kia, và bắt đầu lại. Góc giữa đoạn chạy lắc bụng và đường thẳng đứng trên tổ biểu thị góc giữa mặt trời và nguồn thức ăn.\n\nCông nghệ hiện đại đã bổ sung thêm nhiều chi tiết mới. Bằng các thiết bị radar nhỏ xíu, các nhà khoa học đã theo dõi những con ong từng xem điệu nhảy và xác nhận rằng phần lớn chúng bay thẳng tới nơi mà con ong nhảy đã mô tả. Điệu nhảy lắc bụng, từng là một bí mật hoàn toàn, nay là một trong những hình thức giao tiếp của động vật được hiểu rõ nhất.",
+   "phrases": [
+    {
+     "en": "waggle run",
+     "vi": "đoạn chạy lắc bụng"
+    },
+    {
+     "en": "food source",
+     "vi": "nguồn thức ăn"
+    },
+    {
+     "en": "figure eight",
+     "vi": "hình số 8"
+    },
+    {
+     "en": "honeycomb",
+     "vi": "tổ ong, bánh tổ ong"
+    },
+    {
+     "en": "animal communication",
+     "vi": "giao tiếp của động vật"
+    }
+   ]
+  },
+  {
+   "level": "Band 7.0",
+   "title": "Great Rivers, Great Civilisations",
+   "text": "The world's great rivers have shaped human history. Civilisations grew along their banks because rivers provide water, fertile soil and a natural road for trade. Yet each of the three rivers below has played a quite different role.\n\nA. The Nile, at about 6,650 kilometres, is generally considered the longest river on Earth. It flows through eleven African countries before reaching the Mediterranean Sea, and its annual floods once made farming possible in the Egyptian desert. B. The Amazon, in South America, is far shorter than the Nile but carries more water than any other river on the planet; indeed, it carries more than the next seven largest rivers combined. C. The Mekong flows through six countries in Southeast Asia, and its waters support rice farming and fishing for more than sixty million people.\n\nThe journey of a river follows a clear pattern, shown in geography diagrams of a river course. Every river begins at its source, often high in the mountains, where the water is cold and flows fast. As the land becomes flatter, the river slows and bends into wide curves called meanders. Finally, the river reaches the sea and drops the mud and sand it has carried, slowly building a flat area of new land known as a delta.\n\nRivers now face serious threats. Dams block the movement of fish and change the flow of water, while pollution and climate change reduce the amount of water available. Protecting the great rivers, scientists argue, means protecting the communities that still depend on them.",
+   "questions": [
+    {
+     "type": "MF",
+     "q": "Which river carries the largest volume of water in the world?",
+     "o": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 1,
+     "why": "B là sông Amazon, mang lượng nước lớn hơn mọi con sông khác, hơn cả bảy con sông lớn tiếp theo cộng lại."
+    },
+    {
+     "type": "MF",
+     "q": "Which river is essential for rice farming and fishing in Southeast Asia?",
+     "o": [
+      "A",
+      "B",
+      "C"
+     ],
+     "a": 2,
+     "why": "C là sông Mekong, nuôi việc trồng lúa và đánh cá cho hơn 60 triệu người ở Đông Nam Á."
+    },
+    {
+     "type": "DLC",
+     "q": "Sơ đồ dòng chảy của sông: nhãn 1 chỉ những khúc uốn cong rộng của dòng sông ở vùng đất bằng phẳng. Từ trong bài chỉ các khúc uốn này là ___.",
+     "a": "meanders",
+     "why": "Bài viết: 'the river slows and bends into wide curves called meanders' - các khúc uốn gọi là meanders."
+    },
+    {
+     "type": "DLC",
+     "q": "Sơ đồ dòng chảy của sông: nhãn 2 chỉ vùng đất bằng mới hình thành nơi dòng sông đổ ra biển. Từ trong bài là ___.",
+     "a": "delta",
+     "why": "Cuối hành trình, sông thả bùn cát xuống và bồi đắp vùng đất mới gọi là delta (châu thổ)."
+    },
+    {
+     "type": "SAQ",
+     "q": "Approximately how long is the Nile?",
+     "answer": "6650 kilometres|6,650 kilometres|6650 km|6,650 km|about 6650 kilometres",
+     "why": "Bài viết nêu sông Nile dài khoảng 6.650 km và thường được coi là sông dài nhất thế giới."
+    },
+    {
+     "type": "SAQ",
+     "q": "Through how many countries does the Mekong flow?",
+     "answer": "six|6|six countries",
+     "why": "Sông Mekong chảy qua sáu nước ở Đông Nam Á."
+    }
+   ],
+   "translation": "Những con sông lớn của thế giới đã định hình lịch sử loài người. Các nền văn minh hình thành dọc theo bờ sông vì sông cung cấp nước, đất màu mỡ và một con đường tự nhiên cho thương mại. Tuy vậy, mỗi con sông trong ba con sông dưới đây lại đóng một vai trò rất khác nhau.\n\nA. Sông Nile, dài khoảng 6.650 km, thường được coi là con sông dài nhất trên Trái Đất. Nó chảy qua mười một nước châu Phi trước khi đổ ra Địa Trung Hải, và những trận lũ hằng năm của nó từng giúp việc canh tác trở nên khả thi giữa sa mạc Ai Cập. B. Sông Amazon, ở Nam Mỹ, ngắn hơn sông Nile nhiều nhưng mang lượng nước lớn hơn bất kỳ con sông nào khác trên hành tinh; thực tế, lượng nước của nó còn lớn hơn tổng của bảy con sông lớn tiếp theo cộng lại. C. Sông Mekong chảy qua sáu nước ở Đông Nam Á, và dòng nước của nó nuôi việc trồng lúa và đánh cá cho hơn sáu mươi triệu người.\n\nHành trình của một con sông đi theo một mô hình rõ ràng, được thể hiện trong các sơ đồ địa lý về dòng chảy của sông. Mọi con sông đều bắt đầu từ thượng nguồn, thường ở vùng núi cao, nơi nước lạnh và chảy xiết. Khi địa hình trở nên bằng phẳng hơn, sông chảy chậm lại và uốn thành những khúc cong rộng gọi là khúc uốn (meanders). Cuối cùng, sông đổ ra biển và thả xuống bùn cát nó đã mang theo, từ từ bồi đắp một vùng đất bằng mới gọi là châu thổ (delta).\n\nNgày nay các con sông đối mặt với những mối đe dọa nghiêm trọng. Các con đập chặn đường di chuyển của cá và thay đổi dòng chảy, trong khi ô nhiễm và biến đổi khí hậu làm giảm lượng nước sẵn có. Các nhà khoa học cho rằng bảo vệ những con sông lớn chính là bảo vệ các cộng đồng vẫn đang phụ thuộc vào chúng.",
+   "phrases": [
+    {
+     "en": "fertile soil",
+     "vi": "đất màu mỡ, phù sa"
+    },
+    {
+     "en": "annual floods",
+     "vi": "những trận lũ hằng năm"
+    },
+    {
+     "en": "source",
+     "vi": "thượng nguồn, nơi con sông bắt đầu"
+    },
+    {
+     "en": "meanders",
+     "vi": "các khúc uốn của dòng sông"
+    },
+    {
+     "en": "delta",
+     "vi": "châu thổ, vùng đất nơi sông đổ ra biển"
+    }
+   ]
+  }
+ ],
  "listening": [
   {
    "section": "Section 1",
@@ -34964,6 +37588,228 @@ const CONTENT = {
      ],
      "a": 0,
      "why": "Câu này đúng vì bài giảng nói chính sách hiệu quả buộc nhà sản xuất chi tiền cho việc thu gom."
+    }
+   ]
+  }
+ ,
+  {
+   "section": "Section 1",
+   "band": "Band 5.0",
+   "topic": "Đăng ký lớp học nấu ăn tại trung tâm cộng đồng",
+   "text": "A: Good afternoon, City Community Centre. How can I help you? B: Hello, I would like to join a cooking class, please. A: We have three classes each week. The Monday class is for Italian food, the Wednesday class is for Vietnamese food, and the Friday class is for baking. B: I love Italian food, but I work on Mondays, so I cannot come then. A: Then the Friday baking class may suit you. It starts at 6:30 in the evening and costs 300000 dong for four lessons. B: That sounds good. My name is Minh Anh. A: Thank you, Minh Anh. Please bring an apron and arrive fifteen minutes early for the first lesson.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "Which class does Minh Anh choose in the end?",
+     "o": [
+      "The Monday Italian class",
+      "The Wednesday Vietnamese class",
+      "The Friday baking class",
+      "No class at all"
+     ],
+     "a": 2,
+     "why": "Minh Anh chọn lớp làm bánh tối thứ Sáu vì cô ấy nói lịch đó nghe phù hợp."
+    },
+    {
+     "type": "MC",
+     "q": "Why can Minh Anh not join the Monday class?",
+     "o": [
+      "It is too expensive",
+      "She works on Mondays",
+      "The class is full",
+      "She dislikes Italian food"
+     ],
+     "a": 1,
+     "why": "Minh Anh phải đi làm vào thứ Hai nên không thể học lớp hôm đó."
+    },
+    {
+     "type": "MATCH",
+     "q": "Which class teaches Vietnamese food?",
+     "o": [
+      "The Monday class",
+      "The Wednesday class",
+      "The Friday class"
+     ],
+     "a": 1,
+     "why": "Lớp thứ Tư dạy món ăn Việt Nam theo lời giới thiệu của nhân viên trung tâm."
+    },
+    {
+     "type": "COMP",
+     "q": "The Friday baking class starts at ___ in the evening.",
+     "answer": "6:30|half past six",
+     "why": "Lớp làm bánh bắt đầu lúc 6 giờ 30 tối theo thông tin nhân viên đưa ra."
+    },
+    {
+     "type": "SA",
+     "q": "What must students bring to the first lesson?",
+     "answer": "an apron|apron",
+     "why": "Nhân viên dặn học viên mang theo một chiếc tạp dề (an apron) ở buổi học đầu tiên."
+    }
+   ]
+  },
+  {
+   "section": "Section 2",
+   "band": "Band 6.0",
+   "topic": "Giới thiệu trung tâm thể thao Riverside mới mở",
+   "text": "Welcome to the Riverside Sports Centre. Before your tour begins, let me explain where everything is. On the ground floor, you will find the swimming pool and the children's play area. The fitness gym is on the first floor, together with the yoga studio. On the second floor, there is a large hall for badminton and table tennis. Membership costs 500000 dong a month for adults, but students receive a 20 percent discount. This weekend, all new members can try one class completely free, so please book at reception before Friday to save your place.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "Where is the yoga studio?",
+     "o": [
+      "On the ground floor",
+      "On the first floor",
+      "On the second floor",
+      "Next to the swimming pool"
+     ],
+     "a": 1,
+     "why": "Phòng yoga ở tầng một, cùng tầng với phòng gym theo lời giới thiệu."
+    },
+    {
+     "type": "MATCH",
+     "q": "Which activity takes place on the second floor?",
+     "o": [
+      "Swimming",
+      "Yoga",
+      "Badminton",
+      "Children's games"
+     ],
+     "a": 2,
+     "why": "Tầng hai là hội trường lớn dành cho cầu lông và bóng bàn."
+    },
+    {
+     "type": "COMP",
+     "q": "Students receive a discount of ___ percent on membership.",
+     "answer": "20|twenty",
+     "why": "Sinh viên được giảm 20 phần trăm phí thành viên."
+    },
+    {
+     "type": "MC",
+     "q": "What can new members do this weekend?",
+     "o": [
+      "Join for free for a whole month",
+      "Try one class completely free",
+      "Bring a friend to the gym",
+      "Use the pool late at night"
+     ],
+     "a": 1,
+     "why": "Thành viên mới được học thử một lớp hoàn toàn miễn phí vào cuối tuần này."
+    },
+    {
+     "type": "SA",
+     "q": "Where should visitors book the free class?",
+     "answer": "at reception|reception",
+     "why": "Người hướng dẫn dặn đặt chỗ tại quầy lễ tân (reception) trước thứ Sáu."
+    }
+   ]
+  },
+  {
+   "section": "Section 3",
+   "band": "Band 6.5",
+   "topic": "Nhóm sinh viên phân công dự án năng lượng gió",
+   "text": "A: Let's plan your wind energy project. Who is going to collect the wind speed data? B: Tuan will collect the data from the weather station because he lives near the coast. A: Good. And who will design the model turbine? B: Mai will design the turbine blades, and Linh will prepare the poster for the presentation. A: What about the written report? B: I will write the first draft of the report, and Tuan will check the calculations. A: Remember, the deadline for the whole project is the 15th of May, and our next meeting is in Room 204 on Thursday.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "Why will Tuan collect the wind speed data?",
+     "o": [
+      "He studies the weather",
+      "He lives near the coast",
+      "He designed the turbine",
+      "He is writing the report"
+     ],
+     "a": 1,
+     "why": "Tuan thu thập số liệu vì nhà anh ở gần bờ biển, gần trạm khí tượng."
+    },
+    {
+     "type": "MATCH",
+     "q": "Who will design the turbine blades?",
+     "o": [
+      "Tuan",
+      "Mai",
+      "Linh"
+     ],
+     "a": 1,
+     "why": "Mai phụ trách thiết kế cánh tua-bin theo phân công trong buổi họp."
+    },
+    {
+     "type": "MATCH",
+     "q": "Who will prepare the poster for the presentation?",
+     "o": [
+      "Tuan",
+      "Mai",
+      "Linh"
+     ],
+     "a": 2,
+     "why": "Linh chuẩn bị áp phích cho buổi thuyết trình theo phân công của nhóm."
+    },
+    {
+     "type": "MC",
+     "q": "When is the deadline for the whole project?",
+     "o": [
+      "The 5th of May",
+      "The 15th of May",
+      "The 25th of May",
+      "Next Thursday"
+     ],
+     "a": 1,
+     "why": "Hạn chót của cả dự án là ngày 15 tháng Năm theo lời nhắc của giảng viên."
+    },
+    {
+     "type": "SA",
+     "q": "Where will the next meeting be held?",
+     "answer": "Room 204|in Room 204",
+     "why": "Buổi họp tiếp theo diễn ra ở phòng 204 (Room 204) vào thứ Năm."
+    }
+   ]
+  },
+  {
+   "section": "Section 4",
+   "band": "Band 7.5+",
+   "topic": "Bài giảng về hiệu ứng đảo nhiệt đô thị",
+   "text": "This lecture examines the urban heat island effect, the observation that cities are significantly warmer than the countryside around them. In large cities, the difference can reach seven degrees Celsius on calm summer nights. Three factors explain the effect. First, dark surfaces such as asphalt roads absorb heat during the day and release it slowly at night. Second, tall buildings block the wind that would otherwise cool the streets. Third, vehicles and air conditioners produce waste heat directly. The consequences are serious: energy demand rises, and elderly residents face greater health risks during heatwaves. Researchers have tested several solutions. Green roofs, where plants cover the top of buildings, can reduce indoor temperatures, while pale pavements reflect sunlight instead of absorbing it. Interestingly, a single large park can cool the surrounding streets by up to two degrees, which is why many planners now argue that green space should be treated as essential infrastructure rather than decoration.",
+   "questions": [
+    {
+     "type": "COMP",
+     "q": "In large cities, the temperature difference can reach ___ degrees Celsius on calm summer nights.",
+     "answer": "seven|7",
+     "why": "Bài giảng nêu chênh lệch nhiệt độ có thể tới bảy độ C vào những đêm hè lặng gió."
+    },
+    {
+     "type": "MC",
+     "q": "Which factor is mentioned as a cause of the heat island effect?",
+     "o": [
+      "Dark roads absorbing heat during the day",
+      "Heavy rainfall in city centres",
+      "Tall mountains near the city",
+      "Cold winds blowing from the sea"
+     ],
+     "a": 0,
+     "why": "Mặt đường nhựa tối màu hấp thụ nhiệt ban ngày là nguyên nhân đầu tiên bài giảng nêu."
+    },
+    {
+     "type": "MATCH",
+     "q": "Which solution works by reflecting sunlight?",
+     "o": [
+      "Green roofs",
+      "Pale pavements",
+      "Larger parks",
+      "Air conditioners"
+     ],
+     "a": 1,
+     "why": "Vỉa hè sáng màu (pale pavements) phản xạ ánh nắng thay vì hấp thụ nhiệt."
+    },
+    {
+     "type": "COMP",
+     "q": "A single large park can cool the surrounding streets by up to ___ degrees.",
+     "answer": "two|2",
+     "why": "Một công viên lớn có thể làm mát các phố xung quanh tới hai độ."
+    },
+    {
+     "type": "SA",
+     "q": "Which group of residents faces the greatest health risks during heatwaves?",
+     "answer": "elderly residents|the elderly|elderly people|old people",
+     "why": "Bài giảng nói người cao tuổi đối mặt nguy cơ sức khỏe lớn nhất trong các đợt nắng nóng."
     }
    ]
   }
