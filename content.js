@@ -14878,7 +14878,7 @@ const CONTENT = {
    "hook": "Việc xảy ra mỗi ngày dùng hiện tại đơn như mặt trời mọc mỗi sáng; việc đang diễn ra ngay lúc này thì thêm -ing như nước đang sôi trên bếp.",
    "level": "Band 4.0",
    "name": "Hiện tại đơn và hiện tại tiếp diễn",
-   "explain": "Hiện tại đơn diễn tả sự thật, thói quen (Water boils at 100°C). Hiện tại tiếp diễn diễn tả việc đang xảy ra hoặc xu hướng tạm thời. Trong IELTS, hai thì này dùng để mở bài Reading/Writing và mô tả quy trình, thói quen.",
+   "explain": "Nhìn hai câu này trước nhé: The sun rises in the east (Mặt trời mọc ở hướng đông - sự thật luôn đúng). More and more people are choosing to work from home (Ngày càng nhiều người đang chọn làm việc ở nhà - việc đang diễn ra quanh lúc này). Sau ví dụ là quy tắc. Việc là sự thật hoặc thói quen lặp lại thì dùng hiện tại đơn (rises). Việc đang xảy ra ngay lúc này, hoặc chỉ là xu hướng tạm thời, thì dùng hiện tại tiếp diễn (are choosing). Trong IELTS, hai thì này hay dùng để mở bài, mô tả quy trình và nói về thói quen.",
    "examples": [
     "The sun rises in the east.",
     "More and more people are choosing to work from home."
@@ -14991,7 +14991,7 @@ const CONTENT = {
    "hook": "Biểu đồ đã qua là câu chuyện đã kể xong: cứ lùi về quá khứ đơn, như đóng cuốn sách lại và kể từ đầu đến cuối.",
    "level": "Band 4.0",
    "name": "Quá khứ đơn cho biểu đồ Task 1",
-   "explain": "Hầu hết biểu đồ Task 1 có mốc thời gian trong quá khứ, nên động từ phải ở quá khứ đơn (rose, fell, remained). Luôn ghi rõ năm khi nêu số liệu quá khứ.",
+   "explain": "Ví dụ trước nhé: The number rose in 2005, then fell in 2010 (Con số tăng vào năm 2005, rồi giảm vào năm 2010). Sau ví dụ là quy tắc. Hầu hết biểu đồ Task 1 nói về số liệu của những năm đã qua, nên động từ phải lùi về quá khứ đơn (rose, fell, remained). Khi nêu số liệu quá khứ, nhớ ghi rõ năm để người đọc biết con số thuộc thời điểm nào.",
    "examples": [
     "Sales rose sharply in 2010.",
     "The figure remained stable between 2005 and 2010."
@@ -15104,7 +15104,7 @@ const CONTENT = {
    "hook": "So sánh giống cái cân hai đĩa: một bên nặng hơn thì thêm -er hoặc more, muốn nặng nhất thì dùng -est hoặc the most.",
    "level": "Band 5.0",
    "name": "So sánh cho Task 1",
-   "explain": "Task 1 luôn cần so sánh: comparative (higher than), superlative (the highest), và cấu trúc twice as much as, slightly/considerably + comparative để chỉ mức độ chênh lệch.",
+   "explain": "Ví dụ trước nhé: The figure for Vietnam was higher than for Thailand, and the highest figure was in Singapore (Con số của Việt Nam cao hơn của Thái Lan, và con số cao nhất là ở Singapore). Sau ví dụ là quy tắc. Bài Task 1 nào cũng phải so sánh các con số với nhau: cao hơn thì dùng higher than, cao nhất thì dùng the highest. Muốn nói gấp đôi thì dùng twice as much as. Muốn nói chênh ít hay chênh nhiều thì thêm slightly (hơn một chút) hoặc considerably (hơn hẳn) trước từ so sánh.",
    "examples": [
     "The figure for Japan was higher than that for France.",
     "Spending on food was the highest of all categories."
@@ -15217,7 +15217,7 @@ const CONTENT = {
    "hook": "Bị động là ống kính quay vào đồ vật: cái bánh được làm ra quan trọng hơn người làm bánh, nên be + V3 được đưa lên trước.",
    "level": "Band 4.5",
    "name": "Câu bị động nền tảng",
-   "explain": "Bị động (be + V3) rất quan trọng trong Task 1 miêu tả quy trình (The glass is heated) và văn phong học thuật khi không cần nêu người thực hiện.",
+   "explain": "Ví dụ trước nhé: The glass is heated (Thủy tinh được nung nóng). Sau ví dụ là quy tắc. Khi không cần nói ai làm, hoặc không biết ai làm, ta đưa vật bị tác động lên đầu câu và dùng be + V3 - đó là câu bị động. Dạng này gặp rất nhiều trong bài Task 1 miêu tả quy trình và trong văn học thuật nói chung.",
    "examples": [
     "Rice is grown in many Asian countries.",
     "The bridge was built in 1998."
@@ -15330,7 +15330,7 @@ const CONTENT = {
    "hook": "Động từ khuyết thiếu như núm chỉnh âm lượng cho ý kiến: might là nói khẽ, should là nói chắc, must là nói to nhất.",
    "level": "Band 4.5",
    "name": "Động từ khuyết thiếu nêu quan điểm",
-   "explain": "should, must, can, may giúp nêu đề xuất và mức độ chắc chắn trong Task 2: Governments should invest...; This may lead to... Sau động từ khuyết thiếu dùng động từ nguyên thể.",
+   "explain": "Ví dụ trước nhé: Governments should invest in public transport (Chính phủ nên đầu tư vào giao thông công cộng). This may lead to cleaner air (Điều này có thể giúp không khí sạch hơn). Sau ví dụ là quy tắc. Khi nêu ý kiến trong Task 2, các từ should (nên), must (phải), can (có thể), may (có thể - chưa chắc) giúp bạn nói rõ mức chắc chắn của ý mình. Sau các từ này, động từ luôn để nguyên dạng gốc, không thêm s hay to.",
    "examples": [
     "Schools should teach children about money.",
     "Too much sugar can cause health problems."
@@ -15443,7 +15443,7 @@ const CONTENT = {
    "hook": "Liên từ là cầu nối hai bờ câu: because bắc cầu lý do, but là cầu quặt ngược lại, so là cầu đi thẳng tới kết quả.",
    "level": "Band 4.0",
    "name": "Liên từ cơ bản: because, although, so, but",
-   "explain": "Các liên từ này nối hai mệnh đề thành câu phức đơn giản - nền tảng để thoát khỏi toàn câu đơn trong IELTS Writing: because (nguyên nhân), although (nhượng bộ), so (kết quả), but (tương phản).",
+   "explain": "Ví dụ trước nhé: I study English because I want to work abroad (Tôi học tiếng Anh vì tôi muốn làm việc ở nước ngoài). Sau ví dụ là quy tắc. Bốn từ because (vì), although (mặc dù), so (nên), but (nhưng) dùng để nối hai ý thành một câu dài hơn. Nối được như vậy là bước đầu để bài viết thoát cảnh toàn câu ngắn cụt - rất quan trọng trong IELTS Writing.",
    "examples": [
     "Many people move to cities because there are more jobs.",
     "Although it was expensive, the course was very useful."
@@ -15556,7 +15556,7 @@ const CONTENT = {
    "hook": "Hiện tại hoàn thành là sợi dây nối quá khứ với hôm nay: việc bắt đầu ngày xưa mà kết quả vẫn còn đứng ngay trước mặt.",
    "level": "Band 5.5",
    "name": "Hiện tại hoàn thành cho xu hướng",
-   "explain": "Hiện tại hoàn thành (have/has + V3) nối quá khứ với hiện tại: diễn tả thay đổi kéo dài đến nay (Prices have risen) và kinh nghiệm (has never been). Hay dùng trong mở bài và mô tả xu hướng dài hạn.",
+   "explain": "Ví dụ trước nhé: Prices have risen a lot this year (Giá cả năm nay đã tăng nhiều - và đến giờ vẫn còn cao). Sau ví dụ là quy tắc. Khi một việc bắt đầu trong quá khứ mà kết quả còn kéo tới hôm nay, ta dùng hiện tại hoàn thành: have hoặc has + V3. Dạng này cũng dùng để nói kinh nghiệm đã từng hoặc chưa từng làm, như has never been (chưa từng đến). Nó rất hay gặp khi mở bài và mô tả xu hướng dài hạn trong Task 1.",
    "examples": [
     "House prices have increased dramatically in recent years.",
     "Technology has changed the way we live."
@@ -15669,7 +15669,7 @@ const CONTENT = {
    "hook": "Điều kiện loại 1 là dự báo thời tiết có thể thành thật, loại 2 là giấc mơ giữa ban ngày: If I were you chỉ sống trong tưởng tượng.",
    "level": "Band 5.5",
    "name": "Câu điều kiện loại 1 và 2",
-   "explain": "Loại 1 (If + hiện tại, will + V) cho hệ quả thật trong tương lai - dùng khi đề xuất giải pháp. Loại 2 (If + quá khứ, would + V) cho giả định trái hiện tại.",
+   "explain": "Nhìn hai câu này nhé: If the city builds more parks, people will be healthier (Nếu thành phố xây thêm công viên, người dân sẽ khỏe hơn - việc này có thể xảy ra thật). If I were rich, I would travel the world (Nếu tôi giàu, tôi sẽ đi khắp thế giới - chỉ là giả sử, hiện tại tôi không giàu). Sau ví dụ là quy tắc. Loại 1: If + hiện tại đơn, will + động từ gốc - nói hệ quả có thật trong tương lai, rất hợp để đề xuất giải pháp trong Task 2. Loại 2: If + quá khứ đơn, would + động từ gốc - giả sử một điều trái với hiện tại.",
    "examples": [
     "If the government raises taxes on cigarettes, fewer people will smoke.",
     "If I were the mayor, I would build more parks."
@@ -15782,7 +15782,7 @@ const CONTENT = {
    "hook": "Mệnh đề quan hệ như sợi dây buộc thêm thông tin vào danh từ: who buộc vào người, which buộc vào vật, that buộc được cả hai.",
    "level": "Band 4.5",
    "name": "Mệnh đề quan hệ cơ bản",
-   "explain": "Mệnh đề quan hệ (who cho người, which cho vật, that cho cả hai) giúp nối ý và tăng độ phức của câu - tiêu chí Grammatical Range trong IELTS.",
+   "explain": "Ví dụ trước nhé: The teacher who helped me is very kind (Cô giáo - người đã giúp tôi - rất tốt bụng). Sau ví dụ là quy tắc. Muốn nói thêm về một người hay một vật ngay trong cùng một câu, ta gắn thêm một mệnh đề quan hệ: who cho người, which cho vật, that dùng được cho cả hai. Nối ý được như vậy giúp câu dài và phong phú hơn - đúng tiêu chí độ đa dạng ngữ pháp (Grammatical Range) mà IELTS chấm.",
    "examples": [
     "Students who study regularly tend to get better results.",
     "The city, which was founded in 1800, attracts many tourists."
@@ -15895,7 +15895,7 @@ const CONTENT = {
    "hook": "Cụm giới từ như biển chỉ đường trong câu: in terms of, as a result of giúp ý đi đúng hướng mà không lạc đường.",
    "level": "Band 5.5",
    "name": "Cụm giới từ học thuật",
-   "explain": "Các cụm như in terms of (xét về), due to (do), as a result of (do kết quả của), in addition to (thêm vào) giúp văn phong trang trọng và nối ý mạch lạc trong Writing.",
+   "explain": "Ví dụ trước nhé: In terms of cost, buses are cheaper than taxis (Xét về chi phí, xe buýt rẻ hơn taxi). Sau ví dụ là quy tắc. Các cụm in terms of (xét về), due to (do, bởi vì), as a result of (do kết quả của), in addition to (thêm vào đó) là những cụm nối ý quen thuộc trong văn học thuật. Dùng đúng chúng, bài viết nghe trang trọng và mạch lạc hơn hẳn.",
    "examples": [
     "In terms of cost, trains are cheaper than planes.",
     "The delay was due to bad weather."
@@ -16008,7 +16008,7 @@ const CONTENT = {
    "hook": "Lượng từ trong Task 1 như gia vị nêm vừa tay: the number of cho thứ đếm được từng cái, the amount of cho thứ đong bằng lượng.",
    "level": "Band 5.5",
    "name": "Lượng từ và danh từ số liệu trong Task 1",
-   "explain": "Phân biệt number (đếm được), amount (không đếm được), proportion/percentage (tỷ lệ). Dùng đúng lượng từ là điểm ngữ pháp trực tiếp trong Task 1: the number of students, the amount of water, the proportion of income.",
+   "explain": "Ví dụ trước nhé: The number of students is rising, but the amount of water is falling (Số học sinh đang tăng, nhưng lượng nước đang giảm). Sau ví dụ là quy tắc. Đếm được từng cái thì dùng the number of, như the number of students (số học sinh). Không đếm được, chỉ đong đo được, thì dùng the amount of, như the amount of water (lượng nước). Nói về tỷ lệ thì dùng proportion hoặc percentage. Dùng đúng lượng từ là điểm ngữ pháp được chấm trực tiếp trong Task 1.",
    "examples": [
     "The number of cars increased sharply.",
     "The amount of money spent on food fell."
@@ -16121,7 +16121,7 @@ const CONTENT = {
    "hook": "However, therefore, moreover như biển báo rẽ trên đường viết: báo trước câu sắp đối lập, sắp ra kết quả hay sắp bồi thêm ý.",
    "level": "Band 5.5",
    "name": "Phó từ liên kết: however, therefore, moreover",
-   "explain": "Phó từ liên kết nối hai câu độc lập và phải đứng sau dấu chấm/chấm phẩy, kèm dấu phẩy: The course was expensive. However, it was worth it. Đây là lỗi nhiều thí sinh Việt Nam hay mắc (chạy câu - run-on).",
+   "explain": "Ví dụ trước nhé: The course was expensive. However, it was worth it. (Khóa học đắt. Tuy nhiên, nó đáng tiền.) Sau ví dụ là quy tắc. However (tuy nhiên), therefore (vì vậy), moreover (hơn nữa) là các từ nối đứng ở đầu một câu mới: trước chúng là dấu chấm hoặc chấm phẩy, sau chúng là dấu phẩy. Nhiều bạn hay viết hai câu dính liền không có dấu ngăn - lỗi này gọi là chạy câu (run-on), rất dễ mất điểm.",
    "examples": [
     "Sales fell in January. However, they recovered in March.",
     "The evidence is limited. Therefore, more research is needed."
@@ -16234,7 +16234,7 @@ const CONTENT = {
    "hook": "When, while, as như đèn tín hiệu thời gian: bật lên là biết hai việc xảy ra cùng lúc hay nối đuôi nhau.",
    "level": "Band 6.0",
    "name": "Mệnh đề trạng ngữ thời gian",
-   "explain": "when, while, before, after, until, as soon as tạo câu phức thời gian - rất hữu ích khi mô tả trình tự trong Task 1 (quy trình) và diễn biến trong Task 2.",
+   "explain": "Ví dụ trước nhé: While the water is heating, add the powder (Trong lúc nước đang nóng lên, hãy cho bột vào). Sau ví dụ là quy tắc. Các từ when (khi), while (trong lúc), before (trước khi), after (sau khi), until (cho tới khi), as soon as (ngay khi) giúp bạn nói rõ việc nào xảy ra trước, việc nào xảy ra sau, trong cùng một câu. Rất hữu ích khi kể trình tự các bước trong bài quy trình Task 1.",
    "examples": [
     "When the water reaches 100°C, it boils.",
     "While the mixture is cooling, the bottles are prepared."
@@ -16347,7 +16347,7 @@ const CONTENT = {
    "hook": "Quy trình làm giấy hay làm sô-cô-la không cần nêu ai làm: bị động giúp các bước tự nối nhau như dây chuyền trong nhà máy.",
    "level": "Band 6.0",
    "name": "Bị động cho quy trình Task 1",
-   "explain": "Đề quy trình (process) bắt buộc dùng bị động + liên từ trình tự: First, the clay is dug... Then it is baked... Người ta không nêu người làm mà nhấn mạnh các bước.",
+   "explain": "Ví dụ trước nhé: First, the clay is dug from the ground. Then it is baked in a large oven. (Đầu tiên, đất sét được đào lên khỏi mặt đất. Sau đó, nó được nung trong một lò lớn.) Sau ví dụ là quy tắc. Đề quy trình (process) gần như bắt buộc dùng câu bị động: không ai hỏi ai là người làm, quan trọng là các bước nối tiếp nhau. Nhớ thêm từ chỉ thứ tự như First, Then, After that, Finally để các bước đi liền mạch.",
    "examples": [
     "First, the fruit is washed and sorted.",
     "Finally, the products are packed and transported to shops."
@@ -16460,7 +16460,7 @@ const CONTENT = {
    "hook": "So sánh nâng cao như thước đo có nhiều nấc nhỏ: considerably là hơn hẳn một đoạn, slightly chỉ hơn một chút xíu.",
    "level": "Band 6.0",
    "name": "So sánh nâng cao",
-   "explain": "Dùng much/far/considerably trước so sánh hơn để nhấn mạnh độ chênh; cấu trúc the more..., the more...; và as形容词as cho so sánh bằng - tất cả giúp Task 1 và Task 2 đạt band 6+.",
+   "explain": "Ví dụ trước nhé: This model is considerably more expensive than the old one (Mẫu này đắt hơn hẳn mẫu cũ). The more you practise, the better you write (Càng luyện nhiều, bạn viết càng tốt). Sau ví dụ là quy tắc. Muốn nhấn mạnh chênh lệch lớn thì đặt much, far hoặc considerably trước từ so sánh. Cấu trúc the more..., the more... nghĩa là càng... càng... Còn so sánh bằng thì dùng as + tính từ + as, ví dụ as tall as (cao bằng). Dùng linh hoạt các dạng này giúp Task 1 và Task 2 chạm dải Band 6 trở lên.",
    "examples": [
     "Living in the city is far more expensive than in the countryside.",
     "The more people use cars, the worse traffic becomes."
@@ -16573,7 +16573,7 @@ const CONTENT = {
    "hook": "Whereas đặt hai ý lên hai đĩa cân, nevertheless nghĩa là dù vậy vẫn tiến lên, consequently là quân domino đổ tới kết quả.",
    "level": "Band 6.0",
    "name": "Liên từ học thuật: whereas, nevertheless, consequently",
-   "explain": "Whereas đối chiếu hai sự thật (rất hợp Task 1), Nevertheless = tuy nhiên (trang trọng hơn however), Consequently = do đó. Dùng đúng các từ này nâng điểm Coherence và Lexical Resource.",
+   "explain": "Ví dụ trước nhé: Whereas men prefer team sports, women often choose yoga (Trong khi nam giới thích thể thao đồng đội, nữ giới thường chọn yoga). Sau ví dụ là quy tắc. Whereas dùng để đặt hai sự thật cạnh nhau mà đối chiếu - rất hợp với biểu đồ Task 1. Nevertheless nghĩa là tuy nhiên, trang trọng hơn however. Consequently nghĩa là do đó. Dùng đúng ba từ này giúp bài viết mạch lạc hơn và vốn từ được đánh giá cao hơn.",
    "examples": [
     "Whereas only 10% walked to work, 60% drove.",
     "The data is incomplete. Nevertheless, a clear trend can be seen."
@@ -16686,7 +16686,7 @@ const CONTENT = {
    "hook": "Đổi từ loại như đổi áo cho ý: grow khoác áo danh từ thành growth, câu trông mới hẳn mà nghĩa vẫn nguyên.",
    "level": "Band 6.0",
    "name": "Paraphrase bằng cách đổi từ loại",
-   "explain": "Kỹ năng cốt lõi của IELTS: viết lại ý bằng từ loại khác - increase (v) → an increase (n); decide (v) → make a decision; because → due to the fact that. Mở bài tốt luôn paraphrase lại đề bài.",
+   "explain": "Ví dụ trước nhé: Đề bài nói prices increase (giá tăng). Bạn viết lại: There has been an increase in prices (Đã có một sự tăng lên ở giá cả) - ý nguyên vẹn, mặt câu khác hẳn. Sau ví dụ là quy tắc. Paraphrase (viết lại cùng một ý bằng cách nói khác) là kỹ năng cốt lõi của IELTS. Một cách dễ làm là đổi từ loại: increase (động từ) thành an increase (danh từ), decide thành make a decision. Bài mở đầu tốt luôn viết lại đề bài bằng lời của mình như vậy.",
    "examples": [
     "People's incomes rose. → There was a rise in people's incomes.",
     "Because the price fell, sales grew. → Due to the fall in price, sales grew."
@@ -16799,7 +16799,7 @@ const CONTENT = {
    "hook": "Đường biểu đồ chưa vẽ hết thì dùng will và is expected to, như nhìn mây đoán mưa cho những năm sắp tới.",
    "level": "Band 6.0",
    "name": "Dự đoán tương lai cho biểu đồ",
-   "explain": "Khi biểu đồ kéo dài tới tương lai hoặc đề yêu cầu dự đoán, dùng will, is expected to, is predicted to, is likely to: The figure is expected to reach 50% by 2030.",
+   "explain": "Ví dụ trước nhé: The figure is expected to reach 50% by 2030 (Con số được dự đoán sẽ chạm 50% vào năm 2030). Sau ví dụ là quy tắc. Khi biểu đồ kéo dài tới tương lai, hoặc đề bài yêu cầu dự đoán, đừng kể như chuyện đã xảy ra rồi. Hãy dùng will, is expected to (được dự đoán sẽ), is predicted to hoặc is likely to (có khả năng sẽ) để nói rõ đây là dự đoán.",
    "examples": [
     "Sales are predicted to double by 2030.",
     "The population is likely to keep growing."
@@ -16912,7 +16912,7 @@ const CONTENT = {
    "hook": "Mệnh đề quan hệ nâng cao như dòng chú thích dưới trang sách: bổ sung ý phụ êm ái mà không làm đứt mạch câu chính.",
    "level": "Band 6.5",
    "name": "Mệnh đề quan hệ nâng cao",
-   "explain": "Dùng which để bình luận cả mệnh đề trước (He passed, which surprised everyone), và giới từ + which/whom trong văn trang trọng (the reason for which, the people with whom).",
+   "explain": "Ví dụ trước nhé: He passed the exam, which surprised everyone (Anh ấy thi đỗ, điều đó làm mọi người ngạc nhiên). Sau ví dụ là quy tắc. Ở mức nâng cao, which còn dùng để bình luận cả ý vừa nói ở vế trước, như ví dụ trên. Trong văn trang trọng, giới từ có thể đứng ngay trước which hoặc whom: the reason for which (lý do mà vì nó), the people with whom (những người mà cùng với họ).",
    "examples": [
     "The company cut 200 jobs, which caused public anger.",
     "The house in which he lived is now a museum."
@@ -17025,7 +17025,7 @@ const CONTENT = {
    "hook": "Điều kiện loại 3 là cỗ máy thời gian không có thật: If I had studied gợi tiếc nuối chuyện đã rồi, chỉ để rút bài học.",
    "level": "Band 6.5",
    "name": "Điều kiện loại 3 và điều kiện trong lập luận",
-   "explain": "Loại 3 (If + had V3, would have V3) diễn tả hối tiếc/giả định quá khứ. Trong Task 2, các cấu trúc If governments had acted earlier... giúp lập luận sâu và đa dạng cấu trúc.",
+   "explain": "Ví dụ trước nhé: If governments had acted earlier, the problem would have been smaller (Nếu chính phủ hành động sớm hơn, vấn đề đã nhỏ hơn nhiều - tiếc là thực tế đã khác). Sau ví dụ là quy tắc. Câu điều kiện loại 3: If + had + V3, would have + V3 - dùng để giả sử một chuyện trong quá khứ đã xảy ra khác đi, thường kèm ý tiếc nuối. Đưa dạng này vào Task 2 giúp lập luận sâu hơn và cấu trúc câu đa dạng hơn.",
    "examples": [
     "If the factory had followed the rules, the river would not have been polluted.",
     "If more had been invested, the problem could have been prevented."
@@ -17138,7 +17138,7 @@ const CONTENT = {
    "hook": "Liệt kê song song như hàng quân đứng đều hàng: các ý cùng một khuôn ngữ pháp thì đoạn văn nhìn ngay ngắn, dễ đọc.",
    "level": "Band 6.5",
    "name": "Cấu trúc song song khi liệt kê",
-   "explain": "Khi liệt kê, các thành phần phải cùng dạng ngữ pháp (danh từ với danh từ, V-ing với V-ing). Lỗi song song làm mất điểm nặng: reading books, listening to music and playing sports (đúng).",
+   "explain": "Ví dụ trước nhé: She enjoys reading books, listening to music and playing sports (Cô ấy thích đọc sách, nghe nhạc và chơi thể thao - cả ba việc đều ở dạng V-ing). Sau ví dụ là quy tắc. Khi liệt kê nhiều ý trong một câu, các ý phải cùng một khuôn ngữ pháp: danh từ đi với danh từ, V-ing đi với V-ing. Lệch khuôn - ý này danh từ, ý kia động từ nguyên thể - là lỗi bị trừ điểm khá nặng trong Writing.",
    "examples": [
     "The job requires patience, experience and good communication skills.",
     "She enjoys reading, writing and speaking English."
@@ -17251,7 +17251,7 @@ const CONTENT = {
    "hook": "Hedging là đi nhẹ nói khẽ trong học thuật: tend to, may, often giúp câu không khẳng định quá tay.",
    "level": "Band 6.5",
    "name": "Hedging - ngôn ngữ thận trọng học thuật",
-   "explain": "Văn học thuật tránh khẳng định tuyệt đối: dùng tend to, may, might, appears to, relatively, generally, in most cases. Hedging đúng lúc là dấu hiệu band 6.5+ trong Writing và Speaking Part 3.",
+   "explain": "Ví dụ trước nhé: Đừng viết People always choose... (Người ta luôn chọn...) một cách tuyệt đối. Hãy viết: People tend to choose... (Người ta thường có xu hướng chọn...). Sau ví dụ là quy tắc. Văn học thuật tránh khẳng định chắc nịch 100%. Các từ tend to (thường có xu hướng), may, might (có thể), generally (nhìn chung), in most cases (trong đa số trường hợp) giúp câu mềm và thận trọng đúng mực. Biết nói khẽ như vậy là dấu hiệu của dải Band 6.5 trở lên trong Writing và Speaking Part 3.",
    "examples": [
     "People tend to spend more when the economy is strong.",
     "This policy may benefit rural areas in most cases."
@@ -17364,7 +17364,7 @@ const CONTENT = {
    "hook": "Danh hóa là ép lấy nước cốt: decide vắt thành decision, câu văn đặc lại, trang trọng hơn hẳn.",
    "level": "Band 6.5",
    "name": "Danh hóa - nominalisation",
-   "explain": "Biến động từ/tính từ thành cụm danh từ: decide → decision; fail → failure; because the city grew → the growth of the city. Danh hóa làm câu ngắn gọn, trang trọng - đặc trưng văn phong band cao.",
+   "explain": "Ví dụ trước nhé: Câu thường: The city grew quickly, so traffic got worse. Viết kiểu danh hóa: The rapid growth of the city made traffic worse (Sự tăng trưởng nhanh của thành phố làm giao thông tệ hơn). Sau ví dụ là quy tắc. Danh hóa là biến động từ hoặc tính từ thành cụm danh từ: decide thành decision, grow thành the growth of. Câu văn nhờ đó ngắn gọn và trang trọng hơn - một đặc trưng rõ của văn phong band cao.",
    "examples": [
     "The destruction of forests threatens wildlife.",
     "The introduction of the new law reduced crime."
@@ -17477,7 +17477,7 @@ const CONTENT = {
    "hook": "Câu chủ đề như biển hiệu đầu đoạn: nhìn vào biết ngay đoạn nói về gì, còn từ nối là lối đi nối các phòng ý với nhau.",
    "level": "Band 6.5",
    "name": "Câu chủ đề và từ nối trong đoạn văn",
-   "explain": "Mỗi đoạn thân bài cần một câu chủ đề (topic sentence) nêu ý chính, sau đó là giải thích và ví dụ. Từ nối First and foremost, For instance, As a result giúp đoạn mạch lạc.",
+   "explain": "Ví dụ trước nhé: Một đoạn thân bài nên mở đầu kiểu: Firstly, studying abroad helps students become independent. (Trước hết, du học giúp sinh viên trở nên tự lập.) Đọc câu đầu là biết cả đoạn nói gì. Sau ví dụ là quy tắc. Câu mở đoạn như vậy gọi là câu chủ đề (topic sentence). Sau câu chủ đề, bạn giải thích thêm rồi cho một ví dụ. Các từ nối như For instance (ví dụ như), As a result (kết quả là) giúp các câu trong đoạn đi liền mạch.",
    "examples": [
     "One significant advantage of studying abroad is independence.",
     "Living far from home, for instance, forces students to manage money wisely."
@@ -17590,7 +17590,7 @@ const CONTENT = {
    "hook": "Câu chẻ như đèn sân khấu chiếu đúng một điểm: It was X that... để mọi ánh mắt dồn vào điều cần nhấn mạnh.",
    "level": "Band 7.0",
    "name": "Câu chẻ nhấn mạnh (cleft sentences)",
-   "explain": "It is/was + thành phần nhấn mạnh + that... dùng để làm nổi bật một yếu tố: It was the cost that surprised everyone. What-cleft: What matters most is... Rất hiệu quả trong Task 2.",
+   "explain": "Ví dụ trước nhé: Câu thường: The cost surprised everyone most. Viết kiểu câu chẻ: It was the cost that surprised everyone (Chính chi phí mới là thứ làm mọi người ngạc nhiên). Sau ví dụ là quy tắc. Câu chẻ dùng khung It is hoặc It was + điều muốn nhấn mạnh + that... để dồn sự chú ý vào đúng một điểm. Dạng What matters most is... (Điều quan trọng nhất là...) cũng rất hiệu quả khi mở ý trong Task 2.",
    "examples": [
     "It is education that changes lives most profoundly.",
     "What the city needs most is affordable housing."
@@ -17703,7 +17703,7 @@ const CONTENT = {
    "hook": "Never và rarely đứng đầu câu thì trợ động từ phải đảo lên trước như cúi chào: Never have I seen... nghe trang trọng hơn hẳn.",
    "level": "Band 7.0",
    "name": "Đảo ngữ sau trạng từ phủ định",
-   "explain": "Sau Never, Rarely, Seldom, Not only, Hardly...when, động từ trợ đảo lên trước chủ ngữ: Never have I seen... Đây là cấu trúc band 7+ dùng điểm nhấn mạnh.",
+   "explain": "Ví dụ trước nhé: Câu thường: I have never seen such a crowd. Viết kiểu đảo ngữ: Never have I seen such a crowd (Chưa bao giờ tôi thấy một đám đông như vậy). Sau ví dụ là quy tắc. Khi câu bắt đầu bằng một từ phủ định như Never (chưa bao giờ), Rarely, Seldom (hiếm khi), trợ động từ phải nhảy lên trước chủ ngữ. Đây là cấu trúc nhấn mạnh của dải Band 7 trở lên - dùng đúng một, hai lần trong bài là đủ gây ấn tượng.",
    "examples": [
     "Never has the demand for housing been so high.",
     "Not only did he pass, but he also won a scholarship."
@@ -17816,7 +17816,7 @@ const CONTENT = {
    "hook": "It is said that như câu mở đầu bản tin: người ta nói rằng, không cần nêu tên người nói mà vẫn đáng tin cậy.",
    "level": "Band 7.0",
    "name": "Bị động tường thuật (passive reporting)",
-   "explain": "It is believed/said/thought that... và be believed to + V dùng để dẫn quan điểm chung một cách khách quan - cực kỳ hữu ích khi mở bài và dẫn chứng Task 2.",
+   "explain": "Ví dụ trước nhé: It is believed that exercise improves memory (Người ta tin rằng tập thể dục giúp trí nhớ tốt hơn). Sau ví dụ là quy tắc. Khi muốn dẫn một quan điểm chung mà không cần nêu ai nói, hãy dùng It is believed/said/thought that... (Người ta tin/nói/nghĩ rằng...). Dạng rút gọn là be believed to + động từ. Cách viết này nghe khách quan, rất hợp để mở bài và dẫn ý trong Task 2.",
    "examples": [
     "It is widely believed that exercise improves mental health.",
     "Smoking is known to cause serious diseases."
@@ -17929,7 +17929,7 @@ const CONTENT = {
    "hook": "Mệnh đề phân từ là câu được gấp gọn như vali nén: Walking home thay cho While I was walking home mà nghĩa không vơi đi.",
    "level": "Band 7.0",
    "name": "Mệnh đề phân từ (participle clauses)",
-   "explain": "Dùng V-ing/V3 để rút gọn mệnh đề phụ khi cùng chủ ngữ: Walking home, I... (đang đi), Built in 1900, the house... (được xây). Giúp câu gọn và đa dạng - dấu hiệu band 7.",
+   "explain": "Ví dụ trước nhé: Câu dài: While I was walking home, I met an old friend. Rút gọn: Walking home, I met an old friend (Đang đi bộ về nhà, tôi gặp một người bạn cũ). Sau ví dụ là quy tắc. Khi hai vế có cùng chủ ngữ, vế phụ có thể rút thành cụm phân từ: đang làm gì thì dùng V-ing; được làm gì thì dùng V3, như Built in 1900, the house... (Được xây năm 1900, ngôi nhà...). Câu nhờ đó gọn và đa dạng hơn - dấu hiệu của Band 7.",
    "examples": [
     "Having finished her degree, she applied for jobs abroad.",
     "Located near the river, the village is often flooded."
@@ -18042,7 +18042,7 @@ const CONTENT = {
    "hook": "Had I known chính là If I had known đã bỏ chữ if và đội chiếc nón trang trọng, hay gặp trong văn viết band cao.",
    "level": "Band 7.0",
    "name": "Đảo ngữ trong câu điều kiện",
-   "explain": "Thay If bằng đảo ngữ: Had I known (= If I had known), Were it not for (= If it were not for), Should you need (= If you need). Văn phong rất trang trọng, thường gặp trong bài band 8+.",
+   "explain": "Ví dụ trước nhé: Had I known, I would have prepared better (Giá mà tôi biết trước, tôi đã chuẩn bị tốt hơn) - đây chính là If I had known viết theo kiểu trang trọng. Sau ví dụ là quy tắc. Trong văn rất trang trọng, chữ If có thể bỏ đi và trợ động từ đảo lên đầu câu: Had I known, Were it not for... (nếu không nhờ có...), Should you need... (nếu bạn cần...). Dạng này hay xuất hiện trong các bài viết Band 8 trở lên.",
    "examples": [
     "Had the government acted sooner, the crisis could have been avoided.",
     "Were it not for her support, I would have given up."
@@ -18155,7 +18155,7 @@ const CONTENT = {
    "hook": "It và there như giá đỡ mở màn: It is clear that, there is giúp câu đứng vững trước khi ý chính bước ra.",
    "level": "Band 7.0",
    "name": "Cấu trúc It và There học thuật",
-   "explain": "It is important to note that..., It appears that..., There is evidence that..., There has been a tendency to... Những cấu trúc khách quan này là xương sống của văn học thuật band cao.",
+   "explain": "Ví dụ trước nhé: There is evidence that sleep improves learning (Có bằng chứng cho thấy giấc ngủ giúp học tốt hơn). Sau ví dụ là quy tắc. Các khung It is important to note that... (Cần lưu ý rằng...), It appears that... (Có vẻ như...), There is evidence that... (Có bằng chứng rằng...), There has been a tendency to... (Đã có xu hướng...) là những cách mở câu khách quan, được dùng như xương sống của văn học thuật band cao.",
    "examples": [
     "It is important to note that the sample was relatively small.",
     "There is growing evidence that sleep affects memory."
@@ -18268,7 +18268,7 @@ const CONTENT = {
    "hook": "Đảo ngữ toàn diện như mặc lễ phục cho câu: trật tự lạ mắt nhưng đúng nghi thức, dành cho lúc muốn thật trang trọng.",
    "level": "Band 7.5+",
    "name": "Đảo ngữ nâng cao toàn diện",
-   "explain": "Đảo ngữ với Only after/Only when, So + adj, Such + be, và đảo ngữ địa điểm (Down the hill came...). Dùng tiết chế 1-2 lần trong bài sẽ tạo ấn tượng band cao rõ rệt.",
+   "explain": "Ví dụ trước nhé: Only after the lesson did I understand (Chỉ sau buổi học tôi mới hiểu). So tired was he that he slept at once (Anh ấy mệt đến mức ngủ ngay lập tức). Sau ví dụ là quy tắc. Đây là các dạng đảo ngữ nâng cao: sau Only after hoặc Only when (chỉ sau khi, chỉ khi), trợ động từ đảo lên trước chủ ngữ; So + tính từ đặt lên đầu câu để nhấn mạnh mức độ; Such + be cũng dùng như vậy. Dùng tiết chế một, hai lần trong cả bài là đủ tạo ấn tượng band cao, đừng lạm dụng.",
    "examples": [
     "Only after the war did the economy recover.",
     "So intense was the competition that many firms collapsed."
@@ -18381,7 +18381,7 @@ const CONTENT = {
    "hook": "Thể giả định nghe như lời vua chúa ngày xưa: It is essential that he be present, động từ trở về nguyên mẫu, không chia.",
    "level": "Band 7.5+",
    "name": "Thể giả định trong văn trang trọng",
-   "explain": "Sau demand/suggest/essential/insist, mệnh đề that dùng động từ nguyên thể không chia: It is essential that he be present. Đây là điểm ngữ pháp tinh tế thường chỉ xuất hiện ở band 7.5+.",
+   "explain": "Ví dụ trước nhé: It is essential that he be present (Điều thiết yếu là anh ấy phải có mặt - để ý động từ là be, không chia thành is). Sau ví dụ là quy tắc. Sau các từ như demand (yêu cầu), suggest (đề nghị), essential (thiết yếu), insist (khăng khăng), mệnh đề that dùng động từ nguyên thể không chia. Đây là điểm ngữ pháp tinh tế, thường chỉ xuất hiện ở dải Band 7.5 trở lên.",
    "examples": [
     "The committee insisted that the report be rewritten.",
     "It is vital that every child receive a good education."
@@ -18494,7 +18494,7 @@ const CONTENT = {
    "hook": "Cụm tuyệt đối như diễn viên phụ đứng cạnh cảnh chính: Weather permitting, we will go - thêm bối cảnh mà không tốn một câu riêng.",
    "level": "Band 7.5+",
    "name": "Cụm tuyệt đối và rút gọn nâng cao",
-   "explain": "Cụm tuyệt đối (Noun + phân từ) bổ sung thông tin nền: The weather being fine, we... With + noun + phân từ: With prices rising, many... Đây là cấu trúc văn viết tinh gọn bậc cao.",
+   "explain": "Ví dụ trước nhé: With prices rising, many families spend less (Khi giá cả tăng, nhiều gia đình chi tiêu ít đi). Sau ví dụ là quy tắc. Cụm tuyệt đối là một cụm danh từ + phân từ đứng riêng để thêm bối cảnh cho câu chính, như The weather being fine, we set off early (Thời tiết đẹp, chúng tôi lên đường sớm). Dạng With + danh từ + phân từ cũng dùng như vậy. Đây là cấu trúc văn viết tinh gọn ở bậc cao.",
    "examples": [
     "All things considered, the project was a success.",
     "With demand increasing, prices are likely to follow."
@@ -18607,7 +18607,7 @@ const CONTENT = {
    "hook": "Thêm do trước động từ như gạch chân bằng bút đỏ: I do agree nghĩa là tôi thật sự đồng ý, không phải nói cho qua chuyện.",
    "level": "Band 7.5+",
    "name": "Nhấn mạnh bằng trợ động từ do",
-   "explain": "Thêm do/does/did trước động từ thường để nhấn mạnh hoặc tương phản lịch sự: I do agree, but... / He does work hard. Tinh tế này hay gặp trong Speaking Part 3 và tranh luận Task 2.",
+   "explain": "Ví dụ trước nhé: I do agree, but I see one problem (Tôi thật sự đồng ý, nhưng tôi thấy một vấn đề). Sau ví dụ là quy tắc. Thêm do, does hoặc did trước động từ thường là cách nhấn mạnh rằng ý mình nói là thật lòng, hoặc để mở đầu một ý đối lập một cách lịch sự: He does work hard (Anh ấy quả thật làm việc chăm chỉ). Chi tiết nhỏ này hay gặp trong Speaking Part 3 và lập luận Task 2.",
    "examples": [
     "I do believe that children need unstructured play.",
     "The scheme does have drawbacks, admittedly."
@@ -18720,7 +18720,7 @@ const CONTENT = {
    "hook": "Dấu chấm phẩy là dấu phẩy học cao hơn một bậc, nối hai ý ngang hàng; dấu hai chấm là cánh cửa mở ra phần giải thích.",
    "level": "Band 7.5+",
    "name": "Dấu chấm phẩy và dấu hai chấm trong câu dài",
-   "explain": "Chấm phẩy nối hai mệnh đề độc lập liên quan chặt (thay dấu chấm), hai chấm mở ra giải thích hoặc danh sách. Dùng đúng dấu câu nâng cấp câu dài đa mệnh đề mà không bị lỗi run-on.",
+   "explain": "Ví dụ trước nhé: The city is growing fast; traffic is getting worse (Thành phố đang lớn nhanh; giao thông ngày càng tệ). Sau ví dụ là quy tắc. Dấu chấm phẩy nối hai câu độc lập có liên quan chặt với nhau, thay cho dấu chấm. Dấu hai chấm mở ra phần giải thích hoặc một danh sách: There are two reasons: ... (Có hai lý do: ...). Dùng đúng hai dấu này giúp câu dài nhiều mệnh đề vẫn sạch, không bị lỗi chạy câu.",
    "examples": [
     "The results were clear; the treatment worked.",
     "One factor stands out above all others: cost."
@@ -18833,7 +18833,7 @@ const CONTENT = {
    "hook": "Paraphrase band cao như kể lại một bộ phim bằng lời của chính mình: đổi cấu trúc, đổi từ ngữ, giữ nguyên cốt truyện.",
    "level": "Band 7.5+",
    "name": "Paraphrase trình độ cao",
-   "explain": "Ở band cao, paraphrase là viết lại toàn bộ cấu trúc: đổi chủ động ↔ bị động, đổi mệnh đề thành cụm danh từ, thay hệ thống từ đồng nghĩa học thuật (a significant number of, it is often the case that).",
+   "explain": "Ví dụ trước nhé: Câu gốc: Many people think technology harms children. Viết lại ở mức cao: It is often the case that technology is blamed for harming children (Người ta thường cho rằng công nghệ gây hại cho trẻ em) - đổi cả cấu trúc câu, không chỉ đổi vài từ. Sau ví dụ là quy tắc. Ở dải band cao, paraphrase nghĩa là viết lại toàn bộ cấu trúc: chủ động đổi sang bị động, mệnh đề đổi thành cụm danh từ, và thay từ bằng các cụm đồng nghĩa học thuật như a significant number of (một số lượng đáng kể).",
    "examples": [
     "Many people believe... → It is a widely held belief that...",
     "Because technology developed, jobs changed. → Technological developments brought about changes in employment."
@@ -20944,7 +20944,7 @@ const CONTENT = {
    "hook": "There is như đưa tay giới thiệu một vật: There is a cat. Nhiều vật thì there are, như mở ra cả một hộp đồ.",
    "level": "Band 2.0",
    "name": "There is và there are - giới thiệu đồ vật và nơi chốn",
-   "explain": "Khi muốn nói có cái gì ở đâu, ta dùng there is với danh từ số ít và there are với danh từ số nhiều. Ví dụ: There is a book on the table (Có một quyển sách trên bàn). Mẫu câu này rất hay dùng khi miêu tả phòng, lớp học và thành phố trong IELTS Speaking Part 1.",
+   "explain": "Ví dụ trước nhé: There is a book on the table (Có một quyển sách trên bàn). There are three chairs in the room (Có ba chiếc ghế trong phòng). Sau ví dụ là quy tắc. Muốn nói có cái gì ở đâu: một vật thì dùng there is, nhiều vật thì dùng there are. Mẫu câu này rất hay dùng khi miêu tả phòng, lớp học và thành phố trong IELTS Speaking Part 1.",
    "examples": [
     "There is a small park near my house.",
     "There are thirty students in my class."
@@ -21037,7 +21037,7 @@ const CONTENT = {
    "hook": "Mệnh lệnh là câu ra lệnh ngắn gọn: Sit down. Còn let's là lời rủ rê: Let's go, như nắm tay kéo bạn đi cùng.",
    "level": "Band 2.0",
    "name": "Câu mệnh lệnh và lời rủ rê - imperatives và let's",
-   "explain": "Câu mệnh lệnh dùng động từ nguyên thể để bảo hoặc nhắc ai làm gì: Sit down, please (Mời ngồi). Lời rủ rê dùng Let's + động từ nguyên thể: Let's go (Chúng ta đi thôi). Trong lớp học và đời sống hằng ngày, hai mẫu câu này xuất hiện rất nhiều.",
+   "explain": "Ví dụ trước nhé: Sit down, please (Mời ngồi xuống). Let's go (Chúng ta đi thôi). Sau ví dụ là quy tắc. Câu mệnh lệnh dùng động từ nguyên thể để bảo hoặc nhắc ai làm gì. Lời rủ rê dùng Let's + động từ nguyên thể. Hai mẫu câu này xuất hiện rất nhiều trong lớp học và đời sống hằng ngày.",
    "examples": [
     "Please open your book and read the text.",
     "Let's study together this weekend."
@@ -21130,7 +21130,7 @@ const CONTENT = {
    "hook": "Do và does như người trợ giúp mở cửa cho câu hỏi: does đi với he, she, it và động từ chính trở về nguyên mẫu.",
    "level": "Band 2.5",
    "name": "Câu hỏi và câu phủ định ở hiện tại đơn - do, does",
-   "explain": "Muốn hỏi hoặc phủ định ở hiện tại đơn, ta mượn trợ động từ do (với I, you, we, they) và does (với he, she, it). Sau do và does, động từ chính trở về nguyên thể: Does she like coffee? (Cô ấy có thích cà phê không?) - động từ like không thêm s vì đã có does đứng trước.",
+   "explain": "Ví dụ trước nhé: Does she like coffee? (Cô ấy có thích cà phê không?) Để ý: động từ like không thêm s, vì đã có does đứng trước gánh phần chia động từ rồi. Sau ví dụ là quy tắc. Muốn hỏi hoặc phủ định ở hiện tại đơn, ta mượn do (với I, you, we, they) và does (với he, she, it). Sau do và does, động từ chính luôn trở về nguyên thể.",
    "examples": [
     "Do you speak English?",
     "He does not play football on weekdays."
@@ -21223,7 +21223,7 @@ const CONTENT = {
    "hook": "Many đếm từng cái một, much đong cả thể không đếm được, some dùng trong câu khẳng định, any hay đi với câu hỏi và phủ định.",
    "level": "Band 2.5",
    "name": "Lượng từ đời sống - much, many, some, any",
-   "explain": "Many đi với danh từ đếm được số nhiều (many books - nhiều quyển sách), much đi với danh từ không đếm được (much water - nhiều nước). Some thường dùng trong câu khẳng định, any dùng trong câu hỏi và câu phủ định. Ví dụ: I have some friends here (Tôi có vài người bạn ở đây), nhưng Do you have any questions? (Bạn có câu hỏi nào không?).",
+   "explain": "Ví dụ trước nhé: I have some friends here (Tôi có vài người bạn ở đây). Do you have any questions? (Bạn có câu hỏi nào không?). Sau ví dụ là quy tắc. Many đi với danh từ đếm được số nhiều (many books - nhiều quyển sách), much đi với danh từ không đếm được (much water - nhiều nước). Some thường dùng trong câu khẳng định, any dùng trong câu hỏi và câu phủ định.",
    "examples": [
     "How many students are there in your class?",
     "We do not have much time today."
@@ -21409,7 +21409,7 @@ const CONTENT = {
    "hook": "Động từ bất quy tắc như những người bạn cá tính: go thành went, see thành saw - không theo luật thêm -ed, phải nhớ từng bạn một.",
    "level": "Band 3.5",
    "name": "Động từ bất quy tắc thường gặp ở quá khứ đơn",
-   "explain": "Nhiều động từ quen thuộc không thêm -ed ở quá khứ mà đổi hẳn dạng: go - went, see - saw, take - took, have - had, make - made. Muốn kể chuyện quá khứ trôi chảy trong IELTS Speaking Part 2, bạn cần thuộc lòng các động từ bất quy tắc hay gặp nhất và dùng chúng thật chính xác.",
+   "explain": "Ví dụ trước nhé: Yesterday I went to the market and bought some fruit (Hôm qua tôi đi chợ và mua ít trái cây) - go thành went, buy thành bought, không thêm -ed. Sau ví dụ là quy tắc. Nhiều động từ quen thuộc không thêm -ed ở quá khứ mà đổi hẳn dạng: go - went, see - saw, take - took, have - had, make - made. Muốn kể chuyện quá khứ trôi chảy trong IELTS Speaking Part 2, bạn cần thuộc lòng các động từ bất quy tắc hay gặp nhất.",
    "examples": [
     "We went to Da Lat last summer and took many photos.",
     "She bought a new bike and rode it to school."
@@ -21522,7 +21522,7 @@ const CONTENT = {
    "hook": "A là một vật bất kỳ mới nhắc lần đầu, the là chính vật đó khi nhắc lại: như nhân vật xuất hiện lần hai trong truyện thì được gọi rõ tên.",
    "level": "Band 5.0",
    "name": "Mạo từ a, an, the và không mạo từ - dùng đúng trong bài viết",
-   "explain": "Mạo từ là lỗi nhỏ nhưng rất hay bị trừ điểm ở dải Band 5.0-6.0. Nguyên tắc cốt lõi: dùng a hoặc an khi nhắc một vật chưa xác định ở lần đầu (a university, an hour - chú ý nhìn vào âm đầu tiên chứ không phải chữ đầu tiên); dùng the khi người đọc đã biết rõ đang nói về vật nào; không dùng mạo từ trước danh từ nói về khái niệm chung (Education is important). Nắm chắc ba nguyên tắc này sẽ giúp bài Writing sạch lỗi hơn hẳn.",
+   "explain": "Ví dụ trước nhé: I study at a university (Tôi học ở một trường đại học - nhắc lần đầu, chưa xác định là trường nào). The university is in Hanoi (Trường đại học đó ở Hà Nội - nhắc lại, đã rõ là trường nào). Sau ví dụ là quy tắc. Mạo từ là lỗi nhỏ nhưng rất hay bị trừ điểm ở dải Band 5.0-6.0. Ba nguyên tắc cốt lõi: dùng a hoặc an khi nhắc một vật lần đầu chưa xác định (a university, an hour - chú ý nhìn vào âm đầu tiên chứ không phải chữ đầu tiên); dùng the khi người đọc đã biết rõ đang nói về vật nào; không dùng mạo từ trước danh từ nói về khái niệm chung (Education is important). Nắm chắc ba điều này, bài Writing sẽ sạch lỗi hơn hẳn.",
    "examples": [
     "She is a doctor, and she works at the hospital near my house.",
     "Honesty is an important quality in life."
@@ -21635,7 +21635,7 @@ const CONTENT = {
    "hook": "Want rủ to đi cùng, enjoy lại thích đi với -ing: mỗi động từ có bạn đồng hành riêng, học theo cặp thì nhớ rất lâu.",
    "level": "Band 5.0",
    "name": "Mẫu động từ - V + to V và V + V-ing",
-   "explain": "Khi hai động từ đứng cạnh nhau, động từ thứ hai phải đi theo mẫu của động từ đứng trước: want, decide, hope đi với to V (I decided to study abroad - Tôi quyết định đi du học); enjoy, avoid, finish đi với V-ing (She enjoys reading - Cô ấy thích đọc sách). Một số động từ như stop và remember còn đổi nghĩa theo mẫu đi kèm. Đây là điểm ngữ pháp xuất hiện dày đặc trong Writing Task 2 ở dải Band 5.0-6.5 nên cần nắm thật chắc.",
+   "explain": "Ví dụ trước nhé: I decided to study abroad (Tôi quyết định đi du học - decide đi với to). She enjoys reading (Cô ấy thích đọc sách - enjoy đi với -ing). Sau ví dụ là quy tắc. Khi hai động từ đứng cạnh nhau, động từ thứ hai phải đi theo mẫu của động từ đứng trước: want, decide, hope đi với to V; enjoy, avoid, finish đi với V-ing. Một số động từ như stop và remember còn đổi nghĩa theo mẫu đi kèm. Điểm này xuất hiện dày đặc trong Writing Task 2 ở dải Band 5.0-6.5 nên cần nắm thật chắc.",
    "examples": [
     "Many students hope to study at a good university.",
     "Young people should avoid spending too much time on social media."
@@ -21748,7 +21748,7 @@ const CONTENT = {
    "hook": "Despite như mang ô đi xuyên qua mưa: Despite the rain, ta vẫn đi - sau despite là danh từ hoặc V-ing, không phải cả câu đầy đủ.",
    "level": "Band 5.0",
    "name": "Despite và in spite of - nhượng bộ với danh từ và V-ing",
-   "explain": "Although đi với một mệnh đề đầy đủ (Although it rained, we went out - Mặc dù trời mưa, chúng tôi vẫn ra ngoài), còn despite và in spite of chỉ đi với danh từ hoặc V-ing: Despite the rain, we went out. Lẫn lộn hai mẫu này là lỗi kinh điển ở dải Band 5.0-5.5. Dùng đúng despite và in spite of sẽ giúp câu văn gọn gàng và học thuật hơn trong Writing Task 2.",
+   "explain": "Ví dụ trước nhé: Despite the rain, we went out (Mặc cho trời mưa, chúng tôi vẫn ra ngoài). Sau ví dụ là quy tắc. Although đi với một mệnh đề đầy đủ: Although it rained, we went out. Còn despite và in spite of chỉ đi với danh từ hoặc V-ing. Lẫn lộn hai mẫu này là lỗi kinh điển ở dải Band 5.0-5.5. Dùng đúng despite và in spite of giúp câu văn gọn và học thuật hơn trong Writing Task 2.",
    "examples": [
     "Despite the high cost, many families send their children to private schools.",
     "In spite of working hard, he failed the exam."
