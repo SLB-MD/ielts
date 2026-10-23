@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luyện thi IELTS - Học tiếng Anh theo band điểm</title>
 <style>
-:root{--teal:#0b5563;--teal2:#0e7490;--gold:#e8b33c;--bg:#f4f7f8;--card:#ffffff;--ink:#16323a;--mut:#5b7180;--ok:#1e9e6a;--bad:#d9534f;--line:#dbe6ea;--radius:14px;--shadow:0 1px 4px rgba(20,60,80,.06);--shadow2:0 8px 22px rgba(11,85,99,.13);--focus:#f2c14e}
+:root{--teal:#0b5563;--teal2:#0e7490;--gold:#e8b33c;--bg:#f4f7f8;--card:#ffffff;--ink:#16323a;--mut:#47606f;--ok:#1e9e6a;--bad:#d9534f;--line:#dbe6ea;--radius:14px;--shadow:0 1px 4px rgba(20,60,80,.06);--shadow2:0 8px 22px rgba(11,85,99,.13);--focus:#f2c14e}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:"Segoe UI",system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;overflow-x:hidden}
@@ -975,7 +975,7 @@ function ciMonthBase(){ const d=new Date(); d.setDate(1); d.setMonth(d.getMonth(
 function ciCalendarHTML(){ const base=ciMonthBase(); const y=base.getFullYear(), m=base.getMonth(); const dim=new Date(y,m+1,0).getDate(); const lead=(new Date(y,m,1).getDay()+6)%7; const days=checkinDays(); const t=today(); let cells=["T2","T3","T4","T5","T6","T7","CN"].map(x=>`<div style="text-align:center;font-weight:700;color:var(--mut);font-size:12px;padding:3px 0">${x}</div>`).join("");
   for(let i=0;i<lead;i++) cells+="<div></div>";
   for(let d=1;d<=dim;d++){ const ds=y+"-"+String(m+1).padStart(2,"0")+"-"+String(d).padStart(2,"0"); const on=!!days[ds]; const isT=ds===t; const past=ds<t;
-    cells+=`<div style="text-align:center;padding:5px 0;border-radius:8px;font-size:13px;${on?"background:#eafaf1;color:#0d7a4f;font-weight:700;":""}${isT?"outline:2px solid var(--gold);outline-offset:-2px;font-weight:700;":""}${(!on&&past)?"color:#c3ccd1;":""}">${d}${on?" ✓":""}</div>`; }
+    cells+=`<div style="text-align:center;padding:5px 0;border-radius:8px;font-size:13px;${on?"background:#eafaf1;color:#0d7a4f;font-weight:700;":""}${isT?"outline:2px solid var(--gold);outline-offset:-2px;font-weight:700;":""}${(!on&&past)?"color:#8fa3b0;":""}">${d}${on?" ✓":""}</div>`; }
   return `<div class="row" style="margin-bottom:6px"><button class="btn light ci-prev" style="padding:4px 10px">‹ Tháng trước</button><b style="flex:1;text-align:center">Tháng ${m+1}/${y}</b><button class="btn light ci-next" style="padding:4px 10px">Tháng sau ›</button></div><div style="display:grid;grid-template-columns:repeat(7,1fr);gap:3px">${cells}</div><p class="mut" style="margin-top:6px">Ngày có dấu ✓ là ngày đã điểm danh. Ngày đã qua mà trống là ngày vắng. Hôm nay được viền vàng.</p>`; }
 function renderCiCals(){ $$(".ci-cal").forEach(el=>{ el.innerHTML=ciCalendarHTML(); }); $$(".ci-prev").forEach(b=>b.onclick=()=>{ ciMonthOff--; renderCiCals(); }); $$(".ci-next").forEach(b=>b.onclick=()=>{ ciMonthOff++; renderCiCals(); }); }
 function checkinCardHTML(){ const on=checkedOn(today());
