@@ -605,7 +605,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
+   "level": "Band 2.0",
    "title": "Chặng 2 - Cơ bản: giới thiệu bản thân",
    "sentences": [
     "My name is Nam.",
@@ -621,7 +621,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
+   "level": "Band 2.5",
    "title": "Chặng 3 - Câu đơn giản: sinh hoạt hằng ngày",
    "sentences": [
     "I get up at six o'clock.",
@@ -637,7 +637,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
+   "level": "Band 4.0",
    "title": "Chặng 4 - Tiền IELTS: câu hoàn chỉnh",
    "sentences": [
     "I learn English because I want a good job.",
@@ -653,7 +653,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 3.0",
    "title": "Chào hỏi và xã giao hằng ngày",
    "sentences": [
     "Good morning, it is lovely to see you again after the holiday.",
@@ -669,7 +669,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 3.5",
    "title": "Lịch sự nhờ giúp đỡ",
    "sentences": [
     "Could you please help me carry this heavy bag upstairs?",
@@ -685,7 +685,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 3.0",
    "title": "Mua sắm ở chợ và siêu thị",
    "sentences": [
     "How much does this blue shirt cost in your shop?",
@@ -701,7 +701,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 3.0",
    "title": "Hỏi đường trong thành phố",
    "sentences": [
     "Excuse me, how can I get to the nearest train station?",
@@ -717,7 +717,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 2.5",
    "title": "Ăn uống và gọi món",
    "sentences": [
     "I would like a bowl of chicken soup and some bread.",
@@ -733,7 +733,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 2.5",
    "title": "Gia đình và việc nhà",
    "sentences": [
     "My older brother helps my mother wash the dishes every evening.",
@@ -749,7 +749,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 3.0",
    "title": "Trường học và lớp học",
    "sentences": [
     "Our teacher explains the lesson clearly and answers all our questions.",
@@ -765,7 +765,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 2.5",
    "title": "Thời tiết và trang phục",
    "sentences": [
     "It is sunny and warm today, perfect for a walk outside.",
@@ -781,7 +781,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 3.5",
    "title": "Sức khỏe và cảm giác cơ thể",
    "sentences": [
     "I have a headache today, so I will rest at home.",
@@ -797,7 +797,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 3.5",
    "title": "Kế hoạch cuối tuần vui vẻ",
    "sentences": [
     "This weekend, we plan to visit our grandparents in the countryside.",
@@ -1450,6 +1450,70 @@ const CONTENT = {
     "What gives the memoir its power is the restraint with which painful experiences are recounted.",
     "In essence, good design removes difficulty so gracefully that users barely notice its presence.",
     "The irony is that the more connected we become digitally, the lonelier some people feel."
+   ]
+  },
+  {
+   "level": "Band 2.0",
+   "title": "Số đếm, thời gian và gia đình",
+   "sentences": [
+    "I have two brothers and one sister.",
+    "My class starts at seven o'clock.",
+    "There are thirty students in my class.",
+    "My father is forty years old.",
+    "We have lunch at half past twelve.",
+    "Her birthday is on the fifth of May.",
+    "The shop opens at eight in the morning.",
+    "I have three cats and one dog at home.",
+    "School finishes at five in the afternoon.",
+    "My grandmother is seventy years old."
+   ]
+  },
+  {
+   "level": "Band 4.0",
+   "title": "Câu hoàn chỉnh mức B1 - trải nghiệm và điều kiện",
+   "sentences": [
+    "I have never travelled by plane before.",
+    "She has just finished her first driving lesson.",
+    "If it rains this weekend, we will stay at home.",
+    "We have lived in this city for six years.",
+    "Have you ever tried cooking Vietnamese food?",
+    "If you practise every day, your English will improve.",
+    "He has worked in this office since 2021.",
+    "They have already visited the museum twice.",
+    "If the weather is fine, we will cycle to the lake.",
+    "My sister has not found a new job yet."
+   ]
+  },
+  {
+   "level": "Band 4.5",
+   "title": "Câu bị động trong đời sống",
+   "sentences": [
+    "This bridge was built more than fifty years ago.",
+    "Rice is grown in many parts of Vietnam.",
+    "The rooms are cleaned every morning.",
+    "My bike was stolen outside the station last night.",
+    "English is spoken in many countries around the world.",
+    "The letters were sent yesterday afternoon.",
+    "This pagoda was repaired after the storm.",
+    "Tea is usually served without sugar in this region.",
+    "The new library will be opened next month.",
+    "His car is being fixed at the garage now."
+   ]
+  },
+  {
+   "level": "Band 4.5",
+   "title": "Câu phức mức B1 - nối ý và mệnh đề quan hệ",
+   "sentences": [
+    "Although it was raining, the children played outside.",
+    "The woman who lives next door is a famous singer.",
+    "I stayed at home because I was not feeling well.",
+    "This is the book that I told you about yesterday.",
+    "He used to play football every Sunday when he was young.",
+    "While I was cooking, the phone rang twice.",
+    "The students who passed the test were very happy.",
+    "She speaks English better than she did last year.",
+    "We decided to leave early so that we could avoid the traffic.",
+    "The village where I was born is near a wide river."
    ]
   }
  ],
@@ -5415,7 +5479,7 @@ const CONTENT = {
    ]
   },
   {
-   "theme": "Band 0: Bảng chữ cái và phát âm - Alphabet and Sounds",
+   "theme": "Bảng chữ cái và phát âm - Alphabet and Sounds",
    "cards": [
     {
      "w": "alphabet",
@@ -5577,10 +5641,11 @@ const CONTENT = {
      "ex": "Please read the first line aloud.",
      "exv": "Hãy đọc to dòng đầu tiên."
     }
-   ]
+   ],
+   "band": "Band 0"
   },
   {
-   "theme": "Band 0: Số đếm và thời gian - Numbers and Time",
+   "theme": "Số đếm và thời gian - Numbers and Time",
    "cards": [
     {
      "w": "number",
@@ -5742,10 +5807,11 @@ const CONTENT = {
      "ex": "He is late for school today.",
      "exv": "Hôm nay anh ấy đi học muộn."
     }
-   ]
+   ],
+   "band": "Band 2.0"
   },
   {
-   "theme": "Band 0: Gia đình và con người - Family and People",
+   "theme": "Gia đình và con người - Family and People",
    "cards": [
     {
      "w": "family",
@@ -5907,10 +5973,11 @@ const CONTENT = {
      "ex": "The bus driver is very careful.",
      "exv": "Tài xế xe buýt rất cẩn thận."
     }
-   ]
+   ],
+   "band": "Band 2.0"
   },
   {
-   "theme": "Band 0: Sinh hoạt hằng ngày - Daily Life",
+   "theme": "Sinh hoạt hằng ngày - Daily Life",
    "cards": [
     {
      "w": "eat",
@@ -6072,7 +6139,8 @@ const CONTENT = {
      "ex": "The children are very happy today.",
      "exv": "Hôm nay các em nhỏ rất vui."
     }
-   ]
+   ],
+   "band": "Band 2.5"
   },
   {
    "theme": "Workplace Communication - Giao tiếp nơi công sở",
@@ -11385,11 +11453,1505 @@ const CONTENT = {
      "exv": "Tôi gia hạn thẻ thư viện trực tuyến trong hai phút."
     }
    ]
+  },
+  {
+   "theme": "Việc nhà và khả năng - Housework and Abilities",
+   "band": "Band 2.5",
+   "cards": [
+    {
+     "w": "cook",
+     "ipa": "/kʊk/",
+     "vi": "nấu ăn",
+     "col": "cook dinner",
+     "ex": "My mother cooks dinner every evening.",
+     "exv": "Mẹ tôi nấu bữa tối mỗi tối."
+    },
+    {
+     "w": "clean",
+     "ipa": "/kliːn/",
+     "vi": "dọn dẹp, lau sạch",
+     "col": "clean the house",
+     "ex": "We clean the house on Sunday morning.",
+     "exv": "Chúng tôi dọn nhà vào sáng Chủ nhật."
+    },
+    {
+     "w": "wash",
+     "ipa": "/wɒʃ/",
+     "vi": "rửa, giặt",
+     "col": "wash the dishes",
+     "ex": "I wash the dishes after dinner.",
+     "exv": "Tôi rửa bát sau bữa tối."
+    },
+    {
+     "w": "tidy",
+     "ipa": "/ˈtaɪdi/",
+     "vi": "gọn gàng; dọn gọn",
+     "col": "tidy your room",
+     "ex": "Please tidy your room before lunch.",
+     "exv": "Hãy dọn gọn phòng của con trước bữa trưa."
+    },
+    {
+     "w": "sweep",
+     "ipa": "/swiːp/",
+     "vi": "quét (nhà, sân)",
+     "col": "sweep the floor",
+     "ex": "Grandma sweeps the yard every morning.",
+     "exv": "Bà quét sân mỗi sáng."
+    },
+    {
+     "w": "iron",
+     "ipa": "/ˈaɪən/",
+     "vi": "là, ủi (quần áo)",
+     "col": "iron a shirt",
+     "ex": "He irons his shirt before work.",
+     "exv": "Anh ấy là áo sơ mi trước giờ làm."
+    },
+    {
+     "w": "dust",
+     "ipa": "/dʌst/",
+     "vi": "phủi bụi",
+     "col": "dust the shelves",
+     "ex": "She dusts the shelves on Saturdays.",
+     "exv": "Cô ấy phủi bụi các kệ sách vào thứ Bảy."
+    },
+    {
+     "w": "laundry",
+     "ipa": "/ˈlɔːndri/",
+     "vi": "quần áo cần giặt, việc giặt giũ",
+     "col": "do the laundry",
+     "ex": "I do the laundry twice a week.",
+     "exv": "Tôi giặt quần áo hai lần một tuần."
+    },
+    {
+     "w": "rubbish",
+     "ipa": "/ˈrʌbɪʃ/",
+     "vi": "rác",
+     "col": "take out the rubbish",
+     "ex": "Dad takes out the rubbish every night.",
+     "exv": "Bố mang rác ra ngoài mỗi tối."
+    },
+    {
+     "w": "feed",
+     "ipa": "/fiːd/",
+     "vi": "cho ăn",
+     "col": "feed the cat",
+     "ex": "I feed the cat in the morning.",
+     "exv": "Tôi cho mèo ăn vào buổi sáng."
+    },
+    {
+     "w": "drive",
+     "ipa": "/draɪv/",
+     "vi": "lái xe",
+     "col": "drive a car",
+     "ex": "My father can drive a car very well.",
+     "exv": "Bố tôi có thể lái xe rất giỏi."
+    },
+    {
+     "w": "swim",
+     "ipa": "/swɪm/",
+     "vi": "bơi",
+     "col": "swim in the sea",
+     "ex": "She can swim in the sea.",
+     "exv": "Cô ấy có thể bơi ở biển."
+    },
+    {
+     "w": "ride",
+     "ipa": "/raɪd/",
+     "vi": "đi, cưỡi (xe đạp, xe máy, ngựa)",
+     "col": "ride a bike",
+     "ex": "I ride my bike to school.",
+     "exv": "Tôi đi xe đạp tới trường."
+    },
+    {
+     "w": "draw",
+     "ipa": "/drɔː/",
+     "vi": "vẽ",
+     "col": "draw a picture",
+     "ex": "The child can draw a nice picture.",
+     "exv": "Đứa trẻ có thể vẽ một bức tranh đẹp."
+    },
+    {
+     "w": "sing",
+     "ipa": "/sɪŋ/",
+     "vi": "hát",
+     "col": "sing a song",
+     "ex": "We sing a song at the party.",
+     "exv": "Chúng tôi hát một bài hát ở bữa tiệc."
+    },
+    {
+     "w": "dance",
+     "ipa": "/dɑːns/",
+     "vi": "nhảy, khiêu vũ",
+     "col": "dance very well",
+     "ex": "They can dance very well.",
+     "exv": "Họ có thể nhảy rất giỏi."
+    },
+    {
+     "w": "type",
+     "ipa": "/taɪp/",
+     "vi": "đánh máy, gõ phím",
+     "col": "type fast",
+     "ex": "She can type very fast.",
+     "exv": "Cô ấy có thể đánh máy rất nhanh."
+    },
+    {
+     "w": "climb",
+     "ipa": "/klaɪm/",
+     "vi": "leo, trèo",
+     "col": "climb a tree",
+     "ex": "The boys climb the tree in the garden.",
+     "exv": "Mấy cậu bé trèo cây trong vườn."
+    },
+    {
+     "w": "carry",
+     "ipa": "/ˈkæri/",
+     "vi": "mang, vác, xách",
+     "col": "carry a bag",
+     "ex": "He carries a heavy bag to the market.",
+     "exv": "Anh ấy xách một túi nặng ra chợ."
+    },
+    {
+     "w": "fix",
+     "ipa": "/fɪks/",
+     "vi": "sửa chữa",
+     "col": "fix a bike",
+     "ex": "Dad can fix my bike.",
+     "exv": "Bố có thể sửa xe đạp cho tôi."
+    }
+   ]
+  },
+  {
+   "theme": "Thời gian và quá khứ - Time and the Past",
+   "band": "Band 3.0",
+   "cards": [
+    {
+     "w": "yesterday",
+     "ipa": "/ˈjestədeɪ/",
+     "vi": "hôm qua",
+     "col": "yesterday morning",
+     "ex": "I saw him yesterday morning.",
+     "exv": "Tôi gặp anh ấy sáng hôm qua."
+    },
+    {
+     "w": "ago",
+     "ipa": "/əˈɡəʊ/",
+     "vi": "cách đây (đứng sau khoảng thời gian)",
+     "col": "two days ago",
+     "ex": "She left two days ago.",
+     "exv": "Cô ấy đã đi cách đây hai ngày."
+    },
+    {
+     "w": "last",
+     "ipa": "/lɑːst/",
+     "vi": "trước, vừa qua (last week là tuần trước)",
+     "col": "last night",
+     "ex": "We watched a film last night.",
+     "exv": "Chúng tôi xem một bộ phim tối qua."
+    },
+    {
+     "w": "before",
+     "ipa": "/bɪˈfɔː/",
+     "vi": "trước, trước khi",
+     "col": "before lunch",
+     "ex": "Wash your hands before lunch.",
+     "exv": "Hãy rửa tay trước bữa trưa."
+    },
+    {
+     "w": "after",
+     "ipa": "/ˈɑːftə/",
+     "vi": "sau, sau khi",
+     "col": "after school",
+     "ex": "We play football after school.",
+     "exv": "Chúng tôi chơi bóng đá sau giờ học."
+    },
+    {
+     "w": "then",
+     "ipa": "/ðen/",
+     "vi": "sau đó, rồi",
+     "col": "and then",
+     "ex": "We had dinner and then went home.",
+     "exv": "Chúng tôi ăn tối rồi sau đó về nhà."
+    },
+    {
+     "w": "suddenly",
+     "ipa": "/ˈsʌdənli/",
+     "vi": "đột nhiên, bỗng nhiên",
+     "col": "suddenly rain",
+     "ex": "It suddenly rained very hard.",
+     "exv": "Trời bỗng nhiên mưa rất to."
+    },
+    {
+     "w": "finally",
+     "ipa": "/ˈfaɪnəli/",
+     "vi": "cuối cùng",
+     "col": "finally arrive",
+     "ex": "The bus finally arrived at nine.",
+     "exv": "Cuối cùng xe buýt cũng đến lúc chín giờ."
+    },
+    {
+     "w": "morning",
+     "ipa": "/ˈmɔːnɪŋ/",
+     "vi": "buổi sáng",
+     "col": "this morning",
+     "ex": "I met her this morning.",
+     "exv": "Tôi gặp cô ấy sáng nay."
+    },
+    {
+     "w": "afternoon",
+     "ipa": "/ˌɑːftəˈnuːn/",
+     "vi": "buổi chiều",
+     "col": "in the afternoon",
+     "ex": "We study English in the afternoon.",
+     "exv": "Chúng tôi học tiếng Anh vào buổi chiều."
+    },
+    {
+     "w": "evening",
+     "ipa": "/ˈiːvnɪŋ/",
+     "vi": "buổi tối (đầu tối)",
+     "col": "in the evening",
+     "ex": "Dad reads the news in the evening.",
+     "exv": "Bố đọc tin tức vào buổi tối."
+    },
+    {
+     "w": "midnight",
+     "ipa": "/ˈmɪdnaɪt/",
+     "vi": "nửa đêm, 12 giờ đêm",
+     "col": "at midnight",
+     "ex": "The train left at midnight.",
+     "exv": "Chuyến tàu rời ga lúc nửa đêm."
+    },
+    {
+     "w": "weekend",
+     "ipa": "/ˌwiːkˈend/",
+     "vi": "cuối tuần",
+     "col": "at the weekend",
+     "ex": "We visited grandma at the weekend.",
+     "exv": "Chúng tôi thăm bà vào cuối tuần."
+    },
+    {
+     "w": "holiday",
+     "ipa": "/ˈhɒlədeɪ/",
+     "vi": "kỳ nghỉ, ngày lễ",
+     "col": "on holiday",
+     "ex": "They are on holiday in Hue.",
+     "exv": "Họ đang đi nghỉ ở Huế."
+    },
+    {
+     "w": "early",
+     "ipa": "/ˈɜːli/",
+     "vi": "sớm",
+     "col": "get up early",
+     "ex": "I get up early every day.",
+     "exv": "Tôi dậy sớm mỗi ngày."
+    },
+    {
+     "w": "late",
+     "ipa": "/leɪt/",
+     "vi": "muộn, trễ",
+     "col": "be late for school",
+     "ex": "He was late for school yesterday.",
+     "exv": "Hôm qua cậu ấy đến trường muộn."
+    },
+    {
+     "w": "when",
+     "ipa": "/wen/",
+     "vi": "khi, khi nào",
+     "col": "when I was young",
+     "ex": "When I was young, I lived in a village.",
+     "exv": "Khi còn nhỏ, tôi sống ở một ngôi làng."
+    },
+    {
+     "w": "while",
+     "ipa": "/waɪl/",
+     "vi": "trong khi",
+     "col": "while I was cooking",
+     "ex": "The phone rang while I was cooking.",
+     "exv": "Điện thoại reo trong khi tôi đang nấu ăn."
+    },
+    {
+     "w": "visit",
+     "ipa": "/ˈvɪzɪt/",
+     "vi": "thăm, tham quan",
+     "col": "visit a museum",
+     "ex": "We visited a museum last Sunday.",
+     "exv": "Chủ nhật trước chúng tôi tham quan một bảo tàng."
+    },
+    {
+     "w": "trip",
+     "ipa": "/trɪp/",
+     "vi": "chuyến đi ngắn",
+     "col": "a school trip",
+     "ex": "Our class went on a trip to the zoo.",
+     "exv": "Lớp chúng tôi đi một chuyến tham quan sở thú."
+    }
+   ]
+  },
+  {
+   "theme": "Miêu tả người và đồ vật - Describing People and Things",
+   "band": "Band 3.0",
+   "cards": [
+    {
+     "w": "tall",
+     "ipa": "/tɔːl/",
+     "vi": "cao (người, cây, nhà)",
+     "col": "a tall building",
+     "ex": "That is a very tall building.",
+     "exv": "Đó là một tòa nhà rất cao."
+    },
+    {
+     "w": "short",
+     "ipa": "/ʃɔːt/",
+     "vi": "thấp, ngắn",
+     "col": "short hair",
+     "ex": "She has short black hair.",
+     "exv": "Cô ấy có mái tóc đen ngắn."
+    },
+    {
+     "w": "slim",
+     "ipa": "/slɪm/",
+     "vi": "thon, mảnh mai",
+     "col": "tall and slim",
+     "ex": "My sister is tall and slim.",
+     "exv": "Chị tôi cao và mảnh mai."
+    },
+    {
+     "w": "strong",
+     "ipa": "/strɒŋ/",
+     "vi": "khỏe, mạnh",
+     "col": "strong arms",
+     "ex": "The farmer has strong arms.",
+     "exv": "Người nông dân có đôi tay khỏe."
+    },
+    {
+     "w": "young",
+     "ipa": "/jʌŋ/",
+     "vi": "trẻ",
+     "col": "a young teacher",
+     "ex": "Our teacher is young and kind.",
+     "exv": "Thầy của chúng tôi trẻ và tốt bụng."
+    },
+    {
+     "w": "old",
+     "ipa": "/əʊld/",
+     "vi": "già, cũ",
+     "col": "an old house",
+     "ex": "They live in an old house.",
+     "exv": "Họ sống trong một ngôi nhà cũ."
+    },
+    {
+     "w": "friendly",
+     "ipa": "/ˈfrendli/",
+     "vi": "thân thiện",
+     "col": "a friendly smile",
+     "ex": "The shopkeeper has a friendly smile.",
+     "exv": "Người bán hàng có nụ cười thân thiện."
+    },
+    {
+     "w": "funny",
+     "ipa": "/ˈfʌni/",
+     "vi": "buồn cười, hài hước",
+     "col": "a funny story",
+     "ex": "He told us a funny story.",
+     "exv": "Anh ấy kể cho chúng tôi một câu chuyện buồn cười."
+    },
+    {
+     "w": "quiet",
+     "ipa": "/ˈkwaɪət/",
+     "vi": "yên tĩnh, trầm tính",
+     "col": "a quiet room",
+     "ex": "I like studying in a quiet room.",
+     "exv": "Tôi thích học trong một căn phòng yên tĩnh."
+    },
+    {
+     "w": "noisy",
+     "ipa": "/ˈnɔɪzi/",
+     "vi": "ồn ào",
+     "col": "a noisy street",
+     "ex": "The street is noisy in the morning.",
+     "exv": "Con phố ồn ào vào buổi sáng."
+    },
+    {
+     "w": "heavy",
+     "ipa": "/ˈhevi/",
+     "vi": "nặng",
+     "col": "a heavy bag",
+     "ex": "This bag is too heavy for me.",
+     "exv": "Cái túi này quá nặng đối với tôi."
+    },
+    {
+     "w": "light",
+     "ipa": "/laɪt/",
+     "vi": "nhẹ",
+     "col": "a light box",
+     "ex": "The box is light, so I can carry it.",
+     "exv": "Cái hộp nhẹ nên tôi mang được."
+    },
+    {
+     "w": "round",
+     "ipa": "/raʊnd/",
+     "vi": "tròn",
+     "col": "a round table",
+     "ex": "We sat around a round table.",
+     "exv": "Chúng tôi ngồi quanh một chiếc bàn tròn."
+    },
+    {
+     "w": "soft",
+     "ipa": "/sɒft/",
+     "vi": "mềm",
+     "col": "a soft bed",
+     "ex": "The baby sleeps on a soft bed.",
+     "exv": "Em bé ngủ trên một chiếc giường mềm."
+    },
+    {
+     "w": "hard",
+     "ipa": "/hɑːd/",
+     "vi": "cứng; khó",
+     "col": "a hard chair",
+     "ex": "This chair is very hard.",
+     "exv": "Chiếc ghế này rất cứng."
+    },
+    {
+     "w": "bright",
+     "ipa": "/braɪt/",
+     "vi": "sáng, rực rỡ",
+     "col": "bright colours",
+     "ex": "She wears bright colours.",
+     "exv": "Cô ấy mặc màu sắc rực rỡ."
+    },
+    {
+     "w": "dark",
+     "ipa": "/dɑːk/",
+     "vi": "tối, sẫm màu",
+     "col": "dark clouds",
+     "ex": "Dark clouds covered the sky.",
+     "exv": "Mây sẫm màu che kín bầu trời."
+    },
+    {
+     "w": "clean",
+     "ipa": "/kliːn/",
+     "vi": "sạch",
+     "col": "clean water",
+     "ex": "We need clean water every day.",
+     "exv": "Chúng ta cần nước sạch mỗi ngày."
+    },
+    {
+     "w": "dirty",
+     "ipa": "/ˈdɜːti/",
+     "vi": "bẩn",
+     "col": "dirty shoes",
+     "ex": "His shoes were dirty after the rain.",
+     "exv": "Giày của cậu ấy bị bẩn sau cơn mưa."
+    },
+    {
+     "w": "beautiful",
+     "ipa": "/ˈbjuːtɪfəl/",
+     "vi": "đẹp",
+     "col": "a beautiful garden",
+     "ex": "Their house has a beautiful garden.",
+     "exv": "Nhà của họ có một khu vườn đẹp."
+    }
+   ]
+  },
+  {
+   "theme": "Du lịch và phương tiện - Travel and Transport",
+   "band": "Band 3.5",
+   "cards": [
+    {
+     "w": "journey",
+     "ipa": "/ˈdʒɜːni/",
+     "vi": "hành trình, chuyến đi dài",
+     "col": "a long journey",
+     "ex": "The journey to the mountains took six hours.",
+     "exv": "Chuyến đi lên núi mất sáu giờ."
+    },
+    {
+     "w": "ticket",
+     "ipa": "/ˈtɪkɪt/",
+     "vi": "vé",
+     "col": "buy a ticket",
+     "ex": "We bought our tickets online.",
+     "exv": "Chúng tôi mua vé trên mạng."
+    },
+    {
+     "w": "platform",
+     "ipa": "/ˈplætfɔːm/",
+     "vi": "sân ga, ke ga",
+     "col": "on platform two",
+     "ex": "The train leaves from platform two.",
+     "exv": "Chuyến tàu khởi hành từ ke ga số hai."
+    },
+    {
+     "w": "passenger",
+     "ipa": "/ˈpæsɪndʒə/",
+     "vi": "hành khách",
+     "col": "passengers on the bus",
+     "ex": "There were many passengers on the bus.",
+     "exv": "Có nhiều hành khách trên xe buýt."
+    },
+    {
+     "w": "driver",
+     "ipa": "/ˈdraɪvə/",
+     "vi": "tài xế, người lái",
+     "col": "a taxi driver",
+     "ex": "The taxi driver was very friendly.",
+     "exv": "Người tài xế taxi rất thân thiện."
+    },
+    {
+     "w": "map",
+     "ipa": "/mæp/",
+     "vi": "bản đồ",
+     "col": "look at the map",
+     "ex": "We looked at the map to find the hotel.",
+     "exv": "Chúng tôi xem bản đồ để tìm khách sạn."
+    },
+    {
+     "w": "suitcase",
+     "ipa": "/ˈsuːtkeɪs/",
+     "vi": "va li",
+     "col": "pack a suitcase",
+     "ex": "She packed her suitcase the night before.",
+     "exv": "Cô ấy xếp va li vào tối hôm trước."
+    },
+    {
+     "w": "hotel",
+     "ipa": "/həʊˈtel/",
+     "vi": "khách sạn",
+     "col": "stay at a hotel",
+     "ex": "We stayed at a small hotel near the beach.",
+     "exv": "Chúng tôi ở một khách sạn nhỏ gần biển."
+    },
+    {
+     "w": "beach",
+     "ipa": "/biːtʃ/",
+     "vi": "bãi biển",
+     "col": "on the beach",
+     "ex": "The children played on the beach all day.",
+     "exv": "Bọn trẻ chơi trên bãi biển cả ngày."
+    },
+    {
+     "w": "mountain",
+     "ipa": "/ˈmaʊntɪn/",
+     "vi": "núi",
+     "col": "climb a mountain",
+     "ex": "They climbed the mountain in two days.",
+     "exv": "Họ leo núi trong hai ngày."
+    },
+    {
+     "w": "river",
+     "ipa": "/ˈrɪvə/",
+     "vi": "sông",
+     "col": "cross the river",
+     "ex": "A small boat crossed the river.",
+     "exv": "Một chiếc thuyền nhỏ qua sông."
+    },
+    {
+     "w": "bridge",
+     "ipa": "/brɪdʒ/",
+     "vi": "cầu (bắc qua sông)",
+     "col": "walk across the bridge",
+     "ex": "We walked across the bridge at sunset.",
+     "exv": "Chúng tôi đi bộ qua cầu lúc hoàng hôn."
+    },
+    {
+     "w": "traffic",
+     "ipa": "/ˈtræfɪk/",
+     "vi": "giao thông, xe cộ",
+     "col": "heavy traffic",
+     "ex": "There was heavy traffic this morning.",
+     "exv": "Sáng nay giao thông rất đông."
+    },
+    {
+     "w": "crossroads",
+     "ipa": "/ˈkrɒsrəʊdz/",
+     "vi": "ngã tư",
+     "col": "at the crossroads",
+     "ex": "Turn left at the crossroads.",
+     "exv": "Hãy rẽ trái ở ngã tư."
+    },
+    {
+     "w": "straight",
+     "ipa": "/streɪt/",
+     "vi": "thẳng (go straight là đi thẳng)",
+     "col": "go straight on",
+     "ex": "Go straight on for two hundred metres.",
+     "exv": "Đi thẳng thêm hai trăm mét nữa."
+    },
+    {
+     "w": "corner",
+     "ipa": "/ˈkɔːnə/",
+     "vi": "góc (phố, phòng)",
+     "col": "on the corner",
+     "ex": "The shop is on the corner of the street.",
+     "exv": "Cửa hàng ở góc phố."
+    },
+    {
+     "w": "arrive",
+     "ipa": "/əˈraɪv/",
+     "vi": "đến nơi",
+     "col": "arrive at the station",
+     "ex": "We arrived at the station at noon.",
+     "exv": "Chúng tôi đến ga lúc trưa."
+    },
+    {
+     "w": "leave",
+     "ipa": "/liːv/",
+     "vi": "rời đi, khởi hành",
+     "col": "leave at seven",
+     "ex": "The bus leaves at seven tomorrow.",
+     "exv": "Xe buýt khởi hành lúc bảy giờ sáng mai."
+    },
+    {
+     "w": "miss",
+     "ipa": "/mɪs/",
+     "vi": "lỡ, nhỡ (xe, tàu)",
+     "col": "miss the train",
+     "ex": "Hurry up or we will miss the train.",
+     "exv": "Nhanh lên nếu không chúng ta sẽ lỡ tàu."
+    },
+    {
+     "w": "near",
+     "ipa": "/nɪə/",
+     "vi": "gần",
+     "col": "near the park",
+     "ex": "Her house is near the park.",
+     "exv": "Nhà cô ấy gần công viên."
+    }
+   ]
+  },
+  {
+   "theme": "Kế hoạch và tương lai gần - Plans and the Near Future",
+   "band": "Band 3.5",
+   "cards": [
+    {
+     "w": "plan",
+     "ipa": "/plæn/",
+     "vi": "kế hoạch; lên kế hoạch",
+     "col": "make a plan",
+     "ex": "We made a plan for the weekend.",
+     "exv": "Chúng tôi đã lên kế hoạch cho cuối tuần."
+    },
+    {
+     "w": "tomorrow",
+     "ipa": "/təˈmɒrəʊ/",
+     "vi": "ngày mai",
+     "col": "tomorrow morning",
+     "ex": "I am going to visit my uncle tomorrow.",
+     "exv": "Ngày mai tôi sẽ đi thăm chú tôi."
+    },
+    {
+     "w": "tonight",
+     "ipa": "/təˈnaɪt/",
+     "vi": "tối nay",
+     "col": "tonight at home",
+     "ex": "We are going to watch a film tonight.",
+     "exv": "Tối nay chúng tôi sẽ xem một bộ phim."
+    },
+    {
+     "w": "soon",
+     "ipa": "/suːn/",
+     "vi": "sớm, chẳng bao lâu nữa",
+     "col": "very soon",
+     "ex": "The rain is going to stop soon.",
+     "exv": "Mưa sắp tạnh sớm thôi."
+    },
+    {
+     "w": "maybe",
+     "ipa": "/ˈmeɪbi/",
+     "vi": "có lẽ, có thể",
+     "col": "maybe tomorrow",
+     "ex": "Maybe we will go to the zoo.",
+     "exv": "Có lẽ chúng tôi sẽ đi sở thú."
+    },
+    {
+     "w": "hope",
+     "ipa": "/həʊp/",
+     "vi": "hy vọng",
+     "col": "hope to pass",
+     "ex": "I hope to pass my English test.",
+     "exv": "Tôi hy vọng thi đỗ môn tiếng Anh."
+    },
+    {
+     "w": "want",
+     "ipa": "/wɒnt/",
+     "vi": "muốn",
+     "col": "want to learn",
+     "ex": "She wants to learn how to swim.",
+     "exv": "Cô ấy muốn học bơi."
+    },
+    {
+     "w": "decide",
+     "ipa": "/dɪˈsaɪd/",
+     "vi": "quyết định",
+     "col": "decide to stay",
+     "ex": "We decided to stay one more day.",
+     "exv": "Chúng tôi quyết định ở lại thêm một ngày."
+    },
+    {
+     "w": "promise",
+     "ipa": "/ˈprɒmɪs/",
+     "vi": "hứa",
+     "col": "promise to help",
+     "ex": "He promised to help me with maths.",
+     "exv": "Anh ấy hứa giúp tôi môn toán."
+    },
+    {
+     "w": "ready",
+     "ipa": "/ˈredi/",
+     "vi": "sẵn sàng",
+     "col": "get ready",
+     "ex": "Get ready, the bus is coming.",
+     "exv": "Chuẩn bị sẵn sàng đi, xe buýt đang đến."
+    },
+    {
+     "w": "busy",
+     "ipa": "/ˈbɪzi/",
+     "vi": "bận",
+     "col": "busy tomorrow",
+     "ex": "I am busy tomorrow, so let us meet on Friday.",
+     "exv": "Ngày mai tôi bận, vậy hãy gặp nhau vào thứ Sáu."
+    },
+    {
+     "w": "free",
+     "ipa": "/friː/",
+     "vi": "rảnh; miễn phí",
+     "col": "free time",
+     "ex": "Are you free this evening?",
+     "exv": "Tối nay bạn có rảnh không?"
+    },
+    {
+     "w": "weather",
+     "ipa": "/ˈweðə/",
+     "vi": "thời tiết",
+     "col": "the weather tomorrow",
+     "ex": "The weather is going to be sunny tomorrow.",
+     "exv": "Ngày mai thời tiết sẽ nắng."
+    },
+    {
+     "w": "cloudy",
+     "ipa": "/ˈklaʊdi/",
+     "vi": "nhiều mây",
+     "col": "cloudy and cool",
+     "ex": "It is cloudy and cool today.",
+     "exv": "Hôm nay trời nhiều mây và mát."
+    },
+    {
+     "w": "rain",
+     "ipa": "/reɪn/",
+     "vi": "mưa; cơn mưa",
+     "col": "heavy rain",
+     "ex": "I think it is going to rain.",
+     "exv": "Tôi nghĩ trời sắp mưa."
+    },
+    {
+     "w": "sunny",
+     "ipa": "/ˈsʌni/",
+     "vi": "nắng, có nắng",
+     "col": "a sunny day",
+     "ex": "Tomorrow is going to be a sunny day.",
+     "exv": "Ngày mai sẽ là một ngày nắng."
+    },
+    {
+     "w": "picnic",
+     "ipa": "/ˈpɪknɪk/",
+     "vi": "buổi dã ngoại, picnic",
+     "col": "have a picnic",
+     "ex": "We are going to have a picnic by the lake.",
+     "exv": "Chúng tôi sẽ đi dã ngoại bên hồ."
+    },
+    {
+     "w": "party",
+     "ipa": "/ˈpɑːti/",
+     "vi": "bữa tiệc",
+     "col": "a birthday party",
+     "ex": "She is going to have a birthday party.",
+     "exv": "Cô ấy sẽ tổ chức tiệc sinh nhật."
+    },
+    {
+     "w": "exam",
+     "ipa": "/ɪɡˈzæm/",
+     "vi": "kỳ thi, bài thi",
+     "col": "pass an exam",
+     "ex": "He is going to study hard for the exam.",
+     "exv": "Cậu ấy sẽ học chăm chỉ cho kỳ thi."
+    },
+    {
+     "w": "future",
+     "ipa": "/ˈfjuːtʃə/",
+     "vi": "tương lai",
+     "col": "in the future",
+     "ex": "In the future, I want to be a teacher.",
+     "exv": "Trong tương lai, tôi muốn làm giáo viên."
+    }
+   ]
+  },
+  {
+   "theme": "Học tập và công việc - Study and Work B1",
+   "band": "Band 4.0",
+   "cards": [
+    {
+     "w": "subject",
+     "ipa": "/ˈsʌbdʒɪkt/",
+     "vi": "môn học",
+     "col": "my favourite subject",
+     "ex": "Maths is my favourite subject at school.",
+     "exv": "Toán là môn học tôi thích nhất ở trường."
+    },
+    {
+     "w": "homework",
+     "ipa": "/ˈhəʊmwɜːk/",
+     "vi": "bài tập về nhà",
+     "col": "do homework",
+     "ex": "I have done my homework already.",
+     "exv": "Tôi đã làm xong bài tập về nhà rồi."
+    },
+    {
+     "w": "project",
+     "ipa": "/ˈprɒdʒekt/",
+     "vi": "dự án, bài tập lớn",
+     "col": "a group project",
+     "ex": "We have worked on this project for two weeks.",
+     "exv": "Chúng tôi đã làm dự án này được hai tuần."
+    },
+    {
+     "w": "result",
+     "ipa": "/rɪˈzʌlt/",
+     "vi": "kết quả",
+     "col": "exam results",
+     "ex": "She was happy with her exam results.",
+     "exv": "Cô ấy vui với kết quả thi của mình."
+    },
+    {
+     "w": "improve",
+     "ipa": "/ɪmˈpruːv/",
+     "vi": "cải thiện, tiến bộ",
+     "col": "improve your English",
+     "ex": "If you read every day, your English will improve.",
+     "exv": "Nếu bạn đọc mỗi ngày, tiếng Anh của bạn sẽ tiến bộ."
+    },
+    {
+     "w": "practice",
+     "ipa": "/ˈpræktɪs/",
+     "vi": "luyện tập (danh từ)",
+     "col": "daily practice",
+     "ex": "Daily practice helps you speak better.",
+     "exv": "Luyện tập hằng ngày giúp bạn nói tốt hơn."
+    },
+    {
+     "w": "goal",
+     "ipa": "/ɡəʊl/",
+     "vi": "mục tiêu",
+     "col": "reach a goal",
+     "ex": "My goal is to study at a good university.",
+     "exv": "Mục tiêu của tôi là học ở một trường đại học tốt."
+    },
+    {
+     "w": "job",
+     "ipa": "/dʒɒb/",
+     "vi": "công việc, nghề",
+     "col": "find a job",
+     "ex": "He has just found a new job.",
+     "exv": "Anh ấy vừa tìm được một công việc mới."
+    },
+    {
+     "w": "office",
+     "ipa": "/ˈɒfɪs/",
+     "vi": "văn phòng",
+     "col": "work in an office",
+     "ex": "My mother works in an office in the city centre.",
+     "exv": "Mẹ tôi làm việc ở một văn phòng tại trung tâm thành phố."
+    },
+    {
+     "w": "meeting",
+     "ipa": "/ˈmiːtɪŋ/",
+     "vi": "cuộc họp",
+     "col": "have a meeting",
+     "ex": "We have a meeting every Monday morning.",
+     "exv": "Chúng tôi họp vào mỗi sáng thứ Hai."
+    },
+    {
+     "w": "salary",
+     "ipa": "/ˈsæləri/",
+     "vi": "lương (theo tháng)",
+     "col": "a good salary",
+     "ex": "Teachers in this town do not get a high salary.",
+     "exv": "Giáo viên ở thị trấn này không được lương cao."
+    },
+    {
+     "w": "experience",
+     "ipa": "/ɪkˈspɪəriəns/",
+     "vi": "kinh nghiệm; trải nghiệm",
+     "col": "work experience",
+     "ex": "This job needs two years of experience.",
+     "exv": "Công việc này cần hai năm kinh nghiệm."
+    },
+    {
+     "w": "skill",
+     "ipa": "/skɪl/",
+     "vi": "kỹ năng",
+     "col": "computer skills",
+     "ex": "Computer skills are useful in many jobs.",
+     "exv": "Kỹ năng vi tính hữu ích trong nhiều công việc."
+    },
+    {
+     "w": "course",
+     "ipa": "/kɔːs/",
+     "vi": "khóa học",
+     "col": "take a course",
+     "ex": "I am taking an English course this summer.",
+     "exv": "Hè này tôi đang theo một khóa học tiếng Anh."
+    },
+    {
+     "w": "degree",
+     "ipa": "/dɪˈɡriː/",
+     "vi": "bằng cấp đại học",
+     "col": "a university degree",
+     "ex": "She got her degree last year.",
+     "exv": "Cô ấy nhận bằng đại học năm ngoái."
+    },
+    {
+     "w": "manager",
+     "ipa": "/ˈmænɪdʒə/",
+     "vi": "quản lý, trưởng phòng",
+     "col": "ask the manager",
+     "ex": "If you have a problem, ask the manager.",
+     "exv": "Nếu bạn có vấn đề, hãy hỏi người quản lý."
+    },
+    {
+     "w": "customer",
+     "ipa": "/ˈkʌstəmə/",
+     "vi": "khách hàng",
+     "col": "help customers",
+     "ex": "The shop assistant helps customers every day.",
+     "exv": "Nhân viên bán hàng giúp khách hàng mỗi ngày."
+    },
+    {
+     "w": "busy",
+     "ipa": "/ˈbɪzi/",
+     "vi": "bận rộn",
+     "col": "a busy day",
+     "ex": "It has been a busy day at the office.",
+     "exv": "Hôm nay là một ngày bận rộn ở văn phòng."
+    },
+    {
+     "w": "retire",
+     "ipa": "/rɪˈtaɪə/",
+     "vi": "nghỉ hưu",
+     "col": "retire at sixty",
+     "ex": "My grandfather retired at sixty.",
+     "exv": "Ông tôi nghỉ hưu ở tuổi sáu mươi."
+    },
+    {
+     "w": "earn",
+     "ipa": "/ɜːn/",
+     "vi": "kiếm (tiền)",
+     "col": "earn money",
+     "ex": "He earns money by teaching music.",
+     "exv": "Anh ấy kiếm tiền bằng cách dạy nhạc."
+    }
+   ]
+  },
+  {
+   "theme": "Cơ thể và sức khỏe - Body and Health B1",
+   "band": "Band 4.0",
+   "cards": [
+    {
+     "w": "headache",
+     "ipa": "/ˈhedeɪk/",
+     "vi": "đau đầu",
+     "col": "have a headache",
+     "ex": "I have had a headache since this morning.",
+     "exv": "Tôi bị đau đầu từ sáng nay."
+    },
+    {
+     "w": "stomach",
+     "ipa": "/ˈstʌmək/",
+     "vi": "dạ dày, bụng",
+     "col": "a stomach ache",
+     "ex": "He has a stomach ache after lunch.",
+     "exv": "Anh ấy bị đau bụng sau bữa trưa."
+    },
+    {
+     "w": "temperature",
+     "ipa": "/ˈtemprətʃə/",
+     "vi": "sốt; nhiệt độ",
+     "col": "have a temperature",
+     "ex": "The child has a high temperature.",
+     "exv": "Đứa bé bị sốt cao."
+    },
+    {
+     "w": "medicine",
+     "ipa": "/ˈmedsən/",
+     "vi": "thuốc",
+     "col": "take medicine",
+     "ex": "Take this medicine twice a day.",
+     "exv": "Hãy uống thuốc này hai lần một ngày."
+    },
+    {
+     "w": "doctor",
+     "ipa": "/ˈdɒktə/",
+     "vi": "Bác sĩ",
+     "col": "see a doctor",
+     "ex": "If you feel worse, see a doctor.",
+     "exv": "Nếu bạn thấy nặng hơn, hãy đi gặp Bác sĩ."
+    },
+    {
+     "w": "nurse",
+     "ipa": "/nɜːs/",
+     "vi": "y tá, điều dưỡng",
+     "col": "ask the nurse",
+     "ex": "The nurse checked my temperature.",
+     "exv": "Y tá đã đo nhiệt độ cho tôi."
+    },
+    {
+     "w": "exercise",
+     "ipa": "/ˈeksəsaɪz/",
+     "vi": "tập thể dục; bài tập",
+     "col": "do exercise",
+     "ex": "Doing exercise every day keeps you healthy.",
+     "exv": "Tập thể dục mỗi ngày giúp bạn khỏe mạnh."
+    },
+    {
+     "w": "healthy",
+     "ipa": "/ˈhelθi/",
+     "vi": "khỏe mạnh, tốt cho sức khỏe",
+     "col": "healthy food",
+     "ex": "Fruit and vegetables are healthy food.",
+     "exv": "Trái cây và rau củ là thực phẩm tốt cho sức khỏe."
+    },
+    {
+     "w": "tired",
+     "ipa": "/ˈtaɪəd/",
+     "vi": "mệt",
+     "col": "feel tired",
+     "ex": "She felt tired after the long journey.",
+     "exv": "Cô ấy cảm thấy mệt sau chuyến đi dài."
+    },
+    {
+     "w": "pain",
+     "ipa": "/peɪn/",
+     "vi": "cơn đau",
+     "col": "a pain in my leg",
+     "ex": "I have a pain in my left leg.",
+     "exv": "Tôi bị đau ở chân trái."
+    },
+    {
+     "w": "cough",
+     "ipa": "/kɒf/",
+     "vi": "ho; cơn ho",
+     "col": "have a cough",
+     "ex": "He has had a bad cough for three days.",
+     "exv": "Anh ấy bị ho nặng được ba ngày rồi."
+    },
+    {
+     "w": "rest",
+     "ipa": "/rest/",
+     "vi": "nghỉ ngơi",
+     "col": "get some rest",
+     "ex": "You should go home and get some rest.",
+     "exv": "Bạn nên về nhà và nghỉ ngơi một chút."
+    },
+    {
+     "w": "sleep",
+     "ipa": "/sliːp/",
+     "vi": "ngủ; giấc ngủ",
+     "col": "get enough sleep",
+     "ex": "Children need to get enough sleep.",
+     "exv": "Trẻ em cần ngủ đủ giấc."
+    },
+    {
+     "w": "blood",
+     "ipa": "/blʌd/",
+     "vi": "máu",
+     "col": "blood pressure",
+     "ex": "The doctor checked his blood pressure.",
+     "exv": "Bác sĩ đo huyết áp cho ông ấy."
+    },
+    {
+     "w": "heart",
+     "ipa": "/hɑːt/",
+     "vi": "tim, trái tim",
+     "col": "a healthy heart",
+     "ex": "Walking is good for your heart.",
+     "exv": "Đi bộ tốt cho tim của bạn."
+    },
+    {
+     "w": "muscle",
+     "ipa": "/ˈmʌsəl/",
+     "vi": "cơ bắp",
+     "col": "strong muscles",
+     "ex": "Swimming makes your muscles strong.",
+     "exv": "Bơi lội làm cơ bắp của bạn khỏe hơn."
+    },
+    {
+     "w": "bone",
+     "ipa": "/bəʊn/",
+     "vi": "xương",
+     "col": "break a bone",
+     "ex": "He fell and broke a bone in his arm.",
+     "exv": "Anh ấy ngã và bị gãy một xương ở tay."
+    },
+    {
+     "w": "skin",
+     "ipa": "/skɪn/",
+     "vi": "da",
+     "col": "dry skin",
+     "ex": "Her skin is dry in winter.",
+     "exv": "Da của cô ấy bị khô vào mùa đông."
+    },
+    {
+     "w": "brain",
+     "ipa": "/breɪn/",
+     "vi": "não, bộ não",
+     "col": "good for the brain",
+     "ex": "Reading is good for the brain.",
+     "exv": "Đọc sách tốt cho bộ não."
+    },
+    {
+     "w": "fresh",
+     "ipa": "/freʃ/",
+     "vi": "tươi, trong lành",
+     "col": "fresh air",
+     "ex": "Open the window and let in some fresh air.",
+     "exv": "Hãy mở cửa sổ cho không khí trong lành vào."
+    }
+   ]
+  },
+  {
+   "theme": "Thiên nhiên và môi trường - Nature and Environment B1",
+   "band": "Band 4.5",
+   "cards": [
+    {
+     "w": "forest",
+     "ipa": "/ˈfɒrɪst/",
+     "vi": "rừng",
+     "col": "a thick forest",
+     "ex": "Many wild animals live in this forest.",
+     "exv": "Nhiều động vật hoang dã sống trong khu rừng này."
+    },
+    {
+     "w": "field",
+     "ipa": "/fiːld/",
+     "vi": "cánh đồng, ruộng",
+     "col": "work in the fields",
+     "ex": "Farmers work in the fields from early morning.",
+     "exv": "Nông dân làm việc trên cánh đồng từ sáng sớm."
+    },
+    {
+     "w": "lake",
+     "ipa": "/leɪk/",
+     "vi": "hồ",
+     "col": "by the lake",
+     "ex": "We had a picnic by the lake.",
+     "exv": "Chúng tôi dã ngoại bên hồ."
+    },
+    {
+     "w": "island",
+     "ipa": "/ˈaɪlənd/",
+     "vi": "đảo",
+     "col": "a small island",
+     "ex": "They live on a small island.",
+     "exv": "Họ sống trên một hòn đảo nhỏ."
+    },
+    {
+     "w": "valley",
+     "ipa": "/ˈvæli/",
+     "vi": "thung lũng",
+     "col": "a green valley",
+     "ex": "A river runs through the green valley.",
+     "exv": "Một con sông chảy qua thung lũng xanh."
+    },
+    {
+     "w": "hill",
+     "ipa": "/hɪl/",
+     "vi": "đồi",
+     "col": "climb the hill",
+     "ex": "From the top of the hill, we could see the whole town.",
+     "exv": "Từ đỉnh đồi, chúng tôi có thể nhìn thấy cả thị trấn."
+    },
+    {
+     "w": "soil",
+     "ipa": "/sɔɪl/",
+     "vi": "đất (đất trồng)",
+     "col": "rich soil",
+     "ex": "Plants grow well in this rich soil.",
+     "exv": "Cây cối mọc tốt trong lớp đất màu mỡ này."
+    },
+    {
+     "w": "seed",
+     "ipa": "/siːd/",
+     "vi": "hạt giống",
+     "col": "plant seeds",
+     "ex": "Farmers plant seeds in spring.",
+     "exv": "Nông dân gieo hạt giống vào mùa xuân."
+    },
+    {
+     "w": "leaf",
+     "ipa": "/liːf/",
+     "vi": "lá cây",
+     "col": "green leaves",
+     "ex": "The leaves turn yellow in autumn.",
+     "exv": "Lá cây chuyển màu vàng vào mùa thu."
+    },
+    {
+     "w": "branch",
+     "ipa": "/brɑːntʃ/",
+     "vi": "cành cây",
+     "col": "a tree branch",
+     "ex": "A bird is sitting on that branch.",
+     "exv": "Một con chim đang đậu trên cành cây đó."
+    },
+    {
+     "w": "stone",
+     "ipa": "/stəʊn/",
+     "vi": "đá, hòn đá",
+     "col": "a big stone",
+     "ex": "The path is made of flat stones.",
+     "exv": "Con đường được làm bằng những hòn đá phẳng."
+    },
+    {
+     "w": "sand",
+     "ipa": "/sænd/",
+     "vi": "cát",
+     "col": "soft sand",
+     "ex": "The children built a castle from sand.",
+     "exv": "Bọn trẻ xây một lâu đài bằng cát."
+    },
+    {
+     "w": "wave",
+     "ipa": "/weɪv/",
+     "vi": "sóng (biển)",
+     "col": "big waves",
+     "ex": "Big waves hit the beach in the storm.",
+     "exv": "Những con sóng lớn đánh vào bãi biển trong cơn bão."
+    },
+    {
+     "w": "wind",
+     "ipa": "/wɪnd/",
+     "vi": "gió",
+     "col": "a cold wind",
+     "ex": "A cold wind blew all night.",
+     "exv": "Một cơn gió lạnh thổi suốt đêm."
+    },
+    {
+     "w": "storm",
+     "ipa": "/stɔːm/",
+     "vi": "bão, giông",
+     "col": "a heavy storm",
+     "ex": "The storm broke several trees in the park.",
+     "exv": "Cơn bão làm gãy vài cây trong công viên."
+    },
+    {
+     "w": "flood",
+     "ipa": "/flʌd/",
+     "vi": "lũ, ngập lụt",
+     "col": "a bad flood",
+     "ex": "The flood covered the roads last year.",
+     "exv": "Năm ngoái trận lũ đã ngập các con đường."
+    },
+    {
+     "w": "protect",
+     "ipa": "/prəˈtekt/",
+     "vi": "bảo vệ",
+     "col": "protect nature",
+     "ex": "We must protect nature for our children.",
+     "exv": "Chúng ta phải bảo vệ thiên nhiên cho con cháu mình."
+    },
+    {
+     "w": "pollution",
+     "ipa": "/pəˈluːʃən/",
+     "vi": "ô nhiễm",
+     "col": "air pollution",
+     "ex": "Air pollution is a big problem in large cities.",
+     "exv": "Ô nhiễm không khí là vấn đề lớn ở các thành phố lớn."
+    },
+    {
+     "w": "recycle",
+     "ipa": "/ˌriːˈsaɪkəl/",
+     "vi": "tái chế",
+     "col": "recycle plastic",
+     "ex": "Our school teaches students to recycle plastic.",
+     "exv": "Trường chúng tôi dạy học sinh tái chế nhựa."
+    },
+    {
+     "w": "wild",
+     "ipa": "/waɪld/",
+     "vi": "hoang dã",
+     "col": "wild animals",
+     "ex": "Wild animals need large forests to live in.",
+     "exv": "Động vật hoang dã cần những khu rừng lớn để sinh sống."
+    }
+   ]
+  },
+  {
+   "theme": "Cảm xúc và ý kiến - Feelings and Opinions B1",
+   "band": "Band 4.5",
+   "cards": [
+    {
+     "w": "proud",
+     "ipa": "/praʊd/",
+     "vi": "tự hào",
+     "col": "proud of my son",
+     "ex": "She is proud of her son because he passed the exam.",
+     "exv": "Cô ấy tự hào về con trai vì cậu đã thi đỗ."
+    },
+    {
+     "w": "worried",
+     "ipa": "/ˈwʌrid/",
+     "vi": "lo lắng",
+     "col": "worried about the test",
+     "ex": "He was worried about the test results.",
+     "exv": "Anh ấy lo lắng về kết quả bài kiểm tra."
+    },
+    {
+     "w": "surprised",
+     "ipa": "/səˈpraɪzd/",
+     "vi": "ngạc nhiên",
+     "col": "surprised at the news",
+     "ex": "We were surprised at the good news.",
+     "exv": "Chúng tôi ngạc nhiên trước tin vui đó."
+    },
+    {
+     "w": "bored",
+     "ipa": "/bɔːd/",
+     "vi": "chán (cảm giác của người)",
+     "col": "bored with the lesson",
+     "ex": "The students looked bored with the long lesson.",
+     "exv": "Học sinh trông chán với bài học dài."
+    },
+    {
+     "w": "excited",
+     "ipa": "/ɪkˈsaɪtɪd/",
+     "vi": "hào hứng, phấn khích",
+     "col": "excited about the trip",
+     "ex": "The children are excited about the trip tomorrow.",
+     "exv": "Bọn trẻ hào hứng về chuyến đi ngày mai."
+    },
+    {
+     "w": "nervous",
+     "ipa": "/ˈnɜːvəs/",
+     "vi": "hồi hộp, lo lắng (trước việc quan trọng)",
+     "col": "nervous before an exam",
+     "ex": "I always feel nervous before an exam.",
+     "exv": "Tôi luôn hồi hộp trước kỳ thi."
+    },
+    {
+     "w": "relaxed",
+     "ipa": "/rɪˈlækst/",
+     "vi": "thư giãn, thoải mái",
+     "col": "feel relaxed",
+     "ex": "After the holiday, she felt relaxed and happy.",
+     "exv": "Sau kỳ nghỉ, cô ấy cảm thấy thư giãn và vui vẻ."
+    },
+    {
+     "w": "angry",
+     "ipa": "/ˈæŋɡri/",
+     "vi": "tức giận",
+     "col": "angry with someone",
+     "ex": "He was angry with his brother for breaking his phone.",
+     "exv": "Anh ấy tức giận với em trai vì làm hỏng điện thoại của mình."
+    },
+    {
+     "w": "afraid",
+     "ipa": "/əˈfreɪd/",
+     "vi": "sợ",
+     "col": "afraid of dogs",
+     "ex": "My little sister is afraid of dogs.",
+     "exv": "Em gái tôi sợ chó."
+    },
+    {
+     "w": "disappointed",
+     "ipa": "/ˌdɪsəˈpɔɪntɪd/",
+     "vi": "thất vọng",
+     "col": "disappointed with the result",
+     "ex": "They were disappointed with the match result.",
+     "exv": "Họ thất vọng với kết quả trận đấu."
+    },
+    {
+     "w": "satisfied",
+     "ipa": "/ˈsætɪsfaɪd/",
+     "vi": "hài lòng",
+     "col": "satisfied with my work",
+     "ex": "I am satisfied with my work this week.",
+     "exv": "Tôi hài lòng với công việc của mình tuần này."
+    },
+    {
+     "w": "confident",
+     "ipa": "/ˈkɒnfɪdənt/",
+     "vi": "tự tin",
+     "col": "confident about speaking",
+     "ex": "If you practise often, you will feel confident about speaking.",
+     "exv": "Nếu bạn luyện tập thường xuyên, bạn sẽ tự tin khi nói."
+    },
+    {
+     "w": "agree",
+     "ipa": "/əˈɡriː/",
+     "vi": "đồng ý",
+     "col": "agree with you",
+     "ex": "I agree with you about this plan.",
+     "exv": "Tôi đồng ý với bạn về kế hoạch này."
+    },
+    {
+     "w": "disagree",
+     "ipa": "/ˌdɪsəˈɡriː/",
+     "vi": "không đồng ý",
+     "col": "disagree about money",
+     "ex": "They often disagree about money.",
+     "exv": "Họ thường không đồng ý với nhau về chuyện tiền bạc."
+    },
+    {
+     "w": "opinion",
+     "ipa": "/əˈpɪnjən/",
+     "vi": "ý kiến, quan điểm",
+     "col": "in my opinion",
+     "ex": "In my opinion, children should play outside more.",
+     "exv": "Theo ý kiến của tôi, trẻ em nên chơi ngoài trời nhiều hơn."
+    },
+    {
+     "w": "believe",
+     "ipa": "/bɪˈliːv/",
+     "vi": "tin rằng",
+     "col": "believe that",
+     "ex": "I believe that reading helps us learn faster.",
+     "exv": "Tôi tin rằng đọc sách giúp chúng ta học nhanh hơn."
+    },
+    {
+     "w": "prefer",
+     "ipa": "/prɪˈfɜː/",
+     "vi": "thích hơn",
+     "col": "prefer tea to coffee",
+     "ex": "I prefer the countryside to the city.",
+     "exv": "Tôi thích vùng quê hơn thành phố."
+    },
+    {
+     "w": "reason",
+     "ipa": "/ˈriːzən/",
+     "vi": "lý do",
+     "col": "the reason for",
+     "ex": "The main reason for his success is hard work.",
+     "exv": "Lý do chính cho thành công của anh ấy là sự chăm chỉ."
+    },
+    {
+     "w": "advantage",
+     "ipa": "/ədˈvɑːntɪdʒ/",
+     "vi": "lợi thế, ưu điểm",
+     "col": "a big advantage",
+     "ex": "Living near school is a big advantage.",
+     "exv": "Sống gần trường là một lợi thế lớn."
+    },
+    {
+     "w": "disadvantage",
+     "ipa": "/ˌdɪsədˈvɑːntɪdʒ/",
+     "vi": "bất lợi, nhược điểm",
+     "col": "the main disadvantage",
+     "ex": "The main disadvantage of the job is the long hours.",
+     "exv": "Nhược điểm chính của công việc là giờ làm dài."
+    }
+   ]
   }
  ],
  "grammar": [
   {
-   "level": "Band 5.0",
+   "level": "Band 4.0",
    "name": "Hiện tại đơn và hiện tại tiếp diễn",
    "explain": "Hiện tại đơn diễn tả sự thật, thói quen (Water boils at 100°C). Hiện tại tiếp diễn diễn tả việc đang xảy ra hoặc xu hướng tạm thời. Trong IELTS, hai thì này dùng để mở bài Reading/Writing và mô tả quy trình, thói quen.",
    "examples": [
@@ -11500,7 +13062,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 4.0",
    "name": "Quá khứ đơn cho biểu đồ Task 1",
    "explain": "Hầu hết biểu đồ Task 1 có mốc thời gian trong quá khứ, nên động từ phải ở quá khứ đơn (rose, fell, remained). Luôn ghi rõ năm khi nêu số liệu quá khứ.",
    "examples": [
@@ -11722,7 +13284,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 4.5",
    "name": "Câu bị động nền tảng",
    "explain": "Bị động (be + V3) rất quan trọng trong Task 1 miêu tả quy trình (The glass is heated) và văn phong học thuật khi không cần nêu người thực hiện.",
    "examples": [
@@ -11833,7 +13395,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 4.5",
    "name": "Động từ khuyết thiếu nêu quan điểm",
    "explain": "should, must, can, may giúp nêu đề xuất và mức độ chắc chắn trong Task 2: Governments should invest...; This may lead to... Sau động từ khuyết thiếu dùng động từ nguyên thể.",
    "examples": [
@@ -11944,7 +13506,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 4.0",
    "name": "Liên từ cơ bản: because, although, so, but",
    "explain": "Các liên từ này nối hai mệnh đề thành câu phức đơn giản - nền tảng để thoát khỏi toàn câu đơn trong IELTS Writing: because (nguyên nhân), although (nhượng bộ), so (kết quả), but (tương phản).",
    "examples": [
@@ -12277,7 +13839,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 4.5",
    "name": "Mệnh đề quan hệ cơ bản",
    "explain": "Mệnh đề quan hệ (who cho người, which cho vật, that cho cả hai) giúp nối ý và tăng độ phức của câu - tiêu chí Grammatical Range trong IELTS.",
    "examples": [
@@ -15385,8 +16947,8 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
-   "name": "Nền tảng 1: Động từ be - am, is, are",
+   "level": "Band 2.0",
+   "name": "Động từ be - am, is, are",
    "explain": "Nhìn ví dụ trước nhé. Mẹ đi chợ về và nói: I am tired. Lan giới thiệu bố: He is a farmer. Cả nhà đang ở nhà: We are at home. Sau ví dụ là quy tắc. Ta dùng động từ be (là, thì, ở - động từ đặc biệt dùng để giới thiệu và mô tả) để giới thiệu và tả người hay vật. I đi với am. He, she, it và một người hay một vật đi với is. You, we, they và nhiều người hay nhiều vật đi với are.",
    "examples": [
     "I am from Vietnam.",
@@ -15476,8 +17038,8 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
-   "name": "Nền tảng 2: Hiện tại đơn cơ bản",
+   "level": "Band 2.0",
+   "name": "Hiện tại đơn cơ bản - thói quen mỗi ngày",
    "explain": "Nhìn ví dụ trước nhé. Sáng nào mẹ cũng dậy sớm: My mother gets up at five. Em trai đi học bằng xe buýt mỗi ngày: My brother goes to school by bus. Sau ví dụ là quy tắc. Ta dùng thì hiện tại đơn (cách nói về việc làm lặp lại hằng ngày) cho thói quen. I, you, we, they dùng động từ gốc. He, she, it thì thêm s hoặc es vào động từ.",
    "examples": [
     "I play football on Sunday.",
@@ -15567,8 +17129,8 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
-   "name": "Nền tảng 3: Danh từ số nhiều và a, an, the",
+   "level": "Band 3.0",
+   "name": "Danh từ số nhiều và a, an, the",
    "explain": "Nhìn ví dụ trước nhé. Minh mua một quyển sách ở hiệu sách: Minh buys a book. Lan ăn một quả táo ở nhà: Lan eats an apple. Quyển sách trên bàn của cô giáo thì ai cũng biết rõ: The book is on the desk. Sau ví dụ là quy tắc. Mạo từ (từ nhỏ đứng trước danh từ: a, an, the) đứng trước danh từ. Dùng a trước từ bắt đầu bằng phụ âm. Dùng an trước từ bắt đầu bằng nguyên âm a, e, i, o, u. Dùng the khi người nghe đã biết rõ vật đó. Danh từ số nhiều thường thêm s. Từ kết thúc bằng s, ch, sh, x thì thêm es.",
    "examples": [
     "I have a pen and an orange.",
@@ -15658,8 +17220,8 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
-   "name": "Nền tảng 4: Đại từ và tính từ sở hữu",
+   "level": "Band 3.0",
+   "name": "Đại từ và tính từ sở hữu",
    "explain": "Nhìn ví dụ trước nhé. Lan tự giới thiệu: I am Lan. Lan chỉ vào cặp của mình: This is my bag. Nam rất yêu mẹ của mình: He loves his mother. Sau ví dụ là quy tắc. Đại từ (từ thay cho tên người/vật: I, you, he, she) dùng thay cho tên người. I là tôi, you là bạn, he là anh ấy, she là cô ấy, we là chúng ta, they là họ. Tính từ sở hữu (từ chỉ của ai: my, your, his, her) đứng trước danh từ. My là của tôi, your là của bạn, his là của anh ấy, her là của cô ấy, our là của chúng ta, their là của họ.",
    "examples": [
     "She is my sister. Her name is Mai.",
@@ -15749,8 +17311,8 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
-   "name": "Nền tảng 5: Giới từ in, on, at",
+   "level": "Band 2.5",
+   "name": "Giới từ in, on, at",
    "explain": "Nhìn ví dụ trước nhé. Lớp học bắt đầu lúc bảy giờ: The class starts at seven. Gia đình tôi sống ở Hà Nội: My family lives in Hanoi. Quyển sách nằm trên bàn học: The book is on the desk. Sau ví dụ là quy tắc. Giới từ (từ chỉ vị trí/thời gian: in, on, at) là từ nhỏ chỉ nơi chốn và thời gian. In dùng cho tháng, năm, thành phố và buổi trong ngày. On dùng cho thứ trong tuần và bề mặt. At dùng cho giờ cụ thể và các cụm quen thuộc như at home và at school.",
    "examples": [
     "I was born in May.",
@@ -15840,8 +17402,8 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
-   "name": "Nền tảng 6: Can và can't, câu hỏi đơn giản",
+   "level": "Band 2.5",
+   "name": "Can và can't, câu hỏi đơn giản",
    "explain": "Nhìn ví dụ trước nhé. Em gái tôi biết bơi ở bể bơi gần nhà: My sister can swim. Bố tôi không biết lái xe ô tô: My father can't drive a car. Bạn hỏi bạn cùng lớp: Can you ride a bike? Sau ví dụ là quy tắc. Can nghĩa là có thể làm được một việc. Can't nghĩa là không thể làm được. Sau can luôn dùng động từ gốc, không thêm to và không thêm s. Muốn hỏi thì đưa Can lên đầu câu. Các câu hỏi quen thuộc khác là What is your name, Where are you from và Do you like music.",
    "examples": [
     "I can ride a bike.",
@@ -15931,8 +17493,8 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
-   "name": "Nền tảng 7: Hiện tại tiếp diễn cơ bản",
+   "level": "Band 3.0",
+   "name": "Hiện tại tiếp diễn cơ bản",
    "explain": "Nghe ví dụ đời thường trước nhé. Mẹ đang nấu cơm trong bếp: My mother is cooking now. Các em đang chơi ở sân trường: The children are playing at school. Sau ví dụ là quy tắc. Ta dùng thì hiện tại tiếp diễn (cách nói về việc đang xảy ra ngay lúc này) khi việc đang diễn ra. Cách làm rất đơn giản. Dùng am, is hoặc are rồi cộng động từ thêm ing. I đi với am. He, she, it và một người hay một vật đi với is. You, we, they và nhiều người hay nhiều vật đi với are.",
    "examples": [
     "My mother is cooking in the kitchen now.",
@@ -16022,8 +17584,8 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
-   "name": "Nền tảng 8: Quá khứ đơn cơ bản",
+   "level": "Band 3.5",
+   "name": "Quá khứ đơn cơ bản - kể việc đã qua",
    "explain": "Nhớ lại chuyện hôm qua nhé. Hôm qua tôi đi chợ với mẹ: I went to the market yesterday. Tuần trước cả nhà ăn phở ở quán gần nhà: My family ate pho last week. Sau ví dụ là quy tắc. Ta dùng thì quá khứ đơn (cách nói về việc đã xảy ra và đã kết thúc) cho việc đã xong. Nhiều động từ chỉ cần thêm ed, ví dụ work thành worked và watch thành watched. Một số động từ đổi hẳn dạng và phải nhớ riêng. Go thành went, have thành had, see thành saw và eat thành ate.",
    "examples": [
     "We went to the market yesterday.",
@@ -16224,7 +17786,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 4.5",
    "name": "Used to - thói quen và trạng thái trong quá khứ",
    "explain": "Ví dụ đời sống trước nhé: Khi còn ở quê, ông tôi thường dậy lúc bốn giờ sáng để ra đồng, nhưng nay ông sống ở thành phố nên không dậy sớm nữa. Câu tiếng Anh là: My grandfather used to get up at four in the morning. Quy tắc một: used to cộng động từ nguyên thể (dạng gốc chưa chia của động từ) tả một thói quen hoặc một trạng thái (một tình trạng kéo dài, như từng rất nhút nhát) ở quá khứ mà nay không còn nữa. Quy tắc hai: câu phủ định (câu nói không) là did not use to, bỏ chữ d ở used vì đã có did. Quy tắc ba: câu hỏi là Did cộng chủ ngữ cộng use to, cũng bỏ chữ d ở used. Cần phân biệt nhẹ: be used to cộng động từ thêm ing nghĩa là đã quen với một việc ở hiện tại, như I am used to getting up early nghĩa là tôi đã quen dậy sớm.",
    "examples": [
@@ -16335,7 +17897,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 4.5",
    "name": "Quá khứ tiếp diễn",
    "explain": "Ví dụ đời sống trước nhé: Tối qua lúc tám giờ, cả nhà đang ăn cơm thì bỗng mất điện. Câu tiếng Anh là: We were having dinner when the lights went out. Quy tắc một: thì quá khứ tiếp diễn (thì tả một việc đang diễn ra dở dang tại một lúc trong quá khứ) có dạng was hoặc were cộng động từ thêm ing. Quy tắc hai: một việc ngắn đã xong xen vào thường dùng thì quá khứ đơn (thì kể một việc đã xong hẳn trong quá khứ), như the lights went out trong ví dụ trên. Quy tắc ba: hai việc cùng đang diễn ra song song trong quá khứ thì nối bằng while (từ nối nghĩa là trong lúc), và cả hai việc đều dùng quá khứ tiếp diễn.",
    "examples": [
@@ -16775,6 +18337,571 @@ const CONTENT = {
      ],
      "a": 1,
      "why": "Vì tên ngôn ngữ không dùng mạo từ."
+    }
+   ]
+  },
+  {
+   "level": "Band 3.5",
+   "name": "So sánh cơ bản - hơn và nhất",
+   "explain": "Nhìn ví dụ trước nhé. Anh trai cao hơn em gái: My brother is taller than my sister. Hà Nội là thành phố lớn nhất miền Bắc trong ba thành phố được nhắc: Hanoi is the biggest city of the three. Sau ví dụ là quy tắc. Khi so sánh hai người hay hai vật, ta thêm -er vào tính từ ngắn (từ chỉ tính chất như tall, big) rồi thêm than (hơn). Khi nói một người hay vật đứng đầu trong một nhóm, ta dùng the và thêm -est: the tallest (cao nhất). Tính từ dài như beautiful thì dùng more (hơn) và the most (nhất): more beautiful, the most beautiful. Ba từ hay gặp bất quy tắc (không theo quy tắc chung): good thành better, the best; bad thành worse, the worst.",
+   "examples": [
+    "This bag is cheaper than that bag.",
+    "Winter in Dalat is colder than winter in Saigon.",
+    "She is the youngest student in our class.",
+    "Football is more popular than basketball in Vietnam."
+   ],
+   "quiz": [
+    {
+     "q": "My house is ___ than your house.",
+     "o": [
+      "bigger",
+      "biggest",
+      "more big"
+     ],
+     "a": 0,
+     "why": "So sánh hai nhà với nhau nên dùng bigger (to hơn) và có than đi kèm."
+    },
+    {
+     "q": "This is the ___ day of the year.",
+     "o": [
+      "hotter",
+      "hottest",
+      "more hot"
+     ],
+     "a": 1,
+     "why": "Có the và nói về một ngày đứng đầu cả năm nên dùng hottest (nóng nhất)."
+    },
+    {
+     "q": "A motorbike is ___ than a bicycle.",
+     "o": [
+      "faster",
+      "fastest",
+      "fast"
+     ],
+     "a": 0,
+     "why": "So sánh hai phương tiện nên dùng faster (nhanh hơn)."
+    },
+    {
+     "q": "English is ___ than history for me.",
+     "o": [
+      "most interesting",
+      "interesting",
+      "more interesting"
+     ],
+     "a": 2,
+     "why": "Interesting là tính từ dài nên dùng more interesting (thú vị hơn) khi so sánh hai môn."
+    },
+    {
+     "q": "He is the ___ boy in the village.",
+     "o": [
+      "stronger",
+      "strongest",
+      "more strong"
+     ],
+     "a": 1,
+     "why": "Có the và so với cả làng nên dùng strongest (khỏe nhất)."
+    },
+    {
+     "q": "Today is ___ than yesterday.",
+     "o": [
+      "badder",
+      "worse",
+      "worst"
+     ],
+     "a": 1,
+     "why": "Bad đổi bất quy tắc thành worse (tệ hơn) khi so sánh."
+    },
+    {
+     "q": "My new phone is ___ than the old one.",
+     "o": [
+      "good",
+      "best",
+      "better"
+     ],
+     "a": 2,
+     "why": "Good đổi bất quy tắc thành better (tốt hơn) khi so sánh hai chiếc điện thoại."
+    },
+    {
+     "q": "Which city is ___, Hue or Danang?",
+     "o": [
+      "larger",
+      "largest",
+      "large"
+     ],
+     "a": 0,
+     "why": "Câu hỏi so sánh giữa hai thành phố nên dùng larger (lớn hơn)."
+    },
+    {
+     "q": "She sings the ___ in our group.",
+     "o": [
+      "better",
+      "best",
+      "good"
+     ],
+     "a": 1,
+     "why": "Có the và so với cả nhóm nên dùng the best (hay nhất, giỏi nhất)."
+    },
+    {
+     "q": "A train is ___ than a bus.",
+     "o": [
+      "more comfortable",
+      "comfortabler",
+      "most comfortable"
+     ],
+     "a": 0,
+     "why": "Comfortable là tính từ dài nên dùng more comfortable (thoải mái hơn)."
+    }
+   ]
+  },
+  {
+   "level": "Band 3.5",
+   "name": "Going to - kế hoạch và dự đoán gần",
+   "explain": "Nhìn ví dụ trước nhé. Tối nay Lan đã mua vé xem phim và nói: I am going to watch a film tonight. Nhìn trời đầy mây đen, bố nói: It is going to rain. Sau ví dụ là quy tắc. Ta dùng be going to (sắp, sẽ - nói về việc đã có dự định hoặc sắp xảy ra) khi nói về kế hoạch đã nghĩ trước, hoặc dự đoán dựa trên điều mắt đang thấy. Cách tạo: chủ ngữ + am/is/are + going to + động từ nguyên thể (động từ gốc chưa chia). Câu hỏi: đảo am/is/are lên đầu câu. Phủ định: thêm not sau am/is/are. Đừng nhầm với will: will hay dùng cho quyết định ngay lúc nói, còn going to dùng cho việc đã định trước.",
+   "examples": [
+    "We are going to visit our grandparents this weekend.",
+    "She is going to study medicine at university.",
+    "Look at the baby! He is going to fall.",
+    "They are not going to play football today."
+   ],
+   "quiz": [
+    {
+     "q": "I ___ going to buy a new bike next month.",
+     "o": [
+      "is",
+      "am",
+      "are"
+     ],
+     "a": 1,
+     "why": "I luôn đi với am trong cấu trúc be going to."
+    },
+    {
+     "q": "She ___ going to cook dinner tonight.",
+     "o": [
+      "am",
+      "are",
+      "is"
+     ],
+     "a": 2,
+     "why": "She là số ít nên đi với is."
+    },
+    {
+     "q": "They ___ going to travel to Hue in July.",
+     "o": [
+      "are",
+      "is",
+      "am"
+     ],
+     "a": 0,
+     "why": "They là số nhiều nên đi với are."
+    },
+    {
+     "q": "Look at those black clouds! It ___ rain soon.",
+     "o": [
+      "is going to",
+      "goes to",
+      "go to"
+     ],
+     "a": 0,
+     "why": "Dự đoán dựa trên điều mắt thấy (mây đen) nên dùng is going to."
+    },
+    {
+     "q": "We ___ going to watch the match at home. We bought snacks yesterday.",
+     "o": [
+      "is",
+      "are",
+      "be"
+     ],
+     "a": 1,
+     "why": "We đi với are; việc đã chuẩn bị trước nên dùng going to là đúng."
+    },
+    {
+     "q": "___ he going to join the English club?",
+     "o": [
+      "Does",
+      "Is",
+      "Do"
+     ],
+     "a": 1,
+     "why": "Câu hỏi của be going to đảo is lên đầu vì chủ ngữ he đi với is."
+    },
+    {
+     "q": "My father ___ going to sell his old car. He wants to keep it.",
+     "o": [
+      "is not",
+      "not is",
+      "does not"
+     ],
+     "a": 0,
+     "why": "Phủ định của be going to đặt not ngay sau is: is not going to."
+    },
+    {
+     "q": "What ___ you going to do this summer?",
+     "o": [
+      "is",
+      "am",
+      "are"
+     ],
+     "a": 2,
+     "why": "You luôn đi với are."
+    },
+    {
+     "q": "The cat is running to the tree. It ___ catch the bird.",
+     "o": [
+      "is going to",
+      "going",
+      "goes"
+     ],
+     "a": 0,
+     "why": "Dự đoán việc sắp xảy ra ngay trước mắt nên dùng is going to + động từ gốc catch."
+    },
+    {
+     "q": "I saved money last month because I ___ buy a laptop.",
+     "o": [
+      "am going to",
+      "goes to",
+      "is going"
+     ],
+     "a": 0,
+     "why": "I đi với am going to để nói kế hoạch đã định trước."
+    }
+   ]
+  },
+  {
+   "level": "Band 4.0",
+   "name": "Hiện tại hoàn thành mở đầu - have, has + V3",
+   "explain": "Nhìn ví dụ trước nhé. Tuấn khoe: I have visited Hue twice. Cô giáo hỏi: Have you finished your homework? Sau ví dụ là quy tắc. Thì hiện tại hoàn thành (cách nói về việc đã làm xong hoặc đã từng làm, mà kết quả còn liên quan đến bây giờ) tạo bằng have hoặc has + V3 (động từ ở cột thứ ba, dạng đã chia sẵn như visited, finished, seen). I, you, we, they đi với have. He, she, it đi với has. Ta dùng thì này khi nói kinh nghiệm đã từng làm (đã đi, đã ăn, đã xem) mà không nói rõ thời điểm, hoặc việc vừa xong và kết quả còn đây. Khác với quá khứ đơn: quá khứ đơn luôn gắn với một mốc thời gian đã qua như yesterday, last week.",
+   "examples": [
+    "I have eaten breakfast, so I am not hungry now.",
+    "She has lost her keys, so she cannot open the door.",
+    "We have lived in this town for five years.",
+    "Have you ever tried bun cha in Hanoi?"
+   ],
+   "quiz": [
+    {
+     "q": "I ___ finished my homework.",
+     "o": [
+      "has",
+      "have",
+      "am"
+     ],
+     "a": 1,
+     "why": "I đi với have trong thì hiện tại hoàn thành."
+    },
+    {
+     "q": "She ___ visited Dalat three times.",
+     "o": [
+      "have",
+      "has",
+      "is"
+     ],
+     "a": 1,
+     "why": "She là số ít nên dùng has + visited (V3)."
+    },
+    {
+     "q": "They ___ just arrived at the station.",
+     "o": [
+      "has",
+      "have",
+      "are"
+     ],
+     "a": 1,
+     "why": "They là số nhiều nên dùng have + arrived."
+    },
+    {
+     "q": "___ you ever seen snow?",
+     "o": [
+      "Has",
+      "Have",
+      "Do"
+     ],
+     "a": 1,
+     "why": "Câu hỏi với you mở đầu bằng Have trong thì hiện tại hoàn thành."
+    },
+    {
+     "q": "He ___ broken his arm, so he cannot write.",
+     "o": [
+      "have",
+      "has",
+      "is"
+     ],
+     "a": 1,
+     "why": "He đi với has; broken là V3 của break."
+    },
+    {
+     "q": "We ___ not watched this film before.",
+     "o": [
+      "has",
+      "have",
+      "do"
+     ],
+     "a": 1,
+     "why": "We đi với have; phủ định là have not + V3 (watched)."
+    },
+    {
+     "q": "My mother ___ cooked dinner already.",
+     "o": [
+      "have",
+      "has",
+      "is"
+     ],
+     "a": 1,
+     "why": "My mother tương đương she nên dùng has + cooked."
+    },
+    {
+     "q": "I ___ read this book twice. It is wonderful.",
+     "o": [
+      "has",
+      "am",
+      "have"
+     ],
+     "a": 2,
+     "why": "I dùng have; read ở dạng V3 đọc là 'red' nhưng viết giống nguyên thể."
+    },
+    {
+     "q": "The train ___ just left the station.",
+     "o": [
+      "has",
+      "have",
+      "is"
+     ],
+     "a": 0,
+     "why": "The train là số ít (it) nên dùng has + left."
+    },
+    {
+     "q": "___ your brother found a job yet?",
+     "o": [
+      "Have",
+      "Has",
+      "Does"
+     ],
+     "a": 1,
+     "why": "Your brother tương đương he nên câu hỏi mở đầu bằng Has."
+    }
+   ]
+  },
+  {
+   "level": "Band 4.0",
+   "name": "Câu điều kiện loại 1 - việc có thể xảy ra",
+   "explain": "Nhìn ví dụ trước nhé. Mẹ dặn: If it rains tomorrow, we will stay at home. Bạn hứa: If I have time, I will help you. Sau ví dụ là quy tắc. Câu điều kiện loại 1 (câu 'nếu... thì...' nói về việc thật sự có thể xảy ra trong tương lai) có hai vế: vế if (vế điều kiện, phần bắt đầu bằng if - nếu) dùng hiện tại đơn, vế chính dùng will + động từ nguyên thể. Đừng dùng will trong vế if. Hai vế đổi chỗ cho nhau được: We will stay at home if it rains tomorrow - khi vế if đứng sau thì không cần dấu phẩy. Ngoài will, vế chính còn dùng can hoặc should khi muốn nói khả năng hay lời khuyên.",
+   "examples": [
+    "If you study hard, you will pass the exam.",
+    "If the bus is late, we will take a taxi.",
+    "You can borrow my bike if you are careful.",
+    "If she calls me, I will tell her the news."
+   ],
+   "quiz": [
+    {
+     "q": "If it ___ sunny tomorrow, we will go to the beach.",
+     "o": [
+      "will be",
+      "is",
+      "was"
+     ],
+     "a": 1,
+     "why": "Vế if của điều kiện loại 1 dùng hiện tại đơn: is."
+    },
+    {
+     "q": "If I have enough money, I ___ a new phone.",
+     "o": [
+      "buy",
+      "bought",
+      "will buy"
+     ],
+     "a": 2,
+     "why": "Vế chính dùng will + động từ gốc: will buy."
+    },
+    {
+     "q": "If you ___ now, you will catch the bus.",
+     "o": [
+      "leave",
+      "will leave",
+      "left"
+     ],
+     "a": 0,
+     "why": "Vế if dùng hiện tại đơn: leave."
+    },
+    {
+     "q": "We will miss the train if we ___ late.",
+     "o": [
+      "will be",
+      "are",
+      "be"
+     ],
+     "a": 1,
+     "why": "Vế if đứng sau vẫn dùng hiện tại đơn: are."
+    },
+    {
+     "q": "If she works hard, she ___ the exam.",
+     "o": [
+      "pass",
+      "will pass",
+      "passed"
+     ],
+     "a": 1,
+     "why": "Vế chính nói kết quả tương lai nên dùng will pass."
+    },
+    {
+     "q": "If they ___ us, we will cook dinner for them.",
+     "o": [
+      "visit",
+      "will visit",
+      "visits yesterday"
+     ],
+     "a": 0,
+     "why": "Vế if với they dùng động từ gốc visit ở hiện tại đơn."
+    },
+    {
+     "q": "You can get wet if you ___ an umbrella.",
+     "o": [
+      "will not take",
+      "do not take",
+      "not take"
+     ],
+     "a": 1,
+     "why": "Vế if phủ định ở hiện tại đơn: do not take."
+    },
+    {
+     "q": "If the shop ___ open, I will buy some bread.",
+     "o": [
+      "is",
+      "will be",
+      "be"
+     ],
+     "a": 0,
+     "why": "Vế if dùng hiện tại đơn với be: is."
+    },
+    {
+     "q": "If you heat ice, it ___.",
+     "o": [
+      "will melt tomorrow only",
+      "melts",
+      "melted yesterday"
+     ],
+     "a": 1,
+     "why": "Đây là sự thật luôn đúng (điều kiện loại 0): cả hai vế đều dùng hiện tại đơn melts."
+    },
+    {
+     "q": "If my father ___ time, he will fix the car.",
+     "o": [
+      "will have",
+      "has",
+      "have yesterday"
+     ],
+     "a": 1,
+     "why": "Vế if với my father (số ít) dùng has ở hiện tại đơn."
+    }
+   ]
+  },
+  {
+   "level": "Band 4.5",
+   "name": "Hiện tại hoàn thành - for, since, just, already, yet",
+   "explain": "Nhìn ví dụ trước nhé. Cô ấy nói: I have known Mai since 2020. Anh ấy khoe: I have lived here for ten years. Sau ví dụ là quy tắc. Với thì hiện tại hoàn thành, ta dùng for (trong khoảng - đi với một khoảng thời gian như for two weeks, for a long time) và since (từ khi - đi với một mốc thời gian như since Monday, since 2019). Ba từ hay đi kèm nữa: just (vừa mới - việc vừa xảy ra xong), already (đã rồi - việc xong sớm hơn mong đợi), yet (chưa - chỉ dùng trong câu phủ định và câu hỏi, đặt cuối câu). Nhớ phân biệt: muốn nói một việc đã kết thúc hẳn ở một thời điểm rõ ràng trong quá khứ thì quay về quá khứ đơn, không dùng hiện tại hoàn thành.",
+   "examples": [
+    "We have studied English for three years.",
+    "She has worked at this bank since 2018.",
+    "The film has just started.",
+    "Have you finished your essay yet?"
+   ],
+   "quiz": [
+    {
+     "q": "I have lived in Hanoi ___ 2015.",
+     "o": [
+      "for",
+      "since",
+      "from"
+     ],
+     "a": 1,
+     "why": "2015 là một mốc thời gian nên dùng since (từ khi)."
+    },
+    {
+     "q": "She has been ill ___ three days.",
+     "o": [
+      "since",
+      "for",
+      "at"
+     ],
+     "a": 1,
+     "why": "Three days là một khoảng thời gian nên dùng for (trong khoảng)."
+    },
+    {
+     "q": "They have ___ finished the project. It is on the table now.",
+     "o": [
+      "yet",
+      "already",
+      "since"
+     ],
+     "a": 1,
+     "why": "Already (đã rồi) hợp với câu khẳng định nói việc đã xong."
+    },
+    {
+     "q": "Have you read this novel ___?",
+     "o": [
+      "already",
+      "just",
+      "yet"
+     ],
+     "a": 2,
+     "why": "Yet đặt cuối câu hỏi với nghĩa 'chưa/đã... chưa'."
+    },
+    {
+     "q": "He has ___ arrived. He is at the door now.",
+     "o": [
+      "just",
+      "yet",
+      "for"
+     ],
+     "a": 0,
+     "why": "Just (vừa mới) nói việc vừa xảy ra xong."
+    },
+    {
+     "q": "We have known each other ___ we were children.",
+     "o": [
+      "for",
+      "since",
+      "already"
+     ],
+     "a": 1,
+     "why": "Sau since là một mệnh đề mốc thời gian: since we were children."
+    },
+    {
+     "q": "My sister has studied French ___ six months.",
+     "o": [
+      "since",
+      "for",
+      "yet"
+     ],
+     "a": 1,
+     "why": "Six months là khoảng thời gian nên dùng for."
+    },
+    {
+     "q": "I have not seen him ___ last week.",
+     "o": [
+      "for",
+      "since",
+      "just"
+     ],
+     "a": 1,
+     "why": "Last week là mốc thời gian nên dùng since trong câu phủ định này."
+    },
+    {
+     "q": "The bus has not come ___.",
+     "o": [
+      "already",
+      "yet",
+      "just"
+     ],
+     "a": 1,
+     "why": "Yet đặt cuối câu phủ định với nghĩa 'vẫn chưa'."
+    },
+    {
+     "q": "She has worked here ___ a long time.",
+     "o": [
+      "since",
+      "for",
+      "yet"
+     ],
+     "a": 1,
+     "why": "A long time là một khoảng thời gian dài nên dùng for."
     }
    ]
   }
@@ -18900,7 +21027,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
+   "level": "Band 2.0",
    "title": "My Family",
    "text": "My name is Lan. I live in Hanoi with my family. There are four people in my family.\n\nMy father is a teacher. He works at a school. My mother is a doctor. She works at a hospital. I have one brother. His name is Minh. He is ten years old.\n\nWe are happy together. In the evening, we eat dinner and talk. I love my family very much.",
    "questions": [
@@ -18985,7 +21112,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
+   "level": "Band 2.5",
    "title": "My Day",
    "text": "I am Nam. I am a student. I get up at six o'clock every day.\n\nI go to school at seven o'clock. At school, I learn English and maths. I like English very much. I have lunch at school with my friends.\n\nIn the evening, I do my homework. Then I read a book. I go to bed at nine o'clock. I feel happy every day.",
    "questions": [
@@ -19070,7 +21197,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 0",
+   "level": "Band 3.0",
    "title": "At the Market",
    "text": "Today I go to the market with my mother. The market is near my house. There are many people there.\n\nWe buy vegetables and fruit. We buy tomatoes, carrots and bananas. The tomatoes are red and the bananas are yellow.\n\nThe tomatoes cost ten thousand dong. The bananas cost fifteen thousand dong. We go home and cook lunch together. I like the market very much.",
    "questions": [
@@ -19155,7 +21282,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 4.0",
    "title": "A Picnic Invitation from a Friend",
    "text": "Hi Linh,\n\nHow are you? I hope you are well. I am writing to invite you to a picnic this Saturday afternoon in Green Park. My brother Tom and I want to spend a sunny day outside and we hope you can join us.\n\nWe will meet at the park gate at 11 a.m. and walk to a quiet place near the lake. Tom will bring sandwiches and fruit, and I will bring cakes and orange juice. Please bring a hat and a bottle of water because the weather will be warm and sunny.\n\nAfter lunch, we can play badminton and take photos near the flowers. If it rains, we will go to my house and watch a film instead. I really hope the weather stays fine.\n\nPlease tell me before Thursday evening if you can come, so I can buy enough food. You can bring your cousin Mai if you want. The more friends we have, the more fun we will have.\n\nI am really looking forward to seeing you soon.\n\nBest wishes,\nAnna",
    "translation": "Chào Linh,\n\nBạn có khỏe không? Mình mong bạn vẫn khỏe. Mình viết thư này để mời bạn đi dã ngoại vào chiều thứ Bảy này tại công viên Green Park. Anh trai mình là Tom và mình muốn tận hưởng một ngày nắng đẹp ở ngoài trời và chúng mình mong bạn có thể tham gia.\n\nChúng ta sẽ gặp nhau ở cổng công viên lúc 11 giờ sáng và đi bộ tới một nơi yên tĩnh gần hồ. Tom sẽ mang bánh mì kẹp và trái cây, còn mình sẽ mang bánh ngọt và nước cam. Bạn hãy mang theo mũ và một chai nước vì thời tiết sẽ ấm và có nắng.\n\nSau bữa trưa, chúng ta có thể chơi cầu lông và chụp ảnh gần những khóm hoa. Nếu trời mưa, chúng ta sẽ về nhà mình và xem phim thay vào đó. Mình thật sự mong thời tiết vẫn đẹp.\n\nBạn hãy cho mình biết trước tối thứ Năm nếu bạn có thể đến, để mình mua đủ đồ ăn. Bạn có thể dẫn theo em họ Mai của bạn nếu bạn muốn. Càng có nhiều bạn bè, chúng ta sẽ càng vui.\n\nMình rất mong sớm được gặp bạn.\n\nChúc bạn mọi điều tốt đẹp,\nAnna",
@@ -19245,7 +21372,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 4.0",
    "title": "Asking about an English Course",
    "text": "Dear Sir or Madam,\n\nI am writing to ask for information about your English course for teachers at the Riverdale Language Centre. I saw your advertisement in a local newspaper last week and I am very interested in joining the course in September.\n\nI would like to know the exact starting date and the total cost of the course. Could you also tell me whether the price includes textbooks and examination fees? I have a degree in education and three years of teaching experience, so I would also like to ask whether I can join the advanced class directly.\n\nIn addition, I live outside the city, so I need information about accommodation near the centre. Does the centre help students find a room, and how much does a single room usually cost each month?\n\nFinally, could you send me an application form and tell me the deadline for applying? I would be grateful if you could reply before the end of this month, as I need to ask my school for leave.\n\nThank you for your help. I look forward to hearing from you.\n\nYours faithfully,\nNguyen Thanh Ha",
    "translation": "Kính gửi Ông hoặc Bà,\n\nTôi viết thư này để hỏi thông tin về khóa học tiếng Anh dành cho giáo viên của quý trung tâm tại Trung tâm Ngoại ngữ Riverdale. Tôi đã thấy quảng cáo của quý trung tâm trên một tờ báo địa phương vào tuần trước và tôi rất muốn tham gia khóa học vào tháng Chín.\n\nTôi muốn biết ngày khai giảng chính xác và tổng chi phí của khóa học. Quý trung tâm cũng có thể cho tôi biết giá đó đã bao gồm sách giáo khoa và lệ phí thi hay chưa? Tôi có bằng đại học về giáo dục và ba năm kinh nghiệm giảng dạy, vì vậy tôi cũng muốn hỏi liệu tôi có thể vào thẳng lớp nâng cao hay không.\n\nNgoài ra, tôi sống ở ngoài thành phố nên tôi cần thông tin về chỗ ở gần trung tâm. Trung tâm có giúp học viên tìm phòng không, và một phòng đơn thường có giá bao nhiêu mỗi tháng?\n\nCuối cùng, quý trung tâm có thể gửi cho tôi mẫu đơn đăng ký và cho tôi biết hạn chót nộp đơn không? Tôi sẽ rất biết ơn nếu quý trung tâm có thể trả lời trước cuối tháng này, vì tôi cần xin trường cho nghỉ phép.\n\nCảm ơn sự giúp đỡ của quý trung tâm. Tôi mong nhận được phản hồi từ quý trung tâm.\n\nTrân trọng,\nNguyen Thanh Ha",
@@ -19333,7 +21460,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 4.5",
    "title": "School Library Hours and New Clubs",
    "text": "Greenfield School Notice - Library Hours and New Clubs\n\nFrom this Monday, the school library will open from 7:30 a.m. to 5:30 p.m. on school days. Students can borrow up to three books at a time and keep them for two weeks. Books must be returned on time, and students who return books late will pay a small fine of five thousand dong per day. The library will also open on Saturday mornings from 8 a.m. to 11 a.m. for students who want a quiet place to study.\n\nWe are also happy to announce two new clubs this term. The Gardening Club will meet every Tuesday afternoon in the school garden, and the Chess Club will meet every Thursday in Room 12. Both clubs are free and open to all students from Grade 6 to Grade 9. Students who want to join should write their names on the list outside the library before Friday.\n\nPlease remember to keep your library card safe and to stay quiet inside the library so that everyone can read and study comfortably.",
    "translation": "Thông báo của Trường Greenfield - Giờ mở cửa thư viện và các câu lạc bộ mới\n\nTừ thứ Hai này, thư viện trường sẽ mở cửa từ 7 giờ 30 sáng đến 5 giờ 30 chiều vào các ngày học. Học sinh có thể mượn tối đa ba cuốn sách mỗi lần và giữ chúng trong hai tuần. Sách phải được trả đúng hạn, và học sinh trả sách muộn sẽ phải nộp một khoản phạt nhỏ là năm nghìn đồng mỗi ngày. Thư viện cũng sẽ mở cửa vào các buổi sáng thứ Bảy từ 8 giờ đến 11 giờ cho những học sinh muốn có một nơi yên tĩnh để học.\n\nChúng tôi cũng vui mừng thông báo hai câu lạc bộ mới trong học kỳ này. Câu lạc bộ Làm vườn sẽ sinh hoạt vào mỗi chiều thứ Ba tại vườn trường, và Câu lạc bộ Cờ vua sẽ sinh hoạt vào mỗi thứ Năm tại Phòng 12. Cả hai câu lạc bộ đều miễn phí và dành cho tất cả học sinh từ lớp 6 đến lớp 9. Học sinh muốn tham gia nên ghi tên mình vào danh sách bên ngoài thư viện trước thứ Sáu.\n\nCác em hãy nhớ giữ thẻ thư viện cẩn thận và giữ yên lặng bên trong thư viện để mọi người có thể đọc và học một cách thoải mái.",
@@ -20222,8 +22349,1288 @@ const CONTENT = {
      "why": "Bài viết 'the soil absorbs a large share of the water that falls on the roof, reducing the pressure on city drains' nên đất hấp thụ phần lớn nước mưa và giảm áp lực lên hệ thống thoát nước của thành phố."
     }
    ]
+  },
+  {
+   "level": "Band 2.0",
+   "title": "My School",
+   "text": "My name is Nam. I am ten years old. I am a student at a small school in my town.\n\nMy school has eight classrooms, one library and a big yard. There are 200 students and 12 teachers in my school. My classroom is on the second floor. It has 30 desks and a green board.\n\nSchool starts at 7 o'clock in the morning. I go to school by bike with my friend Tuan. My favourite subject is maths because I love numbers. After school, I play football in the yard with my classmates.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "How old is Nam?",
+     "options": [
+      "Eight",
+      "Ten",
+      "Twelve",
+      "Nine"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'I am ten years old' - Nam mười tuổi."
+    },
+    {
+     "type": "MC",
+     "q": "How many students are there in Nam's school?",
+     "options": [
+      "30",
+      "12",
+      "200",
+      "8"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'There are 200 students' - có 200 học sinh."
+    },
+    {
+     "type": "MC",
+     "q": "Where is Nam's classroom?",
+     "options": [
+      "On the first floor",
+      "Near the library",
+      "On the second floor",
+      "In the yard"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'My classroom is on the second floor' - lớp học ở tầng hai."
+    },
+    {
+     "type": "MC",
+     "q": "How does Nam go to school?",
+     "options": [
+      "By bus",
+      "By bike",
+      "On foot",
+      "By motorbike"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'I go to school by bike' - Nam đi học bằng xe đạp."
+    },
+    {
+     "type": "MC",
+     "q": "Why does Nam like maths?",
+     "options": [
+      "Because his teacher is kind",
+      "Because it is easy",
+      "Because he loves numbers",
+      "Because his friend likes it"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'because I love numbers' - vì Nam yêu các con số."
+    }
+   ],
+   "translation": "Tên tôi là Nam. Tôi mười tuổi. Tôi là học sinh tại một trường nhỏ ở thị trấn của tôi.\n\nTrường của tôi có tám phòng học, một thư viện và một sân lớn. Trường có 200 học sinh và 12 giáo viên. Lớp học của tôi ở tầng hai. Lớp có 30 bàn học và một cái bảng xanh.\n\nGiờ học bắt đầu lúc 7 giờ sáng. Tôi đi học bằng xe đạp cùng bạn Tuấn. Môn học tôi thích nhất là toán vì tôi yêu các con số. Sau giờ học, tôi chơi bóng đá ở sân trường với các bạn cùng lớp.",
+   "phrases": [
+    {
+     "en": "years old",
+     "vi": "tuổi (I am ten years old - tôi mười tuổi)"
+    },
+    {
+     "en": "on the second floor",
+     "vi": "ở tầng hai"
+    },
+    {
+     "en": "go to school by bike",
+     "vi": "đi học bằng xe đạp"
+    },
+    {
+     "en": "favourite subject",
+     "vi": "môn học yêu thích"
+    }
+   ]
+  },
+  {
+   "level": "Band 2.5",
+   "title": "Lucy and Her Dog",
+   "text": "Lucy is twelve years old. She lives in a small house with her parents and her dog, Milo.\n\nEvery morning, Lucy gets up at 6 o'clock. She feeds Milo and takes him to the park. Milo can run very fast, and he can catch a ball. Lucy walks to school at 7.30. She studies English, maths and art. She can draw nice pictures, but she cannot sing very well.\n\nIn the evening, Lucy does her homework and reads a book. Milo sleeps under her desk. At the weekend, Lucy and her father take Milo to the river. Milo can swim, and he loves the water.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "What is the name of Lucy's dog?",
+     "options": [
+      "Milo",
+      "Max",
+      "Ben",
+      "Leo"
+     ],
+     "a": 0,
+     "why": "Bài viết: 'her dog, Milo' - chó của Lucy tên là Milo."
+    },
+    {
+     "type": "MC",
+     "q": "What time does Lucy get up?",
+     "options": [
+      "At 7.30",
+      "At 6 o'clock",
+      "At 7 o'clock",
+      "At 8 o'clock"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'Lucy gets up at 6 o'clock' - Lucy dậy lúc 6 giờ."
+    },
+    {
+     "type": "MC",
+     "q": "What can Milo do?",
+     "options": [
+      "Sing songs",
+      "Draw pictures",
+      "Run fast and catch a ball",
+      "Read books"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'he can run very fast, and he can catch a ball' - Milo chạy nhanh và bắt được bóng."
+    },
+    {
+     "type": "MC",
+     "q": "What can Lucy NOT do well?",
+     "options": [
+      "Draw pictures",
+      "Sing",
+      "Walk to school",
+      "Read books"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'she cannot sing very well' - Lucy hát không hay lắm."
+    },
+    {
+     "type": "MC",
+     "q": "Where do Lucy and her father take Milo at the weekend?",
+     "options": [
+      "To the park",
+      "To school",
+      "To the river",
+      "To the market"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'take Milo to the river' - họ đưa Milo ra sông."
+    }
+   ],
+   "translation": "Lucy mười hai tuổi. Cô bé sống trong một ngôi nhà nhỏ cùng bố mẹ và chú chó của mình, Milo.\n\nMỗi sáng, Lucy dậy lúc 6 giờ. Cô bé cho Milo ăn và dắt nó ra công viên. Milo có thể chạy rất nhanh và bắt được bóng. Lucy đi bộ đến trường lúc 7 giờ 30. Cô bé học tiếng Anh, toán và mỹ thuật. Cô bé có thể vẽ những bức tranh đẹp, nhưng hát thì không hay lắm.\n\nBuổi tối, Lucy làm bài tập và đọc sách. Milo ngủ dưới bàn học của cô bé. Cuối tuần, Lucy và bố đưa Milo ra sông. Milo biết bơi và nó rất thích nước.",
+   "phrases": [
+    {
+     "en": "get up at 6 o'clock",
+     "vi": "dậy lúc 6 giờ"
+    },
+    {
+     "en": "take the dog to the park",
+     "vi": "dắt chó ra công viên"
+    },
+    {
+     "en": "can run very fast",
+     "vi": "có thể chạy rất nhanh"
+    },
+    {
+     "en": "do homework",
+     "vi": "làm bài tập về nhà"
+    }
+   ]
+  },
+  {
+   "level": "Band 3.0",
+   "title": "A Rainy Day",
+   "text": "Yesterday was a rainy day. In the morning, the sky was dark and the wind was strong. Anna looked out of the window and saw big black clouds.\n\nAnna's mother said, 'Take your umbrella. It is raining now.' Anna walked to the bus stop with her red umbrella. The streets were wet, and many people were waiting for the bus. A little boy was jumping in the water and laughing.\n\nAt school, Anna's clothes were a little wet, but she was happy. In the art lesson, the children drew pictures of the rain. Anna drew her red umbrella and the happy little boy. Her teacher said, 'What a lovely picture!'",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "What was the weather like yesterday morning?",
+     "options": [
+      "Sunny and hot",
+      "Dark and windy",
+      "Cold and snowy",
+      "Warm and dry"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'the sky was dark and the wind was strong' - trời tối và gió mạnh."
+    },
+    {
+     "type": "MC",
+     "q": "What colour was Anna's umbrella?",
+     "options": [
+      "Blue",
+      "Black",
+      "Red",
+      "Green"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'her red umbrella' - ô của Anna màu đỏ."
+    },
+    {
+     "type": "MC",
+     "q": "What was the little boy doing?",
+     "options": [
+      "Waiting for his mother",
+      "Jumping in the water",
+      "Drawing a picture",
+      "Running to school"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'A little boy was jumping in the water' - cậu bé đang nhảy trong nước (thì tiếp diễn)."
+    },
+    {
+     "type": "MC",
+     "q": "What did the children do in the art lesson?",
+     "options": [
+      "They sang songs about rain",
+      "They read a story",
+      "They drew pictures of the rain",
+      "They watched a film"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'the children drew pictures of the rain' - bọn trẻ vẽ tranh về mưa."
+    },
+    {
+     "type": "MC",
+     "q": "How did Anna feel at school?",
+     "options": [
+      "Sad",
+      "Happy",
+      "Tired",
+      "Angry"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'she was happy' - Anna cảm thấy vui."
+    }
+   ],
+   "translation": "Hôm qua là một ngày mưa. Buổi sáng, bầu trời tối sầm và gió thổi mạnh. Anna nhìn ra cửa sổ và thấy những đám mây đen lớn.\n\nMẹ của Anna nói: 'Mang theo ô nhé con. Trời đang mưa đấy.' Anna đi bộ ra trạm xe buýt với chiếc ô đỏ. Đường phố ướt, và nhiều người đang chờ xe buýt. Một cậu bé đang nhảy trong nước và cười.\n\nỞ trường, quần áo của Anna hơi ướt, nhưng cô bé rất vui. Trong giờ mỹ thuật, bọn trẻ vẽ tranh về mưa. Anna vẽ chiếc ô đỏ của mình và cậu bé vui vẻ. Cô giáo nói: 'Thật là một bức tranh đáng yêu!'",
+   "phrases": [
+    {
+     "en": "look out of the window",
+     "vi": "nhìn ra ngoài cửa sổ"
+    },
+    {
+     "en": "It is raining now",
+     "vi": "Trời đang mưa (hiện tại tiếp diễn cho việc đang xảy ra)"
+    },
+    {
+     "en": "wait for the bus",
+     "vi": "chờ xe buýt"
+    },
+    {
+     "en": "What a lovely picture!",
+     "vi": "Thật là một bức tranh đáng yêu!"
+    }
+   ]
+  },
+  {
+   "level": "Band 3.5",
+   "title": "The Class Trip to the Farm",
+   "text": "Last Saturday, our class went on a trip to a farm near the mountains. We left school at 7 o'clock in the morning and travelled by bus. The journey took two hours, but we sang songs and looked at the green fields, so nobody felt bored.\n\nAt the farm, a friendly farmer showed us his animals. We fed the chickens and gave grass to the goats. Then we picked strawberries in a big garden. The strawberries were redder and sweeter than the ones in the shops. After lunch, we rode horses around a small lake. My horse was slower than my friend's horse, but it was very gentle.\n\nWe arrived home at 6 o'clock in the evening. Everyone was tired but happy. It was the most interesting trip of the year, and we all want to go back next spring.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "How did the class travel to the farm?",
+     "options": [
+      "By train",
+      "By bus",
+      "By car",
+      "On foot"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'travelled by bus' - lớp đi bằng xe buýt."
+    },
+    {
+     "type": "MC",
+     "q": "How long was the journey?",
+     "options": [
+      "One hour",
+      "Three hours",
+      "Two hours",
+      "Half an hour"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'The journey took two hours' - chuyến đi mất hai giờ."
+    },
+    {
+     "type": "MC",
+     "q": "What did the students give to the goats?",
+     "options": [
+      "Strawberries",
+      "Grass",
+      "Bread",
+      "Milk"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'gave grass to the goats' - họ cho dê ăn cỏ."
+    },
+    {
+     "type": "MC",
+     "q": "How were the strawberries on the farm?",
+     "options": [
+      "Smaller than shop ones",
+      "Redder and sweeter than shop ones",
+      "More expensive than shop ones",
+      "The same as shop ones"
+     ],
+     "a": 1,
+     "why": "Bài viết dùng so sánh hơn: 'redder and sweeter than the ones in the shops'."
+    },
+    {
+     "type": "MC",
+     "q": "When did they arrive home?",
+     "options": [
+      "At 7 in the morning",
+      "At noon",
+      "At 6 in the evening",
+      "At 9 in the evening"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'We arrived home at 6 o'clock in the evening' - về nhà lúc 6 giờ tối."
+    }
+   ],
+   "translation": "Thứ Bảy tuần trước, lớp chúng tôi đi tham quan một trang trại gần núi. Chúng tôi rời trường lúc 7 giờ sáng và đi bằng xe buýt. Chuyến đi mất hai giờ, nhưng chúng tôi hát và ngắm những cánh đồng xanh nên không ai thấy chán.\n\nỞ trang trại, một bác nông dân thân thiện dẫn chúng tôi xem các con vật. Chúng tôi cho gà ăn và cho dê ăn cỏ. Sau đó chúng tôi hái dâu tây trong một khu vườn lớn. Dâu tây ở đây đỏ hơn và ngọt hơn dâu ở cửa hàng. Sau bữa trưa, chúng tôi cưỡi ngựa quanh một cái hồ nhỏ. Ngựa của tôi chậm hơn ngựa của bạn tôi, nhưng nó rất hiền.\n\nChúng tôi về đến nhà lúc 6 giờ tối. Ai cũng mệt nhưng vui. Đó là chuyến đi thú vị nhất trong năm, và tất cả chúng tôi đều muốn quay lại vào mùa xuân tới.",
+   "phrases": [
+    {
+     "en": "go on a trip",
+     "vi": "đi một chuyến tham quan, dã ngoại"
+    },
+    {
+     "en": "feed the chickens",
+     "vi": "cho gà ăn"
+    },
+    {
+     "en": "redder and sweeter than",
+     "vi": "đỏ hơn và ngọt hơn (so sánh hơn của tính từ ngắn)"
+    },
+    {
+     "en": "the most interesting trip",
+     "vi": "chuyến đi thú vị nhất (so sánh nhất)"
+    }
+   ]
+  },
+  {
+   "level": "Band 3.5",
+   "title": "Tom's Plan for the Summer",
+   "text": "Tom is fourteen, and the summer holiday is coming. This year, he has many plans. 'I am going to learn to swim,' he says. 'My cousin is a good swimmer, and he is going to teach me at the town pool.'\n\nTom is also going to help his grandfather in the garden. They are going to plant tomatoes and beans. In the evenings, Tom is going to read two English books and write about them in a small notebook. 'The books are going to be difficult,' he says, 'but I am going to try.'\n\nOn the last weekend of the holiday, Tom's family is going to travel to the sea. They are going to stay in a small hotel near the beach for three days. Tom hopes the weather is going to be sunny, because he wants to swim in the sea with his new skill.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "What is Tom going to learn this summer?",
+     "options": [
+      "How to cook",
+      "How to swim",
+      "How to drive",
+      "How to draw"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'I am going to learn to swim' - Tom sẽ học bơi."
+    },
+    {
+     "type": "MC",
+     "q": "Who is going to teach Tom?",
+     "options": [
+      "His grandfather",
+      "His teacher",
+      "His cousin",
+      "His father"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'My cousin... is going to teach me' - anh họ sẽ dạy Tom."
+    },
+    {
+     "type": "MC",
+     "q": "What are Tom and his grandfather going to plant?",
+     "options": [
+      "Flowers and beans",
+      "Tomatoes and beans",
+      "Tomatoes and potatoes",
+      "Beans and rice"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'plant tomatoes and beans' - trồng cà chua và đậu."
+    },
+    {
+     "type": "MC",
+     "q": "What is Tom going to do in the evenings?",
+     "options": [
+      "Watch films",
+      "Play computer games",
+      "Read English books and write about them",
+      "Help at a shop"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'read two English books and write about them' - đọc sách tiếng Anh và viết về chúng."
+    },
+    {
+     "type": "MC",
+     "q": "How long is the family going to stay near the beach?",
+     "options": [
+      "Two days",
+      "Three days",
+      "One week",
+      "One day"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'stay... for three days' - ở lại ba ngày."
+    }
+   ],
+   "translation": "Tom mười bốn tuổi, và kỳ nghỉ hè đang đến. Năm nay, cậu có nhiều kế hoạch. 'Mình sẽ học bơi,' cậu nói. 'Anh họ mình bơi rất giỏi, và anh ấy sẽ dạy mình ở bể bơi của thị trấn.'\n\nTom cũng sẽ giúp ông ở vườn. Hai ông cháu sẽ trồng cà chua và đậu. Buổi tối, Tom sẽ đọc hai cuốn sách tiếng Anh và viết về chúng trong một cuốn sổ nhỏ. 'Sách sẽ khó,' cậu nói, 'nhưng mình sẽ cố.'\n\nVào cuối tuần cuối cùng của kỳ nghỉ, gia đình Tom sẽ đi biển. Họ sẽ ở trong một khách sạn nhỏ gần bãi biển trong ba ngày. Tom hy vọng thời tiết sẽ nắng, vì cậu muốn bơi ở biển bằng kỹ năng mới của mình.",
+   "phrases": [
+    {
+     "en": "be going to learn to swim",
+     "vi": "sắp/sẽ học bơi (kế hoạch đã định)"
+    },
+    {
+     "en": "help his grandfather in the garden",
+     "vi": "giúp ông ở vườn"
+    },
+    {
+     "en": "stay in a small hotel",
+     "vi": "ở trong một khách sạn nhỏ"
+    },
+    {
+     "en": "hope the weather is going to be sunny",
+     "vi": "hy vọng thời tiết sẽ nắng"
+    }
+   ]
+  },
+  {
+   "level": "Band 4.5",
+   "title": "The Night Market in Our Town",
+   "text": "Every Saturday evening, a night market opens in the main square of our town. It has been a popular meeting place for local people since 2010. More than eighty stalls sell food, clothes and handmade gifts, and the smell of grilled corn and fresh bread fills the air.\n\nThe market is especially famous for its food. Visitors can try dishes from different regions of the country in one place. The most popular stall belongs to Mrs Lan, who has sold noodle soup there for ten years. Her soup is cheaper than the soup in restaurants, but many people say it tastes even better.\n\nFor young people, the market is more than a place to shop. Musicians play traditional songs in the centre of the square, and families sit on small plastic chairs, talking and laughing together. In my opinion, the night market shows the warm heart of our town better than any modern shopping centre.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "How often does the night market open?",
+     "options": [
+      "Every evening",
+      "Every Saturday evening",
+      "Once a month",
+      "Every Sunday morning"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'Every Saturday evening, a night market opens' - chợ mở mỗi tối thứ Bảy."
+    },
+    {
+     "type": "MC",
+     "q": "How many stalls are there in the market?",
+     "options": [
+      "About fifty",
+      "More than eighty",
+      "Exactly one hundred",
+      "Fewer than thirty"
+     ],
+     "a": 1,
+     "why": "Bài viết: 'More than eighty stalls' - hơn tám mươi gian hàng."
+    },
+    {
+     "type": "TFNG",
+     "q": "The night market first opened in 2010.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Bài viết: 'It has been a popular meeting place... since 2010' → Đúng theo bài."
+    },
+    {
+     "type": "TFNG",
+     "q": "Mrs Lan's noodle soup is more expensive than restaurant soup.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 1,
+     "why": "Bài nói ngược lại: 'Her soup is cheaper than the soup in restaurants' → Sai."
+    },
+    {
+     "type": "MC",
+     "q": "What do musicians do in the square?",
+     "options": [
+      "Sell handmade gifts",
+      "Cook traditional food",
+      "Play traditional songs",
+      "Teach children to sing"
+     ],
+     "a": 2,
+     "why": "Bài viết: 'Musicians play traditional songs in the centre of the square'."
+    }
+   ],
+   "translation": "Mỗi tối thứ Bảy, một khu chợ đêm mở ra ở quảng trường chính của thị trấn chúng tôi. Nó đã là điểm hẹn được yêu thích của người dân địa phương từ năm 2010. Hơn tám mươi gian hàng bán đồ ăn, quần áo và quà tặng làm bằng tay, và mùi ngô nướng cùng bánh mì mới ra lò lan tỏa trong không khí.\n\nChợ đặc biệt nổi tiếng về ẩm thực. Du khách có thể thử các món ăn từ nhiều vùng khác nhau của đất nước tại cùng một nơi. Gian hàng được yêu thích nhất thuộc về bà Lan, người đã bán phở (mì nước) ở đó được mười năm. Phở của bà rẻ hơn phở ở nhà hàng, nhưng nhiều người nói nó còn ngon hơn.\n\nVới giới trẻ, chợ không chỉ là nơi mua sắm. Các nhạc công chơi những bài hát truyền thống ở giữa quảng trường, và các gia đình ngồi trên những chiếc ghế nhựa nhỏ, trò chuyện và cười đùa cùng nhau. Theo tôi, chợ đêm thể hiện trái tim ấm áp của thị trấn chúng tôi rõ hơn bất kỳ trung tâm mua sắm hiện đại nào.",
+   "phrases": [
+    {
+     "en": "a popular meeting place",
+     "vi": "một điểm hẹn được yêu thích"
+    },
+    {
+     "en": "handmade gifts",
+     "vi": "quà tặng làm bằng tay"
+    },
+    {
+     "en": "cheaper than, but tastes even better",
+     "vi": "rẻ hơn, nhưng vị còn ngon hơn (so sánh kết hợp)"
+    },
+    {
+     "en": "in my opinion",
+     "vi": "theo ý kiến của tôi"
+    }
+   ]
+  },
+  {
+   "level": "Band 7.5+",
+   "title": "The Science of Sleep and Dreams",
+   "text": "For roughly a third of our lives, we are asleep, yet the purpose of sleep puzzled scientists for centuries. Only in the last few decades has research begun to reveal how much work the sleeping brain quietly performs. Far from being a period of inactivity, sleep is now understood as an active, highly organised state that supports memory, emotion and physical repair.\n\nOne of the most important discoveries concerns memory consolidation. During deep sleep, the brain replays experiences from the day and transfers selected information from short-term storage into long-term memory. Students who sleep well after studying consistently recall more than those who stay up late revising, a finding that challenges the culture of the all-night study session. Sleep, in other words, is not the enemy of learning but one of its essential stages.\n\nDreams occur mainly during rapid eye movement, or REM, sleep, when the brain is almost as active as it is while awake. Some researchers argue that dreams help us process emotions, allowing painful experiences to be revisited in a calmer chemical state. Others are more cautious: they point out that most dreams are forgotten within minutes and may simply be the by-product of the brain tidying its memory stores.\n\nWhat is clear is that modern life is steadily eroding sleep. Artificial light, late-night screens and irregular working hours have cut average sleep by more than an hour compared with a century ago. The consequences reach beyond tiredness: chronic sleep loss is linked to obesity, weakened immunity and a higher risk of accidents.\n\nIn my view, societies should treat sleep as seriously as diet and exercise. Schools start too early for teenage brains, and employers who praise exhausted workers are, I believe, damaging both health and productivity. Recognising sleep as a public health priority would be a small step with enormous benefits.",
+   "questions": [
+    {
+     "type": "YNNG",
+     "q": "Theo tác giả, các trường học nên bắt đầu muộn hơn vì não của thanh thiếu niên hoạt động khác vào buổi sáng.",
+     "o": [
+      "Yes",
+      "No",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Đoạn cuối: 'Schools start too early for teenage brains' - tác giả khẳng định trường học bắt đầu quá sớm đối với não thanh thiếu niên → Yes."
+    },
+    {
+     "type": "YNNG",
+     "q": "Theo tác giả, những người sử dụng lao động khen ngợi nhân viên kiệt sức đang giúp tăng năng suất lao động.",
+     "o": [
+      "Yes",
+      "No",
+      "Not Given"
+     ],
+     "a": 1,
+     "why": "Tác giả nói ngược lại: việc đó 'damaging both health and productivity' - gây hại cả sức khỏe lẫn năng suất → No."
+    },
+    {
+     "type": "TCOMP",
+     "q": "Trong giấc ngủ sâu, não chuyển thông tin đã chọn từ bộ nhớ ngắn hạn sang bộ nhớ ___.",
+     "answer": "long-term memory|long term memory",
+     "why": "Bài viết: 'transfers selected information from short-term storage into long-term memory'."
+    },
+    {
+     "type": "TFNG",
+     "q": "Giấc mơ xảy ra chủ yếu trong giai đoạn ngủ REM.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Bài viết: 'Dreams occur mainly during rapid eye movement, or REM, sleep' → Đúng."
+    },
+    {
+     "type": "SC",
+     "q": "Tóm tắt nào đúng nhất cho đoạn 2?",
+     "options": [
+      "Ngủ sâu giúp não củng cố trí nhớ và hỗ trợ việc học",
+      "Học sinh nên thức khuya để học bài",
+      "Trí nhớ ngắn hạn quan trọng hơn trí nhớ dài hạn",
+      "Não ngừng hoạt động trong giấc ngủ sâu"
+     ],
+     "a": 0,
+     "why": "Đoạn 2 nói về memory consolidation: não chuyển thông tin vào trí nhớ dài hạn khi ngủ sâu."
+    }
+   ],
+   "translation": "Trong khoảng một phần ba cuộc đời, chúng ta ngủ, vậy mà mục đích của giấc ngủ đã làm các nhà khoa học bối rối suốt nhiều thế kỷ. Chỉ trong vài thập kỷ gần đây, nghiên cứu mới bắt đầu hé lộ bộ não khi ngủ âm thầm làm việc nhiều đến mức nào. Khác xa với một giai đoạn bất hoạt, giấc ngủ nay được hiểu là một trạng thái tích cực, có tổ chức cao, hỗ trợ trí nhớ, cảm xúc và sự phục hồi thể chất.\n\nMột trong những khám phá quan trọng nhất liên quan đến việc củng cố trí nhớ. Trong giấc ngủ sâu, não phát lại những trải nghiệm trong ngày và chuyển thông tin đã chọn từ lưu trữ ngắn hạn vào trí nhớ dài hạn. Học sinh ngủ ngon sau khi học luôn nhớ được nhiều hơn những em thức khuya ôn bài, một phát hiện thách thức văn hóa học thâu đêm. Nói cách khác, giấc ngủ không phải kẻ thù của việc học mà là một trong những giai đoạn thiết yếu của nó.\n\nGiấc mơ xảy ra chủ yếu trong giai đoạn ngủ chuyển động mắt nhanh, hay REM, khi não gần như hoạt động mạnh như lúc thức. Một số nhà nghiên cứu cho rằng giấc mơ giúp ta xử lý cảm xúc, cho phép những trải nghiệm đau buồn được xem lại trong trạng thái hóa học bình tĩnh hơn. Những người khác thận trọng hơn: họ chỉ ra rằng hầu hết giấc mơ bị quên trong vài phút và có thể chỉ là sản phẩm phụ của việc não dọn dẹp kho trí nhớ.\n\nĐiều rõ ràng là đời sống hiện đại đang dần bào mòn giấc ngủ. Ánh sáng nhân tạo, màn hình khuya và giờ làm việc thất thường đã cắt giảm thời gian ngủ trung bình hơn một giờ so với một thế kỷ trước. Hậu quả vượt xa sự mệt mỏi: mất ngủ mãn tính liên quan đến béo phì, suy giảm miễn dịch và nguy cơ tai nạn cao hơn.\n\nTheo tôi, xã hội nên coi trọng giấc ngủ ngang với ăn uống và tập thể dục. Trường học bắt đầu quá sớm đối với não thanh thiếu niên, và những chủ lao động khen ngợi nhân viên kiệt sức, theo tôi, đang gây hại cho cả sức khỏe lẫn năng suất. Công nhận giấc ngủ là ưu tiên y tế công cộng sẽ là một bước nhỏ với lợi ích khổng lồ.",
+   "phrases": [
+    {
+     "en": "memory consolidation",
+     "vi": "sự củng cố trí nhớ"
+    },
+    {
+     "en": "in other words",
+     "vi": "nói cách khác"
+    },
+    {
+     "en": "a by-product of",
+     "vi": "sản phẩm phụ của"
+    },
+    {
+     "en": "chronic sleep loss",
+     "vi": "mất ngủ mãn tính"
+    },
+    {
+     "en": "a public health priority",
+     "vi": "ưu tiên y tế công cộng"
+    }
+   ]
+  },
+  {
+   "level": "Band 7.5+",
+   "title": "Why Cities Are Planting Urban Forests",
+   "text": "A. In the summer of 2023, several European capitals recorded temperatures above 40°C, and the streets with the least shade suffered most. In response, city governments have begun an ambitious experiment: planting forests inside the city itself. Paris plans to add 170,000 trees, while Milan has promised three million. These are not decorative parks but dense, carefully designed woodlands intended to cool neighbourhoods, clean the air and restore urban wildlife.\n\nB. The science behind the movement is persuasive. A single mature tree can absorb around 22 kilograms of carbon dioxide a year, and a canopy of leaves can reduce the temperature of the street below by several degrees. In districts where trees have been planted, residents report sleeping better during heatwaves, and local shops even record higher sales because people linger longer in pleasant, shaded streets.\n\nC. Critics, however, raise practical objections. Young trees need years of watering and care, and in dry cities this consumes scarce water. Others worry that greener districts become more fashionable, pushing rents up and forcing poorer residents out - a process known as green gentrification. A forest planted for everyone, they argue, may end up serving only the wealthy.\n\nD. Supporters accept these risks but insist they can be managed. Choosing native species reduces water needs, and planting first in the poorest districts prevents greening from becoming a luxury. What matters, they say, is that cities plan for decades ahead: a tree planted today will give its greatest benefits to people not yet born.\n\nE. Personally, I find the movement hopeful. For two centuries, progress meant replacing nature with concrete; now the most advanced cities compete to bring nature back. If governments protect these young forests with the same energy they protect new roads, future generations will inherit cooler, kinder cities.",
+   "questions": [
+    {
+     "type": "MINFO",
+     "q": "Đoạn nào nêu lo ngại rằng khu phố xanh hơn có thể đẩy giá thuê nhà lên và buộc cư dân nghèo phải rời đi?",
+     "o": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "a": 2,
+     "why": "Đoạn C bàn về phản biện, trong đó có 'pushing rents up and forcing poorer residents out' - green gentrification."
+    },
+    {
+     "type": "YNNG",
+     "q": "Theo tác giả, các thành phố tiên tiến nhất hiện nay cạnh tranh nhau để đưa thiên nhiên trở lại.",
+     "o": [
+      "Yes",
+      "No",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Đoạn E: 'the most advanced cities compete to bring nature back' - đúng quan điểm tác giả → Yes."
+    },
+    {
+     "type": "MSEND",
+     "q": "Theo bài, một cây trưởng thành có thể",
+     "o": [
+      "hấp thụ khoảng 22 kg khí CO2 mỗi năm",
+      "làm giảm nhiệt độ đường phố xuống 22 độ",
+      "sống được đúng 22 năm trong thành phố",
+      "cung cấp bóng mát cho 22 ngôi nhà"
+     ],
+     "a": 0,
+     "why": "Đoạn B: 'A single mature tree can absorb around 22 kilograms of carbon dioxide a year'."
+    },
+    {
+     "type": "MC",
+     "q": "Theo đoạn B, vì sao các cửa hàng ở khu phố nhiều cây xanh bán được nhiều hàng hơn?",
+     "o": [
+      "Vì giá thuê mặt bằng rẻ hơn",
+      "Vì khách nán lại lâu hơn trên những con phố râm mát dễ chịu",
+      "Vì cây xanh thu hút khách du lịch nước ngoài",
+      "Vì chính quyền giảm thuế cho họ"
+     ],
+     "a": 1,
+     "why": "Đoạn B: 'people linger longer in pleasant, shaded streets' - khách ở lại lâu hơn nên mua sắm nhiều hơn."
+    },
+    {
+     "type": "TFNG",
+     "q": "Milan đã hứa trồng ba triệu cây.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Đoạn A: 'Milan has promised three million' → Đúng."
+    }
+   ],
+   "translation": "A. Mùa hè 2023, vài thủ đô châu Âu ghi nhận nhiệt độ trên 40°C, và những con phố ít bóng mát nhất chịu ảnh hưởng nặng nhất. Để ứng phó, chính quyền các thành phố đã bắt đầu một thí nghiệm tham vọng: trồng rừng ngay trong lòng thành phố. Paris dự định thêm 170.000 cây, còn Milan hứa trồng ba triệu cây. Đây không phải công viên trang trí mà là những khu rừng rậm, được thiết kế cẩn thận nhằm làm mát khu dân cư, làm sạch không khí và khôi phục động vật hoang dã đô thị.\n\nB. Cơ sở khoa học đằng sau phong trào này rất thuyết phục. Một cây trưởng thành có thể hấp thụ khoảng 22 kg khí carbon dioxide mỗi năm, và một tán lá có thể giảm nhiệt độ của con phố bên dưới vài độ. Ở các quận đã trồng cây, cư dân cho biết họ ngủ ngon hơn trong các đợt nắng nóng, và các cửa hàng địa phương thậm chí ghi nhận doanh số cao hơn vì mọi người nán lại lâu hơn trên những con phố râm mát dễ chịu.\n\nC. Tuy nhiên, những người phản biện nêu các vấn đề thực tế. Cây non cần nhiều năm tưới nước và chăm sóc, và ở các thành phố khô hạn, việc này tiêu tốn nguồn nước khan hiếm. Những người khác lo rằng các quận xanh hơn sẽ trở nên thời thượng, đẩy giá thuê lên và buộc cư dân nghèo phải rời đi - một quá trình gọi là 'quý tộc hóa xanh'. Một khu rừng trồng cho mọi người, họ lập luận, rốt cuộc có thể chỉ phục vụ người giàu.\n\nD. Những người ủng hộ thừa nhận các rủi ro này nhưng khẳng định chúng có thể quản lý được. Chọn loài bản địa giúp giảm nhu cầu nước, và trồng trước ở các quận nghèo nhất ngăn việc xanh hóa thành một thứ xa xỉ. Điều quan trọng, họ nói, là các thành phố phải hoạch định cho nhiều thập kỷ tới: một cây trồng hôm nay sẽ mang lại lợi ích lớn nhất cho những người chưa ra đời.\n\nE. Cá nhân tôi thấy phong trào này đầy hy vọng. Suốt hai thế kỷ, tiến bộ có nghĩa là thay thiên nhiên bằng bê tông; nay các thành phố tiên tiến nhất cạnh tranh nhau để đưa thiên nhiên trở lại. Nếu các chính phủ bảo vệ những khu rừng non này với cùng nhiệt huyết như khi bảo vệ những con đường mới, các thế hệ tương lai sẽ thừa hưởng những thành phố mát mẻ và nhân hậu hơn.",
+   "phrases": [
+    {
+     "en": "an ambitious experiment",
+     "vi": "một thí nghiệm tham vọng"
+    },
+    {
+     "en": "a canopy of leaves",
+     "vi": "một tán lá"
+    },
+    {
+     "en": "green gentrification",
+     "vi": "quý tộc hóa xanh (xanh hóa làm tăng giá nhà, đẩy người nghèo đi)"
+    },
+    {
+     "en": "native species",
+     "vi": "loài bản địa"
+    },
+    {
+     "en": "future generations",
+     "vi": "các thế hệ tương lai"
+    }
+   ]
+  },
+  {
+   "level": "Band 6.5",
+   "title": "Growing Food on City Roofs",
+   "text": "A. On the roof of a supermarket in Montreal, rows of tomatoes and lettuces grow under the open sky. The store below sells the vegetables on the same day they are picked, and customers can watch their food growing through a glass floor. This rooftop farm, one of the largest in the world, symbolises a movement that is spreading through cities on every continent: urban farming.\n\nB. The reasons for the trend are partly environmental. Food in a typical supermarket may travel 2,000 kilometres before it reaches the shelf, producing large amounts of carbon emissions. Vegetables grown on a roof travel only a few metres. Urban farms also use far less water than traditional agriculture, because modern systems recycle the water that plants do not absorb.\n\nC. There are social benefits, too. Community gardens have appeared on empty land in poor districts, where fresh vegetables were once expensive or unavailable. Elderly residents gain gentle exercise and company, while children who plant seeds often become more willing to taste the vegetables they have grown themselves. Several studies suggest that such gardens reduce stress and even local crime.\n\nD. Nevertheless, urban farming faces real limits. Land in cities is expensive, and a rooftop cannot feed a whole population. Critics point out that growing salad leaves is easy, but producing the grains and potatoes that supply most of our calories will always require countryside fields. Urban farms, in their view, are a useful addition, not a replacement.\n\nE. Whatever its limits, urban farming has changed how many city dwellers think about food. A generation that once saw vegetables only in plastic packaging is now learning how food grows. That knowledge, farmers say, may be the movement's most valuable harvest of all.",
+   "questions": [
+    {
+     "type": "MINFO",
+     "q": "Đoạn nào mô tả một trang trại trên mái nhà cụ thể ở Montreal?",
+     "o": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "a": 0,
+     "why": "Đoạn A giới thiệu trang trại trên mái siêu thị ở Montreal với cà chua và rau xà lách."
+    },
+    {
+     "type": "MSEND",
+     "q": "Theo bài, thực phẩm trong siêu thị thông thường có thể",
+     "o": [
+      "di chuyển 2.000 km trước khi lên kệ",
+      "được trồng ngay tại cửa hàng",
+      "chỉ di chuyển vài mét",
+      "không tạo ra khí thải nào"
+     ],
+     "a": 0,
+     "why": "Đoạn B: 'Food in a typical supermarket may travel 2,000 kilometres before it reaches the shelf'."
+    },
+    {
+     "type": "TCOMP",
+     "q": "Trang trại đô thị dùng ít nước hơn nông nghiệp truyền thống vì các hệ thống hiện đại ___ lượng nước cây không hấp thụ.",
+     "answer": "recycle|recycles",
+     "why": "Đoạn B: 'modern systems recycle the water that plants do not absorb'."
+    },
+    {
+     "type": "MC",
+     "q": "Theo đoạn C, vì sao trẻ em ở vườn cộng đồng sẵn sàng nếm rau hơn?",
+     "o": [
+      "Vì rau được nấu ngon hơn",
+      "Vì chính các em đã trồng những cây rau đó",
+      "Vì rau được phát miễn phí",
+      "Vì bạn bè ép các em ăn"
+     ],
+     "a": 1,
+     "why": "Đoạn C: 'children who plant seeds often become more willing to taste the vegetables they have grown themselves'."
+    },
+    {
+     "type": "TFNG",
+     "q": "Những người phản biện tin rằng trang trại đô thị có thể thay thế hoàn toàn đồng ruộng ở nông thôn.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 1,
+     "why": "Họ nói ngược lại: trang trại đô thị là 'a useful addition, not a replacement' → Sai."
+    }
+   ],
+   "translation": "A. Trên mái một siêu thị ở Montreal, những hàng cà chua và rau xà lách mọc dưới bầu trời rộng mở. Cửa hàng bên dưới bán rau vào đúng ngày chúng được hái, và khách hàng có thể ngắm thực phẩm của mình đang lớn lên qua một sàn kính. Trang trại trên mái này, một trong những trang trại lớn nhất thế giới, tượng trưng cho một phong trào đang lan khắp các thành phố ở mọi châu lục: nông nghiệp đô thị.\n\nB. Lý do của xu hướng này một phần thuộc về môi trường. Thực phẩm trong một siêu thị điển hình có thể di chuyển 2.000 km trước khi lên kệ, tạo ra lượng lớn khí thải carbon. Rau trồng trên mái chỉ di chuyển vài mét. Trang trại đô thị cũng dùng ít nước hơn nhiều so với nông nghiệp truyền thống, vì các hệ thống hiện đại tái chế lượng nước mà cây không hấp thụ.\n\nC. Cũng có những lợi ích xã hội. Vườn cộng đồng đã xuất hiện trên đất trống ở các quận nghèo, nơi rau tươi từng đắt đỏ hoặc không có sẵn. Người già có vận động nhẹ nhàng và bạn đồng hành, còn trẻ em tự gieo hạt thường sẵn lòng nếm thử rau do chính mình trồng. Vài nghiên cứu gợi ý những khu vườn như vậy làm giảm căng thẳng và thậm chí cả tội phạm địa phương.\n\nD. Tuy nhiên, nông nghiệp đô thị đối mặt với những giới hạn thật sự. Đất ở thành phố đắt đỏ, và một mái nhà không thể nuôi cả một cộng đồng dân cư. Những người phản biện chỉ ra rằng trồng rau xà lách thì dễ, nhưng sản xuất ngũ cốc và khoai tây, nguồn cung cấp phần lớn calo của chúng ta, sẽ luôn cần những cánh đồng nông thôn. Theo họ, trang trại đô thị là một bổ sung hữu ích, không phải sự thay thế.\n\nE. Dù giới hạn thế nào, nông nghiệp đô thị đã thay đổi cách nhiều cư dân thành phố nghĩ về thực phẩm. Một thế hệ từng chỉ thấy rau trong bao bì nhựa nay đang học cách thực phẩm lớn lên. Kiến thức đó, theo các nông dân, có thể là vụ thu hoạch quý giá nhất của phong trào này.",
+   "phrases": [
+    {
+     "en": "on every continent",
+     "vi": "ở mọi châu lục"
+    },
+    {
+     "en": "carbon emissions",
+     "vi": "khí thải carbon"
+    },
+    {
+     "en": "community gardens",
+     "vi": "vườn cộng đồng"
+    },
+    {
+     "en": "a useful addition, not a replacement",
+     "vi": "một bổ sung hữu ích, không phải sự thay thế"
+    },
+    {
+     "en": "city dwellers",
+     "vi": "cư dân thành phố"
+    }
+   ]
+  },
+  {
+   "level": "Band 6.5",
+   "title": "How Music Training Changes the Brain",
+   "text": "A. Parents who pay for piano lessons often hope their child will simply learn to play an instrument. Research in the last twenty years suggests the benefits go much further. Children who receive regular musical training show measurable differences in the brain, particularly in areas connected with language, memory and attention.\n\nB. Learning an instrument is a demanding workout for the brain. Both hands must perform different movements, the eyes must read symbols, and the ears must judge sound - all at the same time. Studies using brain scans have found that the connection between the two halves of the brain is thicker in musicians, allowing information to travel faster between them.\n\nC. The effects on language are among the most surprising. Because music and speech share several processing systems, musically trained children often find it easier to distinguish similar sounds in a foreign language and to remember new words. Some schools have therefore introduced music programmes specifically to support reading skills among struggling pupils.\n\nD. Sceptics warn that the evidence is not perfect. Families who can afford music lessons are often wealthier and better educated, so their children might succeed for other reasons. Careful recent studies that compare children from similar backgrounds, however, still find advantages for the musical groups, though the effects are smaller than early headlines suggested.\n\nE. The conclusion most scientists now accept is modest but encouraging: music training will not turn an average child into a genius, but it strengthens real abilities in a way few other activities can match. Few hobbies, after all, train the body, the senses and the mind in a single hour.",
+   "questions": [
+    {
+     "type": "MINFO",
+     "q": "Đoạn nào thừa nhận một số hiệu quả của luyện nhạc có thể đến từ hoàn cảnh gia đình giàu có, học vấn cao?",
+     "o": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "a": 3,
+     "why": "Đoạn D nêu ý kiến hoài nghi: gia đình kham nổi tiền học nhạc thường giàu và học vấn cao hơn."
+    },
+    {
+     "type": "YNNG",
+     "q": "Theo tác giả, luyện nhạc sẽ biến một đứa trẻ bình thường thành thiên tài.",
+     "o": [
+      "Yes",
+      "No",
+      "Not Given"
+     ],
+     "a": 1,
+     "why": "Đoạn E bác bỏ: 'music training will not turn an average child into a genius' → No."
+    },
+    {
+     "type": "MC",
+     "q": "Theo đoạn B, ảnh chụp não cho thấy điều gì ở nhạc công?",
+     "o": [
+      "Não của họ lớn hơn bình thường",
+      "Mối liên kết giữa hai bán cầu não dày hơn",
+      "Họ chỉ dùng một nửa bộ não khi chơi nhạc",
+      "Vùng ngôn ngữ của họ nhỏ hơn"
+     ],
+     "a": 1,
+     "why": "Đoạn B: 'the connection between the two halves of the brain is thicker in musicians'."
+    },
+    {
+     "type": "SC",
+     "q": "Tóm tắt nào đúng nhất cho đoạn C?",
+     "o": [
+      "Luyện nhạc giúp trẻ phân biệt âm và nhớ từ mới trong ngoại ngữ dễ hơn",
+      "Trẻ em nên học nhạc thay vì học đọc",
+      "Âm nhạc và ngôn ngữ không liên quan gì nhau",
+      "Các trường học đã bỏ chương trình âm nhạc"
+     ],
+     "a": 0,
+     "why": "Đoạn C: trẻ được luyện nhạc dễ phân biệt âm tương tự trong ngoại ngữ và nhớ từ mới hơn."
+    },
+    {
+     "type": "TFNG",
+     "q": "Các nghiên cứu cẩn thận gần đây, so sánh trẻ có hoàn cảnh tương tự, vẫn thấy lợi thế ở nhóm học nhạc.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Đoạn D: 'still find advantages for the musical groups, though the effects are smaller' → Đúng."
+    }
+   ],
+   "translation": "A. Cha mẹ trả tiền cho con học piano thường chỉ hy vọng con mình biết chơi một nhạc cụ. Nghiên cứu trong hai mươi năm qua gợi ý lợi ích còn đi xa hơn nhiều. Trẻ em được luyện nhạc thường xuyên cho thấy những khác biệt đo được trong não, đặc biệt ở các vùng liên quan đến ngôn ngữ, trí nhớ và sự chú ý.\n\nB. Học một nhạc cụ là một buổi tập đòi hỏi cao đối với não. Hai tay phải thực hiện các động tác khác nhau, mắt phải đọc ký hiệu, và tai phải đánh giá âm thanh - tất cả cùng lúc. Các nghiên cứu dùng ảnh chụp não phát hiện mối liên kết giữa hai bán cầu não dày hơn ở nhạc công, cho phép thông tin di chuyển nhanh hơn giữa chúng.\n\nC. Ảnh hưởng lên ngôn ngữ thuộc hàng đáng ngạc nhiên nhất. Vì âm nhạc và lời nói dùng chung vài hệ thống xử lý, trẻ được luyện nhạc thường dễ phân biệt các âm tương tự trong ngoại ngữ và nhớ từ mới hơn. Vài trường học do đó đã đưa chương trình âm nhạc vào để hỗ trợ kỹ năng đọc cho học sinh yếu.\n\nD. Những người hoài nghi cảnh báo bằng chứng chưa hoàn hảo. Gia đình kham nổi tiền học nhạc thường giàu có và học vấn cao hơn, nên con họ có thể thành công vì những lý do khác. Tuy nhiên, các nghiên cứu cẩn thận gần đây so sánh trẻ có hoàn cảnh tương tự vẫn tìm thấy lợi thế cho nhóm học nhạc, dù hiệu quả nhỏ hơn những gì các tít báo đầu tiên gợi ý.\n\nE. Kết luận mà đa số nhà khoa học nay chấp nhận là khiêm tốn nhưng khích lệ: luyện nhạc sẽ không biến một đứa trẻ bình thường thành thiên tài, nhưng nó tăng cường những năng lực thật theo cách ít hoạt động nào sánh được. Xét cho cùng, ít sở thích nào rèn luyện cùng lúc cơ thể, các giác quan và trí tuệ trong một giờ.",
+   "phrases": [
+    {
+     "en": "measurable differences",
+     "vi": "những khác biệt đo lường được"
+    },
+    {
+     "en": "at the same time",
+     "vi": "cùng một lúc"
+    },
+    {
+     "en": "struggling pupils",
+     "vi": "học sinh yếu, gặp khó khăn"
+    },
+    {
+     "en": "turn an average child into a genius",
+     "vi": "biến một đứa trẻ bình thường thành thiên tài"
+    },
+    {
+     "en": "after all",
+     "vi": "xét cho cùng"
+    }
+   ]
+  },
+  {
+   "level": "Band 6.0",
+   "title": "The Bicycle: A Simple Machine That Changed Travel",
+   "text": "A. Few inventions have changed everyday life as quietly as the bicycle. The earliest version appeared in Germany in 1817: a wooden machine with two wheels that the rider pushed along with his feet. It had no pedals, no chain and no brakes, yet it allowed people to travel two or three times faster than walking.\n\nB. In the 1860s, French makers added pedals to the front wheel, creating the machine nicknamed the boneshaker because of its hard wooden wheels on rough stone roads. Then, in the 1870s, came the penny-farthing, with an enormous front wheel that let riders travel faster but made falling dangerous and mounting difficult. Cycling at this stage remained a sport for daring young men.\n\nC. The breakthrough arrived in 1885 with the safety bicycle, whose design - two equal wheels, a chain driving the back wheel and a diamond-shaped frame - is recognisably the bicycle we know today. A few years later, air-filled tyres made riding comfortable. Prices fell rapidly, and factories began producing bicycles by the hundred thousand.\n\nD. The social effects were enormous, especially for women. The bicycle offered freedom of movement that many had never known: a woman could visit friends, attend classes or reach a job without depending on anyone. Fashion changed, too, as long skirts made cycling impossible and simpler clothes became acceptable. Some doctors at the time even warned against cycling, which only made it more attractive to the young.\n\nE. Today there are an estimated two billion bicycles in the world. In rich cities they are returning as a serious form of transport, supported by bike-sharing schemes and protected lanes. Two centuries after that first wooden machine, the bicycle remains one of humanity's simplest and smartest answers to moving around.",
+   "questions": [
+    {
+     "type": "MINFO",
+     "q": "Đoạn nào mô tả mẫu xe đạp an toàn năm 1885 có thiết kế gần giống xe đạp ngày nay?",
+     "o": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "a": 2,
+     "why": "Đoạn C mô tả safety bicycle 1885 với hai bánh bằng nhau, xích truyền động bánh sau."
+    },
+    {
+     "type": "MSEND",
+     "q": "Theo bài, mẫu xe đạp năm 1817 cho phép người đi",
+     "o": [
+      "di chuyển nhanh gấp hai đến ba lần đi bộ",
+      "đạp xe mà không cần dùng chân",
+      "đi nhanh hơn tàu hỏa thời đó",
+      "leo núi dễ dàng"
+     ],
+     "a": 0,
+     "why": "Đoạn A: 'it allowed people to travel two or three times faster than walking'."
+    },
+    {
+     "type": "TCOMP",
+     "q": "Xe đạp penny-farthing có một bánh trước rất ___ khiến việc ngã trở nên nguy hiểm.",
+     "answer": "large|enormous|big",
+     "why": "Đoạn B: 'an enormous front wheel that let riders travel faster but made falling dangerous'."
+    },
+    {
+     "type": "MC",
+     "q": "Theo đoạn D, xe đạp đã thay đổi điều gì trong thời trang của phụ nữ?",
+     "o": [
+      "Váy dài trở nên bắt buộc",
+      "Quần áo đơn giản trở nên được chấp nhận",
+      "Phụ nữ phải mặc đồng phục khi đạp xe",
+      "Mũ rộng vành trở nên lỗi thời"
+     ],
+     "a": 1,
+     "why": "Đoạn D: 'long skirts made cycling impossible and simpler clothes became acceptable'."
+    },
+    {
+     "type": "MH",
+     "q": "Đoạn nào nói xe đạp mang lại cho phụ nữ sự tự do di chuyển chưa từng có?",
+     "options": [
+      "A. Paragraph 1",
+      "B. Paragraph 2",
+      "C. Paragraph 3",
+      "D. Paragraph 4"
+     ],
+     "a": 3,
+     "why": "Đoạn D (đoạn 4) nói về tác động xã hội, nhất là tự do di chuyển của phụ nữ."
+    }
+   ],
+   "translation": "A. Ít phát minh nào thay đổi đời sống thường ngày một cách lặng lẽ như xe đạp. Phiên bản sớm nhất xuất hiện ở Đức năm 1817: một cỗ máy gỗ hai bánh mà người lái dùng chân đẩy đi. Nó không có bàn đạp, không xích, không phanh, nhưng cho phép người ta di chuyển nhanh gấp hai đến ba lần đi bộ.\n\nB. Vào thập niên 1860, các nhà sản xuất Pháp gắn bàn đạp vào bánh trước, tạo ra cỗ máy có biệt danh 'kẻ rung xương' vì bánh gỗ cứng trên đường đá gồ ghề. Rồi vào thập niên 1870 xuất hiện xe penny-farthing với bánh trước khổng lồ giúp người lái đi nhanh hơn nhưng làm việc ngã trở nên nguy hiểm và việc lên xe khó khăn. Đạp xe ở giai đoạn này vẫn là môn thể thao của những chàng trai dũng cảm.\n\nC. Bước đột phá đến vào năm 1885 với xe đạp an toàn, có thiết kế - hai bánh bằng nhau, xích truyền động bánh sau và khung hình thoi - rõ ràng là chiếc xe đạp chúng ta biết ngày nay. Vài năm sau, lốp bơm hơi làm việc đạp xe trở nên thoải mái. Giá giảm nhanh, và các nhà máy bắt đầu sản xuất xe đạp hàng trăm nghìn chiếc.\n\nD. Tác động xã hội là rất lớn, nhất là đối với phụ nữ. Xe đạp mang lại sự tự do di chuyển mà nhiều người chưa từng biết: một phụ nữ có thể thăm bạn bè, đi học hoặc đến nơi làm việc mà không lệ thuộc vào ai. Thời trang cũng thay đổi, khi váy dài khiến việc đạp xe là không thể và quần áo đơn giản hơn trở nên được chấp nhận. Vài Bác sĩ thời đó thậm chí còn cảnh báo không nên đạp xe, điều này chỉ làm nó thêm hấp dẫn với giới trẻ.\n\nE. Ngày nay ước tính có hai tỷ xe đạp trên thế giới. Ở các thành phố giàu có, chúng đang trở lại như một phương tiện giao thông nghiêm túc, được hỗ trợ bởi các chương trình chia sẻ xe và làn đường dành riêng. Hai thế kỷ sau cỗ máy gỗ đầu tiên đó, xe đạp vẫn là một trong những đáp án đơn giản và thông minh nhất của nhân loại cho việc di chuyển.",
+   "phrases": [
+    {
+     "en": "two or three times faster than walking",
+     "vi": "nhanh gấp hai đến ba lần đi bộ"
+    },
+    {
+     "en": "the breakthrough arrived",
+     "vi": "bước đột phá đã đến"
+    },
+    {
+     "en": "recognisably the bicycle we know today",
+     "vi": "rõ ràng là chiếc xe đạp chúng ta biết ngày nay"
+    },
+    {
+     "en": "freedom of movement",
+     "vi": "sự tự do di chuyển"
+    },
+    {
+     "en": "bike-sharing schemes",
+     "vi": "chương trình chia sẻ xe đạp"
+    }
+   ]
+  },
+  {
+   "level": "Band 6.0",
+   "title": "Learning a Second Language as an Adult",
+   "text": "Many adults believe they have missed their chance to learn a foreign language. Children, they say, absorb languages like sponges, while adult brains are simply too old. Language researchers, however, paint a more balanced picture: adults and children learn in different ways, and each group has its own advantages.\n\nChildren are certainly better at acquiring a perfect accent. A child who grows up hearing two languages will usually speak both without a foreign accent, something very few adult learners achieve. Children also learn through play and imitation, without worrying about mistakes. For an adult sitting in a classroom, that fear of embarrassment can be the biggest obstacle of all.\n\nAdults, on the other hand, bring powerful tools to the task. They understand grammar rules, can compare the new language with their own, and usually have clearer reasons for learning - a job, an exam or travel. In studies, adults actually learn vocabulary and grammar faster than children in the first year. It is mainly pronunciation, not overall ability, where children keep their advantage.\n\nExperience also matters. An adult learner already knows how the world works: a Turkish businessman learning English, for example, already understands meetings and negotiations, and only needs the words. A child must learn the concept and the word together.\n\nIn my opinion, adults should stop comparing themselves with children and start using their strengths. Progress may be slower in accent, but with regular practice, clear goals and a willingness to make mistakes, adult learners can reach a very high level. Age, I believe, is an excuse far more often than it is a real barrier.",
+   "questions": [
+    {
+     "type": "MSEND",
+     "q": "Theo bài, trong năm đầu tiên người lớn học từ vựng và ngữ pháp",
+     "o": [
+      "nhanh hơn trẻ em",
+      "chậm hơn trẻ em rất nhiều",
+      "bằng đúng tốc độ của trẻ em",
+      "chỉ khi họ sống ở nước ngoài"
+     ],
+     "a": 0,
+     "why": "Đoạn 3: 'adults actually learn vocabulary and grammar faster than children in the first year'."
+    },
+    {
+     "type": "YNNG",
+     "q": "Theo tác giả, tuổi tác thường là một cái cớ hơn là một rào cản thật sự trong việc học ngoại ngữ.",
+     "o": [
+      "Yes",
+      "No",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Đoạn cuối: 'Age, I believe, is an excuse far more often than it is a real barrier' → Yes."
+    },
+    {
+     "type": "MC",
+     "q": "Theo đoạn 2, trở ngại lớn nhất của người lớn khi học trong lớp là gì?",
+     "o": [
+      "Thiếu thời gian",
+      "Nỗi sợ xấu hổ khi mắc lỗi",
+      "Giáo viên không giỏi",
+      "Sách giáo khoa quá khó"
+     ],
+     "a": 1,
+     "why": "Đoạn 2: 'that fear of embarrassment can be the biggest obstacle of all'."
+    },
+    {
+     "type": "TFNG",
+     "q": "Trẻ em lớn lên với hai ngôn ngữ thường nói cả hai mà không có giọng nước ngoài.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Đoạn 2: 'will usually speak both without a foreign accent' → Đúng."
+    },
+    {
+     "type": "SC",
+     "q": "Tóm tắt nào đúng nhất cho đoạn 4?",
+     "o": [
+      "Kinh nghiệm sống giúp người lớn chỉ cần học từ, vì họ đã hiểu sẵn các khái niệm",
+      "Người lớn không hiểu gì về công việc kinh doanh",
+      "Trẻ em hiểu các khái niệm nhanh hơn người lớn",
+      "Học ngoại ngữ không cần kinh nghiệm"
+     ],
+     "a": 0,
+     "why": "Đoạn 4: người lớn đã hiểu sẵn khái niệm (họp hành, đàm phán) nên chỉ cần học từ vựng."
+    }
+   ],
+   "translation": "Nhiều người lớn tin rằng họ đã bỏ lỡ cơ hội học ngoại ngữ. Theo họ, trẻ em thấm ngôn ngữ như bọt biển, còn não người lớn đơn giản là quá già. Tuy nhiên, các nhà nghiên cứu ngôn ngữ vẽ nên bức tranh cân bằng hơn: người lớn và trẻ em học theo những cách khác nhau, và mỗi nhóm có lợi thế riêng.\n\nTrẻ em chắc chắn giỏi hơn trong việc có được giọng hoàn hảo. Một đứa trẻ lớn lên nghe hai ngôn ngữ thường sẽ nói cả hai mà không có giọng nước ngoài, điều rất ít người học trưởng thành đạt được. Trẻ em cũng học qua chơi và bắt chước, không lo sợ mắc lỗi. Với một người lớn ngồi trong lớp học, nỗi sợ xấu hổ đó có thể là trở ngại lớn nhất.\n\nNgược lại, người lớn mang đến những công cụ mạnh mẽ cho nhiệm vụ này. Họ hiểu quy tắc ngữ pháp, có thể so sánh ngôn ngữ mới với tiếng mẹ đẻ, và thường có lý do học rõ ràng hơn - một công việc, một kỳ thi hay du lịch. Trong các nghiên cứu, người lớn thật ra học từ vựng và ngữ pháp nhanh hơn trẻ em trong năm đầu. Chủ yếu là ở phát âm, chứ không phải năng lực tổng thể, trẻ em mới giữ lợi thế.\n\nKinh nghiệm cũng quan trọng. Người học trưởng thành đã biết cách thế giới vận hành: chẳng hạn, một doanh nhân Thổ Nhĩ Kỳ học tiếng Anh đã hiểu sẵn về họp hành và đàm phán, và chỉ cần học từ. Một đứa trẻ phải học cả khái niệm lẫn từ cùng lúc.\n\nTheo tôi, người lớn nên ngừng so sánh mình với trẻ em và bắt đầu dùng điểm mạnh của mình. Tiến bộ về giọng có thể chậm hơn, nhưng với luyện tập đều đặn, mục tiêu rõ ràng và sự sẵn lòng mắc lỗi, người học trưởng thành có thể đạt trình độ rất cao. Tuổi tác, tôi tin, là một cái cớ thường xuyên hơn nhiều so với vai trò rào cản thật sự của nó.",
+   "phrases": [
+    {
+     "en": "absorb languages like sponges",
+     "vi": "thấm ngôn ngữ như bọt biển"
+    },
+    {
+     "en": "a fear of embarrassment",
+     "vi": "nỗi sợ xấu hổ"
+    },
+    {
+     "en": "on the other hand",
+     "vi": "ngược lại, mặt khác"
+    },
+    {
+     "en": "a willingness to make mistakes",
+     "vi": "sự sẵn lòng mắc lỗi"
+    },
+    {
+     "en": "an excuse rather than a real barrier",
+     "vi": "một cái cớ hơn là rào cản thật"
+    }
+   ]
+  },
+  {
+   "level": "Band 5.5",
+   "title": "Chocolate: From Bitter Drink to Sweet Treat",
+   "text": "A. Chocolate is loved all over the world, but it began as something quite different: a bitter drink. Around 3,000 years ago, people in Central America grew cacao trees and used the beans to make a spicy, frothy drink. The beans were so valuable that they were even used as money.\n\nB. In the 1500s, Spanish explorers brought cacao beans back to Europe. At first, only rich people could afford the drink, which was served in special chocolate houses in cities like London and Paris. Sugar was added to make it sweeter, but chocolate remained a luxury for more than 200 years.\n\nC. The Industrial Revolution changed everything. New machines could press the beans and mix them quickly, so chocolate became cheaper. In 1847, a British company produced the first modern chocolate bar, and milk chocolate followed thirty years later in Switzerland. Chocolate was no longer just a drink for the rich; it was a sweet for everyone.\n\nD. Today, most cacao comes from West Africa, where millions of small farmers grow the trees. Growing cacao is hard work: the pods must be cut by hand and the beans dried under the sun. Fair-trade schemes try to make sure farmers receive a fair price, but many still earn very little.\n\nE. Modern research has added one more chapter to the story. Dark chocolate contains substances that appear to be good for the heart, though scientists warn that chocolate also contains sugar and fat. In my view, a small piece of good chocolate, enjoyed slowly, is one of life's simple and harmless pleasures.",
+   "questions": [
+    {
+     "type": "MINFO",
+     "q": "Đoạn nào cho biết hạt cacao từng quý đến mức được dùng làm tiền?",
+     "o": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "a": 0,
+     "why": "Đoạn A: 'The beans were so valuable that they were even used as money'."
+    },
+    {
+     "type": "TCOMP",
+     "q": "Thanh chocolate hiện đại đầu tiên được sản xuất vào năm ___.",
+     "answer": "1847",
+     "why": "Đoạn C: 'In 1847, a British company produced the first modern chocolate bar'."
+    },
+    {
+     "type": "YNNG",
+     "q": "Theo tác giả, một miếng nhỏ chocolate ngon, ăn chậm rãi, là một trong những thú vui đơn giản và vô hại của cuộc sống.",
+     "o": [
+      "Yes",
+      "No",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Đoạn E ghi rõ quan điểm: 'In my view, a small piece of good chocolate, enjoyed slowly, is one of life's simple and harmless pleasures' → Yes."
+    },
+    {
+     "type": "MC",
+     "q": "Vì sao chocolate trở nên rẻ hơn trong Cách mạng Công nghiệp?",
+     "o": [
+      "Vì cây cacao mọc nhiều hơn ở châu Âu",
+      "Vì máy móc mới ép và trộn hạt nhanh chóng",
+      "Vì đường trở nên miễn phí",
+      "Vì người giàu ngừng uống chocolate"
+     ],
+     "a": 1,
+     "why": "Đoạn C: 'New machines could press the beans and mix them quickly, so chocolate became cheaper'."
+    },
+    {
+     "type": "TFNG",
+     "q": "Ngày nay, phần lớn cacao đến từ Tây Phi.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Đoạn D: 'Today, most cacao comes from West Africa' → Đúng."
+    }
+   ],
+   "translation": "A. Chocolate được yêu thích trên toàn thế giới, nhưng khởi đầu của nó khá khác biệt: một thức uống đắng. Khoảng 3.000 năm trước, người dân Trung Mỹ trồng cây cacao và dùng hạt để làm một thức uống cay, có bọt. Hạt cacao quý đến mức chúng còn được dùng làm tiền.\n\nB. Vào những năm 1500, các nhà thám hiểm Tây Ban Nha mang hạt cacao về châu Âu. Ban đầu, chỉ người giàu mới kham nổi thức uống này, được phục vụ trong những quán chocolate đặc biệt ở các thành phố như London và Paris. Đường được thêm vào để làm nó ngọt hơn, nhưng chocolate vẫn là thứ xa xỉ trong hơn 200 năm.\n\nC. Cách mạng Công nghiệp đã thay đổi tất cả. Máy móc mới có thể ép hạt và trộn chúng nhanh chóng, nên chocolate trở nên rẻ hơn. Năm 1847, một công ty Anh sản xuất thanh chocolate hiện đại đầu tiên, và chocolate sữa xuất hiện ba mươi năm sau tại Thụy Sĩ. Chocolate không còn là thức uống của người giàu; nó là món ngọt cho mọi người.\n\nD. Ngày nay, phần lớn cacao đến từ Tây Phi, nơi hàng triệu nông dân nhỏ trồng cây. Trồng cacao là công việc vất vả: quả phải được cắt bằng tay và hạt phơi khô dưới nắng. Các chương trình thương mại công bằng cố đảm bảo nông dân nhận được giá công bằng, nhưng nhiều người vẫn kiếm được rất ít.\n\nE. Nghiên cứu hiện đại đã thêm một chương nữa vào câu chuyện. Chocolate đen chứa những chất dường như tốt cho tim, dù các nhà khoa học cảnh báo chocolate cũng chứa đường và chất béo. Theo tôi, một miếng nhỏ chocolate ngon, được thưởng thức chậm rãi, là một trong những thú vui đơn giản và vô hại của cuộc sống.",
+   "phrases": [
+    {
+     "en": "a bitter drink",
+     "vi": "một thức uống đắng"
+    },
+    {
+     "en": "only rich people could afford",
+     "vi": "chỉ người giàu mới kham nổi"
+    },
+    {
+     "en": "the Industrial Revolution",
+     "vi": "Cách mạng Công nghiệp"
+    },
+    {
+     "en": "fair-trade schemes",
+     "vi": "chương trình thương mại công bằng"
+    },
+    {
+     "en": "one of life's simple pleasures",
+     "vi": "một trong những thú vui giản dị của cuộc sống"
+    }
+   ]
+  },
+  {
+   "level": "Band 5.5",
+   "title": "Volunteering in the Local Community",
+   "text": "Last year, our town library started a programme that has quietly changed many lives. Every Saturday morning, volunteers of all ages meet there to help their neighbours. Some teach elderly people to use smartphones, some read stories to children, and others repair broken bicycles in the yard outside.\n\nThe programme began with just six volunteers. The idea came from Mrs Hoa, a retired teacher who believed that older people had skills the town was wasting. 'A retired electrician can fix lamps,' she said. 'A retired cook can teach young families to make cheap, healthy meals. Everyone knows something useful.'\n\nToday there are more than eighty regular volunteers, and the library lends tools as well as books. A recent survey found that volunteers themselves feel happier and less lonely than before. Students who help on Saturdays also report better communication skills, which several local employers say makes them stronger job candidates.\n\nThe programme is not expensive to run. The library provides the rooms, local shops donate materials, and a small town grant pays for insurance. What it really costs is time - and, as Mrs Hoa points out, time given to neighbours is rarely time wasted.\n\nOther towns have begun to copy the model. Their experience suggests that successful volunteering depends less on money than on organisation: clear tasks, regular hours and a warm welcome for newcomers.",
+   "questions": [
+    {
+     "type": "TCOMP",
+     "q": "Chương trình bắt đầu với chỉ ___ tình nguyện viên.",
+     "answer": "six|6",
+     "why": "Đoạn 2: 'The programme began with just six volunteers'."
+    },
+    {
+     "type": "MSEND",
+     "q": "Theo bài, một thợ điện đã nghỉ hưu có thể",
+     "o": [
+      "sửa đèn cho mọi người",
+      "dạy nấu ăn cho các gia đình trẻ",
+      "đọc truyện cho trẻ em",
+      "quản lý thư viện"
+     ],
+     "a": 0,
+     "why": "Bà Hoa nói: 'A retired electrician can fix lamps'."
+    },
+    {
+     "type": "MC",
+     "q": "Theo đoạn 3, vì sao các nhà tuyển dụng địa phương đánh giá cao học sinh tình nguyện?",
+     "o": [
+      "Vì các em có sức khỏe tốt hơn",
+      "Vì kỹ năng giao tiếp của các em tốt hơn",
+      "Vì các em biết sửa xe đạp",
+      "Vì các em có nhiều sách hơn"
+     ],
+     "a": 1,
+     "why": "Đoạn 3: học sinh 'report better communication skills, which several local employers say makes them stronger job candidates'."
+    },
+    {
+     "type": "MH",
+     "q": "Đoạn nào nói chi phí vận hành chương trình đến từ những nguồn nào?",
+     "options": [
+      "A. Paragraph 1",
+      "B. Paragraph 2",
+      "C. Paragraph 3",
+      "D. Paragraph 4"
+     ],
+     "a": 3,
+     "why": "Đoạn 4 liệt kê: thư viện cho phòng, cửa hàng tặng vật liệu, trợ cấp thị trấn trả bảo hiểm."
+    },
+    {
+     "type": "TFNG",
+     "q": "Hiện nay chương trình có hơn tám mươi tình nguyện viên thường xuyên.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 0,
+     "why": "Đoạn 3: 'Today there are more than eighty regular volunteers' → Đúng."
+    }
+   ],
+   "translation": "Năm ngoái, thư viện thị trấn chúng tôi bắt đầu một chương trình đã lặng lẽ thay đổi nhiều cuộc đời. Mỗi sáng thứ Bảy, các tình nguyện viên ở mọi lứa tuổi gặp nhau ở đó để giúp đỡ hàng xóm. Vài người dạy người cao tuổi dùng điện thoại thông minh, vài người đọc truyện cho trẻ em, và những người khác sửa xe đạp hỏng ở sân ngoài.\n\nChương trình bắt đầu với chỉ sáu tình nguyện viên. Ý tưởng đến từ bà Hoa, một giáo viên đã nghỉ hưu, người tin rằng người cao tuổi có những kỹ năng mà thị trấn đang lãng phí. 'Một thợ điện nghỉ hưu có thể sửa đèn,' bà nói. 'Một đầu bếp nghỉ hưu có thể dạy các gia đình trẻ nấu những bữa ăn rẻ và lành mạnh. Ai cũng biết một điều gì đó hữu ích.'\n\nNgày nay có hơn tám mươi tình nguyện viên thường xuyên, và thư viện cho mượn dụng cụ cũng như sách. Một khảo sát gần đây cho thấy bản thân tình nguyện viên cảm thấy hạnh phúc hơn và bớt cô đơn hơn trước. Học sinh giúp việc vào các ngày thứ Bảy cũng cho biết kỹ năng giao tiếp tốt hơn, điều mà vài nhà tuyển dụng địa phương nói làm các em trở thành ứng viên mạnh hơn.\n\nChương trình không tốn kém để vận hành. Thư viện cung cấp phòng, các cửa hàng địa phương tặng vật liệu, và một khoản trợ cấp nhỏ của thị trấn trả tiền bảo hiểm. Thứ nó thật sự tốn là thời gian - và, như bà Hoa chỉ ra, thời gian dành cho hàng xóm hiếm khi là thời gian lãng phí.\n\nCác thị trấn khác đã bắt đầu sao chép mô hình này. Kinh nghiệm của họ cho thấy tình nguyện thành công phụ thuộc vào tổ chức hơn là tiền: nhiệm vụ rõ ràng, giờ giấc đều đặn và sự chào đón nồng nhiệt dành cho người mới.",
+   "phrases": [
+    {
+     "en": "of all ages",
+     "vi": "ở mọi lứa tuổi"
+    },
+    {
+     "en": "regular volunteers",
+     "vi": "tình nguyện viên thường xuyên"
+    },
+    {
+     "en": "stronger job candidates",
+     "vi": "ứng viên xin việc mạnh hơn"
+    },
+    {
+     "en": "time given to neighbours is rarely time wasted",
+     "vi": "thời gian dành cho hàng xóm hiếm khi bị lãng phí"
+    },
+    {
+     "en": "a warm welcome for newcomers",
+     "vi": "sự chào đón nồng nhiệt cho người mới"
+    }
+   ]
+  },
+  {
+   "level": "Band 5.0",
+   "title": "The Benefits of Daily Walking",
+   "text": "A. Walking is the simplest form of exercise in the world. It needs no special equipment, no gym membership and no training. Yet doctors agree that a daily walk of about thirty minutes can improve health in many different ways.\n\nB. The first benefit is for the heart. Regular walking makes the heart stronger and reduces the risk of heart disease. Studies show that people who walk to work are generally fitter than people who drive, even if the walk is quite short.\n\nC. Walking also helps the mind. After a walk in a park, people usually feel calmer and think more clearly. Many writers and scientists in history took long walks every day because their best ideas came to them while they were moving.\n\nD. A daily walk is also good for the body in smaller ways. It keeps the legs and back strong, helps people control their weight, and improves sleep at night. Unlike running, walking is gentle, so it is suitable for older people and beginners.\n\nE. For all these reasons, health experts advise everyone to find time to walk. You do not need to walk far. The important thing is to walk a little every day and to make it part of your normal routine.",
+   "questions": [
+    {
+     "type": "MINFO",
+     "q": "Đoạn nào nói đi bộ giúp đầu óc bình tĩnh và suy nghĩ rõ ràng hơn?",
+     "o": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ],
+     "a": 2,
+     "why": "Đoạn C bàn về lợi ích cho tinh thần: 'people usually feel calmer and think more clearly'."
+    },
+    {
+     "type": "MSEND",
+     "q": "Theo bài, người đi bộ đến nơi làm việc thường",
+     "o": [
+      "khỏe hơn người lái xe, dù quãng đi bộ khá ngắn",
+      "mệt hơn người lái xe rất nhiều",
+      "đến nơi làm việc muộn hơn",
+      "phải ăn sáng nhiều hơn"
+     ],
+     "a": 0,
+     "why": "Đoạn B: 'people who walk to work are generally fitter than people who drive, even if the walk is quite short'."
+    },
+    {
+     "type": "TCOMP",
+     "q": "Các Bác sĩ đồng ý rằng đi bộ khoảng ___ phút mỗi ngày có thể cải thiện sức khỏe theo nhiều cách.",
+     "answer": "thirty|30",
+     "why": "Đoạn A: 'a daily walk of about thirty minutes'."
+    },
+    {
+     "type": "MC",
+     "q": "Vì sao đi bộ phù hợp với người cao tuổi?",
+     "o": [
+      "Vì nó nhanh hơn chạy",
+      "Vì nó nhẹ nhàng, không gây áp lực lớn lên cơ thể",
+      "Vì nó không cần đi xa",
+      "Vì nó giúp họ ngủ ít hơn"
+     ],
+     "a": 1,
+     "why": "Đoạn D: 'Unlike running, walking is gentle, so it is suitable for older people and beginners'."
+    },
+    {
+     "type": "TFNG",
+     "q": "Bạn phải đi bộ thật xa thì mới có lợi cho sức khỏe.",
+     "options": [
+      "True",
+      "False",
+      "Not Given"
+     ],
+     "a": 1,
+     "why": "Đoạn E nói ngược lại: 'You do not need to walk far' → Sai."
+    }
+   ],
+   "translation": "A. Đi bộ là hình thức vận động đơn giản nhất trên thế giới. Nó không cần thiết bị đặc biệt, không cần thẻ tập gym và không cần huấn luyện. Vậy mà các Bác sĩ đồng ý rằng đi bộ khoảng ba mươi phút mỗi ngày có thể cải thiện sức khỏe theo nhiều cách khác nhau.\n\nB. Lợi ích đầu tiên là cho trái tim. Đi bộ thường xuyên làm tim khỏe hơn và giảm nguy cơ bệnh tim. Các nghiên cứu cho thấy người đi bộ đến nơi làm việc nhìn chung khỏe hơn người lái xe, ngay cả khi quãng đi bộ khá ngắn.\n\nC. Đi bộ cũng giúp ích cho tinh thần. Sau một buổi đi bộ trong công viên, mọi người thường cảm thấy bình tĩnh hơn và suy nghĩ rõ ràng hơn. Nhiều nhà văn và nhà khoa học trong lịch sử đi bộ dài mỗi ngày vì những ý tưởng hay nhất đến với họ khi đang di chuyển.\n\nD. Đi bộ hằng ngày còn tốt cho cơ thể theo những cách nhỏ hơn. Nó giữ cho chân và lưng khỏe, giúp kiểm soát cân nặng và cải thiện giấc ngủ ban đêm. Không như chạy, đi bộ nhẹ nhàng nên phù hợp với người cao tuổi và người mới bắt đầu.\n\nE. Vì tất cả những lý do này, các chuyên gia sức khỏe khuyên mọi người tìm thời gian đi bộ. Bạn không cần đi xa. Điều quan trọng là đi bộ một chút mỗi ngày và biến nó thành một phần thói quen bình thường của bạn.",
+   "phrases": [
+    {
+     "en": "no special equipment",
+     "vi": "không cần thiết bị đặc biệt"
+    },
+    {
+     "en": "reduces the risk of heart disease",
+     "vi": "giảm nguy cơ bệnh tim"
+    },
+    {
+     "en": "think more clearly",
+     "vi": "suy nghĩ rõ ràng hơn"
+    },
+    {
+     "en": "suitable for older people and beginners",
+     "vi": "phù hợp với người cao tuổi và người mới bắt đầu"
+    },
+    {
+     "en": "part of your normal routine",
+     "vi": "một phần thói quen bình thường của bạn"
+    }
+   ]
   }
- ],
+ ,{"level":"Band 0","title":"Hello! I Am Nam","text":"Hello! My name is Nam. I am a student. I am from Vietnam. I live in a small town.\n\nThis is my friend. Her name is Anna. She is from England. She is a student too.\n\nWe say hello every morning. We are happy at school.","questions":[{"type":"MC","q":"What is the boy's name?","options":["Nam","Anna","Minh"],"a":0,"why":"Trong bài, bạn nam tự giới thiệu tên là Nam. Vì vậy đáp án đúng là Nam."},{"type":"MC","q":"Where is Nam from?","options":["England","Vietnam","Japan"],"a":1,"why":"Trong bài, Nam nói mình đến từ Việt Nam. Vì vậy đáp án đúng là Việt Nam."},{"type":"MC","q":"What is Anna?","options":["A teacher","A doctor","A student"],"a":2,"why":"Trong bài, Anna cũng là học sinh. Vì vậy đáp án đúng là học sinh."},{"type":"MC","q":"Where is Anna from?","options":["Vietnam","England","France"],"a":1,"why":"Trong bài, Anna đến từ nước Anh. Vì vậy đáp án đúng là nước Anh."},{"type":"MC","q":"When do Nam and Anna say hello?","options":["In the evening","At night","Every morning"],"a":2,"why":"Trong bài, hai bạn chào nhau vào mỗi buổi sáng. Vì vậy đáp án đúng là mỗi buổi sáng."}],"translation":"Xin chào! Tên tôi là Nam. Tôi là học sinh. Tôi đến từ Việt Nam. Tôi sống ở một thị trấn nhỏ.\n\nĐây là bạn của tôi. Bạn ấy tên là Anna. Bạn ấy đến từ nước Anh. Bạn ấy cũng là học sinh.\n\nChúng tôi chào nhau vào mỗi buổi sáng. Chúng tôi vui vẻ ở trường.","phrases":[{"en":"My name is Nam","vi":"Tên tôi là Nam"},{"en":"I am from Vietnam","vi":"Tôi đến từ Việt Nam"},{"en":"This is my friend","vi":"Đây là bạn của tôi"},{"en":"every morning","vi":"mỗi buổi sáng"}]},{"level":"Band 0","title":"My Classroom","text":"This is my classroom. It is small and clean.\n\nThis is my desk. My book is on the desk. My pen is red. My bag is blue. There are ten chairs in the classroom.\n\nI like my classroom. I learn English here every day.","questions":[{"type":"MC","q":"How is the classroom?","options":["Big","Small","Old"],"a":1,"why":"Trong bài, lớp học được tả là nhỏ và sạch. Vì vậy đáp án đúng là nhỏ."},{"type":"MC","q":"What colour is the pen?","options":["Blue","Green","Red"],"a":2,"why":"Trong bài, cây bút có màu đỏ. Vì vậy đáp án đúng là màu đỏ."},{"type":"MC","q":"What colour is the bag?","options":["Red","Blue","Black"],"a":1,"why":"Trong bài, chiếc cặp có màu xanh dương. Vì vậy đáp án đúng là màu xanh dương."},{"type":"MC","q":"How many chairs are there in the classroom?","options":["Ten","Five","Two"],"a":0,"why":"Trong bài, lớp học có mười chiếc ghế. Vì vậy đáp án đúng là mười."},{"type":"MC","q":"Where is the book?","options":["In the bag","Under the desk","On the desk"],"a":2,"why":"Trong bài, quyển sách nằm trên bàn học. Vì vậy đáp án đúng là trên bàn học."}],"translation":"Đây là lớp học của tôi. Lớp học nhỏ và sạch.\n\nĐây là bàn học của tôi. Quyển sách của tôi ở trên bàn. Cây bút của tôi màu đỏ. Chiếc cặp của tôi màu xanh dương. Trong lớp có mười chiếc ghế.\n\nTôi thích lớp học của mình. Tôi học tiếng Anh ở đây mỗi ngày.","phrases":[{"en":"my classroom","vi":"lớp học của tôi"},{"en":"on the desk","vi":"trên bàn học"},{"en":"My pen is red","vi":"Cây bút của tôi màu đỏ"},{"en":"every day","vi":"mỗi ngày"}]}],
  "listening": [
   {
    "section": "Section 1",
@@ -20707,63 +24114,75 @@ const CONTENT = {
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Chào hỏi buổi sáng",
-   "text": "Good morning. How are you today?"
+   "topic": "Chào hỏi buổi sáng",
+   "text": "Good morning. How are you today?",
+   "band": "Band 0"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Giới thiệu tên",
-   "text": "Hello, my name is Linh. Nice to meet you."
+   "topic": "Giới thiệu tên",
+   "text": "Hello, my name is Linh. Nice to meet you.",
+   "band": "Band 0"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Hỏi tuổi",
-   "text": "How old are you? I am twenty years old."
+   "topic": "Hỏi tuổi",
+   "text": "How old are you? I am twenty years old.",
+   "band": "Band 2.0"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Hỏi giờ",
-   "text": "Excuse me, what time is it now?"
+   "topic": "Hỏi giờ",
+   "text": "Excuse me, what time is it now?",
+   "band": "Band 2.0"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Hỏi đường đi",
-   "text": "Excuse me, where is the bus station?"
+   "topic": "Hỏi đường đi",
+   "text": "Excuse me, where is the bus station?",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Mua cà phê",
-   "text": "Can I have a cup of coffee, please?"
+   "topic": "Mua cà phê",
+   "text": "Can I have a cup of coffee, please?",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Hỏi giá tiền",
-   "text": "How much is this book, please?"
+   "topic": "Hỏi giá tiền",
+   "text": "How much is this book, please?",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Số điện thoại",
-   "text": "My phone number is zero nine eight five."
+   "topic": "Số điện thoại",
+   "text": "My phone number is zero nine eight five.",
+   "band": "Band 2.0"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Ngày tháng",
-   "text": "Today is Monday, the fifth of May."
+   "topic": "Ngày tháng",
+   "text": "Today is Monday, the fifth of May.",
+   "band": "Band 2.0"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Thời tiết hôm nay",
-   "text": "It is sunny and warm today."
+   "topic": "Thời tiết hôm nay",
+   "text": "It is sunny and warm today.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Gia đình tôi",
-   "text": "I have one brother and one sister."
+   "topic": "Gia đình tôi",
+   "text": "I have one brother and one sister.",
+   "band": "Band 2.0"
   },
   {
    "section": "Section 1",
-   "topic": "Band 0: Tạm biệt",
-   "text": "Goodbye. See you tomorrow morning."
+   "topic": "Tạm biệt",
+   "text": "Goodbye. See you tomorrow morning.",
+   "band": "Band 0"
   },
   {
    "section": "Section 1",
@@ -21004,6 +24423,240 @@ const CONTENT = {
    "section": "Section 4",
    "topic": "Bản đồ số",
    "text": "Digital maps have changed the way we travel in less than twenty years. In the past, drivers used thick paper maps and often had to stop and ask for directions. Today, a phone can show our exact position using satellites and can update the route when traffic changes. Digital maps do more than guide drivers; they help ambulances find patients faster and help scientists track floods and forest fires. However, experts warn that we should still learn basic map skills, in case the battery dies or the signal is lost."
+  },
+  {
+   "section": "Section 1",
+   "topic": "Hỏi số nhà",
+   "text": "My house is number twenty-four, Green Street.",
+   "band": "Band 2.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Hỏi ngày sinh nhật",
+   "text": "Her birthday is on the third of June.",
+   "band": "Band 2.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Giới thiệu anh chị em",
+   "text": "I have one older brother and two younger sisters.",
+   "band": "Band 2.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Hỏi khả năng bơi",
+   "text": "Can you swim? Yes, I can swim very well.",
+   "band": "Band 2.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Thói quen buổi sáng",
+   "text": "She gets up at six and has breakfast at half past six.",
+   "band": "Band 2.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Tìm đồ vật trong phòng",
+   "text": "Your keys are on the table, next to the phone.",
+   "band": "Band 2.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Hỏi giờ tàu chạy",
+   "text": "The train to Hue leaves at a quarter past nine.",
+   "band": "Band 2.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Kể việc hôm qua",
+   "text": "Yesterday, we visited the zoo and saw the elephants.",
+   "band": "Band 3.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Mua sắm cuối tuần trước",
+   "text": "Last Saturday, I bought a new shirt at the market.",
+   "band": "Band 3.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Việc đang xảy ra",
+   "text": "Look! The children are playing football in the park.",
+   "band": "Band 3.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Miêu tả căn phòng",
+   "text": "My room is small but bright, with a desk near the window.",
+   "band": "Band 3.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Điện thoại lúc đang nấu ăn",
+   "text": "I am cooking dinner now, so I cannot talk for long.",
+   "band": "Band 3.0"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Thông báo ở trường",
+   "text": "The school library is now open from seven in the morning to eight in the evening.",
+   "band": "Band 3.0"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Giới thiệu công viên",
+   "text": "This park was built in nineteen ninety and is famous for its old trees.",
+   "band": "Band 3.0"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Hướng dẫn ở bể bơi",
+   "text": "Children under ten must swim with an adult at all times.",
+   "band": "Band 3.0"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Kể chuyến đi tuần trước",
+   "text": "Last week, we drove to the beach and stayed there for two days.",
+   "band": "Band 3.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "So sánh hai chiếc xe đạp",
+   "text": "This bike is lighter and faster than the red one.",
+   "band": "Band 3.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Kế hoạch tối nay",
+   "text": "We are going to watch the football match at my friend's house tonight.",
+   "band": "Band 3.5"
+  },
+  {
+   "section": "Section 1",
+   "topic": "Dự đoán thời tiết",
+   "text": "Look at the sky. I think it is going to rain this afternoon.",
+   "band": "Band 3.5"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Thông báo chuyến tham quan",
+   "text": "The school trip to the farm is going to start at seven thirty on Saturday.",
+   "band": "Band 3.5"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Giới thiệu chợ cuối tuần",
+   "text": "The weekend market is bigger than the morning market and sells more kinds of fruit.",
+   "band": "Band 3.5"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Hướng dẫn đi xe buýt",
+   "text": "Bus number twelve is the fastest way to get to the city centre.",
+   "band": "Band 3.5"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Thông báo thay đổi giờ học",
+   "text": "The English class moved from Tuesday to Thursday because the teacher was ill last week.",
+   "band": "Band 3.5"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Thông báo thư viện mới",
+   "text": "The new library has just opened and already has more than five hundred members.",
+   "band": "Band 4.0"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Giới thiệu khóa học nấu ăn",
+   "text": "If you join the cooking course this week, you will get a free recipe book.",
+   "band": "Band 4.0"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Thông báo về kỳ thi",
+   "text": "Students who have finished their essays can leave them at the front desk.",
+   "band": "Band 4.0"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Thảo luận bài tập nhóm",
+   "text": "We have already collected the data, but we have not written the report yet.",
+   "band": "Band 4.0"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Hỏi về kinh nghiệm làm việc",
+   "text": "Have you ever worked in a shop or a restaurant before?",
+   "band": "Band 4.0"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Bàn kế hoạch cuối tuần",
+   "text": "If the weather is fine on Saturday, we will cycle to the lake.",
+   "band": "Band 4.0"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Xin tư vấn chọn sách",
+   "text": "I have read this novel twice because the story is so interesting.",
+   "band": "Band 4.0"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Thảo luận hạn nộp bài",
+   "text": "Our teacher has given us three more days to finish the project.",
+   "band": "Band 4.0"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Giới thiệu cây cầu cổ",
+   "text": "This bridge was built in nineteen twenty and is still used by thousands of people every day.",
+   "band": "Band 4.5"
+  },
+  {
+   "section": "Section 2",
+   "topic": "Thông báo về bảo tàng",
+   "text": "The museum, which was repaired last year, now opens seven days a week.",
+   "band": "Band 4.5"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Kể về thói quen ngày xưa",
+   "text": "My grandfather used to walk five kilometres to school every day.",
+   "band": "Band 4.5"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Thảo luận về cuốn sách",
+   "text": "The book that I borrowed from the library is about the history of our town.",
+   "band": "Band 4.5"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Bàn về kết quả khảo sát",
+   "text": "Most students said that homework should not be given at weekends.",
+   "band": "Band 4.5"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Hỏi ý kiến giảng viên",
+   "text": "While we were doing the experiment, the lights suddenly went out.",
+   "band": "Band 4.5"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Thảo luận phương tiện đi lại",
+   "text": "Bicycles are cheaper than motorbikes and are better for the environment.",
+   "band": "Band 4.5"
+  },
+  {
+   "section": "Section 3",
+   "topic": "Chuẩn bị thuyết trình",
+   "text": "The slides were prepared by Lan, who is the best designer in our group.",
+   "band": "Band 4.5"
   }
  ],
  "speaking": [
@@ -21937,7 +25590,7 @@ const CONTENT = {
   {
    "part": "Part 1",
    "topic": "Weather - Thời tiết",
-   "band": "Band 5.0",
+   "band": "Band 4.5",
    "lines": [
     {
      "who": "Examiner",
@@ -23139,7 +26792,7 @@ const CONTENT = {
   },
   {
    "part": "Part 1",
-   "topic": "Band 0: Greetings - Chào hỏi và làm quen",
+   "topic": "Greetings - Chào hỏi và làm quen",
    "band": "Band 0",
    "lines": [
     {
@@ -23208,7 +26861,7 @@ const CONTENT = {
   },
   {
    "part": "Part 1",
-   "topic": "Band 0: Introducing Yourself - Giới thiệu bản thân",
+   "topic": "Introducing Yourself - Giới thiệu bản thân",
    "band": "Band 0",
    "lines": [
     {
@@ -23277,8 +26930,8 @@ const CONTENT = {
   },
   {
    "part": "Part 1",
-   "topic": "Band 0: Asking the Way and Time - Hỏi đường và hỏi giờ",
-   "band": "Band 0",
+   "topic": "Asking the Way and Time - Hỏi đường và hỏi giờ",
+   "band": "Band 2.0",
    "lines": [
     {
      "who": "Examiner",
@@ -24281,7 +27934,7 @@ const CONTENT = {
   {
    "part": "Roleplay",
    "topic": "Small Talk with a New Colleague - Trò chuyện xã giao với đồng nghiệp mới",
-   "band": "Band 5.0",
+   "band": "Band 4.5",
    "lines": [
     {
      "who": "Colleague",
@@ -26044,6 +29697,1521 @@ const CONTENT = {
      "why": "Thí sinh đề xuất dạy kỹ năng truyền thông như một môn học bình thường, với kỹ năng kiểm tra nguồn và so sánh nhiều nguồn tin."
     }
    ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "Family - Gia đình",
+   "band": "Band 2.0",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about your family. How many people are there in your family?",
+     "vi": "Chúng ta hãy nói về gia đình bạn. Gia đình bạn có mấy người?",
+     "ipa": "let əs tɔːk əˈbaʊt jɔː ˈfæməli. haʊ ˈmeni ˈpiːpəl ɑː ðeə ɪn jɔː ˈfæməli",
+     "link": "Câu hỏi How many xuống giọng cuối câu; 'your family' nối nhẹ thành yuh-fa-mi-ly khi nói nhanh.",
+     "chunks": [
+      "Let us talk about",
+      "How many people",
+      "in your family"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "There are four people in my family: my father, my mother, my sister and me.",
+     "vi": "Gia đình tôi có bốn người: bố tôi, mẹ tôi, chị tôi và tôi.",
+     "ipa": "ðeə ɑː fɔː ˈpiːpəl ɪn maɪ ˈfæməli maɪ ˈfɑːðə maɪ ˈmʌðə maɪ ˈsɪstə ənd miː",
+     "link": "Nhấn vào các số và tên người: FOUR, FATHER, MOTHER, SISTER; nghỉ ngắn sau mỗi dấu phẩy khi liệt kê.",
+     "chunks": [
+      "There are four people",
+      "my father, my mother",
+      "my sister and me"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What does your father do?",
+     "vi": "Bố bạn làm nghề gì?",
+     "ipa": "wɒt dəz jɔː ˈfɑːðə duː",
+     "link": "'What does' đọc gọn; xuống giọng cuối câu hỏi What.",
+     "chunks": [
+      "What does your father do"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "My father is a farmer. He works on a farm near our village.",
+     "vi": "Bố tôi là nông dân. Ông làm việc ở một nông trại gần làng chúng tôi.",
+     "ipa": "maɪ ˈfɑːðə ɪz ə ˈfɑːmə. hi wɜːks ɒn ə fɑːm nɪə ˈaʊə ˈvɪlɪdʒ",
+     "link": "Âm cuối: works có /s/ rõ; 'on a farm' nối âm thành on-nuh-farm.",
+     "chunks": [
+      "My father is a farmer",
+      "He works on a farm",
+      "near our village"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Do you have any brothers or sisters?",
+     "vi": "Bạn có anh chị em nào không?",
+     "ipa": "də jə hæv ˈeni ˈbrʌðəz ɔː ˈsɪstəz",
+     "link": "Câu hỏi Yes/No lên giọng ở cuối; 'brothers or sisters' nối âm nhẹ.",
+     "chunks": [
+      "Do you have",
+      "brothers or sisters"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, I have one sister. She is ten years old, and she is a student like me.",
+     "vi": "Có, tôi có một người chị/em gái. Em ấy mười tuổi, và cũng là học sinh như tôi.",
+     "ipa": "jes aɪ hæv wʌn ˈsɪstə. ʃi ɪz ten jɪəz əʊld ənd ʃi ɪz ə ˈstjuːdənt laɪk miː",
+     "link": "Nhấn ONE sister và TEN; 'years old' nối thành year-zold.",
+     "chunks": [
+      "I have one sister",
+      "ten years old",
+      "a student like me"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate có mấy người trong gia đình?",
+     "o": [
+      "Ba người",
+      "Bốn người",
+      "Năm người"
+     ],
+     "a": 1,
+     "why": "Candidate nói: There are four people in my family."
+    },
+    {
+     "q": "Bố của Candidate làm nghề gì?",
+     "o": [
+      "Thợ xây",
+      "Nông dân",
+      "Bác sĩ"
+     ],
+     "a": 1,
+     "why": "Candidate nói: My father is a farmer."
+    },
+    {
+     "q": "Em/chị gái của Candidate bao nhiêu tuổi?",
+     "o": [
+      "Tám tuổi",
+      "Mười hai tuổi",
+      "Mười tuổi"
+     ],
+     "a": 2,
+     "why": "Candidate nói: She is ten years old."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "School - Trường học",
+   "band": "Band 2.0",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about school. What time does your school start?",
+     "vi": "Chúng ta hãy nói về trường học. Trường bạn bắt đầu lúc mấy giờ?",
+     "ipa": "let əs tɔːk əˈbaʊt skuːl. wɒt taɪm dəz jɔː skuːl stɑːt",
+     "link": "'What time' là cụm hỏi giờ quen thuộc, xuống giọng cuối câu; âm cuối /t/ của start phải rõ.",
+     "chunks": [
+      "Let us talk about school",
+      "What time",
+      "does your school start"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "My school starts at seven o'clock. I go to school by bike every day.",
+     "vi": "Trường tôi bắt đầu lúc bảy giờ. Tôi đi học bằng xe đạp mỗi ngày.",
+     "ipa": "maɪ skuːl stɑːts ət ˈsevən əˈklɒk. aɪ ɡəʊ tə skuːl baɪ baɪk ˈevri deɪ",
+     "link": "'starts at' nối âm thành start-sat; 'go to school' đọc liền một cụm.",
+     "chunks": [
+      "starts at seven o'clock",
+      "go to school by bike",
+      "every day"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "How many students are there in your class?",
+     "vi": "Lớp bạn có bao nhiêu học sinh?",
+     "ipa": "haʊ ˈmeni ˈstjuːdənts ɑː ðeə ɪn jɔː klɑːs",
+     "link": "Nhấn MANY và STUDENTS; âm cuối /s/ của students phải nghe rõ.",
+     "chunks": [
+      "How many students",
+      "in your class"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "There are thirty-two students in my class, fifteen boys and seventeen girls.",
+     "vi": "Lớp tôi có ba mươi hai học sinh, mười lăm bạn nam và mười bảy bạn nữ.",
+     "ipa": "ðeə ɑː ˈθɜːti tuː ˈstjuːdənts ɪn maɪ klɑːs ˈfɪftiːn bɔɪz ənd ˈsevəntiːn ɡɜːlz",
+     "link": "Chú ý phân biệt fifteen (mười lăm) và seventeen (mười bảy) bằng trọng âm: fif-TEEN, seven-TEEN.",
+     "chunks": [
+      "thirty-two students",
+      "fifteen boys",
+      "seventeen girls"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What is your favourite subject?",
+     "vi": "Môn học yêu thích của bạn là gì?",
+     "ipa": "wɒt ɪz jɔː ˈfeɪvərɪt ˈsʌbdʒɪkt",
+     "link": "Trọng âm của favourite rơi vào âm đầu: FAY-vuh-rit; subject nhấn âm đầu.",
+     "chunks": [
+      "your favourite subject"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "My favourite subject is English because I love songs in English.",
+     "vi": "Môn yêu thích của tôi là tiếng Anh vì tôi yêu các bài hát tiếng Anh.",
+     "ipa": "maɪ ˈfeɪvərɪt ˈsʌbdʒɪkt ɪz ˈɪŋɡlɪʃ bɪˈkɒz aɪ lʌv sɒŋz ɪn ˈɪŋɡlɪʃ",
+     "link": "'because' nhấn âm hai; âm cuối /z/ của songs phải rõ.",
+     "chunks": [
+      "My favourite subject is English",
+      "because I love songs"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Trường của Candidate bắt đầu lúc mấy giờ?",
+     "o": [
+      "Bảy giờ",
+      "Tám giờ",
+      "Bảy giờ rưỡi"
+     ],
+     "a": 0,
+     "why": "Candidate nói: My school starts at seven o'clock."
+    },
+    {
+     "q": "Lớp của Candidate có bao nhiêu học sinh?",
+     "o": [
+      "Ba mươi",
+      "Ba mươi hai",
+      "Hai mươi ba"
+     ],
+     "a": 1,
+     "why": "Candidate nói: There are thirty-two students in my class."
+    },
+    {
+     "q": "Vì sao Candidate thích môn tiếng Anh?",
+     "o": [
+      "Vì cô giáo vui tính",
+      "Vì yêu các bài hát tiếng Anh",
+      "Vì môn này dễ"
+     ],
+     "a": 1,
+     "why": "Candidate nói: because I love songs in English."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "My Day - Một ngày của tôi",
+   "band": "Band 2.5",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about your day. What do you usually do in the morning?",
+     "vi": "Chúng ta hãy nói về một ngày của bạn. Buổi sáng bạn thường làm gì?",
+     "ipa": "let əs tɔːk əˈbaʊt jɔː deɪ. wɒt də jə ˈjuːʒuəli duː ɪn ðə ˈmɔːnɪŋ",
+     "link": "'usually' có âm /ʒ/ ở giữa, đọc là YOO-zhoo-uh-lee; 'in the morning' là cụm cố định.",
+     "chunks": [
+      "Let us talk about your day",
+      "What do you usually do",
+      "in the morning"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I usually get up at six o'clock, wash my face and have breakfast with my family.",
+     "vi": "Tôi thường dậy lúc sáu giờ, rửa mặt và ăn sáng cùng gia đình.",
+     "ipa": "aɪ ˈjuːʒuəli ɡet ʌp ət sɪks əˈklɒk wɒʃ maɪ feɪs ənd hæv ˈbrekfəst wɪð maɪ ˈfæməli",
+     "link": "'get up at' nối âm liền: get-up-at; liệt kê ba việc với ngữ điệu lên ở hai việc đầu, xuống ở việc cuối.",
+     "chunks": [
+      "get up at six o'clock",
+      "wash my face",
+      "have breakfast with my family"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Can you cook your own breakfast?",
+     "vi": "Bạn có thể tự nấu bữa sáng không?",
+     "ipa": "kən jə kʊk jɔː əʊn ˈbrekfəst",
+     "link": "Câu hỏi với Can lên giọng ở cuối; 'can you' đọc nhanh thành kuh-nyuh.",
+     "chunks": [
+      "Can you cook",
+      "your own breakfast"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, I can. I can cook rice and eggs, but I cannot make bread.",
+     "vi": "Có, tôi có thể. Tôi nấu được cơm và trứng, nhưng tôi không làm được bánh mì.",
+     "ipa": "jes aɪ kæn. aɪ kən kʊk raɪs ənd eɡz bət aɪ ˈkænɒt meɪk bred",
+     "link": "Phân biệt can (kæn, trả lời ngắn) và cannot (KÆN-not, nhấn âm đầu); âm cuối /s/ của eggs.",
+     "chunks": [
+      "Yes, I can",
+      "cook rice and eggs",
+      "I cannot make bread"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What do you do in the evening?",
+     "vi": "Buổi tối bạn làm gì?",
+     "ipa": "wɒt də jə duː ɪn ði ˈiːvnɪŋ",
+     "link": "'in the evening' là cụm thời gian cố định; xuống giọng cuối câu.",
+     "chunks": [
+      "in the evening"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "In the evening, I do my homework and watch TV for one hour before bed.",
+     "vi": "Buổi tối, tôi làm bài tập và xem ti vi một giờ trước khi đi ngủ.",
+     "ipa": "ɪn ði ˈiːvnɪŋ aɪ duː maɪ ˈhəʊmwɜːk ənd wɒtʃ ˈtiːˈviː fə wʌn ˈaʊə bɪˈfɔː bed",
+     "link": "'for one hour' nối âm: fo-ruh-NAU-er; 'before bed' kết câu xuống giọng.",
+     "chunks": [
+      "do my homework",
+      "watch TV for one hour",
+      "before bed"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate thường dậy lúc mấy giờ?",
+     "o": [
+      "Năm giờ",
+      "Sáu giờ",
+      "Bảy giờ"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I usually get up at six o'clock."
+    },
+    {
+     "q": "Candidate không làm được món gì?",
+     "o": [
+      "Cơm",
+      "Trứng",
+      "Bánh mì"
+     ],
+     "a": 2,
+     "why": "Candidate nói: I cannot make bread."
+    },
+    {
+     "q": "Buổi tối Candidate xem ti vi bao lâu?",
+     "o": [
+      "Một giờ",
+      "Hai giờ",
+      "Nửa giờ"
+     ],
+     "a": 0,
+     "why": "Candidate nói: watch TV for one hour before bed."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "Free Time - Thời gian rảnh",
+   "band": "Band 2.5",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about free time. What do you like doing in your free time?",
+     "vi": "Chúng ta hãy nói về thời gian rảnh. Bạn thích làm gì trong thời gian rảnh?",
+     "ipa": "let əs tɔːk əˈbaʊt friː taɪm. wɒt də jə laɪk ˈduːɪŋ ɪn jɔː friː taɪm",
+     "link": "'What do you like doing' đọc liền một cụm; âm /ŋ/ cuối doing không đọc thành /n/.",
+     "chunks": [
+      "Let us talk about free time",
+      "What do you like doing",
+      "in your free time"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I like playing football with my friends and listening to music at home.",
+     "vi": "Tôi thích chơi bóng đá với bạn bè và nghe nhạc ở nhà.",
+     "ipa": "aɪ laɪk ˈpleɪɪŋ ˈfʊtbɔːl wɪð maɪ frendz ənd ˈlɪsənɪŋ tə ˈmjuːzɪk ət həʊm",
+     "link": "Sau like dùng động từ thêm -ing: playing, listening; 'listening to' nối âm nhẹ.",
+     "chunks": [
+      "playing football with my friends",
+      "listening to music",
+      "at home"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "How often do you play football?",
+     "vi": "Bạn chơi bóng đá thường xuyên đến mức nào?",
+     "ipa": "haʊ ˈɒfən də jə pleɪ ˈfʊtbɔːl",
+     "link": "'How often' là cụm hỏi tần suất, xuống giọng cuối câu.",
+     "chunks": [
+      "How often do you"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I play football twice a week, on Wednesday and Saturday afternoons.",
+     "vi": "Tôi chơi bóng đá hai lần một tuần, vào chiều thứ Tư và thứ Bảy.",
+     "ipa": "aɪ pleɪ ˈfʊtbɔːl twaɪs ə wiːk ɒn ˈwenzdeɪ ənd ˈsætədeɪ ˌɑːftəˈnuːnz",
+     "link": "'twice a week' là cụm tần suất cố định; Wednesday đọc là WENZ-day (âm d ở giữa im lặng).",
+     "chunks": [
+      "twice a week",
+      "on Wednesday and Saturday afternoons"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Can you play any musical instrument?",
+     "vi": "Bạn có chơi được nhạc cụ nào không?",
+     "ipa": "kən jə pleɪ ˈeni ˈmjuːzɪkəl ˈɪnstrəmənt",
+     "link": "'musical instrument' nhấn âm đầu của instrument: IN-stru-ment.",
+     "chunks": [
+      "play any musical instrument"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "No, I cannot, but I can sing a little. I often sing with my sister.",
+     "vi": "Không, tôi không chơi được, nhưng tôi hát được một chút. Tôi thường hát cùng chị tôi.",
+     "ipa": "nəʊ aɪ ˈkænɒt bət aɪ kən sɪŋ ə ˈlɪtəl. aɪ ˈɒfən sɪŋ wɪð maɪ ˈsɪstə",
+     "link": "'a little' nối âm thành uh-LIT-tle; 'often' ở đây đọc OFF-ten hoặc OFF-en đều được chấp nhận.",
+     "chunks": [
+      "No, I cannot",
+      "sing a little",
+      "sing with my sister"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate chơi bóng đá mấy lần một tuần?",
+     "o": [
+      "Một lần",
+      "Hai lần",
+      "Ba lần"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I play football twice a week."
+    },
+    {
+     "q": "Candidate chơi bóng vào những buổi nào?",
+     "o": [
+      "Chiều thứ Tư và thứ Bảy",
+      "Chiều thứ Hai và thứ Sáu",
+      "Sáng Chủ nhật"
+     ],
+     "a": 0,
+     "why": "Candidate nói: on Wednesday and Saturday afternoons."
+    },
+    {
+     "q": "Candidate có chơi được nhạc cụ không?",
+     "o": [
+      "Có, chơi guitar",
+      "Không, nhưng hát được một chút",
+      "Có, chơi piano"
+     ],
+     "a": 1,
+     "why": "Candidate nói: No, I cannot, but I can sing a little."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "Yesterday - Hôm qua của tôi",
+   "band": "Band 3.0",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about yesterday. What did you do yesterday morning?",
+     "vi": "Chúng ta hãy nói về hôm qua. Sáng hôm qua bạn đã làm gì?",
+     "ipa": "let əs tɔːk əˈbaʊt ˈjestədeɪ. wɒt dɪd jə duː ˈjestədeɪ ˈmɔːnɪŋ",
+     "link": "'What did you do' là mẫu hỏi quá khứ quen thuộc; did đọc nhẹ, trọng tâm rơi vào do và yesterday.",
+     "chunks": [
+      "Let us talk about yesterday",
+      "What did you do",
+      "yesterday morning"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yesterday morning, I got up late and had a big breakfast with my grandmother.",
+     "vi": "Sáng hôm qua, tôi dậy muộn và ăn một bữa sáng thịnh soạn với bà tôi.",
+     "ipa": "ˈjestədeɪ ˈmɔːnɪŋ aɪ ɡɒt ʌp leɪt ənd hæd ə bɪɡ ˈbrekfəst wɪð maɪ ˈɡrænmʌðə",
+     "link": "'got up' nối âm thành got-tup; had là quá khứ của have, âm cuối /d/ rõ.",
+     "chunks": [
+      "got up late",
+      "had a big breakfast",
+      "with my grandmother"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Did you go anywhere in the afternoon?",
+     "vi": "Buổi chiều bạn có đi đâu không?",
+     "ipa": "dɪd jə ɡəʊ ˈeniweə ɪn ði ˌɑːftəˈnuːn",
+     "link": "Câu hỏi Did lên giọng ở cuối; anywhere dùng trong câu hỏi và phủ định.",
+     "chunks": [
+      "Did you go anywhere",
+      "in the afternoon"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, I went to the market with my mother. We bought vegetables and some fish.",
+     "vi": "Có, tôi đi chợ với mẹ. Chúng tôi mua rau và một ít cá.",
+     "ipa": "jes aɪ went tə ðə ˈmɑːkɪt wɪð maɪ ˈmʌðə. wi bɔːt ˈvedʒtəbəlz ənd səm fɪʃ",
+     "link": "went (đi) và bought (mua) là động từ bất quy tắc cần thuộc lòng; âm cuối /t/ của bought.",
+     "chunks": [
+      "went to the market",
+      "with my mother",
+      "bought vegetables and some fish"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What did you do in the evening?",
+     "vi": "Buổi tối bạn đã làm gì?",
+     "ipa": "wɒt dɪd jə duː ɪn ði ˈiːvnɪŋ",
+     "link": "Mẫu câu hỏi lặp lại với in the evening; xuống giọng cuối câu hỏi What.",
+     "chunks": [
+      "in the evening"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "In the evening, I read a story and went to bed at ten o'clock.",
+     "vi": "Buổi tối, tôi đọc một câu chuyện và đi ngủ lúc mười giờ.",
+     "ipa": "ɪn ði ˈiːvnɪŋ aɪ red ə ˈstɔːri ənd went tə bed ət ten əˈklɒk",
+     "link": "read ở quá khứ đọc là RED (không phải reed); 'went to bed' là cụm cố định chỉ việc đi ngủ.",
+     "chunks": [
+      "read a story",
+      "went to bed",
+      "at ten o'clock"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Sáng hôm qua Candidate làm gì?",
+     "o": [
+      "Dậy sớm và chạy bộ",
+      "Dậy muộn và ăn sáng với bà",
+      "Đi chợ với mẹ"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I got up late and had a big breakfast with my grandmother."
+    },
+    {
+     "q": "Buổi chiều Candidate mua những gì ở chợ?",
+     "o": [
+      "Hoa quả và bánh",
+      "Thịt và trứng",
+      "Rau và cá"
+     ],
+     "a": 2,
+     "why": "Candidate nói: We bought vegetables and some fish."
+    },
+    {
+     "q": "Candidate đi ngủ lúc mấy giờ?",
+     "o": [
+      "Chín giờ",
+      "Mười giờ",
+      "Mười một giờ"
+     ],
+     "a": 1,
+     "why": "Candidate nói: went to bed at ten o'clock."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "The Weather Today - Thời tiết hôm nay",
+   "band": "Band 3.0",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about the weather. What is the weather like today?",
+     "vi": "Chúng ta hãy nói về thời tiết. Hôm nay thời tiết thế nào?",
+     "ipa": "let əs tɔːk əˈbaʊt ðə ˈweðə. wɒt ɪz ðə ˈweðə laɪk təˈdeɪ",
+     "link": "'What is the weather like' là mẫu hỏi thời tiết cố định; like ở đây nghĩa là như thế nào, không phải thích.",
+     "chunks": [
+      "Let us talk about the weather",
+      "What is the weather like today"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Today it is sunny and warm. The sky is blue, and a soft wind is blowing.",
+     "vi": "Hôm nay trời nắng và ấm. Bầu trời xanh, và một làn gió nhẹ đang thổi.",
+     "ipa": "təˈdeɪ ɪt ɪz ˈsʌni ənd wɔːm. ðə skaɪ ɪz bluː ənd ə sɒft wɪnd ɪz ˈbləʊɪŋ",
+     "link": "'is blowing' là hiện tại tiếp diễn cho việc đang xảy ra; âm cuối /ŋ/ của blowing.",
+     "chunks": [
+      "sunny and warm",
+      "The sky is blue",
+      "a soft wind is blowing"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What are people doing outside now?",
+     "vi": "Mọi người đang làm gì ở ngoài trời lúc này?",
+     "ipa": "wɒt ɑː ˈpiːpəl ˈduːɪŋ ˌaʊtˈsaɪd naʊ",
+     "link": "Câu hỏi tiếp diễn 'What are people doing' đọc liền một cụm; nhấn OUTSIDE và NOW.",
+     "chunks": [
+      "What are people doing",
+      "outside now"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Children are playing in the park, and some old men are sitting under the trees.",
+     "vi": "Trẻ em đang chơi trong công viên, và vài cụ ông đang ngồi dưới bóng cây.",
+     "ipa": "ˈtʃɪldrən ɑː ˈpleɪɪŋ ɪn ðə pɑːk ənd səm əʊld men ɑː ˈsɪtɪŋ ˈʌndə ðə triːz",
+     "link": "Hai vế tiếp diễn song song: are playing, are sitting; men là số nhiều bất quy tắc của man.",
+     "chunks": [
+      "Children are playing in the park",
+      "old men are sitting",
+      "under the trees"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What kind of weather do you like best?",
+     "vi": "Bạn thích kiểu thời tiết nào nhất?",
+     "ipa": "wɒt kaɪnd əv ˈweðə də jə laɪk best",
+     "link": "'What kind of' là cụm hỏi loại; best là dạng nhất của well/good trong ngữ cảnh này.",
+     "chunks": [
+      "What kind of weather",
+      "like best"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I like cool, dry weather best because I can walk and play outside all day.",
+     "vi": "Tôi thích thời tiết mát và khô nhất vì tôi có thể đi bộ và chơi ngoài trời cả ngày.",
+     "ipa": "aɪ laɪk kuːl draɪ ˈweðə best bɪˈkɒz aɪ kən wɔːk ənd pleɪ ˌaʊtˈsaɪd ɔːl deɪ",
+     "link": "'because I can' mở đầu lý do; 'all day' nối âm thành awl-day.",
+     "chunks": [
+      "cool, dry weather",
+      "walk and play outside",
+      "all day"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Thời tiết hôm nay thế nào?",
+     "o": [
+      "Mưa và lạnh",
+      "Nắng và ấm",
+      "Nhiều mây và gió mạnh"
+     ],
+     "a": 1,
+     "why": "Candidate nói: Today it is sunny and warm."
+    },
+    {
+     "q": "Các cụ ông đang làm gì?",
+     "o": [
+      "Đang đi bộ",
+      "Đang ngồi dưới bóng cây",
+      "Đang chơi cờ trong nhà"
+     ],
+     "a": 1,
+     "why": "Candidate nói: some old men are sitting under the trees."
+    },
+    {
+     "q": "Candidate thích kiểu thời tiết nào nhất?",
+     "o": [
+      "Nóng và ẩm",
+      "Mát và khô",
+      "Lạnh và có tuyết"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I like cool, dry weather best."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "A Happy Memory - Một kỷ niệm vui",
+   "band": "Band 3.5",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about a happy memory. Can you describe a happy day you remember?",
+     "vi": "Chúng ta hãy nói về một kỷ niệm vui. Bạn có thể kể một ngày vui mà bạn còn nhớ không?",
+     "ipa": "let əs tɔːk əˈbaʊt ə ˈhæpi ˈmeməri. kən jə dɪˈskraɪb ə ˈhæpi deɪ jə rɪˈmembə",
+     "link": "'describe' nhấn âm hai: dis-KRYBE; nhớ xuống giọng cuối câu hỏi Can you khi hỏi lịch sự.",
+     "chunks": [
+      "Let us talk about a happy memory",
+      "describe a happy day",
+      "you remember"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Last summer, my family went to the beach for three days. It was my happiest holiday ever.",
+     "vi": "Mùa hè năm ngoái, gia đình tôi đi biển trong ba ngày. Đó là kỳ nghỉ vui nhất của tôi từ trước đến nay.",
+     "ipa": "lɑːst ˈsʌmə maɪ ˈfæməli went tə ðə biːtʃ fə θriː deɪz. ɪt wəz maɪ ˈhæpiɪst ˈhɒlədeɪ ˈevə",
+     "link": "'happiest' là so sánh nhất của happy (y thành i); 'ever' ở cuối tăng sức nhấn mạnh.",
+     "chunks": [
+      "Last summer",
+      "went to the beach for three days",
+      "my happiest holiday ever"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What did you do at the beach?",
+     "vi": "Bạn đã làm gì ở bãi biển?",
+     "ipa": "wɒt dɪd jə duː ət ðə biːtʃ",
+     "link": "Mẫu hỏi quá khứ 'What did you do'; nhấn BEACH cuối câu.",
+     "chunks": [
+      "What did you do",
+      "at the beach"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "We swam in the sea every morning, built a big castle from sand, and ate fresh fish for dinner.",
+     "vi": "Chúng tôi bơi ở biển mỗi sáng, xây một lâu đài lớn bằng cát, và ăn cá tươi vào bữa tối.",
+     "ipa": "wi swæm ɪn ðə siː ˈevri ˈmɔːnɪŋ bɪlt ə bɪɡ ˈkɑːsəl frəm sænd ənd et freʃ fɪʃ fə ˈdɪnə",
+     "link": "Ba động từ quá khứ bất quy tắc liên tiếp: swam, built, ate - âm cuối phải rõ từng từ.",
+     "chunks": [
+      "swam in the sea",
+      "built a big castle from sand",
+      "ate fresh fish for dinner"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Why was that holiday so special for you?",
+     "vi": "Vì sao kỳ nghỉ đó đặc biệt với bạn như vậy?",
+     "ipa": "waɪ wəz ðæt ˈhɒlədeɪ səʊ ˈspeʃəl fə juː",
+     "link": "'so special' dùng so để tăng mức độ; xuống giọng cuối câu hỏi Why.",
+     "chunks": [
+      "Why was that holiday",
+      "so special for you"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Because my whole family was together, and we laughed more than on any other trip.",
+     "vi": "Vì cả gia đình tôi được ở bên nhau, và chúng tôi cười nhiều hơn bất kỳ chuyến đi nào khác.",
+     "ipa": "bɪˈkɒz maɪ həʊl ˈfæməli wəz təˈɡeðə ənd wi lɑːft mɔː ðən ɒn ˈeni ˈʌðə trɪp",
+     "link": "'more than' là so sánh hơn; 'whole family' nhấn WHOLE để chỉ đầy đủ cả nhà.",
+     "chunks": [
+      "my whole family was together",
+      "we laughed more than",
+      "any other trip"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Gia đình Candidate đi biển trong bao lâu?",
+     "o": [
+      "Hai ngày",
+      "Ba ngày",
+      "Một tuần"
+     ],
+     "a": 1,
+     "why": "Candidate nói: went to the beach for three days."
+    },
+    {
+     "q": "Mỗi sáng ở biển, họ làm gì?",
+     "o": [
+      "Bơi ở biển",
+      "Câu cá",
+      "Đi chợ sớm"
+     ],
+     "a": 0,
+     "why": "Candidate nói: We swam in the sea every morning."
+    },
+    {
+     "q": "Vì sao kỳ nghỉ đặc biệt?",
+     "o": [
+      "Vì khách sạn sang trọng",
+      "Vì cả gia đình ở bên nhau",
+      "Vì đồ ăn rẻ"
+     ],
+     "a": 1,
+     "why": "Candidate nói: Because my whole family was together."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "My Future Plans - Kế hoạch tương lai của tôi",
+   "band": "Band 3.5",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about the future. What are you going to do this weekend?",
+     "vi": "Chúng ta hãy nói về tương lai. Cuối tuần này bạn sẽ làm gì?",
+     "ipa": "let əs tɔːk əˈbaʊt ðə ˈfjuːtʃə. wɒt ɑː jə ˈɡəʊɪŋ tə duː ðɪs ˌwiːkˈend",
+     "link": "'going to' nói nhanh thành gonna trong giao tiếp thân mật, nhưng khi thi nên nói rõ going to.",
+     "chunks": [
+      "Let us talk about the future",
+      "What are you going to do",
+      "this weekend"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I am going to visit my grandparents in the countryside. We are going to pick fruit in their garden.",
+     "vi": "Tôi sẽ về thăm ông bà ở quê. Chúng tôi sẽ hái trái cây trong vườn của ông bà.",
+     "ipa": "aɪ əm ˈɡəʊɪŋ tə ˈvɪzɪt maɪ ˈɡrænpeərənts ɪn ðə ˈkʌntrisaɪd. wi ɑː ˈɡəʊɪŋ tə pɪk fruːt ɪn ðeə ˈɡɑːdən",
+     "link": "Cấu trúc be going to nhắc lại hai lần cho hai chủ ngữ I và We; âm cuối /t/ của visit và fruit.",
+     "chunks": [
+      "visit my grandparents",
+      "in the countryside",
+      "pick fruit in their garden"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Are you going to travel anywhere next summer?",
+     "vi": "Mùa hè tới bạn có dự định đi đâu không?",
+     "ipa": "ɑː jə ˈɡəʊɪŋ tə ˈtrævəl ˈeniweə nekst ˈsʌmə",
+     "link": "Câu hỏi Are you going to lên giọng ở cuối; anywhere dùng trong câu hỏi.",
+     "chunks": [
+      "Are you going to travel anywhere",
+      "next summer"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, I am going to travel to Da Lat with my class. It is going to be colder there than in my city.",
+     "vi": "Có, tôi sẽ đi Đà Lạt cùng lớp. Ở đó sẽ lạnh hơn thành phố của tôi.",
+     "ipa": "jes aɪ əm ˈɡəʊɪŋ tə ˈtrævəl tə də lɑːt wɪð maɪ klɑːs. ɪt ɪz ˈɡəʊɪŋ tə bi ˈkəʊldə ðeə ðən ɪn maɪ ˈsɪti",
+     "link": "'colder than' so sánh hơn dự đoán; 'going to be' đọc liền một cụm.",
+     "chunks": [
+      "travel to Da Lat with my class",
+      "going to be colder there",
+      "than in my city"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What job are you going to do in the future?",
+     "vi": "Trong tương lai bạn sẽ làm nghề gì?",
+     "ipa": "wɒt dʒɒb ɑː jə ˈɡəʊɪŋ tə duː ɪn ðə ˈfjuːtʃə",
+     "link": "'in the future' cụm chỉ tương lai; xuống giọng cuối câu hỏi What.",
+     "chunks": [
+      "What job are you going to do",
+      "in the future"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I am going to be a teacher because I love children and I want to help them learn.",
+     "vi": "Tôi sẽ trở thành giáo viên vì tôi yêu trẻ em và muốn giúp chúng học hành.",
+     "ipa": "aɪ əm ˈɡəʊɪŋ tə bi ə ˈtiːtʃə bɪˈkɒz aɪ lʌv ˈtʃɪldrən ənd aɪ wɒnt tə help ðəm lɜːn",
+     "link": "'want to help them learn' chuỗi động từ nối tiếp; them đọc nhẹ thành th'm khi nói nhanh.",
+     "chunks": [
+      "going to be a teacher",
+      "because I love children",
+      "help them learn"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Cuối tuần này Candidate sẽ làm gì?",
+     "o": [
+      "Ở nhà học bài",
+      "Về thăm ông bà ở quê",
+      "Đi biển với lớp"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I am going to visit my grandparents in the countryside."
+    },
+    {
+     "q": "Mùa hè tới Candidate đi đâu?",
+     "o": [
+      "Đà Lạt cùng lớp",
+      "Hà Nội cùng gia đình",
+      "Ở nhà"
+     ],
+     "a": 0,
+     "why": "Candidate nói: I am going to travel to Da Lat with my class."
+    },
+    {
+     "q": "Candidate muốn làm nghề gì?",
+     "o": [
+      "Bác sĩ",
+      "Kỹ sư",
+      "Giáo viên"
+     ],
+     "a": 2,
+     "why": "Candidate nói: I am going to be a teacher."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "Learning English - Học tiếng Anh",
+   "band": "Band 4.0",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about learning English. How long have you learned English?",
+     "vi": "Chúng ta hãy nói về việc học tiếng Anh. Bạn đã học tiếng Anh được bao lâu rồi?",
+     "ipa": "let əs tɔːk əˈbaʊt ˈlɜːnɪŋ ˈɪŋɡlɪʃ. haʊ lɒŋ həv jə lɜːnd ˈɪŋɡlɪʃ",
+     "link": "'How long have you learned' là mẫu hiện tại hoàn thành hỏi khoảng thời gian; have rút gọn thành 've khi nói.",
+     "chunks": [
+      "Let us talk about learning English",
+      "How long have you learned English"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I have learned English for three years, but I have spoken it seriously for only six months.",
+     "vi": "Tôi đã học tiếng Anh được ba năm, nhưng tôi mới luyện nói nghiêm túc được sáu tháng.",
+     "ipa": "aɪ həv lɜːnd ˈɪŋɡlɪʃ fə θriː jɪəz bət aɪ həv ˈspəʊkən ɪt ˈsɪəriəsli fə ˈəʊnli sɪks mʌnθs",
+     "link": "Cặp for + khoảng thời gian: for three years, for six months; spoken là phân từ của speak.",
+     "chunks": [
+      "learned English for three years",
+      "spoken it seriously",
+      "for only six months"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "If you practise every day, will your speaking improve?",
+     "vi": "Nếu bạn luyện tập mỗi ngày, khả năng nói của bạn có tiến bộ không?",
+     "ipa": "ɪf jə ˈpræktɪs ˈevri deɪ wɪl jɔː ˈspiːkɪŋ ɪmˈpruːv",
+     "link": "Câu điều kiện loại 1: If + hiện tại đơn, will + động từ; lên giọng ở cuối câu hỏi.",
+     "chunks": [
+      "If you practise every day",
+      "will your speaking improve"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, I think so. If I speak a little every day, I will feel more confident soon.",
+     "vi": "Có, tôi nghĩ vậy. Nếu tôi nói một chút mỗi ngày, tôi sẽ sớm cảm thấy tự tin hơn.",
+     "ipa": "jes aɪ θɪŋk səʊ. ɪf aɪ spiːk ə ˈlɪtəl ˈevri deɪ aɪ wɪl fiːl mɔː ˈkɒnfɪdənt suːn",
+     "link": "'more confident' dùng more vì confident là tính từ dài; nghỉ ngắn sau mệnh đề if.",
+     "chunks": [
+      "If I speak a little every day",
+      "I will feel more confident",
+      "soon"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Have you ever watched a film in English?",
+     "vi": "Bạn đã bao giờ xem phim bằng tiếng Anh chưa?",
+     "ipa": "həv jə ˈevə wɒtʃt ə fɪlm ɪn ˈɪŋɡlɪʃ",
+     "link": "'Have you ever' là mẫu hỏi trải nghiệm kinh điển của hiện tại hoàn thành; ever đặt trước động từ chính.",
+     "chunks": [
+      "Have you ever",
+      "watched a film in English"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, I have watched two films in English this month. They helped me learn new words.",
+     "vi": "Có, tháng này tôi đã xem hai bộ phim tiếng Anh. Chúng giúp tôi học từ mới.",
+     "ipa": "jes aɪ həv wɒtʃt tuː fɪlmz ɪn ˈɪŋɡlɪʃ ðɪs mʌnθ. ðeɪ helpt mi lɜːn njuː wɜːdz",
+     "link": "'this month' đi với hiện tại hoàn thành vì tháng chưa kết thúc; âm cuối /t/ của watched và helped.",
+     "chunks": [
+      "watched two films in English",
+      "this month",
+      "learn new words"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate đã học tiếng Anh bao lâu?",
+     "o": [
+      "Hai năm",
+      "Ba năm",
+      "Năm năm"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I have learned English for three years."
+    },
+    {
+     "q": "Candidate mới luyện nói nghiêm túc được bao lâu?",
+     "o": [
+      "Sáu tháng",
+      "Một năm",
+      "Ba tháng"
+     ],
+     "a": 0,
+     "why": "Candidate nói: I have spoken it seriously for only six months."
+    },
+    {
+     "q": "Tháng này Candidate đã xem mấy bộ phim tiếng Anh?",
+     "o": [
+      "Một bộ",
+      "Hai bộ",
+      "Ba bộ"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I have watched two films in English this month."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "My Neighbourhood - Khu phố của tôi",
+   "band": "Band 4.0",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about your neighbourhood. Can you describe the area where you live?",
+     "vi": "Chúng ta hãy nói về khu phố của bạn. Bạn có thể mô tả khu vực nơi bạn sống không?",
+     "ipa": "let əs tɔːk əˈbaʊt jɔː ˈneɪbəhʊd. kən jə dɪˈskraɪb ði ˈeəriə weə jə lɪv",
+     "link": "'neighbourhood' nhấn âm đầu: NAY-buh-hood; 'describe' nhấn âm hai.",
+     "chunks": [
+      "Let us talk about your neighbourhood",
+      "describe the area",
+      "where you live"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I live in a quiet area near the river. There is a small park where I have walked my dog for years.",
+     "vi": "Tôi sống ở một khu yên tĩnh gần sông. Có một công viên nhỏ nơi tôi đã dắt chó đi dạo nhiều năm nay.",
+     "ipa": "aɪ lɪv ɪn ə ˈkwaɪət ˈeəriə nɪə ðə ˈrɪvə. ðeə ɪz ə smɔːl pɑːk weə aɪ həv wɔːkt maɪ dɒɡ fə jɪəz",
+     "link": "'where I have walked' kết hợp mệnh đề quan hệ và hiện tại hoàn thành; for years chỉ thời gian kéo dài tới nay.",
+     "chunks": [
+      "a quiet area near the river",
+      "a small park where",
+      "for years"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What changes have you seen in your area?",
+     "vi": "Bạn đã thấy những thay đổi nào ở khu vực của mình?",
+     "ipa": "wɒt ˈtʃeɪndʒɪz həv jə siːn ɪn jɔː ˈeəriə",
+     "link": "'have you seen' hiện tại hoàn thành; seen là phân từ của see, âm cuối /n/ rõ.",
+     "chunks": [
+      "What changes have you seen",
+      "in your area"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "A new supermarket has opened near my house, and the roads have become wider and cleaner.",
+     "vi": "Một siêu thị mới đã mở gần nhà tôi, và các con đường đã trở nên rộng và sạch hơn.",
+     "ipa": "ə njuː ˈsuːpəmɑːkɪt həz ˈəʊpənd nɪə maɪ haʊs ənd ðə rəʊdz həv bɪˈkʌm ˈwaɪdə ənd ˈkliːnə",
+     "link": "Hai động từ hoàn thành nối bằng and: has opened, have become; âm cuối /d/ của opened.",
+     "chunks": [
+      "A new supermarket has opened",
+      "roads have become wider",
+      "and cleaner"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "If a friend visited your area, where would you take them?",
+     "vi": "Nếu một người bạn đến thăm khu của bạn, bạn sẽ dẫn họ đi đâu?",
+     "ipa": "ɪf ə frend ˈvɪzɪtɪd jɔː ˈeəriə weə wəd jə teɪk ðəm",
+     "link": "Câu này mượn mẫu điều kiện với would cho tình huống giả định nhẹ; would rút gọn nhẹ khi nói.",
+     "chunks": [
+      "If a friend visited your area",
+      "where would you take them"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I would take them to the old market first. It sells the best street food in our town.",
+     "vi": "Tôi sẽ dẫn họ đến chợ cổ trước. Nơi đó bán đồ ăn đường phố ngon nhất thị trấn chúng tôi.",
+     "ipa": "aɪ wəd teɪk ðəm tə ði əʊld ˈmɑːkɪt fɜːst. ɪt selz ðə best striːt fuːd ɪn ˈaʊə taʊn",
+     "link": "'the best' là so sánh nhất; âm cuối /z/ của sells nối tiếp mạch câu.",
+     "chunks": [
+      "take them to the old market first",
+      "the best street food",
+      "in our town"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate sống ở khu vực thế nào?",
+     "o": [
+      "Ồn ào gần chợ",
+      "Yên tĩnh gần sông",
+      "Đông đúc ở trung tâm"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I live in a quiet area near the river."
+    },
+    {
+     "q": "Thay đổi nào đã xảy ra gần nhà Candidate?",
+     "o": [
+      "Một bệnh viện mới mở",
+      "Một siêu thị mới mở",
+      "Một trường học đóng cửa"
+     ],
+     "a": 1,
+     "why": "Candidate nói: A new supermarket has opened near my house."
+    },
+    {
+     "q": "Candidate sẽ dẫn bạn đến đâu trước?",
+     "o": [
+      "Công viên nhỏ",
+      "Siêu thị mới",
+      "Chợ cổ"
+     ],
+     "a": 2,
+     "why": "Candidate nói: I would take them to the old market first."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "Photos - Ảnh chụp",
+   "band": "Band 5.0",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about photos. Do you like taking photos?",
+     "vi": "Chúng ta hãy nói về ảnh chụp. Bạn có thích chụp ảnh không?",
+     "ipa": "let əs tɔːk əˈbaʊt ˈfəʊtəʊz. də jə laɪk ˈteɪkɪŋ ˈfəʊtəʊz",
+     "link": "Âm /f/ của photos rõ răng-môi; like + V-ing: like taking.",
+     "chunks": [
+      "Let us talk about photos",
+      "Do you like taking photos"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, I do. I take photos almost every day with my phone, especially when I travel with my family.",
+     "vi": "Có, tôi rất thích. Tôi chụp ảnh gần như mỗi ngày bằng điện thoại, đặc biệt khi đi du lịch cùng gia đình.",
+     "ipa": "jes aɪ duː. aɪ teɪk ˈfəʊtəʊz ˈɔːlməʊst ˈevri deɪ wɪð maɪ fəʊn ɪˈspeʃəli wen aɪ ˈtrævəl wɪð maɪ ˈfæməli",
+     "link": "'especially' nhấn âm hai; nghỉ ngắn trước especially để thêm ý nhấn.",
+     "chunks": [
+      "take photos almost every day",
+      "with my phone",
+      "especially when I travel"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What do you usually take photos of?",
+     "vi": "Bạn thường chụp ảnh những gì?",
+     "ipa": "wɒt də jə ˈjuːʒuəli teɪk ˈfəʊtəʊz ɒv",
+     "link": "Giới từ of ở cuối câu hỏi, đọc nhẹ; âm /v/ không được nuốt mất.",
+     "chunks": [
+      "What do you usually",
+      "take photos of"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I mostly take photos of food, old streets and my little daughter. She grows so fast that I want to keep every moment.",
+     "vi": "Tôi chủ yếu chụp đồ ăn, phố cổ và con gái nhỏ của tôi. Con bé lớn nhanh quá nên tôi muốn giữ lại mọi khoảnh khắc.",
+     "ipa": "aɪ ˈməʊstli teɪk ˈfəʊtəʊz əv fuːd əʊld striːts ənd maɪ ˈlɪtəl ˈdɔːtə. ʃi ɡrəʊz səʊ fɑːst ðət aɪ wɒnt tə kiːp ˈevri ˈməʊmənt",
+     "link": "'so fast that' cấu trúc quá... đến nỗi; 'keep every moment' giữ nguyên cụm.",
+     "chunks": [
+      "photos of food, old streets",
+      "my little daughter",
+      "keep every moment"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Do you prefer taking photos or being in photos?",
+     "vi": "Bạn thích chụp ảnh hay thích được chụp ảnh hơn?",
+     "ipa": "də jə prɪˈfɜː ˈteɪkɪŋ ˈfəʊtəʊz ɔː ˈbiːɪŋ ɪn ˈfəʊtəʊz",
+     "link": "prefer A or B: nhấn hai vế đối nhau taking / being; prefer nhấn âm hai.",
+     "chunks": [
+      "Do you prefer",
+      "taking photos or being in photos"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I prefer taking photos because I feel shy in front of the camera. Behind it, I can look at the world more carefully.",
+     "vi": "Tôi thích chụp ảnh hơn vì tôi ngại trước ống kính. Sau ống kính, tôi có thể ngắm thế giới kỹ hơn.",
+     "ipa": "aɪ prɪˈfɜː ˈteɪkɪŋ ˈfəʊtəʊz bɪˈkɒz aɪ fiːl ʃaɪ ɪn frʌnt əv ðə ˈkæmərə. bɪˈhaɪnd ɪt aɪ kən lʊk ət ðə wɜːld mɔː ˈkeəfəli",
+     "link": "'in front of' và 'behind' tạo cặp tương phản; âm cuối /d/ của behind nối nhẹ sang it.",
+     "chunks": [
+      "I prefer taking photos",
+      "shy in front of the camera",
+      "look at the world more carefully"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate chụp ảnh bằng gì?",
+     "o": [
+      "Máy ảnh chuyên nghiệp",
+      "Điện thoại",
+      "Máy tính bảng"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I take photos almost every day with my phone."
+    },
+    {
+     "q": "Candidate chủ yếu chụp những gì?",
+     "o": [
+      "Phong cảnh núi",
+      "Đồ ăn, phố cổ và con gái",
+      "Động vật"
+     ],
+     "a": 1,
+     "why": "Candidate nói: photos of food, old streets and my little daughter."
+    },
+    {
+     "q": "Vì sao Candidate thích chụp hơn được chụp?",
+     "o": [
+      "Vì ngại trước ống kính",
+      "Vì máy ảnh nặng",
+      "Vì ảnh tự chụp xấu"
+     ],
+     "a": 0,
+     "why": "Candidate nói: because I feel shy in front of the camera."
+    }
+   ]
+  },
+  {
+   "part": "Part 1",
+   "topic": "Shopping Habits - Thói quen mua sắm",
+   "band": "Band 5.0",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let us talk about shopping. Do you enjoy shopping?",
+     "vi": "Chúng ta hãy nói về mua sắm. Bạn có thích mua sắm không?",
+     "ipa": "let əs tɔːk əˈbaʊt ˈʃɒpɪŋ. də jə ɪnˈdʒɔɪ ˈʃɒpɪŋ",
+     "link": "'enjoy' nhấn âm hai và đi với V-ing: enjoy shopping.",
+     "chunks": [
+      "Let us talk about shopping",
+      "Do you enjoy shopping"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "To be honest, not really. I only go shopping when I need something, usually once or twice a month.",
+     "vi": "Thật lòng mà nói thì không hẳn. Tôi chỉ đi mua sắm khi cần gì đó, thường một hoặc hai lần một tháng.",
+     "ipa": "tə bi ˈɒnɪst nɒt ˈrɪəli. aɪ ˈəʊnli ɡəʊ ˈʃɒpɪŋ wen aɪ niːd ˈsʌmθɪŋ ˈjuːʒuəli wʌns ɔː twaɪs ə mʌnθ",
+     "link": "'To be honest' là cụm mở đầu thật lòng; 'once or twice a month' cụm tần suất.",
+     "chunks": [
+      "To be honest, not really",
+      "when I need something",
+      "once or twice a month"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Do you prefer shopping online or in real shops?",
+     "vi": "Bạn thích mua sắm trực tuyến hay ở cửa hàng thật hơn?",
+     "ipa": "də jə prɪˈfɜː ˈʃɒpɪŋ ˌɒnˈlaɪn ɔː ɪn rɪəl ʃɒps",
+     "link": "'online' nhấn âm hai; cặp đối online / in real shops nhấn đều hai vế.",
+     "chunks": [
+      "shopping online",
+      "or in real shops"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I prefer shopping online because it saves time and I can compare prices easily. However, for clothes, I still go to real shops to try things on.",
+     "vi": "Tôi thích mua trực tuyến hơn vì tiết kiệm thời gian và dễ so sánh giá. Tuy nhiên, với quần áo, tôi vẫn ra cửa hàng thật để thử.",
+     "ipa": "aɪ prɪˈfɜː ˈʃɒpɪŋ ˌɒnˈlaɪn bɪˈkɒz ɪt seɪvz taɪm ənd aɪ kən kəmˈpeə ˈpraɪsɪz ˈiːzɪli. haʊˈevə fə kləʊðz aɪ stɪl ɡəʊ tə rɪəl ʃɒps tə traɪ θɪŋz ɒn",
+     "link": "'However' đổi hướng lập luận, ngắt hơi rõ trước nó; 'try things on' cụm thử đồ.",
+     "chunks": [
+      "saves time",
+      "compare prices easily",
+      "try things on"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "What was the last thing you bought?",
+     "vi": "Món đồ gần nhất bạn đã mua là gì?",
+     "ipa": "wɒt wəz ðə lɑːst θɪŋ jə bɔːt",
+     "link": "Câu hỏi quá khứ đơn giản; bought âm cuối /t/ gọn.",
+     "chunks": [
+      "the last thing you bought"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Last week I bought a pair of running shoes online. They were on sale, so they cost only half the normal price.",
+     "vi": "Tuần trước tôi mua một đôi giày chạy bộ trên mạng. Chúng đang giảm giá nên chỉ bằng nửa giá thường.",
+     "ipa": "lɑːst wiːk aɪ bɔːt ə peə əv ˈrʌnɪŋ ʃuːz ˌɒnˈlaɪn. ðeɪ wə ɒn seɪl səʊ ðeɪ kɒst ˈəʊnli hɑːf ðə ˈnɔːməl praɪs",
+     "link": "'a pair of' dùng cho đồ đi đôi; 'on sale' cụm giảm giá; 'half the normal price' nhấn HALF.",
+     "chunks": [
+      "a pair of running shoes",
+      "on sale",
+      "half the normal price"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate đi mua sắm thường xuyên thế nào?",
+     "o": [
+      "Mỗi tuần",
+      "Một hoặc hai lần một tháng",
+      "Mỗi ngày"
+     ],
+     "a": 1,
+     "why": "Candidate nói: usually once or twice a month."
+    },
+    {
+     "q": "Với quần áo, Candidate chọn cách nào?",
+     "o": [
+      "Vẫn ra cửa hàng thật để thử",
+      "Chỉ mua trực tuyến",
+      "Nhờ bạn mua hộ"
+     ],
+     "a": 0,
+     "why": "Candidate nói: for clothes, I still go to real shops to try things on."
+    },
+    {
+     "q": "Đôi giày Candidate mua giá thế nào?",
+     "o": [
+      "Đắt gấp đôi",
+      "Bằng nửa giá thường vì giảm giá",
+      "Đúng giá thường"
+     ],
+     "a": 1,
+     "why": "Candidate nói: They were on sale, so they cost only half the normal price."
+    }
+   ]
+  },
+  {
+   "part": "Part 2",
+   "topic": "Describe a Trip That Was Special to You - Một chuyến đi đặc biệt với bạn",
+   "band": "Band 5.5",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Now I am going to give you a topic. Describe a trip that was special to you. You should say: where you went, who you went with, what you did there, and explain why this trip was special to you. You have one minute to prepare, then speak for one to two minutes.",
+     "vi": "Bây giờ tôi sẽ cho bạn một chủ đề. Hãy mô tả một chuyến đi đặc biệt với bạn. Bạn nên nói: bạn đã đi đâu, đi với ai, bạn đã làm gì ở đó, và giải thích vì sao chuyến đi này đặc biệt với bạn. Bạn có một phút chuẩn bị, sau đó nói trong một đến hai phút.",
+     "ipa": "naʊ aɪ əm ˈɡəʊɪŋ tə ɡɪv jə ə ˈtɒpɪk. dɪˈskraɪb ə trɪp ðət wəz ˈspeʃəl tə juː. jə ʃəd seɪ weə jə went huː jə went wɪð wɒt jə dɪd ðeə ənd ɪkˈspleɪn waɪ ðɪs trɪp wəz ˈspeʃəl tə juː. jə həv wʌn ˈmɪnɪt tə prɪˈpeə ðen spiːk fə wʌn tə tuː ˈmɪnɪts",
+     "link": "Đây là dòng chứa cue card đầy đủ của Part 2: đọc chậm, nhấn vào bốn ý cần nói (where, who, what, why).",
+     "chunks": [
+      "Describe a trip that was special to you",
+      "where you went, who you went with",
+      "explain why this trip was special"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "A trip that was really special to me was my journey to Sa Pa with three close friends two years ago. We had just finished our final exams at university, so we wanted to relax before starting our first jobs.",
+     "vi": "Một chuyến đi thật sự đặc biệt với tôi là chuyến đi Sa Pa cùng ba người bạn thân hai năm trước. Chúng tôi vừa thi xong kỳ thi cuối ở đại học nên muốn thư giãn trước khi bắt đầu công việc đầu tiên.",
+     "ipa": "ə trɪp ðət wəz ˈrɪəli ˈspeʃəl tə mi wəz maɪ ˈdʒɜːni tə sə pɑː wɪð θriː kləʊs frendz tuː jɪəz əˈɡəʊ. wi həd dʒəst ˈfɪnɪʃt ˈaʊə ˈfaɪnəl ɪɡˈzæmz ət ˌjuːnɪˈvɜːsəti səʊ wi ˈwɒntɪd tə rɪˈlæks bɪˈfɔː ˈstɑːtɪŋ ˈaʊə fɜːst dʒɒbz",
+     "link": "Âm cuối: finished có /t/, started dạng nguyên thể sau before; 'two years ago' cụm quá khứ rõ mốc.",
+     "chunks": [
+      "A trip that was really special to me",
+      "three close friends",
+      "before starting our first jobs"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "During the four days there, we walked through green rice terraces, visited small villages, and tried local food like grilled corn and herbal chicken soup. On the last morning, we got up at five to watch the sunrise above a sea of clouds, and honestly, no photo could describe that feeling.",
+     "vi": "Trong bốn ngày ở đó, chúng tôi đi bộ qua những ruộng bậc thang xanh mướt, thăm các bản làng nhỏ và thử món ăn địa phương như ngô nướng và canh gà thảo mộc. Sáng cuối cùng, chúng tôi dậy lúc năm giờ để ngắm bình minh trên biển mây, và thật lòng, không bức ảnh nào tả được cảm giác đó.",
+     "ipa": "ˈdjʊərɪŋ ðə fɔː deɪz ðeə wi wɔːkt θruː ɡriːn raɪs ˈterəsɪz ˈvɪzɪtɪd smɔːl ˈvɪlɪdʒɪz ənd traɪd ˈləʊkəl fuːd laɪk ɡrɪld kɔːn ənd ˈhɜːbəl ˈtʃɪkɪn suːp. ɒn ðə lɑːst ˈmɔːnɪŋ wi ɡɒt ʌp ət faɪv tə wɒtʃ ðə ˈsʌnraɪz əˈbʌv ə siː əv klaʊdz ənd ˈɒnɪstli nəʊ ˈfəʊtəʊ kəd dɪˈskraɪb ðæt ˈfiːlɪŋ",
+     "link": "Ba động từ quá khứ song song walked, visited, tried; 'a sea of clouds' hình ảnh biển mây; ngắt hơi theo từng ý.",
+     "chunks": [
+      "green rice terraces",
+      "a sea of clouds",
+      "no photo could describe that feeling"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "The reason this trip means so much to me is that it was the last time the four of us were all together. Now we work in different cities, but whenever I feel tired, I look at those photos and remember that peaceful mountain air.",
+     "vi": "Lý do chuyến đi này ý nghĩa với tôi đến vậy là vì đó là lần cuối cả bốn chúng tôi ở bên nhau. Giờ chúng tôi làm việc ở các thành phố khác nhau, nhưng mỗi khi mệt, tôi nhìn lại những bức ảnh đó và nhớ về không khí núi rừng yên bình ấy.",
+     "ipa": "ðə ˈriːzən ðɪs trɪp miːnz səʊ mʌtʃ tə mi ɪz ðət ɪt wəz ðə lɑːst taɪm ðə fɔː əv əs wə ɔːl təˈɡeðə. naʊ wi wɜːk ɪn ˈdɪfrənt ˈsɪtiz bət wenˈevə aɪ fiːl ˈtaɪəd aɪ lʊk ət ðəʊz ˈfəʊtəʊz ənd rɪˈmembə ðæt ˈpiːsfəl ˈmaʊntɪn eə",
+     "link": "'The reason... is that' mẫu kết bài Part 2; whenever mở mệnh đề thời gian ở hiện tại đơn.",
+     "chunks": [
+      "The reason this trip means so much",
+      "the last time we were all together",
+      "peaceful mountain air"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Thank you. Do you think travelling with friends is better than travelling alone?",
+     "vi": "Cảm ơn bạn. Bạn có nghĩ đi du lịch với bạn bè tốt hơn đi một mình không?",
+     "ipa": "θæŋk juː. də jə θɪŋk ˈtrævəlɪŋ wɪð frendz ɪz ˈbetə ðən ˈtrævəlɪŋ əˈləʊn",
+     "link": "Câu hỏi nối sau Part 2; so sánh 'better than' nhấn BETTER.",
+     "chunks": [
+      "travelling with friends",
+      "better than travelling alone"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "For me, yes. Friends make the journey more fun and help when problems happen, although travelling alone can teach you to be independent.",
+     "vi": "Với tôi thì có. Bạn bè làm chuyến đi vui hơn và giúp đỡ khi có sự cố, mặc dù đi một mình có thể dạy bạn tính tự lập.",
+     "ipa": "fə miː jes. frendz meɪk ðə ˈdʒɜːni mɔː fʌn ənd help wen ˈprɒbləmz ˈhæpən ɔːlˈðəʊ ˈtrævəlɪŋ əˈləʊn kən tiːtʃ jə tə bi ˌɪndɪˈpendənt",
+     "link": "'although' mở vế nhượng bộ cuối câu để cân bằng ý; independent nhấn âm ba.",
+     "chunks": [
+      "make the journey more fun",
+      "although travelling alone",
+      "be independent"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate đi Sa Pa với ai?",
+     "o": [
+      "Gia đình",
+      "Ba người bạn thân",
+      "Đồng nghiệp"
+     ],
+     "a": 1,
+     "why": "Candidate nói: my journey to Sa Pa with three close friends."
+    },
+    {
+     "q": "Sáng cuối cùng nhóm làm gì?",
+     "o": [
+      "Đi chợ sớm",
+      "Dậy lúc 5 giờ ngắm bình minh trên biển mây",
+      "Nấu bữa sáng"
+     ],
+     "a": 1,
+     "why": "Candidate nói: we got up at five to watch the sunrise above a sea of clouds."
+    },
+    {
+     "q": "Vì sao chuyến đi đặc biệt?",
+     "o": [
+      "Vì là lần cuối cả bốn người ở bên nhau",
+      "Vì khách sạn rất đẹp",
+      "Vì thời tiết hoàn hảo"
+     ],
+     "a": 0,
+     "why": "Candidate nói: it was the last time the four of us were all together."
+    }
+   ]
+  },
+  {
+   "part": "Part 2",
+   "topic": "Describe a Skill You Learned as a Child - Một kỹ năng bạn học khi còn nhỏ",
+   "band": "Band 5.5",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Now I am going to give you a topic. Describe a skill you learned as a child. You should say: what the skill is, who taught you it, how you learned it, and explain how this skill is useful to you now. You have one minute to prepare, then speak for one to two minutes.",
+     "vi": "Bây giờ tôi sẽ cho bạn một chủ đề. Hãy mô tả một kỹ năng bạn đã học khi còn nhỏ. Bạn nên nói: đó là kỹ năng gì, ai đã dạy bạn, bạn học nó như thế nào, và giải thích kỹ năng này hữu ích với bạn hiện nay ra sao. Bạn có một phút chuẩn bị, sau đó nói trong một đến hai phút.",
+     "ipa": "naʊ aɪ əm ˈɡəʊɪŋ tə ɡɪv jə ə ˈtɒpɪk. dɪˈskraɪb ə skɪl jə lɜːnd əz ə tʃaɪld. jə ʃəd seɪ wɒt ðə skɪl ɪz huː tɔːt jə ɪt haʊ jə lɜːnd ɪt ənd ɪkˈspleɪn haʊ ðɪs skɪl ɪz ˈjuːsfəl tə jə naʊ. jə həv wʌn ˈmɪnɪt tə prɪˈpeə ðen spiːk fə wʌn tə tuː ˈmɪnɪts",
+     "link": "Dòng chứa cue card đầy đủ của Part 2; bốn ý cần nói được nối bằng dấu phẩy, đọc rành mạch từng ý.",
+     "chunks": [
+      "Describe a skill you learned as a child",
+      "who taught you it, how you learned it",
+      "how this skill is useful to you now"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "A skill I learned as a child is swimming. I learned it when I was eight years old, during a long, hot summer in my hometown, which has a wide river running through it.",
+     "vi": "Một kỹ năng tôi học khi còn nhỏ là bơi lội. Tôi học nó khi tám tuổi, trong một mùa hè dài và nóng ở quê tôi, nơi có một con sông rộng chảy qua.",
+     "ipa": "ə skɪl aɪ lɜːnd əz ə tʃaɪld ɪz ˈswɪmɪŋ. aɪ lɜːnd ɪt wen aɪ wəz eɪt jɪəz əʊld ˈdjʊərɪŋ ə lɒŋ hɒt ˈsʌmə ɪn maɪ ˈhəʊmtaʊn wɪtʃ həz ə waɪd ˈrɪvə ˈrʌnɪŋ θruː ɪt",
+     "link": "Mệnh đề quan hệ which bổ sung thông tin quê hương; running là dạng rút gọn tự nhiên sau river.",
+     "chunks": [
+      "A skill I learned as a child",
+      "when I was eight years old",
+      "a wide river running through it"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "My grandfather taught me. At first, I was afraid of the deep water and held onto his shoulders all the time. Little by little, he showed me how to move my arms, kick my legs and breathe at the right moment. After about a month of practice every afternoon, I could finally swim across the river by myself.",
+     "vi": "Ông tôi đã dạy tôi. Ban đầu, tôi sợ nước sâu và bám chặt lấy vai ông suốt. Dần dần, ông chỉ cho tôi cách quạt tay, đạp chân và thở đúng lúc. Sau khoảng một tháng luyện tập mỗi buổi chiều, cuối cùng tôi đã có thể tự bơi qua sông.",
+     "ipa": "maɪ ˈɡrænfɑːðə tɔːt mi. ət fɜːst aɪ wəz əˈfreɪd əv ðə diːp ˈwɔːtə ənd held ˈɒntə hɪz ˈʃəʊldəz ɔːl ðə taɪm. ˈlɪtəl baɪ ˈlɪtəl hi ʃəʊd mi haʊ tə muːv maɪ ɑːmz kɪk maɪ leɡz ənd briːð ət ðə raɪt ˈməʊmənt. ˈɑːftə əˈbaʊt ə mʌnθ əv ˈpræktɪs ˈevri ˌɑːftəˈnuːn aɪ kəd ˈfaɪnəli swɪm əˈkrɒs ðə ˈrɪvə baɪ maɪˈself",
+     "link": "'Little by little' cụm dần dần ở đầu đoạn chuyển ý; ba động từ nguyên thể song song move, kick, breathe sau how to.",
+     "chunks": [
+      "My grandfather taught me",
+      "Little by little",
+      "swim across the river by myself"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "This skill is still very useful to me now. Swimming keeps me fit, helps me relax after work, and most importantly, it could save a life one day. I am really grateful to my grandfather for those summer lessons.",
+     "vi": "Kỹ năng này vẫn rất hữu ích với tôi hiện nay. Bơi lội giữ cho tôi khỏe, giúp tôi thư giãn sau giờ làm, và quan trọng nhất, một ngày nào đó nó có thể cứu một mạng người. Tôi thật sự biết ơn ông vì những buổi học mùa hè ấy.",
+     "ipa": "ðɪs skɪl ɪz stɪl ˈveri ˈjuːsfəl tə mi naʊ. ˈswɪmɪŋ kiːps mi fɪt helps mi rɪˈlæks ˈɑːftə wɜːk ənd məʊst ɪmˈpɔːtəntli ɪt kəd seɪv ə laɪf wʌn deɪ. aɪ əm ˈrɪəli ˈɡreɪtfəl tə maɪ ˈɡrænfɑːðə fə ðəʊz ˈsʌmə ˈlesənz",
+     "link": "'most importantly' nhấn ý quan trọng nhất; grateful to somebody for something là cấu trúc biết ơn chuẩn.",
+     "chunks": [
+      "still very useful to me now",
+      "keeps me fit",
+      "grateful to my grandfather"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Thank you. Should every child learn to swim, in your opinion?",
+     "vi": "Cảm ơn bạn. Theo bạn, mọi trẻ em có nên học bơi không?",
+     "ipa": "θæŋk juː. ʃəd ˈevri tʃaɪld lɜːn tə swɪm ɪn jɔː əˈpɪnjən",
+     "link": "Câu hỏi nối sau Part 2; 'in your opinion' đặt cuối để mời nêu quan điểm.",
+     "chunks": [
+      "Should every child learn to swim",
+      "in your opinion"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Definitely. In a country with many rivers and a long coastline like mine, swimming is not just a sport. It is a basic safety skill.",
+     "vi": "Chắc chắn là có. Ở một đất nước nhiều sông và bờ biển dài như nước tôi, bơi lội không chỉ là môn thể thao. Nó là một kỹ năng an toàn cơ bản.",
+     "ipa": "ˈdefɪnətli. ɪn ə ˈkʌntri wɪð ˈmeni ˈrɪvəz ənd ə lɒŋ ˈkəʊstlaɪn laɪk maɪn ˈswɪmɪŋ ɪz nɒt dʒəst ə spɔːt. ɪt ɪz ə ˈbeɪsɪk ˈseɪfti skɪl",
+     "link": "Cặp 'not just... It is' tạo nhịp nhấn; coastline nhấn âm đầu.",
+     "chunks": [
+      "Definitely",
+      "not just a sport",
+      "a basic safety skill"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate học bơi khi mấy tuổi?",
+     "o": [
+      "Sáu tuổi",
+      "Tám tuổi",
+      "Mười tuổi"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I learned it when I was eight years old."
+    },
+    {
+     "q": "Ai dạy Candidate bơi?",
+     "o": [
+      "Bố",
+      "Thầy giáo thể dục",
+      "Ông"
+     ],
+     "a": 2,
+     "why": "Candidate nói: My grandfather taught me."
+    },
+    {
+     "q": "Sau bao lâu Candidate tự bơi qua sông được?",
+     "o": [
+      "Sau khoảng một tháng",
+      "Sau một tuần",
+      "Sau một mùa hè"
+     ],
+     "a": 0,
+     "why": "Candidate nói: After about a month of practice... I could finally swim across the river."
+    }
+   ]
   }
  ],
  "writing": [
@@ -27036,6 +32204,192 @@ const CONTENT = {
     {
      "en": "I would welcome the opportunity to discuss...",
      "vi": "Tôi rất mong có cơ hội được trao đổi về..."
+    }
+   ]
+  },
+  {
+   "type": "Task 1",
+   "band": "Band 6.5",
+   "title": "Biểu đồ hỗn hợp cột và đường: khách du lịch và nhiệt độ",
+   "prompt": "The chart below shows the number of visitors to a seaside town and the average temperature in four months in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "dataDesc": "Biểu đồ hỗn hợp gồm cột và đường tại một thị trấn ven biển năm 2023, gồm 4 tháng. Cột là số khách, đơn vị nghìn người: tháng 1 là 18 nghìn, tháng 4 là 32 nghìn, tháng 7 là 58 nghìn, tháng 10 là 40 nghìn. Đường là nhiệt độ trung bình, đơn vị độ C: tháng 1 là 21 độ, tháng 4 là 25 độ, tháng 7 là 31 độ, tháng 10 là 27 độ. Xu hướng chính: cả hai chỉ số đều cao nhất vào tháng 7 và thấp nhất vào tháng 1, số khách tăng giảm cùng chiều với nhiệt độ.",
+   "model": "The chart compares the number of visitors to a seaside town in four months of 2023 with the average temperature in the same months.\n\nOverall, visitor numbers and temperatures both peaked in July and were lowest in January. The town was clearly most popular in the warmest month, while the coolest month attracted the fewest tourists, suggesting a strong link between weather and tourism.\n\nIn January, the town received only 18,000 visitors, and the average temperature stood at 21 degrees Celsius. By April, visitor numbers had risen to 32,000, almost double the January figure, as the temperature climbed to 25 degrees. The increase was steady rather than dramatic, but it already showed a clear upward trend in both measures during the first part of the year shown.\n\nJuly recorded the highest figures by a considerable margin. Visitor numbers reached 58,000, while the temperature peaked at 31 degrees. In October, both measures fell back, with 40,000 visitors and an average temperature of 27 degrees. Although October was cooler and less busy than July, it remained substantially busier and warmer than January, confirming that the town attracted more tourists whenever conditions were warmer over this period.",
+   "analysis": "Cấu trúc 4 đoạn: đoạn 1 paraphrase đề bài, nêu rõ hai loại số liệu là cột số khách và đường nhiệt độ. Đoạn 2 là overview, chỉ ra đỉnh và đáy chung của cả hai chỉ số và mối liên hệ giữa thời tiết với du lịch, không đưa số liệu chi tiết. Đoạn 3 mô tả tháng 1 và tháng 4 theo thứ tự thời gian. Đoạn 4 mô tả tháng 7 và tháng 10, luôn so sánh ngược với các tháng trước. Điểm ghi điểm: đọc biểu đồ hỗn hợp bằng cách bám vào một trục số liệu tại một thời điểm, dùng động từ xu hướng đa dạng như peaked, climbed và fell back.",
+   "phrases": [
+    {
+     "en": "peaked in July",
+     "vi": "đạt đỉnh vào tháng 7"
+    },
+    {
+     "en": "almost double the January figure",
+     "vi": "gần gấp đôi con số của tháng 1"
+    },
+    {
+     "en": "stood at 21 degrees Celsius",
+     "vi": "ở mức 21 độ C"
+    },
+    {
+     "en": "by a considerable margin",
+     "vi": "với khoảng cách đáng kể"
+    },
+    {
+     "en": "a strong link between weather and tourism",
+     "vi": "mối liên hệ chặt chẽ giữa thời tiết và du lịch"
+    }
+   ]
+  },
+  {
+   "type": "Task 1",
+   "band": "Band 7.0",
+   "title": "Biểu đồ hỗn hợp cột và đường: sản lượng lúa mì và lượng mưa",
+   "prompt": "The chart below shows wheat production and annual rainfall in a farming region in 2010, 2014, 2018 and 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "dataDesc": "Biểu đồ hỗn hợp gồm cột và đường tại một vùng nông nghiệp, gồm 4 mốc năm. Cột là sản lượng lúa mì, đơn vị triệu tấn: năm 2010 là 4,2 triệu tấn, năm 2014 là 5,1 triệu tấn, năm 2018 là 4,6 triệu tấn, năm 2022 là 5,8 triệu tấn. Đường là lượng mưa hằng năm, đơn vị mi-li-mét: năm 2010 là 620 mi-li-mét, năm 2014 là 710 mi-li-mét, năm 2018 là 560 mi-li-mét, năm 2022 là 740 mi-li-mét. Xu hướng chính: sản lượng và lượng mưa biến động cùng chiều, cùng giảm vào năm 2018 và cùng đạt mức cao nhất vào năm 2022.",
+   "model": "The chart compares wheat production and annual rainfall in a farming region in 2010, 2014, 2018 and 2022.\n\nOverall, wheat production rose over the period despite a fall in 2018, and rainfall followed a broadly similar pattern. The highest production and the highest rainfall both occurred in the final year, while 2018 recorded a dip in each measure.\n\nIn 2010, the region produced 4.2 million tonnes of wheat, and rainfall stood at 620 millimetres. Four years later, production had increased to 5.1 million tonnes, and rainfall had also risen, reaching 710 millimetres. This parallel growth suggests that wetter conditions supported a larger harvest at the beginning of the period, although other farming factors may also have played an important part in determining the final yield each year.\n\nIn 2018, however, production fell to 4.6 million tonnes, and rainfall dropped sharply to 560 millimetres, the lowest level shown. By 2022, both figures had recovered strongly. Wheat production climbed to 5.8 million tonnes, the highest value in the chart, while rainfall increased to 740 millimetres. The close correspondence between the two sets of figures underlines how heavily this region depended on rainfall for its wheat harvest.",
+   "analysis": "Cấu trúc 4 đoạn: đoạn 1 paraphrase đề bài và liệt kê đủ 4 mốc năm. Đoạn 2 là overview, nêu xu hướng tăng chung, cú giảm năm 2018 và sự trùng khớp của hai chỉ số. Đoạn 3 mô tả năm 2010 và năm 2014, kèm một câu bình luận thận trọng bằng although để tránh khẳng định nhân quả tuyệt đối. Đoạn 4 mô tả năm 2018 và năm 2022, kết thúc bằng nhận xét tổng kết về sự phụ thuộc vào lượng mưa. Điểm ghi điểm: nhóm số liệu theo cặp năm thay vì liệt kê rời rạc, từ vựng nối hai trục số liệu như parallel growth và close correspondence.",
+   "phrases": [
+    {
+     "en": "followed a broadly similar pattern",
+     "vi": "biến động theo xu hướng nhìn chung tương tự"
+    },
+    {
+     "en": "recorded a dip in each measure",
+     "vi": "ghi nhận mức giảm ở từng chỉ số"
+    },
+    {
+     "en": "this parallel growth",
+     "vi": "sự tăng trưởng song song này"
+    },
+    {
+     "en": "had recovered strongly",
+     "vi": "đã phục hồi mạnh mẽ"
+    },
+    {
+     "en": "the close correspondence between the two sets of figures",
+     "vi": "sự tương ứng chặt chẽ giữa hai nhóm số liệu"
+    }
+   ]
+  },
+  {
+   "type": "Task 1",
+   "band": "Band 6.5",
+   "title": "Biểu đồ tròn: chi tiêu của hộ gia đình",
+   "prompt": "The pie chart below shows how an average household in a large city spent its money on six categories in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "dataDesc": "Biểu đồ tròn gồm 6 nhóm chi tiêu của một hộ gia đình trung bình tại một thành phố lớn năm 2024, tổng là 100%. Thực phẩm chiếm 32%, nhà ở chiếm 28%, đi lại chiếm 15%, giáo dục chiếm 11%, giải trí chiếm 8%, chăm sóc sức khỏe chiếm 6%. Xu hướng chính: thực phẩm và nhà ở cộng lại chiếm 60%, tức là hơn một nửa ngân sách, trong khi chăm sóc sức khỏe là nhóm nhỏ nhất.",
+   "model": "The pie chart shows how an average household in a large city allocated its monthly spending across six categories in 2024.\n\nOverall, food and housing together accounted for well over half of total spending, making them by far the two largest expenses. Transport was the third largest category, while healthcare represented the smallest share of the household budget in that year.\n\nFood was the single biggest item, at 32 percent of spending. Housing followed closely, at 28 percent, so the two essential categories consumed 60 percent in total. Transport accounted for a further 15 percent, which was noticeably lower than the figure for housing but still represented a significant monthly cost for most families living and working in the city during this period in question.\n\nThe remaining categories were considerably smaller. Education took up 11 percent of spending, while leisure activities accounted for 8 percent. Healthcare was the least expensive item, at only 6 percent, roughly one fifth of the amount spent on food. Taken together, these three categories made up just one quarter of the budget, which highlights how heavily basic living costs dominated household finances in the city in 2024 overall.",
+   "analysis": "Cấu trúc 4 đoạn: đoạn 1 paraphrase đề bài bằng động từ allocated và cụm across six categories. Đoạn 2 là overview, cộng gộp hai nhóm lớn nhất và chỉ ra nhóm nhỏ nhất. Đoạn 3 mô tả ba nhóm lớn theo thứ tự giảm dần. Đoạn 4 mô tả ba nhóm nhỏ còn lại và so sánh nhóm nhỏ nhất với nhóm lớn nhất bằng tỉ lệ một phần năm. Điểm ghi điểm: cách diễn đạt tỉ lệ đa dạng như accounted for, took up và made up, cộng gộp số liệu để tạo so sánh thay vì chỉ đọc lại từng con số trong biểu đồ tròn.",
+   "phrases": [
+    {
+     "en": "allocated its monthly spending across six categories",
+     "vi": "phân bổ chi tiêu hằng tháng vào 6 nhóm"
+    },
+    {
+     "en": "well over half of total spending",
+     "vi": "hơn một nửa tổng chi tiêu khá nhiều"
+    },
+    {
+     "en": "the single biggest item",
+     "vi": "khoản chi lớn nhất"
+    },
+    {
+     "en": "roughly one fifth of the amount spent on food",
+     "vi": "khoảng một phần năm số tiền chi cho thực phẩm"
+    },
+    {
+     "en": "basic living costs dominated household finances",
+     "vi": "chi phí sinh hoạt cơ bản chiếm phần lớn tài chính hộ gia đình"
+    }
+   ]
+  },
+  {
+   "type": "Task 1",
+   "band": "Band 7.0",
+   "title": "Bản đồ: một thị trấn thay đổi từ năm 1995 đến năm 2024",
+   "prompt": "The maps below show a small town in 1995 and the same town in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "dataDesc": "Hai bản đồ của cùng một thị trấn năm 1995 và năm 2024. Năm 1995: phía bắc là đất nông nghiệp rộng, góc đông bắc có một khu rừng nhỏ, đường chính chạy ngang từ tây sang đông ở giữa thị trấn, trường học nằm ở trung tâm sát đường chính, phía nam trường là đất trống, góc tây nam sát sông là đất trống, giữa thị trấn có quảng trường chợ cũ, con sông chảy qua phía nam. Năm 2024: đất nông nghiệp phía bắc được thay bằng hai dãy nhà ở mới, khu rừng bị chặt để xây siêu thị và bãi đỗ xe, đường chính được kéo dài lên phía bắc, phía nam trường học có thêm trung tâm y tế, góc tây nam có trung tâm thể thao mới cạnh sông, quảng trường chợ ở trung tâm thành khu đi bộ và có thêm bến xe buýt ngay bên cạnh, trường học được mở rộng nhưng giữ nguyên vị trí, con sông không thay đổi.",
+   "model": "The two maps show how a small town changed between 1995 and 2024.\n\nOverall, the town became considerably more residential and commercial over the period. Several public facilities were added in the south, farmland in the north was replaced by housing, and the road network was expanded, although the school and the river remained in exactly the same places.\n\nIn the north of the town, farmland occupied a large area in 1995, with a small woodland in the north-east corner. By 2024, the farmland had been cleared and replaced by two rows of new houses, while the woodland had been cut down to make way for a supermarket and a car park. The main road, which previously ran only from west to east, had been extended northwards to serve this new residential area and the shops.\n\nChanges in the south were focused on public services. A health centre was built to the south of the school, on land that had been empty in 1995, and a new sports centre was constructed beside the river in the south-west. In addition, the old market square in the centre was pedestrianised, and a bus station was added next to it. The school itself was enlarged but stayed on its original central site near the main road.",
+   "analysis": "Cấu trúc 4 đoạn: đoạn 1 paraphrase đề bài bằng hai mốc năm rõ ràng. Đoạn 2 là overview, tóm tắt hướng thay đổi chung là thêm nhà ở, thương mại và cơ sở công cộng, đồng thời nêu hai yếu tố không đổi. Đoạn 3 mô tả riêng khu vực phía bắc theo trình tự đất nông nghiệp, khu rừng rồi đường chính. Đoạn 4 mô tả khu vực phía nam và trung tâm. Điểm ghi điểm: thì quá khứ hoàn thành bị động cho thay đổi đã hoàn tất như had been cleared và had been extended, từ chỉ vị trí chính xác như in the north-east corner, beside the river và to the south of the school.",
+   "phrases": [
+    {
+     "en": "was replaced by housing",
+     "vi": "được thay thế bằng nhà ở"
+    },
+    {
+     "en": "had been cut down to make way for",
+     "vi": "đã bị chặt bỏ để nhường chỗ cho"
+    },
+    {
+     "en": "had been extended northwards",
+     "vi": "đã được kéo dài về phía bắc"
+    },
+    {
+     "en": "was constructed beside the river",
+     "vi": "được xây dựng bên cạnh con sông"
+    },
+    {
+     "en": "stayed on its original central site",
+     "vi": "giữ nguyên vị trí trung tâm ban đầu"
+    }
+   ]
+  },
+  {
+   "type": "Task 1",
+   "band": "Band 6.5",
+   "title": "Biểu đồ cột: tỷ lệ hộ gia đình tái chế rác",
+   "prompt": "The bar chart below shows the percentage of households that recycled in four cities in 2015 and 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "dataDesc": "Biểu đồ cột nhóm, đơn vị phần trăm hộ gia đình có tái chế rác, gồm 4 thành phố A, B, C, D và 2 mốc năm. Năm 2015: thành phố A là 50%, thành phố B là 42%, thành phố C là 35%, thành phố D là 20%. Năm 2023: thành phố A là 68%, thành phố B là 60%, thành phố C là 52%, thành phố D là 45%. Xu hướng chính: tỷ lệ tăng ở cả 4 thành phố, thành phố A luôn cao nhất, thành phố D luôn thấp nhất nhưng có mức tăng lớn nhất, từ 20% lên 45%, tức là tăng 25 điểm phần trăm và hơn gấp đôi.",
+   "model": "The bar chart compares the proportion of households that recycled in four cities in 2015 and 2023.\n\nOverall, recycling rates rose in all four cities over the eight-year period. City A had the highest rate in both years, while City D remained the lowest in 2023 despite recording the largest increase of the four cities shown in the chart.\n\nIn 2015, half of households in City A recycled, compared with 42 percent in City B, 35 percent in City C and only 20 percent in City D. City A was therefore well ahead of the other cities, and its rate was two and a half times as high as the figure for City D in the same year at that time.\n\nBy 2023, rates had increased everywhere. City A reached 68 percent and City B climbed to 60 percent, while City C rose to 52 percent. The most dramatic improvement was in City D, where the rate more than doubled to 45 percent. Nevertheless, a clear gap of 23 percentage points still separated the highest and lowest cities at the end of the period shown overall in all four places across the whole country.",
+   "analysis": "Cấu trúc 4 đoạn: đoạn 1 paraphrase đề bài bằng compares the proportion of households. Đoạn 2 là overview, nêu xu hướng tăng toàn diện và vị trí cao nhất, thấp nhất. Đoạn 3 mô tả riêng năm 2015 theo thứ tự giảm dần và so sánh thành phố A với thành phố D bằng phép gấp lần. Đoạn 4 mô tả năm 2023, nhấn mạnh mức tăng hơn gấp đôi của thành phố D và khoảng cách 23 điểm phần trăm còn lại. Điểm ghi điểm: phân biệt đúng percent và percentage points khi nói về chênh lệch, dùng half thay cho 50% để đa dạng cách diễn đạt số liệu.",
+   "phrases": [
+    {
+     "en": "the proportion of households that recycled",
+     "vi": "tỷ lệ hộ gia đình có tái chế rác"
+    },
+    {
+     "en": "two and a half times as high as",
+     "vi": "cao gấp hai lần rưỡi so với"
+    },
+    {
+     "en": "the most dramatic improvement",
+     "vi": "sự cải thiện ấn tượng nhất"
+    },
+    {
+     "en": "more than doubled to 45 percent",
+     "vi": "tăng hơn gấp đôi, lên mức 45%"
+    },
+    {
+     "en": "a gap of 23 percentage points",
+     "vi": "khoảng cách 23 điểm phần trăm"
+    }
+   ]
+  },
+  {
+   "type": "Task 1",
+   "band": "Band 7.0",
+   "title": "Quy trình: tái chế chai nhựa",
+   "prompt": "The diagram below shows how plastic bottles are recycled and turned into new products. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "dataDesc": "Sơ đồ quy trình tái chế chai nhựa gồm 7 bước nối tiếp. Bước 1: chai nhựa đã qua sử dụng được thu gom từ hộ gia đình và thùng rác tái chế rồi chở bằng xe tải tới nhà máy. Bước 2: chai được phân loại theo màu và rửa sạch để loại bỏ nhãn và chất bẩn. Bước 3: chai sạch được nghiền và cắt thành các mảnh nhựa nhỏ. Bước 4: các mảnh nhựa được nấu chảy ở nhiệt độ cao thành nhựa lỏng đặc. Bước 5: nhựa lỏng được lọc để loại bỏ tạp chất còn lại rồi ép qua các lỗ nhỏ thành sợi nhựa dài. Bước 6: sợi nhựa được làm nguội trong nước, cắt thành hạt nhỏ và kiểm tra chất lượng. Bước 7: hạt nhựa được bán cho nhà máy để nung và đúc thành chai mới và các sản phẩm nhựa khác. Toàn bộ quy trình là tuyến tính, vật liệu loại ra ở khâu kiểm tra được đưa đi xử lý riêng.",
+   "model": "The diagram shows how plastic bottles are recycled and turned into new products.\n\nOverall, the process consists of seven main stages, beginning with the collection of used bottles and ending with the sale of new items. The process is largely linear, although rejected material at the inspection stage is removed and sent for separate disposal outside the main cycle shown.\n\nAt the first stage, used plastic bottles are collected from homes and recycling bins and transported by lorry to a recycling plant. There, the bottles are sorted by colour and washed thoroughly to remove labels and dirt. Next, the clean bottles are crushed and cut into small plastic flakes, which are then melted at a high temperature to form a thick liquid plastic ready for reuse in manufacturing.\n\nIn the following stage, this liquid is filtered to remove any remaining impurities and then forced through small holes to create long plastic strands. The strands are cooled in water, chopped into tiny pellets and inspected for quality. Finally, the pellets are sold to factories, where they are heated and moulded into new bottles and other plastic products, allowing the material to be used again rather than thrown away.",
+   "analysis": "Cấu trúc 4 đoạn: đoạn 1 paraphrase đề bài, nêu điểm đầu là chai đã qua sử dụng và điểm cuối là sản phẩm mới. Đoạn 2 là overview, khẳng định quy trình có 7 bước, mang tính tuyến tính và có khâu loại bỏ vật liệu không đạt. Đoạn 3 mô tả các bước đầu từ thu gom, phân loại và rửa đến nghiền và nấu chảy. Đoạn 4 mô tả các bước cuối từ lọc và kéo sợi đến tạo hạt và bán cho nhà máy. Điểm ghi điểm: thể bị động chiếm ưu thế đúng đặc trưng bài quy trình như are collected, are sorted và are cooled, từ nối trình tự đa dạng như at the first stage, next, in the following stage và finally.",
+   "phrases": [
+    {
+     "en": "consists of seven main stages",
+     "vi": "gồm 7 giai đoạn chính"
+    },
+    {
+     "en": "are sorted by colour and washed thoroughly",
+     "vi": "được phân loại theo màu và rửa kỹ"
+    },
+    {
+     "en": "are crushed and cut into small plastic flakes",
+     "vi": "được nghiền và cắt thành các mảnh nhựa nhỏ"
+    },
+    {
+     "en": "are cooled in water, chopped into tiny pellets",
+     "vi": "được làm nguội trong nước, cắt thành hạt nhỏ"
+    },
+    {
+     "en": "rather than thrown away",
+     "vi": "thay vì bị vứt bỏ"
     }
    ]
   }
@@ -28663,6 +34017,1173 @@ const CONTENT = {
      "chunks": []
     }
    ]
+  },
+  {
+   "title": "Shopping at the Supermarket - Mua đồ ở siêu thị",
+   "setting": "Bạn vào một siêu thị nhỏ gần nhà để mua sữa, bánh mì và trứng cho bữa sáng. Bạn hỏi nhân viên vị trí đồ, giá tiền và nhờ lấy thêm đồ.",
+   "partner": "Nhân viên siêu thị",
+   "goal": "Hỏi được vị trí và giá, mua đủ ba món cần thiết và thanh toán lịch sự.",
+   "band": "Band 0",
+   "chunks": [
+    "Excuse me, where is",
+    "How much is",
+    "I want two, please",
+    "I need eggs, please",
+    "Thank you very much"
+   ],
+   "turns": [
+    {
+     "from": "partner",
+     "text": "Hello. Can I help you?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Xin lỗi, sữa ở đâu ạ?",
+     "expect": "Hello. Excuse me, where is the milk?",
+     "keywords": [
+      "hello",
+      "excuse me",
+      "where is",
+      "milk"
+     ],
+     "hint": "Hello. Excuse me, where...",
+     "tip": "Ngữ điệu: câu hỏi Where lên giọng nhẹ ở cuối. Nối âm: where is đọc liền thành một nhịp, âm cuối của excuse nối sang me.",
+     "chunks": [
+      "Excuse me, where is"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "The milk is over there, next to the bread."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn. Bánh mì bao nhiêu tiền ạ?",
+     "expect": "Thank you. How much is the bread?",
+     "keywords": [
+      "thank you",
+      "how much",
+      "bread"
+     ],
+     "hint": "Thank you. How much...",
+     "tip": "Phát âm: much có âm cuối rõ, không nuốt. Ngữ điệu: How much xuống giọng ở cuối như câu hỏi xin giá, thank you nói ấm và rõ.",
+     "chunks": [
+      "How much is"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "It is two dollars."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi lấy hai cái, làm ơn.",
+     "expect": "I want two, please.",
+     "keywords": [
+      "want",
+      "two",
+      "please"
+     ],
+     "hint": "I want two,...",
+     "tip": "Phát âm: two đọc gọn là tu, không thêm âm cuối. Ngữ điệu: please lên giọng nhẹ để nghe lịch sự, nghỉ ngắn sau two.",
+     "chunks": [
+      "I want two, please"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Here you are. Do you need anything else?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, tôi cũng cần trứng nữa ạ.",
+     "expect": "Yes, I need eggs, please.",
+     "keywords": [
+      "need",
+      "eggs",
+      "please"
+     ],
+     "hint": "Yes, I need eggs,...",
+     "tip": "Nối âm: need eggs nối liền ở âm cuối d sang eggs. Phát âm: eggs có âm cuối z nhẹ, nói gọn cả câu trong một hơi.",
+     "chunks": [
+      "I need eggs, please"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "The eggs are here. Is that all?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, thế thôi ạ. Cảm ơn bạn rất nhiều.",
+     "expect": "Yes, that is all. Thank you very much.",
+     "keywords": [
+      "that is all",
+      "thank you",
+      "very much"
+     ],
+     "hint": "Yes, that is all....",
+     "tip": "Ngữ điệu: that is all xuống giọng để chốt ý đã đủ đồ. Nối âm: thank you đọc liền, âm cuối của very nối nhẹ sang much.",
+     "chunks": [
+      "that is all",
+      "Thank you very much"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Asking the Time and Catching the Bus - Hỏi giờ và đón xe buýt",
+   "setting": "Bạn đứng ở trạm xe buýt trước cổng trường và không mang đồng hồ. Bạn hỏi một người đang chờ cùng trạm về giờ hiện tại và chuyến xe đi đến trường.",
+   "partner": "Người chờ xe cùng trạm",
+   "goal": "Hỏi được giờ hiện tại, biết đúng số xe, giờ xe đến và thời gian di chuyển.",
+   "band": "Band 0",
+   "chunks": [
+    "What time is it",
+    "Is this the bus",
+    "When does the bus come",
+    "How long does it take",
+    "Thank you so much"
+   ],
+   "turns": [
+    {
+     "from": "partner",
+     "text": "Hello. Are you waiting for the bus too?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Xin lỗi, bây giờ là mấy giờ ạ?",
+     "expect": "Hello. Excuse me, what time is it?",
+     "keywords": [
+      "excuse me",
+      "what time",
+      "is it"
+     ],
+     "hint": "Hello. Excuse me, what...",
+     "tip": "Ngữ điệu: What time lên giọng nhẹ ở cuối câu hỏi. Nối âm: what time đọc liền, time is nối thành một nhịp ngắn.",
+     "chunks": [
+      "What time is it"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "It is half past seven."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Đây có phải là xe buýt đến trường không ạ?",
+     "expect": "Is this the bus to school?",
+     "keywords": [
+      "is this",
+      "bus",
+      "school"
+     ],
+     "hint": "Is this the bus...",
+     "tip": "Ngữ điệu: câu hỏi dạng Yes - No lên giọng rõ ở cuối. Phát âm: bus có âm cuối s rõ, school đọc một âm tiết gọn.",
+     "chunks": [
+      "Is this the bus"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Yes, it is. It is bus number five."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Khi nào xe đến ạ?",
+     "expect": "When does the bus come?",
+     "keywords": [
+      "when",
+      "bus",
+      "come"
+     ],
+     "hint": "When does the bus...",
+     "tip": "Ngữ điệu: When xuống giọng ở cuối như câu hỏi thông tin. Nối âm: does the nối liền, bus come đọc gọn trong một nhịp.",
+     "chunks": [
+      "When does the bus come"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "It comes in five minutes."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Đi đến đó mất bao lâu ạ?",
+     "expect": "How long does it take to get there?",
+     "keywords": [
+      "how long",
+      "does it take",
+      "get there"
+     ],
+     "hint": "How long does it...",
+     "tip": "Phát âm: long có âm cuối ng rõ. Nối âm: does it nối liền, take to đọc gọn. Ngữ điệu: xuống giọng ở cuối câu hỏi.",
+     "chunks": [
+      "How long does it take"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "About ten minutes. The bus is coming now."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn rất nhiều. Tạm biệt bạn.",
+     "expect": "Thank you so much. Goodbye.",
+     "keywords": [
+      "thank you",
+      "so much",
+      "goodbye"
+     ],
+     "hint": "Thank you so much....",
+     "tip": "Ngữ điệu: Thank you so much nói ấm, nhấn vào so much. Phát âm: goodbye nhấn âm hai, xuống giọng ở cuối để chào tạm biệt.",
+     "chunks": [
+      "Thank you so much"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "In-depth Job Interview - Phỏng vấn xin việc chuyên sâu",
+   "setting": "Bạn ứng tuyển vị trí chuyên viên truyền thông tại một công ty lớn. Buổi phỏng vấn đi sâu vào kinh nghiệm, cách xử lý khó khăn, điểm yếu và định hướng nghề nghiệp của bạn.",
+   "partner": "Nhà tuyển dụng",
+   "goal": "Trả lời sâu, có ví dụ cụ thể và giữ thái độ chuyên nghiệp, trung thực trong suốt buổi phỏng vấn.",
+   "band": "Band 6.5",
+   "chunks": [
+    "my greatest strength is",
+    "a concrete example of this is",
+    "I dealt with the problem by",
+    "what I learned from that experience was",
+    "in the long term, I hope to"
+   ],
+   "turns": [
+    {
+     "from": "partner",
+     "text": "Good morning, and thank you for coming. Could you start by outlining your experience and explaining why you believe you are a strong fit for this position?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi đã làm truyền thông bốn năm, chủ yếu xây dựng các chiến dịch trên mạng xã hội. Điểm mạnh lớn nhất của tôi là biến số liệu khô khan thành kế hoạch rõ ràng mà cả nhóm đều thực hiện được.",
+     "expect": "I have worked in communications for four years, mainly building social media campaigns. My greatest strength is turning dry data into clear plans that the whole team can actually follow.",
+     "keywords": [
+      "worked",
+      "communications",
+      "four years",
+      "greatest strength",
+      "data"
+     ],
+     "hint": "I have worked in communications...",
+     "tip": "Nối âm: worked in nối liền ở âm cuối t sang in. Ngữ điệu: xuống giọng ở cuối mỗi ý hoàn chỉnh để nghe chín chắn. Trọng âm rơi vào communications, greatest strength và data.",
+     "chunks": [
+      "my greatest strength is"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "That is a promising start. Can you give me a specific example of a campaign that did not go as planned, and how you dealt with it?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Một chiến dịch từng suýt thất bại vì tỉ lệ tương tác giảm mạnh sau tuần đầu. Tôi xử lý bằng cách xem lại phản hồi của khách hàng, thay đổi thông điệp và thử lại trên một nhóm nhỏ trước khi triển khai rộng.",
+     "expect": "One campaign nearly failed because engagement dropped sharply after the first week. I dealt with the problem by reviewing customer feedback, changing the message and testing it again on a small group before rolling it out more widely.",
+     "keywords": [
+      "campaign",
+      "nearly failed",
+      "engagement",
+      "feedback",
+      "testing"
+     ],
+     "hint": "One campaign nearly failed...",
+     "tip": "Phát âm: engagement nhấn âm hai, feedback nhấn âm đầu. Nối âm: dropped sharply nối liền một nhịp. Ngữ điệu: lên nhẹ sau because để mở vế nguyên nhân, xuống giọng khi chốt giải pháp.",
+     "chunks": [
+      "I dealt with the problem by"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Impressive. Now tell me honestly - what would you describe as your main weakness, and what are you doing about it?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Điểm yếu của tôi là từng ôm đồm quá nhiều việc vì ngại nhờ hỗ trợ. Điều tôi học được là phải chia sẻ tiến độ sớm, phân công rõ ràng và lên lịch kiểm tra hằng tuần cùng nhóm.",
+     "expect": "My weakness used to be taking on too much because I was reluctant to ask for support. What I learned from that experience was to share progress early, divide tasks clearly and hold weekly check-ins with the team.",
+     "keywords": [
+      "weakness",
+      "taking on",
+      "reluctant",
+      "share progress",
+      "weekly check-ins"
+     ],
+     "hint": "My weakness used to...",
+     "tip": "Phát âm: weakness nhấn âm đầu, reluctant nhấn âm hai. Nối âm: taking on nối liền thành một cụm. Ngữ điệu: giữ giọng bình tĩnh, xuống ở cuối câu để thể hiện sự trung thực và kiểm soát tốt.",
+     "chunks": [
+      "what I learned from that experience was"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "How do you typically respond when a senior manager strongly disagrees with your proposal in a meeting?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Trước hết tôi lắng nghe hết ý và hỏi lại để chắc chắn mình hiểu đúng mối lo ngại của họ. Sau đó tôi trình bày số liệu ủng hộ đề xuất của mình, đồng thời sẵn sàng điều chỉnh nếu phía quản lý có căn cứ thuyết phục hơn.",
+     "expect": "First, I listen fully and ask follow-up questions to make sure I understand their concern properly. Then I present the data behind my proposal, while remaining open to adjusting it if management has a more convincing case.",
+     "keywords": [
+      "listen fully",
+      "follow-up questions",
+      "understand",
+      "present the data",
+      "adjusting"
+     ],
+     "hint": "First, I listen fully...",
+     "tip": "Nối âm: listen fully nối nhịp liền, ask follow-up đọc gọn trong một hơi. Ngữ điệu: lên nhẹ ở vế First để mở trình tự, xuống giọng chắc chắn ở cuối câu trả lời.",
+     "chunks": [
+      "I listen fully",
+      "present the data behind my proposal"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Last question. Where do you hope to be professionally in five years, and why have you chosen our company as the place to get there?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Về lâu dài, tôi muốn trở thành trưởng nhóm truyền thông có thể đào tạo người mới. Tôi chọn công ty này vì tại đây các chiến dịch luôn gắn với giá trị thật cho cộng đồng, đúng hướng phát triển mà tôi theo đuổi.",
+     "expect": "In the long term, I hope to become a communications team leader who can train new staff. I have chosen this company because its campaigns are always tied to real value for the community, which matches the direction I want my career to take.",
+     "keywords": [
+      "long term",
+      "team leader",
+      "train new staff",
+      "real value",
+      "community"
+     ],
+     "hint": "In the long term,...",
+     "tip": "Phát âm: community nhấn âm hai, career nhấn âm hai. Nối âm: tied to đọc liền. Ngữ điệu: xuống giọng ấm và chắc ở câu chốt để kết thúc buổi phỏng vấn một cách chuyên nghiệp.",
+     "chunks": [
+      "in the long term, I hope to"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Presenting Research and Handling Tough Questions - Thuyết trình và trả lời chất vấn",
+   "setting": "Bạn thuyết trình kết quả nghiên cứu về mảng xanh trong đô thị trước hội đồng và khán giả chuyên môn. Sau phần trình bày, bạn phải trả lời các câu hỏi chất vấn khó về bằng chứng, chi phí và tính khả thi.",
+   "partner": "Người điều phối và khán giả chất vấn",
+   "goal": "Trình bày mạch lạc, bảo vệ luận điểm bằng bằng chứng và xử lý chất vấn một cách điềm tĩnh, thuyết phục.",
+   "band": "Band 7.0",
+   "chunks": [
+    "the central argument of this presentation is",
+    "the evidence consistently suggests that",
+    "to put that into perspective",
+    "that is a legitimate concern, but",
+    "to conclude, the case rests on"
+   ],
+   "turns": [
+    {
+     "from": "partner",
+     "text": "Good afternoon. We will now hear a presentation on green spaces in large cities, after which the floor will be open for questions. Please begin."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Luận điểm trung tâm của bài thuyết trình này là các mảng xanh nhỏ, nếu được bố trí hợp lý, vẫn có thể giảm căng thẳng và cải thiện sức khỏe cộng đồng rõ rệt ngay trong những khu dân cư đông đúc nhất.",
+     "expect": "The central argument of this presentation is that small green spaces, if placed thoughtfully, can still reduce stress and improve public health noticeably, even in the most crowded neighbourhoods.",
+     "keywords": [
+      "central argument",
+      "green spaces",
+      "reduce stress",
+      "public health",
+      "crowded"
+     ],
+     "hint": "The central argument of...",
+     "tip": "Ngữ điệu: nghỉ ngắn sau dấu phẩy để tách mệnh đề phụ, nhấn vào central argument, reduce stress và public health. Phát âm: noticeably nhấn âm đầu, âm cuối ly đọc nhẹ.",
+     "chunks": [
+      "the central argument of this presentation is"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Thank you. Before we go further, could you clarify exactly what evidence that claim is based on?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Bằng chứng đến từ ba nguồn: khảo sát sức khỏe của hơn hai nghìn cư dân, số liệu nhiệt độ đo trong hai mùa hè liên tiếp và so sánh với các khu vực lân cận không có mảng xanh. Cả ba nguồn đều cho thấy cùng một xu hướng.",
+     "expect": "The evidence comes from three sources: health surveys of over two thousand residents, temperature data recorded over two consecutive summers, and comparisons with nearby areas that have no green space. The evidence consistently suggests that all three point in the same direction.",
+     "keywords": [
+      "evidence",
+      "three sources",
+      "health surveys",
+      "temperature data",
+      "comparisons"
+     ],
+     "hint": "The evidence comes from...",
+     "tip": "Ngữ điệu: liệt kê ba nguồn bằng giọng lên nhẹ ở hai nguồn đầu và xuống ở nguồn cuối. Nối âm: recorded over nối liền ở âm cuối d sang over. Trọng âm rơi vào evidence, surveys và comparisons.",
+     "chunks": [
+      "the evidence consistently suggests that"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Let me challenge you on cost. Critics argue that building these spaces is affordable, but maintaining them year after year is not. How do you respond?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Đó là một mối lo ngại chính đáng, nhưng chi phí bảo trì giảm mạnh khi người dân địa phương cùng tham gia chăm sóc. Trong dự án thí điểm của chúng tôi, chi phí hằng năm thấp hơn gần một phần ba so với dự đoán ban đầu.",
+     "expect": "That is a legitimate concern, but maintenance costs fall sharply when local residents share the care of these spaces. In our pilot project, the annual cost was almost a third lower than the original estimate.",
+     "keywords": [
+      "legitimate concern",
+      "maintenance costs",
+      "local residents",
+      "pilot project",
+      "annual cost"
+     ],
+     "hint": "That is a legitimate concern,...",
+     "tip": "Phát âm: legitimate nhấn âm hai, maintenance nhấn âm đầu. Ngữ điệu: lên nhẹ ở vế thừa nhận concern để thể hiện tôn trọng người hỏi, rồi xuống giọng chắc chắn khi đưa số liệu phản biện.",
+     "chunks": [
+      "that is a legitimate concern, but"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Even so, some districts simply have no free land at all. Does your proposal not break down completely in those cases?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Không hẳn vậy. Chúng ta không nhất thiết cần công viên lớn. Mái nhà xanh, sân trường mở cửa sau giờ học và các dải cây dọc vỉa hè đều tận dụng được diện tích sẵn có mà không cần mặt bằng mới.",
+     "expect": "Not necessarily. To put that into perspective, we do not need large parks at all. Green roofs, schoolyards opened after class hours and narrow lines of trees along pavements all make use of existing space without needing new land.",
+     "keywords": [
+      "perspective",
+      "green roofs",
+      "schoolyards",
+      "existing space",
+      "pavements"
+     ],
+     "hint": "Not necessarily. To put...",
+     "tip": "Nối âm: make use of nối liền thành một nhịp. Ngữ điệu: liệt kê ba giải pháp với nhịp đều, nhấn vào green roofs, schoolyards và existing space để người nghe thấy tính khả thi.",
+     "chunks": [
+      "to put that into perspective"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "We have time for one final point. If the council remembers only one sentence from your presentation, what should it be?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Để kết luận, luận cứ của tôi dựa trên một ý đơn giản: mảng xanh không phải là khoản trang trí xa xỉ, mà là hạ tầng sức khỏe thiết yếu mà mọi khu dân cư đều xứng đáng có.",
+     "expect": "To conclude, the case rests on one simple idea: green space is not a luxury decoration, but essential health infrastructure that every neighbourhood deserves.",
+     "keywords": [
+      "conclude",
+      "case rests",
+      "simple idea",
+      "health infrastructure",
+      "deserves"
+     ],
+     "hint": "To conclude, the case...",
+     "tip": "Ngữ điệu: To conclude nói chậm và xuống giọng để báo hiệu kết bài, nhấn mạnh vào not a luxury và essential health infrastructure. Nối âm: rests on nối liền ở âm cuối t sang on.",
+     "chunks": [
+      "to conclude, the case rests on"
+     ]
+    }
+   ]
+  }
+ ],
+ "listeningPlus": [
+  {
+   "section": "Section 1",
+   "band": "Band 0",
+   "topic": "Buổi sáng đi học của Mai",
+   "text": "Mai wakes up at 6 o'clock every morning. She lives with her mother in a small house at 24 Le Loi Street. For breakfast, she eats bread and drinks a glass of milk. She leaves home at 7 o'clock and rides her bike to school. Her school is next to the market and has 12 classrooms.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "What time does Mai wake up?",
+     "o": [
+      "5 o'clock",
+      "6 o'clock",
+      "7 o'clock",
+      "8 o'clock"
+     ],
+     "a": 1,
+     "why": "Mai thức dậy lúc 6 giờ vì câu đầu tiên nói rõ giờ thức dậy của cô ấy."
+    },
+    {
+     "type": "MC",
+     "q": "Where does Mai live?",
+     "o": [
+      "In a flat near her school",
+      "In a small house at 24 Le Loi Street",
+      "In a house next to a park",
+      "In a dormitory in the city centre"
+     ],
+     "a": 1,
+     "why": "Mai sống trong ngôi nhà nhỏ ở số 24 đường Le Loi vì bài nghe nêu rõ địa chỉ nhà của cô ấy."
+    },
+    {
+     "type": "MC",
+     "q": "How does Mai go to school?",
+     "o": [
+      "By bus",
+      "By motorbike",
+      "By bike",
+      "On foot"
+     ],
+     "a": 2,
+     "why": "Mai đi học bằng xe đạp vì bài nghe nói cô ấy rời nhà lúc 7 giờ và đạp xe tới trường."
+    },
+    {
+     "type": "COMP",
+     "q": "For breakfast, Mai eats bread and drinks ___.",
+     "answer": "a glass of milk|glass of milk|milk",
+     "why": "Bữa sáng của Mai có bánh mì và một ly sữa vì phần ghi chú còn thiếu chính là ly sữa."
+    },
+    {
+     "type": "TF",
+     "q": "Mai's school is next to the market.",
+     "o": [
+      "True",
+      "False"
+     ],
+     "a": 0,
+     "why": "Câu này đúng vì bài nghe nói trường của Mai nằm ngay cạnh chợ."
+    }
+   ]
+  },
+  {
+   "section": "Section 1",
+   "band": "Band 5.0",
+   "topic": "Đặt lịch khám với Bác sĩ Lan",
+   "text": "A: Good morning, Green Clinic, how can I help you today? B: Hello, I would like an appointment with Doctor Lan on Friday morning. A: Doctor Lan is free at 9:30 on Friday and the consultation fee is 200000 dong. B: That time suits me and my name is Thanh Ha. A: Your booking number is 18, so please bring your health card with you. B: Thank you, I will arrive at 9:15 and wait at the reception desk.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "Who does Thanh Ha want to see?",
+     "o": [
+      "Doctor Minh",
+      "Doctor Lan",
+      "Doctor Hoa",
+      "Doctor Tuan"
+     ],
+     "a": 1,
+     "why": "Thanh Ha muốn gặp Bác sĩ Lan vì cô ấy nói rõ tên Bác sĩ ngay khi đặt lịch."
+    },
+    {
+     "type": "MC",
+     "q": "When is the appointment?",
+     "o": [
+      "Thursday at 9:30",
+      "Friday at 9:30",
+      "Friday at 10:30",
+      "Saturday at 9:15"
+     ],
+     "a": 1,
+     "why": "Lịch hẹn là thứ Sáu lúc 9 giờ 30 vì lễ tân nói Bác sĩ Lan rảnh vào giờ đó."
+    },
+    {
+     "type": "MC",
+     "q": "What is the booking number?",
+     "o": [
+      "15",
+      "16",
+      "18",
+      "19"
+     ],
+     "a": 2,
+     "why": "Số đặt lịch là 18 vì lễ tân đọc số này sau khi Thanh Ha cho tên."
+    },
+    {
+     "type": "COMP",
+     "q": "Thanh Ha will arrive at ___ and wait at the reception desk.",
+     "answer": "9:15|quarter past nine",
+     "why": "Thanh Ha đến lúc 9 giờ 15 vì cô ấy nói sẽ đến sớm và chờ ở quầy lễ tân."
+    },
+    {
+     "type": "TF",
+     "q": "The consultation fee is 200000 dong.",
+     "o": [
+      "True",
+      "False"
+     ],
+     "a": 0,
+     "why": "Câu này đúng vì lễ tân nói phí khám là 200000 đồng."
+    }
+   ]
+  },
+  {
+   "section": "Section 2",
+   "band": "Band 5.5",
+   "topic": "Thông báo chuyến tham quan bảo tàng khoa học",
+   "text": "Welcome to the City Science Museum tour on Saturday the 18th. The bus leaves the main gate at 8:00 and returns at 4:30 in the afternoon. Tickets cost 120000 dong for adults and 60000 dong for children under 12 years old. Visitors will watch a 20 minute film and then join a hands-on workshop in Room 3. Please wear comfortable shoes and bring a bottle of water with you. Booking closes on Thursday at 5:00, so please register early at the front desk.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "When does the bus return?",
+     "o": [
+      "At 3:30 in the afternoon",
+      "At 4:30 in the afternoon",
+      "At 5:00 in the afternoon",
+      "At 8:00 in the morning"
+     ],
+     "a": 1,
+     "why": "Xe buýt trở về lúc 4 giờ 30 chiều vì thông báo nói rõ giờ về của chuyến đi."
+    },
+    {
+     "type": "MC",
+     "q": "How much is a ticket for a child under 12?",
+     "o": [
+      "40000 dong",
+      "50000 dong",
+      "60000 dong",
+      "120000 dong"
+     ],
+     "a": 2,
+     "why": "Vé trẻ em dưới 12 tuổi giá 60000 đồng vì thông báo nêu giá riêng cho trẻ em."
+    },
+    {
+     "type": "MC",
+     "q": "Where does the workshop take place?",
+     "o": [
+      "Room 2",
+      "Room 3",
+      "Room 5",
+      "The front desk"
+     ],
+     "a": 1,
+     "why": "Buổi thực hành diễn ra ở phòng 3 vì thông báo nói du khách sẽ vào phòng 3 sau bộ phim."
+    },
+    {
+     "type": "COMP",
+     "q": "Booking closes on ___ at 5:00.",
+     "answer": "Thursday|on Thursday",
+     "why": "Việc đặt chỗ kết thúc vào thứ Năm vì thông báo nhắc hạn chót là thứ Năm lúc 5 giờ."
+    },
+    {
+     "type": "TF",
+     "q": "Visitors will watch a film before joining the workshop.",
+     "o": [
+      "True",
+      "False"
+     ],
+     "a": 0,
+     "why": "Câu này đúng vì du khách xem phim 20 phút rồi mới tham gia buổi thực hành."
+    }
+   ]
+  },
+  {
+   "section": "Section 2",
+   "band": "Band 6.0",
+   "topic": "Chương trình tình nguyện đọc sách tại thư viện",
+   "text": "The Central Library will launch a volunteer reading programme for children on 3 March. Volunteers will read stories to groups of 6 to 8 children every Tuesday and Thursday evening. Each session lasts 45 minutes and takes place in the children's room on the second floor. The library needs 15 volunteers and will provide two training sessions on 24 and 26 February. Volunteers must be at least 16 years old and should enjoy working with young readers. Anyone interested can sign up at the information desk before 28 February.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "When will the reading programme start?",
+     "o": [
+      "On 24 February",
+      "On 28 February",
+      "On 3 March",
+      "On 26 March"
+     ],
+     "a": 2,
+     "why": "Chương trình bắt đầu ngày 3 tháng 3 vì câu đầu tiên nêu rõ ngày khai mạc."
+    },
+    {
+     "type": "MC",
+     "q": "How long does each session last?",
+     "o": [
+      "30 minutes",
+      "45 minutes",
+      "60 minutes",
+      "90 minutes"
+     ],
+     "a": 1,
+     "why": "Mỗi buổi kéo dài 45 phút vì thông báo nói rõ thời lượng của từng buổi đọc."
+    },
+    {
+     "type": "MC",
+     "q": "How many volunteers does the library need?",
+     "o": [
+      "8 volunteers",
+      "12 volunteers",
+      "15 volunteers",
+      "20 volunteers"
+     ],
+     "a": 2,
+     "why": "Thư viện cần 15 tình nguyện viên vì thông báo nêu con số này trước phần tập huấn."
+    },
+    {
+     "type": "COMP",
+     "q": "The two training sessions will be held on 24 and ___ February.",
+     "answer": "26|26th",
+     "why": "Hai buổi tập huấn diễn ra ngày 24 và ngày 26 tháng 2 vì thông báo liệt kê cả hai ngày."
+    },
+    {
+     "type": "TF",
+     "q": "Volunteers will read stories on Monday and Wednesday evenings.",
+     "o": [
+      "True",
+      "False"
+     ],
+     "a": 1,
+     "why": "Câu này sai vì tình nguyện viên đọc truyện vào tối thứ Ba và tối thứ Năm."
+    }
+   ]
+  },
+  {
+   "section": "Section 3",
+   "band": "Band 6.5",
+   "topic": "Bàn phương pháp nghiên cứu về giấc ngủ của sinh viên",
+   "text": "A: For our project on student sleep, we collected data from 240 students during March. B: Did you use a questionnaire or interviews as the main method? A: We used an online questionnaire with 18 questions and then interviewed 12 students in depth. B: That combination is useful because numbers show the pattern and interviews explain the reasons. A: Our results show that 62 percent of students sleep less than 7 hours before exams. B: We should compare that figure with the national study from 2022 in the discussion section. A: Agreed, and we will present the charts on Tuesday at 2:00 in Lab 4.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "How many students provided data for the project?",
+     "o": [
+      "120 students",
+      "180 students",
+      "240 students",
+      "320 students"
+     ],
+     "a": 2,
+     "why": "Nhóm thu dữ liệu từ 240 sinh viên vì người nói nêu con số này ngay ở câu đầu tiên."
+    },
+    {
+     "type": "MC",
+     "q": "How many students were interviewed in depth?",
+     "o": [
+      "10 students",
+      "12 students",
+      "18 students",
+      "24 students"
+     ],
+     "a": 1,
+     "why": "Nhóm phỏng vấn sâu 12 sinh viên vì phần phương pháp nói rõ số người được phỏng vấn riêng."
+    },
+    {
+     "type": "MC",
+     "q": "When and where will the group present the charts?",
+     "o": [
+      "On Monday at 2:00 in Lab 2",
+      "On Tuesday at 2:00 in Lab 4",
+      "On Tuesday at 4:00 in Lab 4",
+      "On Thursday at 2:00 in Lab 6"
+     ],
+     "a": 1,
+     "why": "Nhóm trình bày biểu đồ vào thứ Ba lúc 2 giờ ở phòng Lab 4 vì câu cuối nêu cả ngày giờ và địa điểm."
+    },
+    {
+     "type": "COMP",
+     "q": "___ percent of students sleep less than 7 hours before exams.",
+     "answer": "62|62 percent",
+     "why": "Có 62 phần trăm sinh viên ngủ ít hơn 7 giờ trước kỳ thi vì kết quả nghiên cứu nêu tỉ lệ này."
+    },
+    {
+     "type": "TF",
+     "q": "The online questionnaire had 20 questions.",
+     "o": [
+      "True",
+      "False"
+     ],
+     "a": 1,
+     "why": "Câu này sai vì bảng hỏi trực tuyến chỉ có 18 câu hỏi."
+    }
+   ]
+  },
+  {
+   "section": "Section 3",
+   "band": "Band 7.0",
+   "topic": "Trao đổi về chương phương pháp của luận văn không gian xanh",
+   "text": "A: I have revised the methodology chapter of my dissertation on urban green spaces in District 7. B: Did you keep the sample of 35 residents who were interviewed last semester? A: Yes, and I added survey responses from 180 park users collected in April. B: That larger sample should strengthen the validity of your comparison between the two parks. A: My supervisor suggested adding a short section on research limitations before the conclusion. B: That is sensible because the survey was only carried out on weekday mornings. A: I will submit the full draft to Dr Pham by Friday the 9th at noon.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "What is the dissertation mainly about?",
+     "o": [
+      "Urban green spaces in District 7",
+      "Traffic problems in District 7",
+      "Housing prices near public parks",
+      "School gardens for young children"
+     ],
+     "a": 0,
+     "why": "Luận văn viết về không gian xanh đô thị ở Quận 7 vì sinh viên giới thiệu chủ đề ngay ở câu đầu tiên."
+    },
+    {
+     "type": "MC",
+     "q": "How many park users answered the added survey?",
+     "o": [
+      "35 park users",
+      "90 park users",
+      "120 park users",
+      "180 park users"
+     ],
+     "a": 3,
+     "why": "Có 180 người dùng công viên trả lời khảo sát bổ sung vì sinh viên nêu con số này khi nói về mẫu mới."
+    },
+    {
+     "type": "MC",
+     "q": "Why should a limitations section be added?",
+     "o": [
+      "Because the interviews were too long",
+      "Because the survey was only carried out on weekday mornings",
+      "Because the two parks were too far apart",
+      "Because the supervisor disliked the charts"
+     ],
+     "a": 1,
+     "why": "Cần thêm phần hạn chế vì khảo sát chỉ làm vào các buổi sáng ngày thường nên chưa phủ hết các nhóm người dùng."
+    },
+    {
+     "type": "COMP",
+     "q": "The student will submit the full draft to ___ by Friday the 9th at noon.",
+     "answer": "Dr Pham|Doctor Pham",
+     "why": "Sinh viên nộp bản thảo đầy đủ cho thầy Pham vì câu cuối nêu tên người nhận và hạn nộp là trưa thứ Sáu ngày 9."
+    },
+    {
+     "type": "TF",
+     "q": "The sample of interviewed residents included 50 people.",
+     "o": [
+      "True",
+      "False"
+     ],
+     "a": 1,
+     "why": "Câu này sai vì mẫu cư dân được phỏng vấn chỉ gồm 35 người."
+    }
+   ]
+  },
+  {
+   "section": "Section 4",
+   "band": "Band 7.0",
+   "topic": "Bài giảng về vùng đất ngập nước đô thị và chống ngập",
+   "text": "Good morning, and today we examine how urban wetlands protect cities from flooding. A wetland acts like a natural sponge, absorbing excess rainwater and releasing it slowly into rivers. In one recent case, a restored wetland of 42 hectares reduced peak flood levels by nearly 18 percent. Wetlands also trap sediment and filter pollutants, which improves water quality for nearby neighbourhoods. However, their performance depends on careful maintenance, because blocked channels can reduce storage capacity within a few years. For this reason, city planners now treat wetlands as essential infrastructure rather than unused land.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "What is the main role of urban wetlands discussed in the lecture?",
+     "o": [
+      "To produce drinking water for offices",
+      "To absorb rainwater and reduce flooding",
+      "To replace all city parks",
+      "To grow food for nearby markets"
+     ],
+     "a": 1,
+     "why": "Vùng đất ngập nước giúp hút nước mưa thừa và giảm ngập vì bài giảng ví nơi này như một miếng bọt biển tự nhiên."
+    },
+    {
+     "type": "MC",
+     "q": "How large was the restored wetland in the example?",
+     "o": [
+      "18 hectares",
+      "24 hectares",
+      "42 hectares",
+      "60 hectares"
+     ],
+     "a": 2,
+     "why": "Vùng đất ngập nước được khôi phục rộng 42 héc ta vì bài giảng nêu diện tích này trong ví dụ cụ thể."
+    },
+    {
+     "type": "MC",
+     "q": "What can reduce the storage capacity of a wetland?",
+     "o": [
+      "Clean rivers nearby",
+      "Blocked channels",
+      "Careful maintenance",
+      "More sediment traps"
+     ],
+     "a": 1,
+     "why": "Các kênh bị tắc làm giảm sức chứa vì bài giảng cảnh báo kênh tắc khiến khả năng trữ nước giảm sau vài năm."
+    },
+    {
+     "type": "COMP",
+     "q": "A restored wetland reduced peak flood levels by nearly ___ percent.",
+     "answer": "18|18 percent",
+     "why": "Mực ngập đỉnh giảm gần 18 phần trăm vì ví dụ trong bài giảng nêu mức giảm này."
+    },
+    {
+     "type": "TF",
+     "q": "Wetlands make water quality worse for nearby neighbourhoods.",
+     "o": [
+      "True",
+      "False"
+     ],
+     "a": 1,
+     "why": "Câu này sai vì bài giảng nói vùng đất ngập nước lọc chất ô nhiễm và làm nước sạch hơn."
+    }
+   ]
+  },
+  {
+   "section": "Section 4",
+   "band": "Band 7.5+",
+   "topic": "Bài giảng về kinh tế tuần hoàn trong ngành điện tử",
+   "text": "This lecture considers the circular economy as an alternative to the traditional model of production in the electronics industry. Instead of discarding devices after a short period of use, manufacturers design products that can be repaired, upgraded and eventually disassembled for valuable materials. Research in 2023 estimated that recovering metals from discarded phones could meet up to twelve point five percent of demand for certain rare materials in Europe. The economic argument is persuasive, yet collection systems remain inefficient, with fewer than 22 percent of electronic devices being formally recycled worldwide. Effective policy therefore requires producers to finance collection, while consumers need clear information about repair options and product lifespan. Without such coordination, the circular model risks becoming a marketing label rather than a genuine transformation of production.",
+   "questions": [
+    {
+     "type": "MC",
+     "q": "What do manufacturers do in the circular model?",
+     "o": [
+      "Design products that can be repaired and upgraded",
+      "Sell devices with a shorter lifespan",
+      "Stop collecting old materials",
+      "Produce only luxury phones"
+     ],
+     "a": 0,
+     "why": "Trong mô hình tuần hoàn, nhà sản xuất thiết kế sản phẩm sửa và nâng cấp được vì bài giảng nêu rõ cách làm này thay cho việc vứt bỏ sớm."
+    },
+    {
+     "type": "MC",
+     "q": "Up to what share of demand for certain rare materials could recovered metals meet in Europe?",
+     "o": [
+      "5.5 percent",
+      "12.5 percent",
+      "22 percent",
+      "35 percent"
+     ],
+     "a": 1,
+     "why": "Kim loại thu hồi đáp ứng tới 12,5 phần trăm nhu cầu vì nghiên cứu năm 2023 nêu tỉ lệ này cho một số vật liệu hiếm ở châu Âu."
+    },
+    {
+     "type": "MC",
+     "q": "What share of electronic devices are formally recycled worldwide?",
+     "o": [
+      "More than half",
+      "Exactly 35 percent",
+      "Fewer than 22 percent",
+      "Almost all devices"
+     ],
+     "a": 2,
+     "why": "Chưa tới 22 phần trăm thiết bị được tái chế chính thức vì bài giảng nói hệ thống thu gom còn kém hiệu quả."
+    },
+    {
+     "type": "COMP",
+     "q": "Fewer than ___ percent of electronic devices are formally recycled worldwide.",
+     "answer": "22|22 percent",
+     "why": "Tỉ lệ tái chế chính thức chưa tới 22 phần trăm vì phần ghi chú còn thiếu chính là con số này."
+    },
+    {
+     "type": "TF",
+     "q": "Effective policy requires producers to finance collection.",
+     "o": [
+      "True",
+      "False"
+     ],
+     "a": 0,
+     "why": "Câu này đúng vì bài giảng nói chính sách hiệu quả buộc nhà sản xuất chi tiền cho việc thu gom."
+    }
+   ]
+  }
+ ],
+ "writingDrills": [
+  {
+   "band": "Band 5.0",
+   "kind": "combine",
+   "title": "Nối câu nhân quả bằng so",
+   "prompt": "Nối hai câu thành một câu bằng so. / Combine the sentences with so.",
+   "given": "She was tired. / She went to bed early.",
+   "model": "She was tired, so she went to bed early.",
+   "note": "Kỹ thuật này giúp nối nguyên nhân và kết quả bằng so trong một câu rõ ràng."
+  },
+  {
+   "band": "Band 5.0",
+   "kind": "combine",
+   "title": "Nối câu nguyên nhân bằng because",
+   "prompt": "Nối hai câu thành một câu, đặt because ở đầu câu. / Combine with because.",
+   "given": "It rained heavily. / The match was cancelled.",
+   "model": "Because it rained heavily, the match was cancelled.",
+   "note": "Kỹ thuật này đặt mệnh đề nguyên nhân lên trước để người đọc thấy lý do ngay từ đầu câu."
+  },
+  {
+   "band": "Band 5.0",
+   "kind": "paraphrase",
+   "title": "Viết lại bằng cụm từ trái nghĩa phủ định",
+   "prompt": "Viết lại câu giữ nguyên nghĩa bằng not far from. / Paraphrase with not far from.",
+   "given": "My house is near the school.",
+   "model": "My house is not far from the school.",
+   "note": "Kỹ thuật này dùng phủ định của từ trái nghĩa để giữ nguyên nghĩa mà vẫn đổi cách diễn đạt."
+  },
+  {
+   "band": "Band 5.0",
+   "kind": "order",
+   "title": "Sắp xếp thành câu khẳng định đơn giản",
+   "prompt": "Sắp xếp các mảnh thành một câu đúng. / Put the words in the correct order.",
+   "given": "friend / Linh / my / is / best",
+   "model": "Linh is my best friend.",
+   "note": "Kỹ thuật này bám vào trật tự chủ ngữ, động từ rồi bổ ngữ để xếp câu cơ bản cho đúng."
+  },
+  {
+   "band": "Band 5.5",
+   "kind": "combine",
+   "title": "Nối câu tương phản bằng although",
+   "prompt": "Nối hai câu thành một câu bằng although. / Combine with although.",
+   "given": "She was ill. / She went to work.",
+   "model": "Although she was ill, she went to work.",
+   "note": "Kỹ thuật này dùng although để nối hai ý trái ngược trong cùng một câu."
+  },
+  {
+   "band": "Band 5.5",
+   "kind": "paraphrase",
+   "title": "Viết lại bằng câu bị động đơn giản",
+   "prompt": "Viết lại câu bằng thể bị động, giữ nguyên nghĩa. / Rewrite in the passive.",
+   "given": "The doctor examined the patient carefully.",
+   "model": "The patient was examined carefully by the doctor.",
+   "note": "Kỹ thuật này đưa đối tượng chịu tác động lên đầu câu bị động, và Bác sĩ trong câu nguồn trở thành tác nhân ở cuối câu."
+  },
+  {
+   "band": "Band 5.5",
+   "kind": "paraphrase",
+   "title": "Viết lại bằng cấu trúc sở hữu",
+   "prompt": "Viết lại câu bằng cấu trúc have, giữ nguyên nghĩa. / Paraphrase with have.",
+   "given": "There are two bedrooms in his flat.",
+   "model": "His flat has two bedrooms.",
+   "note": "Kỹ thuật này đổi cấu trúc there are thành chủ ngữ sở hữu để câu ngắn gọn và tự nhiên hơn."
+  },
+  {
+   "band": "Band 5.5",
+   "kind": "order",
+   "title": "Sắp xếp thành câu hỏi nơi chốn",
+   "prompt": "Sắp xếp các mảnh thành một câu hỏi đúng. / Put the words in the correct order.",
+   "given": "you / do / live / where",
+   "model": "Where do you live?",
+   "note": "Kỹ thuật này đặt từ hỏi lên đầu rồi đến trợ động từ, chủ ngữ và động từ chính."
+  },
+  {
+   "band": "Band 6.0",
+   "kind": "combine",
+   "title": "Nối ba câu bằng although và because",
+   "prompt": "Nối ba câu thành một câu dùng although và because. / Combine with although and because.",
+   "given": "We left home early. / The road was blocked. / We arrived late.",
+   "model": "Although we left home early, we arrived late because the road was blocked.",
+   "note": "Kỹ thuật này gộp nhượng bộ và nguyên nhân vào một câu để tránh viết ba câu ngắn rời rạc."
+  },
+  {
+   "band": "Band 6.0",
+   "kind": "paraphrase",
+   "title": "Viết lại bằng cấu trúc it is said that",
+   "prompt": "Viết lại câu bằng It is said that, giữ nguyên nghĩa. / Paraphrase with It is said that.",
+   "given": "People say that exercise is good for health.",
+   "model": "It is said that exercise is good for health.",
+   "note": "Kỹ thuật này dùng cấu trúc bị động không ngôi để trình bày thông tin chung một cách khách quan."
+  },
+  {
+   "band": "Band 6.0",
+   "kind": "order",
+   "title": "Sắp xếp câu có trạng từ tần suất",
+   "prompt": "Sắp xếp các mảnh thành một câu đúng. / Put the words in the correct order.",
+   "given": "always / at work / she / on time / arrives",
+   "model": "She always arrives at work on time.",
+   "note": "Kỹ thuật này đặt trạng từ tần suất ngay trước động từ chính và cụm nơi chốn, thời gian ở cuối câu."
+  },
+  {
+   "band": "Band 6.0",
+   "kind": "order",
+   "title": "Sắp xếp đoạn quy trình ngắn",
+   "prompt": "Sắp xếp ba câu thành đoạn đúng thứ tự. / Put the sentences in the correct order.",
+   "given": "Finally, turn on the cooker. / First, wash the rice. / Then, add water.",
+   "model": "First, wash the rice. Then, add water. Finally, turn on the cooker.",
+   "note": "Kỹ thuật này dựa vào các từ nối trình tự để khôi phục thứ tự logic của một quy trình ngắn."
+  },
+  {
+   "band": "Band 6.5",
+   "kind": "combine",
+   "title": "Nối câu bằng mệnh đề quan hệ who",
+   "prompt": "Nối hai câu bằng mệnh đề quan hệ who. / Combine with a relative clause.",
+   "given": "The man is a teacher. / He lives next door.",
+   "model": "The man who lives next door is a teacher.",
+   "note": "Kỹ thuật này lồng mệnh đề quan hệ ngay sau danh từ được mô tả để câu liền mạch hơn."
+  },
+  {
+   "band": "Band 6.5",
+   "kind": "combine",
+   "title": "Nối câu tương phản về du lịch",
+   "prompt": "Nối hai câu thành một câu bằng although. / Combine with although.",
+   "given": "Tourism creates many jobs. / It can damage the environment.",
+   "model": "Although tourism creates many jobs, it can damage the environment.",
+   "note": "Kỹ thuật này cân bằng hai mặt của cùng một vấn đề trong một câu phức rõ ràng."
+  },
+  {
+   "band": "Band 6.5",
+   "kind": "paraphrase",
+   "title": "Viết lại bằng unless",
+   "prompt": "Viết lại câu bằng unless, giữ nguyên nghĩa. / Paraphrase with unless.",
+   "given": "If you do not hurry, you will miss the bus.",
+   "model": "Unless you hurry, you will miss the bus.",
+   "note": "Kỹ thuật này thay if và not bằng unless để diễn đạt điều kiện phủ định ngắn gọn hơn."
+  },
+  {
+   "band": "Band 6.5",
+   "kind": "order",
+   "title": "Sắp xếp câu phức có because",
+   "prompt": "Sắp xếp các mảnh thành một câu đúng. / Put the words in the correct order.",
+   "given": "because / the early train / He / had missed / was late",
+   "model": "He was late because he had missed the early train.",
+   "note": "Kỹ thuật này xác định mệnh đề chính trước rồi gắn mệnh đề nguyên nhân bằng because vào sau."
+  },
+  {
+   "band": "Band 7.0",
+   "kind": "combine",
+   "title": "Nối câu bằng cụm phân từ hoàn thành",
+   "prompt": "Nối ba câu thành một câu, mở đầu bằng Having. / Combine with Having.",
+   "given": "The researchers checked the results twice. / They published the results. / The journal accepted the paper.",
+   "model": "Having checked the results twice, the researchers published them, and the journal accepted the paper.",
+   "note": "Kỹ thuật này dùng cụm phân từ hoàn thành để gộp hành động xảy ra trước mà vẫn giữ rõ chủ ngữ chung."
+  },
+  {
+   "band": "Band 7.0",
+   "kind": "paraphrase",
+   "title": "Viết lại bằng danh hóa và bị động",
+   "prompt": "Viết lại câu bằng bị động và danh hóa investment. / Paraphrase with the passive.",
+   "given": "The government should invest more in public transport.",
+   "model": "Greater investment in public transport should be made by the government.",
+   "note": "Kỹ thuật này chuyển động từ thành danh từ và dùng bị động để câu mang văn phong học thuật hơn."
+  },
+  {
+   "band": "Band 7.0",
+   "kind": "paraphrase",
+   "title": "Viết lại bằng cấu trúc enough to",
+   "prompt": "Viết lại câu bằng not old enough to, giữ nguyên nghĩa. / Paraphrase with enough.",
+   "given": "She is too young to travel alone.",
+   "model": "She is not old enough to travel alone.",
+   "note": "Kỹ thuật này đổi too và tính từ thành not, tính từ trái nghĩa và enough để giữ nguyên giới hạn ý nghĩa."
+  },
+  {
+   "band": "Band 7.0",
+   "kind": "order",
+   "title": "Sắp xếp câu đảo ngữ với only after",
+   "prompt": "Sắp xếp các mảnh thành một câu đúng. / Put the words in the correct order.",
+   "given": "did / we / only after / the meeting / understand / the problem",
+   "model": "Only after the meeting did we understand the problem.",
+   "note": "Kỹ thuật này đặt cụm nhấn mạnh lên đầu câu rồi đảo trợ động từ lên trước chủ ngữ."
+  },
+  {
+   "band": "Band 7.5+",
+   "kind": "combine",
+   "title": "Nối câu bằng despite và mệnh đề nguyên nhân",
+   "prompt": "Nối ba câu thành một câu dùng Despite và because. / Combine with Despite and because.",
+   "given": "Funding was reduced. / The team worked unpaid overtime. / The project continued.",
+   "model": "Despite a reduction in funding, the project continued because the team worked unpaid overtime.",
+   "note": "Kỹ thuật này kết hợp danh hóa sau despite với mệnh đề nguyên nhân để gộp ba ý vào một câu học thuật."
+  },
+  {
+   "band": "Band 7.5+",
+   "kind": "paraphrase",
+   "title": "Viết lại bằng danh hóa nâng cao",
+   "prompt": "Viết lại câu bằng danh hóa incompleteness, giữ nguyên nghĩa. / Paraphrase with nominalisation.",
+   "given": "Because the data were incomplete, the conclusion was not reliable.",
+   "model": "The incompleteness of the data meant that the conclusion was not reliable.",
+   "note": "Kỹ thuật này biến tính từ thành danh từ trừu tượng làm chủ ngữ để nâng độ trang trọng của câu."
+  },
+  {
+   "band": "Band 7.5+",
+   "kind": "order",
+   "title": "Sắp xếp đoạn văn theo logic lập luận",
+   "prompt": "Sắp xếp bốn câu thành một đoạn đúng thứ tự. / Put the sentences in the correct order.",
+   "given": "Therefore, schools should teach digital skills from an early age. / Many jobs now require basic computer skills. / Children who lack these skills may struggle later. / Technology is changing the world of work very fast.",
+   "model": "Technology is changing the world of work very fast. Many jobs now require basic computer skills. Children who lack these skills may struggle later. Therefore, schools should teach digital skills from an early age.",
+   "note": "Kỹ thuật này sắp xếp đoạn theo chuỗi bối cảnh, hệ quả rồi kết luận có therefore ở câu cuối."
+  },
+  {
+   "band": "Band 7.5+",
+   "kind": "order",
+   "title": "Sắp xếp câu nhấn mạnh dạng chẻ",
+   "prompt": "Sắp xếp các mảnh thành một câu nhấn mạnh đúng. / Put the words in the correct order.",
+   "given": "is / what / you practise / matters most / how consistently",
+   "model": "What matters most is how consistently you practise.",
+   "note": "Kỹ thuật này dùng mệnh đề what lên đầu để nhấn mạnh yếu tố quan trọng nhất của câu."
   }
  ]
 };
