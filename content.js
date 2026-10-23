@@ -34229,6 +34229,358 @@ const CONTENT = {
      "why": "Candidate nói: After about a month of practice... I could finally swim across the river."
     }
    ]
+  },
+  {
+   "partNum": 1,
+   "topicStd": "Thể thao và vận động",
+   "part": "Part 1",
+   "topic": "Sports and Exercise - Thể thao và vận động",
+   "band": "Band 5.0",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Let's talk about sports. Do you play any sports?",
+     "vi": "Chúng ta hãy nói về thể thao. Bạn có chơi môn thể thao nào không?",
+     "ipa": "lets tɔːk əˈbaʊt spɔːts. də jə pleɪ ˈeni spɔːts",
+     "link": "Âm /ts/ ở cuối let's và sports đọc rõ; câu hỏi Yes/No lên giọng nhẹ ở cuối.",
+     "chunks": [
+      "Let's talk about sports",
+      "Do you play any sports"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, I do. I play badminton with my colleagues twice a week after work. It helps me relax and stay healthy.",
+     "vi": "Có, tôi có chơi. Tôi chơi cầu lông với đồng nghiệp hai lần một tuần sau giờ làm. Nó giúp tôi thư giãn và khỏe mạnh.",
+     "ipa": "jes aɪ duː. aɪ pleɪ ˈbædmɪntən wɪð maɪ ˈkɒliːɡz twaɪs ə wiːk ˈɑːftə wɜːk. ɪt helps mi rɪˈlæks ənd steɪ ˈhelθi",
+     "link": "'twice a week' là cụm tần suất rất hay dùng ở Part 1; 'stay healthy' giữ nguyên cụm.",
+     "chunks": [
+      "play badminton with my colleagues",
+      "twice a week",
+      "stay healthy"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "How often do you exercise?",
+     "vi": "Bạn tập thể dục bao lâu một lần?",
+     "ipa": "haʊ ˈɒfən də jə ˈeksəsaɪz",
+     "link": "often có thể đọc có /t/ hoặc không; exercise nhấn âm đầu.",
+     "chunks": [
+      "How often",
+      "do you exercise"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I exercise about three times a week. Apart from badminton, I go jogging in the park near my house every Sunday morning.",
+     "vi": "Tôi tập khoảng ba lần một tuần. Ngoài cầu lông, tôi đi chạy bộ ở công viên gần nhà vào mỗi sáng Chủ nhật.",
+     "ipa": "aɪ ˈeksəsaɪz əˈbaʊt θriː taɪmz ə wiːk. əˈpɑːt frəm ˈbædmɪntən aɪ ɡəʊ ˈdʒɒɡɪŋ ɪn ðə pɑːk nɪə maɪ haʊs ˈevri ˈsʌndeɪ ˈmɔːnɪŋ",
+     "link": "Âm /θ/ trong three: đặt đầu lưỡi chạm nhẹ răng trên rồi thổi hơi ra; 'go jogging' là cụm cố định chỉ đi chạy bộ.",
+     "chunks": [
+      "three times a week",
+      "Apart from badminton",
+      "go jogging in the park"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Do you like watching sports on TV?",
+     "vi": "Bạn có thích xem thể thao trên TV không?",
+     "ipa": "də jə laɪk ˈwɒtʃɪŋ spɔːts ɒn ˌtiːˈviː",
+     "link": "like + V-ing: like watching; TV đọc theo tên chữ cái /tiː viː/.",
+     "chunks": [
+      "Do you like watching",
+      "sports on TV"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Yes, especially football. I rarely miss a match of the national team, and watching games with my friends is always exciting.",
+     "vi": "Có, đặc biệt là bóng đá. Tôi hiếm khi bỏ lỡ một trận của đội tuyển quốc gia, và xem bóng cùng bạn bè luôn rất hào hứng.",
+     "ipa": "jes ɪˈspeʃəli ˈfʊtbɔːl. aɪ ˈreəli mɪs ə mætʃ əv ðə ˈnæʃənəl tiːm ənd ˈwɒtʃɪŋ ɡeɪmz wɪð maɪ frendz ɪz ˈɔːlweɪz ɪkˈsaɪtɪŋ",
+     "link": "'rarely miss' là cách nói tự nhiên; 'national team' giữ nguyên cụm đội tuyển quốc gia.",
+     "chunks": [
+      "especially football",
+      "rarely miss a match",
+      "the national team"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Who is your favourite sports player?",
+     "vi": "Cầu thủ yêu thích của bạn là ai?",
+     "ipa": "huː ɪz jə ˈfeɪvərɪt spɔːts ˈpleɪə",
+     "link": "favourite nhấn âm đầu, âm /v/ rõ răng-môi; player đọc hai âm tiết.",
+     "chunks": [
+      "Who is your favourite",
+      "sports player"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "My favourite player is Quang Hai, a midfielder of the Vietnam national team. I admire his free kicks and the way he stays calm under pressure.",
+     "vi": "Cầu thủ yêu thích của tôi là Quang Hải, tiền vệ của đội tuyển quốc gia Việt Nam. Tôi ngưỡng mộ những cú đá phạt của anh ấy và cách anh ấy giữ bình tĩnh dưới áp lực.",
+     "ipa": "maɪ ˈfeɪvərɪt ˈpleɪə ɪz kwɑːŋ haɪ ə ˌmɪdˈfiːldə əv ðə ˌvjetˈnæm ˈnæʃənəl tiːm. aɪ ədˈmaɪə hɪz friː kɪks ənd ðə weɪ hi steɪz kɑːm ˈʌndə ˈpreʃə",
+     "link": "'under pressure' là cụm rất đắt ở Part 1; admire nhấn âm hai.",
+     "chunks": [
+      "a midfielder of the Vietnam national team",
+      "his free kicks",
+      "stays calm under pressure"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate chơi môn thể thao nào với đồng nghiệp?",
+     "o": [
+      "Bóng đá",
+      "Cầu lông",
+      "Quần vợt"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I play badminton with my colleagues twice a week."
+    },
+    {
+     "q": "Candidate tập thể dục khoảng mấy lần một tuần?",
+     "o": [
+      "Một lần",
+      "Hai lần",
+      "Ba lần"
+     ],
+     "a": 2,
+     "why": "Candidate nói: I exercise about three times a week."
+    },
+    {
+     "q": "Vì sao Candidate ngưỡng mộ Quang Hải?",
+     "o": [
+      "Vì anh ấy ghi nhiều bàn nhất đội",
+      "Vì những cú đá phạt và sự bình tĩnh dưới áp lực",
+      "Vì anh ấy chơi ở cùng vị trí"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I admire his free kicks and the way he stays calm under pressure."
+    }
+   ]
+  },
+  {
+   "partNum": 2,
+   "topicStd": "Thể thao và vận động",
+   "part": "Part 2",
+   "topic": "Describe a sport you enjoy watching or playing - Mô tả một môn thể thao bạn thích xem hoặc chơi",
+   "band": "Band 6.0",
+   "lines": [
+    {
+     "who": "Cue card",
+     "en": "Describe a sport you enjoy watching or playing. You should say: what the sport is, where you play or watch it and who you do this with, how often you do it, and explain why you enjoy it.",
+     "vi": "Hãy mô tả một môn thể thao bạn thích xem hoặc chơi. Bạn nên nói: đó là môn thể thao nào, bạn chơi hoặc xem nó ở đâu và với ai, bạn chơi hoặc xem bao lâu một lần, và giải thích vì sao bạn thích nó."
+    },
+    {
+     "who": "Candidate",
+     "en": "I'm going to talk about football, which is by far the most popular sport in Vietnam and the one I enjoy playing the most.",
+     "vi": "Tôi sẽ nói về bóng đá, môn thể thao phổ biến nhất ở Việt Nam và cũng là môn tôi thích chơi nhất.",
+     "ipa": "aɪm ˈɡəʊɪŋ tə tɔːk əˈbaʊt ˈfʊtbɔːl wɪtʃ ɪz baɪ fɑː ðə məʊst ˈpɒpjələ spɔːt ɪn ˌvjetˈnæm ənd ðə wʌn aɪ ɪnˈdʒɔɪ ˈpleɪɪŋ ðə məʊst",
+     "link": "'by far' nhấn mạnh mức cao nhất; 'the one I enjoy playing the most' là mẫu mở bài Part 2 tự nhiên.",
+     "chunks": [
+      "I'm going to talk about football",
+      "by far the most popular sport"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "I usually play with a group of close friends from my university. We rent a small artificial pitch near my house and play there every Sunday morning.",
+     "vi": "Tôi thường chơi với một nhóm bạn thân ở trường đại học. Chúng tôi thuê một sân cỏ nhân tạo nhỏ gần nhà tôi và chơi ở đó vào mỗi sáng Chủ nhật.",
+     "ipa": "aɪ ˈjuːʒuəli pleɪ wɪð ə ɡruːp əv kləʊs frendz frəm maɪ ˌjuːnɪˈvɜːsəti. wi rent ə smɔːl ˌɑːtɪˈfɪʃəl pɪtʃ nɪə maɪ haʊs ənd pleɪ ðeə ˈevri ˈsʌndeɪ ˈmɔːnɪŋ",
+     "link": "Nối âm: group of nối liền thành một nhịp; 'every Sunday morning' là cụm thời gian quen thuộc.",
+     "chunks": [
+      "a group of close friends",
+      "rent a small artificial pitch",
+      "every Sunday morning"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "The game normally lasts about ninety minutes, although we often stay longer to chat and have breakfast together afterwards.",
+     "vi": "Trận đấu thường kéo dài khoảng chín mươi phút, dù chúng tôi hay ở lại lâu hơn để trò chuyện và ăn sáng cùng nhau sau đó.",
+     "ipa": "ðə ɡeɪm ˈnɔːməli lɑːsts əˈbaʊt ˈnaɪnti ˈmɪnɪts ɔːlˈðəʊ wi ˈɒfən steɪ ˈlɒŋɡə tə tʃæt ənd həv ˈbrekfəst təˈɡeðə ˈɑːftəwədz",
+     "link": "'although' mở mệnh đề nhượng bộ; nghỉ ngắn trước afterwards để kết ý.",
+     "chunks": [
+      "lasts about ninety minutes",
+      "stay longer to chat"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "What I love most about football is the teamwork. You cannot win on your own, so everyone has to pass, run and support each other for the whole match.",
+     "vi": "Điều tôi yêu nhất ở bóng đá là tinh thần đồng đội. Bạn không thể thắng một mình, nên mọi người phải chuyền bóng, chạy và hỗ trợ nhau trong suốt trận đấu.",
+     "ipa": "wɒt aɪ lʌv məʊst əˈbaʊt ˈfʊtbɔːl ɪz ðə ˈtiːmwɜːk. jə ˈkænɒt wɪn ɒn jɔː əʊn səʊ ˈevriwʌn həz tə pɑːs rʌn ənd səˈpɔːt iːtʃ ˈʌðə fə ðə həʊl mætʃ",
+     "link": "Cấu trúc 'What I love most about... is...' là câu nhấn mạnh rất hợp Part 2; 'support each other' giữ nguyên cụm.",
+     "chunks": [
+      "What I love most about football",
+      "support each other",
+      "for the whole match"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "Playing regularly also keeps me fit. After a week of sitting in class, running on the pitch helps me release stress and sleep better at night.",
+     "vi": "Chơi thường xuyên cũng giúp tôi khỏe mạnh. Sau một tuần ngồi học trong lớp, chạy trên sân giúp tôi xả căng thẳng và ngủ ngon hơn vào ban đêm.",
+     "ipa": "ˈpleɪɪŋ ˈreɡjələli ˈɔːlsəʊ kiːps mi fɪt. ˈɑːftə ə wiːk əv ˈsɪtɪŋ ɪn klɑːs ˈrʌnɪŋ ɒn ðə pɪtʃ helps mi rɪˈliːs stres ənd sliːp ˈbetə ət naɪt",
+     "link": "'keeps me fit' ngắn gọn mà đắt; 'release stress' là cụm chuẩn khi nói về lợi ích của thể thao.",
+     "chunks": [
+      "keeps me fit",
+      "release stress",
+      "sleep better at night"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "One of my best memories is scoring the winning goal in a friendly match last year. My friends lifted me up, and I still smile whenever I think about it.",
+     "vi": "Một trong những kỷ niệm đẹp nhất của tôi là ghi bàn thắng quyết định trong một trận giao hữu năm ngoái. Các bạn đã nhấc bổng tôi lên, và đến giờ tôi vẫn mỉm cười mỗi khi nghĩ về nó.",
+     "ipa": "wʌn əv maɪ best ˈmeməriz ɪz ˈskɔːrɪŋ ðə ˈwɪnɪŋ ɡəʊl ɪn ə ˈfrendli mætʃ lɑːst jɪə. maɪ frendz ˈlɪftɪd mi ʌp ənd aɪ stɪl smaɪl wenˈevə aɪ θɪŋk əˈbaʊt ɪt",
+     "link": "'One of my best memories is...' là mẫu mở đầu kể kỷ niệm; trọng âm rơi vào winning goal.",
+     "chunks": [
+      "One of my best memories",
+      "scoring the winning goal"
+     ]
+    },
+    {
+     "who": "Candidate",
+     "en": "All in all, football is more than a game to me. It keeps me healthy, brings my friends together and gives me energy for a new week.",
+     "vi": "Tóm lại, bóng đá với tôi không chỉ là một trò chơi. Nó giữ cho tôi khỏe mạnh, gắn kết bạn bè và cho tôi năng lượng cho một tuần mới.",
+     "ipa": "ɔːl ɪn ɔːl ˈfʊtbɔːl ɪz mɔː ðən ə ɡeɪm tə mi. ɪt kiːps mi ˈhelθi brɪŋz maɪ frendz təˈɡeðə ənd ɡɪvz mi ˈenədʒi fə ə njuː wiːk",
+     "link": "'All in all' kết bài Part 2; ba lợi ích liệt kê song song healthy - friends - energy cho câu kết đầy đặn.",
+     "chunks": [
+      "All in all",
+      "more than a game",
+      "gives me energy"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Candidate thường chơi bóng đá ở đâu?",
+     "o": [
+      "Sân vận động quốc gia",
+      "Sân cỏ nhân tạo nhỏ gần nhà",
+      "Sân của trường đại học"
+     ],
+     "a": 1,
+     "why": "Candidate nói: We rent a small artificial pitch near my house."
+    },
+    {
+     "q": "Điều Candidate yêu nhất ở bóng đá là gì?",
+     "o": [
+      "Sự nổi tiếng",
+      "Tinh thần đồng đội",
+      "Những bàn thắng đẹp"
+     ],
+     "a": 1,
+     "why": "Candidate nói: What I love most about football is the teamwork."
+    },
+    {
+     "q": "Kỷ niệm đẹp nhất của Candidate là gì?",
+     "o": [
+      "Ghi bàn thắng quyết định trong một trận giao hữu",
+      "Được gặp cầu thủ nổi tiếng",
+      "Vô địch giải đấu của trường"
+     ],
+     "a": 0,
+     "why": "Candidate nói: scoring the winning goal in a friendly match last year."
+    }
+   ]
+  },
+  {
+   "partNum": 3,
+   "topicStd": "Thể thao và vận động",
+   "part": "Part 3",
+   "topic": "Sports and Society - Thể thao và xã hội",
+   "band": "Band 6.5",
+   "lines": [
+    {
+     "who": "Examiner",
+     "en": "Some professional athletes earn enormous salaries. Do you think they deserve to be paid so much?",
+     "vi": "Một số vận động viên chuyên nghiệp nhận mức lương khổng lồ. Bạn có nghĩ họ xứng đáng được trả nhiều như vậy không?"
+    },
+    {
+     "who": "Candidate",
+     "en": "To some extent, yes. Top athletes train for many years, their careers are short, and they generate huge income for clubs and broadcasters through ticket sales and advertising. However, the gap between star players and ordinary workers is hard to justify, especially when people in essential jobs like nursing earn so little in comparison.",
+     "vi": "Ở một mức độ nào đó thì có. Các vận động viên hàng đầu tập luyện nhiều năm, sự nghiệp của họ ngắn, và họ tạo ra nguồn thu khổng lồ cho câu lạc bộ và các đài truyền hình qua bán vé và quảng cáo. Tuy nhiên, khoảng cách giữa cầu thủ ngôi sao và người lao động bình thường thật khó biện minh, nhất là khi những người làm công việc thiết yếu như điều dưỡng lại thu nhập quá ít ỏi so với họ.",
+     "ipa": "tə sʌm ɪkˈstent jes. tɒp ˈæθliːts treɪn fə ˈmeni jɪəz ðeə kəˈrɪəz ɑː ʃɔːt ənd ðeɪ ˈdʒenəreɪt hjuːdʒ ˈɪnkʌm fə klʌbz ənd ˈbrɔːdkɑːstəz θruː ˈtɪkɪt seɪlz ənd ˈædvətaɪzɪŋ. haʊˈevə ðə ɡæp bɪˈtwiːn stɑː ˈpleɪəz ənd ˈɔːdənəri ˈwɜːkəz ɪz hɑːd tə ˈdʒʌstɪfaɪ ɪˈspeʃəli wen ˈpiːpəl ɪn ɪˈsenʃəl dʒɒbz laɪk ˈnɜːsɪŋ ɜːn səʊ ˈlɪtəl ɪn kəmˈpærɪsən",
+     "link": "'To some extent' mở đầu bằng nhượng bộ một phần - mẫu câu rất đắt ở Part 3; 'in comparison' khép lại phép so sánh.",
+     "chunks": [
+      "To some extent",
+      "generate huge income",
+      "in comparison"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Do you consider e-sports, that is, competitive video gaming, to be a real sport?",
+     "vi": "Bạn có coi thể thao điện tử, tức thi đấu trò chơi điện tử, là một môn thể thao thực sự không?"
+    },
+    {
+     "who": "Candidate",
+     "en": "It depends on how we define sport. E-sports players need quick reactions, strategy and intense concentration, and they train for hours every day, just like traditional athletes. On the other hand, physical movement is minimal, so I would call it a sport of the mind rather than a sport in the traditional sense.",
+     "vi": "Điều đó tùy thuộc vào cách chúng ta định nghĩa thể thao. Người chơi thể thao điện tử cần phản xạ nhanh, chiến thuật và sự tập trung cao độ, và họ tập luyện nhiều giờ mỗi ngày, giống như vận động viên truyền thống. Mặt khác, vận động thể chất là tối thiểu, nên tôi sẽ gọi nó là một môn thể thao của trí tuệ hơn là thể thao theo nghĩa truyền thống.",
+     "ipa": "ɪt dɪˈpendz ɒn haʊ wi dɪˈfaɪn spɔːt. ˈiːspɔːts ˈpleɪəz niːd kwɪk riˈækʃənz ˈstrætədʒi ənd ɪnˈtens ˌkɒnsənˈtreɪʃən ənd ðeɪ treɪn fə ˈaʊəz ˈevri deɪ dʒʌst laɪk trəˈdɪʃənəl ˈæθliːts. ɒn ði ˈʌðə hænd ˈfɪzɪkəl ˈmuːvmənt ɪz ˈmɪnɪməl səʊ aɪ wəd kɔːl ɪt ə spɔːt əv ðə maɪnd ˈrɑːðə ðən ə spɔːt ɪn ðə trəˈdɪʃənəl sens",
+     "link": "'It depends on how we define...' là cách mở câu trả lời tranh luận an toàn; 'on the other hand' chuyển sang vế đối lập.",
+     "chunks": [
+      "It depends on how we define sport",
+      "on the other hand",
+      "a sport of the mind"
+     ]
+    },
+    {
+     "who": "Examiner",
+     "en": "Why do so many countries spend huge amounts of money hosting major sporting events like the Olympics?",
+     "vi": "Vì sao nhiều quốc gia chi những khoản tiền khổng lồ để đăng cai các sự kiện thể thao lớn như Thế vận hội?"
+    },
+    {
+     "who": "Candidate",
+     "en": "Hosting an event like the Olympics brings global attention, boosts tourism and encourages investment in new stadiums, roads and airports. It can also inspire young people to take up sport. That said, the cost is enormous, and some host cities have been left with debts and stadiums that nobody uses, so governments need to plan very carefully.",
+     "vi": "Đăng cai một sự kiện như Thế vận hội mang lại sự chú ý toàn cầu, thúc đẩy du lịch và khuyến khích đầu tư vào sân vận động, đường sá và sân bay mới. Nó cũng có thể truyền cảm hứng cho giới trẻ chơi thể thao. Tuy vậy, chi phí là khổng lồ, và một số thành phố đăng cai đã bị để lại với nợ nần và những sân vận động không ai dùng, nên các chính phủ cần lên kế hoạch rất cẩn thận.",
+     "ipa": "ˈhəʊstɪŋ ən ɪˈvent laɪk ði əˈlɪmpɪks brɪŋz ˈɡləʊbəl əˈtenʃən buːsts ˈtʊərɪzəm ənd ɪnˈkʌrɪdʒɪz ɪnˈvestmənt ɪn njuː ˈsteɪdiəmz rəʊdz ənd ˈeəpɔːts. ɪt kən ˈɔːlsəʊ ɪnˈspaɪə jʌŋ ˈpiːpəl tə teɪk ʌp spɔːt. ðət sed ðə kɒst ɪz ɪˈnɔːməs ənd sʌm həʊst ˈsɪtiz həv biːn left wɪð dets ənd ˈsteɪdiəmz ðət ˈnəʊbədi ˈjuːzɪz səʊ ˈɡʌvənmənts niːd tə plæn ˈveri ˈkeəfəli",
+     "link": "'That said' dùng để quay lại mặt trái sau khi nêu lợi ích; 'take up sport' là cụm bắt đầu chơi thể thao.",
+     "chunks": [
+      "boosts tourism",
+      "take up sport",
+      "plan very carefully"
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Theo Candidate, vì sao vận động viên hàng đầu phần nào xứng đáng với mức lương cao?",
+     "o": [
+      "Vì họ nổi tiếng trên mạng xã hội",
+      "Vì họ tập luyện nhiều năm, sự nghiệp ngắn và tạo ra doanh thu lớn",
+      "Vì họ quan trọng hơn mọi nghề khác"
+     ],
+     "a": 1,
+     "why": "Candidate nói: Top athletes train for many years, their careers are short, and they generate huge income for clubs and broadcasters."
+    },
+    {
+     "q": "Candidate gọi thể thao điện tử là gì?",
+     "o": [
+      "Một môn thể thao truyền thống",
+      "Một môn thể thao của trí tuệ",
+      "Một trò chơi không liên quan đến thể thao"
+     ],
+     "a": 1,
+     "why": "Candidate nói: I would call it a sport of the mind rather than a sport in the traditional sense."
+    },
+    {
+     "q": "Theo Candidate, rủi ro khi đăng cai sự kiện thể thao lớn là gì?",
+     "o": [
+      "Khán giả không đến xem",
+      "Vận động viên dễ bị chấn thương",
+      "Chi phí khổng lồ, có thể để lại nợ và sân vận động bỏ không"
+     ],
+     "a": 2,
+     "why": "Candidate nói: some host cities have been left with debts and stadiums that nobody uses."
+    }
+   ]
   }
  ],
  "writing": [
@@ -37536,6 +37888,127 @@ const CONTENT = {
      "tip": "Ngữ điệu: To conclude nói chậm và xuống giọng để báo hiệu kết bài, nhấn mạnh vào not a luxury và essential health infrastructure. Nối âm: rests on nối liền ở âm cuối t sang on.",
      "chunks": [
       "to conclude, the case rests on"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Joining a Gym - Đăng ký thẻ thành viên phòng gym",
+   "setting": "Bạn đến một phòng gym gần nhà để hỏi đăng ký thẻ thành viên. Nhân viên lễ tân giới thiệu các gói tập và giá tiền, giờ mở cửa, các lớp học nhóm và chính sách tập thử miễn phí trước khi bạn quyết định.",
+   "partner": "Nhân viên lễ tân phòng gym",
+   "goal": "Hỏi rõ giá các gói, giờ mở cửa, các lớp học và buổi tập thử, rồi đăng ký gói phù hợp nhất với lịch của mình.",
+   "band": "Band 5.0",
+   "chunks": [
+    "How much is the membership",
+    "What time do you open and close",
+    "a free trial session",
+    "sign up for the monthly plan",
+    "looking forward to starting"
+   ],
+   "turns": [
+    {
+     "from": "partner",
+     "text": "Good afternoon. Welcome to PowerFit Gym. How can I help you today?"
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào buổi chiều. Tôi muốn đăng ký thẻ thành viên ở phòng gym này. Thẻ thành viên bao nhiêu tiền một tháng ạ?",
+     "expect": "Good afternoon. I would like to join this gym. How much is the membership per month?",
+     "keywords": [
+      "good",
+      "afternoon",
+      "join",
+      "gym",
+      "membership"
+     ],
+     "hint": "Good afternoon. I would like to join...",
+     "tip": "Nối âm: would like to nối liền thành một nhịp nhẹ. How much is... là mẫu hỏi giá rất quen thuộc khi mua sắm và đăng ký dịch vụ.",
+     "chunks": [
+      "How much is the membership"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "We have two main options. The monthly plan is 400,000 dong, and the yearly plan is 3,600,000 dong, so the yearly one is much cheaper per month."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Gói theo năm nghe rẻ hơn thật. Phòng gym mở cửa và đóng cửa lúc mấy giờ mỗi ngày ạ?",
+     "expect": "The yearly plan sounds cheaper. What time do you open and close every day?",
+     "keywords": [
+      "yearly",
+      "plan",
+      "cheaper",
+      "open",
+      "close"
+     ],
+     "hint": "The yearly plan sounds cheaper. What time...",
+     "tip": "Câu hỏi giờ giấc: What time do you open and close? - open and close đi thành một cặp, trọng âm rơi vào open và close.",
+     "chunks": [
+      "What time do you open and close"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "We open at 5:30 in the morning and close at 10 in the evening, every day. Members can also join group classes like yoga and Zumba for free."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Các lớp yoga diễn ra lúc mấy giờ ạ? Và tôi có thể tập thử một buổi miễn phí trước khi đăng ký không?",
+     "expect": "What time are the yoga classes? And can I have a free trial session before I sign up?",
+     "keywords": [
+      "yoga",
+      "classes",
+      "free",
+      "trial",
+      "session"
+     ],
+     "hint": "What time are the yoga classes?",
+     "tip": "Âm /tr/ trong trial: đọc gần như trai nhưng lưỡi cong nhẹ. Can I have... là mẫu xin phép lịch sự, lên giọng nhẹ ở cuối câu.",
+     "chunks": [
+      "a free trial session"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "The yoga classes are at 6 in the morning and 6:30 in the evening. And yes, your first trial session is completely free - just bring sports shoes and a towel."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vậy tôi đăng ký gói theo tháng trước. Tôi có thể bắt đầu từ sáng mai không? Tôi có cần điền vào mẫu đơn nào không?",
+     "expect": "Then I will sign up for the monthly plan first. Can I start tomorrow morning? Do I need to fill in a form?",
+     "keywords": [
+      "sign",
+      "monthly",
+      "plan",
+      "tomorrow",
+      "form"
+     ],
+     "hint": "Then I will sign up for...",
+     "tip": "sign up là cụm động từ nghĩa là đăng ký - âm /aɪ/ trong sign kéo dài rõ. fill in a form nghĩa là điền vào mẫu đơn, âm /f/ rõ răng-môi.",
+     "chunks": [
+      "sign up for the monthly plan"
+     ]
+    },
+    {
+     "from": "partner",
+     "text": "Yes, you can start tomorrow. Please fill in this short form with your name and phone number, and I will make your member card right away."
+    },
+    {
+     "from": "learner",
+     "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn rất nhiều. Tôi rất mong được bắt đầu tập từ ngày mai.",
+     "expect": "Thank you very much. I am really looking forward to starting tomorrow.",
+     "keywords": [
+      "thank",
+      "looking",
+      "forward",
+      "starting",
+      "tomorrow"
+     ],
+     "hint": "Thank you very much. I am really looking...",
+     "tip": "looking forward to + V-ing là cụm kết thúc lịch sự rất hay dùng. Âm /f/ trong forward đọc rõ và nhẹ.",
+     "chunks": [
+      "looking forward to starting"
      ]
     }
    ]

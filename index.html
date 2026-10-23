@@ -409,7 +409,7 @@ const IS_REAL=!!(window.SUPABASE_URL&&window.SUPABASE_ANON_KEY&&String(window.SU
 
 /* ================= TRẠNG THÁI & LƯU TRỮ ================= */
 const LS_KEY="ielts_standalone_v1";
-let state={progress:{},cards:{},savedWords:{},studyLog:{},goal:30,lastSection:"typing",targetBand:null,bandFilter:null,lastStudy:null,welcomed:false,trialDone:false,errors:[],hard:{}};
+let state={progress:{},cards:{},savedWords:{},studyLog:{},goal:30,lastSection:"typing",targetBand:null,bandFilter:null,lastStudy:null,welcomed:false,trialDone:false,errors:[],hard:{},checkin:{}};
 function loadLocal(){try{const raw=localStorage.getItem(LS_KEY);if(raw){const p=JSON.parse(raw);state=Object.assign(state,p)}}catch(e){}}
 function saveLocal(){try{localStorage.setItem(LS_KEY,JSON.stringify(state))}catch(e){}}
 let sb=null, sbUser=null;
@@ -444,7 +444,7 @@ function howToHTML(sec){ const H={
   const steps=H[sec]||[]; if(!steps.length) return "";
   return `<div class="card" style="background:#f7fafb"><div class="row"><b>📖 Cách luyện phần này</b><span class="grow"></span><button class="btn light howto-btn">Xem các bước</button></div><div class="howto-body hidden" style="margin-top:8px">${steps.map(s=>`<p style="margin:5px 0">${esc(s)}</p>`).join("")}</div></div>`; }
 function wireHowTo(app){ const b=$(".howto-btn",app); if(b) b.onclick=()=>{ const bd=$(".howto-body",app); if(bd){ bd.classList.toggle("hidden"); b.textContent=bd.classList.contains("hidden")?"Xem các bước":"Thu gọn"; } }; }
-function setProg(section,key,val){ state.progress[section+":"+key]=val; saveLocal(); pushProgress(section,key); const tab=PROG_TAB[section], re=PROG_IDX[section]; if(tab&&re){ const m=String(key).match(re); if(m) markStudy(tab,parseInt(m[1],10)); } }
+function setProg(section,key,val){ state.progress[section+":"+key]=val; saveLocal(); pushProgress(section,key); if(!(section==="meta"&&(key==="targetBand"||key==="welcomed"||key==="checkin"))) noteActivity(); const tab=PROG_TAB[section], re=PROG_IDX[section]; if(tab&&re){ const m=String(key).match(re); if(m) markStudy(tab,parseInt(m[1],10)); } }
 function getProg(section,key){ return state.progress[section+":"+key]; }
 function effectiveBand(){ return state.bandFilter||state.targetBand||"all"; }
 function setGlobalBand(b,skipRender){ state.bandFilter=(b&&b!=="all")?b:null; saveLocal(); renderBandBar(); if(!skipRender) render(); }
@@ -461,6 +461,7 @@ async function pullRemote(){ if(!sb||!sbUser)return;
     const mw=state.progress["meta:welcomed"]; if(mw&&mw.v) state.welcomed=true;
     const me=state.progress["meta:errors"]; if(me&&Array.isArray(me.list)) state.errors=me.list;
     const mh=state.progress["meta:hard"]; if(mh&&mh.map&&typeof mh.map==="object") state.hard=mh.map;
+    const mc=state.progress["meta:checkin"]; if(mc&&mc.days&&typeof mc.days==="object") state.checkin=Object.assign({},state.checkin||{},mc.days);
     saveLocal();
   }catch(e){}
 }
@@ -480,7 +481,7 @@ const TABICONS={home:"🏠",typing:"⌨️",vocab:"🔤",grammar:"🧭",reading:
 function renderTabs(){ $("#tabBar").innerHTML=TABS.map(([k,v])=>`<button class="tab ${k===curTab?"on":""}" data-tab="${k}">${v}</button>`).join(""); $$("#tabBar .tab").forEach(b=>b.onclick=()=>go(b.dataset.tab)); const bb=$("#bottomBar"); if(bb){ bb.innerHTML=TABS.map(([k,v])=>`<button class="${k===curTab?"on":""}" data-tab="${k}"><span class="bic">${TABICONS[k]||"•"}</span>${v}</button>`).join(""); $$("#bottomBar button").forEach(b=>b.onclick=()=>go(b.dataset.tab)); } }
 function renderBandBar(){ const sel=$("#globalBand"); if(!sel) return; const cur=effectiveBand(); sel.innerHTML=`<option value="all">Tất cả cấp độ</option>`+LADDER.map(b=>`<option value="${esc(b)}" ${b===cur?"selected":""}>${esc(bandLabel(b))}</option>`).join(""); sel.onchange=()=>setGlobalBand(sel.value); const chip=$("#bandTargetChip"); chip.innerHTML=state.targetBand?`<span class="badge gold">Mục tiêu: ${esc(state.targetBand)}</span>`:""; const hint=$("#bandHint"); if(hint) hint.textContent=state.targetBand?(cur===state.targetBand?"Đang học theo band mục tiêu của bạn.":"Đang xem cấp độ khác với mục tiêu "+state.targetBand+"."):"Hãy làm bài kiểm tra thử ở trang chủ để đặt band mục tiêu."; }
 function go(tab){ curTab=tab; state.lastSection=tab; saveLocal(); renderTabs(); render(); window.scrollTo({top:0}); }
-function render(){ renderBandBar(); const app=$("#app"); ({home:viewHome,typing:viewTyping,vocab:viewVocab,grammar:viewGrammar,reading:viewReading,listening:viewListening,speaking:viewSpeaking,writing:viewWriting,games:viewGames,video:viewVideo,errors:viewErrors,combat:viewCombat,tutor:viewTutor,account:viewAccount}[curTab]||viewHome)(app); }
+function render(){ renderBandBar(); const app=$("#app"); ({home:viewHome,typing:viewTyping,vocab:viewVocab,grammar:viewGrammar,reading:viewReading,listening:viewListening,speaking:viewSpeaking,writing:viewWriting,games:viewGames,progress:viewProgress,video:viewVideo,errors:viewErrors,combat:viewCombat,tutor:viewTutor,account:viewAccount}[curTab]||viewHome)(app); }
 function bandFilterHTML(id,cur){ return `<select id="${id}" style="max-width:230px"><option value="all">Tất cả band</option>${LADDER.map(b=>`<option value="${esc(b)}" ${b===cur?"selected":""}>${esc(bandLabel(b))}</option>`).join("")}</select>`; }
 function renderUserBox(){ const ub=$("#userBox"); if(IS_REAL&&sbUser){ ub.innerHTML=`<span>Xin chào, ${esc(sbUser.email)}</span><button class="btn ghost" id="btnOut">Đăng xuất</button>`; $("#btnOut").onclick=async()=>{ await sb.auth.signOut(); sbUser=null; renderUserBox(); render(); toast("Đã đăng xuất."); }; } else if(IS_REAL){ ub.innerHTML=`<button class="btn ghost" id="btnIn">Đăng nhập</button>`; $("#btnIn").onclick=()=>go("account"); } else { ub.innerHTML=`<span style="opacity:.85">Chế độ học thử</span>`; } }
 
@@ -602,6 +603,7 @@ function viewHome(app){
   const SKILLS=[["typing","⌨️","Gõ câu","Gõ lại câu mẫu Writing theo band, sai đâu sửa đó.","bài"],["vocab","🔤","Từ vựng","Thẻ từ theo chủ đề IELTS, ôn giãn cách SRS đúng lúc sắp quên.","thẻ"],["grammar","🧭","Ngữ pháp","Bản đồ trạm ngữ pháp phục vụ Writing và Speaking.","trạm"],["reading","📚","Đọc","Bài đọc đúng định dạng IELTS Reading, chấm kèm giải thích.","bài"],["listening","🎧","Nghe","Câu nghe Section 1-4: chép chính tả, nói nhại, trắc nghiệm.","câu"],["speaking","🎙️","Luyện nói","Bài mẫu Part 1-2-3 theo band, luyện đủ 4 chế độ.","bài"],["writing","✍️","Writing","Đề Task 1-2 có bài mẫu band cao và phân tích cấu trúc.","đề"],["video","🎬","Video bài học","Video chọn lọc từ Band 0 tới band 9, xem ngay trong trang.","video"],["tutor","🤖","Gia sư AI","Hỏi đáp, sửa câu và nhận xét bài Writing với gia sư AI.",""],["errors","📕","Sổ lỗi sai","Mọi câu trả lời sai tự lưu vào đây để ôn lại đúng lúc.",""],["games","🎮","Trò chơi","Sáu trò chơi ôn từ vựng, nghe, gõ câu, xếp câu và ngữ pháp - chơi vui mà nhớ lâu.","ván"],["combat","🎭","Thực chiến","Đóng vai tình huống đời thực: nói hoặc gõ, chấm theo từng lượt.",""]];
   app.innerHTML=`
   <section class="page on">
+    ${bellCardHTML()}
     ${!state.welcomed?`<div class="card" style="border-color:var(--gold);background:#fffdf4;text-align:center;padding:26px 20px">
       <h2 style="font-size:22px;color:var(--teal)">Chào bạn! Bạn muốn bắt đầu từ đâu?</h2>
       <p class="mut" style="margin:6px 0 6px">Đây là phòng học tiếng Anh miễn phí: bạn sẽ đi từ con số 0 - chưa biết một chữ cái nào - lên dần tới kỳ thi IELTS (kỳ thi tiếng Anh quốc tế dùng để xét du học, xin việc, định cư).</p>
@@ -625,6 +627,7 @@ function viewHome(app){
         </div>
       </div>
     </div>
+    ${checkinCardHTML()}
     <div class="card"><h3>🗓️ Hôm nay học gì?</h3>
       ${plan.length?plan.map((p,i)=>`<div class="row" style="margin:9px 0"><span class="badge gold">${i+1}</span><span style="flex:1">${esc(p.text)}</span><button class="btn teal plan-btn" data-pi="${i}">${esc(p.btn)}</button></div>`).join(""):`<p class="mut">Bạn học rất đều rồi. Hãy chọn một kỹ năng ở dưới để học tiếp, hoặc tăng mục tiêu phút học mỗi ngày.</p>`}
     </div>
@@ -632,6 +635,7 @@ function viewHome(app){
       <p>Có <b id="dueStripNum">${totalDueToday()}</b> mục đến hạn ôn: ${dueErrors().length} lỗi sai · ${dueCards().length} thẻ từ · ${dueHard().length} mục khó. Ôn đúng lúc sắp quên là cách nhớ lâu nhất - mỗi mục chỉ cần làm đúng 2 lần liên tiếp ở các lần ôn cách quãng là tốt nghiệp khỏi hàng đợi.</p>
       <div class="row" style="margin-top:8px"><button class="btn teal" id="dueGoBtn">Ôn ngay</button></div>
     </div>
+    <div class="card"><h3>📊 Bảng theo dõi tiến độ</h3><p class="mut">Xem một chỗ toàn bộ tiến độ: từng kỹ năng, 13 chặng, hàng đợi ôn tập, lịch sử điểm kiểm tra, điểm danh và kỷ lục trò chơi.</p><div class="row" style="margin-top:8px"><button class="btn teal" id="progGoBtn">Mở bảng tiến độ</button></div></div>
     <div class="card"><h3>Vào học theo kỹ năng</h3>
       <div class="skillgrid">${SKILLS.map(([k,ic,nm,ds,un])=>{ if(k==="video") return `<div class="skillcard" data-go="video"><div class="ic">${ic}</div><div class="t">${nm}</div><div class="d">${ds}</div><div class="n">${VIDEOS.length} video · từ Band 0 tới IELTS band cao</div></div>`; if(k==="tutor") return `<div class="skillcard" data-go="tutor"><div class="ic">${ic}</div><div class="t">${nm}</div><div class="d">${ds}</div><div class="n">Đang được hoàn thiện - sẽ mở khi máy chủ AI sẵn sàng</div></div>`; if(k==="errors"){ const open=(state.errors||[]).filter(e=>!e.done).length; const due=dueErrors().length; return `<div class="skillcard" data-go="errors"><div class="ic">${ic}</div><div class="t">${nm}</div><div class="d">${ds}</div><div class="n">${open} lỗi chưa sửa xong${due?(" · "+due+" lỗi đến hạn ôn hôm nay"):""}${dueHard().length?(" · "+dueHard().length+" mục khó đến hạn"):""}</div></div>`; } if(k==="combat"){ const n=(CONTENT.roleplay||[]).length; return `<div class="skillcard" data-go="combat"><div class="ic">${ic}</div><div class="t">${nm}</div><div class="d">${ds}</div><div class="n">${n?n+" tình huống đóng vai":"Đang bổ sung tình huống"}</div></div>`; } if(k==="games"){ const gb=gameBestAll(); const played=Object.keys(gb).length; const mx=GAME_DEFS.reduce((m,gd)=>Math.max(m,(gb[gd[0]]||{}).score||0),0); return `<div class="skillcard" data-go="games"><div class="ic">${ic}</div><div class="t">${nm}</div><div class="d">${ds}</div><div class="n">${played?("Đã chơi "+played+"/6 game · Kỷ lục cao nhất: "+mx+" điểm"):"6 trò chơi: nối từ, giải mã chữ, nghe đoán, đua gõ, xếp câu, quiz"}</div></div>`; } const s=ss[k]; const pct=s.total?Math.round(s.done/s.total*100):0; return `<div class="skillcard" data-go="${k}"><div class="ic">${ic}</div><div class="t">${nm}</div><div class="d">${ds}</div><div class="bar"><i style="width:${pct}%"></i></div><div class="n">Đã hoàn thành ${s.done}/${s.total} ${un} · ${pct}%</div></div>`; }).join("")}</div>
     </div>
@@ -663,6 +667,7 @@ function viewHome(app){
     <div class="stat"><b>${Object.keys(state.cards).filter(k=>state.cards[k].box>=4).length}</b><span>từ vựng sắp thuộc (hộp 4-5)</span></div>
     <div class="stat"><b>${Object.keys(state.savedWords).length}</b><span>từ đã tra và lưu</span></div>`;
   renderHomeStats();
+  wireBell(app); wireCheckin(app); const pgb=$("#progGoBtn"); if(pgb) pgb.onclick=()=>go("progress");
   $("#goalInp").onchange=e=>{ let v=parseInt(e.target.value||"30",10); v=Math.min(180,Math.max(15,v)); state.goal=v; e.target.value=v; saveLocal(); renderHomeStats(); };
   $("#btnContinue").onclick=()=>{ if(state.lastStudy&&state.lastStudy.title){ continueStudy(state.lastStudy); } else { dismissWelcome(); if(state.targetBand&&state.targetBand!=="Band 0"){ if(!openFirstForBand(state.targetBand)) startFromZero(); } else startFromZero(); } };
   $$(".skillcard",app).forEach(c=>c.onclick=()=>go(c.dataset.go));
@@ -782,7 +787,7 @@ const GAME_DEFS=[
  ["quiz","🧗","Quiz leo thang","Trả lời trắc nghiệm ngữ pháp và kiểm tra thử: đúng liên tiếp thì lên cấp và cộng điểm theo chuỗi, sai bị trừ một mạng (có 3 mạng)."]];
 function gameBestAll(){ try{ return JSON.parse(localStorage.getItem("ielts_game_best_v1")||"{}"); }catch(e){ return {}; } }
 function gameBest(id){ return gameBestAll()[id]||null; }
-function saveGameBest(id,score,stars){ const all=gameBestAll(); const prev=all[id]; if(!prev||score>prev.score){ all[id]={score:score,stars:stars,at:Date.now()}; try{ localStorage.setItem("ielts_game_best_v1",JSON.stringify(all)); }catch(e){} } }
+function saveGameBest(id,score,stars){ noteActivity(); const all=gameBestAll(); const prev=all[id]; if(!prev||score>prev.score){ all[id]={score:score,stars:stars,at:Date.now()}; try{ localStorage.setItem("ielts_game_best_v1",JSON.stringify(all)); }catch(e){} } }
 function gameStars(frac){ return frac>=0.9?3:(frac>=0.6?2:(frac>0?1:0)); }
 function starStr(n){ return n?("⭐".repeat(n)):"☆ chưa có sao"; }
 function normSent(s){ return String(s||"").toLowerCase().replace(/[.!?,;:'"]/g,"").replace(/\s+/g," ").trim(); }
@@ -877,6 +882,94 @@ function gmRenderQuiz(body,run){ const cur=run.queue[run.i]; if(!cur){ body.inne
   const nx=$("#gmNext",body); if(nx) nx.onclick=()=>{ if(run.lives<=0||run.i>=run.queue.length-1){ run.finished=true; run.stars=gameStars(run.answered?run.correct/run.answered:0); run.endDetail='<p style="margin-top:4px">Bạn trả lời đúng '+run.correct+'/'+run.answered+' câu · Cấp cao nhất đã leo: Cấp '+(1+Math.floor(run.best/3))+' · Chuỗi đúng dài nhất: '+run.best+' câu liên tiếp.</p>'; saveGameBest("quiz",run.score,run.stars); } else { run.i++; run.fb=null; } render(); }; }
 
 /* ================= TÀI KHOẢN ================= */
+/* ================= ĐIỂM DANH, THÔNG BÁO NHẮC NHỞ, BẢNG THEO DÕI TIẾN ĐỘ =================
+   Cả ba tính năng dựng trên dữ liệu thật sẵn có: state.checkin (đồng bộ qua meta:checkin
+   giống meta:hard), state.progress, state.cards, state.errors, state.hard và kỷ lục game. */
+function checkinDays(){ if(!state.checkin||typeof state.checkin!=="object"||Array.isArray(state.checkin)) state.checkin={}; return state.checkin; }
+function syncCheckin(){ setProg("meta","checkin",{days:Object.assign({},checkinDays())}); }
+function doCheckin(){ const t=today(); const days=checkinDays(); if(days[t]) return false; days[t]=Date.now(); saveLocal(); syncCheckin(); return true; }
+function noteActivity(){ doCheckin(); }
+function checkedOn(ds){ return !!checkinDays()[ds]; }
+function checkinStreak(){ const days=checkinDays(); let n=0; let d=today(); if(!days[d]) d=addDays(d,-1); while(days[d]){ n++; d=addDays(d,-1); } return n; }
+function checkinBest(){ const ds=Object.keys(checkinDays()).sort(); let best=0,run=0,prev=null; for(const d of ds){ run=(prev&&addDays(prev,1)===d)?run+1:1; if(run>best)best=run; prev=d; } return best; }
+let ciMonthOff=0;
+function ciMonthBase(){ const d=new Date(); d.setDate(1); d.setMonth(d.getMonth()+ciMonthOff); return d; }
+function ciCalendarHTML(){ const base=ciMonthBase(); const y=base.getFullYear(), m=base.getMonth(); const dim=new Date(y,m+1,0).getDate(); const lead=(new Date(y,m,1).getDay()+6)%7; const days=checkinDays(); const t=today(); let cells=["T2","T3","T4","T5","T6","T7","CN"].map(x=>`<div style="text-align:center;font-weight:700;color:var(--mut);font-size:12px;padding:3px 0">${x}</div>`).join("");
+  for(let i=0;i<lead;i++) cells+="<div></div>";
+  for(let d=1;d<=dim;d++){ const ds=y+"-"+String(m+1).padStart(2,"0")+"-"+String(d).padStart(2,"0"); const on=!!days[ds]; const isT=ds===t; const past=ds<t;
+    cells+=`<div style="text-align:center;padding:5px 0;border-radius:8px;font-size:13px;${on?"background:#eafaf1;color:#0d7a4f;font-weight:700;":""}${isT?"outline:2px solid var(--gold);outline-offset:-2px;font-weight:700;":""}${(!on&&past)?"color:#c3ccd1;":""}">${d}${on?" ✓":""}</div>`; }
+  return `<div class="row" style="margin-bottom:6px"><button class="btn light ci-prev" style="padding:4px 10px">‹ Tháng trước</button><b style="flex:1;text-align:center">Tháng ${m+1}/${y}</b><button class="btn light ci-next" style="padding:4px 10px">Tháng sau ›</button></div><div style="display:grid;grid-template-columns:repeat(7,1fr);gap:3px">${cells}</div><p class="mut" style="margin-top:6px">Ngày có dấu ✓ là ngày đã điểm danh. Ngày đã qua mà trống là ngày vắng. Hôm nay được viền vàng.</p>`; }
+function renderCiCals(){ $$(".ci-cal").forEach(el=>{ el.innerHTML=ciCalendarHTML(); }); $$(".ci-prev").forEach(b=>b.onclick=()=>{ ciMonthOff--; renderCiCals(); }); $$(".ci-next").forEach(b=>b.onclick=()=>{ ciMonthOff++; renderCiCals(); }); }
+function checkinCardHTML(){ const on=checkedOn(today());
+  return `<div class="card"><h3>🗓️ Điểm danh hằng ngày</h3><p>${on?`✅ <b>Hôm nay bạn đã điểm danh.</b> Cứ giữ nhịp đều thế này nhé!`:`Bạn chưa điểm danh hôm nay. Bấm nút điểm danh - hoặc cứ học xong một bài, một thẻ hay một ván game bất kỳ, web sẽ tự điểm danh cho bạn.`}</p><div class="row" style="margin:8px 0"><span>Chuỗi ngày liên tiếp: <b>${checkinStreak()}</b> ngày</span><span>·</span><span>Kỷ lục dài nhất: <b>${checkinBest()}</b> ngày</span><span class="grow"></span>${on?"":`<button class="btn teal ci-btn">Điểm danh hôm nay</button>`}</div><div class="ci-cal">${ciCalendarHTML()}</div></div>`; }
+function wireCheckin(app){ $$(".ci-btn",app).forEach(b=>b.onclick=()=>{ if(doCheckin()) toast("Đã điểm danh hôm nay. Chuỗi ngày học: "+checkinStreak()+" ngày!"); render(); }); renderCiCals(); }
+function dueGoAction(){ if(dueErrors().length||dueHard().length){ go("errors"); return; } if(dueCards().length){ vocabQueue=dueCards(); vocabSel={name:"Ôn tập đến hạn"}; vocabPos=0; vocabFlipped=false; vocabMode="flash"; vocabQuiz=null; go("vocab"); return; } toast("Hôm nay không có mục nào đến hạn ôn. Tốt lắm!"); }
+let bellOpen=false; let curReminders=[];
+function buildReminders(){ const R=[]; const t=today(); const days=checkinDays();
+  if(!days[t]) R.push({icon:"🗓️",text:"Bạn chưa điểm danh hôm nay. Điểm danh ngay để giữ chuỗi ngày học.",btn:"Điểm danh ngay",act:()=>{ if(doCheckin()) toast("Đã điểm danh hôm nay. Chuỗi ngày học: "+checkinStreak()+" ngày!"); render(); }});
+  const de=dueErrors(), dc=dueCards(), dh=dueHard(); const dueN=de.length+dc.length+dh.length;
+  if(dueN) R.push({icon:"🔁",text:`Có ${dueN} mục ôn tập đến hạn chưa ôn (${de.length} lỗi sai · ${dc.length} thẻ từ · ${dh.length} mục khó). Ôn đúng lúc sắp quên là nhớ lâu nhất.`,btn:"Ôn ngay",act:dueGoAction});
+  const od=(state.errors||[]).filter(e=>!e.done&&e.due<t).length;
+  if(od) R.push({icon:"⏰",text:`Có ${od} lỗi sai đã quá hạn ôn. Ôn lại ngay hôm nay kẻo quên hẳn.`,btn:"Mở Sổ lỗi sai",act:()=>go("errors")});
+  const curB=state.targetBand||LADDER.find(b=>!stagePassed(b));
+  let stageRem=null;
+  if(curB&&!stagePassed(curB)&&stageTestPool(curB).length){ const st=bandStageStats(curB); if(st.done>0) stageRem={icon:"📝",text:`Bạn đang học dở chặng ${curB} (${st.done}/${st.total} mục, ${st.pct}%) nhưng chưa làm bài kiểm tra cuối chặng của chặng này.`,btn:"Kiểm tra cuối chặng",act:()=>startStageTest(curB)}; }
+  if(stageRem) R.push(stageRem);
+  const plan=buildTodayPlan().filter(p=>!(dueN&&/đến hạn/.test(p.text))&&!(stageRem&&/kiểm tra cuối chặng/.test(p.text)));
+  if(plan.length) R.push({icon:"🎯",text:`Gợi ý trong thẻ "Hôm nay học gì" chưa hoàn thành: ${plan[0].text}`,btn:plan[0].btn,act:plan[0].act});
+  const yest=addDays(t,-1); const hasHist=Object.keys(days).some(d=>d<t)||Object.keys(state.studyLog||{}).some(d=>d<t);
+  if(hasHist&&!days[yest]) R.push({icon:"🌧️",text:"Hôm qua bạn vắng điểm danh. Hôm nay học một chút để giữ nhịp học đều nhé.",btn:"Vào học ngay",act:()=>go("home")});
+  return R; }
+function bellCardHTML(){ curReminders=buildReminders(); const n=curReminders.length;
+  return `<div class="card" style="padding:12px 16px"><div class="row"><button class="btn ${n?"":"light"}" id="bellBtn">🔔 Thông báo ${n?`<span class="badge gold">${n}</span>`:""}</button><span class="mut">${n?("Bạn có "+n+" việc chưa hoàn thành."):"Không có nhắc nhở nào - bạn đang học rất đều đặn."}</span></div><div id="bellPanel" class="${bellOpen?"":"hidden"}" style="margin-top:8px">${n?curReminders.map((r,i)=>`<div class="row" style="margin:8px 0"><span style="font-size:18px">${r.icon}</span><span style="flex:1">${esc(r.text)}</span><button class="btn teal" data-rem="${i}">${esc(r.btn)}</button></div>`).join(""):`<p class="mut">Mọi việc hôm nay đã xong. Hẹn bạn ở buổi học tiếp theo!</p>`}<p class="mut" style="margin-top:8px">Lưu ý trung thực: nhắc nhở chỉ hiện khi bạn mở web - đây là web tĩnh, không gửi được thông báo đẩy khi bạn đã đóng trang.</p></div></div>`; }
+function wireBell(app){ const b=$("#bellBtn",app); if(b) b.onclick=()=>{ bellOpen=!bellOpen; const p=$("#bellPanel",app); if(p) p.classList.toggle("hidden",!bellOpen); }; $$("[data-rem]",app).forEach(btn=>btn.onclick=()=>{ const r=curReminders[+btn.dataset.rem]; if(r&&r.act) r.act(); }); }
+function viewProgress(app){
+  const ss=skillStats();
+  const decks=allDecks().filter(d=>d.setIdx>=0);
+  const decksStarted=decks.filter(d=>d.cards.some((c,ci)=>state.cards[cardKey(d.setIdx,ci,c.w)])).length;
+  let gBest=null; CONTENT.grammar.forEach((g,i)=>{ const p=getProg("grammar","s"+i)||{}; if(p.best!==undefined){ const cand={best:p.best,total:(g.quiz||[]).length,name:g.name}; if(!gBest||cand.best/Math.max(1,cand.total)>gBest.best/Math.max(1,gBest.total)) gBest=cand; } });
+  const rdP=CONTENT.reading.map((r,i)=>({r,p:getProg("reading","R"+i)||{}})).filter(x=>x.p.score!==undefined);
+  const rdAvg=rdP.length?Math.round(rdP.reduce((s,x)=>s+x.p.score/Math.max(1,x.r.questions.length),0)/rdP.length*100):null;
+  const lp=lpItems(); const lpProgs=lp.map((it,i)=>getProg("listeningPlus","LP"+i)||{}); const lpDoneN=lpProgs.filter(p=>p.done).length;
+  const lpScored=lpProgs.filter(p=>p.done&&p.total); const lpAvg=lpScored.length?Math.round(lpScored.reduce((s,p)=>s+p.score/p.total,0)/lpScored.length*100):null;
+  let wrRev=0; CONTENT.writing.forEach((w,i)=>{ const p=getProg("writing","W"+i)||{}; if(p.revised) wrRev++; });
+  const srow=(icon,name,done,total,unit,extra)=>{ const pct=total?Math.round(done/total*100):0; return `<div style="margin:11px 0"><div class="row"><span><b>${icon} ${name}</b></span><span class="grow"></span><span>${done}/${total} ${unit}${extra?(" · "+extra):""}</span></div><div class="bar"><i style="width:${pct}%"></i></div></div>`; };
+  const skillRows=
+    srow("⌨️","Gõ câu",ss.typing.done,ss.typing.total,"bộ câu")+
+    srow("🔤","Từ vựng",ss.vocab.done,ss.vocab.total,"thẻ đã vào Hộp nhớ",`${decksStarted}/${decks.length} bộ đã bắt đầu học`)+
+    srow("🧭","Ngữ pháp",ss.grammar.done,ss.grammar.total,"trạm đã nắm vững",gBest?(`điểm cao nhất: ${gBest.best}/${gBest.total} câu ở trạm "${esc(gBest.name)}"`):"chưa có trạm nào được chấm")+
+    srow("📚","Đọc",ss.reading.done,ss.reading.total,"bài đã nộp",rdAvg!==null?(`điểm trung bình các bài đã nộp: ${rdAvg}%`):"chưa nộp bài nào")+
+    srow("🎧","Nghe - câu đơn",ss.listening.done,ss.listening.total,"câu đã luyện")+
+    srow("🎧","Nghe - bài dài",lpDoneN,lp.length,"bài đã làm xong",lpAvg!==null?(`điểm trung bình: ${lpAvg}%`):"chưa làm xong bài nào")+
+    srow("🎙️","Luyện nói",ss.speaking.done,ss.speaking.total,"kịch bản đã luyện")+
+    srow("✍️","Writing",ss.writing.done,ss.writing.total,"đề đã viết",`${wrRev} đề đã hoàn thành vòng sửa chữa`);
+  const stageRows=LADDER.map(b=>{ const st=bandStageStats(b); const steps=stageSteps(b).filter(s=>s.status!=="empty"); const sd=steps.filter(s=>s.status==="done").length; const mp=getProg("meta","mock:"+b)||{}; const pct=st.total?st.pct:0;
+    return `<div style="margin:11px 0"><div class="row"><span><b>${esc(bandStageName(b))}</b></span><span class="grow"></span><span>${st.total?(`${st.done}/${st.total} mục · ${sd}/${steps.length} bước học`):"Chưa có nội dung"} · ${stagePassed(b)?"✅ Đã qua kiểm tra cuối chặng":(stageTestPool(b).length?"Chưa qua kiểm tra cuối chặng":"Chưa có bài kiểm tra")}${mp.done?" · ✅ Đã thi thử đúng format":""}</span></div><div class="bar"><i style="width:${pct}%"></i></div></div>`; }).join("");
+  const errs=state.errors||[]; const errDone=errs.filter(e=>e.done).length;
+  const hardVals=Object.values(hardMap()); const hardDone=hardVals.filter(h=>h.done).length;
+  const hist=[];
+  LADDER.forEach(b=>{ const p=getProg("meta","stage:"+b); if(p&&p.score!==undefined&&p.total){ const eb=rawToBand(p.score,p.total,"reading"); hist.push(`<div class="row" style="margin:7px 0"><span style="flex:1">📝 Kiểm tra cuối chặng <b>${esc(b)}</b>: đúng <b>${p.score}/${p.total}</b> câu${p.passed?" - đã qua chặng":""}</span><span class="badge gold">Band ước lượng: ${eb!==null?fmtBand(eb):"-"}</span></div>`); }
+    const mk=getProg("meta","mock:"+b); if(mk&&mk.done){ const lb=rawToBand(mk.lScore,mk.lTotal,"listening"), rb=rawToBand(mk.rScore,mk.rTotal,"reading"); hist.push(`<div class="row" style="margin:7px 0"><span style="flex:1">🧪 Thi thử đúng format <b>${esc(b)}</b>${mk.date?(" - ngày "+esc(mk.date)):""}: Nghe <b>${mk.lScore}/${mk.lTotal}</b> · Đọc <b>${mk.rScore}/${mk.rTotal}</b></span><span class="badge gold">Band ước lượng: Nghe ${lb!==null?fmtBand(lb):"-"} · Đọc ${rb!==null?fmtBand(rb):"-"}</span></div>`); } });
+  const gb=gameBestAll();
+  const gameRows=GAME_DEFS.map(([id,ic,nm])=>{ const b=gb[id]; return `<div class="row" style="margin:7px 0"><span style="flex:1">${ic} <b>${esc(nm)}</b></span><span>${b?(`Kỷ lục: <b>${b.score}</b> điểm · ${starStr(b.stars||0)}`):"Chưa chơi"}</span></div>`; }).join("");
+  app.innerHTML=`<section class="page on">
+    ${bellCardHTML()}
+    ${checkinCardHTML()}
+    <div class="card"><h3>📊 Tiến độ theo kỹ năng</h3><p class="mut">Mọi con số được tính trực tiếp từ dữ liệu học đã lưu của bạn ngay lúc mở trang này.</p>${skillRows}</div>
+    <div class="card"><h3>🗺️ Tiến độ 13 chặng</h3>${stageRows}</div>
+    <div class="card"><h3>🔁 Hàng đợi ôn tập</h3>
+      <p>Hôm nay có <b>${totalDueToday()}</b> mục đến hạn ôn: ${dueErrors().length} lỗi sai · ${dueCards().length} thẻ từ · ${dueHard().length} mục khó.</p>
+      <p style="margin-top:6px">Lỗi sai: đã sửa xong <b>${errDone}/${errs.length}</b> lỗi từng ghi. Mục khó: đã tốt nghiệp <b>${hardDone}/${hardVals.length}</b> mục từng đánh dấu.</p>
+      <div class="row" style="margin-top:8px"><button class="btn teal" id="pqDueBtn">Ôn ngay</button><button class="btn light" id="pqErrBtn">Mở Sổ lỗi sai</button></div>
+    </div>
+    <div class="card"><h3>📝 Lịch sử điểm kiểm tra</h3>${hist.length?hist.join(""):`<p class="mut">Chưa có dữ liệu - bạn chưa hoàn thành bài kiểm tra cuối chặng hay bài thi thử đúng format nào. Khi làm xong, điểm và band ước lượng sẽ hiện ở đây.</p>`}<p class="mut" style="margin-top:6px">Band ước lượng chỉ để tham khảo - IELTS không công bố bảng quy đổi cố định.</p></div>
+    <div class="card"><h3>🎮 Kỷ lục trò chơi</h3>${gameRows}</div>
+  </section>`;
+  wireBell(app); wireCheckin(app);
+  const og=$("#pqDueBtn"); if(og) og.onclick=dueGoAction;
+  const oe=$("#pqErrBtn"); if(oe) oe.onclick=()=>go("errors");
+}
+
 function viewAccount(app){
   if(!IS_REAL){ app.innerHTML=`<section class="page on"><div class="card"><h2>Tài khoản</h2><p class="mut">Web đang chạy ở <b>chế độ học thử</b>: toàn bộ tiến độ của bạn được lưu ngay trong trình duyệt của máy này, không cần tài khoản. Khi web được nối với hệ thống tài khoản, mục này sẽ thành nơi đăng ký và đăng nhập bằng email, và tiến độ sẽ tự lưu theo tài khoản để bạn học trên máy nào cũng thấy.</p></div></section>`; return; }
   if(sbUser){ app.innerHTML=`<section class="page on"><div class="card"><h2>Tài khoản</h2><p>Bạn đang đăng nhập bằng email: <b>${esc(sbUser.email)}</b></p><p class="mut">Tiến độ học, từ đã lưu và phút học đang được đồng bộ tự động theo tài khoản này.</p><div class="row" style="margin-top:10px"><button class="btn teal" id="accOut">Đăng xuất</button></div></div></section>`; $("#accOut").onclick=async()=>{ await sb.auth.signOut(); sbUser=null; renderUserBox(); render(); }; return; }
@@ -1036,7 +1129,7 @@ function viewVocab(app){
   const bm0=$("#vBand0Mouth"); if(bm0) wireMouthPanel(bm0,"i:");
   $("#flipCard").onclick=e=>{ if(e.target.id==="vSpeak")return; vocabFlipped=!vocabFlipped; $("#flipCard").classList.toggle("flipped",vocabFlipped); };
   $("#vSpeak").onclick=e=>{ e.stopPropagation(); speak(c.w,0.9); };
-  const mark=known=>{ const cur=state.cards[item.k]||{box:0,due:today()}; let box; if(known){ box=Math.min(5,(cur.box||0)+1); } else { box=0; } state.cards[item.k]={box,due:addDays(today(),INTERVALS[box])}; saveLocal(); vocabPos++; vocabFlipped=false; render(); };
+  const mark=known=>{ const cur=state.cards[item.k]||{box:0,due:today()}; let box; if(known){ box=Math.min(5,(cur.box||0)+1); } else { box=0; } state.cards[item.k]={box,due:addDays(today(),INTERVALS[box])}; saveLocal(); noteActivity(); vocabPos++; vocabFlipped=false; render(); };
   $("#vYes").onclick=()=>mark(true); $("#vNo").onclick=()=>mark(false);
 }
 
