@@ -202,8 +202,8 @@ select:focus,input:focus,textarea:focus{border-color:var(--teal2);box-shadow:0 0
 .obs-vids{flex:1 1 300px;display:flex;flex-direction:column;gap:12px;min-width:250px}
 .obs-vid{border:1px solid var(--line);border-radius:12px;padding:10px;background:#fbfdfd}
 .ph-figs{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}
-.ph-fig{flex:1 1 150px;min-width:132px;margin:0}
-.ph-fig svg{width:100%;max-width:300px}
+.ph-fig{flex:1 1 150px;min-width:132px;margin:0;display:flex;flex-direction:column;align-items:center}
+.ph-fig svg{width:100%;max-width:300px;height:200px !important}
 .ph-fig figcaption{text-align:center;font-size:12.5px;color:var(--mut);margin-top:4px}
 .ph-arrow{align-self:center;font-size:24px;font-weight:700;color:var(--teal);padding:0 1px}
 .ph-strip .obs-img{flex:1 1 430px;min-width:290px}
@@ -2105,7 +2105,7 @@ function mouthSVG(p){
   ${flowPath}
   ${nasal ? `<path d="M150,57 C112,47 78,54 61,67" stroke="#0e7490" stroke-width="1.6" stroke-dasharray="3 3" opacity="0.6" fill="none"/><polygon points="53,71 62,63 63,73" fill="#0e7490" opacity="0.6"/>` : ""}
   <g stroke="#c3cfd4" stroke-width="0.8" fill="none"><path d="M40,64 L51,79"/><path d="M29,88 L60,88"/><path d="M42,122 L55,108"/><path d="M124,42 L126,61"/><path d="M128,163 L128,144"/></g>
-  <g font-size="9" fill="#607080"><text x="3" y="62">môi trên</text><text x="3" y="91">răng</text><text x="3" y="126">môi dưới</text><text x="124" y="36" text-anchor="middle">vòm miệng</text><text x="128" y="170" text-anchor="middle">lưỡi</text><text x="236" y="15" text-anchor="end" fill="#8a9aa5">mặt cắt bên</text></g></svg>`;
+  <g font-size="9" fill="#607080"><text x="3" y="62">môi trên</text><text x="3" y="91">răng</text><text x="3" y="126">môi dưới</text><text x="124" y="36" text-anchor="middle">vòm miệng</text><text x="128" y="170" text-anchor="middle">lưỡi</text></g></svg>`;
 }
 /* ===== MINH HỌA KHẨU HÌNH BỔ SUNG (đợt mouth2) =====
    PH_JAW: chỉ số độ mở hàm TƯƠNG ĐỐI do trang tự gán (thang 0-4, bước 0,5)
@@ -2146,8 +2146,7 @@ function frontMouthSVG(p){
   <ellipse cx="58" cy="56" rx="4.2" ry="5.6" fill="#4a3b30"/>
   <ellipse cx="102" cy="56" rx="4.2" ry="5.6" fill="#4a3b30"/>
   <path d="M80,64 Q85,76 81,82 Q77,85 72,83" stroke="#cf9a58" stroke-width="2" fill="none" stroke-linecap="round"/>
-  ${mouth}
-  <text x="156" y="15" text-anchor="end" font-size="9" fill="#8a9aa5">nhìn trực diện</text></svg>`;
+  ${mouth}</svg>`;
 }
 /* Khối hình cho panel chi tiết âm: nguyên âm đơn = mặt cắt bên + nhìn trực diện;
    nguyên âm đôi = cặp Bắt đầu -> Kết thúc cho cả hai góc nhìn, dùng chính tham số
