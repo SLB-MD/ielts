@@ -239,6 +239,23 @@ main{padding:14px 10px 122px}
 .stat b{font-size:22px}
 .stage{padding:12px}
 }
+/* Bản đồ bảng chữ cái: nguyên âm - phụ âm, nhóm theo âm của tên chữ */
+.az-map{margin-top:12px;border:1.5px solid var(--line);border-radius:12px;padding:12px;background:#fbfdfd}
+.az-zone{margin-top:10px}
+.az-zone-t{font-weight:700;font-size:13.5px;color:var(--teal);letter-spacing:.02em}
+.az-zone-v{background:#fffaf0;border:1px solid #f0d9a0;border-radius:10px;padding:9px 10px}
+.az-zone-v .az-zone-t{color:#8a6410}
+.az-note{font-size:13.5px;color:#7a5d12;margin-top:6px}
+.az-cells{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.az-cell{position:relative;min-width:40px;height:40px;padding:0 6px;border-radius:10px;border:1.5px solid var(--teal2);background:#eef7f9;color:var(--teal);font-size:17px;font-weight:800;cursor:pointer}
+.az-cell:hover{background:#dceef3}
+.az-cell.az-v{background:#fdf0cd;border-color:var(--gold);color:#8a6410}
+.az-cell.az-v:hover{background:#fbe7ae}
+.az-cell.az-cur{outline:3px solid var(--teal);outline-offset:1px}
+.az-cell i{position:absolute;top:-6px;right:-4px;font-style:normal;font-size:11px;color:var(--ok);background:#fff;border-radius:50%;padding:0 2px}
+.az-grp{margin-top:8px}
+.az-grp-t{font-size:13.5px;font-weight:600;color:var(--ink)}
+.az-grp-t .ipa{color:var(--teal2);font-weight:700}
 </style>
 </head>
 <body>
@@ -521,7 +538,7 @@ function renderStageTest(){ const box=$("#stageTestBox"); if(!box||!stageTest) r
   $$(".st-opt",box).forEach(btn=>btn.onclick=()=>{ if(t.answered) return; t.answered=true; const i=+btn.dataset.i; t.answers[t.i]=i; $$(".st-opt",box).forEach((x,xi)=>{ if(xi===q.a)x.classList.add("right"); else if(xi===i)x.classList.add("wrong"); x.disabled=true; }); if(i===q.a) t.score++; else logError({sec:"stage",q:q.q,o:q.o,a:q.a,why:q.why}); const w=$("#stWhy"); w.innerHTML=(i===q.a?"<b>Đúng.</b> ":"<b>Chưa đúng.</b> ")+esc(q.why||""); w.classList.add("show"); mountHardBtn(w,{kind:"mc",key:"stage|"+q.q,label:q.q,data:{sec:"stage",q:q.q,o:q.o,a:q.a,why:q.why}}); $("#stNext").classList.remove("hidden"); });
   $("#stNext").onclick=()=>{ t.i++; t.answered=false; if(t.i>=t.pool.length){ t.finished=true; t.total=t.pool.length; if(t.score>=Math.ceil(t.total*0.8)){ setProg("meta","stage:"+t.band,{passed:true,score:t.score,total:t.total}); const stEl=document.querySelector(`.stage[data-stageband="${CSS.escape(t.band)}"] .shead`); if(stEl&&!stEl.textContent.includes("Đã hoàn thành chặng")) stEl.insertAdjacentHTML("beforeend",'<span class="badge done">✅ Đã hoàn thành chặng</span>'); } } renderStageTest(); };
   $("#stQuit").onclick=()=>{ stageTest=null; box.innerHTML=""; }; }
-function openItem(sec,idx){ if(sec==="typing"&&CONTENT.typing[idx]){ typingSel=idx; typingRun=null; } else if(sec==="grammar"&&CONTENT.grammar[idx]){ gramSel=idx; gramRun={answers:{},submitted:false}; } else if(sec==="reading"&&CONTENT.reading[idx]){ readSel=idx; readRun={answers:{},submitted:false}; } else if(sec==="listening"&&CONTENT.listening[idx]){ lisSel=idx; lisMode="dict"; lisQuiz=null; } else if(sec==="speaking"&&CONTENT.speaking[idx]){ spSel=idx; spMode="sub"; spQuizRun=null; spLastLine=null; } else if(sec==="writing"&&CONTENT.writing[idx]){ wrSel=idx; wrShowModel=false; } else if(sec==="vocab"){ const decks=allDecks(); const di=decks.findIndex(d=>d.setIdx===idx); if(di>=0){ const d=decks[di]; vocabSel=d; vocabQueue=d.cards.map((c,ci)=>({deck:d,c,ci,k:cardKey(d.setIdx,ci,c.w)})); vocabPos=0; vocabFlipped=false; vocabMode="flash"; vocabQuiz=null; } }
+function openItem(sec,idx){ if(sec==="typing"&&CONTENT.typing[idx]){ typingSel=idx; typingRun=null; } else if(sec==="grammar"&&CONTENT.grammar[idx]){ gramSel=idx; gramRun={answers:{},submitted:false}; } else if(sec==="reading"&&CONTENT.reading[idx]){ readSel=idx; readRun={answers:{},submitted:false}; } else if(sec==="listening"&&CONTENT.listening[idx]){ lisSel=idx; lisMode="dict"; lisQuiz=null; } else if(sec==="speaking"&&CONTENT.speaking[idx]){ spSel=idx; spMode="sub"; spQuizRun=null; spLastLine=null; } else if(sec==="writing"&&CONTENT.writing[idx]){ wrSel=idx; wrShowModel=false; } else if(sec==="vocab"){ const decks=allDecks(); const di=decks.findIndex(d=>d.setIdx===idx); if(di>=0){ const d=decks[di]; vocabSel=d; if(isAZDeck(d)) azOrderMode="group"; vocabQueue=azQueueFor(d); vocabPos=0; vocabFlipped=false; vocabMode="flash"; vocabQuiz=null; } }
   go(sec); }
 function continueStudy(ls){ openItem(ls.tab,ls.idx); }
 function firstItemIdxForBand(sec,b){ if(sec==="typing") return CONTENT.typing.findIndex(l=>itemBand(l)===b); if(sec==="grammar") return CONTENT.grammar.findIndex(g=>itemBand(g)===b); if(sec==="reading") return CONTENT.reading.findIndex(r=>itemBand(r)===b); if(sec==="listening") return CONTENT.listening.findIndex(l=>listeningBand(l)===b); if(sec==="speaking") return CONTENT.speaking.findIndex(s=>itemBand(s)===b); if(sec==="writing") return CONTENT.writing.findIndex(w=>itemBand(w)===b); if(sec==="vocab"){ if(b==="Band 0"){ const ai=alphabetDeckIdx(); if(ai>=0) return ai; } const d=allDecks().find(d=>d.band===b); return d?d.setIdx:-1; } return -1; }
@@ -712,6 +729,38 @@ function viewTyping(app){
 
 /* ================= TỪ VỰNG (SRS) ================= */
 const INTERVALS=[1,1,3,7,16,35];
+/* ============ BẢNG CHỮ CÁI: NGUYÊN ÂM - PHỤ ÂM + NHÓM THEO ÂM CỦA TÊN CHỮ ============
+   Giáo trình ESL/IELTS vỡ lòng dạy bảng chữ cái theo nhóm tên chữ để luyện nghe - đánh vần:
+   tên các chữ trong cùng nhóm đọc gần giống nhau nên phải học cạnh nhau để phân biệt.
+   Tiến độ từng thẻ khóa theo cardKey(setIdx, ci, w) với ci là chỉ số GỐC trong bộ,
+   nên thứ tự trình thẻ chỉ là cách sắp xếp hàng đợi - không ảnh hưởng tiến độ/Hộp nhớ SRS. */
+const AZ_GROUP_META={ei:{ipa:"/eɪ/",vn:"ây"},ii:{ipa:"/iː/",vn:"i dài"},e:{ipa:"/e/",vn:"e"},ai:{ipa:"/aɪ/",vn:"ai"},ou:{ipa:"/əʊ/",vn:"âu"},juu:{ipa:"/juː/",vn:"iu"},aa:{ipa:"/ɑː/",vn:"a dài"}};
+const AZ_GROUP_ORDER=["ei","ii","e","ai","ou","juu","aa"];
+let azOrderMode="group";
+function isAZDeck(d){ return !!(d&&d.cards&&d.cards.length&&d.cards[0]&&d.cards[0].kind&&d.cards[0].ngrp); }
+function azOrderIndices(d,mode){
+  if(mode!=="group") return d.cards.map((c,ci)=>ci);
+  const seen=new Set(), out=[];
+  d.cards.forEach((c,ci)=>{ if(c.kind==="vowel"){ out.push(ci); seen.add(ci); } });
+  for(const g of AZ_GROUP_ORDER) d.cards.forEach((c,ci)=>{ if(!seen.has(ci)&&c.kind==="consonant"&&c.ngrp===g){ out.push(ci); seen.add(ci); } });
+  d.cards.forEach((c,ci)=>{ if(!seen.has(ci)) out.push(ci); });
+  return out;
+}
+function azQueueFor(d){ return azOrderIndices(d,isAZDeck(d)?azOrderMode:"az").map(ci=>({deck:d,c:d.cards[ci],ci,k:cardKey(d.setIdx,ci,d.cards[ci].w)})); }
+function azGroupLabel(c){ const m=AZ_GROUP_META[c.ngrp]; return (c.kind==="vowel"?"Nguyên âm":"Phụ âm")+" - nhóm tên \""+(m?m.vn:"")+"\""+(m?(" "+m.ipa):""); }
+function azMapHTML(d){
+  const byLetter={}; d.cards.forEach((c,ci)=>byLetter[c.w]=ci);
+  const curCi=(vocabQueue&&vocabQueue[vocabPos])?vocabQueue[vocabPos].ci:-1;
+  const cell=ci=>{ const c=d.cards[ci]; const st2=state.cards[cardKey(d.setIdx,ci,c.w)]; const done=st2&&st2.box>=1; return "<button class=\"az-cell "+(c.kind==="vowel"?"az-v":"az-c")+(ci===curCi?" az-cur":"")+"\" data-azci=\""+ci+"\" title=\""+esc(azGroupLabel(c))+"\">"+esc(c.w)+(done?"<i>✓</i>":"")+"</button>"; };
+  const vowels=["A","E","I","O","U"].map(L=>cell(byLetter[L])).join("");
+  const groups=AZ_GROUP_ORDER.map(g=>{ const meta=AZ_GROUP_META[g]; const mem=d.cards.map((c,ci)=>({c,ci})).filter(x=>x.c.ngrp===g); return "<div class=\"az-grp\"><div class=\"az-grp-t\">Nhóm \""+meta.vn+"\" <span class=\"ipa\">"+meta.ipa+"</span></div><div class=\"az-cells\">"+mem.map(x=>cell(x.ci)).join("")+"</div></div>"; }).join("");
+  return "<div class=\"az-map\">"
+  +"<div class=\"row\" style=\"gap:6px\"><b>🗺️ Bản đồ bảng chữ cái - nguyên âm, phụ âm và nhóm tên chữ</b><span class=\"grow\"></span><button class=\"chip"+(azOrderMode==="group"?" on":"")+"\" id=\"azModeGroup\">Học theo nhóm</button><button class=\"chip"+(azOrderMode==="az"?" on":"")+"\" id=\"azModeAZ\">Thứ tự A-Z</button></div>"
+  +"<div class=\"az-zone az-zone-v\"><div class=\"az-zone-t\">NGUYÊN ÂM - 5 chữ</div><div class=\"az-cells\">"+vowels+"</div><p class=\"az-note\">5 nguyên âm là linh hồn của mọi từ: từ nào cũng có ít nhất một nguyên âm. Hãy học 5 chữ này trước tiên.</p></div>"
+  +"<div class=\"az-zone\"><div class=\"az-zone-t\">PHỤ ÂM - 21 chữ, xếp theo nhóm tên chữ</div>"+groups+"<p class=\"mut\" style=\"margin-top:6px\">Bảng nhóm ở trên là bản đồ tra cứu đánh vần: mỗi nhóm liệt kê đủ các chữ có tên đọc giống nhau (có cả nguyên âm nếu chữ đó thuộc nhóm tên này).</p></div>"
+  +"<p class=\"mut\" style=\"margin-top:8px\">Vì sao học theo nhóm tên này? Trong IELTS Listening, người ta hay đánh vần tên người và địa chỉ (ví dụ: My name is Linh - L, I, N, H). Các chữ trong cùng một nhóm có tên đọc gần giống nhau (riêng nhóm \"i dài\" có tới 8 chữ), nên học cạnh nhau để nghe và phân biệt cho rõ. Bấm vào một ô chữ để nhảy ngay tới thẻ chữ đó; ô có dấu ✓ là chữ bạn đã thuộc.</p>"
+  +"</div>";
+}
 let vocabSel=null, vocabQueue=null, vocabPos=0, vocabFlipped=false, vocabMode="flash", vocabQuiz=null;
 function buildVocabQuiz(d){ const cards=d.cards.slice(0,10); const pool=CONTENT.vocab.flatMap(v=>v.cards); const src=cards.length>=4?cards:pool; const items=cards.map((c,i)=>{ const ds=[]; for(const off of [1,3,5,2,4]){ const cand=src[(i+off)%src.length]; if(cand&&cand.vi!==c.vi&&!ds.includes(cand.vi)) ds.push(cand.vi); if(ds.length>=3) break; } const opts=ds.slice(0,3); const pos=opts.length?i%(opts.length+1):0; opts.splice(pos,0,c.vi); return {w:c.w,ipa:c.ipa||"",vi:c.vi,opts,a:pos}; }); return {items,pos:0,score:0,answered:false,wrongs:[]}; }
 function renderVocabQuiz(app){ const d=vocabSel, q=vocabQuiz||(vocabQuiz=buildVocabQuiz(d));
@@ -750,7 +799,7 @@ function viewVocab(app){
     ${due.length?`<div class="row" style="margin:10px 0"><button class="btn" id="dueBtn">Ôn ${due.length} thẻ đến hạn hôm nay</button></div>`:`<p class="mut" style="margin:8px 0">Hôm nay không có thẻ nào đến hạn ôn.</p>`}
     <div class="grid">${allDecks().map((d,di)=>({d,di})).filter(({d})=>deckVisible(d)).map(({d,di})=>{ const total=d.cards.length; const known=d.cards.filter((c,ci)=>{ const st=state.cards[cardKey(d.setIdx,ci,c.w)]; return st&&st.box>=1; }).length; return `<div class="tile" data-di="${di}">${d.band?`<span class="badge">${esc(d.band)}</span>`:`<span class="badge gold">Mọi cấp độ</span>`}<div class="t">${esc(d.name)}</div><div class="mut">${total} thẻ · Đã học ${known}/${total}</div><div class="bar"><i style="width:${total?Math.round(known/total*100):0}%"></i></div></div>`; }).join("")||`<div class="empty" style="grid-column:1/-1">Chưa có bộ từ nào ở cấp độ đang chọn. Hãy chọn cấp độ khác ở thanh Cấp độ phía trên.</div>`}</div></div></section>`;
     wireHowTo(app);
-    $$(".tile",app).forEach(t=>t.onclick=()=>{ const d=allDecks()[+t.dataset.di]; vocabSel=d; vocabQueue=d.cards.map((c,ci)=>({deck:d,c,ci,k:cardKey(d.setIdx,ci,c.w)})); vocabPos=0; vocabFlipped=false; vocabMode="flash"; vocabQuiz=null; markStudy("vocab",d.setIdx,d.name); render(); });
+    $$(".tile",app).forEach(t=>t.onclick=()=>{ const d=allDecks()[+t.dataset.di]; vocabSel=d; if(isAZDeck(d)) azOrderMode="group"; vocabQueue=azQueueFor(d); vocabPos=0; vocabFlipped=false; vocabMode="flash"; vocabQuiz=null; markStudy("vocab",d.setIdx,d.name); render(); });
     const db=$("#dueBtn"); if(db) db.onclick=()=>{ vocabQueue=dueCards(); vocabSel={name:"Ôn tập đến hạn"}; vocabPos=0; vocabFlipped=false; vocabMode="flash"; vocabQuiz=null; render(); };
     return;
   }
@@ -759,8 +808,10 @@ function viewVocab(app){
   const item=vocabQueue[vocabPos], c=item.c, st=state.cards[item.k]||{box:0};
   app.innerHTML=`<section class="page on"><div class="card"><div class="row"><button class="btn light" id="vBack2">← Danh sách bộ</button><b>${esc(vocabSel.name)}</b>${vocabSel.band?`<span class="badge gold">${esc(vocabSel.band)}</span>`:""}<span class="mut">Thẻ ${vocabPos+1}/${vocabQueue.length} · Hộp nhớ: ${st.box||0}/5</span></div>
   ${guideHTML("Thẻ này dạy bạn một từ mới. Nhiệm vụ: đọc từ, bấm loa để nghe phát âm, bấm vào thẻ để lật xem nghĩa. Xem xong, tự chấm mình đã thuộc hay chưa thuộc.")}${stageLineHTML(vocabSel.band)}
+  ${isAZDeck(vocabSel)?azMapHTML(vocabSel):""}
   ${vocabSel.band==="Band 0"?`<div style="background:#f7fafb;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:12px"><b>🔤 Bảng 44 âm tiếng Anh - bấm vào một âm để xem khẩu hình miệng</b><div id="vBand0Mouth">${mouthPanelHTML()}</div></div>`:""}
   ${vocabSel.cards?`<div class="row" style="margin-top:10px"><button class="chip on" id="vModeFlash">🃏 Thẻ ghi nhớ</button><button class="chip" id="vModeQuiz">✅ Kiểm tra nghĩa của từ</button>${vocabSel.setIdx!==undefined&&getProg("vocab","Q"+vocabSel.setIdx)?`<span class="mut">Kiểm tra tốt nhất: ${getProg("vocab","Q"+vocabSel.setIdx).best}/${getProg("vocab","Q"+vocabSel.setIdx).total}</span>`:""}<span class="grow"></span><button class="chip" id="vMouthBtn">👄 Khẩu hình âm đầu</button></div><div id="vMouthBox" class="hidden" style="margin-top:10px"></div>`:""}
+  ${c.kind&&c.ngrp?`<div style="margin-top:10px"><span class="badge ${c.kind==="vowel"?"gold":""}">${esc(azGroupLabel(c))}</span> <span class="mut">- chữ ${esc(c.w)} nằm trong nhóm này; hãy nghe kỹ để phân biệt với các chữ cùng nhóm khi người ta đánh vần.</span></div>`:""}
   <div class="flip ${vocabFlipped?"flipped":""}" id="flipCard" style="margin-top:12px"><div class="inner">
     <div class="face"><div class="word">${esc(c.w)}</div><div class="ipa">${esc(c.ipa||"")}</div><button class="iconbtn" id="vSpeak" title="Nghe phát âm">🔊</button><p class="mut" style="margin-top:10px">Bấm vào thẻ để lật xem nghĩa</p></div>
     <div class="face back"><div class="word" style="font-size:24px">${esc(c.w)}</div><p style="margin:6px 0"><b>Nghĩa:</b> ${esc(c.vi||"")}</p>${c.col?`<p style="margin:4px 0"><b>Collocation:</b> ${esc(c.col)}</p>`:""}<p style="margin:6px 0"><b>Ví dụ:</b> ${esc(c.ex||"")}</p><p class="mut">${esc(c.exv||"")}</p>${c.ex2?`<p style="margin:4px 0"><b>Thêm một từ nữa:</b> ${esc(c.ex2)}</p>`:""}${c.tip?`<p style="margin:4px 0"><b>💡 Mẹo nhớ:</b> ${esc(c.tip)}</p>`:""}</div>
@@ -771,6 +822,10 @@ function viewVocab(app){
   <div id="vHardSlot" style="margin-top:10px"></div>
   </div></section>`;
   $("#vBack2").onclick=()=>{ vocabSel=null; vocabQueue=null; vocabQuiz=null; vocabMode="flash"; render(); };
+  $$(".az-cell",app).forEach(b=>b.onclick=()=>{ const ci=+b.dataset.azci; const p=vocabQueue.findIndex(q=>q.ci===ci); if(p>=0){ vocabPos=p; vocabFlipped=false; render(); } });
+  const azSetMode=m=>{ if(!isAZDeck(vocabSel)||azOrderMode===m) return; azOrderMode=m; const curCi=vocabQueue&&vocabQueue[vocabPos]?vocabQueue[vocabPos].ci:0; vocabQueue=azQueueFor(vocabSel); const p=vocabQueue.findIndex(q=>q.ci===curCi); vocabPos=p>=0?p:0; vocabFlipped=false; render(); };
+  const azmg=$("#azModeGroup"); if(azmg) azmg.onclick=()=>azSetMode("group");
+  const azma=$("#azModeAZ"); if(azma) azma.onclick=()=>azSetMode("az");
   const vmq=$("#vModeQuiz"); if(vmq) vmq.onclick=()=>{ vocabMode="quiz"; vocabQuiz=buildVocabQuiz(vocabSel); render(); };
   const vmb=$("#vMouthBtn"); if(vmb) vmb.onclick=()=>{ const box=$("#vMouthBox"); if(!box) return; box.classList.toggle("hidden"); if(!box.dataset.wired){ box.innerHTML=mouthPanelHTML(); wireMouthPanel(box, firstPhonemeOf(c.w)); box.dataset.wired="1"; } else { const btn=box.querySelector(`.ph-btn[data-s="${CSS.escape(firstPhonemeOf(c.w))}"]`); if(btn) btn.click(); } };
   const vp1=$("#vPbPlay"); if(vp1) vp1.onclick=()=>speak(c.w,0.9);
