@@ -445,6 +445,80 @@ section.shellsec h3{margin-top:18px}
 .card.testcard{border-radius:20px;padding:24px 22px;box-shadow:var(--shadow2)}
 #mockBox .card{border-radius:20px;padding:24px 22px;box-shadow:var(--shadow2)}
 #trialBox{border:1.5px solid var(--line);border-radius:16px;padding:16px 18px;background:#fbfdfd;margin-top:10px}
+
+/* ===== CỬA LỘ TRÌNH MỚI (tiền tố rm-): nền giấy ấm, vàng hổ phách + cam san hô, một điểm trọng tâm mỗi khối ===== */
+.rm-page{--rmpaper:#FFFBF2;--rmink:#1F2430;--rmmut:#6E6A61;--rmamber:#FFB800;--rmamberhi:#FFC800;--rmambersoft:#FFF3D6;--rmamberring:#FFE9B0;--rmambertx:#8A5E00;--rmcoral:#FF6B4A;--rmcoraldeep:#F0522E;--rmok:#1E9E6A;--rmoksoft:#E6F6EF;--rmokline:#BFE7D6;--rmline:#F0E7D8;--rmline2:#E7DCC6;--rmtrack:#F3ECDC;background:var(--rmpaper);border-radius:20px;padding:10px 12px 14px}
+.rm-page .card{border-color:var(--rmline);border-radius:20px}
+.rm-page .card h2,.rm-page .card h3{color:var(--rmink)}
+.rm-goal{background:linear-gradient(180deg,#FFF8E6,#FFF3D6);border:1.5px solid #FFE1A1;border-radius:20px;padding:20px;box-shadow:0 2px 12px rgba(122,84,0,.06);margin-bottom:16px}
+.rm-goal h2{font-size:22px;font-weight:800;color:var(--rmink)}
+.rm-grow{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px}
+.rm-stepper{display:flex;align-items:center;gap:12px}
+.rm-stepper button{width:42px;height:42px;border-radius:50%;border:2px solid var(--rmamber);background:#fff;color:var(--rmink);font-size:22px;font-weight:800;cursor:pointer;line-height:1;font-family:inherit}
+.rm-stepper button:disabled{opacity:.35;cursor:default}
+.rm-gval{font-size:30px;font-weight:800;min-width:118px;text-align:center;color:var(--rmink)}
+.rm-hint{font-size:13px;color:var(--rmmut);margin-top:4px;max-width:340px}
+.rm-streak{display:inline-block;margin-top:8px;background:#fff;border:1.5px solid var(--rmline2);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700;color:var(--rmink)}
+.rm-estbox{background:#fff;border:1.5px solid var(--rmline2);border-radius:16px;padding:14px 16px;flex:1;min-width:250px;font-size:14px;color:var(--rmink)}
+.rm-estbig{font-size:17px}
+.rm-estbig b{font-size:26px;font-weight:800}
+.rm-note{color:var(--rmmut);font-size:13px;margin-top:4px}
+.rm-overall{margin-top:16px}
+.rm-orow{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.rm-pct{font-size:32px;font-weight:800;color:var(--rmink)}
+.rm-olab{font-size:15px;font-weight:700;color:var(--rmink)}
+.rm-odet{font-size:13.5px;color:var(--rmmut);font-weight:600}
+.rm-pbar{height:12px;border-radius:999px;background:var(--rmtrack);overflow:hidden;margin-top:8px}
+.rm-pbar>i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--rmamberhi),var(--rmamber))}
+.rm-chapter .rm-pbar{height:9px}
+.rm-page .stage.rm-chapter{background:#fff;border:1px solid var(--rmline);border-radius:20px;box-shadow:0 2px 12px rgba(122,84,0,.06);padding:20px;margin:14px 0}
+.rm-page .stage.rm-chapter.currentstage{border-color:var(--rmamber);box-shadow:0 0 0 3px var(--rmamberring),0 2px 12px rgba(122,84,0,.06)}
+.rm-chead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rm-cidx{font-size:12.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--rmambertx)}
+.rm-pill{margin-left:auto;font-size:12.5px;font-weight:800;border-radius:999px;padding:4px 12px;background:#EFF1F4;color:#9AA1AD}
+.rm-pill.ok{background:var(--rmoksoft);color:#12714B}
+.rm-pill.cur{background:var(--rmambersoft);color:var(--rmambertx);border:1.5px solid var(--rmamber)}
+.rm-pill.doing{background:#EAF1FB;color:#2E5E8C}
+.rm-ctitle{font-size:21px;font-weight:800;color:var(--rmink);margin-top:4px}
+.rm-cdesc{font-size:14.5px;color:var(--rmink);margin-top:4px}
+.rm-chours{font-size:13px;color:var(--rmmut);margin-top:2px}
+.rm-sumchips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.rm-sumchip{background:#F8F4EC;border:1px solid var(--rmline);border-radius:999px;padding:4px 12px;font-size:13.5px;font-weight:600;color:var(--rmink)}
+.rm-sumchip b{font-size:15px}
+.rm-sumchip.rm-tgt{background:var(--rmambersoft);border-color:var(--rmamber);color:var(--rmambertx);font-weight:800}
+.rm-page .skills{margin-top:12px}
+.rm-page .skills .chip{border-color:var(--rmline2);background:#FFFCF6;color:var(--rmink)}
+.rm-page .skills .chip b{color:var(--rmambertx)}
+.rm-page .pathbox{margin-top:14px;background:transparent;border:0;border-radius:0;padding:0}
+.rm-page .pathhead .ptitle{color:var(--rmink)}
+.rm-page .pathhead .pprog{background:var(--rmambersoft);color:var(--rmambertx)}
+.rm-page .pathbar{background:var(--rmtrack)}
+.rm-page .pathbar>i{background:linear-gradient(90deg,var(--rmamberhi),var(--rmamber))}
+.rm-page .pdot{background:#F1EFE9;color:var(--rmmut);border-color:var(--rmline2);box-shadow:0 3px 0 var(--rmline2)}
+.rm-page .prow.done .pdot{background:var(--rmok);border-color:#178A5B;color:#fff;box-shadow:0 3px 0 #146C47}
+.rm-page .prow.current .pdot{background:var(--rmamber);border-color:#E79E00;color:var(--rmink);box-shadow:0 3px 0 #E79E00,0 0 0 5px var(--rmamberring)}
+.rm-page .plink{background:#F1E7CF}
+.rm-page .prow.done .plink{background:var(--rmokline)}
+.rm-page .prow .step{border-color:var(--rmline2);border-radius:16px}
+.rm-page .prow .step.st-done{background:var(--rmoksoft);border-color:var(--rmokline)}
+.rm-page .prow .step.st-doing{background:#FFFCF6}
+.rm-page .prow.current .step{border-color:var(--rmamber);background:var(--rmambersoft);box-shadow:0 3px 0 #ECD28A}
+.rm-page .prow.future .step{opacity:.72;background:#FBFAF6}
+.rm-page .prow.done .sstat{background:#D9F2E4;color:#12714B}
+.rm-page .prow.current .sstat{background:#FFE9B0;color:var(--rmambertx)}
+.rm-page .here-badge{background:var(--rmamber);color:var(--rmink)}
+.rm-kind{display:inline-block;font-size:12px;font-weight:700;background:#F8F4EC;border:1px solid var(--rmline);color:var(--rmmut);border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:1px}
+.rm-gatechip{display:inline-block;font-size:12px;font-weight:800;background:#fff;border:1.5px dashed #D9C58F;color:var(--rmambertx);border-radius:999px;padding:2px 9px;margin-left:6px}
+.rm-nextbadge{background:var(--rmamber);color:var(--rmink);font-size:12.5px;font-weight:800;border-radius:999px;padding:3px 12px;box-shadow:0 2px 0 #E79E00;margin-left:6px;white-space:nowrap}
+.rm-cta{background:var(--rmcoral);color:#fff;border-radius:999px;padding:7px 15px;font-size:13.5px;font-weight:800;box-shadow:0 2px 0 var(--rmcoraldeep);white-space:nowrap}
+.rm-page .prow.gate .step{border-style:dashed;border-color:#D9D2C2;background:#FFFCF6}
+.rm-page .prow.gate.done .step{border-style:solid;border-color:var(--rmok);background:var(--rmoksoft)}
+.rm-page .prow.gate.current .step{border-style:solid}
+.rm-page .pnavbtn{border-color:var(--rmamber);color:var(--rmambertx);box-shadow:0 2px 0 var(--rmamberring)}
+.rm-page .pnavbtn.next{background:var(--rmamber);border-color:#E79E00;color:var(--rmink);box-shadow:0 3px 0 #E79E00}
+.rm-page #skipCard{border-radius:20px;border-color:var(--rmamber)!important;background:#fff!important}
+@media(max-width:820px){.rm-page .stage.rm-chapter{padding:16px}.rm-goal{padding:16px}}
+@media(max-width:640px){.rm-page{padding:8px 6px 10px}.rm-ctitle{font-size:18.5px}.rm-gval{font-size:25px;min-width:96px}.rm-pct{font-size:26px}.rm-cta{display:block;text-align:center;margin-top:8px}.rm-page .pnode{flex-basis:40px}.rm-page .pdot{width:40px;height:40px;font-size:15px}.rm-pill{margin-left:0}}
 </style>
 </head>
 <body>
@@ -684,13 +758,19 @@ function bandStageStats(b){ const rows=[];
 function firstSkillForBand(b){ const st=bandStageStats(b); const r=st.rows[0]; return r?r.sec:"typing"; }
 function stagePassed(b){ const p=getProg("meta","stage:"+b); return !!(p&&p.passed); }
 function secBandCounts(sec,b){ if(sec==="video"){ const vs=VIDEOS.map((v,vi)=>({v,vi})).filter(({v})=>v.bands.includes(b)); return {total:vs.length,done:vs.filter(({vi})=>!!getProg("video","V"+vi)).length}; } const st=bandStageStats(b); const r=st.rows.find(r=>r.sec===sec); return r?{total:r.total,done:r.done}:{total:0,done:0}; }
+function stageVideoList(b){ const all=VIDEOS.map((v,vi)=>({v,vi})); const ex=all.filter(({v})=>v.bands.includes(b)); if(ex.length) return {list:ex,src:b}; const bn=bandNum(b); let src=null; VIDEOS.forEach(v=>v.bands.forEach(x=>{ if(bandNum(x)<=bn&&(!src||bandNum(x)>bandNum(src))) src=x; })); if(!src) return {list:[],src:b}; return {list:all.filter(({v})=>v.bands.includes(src)),src}; }
+function stageVideoCounts(b){ const L=stageVideoList(b).list; return {total:L.length,done:L.filter(({vi})=>!!getProg("video","V"+vi)).length}; }
 function stageSteps(b){ const mk=(secs,label)=>{ let total=0,done=0; secs.forEach(s=>{ const c=secBandCounts(s,b); total+=c.total; done+=c.done; }); return {secs,label,total,done,status:total===0?"empty":(done>=total?"done":(done>0?"doing":"todo"))}; };
   let defs;
   if(b==="Band 0") defs=[mk(["video"],"Chữ cái và âm - xem video nền tảng"),mk(["vocab"],"Từ vựng sinh tồn theo cụm câu"),mk(["typing"],"Gõ mẫu câu"),mk(["grammar"],"Ngữ pháp nền"),mk(["listening","speaking"],"Nghe - nói chậm")];
   else defs=[mk(["vocab"],"Từ vựng của chặng"),mk(["typing","writing"],"Gõ câu và Writing của chặng"),mk(["grammar"],"Ngữ pháp của chặng"),mk(["reading"],"Đọc hiểu"),mk(["listening"],"Nghe"),mk(["speaking","video"],"Nói và video theo chặng")];
+  if(b!=="Band 0"&&secBandCounts("video",b).total===0){ const vc=stageVideoCounts(b); defs.push({secs:["video"],label:"Xem video theo chặng",total:vc.total,done:vc.done,status:vc.total===0?"empty":(vc.done>=vc.total?"done":(vc.done>0?"doing":"todo")),isVideo:true,vidBand:stageVideoList(b).src}); }
   if(MOCK_BANDS.includes(b)){ const mp=getProg("meta","mock:"+b)||{}; defs.push({secs:["__mock"],label:"Thi thử đúng format IELTS",total:1,done:mp.done?1:0,status:mp.done?"done":"todo",isMock:true}); }
-  defs.push({secs:["__game"],label:"Chơi để nhớ - ôn lại chặng này bằng trò chơi",total:1,done:0,status:"todo",isGame:true});
-  defs.push({secs:["__test"],label:"Kiểm tra cuối chặng",total:stageTestPool(b).length,done:stagePassed(b)?1:0,status:stagePassed(b)?"done":(stageTestPool(b).length?"todo":"empty"),isTest:true});
+  const gameStep={secs:["__game"],label:"Chơi để nhớ - ôn lại chặng này bằng trò chơi",total:1,done:0,status:"todo",isGame:true};
+  const testStep={secs:["__test"],label:"Kiểm tra cuối chặng",total:stageTestPool(b).length,done:stagePassed(b)?1:0,status:stagePassed(b)?"done":(stageTestPool(b).length?"todo":"empty"),isTest:true};
+  defs.push(gameStep);
+  if(testStep.status!=="empty"){ const totalVis=defs.filter(s=>s.status!=="empty").length+1; const p=Math.ceil(totalVis*0.8); let seen=0,insertAt=defs.length; for(let j=0;j<defs.length;j++){ if(defs[j].status!=="empty"){ seen++; if(seen===p){ insertAt=j; break; } } } defs.splice(insertAt,0,testStep); }
+  else defs.push(testStep);
   return defs; }
 /* ================= CON ĐƯỜNG HỌC CỦA CHẶNG =================
    Mỗi chặng là một con đường nhìn thấy được: các nấc (bước) nối tiếp theo thứ tự,
@@ -700,12 +780,16 @@ let pathReturnBand=null;
 function pathCurrentIdx(steps){ for(let i=0;i<steps.length;i++){ const s=steps[i]; if(s.status!=="empty"&&s.status!=="done") return i; } return -1; }
 function pathCounts(steps){ const vis=steps.filter(s=>s.status!=="empty"); return {total:vis.length,done:vis.filter(s=>s.status==="done").length}; }
 function pathDispNum(steps,idx){ let n=0; for(let i=0;i<steps.length&&i<=idx;i++){ if(steps[i].status!=="empty") n++; } return n; }
+const STEP_KIND={video:"Video",vocab:"Từ vựng",typing:"Gõ câu",writing:"Viết",grammar:"Ngữ pháp",reading:"Đọc",listening:"Nghe",speaking:"Nói"};
+function stepKindLabel(s){ if(s.isTest) return "Đánh giá"; if(s.isMock) return "Thi thử"; if(s.isGame) return "Trò chơi"; const ks=(s.secs||[]).map(x=>STEP_KIND[x]).filter(Boolean); return [...new Set(ks)].join(" · "); }
 function stageStepsHTML(b,flash){ const steps=stageSteps(b); if(steps.every(s=>s.status==="empty")) return ""; const ci=pathCurrentIdx(steps); const pc=pathCounts(steps); const pct=pc.total?Math.round(pc.done/pc.total*100):0;
   const visIdx=steps.map((s,i)=>s.status!=="empty"?i:-1).filter(i=>i>=0); const lastVis=visIdx.length?visIdx[visIdx.length-1]:-1;
-  const rows=steps.map((s,si)=>{ if(s.status==="empty") return ""; const dn=pathDispNum(steps,si); const k=visIdx.indexOf(si); const isCur=si===ci; const cls=s.status==="done"?"done":(isCur?"current":(ci>=0&&si>ci?"future":""));
-    const stat=isCur?"👉 Tới lượt bước này":(s.status==="done"?"✅ Đã xong":(s.status==="doing"?"🔵 Đang học dở":(ci>=0&&si>ci?"⏳ Chưa tới lượt":"⚪ Chưa bắt đầu")));
+  const gb=currentStageBand();
+  const rows=steps.map((s,si)=>{ if(s.status==="empty") return ""; const dn=pathDispNum(steps,si); const k=visIdx.indexOf(si); const isCur=si===ci; const isNext=(b===gb&&si===ci); const cls=s.status==="done"?"done":(isCur?"current":(ci>=0&&si>ci?"future":""));
+    let stat=isCur?"👉 Tới lượt bước này":(s.status==="done"?"✅ Đã xong":(s.status==="doing"?"🔵 Đang học dở":(ci>=0&&si>ci?"⏳ Chưa tới lượt":"⚪ Chưa bắt đầu")));
+    if(s.isTest){ if(s.status==="done") stat="✅ Đã qua cổng"; else if(isCur) stat="👉 Tới lượt bước này"; else if(pc.total&&pc.done*5>=pc.total*4) stat="🏁 Cổng đã mở - bấm vào để làm bài kiểm tra"; else stat="🔒 Cổng mở khi xong 80% số bước của chặng (đang "+pc.done+"/"+pc.total+")"; }
     const nav=`<div class="pnav">${k>0?`<button class="pnavbtn" data-prevstep="${visIdx[k-1]}" data-band="${esc(b)}">← Quay lại</button>`:""}${k<visIdx.length-1?`<button class="pnavbtn next" data-nextstep="${visIdx[k+1]}" data-band="${esc(b)}">Tiếp theo →</button>`:""}</div>`;
-    return `<div class="prow ${cls}${flash&&isCur?" flash":""}"><div class="pnode"><span class="pdot">${s.status==="done"?"✓":dn}</span>${si<lastVis?'<span class="plink"></span>':""}</div><button class="step st-${s.status}" data-step="${si}" data-band="${esc(b)}"><span class="slab"><b>Bước ${dn}:</b> ${esc(s.label)}${s.total&&!s.isTest&&!s.isMock&&!s.isGame?` <span class="mut">(${s.done}/${s.total})</span>`:""}</span>${isCur?'<span class="here-badge">📍 Bạn đang ở đây</span>':""}<span class="sstat">${stat}</span></button>${nav}</div>`; }).join("");
+    return `<div class="prow ${cls}${s.isTest?" gate":""}${flash&&isCur?" flash":""}"><div class="pnode"><span class="pdot">${s.status==="done"?"✓":dn}</span>${si<lastVis?'<span class="plink"></span>':""}</div><button class="step st-${s.status}" data-step="${si}" data-band="${esc(b)}"><span class="slab"><b>Bước ${dn}:</b> ${esc(s.label)}${s.total&&!s.isTest&&!s.isMock&&!s.isGame?` <span class="mut">(${s.done}/${s.total})</span>`:""}<span class="rm-kind">${esc(stepKindLabel(s))}</span>${s.isTest?'<span class="rm-gatechip">🏁 Cổng qua chặng</span>':""}${isNext?'<span class="rm-nextbadge">Tiếp theo</span>':""}</span>${isCur?'<span class="here-badge">📍 Bạn đang ở đây</span>':""}${isNext?'<span class="rm-cta">Học tiếp →</span>':""}<span class="sstat">${stat}</span></button>${nav}</div>`; }).join("");
   const liB=LADDER.indexOf(b); const prevB=liB>0?LADDER[liB-1]:null; const nextB=(liB>=0&&liB<LADDER.length-1)?LADDER[liB+1]:null;
   const foot=`<div class="pathnav">${prevB?`<button class="btn light pstagebtn" data-prevstage="${esc(prevB)}">← Quay lại: Chặng ${esc(prevB)}</button>`:""}<span class="grow"></span>${nextB?`<button class="btn pstagebtn" data-nextstage="${esc(nextB)}">Tiếp theo: Chặng ${esc(nextB)} →</button>`:`<span class="pathend">🏁 Đây là chặng cuối của lộ trình - bạn đã đi tới cuối 13 chặng.</span>`}</div>`;
   return `<div class="pathbox"><div class="pathhead"><span class="ptitle">🛤️ Con đường học của chặng này</span><span class="pprog">Đã đi ${pc.done} trên ${pc.total} bước</span></div><div class="bar pathbar"><i style="width:${pct}%"></i></div><p class="mut" style="margin-top:6px">Các nấc nối tiếp nhau theo thứ tự: nấc có dấu ✓ là đã xong, nấc sáng vàng là nấc bạn đang đứng, các nấc mờ phía dưới là chưa tới lượt - học xong nấc trên sẽ tới nấc dưới. Bạn vẫn bấm được vào bất kỳ nấc nào để học trước nếu muốn, và mỗi hàng đều có nút Quay lại / Tiếp theo để đi dọc con đường.</p><div class="path">${rows}</div>${foot}</div>`; }
@@ -805,7 +889,7 @@ function openStageStep(band,s){ if(!s) return; (function(){ const steps=stageSte
   flowCtx={band,secs:(s.secs||[]).slice(),label:s.label};
   setGlobalBand(band,true);
   let fb=null;
-  for(const sec of s.secs){ if(sec==="video"){ if(!fb){ go("video"); return; } break; } const u=firstUndoneInBand(sec,band); if(u>=0){ openItem(sec,u); return; } if(!fb){ const fi=firstInBand(sec,band); if(fi>=0) fb={sec,i:fi}; } }
+  for(const sec of s.secs){ if(sec==="video"){ if(!fb){ if(s.vidBand&&s.vidBand!==band) setGlobalBand(s.vidBand,true); go("video"); return; } break; } const u=firstUndoneInBand(sec,band); if(u>=0){ openItem(sec,u); return; } if(!fb){ const fi=firstInBand(sec,band); if(fi>=0) fb={sec,i:fi}; } }
   if(fb){ openItem(fb.sec,fb.i); return; }
   go(s.secs[0]); }
 function visibleIdxList(sec){ const f=effectiveBand();
@@ -1021,23 +1105,32 @@ function viewHome(app){
   const wt=$("#wcTrial"); if(wt) wt.onclick=()=>{ dismissWelcome(); trialState={i:0,score:0,answered:false}; go("roadmap"); setTimeout(()=>{ const tb=$("#trialBox"); if(tb) tb.scrollIntoView({block:"center"}); },80); };
   const ws=$("#wcSkip"); if(ws) ws.onclick=e=>{ e.preventDefault(); dismissWelcome(); render(); };
 }
+function roadmapChapterHTML(b,i){ const st=bandStageStats(b); const steps=stageSteps(b); const pc=pathCounts(steps); const isT=state.targetBand===b; const isCur=currentStageBand()===b; const passed=stagePassed(b); const vrow=st.rows.find(r=>r.sec==="vocab"); const pct=pc.total?Math.round(pc.done/pc.total*100):0;
+  const pill=passed?'<span class="rm-pill ok">✅ Đã hoàn thành chặng</span>':(isCur?'<span class="rm-pill cur">📍 Chặng bạn đang học</span>':(st.done>0?'<span class="rm-pill doing">🔵 Đang học dở</span>':'<span class="rm-pill lock">⏳ Chưa bắt đầu</span>'));
+  return `<div class="stage rm-chapter ${isT?"target":""} ${isCur?"currentstage":""} ${b==="Band 0"?"start":""}" data-stageband="${esc(b)}"><div class="shead rm-chead"><span class="rm-cidx">Chặng ${i+1} trên 13</span>${pill}</div><h3 class="rm-ctitle">${b==="Band 0"?"🌱 ":""}${esc(bandStageName(b))}</h3>${STAGE_DESC[b]?`<p class="rm-cdesc">${esc(STAGE_DESC[b])}</p>`:""}${STAGE_HOURS[b]?`<p class="rm-chours">⏱ Giờ học có hướng dẫn tích lũy tham khảo: ${STAGE_HOURS[b]}.</p>`:""}<div class="rm-sumchips"><span class="rm-sumchip">Bước đã học <b>${pc.done}/${pc.total}</b></span>${vrow?`<span class="rm-sumchip">Từ đã học <b>${vrow.done}/${vrow.total}</b> thẻ</span>`:`<span class="rm-sumchip">Mục đã học <b>${st.done}/${st.total}</b></span>`}${isT?'<span class="rm-sumchip rm-tgt">🎯 Mục tiêu của bạn</span>':""}</div><div class="rm-pbar"><i style="width:${pct}%"></i></div>${st.total?`<div class="skills"><button class="chip" data-stage="${esc(b)}">▶ Học cấp độ này</button>${st.rows.map(r=>`<button class="chip" data-sec="${r.sec}" data-band="${esc(b)}">${r.label}: <b>${r.done}/${r.total}</b> ${r.unit}</button>`).join("")}</div>`:`<p class="mut" style="margin-top:6px">Chưa có nội dung ở cấp độ này.${b==="Band 0"?" Gói nền tảng cho người mất gốc đang được bổ sung thêm - trong lúc chờ, hãy làm bài kiểm tra thử để biết điểm xuất phát của mình.":""}</p>`}${stageStepsHTML(b, pathReturnBand===b)}${missionHTML(b)}</div>`; }
+function roadmapGoalHTML(){ const goal=state.goal||30; const info=currentStageInfo(); let td=0,tt=0,cd=0,ct=0; LADDER.forEach(b=>{ const pc=pathCounts(stageSteps(b)); td+=pc.done; tt+=pc.total; const vr=bandStageStats(b).rows.find(r=>r.sec==="vocab"); if(vr){ cd+=vr.done; ct+=vr.total; } }); const pct=tt?Math.round(td/tt*100):0;
+  let est;
+  if(info&&info.curStep){ let rem=0; stageSteps(info.band).forEach(s=>{ if(s.status!=="empty"&&s.status!=="done") rem+=stepEstMins(s); }); const weeks=Math.max(1,Math.ceil(rem/(goal*7))); est=`<p class="rm-estbig">Khoảng <b>${weeks} tuần</b> để hoàn thành chặng hiện tại</p><p>Bạn đang ở <b>chặng ${esc(info.band)}</b> - còn <b>${info.left} bước</b> (ước tính khoảng ${rem} phút học) với nhịp <b>${goal} phút/ngày</b>.</p><p class="rm-note">Ước tính tham khảo, tính từ số mục còn lại thật trong chặng và mục tiêu ngày của bạn.</p>`; }
+  else est=`<p class="rm-estbig">🎉 Bạn đã đi hết các chặng hiện có</p><p>Hãy ôn lại các chặng đã qua và giữ chuỗi ngày học mỗi ngày nhé.</p>`;
+  return `<div class="rm-goal"><h2>🎯 Mục tiêu học mỗi ngày</h2><div class="rm-grow"><div><div class="rm-stepper"><button id="rmGoalMinus" type="button" aria-label="Giảm mục tiêu ngày" ${goal<=15?"disabled":""}>−</button><span class="rm-gval" id="rmGoalVal">${goal} phút</span><button id="rmGoalPlus" type="button" aria-label="Tăng mục tiêu ngày" ${goal>=180?"disabled":""}>+</button></div><p class="rm-hint">Bấm − / + để đổi mục tiêu - con số ước tính tự cập nhật theo, và mục tiêu được lưu lại cho lần sau.</p><span class="rm-streak">🔥 Chuỗi học: ${streak()} ngày liên tiếp</span></div><div class="rm-estbox">${est}</div></div><div class="rm-overall"><div class="rm-orow"><span class="rm-olab">Tiến độ toàn lộ trình</span><span class="rm-pct">${pct}%</span><span class="rm-odet">Đã học ${td}/${tt} bước · ${cd}/${ct} thẻ từ</span></div><div class="rm-pbar big"><i style="width:${pct}%"></i></div></div></div>`; }
 function viewRoadmap(app){
   if(mockState){ viewMock(app); return; }
   app.innerHTML=`
-  <section class="page on">
-    <div class="card"><h2>🗺️ Lộ trình theo cấp độ</h2>
+  <section class="page on rm-page">
+    <div class="card rm-intro"><h2>🗺️ Lộ trình theo cấp độ</h2>
       <p class="mut">Bạn đi từ Band 0 (cho người mất gốc) lên dần các band IELTS. Cứ học theo thứ tự từng bước trong mỗi chặng, ôn lại đúng lúc sắp quên - đó là cách nhớ lâu nhất. Bấm vào một kỹ năng trong chặng là vào học ngay, bộ lọc cấp độ đã bật sẵn cho chặng đó.</p><p class="mut" style="margin-top:4px">Số giờ ghi ở mỗi chặng là mốc tham khảo theo Cambridge English (tổng số giờ học có hướng dẫn thường cần để đạt mốc đó), chỉ để bạn lập kế hoạch. Qua chặng hay không là do ĐIỂM ở bài kiểm tra cuối chặng và bài thi thử đúng format, không tính theo giờ học. Các chữ A1, A2, B1, B2, C1 là thang trình độ châu Âu: A là cơ bản, B là trung cấp, C là cao cấp. Riêng vùng biên Band 5.0-5.5, các nguồn chính thống (IELTS.org, IDP, Cambridge) chưa thống nhất tuyệt đối, nên web ghi Band 5.0 là "cuối B1 - bắt đầu B2".</p>
       <div class="row" style="margin:8px 0 2px"><label><b>Band mục tiêu của tôi:</b></label><select id="targetSel" style="max-width:270px"><option value="">- Chưa đặt -</option>${LADDER.map(b=>`<option value="${esc(b)}" ${state.targetBand===b?"selected":""}>${esc(bandLabel(b))}</option>`).join("")}</select><button class="btn teal" id="targetSave">Lưu mục tiêu</button></div>
       <p class="mut">Chưa có nền tảng? Bắt đầu từ Band 0 - lộ trình sẽ dẫn bạn từ những bước đầu tiên.</p>
-      ${skippedCardHTML()}
-      <div id="roadmapBox">${LADDER.map(b=>{ const st=bandStageStats(b); const isT=state.targetBand===b; const isCur=currentStageBand()===b; return `<div class="stage ${isT?"target":""} ${isCur?"currentstage":""} ${b==="Band 0"?"start":""}" data-stageband="${esc(b)}"><div class="shead"><span class="sname">${b==="Band 0"?"🌱 ":""}${esc(bandStageName(b))}</span>${isT?'<span class="badge gold">Mục tiêu của bạn</span>':""}${stagePassed(b)?'<span class="badge done">✅ Đã hoàn thành chặng</span>':""}${isCur?'<span class="badge" style="background:var(--teal2);color:#fff">📍 Chặng bạn đang học</span>':""}<span class="spct">${st.total?(st.pct+"% hoàn thành"):""}</span></div>${STAGE_HOURS[b]?`<p class="mut" style="margin-top:4px">⏱ Giờ học có hướng dẫn tích lũy tham khảo: ${STAGE_HOURS[b]}.</p>`:""}${STAGE_DESC[b]?`<p class="mut" style="margin-top:4px">${esc(STAGE_DESC[b])}</p>`:""}${st.total?`<div class="bar"><i style="width:${st.pct}%"></i></div><div class="skills"><button class="chip" data-stage="${esc(b)}">▶ Học cấp độ này</button>${st.rows.map(r=>`<button class="chip" data-sec="${r.sec}" data-band="${esc(b)}">${r.label}: <b>${r.done}/${r.total}</b> ${r.unit}</button>`).join("")}</div>`:`<p class="mut" style="margin-top:6px">Chưa có nội dung ở cấp độ này.${b==="Band 0"?" Gói nền tảng cho người mất gốc đang được bổ sung thêm - trong lúc chờ, hãy làm bài kiểm tra thử để biết điểm xuất phát của mình.":""}</p>`}${stageStepsHTML(b, pathReturnBand===b)}${missionHTML(b)}</div>`; }).join("")}</div>
-      <div id="stageTestBox" style="margin-top:12px"></div>
     </div>
-    
-    <div class="card"><h3>Bài kiểm tra thử kiểu ${termHTML("IELTS","ielts")}</h3><p class="mut">${CONTENT.trial.length} câu ngắn (từ vựng học thuật, ngữ pháp, đọc, ${termHTML("paraphrase","paraphrase")} - viết lại câu) để ước tính band hiện tại của bạn. Không cần tài khoản.</p><div id="trialBox" style="margin-top:10px"></div></div>
-  
+    ${roadmapGoalHTML()}
+    <div id="roadmapBox">${LADDER.map((b,i)=>roadmapChapterHTML(b,i)).join("")}</div>
+    <div id="stageTestBox" style="margin-top:12px"></div>
+    ${skippedCardHTML()}
+    <div class="card rm-trial"><h3>Bài kiểm tra thử kiểu ${termHTML("IELTS","ielts")}</h3><p class="mut">${CONTENT.trial.length} câu ngắn (từ vựng học thuật, ngữ pháp, đọc, ${termHTML("paraphrase","paraphrase")} - viết lại câu) để ước tính band hiện tại của bạn. Không cần tài khoản.</p><div id="trialBox" style="margin-top:10px"></div></div>
   </section>`;
   const ts=$("#targetSave"); if(ts) ts.onclick=()=>{ const b=$("#targetSel").value||null; setTargetBand(b); toast(b?("Đã đặt band mục tiêu: "+b):"Đã xóa band mục tiêu."); render(); };
+  const gmn=$("#rmGoalMinus"); if(gmn) gmn.onclick=()=>{ state.goal=Math.max(15,(state.goal||30)-5); saveLocal(); render(); };
+  const gpl=$("#rmGoalPlus"); if(gpl) gpl.onclick=()=>{ state.goal=Math.min(180,(state.goal||30)+5); saveLocal(); render(); };
   $$("#roadmapBox [data-sec]").forEach(ch=>ch.onclick=()=>{ setGlobalBand(ch.dataset.band,true); go(ch.dataset.sec); });
   $$("#roadmapBox [data-stage]").forEach(ch=>ch.onclick=()=>{ if(ch.dataset.stage==="Band 0"){ startFromZero(); return; } setGlobalBand(ch.dataset.stage,true); go(firstSkillForBand(ch.dataset.stage)); });
   $$("#roadmapBox [data-step]").forEach(btn=>btn.onclick=()=>{ const b=btn.dataset.band; const stepsB=stageSteps(b); const s=stepsB[+btn.dataset.step]; if(!s) return; const ciB=pathCurrentIdx(stepsB); if(ciB>=0&&+btn.dataset.step>ciB){ toast("Bước "+pathDispNum(stepsB,+btn.dataset.step)+" nằm sau trong lộ trình của chặng "+b+" - nên học lần lượt từ Bước "+pathDispNum(stepsB,ciB)+" để kiến thức nối tiếp nhau. Vẫn mở bước bạn vừa chọn."); } openStageStep(b,s); });
