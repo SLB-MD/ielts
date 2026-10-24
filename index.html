@@ -197,6 +197,7 @@ select:focus,input:focus,textarea:focus{border-color:var(--teal2);box-shadow:0 0
 .pb-bar .btn{padding:7px 11px;font-size:13.5px}
 .pb-res{font-weight:600}
 .pb-marks{margin-top:4px;font-size:15px}
+.pb-ai-card{margin-top:8px;border:1px solid var(--line);border-left:4px solid var(--teal);background:#f4fafb;border-radius:10px;padding:9px 11px;text-align:left}
 .obs-strip{display:flex;gap:14px;flex-wrap:wrap}
 .obs-img{flex:0 1 300px;min-width:230px}
 .obs-vids{flex:1 1 300px;display:flex;flex-direction:column;gap:12px;min-width:250px}
@@ -2226,7 +2227,33 @@ function pbCheckVoice(o){ const btn=o.btn; if(!btn) return; if(btn._pbOn){ pbSto
     rec.onerror=()=>{ if(!st.judged&&o.resEl){ o.resEl.innerHTML="Chưa nghe rõ - hãy bấm lại nút ghi âm và đọc to, rõ hơn."; if(o.typeBox!==false) pbTypeIn(o); } };
     rec.start(); }catch(e){} }
   else if(o.typeBox!==false) pbTypeIn(o);
-  if(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia&&window.MediaRecorder){ navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{ if(!btn._pbOn){ stream.getTracks().forEach(t=>t.stop()); return; } st.stream=stream; try{ const mr=new MediaRecorder(stream); st.rec=mr; mr.ondataavailable=e=>{ if(e.data&&e.data.size) st.chunks.push(e.data); }; mr.onstop=()=>{ stream.getTracks().forEach(t=>t.stop()); if(st.chunks.length&&o.playEl){ const url=URL.createObjectURL(new Blob(st.chunks,{type:mr.mimeType||"audio/webm"})); let box=o.playEl.querySelector(".pb-playbox"); if(!box){ box=document.createElement("div"); box.className="pb-playbox"; o.playEl.appendChild(box); } box.innerHTML=`<p class="mut" style="margin-top:6px">🎧 Bản ghi giọng của bạn - nghe lại và so với giọng mẫu:</p><audio controls src="${url}" style="width:100%"></audio>`; } }; mr.start(); }catch(e){} }).catch(()=>{ if(o.playEl&&!o.playEl.querySelector(".pb-playbox")){ const box=document.createElement("div"); box.className="pb-playbox"; box.innerHTML=`<p class="mut" style="margin-top:6px">Không ghi âm được vì chưa được cấp quyền micro. Bạn vẫn check được bằng nhận diện giọng nói hoặc gõ lại câu.</p>`; o.playEl.appendChild(box); } }); }
+  if(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia&&window.MediaRecorder){ navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{ if(!btn._pbOn){ stream.getTracks().forEach(t=>t.stop()); return; } st.stream=stream; try{ const mr=new MediaRecorder(stream); st.rec=mr; mr.ondataavailable=e=>{ if(e.data&&e.data.size) st.chunks.push(e.data); }; mr.onstop=()=>{ stream.getTracks().forEach(t=>t.stop()); if(st.chunks.length){ const rawMime=mr.mimeType||"audio/webm"; const blob=new Blob(st.chunks,{type:String(rawMime).split(";")[0]}); if(o.playEl){ const url=URL.createObjectURL(blob); let box=o.playEl.querySelector(".pb-playbox"); if(!box){ box=document.createElement("div"); box.className="pb-playbox"; o.playEl.appendChild(box); } box.innerHTML=`<p class="mut" style="margin-top:6px">🎧 Bản ghi giọng của bạn - nghe lại và so với giọng mẫu:</p><audio controls src="${url}" style="width:100%"></audio>`; } pronounceAICheck(o,blob,rawMime); } }; mr.start(); }catch(e){} }).catch(()=>{ if(o.playEl&&!o.playEl.querySelector(".pb-playbox")){ const box=document.createElement("div"); box.className="pb-playbox"; box.innerHTML=`<p class="mut" style="margin-top:6px">Không ghi âm được vì chưa được cấp quyền micro. Bạn vẫn check được bằng nhận diện giọng nói hoặc gõ lại câu.</p>`; o.playEl.appendChild(box); } }); }
+}
+
+/* ================= CHẤM PHÁT ÂM BẰNG AI (Gemini, qua hàm pronounce trên Supabase) ================= */
+function pbNormMime(t){ let m=String(t||"").split(";")[0].trim().toLowerCase(); if(m==="audio/x-wav"||m==="audio/wave"||m==="audio/vnd.wave") m="audio/wav"; else if(m==="audio/mp3") m="audio/mpeg"; else if(m==="audio/m4a"||m==="audio/x-m4a"||m==="audio/aac") m="audio/mp4"; if(["audio/webm","audio/ogg","audio/mp4","audio/mpeg","audio/wav"].indexOf(m)>=0) return m; return "audio/webm"; }
+function pbBlobToB64(blob){ return new Promise((res,rej)=>{ try{ const fr=new FileReader(); fr.onload=()=>{ const s=String(fr.result||""); const i=s.indexOf(","); res(i>=0?s.slice(i+1):s); }; fr.onerror=()=>rej(new Error("read")); fr.readAsDataURL(blob); }catch(e){ rej(e); } }); }
+function pbAIBox(o){ const host=o.playEl||o.resEl; if(!host) return null; let box=host.querySelector(".pb-aibox"); if(!box){ box=document.createElement("div"); box.className="pb-aibox"; host.appendChild(box); } return box; }
+async function pronounceAICheck(o,blob,rawMime){ const ref=String((o&&o.text)||"").trim(); if(!ref||!blob) return; const box=pbAIBox(o); if(!box) return;
+  if(!IS_REAL||!sbUser){ box.innerHTML=`<div class="pb-ai-card">🔐 <b>Đăng nhập để AI nghe và chấm phát âm chi tiết</b> - AI sẽ chỉ ra từng từ bạn đọc sai hoặc thiếu, kèm âm cần luyện lại. Phần check bằng trình duyệt ở trên vẫn chạy bình thường.</div>`; return; }
+  box.innerHTML=`<div class="pb-ai-card">🤖 AI đang nghe và chấm phát âm của bạn...</div>`;
+  try{
+    if(!sb) throw new Error("no client");
+    const sess=await sb.auth.getSession(); const token=sess&&sess.data&&sess.data.session?sess.data.session.access_token:null;
+    if(!token) throw new Error("no session");
+    const b64=await pbBlobToB64(blob); if(!b64) throw new Error("empty audio");
+    const res=await fetch(window.SUPABASE_URL+"/functions/v1/pronounce",{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+token,"apikey":window.SUPABASE_ANON_KEY},body:JSON.stringify({audioBase64:b64,mimeType:pbNormMime(rawMime),referenceText:ref})});
+    const data=await res.json().catch(()=>null);
+    if(!res.ok||!data||data.error||typeof data.score!=="number"||!Array.isArray(data.words)) throw new Error("bad reply");
+    renderPronounceAI(box,o,data);
+  }catch(e){ box.innerHTML=`<div class="pb-ai-card">⚠️ Chưa chấm được bằng AI lần này (mạng hoặc máy chủ đang bận). Kết quả check ngay trong trình duyệt ở trên vẫn giữ nguyên - bạn cứ luyện tiếp nhé.</div>`; }
+}
+function renderPronounceAI(box,o,data){ const words=data.words||[]; const okN=words.filter(w=>w.ok).length;
+  const marks=words.map(w=>`<span class="${w.ok?"wordok":"wordbad"}">${esc(w.word)}</span>`).join(" ");
+  const issues=Array.isArray(data.issues)?data.issues:[];
+  const issHTML=issues.length?`<div style="margin-top:7px">${issues.map(it=>`<div style="margin-top:3px">❌ <b>${esc(it.word)}</b>${it.heard?` - AI nghe thành “${esc(it.heard)}”`:" - bạn chưa đọc từ này (bị thiếu)"} · IPA của từ đúng: /${esc(it.ipa||"")}/ · Âm cần luyện: <b>/${esc(it.sound||"")}/</b></div>`).join("")}</div>`:`<p style="margin-top:7px">🎉 AI không nghe thấy từ nào sai - bạn phát âm rất rõ!</p>`;
+  box.innerHTML=`<div class="pb-ai-card"><div class="row" style="align-items:center"><span style="font-size:28px;font-weight:800">${data.score}%</span><span class="mut">Điểm phát âm do <b>AI chấm qua Gemini</b> - điểm tính theo tỉ lệ từ đọc đúng (${okN}/${words.length} từ).${data.transcript?`<br>AI nghe được: “${esc(data.transcript)}”`:""}</span></div><div class="pb-marks">${marks}</div>${issHTML}</div>`;
+  if(issues.length){ const det=issues.map(it=>`"${it.word}"${it.heard?` nghe thành "${it.heard}"`:" bị thiếu"} - luyện âm /${it.sound||"?"}/ (IPA đúng: /${it.ipa||"?"}/)`).join("; "); logError({sec:"speaking",kind:"type",q:"AI chấm phát âm câu mẫu: "+o.text,a:o.text,why:"AI nghe thấy "+issues.length+" từ chưa đúng: "+det+". Nghe mẫu chậm, sửa từng âm rồi đọc lại cả câu."}); }
 }
 
 /* ================= GƯƠNG KHẨU HÌNH (camera, xử lý ngay trên máy người học) ================= */
