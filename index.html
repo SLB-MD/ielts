@@ -519,6 +519,109 @@ section.shellsec h3{margin-top:18px}
 .rm-page #skipCard{border-radius:20px;border-color:var(--rmamber)!important;background:#fff!important}
 @media(max-width:820px){.rm-page .stage.rm-chapter{padding:16px}.rm-goal{padding:16px}}
 @media(max-width:640px){.rm-page{padding:8px 6px 10px}.rm-ctitle{font-size:18.5px}.rm-gval{font-size:25px;min-width:96px}.rm-pct{font-size:26px}.rm-cta{display:block;text-align:center;margin-top:8px}.rm-page .pnode{flex-basis:40px}.rm-page .pdot{width:40px;height:40px;font-size:15px}.rm-pill{margin-left:0}}
+
+/* ===== ĐỢT PRON2: HỆ MÀU MỚI CHO PHẦN PHÁT ÂM (tiền tố pn-) =====
+   Nền giấy #FFFBF2, mực #1F2430, vàng hổ phách #FFB800/#FFC800 cho tiến độ và
+   điểm nhấn, cam san hô #FF6B4A cho hành động chính. Phạm vi: trang Phát âm
+   (.pn-page) và panel khẩu hình (.mouth-panel) ở mọi nơi panel xuất hiện.
+   Header, thanh tab, nền toàn trang và 4 cửa còn lại giữ nguyên. */
+.pn-page .ph-prog{background:linear-gradient(180deg,#FFF8E6,#FFF3D6);border:1.5px solid #FFE1A1;color:#1F2430;border-radius:16px;padding:12px 14px;font-size:16px}
+.pn-page .pn-progbar{display:block;height:10px;border-radius:999px;background:#F3ECDC;overflow:hidden;margin-top:8px}
+.pn-page .pn-progbar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#FFC800,#FFB800)}
+.pn-page .ph-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(106px,1fr));gap:9px}
+.pn-page .ph-btn{display:flex;flex-direction:column;align-items:center;gap:1px;padding:11px 6px 9px;border-radius:15px;background:#FFFCF6;border:1.5px solid #F0E7D8;min-height:0}
+.pn-page .ph-btn .ph-ipa{font-size:20px;font-weight:800;line-height:1.15;color:#1F2430}
+.pn-page .ph-btn .ph-ex{font-size:12.5px;color:#6E6A61;font-weight:600}
+.pn-page .ph-btn .ph-st{font-size:11px;font-weight:800;border-radius:999px;padding:2px 9px;background:#EFF1F4;color:#9AA1AD;margin-top:4px}
+.pn-page .ph-btn .ph-diff-dot{position:relative;margin-top:2px}
+.pn-page .ph-btn.phst-done{border-color:#BFE7D6;background:#E6F6EF}
+.pn-page .ph-btn.phst-done .ph-st{background:#1E9E6A;color:#fff}
+.pn-page .ph-btn.phst-cur{border-color:#FFB800;background:#FFF3D6;box-shadow:0 0 0 3px #FFE9B0}
+.pn-page .ph-btn.phst-cur .ph-st{background:#FFB800;color:#1F2430}
+.pn-page .ph-btn.on{outline:2px solid #FF6B4A;outline-offset:1px}
+/* ----- Đầu bài học một âm ----- */
+.mouth-panel .pn-lesshead{background:#fff;border:1px solid #F0E7D8;border-radius:18px;padding:16px 18px;margin-top:12px}
+.mouth-panel .pn-bigipa{font-size:46px;font-weight:800;line-height:1.05;color:#1F2430}
+.mouth-panel .pn-exword{font-size:20px;font-weight:700;color:#1F2430}
+.mouth-panel .pn-exipa{font-size:15px;color:#6E6A61;font-weight:600}
+.mouth-panel .pn-badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
+.mouth-panel .pn-badge{font-size:12.5px;font-weight:700;background:#F8F4EC;border:1px solid #F0E7D8;color:#6E6A61;border-radius:999px;padding:3px 11px}
+.mouth-panel .pn-badge.gold{background:#FFF3D6;border-color:#FFE9B0;color:#8A5E00}
+.mouth-panel .pn-badge.hard{background:#FDECEA;border-color:#F3C1BE;color:#A03A36}
+.mouth-panel .pn-videsc{font-size:14.5px;margin-top:9px;color:#1F2430}
+.mouth-panel .pn-warn{font-size:13.5px;margin-top:8px;background:#FFF8E6;border:1.5px solid #FFE9B0;border-radius:12px;padding:8px 12px;color:#1F2430}
+/* ----- Thanh bước + từng bước (accordion) ----- */
+.mouth-panel .pn-stepbar{display:flex;gap:5px;overflow-x:auto;margin-top:14px;padding-bottom:4px}
+.mouth-panel .pn-sb{flex:0 0 auto;display:flex;align-items:center;gap:6px;background:#fff;border:1.5px solid #E7DCC6;border-radius:999px;padding:5px 12px 5px 6px;font-size:13px;font-weight:700;color:#6E6A61;cursor:pointer;font-family:inherit}
+.mouth-panel .pn-sb .n{width:24px;height:24px;border-radius:50%;background:#F1EFE9;color:#6E6A61;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:800}
+.mouth-panel .pn-sb.done{color:#12714B;border-color:#BFE7D6}
+.mouth-panel .pn-sb.done .n{background:#1E9E6A;color:#fff}
+.mouth-panel .pn-sb.cur{background:#FFF3D6;border-color:#FFB800;color:#1F2430}
+.mouth-panel .pn-sb.cur .n{background:#FFB800;color:#1F2430;box-shadow:0 0 0 3px #FFE9B0}
+.mouth-panel .pn-step{background:#fff;border:1px solid #F0E7D8;border-radius:18px;margin-top:12px;overflow:hidden}
+.mouth-panel .pn-step.cur{border:1.5px solid #FFB800}
+.mouth-panel .pn-shead{display:flex;align-items:center;gap:11px;width:100%;background:none;border:0;padding:14px 16px;cursor:pointer;font-family:inherit;text-align:left;color:#1F2430}
+.mouth-panel .pn-snum{width:38px;height:38px;flex:0 0 38px;border-radius:50%;background:#F1EFE9;color:#6E6A61;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.mouth-panel .pn-step.done .pn-snum{background:#1E9E6A;color:#fff}
+.mouth-panel .pn-step.cur .pn-snum{background:#FFB800;color:#1F2430;box-shadow:0 0 0 4px #FFE9B0}
+.mouth-panel .pn-sname{font-size:16.5px;font-weight:800}
+.mouth-panel .pn-ssub{display:block;font-size:13px;color:#6E6A61;font-weight:600}
+.mouth-panel .pn-sstate{margin-left:auto;font-size:12px;font-weight:800;border-radius:999px;padding:3px 10px;background:#EFF1F4;color:#9AA1AD;white-space:nowrap}
+.mouth-panel .pn-step.done .pn-sstate{background:#E6F6EF;color:#12714B}
+.mouth-panel .pn-step.cur .pn-sstate{background:#FFB800;color:#1F2430}
+.mouth-panel .pn-schev{color:#9AA1AD;font-weight:800}
+.mouth-panel .pn-step.open .pn-schev{transform:rotate(180deg)}
+.mouth-panel .pn-sbody{display:none;padding:2px 16px 16px}
+.mouth-panel .pn-step.open .pn-sbody{display:block}
+/* ----- Nội dung từng bước ----- */
+.mouth-panel .pn-bigplay{display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:#FFFCF6;border:1.5px solid #F0E7D8;border-radius:15px;padding:16px}
+.mouth-panel .pn-playbtn{width:78px;height:78px;flex:0 0 78px;border-radius:50%;border:0;background:#FF6B4A;color:#fff;font-size:32px;cursor:pointer;box-shadow:0 3px 0 #F0522E;font-family:inherit}
+.mouth-panel .pn-playbtn:hover{filter:brightness(1.06)}
+.mouth-panel .pn-sym{font-size:40px;font-weight:800;color:#1F2430}
+.mouth-panel .pn-w{font-size:18px;font-weight:700;color:#1F2430}
+.mouth-panel .pn-wp{font-size:14.5px;color:#6E6A61;font-weight:600}
+.mouth-panel .pn-slowbtn{margin-top:8px;background:#fff;border:1.5px solid #FFB800;color:#8A5E00;border-radius:999px;padding:7px 15px;font-size:13.5px;font-weight:800;cursor:pointer;font-family:inherit}
+.mouth-panel .pn-tip{font-size:14px;margin-top:11px;color:#1F2430}
+.mouth-panel .pn-tip b{color:#8A5E00}
+.mouth-panel .pn-howlist{margin:10px 0 0 20px;font-size:14.5px;color:#1F2430}
+.mouth-panel .pn-howlist li{margin-top:5px}
+.mouth-panel .pn-wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px}
+.mouth-panel .pn-wcard{background:#FFFCF6;border:1.5px solid #F0E7D8;border-radius:13px;padding:11px 13px;display:flex;align-items:center;gap:9px}
+.mouth-panel .pn-wcard .wt{font-size:16.5px;font-weight:800;color:#1F2430}
+.mouth-panel .pn-wcard .wp2{font-size:12.5px;color:#6E6A61;font-weight:600;display:block}
+.mouth-panel .pn-spk{margin-left:auto;width:38px;height:38px;flex:0 0 38px;border-radius:50%;border:1.5px solid #FFB800;background:#FFF3D6;font-size:16px;cursor:pointer}
+.mouth-panel .pn-scard{background:#FFFCF6;border:1.5px solid #F0E7D8;border-radius:13px;padding:11px 14px;display:flex;align-items:center;gap:9px;margin-top:9px}
+.mouth-panel .pn-scard .st2{font-size:16px;font-weight:700;color:#1F2430}
+.mouth-panel .pn-scard .sv2{font-size:13px;color:#6E6A61;font-weight:600;display:block}
+.mouth-panel .pn-mp{border:1.5px solid #F0E7D8;border-radius:15px;padding:15px;background:#FFFCF6}
+.mouth-panel .pn-mp-opts{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:11px}
+.mouth-panel .pn-mp-opt{border:2px solid #E7DCC6;border-radius:15px;background:#fff;padding:14px;text-align:center;cursor:pointer;font-family:inherit;color:#1F2430}
+.mouth-panel .pn-mp-opt .ow{font-size:23px;font-weight:800;display:block}
+.mouth-panel .pn-mp-opt .op{font-size:13.5px;color:#6E6A61;font-weight:600}
+.mouth-panel .pn-mp-opt:disabled{cursor:not-allowed;opacity:.55}
+.mouth-panel .pn-mp-opt.right{border-color:#1E9E6A;background:#E6F6EF}
+.mouth-panel .pn-mp-opt.wrong{border-color:#D9534F;background:#FDECEA}
+.mouth-panel .pn-mp-fb{display:none;margin-top:11px;font-size:14px;border-radius:11px;padding:9px 13px}
+.mouth-panel .pn-mp-fb.show{display:block}
+.mouth-panel .pn-mp-fb.good{background:#E6F6EF;border:1.5px solid #BFE7D6}
+.mouth-panel .pn-mp-fb.bad{background:#FDECEA;border:1.5px solid #F3C1BE}
+.mouth-panel .pn-mp-note{font-size:13px;color:#6E6A61;font-weight:600;margin-top:8px}
+.mouth-panel .pn-recbox{border:1.5px solid #F0E7D8;border-radius:15px;background:#FFFCF6;padding:15px}
+.mouth-panel .pn-target{font-size:17px;font-weight:700;color:#1F2430}
+.mouth-panel .pn-target span{color:#6E6A61;font-size:13px;font-weight:600;display:block}
+.mouth-panel .pn-sumcard{background:linear-gradient(180deg,#FFF8E6,#FFF3D6);border:1.5px solid #FFE1A1;border-radius:18px;padding:16px 18px;margin-top:14px}
+.mouth-panel .pn-sumcard h3{font-size:18px;font-weight:800;color:#1F2430}
+.mouth-panel .pn-sumchips{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
+.mouth-panel .pn-sumchip{background:#fff;border:1px solid #E7DCC6;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;color:#1F2430}
+@media(max-width:640px){
+  .pn-page .ph-grid{grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}
+  .pn-page .ph-btn .ph-ipa{font-size:18px}
+  .mouth-panel .pn-bigipa{font-size:38px}
+  .mouth-panel .pn-mp-opts{grid-template-columns:1fr}
+  .mouth-panel .pn-shead{padding:12px 12px}
+  .mouth-panel .pn-sbody{padding:2px 12px 14px}
+  .mouth-panel .pn-lesshead,.mouth-panel .pn-sumcard{padding:13px}
+}
 </style>
 </head>
 <body>
@@ -1189,7 +1292,7 @@ function viewMine(app){
   const sv=$("#mineSaved",app); if(sv) sv.onclick=()=>openSavedDeck();
 }
 function viewPron(app){
-  app.innerHTML=`<section class="page on"><div class="card"><h2>👄 Phát âm - Bảng 44 âm tiếng Anh</h2><p class="mut">Học lần lượt từng âm theo đúng thứ tự của bảng: học xong âm này, âm tiếp theo mới hiện ra. Ở mỗi âm, bạn xem hình khẩu hình, nghe mẫu, soi gương và ghi âm check giọng. Phát âm rõ là nền của kỹ năng Nói: người nghe hiểu bạn ngay từ câu đầu tiên.</p><div id="pronMouth" style="margin-top:10px">${mouthPanelHTML(true)}</div></div>
+  app.innerHTML=`<section class="page on pn-page"><div class="card"><h2>👄 Phát âm - Bảng 44 âm tiếng Anh</h2><p class="mut">Học lần lượt từng âm theo đúng thứ tự của bảng: học xong âm này, âm tiếp theo mới hiện ra. Ở mỗi âm, bạn xem hình khẩu hình, nghe mẫu, soi gương và ghi âm check giọng. Phát âm rõ là nền của kỹ năng Nói: người nghe hiểu bạn ngay từ câu đầu tiên.</p><div id="pronMouth" style="margin-top:10px">${mouthPanelHTML(true)}</div></div>
   <div class="card"><h3>🎯 Bài check âm đích (đánh giá Lớp 2 - chạy ngay trong trình duyệt)</h3><p class="mut">Đây là các âm người Việt hay sai nhất. ${SR_OK()?"Trình duyệt của bạn có nhận diện giọng nói: bấm 🎤 Đọc rồi đọc to từ đó, web nghe và chấm ngay.":"Trình duyệt này không có nhận diện giọng nói, nên bạn check bằng cách nghe mẫu rồi gõ lại từ."} Âm nào chưa đạt, hãy mở khẩu hình của âm đó để xem cách đặt miệng.</p><div id="targetBox"></div></div></section>`;
   const mb=$("#pronMouth",app); if(mb) wireMouthPanel(mb,null,{lock:true});
   wireTargets(app);
@@ -1297,9 +1400,9 @@ const PH_DIFF_META={quen:{label:"Dễ - âm quen với người Việt",dot:"#1e
 let phDiffFilter=null;
 function phonemeDiffOf(s){ return PH_DIFF[s]||"lech"; }
 function phDiffCounts(){ const c={quen:0,lech:0,kho:0}; PH_SEQ.forEach(x=>{ c[phonemeDiffOf(x)]++; }); return c; }
-function phZonesHTML(lock){ const btn=p=>{ if(!lock) return '<button class="ph-btn" data-s="'+esc(p.s)+'" data-diff="'+phonemeDiffOf(p.s)+'"'+(phDiffFilter&&phonemeDiffOf(p.s)!==phDiffFilter?' style="display:none"':"")+'>/'+esc(p.s)+'/<span class="ph-diff-dot" style="color:'+PH_DIFF_META[phonemeDiffOf(p.s)].dot+'">●</span></button>'; const ci=phonemeCurrentIdx(); const st=phonemeDone(p.s)?"done":(PH_SEQ[ci]===p.s?"cur":"lock"); return '<button class="ph-btn phst-'+st+'" data-s="'+esc(p.s)+'" data-diff="'+phonemeDiffOf(p.s)+'"'+(phDiffFilter&&phonemeDiffOf(p.s)!==phDiffFilter?' style="display:none"':"")+(st==="lock"?' data-lock="1"':"")+'>'+(st==="done"?"✓ ":"")+"/"+esc(p.s)+"/"+(st==="lock"?" 🔒":"")+'<span class="ph-diff-dot" style="color:'+PH_DIFF_META[phonemeDiffOf(p.s)].dot+'">●</span></button>'; };
+function phZonesHTML(lock){ const btn=p=>{ if(!lock) return '<button class="ph-btn" data-s="'+esc(p.s)+'" data-diff="'+phonemeDiffOf(p.s)+'"'+(phDiffFilter&&phonemeDiffOf(p.s)!==phDiffFilter?' style="display:none"':"")+'>/'+esc(p.s)+'/<span class="ph-diff-dot" style="color:'+PH_DIFF_META[phonemeDiffOf(p.s)].dot+'">●</span></button>'; const ci=phonemeCurrentIdx(); const st=phonemeDone(p.s)?"done":(PH_SEQ[ci]===p.s?"cur":"lock"); return '<button class="ph-btn phst-'+st+'" data-s="'+esc(p.s)+'" data-diff="'+phonemeDiffOf(p.s)+'"'+(phDiffFilter&&phonemeDiffOf(p.s)!==phDiffFilter?' style="display:none"':"")+(st==="lock"?' data-lock="1"':"")+'>'+'<span class="ph-ipa">'+(st==="done"?"✓ ":"")+"/"+esc(p.s)+"/"+(st==="lock"?" 🔒":"")+'</span><span class="ph-ex">'+esc(p.w)+'</span><span class="ph-st">'+(st==="done"?"Đã xong":(st==="cur"?"Đang học":"Khóa"))+'</span><span class="ph-diff-dot" style="color:'+PH_DIFF_META[phonemeDiffOf(p.s)].dot+'">●</span></button>'; };
   const bySym=arr=>arr.map(s=>PHONEMES.find(p=>p.s===s)).filter(Boolean); const sg=bySym(PH_SINGLE), dp=bySym(PH_DIPH), cs=PHONEMES.filter(p=>!PH_SINGLE.includes(p.s)&&!PH_DIPH.includes(p.s)); const zone=(label,list)=>'<div class="ph-zone">'+label+' ('+list.length+' âm)</div>'+list.map(btn).join("");
-  const head=lock?('<p class="ph-prog">Đã học '+phonemeDoneCount()+' trên 44 âm - học xong âm này, âm tiếp theo sẽ hiện ra.</p><p class="mut" style="margin-bottom:2px">🗺️ Bản đồ 44 âm theo 3 khu: nguyên âm đơn là các âm ngắn gọn rung từ cổ họng, nguyên âm đôi là âm trượt từ âm này sang âm khác, phụ âm được tạo khi môi, răng và lưỡi chặn luồng hơi. Học lần lượt từng âm: âm có dấu ✓ là đã học xong, âm viền vàng là âm bạn đang học, âm có 🔒 sẽ mở ra khi bạn học xong âm ngay trước nó. Bấm vào một âm đã mở để học âm đó.</p>'):'<p class="mut" style="margin-bottom:2px">🗺️ Bản đồ 44 âm theo 3 khu: nguyên âm đơn là các âm ngắn gọn rung từ cổ họng, nguyên âm đôi là âm trượt từ âm này sang âm khác, phụ âm được tạo khi môi, răng và lưỡi chặn luồng hơi. Bấm vào một âm để xem khẩu hình của âm đó.</p>';
+  const head=lock?('<p class="ph-prog">Đã học '+phonemeDoneCount()+' trên 44 âm - học xong âm này, âm tiếp theo sẽ hiện ra.<span class="pn-progbar"><i style="width:'+Math.round(phonemeDoneCount()/44*100)+'%"></i></span></p><p class="mut" style="margin-bottom:2px">🗺️ Bản đồ 44 âm theo 3 khu: nguyên âm đơn là các âm ngắn gọn rung từ cổ họng, nguyên âm đôi là âm trượt từ âm này sang âm khác, phụ âm được tạo khi môi, răng và lưỡi chặn luồng hơi. Học lần lượt từng âm: âm có dấu ✓ là đã học xong, âm viền vàng là âm bạn đang học, âm có 🔒 sẽ mở ra khi bạn học xong âm ngay trước nó. Bấm vào một âm đã mở để học âm đó.</p>'):'<p class="mut" style="margin-bottom:2px">🗺️ Bản đồ 44 âm theo 3 khu: nguyên âm đơn là các âm ngắn gọn rung từ cổ họng, nguyên âm đôi là âm trượt từ âm này sang âm khác, phụ âm được tạo khi môi, răng và lưỡi chặn luồng hơi. Bấm vào một âm để xem khẩu hình của âm đó.</p>';
   const dc=phDiffCounts(); const diffbar='<div class="ph-diffbar"><span class="mut">Nhìn theo độ khó với người Việt:</span><button class="chip ph-diffchip'+(!phDiffFilter?" on":"")+'" data-phdiff="">Tất cả 44 âm</button>'+Object.keys(PH_DIFF_META).map(k=>'<button class="chip ph-diffchip'+(phDiffFilter===k?" on":"")+'" data-phdiff="'+k+'"><span style="color:'+PH_DIFF_META[k].dot+'">●</span> '+PH_DIFF_META[k].label+' ('+dc[k]+')</button>').join("")+'</div>'+(phDiffFilter&&PH_DIFF_META[phDiffFilter]?'<p class="ph-diffnote">'+PH_DIFF_META[phDiffFilter].note+'</p><p class="mut" style="margin:2px 0 4px">Đang xem nhóm: <b>'+PH_DIFF_META[phDiffFilter].label+'</b> - bấm một âm trong nhóm để học. Bộ lọc chỉ giúp nhìn rõ nhóm cần chú ý; thứ tự khóa tiến vẫn giữ nguyên.</p>':"");
   return '<div class="ph-zones">'+head+diffbar+'<div class="ph-grid">'+zone("Nguyên âm đơn",sg)+zone("Nguyên âm đôi",dp)+zone("Phụ âm",cs)+'</div></div>'; }
 
@@ -2266,6 +2369,123 @@ const PH_SEG={"i:":[0,131],"ɪ":[131,251],"ʊ":[251,292],"u:":[292,345],"e":[345
 function phSegEmbed(v,sym){ const sg=PH_SEG[sym]; if(!sg||!v) return v?v.embed:""; return v.embed+"?start="+sg[0]+(sg[1]?"&end="+sg[1]:"")+"&rel=0"; }
 function phonemeOf(sym){ return PHONEMES.find(p=>p.s===sym)||PHONEMES[11]; }
 function firstPhonemeOf(word){ const w=(word||"").toLowerCase(); if(w.startsWith("th")) return "θ"; if(w.startsWith("sh")) return "ʃ"; if(w.startsWith("ch")) return "tʃ"; if(w.startsWith("ph")) return "f"; if(w.startsWith("wh")) return "w"; if(w.startsWith("qu")) return "k"; const map={a:"æ",b:"b",c:"k",d:"d",e:"e",f:"f",g:"ɡ",h:"h",i:"ɪ",j:"dʒ",k:"k",l:"l",m:"m",n:"n",o:"ɒ",p:"p",r:"r",s:"s",t:"t",u:"ʌ",v:"v",w:"w",y:"j",z:"z"}; return map[w[0]]||"ə"; }
+
+/* ================= DỮ KIỆN BÀI HỌC TỪNG ÂM (đợt PRON2) =================
+   Từ đơn, cụm từ, câu mẫu và cặp từ đối chiếu của từng âm được SUY TỪ KHO THẬT
+   của trang (thẻ từ vựng có IPA/nghĩa/câu ví dụ trong content.js, danh sách
+   TARGET_SOUNDS và PHONEMES) - không thêm nội dung ngoài kho. IPA của thẻ từ
+   được tách thành từng âm bằng phép khớp dài nhất với bảng 44 âm, nên "từ chứa
+   âm X" là chứa thật theo phiên âm của chính thẻ đó. */
+const PH_TOK_ORDER=["tʃ","dʒ","i:","u:","ɑ:","ɔ:","eɪ","aɪ","ɔɪ","əʊ","aʊ","ɪə","eə","ʊə","ɪ","e","æ","ɒ","ʊ","ʌ","ɜ:","ə","p","b","t","d","k","ɡ","f","v","θ","ð","s","z","ʃ","ʒ","h","m","n","ŋ","l","r","w","j"];
+function phTokIpa(ipa){
+  const raw=String(ipa||"").replace(/[/.]/g,"").replace(/ː/g,":");
+  const toks=[]; const stressed=new Set();
+  raw.split(/\s+/).filter(Boolean).forEach(part=>{
+    let i=0, pending=false;
+    while(i<part.length){
+      const ch=part[i];
+      if(ch==="ˈ"){ pending=true; i++; continue; }
+      if(ch==="ˌ"){ i++; continue; }
+      if(ch==="("){ const j=part.indexOf(")",i); i=(j<0?part.length:j+1); continue; }
+      let m=null;
+      for(const s of PH_TOK_ORDER){ if(part.startsWith(s,i)){ m=s; break; } }
+      if(pending){ stressed.add(toks.length); pending=false; }
+      if(m){ toks.push(m); i+=m.length; } else { toks.push(ch); i++; }
+    }
+  });
+  return {toks,stressed};
+}
+let PH_POOLS=null;
+function phPools(){
+  if(PH_POOLS) return PH_POOLS;
+  const singles=[], phrases=[];
+  (CONTENT.vocab||[]).forEach(v=>(v.cards||[]).forEach(cd=>{
+    if(!cd||!cd.w||cd.w.length<2||/\d/.test(cd.w)) return;
+    const t=phTokIpa(cd.ipa);
+    if(cd.w.includes(" ")) phrases.push({w:cd.w,ipa:cd.ipa||"",vi:cd.vi||"",toks:t.toks});
+    else singles.push({w:cd.w,ipa:cd.ipa||"",vi:cd.vi||"",ex:cd.ex||"",exv:cd.exv||"",col:cd.col||"",toks:t.toks,stressed:t.stressed});
+  }));
+  PH_POOLS={singles,phrases};
+  return PH_POOLS;
+}
+function phTargetWords(sym){ const g=TARGET_SOUNDS.find(x=>x.s===sym); return g?g.words.map(w=>w.toLowerCase()):[]; }
+function phRankedWords(sym){
+  const {singles}=phPools(); const p=phonemeOf(sym); const tg=phTargetWords(sym);
+  const score=c=>{
+    let sc=c.toks.length*10+c.w.length;
+    if(c.w.toLowerCase()===p.w.toLowerCase()) sc-=1000;
+    if(tg.includes(c.w.toLowerCase())) sc-=500;
+    c.toks.forEach((t,i)=>{ if(t===sym&&c.stressed.has(i)) sc-=40; });
+    if(c.toks[0]===sym||c.toks[c.toks.length-1]===sym) sc-=30;
+    return sc;
+  };
+  const seen=new Set(); const out=[];
+  singles.filter(c=>c.toks.includes(sym)).sort((a,b)=>score(a)-score(b)).forEach(c=>{ const k=c.w.toLowerCase(); if(seen.has(k)) return; seen.add(k); out.push(c); });
+  return out;
+}
+const PH_CONTRAST={"i:":"ɪ","ɪ":"i:","u:":"ʊ","ʊ":"u:","æ":"e","e":"æ","ɑ:":"ɒ","ɒ":"ɑ:","ɔ:":"ɒ","ʌ":"æ","ɜ:":"ə","ə":"ɜ:","eɪ":"e","aɪ":"æ","ɔɪ":"ɔ:","əʊ":"ə","aʊ":"æ","ɪə":"ɪ","eə":"e","ʊə":"ʊ","p":"b","b":"p","t":"d","d":"t","k":"ɡ","ɡ":"k","f":"v","v":"f","θ":"s","ð":"z","s":"z","z":"s","ʃ":"s","ʒ":"ʃ","tʃ":"ʃ","dʒ":"tʃ","m":"n","n":"ŋ","ŋ":"n","l":"r","r":"l","w":"v","j":"dʒ"};
+const PH_TARGET_PAIRS=[["three","tree"],["ship","sheep"],["bad","bed"],["full","fool"]];
+const PH_PAIR_SIDE={"three":"θ","tree":"t","ship":"ɪ","sheep":"i:","bad":"æ","bed":"e","full":"ʊ","fool":"u:"};
+function phPairEntry(w){ const {singles}=phPools(); const c=singles.find(x=>x.w.toLowerCase()===String(w).toLowerCase()); return c?{w:c.w,ipa:c.ipa,vi:c.vi}:{w:String(w),ipa:"",vi:""}; }
+function phFindPair(sym,ranked){
+  const {singles}=phPools();
+  for(const [x,y] of PH_TARGET_PAIRS){
+    if(PH_PAIR_SIDE[x]===sym||PH_PAIR_SIDE[y]===sym){
+      const aW=PH_PAIR_SIDE[x]===sym?x:y, bW=PH_PAIR_SIDE[x]===sym?y:x;
+      return {a:phPairEntry(aW),b:phPairEntry(bW),partnerSym:PH_PAIR_SIDE[bW]||"",minimal:true};
+    }
+  }
+  const inPool=singles.filter(c=>c.toks.includes(sym));
+  const seenW=new Set(); const pool=[];
+  [...(ranked||[]),...inPool].forEach(c=>{ const k=c.w.toLowerCase(); if(seenW.has(k)) return; seenW.add(k); pool.push(c); });
+  const attempt=want=>{
+    for(const a of pool){
+      for(const b of singles){
+        if(b.w.toLowerCase()===a.w.toLowerCase()||b.toks.length!==a.toks.length) continue;
+        let diff=-1,cnt=0;
+        for(let i=0;i<a.toks.length;i++){ if(a.toks[i]!==b.toks[i]){ cnt++; diff=i; } }
+        if(cnt===1&&a.toks[diff]===sym&&(!want||b.toks[diff]===want)) return {a:{w:a.w,ipa:a.ipa,vi:a.vi},b:{w:b.w,ipa:b.ipa,vi:b.vi},partnerSym:b.toks[diff],minimal:true};
+      }
+    }
+    return null;
+  };
+  let pr=attempt(PH_CONTRAST[sym]||null)||attempt(null);
+  if(pr) return pr;
+  const ps=PH_CONTRAST[sym];
+  if(ps){
+    const pw=phRankedWords(ps); const mw=(ranked&&ranked[0])||pool[0];
+    const bw=pw.find(c=>c.toks[c.toks.length-1]===ps)||pw[0];
+    if(mw&&bw) return {a:{w:mw.w,ipa:mw.ipa,vi:mw.vi},b:{w:bw.w,ipa:bw.ipa,vi:bw.vi},partnerSym:ps,minimal:false};
+  }
+  return null;
+}
+const PH_LESSON_CACHE={};
+function phLessonData(sym){
+  if(PH_LESSON_CACHE[sym]) return PH_LESSON_CACHE[sym];
+  const {phrases}=phPools();
+  const ranked=phRankedWords(sym);
+  const words=ranked.slice(0,5);
+  const wset=new Set(words.map(c=>c.w.toLowerCase()));
+  const phrSeen=new Set(); const phrs=[];
+  phrases.filter(c=>c.toks.includes(sym)).sort((a,b)=>{
+    const ah=a.w.toLowerCase().split(/\s+/).some(w=>wset.has(w))?0:1, bh=b.w.toLowerCase().split(/\s+/).some(w=>wset.has(w))?0:1;
+    return ah-bh||a.w.length-b.w.length;
+  }).forEach(c=>{ const k=c.w.toLowerCase(); if(phrSeen.has(k)) return; phrSeen.add(k); if(phrs.length<3) phrs.push({text:c.w,ipa:c.ipa,vi:c.vi}); });
+  words.forEach(c=>{ if(phrs.length>=3||!c.col) return; const k=c.col.toLowerCase(); if(phrSeen.has(k)) return; phrSeen.add(k); phrs.push({text:c.col,ipa:"",vi:""}); });
+  const sSeen=new Set(); const sents=[];
+  words.forEach(c=>{ if(sents.length>=3||!c.ex) return; const k=c.ex.toLowerCase(); if(sSeen.has(k)) return; sSeen.add(k); sents.push({text:c.ex,vi:c.exv||""}); });
+  if(sents.length<2){
+    (CONTENT.listening||[]).forEach(l=>{
+      if(sents.length>=3) return;
+      const t=String(l.text||""); if(!t||sSeen.has(t.toLowerCase())) return;
+      const hay=" "+t.toLowerCase().replace(/[^a-z' ]/g," ")+" ";
+      if(words.some(c=>hay.includes(" "+c.w.toLowerCase()+" "))){ sSeen.add(t.toLowerCase()); sents.push({text:t,vi:""}); }
+    });
+  }
+  const out={words,phrases:phrs,sentences:sents,pair:phFindPair(sym,ranked)};
+  PH_LESSON_CACHE[sym]=out;
+  return out;
+}
 function mouthPanelHTML(lock){ return `<div class="mouth-panel">${phZonesHTML(!!lock)}<div class="ph-detail" style="margin-top:10px"></div><div class="mirror-slot"></div><p class="mut" style="margin-top:6px">Hình minh họa khẩu hình khi phát âm: hình mặt cắt bên cho thấy lưỡi, răng và vòm miệng; hình nhìn trực diện cho thấy môi và độ mở hàm - nhìn cả hai góc để bắt chước theo.</p></div>`; }
 function wireMouthPanel(root,initial,opts){ if(!root) return; const lockMode=!!(opts&&opts.lock); const detail=$(".ph-detail",root); let cur=phonemeOf(initial||"ə");
   if(lockMode&&!phonemeUnlocked(cur.s)) cur=phonemeOf(PH_SEQ[Math.min(phonemeCurrentIdx(),PH_SEQ.length-1)]);
@@ -2278,14 +2498,110 @@ function wireMouthPanel(root,initial,opts){ if(!root) return; const lockMode=!!(
   const bindPhBtns=()=>{ $$(".ph-btn",root).forEach(b=>b.onclick=()=>{ const sym=b.dataset.s; if(lockMode&&!phonemeUnlocked(sym)){ toast("Hãy học lần lượt: học xong âm /"+PH_SEQ[Math.min(phonemeCurrentIdx(),PH_SEQ.length-1)]+"/ trước, âm tiếp theo sẽ tự hiện ra."); return; } cur=phonemeOf(sym); draw(); }); };
   const wirePhDiff=()=>{ $$(".ph-diffchip",root).forEach(ch=>ch.onclick=()=>{ phDiffFilter=ch.dataset.phdiff||null; const z=$(".ph-zones",root); if(z){ const tmp=document.createElement("div"); tmp.innerHTML=phZonesHTML(lockMode); if(tmp.firstElementChild) z.replaceWith(tmp.firstElementChild); } bindPhBtns(); wirePhDiff(); }); };
   const refreshPhZones=()=>{ if(!lockMode) return; const z=$(".ph-zones",root); if(z){ const tmp=document.createElement("div"); tmp.innerHTML=phZonesHTML(true); if(tmp.firstElementChild) z.replaceWith(tmp.firstElementChild); } bindPhBtns(); wirePhDiff(); };
-  const draw=()=>{ root._curSym=cur.s; $$(".ph-btn",root).forEach(b=>b.classList.toggle("on",b.dataset.s===cur.s)); if(detail){ detail.innerHTML=`<div class="obs-strip ph-strip"><div class="obs-img">${mouthFiguresHTML(cur)}<p style="margin-top:6px"><b>/${esc(cur.s)}/</b> - ${esc(cur.vi)}</p></div><div class="obs-vids">${obsVideos("ph").map((v,i)=>obsVideoHTML({...v,embed:phSegEmbed(v,cur.s)},"p"+i)).join("")}</div></div><p class="mut" style="margin-top:6px">👀 Trình tự luyện chuẩn: NHÌN người thật trong video và hình khẩu hình trước, rồi SOI gương của bạn, NGHE mẫu, và ĐỌC to để web check. Xem người thật mở miệng và nói âm này, rồi soi lại miệng của bạn ở gương bên cạnh. Video là để quan sát tổng thể, không chia theo từng giây cho từng âm.</p><div style="margin-top:8px"><p style="font-size:19px"><b>/${esc(cur.s)}/</b> - trong từ <b>${esc(cur.w)}</b> <span class="badge gold">Nhóm: ${phonemeGroupOf(cur.s)}</span> <span class="badge">Độ khó với người Việt: ${PH_DIFF_META[phonemeDiffOf(cur.s)].label}</span></p><div class="row pb-bar" style="margin-top:6px"><button class="btn teal ph-speak" data-act="play">🔊 Nghe mẫu</button><button class="btn light ph-slow" data-act="slow">🐢 Nghe chậm</button><button class="btn light ph-mirror" data-act="mirror">📹 Gương khẩu hình</button><button class="btn teal ph-rec" data-act="rec">🎤 Ghi âm và check giọng</button></div><div class="pb-res ph-res" style="margin-top:6px"></div><div class="ph-playbox"></div><div class="ph-navbox"></div></div>`;
+  let pnStepState={sym:null,done:{}};
+  let pnOpenStep=1;
+  const PN_STEP_DEFS=[[1,"Nghe âm"],[2,"Khẩu hình"],[3,"Từ đơn"],[4,"Cụm từ"],[5,"Câu"],[6,"Phân biệt"],[7,"AI chấm"]];
+  const pnPaintSteps=()=>{ if(!detail) return;
+    $$(".pn-step",detail).forEach(el=>{ const n=+el.dataset.pnstep; const dn=!!pnStepState.done[n]; el.classList.toggle("done",dn); el.classList.toggle("cur",!dn&&n===pnOpenStep); el.classList.toggle("open",n===pnOpenStep); const st=$(".pn-sstate",el); if(st) st.textContent=dn?"Đã xong":(n===pnOpenStep?"Đang học":"Chưa tới"); const num=$(".pn-snum",el); if(num) num.textContent=dn?"✓":String(n); });
+    $$(".pn-sb",detail).forEach(el=>{ const n=+el.dataset.pnsb; const dn=!!pnStepState.done[n]; el.classList.toggle("done",dn); el.classList.toggle("cur",!dn&&n===pnOpenStep); const num=$(".n",el); if(num) num.textContent=dn?"✓":String(n); });
+    const dc=$(".pn-donecount",detail); if(dc) dc.textContent=String(PN_STEP_DEFS.filter(([n])=>pnStepState.done[n]).length);
+  };
+  const pnSetOpen=n=>{ pnOpenStep=n; if(n===2) pnStepState.done[2]=true; pnPaintSteps(); };
+  const pnMarkStep=n=>{ if(pnStepState.done[n]){ return; } pnStepState.done[n]=true; pnPaintSteps(); if(n===1) pnSetOpen(2); if(n===6) pnSetOpen(7); };
+  const pnWirePair=(pair)=>{
+    const box=$(".pn-mp",detail); if(!box||!pair) return;
+    const playB=$(".pn-mp-play",box), revB=$(".pn-mp-reveal",box), note=$(".pn-mp-note",box), fb=$(".pn-mp-fb",box), nextB=$(".pn-mp-next",box), roundEl=$(".pn-mp-round",box);
+    const opts=$$(".pn-mp-opt",box);
+    let round=1, score=0, secret=Math.random()<0.5?"a":"b", heard=false, answered=false;
+    const wordOf=k=>k==="a"?pair.a:pair.b;
+    const symOf=k=>k==="a"?cur.s:pair.partnerSym;
+    const resetRound=()=>{ heard=false; answered=false; opts.forEach(o=>{ o.disabled=true; o.classList.remove("right","wrong"); }); fb.className="pn-mp-fb"; fb.textContent=""; nextB.classList.add("hidden"); if(roundEl) roundEl.textContent=String(round); note.innerHTML="🔒 Lựa chọn đang khóa - nghe từ bí mật trước, lựa chọn mới mở. Nhịp chuẩn của bước này: <b>nghe trước, chọn sau</b>."; };
+    playB.onclick=()=>{ speak(wordOf(secret).w,0.9); heard=true; note.innerHTML="🔊 Bạn vừa nghe một từ - nghe lại nếu cần, rồi bấm <b>\"Đã nghe xong - hiện lựa chọn\"</b> để mở đáp án."; };
+    revB.onclick=()=>{ if(!heard){ note.innerHTML="⚠️ Phải <b>nghe trước</b> đã - bấm nút loa nghe từ bí mật rồi mới mở lựa chọn."; return; } if(answered) return; opts.forEach(o=>{ o.disabled=false; }); note.innerHTML="🔓 Đã mở lựa chọn - bạn vừa nghe là từ nào?"; };
+    opts.forEach(o=>{ o.onclick=()=>{ if(answered||o.disabled) return; answered=true; const pick=o.dataset.pnmp; const right=pick===secret; const sw=wordOf(secret); const otherW=wordOf(secret==="a"?"b":"a");
+      opts.forEach(x=>{ x.disabled=true; if(x.dataset.pnmp===secret) x.classList.add("right"); });
+      if(!right){ o.classList.add("wrong"); logError({sec:"speaking",kind:"mc",q:"Phân biệt /"+cur.s+"/ và /"+pair.partnerSym+"/: nghe và chọn từ",o:[pair.a.w,pair.b.w],a:secret==="a"?0:1,why:"Từ đúng là \""+sw.w+"\" - âm /"+cur.s+"/ và /"+pair.partnerSym+"/ nghe khác nhau; nghe lại hai từ ở Bước 6 và đối chiếu khẩu hình ở Bước 2."}); }
+      else score++;
+      fb.className="pn-mp-fb show "+(right?"good":"bad");
+      fb.innerHTML=right?("✅ <b>Đúng rồi!</b> Từ bạn nghe là <b>"+esc(sw.w)+"</b>"+(sw.ipa?" "+esc(sw.ipa):"")+" - nghe rõ âm /"+esc(symOf(secret))+"/.") : ("❌ Chưa đúng - từ bạn nghe là <b>"+esc(sw.w)+"</b>"+(sw.ipa?" "+esc(sw.ipa):"")+", không phải "+esc(otherW.w)+". Nghe lại cả hai từ rồi sang câu tiếp theo.");
+      if(round<3){ nextB.classList.remove("hidden"); } else { note.innerHTML="🏁 Đã xong 3 câu phân biệt - bạn đúng <b>"+score+"/3</b> câu."; pnMarkStep(6); }
+    }; });
+    nextB.onclick=()=>{ round++; secret=Math.random()<0.5?"a":"b"; resetRound(); };
+    resetRound();
+  };
+  const draw=()=>{ root._curSym=cur.s; $$(".ph-btn",root).forEach(b=>b.classList.toggle("on",b.dataset.s===cur.s)); if(!detail) return;
+    const L=phLessonData(cur.s);
+    const idx=PH_SEQ.indexOf(cur.s);
+    const isDone=phonemeDone(cur.s);
+    if(pnStepState.sym!==cur.s){ pnStepState={sym:cur.s,done:{}}; if(isDone) PN_STEP_DEFS.forEach(([n])=>{ pnStepState.done[n]=true; }); pnOpenStep=1; for(const [n] of PN_STEP_DEFS){ if(!pnStepState.done[n]){ pnOpenStep=n; break; } } }
+    const dm=PH_DIFF_META[phonemeDiffOf(cur.s)];
+    const exEntry=L.words.find(c=>c.w.toLowerCase()===cur.w.toLowerCase());
+    const headIpa=exEntry?exEntry.ipa:"", headVi=exEntry?exEntry.vi:"";
+    const viParts=String(cur.vi||"").split(/\.\s+/).map(s=>s.trim().replace(/\.$/,"")).filter(Boolean);
+    const warnSents=viParts.filter(s=>/nhầm|Người Việt/.test(s));
+    const howSents=viParts.filter(s=>!/nhầm|Người Việt/.test(s));
+    const hasEx=L.words.some(c=>c.w.toLowerCase()===cur.w.toLowerCase());
+    const wordCards=(hasEx?L.words:[{w:cur.w,ipa:headIpa,vi:headVi},...L.words]).slice(0,6);
+    const sent0=L.sentences.length?L.sentences[0].text:cur.w;
+    const pair=L.pair;
+    const spkBtn=(text,step)=>'<button class="pn-spk" type="button" data-pnspk="'+esc(text)+'" data-pnstep="'+step+'" aria-label="Nghe: '+esc(text)+'">🔊</button>';
+    const stepSec=(n,name,sub,body)=>'<div class="pn-step" data-pnstep="'+n+'"><button class="pn-shead" type="button" data-pnhead="'+n+'"><span class="pn-snum">'+n+'</span><span><span class="pn-sname">Bước '+n+' · '+name+'</span><span class="pn-ssub">'+sub+'</span></span><span class="pn-sstate">Chưa tới</span><span class="pn-schev">▾</span></button><div class="pn-sbody">'+body+'</div></div>';
+    const s1='<div class="pn-bigplay"><button class="pn-playbtn ph-speak" type="button" data-act="play" aria-label="Nghe âm /'+esc(cur.s)+'/">🔊</button><div><span class="pn-sym">/'+esc(cur.s)+'/</span><div class="pn-w">'+esc(cur.w)+(headIpa?' <span class="pn-wp">'+esc(headIpa)+'</span>':"")+'</div><button class="pn-slowbtn ph-slow" type="button" data-act="slow">🐢 Nghe chậm</button></div></div>'
+      +'<div style="margin-top:10px">'+obsVideos("ph").map((v,i)=>obsVideoHTML({...v,embed:phSegEmbed(v,cur.s)},"p"+i)).join("")+'</div>'
+      +'<p class="pn-tip">💡 Nghe kỹ âm /'+esc(cur.s)+'/ trong từ mẫu và xem người thật phát âm trong video - video đã cắt đúng đoạn của âm này. Nghe 2-3 lần rồi mới sang bước Khẩu hình. Trình tự luyện chuẩn: NHÌN người thật và hình khẩu hình trước, rồi SOI gương của bạn, NGHE mẫu, và ĐỌC to để web check.</p>';
+    const s2='<div class="pn-figwrap">'+mouthFiguresHTML(cur)+'</div>'
+      +(howSents.length?'<ol class="pn-howlist">'+howSents.map(s=>'<li>'+esc(s)+'.</li>').join("")+'</ol>':"")
+      +'<p class="pn-tip">Đối chiếu hình mặt cắt bên (vị trí lưỡi, răng, vòm miệng) với hình nhìn trực diện (môi và độ mở hàm) rồi bắt chước theo. Hình minh họa: mặt cắt bên cho thấy lưỡi, răng và vòm miệng; nhìn trực diện cho thấy môi và độ mở hàm.</p>';
+    const s3='<div class="pn-wgrid">'+wordCards.map(c=>'<div class="pn-wcard"><div><span class="wt">'+esc(c.w)+'</span>'+(c.ipa||c.vi?'<span class="wp2">'+esc(c.ipa)+(c.vi?" - "+esc(c.vi):"")+'</span>':"")+'</div>'+spkBtn(c.w,3)+'</div>').join("")+'</div>'
+      +'<p class="pn-tip">Nghe mẫu từng từ rồi đọc theo, chú ý bật rõ âm /'+esc(cur.s)+'/ ở đúng vị trí của nó trong từ. Từ đầu tiên là từ mẫu của âm này.</p>';
+    const s4=(L.phrases.length?L.phrases.map(p=>'<div class="pn-scard"><div><span class="st2">'+esc(p.text)+'</span>'+(p.ipa||p.vi?'<span class="sv2">'+esc(p.ipa)+(p.vi?" - "+esc(p.vi):"")+'</span>':"")+'</div>'+spkBtn(p.text,4)+'</div>').join(""):'<p class="mut">Kho nội dung hiện chưa có cụm từ riêng cho âm này - hãy luyện kỹ từ đơn ở Bước 3 và câu ở Bước 5.</p>')
+      +'<p class="pn-tip">Đọc liền một hơi cả cụm, không dừng giữa chừng, giữ đúng âm /'+esc(cur.s)+'/ khi nó nằm giữa cụm.</p>';
+    const s5=(L.sentences.length?L.sentences.map(s=>'<div class="pn-scard"><div><span class="st2">'+esc(s.text)+'</span>'+(s.vi?'<span class="sv2">'+esc(s.vi)+'</span>':"")+'</div>'+spkBtn(s.text,5)+'</div>').join(""):'<p class="mut">Kho nội dung hiện chưa có câu mẫu riêng cho âm này.</p>')
+      +'<p class="pn-tip">Đọc trọn câu với nhịp tự nhiên. Câu đầu tiên chính là câu AI sẽ nghe và chấm ở Bước 7.</p>';
+    const s6=pair?('<div class="pn-mp"><p style="font-size:15px"><b>Câu <span class="pn-mp-round">1</span>/3:</b> Bấm nghe từ bí mật. Bạn sẽ nghe <b>một</b> trong hai từ <b>'+esc(pair.a.w)+'</b> / <b>'+esc(pair.b.w)+'</b> - tai phải phân biệt được trước khi mắt nhìn đáp án.</p>'
+      +'<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:11px;align-items:center"><button class="pn-playbtn pn-mp-play" type="button" style="width:58px;height:58px;flex-basis:58px;font-size:23px" aria-label="Nghe từ bí mật">🔊</button><button class="pn-slowbtn pn-mp-reveal" type="button" style="margin-top:0">👀 Đã nghe xong - hiện lựa chọn</button></div>'
+      +'<div class="pn-mp-opts"><button class="pn-mp-opt" type="button" data-pnmp="a" disabled><span class="ow">'+esc(pair.a.w)+'</span><span class="op">'+(pair.a.ipa?esc(pair.a.ipa):"/"+esc(cur.s)+"/")+(pair.a.vi?" - "+esc(pair.a.vi):"")+'</span></button><button class="pn-mp-opt" type="button" data-pnmp="b" disabled><span class="ow">'+esc(pair.b.w)+'</span><span class="op">'+(pair.b.ipa?esc(pair.b.ipa):"/"+esc(pair.partnerSym)+"/")+(pair.b.vi?" - "+esc(pair.b.vi):"")+'</span></button></div>'
+      +'<p class="pn-mp-note"></p><p class="pn-mp-fb"></p><button class="btn teal pn-mp-next hidden" type="button" style="margin-top:10px">Câu tiếp theo →</button></div>'
+      +'<p class="pn-tip">'+(pair.minimal?('Hai từ này là <b>cặp âm tối thiểu</b>: chúng chỉ khác nhau đúng một âm - /'+esc(cur.s)+'/ và /'+esc(pair.partnerSym)+'/ - nên nghe nhầm là hiểu sai hẳn từ.'):('Hai âm /'+esc(cur.s)+'/ và /'+esc(pair.partnerSym)+'/ rất hay bị nhầm với nhau - luyện nghe để tách bạch chúng.'))+' Sai ở bước này không sao - quay lại Bước 2 xem lại vị trí lưỡi và môi.</p>')
+      :'<p class="mut">Kho nội dung hiện chưa có cặp từ đối chiếu cho âm này - bạn vẫn luyện chắc các bước còn lại, nhất là Bước 7.</p>';
+    const s7='<div class="pn-recbox"><p class="pn-target"><span>Đọc to câu này - AI nghe và chấm từng từ:</span>'+esc(sent0)+'</p>'
+      +'<div class="row" style="margin-top:10px"><button class="btn teal pn-recsent" type="button">🎤 Ghi âm câu - AI chấm</button><button class="btn light ph-mirror" type="button" data-act="mirror">📹 Gương khẩu hình</button></div>'
+      +'<div class="pn-ress" style="margin-top:6px"></div><div class="pn-plays"></div>'
+      +'<p class="pn-tip">Gương khẩu hình mở ngay dưới bài học này: soi miệng của bạn và đối chiếu với hình mẫu của âm /'+esc(cur.s)+'/ ở Bước 2. Camera chỉ xử lý ngay trên máy của bạn, không gửi hình đi đâu.</p></div>'
+      +'<div class="pn-recbox" style="margin-top:10px"><p class="pn-target"><span>Check nhanh từ mẫu - đọc đúng từ này là hoàn thành âm /'+esc(cur.s)+'/:</span>'+esc(cur.w)+'</p>'
+      +'<div class="row" style="margin-top:10px"><button class="btn teal ph-rec" type="button" data-act="rec">🎤 Ghi âm và check giọng</button></div>'
+      +'<div class="pb-res ph-res" style="margin-top:6px"></div><div class="ph-playbox"></div></div>';
+    detail.innerHTML='<div class="pn-lesson">'
+      +'<div class="pn-lesshead"><div class="pn-bigipa">/'+esc(cur.s)+'/</div><div><span class="pn-exword">'+esc(cur.w)+'</span>'+(headIpa||headVi?' <span class="pn-exipa">'+esc(headIpa)+(headVi?" - "+esc(headVi):"")+'</span>':"")+'</div>'
+      +'<div class="pn-badges"><span class="pn-badge gold">Nhóm: '+phonemeGroupOf(cur.s)+'</span><span class="pn-badge'+(phonemeDiffOf(cur.s)==="kho"?" hard":"")+'">Độ khó với người Việt: '+dm.label+'</span><span class="pn-badge">Âm '+(idx+1)+' trên 44</span>'+(isDone?'<span class="pn-badge" style="background:#E6F6EF;border-color:#BFE7D6;color:#12714B">✓ Đã học xong âm này</span>':"")+'</div>'
+      +'<p class="pn-videsc">'+esc(cur.vi)+'</p>'
+      +(warnSents.length?'<p class="pn-warn">⚠️ <b>Người Việt hay nhầm:</b> '+esc(warnSents.map(s=>s+".").join(" "))+'</p>':"")
+      +'</div>'
+      +'<div class="pn-stepbar">'+PN_STEP_DEFS.map(([n,name])=>'<button class="pn-sb" type="button" data-pnsb="'+n+'"><span class="n">'+n+'</span>'+name+'</button>').join("")+'</div>'
+      +stepSec(1,"Nghe âm","Nghe âm /"+cur.s+"/ thật to và rõ, xem người thật phát âm âm này",s1)
+      +stepSec(2,"Khẩu hình","Vị trí lưỡi - răng - môi và độ mở hàm của âm /"+cur.s+"/",s2)
+      +stepSec(3,"Từ đơn","Đọc các từ có âm /"+cur.s+"/ - nghe mẫu rồi đọc theo",s3)
+      +stepSec(4,"Cụm từ","Đọc /"+cur.s+"/ liền trong cụm từ, không dừng giữa chừng",s4)
+      +stepSec(5,"Câu","Đọc trọn câu có âm /"+cur.s+"/ với nhịp tự nhiên",s5)
+      +stepSec(6,"Phân biệt","Phân biệt /"+cur.s+"/ và /"+(pair?pair.partnerSym:"âm hay nhầm")+"/ - nghe trước, chọn sau",s6)
+      +stepSec(7,"AI chấm","Đọc to câu mẫu - AI nghe và chấm từng từ, soi gương khẩu hình",s7)
+      +'<div class="pn-sumcard"><h3>'+(isDone?("🎉 Bạn đã học xong âm /"+esc(cur.s)+"/"):("Tổng kết buổi học âm /"+esc(cur.s)+"/"))+'</h3><div class="pn-sumchips"><span class="pn-sumchip">Đã xong <b class="pn-donecount">0</b>/7 bước trong buổi này</span><span class="pn-sumchip">Tiến độ bảng âm: <b>'+phonemeDoneCount()+'/44</b> âm</span></div><p style="font-size:13.5px;margin-top:9px">Lỗi sai khi đọc sẽ tự vào <b>Sổ lỗi sai</b> để ôn lại theo lịch giãn cách. Đọc đúng từ mẫu hoặc câu mẫu ở Bước 7 là hoàn thành âm này - học xong, âm tiếp theo sẽ tự hiện ra.</p><div class="ph-navbox"></div></div>'
+      +'</div>';
     wireObsVideos(detail);
     const nb0=$(".ph-navbox",detail); if(nb0&&lockMode) nb0.innerHTML=phNavInner();
+    $$(".pn-shead",detail).forEach(h=>{ h.onclick=()=>{ const n=+h.dataset.pnhead; if(pnOpenStep===n) pnSetOpen(0); else pnSetOpen(n); }; });
+    $$(".pn-sb",detail).forEach(ch=>{ ch.onclick=()=>{ const n=+ch.dataset.pnsb; pnSetOpen(n); const el=$('.pn-step[data-pnstep="'+n+'"]',detail); if(el&&el.scrollIntoView) el.scrollIntoView({block:"nearest"}); }; });
     const anim=rate=>{ const svg=$("svg",detail); if(svg){ svg.classList.remove("mouth-anim"); void svg.getBoundingClientRect(); svg.classList.add("mouth-anim"); } speak(cur.w,rate); };
-    const s1=$(".ph-speak",detail); if(s1) s1.onclick=()=>anim(0.9); const s2=$(".ph-slow",detail); if(s2) s2.onclick=()=>anim(0.5);
-    const m1=$(".ph-mirror",detail); if(m1) m1.onclick=()=>{ const slot=$(".mirror-slot",root); if(slot){ mirrorToggle(slot,cur.s); if(lockMode){ const sel=$(".mr-sel",slot); if(sel) [...sel.options].forEach(o=>{ if(o.value&&!phonemeUnlocked(o.value)) o.disabled=true; }); } } };
-    const r1=$(".ph-rec",detail); if(r1) r1.onclick=()=>pbCheckVoice({text:cur.w,btn:r1,resEl:$(".ph-res",detail),playEl:$(".ph-playbox",detail),judge:(said,g)=>{ const ok=g.ok===g.total; setProg("mouth",cur.s,{word:cur.w,ok,say:said}); if(lockMode&&ok){ refreshPhZones(); const nb=$(".ph-navbox",detail); if(nb){ nb.innerHTML=phNavInner(); wirePhNav(); } } if(!ok) logError({sec:"speaking",kind:"type",q:"Đọc từ mẫu của âm /"+cur.s+"/: "+cur.w,a:cur.w,why:"Đọc lại từ này cho đúng âm /"+cur.s+"/ - "+cur.vi}); }});
-    if(MIRROR.slot&&root.contains(MIRROR.slot)) mirrorSetTarget(cur.s); wirePhNav(); } };
+    const s1b=$(".ph-speak",detail); if(s1b) s1b.onclick=()=>{ anim(0.9); pnMarkStep(1); };
+    const s2b=$(".ph-slow",detail); if(s2b) s2b.onclick=()=>{ anim(0.5); pnMarkStep(1); };
+    $$(".pn-spk",detail).forEach(b=>{ b.onclick=()=>{ speak(b.dataset.pnspk,0.9); pnMarkStep(+b.dataset.pnstep); }; });
+    const m1=$(".ph-mirror",detail); if(m1) m1.onclick=()=>{ const slot=$(".mirror-slot",root); if(slot){ mirrorToggle(slot,cur.s); if(lockMode){ const sel=$(".mr-sel",slot); if(sel) [...sel.options].forEach(o=>{ if(o.value&&!phonemeUnlocked(o.value)) o.disabled=true; }); } } pnMarkStep(7); };
+    const onSoundDone=()=>{ PN_STEP_DEFS.forEach(([n])=>{ pnStepState.done[n]=true; }); pnPaintSteps(); };
+    const r1=$(".ph-rec",detail); if(r1) r1.onclick=()=>{ pnMarkStep(7); pbCheckVoice({text:cur.w,btn:r1,resEl:$(".ph-res",detail),playEl:$(".ph-playbox",detail),judge:(said,g)=>{ const ok=g.ok===g.total; setProg("mouth",cur.s,{word:cur.w,ok,say:said}); if(lockMode&&ok){ refreshPhZones(); const nb=$(".ph-navbox",detail); if(nb){ nb.innerHTML=phNavInner(); wirePhNav(); } } if(ok) onSoundDone(); if(!ok) logError({sec:"speaking",kind:"type",q:"Đọc từ mẫu của âm /"+cur.s+"/: "+cur.w,a:cur.w,why:"Đọc lại từ này cho đúng âm /"+cur.s+"/ - "+cur.vi}); }}); };
+    const rs=$(".pn-recsent",detail); if(rs) rs.onclick=()=>{ pnMarkStep(7); pbCheckVoice({text:sent0,btn:rs,resEl:$(".pn-ress",detail),playEl:$(".pn-plays",detail),judge:(said,g)=>{ const ok=g.ok===g.total; if(ok){ setProg("mouth",cur.s,{word:cur.w,ok:true,say:said}); if(lockMode){ refreshPhZones(); const nb=$(".ph-navbox",detail); if(nb){ nb.innerHTML=phNavInner(); wirePhNav(); } } onSoundDone(); } else logError({sec:"speaking",kind:"type",q:"Đọc câu mẫu của âm /"+cur.s+"/: "+sent0,a:sent0,why:"Đọc lại câu này cho đúng âm /"+cur.s+"/ - nghe mẫu chậm ở Bước 5, sửa từng từ rồi đọc lại cả câu."}); }}); };
+    pnWirePair(pair);
+    pnPaintSteps();
+    if(MIRROR.slot&&root.contains(MIRROR.slot)) mirrorSetTarget(cur.s); wirePhNav(); };
   bindPhBtns(); wirePhDiff();
   draw(); }
 function openMouthFor(sym){ const t=document.querySelector(".mouth-panel"); if(t){ const b=t.querySelector(`.ph-btn[data-s="${CSS.escape(sym)}"]`); if(b) b.click(); } }
