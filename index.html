@@ -331,6 +331,7 @@ main{padding:14px 10px 122px}
 .gmap-zone-t{font-weight:700;font-size:13.5px;color:var(--teal);margin-top:10px}
 .hookline{background:#fff7e0;border:1px solid #f0d9a0;border-left:4px solid var(--gold);border-radius:10px;padding:9px 12px;margin-top:10px;font-size:14.5px}
 .ph-zone{flex:0 0 100%;font-weight:700;color:var(--teal);font-size:13.5px;margin-top:8px}
+.ph-zone-empty{flex:0 0 100%;font-size:13px;color:var(--mut);margin-top:8px}
 .gm-match{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
 .gm-col{display:flex;flex-direction:column;gap:6px}
 .gm-w,.gm-m{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:10px;cursor:pointer;font-size:14.5px;text-align:left;color:var(--ink);min-height:44px}
@@ -529,6 +530,8 @@ section.shellsec h3{margin-top:18px}
 .pn-page .pn-progbar{display:block;height:10px;border-radius:999px;background:#F3ECDC;overflow:hidden;margin-top:8px}
 .pn-page .pn-progbar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#FFC800,#FFB800)}
 .pn-page .ph-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(106px,1fr));gap:9px}
+.pn-page .ph-zone{grid-column:1/-1}
+.pn-page .ph-zone-empty{grid-column:1/-1}
 .pn-page .ph-btn{display:flex;flex-direction:column;align-items:center;gap:1px;padding:11px 6px 9px;border-radius:15px;background:#FFFCF6;border:1.5px solid #F0E7D8;min-height:0}
 .pn-page .ph-btn .ph-ipa{font-size:20px;font-weight:800;line-height:1.15;color:#1F2430}
 .pn-page .ph-btn .ph-ex{font-size:12.5px;color:#6E6A61;font-weight:600}
@@ -613,6 +616,8 @@ section.shellsec h3{margin-top:18px}
 .mouth-panel .pn-sumcard h3{font-size:18px;font-weight:800;color:#1F2430}
 .mouth-panel .pn-sumchips{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
 .mouth-panel .pn-sumchip{background:#fff;border:1px solid #E7DCC6;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;color:#1F2430}
+.mouth-panel .btn.teal,.pn-page #targetBox .btn.teal{background:#FF6B4A;color:#fff}
+.mouth-panel .btn.light,.pn-page #targetBox .btn.light{background:#FFF3D6;color:#8A5E00}
 @media(max-width:640px){
   .pn-page .ph-grid{grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}
   .pn-page .ph-btn .ph-ipa{font-size:18px}
@@ -1401,7 +1406,7 @@ let phDiffFilter=null;
 function phonemeDiffOf(s){ return PH_DIFF[s]||"lech"; }
 function phDiffCounts(){ const c={quen:0,lech:0,kho:0}; PH_SEQ.forEach(x=>{ c[phonemeDiffOf(x)]++; }); return c; }
 function phZonesHTML(lock){ const btn=p=>{ if(!lock) return '<button class="ph-btn" data-s="'+esc(p.s)+'" data-diff="'+phonemeDiffOf(p.s)+'"'+(phDiffFilter&&phonemeDiffOf(p.s)!==phDiffFilter?' style="display:none"':"")+'>/'+esc(p.s)+'/<span class="ph-diff-dot" style="color:'+PH_DIFF_META[phonemeDiffOf(p.s)].dot+'">●</span></button>'; const ci=phonemeCurrentIdx(); const st=phonemeDone(p.s)?"done":(PH_SEQ[ci]===p.s?"cur":"lock"); return '<button class="ph-btn phst-'+st+'" data-s="'+esc(p.s)+'" data-diff="'+phonemeDiffOf(p.s)+'"'+(phDiffFilter&&phonemeDiffOf(p.s)!==phDiffFilter?' style="display:none"':"")+(st==="lock"?' data-lock="1"':"")+'>'+'<span class="ph-ipa">'+(st==="done"?"✓ ":"")+"/"+esc(p.s)+"/"+(st==="lock"?" 🔒":"")+'</span><span class="ph-ex">'+esc(p.w)+'</span><span class="ph-st">'+(st==="done"?"Đã xong":(st==="cur"?"Đang học":"Khóa"))+'</span><span class="ph-diff-dot" style="color:'+PH_DIFF_META[phonemeDiffOf(p.s)].dot+'">●</span></button>'; };
-  const bySym=arr=>arr.map(s=>PHONEMES.find(p=>p.s===s)).filter(Boolean); const sg=bySym(PH_SINGLE), dp=bySym(PH_DIPH), cs=PHONEMES.filter(p=>!PH_SINGLE.includes(p.s)&&!PH_DIPH.includes(p.s)); const zone=(label,list)=>'<div class="ph-zone">'+label+' ('+list.length+' âm)</div>'+list.map(btn).join("");
+  const bySym=arr=>arr.map(s=>PHONEMES.find(p=>p.s===s)).filter(Boolean); const sg=bySym(PH_SINGLE), dp=bySym(PH_DIPH), cs=PHONEMES.filter(p=>!PH_SINGLE.includes(p.s)&&!PH_DIPH.includes(p.s)); const zone=(label,list)=>{ const vis=phDiffFilter?list.filter(p=>phonemeDiffOf(p.s)===phDiffFilter):list; if(phDiffFilter&&!vis.length) return '<div class="ph-zone-empty">Không có âm nào trong nhóm này ở khu '+label+'.</div>'; return '<div class="ph-zone">'+label+' ('+vis.length+' âm)</div>'+list.map(btn).join(""); };
   const head=lock?('<p class="ph-prog">Đã học '+phonemeDoneCount()+' trên 44 âm - học xong âm này, âm tiếp theo sẽ hiện ra.<span class="pn-progbar"><i style="width:'+Math.round(phonemeDoneCount()/44*100)+'%"></i></span></p><p class="mut" style="margin-bottom:2px">🗺️ Bản đồ 44 âm theo 3 khu: nguyên âm đơn là các âm ngắn gọn rung từ cổ họng, nguyên âm đôi là âm trượt từ âm này sang âm khác, phụ âm được tạo khi môi, răng và lưỡi chặn luồng hơi. Học lần lượt từng âm: âm có dấu ✓ là đã học xong, âm viền vàng là âm bạn đang học, âm có 🔒 sẽ mở ra khi bạn học xong âm ngay trước nó. Bấm vào một âm đã mở để học âm đó.</p>'):'<p class="mut" style="margin-bottom:2px">🗺️ Bản đồ 44 âm theo 3 khu: nguyên âm đơn là các âm ngắn gọn rung từ cổ họng, nguyên âm đôi là âm trượt từ âm này sang âm khác, phụ âm được tạo khi môi, răng và lưỡi chặn luồng hơi. Bấm vào một âm để xem khẩu hình của âm đó.</p>';
   const dc=phDiffCounts(); const diffbar='<div class="ph-diffbar"><span class="mut">Nhìn theo độ khó với người Việt:</span><button class="chip ph-diffchip'+(!phDiffFilter?" on":"")+'" data-phdiff="">Tất cả 44 âm</button>'+Object.keys(PH_DIFF_META).map(k=>'<button class="chip ph-diffchip'+(phDiffFilter===k?" on":"")+'" data-phdiff="'+k+'"><span style="color:'+PH_DIFF_META[k].dot+'">●</span> '+PH_DIFF_META[k].label+' ('+dc[k]+')</button>').join("")+'</div>'+(phDiffFilter&&PH_DIFF_META[phDiffFilter]?'<p class="ph-diffnote">'+PH_DIFF_META[phDiffFilter].note+'</p><p class="mut" style="margin:2px 0 4px">Đang xem nhóm: <b>'+PH_DIFF_META[phDiffFilter].label+'</b> - bấm một âm trong nhóm để học. Bộ lọc chỉ giúp nhìn rõ nhóm cần chú ý; thứ tự khóa tiến vẫn giữ nguyên.</p>':"");
   return '<div class="ph-zones">'+head+diffbar+'<div class="ph-grid">'+zone("Nguyên âm đơn",sg)+zone("Nguyên âm đôi",dp)+zone("Phụ âm",cs)+'</div></div>'; }
@@ -2028,7 +2033,7 @@ function wireTargets(app){ const box=$("#targetBox",app); if(!box) return; const
   $$(".tg-play",app).forEach(b=>b.onclick=()=>speak(b.dataset.w,0.85));
   $$(".tg-mic",app).forEach(b=>b.onclick=()=>{ const w=b.dataset.w; pbCheckVoice({text:w,btn:b,resEl:$(`.tg-res[data-w="${CSS.escape(w)}"]`,app),playEl:$(`.tg-pb[data-w="${CSS.escape(w)}"]`,app),judge:said=>judge(w,said)}); });
   $$(".tg-chk",app).forEach(b=>b.onclick=()=>{ const w=b.dataset.w; const inp=$(`.tg-inp[data-w="${CSS.escape(w)}"]`,app); judge(w,inp?inp.value:""); });
-  const tobs=$("#targetObs",app); if(tobs){ tobs.innerHTML=obsStripHTML("θ","ph"); wireObsVideos(tobs); }
+  const tobs=$("#targetObs",app); if(tobs){ if($("#pronMouth",app)){ tobs.innerHTML='<p class="mut" style="margin:2px 0">📺 Video người thật phát âm từng âm (đã cắt đúng đoạn của âm đó) nằm ở <b>Bước 1 - Nghe âm</b> trong bài học của từng âm ở bảng 44 âm phía trên, nên khối này không nhúng lại video để tránh trùng.</p><button class="btn light tg-tostep1" type="button" style="padding:5px 12px;margin-top:4px">⬆ Về bài học âm đang học - mở Bước 1 (Nghe âm)</button>'; const tb=$(".tg-tostep1",tobs); if(tb) tb.onclick=()=>{ const main=$("#pronMouth",app); if(!main) return; if(main.scrollIntoView) main.scrollIntoView({block:"start"}); const st1=main.querySelector('.pn-step[data-pnstep="1"]'); if(st1&&!st1.classList.contains("open")){ const h1=main.querySelector('.pn-shead[data-pnhead="1"]'); if(h1) h1.click(); } }; } else { tobs.innerHTML=obsStripHTML("θ","ph"); wireObsVideos(tobs); } }
   $$(".tg-slow",app).forEach(b=>b.onclick=()=>speak(b.dataset.w,0.5));
   $$(".tg-mirror",app).forEach(b=>b.onclick=()=>{ const w=b.dataset.w; const sym=(b.dataset.g&&PHONEMES.some(p=>p.s===b.dataset.g))?b.dataset.g:firstPhonemeOf(w); const main=$("#pronMouth",app); if(main){ if(main.scrollIntoView) main.scrollIntoView({block:"start"}); const mbtn=main.querySelector(`.ph-btn[data-s="${CSS.escape(sym)}"]`); if(mbtn) mbtn.click(); if(phonemeUnlocked(sym)){ const slot=$(".mirror-slot",main); if(slot) mirrorToggle(slot,sym); } } else { const mb=$("#targetMouth",app); if(mb){ mb.classList.remove("hidden"); if(!mb.dataset.wired){ mb.innerHTML=mouthPanelHTML(); mb.dataset.wired="1"; } wireMouthPanel(mb, sym); const btn=mb.querySelector(`.ph-btn[data-s="${CSS.escape(sym)}"]`); if(btn) btn.click(); const slot=$(".mirror-slot",mb); if(slot) mirrorToggle(slot,sym); } } setObsPhoneme($("#targetObs",app),sym); });
   renderSummary(); }
@@ -2499,6 +2504,8 @@ function wireMouthPanel(root,initial,opts){ if(!root) return; const lockMode=!!(
   const wirePhDiff=()=>{ $$(".ph-diffchip",root).forEach(ch=>ch.onclick=()=>{ phDiffFilter=ch.dataset.phdiff||null; const z=$(".ph-zones",root); if(z){ const tmp=document.createElement("div"); tmp.innerHTML=phZonesHTML(lockMode); if(tmp.firstElementChild) z.replaceWith(tmp.firstElementChild); } bindPhBtns(); wirePhDiff(); }); };
   const refreshPhZones=()=>{ if(!lockMode) return; const z=$(".ph-zones",root); if(z){ const tmp=document.createElement("div"); tmp.innerHTML=phZonesHTML(true); if(tmp.firstElementChild) z.replaceWith(tmp.firstElementChild); } bindPhBtns(); wirePhDiff(); };
   let pnStepState={sym:null,done:{}};
+  const pnDoneBySym={};
+  let pnBlurH=null;
   let pnOpenStep=1;
   const PN_STEP_DEFS=[[1,"Nghe âm"],[2,"Khẩu hình"],[3,"Từ đơn"],[4,"Cụm từ"],[5,"Câu"],[6,"Phân biệt"],[7,"AI chấm"]];
   const pnPaintSteps=()=>{ if(!detail) return;
@@ -2533,15 +2540,15 @@ function wireMouthPanel(root,initial,opts){ if(!root) return; const lockMode=!!(
     const L=phLessonData(cur.s);
     const idx=PH_SEQ.indexOf(cur.s);
     const isDone=phonemeDone(cur.s);
-    if(pnStepState.sym!==cur.s){ pnStepState={sym:cur.s,done:{}}; if(isDone) PN_STEP_DEFS.forEach(([n])=>{ pnStepState.done[n]=true; }); pnOpenStep=1; for(const [n] of PN_STEP_DEFS){ if(!pnStepState.done[n]){ pnOpenStep=n; break; } } }
+    if(pnStepState.sym!==cur.s){ if(!pnDoneBySym[cur.s]) pnDoneBySym[cur.s]={}; pnStepState={sym:cur.s,done:pnDoneBySym[cur.s]}; if(isDone) PN_STEP_DEFS.forEach(([n])=>{ pnStepState.done[n]=true; }); pnOpenStep=1; for(const [n] of PN_STEP_DEFS){ if(!pnStepState.done[n]){ pnOpenStep=n; break; } } }
     const dm=PH_DIFF_META[phonemeDiffOf(cur.s)];
-    const exEntry=L.words.find(c=>c.w.toLowerCase()===cur.w.toLowerCase());
+    const exEntry=L.words.find(c=>c.w.toLowerCase()===cur.w.toLowerCase())||phPools().singles.find(c=>c.w.toLowerCase()===cur.w.toLowerCase())||null;
     const headIpa=exEntry?exEntry.ipa:"", headVi=exEntry?exEntry.vi:"";
     const viParts=String(cur.vi||"").split(/\.\s+/).map(s=>s.trim().replace(/\.$/,"")).filter(Boolean);
     const warnSents=viParts.filter(s=>/nhầm|Người Việt/.test(s));
     const howSents=viParts.filter(s=>!/nhầm|Người Việt/.test(s));
-    const hasEx=L.words.some(c=>c.w.toLowerCase()===cur.w.toLowerCase());
-    const wordCards=(hasEx?L.words:[{w:cur.w,ipa:headIpa,vi:headVi},...L.words]).slice(0,6);
+    const hasEx=!!exEntry;
+    const wordCards=(hasEx?[exEntry,...L.words.filter(c=>c.w.toLowerCase()!==cur.w.toLowerCase())]:L.words).slice(0,6);
     const sent0=L.sentences.length?L.sentences[0].text:cur.w;
     const pair=L.pair;
     const spkBtn=(text,step)=>'<button class="pn-spk" type="button" data-pnspk="'+esc(text)+'" data-pnstep="'+step+'" aria-label="Nghe: '+esc(text)+'">🔊</button>';
@@ -2553,7 +2560,7 @@ function wireMouthPanel(root,initial,opts){ if(!root) return; const lockMode=!!(
       +(howSents.length?'<ol class="pn-howlist">'+howSents.map(s=>'<li>'+esc(s)+'.</li>').join("")+'</ol>':"")
       +'<p class="pn-tip">Đối chiếu hình mặt cắt bên (vị trí lưỡi, răng, vòm miệng) với hình nhìn trực diện (môi và độ mở hàm) rồi bắt chước theo. Hình minh họa: mặt cắt bên cho thấy lưỡi, răng và vòm miệng; nhìn trực diện cho thấy môi và độ mở hàm.</p>';
     const s3='<div class="pn-wgrid">'+wordCards.map(c=>'<div class="pn-wcard"><div><span class="wt">'+esc(c.w)+'</span>'+(c.ipa||c.vi?'<span class="wp2">'+esc(c.ipa)+(c.vi?" - "+esc(c.vi):"")+'</span>':"")+'</div>'+spkBtn(c.w,3)+'</div>').join("")+'</div>'
-      +'<p class="pn-tip">Nghe mẫu từng từ rồi đọc theo, chú ý bật rõ âm /'+esc(cur.s)+'/ ở đúng vị trí của nó trong từ. Từ đầu tiên là từ mẫu của âm này.</p>';
+      +'<p class="pn-tip">Nghe mẫu từng từ rồi đọc theo, chú ý bật rõ âm /'+esc(cur.s)+'/ ở đúng vị trí của nó trong từ.'+(hasEx?' Từ đầu tiên là từ mẫu của âm này.':'')+'</p>';
     const s4=(L.phrases.length?L.phrases.map(p=>'<div class="pn-scard"><div><span class="st2">'+esc(p.text)+'</span>'+(p.ipa||p.vi?'<span class="sv2">'+esc(p.ipa)+(p.vi?" - "+esc(p.vi):"")+'</span>':"")+'</div>'+spkBtn(p.text,4)+'</div>').join(""):'<p class="mut">Kho nội dung hiện chưa có cụm từ riêng cho âm này - hãy luyện kỹ từ đơn ở Bước 3 và câu ở Bước 5.</p>')
       +'<p class="pn-tip">Đọc liền một hơi cả cụm, không dừng giữa chừng, giữ đúng âm /'+esc(cur.s)+'/ khi nó nằm giữa cụm.</p>';
     const s5=(L.sentences.length?L.sentences.map(s=>'<div class="pn-scard"><div><span class="st2">'+esc(s.text)+'</span>'+(s.vi?'<span class="sv2">'+esc(s.vi)+'</span>':"")+'</div>'+spkBtn(s.text,5)+'</div>').join(""):'<p class="mut">Kho nội dung hiện chưa có câu mẫu riêng cho âm này.</p>')
@@ -2588,6 +2595,9 @@ function wireMouthPanel(root,initial,opts){ if(!root) return; const lockMode=!!(
       +'<div class="pn-sumcard"><h3>'+(isDone?("🎉 Bạn đã học xong âm /"+esc(cur.s)+"/"):("Tổng kết buổi học âm /"+esc(cur.s)+"/"))+'</h3><div class="pn-sumchips"><span class="pn-sumchip">Đã xong <b class="pn-donecount">0</b>/7 bước trong buổi này</span><span class="pn-sumchip">Tiến độ bảng âm: <b>'+phonemeDoneCount()+'/44</b> âm</span></div><p style="font-size:13.5px;margin-top:9px">Lỗi sai khi đọc sẽ tự vào <b>Sổ lỗi sai</b> để ôn lại theo lịch giãn cách. Đọc đúng từ mẫu hoặc câu mẫu ở Bước 7 là hoàn thành âm này - học xong, âm tiếp theo sẽ tự hiện ra.</p><div class="ph-navbox"></div></div>'
       +'</div>';
     wireObsVideos(detail);
+    const ob1=$('.pn-step[data-pnstep="1"] .obs-play',detail); if(ob1){ const pv1=ob1.onclick; ob1.onclick=()=>{ if(pv1) pv1(); pnMarkStep(1); }; }
+    if(pnBlurH){ window.removeEventListener("blur",pnBlurH); pnBlurH=null; }
+    const f1=$('.pn-step[data-pnstep="1"] iframe',detail); if(f1){ pnBlurH=()=>{ if(document.activeElement===f1) pnMarkStep(1); }; window.addEventListener("blur",pnBlurH); }
     const nb0=$(".ph-navbox",detail); if(nb0&&lockMode) nb0.innerHTML=phNavInner();
     $$(".pn-shead",detail).forEach(h=>{ h.onclick=()=>{ const n=+h.dataset.pnhead; if(pnOpenStep===n) pnSetOpen(0); else pnSetOpen(n); }; });
     $$(".pn-sb",detail).forEach(ch=>{ ch.onclick=()=>{ const n=+ch.dataset.pnsb; pnSetOpen(n); const el=$('.pn-step[data-pnstep="'+n+'"]',detail); if(el&&el.scrollIntoView) el.scrollIntoView({block:"nearest"}); }; });
