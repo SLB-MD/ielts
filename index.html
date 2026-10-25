@@ -65,7 +65,7 @@ p{margin:8px 0}
 #previewBanner{background:#fff7dd;border-bottom:1px solid #ecd28a;color:#7a5b12;font-size:13px;text-align:center;padding:7px 12px}
 #nudgeModal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;z-index:60;padding:20px}
 #nudgeModal .box{background:#fff;border-radius:18px;padding:20px;max-width:480px}
-input[type=text],input[type=number]{border:1.5px solid var(--line);border-radius:12px;padding:9px 12px;font-size:16px}
+input[type=text],input[type=number],input[type=email],input[type=password]{border:1.5px solid var(--line);border-radius:12px;padding:9px 12px;font-size:16px}
 iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radius:14px}
 .mirror-box{margin-top:14px}.mr-video{transform:scaleX(-1);width:100%;max-width:420px;border-radius:14px;background:#000}.mr-stage{position:relative;max-width:420px}.mr-overlay{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}.mr-feed table{width:100%;border-collapse:collapse}.mr-feed td,.mr-feed th{border-bottom:1px solid #E7DCC6;padding:4px 6px;text-align:left;font-size:13px}.mr-lib-row{display:flex;gap:10px;flex-wrap:wrap}.mr-item{width:280px}.mr-item video{width:100%;border-radius:12px}.ai-good{color:#1E9E6A;font-weight:700}.ai-mid{color:#B7791F;font-weight:700}.ai-bad{color:#D9534F;font-weight:700}
 .mr-overlay{filter:drop-shadow(0 0 3px rgba(0,0,0,0.85))}
@@ -78,7 +78,7 @@ iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radiu
 <body>
 <div class="wrap">
 <header><h1>Học tiếng Anh từ đầu</h1><div class="sub">Bản mới — học theo từng bước, không vội, không rối.</div></header>
-<div id="previewBanner">Bạn đang ở chế độ xem trước — tiến trình lưu trên máy này, chưa đồng bộ tài khoản. Đồng bộ Supabase sẽ mở ở giai đoạn 2.</div>
+<div id="previewBanner">Bạn đang ở chế độ khách — tiến trình lưu trên máy này, chưa đồng bộ tài khoản. Đăng nhập ở mục Của tôi → Tài khoản để đồng bộ.</div>
 <nav class="tabbar" id="tabBar">
 <button class="tab" data-tab="home">Học</button>
 <button class="tab" data-tab="roadmap">Lộ trình</button>
@@ -97,7 +97,7 @@ iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radiu
 "use strict";
 /* ============ SHELL BẢN MỚI — GIAI ĐOẠN 1 ============
    Một nguồn số liệu duy nhất: state (localStorage ielts_rebuild_v1).
-   Không gọi Supabase trong giai đoạn 1 (đồng bộ tài khoản mở ở giai đoạn 2).
+   Tài khoản + đồng bộ Supabase: xem mục TÀI KHOẢN trong file này (đăng nhập, khách, gộp tiến trình, lộ trình riêng, VIP).
    ======================================================= */
 var $ = function (s, r) { return (r || document).querySelector(s); };
 var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -187,8 +187,8 @@ function mouthFiguresHTML(p) {
 
 /* ---------- Store: một nguồn số liệu duy nhất ---------- */
 var LS_NEW = "ielts_rebuild_v1", LS_OLD = "ielts_standalone_v1";
-function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], chatStars: [], chatReports: [], testDone: false, xpClaimed: {}, migrated: false }; }
-function saveState() { try { localStorage.setItem(LS_NEW, JSON.stringify(state)); } catch (e) {} }
+function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], chatStars: [], chatReports: [], testDone: false, xpClaimed: {}, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null }; }
+function saveState() { try { localStorage.setItem(LS_NEW, JSON.stringify(state)); } catch (e) {} try { if (typeof authState !== "undefined" && authState.user) scheduleSyncPush(); } catch (e2) {} }
 function loadState() {
   var st = freshState();
   try {
@@ -347,6 +347,7 @@ function finishSummaryHTML(title, stats, wrongListHTML) {
 /* ---------- Điều hướng ---------- */
 function go(tab) { curTab = tab; curLesson = null; render(); }
 function render() {
+  try { var bn = $("#previewBanner"); if (bn) bn.textContent = authBannerText(); } catch (e) {}
   $$("#tabBar .tab").forEach(function (b) { b.classList.toggle("on", b.dataset.tab === curTab); });
   var app = $("#app");
   if (curLesson) { renderLesson(app); return; }
@@ -394,6 +395,7 @@ function viewHome(app) {
   if (due > 0) html += '<section class="card" id="reviewStrip"><p>Có <b>' + due + ' mục đến hạn ôn</b> hôm nay — ôn đúng lúc sắp quên là nhớ lâu nhất.</p><button class="btn btn-amber" id="reviewGo">Ôn ngay</button></section>';
   html += '<p><button class="dimlink" id="quickCheckLink">Tôi đã biết chút ít — kiểm tra nhanh để gợi ý điểm bắt đầu</button> · <button class="dimlink" id="loginLink">Đăng nhập</button></p>';
   app.innerHTML = html;
+  var ll = $("#loginLink"); if (ll) { try { ll.textContent = (typeof authState !== "undefined" && authState.user) ? "Tài khoản: " + authState.user.email : "Đăng nhập"; } catch (e) {} }
   $("#nextBtn").onclick = function () {
     if (!ns) { if (state.testDone) go("review"); else openStep(stepById("test")); return; }
     openStep(ns, { noNudge: true });
@@ -401,13 +403,106 @@ function viewHome(app) {
   var rg = $("#reviewGo"); if (rg) rg.onclick = function () { go("review"); };
   $("#quickCheckLink").onclick = function () { openLesson({ type: "quickcheck" }); };
   $("#mapGo").onclick = function () { go("roadmap"); };
-  $("#loginLink").onclick = function () { toast("Đăng nhập sẽ mở ở giai đoạn 2 — hiện tại tiến trình lưu trên máy này."); };
+  $("#loginLink").onclick = function () { go("mine"); };
+}
+
+/* ---------- LỘ TRÌNH RIÊNG: CÁ NHÂN HÓA CỰC CHI TIẾT ---------- */
+/* Luật chạy ngay trên máy, trên dữ liệu thật của người học (miễn phí, không
+   giới hạn lượt): điểm yếu từ kiểm tra, mục đến hạn từ Sổ lỗi sai, nhịp độ
+   đã chọn. AI trò chuyện chỉ viết câu giải thích khi người học bấm hỏi —
+   không dùng lượt AI để quyết định lộ trình. */
+function personalWeakInfo() {
+  var lt = state.lastTest;
+  if (!lt || !lt.parts || !lt.parts.length) return null;
+  return lt.parts.slice().sort(function (a, b) { return a.pct - b.pct; })[0];
+}
+function personalWeakStepId() {
+  var w = personalWeakInfo(); if (!w) return null;
+  var n = w.name || "";
+  if (n.indexOf("Chữ") >= 0) return "letters";
+  if (n.indexOf("Âm") >= 0) return "pron1";
+  if (n.indexOf("lớp") >= 0) return "classroom";
+  if (n.indexOf("Ngữ pháp") >= 0) return "gram0";
+  return null;
+}
+function buildPersonalPath() {
+  var remaining = learningSteps().filter(function (s) { return !stepDone(s.id); });
+  var doneN = doneLearnCount(), totalN = learningSteps().length;
+  var pace = state.pace || "vua";
+  var due = dueHard();
+  var weak = personalWeakInfo();
+  var weakId = personalWeakStepId();
+  var items = [];
+  var reasons = [];
+  var ordered = remaining.slice();
+  if (weakId) {
+    var wi = -1;
+    for (var i = 0; i < ordered.length; i++) if (ordered[i].id === weakId) { wi = i; break; }
+    if (wi > 0) { var ws = ordered.splice(wi, 1)[0]; ordered.unshift(ws); reasons.push("Vì phần \"" + weak.name + "\" bạn đúng ít nhất trong kiểm tra (" + weak.pct + "%) nên học trước."); }
+    else if (wi === 0) { reasons.push("Phần yếu nhất của bạn là \"" + weak.name + "\" (" + weak.pct + "%) — bước này đã ở đầu lộ trình."); }
+  }
+  function stepItem(s) { return { kind: "step", stepId: s.id, title: s.title, reason: "" }; }
+  function reviewItem(label, reason) { return { kind: "review", stepId: null, title: "Ôn điểm yếu" + label, reason: reason }; }
+  if (due.length > 0 && pace === "nhanh") {
+    items.push(reviewItem(" (gọn)", "Bạn có " + due.length + " mục đến hạn ôn — gom gọn để tăng tốc."));
+  }
+  ordered.forEach(function (s, idx) {
+    items.push(stepItem(s));
+    if (pace === "ky") items.push({ kind: "drill", stepId: s.id, title: "Ôn kỹ: " + s.title, reason: "Bạn chọn nhịp kỹ nên ôn thêm sau mỗi bước." });
+    if (due.length > 0 && pace === "vua" && idx === 0) items.push(reviewItem("", "Bạn có " + due.length + " mục đến hạn ôn — ôn đúng lúc sắp quên là nhớ lâu nhất."));
+    if (due.length > 0 && pace === "ky" && (idx + 1) % 2 === 0) items.push(reviewItem("", "Bạn chọn nhịp kỹ nên ôn thêm sau mỗi 2 bước."));
+  });
+  var hasReview = items.some(function (it) { return it.kind === "review"; });
+  if (due.length > 0 && !hasReview) items.push(reviewItem("", "Bạn có " + due.length + " mục đến hạn ôn — ôn đúng lúc sắp quên là nhớ lâu nhất."));
+  if (due.length > 0) reasons.push("Bạn có " + due.length + " mục đến hạn ôn trong Sổ lỗi sai.");
+  if (!weak && due.length === 0) reasons.push("Chưa có kiểm tra — lộ trình theo thứ tự chương 1; làm kiểm tra cuối chương để AI điều chỉnh theo điểm yếu.");
+  if (ordered.length === 0) reasons.push("Bạn đã xong chương 1 — lộ trình riêng sẽ mở tiếp khi chương 2 mở.");
+  if (pace === "nhanh") reasons.push("Nhịp tăng tốc: các bước đã xong không lặp lại.");
+  if (pace === "ky") reasons.push("Nhịp kỹ: ôn thêm sau mỗi bước và sau mỗi 2 bước.");
+  return { items: items, reasons: reasons, done: doneN, total: totalN, weak: weak, dueCount: due.length, pace: pace };
+}
+function setPace(p) {
+  if (["nhanh", "vua", "ky"].indexOf(p) < 0) return;
+  state.pace = p; state.personalPath = null; saveState(); scheduleSyncPush(); render();
+}
+function personalPathCardHTML() {
+  var pp = buildPersonalPath();
+  var pace = pp.pace;
+  var paceBtn = function (p, label) { return '<button class="btn' + (pace === p ? ' btn-amber' : '') + '" data-pace="' + p + '">' + label + '</button>'; };
+  var h = '<section class="card" id="ppCard"><h3>Lộ trình riêng — Cá nhân hóa cực chi tiết</h3>';
+  h += '<p class="mut">AI theo dõi lộ trình của riêng bạn: điểm yếu, Sổ lỗi sai, nhịp độ — rồi tự chỉnh bước tiếp theo cho hợp lý. Mỗi lần đổi đều ghi rõ lý do.</p>';
+  h += '<p>Nhịp độ: ' + paceBtn("nhanh", "Tăng tốc") + ' ' + paceBtn("vua", "Vừa") + ' ' + paceBtn("ky", "Kỹ hơn") + '</p>';
+  h += '<p>Đã xong ' + pp.done + '/' + pp.total + ' bước chương 1' + (pp.dueCount ? ' · ' + pp.dueCount + ' mục đến hạn ôn' : '') + '</p>';
+  if (pp.reasons.length) h += '<ul>' + pp.reasons.map(function (r) { return '<li>' + esc(r) + '</li>'; }).join("") + '</ul>';
+  if (!pp.items.length) { h += '<p>Chưa có bước tiếp theo trong lộ trình riêng.</p>'; }
+  else {
+    h += '<div>' + pp.items.map(function (it, i) {
+      var btn = it.stepId ? '<button class="btn" data-ppstep="' + it.stepId + '">Vào học</button>' : '<button class="btn" data-ppreview="1">Ôn ngay</button>';
+      return '<p><b>' + (i + 1) + '. ' + esc(it.title) + '</b>' + (it.reason ? '<br><span class="mut">' + esc(it.reason) + '</span>' : '') + ' ' + btn + '</p>';
+    }).join("") + '</div>';
+  }
+  if (state.personalPath && state.personalPath.note) h += '<p class="mut">' + esc(state.personalPath.note) + '</p>';
+  if (state.personalExplain) h += '<p class="mut">AI giải thích: ' + esc(state.personalExplain) + '</p>';
+  h += '<button class="btn" id="ppExplainBtn">AI giải thích vì sao lộ trình xếp thế này</button>';
+  if (authState.vip) h += ' <button class="btn btn-primary" id="vipComposeBtn">AI soạn lộ trình riêng</button>';
+  else h += ' <button class="btn" id="vipRequestBtn">Yêu cầu VIP</button>';
+  if (authState.vip) h += '<p class="mut">Tài khoản VIP: bấm "AI soạn lộ trình riêng" để mô hình soạn lại lộ trình từ dữ liệu học của bạn.</p>';
+  h += '</section>';
+  return h;
 }
 
 /* ---------- LỘ TRÌNH ---------- */
 function viewRoadmap(app) {
   var done = doneLearnCount(), total = learningSteps().length;
   var html = '<h2>Lộ trình học</h2>';
+  if (typeof authState !== "undefined" && authState.user) {
+    var pp0 = buildPersonalPath();
+    var nx0 = pp0.items[0];
+    html += '<section class="card" id="ppRoadmap"><h3>Lộ trình riêng của bạn — Cá nhân hóa cực chi tiết</h3>'
+      + '<p>' + (nx0 ? 'Bước tiếp theo: <b>' + esc(nx0.title) + '</b>' : 'Bạn đã xong chương 1.') + '</p>'
+      + '<p class="mut">Nhịp độ: ' + (pp0.pace === "nhanh" ? "Tăng tốc" : pp0.pace === "ky" ? "Kỹ hơn" : "Vừa") + (pp0.dueCount ? ' · ' + pp0.dueCount + ' mục đến hạn ôn' : '') + '</p>'
+      + '<button class="btn btn-primary" id="ppGoMine">Xem lộ trình riêng đầy đủ</button></section>';
+  }
   html += '<section class="card"><h3>Sổ tay chương 1</h3><p><b>Mục tiêu:</b> ' + esc(RB_CH1_GUIDEBOOK.goal) + '</p>'
     + '<p><b>Ngữ pháp chính:</b> ' + esc(RB_CH1_GUIDEBOOK.grammar.join(" · ")) + '</p>'
     + '<p><b>Cụm câu then chốt:</b> ' + esc(RB_CH1_GUIDEBOOK.phrases.join(" · ")) + '</p>'
@@ -454,6 +549,7 @@ function viewRoadmap(app) {
   var mc1 = $("#mapCh1"); if (mc1) mc1.onclick = function () { var ns = nextLearnStep(); openStep(ns || stepById("letters"), { noNudge: true }); };
   var mct = $("#mapChatType"); if (mct) mct.onclick = function () { openLesson({ type: "chat", chatMode: "type" }); };
   var mcv = $("#mapChatVoice"); if (mcv) mcv.onclick = function () { openLesson({ type: "chat", chatMode: "voice" }); };
+  var pgm = $("#ppGoMine"); if (pgm) pgm.onclick = function () { go("mine"); };
   $$("#skippedList .step-row[data-skip]").forEach(function (btn) {
     btn.onclick = function () { openStep(stepById(btn.dataset.skip), { noNudge: true }); };
   });
@@ -480,7 +576,7 @@ function viewPractice(app) {
   html += '<section class="card"><h3>Nói</h3>'
     + '<button class="step-row" data-chat="type"><span><b>Trò chuyện gõ tay với AI</b> <span class="chip cur">Đang mở</span></span><span class="mut">chỉ gõ chữ, AI trả lời bằng chữ, không mic, không giọng nói</span></button>'
     + '<button class="step-row" data-chat="voice"><span><b>Trò chuyện nói live với AI</b> <span class="chip cur">Đang mở</span></span><span class="mut">mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được</span></button>'
-    + '<p class="mut">Mô hình nguồn chính là AI trò chuyện liên tục (không phải người thật). AI tự nhận là AI trong lời chào đầu phiên. Sau phiên có transcript, câu hay dùng lại và ghi chú lỗi. Cần đăng nhập để dùng (đăng nhập mở ở giai đoạn 2) — chưa đăng nhập thì web báo rõ, không bịa câu trả lời. 71 kịch bản nói (Part 1/2/3) và 20 roleplay của bản cũ sẽ chuyển sang bản mới ở giai đoạn 2.</p></section>';
+    + '<p class="mut">Mô hình nguồn chính là AI trò chuyện liên tục (không phải người thật). AI tự nhận là AI trong lời chào đầu phiên. Sau phiên có transcript, câu hay dùng lại và ghi chú lỗi. Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản) — chưa đăng nhập thì web báo rõ, không bịa câu trả lời. 71 kịch bản nói (Part 1/2/3) và 20 roleplay của bản cũ sẽ chuyển sang bản mới ở giai đoạn 2.</p></section>';
   html += '<p class="mut">Thư viện đầy đủ của bản cũ (81 bộ từ, 64 trạm ngữ pháp, 61 bài đọc...) sẽ chuyển sang bản mới ở giai đoạn 2.</p>';
   app.innerHTML = html;
   $$("[data-practice]").forEach(function (btn) {
@@ -564,7 +660,7 @@ function viewMine(app) {
     + '<p><span class="chip">Chuỗi ' + streak + ' ngày</span> <button class="btn btn-amber" id="checkinBtn">' + (state.checkin[todayStr()] ? "Đã điểm danh" : "Điểm danh hôm nay (+5 XP)") + '</button></p>'
     + '<p class="mut">Với mục tiêu này, bạn còn khoảng ' + weeks + ' tuần nữa để xong chương 1 (ước tính). Web tĩnh không gửi thông báo khi bạn đóng trang — hãy tự mở web mỗi ngày để giữ chuỗi.</p></section>';
   html += '<section class="card"><h3>Tiến trình của bạn</h3><p>Thẻ đã thuộc: ' + known + ' · Mục khó chưa xong: ' + hardN + ' · Từ đã lưu: ' + savedN + '</p>'
-    + (state.migrated ? '<p class="mut">Đã chuyển tiến trình cũ của bạn sang bản mới; bản cũ vẫn còn nguyên để hoàn tác.</p>' : "") + '</section>';
+    + (state.migrated ? '<p class="mut">Đã chuyển tiến trình cũ của bạn sang bản mới; bản cũ vẫn còn nguyên để hoàn tác.</p>' : "") + '<p><button class="btn" id="quickCheckBtn">Kiểm tra trình độ (tùy chọn, không bắt buộc)</button></p></section>';
   var levelHTML = "";
   if (state.lastTest) {
     var lt = state.lastTest;
@@ -581,32 +677,432 @@ function viewMine(app) {
       + '<p class="mut">Làm bài kiểm tra cuối chương 1 ở Lộ trình để xem mức độ của mình (band ước lượng + % từng phần + phần yếu nhất).</p></section>';
   }
   html += levelHTML;
+  if (typeof authState !== "undefined" && authState.user) { html += personalPathCardHTML(); } else { html += '<section class="card" id="ppGuest"><h3>Lộ trình riêng — Cá nhân hóa cực chi tiết</h3><p class="mut">Lộ trình riêng mở khi bạn đăng nhập — khách dùng lộ trình 13 chặng chuẩn ở tab Lộ trình. Đăng nhập ở thẻ Tài khoản bên dưới để mở.</p></section>'; }
   html += '<section class="card"><h3>Bảng chú giải</h3>' + RB_GLOSSARY.map(function (g) { return '<p><b>' + esc(g.t) + ':</b> ' + esc(g.d) + '</p>'; }).join("") + '</section>';
-  html += '<section class="card"><h3>Gia sư AI</h3><p>' + esc(RB_AI.tutor.label) + '.</p><p class="mut">Gia sư dùng model gemini-3.5-flash qua Supabase, cần đăng nhập để dùng (đăng nhập mở ở giai đoạn 2).</p>'
+  html += '<section class="card"><h3>Gia sư AI</h3><p>' + esc(RB_AI.tutor.label) + '.</p><p class="mut">Gia sư dùng model gemini-3.5-flash qua Supabase, cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p>'
     + '<button class="btn" id="tutorTry">Thử gọi gia sư</button></section>';
-  html += '<section class="card"><h3>Tài khoản</h3><p class="mut">Chế độ: lưu trên máy này (chưa đồng bộ tài khoản). Đồng bộ Supabase (cùng project, cùng 3 bảng progress/saved_words/study_log) sẽ mở ở giai đoạn 2.</p>'
-    + '<button class="btn" id="quickCheckBtn">Kiểm tra trình độ (tùy chọn, không bắt buộc)</button></section>';
-  html += '<section class="card"><h3>Trò chuyện với AI</h3><p class="mut">Trò chuyện tự do với AI đã mở: vào Luyện tập → Nói, chọn 1 trong 2 loại riêng — gõ tay (chỉ gõ chữ) hoặc nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mô hình nguồn là AI trò chuyện liên tục, không phải người thật. Cần đăng nhập để dùng (đăng nhập mở ở giai đoạn 2).</p></section>';
+  html += accountCardHTML();
+  html += '<section class="card"><h3>Trò chuyện với AI</h3><p class="mut">Trò chuyện tự do với AI đã mở: vào Luyện tập → Nói, chọn 1 trong 2 loại riêng — gõ tay (chỉ gõ chữ) hoặc nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mô hình nguồn là AI trò chuyện liên tục, không phải người thật. Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p></section>';
   app.innerHTML = html;
   var setGoal = function (v) { v = Math.max(15, Math.min(180, Math.round(v) || 30)); state.goal = v; saveState(); render(); };
   $("#goalMinus").onclick = function () { setGoal((state.goal || 30) - 5); };
   $("#goalPlus").onclick = function () { setGoal((state.goal || 30) + 5); };
   $("#goalInp").onchange = function (e) { setGoal(+e.target.value); };
   $("#checkinBtn").onclick = checkinToday;
-  $("#tutorTry").onclick = function () { callAiTutor("Xin chào").then(function () {}, function (err) { toast(err); }); };
-  $("#quickCheckBtn").onclick = function () { openLesson({ type: "quickcheck" }); };
+  $("#tutorTry").onclick = function () { callAiTutor("Xin chào").then(function (r) { toast("Gia sư đã trả lời: " + String(r).slice(0, 80)); }, function (err) { toast(err); }); };
+  var qcBtn = $("#quickCheckBtn"); if (qcBtn) qcBtn.onclick = function () { openLesson({ type: "quickcheck" }); };
   var lw = $("#levelWeakBtn"); if (lw) lw.onclick = function () { var lt2 = state.lastTest; var wp = lt2.parts.slice().sort(function (a, b) { return a.pct - b.pct; })[0]; if (typeof openStep === "function") { openStep(wp.name === "Chữ cái" ? stepById("letters") : stepById("classroom"), { noNudge: true }); } else { go("roadmap"); } };
+  var aL = $("#accLogin"); if (aL) aL.onclick = function () { authDoSignIn(); };
+  var aS = $("#accSignup"); if (aS) aS.onclick = function () { authDoSignUp(); };
+  var aF = $("#accForgot"); if (aF) aF.onclick = function () { authDoResetPassword(); };
+  var aC = $("#accChangePw"); if (aC) aC.onclick = function () { authDoChangePassword(); };
+  var aO = $("#accLogout"); if (aO) aO.onclick = function () { authDoSignOut(); };
+  var aY = $("#accSync"); if (aY) aY.onclick = function () { syncPush().then(function (ok) { authState.sync = ok ? "Đã đồng bộ." : "Chưa đồng bộ được — tiến trình vẫn lưu trên máy."; render(); }); };
+  var aP = $("#accPull"); if (aP) aP.onclick = function () { authPullAndMerge(); };
+  $$("#ppCard [data-pace]").forEach(function (b) { b.onclick = function () { setPace(b.dataset.pace); }; });
+  $$("#ppCard [data-ppstep]").forEach(function (b) { b.onclick = function () { openStep(stepById(b.dataset.ppstep), { noNudge: true }); }; });
+  $$("#ppCard [data-ppreview]").forEach(function (b) { b.onclick = function () { go("review"); }; });
+  var ppe = $("#ppExplainBtn"); if (ppe) ppe.onclick = function () {
+    var pp = buildPersonalPath();
+    var sum = "Trình độ: đã xong " + pp.done + "/" + pp.total + " bước chương 1. Phần yếu nhất: " + (pp.weak ? pp.weak.name + " (" + pp.weak.pct + "%)" : "chưa có kiểm tra") + ". Mục đến hạn ôn: " + pp.dueCount + ". Nhịp độ: " + pp.pace + ". Bước tiếp theo: " + (pp.items[0] ? pp.items[0].title : "không có") + ".";
+    callAiTutorChat([{ role: "user", text: sum + " Giải thích ngắn vì sao lộ trình riêng của tôi xếp như vậy, bằng tiếng Việt đơn giản." }]).then(function (r) { state.personalExplain = r; saveState(); render(); }, function (err) { toast(err); });
+  };
+  var vcb = $("#vipComposeBtn"); if (vcb) vcb.onclick = function () { vipComposePath(); };
+  var vrb = $("#vipRequestBtn"); if (vrb) vrb.onclick = function () { sendVipRequest(); };
+
 }
 
-/* ---------- Đường dây AI: giữ nguyên hợp đồng, chưa gọi khi chưa đăng nhập ---------- */
+/* ---------- TÀI KHOẢN: đăng nhập, khách, gộp tiến trình, đồng bộ ---------- */
+/* Dùng đúng hạ tầng Supabase đã có (config.js -> window.__supabaseReady):
+   đăng nhập bằng email + mật khẩu qua Supabase Auth, không tự giữ mật khẩu
+   trong code. Tiến trình lưu trên máy (localStorage) là nguồn thật khi chưa
+   đăng nhập; khi đăng nhập thì gộp lên tài khoản theo luật "tài khoản đã có
+   thì giữ, chưa có thì lấy từ khách sang". Đồng bộ dùng 3 bảng đã có:
+   progress (section meta:* theo quy ước web cũ + section rb:* cho bản mới),
+   saved_words, study_log. Cờ VIP (meta:vip hoặc rb:vip) CHỈ ĐỌC — web không
+   bao giờ tự cấp VIP, không ghi đè cờ khi đồng bộ. */
+var authState = { status: "guest", user: null, vip: false, sync: "", merge: null, lastUid: null, syncTimer: null };
+function authBannerText() {
+  try {
+    if (typeof authState !== "undefined" && authState.user) return "Đã đăng nhập: " + authState.user.email + (authState.vip ? " · VIP" : "") + " — tiến trình đồng bộ theo tài khoản.";
+  } catch (e) {}
+  return "Bạn đang ở chế độ khách — tiến trình lưu trên máy này, chưa đồng bộ tài khoản. Đăng nhập ở mục Của tôi → Tài khoản để đồng bộ.";
+}
+function authLoginMsg() { return "Cần đăng nhập (đăng nhập ở mục Của tôi → Tài khoản)."; }
+function authErrorText(e) {
+  var m = "";
+  try { m = String((e && (e.message || e.msg)) || e || ""); } catch (err) { m = ""; }
+  if (/Invalid login credentials/i.test(m)) return "Sai email hoặc mật khẩu — hãy kiểm tra lại.";
+  if (/already registered|already exists/i.test(m)) return "Email này đã đăng ký rồi — hãy đăng nhập.";
+  if (/at least 6 characters/i.test(m)) return "Mật khẩu phải từ 6 ký tự trở lên.";
+  if (/rate limit/i.test(m)) return "Gửi quá nhiều — hãy thử lại sau ít phút.";
+  if (/expired|invalid link/i.test(m)) return "Link đã hết hạn — hãy gửi lại email đặt lại mật khẩu.";
+  if (/Failed to fetch|NetworkError|network/i.test(m)) return "Mất mạng — hãy kiểm tra kết nối rồi thử lại.";
+  if (/Cần đăng nhập/i.test(m)) return m;
+  return m ? "Đã có lỗi: " + m : "Đã có lỗi — hãy thử lại.";
+}
+function supaClientPromise() {
+  try {
+    var r = window.__supabaseReady;
+    if (r && typeof r.then === "function") return r;
+  } catch (e) {}
+  return Promise.resolve(null);
+}
+function authGetSession() {
+  return supaClientPromise().then(function (client) {
+    if (!client || !client.auth || !client.auth.getSession) return null;
+    return client.auth.getSession().then(function (res) { return (res && res.data && res.data.session) || null; }, function () { return null; });
+  });
+}
+function mergeGuestIntoAccount(guest, acc) {
+  var merged = freshState();
+  var added = { progress: 0, cards: 0, hard: 0, checkin: 0, studyLog: 0, savedWords: 0, phDone: 0, pos: 0 };
+  function mergeMap(field) {
+    var g = (guest && guest[field]) || {}, a = (acc && acc[field]) || {};
+    var out = {}, add = 0;
+    Object.keys(g).forEach(function (k) { if (!(k in a)) add++; out[k] = g[k]; });
+    Object.keys(a).forEach(function (k) { out[k] = a[k]; });
+    merged[field] = out; added[field] = add;
+  }
+  ["progress", "cards", "hard", "checkin", "studyLog", "savedWords", "phDone", "pos"].forEach(mergeMap);
+  merged.xp = (acc && acc.xp != null) ? acc.xp : (guest.xp || 0);
+  merged.goal = (acc && acc.goal != null) ? acc.goal : (guest.goal || 30);
+  merged.targetBand = (acc && acc.targetBand != null) ? acc.targetBand : (guest.targetBand || null);
+  merged.pace = (acc && acc.pace) ? acc.pace : (guest.pace || "vua");
+  merged.testDone = !!((acc && acc.testDone) || (guest && guest.testDone));
+  merged.migrated = !!((acc && acc.migrated) || (guest && guest.migrated));
+  merged.lastTest = (acc && acc.lastTest) || (guest && guest.lastTest) || null;
+  merged.personalPath = (acc && acc.personalPath) || (guest && guest.personalPath) || null;
+  merged.vipRequests = (guest && guest.vipRequests) || [];
+  function unionArr(a, b) { var out = (a || []).slice(); (b || []).forEach(function (x) { if (out.indexOf(x) < 0) out.push(x); }); return out; }
+  merged.skipped = unionArr(guest.skipped, acc.skipped);
+  merged.phSkipped = unionArr(guest.phSkipped, acc.phSkipped);
+  merged.chatStars = unionArr(guest.chatStars, acc.chatStars);
+  var xc = {};
+  Object.keys(guest.xpClaimed || {}).forEach(function (k) { xc[k] = guest.xpClaimed[k]; });
+  Object.keys(acc.xpClaimed || {}).forEach(function (k) { xc[k] = acc.xpClaimed[k]; });
+  merged.xpClaimed = xc;
+  var hadAccount = !!(acc && (Object.keys(acc.progress || {}).length || Object.keys(acc.cards || {}).length || acc.xp != null));
+  var note = hadAccount
+    ? ("Đã gộp từ máy này: " + added.cards + " thẻ, " + added.hard + " mục khó, " + added.progress + " bước tiến trình. Phần tài khoản đã có được giữ nguyên.")
+    : "Tài khoản chưa có tiến trình — đã đưa toàn bộ tiến trình trên máy lên tài khoản.";
+  return { state: merged, report: { note: note, added: added, keptAccount: hadAccount } };
+}
+function syncPull(uid) {
+  return supaClientPromise().then(function (client) {
+    if (!client || !client.from) return null;
+    return client.from("progress").select("section,item_key,state").eq("user_id", uid).then(function (res) {
+      var acc = { progress: {}, cards: {}, hard: {}, checkin: {}, studyLog: {}, savedWords: {}, phDone: {}, vip: false };
+      var rows = (res && res.data) || [];
+      rows.forEach(function (r) {
+        if (r.section === "meta") {
+          if (r.item_key === "xp" && r.state) { acc.xp = r.state.total; if (r.state.claimed) acc.xpClaimed = r.state.claimed; }
+          if (r.item_key === "hard" && r.state) acc.hard = r.state.map || {};
+          if (r.item_key === "targetBand" && r.state) acc.targetBand = r.state.v;
+          if (r.item_key === "checkin" && r.state) acc.checkin = r.state.days || {};
+          if (r.item_key === "vip" && r.state) acc.vip = !!r.state.v;
+        } else if (r.section === "rb") {
+          var k = r.item_key;
+          if (k === "vip") acc.vip = !!(r.state && r.state.v);
+          else if (k === "progress") acc.progress = r.state || {};
+          else if (k === "cards") acc.cards = r.state || {};
+          else if (k === "phDone") acc.phDone = r.state || {};
+          else if (k === "goal") acc.goal = r.state;
+          else if (k === "pace") acc.pace = r.state;
+          else if (k === "personalPath") acc.personalPath = r.state;
+          else if (k === "lastTest") acc.lastTest = r.state;
+          else if (k === "testDone") acc.testDone = r.state;
+          else if (k === "skipped") acc.skipped = r.state || [];
+          else if (k === "phSkipped") acc.phSkipped = r.state || [];
+          else if (k === "chatStars") acc.chatStars = r.state || [];
+          else if (k === "xpClaimed") acc.xpClaimed = r.state || {};
+          else if (k === "pos") acc.pos = r.state || {};
+        }
+      });
+      function pullWords() {
+        try {
+          return client.from("saved_words").select("word,data").eq("user_id", uid).then(function (r2) {
+            ((r2 && r2.data) || []).forEach(function (w) { acc.savedWords[w.word] = w.data; });
+            return acc;
+          }, function () { return acc; });
+        } catch (e) { return Promise.resolve(acc); }
+      }
+      function pullLog() {
+        try {
+          return client.from("study_log").select("day,minutes").eq("user_id", uid).then(function (r3) {
+            ((r3 && r3.data) || []).forEach(function (d) { acc.studyLog[d.day] = d.minutes; });
+            return acc;
+          }, function () { return acc; });
+        } catch (e) { return Promise.resolve(acc); }
+      }
+      return pullWords().then(pullLog);
+    }, function () { return null; });
+  });
+}
+function syncPush() {
+  return authGetSession().then(function (sess) {
+    if (!sess || !sess.user) return false;
+    return supaClientPromise().then(function (client) {
+      if (!client || !client.from) return false;
+      var uid = sess.user.id;
+      var now = new Date().toISOString();
+      var rows = [];
+      function row(section, key, st) { rows.push({ user_id: uid, section: section, item_key: key, state: st, updated_at: now }); }
+      row("meta", "xp", { total: state.xp || 0, claimed: state.xpClaimed || {} });
+      row("meta", "hard", { map: state.hard || {} });
+      if (state.targetBand != null) row("meta", "targetBand", { v: state.targetBand });
+      row("meta", "checkin", { days: state.checkin || {} });
+      row("rb", "progress", state.progress || {});
+      row("rb", "cards", state.cards || {});
+      row("rb", "phDone", state.phDone || {});
+      row("rb", "goal", state.goal || 30);
+      row("rb", "pace", state.pace || "vua");
+      row("rb", "personalPath", state.personalPath || null);
+      row("rb", "lastTest", state.lastTest || null);
+      row("rb", "testDone", !!state.testDone);
+      row("rb", "skipped", state.skipped || []);
+      row("rb", "phSkipped", state.phSkipped || []);
+      row("rb", "chatStars", state.chatStars || []);
+      row("rb", "xpClaimed", state.xpClaimed || {});
+      row("rb", "pos", state.pos || {});
+      /* KHÔNG BAO GIỜ đẩy vip: cờ VIP chỉ chủ web bật trong Supabase. */
+      var chain = null;
+      try { chain = client.from("progress").upsert(rows); } catch (e) { chain = null; }
+      if (!chain || !chain.then) return false;
+      return chain.then(function () {
+        var jobs = [];
+        Object.keys(state.savedWords || {}).forEach(function (w) {
+          try { jobs.push(client.from("saved_words").upsert({ user_id: uid, word: w, data: state.savedWords[w] || {} })); } catch (e) {}
+        });
+        Object.keys(state.studyLog || {}).forEach(function (d) {
+          try { jobs.push(client.from("study_log").upsert({ user_id: uid, day: d, minutes: state.studyLog[d] || 0 })); } catch (e) {}
+        });
+        return Promise.all(jobs).then(function () { return true; }, function () { return true; });
+      }, function () { return false; });
+    });
+  });
+}
+function scheduleSyncPush() {
+  try {
+    if (typeof authState === "undefined" || !authState.user) return;
+    if (authState.syncTimer) return;
+    authState.syncTimer = setTimeout(function () {
+      authState.syncTimer = null;
+      syncPush().then(function (ok) { authState.sync = ok ? "Đã đồng bộ." : "Chưa đồng bộ được — tiến trình vẫn lưu trên máy."; }, function () {});
+    }, 3000);
+  } catch (e) {}
+}
+function authRefresh() {
+  return authGetSession().then(function (sess) {
+    if (!sess || !sess.user) {
+      authState.user = null; authState.vip = false; authState.status = "guest"; authState.lastUid = null;
+      return authState;
+    }
+    var uid = sess.user.id, email = sess.user.email || "";
+    var isNew = authState.lastUid !== uid;
+    authState.user = { id: uid, email: email };
+    authState.status = "ready";
+    authState.lastUid = uid;
+    if (!isNew) {
+      return syncPull(uid).then(function (acc) { if (acc) authState.vip = !!acc.vip; return authState; });
+    }
+    var guestCopy = JSON.parse(JSON.stringify(state));
+    return syncPull(uid).then(function (acc) {
+      if (!acc) { authState.sync = "Chưa đồng bộ được — tiến trình vẫn lưu trên máy."; return authState; }
+      var m = mergeGuestIntoAccount(guestCopy, acc);
+      state = m.state;
+      state.accountMerge = m.report;
+      saveState();
+      authState.merge = m.report;
+      authState.vip = !!acc.vip;
+      authState.sync = "Đã gộp tiến trình khách lên tài khoản.";
+      syncPush().then(function () {}, function () {});
+      return authState;
+    });
+  });
+}
+function authWatch() {
+  supaClientPromise().then(function (client) {
+    try {
+      if (client && client.auth && client.auth.onAuthStateChange) {
+        client.auth.onAuthStateChange(function () { authRefresh().then(function () { render(); }, function () {}); });
+      }
+    } catch (e) {}
+  });
+}
+function authPullAndMerge() {
+  return authGetSession().then(function (sess) {
+    if (!sess || !sess.user) { toast(authLoginMsg()); return; }
+    var guestCopy = JSON.parse(JSON.stringify(state));
+    return syncPull(sess.user.id).then(function (acc) {
+      if (!acc) { toast("Chưa tải được từ tài khoản — tiến trình vẫn lưu trên máy."); return; }
+      var m = mergeGuestIntoAccount(guestCopy, acc);
+      state = m.state;
+      state.accountMerge = m.report;
+      saveState();
+      authState.merge = m.report;
+      authState.vip = !!acc.vip;
+      toast("Đã tải và gộp tiến trình từ tài khoản.");
+      render();
+    });
+  });
+}
+function authDoSignIn() {
+  var email = ($("#accEmail") && $("#accEmail").value || "").trim();
+  var pw = ($("#accPw") && $("#accPw").value) || "";
+  if (!email || !pw) { toast("Hãy nhập email và mật khẩu."); return; }
+  supaClientPromise().then(function (client) {
+    if (!client || !client.auth || !client.auth.signInWithPassword) { toast("Chưa có cấu hình đăng nhập — hãy kiểm tra config.js."); return; }
+    client.auth.signInWithPassword({ email: email, password: pw }).then(function (res) {
+      if (res.error) { toast(authErrorText(res.error)); return; }
+      if (res.data && res.data.session) { authRefresh().then(function () { toast("Đã đăng nhập: " + email); render(); }); }
+      else { toast("Đã đăng nhập — hãy tải lại trang nếu chưa thấy tài khoản."); render(); }
+    }, function (e) { toast(authErrorText(e)); });
+  });
+}
+function authDoSignUp() {
+  var email = ($("#accEmail") && $("#accEmail").value || "").trim();
+  var pw = ($("#accPw") && $("#accPw").value) || "";
+  if (!email || !pw) { toast("Hãy nhập email và mật khẩu."); return; }
+  if (pw.length < 6) { toast("Mật khẩu phải từ 6 ký tự trở lên."); return; }
+  supaClientPromise().then(function (client) {
+    if (!client || !client.auth || !client.auth.signUp) { toast("Chưa có cấu hình đăng nhập — hãy kiểm tra config.js."); return; }
+    client.auth.signUp({ email: email, password: pw }).then(function (res) {
+      if (res.error) { toast(authErrorText(res.error)); return; }
+      if (res.data && res.data.session) { authRefresh().then(function () { toast("Đã đăng ký và đăng nhập: " + email); render(); }); }
+      else { toast("Đã đăng ký — hãy đăng nhập."); render(); }
+    }, function (e) { toast(authErrorText(e)); });
+  });
+}
+function authDoSignOut() {
+  supaClientPromise().then(function (client) {
+    function done() {
+      authState.user = null; authState.vip = false; authState.status = "guest"; authState.lastUid = null; authState.merge = null;
+      state.accountMerge = null; saveState();
+      toast("Đã đăng xuất — tiếp tục học ở chế độ khách.");
+      render();
+    }
+    if (client && client.auth && client.auth.signOut) { client.auth.signOut().then(done, done); }
+    else done();
+  });
+}
+function authDoChangePassword() {
+  var pw = ($("#accNewPw") && $("#accNewPw").value) || "";
+  if (pw.length < 6) { toast("Mật khẩu mới phải từ 6 ký tự trở lên."); return; }
+  supaClientPromise().then(function (client) {
+    if (!client || !client.auth || !client.auth.updateUser) { toast("Chưa có cấu hình đăng nhập — hãy kiểm tra config.js."); return; }
+    client.auth.updateUser({ password: pw }).then(function (res) {
+      if (res.error) { toast(authErrorText(res.error)); return; }
+      toast("Đã đổi mật khẩu."); render();
+    }, function (e) { toast(authErrorText(e)); });
+  });
+}
+function authDoResetPassword() {
+  var email = ($("#accEmail") && $("#accEmail").value || "").trim();
+  if (!email) { toast("Hãy nhập email rồi bấm Quên mật khẩu."); return; }
+  supaClientPromise().then(function (client) {
+    if (!client || !client.auth || !client.auth.resetPasswordForEmail) { toast("Chưa có cấu hình đăng nhập — hãy kiểm tra config.js."); return; }
+    client.auth.resetPasswordForEmail(email).then(function (res) {
+      if (res.error) { toast(authErrorText(res.error)); return; }
+      toast("Đã gửi email đặt lại mật khẩu — hãy kiểm tra hộp thư.");
+    }, function (e) { toast(authErrorText(e)); });
+  });
+}
+function accountCardHTML() {
+  var known = Object.keys(state.cards).filter(function (k) { return state.cards[k].box >= 1; }).length;
+  var hardN = Object.keys(state.hard).filter(function (k) { return !state.hard[k].done; }).length;
+  var h = '<section class="card" id="accCard"><h3>Tài khoản</h3>';
+  if (!authState.user) {
+    h += '<p>Chưa đăng nhập — đang học ở chế độ khách.</p>'
+      + '<p class="mut">Tiến trình khách lưu trên máy này (thẻ đã thuộc: ' + known + ' · mục khó chưa xong: ' + hardN + ' · ' + (state.xp || 0) + ' XP) và không mất khi tắt trang. Đăng nhập để đồng bộ theo tài khoản; tiến trình khách sẽ gộp lên tài khoản (phần tài khoản đã có được giữ nguyên).</p>'
+      + '<p><input type="text" id="accEmail" placeholder="Email" autocomplete="email"> <input type="password" id="accPw" placeholder="Mật khẩu (từ 6 ký tự)"></p>'
+      + '<div class="row"><button class="btn btn-primary" id="accLogin">Đăng nhập</button><button class="btn" id="accSignup">Đăng ký</button><button class="btn" id="accForgot">Quên mật khẩu</button></div>'
+      + '<p class="mut">Nhập email + mật khẩu rồi bấm Đăng nhập hoặc Đăng ký.</p>';
+  } else {
+    h += '<p>Đã đăng nhập: <b>' + esc(authState.user.email) + '</b> ' + (authState.vip ? '<span class="chip">VIP</span>' : '<span class="chip">Thường</span>') + '</p>'
+      + '<p class="mut">Đồng bộ: ' + esc(authState.sync || "Chưa đồng bộ.") + '</p>';
+    if (state.accountMerge) h += '<p class="mut">Gộp tiến trình: ' + esc(state.accountMerge.note || "") + '</p>';
+    var vr = (state.vipRequests || []).slice(-1)[0];
+    if (vr) h += '<p class="mut">Yêu cầu VIP gần nhất: ' + esc(vr.note || vr.status) + '</p>';
+    h += '<p><input type="password" id="accNewPw" placeholder="Mật khẩu mới (từ 6 ký tự)"></p>'
+      + '<div class="row"><button class="btn" id="accChangePw">Đổi mật khẩu</button><button class="btn" id="accLogout">Đăng xuất</button><button class="btn" id="accSync">Đồng bộ ngay</button><button class="btn" id="accPull">Tải lại từ tài khoản</button></div>';
+  }
+  h += '</section>';
+  return h;
+}
+function sendVipRequest() {
+  var loginMsg = authLoginMsg();
+  authGetSession().then(function (sess) {
+    if (!sess || !sess.user) { toast(loginMsg); return; }
+    var email = sess.user.email || "";
+    var rec = { at: Date.now(), email: email, status: "pending", note: "" };
+    fetch(supabaseFnUrl("vip-request"), { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + sess.access_token, "apikey": window.SUPABASE_ANON_KEY || "" }, body: JSON.stringify({ email: email, requested_at: new Date().toISOString() }) })
+      .then(function (resp) {
+        if (resp.ok) {
+          return resp.json().then(function (d) {
+            rec.status = "sent";
+            rec.note = (d && d.emailed) ? "Đã gửi yêu cầu VIP về Gmail của chủ web." : "Đã ghi yêu cầu VIP (email sẽ gửi khi máy chủ có khóa gửi mail).";
+            state.vipRequests.push(rec); saveState(); render();
+            toast(rec.note);
+          }, function () {
+            rec.status = "sent"; rec.note = "Đã gửi yêu cầu VIP.";
+            state.vipRequests.push(rec); saveState(); render();
+            toast(rec.note);
+          });
+        }
+        if (resp.status === 401) throw new Error(loginMsg);
+        if (resp.status === 404) throw { code: "notlive" };
+        if (resp.status === 429) throw new Error("Gửi quá nhiều — hãy thử lại sau.");
+        throw new Error("Máy chủ chưa nhận được yêu cầu (lỗi " + resp.status + ").");
+      })
+      .catch(function (e) {
+        if (e && e.code === "notlive") { rec.status = "pending"; rec.note = "Hệ thống nhận yêu cầu VIP chưa mở (hàm máy chủ chưa triển khai) — yêu cầu đã lưu trên máy, hãy thử lại sau."; }
+        else { rec.status = "pending"; rec.note = "Chưa gửi được yêu cầu (" + ((e && e.message) || "mất mạng") + ") — yêu cầu đã lưu trên máy, hãy bấm lại để gửi."; }
+        state.vipRequests.push(rec); saveState(); render();
+        toast(rec.note);
+      });
+  });
+}
+function vipComposePath() {
+  var note = "AI soạn lộ trình riêng bằng mô hình đang chờ mở rộng máy chủ (hàm ai-tutor chưa có chế độ soạn lộ trình) — tạm dùng lộ trình theo luật dưới đây, không bịa lộ trình.";
+  state.personalPath = { source: "rule", note: note, at: Date.now() };
+  saveState(); scheduleSyncPush();
+  render();
+}
+
+/* ---------- Đường dây AI: giữ nguyên hợp đồng ---------- */
 function supabaseFnUrl(fn) { try { return (window.SUPABASE_URL || "") + "/functions/v1/" + fn; } catch (e) { return ""; } }
 function callAiTutor(message) {
   return new Promise(function (resolve, reject) {
-    reject("Cần đăng nhập để dùng gia sư AI (đăng nhập mở ở giai đoạn 2).");
+    var loginMsg = "Cần đăng nhập để dùng gia sư AI (đăng nhập ở mục Của tôi → Tài khoản).";
+    var ready = window.__supabaseReady;
+    if (!ready || typeof ready.then !== "function") { reject(loginMsg); return; }
+    ready.then(function (client) {
+      if (!client || !client.auth || !client.auth.getSession) { reject(loginMsg); return; }
+      client.auth.getSession().then(function (res) {
+        var sess = res && res.data && res.data.session;
+        if (!sess || !sess.access_token) { reject(loginMsg); return; }
+        fetch(supabaseFnUrl("ai-tutor"), { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + sess.access_token, "apikey": window.SUPABASE_ANON_KEY || "" }, body: JSON.stringify({ message: message, mode: "chat", context: "" }) })
+          .then(function (resp) {
+            if (!resp.ok) {
+              if (resp.status === 401) throw new Error(loginMsg);
+              if (resp.status === 429) throw new Error("AI đã hết lượt cho phép — hãy thử lại sau.");
+              if (resp.status === 502 || resp.status === 503) throw new Error("AI đang bận — hãy thử lại sau ít phút.");
+              throw new Error("AI chưa trả lời được (lỗi máy chủ " + resp.status + ") — hãy thử lại.");
+            }
+            return resp.json();
+          })
+          .then(function (data) {
+            if (data && data.reply) resolve(data.reply);
+            else reject("AI trả về trống — hãy thử gửi lại.");
+          })
+          .catch(function (e) { reject((e && e.message) || "Mất mạng — hãy kiểm tra kết nối rồi gửi lại."); });
+      }, function () { reject(loginMsg); });
+    }, function () { reject(loginMsg); });
   });
 }
 /* Hợp đồng trò chuyện tự do (C7, giai đoạn 2): gọi thật hàm ai-tutor đã live
-   qua Supabase, cần JWT (đăng nhập mở ở giai đoạn 2). Hợp đồng máy chủ:
+   qua Supabase, cần JWT (đăng nhập ở mục Của tôi → Tài khoản). Hợp đồng máy chủ:
    POST SUPABASE_URL/functions/v1/ai-tutor, headers Authorization Bearer JWT +
    apikey anon, body {message, mode: "chat", context} -> {reply}.
    messages = [{role: "user"|"assistant", text: "..."}] — lịch sử hội thoại
@@ -616,7 +1112,7 @@ function callAiTutor(message) {
    trò chuyện hoàn toàn bằng tiếng Anh. */
 function callAiTutorChat(messages) {
   return new Promise(function (resolve, reject) {
-    var loginMsg = "Cần đăng nhập để dùng trò chuyện với AI (đăng nhập mở ở giai đoạn 2).";
+    var loginMsg = "Cần đăng nhập để dùng trò chuyện với AI (đăng nhập ở mục Của tôi → Tài khoản).";
     var ready = window.__supabaseReady;
     if (!ready || typeof ready.then !== "function") { reject(loginMsg); return; }
     ready.then(function (client) {
@@ -679,7 +1175,31 @@ function sendChatReport(reason, note, startedAt) {
 }
 function callPronounce(audioBase64, mimeType, referenceText) {
   return new Promise(function (resolve, reject) {
-    reject("Cần đăng nhập để dùng chấm phát âm AI (đăng nhập mở ở giai đoạn 2).");
+    var loginMsg = "Cần đăng nhập để dùng chấm phát âm AI (đăng nhập ở mục Của tôi → Tài khoản).";
+    var ready = window.__supabaseReady;
+    if (!ready || typeof ready.then !== "function") { reject(loginMsg); return; }
+    ready.then(function (client) {
+      if (!client || !client.auth || !client.auth.getSession) { reject(loginMsg); return; }
+      client.auth.getSession().then(function (res) {
+        var sess = res && res.data && res.data.session;
+        if (!sess || !sess.access_token) { reject(loginMsg); return; }
+        fetch(supabaseFnUrl("pronounce"), { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + sess.access_token, "apikey": window.SUPABASE_ANON_KEY || "" }, body: JSON.stringify({ audioBase64: audioBase64, mimeType: mimeType, referenceText: referenceText }) })
+          .then(function (resp) {
+            if (!resp.ok) {
+              if (resp.status === 401) throw new Error(loginMsg);
+              if (resp.status === 429) throw new Error("AI đã hết lượt cho phép — hãy thử lại sau.");
+              if (resp.status === 502 || resp.status === 503) throw new Error("AI đang bận — hãy thử lại sau ít phút.");
+              throw new Error("AI chưa trả lời được (lỗi máy chủ " + resp.status + ") — hãy thử lại.");
+            }
+            return resp.json();
+          })
+          .then(function (data) {
+            if (data && (data.score != null || data.transcript)) resolve(data);
+            else reject(new Error("AI trả về trống — hãy thử gửi lại."));
+          })
+          .catch(function (e) { reject(new Error((e && e.message) || "Mất mạng — hãy kiểm tra kết nối rồi gửi lại.")); });
+      }, function () { reject(loginMsg); });
+    }, function () { reject(loginMsg); });
   });
 }
 function rawToBand(score, total, skill) {
@@ -777,7 +1297,7 @@ function renderVocab(app, l) {
     + '</div>'
     + (l.setIdx === 69 && c.vid ? '<div id="vidBox"><iframe src="https://www.youtube-nocookie.com/embed/' + c.vid + '" allowfullscreen></iframe><p class="mut">Video chữ Jack Hartmann — phát ngay trong thẻ, không cần bấm thêm.</p></div>' : '<div id="vidBox"></div>')
     + '<div id="vocabMirrorSlot"></div><div id="azMouthSlot"></div>'
-    + (l.setIdx === 69 ? '<p class="mut">Ghi âm và check giọng ở thẻ chữ chỉ mở khi có đăng nhập (giai đoạn 2), như bước 7 phát âm.</p>' : "")
+    + (l.setIdx === 69 ? '<p class="mut">Ghi âm và check giọng ở thẻ chữ chỉ mở khi có đăng nhập, như bước 7 phát âm.</p>' : "")
     + '<div class="row" style="margin-top:12px"><button class="btn" id="btnPrev"' + (pos === 0 ? " disabled" : "") + '>← Thẻ trước</button>'
     + '<button class="btn" id="btnNotKnow">Chưa thuộc</button><button class="btn btn-primary" id="btnKnow">Đã thuộc</button></div></div>';
   app.innerHTML = html;
@@ -1127,7 +1647,7 @@ function renderPron(app, l) {
     });
     html += '</div>';
   }
-  html += '<p class="mut">Gương khẩu hình và bước AI chấm đã có trong bài học cả 3 đợt (AI chấm cần đăng nhập, mở ở giai đoạn 2).</p>';
+  html += '<p class="mut">Gương khẩu hình và bước AI chấm đã có trong bài học cả 3 đợt (AI chấm cần đăng nhập).</p>';
   app.innerHTML = html;
   wireBack();
   var vw = $("#phViewWave"); if (vw) vw.onclick = function () { phViewMode = "wave"; render(); };
@@ -1196,7 +1716,7 @@ function renderPronLesson(app, l) {
       + '<div class="row"><button class="btn btn-primary" id="diffReveal"' + (l.diffHeard1 && l.diffHeard2 ? "" : " disabled") + '>Hiện lựa chọn</button></div>'
       + '<div id="diffChoices"></div><div class="why" id="diffWhy"></div>';
   } else {
-    html += '<p><b>Bước 7 — AI chấm:</b> ghi âm chính bạn đọc từ ví dụ, nghe lại rồi tự đánh giá. Chấm AI thật đã sống ở web cũ, cần đăng nhập để dùng — đăng nhập mở ở giai đoạn 2.</p>'
+    html += '<p><b>Bước 7 — AI chấm:</b> ghi âm chính bạn đọc từ ví dụ, nghe lại rồi tự đánh giá. Chấm AI thật đã sống ở web cũ, cần đăng nhập để dùng — đăng nhập ở mục Của tôi → Tài khoản.</p>'
       + '<p>Từ mẫu: <b>' + esc(p.w) + '</b> <span class="mut">— ' + esc(p.vi) + '</span></p>'
       + '<div class="row"><button class="btn" id="aiRec">🔴 Ghi âm</button><button class="btn" id="aiPlay"' + (aiBlob ? "" : " disabled") + '>▶ Nghe lại bản ghi</button><button class="btn btn-primary" id="aiSend"' + (aiBlob ? "" : " disabled") + '>Gửi AI chấm</button></div>'
       + '<div id="aiResult"></div>'
@@ -1208,7 +1728,7 @@ function renderPronLesson(app, l) {
   }
   html += '<div class="row" style="margin-top:14px">'
     + (sub > 0 ? '<button class="btn" id="phPrev">← Bước trước</button>' : "")
-    + (sub < 6 ? (sub === 5 && !l.diffOk ? '<button class="btn btn-primary" id="phNext" disabled>Bước tiếp theo</button><span class="mut">Nghe cả 2 từ, hiện lựa chọn rồi chọn đúng để sang bước tiếp.</span>' : '<button class="btn btn-primary" id="phNext">Bước tiếp theo</button>') : '<button class="btn btn-primary" id="phDone">Tôi tự thấy đã thuộc âm này</button><span class="mut">Tự đánh dấu — khi đăng nhập mở ở giai đoạn 2, chấm AI sẽ là đường hoàn thành chính.</span>')
+    + (sub < 6 ? (sub === 5 && !l.diffOk ? '<button class="btn btn-primary" id="phNext" disabled>Bước tiếp theo</button><span class="mut">Nghe cả 2 từ, hiện lựa chọn rồi chọn đúng để sang bước tiếp.</span>' : '<button class="btn btn-primary" id="phNext">Bước tiếp theo</button>') : '<button class="btn btn-primary" id="phDone">Tôi tự thấy đã thuộc âm này</button><span class="mut">Tự đánh dấu — khi đã đăng nhập, chấm AI sẽ là đường hoàn thành chính.</span>')
     + '</div></div>';
   app.innerHTML = html;
   wireBack();
@@ -1324,7 +1844,7 @@ function renderPronLesson(app, l) {
           if (r && r.modelUsed) out += '<p class="mut">Model: ' + esc(r.modelUsed) + '</p>';
           if (res) res.innerHTML = out || '<p class="mut">Hàm chấm đã trả về nhưng không có điểm — hãy tự đánh giá theo 3 mức dưới.</p>';
         }, function (err) {
-          if (res) res.innerHTML = '<p class="mut">' + esc(err) + ' Chấm AI thật đã sống ở web cũ (hàm pronounce, điểm theo từng từ, 3 mức màu theo âm vị) và sẽ dùng được ngay khi đăng nhập mở ở giai đoạn 2. Trong lúc chờ, hãy tự nghe lại bản ghi và tự đánh giá theo 3 mức dưới.</p>';
+          if (res) res.innerHTML = '<p class="mut">' + esc(err) + ' Chấm AI thật đã sống ở web cũ (hàm pronounce, điểm theo từng từ, 3 mức màu theo âm vị) và sẽ dùng được ngay khi đã đăng nhập. Trong lúc chờ, hãy tự nghe lại bản ghi và tự đánh giá theo 3 mức dưới.</p>';
         });
       };
       reader.readAsDataURL(aiBlob);
@@ -2092,7 +2612,7 @@ function mrLocalAudioEstimate(transcript, ref) {
 function mrCallPronounce(audioBase64, mimeType, referenceText) {
   /* Chi dung cho guong — KHONG cham vao stub callPronounce (buoc 7 phat am). */
   return new Promise(function (resolve, reject) {
-    var loginMsg = "Cần đăng nhập để dùng chấm phát âm AI (đăng nhập mở ở giai đoạn 2).";
+    var loginMsg = "Cần đăng nhập để dùng chấm phát âm AI (đăng nhập ở mục Của tôi → Tài khoản).";
     var ready = window.__supabaseReady;
     if (!ready || typeof ready.then !== "function") { reject(new Error(loginMsg)); return; }
     ready.then(function (client) {
@@ -2438,7 +2958,7 @@ function renderChat(app, l) {
     html += '</div><div class="row"><input type="text" id="chatInp" placeholder="Gõ câu của bạn rồi bấm Gửi..." style="flex:1"><button class="btn btn-primary" id="chatSend">Gửi</button></div>'
       + '<div class="row"><button class="btn btn-amber" id="chatEnd">Kết thúc phiên (+10 XP)</button><button class="btn" id="chatReport">⚑ Báo cáo nội dung không phù hợp</button></div>';
   }
-  html += '<p class="mut">Trò chuyện cần đăng nhập (đăng nhập mở ở giai đoạn 2) — nếu chưa đăng nhập, web báo rõ và không bịa câu trả lời. Lưu ý thật: hàm ai-tutor phía máy chủ trả lời bằng tiếng Việt trước, nên phiên này là tiếng Anh đơn giản kèm tiếng Việt hỗ trợ, không phải trò chuyện hoàn toàn bằng tiếng Anh.' + (isVoice ? ' Bản ghi giọng nói qua trình duyệt chỉ là ước lượng — kiểm tra lại câu trước khi nó tự gửi. Mic có thể bắt lại tiếng loa nên thỉnh thoảng giọng có thể dừng nhầm một nhịp rồi nói tiếp (bản ghi trùng với câu AI đang đọc sẽ bị bỏ qua).' : '') + ' Câu bạn bấm ⭐ sẽ lưu trên máy này vào mục "Câu hay dùng lại". Bấm ⚑ Báo cáo để gửi về máy chủ (cần đăng nhập; chỉ gửi lý do + ghi chú ngắn + thời điểm phiên, không gửi transcript hay audio/video). Nếu gửi không được, báo cáo vẫn lưu trên máy này làm dự phòng.</p></div>';
+  html += '<p class="mut">Trò chuyện cần đăng nhập (đăng nhập ở mục Của tôi → Tài khoản) — nếu chưa đăng nhập, web báo rõ và không bịa câu trả lời. Lưu ý thật: hàm ai-tutor phía máy chủ trả lời bằng tiếng Việt trước, nên phiên này là tiếng Anh đơn giản kèm tiếng Việt hỗ trợ, không phải trò chuyện hoàn toàn bằng tiếng Anh.' + (isVoice ? ' Bản ghi giọng nói qua trình duyệt chỉ là ước lượng — kiểm tra lại câu trước khi nó tự gửi. Mic có thể bắt lại tiếng loa nên thỉnh thoảng giọng có thể dừng nhầm một nhịp rồi nói tiếp (bản ghi trùng với câu AI đang đọc sẽ bị bỏ qua).' : '') + ' Câu bạn bấm ⭐ sẽ lưu trên máy này vào mục "Câu hay dùng lại". Bấm ⚑ Báo cáo để gửi về máy chủ (cần đăng nhập; chỉ gửi lý do + ghi chú ngắn + thời điểm phiên, không gửi transcript hay audio/video). Nếu gửi không được, báo cáo vẫn lưu trên máy này làm dự phòng.</p></div>';
   app.innerHTML = html;
   wireBack();
   if (isVoice) {
@@ -2733,6 +3253,8 @@ function renderQuickcheck(app, l) {
 
 /* ---------- Khởi động ---------- */
 render();
+authRefresh().then(function () { render(); }, function () {});
+authWatch();
 </script>
 </body>
 </html>
