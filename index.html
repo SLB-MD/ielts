@@ -1871,7 +1871,7 @@ function renderPronLesson(app, l) {
    Video chỉ lưu trên máy (IndexedDB, tối đa 12), không gửi đi đâu.
    Độ chính xác nhận diện trên mặt thật CHƯA đo — giao diện ghi rõ điều này. */
 var aiRec = null, aiBlob = null, aiUrl = null;
-var MR = { slot: null, sym: null, stream: null, rec: null, chunks: [], segTimer: null, curBlob: null, stopping: false, fm: null, fmOn: false, fmBusy: false, holdStart: 0, autoDone: false, pendingAuto: false, pendingManual: false, stableCount: 0, momentDone: {}, urls: [], diagFm: "chưa tải", diagFace: false, diagScore: "chưa chạy", diagSends: 0, diagResults: 0, diagLm: 0, diagSendErr: "", diagVState: "", diagRetry: "chưa", fmRetried: false, fmStartAt: 0, fmGen: 0, engine: "", engineFallback: false, lm: null, lmOn: false, lmBusy: false, lmGen: 0, lmRetried: false, lmStartAt: 0, sessionId: 0, sessionActive: false, procSamples: [], sessionMoment: null, manualLocked: false, lastLiveScore: null, lastProc: null, micWant: true, micOn: false, audioStream: null, audioRec: null, audioBlob: null, audioTranscript: "", audioSid: 0, audioSlot: null, audioDiscard: false, srRec: null };
+var MR = { slot: null, sym: null, stream: null, rec: null, chunks: [], segTimer: null, curBlob: null, stopping: false, fm: null, fmOn: false, fmBusy: false, holdStart: 0, autoDone: false, pendingAuto: false, pendingAutoScore: null, pendingManual: false, stableCount: 0, momentDone: {}, urls: [], diagFm: "chưa tải", diagFace: false, diagScore: "chưa chạy", diagSends: 0, diagResults: 0, diagLm: 0, diagSendErr: "", diagVState: "", diagRetry: "chưa", fmRetried: false, fmStartAt: 0, fmGen: 0, engine: "", engineFallback: false, lm: null, lmOn: false, lmBusy: false, lmGen: 0, lmRetried: false, lmStartAt: 0, sessionId: 0, sessionActive: false, procSamples: [], sessionMoment: null, manualLocked: false, lastLiveScore: null, lastProc: null, micWant: true, micOn: false, audioStream: null, audioRec: null, audioBlob: null, audioTranscript: "", audioSid: 0, audioSlot: null, audioDiscard: false, srRec: null };
 function mrSupported() { try { return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia); } catch (e) { return false; } }
 function mrRecSupported() { try { return typeof MediaRecorder !== "undefined"; } catch (e) { return false; } }
 function mrPickMime() {
@@ -2097,15 +2097,28 @@ function mrRenderLib(slot) {
   MR.urls = [];
   if (typeof indexedDB === "undefined") { lib.innerHTML = '<p class="mut">Trình duyệt này không lưu được video mẫu.</p>'; return; }
   mrVidAll().then(function (list) {
-    if (cnt) cnt.textContent = list.length ? ("Thư viện: " + list.length + " video mẫu.") : "Thư viện: chưa có video mẫu nào.";
-    if (!list.length) { lib.innerHTML = '<p class="mut">Chưa có video mẫu nào.</p>'; return; }
-    lib.innerHTML = '<h4>Video mẫu đúng của bạn</h4><div class="mr-lib-row">' + list.slice().reverse().map(function (v) {
+    /* Hai hàng tách biệt, không lẫn: hàng trên CHỈ clip tự lưu đã chấm đúng
+       (>=80% — kind "moment" vốn luôn qua ngưỡng, hoặc bản ghi mới có cờ
+       auto); mọi thứ còn lại — kể cả bản ghi cũ không chứng minh được là
+       tự lưu đúng — xuống hàng lưu tay để đối chiếu. */
+    var isAutoRight = function (v) { return (v.auto === true || v.kind === "moment") && v.score != null && v.score >= MR_CAPTURE_MIN_SCORE; };
+    var top = list.filter(isAutoRight);
+    var bottom = list.filter(function (v) { return !isAutoRight(v); });
+    if (cnt) cnt.textContent = list.length ? ("Thư viện: " + top.length + " video mẫu đúng · " + bottom.length + " video lưu tay.") : "Thư viện: chưa có video mẫu nào.";
+    var item = function (v, isTop) {
       var media = "";
       if (v.blob) { var url = URL.createObjectURL(v.blob); MR.urls.push(url); media = '<video controls src="' + url + '"></video>'; }
       else if (v.shot) { media = '<img src="' + v.shot + '" style="width:100%;border-radius:12px" alt="Khung hình đúng">'; }
-      var cap = ""; if (v.kind === "moment") cap = 'Khoảnh khắc đúng nhất' + (v.score != null ? ' · Khớp khẩu hình ' + v.score + '%' : ''); else if (v.score != null) cap = 'Video mẫu · Khớp khẩu hình ' + v.score + '%';
-      return '<div class="mr-item">' + media + '<p class="mut">Âm /' + esc(v.sym) + '/ · ' + (cap ? cap + ' · ' : '') + new Date(v.ts).toLocaleString("vi-VN") + '</p><button class="btn mr-del" data-id="' + v.id + '">Xóa video này</button></div>';
-    }).join("") + '</div>';
+      var cap = "";
+      if (isTop) {
+        if (v.kind === "moment") cap = 'Khoảnh khắc đúng nhất · Khớp khẩu hình ' + v.score + '%';
+        else cap = 'Video mẫu đúng · Khớp khẩu hình ' + v.score + '%';
+      } else cap = 'Video lưu tay · lưu để đối chiếu';
+      return '<div class="mr-item">' + media + '<p class="mut">Âm /' + esc(v.sym) + '/ · ' + cap + ' · ' + new Date(v.ts).toLocaleString("vi-VN") + '</p><button class="btn mr-del" data-id="' + v.id + '">Xóa video này</button></div>';
+    };
+    var topHTML = '<h4>Video mẫu đúng của bạn</h4>' + (top.length ? '<div class="mr-lib-row">' + top.slice().reverse().map(function (v) { return item(v, true); }).join("") + '</div>' : '<p class="mut">Chưa có video mẫu đúng — tập đúng từ 80% trở lên để hệ thống tự lưu.</p>');
+    var bottomHTML = '<h4>Video lưu tay — lưu để đối chiếu</h4><p class="mut">Để tự so với hình mẫu, không phải clip đã chấm đúng.</p>' + (bottom.length ? '<div class="mr-lib-row">' + bottom.slice().reverse().map(function (v) { return item(v, false); }).join("") + '</div>' : '<p class="mut">Chưa có video lưu tay.</p>');
+    lib.innerHTML = topHTML + bottomHTML;
     lib.querySelectorAll(".mr-del").forEach(function (b) {
       b.onclick = function () { mrVidDelete(+b.dataset.id).then(function () { mrRenderLib(slot); }); };
     });
@@ -2124,7 +2137,7 @@ function mrSaveSessionClip(slot, blob, score, shot, kind, isManual) {
      nhat sessionMoment; luu tay sau do van duoc phep cap nhat lai entry. */
   if (!blob && !shot) return Promise.resolve(null);
   if (isManual) MR.manualLocked = true; /* clip nguoi dung chon dung yen den het lan tap; luu tay sau van duoc cap nhat lai entry, luu tu dong thi bi chan */
-  var rec = { sym: MR.sym, ts: Date.now(), blob: blob || null, shot: shot || "", kind: kind, score: score != null ? score : null };
+  var rec = { sym: MR.sym, ts: Date.now(), blob: blob || null, shot: shot || "", kind: kind, score: score != null ? score : null, auto: !isManual };
   var addNew = function () {
     return mrVidAddFull(rec).then(function (id) { MR.sessionMoment = { id: id, score: score }; return id; });
   };
@@ -2134,7 +2147,7 @@ function mrSaveSessionClip(slot, blob, score, shot, kind, isManual) {
   }
   return addNew();
 }
-function mrSaveCurrent(slot, auto) {
+function mrSaveCurrent(slot, auto, scoreOverride) {
   if (!MR.curBlob) {
     /* Chưa có đoạn hoàn tất nhưng đang quay: cắt ngay đoạn đang quay để lưu,
        thay vì chỉ báo "chưa có đoạn nào" (bẫy hay gặp: bấm Lưu trước nhịp 7 giây). */
@@ -2147,11 +2160,11 @@ function mrSaveCurrent(slot, auto) {
     toast("Chưa có đoạn video nào — bật camera rồi chờ vài giây.");
     return;
   }
-  mrSaveSessionClip(slot, MR.curBlob, MR.lastLiveScore, null, "video", !auto).then(function () {
+  mrSaveSessionClip(slot, MR.curBlob, auto ? (scoreOverride != null ? scoreOverride : MR.lastLiveScore) : MR.lastLiveScore, null, "video", !auto).then(function () {
     mrRenderLib(slot);
     var libEl = slot.querySelector(".mr-lib");
     if (libEl && libEl.scrollIntoView) { try { libEl.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {} }
-    toast(auto ? "Đã lưu video mẫu tự bắt — xem ở mục “Video mẫu đúng của bạn” ngay bên dưới." : "Đã lưu video mẫu — xem ở mục “Video mẫu đúng của bạn” ngay bên dưới.");
+    toast(auto ? "Đã lưu video mẫu tự bắt — xem ở mục “Video mẫu đúng của bạn” ngay bên dưới." : "Đã lưu video mẫu — xem ở mục “Video lưu tay — lưu để đối chiếu” ngay bên dưới.");
   }, function (err) {
     var why = err ? (err.name || err.message || String(err)) : "lỗi không rõ";
     mrSetStatus(slot, "Không lưu được video mẫu (" + why + ") — hãy chụp dòng này gửi lại.");
@@ -2173,11 +2186,12 @@ function mrStartSeg(slot) {
        khi onstop bất đồng bộ chạy — đọc MR.rec.mimeType lúc đó gây crash và làm
        mất đoạn quay + lệnh lưu tự động đang chờ. */
     var wantAuto = MR.pendingAuto, wantManual = MR.pendingManual;
-    MR.pendingAuto = false; MR.pendingManual = false;
+    var wantAutoScore = MR.pendingAutoScore;
+    MR.pendingAuto = false; MR.pendingManual = false; MR.pendingAutoScore = null;
     if (MR.chunks.length) {
       MR.curBlob = new Blob(MR.chunks, { type: selfMime || (selfRec && selfRec.mimeType) || "" });
       var saveBtn = slot.querySelector(".mr-save"); if (saveBtn) saveBtn.disabled = false;
-      if (wantAuto || wantManual) mrSaveCurrent(slot, wantAuto);
+      if (wantAuto || wantManual) mrSaveCurrent(slot, wantAuto, wantAutoScore);
     } else if (wantManual) {
       toast("Đoạn quay quá ngắn nên chưa lưu được — hãy quay thêm vài giây rồi bấm Lưu lại.");
     }
@@ -2190,7 +2204,7 @@ function mrStartSeg(slot) {
 }
 function mirrorStop() {
   if (MR.sessionActive && MR.slot) { try { mrFinishSession(MR.slot); } catch (e) {} }
-  MR.stopping = true; MR.fmOn = false; MR.lmOn = false; MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingManual = false; MR.stableCount = 0;
+  MR.stopping = true; MR.fmOn = false; MR.lmOn = false; MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingAutoScore = null; MR.pendingManual = false; MR.stableCount = 0;
   if (MR.segTimer) { clearInterval(MR.segTimer); MR.segTimer = null; }
   var slot = MR.slot;
   if (MR.rec && MR.rec.state === "recording") { try { MR.rec.stop(); } catch (e) {} }
@@ -2367,12 +2381,17 @@ function mrHandleLandmarks(slot, lm) {
             if (z) { has = true; if (kv[1] < z[0] || kv[1] > z[1]) pass = false; }
           });
           if (!has) { mrSetStatus(slot, "Âm này camera khó chấm tự động — hãy tự soi gương: " + (tg.hint || "")); return; }
-          if (pass) {
+          if (pass && score && score.total >= MR_CAPTURE_MIN_SCORE) {
             if (!MR.holdStart) MR.holdStart = Date.now();
             if (Date.now() - MR.holdStart >= 1000 && !MR.autoDone && !MR.manualLocked) {
-              MR.autoDone = true; MR.pendingAuto = true;
+              MR.autoDone = true; MR.pendingAuto = true; MR.pendingAutoScore = score.total;
               mrSetStatus(slot, "Đạt! Đang lưu video mẫu…");
             } else mrSetStatus(slot, "Đang giữ đúng khẩu hình…");
+          } else if (pass) {
+            /* Miệng trong vùng đích nhưng điểm khung chưa đạt 80%: không tính
+               là giữ đúng — đặt lại đồng hồ, không đặt pendingAuto. */
+            MR.holdStart = 0;
+            mrSetStatus(slot, "Đang giữ đúng hình nhưng chưa đủ điểm đúng (cần từ 80%) — chỉnh thêm theo hình mẫu.");
           } else {
             MR.holdStart = 0;
             mrSetStatus(slot, "Chưa đúng vùng đích — " + (tg.hint || "hãy soi gương và chỉnh theo hình mẫu."));
@@ -2724,7 +2743,7 @@ function mirrorStart(slot) {
   if (!mrSupported()) return;
   navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(function (stream) {
     MR.stream = stream; MR.slot = slot; MR.sym = slot.querySelector(".mr-sel").value || MR.sym;
-    MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingManual = false; MR.stableCount = 0; MR.momentDone = {}; MR.diagSends = 0; MR.diagResults = 0; MR.diagLm = 0; MR.diagSendErr = ""; MR.diagVState = ""; MR.diagRetry = "chưa"; MR.fmRetried = false; MR.lmRetried = false; MR.sessionId++; MR.sessionActive = true; MR.procSamples = []; MR.sessionMoment = null; MR.manualLocked = false; MR.lastLiveScore = null; MR.lastProc = null; MR.audioBlob = null; MR.audioTranscript = "";
+    MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingAutoScore = null; MR.pendingManual = false; MR.stableCount = 0; MR.momentDone = {}; MR.diagSends = 0; MR.diagResults = 0; MR.diagLm = 0; MR.diagSendErr = ""; MR.diagVState = ""; MR.diagRetry = "chưa"; MR.fmRetried = false; MR.lmRetried = false; MR.sessionId++; MR.sessionActive = true; MR.procSamples = []; MR.sessionMoment = null; MR.manualLocked = false; MR.lastLiveScore = null; MR.lastProc = null; MR.audioBlob = null; MR.audioTranscript = "";
     var v = slot.querySelector(".mr-video");
     if (v) { v.srcObject = stream; v.style.display = "block"; }
     var ov0 = slot.querySelector(".mr-overlay"); if (ov0) ov0.style.display = "block";
