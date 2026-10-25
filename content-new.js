@@ -5,40 +5,6 @@
 //  Gỡ file này là về lại nội dung cũ.
 // ============================================================
 
-// ---------- 1. BỘ 26 CHỮ CÁI (vocab set 69) — sửa A1-A7 ----------
-(function () {
-  if (typeof CONTENT === "undefined") return;
-  var letters = [
-    { w: "A", ipa: "/eɪ/", vi: "Chữ A - tên chữ đọc gần giống 'ây', viết thường là a.", col: "A - apple: quả táo", ex: "A is for apple.", exv: "A là chữ đầu của từ apple (quả táo).", vid: "KGZFmW3uPJE", ex2: "A - ant: con kiến", tip: "Chữ A giống một cái thang hình tam giác có một thanh ngang ở giữa.", kind: "vowel", ngrp: "ei", snd: "Tên chữ đọc gần giống 'ây'. Nhưng trong từ apple, chữ A đọc là 'a' ngắn — nghe kỹ: 'a-pồ-l' (đọc rõ âm l cuối), không phải 'ây-pồ'." },
-    { w: "B", ipa: "/biː/", vi: "Chữ B - tên chữ đọc gần giống 'bi', viết thường là b.", col: "B - ball: quả bóng", ex: "B is for ball.", exv: "B là chữ đầu của từ ball (quả bóng).", vid: "f1bcER1Zzak", ex2: "B - book: quyển sách", tip: "Chữ B có hai cái bụng tròn xếp chồng lên nhau, tròn như hai quả bóng ball.", kind: "consonant", ngrp: "ii", snd: "Tên chữ đọc gần giống 'bi'. Nhưng trong từ ball, chữ B đọc là /b/ — nghe kỹ: 'bôl', không phải 'bi-ôl'." },
-    { w: "C", ipa: "/siː/", vi: "Chữ C - tên chữ đọc gần giống 'xi', viết thường là c.", col: "C - cat: con mèo", ex: "C is for cat.", exv: "C là chữ đầu của từ cat (con mèo).", vid: "SNgUoinyQUU", ex2: "C - cake: cái bánh", tip: "Chữ C giống vầng trăng khuyết đang mở miệng về phía phải.", kind: "consonant", ngrp: "ii", snd: "Tên chữ đọc gần giống 'xi'. Nhưng trong từ cat, chữ C đọc là /k/ — nghe kỹ: 'cát', không phải 'xi-át'." },
-    { w: "D", ipa: "/diː/", vi: "Chữ D - tên chữ đọc gần giống 'đi', viết thường là d.", col: "D - dog: con chó", ex: "D is for dog.", exv: "D là chữ đầu của từ dog (con chó).", vid: "SizYpeJL_UE", ex2: "D - door: cánh cửa", tip: "Chữ D giống cánh cửa cong: một nét thẳng đứng và một cái bụng to.", kind: "consonant", ngrp: "ii", snd: "Tên chữ đọc gần giống 'đi'. Nhưng trong từ dog, chữ D đọc là /d/ — nghe kỹ: 'đóc', không phải 'đi-óc'." },
-    { w: "E", ipa: "/iː/", vi: "Chữ E - tên chữ đọc gần giống 'i', viết thường là e.", col: "E - egg: quả trứng", ex: "E is for egg.", exv: "E là chữ đầu của từ egg (quả trứng).", vid: "BMLtpWCdBeY", ex2: "E - elephant: con voi", tip: "Chữ E giống cái lược có ba răng chĩa ra phía phải.", kind: "vowel", ngrp: "ii", snd: "Tên chữ đọc gần giống 'i'. Nhưng trong từ egg, chữ E đọc là /e/ — nghe kỹ: 'éc', không phải 'i-éc'." },
-    { w: "F", ipa: "/ɛf/", vi: "Chữ F - tên chữ đọc gần giống 'ép', viết thường là f.", col: "F - fish: con cá", ex: "F is for fish.", exv: "F là chữ đầu của từ fish (con cá).", vid: "LWMED_3Nvig", ex2: "F - frog: con ếch", tip: "Chữ F giống chữ E bị rụng nét ngang dưới cùng, chỉ còn hai nét ngang.", kind: "consonant", ngrp: "e", snd: "Tên chữ đọc gần giống 'ép'. Nhưng trong từ fish, chữ F đọc là /f/ — nghe kỹ: 'fish', cuối từ thổi hơi 'sh', không phải 't'." },
-    { w: "G", ipa: "/dʒiː/", vi: "Chữ G - tên chữ đọc gần giống 'gi', viết thường là g.", col: "G - girl: cô gái", ex: "G is for girl.", exv: "G là chữ đầu của từ girl (cô gái).", vid: "39prtfpkRkU", ex2: "G - goat: con dê", tip: "Chữ G giống chữ C có thêm một nét ngang nhỏ chui vào trong như cái móc.", kind: "consonant", ngrp: "ii", snd: "Tên chữ đọc gần giống 'gi'. Nhưng trong từ girl, chữ G đọc là /dʒ/ — nghe kỹ: 'gơn-l' (đọc rõ âm l cuối), không phải 'gi-ơn'.", note: "Ở miền Bắc, chữ 'gi' tiếng Việt đọc là /z/, khác âm /dʒ/ của chữ G tiếng Anh — nghe nút loa để phân biệt." },
-    { w: "H", ipa: "/eɪtʃ/", vi: "Chữ H - tên chữ đọc gần giống 'ếch', viết thường là h.", col: "H - hat: cái mũ", ex: "H is for hat.", exv: "H là chữ đầu của từ hat (cái mũ).", vid: "PUI5-AphjMg", ex2: "H - hand: bàn tay", tip: "Chữ H giống hai người đứng song song, nắm tay nhau bằng một nét ngang ở giữa.", kind: "consonant", ngrp: "ei", snd: "Tên chữ đọc gần giống 'ếch'. Nhưng trong từ hat, chữ H đọc là /h/ — nghe kỹ: 'hát', không phải 'ếch-át'." },
-    { w: "I", ipa: "/aɪ/", vi: "Chữ I - tên chữ đọc gần giống 'ai', viết thường là i.", col: "I - ice: nước đá", ex: "I is for ice.", exv: "I là chữ đầu của từ ice (nước đá).", vid: "b_gJVJvOA3Q", ex2: "I - insect: con côn trùng", tip: "Chữ I chỉ là một nét thẳng đơn giản; viết thường thì có thêm một dấu chấm ở trên đầu.", kind: "vowel", ngrp: "ai", snd: "Tên chữ đọc gần giống 'ai'. Nhưng trong từ insect, chữ I đọc là /ɪ/ ngắn — nghe kỹ: 'in-séc-t' (đọc rõ âm t cuối), không phải 'ai-in-séc'." },
-    { w: "J", ipa: "/dʒeɪ/", vi: "Chữ J - tên chữ đọc gần giống 'giây', viết thường là j.", col: "J - juice: nước ép", ex: "J is for juice.", exv: "J là chữ đầu của từ juice (nước ép).", vid: "8wNIYNyG37g", ex2: "J - jacket: cái áo khoác", tip: "Chữ J giống cái móc câu cong lên ở cuối; viết thường cũng có dấu chấm ở trên đầu.", kind: "consonant", ngrp: "ei", snd: "Tên chữ đọc gần giống 'giây'. Nhưng trong từ juice, chữ J đọc là /dʒ/ — nghe kỹ: 'giu' rồi xì 's' ở cuối, không phải 'giây-ut'." },
-    { w: "K", ipa: "/keɪ/", vi: "Chữ K - tên chữ đọc gần giống 'cây', viết thường là k.", col: "K - kite: cái diều", ex: "K is for kite.", exv: "K là chữ đầu của từ kite (cái diều).", vid: "jdI2ad0lNpA", ex2: "K - key: cái chìa khóa", tip: "Chữ K giống một người đứng thẳng, giơ một tay lên và đá một chân ra.", kind: "consonant", ngrp: "ei", snd: "Tên chữ đọc gần giống 'cây'. Nhưng trong từ kite, chữ K đọc là /k/ — nghe kỹ: 'cai-t' (đọc rõ âm t cuối), không phải 'cây-ai'." },
-    { w: "L", ipa: "/ɛl/", vi: "Chữ L - tên chữ đọc gần giống 'eo', viết thường là l.", col: "L - lion: con sư tử", ex: "L is for lion.", exv: "L là chữ đầu của từ lion (con sư tử).", vid: "F4BgJ_SAgZ8", ex2: "L - leg: cái chân", tip: "Chữ L giống góc nhà: một nét đứng rồi một nét nằm ở dưới chân.", kind: "consonant", ngrp: "e", snd: "Tên chữ đọc gần giống 'eo'. Nhưng trong từ lion, chữ L đọc là /l/ — nghe kỹ: 'lai-ơn', không phải 'eo-ai-ơn'." },
-    { w: "M", ipa: "/ɛm/", vi: "Chữ M - tên chữ đọc gần giống 'em', viết thường là m.", col: "M - milk: sữa", ex: "M is for milk.", exv: "M là chữ đầu của từ milk (sữa).", vid: "WFMI-cV9sq8", ex2: "M - moon: mặt trăng", tip: "Chữ M giống hai ngọn núi đứng sát cạnh nhau.", kind: "consonant", ngrp: "e", snd: "Tên chữ đọc gần giống 'em'. Nhưng trong từ milk, chữ M đọc là /m/ — nghe kỹ: 'miức', không phải 'em-iức'." },
-    { w: "N", ipa: "/ɛn/", vi: "Chữ N - tên chữ đọc gần giống 'en', viết thường là n.", col: "N - nose: cái mũi", ex: "N is for nose.", exv: "N là chữ đầu của từ nose (cái mũi).", vid: "xZx53RedAZ0", ex2: "N - night: ban đêm", tip: "Chữ N giống chữ M bị thiếu một chân: hai nét đứng nối nhau bằng một nét chéo.", kind: "consonant", ngrp: "e", snd: "Tên chữ đọc gần giống 'en'. Nhưng trong từ nose, chữ N đọc là /n/ — nghe kỹ: 'nâu-z' (cuối từ là âm z rung nhẹ), không phải 'en-âu'." },
-    { w: "O", ipa: "/əʊ/", vi: "Chữ O - tên chữ đọc gần giống 'âu', viết thường là o.", col: "O - orange: quả cam", ex: "O is for orange.", exv: "O là chữ đầu của từ orange (quả cam).", vid: "RWbvHZBmrqk", ex2: "O - owl: con cú mèo", tip: "Chữ O tròn xoe như quả cam orange và như cái miệng đang đọc 'âu'.", kind: "vowel", ngrp: "ou", snd: "Tên chữ đọc gần giống 'âu'. Nhưng trong từ orange, chữ O đọc là /ɒ/ — nghe kỹ: 'o-rin-gi' (cuối từ có âm 'gi' nhẹ), không phải 'âu-rinh'." },
-    { w: "P", ipa: "/piː/", vi: "Chữ P - tên chữ đọc gần giống 'pi', viết thường là p.", col: "P - pig: con lợn", ex: "P is for pig.", exv: "P là chữ đầu của từ pig (con lợn).", vid: "14hXRz94jRQ", ex2: "P - pen: cái bút", tip: "Chữ P giống lá cờ trên cột: một nét đứng và một cái bụng tròn ở phía trên.", kind: "consonant", ngrp: "ii", snd: "Tên chữ đọc gần giống 'pi'. Nhưng trong từ pig, chữ P đọc là /p/ — nghe kỹ: 'píc', không phải 'pi-íc'." },
-    { w: "Q", ipa: "/kjuː/", vi: "Chữ Q - tên chữ đọc gần giống 'kiu', viết thường là q.", col: "Q - queen: nữ hoàng", ex: "Q is for queen.", exv: "Q là chữ đầu của từ queen (nữ hoàng).", vid: "L987a64I2cY", ex2: "Q - question: câu hỏi", tip: "Chữ Q giống chữ O có thêm một cái đuôi nhỏ ở góc dưới bên phải.", kind: "consonant", ngrp: "juu", snd: "Tên chữ đọc gần giống 'kiu'. Nhưng trong từ queen, chữ Q đọc là /kw/ — nghe kỹ: 'quin', không phải 'kiu-in'." },
-    { w: "R", ipa: "/ɑː/", vi: "Chữ R - tên chữ đọc gần giống 'a' dài, viết thường là r.", col: "R - rabbit: con thỏ", ex: "R is for rabbit.", exv: "R là chữ đầu của từ rabbit (con thỏ).", vid: "W5z941Xx2fM", ex2: "R - red: màu đỏ", tip: "Chữ R giống chữ P có thêm một cái chân đá ra phía trước.", kind: "consonant", ngrp: "aa", snd: "Tên chữ đọc là /ɑː/ (kiểu Anh, dùng trong IELTS) — gần giống 'a' dài. Video Mỹ đọc 'ar' /ɑːr/ (có âm r ở cuối). Nhưng trong từ rabbit, chữ R đọc là /r/ — nghe kỹ: 'ra-bít', không phải 'a-ra-bít'." },
-    { w: "S", ipa: "/ɛs/", vi: "Chữ S - tên chữ đọc gần giống 'ét', viết thường là s.", col: "S - sun: mặt trời", ex: "S is for sun.", exv: "S là chữ đầu của từ sun (mặt trời).", vid: "IaFlt1TjM-k", ex2: "S - star: ngôi sao", tip: "Chữ S cong cong như con rắn đang bò, đọc lên nghe 'xì xì' như tiếng rắn.", kind: "consonant", ngrp: "e", snd: "Tên chữ đọc gần giống 'ét'. Nhưng trong từ sun, chữ S đọc là /s/ — nghe kỹ: 'săn', không phải 'ét-ăn'." },
-    { w: "T", ipa: "/tiː/", vi: "Chữ T - tên chữ đọc gần giống 'ti', viết thường là t.", col: "T - tree: cái cây", ex: "T is for tree.", exv: "T là chữ đầu của từ tree (cái cây).", vid: "1yl9p--gElU", ex2: "T - table: cái bàn", tip: "Chữ T giống cái cột có mái ngang trên đầu.", kind: "consonant", ngrp: "ii", snd: "Tên chữ đọc gần giống 'ti'. Nhưng trong từ tree, chữ T đọc là /t/ — nghe kỹ: 'tri', không phải 'ti-ri'." },
-    { w: "U", ipa: "/juː/", vi: "Chữ U - tên chữ đọc gần giống 'iu', viết thường là u.", col: "U - umbrella: cái ô", ex: "U is for umbrella.", exv: "U là chữ đầu của từ umbrella (cái ô).", vid: "IF59Xs60uRM", ex2: "U - uncle: chú, bác trai", tip: "Chữ U giống cái cốc có hai thành cao và đáy cong, đang chờ rót nước.", kind: "vowel", ngrp: "juu", snd: "Tên chữ đọc gần giống 'iu'. Nhưng trong từ umbrella, chữ U đọc là /ʌ/ — nghe kỹ: 'ăm-bre-lơ', không phải 'iu-bre-lơ'." },
-    { w: "V", ipa: "/viː/", vi: "Chữ V - tên chữ đọc gần giống 'vi', viết thường là v.", col: "V - van: xe tải nhỏ", ex: "V is for van.", exv: "V là chữ đầu của từ van (xe tải nhỏ).", vid: "yZjEtwr8Q4o", ex2: "V - violin: cây đàn vĩ cầm", tip: "Chữ V là hai nét chéo gặp nhau ở một điểm nhọn phía dưới.", kind: "consonant", ngrp: "ii", snd: "Tên chữ đọc gần giống 'vi'. Nhưng trong từ van, chữ V đọc là /v/ — nghe kỹ: 'van' với âm a mở rộng (giữa a và e), không phải 'vi-an'." },
-    { w: "W", ipa: "/ˈdʌbljuː/", vi: "Chữ W - tên chữ đọc gần giống 'đắp-biu', viết thường là w.", col: "W - water: nước", ex: "W is for water.", exv: "W là chữ đầu của từ water (nước).", vid: "mQZ-c3_EDj4", ex2: "W - window: cửa sổ", tip: "Chữ W là hai chữ V đứng cạnh nhau, nhìn như hai thung lũng liền nhau.", kind: "consonant", ngrp: "juu", snd: "Tên chữ đọc gần giống 'đắp-biu'. Nhưng trong từ water, chữ W đọc là /w/ — nghe kỹ: 'wo-tơ' (môi tròn chu ra rồi mở), không phải 'đắp-biu-o-tơ'." },
-    { w: "X", ipa: "/ɛks/", vi: "Chữ X - tên chữ đọc gần giống 'ếch-x', viết thường là x.", col: "X - box: cái hộp", ex: "X is for box.", exv: "X là chữ CUỐI của từ box (cái hộp).", vid: "3AQUDbEhTm8", ex2: "X - fox: con cáo", tip: "Chữ X là hai nét chéo bắt chéo nhau như dấu nhân.", kind: "consonant", ngrp: "e", snd: "Chữ X thường đứng ở CUỐI từ: box đọc là 'bốc-x', fox cũng vậy — X không đứng đầu hai từ này." },
-    { w: "Y", ipa: "/waɪ/", vi: "Chữ Y - tên chữ đọc gần giống 'oai', viết thường là y.", col: "Y - yellow: màu vàng", ex: "Y is for yellow.", exv: "Y là chữ đầu của từ yellow (màu vàng).", vid: "Wa_9FdUyrJ0", ex2: "Y - yo-yo: đồ chơi yo-yo", tip: "Chữ Y giống cái chạc cây: hai nhánh ở trên chụm lại thành một thân ở dưới.", kind: "consonant", ngrp: "ai", snd: "Tên chữ đọc gần giống 'oai'. Nhưng trong từ yellow, chữ Y đọc là /j/ — nghe kỹ: âm đầu như âm 'y' trong từ 'yes', rồi 'lô', không phải 'oai-e-lô'.", note: "Chữ Y đặc biệt: lúc là phụ âm (yellow), lúc là nguyên âm (happy) — lên chặng sau sẽ gặp." },
-    { w: "Z", ipa: "/zɛd/", vi: "Chữ Z - tên chữ đọc gần giống 'dét', viết thường là z.", col: "Z - zoo: vườn thú", ex: "Z is for zoo.", exv: "Z là chữ đầu của từ zoo (vườn thú).", vid: "IDeUZy_iNT4", ex2: "Z - zebra: con ngựa vằn", tip: "Chữ Z đi theo đường zíc zắc: ngang, chéo xuống, rồi ngang. Cách đọc tên chữ: 'zee' (kiểu Mỹ) / 'zed' (kiểu Anh, dùng trong IELTS) — web này ưu tiên 'zed'.", kind: "consonant", ngrp: "e", snd: "Tên chữ đọc là 'zed' (kiểu Anh). Nhưng trong từ zoo, chữ Z đọc là /z/ — nghe kỹ: 'zu', không phải 'dét-u'." }
-  ];
-  CONTENT.vocab[69].cards = letters;
-})();
-
 // ---------- 2. BỘ 20 TỪ LỚP HỌC (vocab set 24) — sửa B1-B4 ----------
 (function () {
   if (typeof CONTENT === "undefined") return;
@@ -141,22 +107,6 @@ var RB_CH1_TEST = {
   ]
 };
 
-// ---------- 6. ÔN PHÂN BIỆT NHÓM TÊN CHỮ (bước ôn riêng sau A-Z) ----------
-var RB_AZ_GROUPS = [
-  { key: "ei", vn: "ây", ipa: "/eɪ/", letters: ["A", "H", "J", "K"] },
-  { key: "ii", vn: "i dài", ipa: "/iː/", letters: ["B", "C", "D", "E", "G", "P", "T", "V"] },
-  { key: "e", vn: "e", ipa: "/ɛ/", letters: ["F", "L", "M", "N", "S", "X", "Z"] },
-  { key: "ai", vn: "ai", ipa: "/aɪ/", letters: ["I", "Y"] },
-  { key: "ou", vn: "âu", ipa: "/əʊ/", letters: ["O"] },
-  { key: "juu", vn: "iu", ipa: "/juː/", letters: ["Q", "U", "W"] },
-  { key: "aa", vn: "a dài", ipa: "/ɑː/", letters: ["R"] }
-];
-var RB_AZ_QUIZ = [
-  { q: "Chữ B cùng nhóm tên với chữ nào?", o: ["D (đi)", "M (em)", "Q (kiu)"], a: 0, why: "B đọc gần giống 'bi', D đọc gần giống 'đi' — cùng nhóm tên 'i dài'." },
-  { q: "Chữ M cùng nhóm tên với chữ nào?", o: ["S (ét)", "K (cây)", "A (ây)"], a: 0, why: "M đọc gần giống 'em', S đọc gần giống 'ét' — cùng nhóm tên 'e'." },
-  { q: "Chữ Q cùng nhóm tên với chữ nào?", o: ["U (iu)", "T (ti)", "Y (oai)"], a: 0, why: "Q đọc gần giống 'kiu', U đọc gần giống 'iu' — cùng nhóm tên 'iu'." }
-];
-
 // ---------- 7. PHÁT ÂM: BẢNG 44 ÂM THEO PHÂN LOẠI MỚI + ĐỢT 1 ----------
 // Phân loại MỚI sau kiểm chứng: ə = hay lệch, ʃ = khó, ʌ giữ hay lệch (đợt 2).
 // Thành phần: quen 23, hay lệch 15, khó 6 = 44. Đợt = đúng phân loại (đợt 1 = quen, đợt 2 = hay lệch, đợt 3 = khó).
@@ -171,7 +121,7 @@ var RB_PH_WAVES = {
   3: ["æ", "ɜ:", "θ", "ð", "ʒ", "ʃ"]
 };
 // Dữ liệu đợt 1: ký hiệu, từ ví dụ, nghĩa, lời giải thích bằng lời thường, câu mẫu,
-// mốc đoạn video BBC (PH_SEG, gắn theo ký hiệu âm) và tham số khẩu hình (dùng cho mouthSVG).
+// mốc đoạn video BBC (PH_SEG, gắn theo ký hiệu âm) và tham số khẩu hình cũ (hình vẽ đã bỏ, chỉ giữ để đối chiếu).
 // Lời giải thích f/j/k/ɡ/ŋ là bản viết lại đã kiểm chứng; các âm còn lại giữ lời giải thích cũ đã tốt.
 var RB_PH1 = [
   { s: "m", w: "man", vi: "người đàn ông", ex: "Hai môi mím lại, hơi đi qua mũi, có rung. Giống âm m tiếng Việt.", sen: "The man is my father.", senVi: "Người đàn ông đó là bố tôi.", seg: [3506, 3625], h: .4, f: .5, r: 0, o: .05, tip: .1, teeth: 0 },
@@ -234,11 +184,6 @@ var RB_PH_EXPLAIN_LATER = {
 // Độ mở hàm tương đối do trang tự gán (thang 0-4) + âm đích của nguyên âm đôi (dùng cho hình trượt).
 var RB_PH_JAW = { "i:": 1, "ɪ": 1.5, "e": 2, "æ": 3.5, "ɑ:": 4, "ɒ": 3.5, "ɔ:": 2.5, "ʊ": 1.5, "u:": 1, "ʌ": 2.5, "ɜ:": 2, "ə": 1.5, "eɪ": 2, "aɪ": 3.5, "ɔɪ": 2.5, "əʊ": 1.5, "aʊ": 3.5, "ɪə": 1.5, "eə": 2, "ʊə": 1.5, "p": 0.5, "b": 0.5, "t": 1, "d": 1, "k": 1.5, "ɡ": 1.5, "tʃ": 1.5, "dʒ": 1.5, "f": 0.5, "v": 0.5, "θ": 1, "ð": 1, "s": 0.5, "z": 0.5, "ʃ": 1, "ʒ": 1, "h": 2, "m": 0.5, "n": 1, "ŋ": 1.5, "l": 1, "r": 1.5, "w": 1, "j": 0.5 };
 var RB_PH_GLIDE = { "eɪ": "ɪ", "aɪ": "ɪ", "ɔɪ": "ɪ", "əʊ": "ʊ", "aʊ": "ʊ", "ɪə": "ə", "eə": "ə", "ʊə": "ə" };
-var RB_PH_TARGETS = {
-  "ɪ": { s: "ɪ", w: "ship", h: .8, f: .85, r: 0, o: .3, tip: .25, teeth: 0 },
-  "ʊ": { s: "ʊ", w: "book", h: .65, f: .2, r: .6, o: .3, tip: 0, teeth: 0 },
-  "ə": { s: "ə", w: "about", h: .5, f: .5, r: 0, o: .35, tip: .1, teeth: 0 }
-};
 // Từ ví dụ cho toàn bảng 44 âm (bài học đủ 44 âm từ giai đoạn 1.6).
 var RB_PH_ALL_EXAMPLES = { "i:": "see", "ɪ": "ship", "e": "bed", "æ": "cat", "ɑ:": "car", "ɒ": "hot", "ɔ:": "horse", "ʊ": "book", "u:": "food", "ʌ": "cup", "ɜ:": "bird", "ə": "about", "eɪ": "day", "aɪ": "night", "ɔɪ": "boy", "əʊ": "go", "aʊ": "now", "ɪə": "here", "eə": "hair", "ʊə": "sure", "p": "pen", "b": "bag", "t": "ten", "d": "dog", "tʃ": "chair", "dʒ": "job", "k": "key", "ɡ": "go", "f": "fish", "v": "van", "θ": "think", "ð": "this", "s": "see", "z": "zoo", "ʃ": "she", "ʒ": "television", "h": "hat", "m": "man", "n": "no", "ŋ": "sing", "l": "leg", "r": "red", "w": "water", "j": "yes" };
 
@@ -280,11 +225,9 @@ var RB_AI = {
 };
 
 // ---------- 10. LỘ TRÌNH CHƯƠNG 1 (thứ tự HIỂN THỊ) ----------
-// Hàng kiểm tra cuối chương đứng ở vị trí 80% (sau 8 bước học), hàng cuối là trò chơi.
-// Cổng mở khi học xong 8/9 bước học (mốc 80% — chuẩn nội bộ của web, không phải chuẩn IELTS).
+// Hàng kiểm tra cuối chương đứng ở vị trí 80% (sau 6 bước học), hàng cuối là trò chơi.
+// Cổng mở khi học xong 6/7 bước học (mốc 80% — chuẩn nội bộ của web, không phải chuẩn IELTS).
 var RB_CH1_STEPS = [
-  { id: "letters", kind: "vocab", setIdx: 69, deckNo: 1, title: "Học xong: đọc đúng tên 26 chữ cái và phân biệt tên chữ với âm chữ", type: "Từ vựng · Thẻ chữ", mins: 10 },
-  { id: "azreview", kind: "az", title: "Học xong: phân biệt các nhóm tên chữ (ây, i dài, e, ai, âu, iu, a dài)", type: "Ôn tập · Nhóm tên chữ", mins: 5 },
   { id: "classroom", kind: "vocab", setIdx: 24, deckNo: 2, title: "Học xong: hiểu và nói 20 từ dùng trong lớp học", type: "Từ vựng · Từ lớp học", mins: 8 },
   { id: "video", kind: "video", title: "Học xong: hát theo bài hát bảng chữ cái", type: "Xem video", mins: 5 },
   { id: "gram0", kind: "grammar", gIdx: 0, title: "Học xong: tự giới thiệu 'Tôi là...'", type: "Ngữ pháp · Câu đầu tiên", mins: 6 },
@@ -294,12 +237,12 @@ var RB_CH1_STEPS = [
   { id: "test", kind: "test", title: "Bài kiểm tra cuối chương 1", type: "Đánh giá", mins: 10 },
   { id: "game", kind: "game", title: "Học xong: nhớ chữ cái qua trò chơi nối chữ với từ", type: "Chơi để nhớ", mins: 5 }
 ];
-var RB_CH1_GATE_NEED = 8;
+var RB_CH1_GATE_NEED = 6; /* 80% của 7 bước học còn lại (làm tròn lên) sau khi bỏ 2 bước chữ cái */
 var RB_CH1_GUIDEBOOK = {
-  goal: "Học xong chương này, bạn đọc đúng tên 26 chữ cái, phân biệt được tên chữ với âm chữ, hiểu 20 từ dùng trong lớp học và nói được 3 câu đầu tiên: I am..., This is..., My name is...",
+  goal: "Học xong chương này, bạn hiểu 20 từ dùng trong lớp học, nói được 3 câu đầu tiên: I am..., This is..., My name is..., và đọc đúng 44 âm tiếng Anh theo đợt khó.",
   grammar: ["Tôi là... (I am...)", "Đây là... (This is...)", "Tôi tên là... (My name is...)"],
   phrases: ["Hello! (Xin chào!)", "My name is... (Tôi tên là...)", "Thank you! (Cảm ơn bạn!)", "Nice to meet you! (Rất vui được gặp bạn!)"],
-  mistakes: ["Đọc tên chữ thay cho âm chữ (apple thành 'ây-pồ')", "Tưởng X đứng đầu từ box (X thường ở cuối từ)", "Nuốt âm cuối của từ tiếng Anh (life thiếu /f/)"]
+  mistakes: ["Đọc âm dài thành âm ngắn (ship thành sheep do /ɪ/ và /i:/ lẫn nhau)", "Nuốt âm cuối của từ tiếng Anh (life thiếu /f/)", "Đọc /r/ rung như r tiếng Việt"]
 };
 
 // ---------- 11. GIAI ĐOẠN 1.5: cụm từ, cặp phân biệt, vùng đích gương ----------
@@ -470,16 +413,11 @@ var RB_PH_PAIR_REASONS = {
   "ə": "Hai từ này khác nhau nhiều âm, không phải cặp tối thiểu — bài này chỉ luyện nhận diện âm /ə/ đọc lướt trong about.",
   "ʒ": "Hai từ này khác nhau nhiều âm, không phải cặp tối thiểu — bài này chỉ luyện nhận diện âm /ʒ/ trong television."
 };
-// Âm đầu của mỗi chữ cái — lấy từ từ ví dụ (col) của chính thẻ chữ đó.
-// Q và X là trường hợp đặc biệt, ghi chú rõ trong giao diện khi dùng.
-var RB_AZ_FIRST_SYM = { "A": "æ", "B": "b", "C": "k", "D": "d", "E": "e", "F": "f", "G": "dʒ", "H": "h", "I": "aɪ", "J": "dʒ", "K": "k", "L": "l", "M": "m", "N": "n", "O": "ɒ", "P": "p", "Q": "k", "R": "r", "S": "s", "T": "t", "U": "ʌ", "V": "v", "W": "w", "X": "k", "Y": "j", "Z": "z" };
-var RB_AZ_FIRST_NOTE = { "Q": "Chữ Q trong queen đọc là /kw/ — nút này mở âm /k/ làm âm đầu, nghe kỹ sẽ thấy /w/ nối ngay sau.", "X": "Chữ X thường ở CUỐI từ (box, fox đọc /ks/ ở cuối) — nút này mở âm /k/ làm âm đầu để soi khẩu hình." };
-
 // ---------- 13. GIAI ĐOẠN 2 (a20): BẢN ĐỒ 13 CHƯƠNG ----------
 // Mục tiêu và năng lực làm được tự soạn theo chuẩn IELTS từng band, không sao chép.
 // Chương chưa dựng xong ghi "sắp mở" — không bịa nội dung bài học bên trong.
 var RB_CHAPTER_MAP = [
-  { band: "Band 0", title: "Chữ cái và chào hỏi", status: "open", goal: "Đọc đúng tên 26 chữ cái, phân biệt tên chữ với âm chữ, hiểu 20 từ lớp học, nói được 3 câu I am... / This is... / My name is...", can: ["Đọc đúng tên 26 chữ cái", "Đánh vần tên mình khi người ta hỏi", "Chào hỏi và giới thiệu tên"] },
+  { band: "Band 0", title: "Chào hỏi và 44 âm", status: "open", goal: "Hiểu 20 từ lớp học, nói được 3 câu I am... / This is... / My name is..., đọc đúng 44 âm tiếng Anh theo đợt khó.", can: ["Chào hỏi và giới thiệu tên", "Hiểu 20 từ lớp học", "Đọc đúng 44 âm tiếng Anh"] },
   { band: "Band 2,0", title: "Câu đơn giản và từ quen thuộc", status: "soon", goal: "Hiểu và nói những câu rất đơn giản về bản thân và những việc quen thuộc hằng ngày.", can: ["Nói câu đơn về tên, tuổi, nơi ở", "Hiểu câu hỏi đơn giản khi nói chậm và rõ"] },
   { band: "Band 2,5", title: "Nói về bản thân và gia đình", status: "soon", goal: "Kể ngắn gọn về gia đình, bạn bè và thói quen hằng ngày bằng câu đơn nối nhau.", can: ["Giới thiệu gia đình bằng vài câu đơn", "Nói về việc mình làm mỗi ngày"] },
   { band: "Band 3,0", title: "Giao tiếp đơn giản hằng ngày", status: "soon", goal: "Xoay xở trong các tình huống quen thuộc: mua đồ, hỏi đường, hỏi giờ.", can: ["Hỏi và trả lời về giá cả, giờ giấc", "Hiểu biển báo và thông báo ngắn"] },
