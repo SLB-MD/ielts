@@ -445,14 +445,15 @@ function viewRoadmap(app) {
       + (isOpen ? '<button class="btn btn-primary" id="mapCh1">Vào học chương 1</button>' : '<p class="mut">Cổng: mở khi bạn học xong 80% chương trước (chuẩn nội bộ).</p>')
       + '</section>';
   });
-  html += '<section class="card"><h3>Trò chuyện tự do với AI</h3><p class="mut">Bước sau các chương nói: nói live bằng mic + gõ bàn phím, nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mở ngay qua Luyện tập → Nói.</p><button class="btn btn-primary" id="mapChat">Mở trò chuyện với AI</button></section>';
+  html += '<section class="card"><h3>Trò chuyện tự do với AI</h3><p class="mut">Bước sau các chương nói, chia 2 loại riêng: gõ tay (chỉ gõ chữ) và nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mở ngay qua Luyện tập → Nói.</p><div class="row"><button class="btn btn-primary" id="mapChatType">Mở trò chuyện gõ tay</button><button class="btn btn-primary" id="mapChatVoice">Mở trò chuyện nói live</button></div></section>';
   app.innerHTML = html;
   $$("#roadmapBox .step-row[data-step]").forEach(function (btn) {
     btn.onclick = function () { openStep(stepById(btn.dataset.step)); };
   });
   var gb = $("#gateBtn"); if (gb) gb.onclick = function () { openStep(stepById("test")); };
   var mc1 = $("#mapCh1"); if (mc1) mc1.onclick = function () { var ns = nextLearnStep(); openStep(ns || stepById("letters"), { noNudge: true }); };
-  var mch = $("#mapChat"); if (mch) mch.onclick = function () { openLesson({ type: "chat" }); };
+  var mct = $("#mapChatType"); if (mct) mct.onclick = function () { openLesson({ type: "chat", chatMode: "type" }); };
+  var mcv = $("#mapChatVoice"); if (mcv) mcv.onclick = function () { openLesson({ type: "chat", chatMode: "voice" }); };
   $$("#skippedList .step-row[data-skip]").forEach(function (btn) {
     btn.onclick = function () { openStep(stepById(btn.dataset.skip), { noNudge: true }); };
   });
@@ -477,7 +478,8 @@ function viewPractice(app) {
     html += '</section>';
   });
   html += '<section class="card"><h3>Nói</h3>'
-    + '<button class="step-row" data-chat="1"><span><b>Trò chuyện tự do với AI</b> <span class="chip cur">Đang mở</span></span><span class="mut">nói live bằng mic + gõ bàn phím, nói tự do thích gì nói đó, không chấm điểm trong lúc nói</span></button>'
+    + '<button class="step-row" data-chat="type"><span><b>Trò chuyện gõ tay với AI</b> <span class="chip cur">Đang mở</span></span><span class="mut">chỉ gõ chữ, AI trả lời bằng chữ, không mic, không giọng nói</span></button>'
+    + '<button class="step-row" data-chat="voice"><span><b>Trò chuyện nói live với AI</b> <span class="chip cur">Đang mở</span></span><span class="mut">mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được</span></button>'
     + '<p class="mut">Mô hình nguồn chính là AI trò chuyện liên tục (không phải người thật). AI tự nhận là AI trong lời chào đầu phiên. Sau phiên có transcript, câu hay dùng lại và ghi chú lỗi. Cần đăng nhập để dùng (đăng nhập mở ở giai đoạn 2) — chưa đăng nhập thì web báo rõ, không bịa câu trả lời. 71 kịch bản nói (Part 1/2/3) và 20 roleplay của bản cũ sẽ chuyển sang bản mới ở giai đoạn 2.</p></section>';
   html += '<p class="mut">Thư viện đầy đủ của bản cũ (81 bộ từ, 64 trạm ngữ pháp, 61 bài đọc...) sẽ chuyển sang bản mới ở giai đoạn 2.</p>';
   app.innerHTML = html;
@@ -485,7 +487,7 @@ function viewPractice(app) {
     btn.onclick = function () { openStep(stepById(btn.dataset.practice)); };
   });
   $$("[data-chat]").forEach(function (btn) {
-    btn.onclick = function () { openLesson({ type: "chat" }); };
+    btn.onclick = function () { openLesson({ type: "chat", chatMode: btn.dataset.chat }); };
   });
 }
 
@@ -584,7 +586,7 @@ function viewMine(app) {
     + '<button class="btn" id="tutorTry">Thử gọi gia sư</button></section>';
   html += '<section class="card"><h3>Tài khoản</h3><p class="mut">Chế độ: lưu trên máy này (chưa đồng bộ tài khoản). Đồng bộ Supabase (cùng project, cùng 3 bảng progress/saved_words/study_log) sẽ mở ở giai đoạn 2.</p>'
     + '<button class="btn" id="quickCheckBtn">Kiểm tra trình độ (tùy chọn, không bắt buộc)</button></section>';
-  html += '<section class="card"><h3>Trò chuyện với AI</h3><p class="mut">Trò chuyện tự do với AI đã mở: vào Luyện tập → Nói (nói live bằng mic + gõ bàn phím, nói tự do thích gì nói đó, không chấm điểm trong lúc nói). Mô hình nguồn là AI trò chuyện liên tục, không phải người thật. Cần đăng nhập để dùng (đăng nhập mở ở giai đoạn 2).</p></section>';
+  html += '<section class="card"><h3>Trò chuyện với AI</h3><p class="mut">Trò chuyện tự do với AI đã mở: vào Luyện tập → Nói, chọn 1 trong 2 loại riêng — gõ tay (chỉ gõ chữ) hoặc nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mô hình nguồn là AI trò chuyện liên tục, không phải người thật. Cần đăng nhập để dùng (đăng nhập mở ở giai đoạn 2).</p></section>';
   app.innerHTML = html;
   var setGoal = function (v) { v = Math.max(15, Math.min(180, Math.round(v) || 30)); state.goal = v; saveState(); render(); };
   $("#goalMinus").onclick = function () { setGoal((state.goal || 30) - 5); };
@@ -1809,54 +1811,219 @@ function firstSymFromIpa(ipa) {
 }
 
 
-/* ----- Trò chuyện tự do với AI (C7, giai đoạn 2) -----
+/* ----- Trò chuyện với AI: 2 loại riêng (gõ tay / nói live + ngắt lời) -----
    Mô hình nguồn = AI trò chuyện liên tục, không phải người thật.
-   Trong phiên: chỉ hội thoại, không điểm số, không bảng đúng/sai chen ngang.
-   Sau phiên: transcript + câu hay dùng lại (⭐, lưu trên máy) + ghi chú lỗi.
-   Báo cáo trong phiên gửi về máy chủ qua hàm chat-report (cần đăng nhập; gửi lỗi thì giữ bản lưu trên máy).
-   XP +10 chỉ cộng một lần cho mỗi phiên đã kết thúc. */
+   Loại gõ tay: chỉ gõ chữ, không mic, không giọng nói.
+   Loại nói live: mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng
+   đọc tự động; mic vẫn mở cả lúc AI đang đọc nên nói chen vào là ngắt lời được.
+   Lọc tiếng vọng: bản ghi trùng với câu AI đang đọc (mic bắt lại tiếng loa) thì bỏ qua.
+   Cả hai loại giữ nguyên: cùng AI (ai-tutor mode chat), cùng 3 cấm, cùng nút Báo cáo
+   (gửi máy chủ như bản Bùi gật), cùng transcript + câu hay ⭐ + ghi chú lỗi sau phiên,
+   cùng XP +10/phiên đúng một lần, cùng báo hết lượt theo mã thật, cùng yêu cầu đăng nhập.
+   Trong phiên: chỉ hội thoại, không điểm số, không bảng đúng/sai chen ngang. */
+function chatNormText(s) {
+  return String(s || "").toLowerCase().replace(/[.,!?;:"'()\[\]{}<>«»“”‘’]/g, " ").replace(/\s+/g, " ").trim();
+}
+function chatIsEcho(heard, spoken) {
+  var h = chatNormText(heard), s = chatNormText(spoken);
+  if (!h || !s) return false;
+  if (h === s) return true;
+  if (s.indexOf(h) >= 0) return true;
+  var hw = h.split(" "), sw = s.split(" ");
+  for (var i = 0; i < hw.length; i++) if (sw.indexOf(hw[i]) < 0) return false;
+  return true;
+}
+function chatVoiceState(l) {
+  if (!l.voice) l.voice = { rec: null, active: true, started: false, manuallyStopped: false, srSupported: true, speaking: false, curSpoken: "", speakNext: "", pending: "", lastSent: "", sentPrefix: "", fullTranscript: "", sendTimer: null };
+  return l.voice;
+}
+function chatVoiceStopRec(l) {
+  var v = chatVoiceState(l);
+  var r = v.rec; v.rec = null; v.started = false;
+  try { if (r) r.stop(); } catch (e) {}
+}
+function chatVoiceCleanup(l) {
+  var v = l.voice; if (!v) return;
+  v.active = false; v.manuallyStopped = true;
+  if (v.sendTimer) { clearTimeout(v.sendTimer); v.sendTimer = null; }
+  v.pending = "";
+  chatVoiceStopRec(l);
+  try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) {}
+  v.speaking = false; v.curSpoken = ""; v.speakNext = "";
+}
+function chatVoiceStatusText(l) {
+  var v = chatVoiceState(l);
+  if (!v.srSupported) return "Trình duyệt này không hỗ trợ nhận dạng giọng nói — hãy dùng chế độ gõ tay.";
+  if (!v.active) return "Mic đang tắt — bấm “Mở mic” để nói tiếp.";
+  if (v.speaking) return "AI đang nói — cứ nói chen vào bất cứ lúc nào, giọng sẽ dừng lại ngay.";
+  return "Mic đang mở — cứ nói, ngừng khoảng 1,5 giây là tự gửi.";
+}
+function chatVoiceSpeak(l, text) {
+  var v = chatVoiceState(l);
+  try {
+    if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) { v.speaking = false; v.curSpoken = ""; return; }
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = "en-GB";
+    u.onstart = function () { v.speaking = true; v.curSpoken = text; };
+    u.onend = function () { v.speaking = false; v.curSpoken = ""; };
+    u.onerror = function () { v.speaking = false; v.curSpoken = ""; };
+    v.curSpoken = text;
+    window.speechSynthesis.speak(u);
+  } catch (e) { v.speaking = false; v.curSpoken = ""; }
+}
+function chatVoiceStart(l, app) {
+  var v = chatVoiceState(l);
+  if (v.started) return;
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) { v.srSupported = false; v.active = false; var st0 = $("#chatMicStatus"); if (st0) st0.textContent = chatVoiceStatusText(l); return; }
+  try {
+    var rec = new SR();
+    rec.lang = "en-US"; rec.continuous = true; rec.interimResults = true;
+    rec.onresult = function (ev) { chatVoiceOnResult(l, app, ev); };
+    rec.onerror = function (e) {
+      var err = e && e.error;
+      if (err === "not-allowed" || err === "service-not-allowed") {
+        v.active = false; v.started = false;
+        toast("Không bật được micrô trên trình duyệt này — hãy cho phép micrô rồi mở lại.");
+        var st = $("#chatMicStatus"); if (st) st.textContent = chatVoiceStatusText(l);
+      }
+    };
+    rec.onend = function () {
+      v.started = false;
+      if (v.active && !l.ended && curLesson === l && !v.manuallyStopped) {
+        setTimeout(function () { if (v.active && !l.ended && curLesson === l) chatVoiceStart(l, app); }, 250);
+      }
+    };
+    v.rec = rec; v.started = true; v.manuallyStopped = false;
+    rec.start();
+  } catch (e) {
+    v.started = false; v.rec = null;
+    toast("Không bật được micrô trên trình duyệt này.");
+  }
+}
+function chatVoiceOnResult(l, app, ev) {
+  if (curLesson !== l || l.ended) { chatVoiceCleanup(l); return; }
+  var v = chatVoiceState(l);
+  var fullParts = [], hasFinal = false, hasInterim = false;
+  var res = (ev && ev.results) || [];
+  for (var i = 0; i < res.length; i++) {
+    if (!res[i] || !res[i][0]) continue;
+    fullParts.push(res[i][0].transcript);
+    if (res[i].isFinal) hasFinal = true; else hasInterim = true;
+  }
+  var full = fullParts.join(" ").replace(/\s+/g, " ").trim();
+  v.fullTranscript = full;
+  var fresh = full;
+  if (v.sentPrefix && full.indexOf(v.sentPrefix) === 0) fresh = full.slice(v.sentPrefix.length);
+  fresh = fresh.trim();
+  var live = $("#chatLive");
+  if (live) live.textContent = fresh ? "Bạn đang nói: " + fresh : "";
+  if (!fresh) return;
+  if (v.speaking) {
+    if (chatIsEcho(fresh, v.curSpoken)) return;
+    try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) {}
+    v.speaking = false; v.curSpoken = "";
+    var st = $("#chatMicStatus"); if (st) st.textContent = "Đã ngắt lời — đang nghe bạn...";
+  }
+  v.pending = fresh;
+  if (v.sendTimer) clearTimeout(v.sendTimer);
+  if (hasFinal && !hasInterim) chatVoiceFlush(l, app);
+  else v.sendTimer = setTimeout(function () { chatVoiceFlush(l, app); }, 1600);
+}
+function chatVoiceFlush(l, app) {
+  if (curLesson !== l || l.ended) { chatVoiceCleanup(l); return; }
+  var v = chatVoiceState(l);
+  if (v.sendTimer) { clearTimeout(v.sendTimer); v.sendTimer = null; }
+  var t = (v.pending || "").trim();
+  v.pending = "";
+  var live = $("#chatLive"); if (live) live.textContent = "";
+  if (!t || t === v.lastSent) return;
+  v.lastSent = t;
+  v.sentPrefix = v.fullTranscript || "";
+  chatSendUser(l, app, t);
+}
+function chatSendUser(l, app, text) {
+  l.msgs.push({ role: "user", text: text });
+  var box = $("#chatBox");
+  if (box) box.innerHTML += '<div class="chat-msg user"><b>Bạn:</b> ' + esc(text) + '</div>';
+  callAiTutorChat(l.msgs).then(function (reply) {
+    l.msgs.push({ role: "assistant", text: reply });
+    if (l.chatMode === "voice" && curLesson === l) { var v = chatVoiceState(l); v.speakNext = reply; }
+    render();
+  }, function (err) { toast(err); });
+}
+function chatVoiceEnsure(l, app) {
+  var v = chatVoiceState(l);
+  if (l.ended) return;
+  if (v.speakNext) { var t = v.speakNext; v.speakNext = ""; chatVoiceSpeak(l, t); }
+  if (v.active && !v.started) chatVoiceStart(l, app);
+  var st = $("#chatMicStatus");
+  if (st) st.textContent = chatVoiceStatusText(l);
+  var tog = $("#chatMicToggle");
+  if (tog) tog.textContent = v.active ? "🎤 Tắt mic" : "🎤 Mở mic";
+}
 function chatGreeting() { return "Chào bạn! Mình là AI trò chuyện tiếng Anh của web này (không phải người thật). Bạn muốn nói về gì hôm nay? Cứ nói tự do bằng tiếng Anh hoặc tiếng Việt — mình trả lời bằng tiếng Anh đơn giản kèm nghĩa tiếng Việt ngắn khi cần. Trong lúc nói mình không chấm điểm."; }
 function renderChat(app, l) {
+  if (!l.chatMode) l.chatMode = "type";
   if (!l.started) l.started = Date.now();
   if (!l.msgs) l.msgs = [{ role: "assistant", text: chatGreeting() }];
   if (l.ended) { renderChatSummary(app, l); return; }
-  var html = '<div class="lessonframe"><div class="row"><button class="btn" id="btnBack">← Quay lại</button><span class="chip cur">Nói · Trò chuyện với AI</span></div><div style="margin-top:6px"><b>Trò chuyện tự do với AI</b><div class="mut">Nói live bằng mic + gõ bàn phím, nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mô hình nguồn là AI trò chuyện liên tục — không phải người thật.</div></div></div>';
+  var isVoice = l.chatMode === "voice";
+  var html = '<div class="lessonframe"><div class="row"><button class="btn" id="btnBack">← Quay lại</button><span class="chip cur">Nói · ' + (isVoice ? "Trò chuyện nói live" : "Trò chuyện gõ tay") + '</span></div><div style="margin-top:6px"><b>' + (isVoice ? "Trò chuyện nói live với AI" : "Trò chuyện gõ tay với AI") + '</b><div class="mut">' + (isVoice ? "Mic mở liên tục — cứ nói, ngừng khoảng 1,5 giây là tự gửi, AI trả lời bằng giọng đọc tự động. AI đang nói mà bạn nói chen vào thì giọng dừng lại ngay và câu chen được gửi đi." : "Chỉ gõ chữ trò chuyện với AI, không mic, không giọng nói.") + ' Mô hình nguồn là AI trò chuyện liên tục — không phải người thật. Nói tự do thích gì nói đó, không chấm điểm trong lúc nói.</div></div></div>';
   html += '<div class="qblock"><div id="chatBox">';
   l.msgs.forEach(function (m, i) {
     var cls = m.role === "user" ? "user" : "ai";
     var starred = (state.chatStars || []).some(function (s) { return s.text === m.text; });
     html += '<div class="chat-msg ' + cls + '"><b>' + (m.role === "user" ? "Bạn" : "AI") + ':</b> ' + esc(m.text)
-      + (m.role === "assistant" && i > 0 ? '<div class="row"><button class="btn" data-speak="' + i + '">🔊 Nghe</button><button class="btn" data-star="' + i + '">' + (starred ? "★ Đã giữ" : "☆ Giữ câu hay") + '</button></div>' : "")
+      + (m.role === "assistant" && i > 0 ? '<div class="row">' + (!isVoice ? '<button class="btn" data-speak="' + i + '">🔊 Nghe</button>' : "") + '<button class="btn" data-star="' + i + '">' + (starred ? "★ Đã giữ" : "☆ Giữ câu hay") + '</button></div>' : "")
       + '</div>';
   });
-  html += '</div><div class="row"><input type="text" id="chatInp" placeholder="Gõ câu của bạn rồi bấm Gửi — hoặc bấm mic để nói..." style="flex:1"><button class="btn btn-primary" id="chatSend">Gửi</button><button class="btn" id="chatMic">🎤 Nói</button></div>'
-    + '<div class="row"><button class="btn btn-amber" id="chatEnd">Kết thúc phiên (+10 XP)</button><button class="btn" id="chatReport">⚑ Báo cáo nội dung không phù hợp</button></div>'
-    + '<p class="mut">Trò chuyện cần đăng nhập (đăng nhập mở ở giai đoạn 2) — nếu chưa đăng nhập, web báo rõ và không bịa câu trả lời. Lưu ý thật: hàm ai-tutor phía máy chủ trả lời bằng tiếng Việt trước, nên phiên này là tiếng Anh đơn giản kèm tiếng Việt hỗ trợ, không phải trò chuyện hoàn toàn bằng tiếng Anh. Bản ghi giọng nói qua trình duyệt chỉ là ước lượng — kiểm tra lại câu trước khi gửi. Câu bạn bấm ⭐ sẽ lưu trên máy này vào mục "Câu hay dùng lại". Bấm ⚑ Báo cáo để gửi về máy chủ (cần đăng nhập; chỉ gửi lý do + ghi chú ngắn + thời điểm phiên, không gửi transcript hay audio/video). Nếu gửi không được, báo cáo vẫn lưu trên máy này làm dự phòng.</p></div>';
+  if (isVoice) {
+    html += '</div><p class="mut" id="chatMicStatus">' + esc(chatVoiceStatusText(l)) + '</p><p class="mut" id="chatLive"></p>'
+      + '<div class="row"><button class="btn" id="chatMicToggle">🎤 Tắt mic</button><button class="btn btn-amber" id="chatEnd">Kết thúc phiên (+10 XP)</button><button class="btn" id="chatReport">⚑ Báo cáo nội dung không phù hợp</button></div>';
+  } else {
+    html += '</div><div class="row"><input type="text" id="chatInp" placeholder="Gõ câu của bạn rồi bấm Gửi..." style="flex:1"><button class="btn btn-primary" id="chatSend">Gửi</button></div>'
+      + '<div class="row"><button class="btn btn-amber" id="chatEnd">Kết thúc phiên (+10 XP)</button><button class="btn" id="chatReport">⚑ Báo cáo nội dung không phù hợp</button></div>';
+  }
+  html += '<p class="mut">Trò chuyện cần đăng nhập (đăng nhập mở ở giai đoạn 2) — nếu chưa đăng nhập, web báo rõ và không bịa câu trả lời. Lưu ý thật: hàm ai-tutor phía máy chủ trả lời bằng tiếng Việt trước, nên phiên này là tiếng Anh đơn giản kèm tiếng Việt hỗ trợ, không phải trò chuyện hoàn toàn bằng tiếng Anh.' + (isVoice ? ' Bản ghi giọng nói qua trình duyệt chỉ là ước lượng — kiểm tra lại câu trước khi nó tự gửi. Mic có thể bắt lại tiếng loa nên thỉnh thoảng giọng có thể dừng nhầm một nhịp rồi nói tiếp (bản ghi trùng với câu AI đang đọc sẽ bị bỏ qua).' : '') + ' Câu bạn bấm ⭐ sẽ lưu trên máy này vào mục "Câu hay dùng lại". Bấm ⚑ Báo cáo để gửi về máy chủ (cần đăng nhập; chỉ gửi lý do + ghi chú ngắn + thời điểm phiên, không gửi transcript hay audio/video). Nếu gửi không được, báo cáo vẫn lưu trên máy này làm dự phòng.</p></div>';
   app.innerHTML = html;
   wireBack();
-  var send = function () {
-    var inp = $("#chatInp"); if (!inp) return;
-    var t = inp.value.trim(); if (!t) return;
-    l.msgs.push({ role: "user", text: t }); inp.value = "";
-    var box = $("#chatBox"); if (box) box.innerHTML += '<div class="chat-msg user"><b>Bạn:</b> ' + esc(t) + '</div>';
-    callAiTutorChat(l.msgs).then(function (reply) { l.msgs.push({ role: "assistant", text: reply }); render(); }, function (err) { toast(err); });
-  };
-  $("#chatSend").onclick = send;
-  var inpEl = $("#chatInp");
-  if (inpEl) inpEl.onkeydown = function (e) { if (e.key === "Enter") send(); };
-  $("#chatMic").onclick = function () {
-    var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) { toast("Trình duyệt này không hỗ trợ nhận dạng giọng nói — hãy gõ bàn phím."); return; }
-    try {
-      var rec = new SR(); rec.lang = "en-US"; rec.interimResults = false;
-      rec.onresult = function (ev) { var t = ""; for (var i = 0; i < ev.results.length; i++) t += ev.results[i][0].transcript; var inp2 = $("#chatInp"); if (inp2) inp2.value = (inp2.value ? inp2.value + " " : "") + t; };
-      rec.onerror = function () { toast("Không nghe rõ — hãy thử nói lại hoặc gõ bàn phím."); };
-      rec.start(); toast("Đang nghe — nói rồi chờ câu hiện vào ô gõ.");
-    } catch (e) { toast("Không bật được micrô trên trình duyệt này."); }
-  };
-  $$("[data-speak]").forEach(function (b) {
-    b.onclick = function () { var m = l.msgs[+b.dataset.speak]; if (m) speak(m.text); };
-  });
+  if (isVoice) {
+    var backBtn = $("#btnBack");
+    if (backBtn) { var oldBack = backBtn.onclick; backBtn.onclick = function () { chatVoiceCleanup(l); if (oldBack) oldBack(); }; }
+  }
+  if (!isVoice) {
+    var send = function () {
+      var inp = $("#chatInp"); if (!inp) return;
+      var t = inp.value.trim(); if (!t) return;
+      inp.value = "";
+      chatSendUser(l, app, t);
+    };
+    $("#chatSend").onclick = send;
+    var inpEl = $("#chatInp");
+    if (inpEl) inpEl.onkeydown = function (e) { if (e.key === "Enter") send(); };
+    $$("[data-speak]").forEach(function (b) {
+      b.onclick = function () { var m = l.msgs[+b.dataset.speak]; if (m) speak(m.text); };
+    });
+  } else {
+    var tog = $("#chatMicToggle");
+    if (tog) tog.onclick = function () {
+      var v = chatVoiceState(l);
+      if (v.active) {
+        v.active = false; v.manuallyStopped = true;
+        if (v.sendTimer) clearTimeout(v.sendTimer);
+        chatVoiceStopRec(l);
+        tog.textContent = "🎤 Mở mic";
+        var st2 = $("#chatMicStatus"); if (st2) st2.textContent = chatVoiceStatusText(l);
+      } else {
+        v.active = true; v.manuallyStopped = false;
+        tog.textContent = "🎤 Tắt mic";
+        chatVoiceStart(l, app);
+        var st3 = $("#chatMicStatus"); if (st3) st3.textContent = chatVoiceStatusText(l);
+      }
+    };
+  }
   $$("[data-star]").forEach(function (b) {
     b.onclick = function () {
       var m = l.msgs[+b.dataset.star]; if (!m) return;
@@ -1868,6 +2035,7 @@ function renderChat(app, l) {
     };
   });
   $("#chatEnd").onclick = function () {
+    chatVoiceCleanup(l);
     l.ended = true; l.notes = null; l.notesLoading = false;
     if (!l.xpDone) { awardXp(10); l.xpDone = true; }
     render();
@@ -1892,6 +2060,7 @@ function renderChat(app, l) {
       toast((e && e.msg ? e.msg : "Chưa gửi được báo cáo.") + " Báo cáo đã lưu trên máy này làm dự phòng.");
     });
   };
+  if (isVoice) chatVoiceEnsure(l, app);
 }
 function renderChatSummary(app, l) {
   var userN = l.msgs.filter(function (m) { return m.role === "user"; }).length;
@@ -1906,8 +2075,8 @@ function renderChatSummary(app, l) {
     + '<h3>Transcript đầy đủ</h3>' + l.msgs.map(function (m) { return '<p><b>' + (m.role === "user" ? "Bạn" : "AI") + ':</b> ' + esc(m.text) + '</p>'; }).join("");
   app.innerHTML = html;
   wireBack();
-  $("#chatAgain").onclick = function () { l.ended = false; render(); };
-  $("#chatToPractice").onclick = function () { backFromLesson(); go("practice"); };
+  $("#chatAgain").onclick = function () { l.ended = false; if (l.chatMode === "voice") { var vv = chatVoiceState(l); vv.active = true; vv.manuallyStopped = false; } render(); };
+  $("#chatToPractice").onclick = function () { chatVoiceCleanup(l); backFromLesson(); go("practice"); };
   if (l.notes === null && !l.notesLoading) {
     l.notesLoading = true;
     var reqMsgs = l.msgs.concat([{ role: "user", text: "Hãy tóm tắt ngắn gọn bằng tiếng Việt những lỗi tiếng Anh tôi hay mắc trong đoạn hội thoại trên (tối đa 5 gạch đầu dòng), kèm câu đúng cho mỗi lỗi." }]);
