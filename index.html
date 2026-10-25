@@ -146,7 +146,7 @@ function phDescFull(p) {
 }
 /* ---------- Store: một nguồn số liệu duy nhất ---------- */
 var LS_NEW = "ielts_rebuild_v1", LS_OLD = "ielts_standalone_v1";
-function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], chatStars: [], chatReports: [], chatVoicePrefs: {}, testDone: false, xpClaimed: {}, mems: {}, selfRate: {}, unsure: {}, videoUnknown: {}, plan: null, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {}, freeze: { count: 0, used: [], granted: [] }, push: { enabled: false, time: "20:00", types: { srs: true, path: true, checkin: true }, permission: "default", subscribed: false, serverSynced: false, lastLocalDay: "" } }; }
+function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], vocabSkipped: [], chatStars: [], chatReports: [], chatVoicePrefs: {}, testDone: false, xpClaimed: {}, mems: {}, selfRate: {}, unsure: {}, videoUnknown: {}, plan: null, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {}, freeze: { count: 0, used: [], granted: [] }, push: { enabled: false, time: "20:00", types: { srs: true, path: true, checkin: true }, permission: "default", subscribed: false, serverSynced: false, lastLocalDay: "" } }; }
 function saveState() { try { localStorage.setItem(LS_NEW, JSON.stringify(state)); } catch (e) {} try { if (typeof authState !== "undefined" && authState.user) scheduleSyncPush(); } catch (e2) {} }
 function normHardFails(st) {
   /* Mục khó cũ chưa có số lần sai: mục từ Sổ lỗi sai (quiz/drill) vốn đã sai
@@ -1601,6 +1601,7 @@ function mergeGuestIntoAccount(guest, acc) {
   function unionArr(a, b) { var out = (a || []).slice(); (b || []).forEach(function (x) { if (out.indexOf(x) < 0) out.push(x); }); return out; }
   merged.skipped = unionArr(guest.skipped, acc.skipped);
   merged.phSkipped = unionArr(guest.phSkipped, acc.phSkipped);
+  merged.vocabSkipped = unionArr(guest.vocabSkipped, acc.vocabSkipped);
   merged.chatStars = unionArr(guest.chatStars, acc.chatStars);
   var xc = {};
   Object.keys(guest.xpClaimed || {}).forEach(function (k) { xc[k] = guest.xpClaimed[k]; });
@@ -1673,6 +1674,7 @@ function syncPull(uid) {
           else if (k === "testDone") acc.testDone = r.state;
           else if (k === "skipped") acc.skipped = r.state || [];
           else if (k === "phSkipped") acc.phSkipped = r.state || [];
+          else if (k === "vocabSkipped") acc.vocabSkipped = r.state || [];
           else if (k === "chatStars") acc.chatStars = r.state || [];
           else if (k === "xpClaimed") acc.xpClaimed = r.state || {};
           else if (k === "pos") acc.pos = r.state || {};
@@ -1726,6 +1728,7 @@ function syncPush() {
       row("rb", "testDone", !!state.testDone);
       row("rb", "skipped", state.skipped || []);
       row("rb", "phSkipped", state.phSkipped || []);
+      row("rb", "vocabSkipped", state.vocabSkipped || []);
       row("rb", "chatStars", state.chatStars || []);
       row("rb", "xpClaimed", state.xpClaimed || {});
       row("rb", "pos", state.pos || {});
@@ -2688,7 +2691,7 @@ function stepHeader(step, sub) { return lessonHead(step, sub); }
    lúc đang ghi là dừng và chấm ngay (dự phòng khi tự chấm chưa kích hoạt). */
 var VK = { active: false, key: "", word: "", sym: "", slot: null, result: null, onPass: null };
 var VKR = null; /* thong tin lan cham gan nhat de nut "Doc lai" khoi dong lai dung the */
-function vocabKnownRetry() { if (!VKR) return; vocabKnownStart(VKR.key, VKR.word, VKR.sym, VKR.slotEl, VKR.resultEl, VKR.onPass); }
+function vocabKnownRetry() { if (!VKR) return; vocabKnownStart(VKR.key, VKR.word, VKR.sym, VKR.slotEl, VKR.resultEl, VKR.onPass, VKR.onSkip); }
 function vocabMirrorScoreNow() { if (MR.lastProc && MR.lastProc.total != null) return MR.lastProc.total; return MR.lastLiveScore; }
 function vocabKnownRenderResult(resultEl, aiScore, mirrorScore, ok, reason, opts) {
   if (!resultEl) return;
@@ -2713,11 +2716,12 @@ function vocabKnownRenderResult(resultEl, aiScore, mirrorScore, ok, reason, opts
     + '<p>' + esc(ok ? reason : 'Chưa đạt chuẩn: ' + reason) + '</p>';
   if (!ok) {
     if (fixes.length) s += '<p><b>Cần chỉnh sửa gì:</b></p><ul>' + fixes.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>';
-    s += '<div class="row"><button class="btn btn-primary vocab-retry">Đọc lại</button></div>';
+    s += '<div class="row"><button class="btn btn-primary vocab-retry">Đọc lại</button><button class="btn vocab-skip">Bỏ qua thẻ này</button></div><p class="mut">Bỏ qua không tính là đạt — thẻ này sẽ gặp lại ở phần ôn.</p>';
   } else s += '<p class="mut">AI chấm đạt nên tự qua thẻ.</p>';
   s += '</div>';
   resultEl.innerHTML = s;
   if (!ok && opts.onRetry) { var rb = resultEl.querySelector('.vocab-retry'); if (rb) rb.onclick = opts.onRetry; }
+  if (!ok && opts.onSkip) { var skb = resultEl.querySelector('.vocab-skip'); if (skb) skb.onclick = opts.onSkip; }
 }
 function vocabKnownGrade(aiScore, mirrorScore, opts) {
   opts = opts || {};
@@ -2731,7 +2735,7 @@ function vocabKnownGrade(aiScore, mirrorScore, opts) {
   else if (mirrorScore == null) chk = { ok: false, reason: 'Chưa có điểm khớp khẩu hình — bật camera, để mặt vào khung rồi đọc lại.' };
   else if (mirrorScore < 80) chk = { ok: false, reason: 'Điểm khớp khẩu hình ' + mirrorScore + '% chưa đạt 80% — chỉnh miệng theo hình mẫu rồi đọc lại.' };
   else chk = { ok: true, reason: 'Đã đạt chuẩn: tiếng AI ' + aiScore + '/100 và khớp khẩu hình ' + mirrorScore + '%.' };
-  vocabKnownRenderResult(opts.resultEl, aiScore, mirrorScore, chk.ok, chk.reason, { camDenied: camDenied, micDenied: micDenied, estimatedOnly: !!opts.estimatedOnly, fixHint: opts.fixHint || null, onRetry: opts.onRetry || null });
+  vocabKnownRenderResult(opts.resultEl, aiScore, mirrorScore, chk.ok, chk.reason, { camDenied: camDenied, micDenied: micDenied, estimatedOnly: !!opts.estimatedOnly, fixHint: opts.fixHint || null, onRetry: opts.onRetry || null, onSkip: opts.onSkip || null });
   if (chk.ok && opts.onPass) opts.onPass();
   return chk;
 }
@@ -2741,14 +2745,14 @@ function vocabKnownStopCheck() {
   if (VK.slot) VK.slot.style.display = 'none';
   VK.active = false; VK.key = ''; VK.word = ''; VK.sym = ''; VK.slot = null; VK.result = null; VK.onPass = null;
 }
-function vocabKnownWaitGrade(slot, resultEl, onPass, onRetry) {
+function vocabKnownWaitGrade(slot, resultEl, onPass, onRetry, onSkip) {
   var tries = 0;
   var timer = setInterval(function () {
     tries++;
     var txt = slot ? slot.textContent : '';
     var m = txt.match(/Điểm tiếng \(AI chấm\): (\d+)%/);
-    if (m) { clearInterval(timer); var fm = txt.match(/Cần sửa: ([^\n]+)/); vocabKnownGrade(parseInt(m[1], 10), vocabMirrorScoreNow(), { onPass: onPass, resultEl: resultEl, fixHint: fm ? fm[1].trim() : null, onRetry: onRetry || null }); return; }
-    if (tries >= 20) { clearInterval(timer); var est = txt.match(/Điểm tiếng \(ước lượng tại chỗ\): (\d+)%/); vocabKnownGrade(null, vocabMirrorScoreNow(), { onPass: onPass, resultEl: resultEl, estimatedOnly: !!est, onRetry: onRetry || null }); }
+    if (m) { clearInterval(timer); var fm = txt.match(/Cần sửa: ([^\n]+)/); vocabKnownGrade(parseInt(m[1], 10), vocabMirrorScoreNow(), { onPass: onPass, resultEl: resultEl, fixHint: fm ? fm[1].trim() : null, onRetry: onRetry || null, onSkip: onSkip || null }); return; }
+    if (tries >= 20) { clearInterval(timer); var est = txt.match(/Điểm tiếng \(ước lượng tại chỗ\): (\d+)%/); vocabKnownGrade(null, vocabMirrorScoreNow(), { onPass: onPass, resultEl: resultEl, estimatedOnly: !!est, onRetry: onRetry || null, onSkip: onSkip || null }); }
   }, 600);
   if (timer && timer.unref) timer.unref();
 }
@@ -2759,14 +2763,14 @@ function vocabKnownSimulateGrade(aiScore, mirrorScore) {
   var pass = VK.onPass, res = VK.result;
   try { mirrorStop(); } catch (e) {}
   VK.active = false; VK.key = ''; VK.word = ''; VK.sym = ''; VK.slot = null; VK.result = null; VK.onPass = null;
-  return vocabKnownGrade(aiScore, mirrorScore, { onPass: pass, resultEl: res, onRetry: VKR ? vocabKnownRetry : null });
+  return vocabKnownGrade(aiScore, mirrorScore, { onPass: pass, resultEl: res, onRetry: VKR ? vocabKnownRetry : null, onSkip: VKR ? VKR.onSkip : null });
 }
-function vocabKnownStart(key, word, sym, slotEl, resultEl, onPass) {
+function vocabKnownStart(key, word, sym, slotEl, resultEl, onPass, onSkip) {
   if (VK.active && VK.key === key) { vocabKnownStopAndGrade(); return; }
   if (VK.active) vocabKnownStopCheck();
   if (!mrSupported()) { if (resultEl) resultEl.innerHTML = '<p>Trình duyệt này chưa hỗ trợ camera/mic — không tính đạt chuẩn.</p>'; return; }
   VK.active = true; VK.key = key; VK.word = word; VK.sym = sym; VK.slot = slotEl; VK.result = resultEl; VK.onPass = onPass;
-  VKR = { key: key, word: word, sym: sym, slotEl: slotEl, resultEl: resultEl, onPass: onPass };
+  VKR = { key: key, word: word, sym: sym, slotEl: slotEl, resultEl: resultEl, onPass: onPass, onSkip: onSkip || null };
   if (slotEl) { slotEl.style.display = 'block'; slotEl.innerHTML = phPracticeSlotHTML(sym); }
   if (resultEl) resultEl.innerHTML = '<p class="mut">Đang ghi — đọc to từ “' + esc(word) + '” trong lúc soi gương. Hệ thống sẽ tự chuyển sang AI chấm khi đã thấy mở mồm và nghe được âm thanh; bấm lại nút “Phát âm” để dừng và chấm ngay nếu muốn.</p>';
   MR.micWant = true;
@@ -2780,7 +2784,7 @@ function vocabKnownStart(key, word, sym, slotEl, resultEl, onPass) {
     var slot = VK.slot, res = VK.result, pass = VK.onPass;
     try { mirrorStop(); } catch (e) {}
     if (res) res.innerHTML = '<p class="mut">Đã thấy mở mồm và nghe được âm thanh — đang chấm lần đọc vừa rồi…</p>';
-    vocabKnownWaitGrade(slot, res, pass, VKR ? vocabKnownRetry : null);
+    vocabKnownWaitGrade(slot, res, pass, VKR ? vocabKnownRetry : null, VKR ? VKR.onSkip : null);
   };
   /* Neu camera/mic bi tu choi thi phien khong bao gio chay: bao ro sau 4 giay
      thay vi ket o “Dang ghi”. Chi kich hoat khi co co denied that. */
@@ -2791,7 +2795,7 @@ function vocabKnownStart(key, word, sym, slotEl, resultEl, onPass) {
       var res = VK.result;
       VK.active = false; VK.key = ''; VK.word = ''; VK.sym = ''; VK.slot = null; VK.result = null; VK.onPass = null;
       try { mirrorStop(); } catch (e) {}
-      vocabKnownGrade(null, vocabMirrorScoreNow(), { onPass: null, resultEl: res, camDenied: !!MR.camDenied, micDenied: !!MR.micDenied, onRetry: VKR ? vocabKnownRetry : null });
+      vocabKnownGrade(null, vocabMirrorScoreNow(), { onPass: null, resultEl: res, camDenied: !!MR.camDenied, micDenied: !!MR.micDenied, onRetry: VKR ? vocabKnownRetry : null, onSkip: VKR ? VKR.onSkip : null });
     }
   }, 4000);
 }
@@ -2801,7 +2805,7 @@ function vocabKnownStopAndGrade() {
   VK.active = false; VK.key = ''; VK.word = ''; VK.sym = ''; VK.slot = null; VK.result = null; VK.onPass = null;
   try { mirrorStop(); } catch (e) {}
   if (res) res.innerHTML = '<p class="mut">Đang chấm lần đọc vừa rồi…</p>';
-  vocabKnownWaitGrade(slot, res, pass, VKR ? vocabKnownRetry : null);
+  vocabKnownWaitGrade(slot, res, pass, VKR ? vocabKnownRetry : null, VKR ? VKR.onSkip : null);
 }
 
 /* ----- Từ vựng: một màn một thẻ ----- */
@@ -2833,13 +2837,13 @@ function renderVocab(app, l) {
     + gd23VocabPauseHTML(pos, cards.length)
     + '<div class="row" style="margin-top:12px"><button class="btn" id="btnPrev"' + (pos === 0 ? " disabled" : "") + '>← Thẻ trước</button>'
     + '<button class="btn btn-primary" id="btnPronounce">🎤 Phát âm</button></div>'
-    + '<p class="mut" id="vocabKnowNote">Bấm “Phát âm” để AI chấm — đọc to từ trong lúc soi gương; AI chấm đạt thì tự qua thẻ, chưa đạt thì ở lại kèm phần trăm và mục cần sửa. Trình duyệt từ chối quyền thì không tính đạt chuẩn.</p><div id="vocabCheckSlot" style="display:none"></div><div id="vocabCheckResult"></div>' + gd23SelfRateHTML(clMemoKey) + '<div class="row" style="margin-top:10px"><input type="text" id="vocabMemoInp" placeholder="Mẹo nhớ của bạn cho từ này..." value="' + esc((state.mems && state.mems[clMemoKey]) || "") + '"><button class="btn" id="vocabMemoSave">Lưu mẹo nhớ</button></div></div>';
+     + '<p class="mut" id="vocabKnowNote">Bấm “Phát âm” để AI chấm — đọc to từ trong lúc soi gương; AI chấm đạt thì tự qua thẻ, chưa đạt thì ở lại kèm phần trăm và mục cần sửa. Trình duyệt từ chối quyền thì không tính đạt chuẩn. Chấm không đạt thì có thêm nút “Bỏ qua thẻ này”.</p><div id="vocabCheckSlot" style="display:none"></div><div id="vocabCheckResult"></div>' + mrLibSectionHTML() + '<div class="row" style="margin-top:10px"><input type="text" id="vocabMemoInp" placeholder="Mẹo nhớ của bạn cho từ này..." value="' + esc((state.mems && state.mems[clMemoKey]) || "") + '"><button class="btn" id="vocabMemoSave">Lưu mẹo nhớ</button></div></div>';
   app.innerHTML = html;
   wireBack();
+  wireMrLibSection(app.querySelector(".mr-lib-section"));
   var clMemoBtn = $("#vocabMemoSave"); if (clMemoBtn) clMemoBtn.onclick = function () { if (!state.mems) state.mems = {}; state.mems[clMemoKey] = $("#vocabMemoInp").value; saveState(); toast("Đã lưu mẹo nhớ."); };
   $("#btnSpeak").onclick = function () { speak(c.w); };
   var rb2 = $("#vocabRoundNext"); if (rb2) rb2.onclick = function () { var p = $("#vocabRoundPause"); if (p) p.style.display = "none"; };
-  $$(".vocab-self-rate").forEach(function (b) { b.onclick = function () { gd23SelfRateSet(clMemoKey, +b.dataset.level); var nt = $("#vocabSelfRateNote"); if (nt) nt.textContent = gd23SelfRateNote(clMemoKey); toast("Đã ghi mức nhớ tự đánh giá — chỉ để bạn tự theo dõi, không tính qua thẻ, không cộng XP."); }; });
   $("#btnPrev").onclick = function () { state.pos["vocab:" + l.setIdx] = Math.max(0, pos - 1); saveState(); render(); };
   var advance = function (known) {
     var key = "s" + l.setIdx + ":" + pos;
@@ -2860,10 +2864,36 @@ function renderVocab(app, l) {
       $("#btnRedo").onclick = function () { state.pos["vocab:" + l.setIdx] = 0; saveState(); lessonStart = Date.now(); runFirstTry = {}; runWrong = []; render(); };
     } else render();
   };
+  var vocabSkipCard = function () {
+    /* Bo qua: sang the sau NHUNG khong tang nac, khong cong XP, giu nguyen
+       nac va lich on cu (the moi chua co lich thi hen ngay mai de con gap lai
+       o phan on) — khac han advance(false) von reset nac ve 0 + cong XP. */
+    try { mirrorStop(); } catch (e) {}
+    VK.active = false; VK.key = ''; VK.word = ''; VK.sym = ''; VK.slot = null; VK.result = null; VK.onPass = null;
+    var key = "s" + l.setIdx + ":" + pos;
+    if (!state.vocabSkipped) state.vocabSkipped = [];
+    if (state.vocabSkipped.indexOf(key) < 0) state.vocabSkipped.push(key);
+    if (runFirstTry[key] === undefined) runFirstTry[key] = false;
+    if (runWrong.indexOf(pos) < 0) runWrong.push(pos);
+    var cur = state.cards[key] || { box: 0 };
+    if (!cur.due) state.cards[key] = { box: cur.box || 0, due: addDaysStr(todayStr(), 1) };
+    state.pos["vocab:" + l.setIdx] = pos + 1; saveState();
+    if (pos + 1 >= cards.length) {
+      finishStep(step.id);
+      var firstTryN = Object.keys(runFirstTry).filter(function (k) { return runFirstTry[k]; }).length;
+      var skipWords = (state.vocabSkipped || []).filter(function (k) { return k.indexOf("s" + l.setIdx + ":") === 0; }).map(function (k) { var ci = +k.split(":")[1]; return cards[ci] ? esc(cards[ci].w) : k; }).join(", ");
+      var wrongHTML = runWrong.length ? '<div class="sumcard"><b>Thẻ chưa vững (' + runWrong.length + '):</b> ' + runWrong.map(function (i) { var cc = cards[i]; return esc(cc.w); }).join(", ") + ' — các thẻ này sẽ xuất hiện lại theo lịch ôn.</div>' : "";
+      if (skipWords) wrongHTML += '<div class="sumcard"><b>Thẻ đã bỏ qua (chưa tính đạt):</b> ' + skipWords + ' — sẽ gặp lại ở phần ôn.</div>';
+      app.innerHTML = stepHeader(step) + finishSummaryHTML("Bạn đã học xong bộ này!",
+        '<p>Kết quả: ' + firstTryN + '/' + cards.length + ' thẻ thuộc ngay lần đầu · Thời gian học thật: ' + elapsedText() + '.</p>', wrongHTML, { chest: { key: step.id, title: step.title }, starsKey: "vocab:" + l.setIdx, appeal: "vocab:" + l.setIdx });
+      wireBack(); wireNextStep();
+      $("#btnRedo").onclick = function () { state.pos["vocab:" + l.setIdx] = 0; saveState(); lessonStart = Date.now(); runFirstTry = {}; runWrong = []; render(); };
+    } else render();
+  };
   $("#btnPronounce").onclick = function () {
     var key = "s" + l.setIdx + ":" + pos;
     if (VK.active && VK.key === key) { vocabKnownStopAndGrade(); return; }
-    vocabKnownStart(key, c.w, firstSymFromIpa(c.ipa), $("#vocabCheckSlot"), $("#vocabCheckResult"), function () { advance(true); });
+    vocabKnownStart(key, c.w, firstSymFromIpa(c.ipa), $("#vocabCheckSlot"), $("#vocabCheckResult"), function () { advance(true); }, vocabSkipCard);
   };
 }
 
@@ -3193,7 +3223,7 @@ function phExtraSentences(sym) {
 /* ----- Phát âm: MỘT bảng 44 âm, khóa tiến tuần tự trong đợt ----- */
 function phDone(sym) { return !!(state.phDone && state.phDone[sym]); }
 function phAllOrder() { return RB_PH_WAVES[1].concat(RB_PH_WAVES[2], RB_PH_WAVES[3]); }
-function phNextSym() { var o = phAllOrder(); for (var i = 0; i < o.length; i++) if (!phDone(o[i])) return o[i]; return null; }
+function phNextSym() { var o = phAllOrder(); for (var i = 0; i < o.length; i++) if (!phDone(o[i]) && (!state.phSkipped || state.phSkipped.indexOf(o[i]) < 0)) return o[i]; return null; }
 function phWaveOf(sym) { if (RB_PH_WAVES[1].indexOf(sym) >= 0) return 1; if (RB_PH_WAVES[2].indexOf(sym) >= 0) return 2; return 3; }
 function phEntry(sym) { var all = RB_PH1.concat(RB_PH2); for (var i = 0; i < all.length; i++) if (all[i].s === sym) return all[i]; return null; }
 function phSegText(seg, sym) { function mm(v) { return Math.floor(v / 60) + ":" + ("0" + (v % 60)).slice(-2); } return "Đoạn video này chỉ đúng âm /" + sym + "/ (từ " + mm(seg[0]) + (seg[1] ? " đến " + mm(seg[1]) : " đến hết video") + " trong video BBC 44 âm)."; }
@@ -3256,6 +3286,17 @@ function phCompleteSound(app, step, l, sym) {
     $("#btnRedo").onclick = function () { lessonStart = Date.now(); l.sound = null; render(); };
   } else { l.sound = next; l.sub = 0; l.diffOk = false; l.diffHeard1 = false; l.diffHeard2 = false; l.diffRevealed = false; l.diffLogged = false; render(); }
 }
+function phSkipSound(app, step, l, sym) {
+  /* Bo qua am: sang am sau NHUNG khong danh dau da xong (phDone khong doi,
+     so "Da thuoc X/44 am" khong tang); am vao danh sach da bo qua de quay lai. */
+  if (!state.phSkipped) state.phSkipped = [];
+  if (state.phSkipped.indexOf(sym) < 0) state.phSkipped.push(sym);
+  saveState();
+  var o = phAllOrder(), i = o.indexOf(sym), next = null;
+  for (var k = i + 1; k < o.length; k++) if (!phDone(o[k]) && state.phSkipped.indexOf(o[k]) < 0) { next = o[k]; break; }
+  if (!next) { l.sound = null; render(); return; }
+  l.sound = next; l.sub = 0; l.diffOk = false; l.diffHeard1 = false; l.diffHeard2 = false; l.diffRevealed = false; l.diffLogged = false; render();
+}
 function phSaveCombinedPassRecord(sym, aiScore, mirrorScore) {
   /* Luu chung 1 ban ghi cho lan dat chuan: lay clip cua lan tap vua roi (sessionMoment)
      roi gan them diem AI + ban ghi tieng, thay vi luu them 1 clip trung. Loi IDB thi bo qua,
@@ -3309,6 +3350,8 @@ function phPracticeSlotHTML(sym) {
     + '<div class="mr-feed"><div class="mr-feed-body"><p class="mut">Điểm khớp khẩu hình sẽ hiện ở đây khi đang tập.</p></div></div>'
     + '<div class="mr-session"></div>'
     + '<p class="mut mr-mic-status">Mic sẽ tự bật cùng camera.</p>'
+    + '<div class="row"><button class="btn mr-save" disabled>💾 Lưu video mẫu</button></div>'
+    + '<p class="mut mr-save-note">Chưa có phiên tập — bấm “Phát âm” để bật camera rồi mới lưu được video mẫu. Trình duyệt không hỗ trợ quay video thì nút này luôn mờ.</p>'
     + '<select class="mr-sel" style="display:none"><option value="' + esc(sym) + '" selected>/' + esc(sym) + '/</option></select>';
 }
 function phPracticeFinish(app, step, l, sym, aiScore, mirrorScore) {
@@ -3326,6 +3369,10 @@ function phPracticeFinish(app, step, l, sym, aiScore, mirrorScore) {
     + (mirrorScore == null ? '<p><b>Khớp khẩu hình: chưa có</b> — bật camera, đọc âm trong lúc soi gương.</p>' : '<p><b>Khớp khẩu hình: ' + mirrorScore + '%</b></p>')
     + (typeof MR !== "undefined" && MR.lastPronWords && MR.lastPronWords.length ? pronWordChipsHTML(MR.lastPronWords, null) : '')
     + '<p>' + esc(chk.ok ? chk.reason : "Chưa đạt chuẩn: " + chk.reason) + '</p></div>';
+  if (res && !chk.ok) {
+    res.innerHTML += '<div class="row"><button class="btn" id="phSkipBtn">Bỏ qua âm này</button></div><p class="mut">Bỏ qua không tính là đạt — âm này sẽ gặp lại ở phần ôn.</p>';
+    var skb = $("#phSkipBtn"); if (skb) skb.onclick = function () { phSkipSound(app, step, l, sym); };
+  }
   var st = $("#phPassStatus");
   if (st) st.textContent = chk.ok ? chk.reason + " Đang chuyển sang âm sau…" : "Chưa đạt chuẩn: " + chk.reason + " Bấm lại nút “Phát âm” để tập lại.";
   if (!chk.ok) return chk;
@@ -3485,6 +3532,7 @@ function renderPronLesson(app, l) {
       + '<div class="row"><button class="btn btn-primary" id="phSpeakBtn">🎤 Phát âm</button></div>'
       + '<div id="phPracticeSlot" style="display:none">' + phPracticeSlotHTML(sym) + '</div>'
       + '<div id="phPracticeResult"></div>'
+      + mrLibSectionHTML()
       + '<p class="mut" id="phPassStatus">Chưa tập — bấm nút “Phát âm” để bắt đầu.</p></div>'
       + '<div id="phShadowQuiz">' + phShadowQuizHTML(l, sym) + '</div>';
   } else if (sub === 1) {
@@ -3527,6 +3575,7 @@ function renderPronLesson(app, l) {
     + '</div></div>';
   app.innerHTML = html;
   wireBack();
+  wireMrLibSection(app.querySelector(".mr-lib-section"));
   $$("#phMap .ph-btn").forEach(function (b) {
     b.onclick = function () {
       var sym2 = b.dataset.s;
@@ -3787,7 +3836,7 @@ function mrDb() {
   return new Promise(function (resolve, reject) {
     try {
       var req = indexedDB.open("ielts_mirror_videos_db", 1);
-      req.onupgradeneeded = function () { if (!req.result.objectStoreNames.contains("videos")) req.result.createObjectStore("videos", { keyPath: "id", autoIncrement: true }); };
+      req.onupgradeneeded = function () { try { var names = req.result.objectStoreNames; var has = names.contains ? names.contains("videos") : (names.indexOf ? names.indexOf("videos") >= 0 : false); if (!has) req.result.createObjectStore("videos", { keyPath: "id", autoIncrement: true }); } catch (e) {} };
       req.onsuccess = function () { resolve(req.result); };
       req.onerror = function () { reject(req.error); };
     } catch (e) { reject(e); }
@@ -3902,6 +3951,22 @@ function mrRenderLib(slot) {
     });
   }, function (err) { lib.innerHTML = '<p class="mut">Không đọc được thư viện video mẫu' + (err ? ' (lỗi: ' + (err.name || err.message || String(err)) + ')' : '') + '.</p>'; });
 }
+function mrLibSectionHTML() {
+  return '<section class="card mr-lib-section"><h3>Video mẫu của bạn</h3>'
+    + '<p class="mut mr-lib-count">Thư viện: chưa có video mẫu nào.</p>'
+    + '<div class="row"><button class="btn mr-clear">Xóa hết video</button></div>'
+    + '<div class="mr-lib"></div>'
+    + '<p class="mut">🔒 Riêng tư: video chỉ lưu trên máy của bạn, không gửi đi đâu cả.</p></section>';
+}
+function mrRefreshLibSections() {
+  $$(".mr-lib-section").forEach(function (sec) { mrRenderLib(sec); });
+}
+function wireMrLibSection(sec) {
+  if (!sec) return;
+  var cl = sec.querySelector(".mr-clear");
+  if (cl) cl.onclick = function () { mrVidClear().then(function () { mrRefreshLibSections(); toast("Đã xóa hết video mẫu."); }); };
+  mrRenderLib(sec);
+}
 function mrDiagText() {
   var tg = MR.sym ? RB_MIRROR_TARGETS[MR.sym] : null;
   return "Chẩn đoán gương — " + (MR.engine === "landmarker" ? "FaceLandmarker: " : "FaceMesh: ") + MR.diagFm + " · Mặt: " + (MR.diagFace ? "đã thấy" : "chưa thấy") + " · Đích âm " + (MR.sym ? "/" + MR.sym + "/" : "") + ": " + (tg ? "có" : "không có — chỉ tự soi") + " · Chấm: " + MR.diagScore;
@@ -3940,6 +4005,7 @@ function mrSaveCurrent(slot, auto, scoreOverride) {
   }
   mrSaveSessionClip(slot, MR.curBlob, auto ? (scoreOverride != null ? scoreOverride : MR.lastLiveScore) : MR.lastLiveScore, null, "video", !auto).then(function () {
     mrRenderLib(slot);
+    mrRefreshLibSections();
     var libEl = slot.querySelector(".mr-lib");
     if (libEl && libEl.scrollIntoView) { try { libEl.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {} }
     toast(auto ? "Đã lưu video mẫu tự bắt — xem ở mục “Video mẫu đúng của bạn” ngay bên dưới." : "Đã lưu video mẫu — xem ở mục “Video lưu tay — lưu để đối chiếu” ngay bên dưới.");
@@ -4548,6 +4614,8 @@ function mirrorStart(slot) {
     var spk0 = slot.querySelector(".mr-speak"); if (spk0) { spk0.style.display = "inline-block"; spk0.textContent = "⏹ Dừng và chấm"; }
     mrSetStatus(slot, "Đang soi gương — làm hình miệng như hình mẫu và giữ đúng khoảng 1 giây để tự bắt video.");
     MR.diagFace = false; MR.diagScore = "đang chờ khung hình đầu tiên"; mrDiagUpdate(slot);
+    var svStart = slot.querySelector(".mr-save"); if (svStart) svStart.onclick = function () { mrSaveCurrent(slot, false); };
+    var snStart = slot.querySelector(".mr-save-note"); if (snStart) snStart.textContent = "Đã bật camera — bấm “Lưu video mẫu” để lưu đoạn vừa quay.";
     if (mrRecSupported()) {
       mrStartSeg(slot);
       var sv0 = slot.querySelector(".mr-save"); if (sv0) sv0.disabled = false;
@@ -6858,31 +6926,6 @@ function gd23VocabPauseHTML(pos, total) {
   return '<div class="sumcard" id="vocabRoundPause"><b>Đã xong vòng ' + (r.round - 1) + ' — nghỉ ngắn một chút nhé.</b>'
     + '<p class="mut">Bạn vừa nạp xong 5 từ (vòng ' + (r.round - 1) + '/' + r.total + '). Nghỉ ngắn rồi bấm nút dưới để sang vòng ' + r.round + '.</p>'
     + '<button class="btn btn-primary" id="vocabRoundNext">Nghỉ xong, sang vòng sau →</button></div>';
-}
-
-/* ----- b10: tự chấm thẻ 4 mức, chỉ phản chiếu ----- */
-function gd23SelfLevels() {
-  return (typeof RB_GD23_SELF_LEVELS !== "undefined" && RB_GD23_SELF_LEVELS) || ["Chưa nhớ", "Nhớ lơ mơ", "Nhớ khá", "Nhớ chắc"];
-}
-function gd23SelfRateNote(key) {
-  var rec = (state.selfRate || {})[key];
-  if (!rec) return "Chưa ghi mức nhớ cho thẻ này. Bạn tự ghi để tự theo dõi thôi — không tính qua thẻ, không cộng XP, không đổi nấc nhớ.";
-  return "Bạn tự ghi: " + gd23SelfLevels()[rec.level] + " — chỉ để bạn tự theo dõi, không tính qua thẻ, không cộng XP, không đổi nấc nhớ.";
-}
-function gd23SelfRateHTML(key) {
-  var lv = gd23SelfLevels();
-  var btns = lv.map(function (t, i) {
-    return '<button class="btn vocab-self-rate" data-level="' + i + '">' + esc(t) + '</button>';
-  }).join(" ");
-  return '<div class="row" style="margin-top:10px"><span class="mut">Bạn tự ghi mức nhớ của mình (chỉ để tự theo dõi):</span></div>'
-    + '<div class="row" id="vocabSelfRate">' + btns + '</div>'
-    + '<p class="mut" id="vocabSelfRateNote">' + esc(gd23SelfRateNote(key)) + '</p>';
-}
-function gd23SelfRateSet(key, level) {
-  if (!state.selfRate) state.selfRate = {};
-  state.selfRate[key] = { level: level, at: todayStr() };
-  saveState();
-  /* Cố tình KHÔNG đụng state.cards (nấc nhớ), KHÔNG awardXp, KHÔNG đổi pos. */
 }
 
 /* ----- b13/b16: từ điển bấm tra trong bài đọc ----- */
