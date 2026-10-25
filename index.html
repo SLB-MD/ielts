@@ -1341,7 +1341,7 @@ function renderPronLesson(app, l) {
    Video chỉ lưu trên máy (IndexedDB, tối đa 12), không gửi đi đâu.
    Độ chính xác nhận diện trên mặt thật CHƯA đo — giao diện ghi rõ điều này. */
 var aiRec = null, aiBlob = null, aiUrl = null;
-var MR = { slot: null, sym: null, stream: null, rec: null, chunks: [], segTimer: null, curBlob: null, stopping: false, fm: null, fmOn: false, fmBusy: false, holdStart: 0, autoDone: false, pendingAuto: false, pendingManual: false, stableCount: 0, momentDone: {}, urls: [], diagFm: "chưa tải", diagFace: false, diagScore: "chưa chạy" };
+var MR = { slot: null, sym: null, stream: null, rec: null, chunks: [], segTimer: null, curBlob: null, stopping: false, fm: null, fmOn: false, fmBusy: false, holdStart: 0, autoDone: false, pendingAuto: false, pendingManual: false, stableCount: 0, momentDone: {}, urls: [], diagFm: "chưa tải", diagFace: false, diagScore: "chưa chạy", diagSends: 0, diagResults: 0, diagLm: 0, diagSendErr: "", diagVState: "", diagRetry: "chưa", fmRetried: false, fmStartAt: 0, fmGen: 0 };
 function mrSupported() { try { return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia); } catch (e) { return false; } }
 function mrRecSupported() { try { return typeof MediaRecorder !== "undefined"; } catch (e) { return false; } }
 function mrPickMime() {
@@ -1544,6 +1544,7 @@ function mirrorHTML(sym) {
     cam = '<div class="mr-stage"><video class="mr-video" autoplay muted playsinline style="display:none"></video><canvas class="mr-overlay" style="display:none"></canvas></div>'
       + '<p class="mr-status mut">Bấm “Bật camera” để soi khẩu hình cạnh hình mẫu.</p>'
       + '<p class="mr-diag mut">' + esc(mrDiagText()) + '</p>'
+      + '<p class="mr-diag2 mut">' + esc(mrDiagDetailText()) + '</p>'
       + '<div class="mr-feed"><p class="mut">Điểm % dưới đây là <b>ĐIỂM KHỚP KHẨU HÌNH</b> (hình miệng nhìn thấy được), <b>KHÔNG</b> phải điểm phát âm theo âm thanh. Điểm phát âm theo âm thanh do AI chấm (pronounce) hiển thị riêng ở bước AI chấm, không trộn hai điểm thành một. Ngưỡng điểm và vùng đích là tạm (chưa đo trên mặt thật) và có thể chỉnh.</p><div class="mr-feed-body"><p class="mut">Bật camera để xem điểm khớp từng khung hình.</p></div></div>'
       + '<div class="row"><button class="btn btn-primary mr-start">📷 Bật camera</button><button class="btn mr-stop" style="display:none">Tắt camera</button><button class="btn mr-save" disabled>💾 Lưu video mẫu</button><button class="btn mr-clear">Xóa hết video</button></div>'
       + '<p class="mut mr-lib-count">Thư viện: chưa có video mẫu nào.</p>'
@@ -1582,7 +1583,8 @@ function mrDiagText() {
   var tg = MR.sym ? RB_MIRROR_TARGETS[MR.sym] : null;
   return "Chẩn đoán gương — FaceMesh: " + MR.diagFm + " · Mặt: " + (MR.diagFace ? "đã thấy" : "chưa thấy") + " · Đích âm " + (MR.sym ? "/" + MR.sym + "/" : "") + ": " + (tg ? "có" : "không có — chỉ tự soi") + " · Chấm: " + MR.diagScore;
 }
-function mrDiagUpdate(slot) { var d = slot && slot.querySelector(".mr-diag"); if (d) d.textContent = mrDiagText(); }
+function mrDiagDetailText() { return "Chi tiết — Gửi: " + MR.diagSends + " · Kết quả: " + MR.diagResults + " · Điểm mốc: " + MR.diagLm + " · Lỗi gửi: " + (MR.diagSendErr || "không") + " · Video: " + (MR.diagVState || "chưa gửi") + " · Thử lại: " + MR.diagRetry; }
+function mrDiagUpdate(slot) { var d = slot && slot.querySelector(".mr-diag"); if (d) d.textContent = mrDiagText(); var d2 = slot && slot.querySelector(".mr-diag2"); if (d2) d2.textContent = mrDiagDetailText(); }
 function mrSetStatus(slot, t) { var s = slot && slot.querySelector(".mr-status"); if (s) s.textContent = t; }
 function mrSaveCurrent(slot, auto) {
   if (!MR.curBlob) {
@@ -1658,19 +1660,12 @@ function mirrorStop() {
   }
   MR.stopping = false; MR.slot = null;
 }
-function mrFaceMesh(slot) {
-  if (MR.fmBusy) return;
-  MR.fmBusy = true;
-  var fail = function () { MR.fmBusy = false; MR.diagFm = "không tải được"; MR.diagScore = "đứng — FaceMesh không tải được"; mrDiagUpdate(slot); mrSetStatus(slot, "Không bật được nhận diện khẩu hình tự động — vẫn soi gương và lưu video mẫu bằng tay được."); };
-  var boot = function () {
-    try {
-      if (!window.FaceMesh) { fail(); return; }
-      if (!MR.fm) {
-        MR.fm = new window.FaceMesh({ locateFile: function (f) { return "https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/" + f; } });
-        MR.fm.setOptions({ maxNumFaces: 1, refineLandmarks: false, minDetectionConfidence: 0.5, minTrackingConfidence: 0.5 });
-        MR.fm.onResults(function (res) {
-          if (!MR.fmOn || MR.slot !== slot) return;
-          var lm = res.multiFaceLandmarks && res.multiFaceLandmarks[0];
+function mrOnResults(res) {
+  var slot = MR.slot;
+  if (!MR.fmOn || !slot) return;
+  var lm = res.multiFaceLandmarks && res.multiFaceLandmarks[0];
+  MR.diagResults++;
+  MR.diagLm = lm ? lm.length : 0;
           if (!lm) { MR.diagFace = false; MR.diagScore = "đứng — chưa thấy mặt"; mrDiagUpdate(slot); return; }
           MR.diagFace = true;
           var idx = mrIndices(lm), tg = RB_MIRROR_TARGETS[MR.sym];
@@ -1710,13 +1705,50 @@ function mrFaceMesh(slot) {
             MR.holdStart = 0;
             mrSetStatus(slot, "Chưa đúng vùng đích — " + (tg.hint || "hãy soi gương và chỉnh theo hình mẫu."));
           }
-        });
+}
+function mrSendFrame(slot) {
+  var v = slot && slot.querySelector(".mr-video");
+  if (!v || v.readyState < 2 || !MR.fm) return false;
+  MR.diagVState = v.readyState + "/" + (v.videoWidth || 0) + "x" + (v.videoHeight || 0);
+  MR.diagSends++;
+  try {
+    var r = MR.fm.send({ image: v });
+    if (r && r.catch) r.catch(function (err) { MR.diagSendErr = (err && (err.message || err.name)) || String(err); mrDiagUpdate(MR.slot); });
+  } catch (e) { MR.diagSendErr = (e && (e.message || e.name)) || String(e); }
+  mrDiagUpdate(slot);
+  return true;
+}
+/* Tu khoi tao lai MOT lan neu sau 8 giay van chua co ket qua nao (vd WASM treo):
+   dong instance cu, tao lai instance moi; pump cu chet nho fmGen, pump moi tiep quan. */
+function mrMaybeRetry(slot) {
+  if (!window.FaceMesh || !MR.fmOn || MR.diagResults > 0 || MR.fmRetried || !MR.fmStartAt) return false;
+  if (Date.now() - MR.fmStartAt < 8000) return false;
+  MR.fmRetried = true; MR.diagRetry = "đang thử lại lần 1"; mrDiagUpdate(slot);
+  MR.fmOn = false;
+  try { if (MR.fm && MR.fm.close) { var c = MR.fm.close(); if (c && c.catch) c.catch(function () {}); } } catch (e) {}
+  MR.fm = null;
+  mrFaceMesh(slot);
+  MR.diagRetry = "đã thử lại 1 lần"; mrDiagUpdate(MR.slot);
+  return true;
+}
+function mrFaceMesh(slot) {
+  if (MR.fmBusy) return;
+  MR.fmBusy = true;
+  var fail = function () { MR.fmBusy = false; MR.diagFm = "không tải được"; MR.diagScore = "đứng — FaceMesh không tải được"; mrDiagUpdate(slot); mrSetStatus(slot, "Không bật được nhận diện khẩu hình tự động — vẫn soi gương và lưu video mẫu bằng tay được."); };
+  var boot = function () {
+    try {
+      if (!window.FaceMesh) { fail(); return; }
+      if (!MR.fm) {
+        MR.fm = new window.FaceMesh({ locateFile: function (f) { return "https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/" + f; } });
+        MR.fm.setOptions({ maxNumFaces: 1, refineLandmarks: false, minDetectionConfidence: 0.5, minTrackingConfidence: 0.5 });
+        MR.fm.onResults(mrOnResults);
       }
       MR.fmOn = true; MR.diagFm = "đã tải"; MR.diagScore = "đang chờ khung hình đầu tiên"; mrDiagUpdate(slot);
+      MR.fmGen = (MR.fmGen || 0) + 1; var gen = MR.fmGen; MR.fmStartAt = Date.now();
       var pump = function () {
-        if (!MR.fmOn || !MR.stream || MR.slot !== slot) return;
-        var v = slot.querySelector(".mr-video");
-        if (v && v.readyState >= 2) { try { MR.fm.send({ image: v }); } catch (e) {} }
+        if (!MR.fmOn || !MR.stream || MR.slot !== slot || MR.fmGen !== gen) return;
+        if (mrMaybeRetry(slot)) return;
+        mrSendFrame(slot);
         setTimeout(pump, 120);
       };
       pump();
@@ -1737,7 +1769,7 @@ function mirrorStart(slot) {
   if (!mrSupported()) return;
   navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(function (stream) {
     MR.stream = stream; MR.slot = slot; MR.sym = slot.querySelector(".mr-sel").value || MR.sym;
-    MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingManual = false; MR.stableCount = 0; MR.momentDone = {};
+    MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingManual = false; MR.stableCount = 0; MR.momentDone = {}; MR.diagSends = 0; MR.diagResults = 0; MR.diagLm = 0; MR.diagSendErr = ""; MR.diagVState = ""; MR.diagRetry = "chưa"; MR.fmRetried = false;
     var v = slot.querySelector(".mr-video");
     if (v) { v.srcObject = stream; v.style.display = "block"; }
     var ov0 = slot.querySelector(".mr-overlay"); if (ov0) ov0.style.display = "block";
