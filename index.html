@@ -33,6 +33,7 @@ p{margin:8px 0}
 .qblock{background:#fff;border:1.5px solid var(--line2);border-radius:18px;padding:16px;margin:12px 0}
 .why{display:none;background:#FFF8E1;border:1.5px solid var(--amber);border-radius:14px;padding:10px 12px;margin:10px 0}
 .why.show{display:block}
+.q-opt-sel{outline:3px solid var(--amber);outline-offset:1px}
 .summarybox{background:#fff;border:2px solid var(--amber);border-radius:18px;padding:16px;margin:12px 0}
 .sumcard{background:var(--paper);border:1px solid var(--line2);border-radius:14px;padding:10px 12px;margin:8px 0}
 .bigletter{font-size:76px;font-weight:800;text-align:center;line-height:1.1;margin:6px 0}
@@ -365,8 +366,8 @@ function openLessonFor(step) {
   else if (step.kind === "pron") openLesson({ type: "pron", step: step });
   else if (step.kind === "game") openLesson({ type: "game", step: step });
 }
-function openLesson(l) { curLesson = l; returnTab = curTab; render(); }
-function backFromLesson() { curLesson = null; go(returnTab || "home"); }
+function openLesson(l) { examTimerStop(); examPartTimerStop(); curLesson = l; returnTab = curTab; render(); }
+function backFromLesson() { examTimerStop(); examPartTimerStop(); curLesson = null; go(returnTab || "home"); }
 function nextStepButtonHTML() { return '<button class="btn btn-primary" id="btnNextStep">Tiếp tục sang bài tiếp →</button>'; }
 function wireNextStep() {
   var b = $("#btnNextStep"); if (!b) return;
@@ -390,7 +391,7 @@ function finishSummaryHTML(title, stats, wrongListHTML) {
 }
 
 /* ---------- Điều hướng ---------- */
-function go(tab) { curTab = tab; curLesson = null; render(); }
+function go(tab) { examTimerStop(); examPartTimerStop(); curTab = tab; curLesson = null; render(); }
 function render() {
   try { var bn = $("#previewBanner"); if (bn) bn.textContent = authBannerText(); } catch (e) {}
   $$("#tabBar .tab").forEach(function (b) { b.classList.toggle("on", b.dataset.tab === curTab); });
@@ -670,7 +671,7 @@ function viewPractice(app) {
     + '<div class="row"><button class="btn btn-primary" data-phaseexam="1">Mở buổi thi — Đợt 1</button><button class="btn" data-phaseexam="2">Đợt 2</button><button class="btn" data-phaseexam="3">Đợt 3</button></div>'
     + '<p class="mut">Mỗi đợt lấy bộ bài khác nhau trong kho, đợt càng sau bài càng khó dần (xếp theo band trong kho). Nghe/Đọc chấm theo đáp án; Nói/Viết tự đánh giá 4 tiêu chí (ghi rõ "Tự đánh giá", không phải điểm máy chấm).</p></section>';
   html += '<section class="card"><h3>📝 Thi thử đúng format</h3>'
-    + '<p class="mut">Thi thử gộp 4 kỹ năng như một kỳ thi thật: Nghe 40 câu (30 phút), Đọc 3 bài (60 phút), Viết Task 1 + Task 2 (60 phút), Nói Part 1-2-3 (14 phút). Thời gian chỉ để tham khảo, không khóa bài khi hết giờ. Kết quả lưu thành mốc đã thi thử.</p>'
+    + '<p class="mut">Thi thử gộp 4 kỹ năng như một kỳ thi thật: Nghe 40 câu (30 phút), Đọc 3 bài (60 phút), Viết Task 1 + Task 2 (60 phút), Nói Part 1-2-3 (14 phút). Mỗi phần thi có đồng hồ đếm ngược chạy thật, hết giờ bài tự nộp. Kết quả lưu thành mốc đã thi thử.</p>'
     + '<div class="row"><button class="btn btn-primary" data-mocktest="4.5">Thi thử chặng 4,5</button><button class="btn" data-mocktest="5.5">Chặng 5,5</button><button class="btn" data-mocktest="6.5">Chặng 6,5</button><button class="btn" data-mocktest="7.5">Chặng 7,5+</button></div>'
     + '<p class="mut">Chặng chọn bài có độ khó gần chặng đó nhất trong kho; bài nào thay thế vì kho thiếu đúng độ khó sẽ ghi rõ trong màn thi.</p></section>';
   html += '<section class="card"><h3>Bổ trợ</h3>'
@@ -802,7 +803,7 @@ function viewMine(app) {
     var last = phList[phList.length - 1], prevPh = phList.length > 1 ? phList[phList.length - 2] : null;
     var dPh = function (sk) { if (!prevPh) return ""; var d = Math.round((last[sk].band - prevPh[sk].band) * 10) / 10; return d > 0 ? " ▲ +" + d.toFixed(1).replace(".", ",") : (d < 0 ? " ▼ " + d.toFixed(1).replace(".", ",") : " = không đổi"); };
     phaseHTML = '<section class="card" id="minePhase"><h3>Buổi thi kết thúc đợt — trình độ qua các đợt</h3>'
-      + '<p><b>Đợt ' + last.phase + ' (' + esc(last.date) + '):</b> Nghe ' + fmtBandComma(last.listening.band) + dPh("listening") + ' · Đọc ' + fmtBandComma(last.reading.band) + dPh("reading") + ' · Nói ' + fmtBandComma(last.speaking.band) + ' (Tự đánh giá)' + dPh("speaking") + ' · Viết ' + fmtBandComma(last.writing.band) + ' (Tự đánh giá)' + dPh("writing") + '</p>'
+      + '<p><b>Đợt ' + last.phase + ' (' + esc(last.date) + '):</b> Nghe ' + fmtBandComma(last.listening.band) + dPh("listening") + ' · Đọc ' + fmtBandComma(last.reading.band) + dPh("reading") + ' · Nói ' + fmtBandComma(last.speaking.band) + ' (Tự đánh giá)' + (last.speaking.aiScore != null ? ' · AI phát âm ' + last.speaking.aiScore + '%' : '') + dPh("speaking") + ' · Viết ' + fmtBandComma(last.writing.band) + (last.writing.ai ? ' (Máy ước lượng)' : ' (Tự đánh giá)') + dPh("writing") + '</p>'
       + (prevPh ? '<p class="mut">Đợt trước (Đợt ' + prevPh.phase + ', ' + esc(prevPh.date) + '): Nghe ' + fmtBandComma(prevPh.listening.band) + ' · Đọc ' + fmtBandComma(prevPh.reading.band) + ' · Nói ' + fmtBandComma(prevPh.speaking.band) + ' · Viết ' + fmtBandComma(prevPh.writing.band) + '</p>' : '<p class="mut">Đây là đợt đầu tiên — thi thêm đợt sau để so sánh trình độ thay đổi ra sao.</p>')
       + '<p class="mut">' + RB_BAND_NOTE + '</p>'
       + '<p><button class="btn" id="phaseAgainBtn">Mở buổi thi đợt ' + (last.phase + 1) + '</button></p></section>';
@@ -3754,12 +3755,459 @@ function renderSkillDrill(app, l) {
    năng. Mỗi đợt lấy bộ bài khác nhau trong kho, xoay vòng theo số đợt.
    Nghe/Đọc chấm theo đáp án (quy về thang 40 rồi tra bảng band ước lượng);
    Nói/Viết tự đánh giá 4 tiêu chí (ghi rõ "Tự đánh giá"). */
+
+/* ---------- DẠNG THI MỚI (25/10): Nghe đủ câu cùng lúc, ghi âm + AI chấm Nói/Viết, đồng hồ đếm ngược ---------- */
+/* Thời lượng đồng hồ: thi thử dùng mốc tham khảo đã chốt (Nghe 30 / Đọc 60 / Viết 60 / Nói 14 phút);
+   buổi thi dùng thời lượng riêng theo từng phần, ghi rõ trong giao diện trước khi vào thi.
+   Đồng hồ chỉ tính thời gian làm bài (Nghe/Đọc), thời gian viết bài (Viết), thời gian ghi âm (Nói);
+   bước tự đánh giá / xem kết quả sau đó không tính giờ. */
+var EXAM_MOCK_MIN = { listening: 30, reading: 60, writing: 60, speaking: 14 };
+var EXAM_PHASE_MIN = { listening: 10, reading: 20, writing: 40 };
+var EXAM_SPEAK_PART_MIN = { 1: 5, 2: 4, 3: 5 };
+function examClockText(ms) {
+  var s = Math.max(0, Math.ceil(ms / 1000));
+  var m = Math.floor(s / 60), r = s % 60;
+  return m + ":" + (r < 10 ? "0" + r : r);
+}
+function makeExamTimer() {
+  var t = null;
+  return {
+    start: function (key, minutes, onTimeout, elId) {
+      if (t && t.key === key) return;
+      if (t && t.intId) clearInterval(t.intId);
+      t = { key: key, endAt: Date.now() + minutes * 60000, onTimeout: onTimeout, elId: elId || "examClock" };
+      var tick = function () {
+        if (!t) return;
+        var el = document.getElementById(t.elId);
+        if (!el) { if (t.intId) clearInterval(t.intId); t = null; return; }
+        var left = t.endAt - Date.now();
+        if (left <= 0) { el.textContent = "Hết giờ!"; var cb = t.onTimeout; if (t.intId) clearInterval(t.intId); t = null; if (cb) cb(); return; }
+        el.textContent = "Còn " + examClockText(left);
+      };
+      t.intId = setInterval(tick, 1000); tick();
+    },
+    stop: function () { if (t && t.intId) clearInterval(t.intId); t = null; },
+    running: function () { return !!t; }
+  };
+}
+var examTimer = makeExamTimer();
+var examPartTimer = makeExamTimer();
+function examTimerStart(key, minutes, onTimeout, elId) { examTimer.start(key, minutes, onTimeout, elId); }
+function examTimerStop() { examTimer.stop(); }
+function examPartTimerStart(key, minutes, onTimeout, elId) { examPartTimer.start(key, minutes, onTimeout, elId); }
+function examPartTimerStop() { examPartTimer.stop(); }
+function examClockBlock(minutes, note) {
+  return '<div class="qblock"><b>⏱ Đồng hồ thi: <span id="examClock">Còn ' + examClockText(minutes * 60000) + '</span></b>'
+    + '<span class="mut"> · ' + (note || "Hết giờ bài tự nộp.") + '</span></div>';
+}
+function examPartClockBlock(minutes) {
+  return '<div class="qblock"><b>⏱ Đồng hồ Part này: <span id="examClockPart">Còn ' + examClockText(minutes * 60000) + '</span></b></div>';
+}
+/* Kiểm tra đã đăng nhập chưa mà KHÔNG gọi mạng (getSession chỉ đọc phiên đã lưu trên máy).
+   Dùng để chặn gọi AI khi chưa đăng nhập: chưa đăng nhập thì chỉ tự đánh giá / ước lượng tại chỗ. */
+function examHasSession() {
+  return new Promise(function (resolve) {
+    try {
+      var ready = window.__supabaseReady;
+      if (!ready || typeof ready.then !== "function") { resolve(false); return; }
+      ready.then(function (client) {
+        if (!client || !client.auth || !client.auth.getSession) { resolve(false); return; }
+        client.auth.getSession().then(function (res) { resolve(!!(res && res.data && res.data.session && res.data.session.access_token)); }, function () { resolve(false); });
+      }, function () { resolve(false); });
+    } catch (e) { resolve(false); }
+  });
+}
+
+/* Thi Nghe dạng mới: hiện ĐỦ HẾT câu hỏi cùng lúc, đổi đáp án được tới khi nộp,
+   sau nộp mới hiện đánh giá từng câu + lời giải. "Tôi không biết" = sai + vào Sổ
+   lỗi sai (ghi ở lúc nộp, một lần duy nhất); đáp án đúng KHÔNG hiện trước khi nộp.
+   Câu chưa trả lời tính là sai nhưng không vào Sổ lỗi sai (người học chưa làm câu đó). */
+function renderExamListen(slot, l, questions, opts) {
+  var qs = (questions || []).map(normSkillQ);
+  var lessonId = opts.lessonId;
+  if (!l.examAns) l.examAns = {};
+  if (l.examReview) { renderExamListenReview(slot, l, opts); return; }
+  var html = "";
+  qs.forEach(function (q, i) {
+    var ans = l.examAns[i] || {};
+    html += '<div class="qblock exam-q" data-qi="' + i + '"><p><b>Câu ' + (i + 1) + '. ' + esc(q.q) + '</b></p>';
+    if (q.o) {
+      q.o.forEach(function (opt, j) {
+        html += '<button class="q-opt' + (ans.v === j && !ans.dk ? ' q-opt-sel' : '') + '" data-examopt="' + i + ':' + j + '"' + (ans.dk ? ' disabled' : '') + '>' + esc(opt) + '</button>';
+      });
+    } else {
+      html += '<input type="text" data-examinput="' + i + '" value="' + esc(ans.v || '') + '" placeholder="Gõ đáp án của bạn..." style="width:100%;padding:10px;margin:8px 0"' + (ans.dk ? ' disabled' : '') + '>';
+    }
+    if (ans.dk) html += '<p class="mut">Đã chọn “Tôi không biết” — câu này tính là sai.</p>';
+    else html += '<button class="btn" data-examdk="' + i + '">Tôi không biết</button>';
+    html += '</div>';
+  });
+  html += '<div class="row"><button class="btn btn-primary" id="examSubmit">Nộp bài</button></div>';
+  slot.innerHTML = html;
+  var blocks = slot.querySelectorAll(".exam-q");
+  blocks.forEach(function (blk) {
+    var qi = +blk.dataset.qi;
+    blk.querySelectorAll("[data-examopt]").forEach(function (b) {
+      b.onclick = function () {
+        var j = +b.dataset.examopt.split(":")[1];
+        l.examAns[qi] = { v: j };
+        blk.querySelectorAll("[data-examopt]").forEach(function (x) { x.classList.toggle("q-opt-sel", x === b); });
+      };
+    });
+    var inp = blk.querySelector("[data-examinput]");
+    if (inp) inp.oninput = function () { l.examAns[qi] = { v: inp.value }; };
+    var dk = blk.querySelector("[data-examdk]");
+    if (dk) dk.onclick = function () {
+      l.examAns[qi] = { dk: true };
+      blk.querySelectorAll("[data-examopt]").forEach(function (x) { x.disabled = true; });
+      var ip2 = blk.querySelector("[data-examinput]"); if (ip2) ip2.disabled = true;
+      dk.style.display = "none";
+      var note = document.createElement("p"); note.className = "mut";
+      note.textContent = "Đã chọn “Tôi không biết” — câu này tính là sai.";
+      blk.appendChild(note);
+    };
+  });
+  var submit = function () {
+    examTimerStop();
+    slot.querySelectorAll("[data-examinput]").forEach(function (ip) {
+      var qi = +ip.dataset.examinput;
+      if (!l.examAns[qi] || !l.examAns[qi].dk) l.examAns[qi] = { v: ip.value };
+    });
+    var firstN = 0, wrong = [];
+    qs.forEach(function (q, i) {
+      var a = l.examAns[i];
+      var ok = false;
+      if (a && !a.dk) ok = q.o ? (a.v === q.a) : textAnsOk(a.v || "", q.answer);
+      if (ok) firstN++;
+      else {
+        wrong.push(i);
+        if (a) recordQuizError(lessonId, i, q);
+      }
+    });
+    l.examReview = { firstN: firstN, total: qs.length, wrong: wrong, qs: qs, timedOut: !!l.examTimedOut };
+    l._examSubmit = null;
+    renderExamListenReview(slot, l, opts);
+  };
+  l._examSubmit = submit;
+  var sb = slot.querySelector("#examSubmit");
+  if (sb) sb.onclick = submit;
+}
+function renderExamListenReview(slot, l, opts) {
+  var r = l.examReview;
+  var html = '<div class="summarybox"><h2>Kết quả: ' + r.firstN + '/' + r.total + ' câu đúng</h2>'
+    + (r.timedOut ? '<p><b>Đã hết giờ, bài đã tự nộp.</b></p>' : '')
+    + r.qs.map(function (q, i) {
+      var a = l.examAns[i];
+      var your = !a ? "Chưa trả lời" : (a.dk ? "Tôi không biết" : (q.o ? q.o[a.v] : a.v));
+      var correct = q.o ? q.o[q.a] : String(q.answer).split("|")[0];
+      var ok = r.wrong.indexOf(i) < 0;
+      return '<div class="sumcard"><p><b>Câu ' + (i + 1) + '. ' + esc(q.q) + '</b> ' + (ok ? '✓ Đúng' : '✗ Chưa đúng')
+        + '<br>Bạn chọn: ' + esc(String(your))
+        + '<br>Đáp án đúng: <b>' + esc(correct) + '</b> — ' + esc(q.why) + '</p></div>';
+    }).join("")
+    + '<div class="row"><button class="btn btn-primary" id="examContinue">Tiếp tục</button></div></div>';
+  slot.innerHTML = html;
+  var cb = slot.querySelector("#examContinue");
+  if (cb) cb.onclick = function () { opts.onDone({ firstN: r.firstN, total: r.total, wrong: r.wrong, questions: r.qs, timedOut: r.timedOut }); };
+}
+
+/* Chuẩn hóa từ để so khớp (dùng cho chấm Nói tại chỗ và gom vấn đề theo câu). */
+function normSpeakWord(s) { return String(s || "").toLowerCase().replace(/[^a-zà-ỹ0-9']/g, ""); }
+/* Ước lượng tại chỗ từ bản ghi trình duyệt (KHÔNG phải AI chấm): % từ mẫu có trong bản ghi. */
+function localSpeechEstimate(transcript, refText) {
+  var norm = function (s) { return String(s || "").toLowerCase().replace(/[^a-zà-ỹ0-9'\s]/g, " ").split(/\s+/).filter(Boolean); };
+  var heard = {}; norm(transcript).forEach(function (w) { heard[w] = true; });
+  var seen = {}, ref = [];
+  norm(refText).forEach(function (w) { if (!seen[w]) { seen[w] = true; ref.push(w); } });
+  var found = ref.filter(function (w) { return heard[w]; });
+  var missing = ref.filter(function (w) { return !heard[w]; });
+  return { pct: ref.length ? Math.round(found.length / ref.length * 100) : 0, found: found, missing: missing, total: ref.length };
+}
+/* Gom kết quả pronounce theo từng câu nói của thí sinh (mỗi dòng Candidate = một câu).
+   words của máy chủ xếp đúng thứ tự từ của bài mẫu nên chia theo số từ từng dòng. */
+function examSpeakSentences(refLines, words, issues) {
+  var issueByNorm = {};
+  (issues || []).forEach(function (it) { issueByNorm[normSpeakWord(it.word)] = it; });
+  var out = [], wi = 0;
+  refLines.forEach(function (line) {
+    var toks = String(line).split(/\s+/).filter(Boolean);
+    var seg = [], ok = 0;
+    for (var k = 0; k < toks.length; k++) {
+      var w = (words || [])[wi] || null; wi++;
+      var isOk = !!(w && w.ok);
+      if (isOk) ok++;
+      var iss = null;
+      if (w && !isOk) iss = issueByNorm[normSpeakWord(w.word)] || null;
+      seg.push({ word: w ? w.word : toks[k], ok: isOk, issue: iss });
+    }
+    out.push({ text: line, total: toks.length, ok: ok, pct: toks.length ? Math.round(ok / toks.length * 100) : 0, words: seg });
+  });
+  return out;
+}
+/* Các dòng thí sinh nói trong kịch bản (bỏ dòng giám khảo). */
+function examSpeakRefLines(script) {
+  return (script.lines || []).filter(function (ln) { return !/examiner|giám khảo/i.test(ln.who || ""); }).map(function (ln) { return ln.en; });
+}
+function examSpeakRefText(script) { return examSpeakRefLines(script).join(" "); }
+
 var phaseRun = null;
 function phasePick(arr, phase) { return arr[(phase - 1) % arr.length]; }
 function phasePickBandIdx(arr, phase) {
   var order = arr.map(function (x, i) { return i; }).sort(function (a, b) { var ba = bandSortVal(arr[a].band || arr[a].level), bb = bandSortVal(arr[b].band || arr[b].level); return ba - bb || a - b; });
   return order[(phase - 1) % order.length];
 }
+
+/* ---------- Ghi âm + AI chấm Nói trong thi (25/10) ---------- */
+/* AI chấm phát âm dùng đúng hàm callPronounce đã có (functions/v1/pronounce + JWT).
+   Hàm pronounce chỉ trả điểm phát âm từng chữ, KHÔNG trả 4 tiêu chí Nói — nên band
+   4 tiêu chí vẫn lấy từ tự đánh giá (ghi rõ "Tự đánh giá"), AI chỉ chấm phát âm
+   từng câu/từng chữ đi kèm. Không tự suy 4 tiêu chí từ điểm phát âm. */
+function examSpeakPartHTML(script, opts) {
+  return '<div class="qblock">' + speakLinesHTML(script)
+    + '<p class="mut">Bấm “Bắt đầu ghi âm”, nói thành tiếng toàn bộ phần thí sinh nói, rồi bấm “Dừng và chấm”. Bài nói mẫu của giám khảo giữ nguyên phía trên để đối chiếu.</p>'
+    + '<div class="row"><button class="btn btn-primary" id="spRecBtn">🎤 Bắt đầu ghi âm</button><button class="btn" id="spStopBtn" disabled>Dừng và chấm</button></div>'
+    + '<p class="mut" id="spRecStatus">Chưa ghi âm. Mic bị từ chối thì vẫn bấm nút “Đã nói xong” để tự đánh giá.</p>'
+    + '<div id="spRecResult"></div>'
+    + '<div class="row"><button class="btn btn-primary" id="' + opts.skipId + '">' + opts.skipLabel + '</button></div></div>';
+}
+function wireExamSpeakPart(l, script, opts) {
+  var st = function () { if (!l.spRec) l.spRec = { status: "idle", blob: null, mime: "", transcript: "", ai: null, aiErr: "", local: null, gen: 0, discarded: false, timeoutAdvance: false }; return l.spRec; };
+  var statusEl = $("#spRecStatus"), resultEl = $("#spRecResult");
+  var recBtn = $("#spRecBtn"), stopBtn = $("#spStopBtn"), skipBtn = $("#" + opts.skipId);
+  var setStatus = function (t) { if (statusEl) statusEl.textContent = t; };
+  var stopTracks = function () {
+    var s = st();
+    try { if (s.sr) s.sr.stop(); } catch (e) {}
+    try { if (s.stream) s.stream.getTracks().forEach(function (tr) { tr.stop(); }); } catch (e) {}
+  };
+  var renderResult = function () {
+    var s = st();
+    if (!resultEl) return;
+    if (s.ai) {
+      var sens = examSpeakSentences(examSpeakRefLines(script), s.ai.words || [], s.ai.issues || []);
+      var h = '<div class="sumcard"><h3>AI chấm phát âm: ' + s.ai.score + '%</h3>'
+        + '<p class="mut">Máy ước lượng theo từng chữ đã nghe (không phải điểm thi thật).</p>'
+        + '<p>Nghe được: ' + esc(s.ai.transcript || "") + '</p>'
+        + sens.map(function (sn) {
+          return '<p><b>' + esc(sn.text) + '</b> — ' + sn.ok + '/' + sn.total + ' từ đúng (' + sn.pct + '%)'
+            + sn.words.filter(function (w) { return !w.ok; }).map(function (w) {
+              return '<br>· <b>' + esc(w.word) + '</b>' + (w.issue ? ' — nghe thành “' + esc(w.issue.heard || "?") + '”, âm /' + esc(w.issue.ipa || "") + '/ (' + esc(w.issue.sound || "") + ')' : ' — chưa nghe được');
+            }).join("") + '</p>';
+        }).join("")
+        + '</div>';
+      resultEl.innerHTML = h;
+    } else if (s.local) {
+      resultEl.innerHTML = '<div class="sumcard"><h3>Ước lượng tại chỗ: ' + s.local.pct + '% từ khớp với bài mẫu</h3>'
+        + '<p class="mut">Bản ghi trình duyệt chỉ là ước lượng, chưa phải AI chấm (cần đăng nhập để AI chấm).</p>'
+        + (s.local.missing.length ? '<p>Chưa nghe được: ' + esc(s.local.missing.join(", ")) + '</p>' : '<p>Nghe được đủ các từ mẫu.</p>')
+        + '</div>';
+    } else if (s.aiErr) {
+      resultEl.innerHTML = '<div class="sumcard"><p>' + esc(s.aiErr) + '</p>'
+        + (s.local ? '<p>Ước lượng tại chỗ từ bản ghi: ' + s.local.pct + '% từ khớp (chưa phải AI chấm).</p>' : '')
+        + '<p class="mut">Không chấm được bằng AI — vẫn tự đánh giá 4 tiêu chí được.</p></div>';
+    } else if (s.status === "noscored") {
+      resultEl.innerHTML = '<div class="sumcard"><p class="mut">Không có bản ghi để chấm — vẫn tự đánh giá 4 tiêu chí được.</p></div>';
+    }
+  };
+  var finishScore = function () {
+    var s = st();
+    if (s.discarded) return;
+    if (!s.blob) {
+      s.status = "noscored"; renderResult();
+      if (s.timeoutAdvance) { setStatus("Đã hết giờ — tự chuyển tiếp sau 3 giây."); setTimeout(opts.onSkip, 3000); }
+      return;
+    }
+    setStatus("Đang chấm bài nói...");
+    var ref = examSpeakRefText(script);
+    var gen = s.gen;
+    examHasSession().then(function (logged) {
+      if (gen !== st().gen || st().discarded) return;
+      if (!logged) {
+        if (!s.transcript) { s.aiErr = "Không nghe được gì từ bản ghi trình duyệt nên không ước lượng được."; s.local = null; }
+        else s.local = localSpeechEstimate(s.transcript, ref);
+        s.status = "done"; renderResult();
+        if (s.timeoutAdvance) { setStatus("Đã hết giờ — tự chuyển tiếp sau 3 giây."); setTimeout(opts.onSkip, 3000); }
+        return;
+      }
+      mrBlobToBase64(s.blob, function (b64) {
+        if (gen !== st().gen || st().discarded) return;
+        if (!b64) {
+          s.aiErr = "Không đọc được bản ghi — hãy thử ghi lại.";
+          if (s.transcript) s.local = localSpeechEstimate(s.transcript, ref);
+          s.status = "done"; renderResult();
+          if (s.timeoutAdvance) { setStatus("Đã hết giờ — tự chuyển tiếp sau 3 giây."); setTimeout(opts.onSkip, 3000); }
+          return;
+        }
+        callPronounce(b64, s.mime || "audio/webm", ref).then(function (data) {
+          if (gen !== st().gen || st().discarded) return;
+          s.ai = data; s.status = "done"; renderResult();
+          if (opts.onScored) opts.onScored(data);
+          if (s.timeoutAdvance) { setStatus("Đã hết giờ — tự chuyển tiếp sau 3 giây."); setTimeout(opts.onSkip, 3000); }
+        }, function (err) {
+          if (gen !== st().gen || st().discarded) return;
+          s.aiErr = (err && err.message) || String(err);
+          if (s.transcript) s.local = localSpeechEstimate(s.transcript, ref);
+          s.status = "done"; renderResult();
+          if (s.timeoutAdvance) { setStatus("Đã hết giờ — tự chuyển tiếp sau 3 giây."); setTimeout(opts.onSkip, 3000); }
+        });
+      });
+    });
+  };
+  if (recBtn) recBtn.onclick = function () {
+    var s = st();
+    if (!mrSupported() || !mrRecSupported()) { setStatus("Trình duyệt này chưa hỗ trợ ghi âm — vẫn bấm nút “Đã nói xong” để tự đánh giá."); return; }
+    s.gen++;
+    s.discarded = false; s.timeoutAdvance = false;
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+      s.stream = stream; s.chunks = []; s.transcript = ""; s.ai = null; s.aiErr = ""; s.local = null;
+      try {
+        var mime = mrPickAudioMime();
+        var rec = mime ? new MediaRecorder(stream, { mimeType: mime }) : new MediaRecorder(stream);
+        s.rec = rec; s.mime = mime || rec.mimeType || "";
+        rec.ondataavailable = function (e) { if (e.data && e.data.size) s.chunks.push(e.data); };
+        rec.onstop = function () {
+          stopTracks();
+          try { s.blob = new Blob(s.chunks, { type: s.mime || "audio/webm" }); } catch (e) { s.blob = null; }
+          s.status = "scoring"; setStatus("Đã ghi xong — đang chấm...");
+          finishScore();
+        };
+        rec.start(); s.status = "rec";
+        setStatus("Đang ghi âm — nói to, rõ toàn bộ phần thí sinh nói rồi bấm “Dừng và chấm”.");
+        recBtn.disabled = true; if (stopBtn) stopBtn.disabled = false;
+        try {
+          var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+          if (SR) {
+            var sr = new SR(); s.sr = sr;
+            sr.lang = "en-US"; sr.continuous = true; sr.interimResults = true;
+            sr.onresult = function (ev) {
+              for (var i = ev.resultIndex; i < ev.results.length; i++) if (ev.results[i].isFinal) s.transcript += (s.transcript ? " " : "") + ev.results[i][0].transcript;
+            };
+            sr.onerror = function () {};
+            sr.start();
+          }
+        } catch (e) {}
+      } catch (e) { setStatus("Không bật được ghi âm trên trình duyệt này — vẫn tự đánh giá được."); }
+    }, function () { setStatus("Chưa cho phép dùng mic — vẫn bấm nút “Đã nói xong” để tự đánh giá."); });
+  };
+  if (stopBtn) stopBtn.onclick = function () {
+    var s = st();
+    try { if (s.sr) s.sr.stop(); } catch (e) {}
+    try { if (s.rec && s.rec.state === "recording") s.rec.stop(); } catch (e) {}
+    recBtn.disabled = false; stopBtn.disabled = true;
+  };
+  if (skipBtn) skipBtn.onclick = function () {
+    var s = st();
+    s.discarded = true; s.gen++;
+    stopTracks();
+    try { if (s.rec && s.rec.state === "recording") s.rec.stop(); } catch (e) {}
+    opts.onSkip();
+  };
+}
+
+/* ---------- AI chấm Viết trong thi (25/10) ---------- */
+/* Dùng đúng chế độ writing đã có của ai-tutor (trả {reply} dạng text). Vì máy chủ
+   không trả JSON 4 tiêu chí sẵn nên web dặn AI trả đúng định dạng dòng TIÊU CHÍ và
+   tách bằng parseWritingReply; tách không đủ 4 tiêu chí thì hiện toàn văn + giữ
+   tự đánh giá, không bịa điểm. AI chấm cần đăng nhập (JWT); chưa đăng nhập thì
+   không gọi mạng. */
+function callAiTutorWriting(taskLabel, prompt, essay) {
+  return new Promise(function (resolve, reject) {
+    var loginMsg = "Cần đăng nhập để dùng AI chấm Writing (đăng nhập ở mục Của tôi → Tài khoản).";
+    var ready = window.__supabaseReady;
+    if (!ready || typeof ready.then !== "function") { reject(loginMsg); return; }
+    ready.then(function (client) {
+      if (!client || !client.auth || !client.auth.getSession) { reject(loginMsg); return; }
+      client.auth.getSession().then(function (res) {
+        var sess = res && res.data && res.data.session;
+        if (!sess || !sess.access_token) { reject(loginMsg); return; }
+        var cut = essay.length > 6500;
+        var body = { message: "Chấm bài Writing IELTS " + taskLabel + " này theo đúng 4 tiêu chí chính thức: (1) Trả lời đúng yêu cầu đề, (2) Mạch lạc và liên kết, (3) Từ vựng, (4) Ngữ pháp và câu. Trả lời ĐÚNG định dạng sau, không viết thêm gì khác: mỗi tiêu chí một dòng dạng 'TIÊU CHÍ: <tên tiêu chí> | Band <số, ví dụ 6 hoặc 6,5> | <nhận xét ngắn>'; cuối cùng một dòng 'BAND CHUNG: <số>'.", mode: "writing", context: "ĐỀ: " + prompt + "\nBÀI VIẾT:\n" + essay.slice(0, 6500) };
+        fetch(supabaseFnUrl("ai-tutor"), { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + sess.access_token, "apikey": window.SUPABASE_ANON_KEY || "" }, body: JSON.stringify(body) })
+          .then(function (resp) {
+            if (!resp.ok) {
+              if (resp.status === 401) throw new Error(loginMsg);
+              if (resp.status === 429) throw new Error("AI đã hết lượt cho phép — hãy thử lại sau.");
+              if (resp.status === 502 || resp.status === 503) throw new Error("AI đang bận — hãy thử lại sau ít phút.");
+              throw new Error("AI chưa trả lời được (lỗi máy chủ " + resp.status + ") — hãy thử lại.");
+            }
+            return resp.json();
+          })
+          .then(function (data) { if (data && data.reply) resolve({ reply: data.reply, truncated: cut }); else reject(new Error("AI trả về trống — hãy thử gửi lại.")); })
+          .catch(function (e) { reject(new Error((e && e.message) || "Mất mạng — hãy kiểm tra kết nối rồi gửi lại.")); });
+      }, function () { reject(loginMsg); });
+    }, function () { reject(loginMsg); });
+  });
+}
+function parseWritingReply(reply) {
+  var lines = String(reply || "").split(/\n/);
+  var crit = [], overall = null;
+  var keyOf = function (name) {
+    var n = name.toLowerCase();
+    if (/trả lời|yêu cầu|task/.test(n)) return "task";
+    if (/mạch lạc|liên kết|coherence/.test(n)) return "coh";
+    if (/từ vựng|lexical/.test(n)) return "lex";
+    if (/ngữ pháp|câu|grammatical/.test(n)) return "gram";
+    return null;
+  };
+  lines.forEach(function (ln) {
+    var m = ln.match(/TIÊU CHÍ:\s*(.+?)\s*\|\s*Band\s*([0-9]+(?:[.,][0-9]+)?)\s*\|\s*(.*)/i);
+    if (m) { var k = keyOf(m[1]); if (k) crit.push({ key: k, name: m[1].trim(), band: parseFloat(m[2].replace(",", ".")), note: (m[3] || "").trim() }); return; }
+    var o = ln.match(/BAND CHUNG:\s*([0-9]+(?:[.,][0-9]+)?)/i);
+    if (o) overall = parseFloat(o[1].replace(",", "."));
+  });
+  var order = ["task", "coh", "lex", "gram"];
+  var sorted = order.map(function (k) { return crit.filter(function (c) { return c.key === k; })[0]; }).filter(Boolean);
+  var full = sorted.length === 4;
+  if (overall === null && sorted.length) { var s = 0; sorted.forEach(function (c) { s += c.band; }); overall = Math.round((s / sorted.length) * 2) / 2; }
+  return { criteria: sorted, overall: overall, full: full, raw: reply };
+}
+function writingAiBlockHTML(l) {
+  var w = l.aiW || {};
+  var h = '<div class="qblock"><h3>AI chấm bài</h3>';
+  if (w.err) h += '<p>' + esc(w.err) + '</p>';
+  if (!w.t1 && !w.t2 && !w.err) h += '<p class="mut">Bấm “AI chấm bài” để AI chấm cả hai bài theo 4 tiêu chí (cần đăng nhập; chưa đăng nhập thì web không gọi mạng và chỉ giữ tự đánh giá).</p>';
+  ["t1", "t2"].forEach(function (k, idx) {
+    var r = w[k];
+    if (!r) return;
+    var tLabel = idx === 0 ? "Task 1" : "Task 2";
+    if (r.empty) { h += '<h3>' + tLabel + '</h3><p class="mut">Không có bài viết để chấm.</p>'; return; }
+    h += '<h3>' + tLabel + (r.truncated ? ' <span class="mut">(bài dài nên chỉ gửi phần đầu cho AI)</span>' : '') + '</h3>';
+    if (r.parsed && r.parsed.full) {
+      r.parsed.criteria.forEach(function (c) { h += '<p><b>' + esc(c.name) + ': Band ' + fmtBandComma(c.band) + '</b> — ' + esc(c.note) + '</p>'; });
+      h += '<p><b>Band ' + tLabel + ' (Máy ước lượng): ' + fmtBandComma(r.parsed.overall) + '</b></p>';
+    } else {
+      h += '<p class="mut">AI trả lời chưa đúng định dạng 4 tiêu chí nên chưa tách được điểm từng tiêu chí — toàn văn AI trả lời:</p><p>' + esc(r.parsed ? r.parsed.raw : "") + '</p><p class="mut">Band bài này vẫn lấy từ tự đánh giá.</p>';
+    }
+  });
+  h += '<div class="row"><button class="btn btn-primary" id="aiWriteBtn"' + (w.busy ? ' disabled' : '') + '>' + (w.busy ? 'Đang chấm...' : 'AI chấm bài') + '</button></div></div>';
+  return h;
+}
+function wireWritingAi(l, t1, t2) {
+  var b = $("#aiWriteBtn"); if (!b) return;
+  b.onclick = function () {
+    if (!l.aiW) l.aiW = {};
+    l.aiW.busy = true; l.aiW.err = ""; render();
+    var tasks = [{ k: "t1", label: "Task 1", prompt: t1.prompt || t1.title, essay: l.w1 || "" }, { k: "t2", label: "Task 2", prompt: t2.prompt || t2.title, essay: l.w2 || "" }];
+    var step = function (i) {
+      if (i >= tasks.length) { l.aiW.busy = false; render(); return; }
+      var tk = tasks[i];
+      if (!tk.essay.trim()) { l.aiW[tk.k] = { empty: true }; step(i + 1); return; }
+      callAiTutorWriting(tk.label, tk.prompt, tk.essay).then(function (res) {
+        l.aiW[tk.k] = { parsed: parseWritingReply(res.reply), truncated: res.truncated };
+        step(i + 1);
+      }, function (err) { l.aiW.err = (err && err.message) || String(err); l.aiW.busy = false; render(); });
+    };
+    step(0);
+  };
+}
+function writingAiReady(l) {
+  return !!(l.aiW && l.aiW.t1 && l.aiW.t1.parsed && l.aiW.t1.parsed.full && l.aiW.t2 && l.aiW.t2.parsed && l.aiW.t2.parsed.full);
+}
+function writingAiCombined(l) {
+  var b1 = l.aiW.t1.parsed.overall, b2 = l.aiW.t2.parsed.overall;
+  return Math.round(((b1 + 2 * b2) / 3) * 2) / 2;
+}
+
 function renderPhaseExam(app, l) {
   if (!phaseRun || phaseRun.phase !== l.phase) phaseRun = { phase: l.phase, results: {} };
   if (l.saved) {
@@ -3770,8 +4218,8 @@ function renderPhaseExam(app, l) {
     app.innerHTML = skillHead("Buổi thi kết thúc đợt — Đợt " + l.phase, "Đã lưu kết quả đợt này.") + '<div class="summarybox"><h2>Kết quả đợt ' + l.phase + ' (' + esc(rec.date) + ')</h2>'
       + '<p>Nghe: <b>' + fmtBandComma(rec.listening.band) + '</b> (' + rec.listening.c + '/' + rec.listening.n + ' câu)' + dl("listening") + '</p>'
       + '<p>Đọc: <b>' + fmtBandComma(rec.reading.band) + '</b> (' + rec.reading.c + '/' + rec.reading.n + ' câu)' + dl("reading") + '</p>'
-      + '<p>Nói: <b>' + fmtBandComma(rec.speaking.band) + '</b> (Tự đánh giá)' + dl("speaking") + '</p>'
-      + '<p>Viết: <b>' + fmtBandComma(rec.writing.band) + '</b> (Tự đánh giá)' + dl("writing") + '</p>'
+      + '<p>Nói: <b>' + fmtBandComma(rec.speaking.band) + '</b> (Tự đánh giá)' + (rec.speaking.aiScore != null ? ' · AI phát âm ' + rec.speaking.aiScore + '%' : '') + dl("speaking") + '</p>'
+      + '<p>Viết: <b>' + fmtBandComma(rec.writing.band) + '</b> ' + (rec.writing.ai ? '(Máy ước lượng)' : '(Tự đánh giá)') + dl("writing") + '</p>'
       + '<p class="mut">' + RB_BAND_NOTE + '</p>'
       + '<div class="row" style="margin-top:10px"><button class="btn btn-primary" id="phNext">Mở buổi thi đợt ' + (l.phase + 1) + '</button><button class="btn" id="phBack">Về Luyện tập</button></div></div>';
     wireBack();
@@ -3782,7 +4230,7 @@ function renderPhaseExam(app, l) {
   var r = phaseRun.results;
   var allDone = r.listening && r.reading && r.speaking && r.writing;
   var row = function (sk, label, doneTxt) {
-    return '<button class="step-row" data-phskill="' + sk + '"><span><b>' + label + '</b>' + (r[sk] ? ' <span class="chip">Đã xong — Band ' + fmtBandComma(r[sk].band) + (r[sk].self ? ' (Tự đánh giá)' : '') + '</span>' : ' <span class="mut">chưa thi</span>') + '</span><span class="st">→</span></button>';
+    return '<button class="step-row" data-phskill="' + sk + '"><span><b>' + label + '</b>' + (r[sk] ? ' <span class="chip">Đã xong — Band ' + fmtBandComma(r[sk].band) + (r[sk].ai ? ' (Máy ước lượng)' : (r[sk].self ? ' (Tự đánh giá)' : '')) + (r[sk].timedOut ? ' · hết giờ' : '') + (r[sk].aiScore != null ? ' · AI phát âm ' + r[sk].aiScore + '%' : '') + '</span>' : ' <span class="mut">chưa thi</span>') + '</span><span class="st">→</span></button>';
   };
   app.innerHTML = skillHead("Buổi thi kết thúc đợt — Đợt " + l.phase, "Thi 4 bài riêng từng kỹ năng để biết trình độ mình đang ở đâu. Kết quả lưu theo đợt và so sánh được với đợt trước ở mục Của tôi → Đánh giá mức độ.")
     + '<div class="qblock">' + row("listening", "🎧 Nghe") + row("reading", "📖 Đọc") + row("speaking", "🗣️ Nói") + row("writing", "✍️ Viết")
@@ -3805,7 +4253,7 @@ function renderPhaseSkill(app, l) {
     l.itemIdx = liIdx;
     l.title = "Buổi thi đợt " + ph + " — Nghe"; l.sub = item.section + (item.band ? " · " + item.band : "") + " · " + phQs.length + " câu hỏi" + (phQs.length < item.questions.length ? " · đã bỏ " + (item.questions.length - phQs.length) + " câu đúng/sai vì đề thi Listening chính thức không có dạng đúng/sai" : "");
     if (!l.started) {
-      app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock"><p>Nghe toàn bài rồi trả lời ' + phQs.length + ' câu hỏi. Bài thi: nghe trước, không mở transcript trong lúc thi.</p>'
+      app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock"><p>Nghe toàn bài rồi trả lời ' + phQs.length + ' câu hỏi. Bài thi: nghe trước, không mở transcript trong lúc thi. Đồng hồ: 10 phút, hết giờ bài tự nộp.</p>'
         + '<div class="row"><button class="btn btn-primary" id="psPlay">🔊 Nghe toàn bài</button><button class="btn btn-primary" id="psStart">Bắt đầu làm bài</button></div></div>';
       wireBack();
       $("#psPlay").onclick = function () { speak(item.text); };
@@ -3813,12 +4261,18 @@ function renderPhaseSkill(app, l) {
       return;
     }
     l.onDone = function (res) {
-      phaseRun.results.listening = { c: res.firstN, n: res.total, band: rawToBand(res.firstN, res.total, "listening") };
+      phaseRun.results.listening = { c: res.firstN, n: res.total, band: rawToBand(res.firstN, res.total, "listening"), timedOut: !!res.timedOut };
       openLesson({ type: "phaseExam", phase: ph });
     };
-    app.innerHTML = '<div class="row" style="margin-bottom:10px"><button class="btn btn-primary" id="psAgain">🔊 Nghe lại toàn bài</button></div><div id="quizSlot"></div>';
+    app.innerHTML = examClockBlock(EXAM_PHASE_MIN.listening, "Hết giờ bài tự nộp — các câu chưa trả lời tính là sai.")
+      + '<div class="row" style="margin-bottom:10px"><button class="btn btn-primary" id="psAgain">🔊 Nghe lại toàn bài</button></div><div id="quizSlot"></div>';
     $("#psAgain").onclick = function () { speak(item.text); };
-    renderQuizEngine($("#quizSlot"), l, phQs, "phase", "phase:" + ph + ":listening");
+    examTimerStart("phase:" + ph + ":listening", EXAM_PHASE_MIN.listening, function () {
+      toast("Đã hết giờ, bài đã tự nộp.");
+      l.examTimedOut = true;
+      if (l._examSubmit) l._examSubmit();
+    });
+    renderExamListen($("#quizSlot"), l, phQs, { lessonId: "phase:" + ph + ":listening", onDone: l.onDone });
     return;
   }
   if (l.skill === "reading") {
@@ -3827,17 +4281,24 @@ function renderPhaseSkill(app, l) {
     l.itemIdx = rdIdx;
     l.title = "Buổi thi đợt " + ph + " — Đọc"; l.sub = rp.topic + " · " + rp.level + " · " + rp.questions.length + " câu hỏi";
     if (!l.started) {
-      app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock"><p>Đọc bài rồi trả lời ' + rp.questions.length + ' câu hỏi. Trong lúc làm bài vẫn xem lại được bài đọc.</p>'
+      app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock"><p>Đọc bài rồi trả lời ' + rp.questions.length + ' câu hỏi. Trong lúc làm bài vẫn xem lại được bài đọc. Đồng hồ: 20 phút, hết giờ bài tự nộp.</p>'
         + '<button class="btn btn-primary" id="psStart">Bắt đầu làm bài</button></div>';
       wireBack();
       $("#psStart").onclick = function () { l.started = true; lessonStart = Date.now(); runWrong = []; runFirstTry = {}; render(); };
       return;
     }
     l.onDone = function (res) {
-      phaseRun.results.reading = { c: res.firstN, n: res.total, band: rawToBand(res.firstN, res.total, "reading") };
+      phaseRun.results.reading = { c: res.firstN, n: res.total, band: rawToBand(res.firstN, res.total, "reading"), timedOut: !!l.examTimedOut };
+      l.examTimedOut = false;
       openLesson({ type: "phaseExam", phase: ph });
     };
-    app.innerHTML = '<details open style="margin-bottom:10px"><summary><b>Bài đọc</b></summary><div class="qblock">' + paraHTML(rp.text) + '</div></details><div id="quizSlot"></div>';
+    app.innerHTML = examClockBlock(EXAM_PHASE_MIN.reading, "Hết giờ bài tự nộp — các câu chưa trả lời tính là sai.")
+      + '<details open style="margin-bottom:10px"><summary><b>Bài đọc</b></summary><div class="qblock">' + paraHTML(rp.text) + '</div></details><div id="quizSlot"></div>';
+    examTimerStart("phase:" + ph + ":reading", EXAM_PHASE_MIN.reading, function () {
+      toast("Đã hết giờ, bài đã tự nộp.");
+      l.examTimedOut = true; examTimerStop();
+      l.qi = rp.questions.length; render();
+    });
     renderQuizEngine($("#quizSlot"), l, rp.questions, "phase", "phase:" + ph + ":reading");
     return;
   }
@@ -3850,12 +4311,22 @@ function renderPhaseSkill(app, l) {
     l.itemIdx = spIdx;
     l.title = "Buổi thi đợt " + ph + " — Nói"; l.sub = sp.part + " · " + sp.topic;
     if (!l.spoken) {
-      app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock">' + speakLinesHTML(sp)
-        + '<p class="mut">Nói thành tiếng toàn bộ bài mẫu (đóng vai thí sinh), rồi bấm "Đã nói xong" để tự đánh giá 4 tiêu chí.</p>'
-        + '<button class="btn btn-primary" id="psSpoken">Đã nói xong → Tự đánh giá</button></div>';
+      app.innerHTML = skillHead(l.title, l.sub)
+        + examClockBlock(EXAM_SPEAK_PART_MIN[partN], "Hết giờ Part này thì tự chuyển sang tự đánh giá.")
+        + examSpeakPartHTML(sp, { skipId: "psSpoken", skipLabel: "Đã nói xong → Tự đánh giá" });
       wireBack();
       $$("[data-speakline]").forEach(function (b) { b.onclick = function () { speak(sp.lines[+b.dataset.speakline].en); }; });
-      $("#psSpoken").onclick = function () { l.spoken = true; l.self = {}; render(); };
+      examTimerStart("phase:" + ph + ":speaking", EXAM_SPEAK_PART_MIN[partN], function () {
+        toast("Đã hết giờ Part này, chuyển sang tự đánh giá.");
+        examTimerStop();
+        var s = l.spRec;
+        if (s && s.status === "rec") {
+          s.timeoutAdvance = true;
+          try { if (s.sr) s.sr.stop(); } catch (e) {}
+          try { if (s.rec) s.rec.stop(); } catch (e) {}
+        } else { l.spoken = true; l.self = {}; render(); }
+      });
+      wireExamSpeakPart(l, sp, { skipId: "psSpoken", onSkip: function () { examTimerStop(); l.spoken = true; l.self = {}; render(); }, onScored: function (res) { if (res) l.spAiScore = res.score; } });
       return;
     }
     app.innerHTML = skillHead(l.title, "Tự đánh giá 4 tiêu chí (chọn mức cho từng tiêu chí)") + selfAssessHTML(RB_SPEAK_CRITERIA, "ps", l.self || {})
@@ -3864,7 +4335,7 @@ function renderPhaseSkill(app, l) {
     wireSelfAssess(l.self || {});
     $("#psSave").onclick = function () {
       if (Object.keys(l.self || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí trước đã."); return; }
-      phaseRun.results.speaking = { band: selfBandOf(l.self), self: true };
+      phaseRun.results.speaking = { band: selfBandOf(l.self), self: true, aiScore: (typeof l.spAiScore === "number" ? l.spAiScore : null) };
       openLesson({ type: "phaseExam", phase: ph });
     };
     return;
@@ -3877,22 +4348,34 @@ function renderPhaseSkill(app, l) {
     var t1 = phasePick(t1s, ph), t2 = phasePick(t2s, ph);
     l.title = "Buổi thi đợt " + ph + " — Viết";
     if (!l.written) {
-      app.innerHTML = skillHead(l.title, "Task 1 + Task 2 — viết cả hai bài rồi tự đánh giá từng bài") + '<div class="qblock"><p><b>Task 1 — ' + esc(t1.title) + ':</b> ' + esc(t1.prompt) + '</p><textarea id="psW1" rows="5" style="width:100%;padding:10px" placeholder="Viết Task 1..."></textarea>'
+      app.innerHTML = skillHead(l.title, "Task 1 + Task 2 — viết cả hai bài rồi chấm (đồng hồ: 40 phút, hết giờ bài tự chuyển sang chấm)")
+        + examClockBlock(EXAM_PHASE_MIN.writing, "Hết giờ viết bài thì bài tự chuyển sang chấm.")
+        + '<div class="qblock"><p><b>Task 1 — ' + esc(t1.title) + ':</b> ' + esc(t1.prompt) + '</p><textarea id="psW1" rows="5" style="width:100%;padding:10px" placeholder="Viết Task 1..."></textarea>'
         + '<p><b>Task 2 — ' + esc(t2.title) + ':</b> ' + esc(t2.prompt) + '</p><textarea id="psW2" rows="6" style="width:100%;padding:10px" placeholder="Viết Task 2..."></textarea>'
-        + '<div class="row" style="margin-top:8px"><button class="btn btn-primary" id="psWritten">Đã viết xong → Tự đánh giá</button></div></div>';
+        + '<div class="row" style="margin-top:8px"><button class="btn btn-primary" id="psWritten">Đã viết xong → Chấm bài</button></div></div>';
       wireBack();
+      examTimerStart("phase:" + ph + ":writing", EXAM_PHASE_MIN.writing, function () {
+        toast("Đã hết giờ, bài đã tự nộp sang chấm.");
+        examTimerStop();
+        l.w1 = $("#psW1") ? $("#psW1").value : ""; l.w2 = $("#psW2") ? $("#psW2").value : "";
+        l.written = true; l.self1 = {}; l.self2 = {}; l.examTimedOut = true; render();
+      });
       $("#psWritten").onclick = function () {
         var a = $("#psW1").value, b = $("#psW2").value;
         if (!a.trim() || !b.trim()) { toast("Hãy viết cả hai bài trước đã."); return; }
+        examTimerStop();
         l.w1 = a; l.w2 = b; l.written = true; l.self1 = {}; l.self2 = {}; render();
       };
       return;
     }
-    app.innerHTML = skillHead(l.title, "Tự đánh giá 4 tiêu chí cho từng bài (Task 2 nặng gấp đôi Task 1 khi tính band Viết)")
+    app.innerHTML = skillHead(l.title, "Chấm bài: AI chấm 4 tiêu chí hoặc tự đánh giá 4 tiêu chí cho từng bài (Task 2 nặng gấp đôi Task 1 khi tính band Viết)")
+      + (l.examTimedOut ? '<p><b>Đã hết giờ, bài đã tự nộp.</b></p>' : '')
+      + writingAiBlockHTML(l)
       + '<h3>Task 1 — ' + esc(t1.title) + '</h3>' + selfAssessHTML(RB_WRITE_CRITERIA, "w1", l.self1 || {})
       + '<h3>Task 2 — ' + esc(t2.title) + '</h3>' + selfAssessHTML(RB_WRITE_CRITERIA, "w2", l.self2 || {})
       + '<div class="row"><button class="btn btn-primary" id="psSave">Lưu kết quả Viết</button></div>';
     wireBack();
+    wireWritingAi(l, t1, t2);
     $$("[data-self]").forEach(function (b) {
       b.onclick = function () {
         var parts = b.dataset.self.split(":");
@@ -3902,7 +4385,13 @@ function renderPhaseSkill(app, l) {
       };
     });
     $("#psSave").onclick = function () {
-      if (Object.keys(l.self1 || {}).length < 4 || Object.keys(l.self2 || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí của cả hai bài."); return; }
+      l.examTimedOut = false;
+      if (writingAiReady(l)) {
+        phaseRun.results.writing = { band: writingAiCombined(l), ai: true, t1: l.aiW.t1.parsed.overall, t2: l.aiW.t2.parsed.overall };
+        openLesson({ type: "phaseExam", phase: ph });
+        return;
+      }
+      if (Object.keys(l.self1 || {}).length < 4 || Object.keys(l.self2 || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí của cả hai bài, hoặc bấm “AI chấm bài” để AI chấm."); return; }
       var b1 = selfBandOf(l.self1), b2 = selfBandOf(l.self2);
       var combined = Math.round(((b1 + 2 * b2) / 3) * 2) / 2;
       phaseRun.results.writing = { band: combined, self: true, t1: b1, t2: b2 };
@@ -3964,12 +4453,12 @@ function renderMockTest(app, l) {
   if (mockRun.stage === "hub") {
     var sub = mockRun.substituted ? "Kho thiếu bài đúng chặng " + mLabel + " ở vài chỗ nên đã lấy bài gần nhất — độ khó thật của từng bài ghi dưới đây." : "Các bài đã chọn đều gần chặng " + mLabel + ".";
     app.innerHTML = skillHead("Thi thử — Chặng " + mLabel, sub) + '<div class="qblock">'
-      + '<p><b>Nghe:</b> ' + mockRun.listen.n + ' câu (tham khảo 30 phút) — ' + mockRun.listen.groups.map(function (g) { return esc(g.item.topic); }).join(" · ") + '</p>'
-      + '<p><b>Đọc:</b> ' + mockRun.read.passages.length + ' bài = ' + mockRun.read.n + ' câu (tham khảo 60 phút) — ' + mockRun.read.passages.map(function (r) { return esc(r.title) + " (" + esc(r.level) + ")"; }).join(" · ") + '</p>'
+      + '<p><b>Nghe:</b> ' + mockRun.listen.n + ' câu (đồng hồ 30 phút) — ' + mockRun.listen.groups.map(function (g) { return esc(g.item.topic); }).join(" · ") + '</p>'
+      + '<p><b>Đọc:</b> ' + mockRun.read.passages.length + ' bài = ' + mockRun.read.n + ' câu (đồng hồ 60 phút) — ' + mockRun.read.passages.map(function (r) { return esc(r.title) + " (" + esc(r.level) + ")"; }).join(" · ") + '</p>'
       + '<p class="mut">Giới hạn kho hiện tại: phần Đọc của thi thử mới có ' + mockRun.read.n + ' câu do kho bài hiện tại (mỗi bài đọc khoảng 5 câu) — chưa đủ 40 câu như thi thật, web ghi rõ chứ không giấu.</p>'
-      + '<p><b>Viết:</b> Task 1 — ' + esc(mockRun.write.t1.title) + ' · Task 2 — ' + esc(mockRun.write.t2.title) + ' (tham khảo 60 phút)</p>'
-      + '<p><b>Nói:</b> Part 1 — ' + esc(mockRun.speak.scripts[0].topic) + ' · Part 2 — ' + esc(mockRun.speak.scripts[1].topic) + ' · Part 3 — ' + esc(mockRun.speak.scripts[2].topic) + ' (tham khảo 14 phút)</p>'
-      + '<p class="mut">Nghe/Đọc chấm theo đáp án (quy về thang 40). Nói/Viết tự đánh giá 4 tiêu chí (ghi rõ "Tự đánh giá"). Thời gian chỉ để tham khảo, không khóa bài khi hết giờ.</p>'
+      + '<p><b>Viết:</b> Task 1 — ' + esc(mockRun.write.t1.title) + ' · Task 2 — ' + esc(mockRun.write.t2.title) + ' (đồng hồ 60 phút)</p>'
+      + '<p><b>Nói:</b> Part 1 — ' + esc(mockRun.speak.scripts[0].topic) + ' · Part 2 — ' + esc(mockRun.speak.scripts[1].topic) + ' · Part 3 — ' + esc(mockRun.speak.scripts[2].topic) + ' (đồng hồ 14 phút)</p>'
+      + '<p class="mut">Nghe/Đọc chấm theo đáp án (quy về thang 40). Nói tự đánh giá 4 tiêu chí (ghi rõ "Tự đánh giá") kèm AI chấm phát âm từng chữ; Viết AI chấm 4 tiêu chí (ghi rõ "Máy ước lượng") hoặc tự đánh giá. Mỗi phần thi có đồng hồ đếm ngược chạy thật, hết giờ bài tự nộp.</p>'
       + '<button class="btn btn-primary" id="mkStart">Bắt đầu thi thử</button></div>';
     wireBack();
     $("#mkStart").onclick = function () { mockRun.stage = "listen"; mockRun.times.listenStart = Date.now(); lessonStart = Date.now(); runWrong = []; runFirstTry = {}; render(); };
@@ -3977,48 +4466,81 @@ function renderMockTest(app, l) {
   }
   if (mockRun.stage === "listen") {
     var g = mockRun.listen.groups[mockRun.listen.gi];
-    if (!g) { mockRun.times.listen = Date.now() - mockRun.times.listenStart; mockRun.stage = "read"; mockRun.times.readStart = Date.now(); render(); return; }
+    if (!g || mockRun.listenTimedOut) { mockRun.times.listen = Date.now() - mockRun.times.listenStart; mockRun.stage = "read"; mockRun.times.readStart = Date.now(); render(); return; }
     l.title = "Thi thử " + mLabel + " — Nghe (" + (mockRun.listen.gi + 1) + "/" + mockRun.listen.groups.length + ")";
     l.onDone = function (res) {
-      mockRun.listen.c += res.firstN; mockRun.listen.gi++;
+      mockRun.listen.c += res.firstN;
+      l.examAns = {}; l.examReview = null; l.examTimedOut = false; l._examSubmit = null;
+      if (res.timedOut) { mockRun.listenTimedOut = true; mockRun.times.listen = Date.now() - mockRun.times.listenStart; mockRun.stage = "read"; mockRun.times.readStart = Date.now(); }
+      else mockRun.listen.gi++;
       l.qi = 0; runWrong = []; runFirstTry = []; lessonStart = Date.now(); render();
     };
-    app.innerHTML = '<div class="row" style="margin-bottom:10px"><button class="btn btn-primary" id="mkPlay">🔊 Nghe bài (' + esc(g.item.section) + ' — ' + esc(g.item.topic) + ')</button></div><div id="quizSlot"></div>';
+    app.innerHTML = examClockBlock(EXAM_MOCK_MIN.listening, "Đồng hồ chung cho cả phần Nghe — hết giờ bài tự nộp, các câu chưa trả lời tính là sai.")
+      + '<div class="row" style="margin-bottom:10px"><button class="btn btn-primary" id="mkPlay">🔊 Nghe bài (' + esc(g.item.section) + ' — ' + esc(g.item.topic) + ')</button></div><div id="quizSlot"></div>';
     $("#mkPlay").onclick = function () { speak(g.item.text); };
-    renderQuizEngine($("#quizSlot"), l, g.questions, "mock", "mock:" + l.milestone + ":listen");
+    examTimerStart("mock:" + l.milestone + ":listen", EXAM_MOCK_MIN.listening, function () {
+      toast("Đã hết giờ, bài đã tự nộp.");
+      l.examTimedOut = true;
+      if (l._examSubmit) l._examSubmit();
+    });
+    renderExamListen($("#quizSlot"), l, g.questions, { lessonId: "mock:" + l.milestone + ":listen", onDone: l.onDone });
     return;
   }
   if (mockRun.stage === "read") {
     var rp2 = mockRun.read.passages[mockRun.read.pi];
-    if (!rp2) { mockRun.times.read = Date.now() - mockRun.times.readStart; mockRun.stage = "write"; mockRun.times.writeStart = Date.now(); render(); return; }
+    if (!rp2 || mockRun.readTimedOut) { mockRun.times.read = Date.now() - mockRun.times.readStart; mockRun.stage = "write"; mockRun.times.writeStart = Date.now(); render(); return; }
     l.title = "Thi thử " + mLabel + " — Đọc (" + (mockRun.read.pi + 1) + "/" + mockRun.read.passages.length + ")";
     l.onDone = function (res) {
-      mockRun.read.c += res.firstN; mockRun.read.pi++;
+      mockRun.read.c += res.firstN;
+      if (l.examTimedOut) { mockRun.readTimedOut = true; mockRun.times.read = Date.now() - mockRun.times.readStart; mockRun.stage = "write"; mockRun.times.writeStart = Date.now(); }
+      else mockRun.read.pi++;
+      l.examTimedOut = false;
       l.qi = 0; runWrong = []; runFirstTry = []; lessonStart = Date.now(); render();
     };
-    app.innerHTML = '<details open style="margin-bottom:10px"><summary><b>Bài đọc: ' + esc(rp2.title) + '</b></summary><div class="qblock">' + paraHTML(rp2.text) + '</div></details><div id="quizSlot"></div>';
+    app.innerHTML = examClockBlock(EXAM_MOCK_MIN.reading, "Đồng hồ chung cho cả phần Đọc — hết giờ bài tự nộp, các câu chưa trả lời tính là sai.")
+      + '<details open style="margin-bottom:10px"><summary><b>Bài đọc: ' + esc(rp2.title) + '</b></summary><div class="qblock">' + paraHTML(rp2.text) + '</div></details><div id="quizSlot"></div>';
+    examTimerStart("mock:" + l.milestone + ":read", EXAM_MOCK_MIN.reading, function () {
+      toast("Đã hết giờ, bài đã tự nộp.");
+      l.examTimedOut = true; examTimerStop();
+      l.qi = rp2.questions.length; render();
+    });
     renderQuizEngine($("#quizSlot"), l, rp2.questions, "mock", "mock:" + l.milestone + ":read");
     return;
   }
   if (mockRun.stage === "write") {
     var w1 = mockRun.write.t1, w2 = mockRun.write.t2;
     if (!l.written) {
-      app.innerHTML = skillHead("Thi thử " + mLabel + " — Viết", "Task 1 + Task 2 (tham khảo 60 phút)") + '<div class="qblock"><p><b>Task 1 — ' + esc(w1.title) + ':</b> ' + esc(w1.prompt) + '</p><textarea id="mkW1" rows="5" style="width:100%;padding:10px" placeholder="Viết Task 1..."></textarea>'
+      app.innerHTML = skillHead("Thi thử " + mLabel + " — Viết", "Task 1 + Task 2 (đồng hồ 60 phút, hết giờ bài tự chuyển sang chấm)")
+        + examClockBlock(EXAM_MOCK_MIN.writing, "Hết giờ viết bài thì bài tự chuyển sang chấm.")
+        + '<div class="qblock"><p><b>Task 1 — ' + esc(w1.title) + ':</b> ' + esc(w1.prompt) + '</p><textarea id="mkW1" rows="5" style="width:100%;padding:10px" placeholder="Viết Task 1..."></textarea>'
         + '<p><b>Task 2 — ' + esc(w2.title) + ':</b> ' + esc(w2.prompt) + '</p><textarea id="mkW2" rows="6" style="width:100%;padding:10px" placeholder="Viết Task 2..."></textarea>'
-        + '<div class="row" style="margin-top:8px"><button class="btn btn-primary" id="mkWritten">Đã viết xong → Tự đánh giá</button></div></div>';
+        + '<div class="row" style="margin-top:8px"><button class="btn btn-primary" id="mkWritten">Đã viết xong → Chấm bài</button></div></div>';
       wireBack();
+      examTimerStart("mock:" + l.milestone + ":write", EXAM_MOCK_MIN.writing, function () {
+        toast("Đã hết giờ, bài đã tự nộp sang chấm.");
+        examTimerStop();
+        l.w1 = $("#mkW1") ? $("#mkW1").value : ""; l.w2 = $("#mkW2") ? $("#mkW2").value : "";
+        l.written = true; l.self1 = {}; l.self2 = {}; l.examTimedOut = true; render();
+      });
       $("#mkWritten").onclick = function () {
         var a = $("#mkW1").value, b = $("#mkW2").value;
         if (!a.trim() || !b.trim()) { toast("Hãy viết cả hai bài trước đã."); return; }
+        examTimerStop();
+        l.w1 = a; l.w2 = b;
+        examTimerStop();
+        l.w1 = a; l.w2 = b;
         l.written = true; l.self1 = {}; l.self2 = {}; render();
       };
       return;
     }
-    app.innerHTML = skillHead("Thi thử " + mLabel + " — Viết (Tự đánh giá)", "Task 2 nặng gấp đôi Task 1 khi tính band Viết")
+    app.innerHTML = skillHead("Thi thử " + mLabel + " — Viết (Chấm bài)", "Task 2 nặng gấp đôi Task 1 khi tính band Viết")
+      + (l.examTimedOut ? '<p><b>Đã hết giờ, bài đã tự nộp.</b></p>' : '')
+      + writingAiBlockHTML(l)
       + '<h3>Task 1 — ' + esc(w1.title) + '</h3>' + selfAssessHTML(RB_WRITE_CRITERIA, "w1", l.self1 || {})
       + '<h3>Task 2 — ' + esc(w2.title) + '</h3>' + selfAssessHTML(RB_WRITE_CRITERIA, "w2", l.self2 || {})
       + '<div class="row"><button class="btn btn-primary" id="mkWNext">Xong phần Viết → Nói</button></div>';
     wireBack();
+    wireWritingAi(l, w1, w2);
     $$("[data-self]").forEach(function (b) {
       b.onclick = function () {
         var parts = b.dataset.self.split(":");
@@ -4028,7 +4550,14 @@ function renderMockTest(app, l) {
       };
     });
     $("#mkWNext").onclick = function () {
-      if (Object.keys(l.self1 || {}).length < 4 || Object.keys(l.self2 || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí của cả hai bài."); return; }
+      l.examTimedOut = false;
+      if (writingAiReady(l)) {
+        mockRun.write.band = writingAiCombined(l); mockRun.write.ai = true;
+        mockRun.times.write = Date.now() - mockRun.times.writeStart;
+        mockRun.stage = "speak"; mockRun.times.speakStart = Date.now(); render();
+        return;
+      }
+      if (Object.keys(l.self1 || {}).length < 4 || Object.keys(l.self2 || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí của cả hai bài, hoặc bấm “AI chấm bài” để AI chấm."); return; }
       var b1 = selfBandOf(l.self1), b2 = selfBandOf(l.self2);
       mockRun.write.band = Math.round(((b1 + 2 * b2) / 3) * 2) / 2;
       mockRun.times.write = Date.now() - mockRun.times.writeStart;
@@ -4037,22 +4566,53 @@ function renderMockTest(app, l) {
     return;
   }
   if (mockRun.stage === "speak") {
-    if (!l.spoken) {
-      var spH = mockRun.speak.scripts.map(function (s) {
-        var lines = s.lines.map(function (ln) { return '<p><b>' + esc(ln.who) + ':</b> ' + esc(ln.en) + '<br><span class="mut">' + esc(ln.vi) + '</span></p>'; }).join("");
-        return '<details style="margin-bottom:8px"><summary><b>' + esc(s.part) + ' — ' + esc(s.topic) + '</b></summary><div class="qblock">' + lines + '</div></details>';
-      }).join("");
-      app.innerHTML = skillHead("Thi thử " + mLabel + " — Nói", "Part 1-2-3 (tham khảo 14 phút)") + spH
-        + '<p class="mut">Nói thành tiếng cả 3 phần rồi bấm "Đã nói xong" để tự đánh giá chung 4 tiêu chí.</p>'
-        + '<button class="btn btn-primary" id="mkSpoken">Đã nói xong → Tự đánh giá</button>';
+    if (mockRun.speak.pi === undefined) mockRun.speak.pi = 0;
+    if (!mockRun.speak.aiParts) mockRun.speak.aiParts = [];
+    var spi = mockRun.speak.pi;
+    if (spi < 3) {
+      var sps = mockRun.speak.scripts[spi];
+      var partN2 = spi + 1;
+      app.innerHTML = skillHead("Thi thử " + mLabel + " — Nói (Part " + partN2 + "/3)", "Ghi âm Part này rồi AI chấm phát âm từng chữ")
+        + examClockBlock(EXAM_MOCK_MIN.speaking, "Đồng hồ cả bài Nói — hết giờ tự chuyển sang tự đánh giá.")
+        + examPartClockBlock(EXAM_SPEAK_PART_MIN[partN2])
+        + examSpeakPartHTML(sps, { skipId: "mkSpPartNext", skipLabel: (spi === 2 ? "Xong Part 3 → Tự đánh giá" : "Xong Part " + partN2 + " → Part tiếp theo") });
       wireBack();
-      $("#mkSpoken").onclick = function () { l.spoken = true; l.self = {}; render(); };
+      $$("[data-speakline]").forEach(function (b) { b.onclick = function () { speak(sps.lines[+b.dataset.speakline].en); }; });
+      examTimerStart("mock:" + l.milestone + ":speak", EXAM_MOCK_MIN.speaking, function () {
+        toast("Đã hết giờ cả bài Nói, chuyển sang tự đánh giá.");
+        examTimerStop(); examPartTimerStop();
+        var s = l.spRec;
+        if (s) { s.discarded = true; s.gen++; try { if (s.sr) s.sr.stop(); } catch (e) {} try { if (s.stream) s.stream.getTracks().forEach(function (tr) { tr.stop(); }); } catch (e) {} try { if (s.rec) s.rec.stop(); } catch (e) {} }
+        mockRun.speakTimedOut = true; mockRun.speak.pi = 3; l.spRec = null; render();
+      });
+      examPartTimerStart("mock:" + l.milestone + ":speak:part" + partN2, EXAM_SPEAK_PART_MIN[partN2], function () {
+        toast("Đã hết giờ Part " + partN2 + ", chuyển Part tiếp theo.");
+        examPartTimerStop();
+        var s = l.spRec;
+        if (s && s.status === "rec") {
+          s.timeoutAdvance = true;
+          try { if (s.sr) s.sr.stop(); } catch (e) {}
+          try { if (s.rec) s.rec.stop(); } catch (e) {}
+        } else {
+          mockRun.speak.aiParts.push(l.spAiScore != null ? { part: partN2, score: l.spAiScore } : { part: partN2, score: null });
+          l.spAiScore = null; l.spRec = null; mockRun.speak.pi++; render();
+        }
+      }, "examClockPart");
+      wireExamSpeakPart(l, sps, { skipId: "mkSpPartNext", onSkip: function () {
+        examPartTimerStop();
+        mockRun.speak.aiParts.push(l.spAiScore != null ? { part: partN2, score: l.spAiScore } : { part: partN2, score: null });
+        l.spAiScore = null; l.spRec = null; mockRun.speak.pi++; render();
+      }, onScored: function (res) { if (res) l.spAiScore = res.score; } });
       return;
     }
-    app.innerHTML = skillHead("Thi thử " + mLabel + " — Nói (Tự đánh giá)", "Tự đánh giá chung cho cả 3 phần") + selfAssessHTML(RB_SPEAK_CRITERIA, "mk", l.self || {})
+    examTimerStop(); examPartTimerStop();
+    app.innerHTML = skillHead("Thi thử " + mLabel + " — Nói (Tự đánh giá)", "Tự đánh giá chung cho cả 3 phần" + (mockRun.speakTimedOut ? " — đã hết giờ cả bài nên tự nộp" : ""))
+      + (mockRun.speak.aiParts.some(function (p) { return p.score != null; }) ? '<div class="qblock"><p>AI chấm phát âm các Part: ' + mockRun.speak.aiParts.map(function (p) { return "Part " + p.part + ": " + (p.score != null ? p.score + "%" : "chưa chấm"); }).join(" · ") + ' <span class="mut">(Máy ước lượng)</span></p></div>' : '')
+      + selfAssessHTML(RB_SPEAK_CRITERIA, "mk", l.self || {})
       + '<div class="row"><button class="btn btn-primary" id="mkSNext">Xem bảng điểm thi thử</button></div>';
     wireBack();
-    wireSelfAssess(l.self || {});
+    if (!l.self) l.self = {};
+    wireSelfAssess(l.self);
     $("#mkSNext").onclick = function () {
       if (Object.keys(l.self || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí trước đã."); return; }
       mockRun.speak.band = selfBandOf(l.self);
@@ -4068,14 +4628,14 @@ function renderMockTest(app, l) {
     var overall = Math.round(((lb + rb + wb + sb) / 4) * 2) / 2;
     var tRow = function (label, ms, ref) {
       var mins = ms / 60000;
-      return '<p>' + label + ': ' + mockMin(ms) + ' phút (tham khảo ' + ref + ' phút)' + (mins <= ref ? ' — trong thời gian tham khảo.' : ' — quá thời gian tham khảo, chỉ để tham khảo.') + '</p>';
+      return '<p>' + label + ': ' + mockMin(ms) + ' phút (giới hạn ' + ref + ' phút)' + (mins <= ref ? ' — trong giới hạn.' : ' — quá giới hạn (bài đã tự nộp).') + '</p>';
     };
     if (l.savedSheet) {
       app.innerHTML = skillHead("Thi thử — Chặng " + mLabel, "Đã lưu mốc thi thử.") + '<div class="summarybox"><h2>Bảng điểm thi thử — Chặng ' + mLabel + '</h2>'
         + '<p>Nghe: <b>' + fmtBandComma(lb) + '</b> (' + mockRun.listen.c + '/' + mockRun.listen.n + ' câu)</p>'
         + '<p>Đọc: <b>' + fmtBandComma(rb) + '</b> (' + mockRun.read.c + '/' + mockRun.read.n + ' câu)</p>'
-        + '<p>Viết: <b>' + fmtBandComma(wb) + '</b> (Tự đánh giá)</p>'
-        + '<p>Nói: <b>' + fmtBandComma(sb) + '</b> (Tự đánh giá)</p>'
+        + '<p>Viết: <b>' + fmtBandComma(wb) + '</b> ' + (mockRun.write.ai ? '(Máy ước lượng)' : '(Tự đánh giá)') + '</p>'
+        + '<p>Nói: <b>' + fmtBandComma(sb) + '</b> (Tự đánh giá)' + (mockRun.speak.aiParts && mockRun.speak.aiParts.some(function (p) { return p.score != null; }) ? ' · AI phát âm: ' + mockRun.speak.aiParts.map(function (p) { return 'Part ' + p.part + ' ' + (p.score != null ? p.score + '%' : 'chưa chấm'); }).join(', ') + ' (Máy ước lượng)' : '') + '</p>'
         + '<p><b>Overall ước lượng: ' + fmtBandComma(overall) + '</b></p>'
         + '<p class="mut">' + RB_BAND_NOTE + ' Các câu sai đã vào Sổ lỗi sai để ôn lại.</p>'
         + '<div class="row" style="margin-top:10px"><button class="btn btn-primary" id="mkBack">Về Luyện tập</button></div></div>';
@@ -4086,8 +4646,8 @@ function renderMockTest(app, l) {
     app.innerHTML = skillHead("Thi thử — Chặng " + mLabel, "Bảng điểm (xem lại trước khi lưu)") + '<div class="summarybox"><h2>Bảng điểm thi thử — Chặng ' + mLabel + '</h2>'
       + '<p>Nghe: <b>' + fmtBandComma(lb) + '</b> (' + mockRun.listen.c + '/' + mockRun.listen.n + ' câu)</p>'
       + '<p>Đọc: <b>' + fmtBandComma(rb) + '</b> (' + mockRun.read.c + '/' + mockRun.read.n + ' câu)</p>'
-      + '<p>Viết: <b>' + fmtBandComma(wb) + '</b> (Tự đánh giá)</p>'
-      + '<p>Nói: <b>' + fmtBandComma(sb) + '</b> (Tự đánh giá)</p>'
+      + '<p>Viết: <b>' + fmtBandComma(wb) + '</b> ' + (mockRun.write.ai ? '(Máy ước lượng)' : '(Tự đánh giá)') + '</p>'
+      + '<p>Nói: <b>' + fmtBandComma(sb) + '</b> (Tự đánh giá)' + (mockRun.speak.aiParts && mockRun.speak.aiParts.some(function (p) { return p.score != null; }) ? ' · AI phát âm: ' + mockRun.speak.aiParts.map(function (p) { return 'Part ' + p.part + ' ' + (p.score != null ? p.score + '%' : 'chưa chấm'); }).join(', ') + ' (Máy ước lượng)' : '') + '</p>'
       + '<p><b>Overall ước lượng: ' + fmtBandComma(overall) + '</b></p>'
       + tRow("Nghe", mockRun.times.listen || 0, 30) + tRow("Đọc", mockRun.times.read || 0, 60) + tRow("Viết", mockRun.times.write || 0, 60) + tRow("Nói", mockRun.times.speak || 0, 14)
       + '<p class="mut">' + RB_BAND_NOTE + ' Các câu sai đã vào Sổ lỗi sai để ôn lại.</p>'
