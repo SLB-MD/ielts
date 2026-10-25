@@ -58,14 +58,6 @@ p{margin:8px 0}
 .ph-btn.lock{opacity:.55}
 .ph-map{margin:10px 0}
 .ph-map summary{cursor:pointer;font-weight:700}
-.ph-arrow{font-size:22px;align-self:center}
-.jawline{margin:8px 0;font-size:14px}
-.jaw-segs i{display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--line2);margin-right:2px}
-.jaw-segs i.on{background:var(--amber)}
-.g-tile{border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:14px 10px;font-size:17px;cursor:pointer;min-width:110px;text-align:center}
-.g-tile.sel{border-color:var(--amber);border-width:2px;background:#FFFBEA}
-.g-tile.ok{border-color:var(--green);background:#EAF7F0;color:var(--green)}
-.g-tile.bad{border-color:var(--red);background:#FDECEA}
 .q-opt{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:12px;margin:8px 0;font-size:16px;cursor:pointer}
 .q-opt.ok{border-color:var(--green);background:#EAF7F0}
 .q-opt.bad{border-color:var(--red);background:#FDECEA}
@@ -460,7 +452,7 @@ function u8DailyHTML() {
     + '<p>Ví dụ: ' + esc(ph.ex) + '</p><p class="mut">' + esc(ph.exv) + '</p>'
     + '<p class="mut">Câu tự soạn, dùng được thật trong giao tiếp. Mỗi ngày đổi một câu.</p>'
     + '<div class="row"><button class="btn" data-u8speak="' + esc(ph.en) + '">🔊 Nghe đọc</button>'
-    + '<button class="btn btn-amber" data-u8savephrase="' + esc(ph.en) + '"' + (saved ? ' disabled' : '') + '>' + (saved ? 'Đã lưu vào Sổ từ/cụm' : 'Lưu vào Sổ từ/cụm để ôn SRS') + '</button></div></section>';
+    + '<button class="btn btn-amber" data-u8savephrase="' + esc(ph.en) + '"' + (saved ? ' disabled' : '') + '>' + (saved ? 'Đã lưu vào Sổ từ/cụm' : 'Lưu vào Sổ từ/cụm để ôn lại đúng ngày') + '</button></div></section>';
 }
 function u8ClassHTML() {
   normU8();
@@ -656,9 +648,8 @@ function applyLessonLayout(app) {
   } catch (e) {}
   var side = document.createElement("aside"); side.className = "lesson-side";
   side.innerHTML = '<div class="card"><h3>Đang học</h3><p><b>' + esc(title) + '</b></p><p class="mut">Cột chính giữ chiều rộng đọc thoải mái, không kéo chữ dài ra hai bên.</p></div>'
-    + '<div class="card"><h3>Điều hướng</h3><div class="row"><button class="btn" id="sideBack">← Quay lại</button><button class="btn" id="sideRoadmap">Bản đồ lộ trình</button><button class="btn" id="sideReview">Ôn tập</button></div><p class="mut">Cột phụ chỉ hiện trên màn hình lớn; điện thoại vẫn một cột như cũ.</p></div>';
+    + '<div class="card"><h3>Điều hướng</h3><div class="row"><button class="btn" id="sideRoadmap">Bản đồ lộ trình</button><button class="btn" id="sideReview">Ôn tập</button></div><p class="mut">Cột phụ chỉ hiện trên màn hình lớn; điện thoại vẫn một cột như cũ.</p></div>';
   app.appendChild(main); app.appendChild(side);
-  var b1 = side.querySelector("#sideBack"); if (b1) b1.onclick = backFromLesson;
   var b2 = side.querySelector("#sideRoadmap"); if (b2) b2.onclick = function () { go("roadmap"); };
   var b3 = side.querySelector("#sideReview"); if (b3) b3.onclick = function () { go("review"); };
   app.classList.add("lesson-view");
@@ -774,7 +765,7 @@ function pushShowTodayReminder() {
   if (!txt) return false;
   p.lastLocalDay = t;
   saveState();
-  pushLocalNotify("Nhắc học IELTS", txt);
+  pushLocalNotify("Nhắc học", txt);
   return true;
 }
 function pushServerCall(body) {
@@ -1128,7 +1119,7 @@ function viewMyPath(app) {
 function viewRoadmap(app) {
   var done = doneLearnCount(), total = learningSteps().length;
   var html = '<h2>Bản đồ</h2>';
-  html += '<section class="card" id="myPathLink"><h3>Lộ trình riêng của bạn</h3><p class="mut">Lộ trình riêng đã tách ra thành trang riêng — bấm vào là bắt đầu học ngay bước tiếp theo của riêng bạn.</p><button class="btn btn-primary" id="myPathGo">Mở lộ trình riêng</button></section>';
+  html += '<section class="card" id="myPathLink"><h3>Lộ trình riêng của bạn</h3><p class="mut">Lộ trình riêng đã tách ra thành trang riêng — bấm vào là bắt đầu học ngay bước tiếp theo của riêng bạn.</p><button class="btn" id="myPathGo">Mở lộ trình riêng</button></section>';
   html += '<section class="card"><h3>Sổ tay chương 1</h3><p><b>Mục tiêu:</b> ' + esc(RB_CH1_GUIDEBOOK.goal) + '</p>'
     + '<p><b>Ngữ pháp chính:</b> ' + esc(RB_CH1_GUIDEBOOK.grammar.join(" · ")) + '</p>'
     + '<p><b>Cụm câu then chốt:</b> ' + esc(RB_CH1_GUIDEBOOK.phrases.join(" · ")) + '</p>'
@@ -1140,7 +1131,7 @@ function viewRoadmap(app) {
       var open = gateOpen();
       html += '<div class="card" id="gateRow" style="margin:8px 0"><div class="row"><span class="num">' + (i + 1) + '.</span><b>' + esc(s.title) + '</b><span class="chip">' + esc(s.type) + '</span></div>'
         + '<p class="mut">Luật mở: bài kiểm tra mở khi bạn học xong ' + RB_CH1_GATE_NEED + '/' + total + ' bước (mốc 80% — chuẩn nội bộ của web, không phải chuẩn IELTS).</p>'
-        + '<button class="btn btn-primary" id="gateBtn" ' + (open ? "" : "disabled") + '>' + (state.testDone ? "Đã qua — làm lại" : open ? "Làm bài kiểm tra" : "Chưa mở") + '</button></div>';
+        + '<button class="btn" id="gateBtn" ' + (open ? "" : "disabled") + '>' + (state.testDone ? "Đã qua — làm lại" : open ? "Làm bài kiểm tra" : "Chưa mở") + '</button></div>';
       return;
     }
     var st = stepDone(s.id) ? "done" : (nextLearnStep() && nextLearnStep().id === s.id ? "cur" : "future");
@@ -1181,9 +1172,9 @@ function viewRoadmap(app) {
       + (gb ? '<p><b>Ngữ pháp chính:</b> ' + esc(gb.grammar.join(" · ")) + '</p><p><b>Cụm câu then chốt:</b> ' + esc(gb.phrases.join(" · ")) + '</p><p><b>Lỗi người Việt hay mắc:</b> ' + esc(gb.mistakes.join(" · ")) + '</p>' : '')
       + (isOpen ? '' : '<p class="mut">Chương này sắp mở — sổ tay này chỉ là định hướng, chưa có bài học bên trong.</p>') + '</details></section>';
   });
-  html += '<section class="card" id="bkRoadmapCard"><h3>📚 Nội dung mới theo nghiên cứu sách</h3><p class="mut">Nội dung tự soạn của web từ khoảng trống mà 86 sách không có đủ. Lỗi người Việt có ở các chặng từ Band 0 tới Band 6,5; ví dụ đời sống người Việt có ở Band 2,0 tới Band 6,0; sắc thái và phong cách chỉ ở chặng 7,5+ — không đưa xuống chặng thấp hơn. Mở ở tab Luyện tập.</p><button class="btn btn-primary" id="bkRoadmapGo">Mở ở tab Luyện tập</button></section>';
+  html += '<section class="card" id="bkRoadmapCard"><h3>📚 Nội dung mới theo nghiên cứu sách</h3><p class="mut">Nội dung tự soạn của web từ khoảng trống mà 86 sách không có đủ. Lỗi người Việt có ở các chặng từ Band 0 tới Band 6,5; ví dụ đời sống người Việt có ở Band 2,0 tới Band 6,0; sắc thái và phong cách chỉ ở chặng 7,5+ — không đưa xuống chặng thấp hơn. Mở ở tab Luyện tập.</p><button class="btn" id="bkRoadmapGo">Mở ở tab Luyện tập</button></section>';
   html += '<section class="card" id="clCanDo"><h3>Trang cấp độ — bạn làm được gì ở mỗi cấp</h3><p class="mut">Xem trước khi vào chặng: mỗi cấp ghi rõ năng lực làm được, không phải điểm số.</p>' + RB_CHAPTER_MAP.map(function (ch) { return '<p><b>' + esc(ch.band) + ' — ' + esc(ch.title) + ':</b> ' + esc(ch.can.join("; ")) + '</p>'; }).join("") + '</section>';
-  html += '<section class="card"><h3>Trò chuyện tự do với AI</h3><p class="mut">Bước sau các chương nói, chia 2 loại riêng: gõ tay (chỉ gõ chữ) và nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mở ngay qua Luyện tập → Nói.</p><div class="row"><button class="btn btn-primary" id="mapChatType">Mở trò chuyện gõ tay</button><button class="btn btn-primary" id="mapChatVoice">Mở trò chuyện nói live</button></div></section>';
+  html += '<section class="card"><h3>Trò chuyện tự do với AI</h3><p class="mut">Bước sau các chương nói, chia 2 loại riêng: gõ tay (chỉ gõ chữ) và nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mở ngay qua Luyện tập → Nói.</p><div class="row"><button class="btn" id="mapChatType">Mở trò chuyện gõ tay</button><button class="btn" id="mapChatVoice">Mở trò chuyện nói live</button></div></section>';
   app.innerHTML = html;
   $$("#roadmapBox .step-row[data-step]").forEach(function (btn) {
     btn.onclick = function () { openStep(stepById(btn.dataset.step)); };
@@ -1358,8 +1349,10 @@ function viewReview(app) {
     });
     html += '</section>';
   }
-  if (!cards.length && !hards.length) html += '<section class="card"><p>Hôm nay không có mục nào đến hạn ôn. Tốt lắm!</p></section>';
+  if (!cards.length && !hards.length) html += '<section class="card"><p>Hôm nay không có mục nào đến hạn ôn. Tốt lắm!</p><p class="mut">Hôm nay chưa có mục nào đến hạn ôn — cứ học tiếp, mục khó sẽ tự về đây đúng ngày.</p><div class="row"><button class="btn btn-primary" id="reviewNextStep">Học tiếp bước kế tiếp</button><button class="btn" id="reviewRoadmap">Xem lộ trình</button></div></section>';
   app.innerHTML = html;
+  var rns = $("#reviewNextStep"); if (rns) rns.onclick = function () { var ns = nextLearnStep(); if (ns) openStep(ns, { noNudge: true }); else go("home"); };
+  var rrm = $("#reviewRoadmap"); if (rrm) rrm.onclick = function () { go("roadmap"); };
   $$("[data-memo-save]").forEach(function (b) {
     b.onclick = function () {
       var k = b.dataset.memoSave, inp = $('[data-memo="' + k + '"]');
@@ -4406,8 +4399,6 @@ function mrMicStart(slot) {
     var ex = RB_PH_ALL_EXAMPLES[MR.sym] || "";
     var st = slot.querySelector(".mr-mic-status");
     if (st) st.textContent = "Mic đang thu — đọc to từ ví dụ “" + ex + "” trong lúc soi gương.";
-    var btn = slot.querySelector(".mr-mic");
-    if (btn) btn.textContent = "🎤 Mic kèm theo: Tắt";
     if (mrRecSupported()) {
       try {
         var mime = mrPickAudioMime();
@@ -4451,8 +4442,6 @@ function mrMicStart(slot) {
     MR.micOn = false; MR.micWant = false; MR.micDenied = true;
     var st2 = slot.querySelector(".mr-mic-status");
     if (st2) st2.textContent = "Chưa cho phép mic — gương chạy phần hình, chưa chấm tiếng.";
-    var b2 = slot.querySelector(".mr-mic");
-    if (b2) b2.textContent = "🎤 Mic kèm theo: Bật";
   });
 }
 function mrMicStopAll() {
@@ -5586,7 +5575,7 @@ function examPartClockBlock(minutes) {
   return '<div class="qblock"><b>⏱ Đồng hồ Part này: <span id="examClockPart">Còn ' + examClockText(minutes * 60000) + '</span></b></div>';
 }
 /* Kiểm tra đã đăng nhập chưa mà KHÔNG gọi mạng (getSession chỉ đọc phiên đã lưu trên máy).
-   Dùng để chặn gọi AI khi chưa đăng nhập: chưa đăng nhập thì chỉ tự đánh giá / ước lượng tại chỗ. */
+   Dùng để chặn gọi AI khi chưa đăng nhập: chưa đăng nhập thì AI chấm không chạy, chỉ ước lượng tại chỗ. */
 function examHasSession() {
   return new Promise(function (resolve) {
     try {
@@ -5828,8 +5817,8 @@ function phasePickBandIdx(arr, phase) {
 /* ---------- Ghi âm + AI chấm Nói trong thi (25/10) ---------- */
 /* AI chấm phát âm dùng đúng hàm callPronounce đã có (functions/v1/pronounce + JWT).
    Hàm pronounce chỉ trả điểm phát âm từng chữ, KHÔNG trả 4 tiêu chí Nói — nên band
-   4 tiêu chí vẫn lấy từ tự đánh giá (ghi rõ "Tự đánh giá"), AI chỉ chấm phát âm
-   từng câu/từng chữ đi kèm. Không tự suy 4 tiêu chí từ điểm phát âm. */
+   4 tiêu chí do AI chấm (mode speaking), AI phát âm từng chữ đi kèm.
+   Không tự suy 4 tiêu chí từ điểm phát âm. */
 function examSpeakPartHTML(script, opts) {
   return '<div class="qblock">' + speakLinesHTML(script)
     + '<p class="mut">Chỉ có 1 nút duy nhất dưới đây, đổi nhãn theo từng bước: bấm để bắt đầu ghi âm, bấm lại để dừng và chấm, chấm xong bấm tiếp để sang AI chấm 4 tiêu chí. Bài nói mẫu của giám khảo giữ nguyên phía trên để đối chiếu.</p>'
@@ -6552,12 +6541,12 @@ function renderPhaseSkill(app, l) {
     l.title = "Buổi thi đợt " + ph + " — Nói"; l.sub = sp.part + " · " + sp.topic;
     if (!l.spoken) {
       app.innerHTML = skillHead(l.title, l.sub)
-        + examClockBlock(EXAM_SPEAK_PART_MIN[partN], "Hết giờ Part này thì tự chuyển sang tự đánh giá.")
+        + examClockBlock(EXAM_SPEAK_PART_MIN[partN], "Hết giờ Part này thì tự chuyển sang AI chấm.")
         + examSpeakPartHTML(sp, { skipId: "psSpoken", continueLabel: "Tiếp tục → AI chấm 4 tiêu chí", failLabel: "Không ghi âm được → AI chấm 4 tiêu chí" });
       wireBack();
       $$("[data-speakline]").forEach(function (b) { b.onclick = function () { speak(sp.lines[+b.dataset.speakline].en); }; });
       examTimerStart("phase:" + ph + ":speaking", EXAM_SPEAK_PART_MIN[partN], function () {
-        toast("Đã hết giờ Part này, chuyển sang tự đánh giá.");
+        toast("Đã hết giờ Part này, chuyển sang AI chấm.");
         examTimerStop();
         var s = l.spRec;
         if (s && s.status === "rec") {
@@ -6791,13 +6780,13 @@ function renderMockTest(app, l) {
       var sps = mockRun.speak.scripts[spi];
       var partN2 = spi + 1;
       app.innerHTML = skillHead("Thi thử " + mLabel + " — Nói (Part " + partN2 + "/3)", "Ghi âm Part này rồi AI chấm phát âm từng chữ")
-        + examClockBlock(EXAM_MOCK_MIN.speaking, "Đồng hồ cả bài Nói — hết giờ tự chuyển sang tự đánh giá.")
+        + examClockBlock(EXAM_MOCK_MIN.speaking, "Đồng hồ cả bài Nói — hết giờ tự chuyển sang AI chấm.")
         + examPartClockBlock(EXAM_SPEAK_PART_MIN[partN2])
         + examSpeakPartHTML(sps, { skipId: "mkSpPartNext", continueLabel: (spi === 2 ? "Tiếp tục → AI chấm 4 tiêu chí" : "Tiếp tục → Part tiếp theo"), failLabel: (spi === 2 ? "Không ghi âm được → AI chấm 4 tiêu chí" : "Không ghi âm được → Part tiếp theo") });
       wireBack();
       $$("[data-speakline]").forEach(function (b) { b.onclick = function () { speak(sps.lines[+b.dataset.speakline].en); }; });
       examTimerStart("mock:" + l.milestone + ":speak", EXAM_MOCK_MIN.speaking, function () {
-        toast("Đã hết giờ cả bài Nói, chuyển sang tự đánh giá.");
+        toast("Đã hết giờ cả bài Nói, chuyển sang AI chấm.");
         examTimerStop(); examPartTimerStop();
         var s = l.spRec;
         if (s) { s.discarded = true; s.gen++; try { if (s.sr) s.sr.stop(); } catch (e) {} try { if (s.stream) s.stream.getTracks().forEach(function (tr) { tr.stop(); }); } catch (e) {} try { if (s.rec) s.rec.stop(); } catch (e) {} }
@@ -7259,7 +7248,7 @@ function gd23MidHTML() {
   var done = doneLearnCount(), total = learningSteps().length;
   if (gd23MidOpen()) return '<section class="card" id="midReviewCard"><h3>Ôn giữa chương</h3>'
     + '<p>Bạn đã học ' + done + '/' + total + ' bước — đã tới nửa chương 1 nên buổi ôn giữa chương đã mở. Trộn câu từ các bước bạn đã học xong.</p>'
-    + '<button class="btn btn-primary" id="midReviewBtn">Mở buổi ôn giữa chương</button></section>';
+    + '<button class="btn" id="midReviewBtn">Mở buổi ôn giữa chương</button></section>';
   return '<section class="card" id="midReviewCard"><h3>Ôn giữa chương</h3>'
     + '<p class="mut">Chưa mở — học được nửa chương 1 thì mở. Hiện tại bạn đã học ' + done + '/' + total + ' bước.</p></section>';
 }
