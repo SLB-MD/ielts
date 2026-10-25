@@ -8,9 +8,9 @@
 :root{--paper:#FFFBF2;--ink:#1F2430;--amber:#FFB800;--amber2:#FFC800;--coral:#FF6B4A;--coralD:#F0522E;--line:#E7DCC6;--line2:#F0E7D8;--green:#1E9E6A;--red:#D9534F;--mut:#6E6A61}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:17px;line-height:1.55}
-.wrap{max-width:100%;margin:0 auto;padding:12px 14px 40px}
+.wrap{max-width:100%;margin:0 auto;padding:12px 14px 96px}
 @media (min-width:900px){.wrap{max-width:1080px}}
-@media (min-width:1200px){.wrap{max-width:min(1360px,94vw);padding:12px 24px 40px}}
+@media (min-width:1200px){.wrap{max-width:min(1360px,94vw);padding:12px 24px 96px}}
 .qblock p{max-width:820px}
 .qblock .mut{max-width:820px}
 header h1{font-size:22px;margin:6px 0 2px}
@@ -66,6 +66,9 @@ p{margin:8px 0}
 .q-opt.ok{border-color:var(--green);background:#EAF7F0}
 .q-opt.bad{border-color:var(--red);background:#FDECEA}
 .q-opt:disabled{cursor:default}
+#tutorFloatBtn{position:fixed;right:16px;bottom:16px;width:52px;height:52px;border-radius:50%;border:2px solid var(--amber);background:var(--coral);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:45;box-shadow:0 2px 10px rgba(0,0,0,.25);padding:0}
+#tutorFloatPanel{position:fixed;right:16px;bottom:80px;width:min(360px,calc(100vw - 32px));max-height:70vh;overflow-y:auto;background:#fff;border:2px solid var(--amber);border-radius:18px;padding:14px;z-index:45;box-shadow:0 4px 20px rgba(0,0,0,.25)}
+#tutorFloatMsgs .chat-msg{font-size:15px}
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:15px;display:none;z-index:50;max-width:92vw;text-align:center}
 #previewBanner{background:#fff7dd;border-bottom:1px solid #ecd28a;color:#7a5b12;font-size:13px;text-align:center;padding:7px 12px}
 #nudgeModal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;z-index:60;padding:20px}
@@ -99,6 +102,15 @@ iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radiu
 <main id="app"></main>
 <div id="toast"></div>
 <div id="nudgeModal"><div class="box" id="nudgeBox"></div></div>
+</div>
+<button id="tutorFloatBtn" aria-label="Gia sư AI" title="Gia sư AI">🤖</button>
+<div id="tutorFloatPanel" aria-label="Khung trò chuyện với gia sư AI" style="display:none">
+<div class="row" style="justify-content:space-between"><b>Gia sư AI</b><button class="btn" id="tutorFloatClose">✕ Đóng</button></div>
+<p class="mut">Hỏi gia sư bằng tiếng Việt đơn giản. Gia sư dùng model gemini-3.5-flash qua Supabase, cần đăng nhập để dùng.</p>
+<div id="tutorFloatMsgs"></div>
+<div id="tutorFloatLogin" style="display:none"><p class="mut">Cần đăng nhập để dùng gia sư AI.</p><button class="btn btn-amber" id="tutorFloatToAccount">Sang thẻ Tài khoản</button></div>
+<div class="row" id="tutorFloatForm"><input type="text" id="tutorFloatInput" placeholder="Hỏi gia sư..." style="flex:1;min-width:0"><button class="btn btn-amber" id="tutorFloatSend">Gửi</button></div>
+<p class="mut" id="tutorFloatStatus"></p>
 </div>
 <script src="config.js"></script>
 <script src="content.js"></script>
@@ -761,6 +773,7 @@ function viewMine(app) {
   var aO = $("#accLogout"); if (aO) aO.onclick = function () { authDoSignOut(); };
   var aY = $("#accSync"); if (aY) aY.onclick = function () { syncPush().then(function (ok) { authState.sync = ok ? "Đã đồng bộ." : "Chưa đồng bộ được — tiến trình vẫn lưu trên máy."; render(); }); };
   var aP = $("#accPull"); if (aP) aP.onclick = function () { authPullAndMerge(); };
+  var aV = $("#accVipRequestBtn"); if (aV) aV.onclick = function () { sendVipRequest(); };
   $$("#ppCard [data-pace]").forEach(function (b) { b.onclick = function () { setPace(b.dataset.pace); }; });
   $$("#ppCard [data-ppstep]").forEach(function (b) { b.onclick = function () { openStep(stepById(b.dataset.ppstep), { noNudge: true }); }; });
   $$("#ppCard [data-ppreview]").forEach(function (b) { b.onclick = function () { go("review"); }; });
@@ -1161,7 +1174,8 @@ function accountCardHTML() {
     var vr = (state.vipRequests || []).slice(-1)[0];
     if (vr) h += '<p class="mut">Yêu cầu VIP gần nhất: ' + esc(vr.note || vr.status) + '</p>';
     h += '<p><input type="password" id="accNewPw" placeholder="Mật khẩu mới (từ 6 ký tự)"></p>'
-      + '<div class="row"><button class="btn" id="accChangePw">Đổi mật khẩu</button><button class="btn" id="accLogout">Đăng xuất</button><button class="btn" id="accSync">Đồng bộ ngay</button><button class="btn" id="accPull">Tải lại từ tài khoản</button></div>';
+      + '<div class="row"><button class="btn" id="accChangePw">Đổi mật khẩu</button><button class="btn" id="accLogout">Đăng xuất</button><button class="btn" id="accSync">Đồng bộ ngay</button><button class="btn" id="accPull">Tải lại từ tài khoản</button>' + (!authState.vip ? '<button class="btn" id="accVipRequestBtn">Yêu cầu VIP</button>' : '') + '</div>'
+      + (!authState.vip ? '<p class="mut">Bấm Yêu cầu VIP chỉ ghi lại yêu cầu để chủ web cấp tay — tài khoản vẫn là Thường cho tới khi được cấp, sau khi được cấp thì bấm Tải lại từ tài khoản để hiện VIP.</p>' : '');
   }
   h += '</section>';
   return h;
@@ -1288,6 +1302,65 @@ function callAiTutorChat(messages) {
     }, function () { reject(loginMsg); });
   });
 }
+/* ---------- ICON GIA SU AI NOI (25/10): them loi vao, khong thay the cac loi cu ----------
+   Icon + panel nam NGOAI #app nen render() doi tab/bai hoc khong xoa chung.
+   Dong panel chi an panel, khong goi render(), khong doi curLesson -> khong mat bai dang lam.
+   Tro chuyen dung callAiTutorChat (ai-tutor mode chat, can JWT); chua dang nhap thi
+   chi hien khoi dang nhap + nut sang the Tai khoan, khong tu bia cau tra loi. */
+var tutorFloatMsgs = [];
+function tutorFloatRenderMsgs() {
+  var box = $("#tutorFloatMsgs"); if (!box) return;
+  if (!tutorFloatMsgs.length) { box.innerHTML = '<p class="mut">Ví dụ: "Giải thích giúp tôi thì hiện tại đơn" hoặc "Sửa giúp tôi câu này".</p>'; return; }
+  box.innerHTML = tutorFloatMsgs.map(function (m) {
+    return '<div class="chat-msg ' + (m.role === "user" ? "user" : "ai") + '">' + esc(m.text) + '</div>';
+  }).join("");
+}
+function tutorFloatOpen() {
+  var panel = $("#tutorFloatPanel"); if (!panel) return;
+  var logged = false;
+  try { logged = !!(typeof authState !== "undefined" && authState.user); } catch (e) {}
+  var loginBox = $("#tutorFloatLogin"), form = $("#tutorFloatForm");
+  if (loginBox) loginBox.style.display = logged ? "none" : "block";
+  if (form) form.style.display = logged ? "flex" : "none";
+  tutorFloatRenderMsgs();
+  panel.style.display = "block";
+}
+function tutorFloatClose() {
+  var panel = $("#tutorFloatPanel"); if (panel) panel.style.display = "none";
+}
+function tutorFloatSend() {
+  var inp = $("#tutorFloatInput"); if (!inp) return;
+  var text = (inp.value || "").trim(); if (!text) return;
+  tutorFloatMsgs.push({ role: "user", text: text });
+  inp.value = "";
+  tutorFloatRenderMsgs();
+  var sendBtn = $("#tutorFloatSend"), st = $("#tutorFloatStatus");
+  if (sendBtn) sendBtn.disabled = true;
+  if (st) st.textContent = "Gia sư đang trả lời...";
+  callAiTutorChat(tutorFloatMsgs.slice()).then(function (reply) {
+    tutorFloatMsgs.push({ role: "assistant", text: reply });
+    tutorFloatRenderMsgs();
+    if (st) st.textContent = "";
+  }, function (err) {
+    var msg = (err && err.message) || String(err || "");
+    if (st) st.textContent = msg;
+    if (msg.indexOf("Cần đăng nhập") >= 0) {
+      var loginBox = $("#tutorFloatLogin"), form = $("#tutorFloatForm");
+      if (loginBox) loginBox.style.display = "block";
+      if (form) form.style.display = "none";
+    }
+  }).then(function () { if (sendBtn) sendBtn.disabled = false; });
+}
+function wireTutorFloat() {
+  var btn = $("#tutorFloatBtn"); if (btn) btn.onclick = tutorFloatOpen;
+  var cls = $("#tutorFloatClose"); if (cls) cls.onclick = tutorFloatClose;
+  var send = $("#tutorFloatSend"); if (send) send.onclick = tutorFloatSend;
+  var inp = $("#tutorFloatInput");
+  if (inp) inp.addEventListener("keydown", function (e) { if (e.key === "Enter") tutorFloatSend(); });
+  var toAcc = $("#tutorFloatToAccount");
+  if (toAcc) toAcc.onclick = function () { tutorFloatClose(); go("mine"); };
+}
+
 /* Báo cáo phiên trò chuyện về máy chủ (Bùi gật 25/10: xây chỗ nhận báo cáo phía máy chủ).
    Chỉ gửi khi đã đăng nhập, qua hàm chat-report (Supabase Edge Function, JWT như ai-tutor).
    Payload tối thiểu: lý do + ghi chú ngắn + thời điểm bắt đầu phiên.
@@ -5010,6 +5083,7 @@ function renderMockTest(app, l) {
 render();
 authRefresh().then(function () { render(); }, function () {});
 authWatch();
+wireTutorFloat();
 </script>
 </body>
 </html>
