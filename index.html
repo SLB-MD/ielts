@@ -146,7 +146,7 @@ function phDescFull(p) {
 }
 /* ---------- Store: một nguồn số liệu duy nhất ---------- */
 var LS_NEW = "ielts_rebuild_v1", LS_OLD = "ielts_standalone_v1";
-function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], chatStars: [], chatReports: [], chatVoicePrefs: {}, testDone: false, xpClaimed: {}, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {} }; }
+function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], chatStars: [], chatReports: [], chatVoicePrefs: {}, testDone: false, xpClaimed: {}, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {}, freeze: { count: 0, used: [], granted: [] } }; }
 function saveState() { try { localStorage.setItem(LS_NEW, JSON.stringify(state)); } catch (e) {} try { if (typeof authState !== "undefined" && authState.user) scheduleSyncPush(); } catch (e2) {} }
 function normHardFails(st) {
   /* Mục khó cũ chưa có số lần sai: mục từ Sổ lỗi sai (quiz/drill) vốn đã sai
@@ -191,9 +191,80 @@ function xpLevel(xp) {
   return { level: lv, next: next };
 }
 function streakDays() {
+  var counted = freezeCountedDays();
   var d = new Date(), n = 0;
-  while (true) { var k = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); if (state.checkin[k]) { n++; d.setDate(d.getDate() - 1); } else break; }
+  while (true) { var k = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); if (counted[k]) { n++; d.setDate(d.getDate() - 1); } else break; }
   return n;
+}
+/* ---------- DONG BANG CHUOI MIEN PHI (U2) ----------
+   Hoan toan mien phi, khong mua ban, khong tru XP/ngoc/tien.
+   - Cu 7 ngay chuoi lien tiep thi nhan 1 luot dong bang, toi da giu 3 luot.
+   - Lo ngay: tu dong dung luot dong bang neu du de lap kin TOAN BO khoang
+     ngay lo giua ngay cuoi cung da tinh va hom nay; neu khong du thi KHONG
+     tru luot nao ca va chuoi dut (khong phi luot cho chuoi da dut).
+   - Ngay da dong bang duoc tinh nhu ngay diem danh khi dem chuoi.
+   - Ngay chua toi khong bao gio sinh luot, khong dong bang lui qua gioi han. */
+var FREEZE_PER_STREAK = 7, FREEZE_MAX = 3;
+function normFreeze(st) {
+  if (!st.freeze || typeof st.freeze !== "object") st.freeze = { count: 0, used: [], granted: [] };
+  if (!(st.freeze.count >= 0)) st.freeze.count = 0;
+  if (!Array.isArray(st.freeze.used)) st.freeze.used = [];
+  if (!Array.isArray(st.freeze.granted)) st.freeze.granted = [];
+  st.freeze.used = st.freeze.used.filter(function (u) { return u && u.missed; }).map(function (u) { return { missed: u.missed, at: u.at || u.missed }; });
+}
+function freezeCountedDays() {
+  var out = {};
+  Object.keys(state.checkin || {}).forEach(function (k) { out[k] = true; });
+  normFreeze(state);
+  state.freeze.used.forEach(function (u) { out[u.missed] = true; });
+  return out;
+}
+function freezeStatusHTML() {
+  normFreeze(state);
+  var f = state.freeze;
+  var held = "";
+  if (f.used.length) {
+    var last = f.used[f.used.length - 1];
+    held = '<p class="mut">Chuỗi đang được đóng băng giữ — ngày lỡ gần nhất đã giữ: ' + esc(last.missed) + '.</p>';
+  }
+  var hist = "";
+  if (f.used.length) {
+    hist = '<p class="mut">Lịch sử đóng băng đã dùng:</p><ul>' + f.used.slice().reverse().map(function (u) {
+      return '<li>Giữ ngày lỡ ' + esc(u.missed) + ' (ghi nhận ngày ' + esc(u.at) + ')</li>';
+    }).join("") + '</ul>';
+  } else {
+    hist = '<p class="mut">Chưa dùng lượt đóng băng nào.</p>';
+  }
+  return '<section class="card" id="freezeCard"><h3>❄️ Đóng băng chuỗi (miễn phí)</h3>'
+    + '<p>Bạn còn <b>' + f.count + ' lượt đóng băng</b> (tối đa 3 lượt). Cứ 7 ngày chuỗi liên tiếp thì nhận thêm 1 lượt — hoàn toàn miễn phí, không mua bán, không trừ XP.</p>'
+    + '<p class="mut">Lỡ 1 ngày mà còn lượt thì chuỗi tự giữ, không cần bấm gì. Nếu lỡ nhiều ngày hơn số lượt còn lại thì chuỗi sẽ đứt thật và lượt đóng băng được giữ lại, không trừ oan. Lỡ tiếp ngày nữa mà hết lượt thì chuỗi đứt.</p>'
+    + held + hist + '</section>';
+}
+function settleStreakFreeze() {
+  normFreeze(state);
+  var t = todayStr();
+  var counted = freezeCountedDays();
+  var before = Object.keys(counted).filter(function (k) { return k < t; }).sort();
+  if (!before.length) return false;
+  var anchor = before[before.length - 1];
+  var missed = [], d = addDaysStr(anchor, 1);
+  while (d < t) { if (!counted[d]) missed.push(d); d = addDaysStr(d, 1); }
+  if (!missed.length) return false;
+  if (missed.length > state.freeze.count) return false;
+  missed.forEach(function (m) { state.freeze.used.push({ missed: m, at: t }); });
+  state.freeze.count -= missed.length;
+  saveState();
+  return true;
+}
+function grantStreakFreeze(streakLen) {
+  normFreeze(state);
+  for (var m = FREEZE_PER_STREAK; m <= streakLen; m += FREEZE_PER_STREAK) {
+    if (state.freeze.granted.indexOf(m) < 0 && state.freeze.count < FREEZE_MAX) {
+      state.freeze.granted.push(m);
+      state.freeze.count++;
+      toast("Bạn nhận 1 lượt đóng băng chuỗi miễn phí (chuỗi " + m + " ngày)!");
+    }
+  }
 }
 function checkinToday() {
   var t = todayStr();
@@ -203,6 +274,7 @@ function checkinToday() {
   [[7, 50], [30, 150], [100, 400]].forEach(function (pair) {
     if (s >= pair[0] && !state.xpClaimed["streak" + pair[0]]) { state.xpClaimed["streak" + pair[0]] = true; awardXp(pair[1]); toast("Chuỗi " + pair[0] + " ngày! Cộng " + pair[1] + " XP."); }
   });
+  grantStreakFreeze(s);
   saveState(); render();
 }
 function dueCards() {
@@ -354,6 +426,7 @@ function applyLessonLayout(app) {
 }
 function go(tab) { examTimerStop(); examPartTimerStop(); curTab = tab; curLesson = null; render(); }
 function render() {
+  try { settleStreakFreeze(); } catch (e) {}
   try { var bn = $("#previewBanner"); if (bn) bn.textContent = authBannerText(); } catch (e) {}
   try {
     var rec = getRecoveryState();
@@ -364,7 +437,7 @@ function render() {
   } catch (e) {}
   $$("#tabBar .tab").forEach(function (b) { b.classList.toggle("on", b.dataset.tab === curTab); });
   var app = $("#app");
-  if (curLesson) { renderLesson(app); applyLessonLayout(app); return; }
+  if (curLesson) { renderLesson(app); applyLessonLayout(app); u7PositionUpdate(); return; }
   app.classList.remove("lesson-view");
   if (curTab === "home") viewHome(app);
   else if (curTab === "roadmap") viewRoadmap(app);
@@ -372,10 +445,65 @@ function render() {
   else if (curTab === "practice") viewPractice(app);
   else if (curTab === "review") viewReview(app);
   else viewMine(app);
+  u7PositionUpdate();
 }
 $("#tabBar").addEventListener("click", function (e) {
   var b = e.target.closest(".tab"); if (b) go(b.dataset.tab);
 });
+
+/* ---------- U7: DONG VI TRI + GAME CHOI THU ---------- */
+function u7PositionText() {
+  var total = 0, done = 0;
+  try { total = learningSteps().length; done = doneLearnCount(); } catch (e) {}
+  if (typeof curLesson !== "undefined" && curLesson) {
+    if (curLesson.step) {
+      var n = stepIdx(curLesson.step.id) + 1;
+      return "Vị trí: Chặng 1 · Bước " + n + "/" + total + " · " + curLesson.step.title;
+    }
+    var typeMap = { skillRead: "Bài Đọc", skillListen: "Bài Nghe ngắn", skillListenLong: "Bài Nghe dài", skillSpeak: "Bài Nói", skillRoleplay: "Luyện nói theo tình huống", skillWrite: "Bài Viết", skillDrill: "Luyện viết", phaseExam: "Buổi thi", mockTest: "Thi thử", test: "Bài kiểm tra cuối chương", chat: "Trò chuyện với AI", pron: "Bài phát âm", vocab: "Thẻ từ vựng", grammar: "Trạm ngữ pháp", quickcheck: "Kiểm tra nhanh", u7trial: "Chơi thử" };
+    var label = typeMap[curLesson.type] || "Bài học";
+    return "Vị trí: " + label + (curLesson.title ? " · " + curLesson.title : "") + " · Chặng 1 · " + done + "/" + total + " bước đã xong";
+  }
+  var tabMap = { home: "Màn chính", roadmap: "Bản đồ", mypath: "Lộ trình riêng", practice: "Luyện tập", review: "Ôn tập", mine: "Của tôi" };
+  return "Vị trí: " + (tabMap[curTab] || curTab) + " · Chặng 1 · " + done + "/" + total + " bước đã xong";
+}
+function u7PositionUpdate() {
+  var app = $("#app"); if (!app) return;
+  var el = $("#u7Position");
+  if (!el) { el = document.createElement("p"); el.id = "u7Position"; el.className = "mut"; }
+  if (app.firstChild !== el) app.insertBefore(el, app.firstChild);
+  el.textContent = u7PositionText();
+}
+function u7TrialQs() {
+  var set = (typeof CONTENT !== "undefined" && CONTENT.vocab) ? CONTENT.vocab[24] : null;
+  if (!set || !set.cards) return [];
+  var cards = set.cards.slice(0, 5);
+  return cards.map(function (c, qi) {
+    var others = set.cards.filter(function (x) { return x.w !== c.w; }).slice(0, 3);
+    var opts = [c.vi].concat(others.map(function (x) { return x.vi; }));
+    var rot = qi % 4, o2 = [];
+    for (var i = 0; i < 4; i++) o2.push(opts[(i + rot) % 4]);
+    return { w: c.w, q: "Từ này nghĩa là gì: " + c.w + "?", o: o2, a: o2.indexOf(c.vi) };
+  });
+}
+function renderU7Trial(app, l) {
+  if (!l.qs) { l.qs = u7TrialQs(); l.qi = 0; l.score = 0; l.picked = -1; l.done = false; }
+  var qs = l.qs;
+  var html = '<div class="lessonframe"><div class="row"><button class="btn" id="btnBack">← Quay lại</button><span class="chip cur">Chơi thử</span></div><div style="margin-top:6px"><b>Chơi thử ngay — nối từ nhanh</b><div class="mut">Đang chơi thử, chưa đăng nhập: ván này không lưu lên tài khoản. Đăng nhập rồi chơi lại để lưu tiến trình.</div></div></div>';
+  if (!l.done) {
+    var q = qs[l.qi];
+    html += '<div class="qblock"><p><b>Câu ' + (l.qi + 1) + '/' + qs.length + ': ' + esc(q.q) + '</b></p><div class="row">';
+    q.o.forEach(function (op, i) { html += '<button class="btn u7trial-opt" data-i="' + i + '">' + esc(op) + '</button>'; });
+    html += '</div>' + (l.picked >= 0 ? '<p class="why show">' + (l.picked === q.a ? 'Đúng rồi! ' : 'Chưa đúng — đáp án đúng là: ' + esc(q.o[q.a]) + '. ') + '</p><button class="btn btn-primary" id="u7trialNext">' + (l.qi + 1 >= qs.length ? 'Xem kết quả' : 'Câu tiếp theo') + '</button>' : '') + '</div>';
+  } else {
+    html += '<div class="summarybox"><h2>Kết quả chơi thử: ' + l.score + '/' + qs.length + ' đúng</h2><p class="mut">Ván thử không lưu lên tài khoản. Đăng nhập rồi vào Lộ trình để học tiếp và lưu tiến trình thật.</p><div class="row"><button class="btn btn-primary" id="u7trialAgain">Chơi lại ván thử</button><button class="btn" id="u7trialHome">Về màn chính</button></div></div>';
+  }
+  app.innerHTML = html; wireBack();
+  $$(".u7trial-opt").forEach(function (b) { b.onclick = function () { if (l.picked >= 0) return; l.picked = +b.dataset.i; if (l.picked === qs[l.qi].a) l.score++; render(); }; });
+  var nx = $("#u7trialNext"); if (nx) nx.onclick = function () { l.qi++; l.picked = -1; if (l.qi >= qs.length) l.done = true; render(); };
+  var ag = $("#u7trialAgain"); if (ag) ag.onclick = function () { l.qs = u7TrialQs(); l.qi = 0; l.score = 0; l.picked = -1; l.done = false; render(); };
+  var hm = $("#u7trialHome"); if (hm) hm.onclick = function () { backFromLesson(); };
+}
 
 /* ---------- MÀN CHÍNH ---------- */
 function resumeLine(step) {
@@ -396,6 +524,9 @@ function viewHome(app) {
   var pct = Math.round(done / total * 100);
   var due = dueCount();
   var html = '<p id="homeGreet">Chào bạn! Hôm nay mình học tiếp nhé.</p>';
+  if (done === 0) html += '<section class="card" id="u7Welcome"><h2>Chào bạn mới! Học ở đây như thế nào?</h2><p class="mut">Bạn không cần đăng nhập để xem thử. Bấm "Bắt đầu học" ở dưới là học ngay bước đầu tiên, không cần chọn gì thêm.</p>'
+    + '<details id="u7WhyCard"><summary><b>Vì sao học kiểu này nhớ lâu — bấm để mở</b></summary><p><b>Ôn đúng lúc sắp quên:</b> câu nào sai sẽ vào Sổ lỗi sai và hiện lại theo lịch 1-3-7-14-30 ngày, đúng 2 lần liên tiếp ở các lần ôn cách quãng mới xong hẳn.</p><p><b>Học theo dạng bài:</b> mỗi dạng bài có cách làm riêng trước, rồi mới luyện trộn nhiều dạng như đi thi thật.</p><p><b>Chẩn đoán trước khi học:</b> bài kiểm tra nhanh đầu chặng cho biết bạn yếu chỗ nào, để lộ trình xếp dạng bài yếu lên trước.</p></details>'
+    + '<details id="u7Faq"><summary><b>Câu hỏi thường gặp — bấm để mở</b></summary><p><b>Học có mất phí không?</b> Không — web này học miễn phí, không bán khóa học.</p><p><b>Mỗi ngày học bao lâu?</b> Khoảng 10-20 phút một buổi là đủ, học đều mỗi ngày quan trọng hơn học dồn một lúc.</p><p><b>Làm sai có sao không?</b> Không sao cả — câu sai vào Sổ lỗi sai để ôn lại, không bị trừ điểm hay khóa bài.</p><p><b>"Band ước lượng" nghĩa là gì?</b> Là điểm web tự tính để bạn tham khảo trình độ, không phải điểm thi thật — IELTS không công bố bảng quy đổi cố định.</p></details></section>';
   if (!ns) {
     html += '<section class="card" id="nextCard"><h2>Bạn đã học xong chương 1!</h2><p>Bạn đã đi hết ' + total + ' bước học của chương 1.</p>'
       + (state.testDone ? '<p>Bạn đã qua bài kiểm tra cuối chương 1. Hãy ôn tập mỗi ngày để nhớ lâu.</p><button class="btn btn-primary" id="nextBtn">Vào Ôn tập</button>'
@@ -411,6 +542,8 @@ function viewHome(app) {
   }
   html += '<section class="card"><div>Chương 1: Chào hỏi và 44 âm — <span id="chProgress">' + done + '/' + total + ' bước</span></div>'
     + '<div class="bar" style="margin-top:8px"><i id="chProgressBar" style="width:' + pct + '%"></i></div><div class="mut">' + pct + '% chương 1</div></section>';
+  html += '<section class="card" id="u7PlayCard"><h3>🎮 Chơi thử ngay</h3><p class="mut">Chơi thử một ván nối từ nhanh, không cần đăng nhập, không cần chọn gì thêm. Ván thử không lưu lên tài khoản.</p><button class="btn btn-amber" id="u7PlayNow">🎮 Chơi thử ngay</button></section>';
+  html += '<section class="card" id="homeFreezeStrip"><p>❄️ Đóng băng chuỗi: còn <b>' + (function () { normFreeze(state); return state.freeze.count; })() + ' lượt</b> (tối đa 3, miễn phí). Lỡ ngày mà còn lượt thì chuỗi tự giữ.</p></section>';
   html += '<section class="card"><h3>🗺️ Bản đồ 13 chương</h3><p class="mut">Từ Band 0 tới 7,5+ — chương 1 đang mở, các chương sau sắp mở theo thứ tự, cổng 80% (chuẩn nội bộ).</p><button class="btn" id="mapGo">Xem bản đồ 13 chương</button></section>';
   if (due > 0) html += '<section class="card" id="reviewStrip"><p>Có <b>' + due + ' mục đến hạn ôn</b> hôm nay — ôn đúng lúc sắp quên là nhớ lâu nhất.</p><button class="btn btn-amber" id="reviewGo">Ôn ngay</button></section>';
   html += '<p><button class="dimlink" id="quickCheckLink">Tôi đã biết chút ít — kiểm tra nhanh để gợi ý điểm bắt đầu</button> · <button class="dimlink" id="loginLink">Đăng nhập</button></p>';
@@ -424,6 +557,7 @@ function viewHome(app) {
   var rg = $("#reviewGo"); if (rg) rg.onclick = function () { go("review"); };
   $("#quickCheckLink").onclick = function () { openLesson({ type: "quickcheck" }); };
   $("#mapGo").onclick = function () { go("roadmap"); };
+  var pnHome = $("#u7PlayNow"); if (pnHome) pnHome.onclick = function () { openLesson({ type: "u7trial" }); };
   $("#loginLink").onclick = function () { go("mine"); };
 }
 
@@ -594,7 +728,12 @@ function viewRoadmap(app) {
       + '<p><b>Mục tiêu:</b> ' + esc(ch.goal) + '</p>'
       + '<p><b>Học xong làm được:</b> ' + esc(ch.can.join(" · ")) + '</p>'
       + (isOpen ? '<button class="btn btn-primary" id="mapCh1">Vào học chương 1</button>' : '<p class="mut">Cổng: mở khi bạn học xong 80% chương trước (chuẩn nội bộ).</p>')
-      + '</section>';
+      + '<details class="u7RoadNote" data-ch-note="' + esc(ch.band) + '"><summary><b>Ghi chú lộ trình — bấm để mở</b></summary>'
+      + '<p><b>Lý do xếp chương này:</b> ' + (ci === 0 ? 'Chương mở đầu: học từ cái quen thuộc nhất — chào hỏi, từ lớp học, 44 âm — rồi mới lên câu dài và bài khó.' : 'Chương này xếp sau chương ' + esc(RB_CHAPTER_MAP[ci - 1].band) + ': học xong chương trước mới đủ nền để học chương này, cổng mở ở mốc 80% (chuẩn nội bộ).') + '</p>'
+      + '<p><b>Mục tiêu:</b> ' + esc(ch.goal) + '</p>'
+      + '<p><b>Dạng bài yếu cần chú ý:</b> ' + (ci === 0 ? 'Xem Sổ lỗi sai — dạng nào sai nhiều thì ôn dạng đó trước, đừng học dàn trải.' : 'Khi tới chương này, ôn lại dạng bài yếu nhất ở chương trước theo Sổ lỗi sai trước khi học bài mới.') + '</p>'
+      + (isOpen ? '' : '<p class="mut">Chương này sắp mở — ghi chú này chỉ là định hướng, chưa có bài học bên trong.</p>')
+      + '</details></section>';
   });
   html += '<section class="card"><h3>Trò chuyện tự do với AI</h3><p class="mut">Bước sau các chương nói, chia 2 loại riêng: gõ tay (chỉ gõ chữ) và nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mở ngay qua Luyện tập → Nói.</p><div class="row"><button class="btn btn-primary" id="mapChatType">Mở trò chuyện gõ tay</button><button class="btn btn-primary" id="mapChatVoice">Mở trò chuyện nói live</button></div></section>';
   app.innerHTML = html;
@@ -621,7 +760,8 @@ function skillDoneMark(key) { return (state.skillDone && state.skillDone[key]) ?
 function viewPractice(app) {
   var c = skillCounts();
   var html = '<h2>Luyện tập</h2><p class="mut">Luyện riêng theo từng kỹ năng, đúng format thi. Trò chơi nằm trong này, không còn là cửa riêng.</p>'
-    + '<p class="mut">Mọi bài dưới đây đều từ kho tự soạn của web, xếp theo đúng định dạng thi IELTS. Số lượng đếm thật từ kho, không ghi số mẫu.</p>';
+    + '<p class="mut">Mọi bài dưới đây đều từ kho tự soạn của web, xếp theo đúng định dạng thi IELTS. Số lượng đếm thật từ kho, không ghi số mẫu.</p>'
+    + '<section class="card" id="u7PlayCardPractice"><h3>🎮 Chơi thử ngay</h3><p class="mut">Trò chơi nằm trong Luyện tập — bấm là chơi thử một ván nối từ nhanh, không cần đăng nhập. Ván thử không lưu lên tài khoản.</p><button class="btn btn-amber" id="u7PlayNowPractice">🎮 Chơi thử ngay</button></section>';
   var readLevels = ["Band 0", "Band 2.0", "Band 2.5", "Band 3.0", "Band 3.5", "Band 4.0", "Band 4.5", "Band 5.0", "Band 5.5", "Band 6.0", "Band 6.5", "Band 7.0", "Band 7.5+"];
   var readByLevel = {};
   CONTENT.reading.forEach(function (r, i) { (readByLevel[r.level] = readByLevel[r.level] || []).push(i); });
@@ -712,6 +852,7 @@ function viewPractice(app) {
   $$("[data-skilldrill]").forEach(function (b) { b.onclick = function () { openSkill("skillDrill", 0, { idx: +b.dataset.skilldrill }); }; });
   $$("[data-phaseexam]").forEach(function (b) { b.onclick = function () { openSkill("phaseExam", 0, { phase: +b.dataset.phaseexam }); }; });
   $$("[data-mocktest]").forEach(function (b) { b.onclick = function () { openSkill("mockTest", 0, { milestone: b.dataset.mocktest }); }; });
+  var pnPr = $("#u7PlayNowPractice"); if (pnPr) pnPr.onclick = function () { openLesson({ type: "u7trial" }); };
 }
 
 
@@ -796,6 +937,7 @@ function viewMine(app) {
     + '<button class="btn" id="goalPlus">+</button><span>phút/ngày</span></div>'
     + '<p><span class="chip">Chuỗi ' + streak + ' ngày</span> <button class="btn btn-amber" id="checkinBtn">' + (state.checkin[todayStr()] ? "Đã điểm danh" : "Điểm danh hôm nay (+5 XP)") + '</button></p>'
     + '<p class="mut">Với mục tiêu này, bạn còn khoảng ' + weeks + ' tuần nữa để xong chương 1 (ước tính). Web tĩnh không gửi thông báo khi bạn đóng trang — hãy tự mở web mỗi ngày để giữ chuỗi.</p></section>';
+  html += freezeStatusHTML();
   html += '<section class="card"><h3>Tiến trình của bạn</h3><p>Thẻ đã thuộc: ' + known + ' · Mục khó chưa xong: ' + hardN + ' · Từ đã lưu: ' + savedN + '</p>'
     + (state.migrated ? '<p class="mut">Đã chuyển tiến trình cũ của bạn sang bản mới; bản cũ vẫn còn nguyên để hoàn tác.</p>' : "") + '<p><button class="btn" id="quickCheckBtn">Kiểm tra trình độ (tùy chọn, không bắt buộc)</button></p></section>';
   var levelHTML = "";
@@ -924,6 +1066,13 @@ function mergeGuestIntoAccount(guest, acc) {
     merged[field] = out; added[field] = add;
   }
   ["progress", "cards", "hard", "checkin", "studyLog", "savedWords", "phDone", "pos"].forEach(mergeMap);
+  (function () {
+    var gf = (guest && guest.freeze) || { count: 0, used: [], granted: [] };
+    var af = (acc && acc.freeze) || null;
+    function unionUsed(a, b) { var out = (a || []).slice(), seen = {}; out.forEach(function (u) { seen[u.missed] = true; }); (b || []).forEach(function (u) { if (u && u.missed && !seen[u.missed]) { seen[u.missed] = true; out.push(u); } }); return out; }
+    function unionArr2(a, b) { var out = (a || []).slice(); (b || []).forEach(function (x) { if (out.indexOf(x) < 0) out.push(x); }); return out; }
+    merged.freeze = { count: af ? (af.count || 0) : (gf.count || 0), used: unionUsed(gf.used, af ? af.used : []), granted: unionArr2(gf.granted, af ? af.granted : []) };
+  })();
   merged.xp = (acc && acc.xp != null) ? acc.xp : (guest.xp || 0);
   merged.goal = (acc && acc.goal != null) ? acc.goal : (guest.goal || 30);
   merged.targetBand = (acc && acc.targetBand != null) ? acc.targetBand : (guest.targetBand || null);
@@ -960,6 +1109,7 @@ function syncPull(uid) {
           if (r.item_key === "hard" && r.state) acc.hard = r.state.map || {};
           if (r.item_key === "targetBand" && r.state) acc.targetBand = r.state.v;
           if (r.item_key === "checkin" && r.state) acc.checkin = r.state.days || {};
+          if (r.item_key === "freeze" && r.state) acc.freeze = { count: r.state.count || 0, used: r.state.used || [], granted: r.state.granted || [] };
           if (r.item_key === "vip" && r.state) acc.vip = !!r.state.v;
         } else if (r.section === "rb") {
           var k = r.item_key;
@@ -1012,6 +1162,7 @@ function syncPush() {
       row("meta", "hard", { map: state.hard || {} });
       if (state.targetBand != null) row("meta", "targetBand", { v: state.targetBand });
       row("meta", "checkin", { days: state.checkin || {} });
+      normFreeze(state); row("meta", "freeze", { count: state.freeze.count, used: state.freeze.used, granted: state.freeze.granted });
       row("rb", "progress", state.progress || {});
       row("rb", "cards", state.cards || {});
       row("rb", "phDone", state.phDone || {});
@@ -1564,6 +1715,7 @@ function renderLesson(app) {
   else if (l.type === "pron") renderPron(app, l);
   else if (l.type === "test") renderTest(app, l);
   else if (l.type === "chat") renderChat(app, l);
+  else if (l.type === "u7trial") renderU7Trial(app, l);
   else if (l.type === "quickcheck") renderQuickcheck(app, l);
   else if (l.type === "skillRead") renderSkillRead(app, l);
   else if (l.type === "skillListen") renderSkillListen(app, l);

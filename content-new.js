@@ -472,3 +472,60 @@ function skillCounts() {
     writeTotal: (CONTENT.writing || []).length, writeDrills: (CONTENT.writingDrills || []).length
   };
 }
+
+
+// ---------- U7-1. VIET LAI WHY 378 CAU DOC/NGHE (Doc 308 + Nghe dai 70) ----------
+// Kho cu nam trong content.js (khong sua file do). content-new.js nap sau
+// content.js nen viet lai why tai day, truoc khi bat ky man nao ve ra.
+// Cach viet lai (khong bia du kien moi): moi why moi lay dung bang chung
+// cua chinh cau do (doan trich trong why cu) + dap an dung cua chinh cau
+// do + quy tac theo dang cau, theo chuan: vi du truoc, quy tac sau,
+// tieng Viet don gian, khong mui ten, khong thuat ngu kho.
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  function u7WhyEvidence(oldWhy) {
+    if (!oldWhy) return "";
+    var m = oldWhy.match(/'([^']{6,})'/) || oldWhy.match(/"([^"]{6,})"/);
+    if (m) return m[1];
+    return oldWhy.split("\u2192")[0].replace(/^\u0110o\u1ea1n \d+:\s*/, "").replace(/^B\u00e0i vi\u1ebft:\s*/, "").trim();
+  }
+  function u7WhyAnswer(q) {
+    var opts = q.options || q.o;
+    if (opts && opts[q.a] !== undefined) return opts[q.a];
+    if (typeof q.answer === "string") return q.answer.split("|")[0];
+    if (typeof q.a === "string") return q.a;
+    return "";
+  }
+  function u7WhyRule(q) {
+    var t = q.type;
+    if (t === "TFNG" || t === "TF" || t === "YNNG") {
+      var opts = q.options || q.o || [];
+      var v = opts[q.a];
+      if (v === "True" || v === "Yes") return "C\u00e1ch l\u00e0m: \u0111\u1ed1i chi\u1ebfu t\u1eebng \u00fd trong c\u00e2u h\u1ecfi v\u1edbi \u0111\u00fang c\u00e2u trong b\u00e0i. B\u00e0i n\u00f3i \u0111\u00fang nh\u01b0 v\u1eady th\u00ec c\u00e2u n\u00e0y \u0111\u00fang.";
+      if (v === "False" || v === "No") return "C\u00e1ch l\u00e0m: \u0111\u1ed1i chi\u1ebfu t\u1eebng \u00fd trong c\u00e2u h\u1ecfi v\u1edbi \u0111\u00fang c\u00e2u trong b\u00e0i. B\u00e0i n\u00f3i ng\u01b0\u1ee3c l\u1ea1i th\u00ec c\u00e2u n\u00e0y sai.";
+      return "C\u00e1ch l\u00e0m: \u0111\u1ecdc k\u1ef9 c\u1ea3 b\u00e0i m\u00e0 kh\u00f4ng th\u1ea5y c\u00e2u n\u00e0o n\u00f3i t\u1edbi \u00fd n\u00e0y th\u00ec \u0111\u00e1p \u00e1n l\u00e0 kh\u00f4ng c\u00f3 th\u00f4ng tin \u2014 \u0111\u1eebng \u0111o\u00e1n \u0111\u00fang hay sai.";
+    }
+    if (t === "MC" || t === "SC") return "C\u00e1ch l\u00e0m: \u0111\u1ecdc k\u1ef9 c\u00e2u h\u1ecfi r\u1ed3i t\u00ecm \u0111\u00fang c\u00e2u trong b\u00e0i n\u00f3i gi\u1ed1ng \u0111\u00e1p \u00e1n. \u0110\u00e1p \u00e1n nghe quen nh\u01b0ng b\u00e0i kh\u00f4ng n\u00f3i th\u00ec kh\u00f4ng ch\u1ecdn.";
+    return "C\u00e1ch l\u00e0m: t\u00ecm \u0111\u00fang ch\u1ed7 trong b\u00e0i n\u00f3i t\u1edbi \u00fd n\u00e0y r\u1ed3i \u0111i\u1ec1n \u0111\u00fang t\u1eeb trong b\u00e0i, \u0111\u1eebng \u0111i\u1ec1n t\u1eeb m\u00ecnh \u0111o\u00e1n.";
+  }
+  function u7RewriteOneWhy(q) {
+    if (!q || q.whyU7) return;
+    var oldWhy = q.why || "";
+    var ans = u7WhyAnswer(q);
+    var opts = q.options || q.o || [];
+    if (opts[q.a] === "Not Given") {
+      q.whyOrig = oldWhy;
+      q.why = "V\u00ed d\u1ee5: \u0111\u1ecdc k\u1ef9 c\u1ea3 b\u00e0i c\u0169ng kh\u00f4ng th\u1ea5y c\u00e2u n\u00e0o n\u00f3i t\u1edbi \u00fd n\u00e0y. V\u00ec v\u1eady \u0111\u00e1p \u00e1n \u201cNot Given\u201d \u0111\u00fang. " + u7WhyRule(q);
+      q.whyU7 = true;
+      return;
+    }
+    var ev = u7WhyEvidence(oldWhy);
+    if (ev.charAt(ev.length - 1) === ".") ev = ev.slice(0, -1);
+    var ex = ev ? "trong b\u00e0i c\u00f3 c\u00e2u \u201c" + ev + "\u201d" : oldWhy;
+    q.whyOrig = oldWhy;
+    q.why = "V\u00ed d\u1ee5: " + ex + ". V\u00ec v\u1eady \u0111\u00e1p \u00e1n \u201c" + ans + "\u201d \u0111\u00fang. " + u7WhyRule(q);
+    q.whyU7 = true;
+  }
+  (CONTENT.reading || []).forEach(function (b) { (b.questions || []).forEach(u7RewriteOneWhy); });
+  (CONTENT.listeningPlus || []).forEach(function (b) { (b.questions || []).forEach(u7RewriteOneWhy); });
+})();
