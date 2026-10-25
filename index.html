@@ -187,7 +187,7 @@ function mouthFiguresHTML(p) {
 
 /* ---------- Store: một nguồn số liệu duy nhất ---------- */
 var LS_NEW = "ielts_rebuild_v1", LS_OLD = "ielts_standalone_v1";
-function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], chatStars: [], chatReports: [], testDone: false, xpClaimed: {}, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null }; }
+function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], chatStars: [], chatReports: [], testDone: false, xpClaimed: {}, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {} }; }
 function saveState() { try { localStorage.setItem(LS_NEW, JSON.stringify(state)); } catch (e) {} try { if (typeof authState !== "undefined" && authState.user) scheduleSyncPush(); } catch (e2) {} }
 function loadState() {
   var st = freshState();
@@ -268,7 +268,11 @@ function hardJudge(key, ok) {
 }
 function recordQuizError(lessonId, qi, q) {
   var key = "quiz:" + lessonId + ":" + qi;
-  if (!state.hard[key]) state.hard[key] = { kind: "quiz", lesson: lessonId, qi: qi, q: q.q, options: q.o, a: q.a, why: q.why, streak: 0, level: 0, due: addDaysStr(todayStr(), 1) };
+  // Câu điền đáp án (TCOMP/DLC/SAQ/COMP/SA) không có options: lưu đáp án đúng
+  // đầu tiên làm options để màn Ôn tập vẫn hiện được đáp án đúng như câu trắc nghiệm.
+  var opts = q.o || q.options || null, ans = q.a;
+  if (!opts && q.answer) { opts = [String(q.answer).split("|")[0]]; ans = 0; }
+  if (!state.hard[key]) state.hard[key] = { kind: "quiz", lesson: lessonId, qi: qi, q: q.q, options: opts, a: ans, why: q.why, streak: 0, level: 0, due: addDaysStr(todayStr(), 1) };
   saveState();
 }
 
@@ -555,29 +559,89 @@ function viewRoadmap(app) {
   });
 }
 
-/* ---------- LUYỆN TẬP (trò chơi nằm TRONG này) ---------- */
+/* ---------- LUYỆN TẬP (4 kỹ năng riêng + thi) ---------- */
+/* Cổng giáo trình: mọi bài dưới đây đều từ kho tự soạn của web (CONTENT),
+   xếp theo đúng định dạng thi IELTS — Đọc đủ 11 dạng, Nghe 4 Section, Nói
+   Part 1-2-3, Viết Task 1+2 — và đặt ở tab Luyện tập (luyện tự do, không khóa
+   theo chặng, đúng luật vượt bước tự do). Không có bài nào chép từ sách:
+   bài tập và lời văn đều là kho tự soạn có sẵn, chỉ nối vào khung mới. */
+function skillDoneMark(key) { return (state.skillDone && state.skillDone[key]) ? " ✓" : ""; }
 function viewPractice(app) {
-  var html = '<h2>Luyện tập</h2><p class="mut">Luyện riêng theo từng kỹ năng. Trò chơi nằm trong này, không còn là cửa riêng.</p>';
-  var groups = [
-    { t: "Từ vựng", items: [{ id: "letters", label: "Chữ cái A-Z (26 thẻ)" }, { id: "classroom", label: "Từ vựng lớp học đầu tiên (20 từ)" }] },
-    { t: "Ngữ pháp", items: [{ id: "gram0", label: "Tôi là... (I am...)" }, { id: "gram1", label: "Đây là... (This is...)" }, { id: "gram2", label: "Tôi tên là... (My name is...)" }] },
-    { t: "Phát âm", items: [{ id: "pron1", label: "Phát âm · 44 âm" }] },
-    { t: "Video", items: [{ id: "video", label: "Bài hát bảng chữ cái" }] },
-    { t: "Trò chơi", items: [{ id: "game", label: "Chơi để nhớ: nối chữ với từ" }] },
-    { t: "Đánh giá", items: [{ id: "test", label: "Bài kiểm tra cuối chương 1" }] }
-  ];
-  groups.forEach(function (g) {
-    html += '<section class="card"><h3>' + g.t + '</h3>';
-    g.items.forEach(function (it) {
-      html += '<button class="step-row" data-practice="' + it.id + '"><span>' + esc(it.label) + '</span><span class="st">→</span></button>';
-    });
-    html += '</section>';
+  var c = skillCounts();
+  var html = '<h2>Luyện tập</h2><p class="mut">Luyện riêng theo từng kỹ năng, đúng format thi. Trò chơi nằm trong này, không còn là cửa riêng.</p>'
+    + '<p class="mut">Mọi bài dưới đây đều từ kho tự soạn của web, xếp theo đúng định dạng thi IELTS. Số lượng đếm thật từ kho, không ghi số mẫu.</p>';
+  var readLevels = ["Band 0", "Band 2.0", "Band 2.5", "Band 3.0", "Band 3.5", "Band 4.0", "Band 4.5", "Band 5.0", "Band 5.5", "Band 6.0", "Band 6.5", "Band 7.0", "Band 7.5+"];
+  var readByLevel = {};
+  CONTENT.reading.forEach(function (r, i) { (readByLevel[r.level] = readByLevel[r.level] || []).push(i); });
+  html += '<section class="card"><h3>📖 Đọc — ' + c.readingItems + ' bài · ' + c.readingQs + ' câu · đủ 11 dạng chính thống</h3>'
+    + '<p class="mut">11 dạng: trắc nghiệm, đúng/sai/không có thông tin, hoàn thành câu tóm tắt, nối tiêu đề, có/không/không có thông tin theo tác giả, hoàn thành bảng, tìm thông tin theo đoạn, hoàn thành câu, nối đặc điểm, điền từ vào sơ đồ, trả lời ngắn. Mở một bài để đọc rồi làm câu hỏi ngay dưới bài.</p>';
+  readLevels.forEach(function (lv) {
+    var idxs = readByLevel[lv]; if (!idxs) return;
+    html += '<details style="margin-top:8px"><summary><b>' + esc(lv) + ' · ' + idxs.length + ' bài</b></summary><div class="row" style="margin-top:6px">';
+    idxs.forEach(function (i) { var r = CONTENT.reading[i]; html += '<button class="btn" data-skillread="' + i + '">' + esc(r.title) + ' (' + r.questions.length + ' câu)' + skillDoneMark("read:" + i) + '</button>'; });
+    html += '</div></details>';
   });
-  html += '<section class="card"><h3>Nói</h3>'
-    + '<button class="step-row" data-chat="type"><span><b>Trò chuyện gõ tay với AI</b> <span class="chip cur">Đang mở</span></span><span class="mut">chỉ gõ chữ, AI trả lời bằng chữ, không mic, không giọng nói</span></button>'
-    + '<button class="step-row" data-chat="voice"><span><b>Trò chuyện nói live với AI</b> <span class="chip cur">Đang mở</span></span><span class="mut">mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được</span></button>'
-    + '<p class="mut">Mô hình nguồn chính là AI trò chuyện liên tục (không phải người thật). AI tự nhận là AI trong lời chào đầu phiên. Sau phiên có transcript, câu hay dùng lại và ghi chú lỗi. Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản) — chưa đăng nhập thì web báo rõ, không bịa câu trả lời. 71 kịch bản nói (Part 1/2/3) và 20 roleplay của bản cũ sẽ chuyển sang bản mới ở giai đoạn 2.</p></section>';
-  html += '<p class="mut">Thư viện đầy đủ của bản cũ (81 bộ từ, 64 trạm ngữ pháp, 61 bài đọc...) sẽ chuyển sang bản mới ở giai đoạn 2.</p>';
+  html += '</section>';
+  html += '<section class="card"><h3>🎧 Nghe — ' + c.listenLongItems + ' bài dài · ' + c.listenLongQs + ' câu hỏi + ' + c.listenSingles + ' câu nghe ngắn</h3>'
+    + '<p class="mut">Bài nghe dài: nghe toàn bài rồi trả lời câu hỏi hiểu nội dung (trắc nghiệm, đúng/sai, điền từ, nối). Câu nghe ngắn: nghe một câu rồi chọn đúng câu vừa nghe trong 3 câu — dạng luyện nghe-chép và nhận diện câu của web cũ, không phải câu hỏi hiểu nội dung.</p>'
+    + '<details style="margin-top:8px"><summary><b>Bài nghe dài · ' + c.listenLongItems + ' bài · ' + c.listenLongQs + ' câu hỏi</b></summary><div class="row" style="margin-top:6px">';
+  var lpOrder = CONTENT.listeningPlus.map(function (r, i) { return i; }).sort(function (a, b) { var ba = bandSortVal(CONTENT.listeningPlus[a].band), bb = bandSortVal(CONTENT.listeningPlus[b].band); return ba - bb || a - b; });
+  lpOrder.forEach(function (i) { var r = CONTENT.listeningPlus[i];
+    html += '<button class="btn" data-skilllistenlong="' + i + '">' + esc(r.section) + ' — ' + esc(r.topic) + ' (' + r.questions.length + ' câu)' + skillDoneMark("listenLong:" + i) + '</button>';
+  });
+  html += '</div></details>';
+  ["Section 1", "Section 2", "Section 3", "Section 4"].forEach(function (sec) {
+    var idxs = []; CONTENT.listening.forEach(function (r, i) { if (r.section === sec) idxs.push(i); });
+    if (!idxs.length) return;
+    html += '<details style="margin-top:8px"><summary><b>' + esc(sec) + ' · ' + idxs.length + ' câu nghe ngắn</b></summary><div class="row" style="margin-top:6px">';
+    idxs.forEach(function (i) { var r = CONTENT.listening[i]; html += '<button class="btn" data-skilllisten="' + i + '">' + esc(r.topic) + skillDoneMark("listen:" + i) + '</button>'; });
+    html += '</div></details>';
+  });
+  html += '</section>';
+  html += '<section class="card"><h3>🗣️ Nói — ' + c.speakTotal + ' kịch bản (Part 1: ' + c.speakP1 + ' · Part 2: ' + c.speakP2 + ' · Part 3: ' + c.speakP3 + ') + ' + c.roleplay + ' tình huống nhập vai</h3>'
+    + '<p class="mut">Mỗi kịch bản: đọc hội thoại mẫu (giám khảo – thí sinh, kèm tiếng Việt), nghe từng câu, rồi làm câu hỏi từ vựng và cấu trúc rút ra từ chính bài mẫu. Nói Part 3 là thảo luận mở rộng, khó hơn Part 1.</p>';
+  [1, 2, 3].forEach(function (p) {
+    var idxs = []; CONTENT.speaking.forEach(function (s, i) { if (s.partNum === p) idxs.push(i); });
+    idxs.sort(function (a, b) { var ba = bandSortVal(CONTENT.speaking[a].band), bb = bandSortVal(CONTENT.speaking[b].band); return ba - bb || a - b; });
+    html += '<details style="margin-top:8px"><summary><b>Part ' + p + ' · ' + idxs.length + ' kịch bản</b></summary><div class="row" style="margin-top:6px">';
+    idxs.forEach(function (i) { var s = CONTENT.speaking[i]; html += '<button class="btn" data-skillspeak="' + i + '">' + esc(s.topic) + skillDoneMark("speak:" + i) + '</button>'; });
+    html += '</div></details>';
+  });
+  html += '<details style="margin-top:8px"><summary><b>Nhập vai · ' + c.roleplay + ' tình huống</b></summary><div class="row" style="margin-top:6px">';
+  CONTENT.roleplay.forEach(function (r, i) { html += '<button class="btn" data-skillroleplay="' + i + '">' + esc(r.title) + skillDoneMark("roleplay:" + i) + '</button>'; });
+  html += '</div></details>';
+  html += '<div class="row" style="margin-top:10px"><button class="btn btn-primary" data-chat="type">Trò chuyện gõ tay với AI — Đang mở</button><button class="btn btn-primary" data-chat="voice">Trò chuyện nói live với AI — Đang mở</button></div>'
+    + '<p class="mut">Trò chuyện tự do với AI: gõ tay (chỉ gõ chữ) hoặc nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Mô hình nguồn chính là AI trò chuyện liên tục (không phải người thật). Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p></section>';
+  html += '<section class="card"><h3>✍️ Viết — ' + c.writeTotal + ' bài (Task 1: ' + c.writeT1 + ' · Task 2: ' + c.writeT2 + ' · Thư và email: ' + c.writeMail + ') + ' + c.writeDrills + ' bài luyện viết từng bước</h3>'
+    + '<p class="mut">Mỗi bài viết đi theo 3 bước: viết bản nháp → tự chấm 4 tiêu chí + đối chiếu bài mẫu 2 cột → viết lại bản sửa (lưu cả hai bản). Task 2 nặng gấp đôi Task 1 khi tính band Viết. Thư và email theo format General Training Task 1, không phải Academic. Bài luyện từng bước: nối câu, paraphrase, sắp xếp câu — gõ câu của bạn rồi so với bài mẫu.</p>';
+  [["Task 1", function (w) { return w.type === "Task 1"; }], ["Task 2", function (w) { return w.type === "Task 2"; }], ["Thư và email (General Training Task 1)", function (w) { return w.type !== "Task 1" && w.type !== "Task 2"; }]].forEach(function (grp) {
+    var idxs = []; CONTENT.writing.forEach(function (w, i) { if (grp[1](w)) idxs.push(i); });
+    idxs.sort(function (a, b) { var ba = bandSortVal(CONTENT.writing[a].band), bb = bandSortVal(CONTENT.writing[b].band); return ba - bb || a - b; });
+    html += '<details style="margin-top:8px"><summary><b>' + grp[0] + ' · ' + idxs.length + ' bài</b></summary><div class="row" style="margin-top:6px">';
+    idxs.forEach(function (i) { var w = CONTENT.writing[i]; html += '<button class="btn" data-skillwrite="' + i + '">' + esc(w.title) + skillDoneMark("write:" + i) + '</button>'; });
+    html += '</div></details>';
+  });
+  html += '<details style="margin-top:8px"><summary><b>Luyện viết từng bước · ' + c.writeDrills + ' bài</b></summary><div class="row" style="margin-top:6px">';
+  CONTENT.writingDrills.forEach(function (d, i) { html += '<button class="btn" data-skilldrill="' + i + '">' + esc(d.title) + skillDoneMark("drill:" + i) + '</button>'; });
+  html += '</div></details></section>';
+  html += '<section class="card"><h3>🎓 Buổi thi kết thúc đợt</h3>'
+    + '<p class="mut">Cuối mỗi đợt học, thi 4 bài riêng từng kỹ năng (Nghe, Đọc, Nói, Viết) để biết trình độ mình đang ở đâu. Khác với bài kiểm tra cuối chương (mở bước tiếp theo) và khác với thi thử gộp 4 kỹ năng. Kết quả từng đợt lưu lại và hiện ở mục Của tôi → Đánh giá mức độ để so sánh các đợt với nhau.</p>'
+    + '<div class="row"><button class="btn btn-primary" data-phaseexam="1">Mở buổi thi — Đợt 1</button><button class="btn" data-phaseexam="2">Đợt 2</button><button class="btn" data-phaseexam="3">Đợt 3</button></div>'
+    + '<p class="mut">Mỗi đợt lấy bộ bài khác nhau trong kho, đợt càng sau bài càng khó dần (xếp theo band trong kho). Nghe/Đọc chấm theo đáp án; Nói/Viết tự đánh giá 4 tiêu chí (ghi rõ "Tự đánh giá", không phải điểm máy chấm).</p></section>';
+  html += '<section class="card"><h3>📝 Thi thử đúng format</h3>'
+    + '<p class="mut">Thi thử gộp 4 kỹ năng như một kỳ thi thật: Nghe 40 câu (30 phút), Đọc 3 bài (60 phút), Viết Task 1 + Task 2 (60 phút), Nói Part 1-2-3 (14 phút). Thời gian chỉ để tham khảo, không khóa bài khi hết giờ. Kết quả lưu thành mốc đã thi thử.</p>'
+    + '<div class="row"><button class="btn btn-primary" data-mocktest="4.5">Thi thử chặng 4,5</button><button class="btn" data-mocktest="5.5">Chặng 5,5</button><button class="btn" data-mocktest="6.5">Chặng 6,5</button><button class="btn" data-mocktest="7.5">Chặng 7,5+</button></div>'
+    + '<p class="mut">Chặng chọn bài có độ khó gần chặng đó nhất trong kho; bài nào thay thế vì kho thiếu đúng độ khó sẽ ghi rõ trong màn thi.</p></section>';
+  html += '<section class="card"><h3>Bổ trợ</h3>'
+    + '<button class="step-row" data-practice="letters"><span>Chữ cái A-Z (26 thẻ)</span><span class="st">→</span></button>'
+    + '<button class="step-row" data-practice="classroom"><span>Từ vựng lớp học đầu tiên (20 từ)</span><span class="st">→</span></button>'
+    + '<button class="step-row" data-practice="gram0"><span>Ngữ pháp: Tôi là... (I am...)</span><span class="st">→</span></button>'
+    + '<button class="step-row" data-practice="gram1"><span>Ngữ pháp: Đây là... (This is...)</span><span class="st">→</span></button>'
+    + '<button class="step-row" data-practice="gram2"><span>Ngữ pháp: Tôi tên là... (My name is...)</span><span class="st">→</span></button>'
+    + '<button class="step-row" data-practice="pron1"><span>Phát âm · 44 âm</span><span class="st">→</span></button>'
+    + '<button class="step-row" data-practice="video"><span>Bài hát bảng chữ cái</span><span class="st">→</span></button>'
+    + '<button class="step-row" data-practice="game"><span>Chơi để nhớ: nối chữ với từ</span><span class="st">→</span></button>'
+    + '<button class="step-row" data-practice="test"><span>Bài kiểm tra cuối chương 1</span><span class="st">→</span></button></section>';
   app.innerHTML = html;
   $$("[data-practice]").forEach(function (btn) {
     btn.onclick = function () { openStep(stepById(btn.dataset.practice)); };
@@ -585,7 +649,22 @@ function viewPractice(app) {
   $$("[data-chat]").forEach(function (btn) {
     btn.onclick = function () { openLesson({ type: "chat", chatMode: btn.dataset.chat }); };
   });
+  var openSkill = function (type, key, extra) {
+    lessonStart = Date.now(); runWrong = []; runFirstTry = {};
+    var l = { type: type }; if (extra) Object.keys(extra).forEach(function (k) { l[k] = extra[k]; });
+    openLesson(l);
+  };
+  $$("[data-skillread]").forEach(function (b) { b.onclick = function () { openSkill("skillRead", 0, { idx: +b.dataset.skillread }); }; });
+  $$("[data-skilllisten]").forEach(function (b) { b.onclick = function () { openSkill("skillListen", 0, { idx: +b.dataset.skilllisten }); }; });
+  $$("[data-skilllistenlong]").forEach(function (b) { b.onclick = function () { openSkill("skillListenLong", 0, { idx: +b.dataset.skilllistenlong }); }; });
+  $$("[data-skillspeak]").forEach(function (b) { b.onclick = function () { openSkill("skillSpeak", 0, { idx: +b.dataset.skillspeak }); }; });
+  $$("[data-skillroleplay]").forEach(function (b) { b.onclick = function () { openSkill("skillRoleplay", 0, { idx: +b.dataset.skillroleplay }); }; });
+  $$("[data-skillwrite]").forEach(function (b) { b.onclick = function () { openSkill("skillWrite", 0, { idx: +b.dataset.skillwrite }); }; });
+  $$("[data-skilldrill]").forEach(function (b) { b.onclick = function () { openSkill("skillDrill", 0, { idx: +b.dataset.skilldrill }); }; });
+  $$("[data-phaseexam]").forEach(function (b) { b.onclick = function () { openSkill("phaseExam", 0, { phase: +b.dataset.phaseexam }); }; });
+  $$("[data-mocktest]").forEach(function (b) { b.onclick = function () { openSkill("mockTest", 0, { milestone: b.dataset.mocktest }); }; });
 }
+
 
 /* ---------- ÔN TẬP: MỘT hàng đợi duy nhất ---------- */
 function viewReview(app) {
@@ -676,7 +755,27 @@ function viewMine(app) {
       + '<p>Chưa có bài kiểm tra — bạn chưa làm bài kiểm tra cuối chương nào.</p>'
       + '<p class="mut">Làm bài kiểm tra cuối chương 1 ở Lộ trình để xem mức độ của mình (band ước lượng + % từng phần + phần yếu nhất).</p></section>';
   }
-  html += levelHTML;
+  var phaseHTML = "";
+  var phList = state.phaseExams || [];
+  if (phList.length) {
+    var last = phList[phList.length - 1], prevPh = phList.length > 1 ? phList[phList.length - 2] : null;
+    var dPh = function (sk) { if (!prevPh) return ""; var d = Math.round((last[sk].band - prevPh[sk].band) * 10) / 10; return d > 0 ? " ▲ +" + d.toFixed(1).replace(".", ",") : (d < 0 ? " ▼ " + d.toFixed(1).replace(".", ",") : " = không đổi"); };
+    phaseHTML = '<section class="card" id="minePhase"><h3>Buổi thi kết thúc đợt — trình độ qua các đợt</h3>'
+      + '<p><b>Đợt ' + last.phase + ' (' + esc(last.date) + '):</b> Nghe ' + fmtBandComma(last.listening.band) + dPh("listening") + ' · Đọc ' + fmtBandComma(last.reading.band) + dPh("reading") + ' · Nói ' + fmtBandComma(last.speaking.band) + ' (Tự đánh giá)' + dPh("speaking") + ' · Viết ' + fmtBandComma(last.writing.band) + ' (Tự đánh giá)' + dPh("writing") + '</p>'
+      + (prevPh ? '<p class="mut">Đợt trước (Đợt ' + prevPh.phase + ', ' + esc(prevPh.date) + '): Nghe ' + fmtBandComma(prevPh.listening.band) + ' · Đọc ' + fmtBandComma(prevPh.reading.band) + ' · Nói ' + fmtBandComma(prevPh.speaking.band) + ' · Viết ' + fmtBandComma(prevPh.writing.band) + '</p>' : '<p class="mut">Đây là đợt đầu tiên — thi thêm đợt sau để so sánh trình độ thay đổi ra sao.</p>')
+      + '<p class="mut">' + RB_BAND_NOTE + '</p>'
+      + '<p><button class="btn" id="phaseAgainBtn">Mở buổi thi đợt ' + (last.phase + 1) + '</button></p></section>';
+  } else {
+    phaseHTML = '<section class="card" id="minePhase"><h3>Buổi thi kết thúc đợt</h3><p class="mut">Chưa có buổi thi nào. Vào Luyện tập → Buổi thi kết thúc đợt để thi 4 kỹ năng riêng và lưu kết quả theo đợt.</p></section>';
+  }
+  var mockHTML = "";
+  var mkList = state.mockTests || [];
+  if (mkList.length) {
+    mockHTML = '<section class="card" id="mineMock"><h3>Mốc đã thi thử</h3>' + mkList.map(function (m) {
+      return '<p>Chặng ' + esc(String(m.milestone).replace(".", ",")) + (m.milestone === "7.5" ? "+" : "") + ' (' + esc(m.date) + '): Nghe ' + fmtBandComma(m.listen) + ' · Đọc ' + fmtBandComma(m.read) + ' · Viết ' + fmtBandComma(m.write) + ' · Nói ' + fmtBandComma(m.speak) + ' · <b>Overall ' + fmtBandComma(m.overall) + '</b></p>';
+    }).join("") + '<p class="mut">' + RB_BAND_NOTE + '</p></section>';
+  }
+  html += levelHTML + phaseHTML + mockHTML;
   if (typeof authState !== "undefined" && authState.user) { html += personalPathCardHTML(); } else { html += '<section class="card" id="ppGuest"><h3>Lộ trình riêng — Cá nhân hóa cực chi tiết</h3><p class="mut">Lộ trình riêng mở khi bạn đăng nhập — khách dùng lộ trình 13 chặng chuẩn ở tab Lộ trình. Đăng nhập ở thẻ Tài khoản bên dưới để mở.</p></section>'; }
   html += '<section class="card"><h3>Bảng chú giải</h3>' + RB_GLOSSARY.map(function (g) { return '<p><b>' + esc(g.t) + ':</b> ' + esc(g.d) + '</p>'; }).join("") + '</section>';
   html += '<section class="card"><h3>Gia sư AI</h3><p>' + esc(RB_AI.tutor.label) + '.</p><p class="mut">Gia sư dùng model gemini-3.5-flash qua Supabase, cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p>'
@@ -692,6 +791,7 @@ function viewMine(app) {
   $("#tutorTry").onclick = function () { callAiTutor("Xin chào").then(function (r) { toast("Gia sư đã trả lời: " + String(r).slice(0, 80)); }, function (err) { toast(err); }); };
   var qcBtn = $("#quickCheckBtn"); if (qcBtn) qcBtn.onclick = function () { openLesson({ type: "quickcheck" }); };
   var lw = $("#levelWeakBtn"); if (lw) lw.onclick = function () { var lt2 = state.lastTest; var wp = lt2.parts.slice().sort(function (a, b) { return a.pct - b.pct; })[0]; if (typeof openStep === "function") { openStep(wp.name === "Chữ cái" ? stepById("letters") : stepById("classroom"), { noNudge: true }); } else { go("roadmap"); } };
+  var phBtn = $("#phaseAgainBtn"); if (phBtn) phBtn.onclick = function () { var all = state.phaseExams || []; var nx = all.length ? all[all.length - 1].phase + 1 : 1; openLesson({ type: "phaseExam", phase: nx }); };
   var aL = $("#accLogin"); if (aL) aL.onclick = function () { authDoSignIn(); };
   var aS = $("#accSignup"); if (aS) aS.onclick = function () { authDoSignUp(); };
   var aF = $("#accForgot"); if (aF) aF.onclick = function () { authDoResetPassword(); };
@@ -1222,6 +1322,16 @@ function renderLesson(app) {
   else if (l.type === "test") renderTest(app, l);
   else if (l.type === "chat") renderChat(app, l);
   else if (l.type === "quickcheck") renderQuickcheck(app, l);
+  else if (l.type === "skillRead") renderSkillRead(app, l);
+  else if (l.type === "skillListen") renderSkillListen(app, l);
+  else if (l.type === "skillListenLong") renderSkillListenLong(app, l);
+  else if (l.type === "skillSpeak") renderSkillSpeak(app, l);
+  else if (l.type === "skillRoleplay") renderSkillRoleplay(app, l);
+  else if (l.type === "skillWrite") renderSkillWrite(app, l);
+  else if (l.type === "skillDrill") renderSkillDrill(app, l);
+  else if (l.type === "phaseExam") renderPhaseExam(app, l);
+  else if (l.type === "phaseSkill") renderPhaseSkill(app, l);
+  else if (l.type === "mockTest") renderMockTest(app, l);
   else { curLesson = null; render(); }
 }
 function stepHeader(step, sub) { return lessonHead(step, sub); }
@@ -1402,22 +1512,63 @@ function renderGrammar(app, l) {
   $("#gramStart").onclick = function () { l.quiz = true; lessonStart = Date.now(); render(); };
 }
 
-/* ----- Máy chấm câu hỏi: luyện tập chặn-tới-khi-đúng, kiểm tra hiện đáp án rồi cho qua ----- */
+/* ----- Máy chấm câu hỏi MỞ RỘNG (luyện tập thi): trắc nghiệm + điền đáp án ----- */
+/* Chuẩn hóa mọi dạng câu hỏi của kho cũ về một hình duy nhất để máy chấm dùng chung:
+   - trắc nghiệm: q.o = q.o || q.options, q.a = chỉ số đáp án đúng;
+   - điền đáp án: q.answer = "đáp án 1|đáp án 2" (các cách viết chấp nhận, tách bằng |).
+   "Tôi không biết": bài luyện (practice/skill) = sai + vào Sổ lỗi sai + giữ lời giải,
+   chặn tới khi làm đúng; bài kiểm tra (phase/mock) = sai đúng nghĩa như kiểm tra cuối
+   chương (không điểm, vào Sổ lỗi sai, hiện đáp án rồi qua câu). */
+function normSkillQ(q) {
+  var o = q.o || q.options || null;
+  var ans = (q.answer !== undefined && q.answer !== null) ? String(q.answer) : null;
+  return { q: q.q, o: o, a: (o ? q.a : null), answer: ans, why: q.why || "", type: q.type || "" };
+}
+function normAnsText(s) {
+  return String(s || "").toLowerCase().replace(/[’']/g, "'").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+}
+function textAnsOk(input, answer) {
+  var n = normAnsText(input);
+  if (!n) return false;
+  return String(answer).split("|").some(function (alt) { return normAnsText(alt) === n; });
+}
+function skillHead(title, sub) {
+  return '<div class="lessonframe"><div class="row"><button class="btn" id="btnBack">← Quay lại</button><span class="chip cur">' + esc(title) + '</span></div>' + (sub ? '<div style="margin-top:6px" class="mut">' + sub + '</div>' : "") + '</div>';
+}
 function renderQuizEngine(app, l, questions, mode, lessonId) {
+  var qs = (questions || []).map(normSkillQ);
   var step = l.step || { id: lessonId, title: "", type: "" };
+  var isSkillMode = (mode === "skill" || mode === "phase" || mode === "mock");
+  var head = isSkillMode ? skillHead(l.title || lessonId, l.sub || "") : stepHeader(step);
   var qi = l.qi || 0;
-  if (qi >= questions.length) {
-    var total = questions.length;
+  if (qi >= qs.length) {
+    var total = qs.length;
     var firstN = total - runWrong.length;
-    var pct = Math.round(firstN / total * 100);
+    var pct = total ? Math.round(firstN / total * 100) : 0;
     var wrongHTML = runWrong.length ? '<div class="sumcard"><b>Câu chưa vững (' + runWrong.length + '):</b>' + runWrong.map(function (i) {
-      var q = questions[i]; return '<p>· ' + esc(q.q) + '<br>Đáp án đúng: <b>' + esc(q.o[q.a]) + '</b> — ' + esc(q.why) + '</p>';
+      var q = qs[i];
+      var ans = q.o ? q.o[q.a] : String(q.answer).split("|")[0];
+      return '<p>· ' + esc(q.q) + '<br>Đáp án đúng: <b>' + esc(ans) + '</b> — ' + esc(q.why) + '</p>';
     }).join("") + '<p class="mut">Các câu này đã vào Sổ lỗi sai để ôn lại sau.</p></div>' : "";
     var stats = '<p>Kết quả: ' + firstN + '/' + total + ' câu đúng ngay lần đầu (' + pct + '%) · Thời gian học thật: ' + elapsedText() + '.</p>';
     if (mode === "practice") {
       finishStep(step.id);
       app.innerHTML = stepHeader(step) + finishSummaryHTML("Hoàn thành bài luyện!", stats, wrongHTML);
       wireBack(); wireNextStep();
+      $("#btnRedo").onclick = function () { l.qi = 0; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
+    } else if (mode === "skill") {
+      var was = !!(state.skillDone && state.skillDone[l.skillKey]);
+      if (!state.skillDone) state.skillDone = {};
+      state.skillDone[l.skillKey] = true; awardXp(was ? 5 : 10); saveState();
+      app.innerHTML = head + finishSummaryHTML("Hoàn thành bài luyện!", stats, wrongHTML);
+      wireBack();
+      var ns = $("#btnNextStep"); if (ns) { ns.textContent = "Về Luyện tập"; ns.onclick = function () { backFromLesson(); }; }
+      $("#btnRedo").onclick = function () { l.qi = 0; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
+    } else if (mode === "phase" || mode === "mock") {
+      if (typeof l.onDone === "function") { l.onDone({ firstN: firstN, total: total, wrong: runWrong.slice(), questions: qs }); return; }
+      app.innerHTML = head + finishSummaryHTML("Hoàn thành bài kiểm tra!", stats, wrongHTML);
+      wireBack();
+      var ns2 = $("#btnNextStep"); if (ns2) { ns2.textContent = "Về Luyện tập"; ns2.onclick = function () { backFromLesson(); }; }
       $("#btnRedo").onclick = function () { l.qi = 0; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
     } else {
       app.innerHTML = stepHeader(step) + finishSummaryHTML("Hoàn thành bài kiểm tra!", stats, wrongHTML);
@@ -1426,20 +1577,25 @@ function renderQuizEngine(app, l, questions, mode, lessonId) {
     }
     return;
   }
-  var q = questions[qi];
+  var q = qs[qi];
   var wrongs = l.wrongs || 0, revealed = !!l.revealed, answered = !!l.answered;
   /* "Tôi không biết" đã bấm thì đáp án hiện luôn sau khi vẽ lại (trước đây
      l.revealed được đặt nhưng không dùng để vẽ nên lời giải biến mất ngay);
      gợi ý sau câu sai cũng giữ lại thay vì bị lần vẽ lại xóa mất. */
-  var revealText = revealed ? "Đáp án đúng: " + q.o[q.a] + " — " + q.why + " — giờ hãy bấm vào đáp án đúng để đi tiếp." : "";
+  var revealText = revealed ? (q.o ? "Đáp án đúng: " + q.o[q.a] + " — " + q.why + " — giờ hãy bấm vào đáp án đúng để đi tiếp." : "Đáp án đúng: " + String(q.answer).split("|")[0] + " — " + q.why + " — giờ hãy gõ đúng đáp án để đi tiếp.") : "";
   var whyText = revealed ? revealText : (l.hint || "");
-  var html = stepHeader(step);
-  html += '<div class="qblock" id="quizBox"><div class="row"><span class="chip">Câu ' + (qi + 1) + '/' + questions.length + '</span></div>'
+  var html = head;
+  html += '<div class="qblock" id="quizBox"><div class="row"><span class="chip">Câu ' + (qi + 1) + '/' + qs.length + '</span></div>'
     + '<p><b>' + esc(q.q) + '</b></p>';
-  q.o.forEach(function (opt, i) {
-    html += '<button class="q-opt" data-i="' + i + '"' + (answered ? " disabled" : "") + '>' + esc(opt) + '</button>';
-  });
-  if (mode === "practice" && !answered && !revealed) html += '<button class="btn" id="btnDontKnow">Tôi không biết</button>';
+  if (q.o) {
+    q.o.forEach(function (opt, i) {
+      html += '<button class="q-opt" data-i="' + i + '"' + (answered ? " disabled" : "") + '>' + esc(opt) + '</button>';
+    });
+  } else {
+    html += '<input type="text" id="quizInp" placeholder="Gõ đáp án của bạn..." style="width:100%;padding:10px;margin:8px 0">'
+      + '<button class="btn btn-primary" id="quizSend">Trả lời</button>';
+  }
+  if ((mode === "practice" || mode === "skill" || mode === "phase" || mode === "mock") && !answered && !revealed) html += '<button class="btn" id="btnDontKnow">Tôi không biết</button>';
   html += '<div class="why' + (whyText ? ' show' : '') + '" id="quizWhy">' + esc(whyText) + '</div>'
     + '<button class="btn btn-primary" id="quizNext" style="display:none">Câu tiếp theo</button></div>';
   app.innerHTML = html;
@@ -1448,41 +1604,75 @@ function renderQuizEngine(app, l, questions, mode, lessonId) {
   var markWrong = function () {
     if (runFirstTry[qi] === undefined) { runFirstTry[qi] = false; if (runWrong.indexOf(qi) < 0) runWrong.push(qi); recordQuizError(lessonId, qi, q); }
   };
-  $$("#quizBox .q-opt").forEach(function (b) {
-    b.onclick = function () {
-      var i = +b.dataset.i;
-      if (mode === "test") {
-        if (i === q.a) { b.classList.add("ok"); if (runFirstTry[qi] === undefined) runFirstTry[qi] = true; }
-        else { b.classList.add("bad"); markWrong(); $$("#quizBox .q-opt")[q.a].classList.add("ok"); }
-        $$("#quizBox .q-opt").forEach(function (x) { x.disabled = true; });
-        whyEl.textContent = "Đáp án đúng: " + q.o[q.a] + " — " + q.why; whyEl.classList.add("show");
-        l.answered = true; $("#quizNext").style.display = "inline-block";
+  var showNext = function () { var nx0 = $("#quizNext"); if (nx0) nx0.style.display = "inline-block"; };
+  var finishOneShot = function () {
+    $$("#quizBox .q-opt").forEach(function (x) { x.disabled = true; });
+    var inp = $("#quizInp"); if (inp) inp.disabled = true;
+    var snd = $("#quizSend"); if (snd) snd.disabled = true;
+    var dkb = $("#btnDontKnow"); if (dkb) dkb.style.display = "none";
+    var ans = q.o ? q.o[q.a] : String(q.answer).split("|")[0];
+    whyEl.textContent = "Đáp án đúng: " + ans + " — " + q.why; whyEl.classList.add("show");
+    l.answered = true; showNext();
+  };
+  if (q.o) {
+    $$("#quizBox .q-opt").forEach(function (b) {
+      b.onclick = function () {
+        var i = +b.dataset.i;
+        if (mode === "phase" || mode === "mock" || mode === "test") {
+          if (i === q.a) { b.classList.add("ok"); if (runFirstTry[qi] === undefined) runFirstTry[qi] = true; }
+          else { b.classList.add("bad"); markWrong(); $$("#quizBox .q-opt")[q.a].classList.add("ok"); }
+          finishOneShot();
+          return;
+        }
+        if (i === q.a) {
+          b.classList.add("ok");
+          if (runFirstTry[qi] === undefined) runFirstTry[qi] = true;
+          whyEl.textContent = "Đúng rồi! " + q.why; whyEl.classList.add("show");
+          $$("#quizBox .q-opt").forEach(function (x) { x.disabled = true; });
+          l.answered = true; showNext();
+        } else {
+          b.classList.add("bad"); b.disabled = true; markWrong();
+          l.wrongs = (l.wrongs || 0) + 1;
+          /* Lưu gợi ý vào l.hint rồi vẽ lại: trước đây gán trực tiếp lên whyEl
+             rồi gọi render() nên gợi ý bị lần vẽ lại xóa mất, không bao giờ hiện. */
+          l.hint = l.wrongs === 1
+            ? "Gợi ý 1: đọc lại ví dụ trong bài rồi thử lại nhé."
+            : "Gợi ý 2: " + q.why + " — giờ hãy bấm vào đáp án đúng để đi tiếp.";
+          render();
+        }
+      };
+    });
+  } else {
+    var sndBtn = $("#quizSend");
+    if (sndBtn) sndBtn.onclick = function () {
+      var v = $("#quizInp") ? $("#quizInp").value : "";
+      if (mode === "phase" || mode === "mock" || mode === "test") {
+        if (textAnsOk(v, q.answer)) { if (runFirstTry[qi] === undefined) runFirstTry[qi] = true; whyEl.textContent = "Đúng rồi! " + q.why; }
+        else { markWrong(); whyEl.textContent = "Chưa đúng. Đáp án đúng: " + String(q.answer).split("|")[0] + " — " + q.why; }
+        whyEl.classList.add("show"); finishOneShot();
         return;
       }
-      if (i === q.a) {
-        b.classList.add("ok");
+      if (textAnsOk(v, q.answer)) {
         if (runFirstTry[qi] === undefined) runFirstTry[qi] = true;
         whyEl.textContent = "Đúng rồi! " + q.why; whyEl.classList.add("show");
-        $$("#quizBox .q-opt").forEach(function (x) { x.disabled = true; });
-        l.answered = true; $("#quizNext").style.display = "inline-block";
+        var inp2 = $("#quizInp"); if (inp2) inp2.disabled = true;
+        sndBtn.disabled = true; l.answered = true; showNext();
       } else {
-        b.classList.add("bad"); b.disabled = true; markWrong();
+        markWrong();
         l.wrongs = (l.wrongs || 0) + 1;
-        /* Lưu gợi ý vào l.hint rồi vẽ lại: trước đây gán trực tiếp lên whyEl
-           rồi gọi render() nên gợi ý bị lần vẽ lại xóa mất, không bao giờ hiện. */
-        l.hint = l.wrongs === 1
-          ? "Gợi ý 1: đọc lại ví dụ trong bài rồi thử lại nhé."
-          : "Gợi ý 2: " + q.why + " — giờ hãy bấm vào đáp án đúng để đi tiếp.";
+        if (l.wrongs === 1) { l.hint = "Gợi ý 1: đọc lại bài rồi thử lại nhé."; }
+        else { l.hint = "Gợi ý 2: Đáp án đúng là " + String(q.answer).split("|")[0] + " — " + q.why + " — giờ hãy gõ đúng đáp án để đi tiếp."; l.revealed = true; }
         render();
       }
     };
-  });
+  }
   var dk = $("#btnDontKnow");
   if (dk) dk.onclick = function () {
+    if (mode === "phase" || mode === "mock") { markWrong(); finishOneShot(); return; }
     /* "Tôi không biết" = sai: markWrong đã ghi câu vào runWrong + Sổ lỗi sai,
        điểm cuối bài trừ câu này; lời giải giữ lại qua l.revealed khi vẽ lại. */
     markWrong();
-    whyEl.textContent = "Đáp án đúng: " + q.o[q.a] + " — " + q.why + " — giờ hãy bấm vào đáp án đúng để đi tiếp.";
+    whyEl.textContent = (q.o ? "Đáp án đúng: " + q.o[q.a] : "Đáp án đúng: " + String(q.answer).split("|")[0]) + " — " + q.why + " — giờ hãy " + (q.o ? "bấm vào đáp án đúng" : "gõ đúng đáp án") + " để đi tiếp.";
     whyEl.classList.add("show");
     l.revealed = true; l.hint = ""; render();
   };
@@ -3269,6 +3459,609 @@ function renderQuickcheck(app, l) {
     finishQcQ();
   };
 }
+
+/* ---------- LUYỆN TẬP THI: 4 KỸ NĂNG RIÊNG (khôi phục kho cũ vào khung mới) ---------- */
+/* Cổng giáo trình (Bùi chốt 25/10): mọi bài dưới đây lấy từ kho tự soạn CONTENT,
+   không thêm bài tập/đoạn văn/câu hỏi nào mới; chỉ xếp lại theo đúng định dạng thi
+   (Đọc 11 dạng, Nghe 4 Section, Nói Part 1-2-3, Viết Task 1+2) và đúng vị trí
+   (tab Luyện tập, luyện tự do). Đối chiếu giáo trình: chuẩn cao nhất số 25
+   (Official Cambridge Guide) chốt phân loại dạng bài; số 65 xác nhận đủ 11 dạng Đọc;
+   số 49 xác nhận nhãn dạng Nghe + neo quy đổi; số 20 soi luồng Viết 3 bước
+   (Plan → Write → Revise); số 15 soi 4 tiêu chí Nói + Part 1→3 tăng dần.
+   Không đưa vào: bài mẫu/công thức của sách 39/59/68 (chỉ đối chiếu khung phân loại). */
+var RB_READ_TYPE_VN = { MC: "Trắc nghiệm", TFNG: "Đúng/Sai/Không có thông tin", SC: "Hoàn thành bản tóm tắt", MH: "Nối tiêu đề", YNNG: "Có/Không/Không có thông tin (theo tác giả)", TCOMP: "Hoàn thành câu/bảng", MINFO: "Tìm thông tin theo đoạn", MSEND: "Hoàn thành câu", MF: "Nối đặc điểm", DLC: "Điền từ vào sơ đồ", SAQ: "Trả lời ngắn" };
+function readTypesLine(r) {
+  var seen = {};
+  (r.questions || []).forEach(function (q) { seen[q.type] = true; });
+  return Object.keys(seen).map(function (t) { return RB_READ_TYPE_VN[t] || t; }).join(" · ");
+}
+function paraHTML(text) {
+  return String(text || "").split(/\n\s*\n/).map(function (p) { return '<p>' + esc(p) + '</p>'; }).join("");
+}
+function selfBandOf(sel) {
+  var vals = Object.keys(sel || {}).map(function (k) { return sel[k]; }).filter(function (v) { return typeof v === "number"; });
+  if (!vals.length) return null;
+  var avg = vals.reduce(function (a, b) { return a + b; }, 0) / vals.length;
+  return Math.round(avg * 2) / 2;
+}
+function selfAssessHTML(criteria, prefix, sel) {
+  var h = "";
+  criteria.forEach(function (cr) {
+    h += '<div class="qblock"><b>' + esc(cr.name) + '</b>'
+      + '<p class="mut">Band 5: ' + esc(cr.d5) + '</p><p class="mut">Band 6: ' + esc(cr.d6) + '</p><p class="mut">Band 7: ' + esc(cr.d7) + '</p>'
+      + '<div class="row">' + [4, 5, 6, 7].map(function (v) {
+        var lab = v === 4 ? "Chưa tới 5" : "Band " + v;
+        var on = sel && sel[cr.key] === v;
+        return '<button class="btn' + (on ? ' btn-primary' : '') + '" data-self="' + prefix + ':' + cr.key + '" data-v="' + v + '">' + lab + '</button>';
+      }).join("") + '</div></div>';
+  });
+  return h;
+}
+function wireSelfAssess(sel, done) {
+  $$("[data-self]").forEach(function (b) {
+    b.onclick = function () {
+      var parts = b.dataset.self.split(":");
+      sel[parts[1]] = +b.dataset.v;
+      $$("[data-self]").forEach(function (x) { if (x.dataset.self === b.dataset.self) x.classList.toggle("btn-primary", x === b); });
+      if (done) done();
+    };
+  });
+}
+function renderSkillRead(app, l) {
+  var r = CONTENT.reading[l.idx];
+  if (!r) { curLesson = null; render(); return; }
+  l.title = "Đọc — " + r.title; l.skillKey = "read:" + l.idx;
+  l.sub = r.topic + " · " + r.level + " · " + r.questions.length + " câu hỏi · Dạng: " + readTypesLine(r);
+  if (!l.quiz) {
+    app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock">' + paraHTML(r.text)
+      + '<p class="mut">Đọc kỹ bài rồi bấm "Làm bài" — câu hỏi hiện ngay dưới bài, bài đọc vẫn xem lại được trong lúc làm.</p>'
+      + '<button class="btn btn-primary" id="readStart">Làm bài (' + r.questions.length + ' câu)</button></div>';
+    wireBack();
+    $("#readStart").onclick = function () { l.quiz = true; lessonStart = Date.now(); runWrong = []; runFirstTry = {}; render(); };
+    return;
+  }
+  app.innerHTML = '<details style="margin-bottom:10px"><summary><b>Xem lại bài đọc</b></summary><div class="qblock">' + paraHTML(r.text) + '</div></details><div id="quizSlot"></div>';
+  renderQuizEngine($("#quizSlot"), l, r.questions, "skill", "read:" + l.idx);
+}
+function renderSkillListen(app, l) {
+  var item = CONTENT.listening[l.idx];
+  if (!item) { curLesson = null; render(); return; }
+  l.title = "Nghe — " + item.topic; l.skillKey = "listen:" + l.idx;
+  l.sub = item.section + " · Nghe một câu rồi chọn đúng câu vừa nghe trong 3 câu";
+  if (!l.quiz) {
+    app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock"><p>Bấm 🔊 Nghe để nghe câu, nghe kỹ rồi bấm "Chọn câu đã nghe" để làm bài.</p>'
+      + '<div class="row"><button class="btn btn-primary" id="lisPlay">🔊 Nghe câu</button><button class="btn btn-primary" id="lisStart">Chọn câu đã nghe</button></div>'
+      + '<p class="mut">3 lựa chọn gồm câu đúng và 2 câu khác cùng Section — đều lấy từ kho câu nghe của web, không bịa thêm.</p></div>';
+    wireBack();
+    $("#lisPlay").onclick = function () { speak(item.text); };
+    $("#lisStart").onclick = function () { l.quiz = true; lessonStart = Date.now(); runWrong = []; runFirstTry = {}; render(); };
+    return;
+  }
+  var same = [];
+  CONTENT.listening.forEach(function (x, i) { if (x.section === item.section && i !== l.idx) same.push(i); });
+  var opts = [item.text];
+  if (same.length) opts.push(CONTENT.listening[same[l.idx % same.length]].text);
+  if (same.length > 1) opts.push(CONTENT.listening[same[(l.idx + 3) % same.length]].text);
+  var pos = opts.length ? (l.idx % opts.length) : 0;
+  var ordered = opts.slice(); ordered.splice(0, 1); ordered.splice(pos, 0, item.text);
+  var q = { q: "Nghe kỹ rồi chọn đúng câu bạn vừa nghe trong 3 câu dưới đây.", o: ordered, a: pos, why: "Câu đúng thuộc chủ đề " + item.topic + " (" + item.section + ")." };
+  app.innerHTML = '<div class="row" style="margin-bottom:10px"><button class="btn btn-primary" id="lisAgain">🔊 Nghe lại câu</button></div><div id="quizSlot"></div>';
+  $("#lisAgain").onclick = function () { speak(item.text); };
+  renderQuizEngine($("#quizSlot"), l, [q], "skill", "listen:" + l.idx);
+}
+function renderSkillListenLong(app, l) {
+  var r = CONTENT.listeningPlus[l.idx];
+  if (!r) { curLesson = null; render(); return; }
+  l.title = "Nghe dài — " + r.topic; l.skillKey = "listenLong:" + l.idx;
+  var tfN = (r.questions || []).filter(function (q) { return q.type === "TF"; }).length;
+  l.sub = r.section + (r.band ? " · " + r.band : "") + " · " + r.questions.length + " câu hỏi hiểu nội dung" + (tfN ? " · có " + tfN + " câu đúng/sai (dạng luyện thêm — đề thi Listening chính thức không có dạng đúng/sai)" : "");
+  if (!l.quiz) {
+    app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock"><p>Bấm 🔊 Nghe toàn bài, nghe kỹ rồi bấm "Làm bài". Transcript để đối chiếu sau khi làm xong, không mở trước khi nghe.</p>'
+      + '<div class="row"><button class="btn btn-primary" id="lpPlay">🔊 Nghe toàn bài</button><button class="btn btn-primary" id="lpStart">Làm bài (' + r.questions.length + ' câu)</button></div></div>';
+    wireBack();
+    $("#lpPlay").onclick = function () { speak(r.text); };
+    $("#lpStart").onclick = function () { l.quiz = true; lessonStart = Date.now(); runWrong = []; runFirstTry = {}; render(); };
+    return;
+  }
+  app.innerHTML = '<div class="row" style="margin-bottom:10px"><button class="btn btn-primary" id="lpAgain">🔊 Nghe lại toàn bài</button></div>'
+    + '<details style="margin-bottom:10px"><summary><b>Transcript (mở để đối chiếu sau khi nghe)</b></summary><div class="qblock">' + paraHTML(r.text) + '</div></details><div id="quizSlot"></div>';
+  $("#lpAgain").onclick = function () { speak(r.text); };
+  renderQuizEngine($("#quizSlot"), l, r.questions, "skill", "listenLong:" + l.idx);
+}
+function speakLinesHTML(s) {
+  return s.lines.map(function (ln, i) {
+    return '<p><b>' + esc(ln.who) + ':</b> ' + esc(ln.en) + ' <button class="btn" data-speakline="' + i + '">🔊</button><br><span class="mut">' + esc(ln.vi) + '</span></p>';
+  }).join("");
+}
+function renderSkillSpeak(app, l) {
+  var s = CONTENT.speaking[l.idx];
+  if (!s) { curLesson = null; render(); return; }
+  l.title = "Nói — " + s.topic; l.skillKey = "speak:" + l.idx;
+  l.sub = s.part + (s.band ? " · " + s.band : "") + " · " + (s.quiz || []).length + " câu hỏi từ bài mẫu";
+  if (!l.quiz) {
+    app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock">' + speakLinesHTML(s)
+      + '<p class="mut">Nghe từng câu rồi nói nhại theo. Sau đó làm câu hỏi từ vựng và cấu trúc rút ra từ chính bài mẫu.</p>'
+      + '<button class="btn btn-primary" id="spStart">Làm câu hỏi (' + (s.quiz || []).length + ' câu)</button></div>';
+    wireBack();
+    $$("[data-speakline]").forEach(function (b) { b.onclick = function () { speak(s.lines[+b.dataset.speakline].en); }; });
+    $("#spStart").onclick = function () { l.quiz = true; lessonStart = Date.now(); runWrong = []; runFirstTry = {}; render(); };
+    return;
+  }
+  app.innerHTML = '<details open style="margin-bottom:10px"><summary><b>Xem lại bài mẫu</b></summary><div class="qblock">' + speakLinesHTML(s) + '</div></details>'
+    + '<p class="mut">Sau khi làm xong, hãy tự nói lại toàn bộ bài mẫu thành tiếng (không chấm điểm).</p><div id="quizSlot"></div>';
+  $$("[data-speakline]").forEach(function (b) { b.onclick = function () { speak(s.lines[+b.dataset.speakline].en); }; });
+  renderQuizEngine($("#quizSlot"), l, s.quiz || [], "skill", "speak:" + l.idx);
+}
+function renderSkillRoleplay(app, l) {
+  var r = CONTENT.roleplay[l.idx];
+  if (!r) { curLesson = null; render(); return; }
+  if (l.done) {
+    app.innerHTML = skillHead("Nhập vai — " + r.title, "") + finishSummaryHTML("Bạn đã luyện xong tình huống này!", '<p>Thời gian luyện: ' + elapsedText() + '. Hãy luyện lại với vai khác hoặc chọn tình huống khác trong Luyện tập → Nói.</p>', "");
+    wireBack();
+    var ns = $("#btnNextStep"); if (ns) { ns.textContent = "Về Luyện tập"; ns.onclick = function () { backFromLesson(); }; }
+    $("#btnRedo").onclick = function () { l.done = false; lessonStart = Date.now(); render(); };
+    return;
+  }
+  var turns = r.turns.map(function (t, i) {
+    if (t.from === "partner") return '<p><b>' + esc(r.partner) + ':</b> ' + esc(t.text) + ' <button class="btn" data-rpspeak="' + i + '">🔊</button></p>';
+    return '<p><b>Lượt của bạn:</b> ' + esc(t.prompt) + '</p>';
+  }).join("");
+  app.innerHTML = skillHead("Nhập vai — " + r.title, r.setting) + '<div class="qblock"><p><b>Mục tiêu:</b> ' + esc(r.goal) + '</p>' + turns
+    + '<p><b>Cụm câu dùng được:</b> ' + r.chunks.map(function (ch) { return esc(ch); }).join(" · ") + '</p>'
+    + '<p class="mut">Nói thành tiếng theo lượt của bạn, dùng cụm câu gợi ý. Tình huống này không chấm điểm — luyện nói tự do.</p>'
+    + '<button class="btn btn-primary" id="rpDone">Đã luyện xong</button></div>';
+  wireBack();
+  $$("[data-rpspeak]").forEach(function (b) { b.onclick = function () { speak(r.turns[+b.dataset.rpspeak].text); }; });
+  $("#rpDone").onclick = function () {
+    var was = !!(state.skillDone && state.skillDone["roleplay:" + l.idx]);
+    if (!state.skillDone) state.skillDone = {};
+    state.skillDone["roleplay:" + l.idx] = true; awardXp(was ? 5 : 10); saveState();
+    l.done = true; render();
+  };
+}
+function renderSkillWrite(app, l) {
+  var w = CONTENT.writing[l.idx];
+  if (!w) { curLesson = null; render(); return; }
+  var key = "write:" + l.idx;
+  var step = l.wstep || 0;
+  if (step === 3) {
+    var att = (state.writingAttempts || {})[key] || {};
+    app.innerHTML = skillHead("Viết — " + w.title, w.type + (w.band ? " · " + w.band : "")) + finishSummaryHTML("Bạn đã hoàn thành bài viết 3 bước!", '<p>Band tự đánh giá: <b>' + (att.band != null ? fmtBandComma(att.band) : "?") + '</b> <span class="mut">(Tự đánh giá — không phải điểm thi thật)</span></p><p class="mut">Cả hai bản đã lưu trong tiến trình của bạn.</p>', "");
+    wireBack();
+    var ns = $("#btnNextStep"); if (ns) { ns.textContent = "Về Luyện tập"; ns.onclick = function () { backFromLesson(); }; }
+    $("#btnRedo").onclick = function () { l.wstep = 0; l.draft = ""; l.rewrite = ""; l.self = {}; lessonStart = Date.now(); render(); };
+    return;
+  }
+  if (step === 0) {
+    app.innerHTML = skillHead("Viết — " + w.title, w.type + (w.band ? " · " + w.band : "") + " · Bước 1: Viết bản nháp") + '<div class="qblock"><p><b>Đề bài:</b> ' + esc(w.prompt) + '</p>'
+      + (w.dataDesc ? '<p class="mut">' + esc(w.dataDesc) + '</p>' : "")
+      + '<textarea id="wrDraft" rows="8" style="width:100%;padding:10px">' + esc(l.draft || "") + '</textarea>'
+      + '<div class="row" style="margin-top:8px"><button class="btn btn-primary" id="wrNext1">Xong bản nháp → Tự chấm</button></div></div>';
+    wireBack();
+    $("#wrNext1").onclick = function () { var v = $("#wrDraft").value; if (!v.trim()) { toast("Hãy viết vài câu trước đã."); return; } l.draft = v; l.wstep = 1; l.self = l.self || {}; render(); };
+    return;
+  }
+  if (step === 1) {
+    app.innerHTML = skillHead("Viết — " + w.title, w.type + " · Bước 2: Tự chấm 4 tiêu chí + đối chiếu bài mẫu") + '<div class="qblock"><p><b>Chọn mức cho từng tiêu chí (dựa vào mô tả Band 5/6/7):</b></p></div>'
+      + selfAssessHTML(RB_WRITE_CRITERIA, "wr", l.self || {})
+      + '<div class="qblock"><h3>Đối chiếu 2 cột</h3><div class="row"><div style="flex:1"><b>Bản của bạn</b><p>' + esc(l.draft || "") + '</p></div><div style="flex:1"><b>Bài mẫu</b><p>' + esc(w.model || "") + '</p></div></div>'
+      + (w.analysis ? '<p><b>Phân tích bài mẫu:</b> ' + esc(w.analysis) + '</p>' : "")
+      + (w.phrases ? '<p><b>Cụm câu dùng được:</b> ' + w.phrases.map(function (p) { return esc(p.en) + " (" + esc(p.vi) + ")"; }).join(" · ") + '</p>' : "")
+      + '<div class="row" style="margin-top:8px"><button class="btn btn-primary" id="wrNext2">Đã chấm xong → Viết lại bản sửa</button></div></div>';
+    wireBack();
+    wireSelfAssess(l.self || {});
+    $("#wrNext2").onclick = function () {
+      var b = selfBandOf(l.self || {});
+      if (b === null || Object.keys(l.self || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí trước đã."); return; }
+      l.selfBand = b; l.wstep = 2; render();
+    };
+    return;
+  }
+  app.innerHTML = skillHead("Viết — " + w.title, w.type + " · Bước 3: Viết lại bản sửa") + '<div class="qblock"><p><b>Band tự đánh giá bản nháp: ' + fmtBandComma(l.selfBand) + '</b> <span class="mut">(Tự đánh giá)</span></p><p>Viết lại bài, sửa theo những gì bạn vừa tự chấm:</p>'
+    + '<textarea id="wrRewrite" rows="8" style="width:100%;padding:10px">' + esc(l.rewrite || l.draft || "") + '</textarea>'
+    + '<div class="row" style="margin-top:8px"><button class="btn btn-primary" id="wrSave">Lưu bản sửa</button></div></div>';
+  wireBack();
+  $("#wrSave").onclick = function () {
+    var v = $("#wrRewrite").value; if (!v.trim()) { toast("Hãy viết bản sửa trước đã."); return; }
+    if (!state.writingAttempts) state.writingAttempts = {};
+    state.writingAttempts[key] = { draft: l.draft || "", rewrite: v, self: l.self || {}, band: l.selfBand, at: todayStr() };
+    var was = !!(state.skillDone && state.skillDone[key]);
+    if (!state.skillDone) state.skillDone = {};
+    state.skillDone[key] = true; awardXp(was ? 5 : 10); saveState();
+    l.wstep = 3; render();
+  };
+}
+function renderSkillDrill(app, l) {
+  var d = CONTENT.writingDrills[l.idx];
+  if (!d) { curLesson = null; render(); return; }
+  var key = "drill:" + l.idx;
+  if (l.shown) {
+    app.innerHTML = skillHead("Luyện viết — " + d.title, d.kind + (d.band ? " · " + d.band : "")) + '<div class="qblock"><p><b>Đề:</b> ' + esc(d.prompt) + '</p><p><b>Cho sẵn:</b> ' + esc(d.given) + '</p>'
+      + '<p><b>Câu của bạn:</b> ' + esc(l.typed || "") + '</p>'
+      + '<p><b>Bài mẫu:</b> ' + esc(d.model) + '</p>' + (d.note ? '<p class="mut">' + esc(d.note) + '</p>' : "")
+      + '<p>So câu của bạn với bài mẫu: ý có khớp không, từ nối và trật tự từ có đúng không?</p>'
+      + '<div class="row"><button class="btn btn-primary" id="drOk">Tôi làm đúng</button><button class="btn" id="drBad">Tôi làm chưa đúng</button></div></div>';
+    wireBack();
+    $("#drOk").onclick = function () {
+      var was = !!(state.skillDone && state.skillDone[key]);
+      if (!state.skillDone) state.skillDone = {};
+      state.skillDone[key] = true; awardXp(was ? 5 : 10); saveState();
+      app.innerHTML = skillHead("Luyện viết — " + d.title, "") + finishSummaryHTML("Làm đúng rồi!", '<p>Câu của bạn khớp với bài mẫu. Luyện tiếp bài khác trong Luyện tập → Viết nhé.</p>', "");
+      wireBack();
+      var ns = $("#btnNextStep"); if (ns) { ns.textContent = "Về Luyện tập"; ns.onclick = function () { backFromLesson(); }; }
+      $("#btnRedo").onclick = function () { l.shown = false; l.typed = ""; render(); };
+    };
+    $("#drBad").onclick = function () {
+      var hk = "drill:" + l.idx;
+      if (!state.hard[hk]) state.hard[hk] = { kind: "drill", lesson: key, qi: 0, q: d.prompt + " — Cho sẵn: " + d.given, options: [d.model], a: 0, why: d.note || "", streak: 0, level: 0, due: addDaysStr(todayStr(), 1) };
+      saveState();
+      toast("Đã vào Sổ lỗi sai — ôn lại theo lịch 1-3-7-14-30 ngày.");
+      l.shown = false; l.typed = ""; render();
+    };
+    return;
+  }
+  app.innerHTML = skillHead("Luyện viết — " + d.title, d.kind + (d.band ? " · " + d.band : "")) + '<div class="qblock"><p><b>Đề:</b> ' + esc(d.prompt) + '</p><p><b>Cho sẵn:</b> ' + esc(d.given) + '</p>'
+    + '<textarea id="drInp" rows="3" style="width:100%;padding:10px" placeholder="Gõ câu của bạn..."></textarea>'
+    + '<div class="row" style="margin-top:8px"><button class="btn btn-primary" id="drShow">So với bài mẫu</button></div></div>';
+  wireBack();
+  $("#drShow").onclick = function () { var v = $("#drInp").value; if (!v.trim()) { toast("Hãy gõ câu của bạn trước đã."); return; } l.typed = v; l.shown = true; render(); };
+}
+
+
+/* ---------- BUỔI THI KẾT THÚC ĐỢT (4 bài riêng từng kỹ năng) ---------- */
+/* Khác bài kiểm tra cuối chương (mở bước tiếp theo) và khác thi thử gộp 4 kỹ
+   năng. Mỗi đợt lấy bộ bài khác nhau trong kho, xoay vòng theo số đợt.
+   Nghe/Đọc chấm theo đáp án (quy về thang 40 rồi tra bảng band ước lượng);
+   Nói/Viết tự đánh giá 4 tiêu chí (ghi rõ "Tự đánh giá"). */
+var phaseRun = null;
+function phasePick(arr, phase) { return arr[(phase - 1) % arr.length]; }
+function phasePickBandIdx(arr, phase) {
+  var order = arr.map(function (x, i) { return i; }).sort(function (a, b) { var ba = bandSortVal(arr[a].band || arr[a].level), bb = bandSortVal(arr[b].band || arr[b].level); return ba - bb || a - b; });
+  return order[(phase - 1) % order.length];
+}
+function renderPhaseExam(app, l) {
+  if (!phaseRun || phaseRun.phase !== l.phase) phaseRun = { phase: l.phase, results: {} };
+  if (l.saved) {
+    var all = state.phaseExams || [];
+    var rec = all[all.length - 1];
+    var prev = all.length > 1 ? all[all.length - 2] : null;
+    var dl = function (sk) { if (!prev) return ""; var d = Math.round((rec[sk].band - prev[sk].band) * 10) / 10; return d > 0 ? " ▲ +" + d.toFixed(1).replace(".", ",") : (d < 0 ? " ▼ " + d.toFixed(1).replace(".", ",") : " = không đổi"); };
+    app.innerHTML = skillHead("Buổi thi kết thúc đợt — Đợt " + l.phase, "Đã lưu kết quả đợt này.") + '<div class="summarybox"><h2>Kết quả đợt ' + l.phase + ' (' + esc(rec.date) + ')</h2>'
+      + '<p>Nghe: <b>' + fmtBandComma(rec.listening.band) + '</b> (' + rec.listening.c + '/' + rec.listening.n + ' câu)' + dl("listening") + '</p>'
+      + '<p>Đọc: <b>' + fmtBandComma(rec.reading.band) + '</b> (' + rec.reading.c + '/' + rec.reading.n + ' câu)' + dl("reading") + '</p>'
+      + '<p>Nói: <b>' + fmtBandComma(rec.speaking.band) + '</b> (Tự đánh giá)' + dl("speaking") + '</p>'
+      + '<p>Viết: <b>' + fmtBandComma(rec.writing.band) + '</b> (Tự đánh giá)' + dl("writing") + '</p>'
+      + '<p class="mut">' + RB_BAND_NOTE + '</p>'
+      + '<div class="row" style="margin-top:10px"><button class="btn btn-primary" id="phNext">Mở buổi thi đợt ' + (l.phase + 1) + '</button><button class="btn" id="phBack">Về Luyện tập</button></div></div>';
+    wireBack();
+    $("#phNext").onclick = function () { openLesson({ type: "phaseExam", phase: l.phase + 1 }); };
+    $("#phBack").onclick = function () { backFromLesson(); };
+    return;
+  }
+  var r = phaseRun.results;
+  var allDone = r.listening && r.reading && r.speaking && r.writing;
+  var row = function (sk, label, doneTxt) {
+    return '<button class="step-row" data-phskill="' + sk + '"><span><b>' + label + '</b>' + (r[sk] ? ' <span class="chip">Đã xong — Band ' + fmtBandComma(r[sk].band) + (r[sk].self ? ' (Tự đánh giá)' : '') + '</span>' : ' <span class="mut">chưa thi</span>') + '</span><span class="st">→</span></button>';
+  };
+  app.innerHTML = skillHead("Buổi thi kết thúc đợt — Đợt " + l.phase, "Thi 4 bài riêng từng kỹ năng để biết trình độ mình đang ở đâu. Kết quả lưu theo đợt và so sánh được với đợt trước ở mục Của tôi → Đánh giá mức độ.")
+    + '<div class="qblock">' + row("listening", "🎧 Nghe") + row("reading", "📖 Đọc") + row("speaking", "🗣️ Nói") + row("writing", "✍️ Viết")
+    + '<div class="row" style="margin-top:10px"><button class="btn btn-primary" id="phSave"' + (allDone ? "" : " disabled") + '>Lưu kết quả đợt ' + l.phase + '</button></div>'
+    + (allDone ? "" : '<p class="mut">Thi đủ 4 kỹ năng rồi mới lưu được kết quả đợt.</p>') + '</div>';
+  wireBack();
+  $$("[data-phskill]").forEach(function (b) { b.onclick = function () { openLesson({ type: "phaseSkill", phase: l.phase, skill: b.dataset.phskill }); }; });
+  $("#phSave").onclick = function () {
+    if (!state.phaseExams) state.phaseExams = [];
+    state.phaseExams.push({ phase: l.phase, date: todayStr(), listening: r.listening, reading: r.reading, speaking: r.speaking, writing: r.writing });
+    saveState(); phaseRun = null; l.saved = true; render();
+  };
+}
+function renderPhaseSkill(app, l) {
+  var ph = l.phase;
+  if (l.skill === "listening") {
+    var liIdx = phasePickBandIdx(CONTENT.listeningPlus, ph);
+    var item = CONTENT.listeningPlus[liIdx];
+    var phQs = item.questions.filter(function (q) { return q.type !== "TF"; });
+    l.itemIdx = liIdx;
+    l.title = "Buổi thi đợt " + ph + " — Nghe"; l.sub = item.section + (item.band ? " · " + item.band : "") + " · " + phQs.length + " câu hỏi" + (phQs.length < item.questions.length ? " · đã bỏ " + (item.questions.length - phQs.length) + " câu đúng/sai vì đề thi Listening chính thức không có dạng đúng/sai" : "");
+    if (!l.started) {
+      app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock"><p>Nghe toàn bài rồi trả lời ' + phQs.length + ' câu hỏi. Bài thi: nghe trước, không mở transcript trong lúc thi.</p>'
+        + '<div class="row"><button class="btn btn-primary" id="psPlay">🔊 Nghe toàn bài</button><button class="btn btn-primary" id="psStart">Bắt đầu làm bài</button></div></div>';
+      wireBack();
+      $("#psPlay").onclick = function () { speak(item.text); };
+      $("#psStart").onclick = function () { l.started = true; lessonStart = Date.now(); runWrong = []; runFirstTry = {}; render(); };
+      return;
+    }
+    l.onDone = function (res) {
+      phaseRun.results.listening = { c: res.firstN, n: res.total, band: rawToBand(res.firstN, res.total, "listening") };
+      openLesson({ type: "phaseExam", phase: ph });
+    };
+    app.innerHTML = '<div class="row" style="margin-bottom:10px"><button class="btn btn-primary" id="psAgain">🔊 Nghe lại toàn bài</button></div><div id="quizSlot"></div>';
+    $("#psAgain").onclick = function () { speak(item.text); };
+    renderQuizEngine($("#quizSlot"), l, phQs, "phase", "phase:" + ph + ":listening");
+    return;
+  }
+  if (l.skill === "reading") {
+    var rdIdx = phasePickBandIdx(CONTENT.reading, ph);
+    var rp = CONTENT.reading[rdIdx];
+    l.itemIdx = rdIdx;
+    l.title = "Buổi thi đợt " + ph + " — Đọc"; l.sub = rp.topic + " · " + rp.level + " · " + rp.questions.length + " câu hỏi";
+    if (!l.started) {
+      app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock"><p>Đọc bài rồi trả lời ' + rp.questions.length + ' câu hỏi. Trong lúc làm bài vẫn xem lại được bài đọc.</p>'
+        + '<button class="btn btn-primary" id="psStart">Bắt đầu làm bài</button></div>';
+      wireBack();
+      $("#psStart").onclick = function () { l.started = true; lessonStart = Date.now(); runWrong = []; runFirstTry = {}; render(); };
+      return;
+    }
+    l.onDone = function (res) {
+      phaseRun.results.reading = { c: res.firstN, n: res.total, band: rawToBand(res.firstN, res.total, "reading") };
+      openLesson({ type: "phaseExam", phase: ph });
+    };
+    app.innerHTML = '<details open style="margin-bottom:10px"><summary><b>Bài đọc</b></summary><div class="qblock">' + paraHTML(rp.text) + '</div></details><div id="quizSlot"></div>';
+    renderQuizEngine($("#quizSlot"), l, rp.questions, "phase", "phase:" + ph + ":reading");
+    return;
+  }
+  if (l.skill === "speaking") {
+    var partN = ((ph - 1) % 3) + 1;
+    var spCand = CONTENT.speaking.map(function (s, i) { return i; }).filter(function (i) { return CONTENT.speaking[i].partNum === partN; })
+      .sort(function (a, b) { var ba = bandSortVal(CONTENT.speaking[a].band), bb = bandSortVal(CONTENT.speaking[b].band); return ba - bb || a - b; });
+    var spIdx = spCand[Math.floor((ph - 1) / 3) % spCand.length];
+    var sp = CONTENT.speaking[spIdx];
+    l.itemIdx = spIdx;
+    l.title = "Buổi thi đợt " + ph + " — Nói"; l.sub = sp.part + " · " + sp.topic;
+    if (!l.spoken) {
+      app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock">' + speakLinesHTML(sp)
+        + '<p class="mut">Nói thành tiếng toàn bộ bài mẫu (đóng vai thí sinh), rồi bấm "Đã nói xong" để tự đánh giá 4 tiêu chí.</p>'
+        + '<button class="btn btn-primary" id="psSpoken">Đã nói xong → Tự đánh giá</button></div>';
+      wireBack();
+      $$("[data-speakline]").forEach(function (b) { b.onclick = function () { speak(sp.lines[+b.dataset.speakline].en); }; });
+      $("#psSpoken").onclick = function () { l.spoken = true; l.self = {}; render(); };
+      return;
+    }
+    app.innerHTML = skillHead(l.title, "Tự đánh giá 4 tiêu chí (chọn mức cho từng tiêu chí)") + selfAssessHTML(RB_SPEAK_CRITERIA, "ps", l.self || {})
+      + '<div class="row"><button class="btn btn-primary" id="psSave">Lưu kết quả Nói</button></div>';
+    wireBack();
+    wireSelfAssess(l.self || {});
+    $("#psSave").onclick = function () {
+      if (Object.keys(l.self || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí trước đã."); return; }
+      phaseRun.results.speaking = { band: selfBandOf(l.self), self: true };
+      openLesson({ type: "phaseExam", phase: ph });
+    };
+    return;
+  }
+  if (l.skill === "writing") {
+    var t1s = CONTENT.writing.filter(function (w) { return w.type === "Task 1"; });
+    var t2s = CONTENT.writing.filter(function (w) { return w.type === "Task 2"; });
+    t1s.sort(function (a, b) { return (bandSortVal(a.band)) - (bandSortVal(b.band)); });
+    t2s.sort(function (a, b) { return (bandSortVal(a.band)) - (bandSortVal(b.band)); });
+    var t1 = phasePick(t1s, ph), t2 = phasePick(t2s, ph);
+    l.title = "Buổi thi đợt " + ph + " — Viết";
+    if (!l.written) {
+      app.innerHTML = skillHead(l.title, "Task 1 + Task 2 — viết cả hai bài rồi tự đánh giá từng bài") + '<div class="qblock"><p><b>Task 1 — ' + esc(t1.title) + ':</b> ' + esc(t1.prompt) + '</p><textarea id="psW1" rows="5" style="width:100%;padding:10px" placeholder="Viết Task 1..."></textarea>'
+        + '<p><b>Task 2 — ' + esc(t2.title) + ':</b> ' + esc(t2.prompt) + '</p><textarea id="psW2" rows="6" style="width:100%;padding:10px" placeholder="Viết Task 2..."></textarea>'
+        + '<div class="row" style="margin-top:8px"><button class="btn btn-primary" id="psWritten">Đã viết xong → Tự đánh giá</button></div></div>';
+      wireBack();
+      $("#psWritten").onclick = function () {
+        var a = $("#psW1").value, b = $("#psW2").value;
+        if (!a.trim() || !b.trim()) { toast("Hãy viết cả hai bài trước đã."); return; }
+        l.w1 = a; l.w2 = b; l.written = true; l.self1 = {}; l.self2 = {}; render();
+      };
+      return;
+    }
+    app.innerHTML = skillHead(l.title, "Tự đánh giá 4 tiêu chí cho từng bài (Task 2 nặng gấp đôi Task 1 khi tính band Viết)")
+      + '<h3>Task 1 — ' + esc(t1.title) + '</h3>' + selfAssessHTML(RB_WRITE_CRITERIA, "w1", l.self1 || {})
+      + '<h3>Task 2 — ' + esc(t2.title) + '</h3>' + selfAssessHTML(RB_WRITE_CRITERIA, "w2", l.self2 || {})
+      + '<div class="row"><button class="btn btn-primary" id="psSave">Lưu kết quả Viết</button></div>';
+    wireBack();
+    $$("[data-self]").forEach(function (b) {
+      b.onclick = function () {
+        var parts = b.dataset.self.split(":");
+        var tgt = parts[0] === "w1" ? l.self1 : l.self2;
+        tgt[parts[1]] = +b.dataset.v;
+        $$("[data-self]").forEach(function (x) { if (x.dataset.self === b.dataset.self) x.classList.toggle("btn-primary", x === b); });
+      };
+    });
+    $("#psSave").onclick = function () {
+      if (Object.keys(l.self1 || {}).length < 4 || Object.keys(l.self2 || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí của cả hai bài."); return; }
+      var b1 = selfBandOf(l.self1), b2 = selfBandOf(l.self2);
+      var combined = Math.round(((b1 + 2 * b2) / 3) * 2) / 2;
+      phaseRun.results.writing = { band: combined, self: true, t1: b1, t2: b2 };
+      openLesson({ type: "phaseExam", phase: ph });
+    };
+    return;
+  }
+  curLesson = null; render();
+}
+
+/* ---------- THI THỬ ĐÚNG FORMAT (chặng 4.5/5.5/6.5/7.5+) ---------- */
+/* Nghe 40 câu (30 phút) · Đọc 3 bài (60 phút) · Viết Task 1+2 (60 phút) ·
+   Nói Part 1-2-3 (14 phút). Thời gian chỉ để tham khảo, không khóa bài.
+   Chặng chọn bài có độ khó gần chặng đó nhất; bài thay thế vì kho thiếu
+   đúng độ khó ghi rõ trong màn thi. */
+var mockRun = null;
+function mockPickByBand(arr, mNum, count, getBand) {
+  var withB = arr.map(function (x, i) { return { x: x, i: i, b: bandNumOf(getBand(x)) }; }).filter(function (e) { return e.b !== null; });
+  withB.sort(function (a, b) { return Math.abs(a.b - mNum) - Math.abs(b.b - mNum) || a.i - b.i; });
+  var picked = withB.slice(0, count);
+  picked.sort(function (a, b) { return a.i - b.i; });
+  var substituted = picked.some(function (e) { return Math.abs(e.b - mNum) > 0.5; });
+  return { items: picked.map(function (e) { return e.x; }), idxs: picked.map(function (e) { return e.i; }), bands: picked.map(function (e) { return e.b; }), substituted: substituted };
+}
+function buildMockRun(milestone) {
+  var mNum = milestone === "7.5" ? 7.5 : parseFloat(milestone);
+  var lpSorted = CONTENT.listeningPlus.map(function (x, i) { return { x: x, i: i, b: bandNumOf(x.band) }; }).filter(function (e) { return e.b !== null; });
+  lpSorted.sort(function (a, b) { return Math.abs(a.b - mNum) - Math.abs(b.b - mNum) || a.i - b.i; });
+  var groups = [], n = 0;
+  for (var gi = 0; gi < lpSorted.length && n < 40; gi++) {
+    var it = lpSorted[gi].x;
+    var official = it.questions.filter(function (q) { return q.type !== "TF"; });
+    var qs = official.slice(0, Math.max(0, 40 - n));
+    if (qs.length) { groups.push({ item: it, questions: qs }); n += qs.length; }
+  }
+  var read = mockPickByBand(CONTENT.reading, mNum, 3, function (r) { return r.level; });
+  var t1s = CONTENT.writing.filter(function (w) { return w.type === "Task 1"; });
+  var t2s = CONTENT.writing.filter(function (w) { return w.type === "Task 2"; });
+  var w1 = mockPickByBand(t1s, mNum, 1, function (w) { return w.band; });
+  var w2 = mockPickByBand(t2s, mNum, 1, function (w) { return w.band; });
+  var sp = [1, 2, 3].map(function (p) {
+    var arr = CONTENT.speaking.filter(function (s) { return s.partNum === p; });
+    return mockPickByBand(arr, mNum, 1, function (s) { return s.band; });
+  });
+  return {
+    milestone: milestone, mNum: mNum, stage: "hub",
+    listen: { groups: groups, gi: 0, c: 0, n: n },
+    read: { passages: read.items, pi: 0, c: 0, n: read.items.reduce(function (a, r) { return a + r.questions.length; }, 0) },
+    write: { t1: w1.items[0], t2: w2.items[0], t1Band: w1.bands[0], t2Band: w2.bands[0] },
+    speak: { scripts: sp.map(function (e) { return e.items[0]; }), bands: sp.map(function (e) { return e.bands[0]; }) },
+    substituted: read.substituted || w1.substituted || w2.substituted || sp.some(function (e) { return e.substituted; }),
+    readBands: read.bands, times: {}
+  };
+}
+function mockMin(ms) { return fmtBandComma(Math.round(ms / 60000 * 10) / 10); }
+function renderMockTest(app, l) {
+  if (!mockRun || mockRun.milestone !== l.milestone) mockRun = buildMockRun(l.milestone);
+  var mLabel = l.milestone === "7.5" ? "7,5+" : l.milestone.replace(".", ",");
+  if (mockRun.stage === "hub") {
+    var sub = mockRun.substituted ? "Kho thiếu bài đúng chặng " + mLabel + " ở vài chỗ nên đã lấy bài gần nhất — độ khó thật của từng bài ghi dưới đây." : "Các bài đã chọn đều gần chặng " + mLabel + ".";
+    app.innerHTML = skillHead("Thi thử — Chặng " + mLabel, sub) + '<div class="qblock">'
+      + '<p><b>Nghe:</b> ' + mockRun.listen.n + ' câu (tham khảo 30 phút) — ' + mockRun.listen.groups.map(function (g) { return esc(g.item.topic); }).join(" · ") + '</p>'
+      + '<p><b>Đọc:</b> ' + mockRun.read.passages.length + ' bài = ' + mockRun.read.n + ' câu (tham khảo 60 phút) — ' + mockRun.read.passages.map(function (r) { return esc(r.title) + " (" + esc(r.level) + ")"; }).join(" · ") + '</p>'
+      + '<p class="mut">Giới hạn kho hiện tại: phần Đọc của thi thử mới có ' + mockRun.read.n + ' câu do kho bài hiện tại (mỗi bài đọc khoảng 5 câu) — chưa đủ 40 câu như thi thật, web ghi rõ chứ không giấu.</p>'
+      + '<p><b>Viết:</b> Task 1 — ' + esc(mockRun.write.t1.title) + ' · Task 2 — ' + esc(mockRun.write.t2.title) + ' (tham khảo 60 phút)</p>'
+      + '<p><b>Nói:</b> Part 1 — ' + esc(mockRun.speak.scripts[0].topic) + ' · Part 2 — ' + esc(mockRun.speak.scripts[1].topic) + ' · Part 3 — ' + esc(mockRun.speak.scripts[2].topic) + ' (tham khảo 14 phút)</p>'
+      + '<p class="mut">Nghe/Đọc chấm theo đáp án (quy về thang 40). Nói/Viết tự đánh giá 4 tiêu chí (ghi rõ "Tự đánh giá"). Thời gian chỉ để tham khảo, không khóa bài khi hết giờ.</p>'
+      + '<button class="btn btn-primary" id="mkStart">Bắt đầu thi thử</button></div>';
+    wireBack();
+    $("#mkStart").onclick = function () { mockRun.stage = "listen"; mockRun.times.listenStart = Date.now(); lessonStart = Date.now(); runWrong = []; runFirstTry = {}; render(); };
+    return;
+  }
+  if (mockRun.stage === "listen") {
+    var g = mockRun.listen.groups[mockRun.listen.gi];
+    if (!g) { mockRun.times.listen = Date.now() - mockRun.times.listenStart; mockRun.stage = "read"; mockRun.times.readStart = Date.now(); render(); return; }
+    l.title = "Thi thử " + mLabel + " — Nghe (" + (mockRun.listen.gi + 1) + "/" + mockRun.listen.groups.length + ")";
+    l.onDone = function (res) {
+      mockRun.listen.c += res.firstN; mockRun.listen.gi++;
+      l.qi = 0; runWrong = []; runFirstTry = []; lessonStart = Date.now(); render();
+    };
+    app.innerHTML = '<div class="row" style="margin-bottom:10px"><button class="btn btn-primary" id="mkPlay">🔊 Nghe bài (' + esc(g.item.section) + ' — ' + esc(g.item.topic) + ')</button></div><div id="quizSlot"></div>';
+    $("#mkPlay").onclick = function () { speak(g.item.text); };
+    renderQuizEngine($("#quizSlot"), l, g.questions, "mock", "mock:" + l.milestone + ":listen");
+    return;
+  }
+  if (mockRun.stage === "read") {
+    var rp2 = mockRun.read.passages[mockRun.read.pi];
+    if (!rp2) { mockRun.times.read = Date.now() - mockRun.times.readStart; mockRun.stage = "write"; mockRun.times.writeStart = Date.now(); render(); return; }
+    l.title = "Thi thử " + mLabel + " — Đọc (" + (mockRun.read.pi + 1) + "/" + mockRun.read.passages.length + ")";
+    l.onDone = function (res) {
+      mockRun.read.c += res.firstN; mockRun.read.pi++;
+      l.qi = 0; runWrong = []; runFirstTry = []; lessonStart = Date.now(); render();
+    };
+    app.innerHTML = '<details open style="margin-bottom:10px"><summary><b>Bài đọc: ' + esc(rp2.title) + '</b></summary><div class="qblock">' + paraHTML(rp2.text) + '</div></details><div id="quizSlot"></div>';
+    renderQuizEngine($("#quizSlot"), l, rp2.questions, "mock", "mock:" + l.milestone + ":read");
+    return;
+  }
+  if (mockRun.stage === "write") {
+    var w1 = mockRun.write.t1, w2 = mockRun.write.t2;
+    if (!l.written) {
+      app.innerHTML = skillHead("Thi thử " + mLabel + " — Viết", "Task 1 + Task 2 (tham khảo 60 phút)") + '<div class="qblock"><p><b>Task 1 — ' + esc(w1.title) + ':</b> ' + esc(w1.prompt) + '</p><textarea id="mkW1" rows="5" style="width:100%;padding:10px" placeholder="Viết Task 1..."></textarea>'
+        + '<p><b>Task 2 — ' + esc(w2.title) + ':</b> ' + esc(w2.prompt) + '</p><textarea id="mkW2" rows="6" style="width:100%;padding:10px" placeholder="Viết Task 2..."></textarea>'
+        + '<div class="row" style="margin-top:8px"><button class="btn btn-primary" id="mkWritten">Đã viết xong → Tự đánh giá</button></div></div>';
+      wireBack();
+      $("#mkWritten").onclick = function () {
+        var a = $("#mkW1").value, b = $("#mkW2").value;
+        if (!a.trim() || !b.trim()) { toast("Hãy viết cả hai bài trước đã."); return; }
+        l.written = true; l.self1 = {}; l.self2 = {}; render();
+      };
+      return;
+    }
+    app.innerHTML = skillHead("Thi thử " + mLabel + " — Viết (Tự đánh giá)", "Task 2 nặng gấp đôi Task 1 khi tính band Viết")
+      + '<h3>Task 1 — ' + esc(w1.title) + '</h3>' + selfAssessHTML(RB_WRITE_CRITERIA, "w1", l.self1 || {})
+      + '<h3>Task 2 — ' + esc(w2.title) + '</h3>' + selfAssessHTML(RB_WRITE_CRITERIA, "w2", l.self2 || {})
+      + '<div class="row"><button class="btn btn-primary" id="mkWNext">Xong phần Viết → Nói</button></div>';
+    wireBack();
+    $$("[data-self]").forEach(function (b) {
+      b.onclick = function () {
+        var parts = b.dataset.self.split(":");
+        var tgt = parts[0] === "w1" ? l.self1 : l.self2;
+        tgt[parts[1]] = +b.dataset.v;
+        $$("[data-self]").forEach(function (x) { if (x.dataset.self === b.dataset.self) x.classList.toggle("btn-primary", x === b); });
+      };
+    });
+    $("#mkWNext").onclick = function () {
+      if (Object.keys(l.self1 || {}).length < 4 || Object.keys(l.self2 || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí của cả hai bài."); return; }
+      var b1 = selfBandOf(l.self1), b2 = selfBandOf(l.self2);
+      mockRun.write.band = Math.round(((b1 + 2 * b2) / 3) * 2) / 2;
+      mockRun.times.write = Date.now() - mockRun.times.writeStart;
+      mockRun.stage = "speak"; mockRun.times.speakStart = Date.now(); render();
+    };
+    return;
+  }
+  if (mockRun.stage === "speak") {
+    if (!l.spoken) {
+      var spH = mockRun.speak.scripts.map(function (s) {
+        var lines = s.lines.map(function (ln) { return '<p><b>' + esc(ln.who) + ':</b> ' + esc(ln.en) + '<br><span class="mut">' + esc(ln.vi) + '</span></p>'; }).join("");
+        return '<details style="margin-bottom:8px"><summary><b>' + esc(s.part) + ' — ' + esc(s.topic) + '</b></summary><div class="qblock">' + lines + '</div></details>';
+      }).join("");
+      app.innerHTML = skillHead("Thi thử " + mLabel + " — Nói", "Part 1-2-3 (tham khảo 14 phút)") + spH
+        + '<p class="mut">Nói thành tiếng cả 3 phần rồi bấm "Đã nói xong" để tự đánh giá chung 4 tiêu chí.</p>'
+        + '<button class="btn btn-primary" id="mkSpoken">Đã nói xong → Tự đánh giá</button>';
+      wireBack();
+      $("#mkSpoken").onclick = function () { l.spoken = true; l.self = {}; render(); };
+      return;
+    }
+    app.innerHTML = skillHead("Thi thử " + mLabel + " — Nói (Tự đánh giá)", "Tự đánh giá chung cho cả 3 phần") + selfAssessHTML(RB_SPEAK_CRITERIA, "mk", l.self || {})
+      + '<div class="row"><button class="btn btn-primary" id="mkSNext">Xem bảng điểm thi thử</button></div>';
+    wireBack();
+    wireSelfAssess(l.self || {});
+    $("#mkSNext").onclick = function () {
+      if (Object.keys(l.self || {}).length < 4) { toast("Hãy chọn mức cho đủ 4 tiêu chí trước đã."); return; }
+      mockRun.speak.band = selfBandOf(l.self);
+      mockRun.times.speak = Date.now() - mockRun.times.speakStart;
+      mockRun.stage = "sheet"; render();
+    };
+    return;
+  }
+  if (mockRun.stage === "sheet") {
+    var lb = rawToBand(mockRun.listen.c, mockRun.listen.n, "listening");
+    var rb = rawToBand(mockRun.read.c, mockRun.read.n, "reading");
+    var wb = mockRun.write.band, sb = mockRun.speak.band;
+    var overall = Math.round(((lb + rb + wb + sb) / 4) * 2) / 2;
+    var tRow = function (label, ms, ref) {
+      var mins = ms / 60000;
+      return '<p>' + label + ': ' + mockMin(ms) + ' phút (tham khảo ' + ref + ' phút)' + (mins <= ref ? ' — trong thời gian tham khảo.' : ' — quá thời gian tham khảo, chỉ để tham khảo.') + '</p>';
+    };
+    if (l.savedSheet) {
+      app.innerHTML = skillHead("Thi thử — Chặng " + mLabel, "Đã lưu mốc thi thử.") + '<div class="summarybox"><h2>Bảng điểm thi thử — Chặng ' + mLabel + '</h2>'
+        + '<p>Nghe: <b>' + fmtBandComma(lb) + '</b> (' + mockRun.listen.c + '/' + mockRun.listen.n + ' câu)</p>'
+        + '<p>Đọc: <b>' + fmtBandComma(rb) + '</b> (' + mockRun.read.c + '/' + mockRun.read.n + ' câu)</p>'
+        + '<p>Viết: <b>' + fmtBandComma(wb) + '</b> (Tự đánh giá)</p>'
+        + '<p>Nói: <b>' + fmtBandComma(sb) + '</b> (Tự đánh giá)</p>'
+        + '<p><b>Overall ước lượng: ' + fmtBandComma(overall) + '</b></p>'
+        + '<p class="mut">' + RB_BAND_NOTE + ' Các câu sai đã vào Sổ lỗi sai để ôn lại.</p>'
+        + '<div class="row" style="margin-top:10px"><button class="btn btn-primary" id="mkBack">Về Luyện tập</button></div></div>';
+      wireBack();
+      $("#mkBack").onclick = function () { backFromLesson(); };
+      return;
+    }
+    app.innerHTML = skillHead("Thi thử — Chặng " + mLabel, "Bảng điểm (xem lại trước khi lưu)") + '<div class="summarybox"><h2>Bảng điểm thi thử — Chặng ' + mLabel + '</h2>'
+      + '<p>Nghe: <b>' + fmtBandComma(lb) + '</b> (' + mockRun.listen.c + '/' + mockRun.listen.n + ' câu)</p>'
+      + '<p>Đọc: <b>' + fmtBandComma(rb) + '</b> (' + mockRun.read.c + '/' + mockRun.read.n + ' câu)</p>'
+      + '<p>Viết: <b>' + fmtBandComma(wb) + '</b> (Tự đánh giá)</p>'
+      + '<p>Nói: <b>' + fmtBandComma(sb) + '</b> (Tự đánh giá)</p>'
+      + '<p><b>Overall ước lượng: ' + fmtBandComma(overall) + '</b></p>'
+      + tRow("Nghe", mockRun.times.listen || 0, 30) + tRow("Đọc", mockRun.times.read || 0, 60) + tRow("Viết", mockRun.times.write || 0, 60) + tRow("Nói", mockRun.times.speak || 0, 14)
+      + '<p class="mut">' + RB_BAND_NOTE + ' Các câu sai đã vào Sổ lỗi sai để ôn lại.</p>'
+      + '<div class="row" style="margin-top:10px"><button class="btn btn-primary" id="mkSave">Lưu mốc thi thử</button></div></div>';
+    wireBack();
+    $("#mkSave").onclick = function () {
+      if (!state.mockTests) state.mockTests = [];
+      state.mockTests.push({ milestone: l.milestone, date: todayStr(), listen: lb, read: rb, write: wb, speak: sb, overall: overall });
+      saveState(); l.savedSheet = true; render();
+    };
+    return;
+  }
+  curLesson = null; render();
+}
+
 
 /* ---------- Khởi động ---------- */
 render();

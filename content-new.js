@@ -493,3 +493,47 @@ var RB_CHAPTER_MAP = [
   { band: "Band 7,0", title: "Dùng tiếng Anh linh hoạt, chính xác", status: "soon", goal: "Dùng tiếng Anh linh hoạt trong học thuật và công việc, sai sót hiếm và không cản trở giao tiếp.", can: ["Dùng từ ngữ ít phổ biến đúng ngữ cảnh", "Viết bài có giọng văn phù hợp"] },
   { band: "Band 7,5+", title: "Gần như người bản địa trong học thuật và công việc", status: "soon", goal: "Giao tiếp gần như trôi chảy, hiểu cả hàm ý và sắc thái trong văn bản và hội thoại phức tạp.", can: ["Hiểu hàm ý và giọng điệu trong bài khó", "Viết và nói có phong cách riêng, chính xác cao"] }
 ];
+
+// ---------- 14. LUYỆN TẬP THI (4 kỹ năng riêng + buổi thi kết thúc đợt) ----------
+// Tiêu chí chấm Nói/Viết: tên 4 tiêu chí là tiêu chí chính thức của IELTS;
+// mô tả từng mức Band 5/6/7 dưới đây do web tự viết bằng tiếng Việt đơn giản.
+// Tự đánh giá: người học tự chọn mức cho từng tiêu chí, web chỉ tính trung bình,
+// không tự nhận là điểm thi thật — luôn ghi rõ "Tự đánh giá".
+var RB_SPEAK_CRITERIA = [
+  { key: "flu", name: "Nói trôi chảy và mạch lạc", d5: "Nói còn ngắt quãng nhiều, ý nối nhau chưa trơn nhưng người nghe vẫn hiểu ý chính.", d6: "Nói khá liền mạch, có lúc ngập ngừng khi tìm từ nhưng ý vẫn nối nhau được.", d7: "Nói trôi chảy, ít ngập ngừng, ý nối nhau tự nhiên, chỉ khựng lại đôi chỗ khi diễn đạt ý khó." },
+  { key: "lex", name: "Từ vựng", d5: "Dùng được từ quen thuộc cho chủ đề quen thuộc, đôi khi dùng từ chưa đúng chỗ hoặc lặp từ.", d6: "Dùng được từ cho nhiều chủ đề, có paraphrase đơn giản, đôi khi chọn từ chưa thật chính xác.", d7: "Dùng từ đa dạng và khá chính xác, có từ ít phổ biến dùng đúng chỗ, paraphrase linh hoạt." },
+  { key: "gram", name: "Ngữ pháp", d5: "Dùng được câu đơn và vài câu ghép, còn sai nhiều ở câu phức nhưng ý vẫn hiểu được.", d6: "Dùng được câu đơn và câu phức, có sai sót nhưng ít làm người nghe hiểu nhầm.", d7: "Dùng câu phức tương đối chính xác, sai sót hiếm và không cản trở người nghe." },
+  { key: "pron", name: "Phát âm", d5: "Phát âm đủ rõ để hiểu dù còn lệch nhiều âm, người nghe phải tập trung mới theo kịp.", d6: "Phát âm khá rõ, có trọng âm và ngữ điệu cơ bản, thỉnh thoảng lệch âm nhưng vẫn hiểu được.", d7: "Phát âm rõ và tự nhiên, trọng âm và ngữ điệu tốt, chỉ lệch nhẹ ở vài âm khó." }
+];
+var RB_WRITE_CRITERIA = [
+  { key: "task", name: "Trả lời đúng yêu cầu đề", d5: "Trả lời được ý chính của đề nhưng còn thiếu ý hoặc lạc ý ở vài chỗ.", d6: "Trả lời đủ các ý chính của đề, có lập trường và lý do, đôi chỗ chưa triển khai sâu.", d7: "Trả lời đầy đủ và sâu các ý của đề, lập trường rõ, lý do và ví dụ thuyết phục." },
+  { key: "coh", name: "Mạch lạc và liên kết", d5: "Bài có mở - thân - kết nhưng ý nối nhau còn rời rạc, từ nối dùng còn đơn điệu.", d6: "Bài có bố cục rõ, ý nối nhau khá trơn bằng từ nối và từ thay thế, đôi chỗ còn gượng.", d7: "Bài mạch lạc, ý nối nhau tự nhiên, dùng từ nối và từ thay thế đa dạng và đúng chỗ." },
+  { key: "lex", name: "Từ vựng", d5: "Dùng được từ cho chủ đề quen thuộc, còn lặp từ và sai chính tả ở vài chỗ.", d6: "Dùng từ đa dạng hơn, có paraphrase và collocation đơn giản, sai sót ít.", d7: "Dùng từ chính xác và đa dạng, có từ học thuật dùng đúng chỗ, chính tả gần như không sai." },
+  { key: "gram", name: "Ngữ pháp và câu", d5: "Dùng được câu đơn và vài câu phức, còn sai nhiều nhưng ý vẫn hiểu được.", d6: "Dùng được câu phức và cấu trúc đa dạng, có sai sót nhưng không làm lệch ý.", d7: "Câu đa dạng và chính xác, sai sót hiếm, dấu câu đúng." }
+];
+// Đọc số band từ nhãn "Band 6.0"/"Band 7.5+" để lọc bài theo chặng thi thử.
+function bandNumOf(label) {
+  var m = String(label || "").match(/([0-9]+(?:[.,][0-9]+)?)/);
+  if (!m) return null;
+  return parseFloat(m[1].replace(",", "."));
+}
+function bandSortVal(label) { var n = bandNumOf(label); return n === null ? 99 : n; }
+// Đếm thật từ kho cũ (không ghi số mẫu): dùng để hiển thị ở tab Luyện tập.
+function skillCounts() {
+  var readQs = 0, lpQs = 0;
+  (CONTENT.reading || []).forEach(function (r) { readQs += (r.questions || []).length; });
+  (CONTENT.listeningPlus || []).forEach(function (r) { lpQs += (r.questions || []).length; });
+  return {
+    readingItems: (CONTENT.reading || []).length, readingQs: readQs,
+    listenSingles: (CONTENT.listening || []).length,
+    listenLongItems: (CONTENT.listeningPlus || []).length, listenLongQs: lpQs,
+    speakP1: (CONTENT.speaking || []).filter(function (s) { return s.partNum === 1; }).length,
+    speakP2: (CONTENT.speaking || []).filter(function (s) { return s.partNum === 2; }).length,
+    speakP3: (CONTENT.speaking || []).filter(function (s) { return s.partNum === 3; }).length,
+    speakTotal: (CONTENT.speaking || []).length, roleplay: (CONTENT.roleplay || []).length,
+    writeT1: (CONTENT.writing || []).filter(function (w) { return w.type === "Task 1"; }).length,
+    writeT2: (CONTENT.writing || []).filter(function (w) { return w.type === "Task 2"; }).length,
+    writeMail: (CONTENT.writing || []).filter(function (w) { return w.type !== "Task 1" && w.type !== "Task 2"; }).length,
+    writeTotal: (CONTENT.writing || []).length, writeDrills: (CONTENT.writingDrills || []).length
+  };
+}
