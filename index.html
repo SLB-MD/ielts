@@ -898,24 +898,29 @@ function renderQuizEngine(app, l, questions, mode, lessonId) {
       finishStep(step.id);
       app.innerHTML = stepHeader(step) + finishSummaryHTML("Hoàn thành bài luyện!", stats, wrongHTML);
       wireBack(); wireNextStep();
-      $("#btnRedo").onclick = function () { l.qi = 0; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
+      $("#btnRedo").onclick = function () { l.qi = 0; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
     } else {
       app.innerHTML = stepHeader(step) + finishSummaryHTML("Hoàn thành bài kiểm tra!", stats, wrongHTML);
       wireBack(); wireNextStep();
-      $("#btnRedo").onclick = function () { l.qi = 0; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
+      $("#btnRedo").onclick = function () { l.qi = 0; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
     }
     return;
   }
   var q = questions[qi];
   var wrongs = l.wrongs || 0, revealed = !!l.revealed, answered = !!l.answered;
+  /* "Tôi không biết" đã bấm thì đáp án hiện luôn sau khi vẽ lại (trước đây
+     l.revealed được đặt nhưng không dùng để vẽ nên lời giải biến mất ngay);
+     gợi ý sau câu sai cũng giữ lại thay vì bị lần vẽ lại xóa mất. */
+  var revealText = revealed ? "Đáp án đúng: " + q.o[q.a] + " — " + q.why + " — giờ hãy bấm vào đáp án đúng để đi tiếp." : "";
+  var whyText = revealed ? revealText : (l.hint || "");
   var html = stepHeader(step);
   html += '<div class="qblock" id="quizBox"><div class="row"><span class="chip">Câu ' + (qi + 1) + '/' + questions.length + '</span></div>'
     + '<p><b>' + esc(q.q) + '</b></p>';
   q.o.forEach(function (opt, i) {
     html += '<button class="q-opt" data-i="' + i + '"' + (answered ? " disabled" : "") + '>' + esc(opt) + '</button>';
   });
-  if (mode === "practice" && !answered) html += '<button class="btn" id="btnDontKnow">Tôi không biết</button>';
-  html += '<div class="why" id="quizWhy"></div>'
+  if (mode === "practice" && !answered && !revealed) html += '<button class="btn" id="btnDontKnow">Tôi không biết</button>';
+  html += '<div class="why' + (whyText ? ' show' : '') + '" id="quizWhy">' + esc(whyText) + '</div>'
     + '<button class="btn btn-primary" id="quizNext" style="display:none">Câu tiếp theo</button></div>';
   app.innerHTML = html;
   wireBack();
@@ -943,23 +948,26 @@ function renderQuizEngine(app, l, questions, mode, lessonId) {
       } else {
         b.classList.add("bad"); b.disabled = true; markWrong();
         l.wrongs = (l.wrongs || 0) + 1;
-        var hint = l.wrongs === 1
+        /* Lưu gợi ý vào l.hint rồi vẽ lại: trước đây gán trực tiếp lên whyEl
+           rồi gọi render() nên gợi ý bị lần vẽ lại xóa mất, không bao giờ hiện. */
+        l.hint = l.wrongs === 1
           ? "Gợi ý 1: đọc lại ví dụ trong bài rồi thử lại nhé."
           : "Gợi ý 2: " + q.why + " — giờ hãy bấm vào đáp án đúng để đi tiếp.";
-        whyEl.textContent = hint; whyEl.classList.add("show");
         render();
       }
     };
   });
   var dk = $("#btnDontKnow");
   if (dk) dk.onclick = function () {
+    /* "Tôi không biết" = sai: markWrong đã ghi câu vào runWrong + Sổ lỗi sai,
+       điểm cuối bài trừ câu này; lời giải giữ lại qua l.revealed khi vẽ lại. */
     markWrong();
     whyEl.textContent = "Đáp án đúng: " + q.o[q.a] + " — " + q.why + " — giờ hãy bấm vào đáp án đúng để đi tiếp.";
     whyEl.classList.add("show");
-    l.revealed = true; render();
+    l.revealed = true; l.hint = ""; render();
   };
   var nx = $("#quizNext");
-  if (nx) nx.onclick = function () { l.qi = qi + 1; l.wrongs = 0; l.revealed = false; l.answered = false; render(); };
+  if (nx) nx.onclick = function () { l.qi = qi + 1; l.wrongs = 0; l.revealed = false; l.answered = false; l.hint = ""; render(); };
 }
 
 
@@ -2187,27 +2195,42 @@ function renderTest(app, l) {
   html += '<div class="qblock" id="quizBox"><div class="row"><span class="chip">Câu ' + (qi + 1) + '/' + questions.length + '</span></div>'
     + '<p><b>' + esc(q.q) + '</b></p>';
   q.o.forEach(function (opt, i) { html += '<button class="q-opt" data-i="' + i + '">' + esc(opt) + '</button>'; });
+  html += '<button class="btn" id="btnDontKnow">Tôi không biết</button>';
   html += '<div class="why" id="quizWhy"></div><button class="btn btn-primary" id="quizNext" style="display:none">Câu tiếp theo</button></div>';
   app.innerHTML = html;
   wireBack();
   var answered = false;
+  var finishTestQ = function () {
+    $$("#quizBox .q-opt").forEach(function (x) { x.disabled = true; });
+    var dkb = $("#btnDontKnow"); if (dkb) dkb.style.display = "none";
+    var whyEl = $("#quizWhy");
+    whyEl.textContent = "Đáp án đúng: " + q.o[q.a] + " — " + q.why; whyEl.classList.add("show");
+    $("#quizNext").style.display = "inline-block";
+    $("#quizNext").onclick = function () {
+      curLesson = { type: "test", qi: qi + 1, answers: l2.answers, score: l2.score };
+      if (qi + 1 >= questions.length) { curLesson.summary = true; }
+      render();
+    };
+  };
   $$("#quizBox .q-opt").forEach(function (b) {
     b.onclick = function () {
       if (answered) return; answered = true;
       var i = +b.dataset.i;
       if (i === q.a) { b.classList.add("ok"); l2.answers[qi] = true; l2.score++; }
       else { b.classList.add("bad"); $$("#quizBox .q-opt")[q.a].classList.add("ok"); l2.answers[qi] = false; if (runWrong.indexOf(qi) < 0) { runWrong.push(qi); recordQuizError("test", qi, q); } }
-      $$("#quizBox .q-opt").forEach(function (x) { x.disabled = true; });
-      var whyEl = $("#quizWhy");
-      whyEl.textContent = "Đáp án đúng: " + q.o[q.a] + " — " + q.why; whyEl.classList.add("show");
-      $("#quizNext").style.display = "inline-block";
-      $("#quizNext").onclick = function () {
-        curLesson = { type: "test", qi: qi + 1, answers: l2.answers, score: l2.score };
-        if (qi + 1 >= questions.length) { curLesson.summary = true; }
-        render();
-      };
+      finishTestQ();
     };
   });
+  var dk = $("#btnDontKnow");
+  if (dk) dk.onclick = function () {
+    /* "Tôi không biết" trong bài kiểm tra = sai: không cộng điểm, đáp án
+       ghi false (tính vào % từng phần), câu vào Sổ lỗi sai, hiện ở kết quả. */
+    if (answered) return; answered = true;
+    $$("#quizBox .q-opt")[q.a].classList.add("ok");
+    l2.answers[qi] = false;
+    if (runWrong.indexOf(qi) < 0) { runWrong.push(qi); recordQuizError("test", qi, q); }
+    finishTestQ();
+  };
 }
 
 /* ----- Kiểm tra nhanh (tùy chọn, không bao giờ là cổng) ----- */
@@ -2231,23 +2254,37 @@ function renderQuickcheck(app, l) {
   var html = '<div class="lessonframe"><div class="row"><button class="btn" id="btnBack">← Quay lại</button><span class="chip">Kiểm tra nhanh (tùy chọn) · Câu ' + (l.qi + 1) + '/' + qs.length + '</span></div></div>'
     + '<div class="qblock" id="quizBox"><p><b>' + esc(q.q) + '</b></p>';
   q.o.forEach(function (opt, i) { html += '<button class="q-opt" data-i="' + i + '">' + esc(opt) + '</button>'; });
+  html += '<button class="btn" id="btnDontKnow">Tôi không biết</button>';
   html += '<div class="why" id="quizWhy"></div><button class="btn btn-primary" id="quizNext" style="display:none">Câu tiếp theo</button></div>';
   app.innerHTML = html;
   wireBack();
   var answered = false;
+  var finishQcQ = function () {
+    $$("#quizBox .q-opt").forEach(function (x) { x.disabled = true; });
+    var dkb = $("#btnDontKnow"); if (dkb) dkb.style.display = "none";
+    var whyEl = $("#quizWhy");
+    whyEl.textContent = "Đáp án đúng: " + q.o[q.a] + " — " + q.why; whyEl.classList.add("show");
+    $("#quizNext").style.display = "inline-block";
+    $("#quizNext").onclick = function () { l.qi++; render(); };
+  };
   $$("#quizBox .q-opt").forEach(function (b) {
     b.onclick = function () {
       if (answered) return; answered = true;
       var i = +b.dataset.i;
       if (i === q.a) { b.classList.add("ok"); l.score = (l.score || 0) + 1; }
       else { b.classList.add("bad"); $$("#quizBox .q-opt")[q.a].classList.add("ok"); }
-      $$("#quizBox .q-opt").forEach(function (x) { x.disabled = true; });
-      var whyEl = $("#quizWhy");
-      whyEl.textContent = "Đáp án đúng: " + q.o[q.a] + " — " + q.why; whyEl.classList.add("show");
-      $("#quizNext").style.display = "inline-block";
-      $("#quizNext").onclick = function () { l.qi++; render(); };
+      finishQcQ();
     };
   });
+  var dk = $("#btnDontKnow");
+  if (dk) dk.onclick = function () {
+    /* Kiểm tra nhanh chỉ gợi ý điểm bắt đầu, không chấm điểm: "Tôi không biết"
+       tương đương câu sai ở đây — không cộng điểm, hiện đáp án đúng rồi qua
+       câu tiếp; như mọi câu sai của kiểm tra nhanh, không vào Sổ lỗi sai. */
+    if (answered) return; answered = true;
+    $$("#quizBox .q-opt")[q.a].classList.add("ok");
+    finishQcQ();
+  };
 }
 
 /* ---------- Khởi động ---------- */
