@@ -645,6 +645,36 @@ function callAiTutorChat(messages) {
     }, function () { reject(loginMsg); });
   });
 }
+/* Báo cáo phiên trò chuyện về máy chủ (Bùi gật 25/10: xây chỗ nhận báo cáo phía máy chủ).
+   Chỉ gửi khi đã đăng nhập, qua hàm chat-report (Supabase Edge Function, JWT như ai-tutor).
+   Payload tối thiểu: lý do + ghi chú ngắn + thời điểm bắt đầu phiên.
+   KHÔNG gửi transcript, audio, video. Gửi lỗi thì giữ bản lưu trên máy làm dự phòng. */
+function sendChatReport(reason, note, startedAt) {
+  return new Promise(function (resolve, reject) {
+    var loginMsg = "Cần đăng nhập để gửi báo cáo về máy chủ.";
+    var ready = window.__supabaseReady;
+    if (!ready || typeof ready.then !== "function") { reject({ code: "login", msg: loginMsg }); return; }
+    ready.then(function (client) {
+      if (!client || !client.auth || !client.auth.getSession) { reject({ code: "login", msg: loginMsg }); return; }
+      client.auth.getSession().then(function (res) {
+        var sess = res && res.data && res.data.session;
+        if (!sess || !sess.access_token) { reject({ code: "login", msg: loginMsg }); return; }
+        fetch(supabaseFnUrl("chat-report"), { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + sess.access_token, "apikey": window.SUPABASE_ANON_KEY || "" }, body: JSON.stringify({ reason: reason, note: note || "", session_started_at: startedAt ? new Date(startedAt).toISOString() : null }) })
+          .then(function (resp) {
+            if (resp.ok) { resolve(true); return; }
+            if (resp.status === 401) throw { code: "login", msg: loginMsg };
+            if (resp.status === 404) throw { code: "notlive", msg: "Hệ thống nhận báo cáo phía máy chủ chưa mở." };
+            if (resp.status === 429) throw { code: "retry", msg: "Đã gửi quá nhiều báo cáo — hãy thử lại sau." };
+            throw { code: "server", msg: "Máy chủ chưa nhận được báo cáo (lỗi " + resp.status + ")." };
+          })
+          .catch(function (e) {
+            if (e && e.code) reject(e);
+            else reject({ code: "net", msg: "Mất mạng — chưa gửi được báo cáo." });
+          });
+      }, function () { reject({ code: "login", msg: loginMsg }); });
+    }, function () { reject({ code: "login", msg: loginMsg }); });
+  });
+}
 function callPronounce(audioBase64, mimeType, referenceText) {
   return new Promise(function (resolve, reject) {
     reject("Cần đăng nhập để dùng chấm phát âm AI (đăng nhập mở ở giai đoạn 2).");
@@ -1751,9 +1781,11 @@ function firstSymFromIpa(ipa) {
    Mô hình nguồn = AI trò chuyện liên tục, không phải người thật.
    Trong phiên: chỉ hội thoại, không điểm số, không bảng đúng/sai chen ngang.
    Sau phiên: transcript + câu hay dùng lại (⭐, lưu trên máy) + ghi chú lỗi.
+   Báo cáo trong phiên gửi về máy chủ qua hàm chat-report (cần đăng nhập; gửi lỗi thì giữ bản lưu trên máy).
    XP +10 chỉ cộng một lần cho mỗi phiên đã kết thúc. */
 function chatGreeting() { return "Chào bạn! Mình là AI trò chuyện tiếng Anh của web này (không phải người thật). Bạn muốn nói về gì hôm nay? Cứ nói tự do bằng tiếng Anh hoặc tiếng Việt — mình trả lời bằng tiếng Anh đơn giản kèm nghĩa tiếng Việt ngắn khi cần. Trong lúc nói mình không chấm điểm."; }
 function renderChat(app, l) {
+  if (!l.started) l.started = Date.now();
   if (!l.msgs) l.msgs = [{ role: "assistant", text: chatGreeting() }];
   if (l.ended) { renderChatSummary(app, l); return; }
   var html = '<div class="lessonframe"><div class="row"><button class="btn" id="btnBack">← Quay lại</button><span class="chip cur">Nói · Trò chuyện với AI</span></div><div style="margin-top:6px"><b>Trò chuyện tự do với AI</b><div class="mut">Nói live bằng mic + gõ bàn phím, nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mô hình nguồn là AI trò chuyện liên tục — không phải người thật.</div></div></div>';
@@ -1767,7 +1799,7 @@ function renderChat(app, l) {
   });
   html += '</div><div class="row"><input type="text" id="chatInp" placeholder="Gõ câu của bạn rồi bấm Gửi — hoặc bấm mic để nói..." style="flex:1"><button class="btn btn-primary" id="chatSend">Gửi</button><button class="btn" id="chatMic">🎤 Nói</button></div>'
     + '<div class="row"><button class="btn btn-amber" id="chatEnd">Kết thúc phiên (+10 XP)</button><button class="btn" id="chatReport">⚑ Báo cáo nội dung không phù hợp</button></div>'
-    + '<p class="mut">Trò chuyện cần đăng nhập (đăng nhập mở ở giai đoạn 2) — nếu chưa đăng nhập, web báo rõ và không bịa câu trả lời. Lưu ý thật: hàm ai-tutor phía máy chủ trả lời bằng tiếng Việt trước, nên phiên này là tiếng Anh đơn giản kèm tiếng Việt hỗ trợ, không phải trò chuyện hoàn toàn bằng tiếng Anh. Bản ghi giọng nói qua trình duyệt chỉ là ước lượng — kiểm tra lại câu trước khi gửi. Câu bạn bấm ⭐ sẽ lưu trên máy này vào mục "Câu hay dùng lại". Báo cáo hiện chỉ lưu trên máy này — chưa có hệ thống xử lý báo cáo phía máy chủ.</p></div>';
+    + '<p class="mut">Trò chuyện cần đăng nhập (đăng nhập mở ở giai đoạn 2) — nếu chưa đăng nhập, web báo rõ và không bịa câu trả lời. Lưu ý thật: hàm ai-tutor phía máy chủ trả lời bằng tiếng Việt trước, nên phiên này là tiếng Anh đơn giản kèm tiếng Việt hỗ trợ, không phải trò chuyện hoàn toàn bằng tiếng Anh. Bản ghi giọng nói qua trình duyệt chỉ là ước lượng — kiểm tra lại câu trước khi gửi. Câu bạn bấm ⭐ sẽ lưu trên máy này vào mục "Câu hay dùng lại". Bấm ⚑ Báo cáo để gửi về máy chủ (cần đăng nhập; chỉ gửi lý do + ghi chú ngắn + thời điểm phiên, không gửi transcript hay audio/video). Nếu gửi không được, báo cáo vẫn lưu trên máy này làm dự phòng.</p></div>';
   app.innerHTML = html;
   wireBack();
   var send = function () {
@@ -1809,9 +1841,24 @@ function renderChat(app, l) {
     render();
   };
   $("#chatReport").onclick = function () {
+    var reason = null;
+    try { reason = window.prompt("Báo cáo nội dung không phù hợp — lý do ngắn (ví dụ: nói bậy, nội dung 18+, vi phạm pháp luật):", ""); } catch (e) { reason = null; }
+    if (reason === null || !String(reason).trim()) { toast("Đã hủy báo cáo."); return; }
+    var note = "";
+    try { note = window.prompt("Ghi chú ngắn thêm (không bắt buộc, tối đa 500 ký tự):", "") || ""; } catch (e) { note = ""; }
+    reason = String(reason).trim().slice(0, 200);
+    note = String(note).slice(0, 500);
+    if (!l.started) l.started = Date.now();
+    var rec = { at: Date.now(), last: l.msgs[l.msgs.length - 1], reason: reason, note: note, sent: false };
     state.chatReports = state.chatReports || [];
-    state.chatReports.push({ at: Date.now(), last: l.msgs[l.msgs.length - 1] });
-    saveState(); toast("Đã ghi nhận báo cáo — hiện báo cáo chỉ lưu trên máy này.");
+    state.chatReports.push(rec);
+    saveState();
+    sendChatReport(reason, note, l.started).then(function () {
+      rec.sent = true; saveState();
+      toast("Đã gửi báo cáo về máy chủ.");
+    }, function (e) {
+      toast((e && e.msg ? e.msg : "Chưa gửi được báo cáo.") + " Báo cáo đã lưu trên máy này làm dự phòng.");
+    });
   };
 }
 function renderChatSummary(app, l) {
