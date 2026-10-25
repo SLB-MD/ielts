@@ -14870,6 +14870,1342 @@ const CONTENT = {
      "exv": "Nếu nhiễm trùng không được điều trị sớm, nó có thể dẫn đến những biến chứng nghiêm trọng."
     }
    ]
+  },
+  {
+   "topic": "Logistics và chuỗi cung ứng",
+   "theme": "Từ vựng logistics 1 - Chuỗi cung ứng cơ bản",
+   "band": "Band 5.0",
+   "cards": [
+    {
+     "w": "supply chain management",
+     "ipa": "/səˈplaɪ tʃeɪn ˈmænɪdʒmənt/",
+     "vi": "quản trị chuỗi cung ứng",
+     "col": "good supply chain management",
+     "ex": "Good supply chain management keeps shops full every day.",
+     "exv": "Quản trị chuỗi cung ứng tốt giữ cho cửa hàng lúc nào cũng đủ hàng."
+    },
+    {
+     "w": "approved supplier",
+     "ipa": "/əˈpruːvd səˈplaɪə/",
+     "vi": "nhà cung cấp đã duyệt",
+     "col": "an approved supplier",
+     "ex": "We only buy from an approved supplier.",
+     "exv": "Chúng tôi chỉ mua từ nhà cung cấp đã duyệt."
+    },
+    {
+     "w": "warehouse",
+     "ipa": "/ˈweəhaʊs/",
+     "vi": "nhà kho",
+     "col": "a large warehouse",
+     "ex": "The goods are stored in a large warehouse outside the city.",
+     "exv": "Hàng hóa được cất trong một nhà kho lớn ngoài thành phố."
+    },
+    {
+     "w": "inventory",
+     "ipa": "/ˈɪnvəntri/",
+     "vi": "hàng tồn kho",
+     "col": "check the inventory",
+     "ex": "We check the inventory every Friday afternoon.",
+     "exv": "Chúng tôi kiểm kê hàng tồn kho mỗi chiều thứ Sáu."
+    },
+    {
+     "w": "shipment",
+     "ipa": "/ˈʃɪpmənt/",
+     "vi": "lô hàng gửi đi",
+     "col": "a delayed shipment",
+     "ex": "The customer is waiting for a delayed shipment.",
+     "exv": "Khách hàng đang chờ một lô hàng bị chậm."
+    },
+    {
+     "w": "delivery time",
+     "ipa": "/dɪˈlɪvəri taɪm/",
+     "vi": "thời gian giao hàng",
+     "col": "a short delivery time",
+     "ex": "A short delivery time makes customers happy.",
+     "exv": "Thời gian giao hàng ngắn làm khách hàng hài lòng."
+    },
+    {
+     "w": "retailer",
+     "ipa": "/ˈriːteɪlə/",
+     "vi": "nhà bán lẻ",
+     "col": "a local retailer",
+     "ex": "A local retailer sells our products in town.",
+     "exv": "Một nhà bán lẻ địa phương bán sản phẩm của chúng tôi trong thị trấn."
+    },
+    {
+     "w": "wholesaler",
+     "ipa": "/ˈhəʊlseɪlə/",
+     "vi": "nhà bán sỉ",
+     "col": "buy from a wholesaler",
+     "ex": "Small shops often buy from a wholesaler.",
+     "exv": "Các cửa hàng nhỏ thường mua từ nhà bán sỉ."
+    },
+    {
+     "w": "distributor",
+     "ipa": "/dɪˈstrɪbjətə/",
+     "vi": "nhà phân phối",
+     "col": "an official distributor",
+     "ex": "She works as an official distributor for the brand.",
+     "exv": "Cô ấy làm nhà phân phối chính thức cho thương hiệu."
+    },
+    {
+     "w": "stock",
+     "ipa": "/stɒk/",
+     "vi": "hàng có sẵn trong kho",
+     "col": "in stock",
+     "ex": "This model is still in stock.",
+     "exv": "Mẫu này vẫn còn hàng trong kho."
+    },
+    {
+     "w": "goods",
+     "ipa": "/ɡʊdz/",
+     "vi": "hàng hóa",
+     "col": "deliver the goods",
+     "ex": "We must deliver the goods before Friday.",
+     "exv": "Chúng tôi phải giao hàng hóa trước thứ Sáu."
+    },
+    {
+     "w": "package",
+     "ipa": "/ˈpækɪdʒ/",
+     "vi": "kiện hàng, gói hàng",
+     "col": "a small package",
+     "ex": "A small package arrived this morning.",
+     "exv": "Một kiện hàng nhỏ đã đến sáng nay."
+    },
+    {
+     "w": "parcel",
+     "ipa": "/ˈpɑːsl/",
+     "vi": "bưu kiện",
+     "col": "send a parcel",
+     "ex": "I will send a parcel to my sister.",
+     "exv": "Tôi sẽ gửi một bưu kiện cho em gái tôi."
+    },
+    {
+     "w": "transport",
+     "ipa": "/ˈtrænspɔːt/",
+     "vi": "vận tải",
+     "col": "road transport",
+     "ex": "Road transport is cheaper for short trips.",
+     "exv": "Vận tải đường bộ rẻ hơn cho quãng đường ngắn."
+    },
+    {
+     "w": "storage",
+     "ipa": "/ˈstɔːrɪdʒ/",
+     "vi": "việc lưu kho",
+     "col": "storage costs",
+     "ex": "Storage costs rise when goods stay too long.",
+     "exv": "Chi phí lưu kho tăng khi hàng hóa để quá lâu."
+    },
+    {
+     "w": "customer demand",
+     "ipa": "/ˈkʌstəmə dɪˈmɑːnd/",
+     "vi": "nhu cầu khách hàng",
+     "col": "meet customer demand",
+     "ex": "We bake more bread to meet customer demand.",
+     "exv": "Chúng tôi nướng thêm bánh mì để đáp ứng nhu cầu khách hàng."
+    },
+    {
+     "w": "end customer",
+     "ipa": "/ˈend ˈkʌstəmə/",
+     "vi": "khách hàng cuối",
+     "col": "serve the end customer",
+     "ex": "Every step in the chain serves the end customer.",
+     "exv": "Mọi khâu trong chuỗi đều phục vụ khách hàng cuối."
+    },
+    {
+     "w": "logistics provider",
+     "ipa": "/ləˈdʒɪstɪks prəˈvaɪdə/",
+     "vi": "nhà cung cấp dịch vụ logistics",
+     "col": "a logistics provider",
+     "ex": "A logistics provider moves our goods by truck.",
+     "exv": "Một nhà cung cấp dịch vụ logistics chở hàng của chúng tôi bằng xe tải."
+    },
+    {
+     "w": "stock level",
+     "ipa": "/ˈstɒk ˈlevl/",
+     "vi": "mức tồn kho",
+     "col": "a low stock level",
+     "ex": "A low stock level means we must order soon.",
+     "exv": "Mức tồn kho thấp nghĩa là chúng tôi phải sớm đặt hàng."
+    },
+    {
+     "w": "purchase order",
+     "ipa": "/ˈpɜːtʃəs ˈɔːdə/",
+     "vi": "đơn đặt mua",
+     "col": "send a purchase order",
+     "ex": "Send a purchase order before you pay.",
+     "exv": "Hãy gửi đơn đặt mua trước khi thanh toán."
+    }
+   ]
+  },
+  {
+   "topic": "Logistics và chuỗi cung ứng",
+   "theme": "Từ vựng logistics 2 - Kho bãi và đóng gói",
+   "band": "Band 5.5",
+   "cards": [
+    {
+     "w": "pallet",
+     "ipa": "/ˈpælɪt/",
+     "vi": "tấm kê hàng (pallet)",
+     "col": "stack boxes on a pallet",
+     "ex": "Workers stack boxes on a pallet.",
+     "exv": "Công nhân xếp hộp lên tấm kê hàng."
+    },
+    {
+     "w": "container",
+     "ipa": "/kənˈteɪnə/",
+     "vi": "container",
+     "col": "a shipping container",
+     "ex": "A shipping container can hold many boxes.",
+     "exv": "Một container có thể chứa nhiều hộp hàng."
+    },
+    {
+     "w": "forklift",
+     "ipa": "/ˈfɔːklɪft/",
+     "vi": "xe nâng",
+     "col": "drive a forklift",
+     "ex": "He drives a forklift in the warehouse.",
+     "exv": "Anh ấy lái xe nâng trong nhà kho."
+    },
+    {
+     "w": "loading",
+     "ipa": "/ˈləʊdɪŋ/",
+     "vi": "việc bốc hàng lên",
+     "col": "loading time",
+     "ex": "Loading time is 30 minutes.",
+     "exv": "Thời gian bốc hàng là 30 phút."
+    },
+    {
+     "w": "unloading",
+     "ipa": "/ʌnˈləʊdɪŋ/",
+     "vi": "việc dỡ hàng xuống",
+     "col": "unloading area",
+     "ex": "Trucks wait in the unloading area.",
+     "exv": "Xe tải chờ ở khu dỡ hàng."
+    },
+    {
+     "w": "packaging",
+     "ipa": "/ˈpækɪdʒɪŋ/",
+     "vi": "bao bì, việc đóng gói",
+     "col": "strong packaging",
+     "ex": "Strong packaging protects the goods.",
+     "exv": "Bao bì chắc chắn bảo vệ hàng hóa."
+    },
+    {
+     "w": "wrapping",
+     "ipa": "/ˈræpɪŋ/",
+     "vi": "việc bọc hàng",
+     "col": "plastic wrapping",
+     "ex": "Plastic wrapping keeps the boxes dry.",
+     "exv": "Lớp bọc ni lông giữ hộp hàng khô ráo."
+    },
+    {
+     "w": "labelling",
+     "ipa": "/ˈleɪbəlɪŋ/",
+     "vi": "việc dán nhãn",
+     "col": "clear labelling",
+     "ex": "Clear labelling helps workers find goods fast.",
+     "exv": "Dán nhãn rõ ràng giúp công nhân tìm hàng nhanh."
+    },
+    {
+     "w": "barcode",
+     "ipa": "/ˈbɑːkəʊd/",
+     "vi": "mã vạch",
+     "col": "scan a barcode",
+     "ex": "Scan the barcode to check the price.",
+     "exv": "Quét mã vạch để kiểm tra giá."
+    },
+    {
+     "w": "shelf",
+     "ipa": "/ʃelf/",
+     "vi": "kệ hàng",
+     "col": "put it on the shelf",
+     "ex": "Put the small boxes on the top shelf.",
+     "exv": "Đặt hộp nhỏ lên kệ trên cùng."
+    },
+    {
+     "w": "rack",
+     "ipa": "/ræk/",
+     "vi": "giá kệ lớn",
+     "col": "a storage rack",
+     "ex": "Heavy boxes go on a low storage rack.",
+     "exv": "Hộp nặng để trên giá kệ thấp."
+    },
+    {
+     "w": "crate",
+     "ipa": "/kreɪt/",
+     "vi": "thùng gỗ lớn",
+     "col": "a wooden crate",
+     "ex": "Fruit travels in a wooden crate.",
+     "exv": "Trái cây được chở trong thùng gỗ."
+    },
+    {
+     "w": "carton",
+     "ipa": "/ˈkɑːtn/",
+     "vi": "thùng các-tông",
+     "col": "a carton of books",
+     "ex": "We packed the books in a carton.",
+     "exv": "Chúng tôi đóng sách vào thùng các-tông."
+    },
+    {
+     "w": "fragile",
+     "ipa": "/ˈfrædʒaɪl/",
+     "vi": "dễ vỡ",
+     "col": "fragile goods",
+     "ex": "Mark the box 'fragile' if the goods break easily.",
+     "exv": "Hãy ghi 'dễ vỡ' lên hộp nếu hàng dễ vỡ."
+    },
+    {
+     "w": "stack",
+     "ipa": "/stæk/",
+     "vi": "xếp chồng",
+     "col": "stack the boxes",
+     "ex": "Do not stack heavy boxes too high.",
+     "exv": "Đừng xếp hộp nặng chồng quá cao."
+    },
+    {
+     "w": "sort",
+     "ipa": "/sɔːt/",
+     "vi": "phân loại",
+     "col": "sort the parcels",
+     "ex": "Workers sort the parcels by city.",
+     "exv": "Công nhân phân loại bưu kiện theo thành phố."
+    },
+    {
+     "w": "dispatch",
+     "ipa": "/dɪˈspætʃ/",
+     "vi": "gửi đi",
+     "col": "dispatch the orders",
+     "ex": "We dispatch the orders every evening.",
+     "exv": "Chúng tôi gửi các đơn hàng đi mỗi tối."
+    },
+    {
+     "w": "forklift driver",
+     "ipa": "/ˈfɔːklɪft ˈdraɪvə/",
+     "vi": "tài xế xe nâng",
+     "col": "a trained forklift driver",
+     "ex": "A trained forklift driver moves heavy pallets safely.",
+     "exv": "Tài xế xe nâng đã qua đào tạo di chuyển pallet nặng an toàn."
+    },
+    {
+     "w": "stockroom",
+     "ipa": "/ˈstɒkruːm/",
+     "vi": "phòng chứa hàng",
+     "col": "in the stockroom",
+     "ex": "Extra boxes are kept in the stockroom.",
+     "exv": "Hộp thừa được cất trong phòng chứa hàng."
+    },
+    {
+     "w": "weighing",
+     "ipa": "/ˈweɪɪŋ/",
+     "vi": "việc cân hàng",
+     "col": "weighing station",
+     "ex": "Every parcel passes the weighing station.",
+     "exv": "Mọi bưu kiện đều qua trạm cân."
+    }
+   ]
+  },
+  {
+   "topic": "Logistics và chuỗi cung ứng",
+   "theme": "Từ vựng logistics 3 - Vận chuyển và giao nhận",
+   "band": "Band 6.0",
+   "cards": [
+    {
+     "w": "customs declaration",
+     "ipa": "/ˈkʌstəmz ˌdekləˈreɪʃn/",
+     "vi": "tờ khai hải quan",
+     "col": "fill in a customs declaration",
+     "ex": "Fill in a customs declaration before you ship the box.",
+     "exv": "Hãy khai tờ khai hải quan trước khi gửi hộp hàng."
+    },
+    {
+     "w": "clearance",
+     "ipa": "/ˈklɪərəns/",
+     "vi": "việc thông quan",
+     "col": "customs clearance",
+     "ex": "Customs clearance can take two days.",
+     "exv": "Thông quan có thể mất hai ngày."
+    },
+    {
+     "w": "tracking",
+     "ipa": "/ˈtrækɪŋ/",
+     "vi": "việc theo dõi hành trình",
+     "col": "parcel tracking",
+     "ex": "Parcel tracking shows where your box is now.",
+     "exv": "Theo dõi bưu kiện cho biết hộp của bạn đang ở đâu."
+    },
+    {
+     "w": "distribution",
+     "ipa": "/ˌdɪstrɪˈbjuːʃn/",
+     "vi": "phân phối",
+     "col": "a distribution centre",
+     "ex": "A new distribution centre opened near the port.",
+     "exv": "Một trung tâm phân phối mới mở gần cảng."
+    },
+    {
+     "w": "shipping route",
+     "ipa": "/ˈʃɪpɪŋ ruːt/",
+     "vi": "tuyến vận chuyển",
+     "col": "a new shipping route",
+     "ex": "A new shipping route cuts two days off the trip.",
+     "exv": "Tuyến vận chuyển mới rút ngắn hành trình hai ngày."
+    },
+    {
+     "w": "fleet",
+     "ipa": "/fliːt/",
+     "vi": "đội xe",
+     "col": "a fleet of trucks",
+     "ex": "The company owns a fleet of 50 trucks.",
+     "exv": "Công ty sở hữu đội xe 50 chiếc."
+    },
+    {
+     "w": "carrier",
+     "ipa": "/ˈkæriə/",
+     "vi": "hãng vận chuyển",
+     "col": "a reliable carrier",
+     "ex": "Choose a reliable carrier for urgent goods.",
+     "exv": "Hãy chọn hãng vận chuyển đáng tin cho hàng gấp."
+    },
+    {
+     "w": "consignment",
+     "ipa": "/kənˈsaɪnmənt/",
+     "vi": "lô hàng ký gửi",
+     "col": "a large consignment",
+     "ex": "A large consignment arrived by sea.",
+     "exv": "Một lô hàng lớn đã đến bằng đường biển."
+    },
+    {
+     "w": "transit",
+     "ipa": "/ˈtrænzɪt/",
+     "vi": "quá cảnh, đang vận chuyển",
+     "col": "in transit",
+     "ex": "Your parcel is still in transit.",
+     "exv": "Bưu kiện của bạn vẫn đang trên đường vận chuyển."
+    },
+    {
+     "w": "delivery deadline",
+     "ipa": "/dɪˈlɪvəri ˈdedlaɪn/",
+     "vi": "hạn giao hàng",
+     "col": "meet the delivery deadline",
+     "ex": "We must meet the delivery deadline.",
+     "exv": "Chúng tôi phải kịp hạn giao hàng."
+    },
+    {
+     "w": "shipping delay",
+     "ipa": "/ˈʃɪpɪŋ dɪˈleɪ/",
+     "vi": "chậm trễ vận chuyển",
+     "col": "a shipping delay",
+     "ex": "A storm caused a shipping delay.",
+     "exv": "Một cơn bão gây chậm trễ vận chuyển."
+    },
+    {
+     "w": "express",
+     "ipa": "/ɪkˈspres/",
+     "vi": "chuyển phát nhanh",
+     "col": "express delivery",
+     "ex": "Express delivery costs more but arrives sooner.",
+     "exv": "Chuyển phát nhanh đắt hơn nhưng đến sớm hơn."
+    },
+    {
+     "w": "courier",
+     "ipa": "/ˈkʊriə/",
+     "vi": "người giao hàng nhanh",
+     "col": "a motorbike courier",
+     "ex": "A motorbike courier delivers small parcels in the city.",
+     "exv": "Người giao hàng xe máy giao bưu kiện nhỏ trong thành phố."
+    },
+    {
+     "w": "air waybill",
+     "ipa": "/ˈeə ˈweɪbɪl/",
+     "vi": "vận đơn hàng không",
+     "col": "check the air waybill",
+     "ex": "Check the air waybill before the plane leaves.",
+     "exv": "Hãy kiểm tra vận đơn hàng không trước khi máy bay cất cánh."
+    },
+    {
+     "w": "port",
+     "ipa": "/pɔːt/",
+     "vi": "cảng",
+     "col": "a busy port",
+     "ex": "This busy port handles thousands of containers.",
+     "exv": "Cảng nhộn nhịp này xử lý hàng nghìn container."
+    },
+    {
+     "w": "cargo terminal",
+     "ipa": "/ˈkɑːɡəʊ ˈtɜːmɪnl/",
+     "vi": "bến hàng hóa",
+     "col": "at the cargo terminal",
+     "ex": "Trucks unload at the cargo terminal.",
+     "exv": "Xe tải dỡ hàng ở bến hàng hóa."
+    },
+    {
+     "w": "haulage",
+     "ipa": "/ˈhɔːlɪdʒ/",
+     "vi": "vận tải đường bộ hạng nặng",
+     "col": "a haulage company",
+     "ex": "A haulage company moves goods between cities.",
+     "exv": "Một công ty vận tải đường bộ chở hàng giữa các thành phố."
+    },
+    {
+     "w": "freight forwarder",
+     "ipa": "/ˈfreɪt ˈfɔːwədə/",
+     "vi": "công ty giao nhận vận tải",
+     "col": "contact a freight forwarder",
+     "ex": "Contact a freight forwarder to ship goods abroad.",
+     "exv": "Hãy liên hệ công ty giao nhận để gửi hàng ra nước ngoài."
+    },
+    {
+     "w": "import duty",
+     "ipa": "/ˈɪmpɔːt ˈdjuːti/",
+     "vi": "thuế nhập khẩu",
+     "col": "pay import duty",
+     "ex": "You must pay import duty on goods from abroad.",
+     "exv": "Bạn phải nộp thuế nhập khẩu cho hàng từ nước ngoài."
+    },
+    {
+     "w": "export licence",
+     "ipa": "/ˈekspɔːt ˈlaɪsns/",
+     "vi": "giấy phép xuất khẩu",
+     "col": "need an export licence",
+     "ex": "Some goods need an export licence.",
+     "exv": "Một số mặt hàng cần giấy phép xuất khẩu."
+    }
+   ]
+  },
+  {
+   "topic": "Logistics và chuỗi cung ứng",
+   "theme": "Từ vựng logistics 4 - Quản trị logistics",
+   "band": "Band 6.5",
+   "cards": [
+    {
+     "w": "procurement",
+     "ipa": "/prəˈkjʊəmənt/",
+     "vi": "thu mua",
+     "col": "a procurement team",
+     "ex": "The procurement team buys raw materials.",
+     "exv": "Đội thu mua mua nguyên liệu thô."
+    },
+    {
+     "w": "third-party logistics",
+     "ipa": "/ˈθɜːd ˈpɑːti ləˈdʒɪstɪks/",
+     "vi": "logistics bên thứ ba",
+     "col": "use third-party logistics",
+     "ex": "Small firms often use third-party logistics.",
+     "exv": "Công ty nhỏ thường dùng logistics bên thứ ba."
+    },
+    {
+     "w": "last-mile delivery",
+     "ipa": "/ˈlɑːst maɪl dɪˈlɪvəri/",
+     "vi": "giao chặng cuối",
+     "col": "last-mile delivery costs",
+     "ex": "Last-mile delivery costs the most in the chain.",
+     "exv": "Giao chặng cuối tốn kém nhất trong chuỗi."
+    },
+    {
+     "w": "just-in-time",
+     "ipa": "/ˌdʒʌst ɪn ˈtaɪm/",
+     "vi": "đúng lúc (mô hình tồn kho)",
+     "col": "a just-in-time system",
+     "ex": "A just-in-time system keeps almost no spare stock.",
+     "exv": "Hệ thống đúng lúc gần như không giữ hàng dự phòng."
+    },
+    {
+     "w": "reverse logistics",
+     "ipa": "/rɪˈvɜːs ləˈdʒɪstɪks/",
+     "vi": "logistics ngược (hàng trả lại)",
+     "col": "manage reverse logistics",
+     "ex": "Shops must manage reverse logistics for returned goods.",
+     "exv": "Cửa hàng phải lo logistics ngược cho hàng bị trả lại."
+    },
+    {
+     "w": "lead time",
+     "ipa": "/ˈliːd taɪm/",
+     "vi": "thời gian chờ hàng",
+     "col": "a short lead time",
+     "ex": "A short lead time helps shops plan better.",
+     "exv": "Thời gian chờ hàng ngắn giúp cửa hàng lên kế hoạch tốt hơn."
+    },
+    {
+     "w": "bottleneck",
+     "ipa": "/ˈbɒtlnek/",
+     "vi": "điểm nghẽn",
+     "col": "a bottleneck at the port",
+     "ex": "A bottleneck at the port delays every shipment.",
+     "exv": "Điểm nghẽn ở cảng làm chậm mọi lô hàng."
+    },
+    {
+     "w": "streamline operations",
+     "ipa": "/ˈstriːmlaɪn ˌɒpəˈreɪʃnz/",
+     "vi": "tinh gọn vận hành",
+     "col": "streamline operations",
+     "ex": "We streamlined operations and saved two days.",
+     "exv": "Chúng tôi đã tinh gọn vận hành và tiết kiệm hai ngày."
+    },
+    {
+     "w": "benchmark",
+     "ipa": "/ˈbentʃmɑːk/",
+     "vi": "chuẩn đối sánh",
+     "col": "set a benchmark",
+     "ex": "Set a benchmark for delivery speed.",
+     "exv": "Hãy đặt chuẩn đối sánh cho tốc độ giao hàng."
+    },
+    {
+     "w": "vendor",
+     "ipa": "/ˈvendə/",
+     "vi": "nhà cung ứng",
+     "col": "a trusted vendor",
+     "ex": "We work with one trusted vendor.",
+     "exv": "Chúng tôi làm việc với một nhà cung ứng đáng tin."
+    },
+    {
+     "w": "price negotiation",
+     "ipa": "/ˈpraɪs nɪˌɡəʊʃiˈeɪʃn/",
+     "vi": "đàm phán giá",
+     "col": "a price negotiation",
+     "ex": "A price negotiation saved us 10 percent.",
+     "exv": "Cuộc đàm phán giá giúp chúng tôi tiết kiệm 10%."
+    },
+    {
+     "w": "green logistics",
+     "ipa": "/ˈɡriːn ləˈdʒɪstɪks/",
+     "vi": "logistics xanh",
+     "col": "green logistics",
+     "ex": "Green logistics uses electric trucks and less plastic.",
+     "exv": "Logistics xanh dùng xe tải điện và ít nhựa hơn."
+    },
+    {
+     "w": "carbon emissions",
+     "ipa": "/ˈkɑːbən ɪˈmɪʃnz/",
+     "vi": "khí thải carbon",
+     "col": "cut carbon emissions",
+     "ex": "Fewer empty trips cut carbon emissions.",
+     "exv": "Ít chuyến xe rỗng hơn giúp giảm khí thải carbon."
+    },
+    {
+     "w": "automated sorting",
+     "ipa": "/ˈɔːtəmeɪtɪd ˈsɔːtɪŋ/",
+     "vi": "phân loại tự động",
+     "col": "automated sorting",
+     "ex": "Automated sorting moves parcels faster than people.",
+     "exv": "Phân loại tự động chuyển bưu kiện nhanh hơn con người."
+    },
+    {
+     "w": "real-time",
+     "ipa": "/ˈrɪəl taɪm/",
+     "vi": "theo thời gian thực",
+     "col": "real-time tracking",
+     "ex": "Real-time tracking shows every truck on a map.",
+     "exv": "Theo dõi thời gian thực hiển thị mọi xe tải trên bản đồ."
+    },
+    {
+     "w": "data integration",
+     "ipa": "/ˈdeɪtə ˌɪntɪˈɡreɪʃn/",
+     "vi": "tích hợp dữ liệu",
+     "col": "data integration",
+     "ex": "Data integration joins sales and warehouse data.",
+     "exv": "Tích hợp dữ liệu nối dữ liệu bán hàng với dữ liệu kho."
+    },
+    {
+     "w": "service contract",
+     "ipa": "/ˈsɜːvɪs ˈkɒntrækt/",
+     "vi": "hợp đồng dịch vụ",
+     "col": "sign a service contract",
+     "ex": "Sign a service contract before the first shipment.",
+     "exv": "Hãy ký hợp đồng dịch vụ trước lô hàng đầu tiên."
+    },
+    {
+     "w": "scalability",
+     "ipa": "/ˌskeɪləˈbɪləti/",
+     "vi": "khả năng mở rộng",
+     "col": "plan for scalability",
+     "ex": "Plan for scalability before sales grow.",
+     "exv": "Hãy tính khả năng mở rộng trước khi doanh số tăng."
+    },
+    {
+     "w": "optimization",
+     "ipa": "/ˌɒptɪmaɪˈzeɪʃn/",
+     "vi": "tối ưu hóa",
+     "col": "route optimization",
+     "ex": "Route optimization saves fuel every day.",
+     "exv": "Tối ưu tuyến đường tiết kiệm nhiên liệu mỗi ngày."
+    },
+    {
+     "w": "order fulfilment",
+     "ipa": "/ˈɔːdə fʊlˈfɪlmənt/",
+     "vi": "hoàn tất đơn hàng",
+     "col": "order fulfilment",
+     "ex": "Order fulfilment covers packing and sending.",
+     "exv": "Hoàn tất đơn hàng gồm đóng gói và gửi đi."
+    }
+   ]
+  },
+  {
+   "topic": "Y tế và chăm sóc sức khỏe",
+   "theme": "Từ vựng y tế 3 - Khoa phòng và nhân sự",
+   "band": "Band 5.5",
+   "cards": [
+    {
+     "w": "cardiology",
+     "ipa": "/ˌkɑːdiˈɒlədʒi/",
+     "vi": "khoa tim mạch",
+     "col": "a cardiology department",
+     "ex": "He works in the cardiology department.",
+     "exv": "Anh ấy làm việc ở khoa tim mạch."
+    },
+    {
+     "w": "paediatrics",
+     "ipa": "/ˌpiːdiˈætrɪks/",
+     "vi": "khoa nhi",
+     "col": "a paediatrics ward",
+     "ex": "Children are treated in paediatrics.",
+     "exv": "Trẻ em được điều trị ở khoa nhi."
+    },
+    {
+     "w": "neurology",
+     "ipa": "/njʊəˈrɒlədʒi/",
+     "vi": "khoa thần kinh",
+     "col": "a neurology doctor",
+     "ex": "A neurology doctor treats headaches and seizures.",
+     "exv": "Bác sĩ thần kinh điều trị đau đầu và co giật."
+    },
+    {
+     "w": "oncology",
+     "ipa": "/ɒŋˈkɒlədʒi/",
+     "vi": "khoa ung bướu",
+     "col": "an oncology nurse",
+     "ex": "An oncology nurse cares for cancer patients.",
+     "exv": "Điều dưỡng ung bướu chăm sóc bệnh nhân ung thư."
+    },
+    {
+     "w": "dermatology",
+     "ipa": "/ˌdɜːməˈtɒlədʒi/",
+     "vi": "khoa da liễu",
+     "col": "a dermatology clinic",
+     "ex": "Skin problems are treated in dermatology.",
+     "exv": "Bệnh về da được điều trị ở khoa da liễu."
+    },
+    {
+     "w": "surgeon",
+     "ipa": "/ˈsɜːdʒən/",
+     "vi": "bác sĩ phẫu thuật",
+     "col": "a heart surgeon",
+     "ex": "A heart surgeon operates every day.",
+     "exv": "Bác sĩ phẫu thuật tim mổ mỗi ngày."
+    },
+    {
+     "w": "hospital pharmacist",
+     "ipa": "/ˈhɒspɪtl ˈfɑːməsɪst/",
+     "vi": "dược sĩ bệnh viện",
+     "col": "ask the hospital pharmacist",
+     "ex": "Ask the hospital pharmacist about your medicine.",
+     "exv": "Hãy hỏi dược sĩ bệnh viện về thuốc của bạn."
+    },
+    {
+     "w": "physiotherapist",
+     "ipa": "/ˌfɪziəʊˈθerəpɪst/",
+     "vi": "chuyên viên vật lý trị liệu",
+     "col": "see a physiotherapist",
+     "ex": "See a physiotherapist after a leg injury.",
+     "exv": "Hãy gặp chuyên viên vật lý trị liệu sau chấn thương chân."
+    },
+    {
+     "w": "radiologist",
+     "ipa": "/ˌreɪdiˈɒlədʒɪst/",
+     "vi": "bác sĩ chẩn đoán hình ảnh",
+     "col": "a radiologist reads the scan",
+     "ex": "A radiologist reads the scan and writes a report.",
+     "exv": "Bác sĩ chẩn đoán hình ảnh đọc phim chụp và viết báo cáo."
+    },
+    {
+     "w": "anaesthetist",
+     "ipa": "/əˈniːsθətɪst/",
+     "vi": "bác sĩ gây mê",
+     "col": "an anaesthetist",
+     "ex": "An anaesthetist keeps you asleep during surgery.",
+     "exv": "Bác sĩ gây mê giữ bạn ngủ trong lúc mổ."
+    },
+    {
+     "w": "midwife",
+     "ipa": "/ˈmɪdwaɪf/",
+     "vi": "nữ hộ sinh",
+     "col": "a hospital midwife",
+     "ex": "A midwife helps mothers give birth safely.",
+     "exv": "Nữ hộ sinh giúp sản phụ sinh con an toàn."
+    },
+    {
+     "w": "paramedic",
+     "ipa": "/ˌpærəˈmedɪk/",
+     "vi": "nhân viên cấp cứu",
+     "col": "call a paramedic",
+     "ex": "Call a paramedic for a serious accident.",
+     "exv": "Hãy gọi nhân viên cấp cứu khi tai nạn nghiêm trọng."
+    },
+    {
+     "w": "outpatient",
+     "ipa": "/ˈaʊtpeɪʃnt/",
+     "vi": "bệnh nhân ngoại trú",
+     "col": "an outpatient visit",
+     "ex": "An outpatient visit takes one morning.",
+     "exv": "Một lần khám ngoại trú mất một buổi sáng."
+    },
+    {
+     "w": "inpatient",
+     "ipa": "/ˈɪnpeɪʃnt/",
+     "vi": "bệnh nhân nội trú",
+     "col": "an inpatient bed",
+     "ex": "An inpatient stays in hospital overnight.",
+     "exv": "Bệnh nhân nội trú ở lại bệnh viện qua đêm."
+    },
+    {
+     "w": "consultant",
+     "ipa": "/kənˈsʌltənt/",
+     "vi": "bác sĩ tư vấn cấp cao",
+     "col": "a hospital consultant",
+     "ex": "A hospital consultant leads the medical team.",
+     "exv": "Bác sĩ tư vấn cấp cao dẫn dắt đội ngũ y tế."
+    },
+    {
+     "w": "general practitioner",
+     "ipa": "/ˈdʒenrəl prækˈtɪʃnə/",
+     "vi": "bác sĩ đa khoa",
+     "col": "see your general practitioner",
+     "ex": "See your general practitioner first for a cough.",
+     "exv": "Hãy gặp bác sĩ đa khoa trước khi bị ho."
+    },
+    {
+     "w": "psychiatry",
+     "ipa": "/saɪˈkaɪətri/",
+     "vi": "khoa tâm thần",
+     "col": "a psychiatry department",
+     "ex": "The psychiatry department treats anxiety and depression.",
+     "exv": "Khoa tâm thần điều trị lo âu và trầm cảm."
+    },
+    {
+     "w": "orthopaedics",
+     "ipa": "/ˌɔːθəˈpiːdɪks/",
+     "vi": "khoa chấn thương chỉnh hình",
+     "col": "an orthopaedics doctor",
+     "ex": "An orthopaedics doctor treats broken bones.",
+     "exv": "Bác sĩ chấn thương chỉnh hình điều trị gãy xương."
+    },
+    {
+     "w": "ophthalmology",
+     "ipa": "/ˌɒfθælˈmɒlədʒi/",
+     "vi": "khoa mắt",
+     "col": "an ophthalmology check",
+     "ex": "An ophthalmology check tests your eyesight.",
+     "exv": "Khám mắt kiểm tra thị lực của bạn."
+    },
+    {
+     "w": "gynaecology",
+     "ipa": "/ˌɡaɪnəˈkɒlədʒi/",
+     "vi": "khoa phụ sản",
+     "col": "a gynaecology clinic",
+     "ex": "A gynaecology clinic cares for women's health.",
+     "exv": "Phòng khám phụ sản chăm sóc sức khỏe phụ nữ."
+    }
+   ]
+  },
+  {
+   "topic": "Y tế và chăm sóc sức khỏe",
+   "theme": "Từ vựng y tế 4 - Xét nghiệm và chẩn đoán hình ảnh",
+   "band": "Band 6.0",
+   "cards": [
+    {
+     "w": "blood test",
+     "ipa": "/ˈblʌd test/",
+     "vi": "xét nghiệm máu",
+     "col": "a routine blood test",
+     "ex": "A routine blood test checks your health yearly.",
+     "exv": "Xét nghiệm máu định kỳ kiểm tra sức khỏe của bạn hằng năm."
+    },
+    {
+     "w": "urine test",
+     "ipa": "/ˈjʊərɪn test/",
+     "vi": "xét nghiệm nước tiểu",
+     "col": "a urine test",
+     "ex": "A urine test can show kidney problems.",
+     "exv": "Xét nghiệm nước tiểu có thể phát hiện bệnh thận."
+    },
+    {
+     "w": "blood sample",
+     "ipa": "/ˈblʌd ˈsɑːmpl/",
+     "vi": "mẫu máu",
+     "col": "take a blood sample",
+     "ex": "The nurse takes a blood sample from your arm.",
+     "exv": "Điều dưỡng lấy mẫu máu từ cánh tay bạn."
+    },
+    {
+     "w": "tissue sample",
+     "ipa": "/ˈtɪʃuː ˈsɑːmpl/",
+     "vi": "mẫu mô",
+     "col": "a tissue sample",
+     "ex": "A tissue sample helps doctors find the disease.",
+     "exv": "Mẫu mô giúp bác sĩ tìm ra bệnh."
+    },
+    {
+     "w": "testing laboratory",
+     "ipa": "/ˈtestɪŋ ləˈbɒrətri/",
+     "vi": "phòng xét nghiệm",
+     "col": "a testing laboratory",
+     "ex": "The sample goes to a testing laboratory.",
+     "exv": "Mẫu bệnh phẩm được đưa tới phòng xét nghiệm."
+    },
+    {
+     "w": "lab technician",
+     "ipa": "/ˈlæb tekˈnɪʃn/",
+     "vi": "kỹ thuật viên xét nghiệm",
+     "col": "a lab technician",
+     "ex": "A lab technician runs the blood test.",
+     "exv": "Kỹ thuật viên xét nghiệm chạy xét nghiệm máu."
+    },
+    {
+     "w": "X-ray",
+     "ipa": "/ˈeks reɪ/",
+     "vi": "chụp X-quang",
+     "col": "take an X-ray",
+     "ex": "Take an X-ray to check the broken bone.",
+     "exv": "Hãy chụp X-quang để kiểm tra xương gãy."
+    },
+    {
+     "w": "MRI scan",
+     "ipa": "/ˌem ɑːr ˈaɪ skæn/",
+     "vi": "chụp cộng hưởng từ",
+     "col": "an MRI scan",
+     "ex": "An MRI scan shows soft tissues clearly.",
+     "exv": "Chụp cộng hưởng từ cho thấy mô mềm rõ ràng."
+    },
+    {
+     "w": "CT scan",
+     "ipa": "/ˌsiː ˈtiː skæn/",
+     "vi": "chụp cắt lớp vi tính",
+     "col": "a CT scan",
+     "ex": "A CT scan builds a 3D picture of the body.",
+     "exv": "Chụp cắt lớp vi tính dựng hình ảnh 3D của cơ thể."
+    },
+    {
+     "w": "ultrasound",
+     "ipa": "/ˈʌltrəsaʊnd/",
+     "vi": "siêu âm",
+     "col": "an ultrasound scan",
+     "ex": "An ultrasound scan checks the baby's growth.",
+     "exv": "Siêu âm kiểm tra sự phát triển của em bé."
+    },
+    {
+     "w": "biopsy",
+     "ipa": "/ˈbaɪɒpsi/",
+     "vi": "sinh thiết",
+     "col": "a biopsy result",
+     "ex": "A biopsy result takes a few days.",
+     "exv": "Kết quả sinh thiết mất vài ngày."
+    },
+    {
+     "w": "cholesterol",
+     "ipa": "/kəˈlestərɒl/",
+     "vi": "cholesterol",
+     "col": "high cholesterol",
+     "ex": "High cholesterol raises heart risk.",
+     "exv": "Cholesterol cao làm tăng nguy cơ bệnh tim."
+    },
+    {
+     "w": "glucose",
+     "ipa": "/ˈɡluːkəʊs/",
+     "vi": "đường huyết (glucose)",
+     "col": "blood glucose",
+     "ex": "Blood glucose is measured after fasting.",
+     "exv": "Đường huyết được đo sau khi nhịn ăn."
+    },
+    {
+     "w": "haemoglobin",
+     "ipa": "/ˌhiːməˈɡləʊbɪn/",
+     "vi": "huyết sắc tố",
+     "col": "low haemoglobin",
+     "ex": "Low haemoglobin can cause tiredness.",
+     "exv": "Huyết sắc tố thấp có thể gây mệt mỏi."
+    },
+    {
+     "w": "platelet",
+     "ipa": "/ˈpleɪtlət/",
+     "vi": "tiểu cầu",
+     "col": "a low platelet count",
+     "ex": "A low platelet count slows blood clotting.",
+     "exv": "Tiểu cầu thấp làm máu đông chậm lại."
+    },
+    {
+     "w": "antibody",
+     "ipa": "/ˈæntibɒdi/",
+     "vi": "kháng thể",
+     "col": "produce antibodies",
+     "ex": "The body produces antibodies after infection.",
+     "exv": "Cơ thể tạo kháng thể sau khi nhiễm bệnh."
+    },
+    {
+     "w": "bacterial culture",
+     "ipa": "/bækˈtɪəriəl ˈkʌltʃə/",
+     "vi": "nuôi cấy vi khuẩn",
+     "col": "a bacterial culture",
+     "ex": "A bacterial culture finds which germ causes the illness.",
+     "exv": "Nuôi cấy vi khuẩn tìm ra vi trùng nào gây bệnh."
+    },
+    {
+     "w": "microscope",
+     "ipa": "/ˈmaɪkrəskəʊp/",
+     "vi": "kính hiển vi",
+     "col": "under a microscope",
+     "ex": "Look at the sample under a microscope.",
+     "exv": "Hãy nhìn mẫu bệnh phẩm dưới kính hiển vi."
+    },
+    {
+     "w": "test tube",
+     "ipa": "/ˈtest tjuːb/",
+     "vi": "ống nghiệm",
+     "col": "a test tube",
+     "ex": "Put the blood in a test tube.",
+     "exv": "Hãy cho máu vào ống nghiệm."
+    },
+    {
+     "w": "syringe",
+     "ipa": "/sɪˈrɪndʒ/",
+     "vi": "ống tiêm",
+     "col": "a sterile syringe",
+     "ex": "Use a sterile syringe for every injection.",
+     "exv": "Hãy dùng ống tiêm vô trùng cho mỗi lần tiêm."
+    }
+   ]
+  },
+  {
+   "topic": "Y tế và chăm sóc sức khỏe",
+   "theme": "Từ vựng y tế 5 - Y tế công cộng và dịch bệnh",
+   "band": "Band 7.0",
+   "cards": [
+    {
+     "w": "endemic",
+     "ipa": "/enˈdemɪk/",
+     "vi": "(bệnh) lưu hành địa phương",
+     "col": "an endemic disease",
+     "ex": "Malaria is endemic in some tropical areas.",
+     "exv": "Sốt rét là bệnh lưu hành ở một số vùng nhiệt đới."
+    },
+    {
+     "w": "pandemic",
+     "ipa": "/pænˈdemɪk/",
+     "vi": "đại dịch",
+     "col": "a global pandemic",
+     "ex": "A global pandemic affects many countries at once.",
+     "exv": "Đại dịch toàn cầu ảnh hưởng nhiều nước cùng lúc."
+    },
+    {
+     "w": "outbreak",
+     "ipa": "/ˈaʊtbreɪk/",
+     "vi": "đợt bùng phát dịch",
+     "col": "an outbreak of flu",
+     "ex": "An outbreak of flu closed the school.",
+     "exv": "Đợt bùng phát cúm làm trường học đóng cửa."
+    },
+    {
+     "w": "quarantine",
+     "ipa": "/ˈkwɒrəntiːn/",
+     "vi": "cách ly",
+     "col": "in quarantine",
+     "ex": "Travellers stayed in quarantine for five days.",
+     "exv": "Du khách ở trong diện cách ly năm ngày."
+    },
+    {
+     "w": "transmission",
+     "ipa": "/trænzˈmɪʃn/",
+     "vi": "sự lây truyền",
+     "col": "stop transmission",
+     "ex": "Masks help stop transmission of flu.",
+     "exv": "Khẩu trang giúp ngăn lây truyền cúm."
+    },
+    {
+     "w": "immunity",
+     "ipa": "/ɪˈmjuːnəti/",
+     "vi": "khả năng miễn dịch",
+     "col": "natural immunity",
+     "ex": "Natural immunity grows after recovery.",
+     "exv": "Miễn dịch tự nhiên tăng lên sau khi khỏi bệnh."
+    },
+    {
+     "w": "public health",
+     "ipa": "/ˈpʌblɪk helθ/",
+     "vi": "y tế công cộng",
+     "col": "a public health campaign",
+     "ex": "A public health campaign teaches hand washing.",
+     "exv": "Chiến dịch y tế công cộng dạy rửa tay."
+    },
+    {
+     "w": "sanitation",
+     "ipa": "/ˌsænɪˈteɪʃn/",
+     "vi": "vệ sinh môi trường",
+     "col": "better sanitation",
+     "ex": "Better sanitation cuts many diseases.",
+     "exv": "Vệ sinh môi trường tốt hơn giảm nhiều bệnh."
+    },
+    {
+     "w": "hygiene",
+     "ipa": "/ˈhaɪdʒiːn/",
+     "vi": "vệ sinh (cá nhân)",
+     "col": "good hygiene",
+     "ex": "Good hygiene starts with clean hands.",
+     "exv": "Vệ sinh tốt bắt đầu từ bàn tay sạch."
+    },
+    {
+     "w": "vaccine",
+     "ipa": "/ˈvæksiːn/",
+     "vi": "vắc xin",
+     "col": "a flu vaccine",
+     "ex": "A flu vaccine is given every year.",
+     "exv": "Vắc xin cúm được tiêm mỗi năm."
+    },
+    {
+     "w": "variant",
+     "ipa": "/ˈveəriənt/",
+     "vi": "biến thể (virus)",
+     "col": "a new variant",
+     "ex": "A new variant spreads faster than the old one.",
+     "exv": "Biến thể mới lây nhanh hơn biến thể cũ."
+    },
+    {
+     "w": "mutation",
+     "ipa": "/mjuːˈteɪʃn/",
+     "vi": "đột biến",
+     "col": "a virus mutation",
+     "ex": "A virus mutation can change its symptoms.",
+     "exv": "Đột biến virus có thể đổi triệu chứng bệnh."
+    },
+    {
+     "w": "contagious",
+     "ipa": "/kənˈteɪdʒəs/",
+     "vi": "dễ lây",
+     "col": "a contagious illness",
+     "ex": "Chickenpox is a contagious illness.",
+     "exv": "Thủy đậu là bệnh dễ lây."
+    },
+    {
+     "w": "isolation",
+     "ipa": "/ˌaɪsəˈleɪʃn/",
+     "vi": "cách ly (người bệnh)",
+     "col": "in isolation",
+     "ex": "The patient stayed in isolation for a week.",
+     "exv": "Bệnh nhân ở trong diện cách ly một tuần."
+    },
+    {
+     "w": "contact tracing",
+     "ipa": "/ˈkɒntækt ˈtreɪsɪŋ/",
+     "vi": "truy vết tiếp xúc",
+     "col": "contact tracing",
+     "ex": "Contact tracing finds people who met the patient.",
+     "exv": "Truy vết tiếp xúc tìm người đã gặp bệnh nhân."
+    },
+    {
+     "w": "herd immunity",
+     "ipa": "/ˈhɜːd ɪˈmjuːnəti/",
+     "vi": "miễn dịch cộng đồng",
+     "col": "reach herd immunity",
+     "ex": "When enough people are immune, we reach herd immunity.",
+     "exv": "Khi đủ nhiều người có miễn dịch, cộng đồng đạt miễn dịch cộng đồng."
+    },
+    {
+     "w": "mortality",
+     "ipa": "/mɔːˈtæləti/",
+     "vi": "tỷ lệ tử vong",
+     "col": "a high mortality rate",
+     "ex": "A high mortality rate worries doctors.",
+     "exv": "Tỷ lệ tử vong cao làm bác sĩ lo lắng."
+    },
+    {
+     "w": "morbidity",
+     "ipa": "/mɔːˈbɪdəti/",
+     "vi": "tỷ lệ mắc bệnh",
+     "col": "morbidity data",
+     "ex": "Morbidity data shows how many people fall ill.",
+     "exv": "Số liệu mắc bệnh cho biết bao nhiêu người bị ốm."
+    },
+    {
+     "w": "disease surveillance",
+     "ipa": "/dɪˈziːz sɜːˈveɪləns/",
+     "vi": "giám sát dịch bệnh",
+     "col": "disease surveillance",
+     "ex": "Disease surveillance spots outbreaks early.",
+     "exv": "Giám sát dịch bệnh phát hiện đợt bùng phát sớm."
+    },
+    {
+     "w": "healthcare system",
+     "ipa": "/ˈhelθkeə ˈsɪstəm/",
+     "vi": "hệ thống y tế",
+     "col": "a strong healthcare system",
+     "ex": "A strong healthcare system treats everyone fairly.",
+     "exv": "Hệ thống y tế mạnh điều trị công bằng cho mọi người."
+    }
+   ]
+  },
+  {
+   "topic": "Y tế và chăm sóc sức khỏe",
+   "theme": "Từ vựng y tế 6 - Nghiên cứu y khoa và y đức",
+   "band": "Band 7.5+",
+   "cards": [
+    {
+     "w": "clinical trial",
+     "ipa": "/ˈklɪnɪkl ˈtraɪəl/",
+     "vi": "thử nghiệm lâm sàng",
+     "col": "join a clinical trial",
+     "ex": "Patients may join a clinical trial for a new drug.",
+     "exv": "Bệnh nhân có thể tham gia thử nghiệm lâm sàng thuốc mới."
+    },
+    {
+     "w": "placebo",
+     "ipa": "/pləˈsiːbəʊ/",
+     "vi": "giả dược",
+     "col": "a placebo group",
+     "ex": "A placebo group takes a pill with no medicine.",
+     "exv": "Nhóm giả dược uống viên thuốc không có dược chất."
+    },
+    {
+     "w": "medical ethics",
+     "ipa": "/ˈmedɪkl ˈeθɪks/",
+     "vi": "y đức",
+     "col": "medical ethics",
+     "ex": "Medical ethics protects patients in research.",
+     "exv": "Y đức bảo vệ bệnh nhân trong nghiên cứu."
+    },
+    {
+     "w": "consent",
+     "ipa": "/kənˈsent/",
+     "vi": "sự đồng ý",
+     "col": "give consent",
+     "ex": "Give consent only after you understand the risks.",
+     "exv": "Chỉ đồng ý sau khi bạn hiểu các rủi ro."
+    },
+    {
+     "w": "informed consent",
+     "ipa": "/ɪnˈfɔːmd kənˈsent/",
+     "vi": "đồng ý sau khi được giải thích đầy đủ",
+     "col": "sign informed consent",
+     "ex": "Sign informed consent before the trial starts.",
+     "exv": "Hãy ký đồng ý sau giải thích đầy đủ trước khi thử nghiệm bắt đầu."
+    },
+    {
+     "w": "systematic review",
+     "ipa": "/ˌsɪstəmætɪk rɪˈvjuː/",
+     "vi": "tổng quan hệ thống",
+     "col": "a systematic review",
+     "ex": "A systematic review sums up many studies.",
+     "exv": "Tổng quan hệ thống tóm tắt nhiều nghiên cứu."
+    },
+    {
+     "w": "evidence-based medicine",
+     "ipa": "/ˈevɪdəns beɪst ˈmedɪsn/",
+     "vi": "y học dựa trên bằng chứng",
+     "col": "evidence-based medicine",
+     "ex": "Evidence-based medicine uses the best studies.",
+     "exv": "Y học dựa trên bằng chứng dùng những nghiên cứu tốt nhất."
+    },
+    {
+     "w": "research hypothesis",
+     "ipa": "/rɪˈsɜːtʃ haɪˈpɒθəsɪs/",
+     "vi": "giả thuyết nghiên cứu",
+     "col": "test a research hypothesis",
+     "ex": "Test a research hypothesis with real data.",
+     "exv": "Hãy kiểm chứng giả thuyết nghiên cứu bằng dữ liệu thật."
+    },
+    {
+     "w": "research methodology",
+     "ipa": "/rɪˈsɜːtʃ ˌmeθəˈdɒlədʒi/",
+     "vi": "phương pháp nghiên cứu",
+     "col": "research methodology",
+     "ex": "Good research methodology avoids bias.",
+     "exv": "Phương pháp nghiên cứu tốt tránh thiên lệch."
+    },
+    {
+     "w": "control group",
+     "ipa": "/kənˈtrəʊl ɡruːp/",
+     "vi": "nhóm đối chứng",
+     "col": "a control group",
+     "ex": "A control group gets no new treatment.",
+     "exv": "Nhóm đối chứng không nhận phương pháp mới."
+    },
+    {
+     "w": "double-blind",
+     "ipa": "/ˌdʌbl ˈblaɪnd/",
+     "vi": "mù đôi",
+     "col": "a double-blind trial",
+     "ex": "In a double-blind trial, neither side knows who gets the drug.",
+     "exv": "Trong thử nghiệm mù đôi, không bên nào biết ai nhận thuốc."
+    },
+    {
+     "w": "efficacy",
+     "ipa": "/ˈefɪkəsi/",
+     "vi": "hiệu lực (của thuốc/phương pháp)",
+     "col": "prove efficacy",
+     "ex": "Trials must prove efficacy before approval.",
+     "exv": "Thử nghiệm phải chứng minh hiệu lực trước khi phê duyệt."
+    },
+    {
+     "w": "randomised",
+     "ipa": "/ˈrændəmaɪzd/",
+     "vi": "ngẫu nhiên hóa",
+     "col": "a randomised trial",
+     "ex": "A randomised trial assigns patients by chance.",
+     "exv": "Thử nghiệm ngẫu nhiên hóa xếp bệnh nhân theo may rủi."
+    },
+    {
+     "w": "research publication",
+     "ipa": "/rɪˈsɜːtʃ ˌpʌblɪˈkeɪʃn/",
+     "vi": "công bố nghiên cứu",
+     "col": "a research publication",
+     "ex": "A research publication shares results with doctors.",
+     "exv": "Công bố nghiên cứu chia sẻ kết quả với bác sĩ."
+    },
+    {
+     "w": "confidentiality",
+     "ipa": "/ˌkɒnfɪdenʃiˈæləti/",
+     "vi": "bảo mật (thông tin bệnh nhân)",
+     "col": "patient confidentiality",
+     "ex": "Patient confidentiality keeps names secret.",
+     "exv": "Bảo mật bệnh nhân giữ kín tên tuổi."
+    },
+    {
+     "w": "protocol",
+     "ipa": "/ˈprəʊtəkɒl/",
+     "vi": "phác đồ nghiên cứu",
+     "col": "follow the protocol",
+     "ex": "Follow the protocol exactly in every trial.",
+     "exv": "Hãy tuân thủ phác đồ chính xác trong mọi thử nghiệm."
+    },
+    {
+     "w": "trial participant",
+     "ipa": "/ˈtraɪəl pɑːˈtɪsɪpənt/",
+     "vi": "người tham gia thử nghiệm",
+     "col": "a trial participant",
+     "ex": "Every trial participant can leave at any time.",
+     "exv": "Mọi người tham gia thử nghiệm đều có thể rút lui bất cứ lúc nào."
+    },
+    {
+     "w": "adverse event",
+     "ipa": "/ˈædvɜːs ɪˈvent/",
+     "vi": "biến cố bất lợi",
+     "col": "report an adverse event",
+     "ex": "Report an adverse event to the doctor at once.",
+     "exv": "Hãy báo biến cố bất lợi cho bác sĩ ngay."
+    },
+    {
+     "w": "statistical significance",
+     "ipa": "/stəˈtɪstɪkl sɪɡˈnɪfɪkəns/",
+     "vi": "ý nghĩa thống kê",
+     "col": "reach statistical significance",
+     "ex": "Results reach statistical significance when they are unlikely by chance.",
+     "exv": "Kết quả đạt ý nghĩa thống kê khi khó xảy ra do may rủi."
+    },
+    {
+     "w": "reproducibility",
+     "ipa": "/ˌriːprədjuːsəˈbɪləti/",
+     "vi": "khả năng lặp lại (kết quả)",
+     "col": "test reproducibility",
+     "ex": "Test reproducibility by repeating the study.",
+     "exv": "Hãy kiểm tra khả năng lặp lại bằng cách làm lại nghiên cứu."
+    }
+   ]
   }
  ],
  "grammar": [

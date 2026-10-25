@@ -720,3 +720,1348 @@ var RB_GD23_LISTEN_STEPS = [
 ];
 var RB_GD23_SELF_LEVELS = ["Chưa nhớ", "Nhớ lơ mơ", "Nhớ khá", "Nhớ chắc"];
 var RB_GD23_SPEECH_AREAS = ["Phát âm", "Lưu loát", "Từ vựng", "Ngữ pháp", "Mạch lạc"];
+
+// ---------- BỘ TỪ TIẾNG TRUNG LOGISTICS + Y TẾ (25/10/2026, Bùi chốt song ngữ) ----------
+// Dữ liệu chờ đợt khung HSK nối dây hiển thị. Nhãn hsk là MỨC ĐẶT CHỦ ĐỀ theo
+// tiến trình cấp (đối chiếu cấu trúc/chủ đề trong TONG-HOP-HSK.md); tài liệu tham
+// khảo không có bảng từ từng cấp nên đây KHÔNG phải xác nhận từng từ nằm trong
+// khung từ vựng HSK 2.0 chính thức — thuật ngữ chuyên ngành được ghi rõ ngoài khung
+// trong hskNote từng bộ.
+if (typeof CONTENT !== "undefined") { CONTENT.zhVocab = [
+  {
+   "topic": "Logistics 1 — Chuỗi cung ứng cơ bản",
+   "hsk": "HSK4",
+   "hskNote": "Mức đặt theo chủ đề công việc/giao thông cấp 4; tài liệu HSK tham khảo không có bảng từ từng cấp nên nhãn này là mức đặt chủ đề, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Thuật ngữ chuyên ngành (供应链, 经销商) coi là ngoài khung.",
+   "cards": [
+    {
+     "han": "供应链",
+     "pinyin": "gōngyìngliàn",
+     "vi": "chuỗi cung ứng",
+     "col": "管理供应链",
+     "ex": "管理好供应链，商店才不会缺货。",
+     "exv": "Quản lý tốt chuỗi cung ứng thì cửa hàng mới không thiếu hàng."
+    },
+    {
+     "han": "供应商",
+     "pinyin": "gōngyìngshāng",
+     "vi": "nhà cung cấp",
+     "col": "可靠的供应商",
+     "ex": "我们只跟可靠的供应商合作。",
+     "exv": "Chúng tôi chỉ hợp tác với nhà cung cấp đáng tin."
+    },
+    {
+     "han": "仓库",
+     "pinyin": "cāngkù",
+     "vi": "nhà kho",
+     "col": "大仓库",
+     "ex": "货物放在城外的大仓库里。",
+     "exv": "Hàng hóa để trong nhà kho lớn ngoài thành phố."
+    },
+    {
+     "han": "库存",
+     "pinyin": "kùcún",
+     "vi": "hàng tồn kho",
+     "col": "检查库存",
+     "ex": "每周五下午检查库存。",
+     "exv": "Mỗi chiều thứ Sáu kiểm kê hàng tồn kho."
+    },
+    {
+     "han": "订单",
+     "pinyin": "dìngdān",
+     "vi": "đơn đặt hàng",
+     "col": "下一订单",
+     "ex": "请在中午前下一订单。",
+     "exv": "Hãy đặt hàng trước buổi trưa."
+    },
+    {
+     "han": "订货",
+     "pinyin": "dìnghuò",
+     "vi": "đặt hàng (mua hàng)",
+     "col": "订货单",
+     "ex": "订货单上要写清楚数量。",
+     "exv": "Trên đơn đặt hàng phải ghi rõ số lượng."
+    },
+    {
+     "han": "发货",
+     "pinyin": "fāhuò",
+     "vi": "gửi hàng đi",
+     "col": "及时发货",
+     "ex": "我们每天及时发货。",
+     "exv": "Chúng tôi gửi hàng kịp thời mỗi ngày."
+    },
+    {
+     "han": "到货",
+     "pinyin": "dàohuò",
+     "vi": "hàng đến",
+     "col": "到货通知",
+     "ex": "到货以后请马上通知我。",
+     "exv": "Hàng đến rồi thì báo ngay cho tôi."
+    },
+    {
+     "han": "缺货",
+     "pinyin": "quēhuò",
+     "vi": "hết hàng",
+     "col": "暂时缺货",
+     "ex": "这件衣服暂时缺货。",
+     "exv": "Chiếc áo này tạm thời hết hàng."
+    },
+    {
+     "han": "补货",
+     "pinyin": "bǔhuò",
+     "vi": "bổ sung hàng",
+     "col": "及时补货",
+     "ex": "货架空了要及时补货。",
+     "exv": "Kệ trống thì phải kịp thời bổ sung hàng."
+    },
+    {
+     "han": "送货",
+     "pinyin": "sònghuò",
+     "vi": "giao hàng",
+     "col": "送货上门",
+     "ex": "这家店可以送货上门。",
+     "exv": "Cửa hàng này có thể giao hàng tận nhà."
+    },
+    {
+     "han": "运输",
+     "pinyin": "yùnshū",
+     "vi": "vận chuyển",
+     "col": "公路运输",
+     "ex": "短途用公路运输更便宜。",
+     "exv": "Quãng ngắn dùng vận tải đường bộ rẻ hơn."
+    },
+    {
+     "han": "货物",
+     "pinyin": "huòwù",
+     "vi": "hàng hóa",
+     "col": "检查货物",
+     "ex": "发货前要检查货物。",
+     "exv": "Trước khi gửi hàng phải kiểm tra hàng hóa."
+    },
+    {
+     "han": "顾客",
+     "pinyin": "gùkè",
+     "vi": "khách hàng",
+     "col": "老顾客",
+     "ex": "他是我们店的老顾客。",
+     "exv": "Anh ấy là khách quen của cửa hàng chúng tôi."
+    },
+    {
+     "han": "需求",
+     "pinyin": "xūqiú",
+     "vi": "nhu cầu",
+     "col": "顾客需求",
+     "ex": "冬天对厚衣服的需求很大。",
+     "exv": "Mùa đông nhu cầu quần áo dày rất lớn."
+    },
+    {
+     "han": "供应",
+     "pinyin": "gōngyìng",
+     "vi": "cung cấp",
+     "col": "供应不足",
+     "ex": "新鲜食品供应不足。",
+     "exv": "Thực phẩm tươi cung cấp không đủ."
+    },
+    {
+     "han": "零售",
+     "pinyin": "língshòu",
+     "vi": "bán lẻ",
+     "col": "零售店",
+     "ex": "这家零售店卖本地产品。",
+     "exv": "Cửa hàng bán lẻ này bán sản phẩm địa phương."
+    },
+    {
+     "han": "批发",
+     "pinyin": "pīfā",
+     "vi": "bán sỉ",
+     "col": "批发市场",
+     "ex": "小商店常去批发市场进货。",
+     "exv": "Cửa hàng nhỏ thường ra chợ bán sỉ lấy hàng."
+    },
+    {
+     "han": "经销商",
+     "pinyin": "jīngxiāoshāng",
+     "vi": "nhà phân phối",
+     "col": "正式经销商",
+     "ex": "她是这个品牌的正式经销商。",
+     "exv": "Cô ấy là nhà phân phối chính thức của thương hiệu này."
+    },
+    {
+     "han": "储存",
+     "pinyin": "chǔcún",
+     "vi": "lưu trữ, cất giữ",
+     "col": "储存费用",
+     "ex": "货物放太久，储存费用会增加。",
+     "exv": "Hàng để quá lâu thì chi phí lưu trữ sẽ tăng."
+    }
+   ]
+  },
+  {
+   "topic": "Logistics 2 — Kho bãi và đóng gói",
+   "hsk": "HSK5",
+   "hskNote": "Mức đặt theo chủ đề nghề nghiệp cấp 5; tài liệu HSK tham khảo không có bảng từ từng cấp nên nhãn này là mức đặt chủ đề, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Thuật ngữ kho bãi chuyên ngành coi là ngoài khung.",
+   "cards": [
+    {
+     "han": "包装",
+     "pinyin": "bāozhuāng",
+     "vi": "đóng gói, bao bì",
+     "col": "结实的包装",
+     "ex": "结实的包装可以保护货物。",
+     "exv": "Bao bì chắc chắn có thể bảo vệ hàng hóa."
+    },
+    {
+     "han": "装卸",
+     "pinyin": "zhuāngxiè",
+     "vi": "bốc dỡ",
+     "col": "装卸区",
+     "ex": "卡车在装卸区等着。",
+     "exv": "Xe tải đang chờ ở khu bốc dỡ."
+    },
+    {
+     "han": "托盘",
+     "pinyin": "tuōpán",
+     "vi": "tấm kê hàng",
+     "col": "木托盘",
+     "ex": "工人把箱子放在托盘上。",
+     "exv": "Công nhân đặt hộp lên tấm kê hàng."
+    },
+    {
+     "han": "集装箱",
+     "pinyin": "jízhuāngxiāng",
+     "vi": "container",
+     "col": "一个集装箱",
+     "ex": "一个集装箱能装很多箱子。",
+     "exv": "Một container có thể chứa nhiều hộp hàng."
+    },
+    {
+     "han": "货架",
+     "pinyin": "huòjià",
+     "vi": "kệ hàng",
+     "col": "顶层货架",
+     "ex": "小箱子放在顶层货架上。",
+     "exv": "Hộp nhỏ đặt trên kệ cao nhất."
+    },
+    {
+     "han": "标签",
+     "pinyin": "biāoqiān",
+     "vi": "nhãn",
+     "col": "贴标签",
+     "ex": "贴清楚标签，找货才快。",
+     "exv": "Dán nhãn rõ ràng thì tìm hàng mới nhanh."
+    },
+    {
+     "han": "条形码",
+     "pinyin": "tiáoxíngmǎ",
+     "vi": "mã vạch",
+     "col": "扫描条形码",
+     "ex": "扫描条形码可以查价格。",
+     "exv": "Quét mã vạch có thể tra giá."
+    },
+    {
+     "han": "纸箱",
+     "pinyin": "zhǐxiāng",
+     "vi": "thùng các-tông",
+     "col": "一箱书",
+     "ex": "我们把书装进纸箱。",
+     "exv": "Chúng tôi đóng sách vào thùng các-tông."
+    },
+    {
+     "han": "木箱",
+     "pinyin": "mùxiāng",
+     "vi": "thùng gỗ",
+     "col": "木箱装水果",
+     "ex": "水果装在木箱里运走。",
+     "exv": "Trái cây đựng trong thùng gỗ rồi chở đi."
+    },
+    {
+     "han": "易碎",
+     "pinyin": "yìsuì",
+     "vi": "dễ vỡ",
+     "col": "易碎物品",
+     "ex": "易碎物品要在箱子上写清楚。",
+     "exv": "Hàng dễ vỡ phải ghi rõ trên hộp."
+    },
+    {
+     "han": "堆放",
+     "pinyin": "duīfàng",
+     "vi": "xếp chồng",
+     "col": "不要堆放太高",
+     "ex": "重箱子不要堆放太高。",
+     "exv": "Hộp nặng đừng xếp chồng quá cao."
+    },
+    {
+     "han": "分类",
+     "pinyin": "fēnlèi",
+     "vi": "phân loại",
+     "col": "按城市分类",
+     "ex": "工人按城市给包裹分类。",
+     "exv": "Công nhân phân loại bưu kiện theo thành phố."
+    },
+    {
+     "han": "入库",
+     "pinyin": "rùkù",
+     "vi": "nhập kho",
+     "col": "办理入库",
+     "ex": "新货到了要办理入库。",
+     "exv": "Hàng mới đến phải làm thủ tục nhập kho."
+    },
+    {
+     "han": "出库",
+     "pinyin": "chūkù",
+     "vi": "xuất kho",
+     "col": "出库单",
+     "ex": "出库要先开出库单。",
+     "exv": "Xuất kho phải mở phiếu xuất kho trước."
+    },
+    {
+     "han": "盘点",
+     "pinyin": "pándiǎn",
+     "vi": "kiểm kê",
+     "col": "每月盘点",
+     "ex": "仓库每月盘点一次。",
+     "exv": "Nhà kho mỗi tháng kiểm kê một lần."
+    },
+    {
+     "han": "保管",
+     "pinyin": "bǎoguǎn",
+     "vi": "bảo quản",
+     "col": "妥善保管",
+     "ex": "贵重货物要妥善保管。",
+     "exv": "Hàng quý phải bảo quản cẩn thận."
+    },
+    {
+     "han": "货位",
+     "pinyin": "huòwèi",
+     "vi": "vị trí để hàng",
+     "col": "找货位",
+     "ex": "按货位找货最快。",
+     "exv": "Tìm hàng theo vị trí để hàng là nhanh nhất."
+    },
+    {
+     "han": "叉车",
+     "pinyin": "chāchē",
+     "vi": "xe nâng",
+     "col": "开叉车",
+     "ex": "他在仓库里开叉车。",
+     "exv": "Anh ấy lái xe nâng trong nhà kho."
+    },
+    {
+     "han": "搬运",
+     "pinyin": "bānyùn",
+     "vi": "bốc vác, vận chuyển trong kho",
+     "col": "搬运工人",
+     "ex": "搬运工人每天都很忙。",
+     "exv": "Công nhân bốc vác ngày nào cũng bận."
+    },
+    {
+     "han": "称重",
+     "pinyin": "chēngzhòng",
+     "vi": "cân hàng",
+     "col": "称重处",
+     "ex": "每个包裹都要经过称重处。",
+     "exv": "Mỗi bưu kiện đều phải qua chỗ cân."
+    }
+   ]
+  },
+  {
+   "topic": "Logistics 3 — Vận chuyển và giao nhận",
+   "hsk": "HSK5",
+   "hskNote": "Mức đặt theo chủ đề giao thông/nghề nghiệp cấp 5; tài liệu HSK tham khảo không có bảng từ từng cấp nên nhãn này là mức đặt chủ đề, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Thuật ngữ giao nhận chuyên ngành (清关, 承运人) coi là ngoài khung.",
+   "cards": [
+    {
+     "han": "海关",
+     "pinyin": "hǎiguān",
+     "vi": "hải quan",
+     "col": "海关检查",
+     "ex": "每个箱子都要经过海关检查。",
+     "exv": "Mỗi hộp hàng đều phải qua kiểm tra hải quan."
+    },
+    {
+     "han": "清关",
+     "pinyin": "qīngguān",
+     "vi": "thông quan",
+     "col": "清关要两天",
+     "ex": "清关可能要两天。",
+     "exv": "Thông quan có thể mất hai ngày."
+    },
+    {
+     "han": "追踪",
+     "pinyin": "zhuīzōng",
+     "vi": "theo dõi hành trình",
+     "col": "包裹追踪",
+     "ex": "包裹追踪能告诉你箱子在哪儿。",
+     "exv": "Theo dõi bưu kiện cho biết hộp của bạn đang ở đâu."
+    },
+    {
+     "han": "配送",
+     "pinyin": "pèisòng",
+     "vi": "phân phối, giao hàng",
+     "col": "配送中心",
+     "ex": "新的配送中心在港口附近。",
+     "exv": "Trung tâm phân phối mới ở gần cảng."
+    },
+    {
+     "han": "路线",
+     "pinyin": "lùxiàn",
+     "vi": "tuyến đường",
+     "col": "配送路线",
+     "ex": "司机每天走同一条配送路线。",
+     "exv": "Tài xế mỗi ngày đi cùng một tuyến giao hàng."
+    },
+    {
+     "han": "调度",
+     "pinyin": "diàodù",
+     "vi": "điều phối",
+     "col": "车辆调度",
+     "ex": "车辆调度要看天气和路况。",
+     "exv": "Điều phối xe phải xem thời tiết và tình hình đường."
+    },
+    {
+     "han": "车队",
+     "pinyin": "chēduì",
+     "vi": "đội xe",
+     "col": "一支车队",
+     "ex": "公司有一支五十辆卡车的车队。",
+     "exv": "Công ty có một đội xe 50 chiếc."
+    },
+    {
+     "han": "承运人",
+     "pinyin": "chéngyùnrén",
+     "vi": "hãng vận chuyển",
+     "col": "可靠的承运人",
+     "ex": "急货要找可靠的承运人。",
+     "exv": "Hàng gấp phải tìm hãng vận chuyển đáng tin."
+    },
+    {
+     "han": "托运",
+     "pinyin": "tuōyùn",
+     "vi": "ký gửi vận chuyển",
+     "col": "办理托运",
+     "ex": "出国前先办理托运。",
+     "exv": "Trước khi ra nước ngoài phải làm thủ tục ký gửi."
+    },
+    {
+     "han": "中转",
+     "pinyin": "zhōngzhuǎn",
+     "vi": "trung chuyển",
+     "col": "中转站",
+     "ex": "包裹还在中转站。",
+     "exv": "Bưu kiện vẫn đang ở trạm trung chuyển."
+    },
+    {
+     "han": "港口",
+     "pinyin": "gǎngkǒu",
+     "vi": "cảng",
+     "col": "繁忙的港口",
+     "ex": "这个港口每天处理很多集装箱。",
+     "exv": "Cảng này mỗi ngày xử lý nhiều container."
+    },
+    {
+     "han": "码头",
+     "pinyin": "mǎtóu",
+     "vi": "bến tàu",
+     "col": "在码头卸货",
+     "ex": "卡车在码头卸货。",
+     "exv": "Xe tải dỡ hàng ở bến tàu."
+    },
+    {
+     "han": "航空",
+     "pinyin": "hángkōng",
+     "vi": "hàng không",
+     "col": "航空运输",
+     "ex": "航空运输最快，也最贵。",
+     "exv": "Vận tải hàng không nhanh nhất, cũng đắt nhất."
+    },
+    {
+     "han": "陆运",
+     "pinyin": "lùyùn",
+     "vi": "vận tải đường bộ",
+     "col": "陆运公司",
+     "ex": "陆运公司在城市之间运货。",
+     "exv": "Công ty vận tải đường bộ chở hàng giữa các thành phố."
+    },
+    {
+     "han": "海运",
+     "pinyin": "hǎiyùn",
+     "vi": "vận tải đường biển",
+     "col": "走海运",
+     "ex": "大批货物一般走海运。",
+     "exv": "Hàng số lượng lớn thường đi đường biển."
+    },
+    {
+     "han": "快递",
+     "pinyin": "kuàidì",
+     "vi": "chuyển phát nhanh",
+     "col": "寄快递",
+     "ex": "小包裹可以寄快递。",
+     "exv": "Bưu kiện nhỏ có thể gửi chuyển phát nhanh."
+    },
+    {
+     "han": "准时",
+     "pinyin": "zhǔnshí",
+     "vi": "đúng giờ",
+     "col": "准时送达",
+     "ex": "准时送达让顾客放心。",
+     "exv": "Giao đúng giờ làm khách hàng yên tâm."
+    },
+    {
+     "han": "延误",
+     "pinyin": "yánwù",
+     "vi": "chậm trễ",
+     "col": "运输延误",
+     "ex": "暴风雨造成了运输延误。",
+     "exv": "Bão gây chậm trễ vận chuyển."
+    },
+    {
+     "han": "签收",
+     "pinyin": "qiānshōu",
+     "vi": "ký nhận",
+     "col": "请签收",
+     "ex": "收到包裹请签收。",
+     "exv": "Nhận bưu kiện xin ký nhận."
+    },
+    {
+     "han": "退货",
+     "pinyin": "tuìhuò",
+     "vi": "trả hàng",
+     "col": "办理退货",
+     "ex": "不满意可以办理退货。",
+     "exv": "Không hài lòng có thể làm thủ tục trả hàng."
+    }
+   ]
+  },
+  {
+   "topic": "Logistics 4 — Quản trị logistics",
+   "hsk": "HSK6",
+   "hskNote": "Mức đặt theo chủ đề nghề nghiệp/kinh tế cấp 6; tài liệu HSK tham khảo không có bảng từ từng cấp nên nhãn này là mức đặt chủ đề, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Thuật ngữ quản trị chuyên ngành (逆向物流, 准时制, 最后一公里) coi là ngoài khung.",
+   "cards": [
+    {
+     "han": "采购",
+     "pinyin": "cǎigòu",
+     "vi": "thu mua",
+     "col": "采购部",
+     "ex": "采购部负责买原材料。",
+     "exv": "Bộ phận thu mua phụ trách mua nguyên liệu."
+    },
+    {
+     "han": "外包",
+     "pinyin": "wàibāo",
+     "vi": "thuê ngoài",
+     "col": "物流外包",
+     "ex": "小公司常用物流外包。",
+     "exv": "Công ty nhỏ thường dùng thuê ngoài logistics."
+    },
+    {
+     "han": "最后一公里",
+     "pinyin": "zuìhòu yī gōnglǐ",
+     "vi": "giao chặng cuối",
+     "col": "最后一公里最贵",
+     "ex": "最后一公里的成本最高。",
+     "exv": "Chi phí giao chặng cuối là cao nhất."
+    },
+    {
+     "han": "准时制",
+     "pinyin": "zhǔnshízhì",
+     "vi": "mô hình đúng lúc",
+     "col": "准时制生产",
+     "ex": "准时制几乎不留多余库存。",
+     "exv": "Mô hình đúng lúc gần như không giữ tồn kho thừa."
+    },
+    {
+     "han": "逆向物流",
+     "pinyin": "nìxiàng wùliú",
+     "vi": "logistics ngược",
+     "col": "处理逆向物流",
+     "ex": "商店要处理退货的逆向物流。",
+     "exv": "Cửa hàng phải xử lý logistics ngược của hàng trả lại."
+    },
+    {
+     "han": "交货期",
+     "pinyin": "jiāohuòqī",
+     "vi": "thời gian giao hàng",
+     "col": "缩短交货期",
+     "ex": "缩短交货期能让商店更好计划。",
+     "exv": "Rút ngắn thời gian giao hàng giúp cửa hàng lên kế hoạch tốt hơn."
+    },
+    {
+     "han": "履约",
+     "pinyin": "lǚyuē",
+     "vi": "thực hiện đơn hàng",
+     "col": "履约能力",
+     "ex": "履约能力强的公司更可靠。",
+     "exv": "Công ty thực hiện đơn hàng tốt thì đáng tin hơn."
+    },
+    {
+     "han": "瓶颈",
+     "pinyin": "píngjǐng",
+     "vi": "điểm nghẽn",
+     "col": "港口瓶颈",
+     "ex": "港口瓶颈会拖慢所有货物。",
+     "exv": "Điểm nghẽn ở cảng làm chậm mọi lô hàng."
+    },
+    {
+     "han": "优化",
+     "pinyin": "yōuhuà",
+     "vi": "tối ưu hóa",
+     "col": "优化路线",
+     "ex": "优化路线每天都能省油。",
+     "exv": "Tối ưu tuyến đường mỗi ngày đều tiết kiệm nhiên liệu."
+    },
+    {
+     "han": "流程",
+     "pinyin": "liúchéng",
+     "vi": "quy trình",
+     "col": "简化流程",
+     "ex": "简化流程可以省下两天时间。",
+     "exv": "Đơn giản hóa quy trình có thể tiết kiệm hai ngày."
+    },
+    {
+     "han": "整合",
+     "pinyin": "zhěnghé",
+     "vi": "tích hợp",
+     "col": "数据整合",
+     "ex": "数据整合把销售和仓库连起来。",
+     "exv": "Tích hợp dữ liệu nối bán hàng với nhà kho."
+    },
+    {
+     "han": "实时",
+     "pinyin": "shíshí",
+     "vi": "theo thời gian thực",
+     "col": "实时追踪",
+     "ex": "实时追踪能在地图上看到每辆车。",
+     "exv": "Theo dõi thời gian thực có thể thấy mọi xe trên bản đồ."
+    },
+    {
+     "han": "自动化",
+     "pinyin": "zìdònghuà",
+     "vi": "tự động hóa",
+     "col": "仓库自动化",
+     "ex": "仓库自动化让分拣更快。",
+     "exv": "Tự động hóa kho bãi làm phân loại nhanh hơn."
+    },
+    {
+     "han": "可持续",
+     "pinyin": "kě chíxù",
+     "vi": "bền vững",
+     "col": "可持续发展",
+     "ex": "可持续发展要求少用塑料。",
+     "exv": "Phát triển bền vững yêu cầu dùng ít nhựa hơn."
+    },
+    {
+     "han": "成本",
+     "pinyin": "chéngběn",
+     "vi": "chi phí",
+     "col": "降低成本",
+     "ex": "减少空车能降低成本。",
+     "exv": "Giảm chuyến xe rỗng có thể hạ chi phí."
+    },
+    {
+     "han": "效率",
+     "pinyin": "xiàolǜ",
+     "vi": "hiệu suất",
+     "col": "提高效率",
+     "ex": "新系统提高了仓库效率。",
+     "exv": "Hệ thống mới nâng cao hiệu suất nhà kho."
+    },
+    {
+     "han": "合同",
+     "pinyin": "hétong",
+     "vi": "hợp đồng",
+     "col": "签合同",
+     "ex": "第一次发货前要签合同。",
+     "exv": "Trước lô hàng đầu tiên phải ký hợp đồng."
+    },
+    {
+     "han": "谈判",
+     "pinyin": "tánpàn",
+     "vi": "đàm phán",
+     "col": "价格谈判",
+     "ex": "价格谈判帮我们省了百分之十。",
+     "exv": "Đàm phán giá giúp chúng tôi tiết kiệm 10%."
+    },
+    {
+     "han": "评估",
+     "pinyin": "pínggū",
+     "vi": "đánh giá",
+     "col": "评估供应商",
+     "ex": "每年都要评估供应商。",
+     "exv": "Mỗi năm đều phải đánh giá nhà cung cấp."
+    },
+    {
+     "han": "战略",
+     "pinyin": "zhànlüè",
+     "vi": "chiến lược",
+     "col": "长期战略",
+     "ex": "公司需要一个长期战略。",
+     "exv": "Công ty cần một chiến lược dài hạn."
+    }
+   ]
+  },
+  {
+   "topic": "Y tế 1 — Khoa phòng và nhân sự y tế",
+   "hsk": "HSK4",
+   "hskNote": "Mức đặt theo chủ đề nghề nghiệp/sức khỏe cấp 4; tài liệu HSK tham khảo không có bảng từ từng cấp nên nhãn này là mức đặt chủ đề, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Tên khoa chuyên ngành coi là ngoài khung.",
+   "cards": [
+    {
+     "han": "科室",
+     "pinyin": "kēshì",
+     "vi": "khoa, phòng",
+     "col": "各科室",
+     "ex": "医院有内科、外科等各科室。",
+     "exv": "Bệnh viện có các khoa nội, ngoại và nhiều khoa khác."
+    },
+    {
+     "han": "内科",
+     "pinyin": "nèikē",
+     "vi": "khoa nội",
+     "col": "内科医生",
+     "ex": "内科医生看感冒、发烧这些病。",
+     "exv": "Bác sĩ nội khoa khám cảm cúm, sốt và các bệnh này."
+    },
+    {
+     "han": "外科",
+     "pinyin": "wàikē",
+     "vi": "khoa ngoại",
+     "col": "外科手术",
+     "ex": "外科医生每天都要做手术。",
+     "exv": "Bác sĩ ngoại khoa mỗi ngày đều phải mổ."
+    },
+    {
+     "han": "儿科",
+     "pinyin": "érkē",
+     "vi": "khoa nhi",
+     "col": "儿科门诊",
+     "ex": "孩子生病去儿科门诊。",
+     "exv": "Trẻ ốm thì đến phòng khám nhi."
+    },
+    {
+     "han": "心脏科",
+     "pinyin": "xīnzàngkē",
+     "vi": "khoa tim mạch",
+     "col": "心脏科检查",
+     "ex": "心脏科检查能发现心脏问题。",
+     "exv": "Khám tim mạch có thể phát hiện vấn đề tim."
+    },
+    {
+     "han": "皮肤科",
+     "pinyin": "pífūkē",
+     "vi": "khoa da liễu",
+     "col": "皮肤科医生",
+     "ex": "皮肤问题可以去看皮肤科医生。",
+     "exv": "Bệnh về da có thể đến gặp bác sĩ da liễu."
+    },
+    {
+     "han": "眼科",
+     "pinyin": "yǎnkē",
+     "vi": "khoa mắt",
+     "col": "眼科检查",
+     "ex": "眼科检查能测你的视力。",
+     "exv": "Khám mắt có thể đo thị lực của bạn."
+    },
+    {
+     "han": "牙科",
+     "pinyin": "yákē",
+     "vi": "khoa răng",
+     "col": "看牙科",
+     "ex": "牙疼要去看牙科。",
+     "exv": "Đau răng phải đi khám răng."
+    },
+    {
+     "han": "医生",
+     "pinyin": "yīshēng",
+     "vi": "bác sĩ",
+     "col": "主治医生",
+     "ex": "主治医生每天查房。",
+     "exv": "Bác sĩ điều trị chính mỗi ngày đi buồng bệnh."
+    },
+    {
+     "han": "护士",
+     "pinyin": "hùshi",
+     "vi": "điều dưỡng, y tá",
+     "col": "护士站",
+     "ex": "护士每天给病人量体温。",
+     "exv": "Điều dưỡng mỗi ngày đo thân nhiệt cho bệnh nhân."
+    },
+    {
+     "han": "药剂师",
+     "pinyin": "yàojìshī",
+     "vi": "dược sĩ",
+     "col": "问药剂师",
+     "ex": "吃药前可以问药剂师。",
+     "exv": "Trước khi uống thuốc có thể hỏi dược sĩ."
+    },
+    {
+     "han": "理疗师",
+     "pinyin": "lǐliáoshī",
+     "vi": "chuyên viên vật lý trị liệu",
+     "col": "找理疗师",
+     "ex": "腿受伤以后可以找理疗师。",
+     "exv": "Sau chấn thương chân có thể tìm chuyên viên vật lý trị liệu."
+    },
+    {
+     "han": "放射科",
+     "pinyin": "fàngshèkē",
+     "vi": "khoa chẩn đoán hình ảnh",
+     "col": "放射科报告",
+     "ex": "放射科医生看片子、写报告。",
+     "exv": "Bác sĩ chẩn đoán hình ảnh đọc phim và viết báo cáo."
+    },
+    {
+     "han": "麻醉师",
+     "pinyin": "mázuìshī",
+     "vi": "bác sĩ gây mê",
+     "col": "麻醉师",
+     "ex": "手术时麻醉师让你睡着。",
+     "exv": "Lúc mổ, bác sĩ gây mê làm bạn ngủ."
+    },
+    {
+     "han": "助产士",
+     "pinyin": "zhùchǎnshì",
+     "vi": "nữ hộ sinh",
+     "col": "助产士",
+     "ex": "助产士帮助产妇安全生孩子。",
+     "exv": "Nữ hộ sinh giúp sản phụ sinh con an toàn."
+    },
+    {
+     "han": "急救员",
+     "pinyin": "jíjiùyuán",
+     "vi": "nhân viên cấp cứu",
+     "col": "叫急救员",
+     "ex": "出了严重事故要叫急救员。",
+     "exv": "Tai nạn nghiêm trọng phải gọi nhân viên cấp cứu."
+    },
+    {
+     "han": "专家",
+     "pinyin": "zhuānjiā",
+     "vi": "chuyên gia",
+     "col": "请专家会诊",
+     "ex": "疑难病要请专家会诊。",
+     "exv": "Bệnh khó phải mời chuyên gia hội chẩn."
+    },
+    {
+     "han": "门诊",
+     "pinyin": "ménzhěn",
+     "vi": "khám ngoại trú",
+     "col": "门诊时间",
+     "ex": "门诊时间是上午八点到十二点。",
+     "exv": "Giờ khám ngoại trú là 8 giờ sáng đến 12 giờ trưa."
+    },
+    {
+     "han": "住院",
+     "pinyin": "zhùyuàn",
+     "vi": "nằm viện",
+     "col": "办理住院",
+     "ex": "重病人需要办理住院。",
+     "exv": "Bệnh nặng cần làm thủ tục nằm viện."
+    },
+    {
+     "han": "挂号",
+     "pinyin": "guàhào",
+     "vi": "đăng ký khám",
+     "col": "先挂号",
+     "ex": "看病要先挂号。",
+     "exv": "Khám bệnh phải đăng ký khám trước."
+    }
+   ]
+  },
+  {
+   "topic": "Y tế 2 — Xét nghiệm và chẩn đoán hình ảnh",
+   "hsk": "HSK5",
+   "hskNote": "Mức đặt theo chủ đề sức khỏe/nghề nghiệp cấp 5; tài liệu HSK tham khảo không có bảng từ từng cấp nên nhãn này là mức đặt chủ đề, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Thuật ngữ xét nghiệm/chẩn đoán hình ảnh phần lớn coi là ngoài khung.",
+   "cards": [
+    {
+     "han": "化验",
+     "pinyin": "huàyàn",
+     "vi": "xét nghiệm",
+     "col": "化验单",
+     "ex": "医生开了化验单。",
+     "exv": "Bác sĩ đã kê phiếu xét nghiệm."
+    },
+    {
+     "han": "血检",
+     "pinyin": "xuèjiǎn",
+     "vi": "xét nghiệm máu",
+     "col": "定期血检",
+     "ex": "定期血检能了解身体情况。",
+     "exv": "Xét nghiệm máu định kỳ giúp hiểu tình hình cơ thể."
+    },
+    {
+     "han": "尿检",
+     "pinyin": "niàojiǎn",
+     "vi": "xét nghiệm nước tiểu",
+     "col": "做尿检",
+     "ex": "尿检可以发现肾脏问题。",
+     "exv": "Xét nghiệm nước tiểu có thể phát hiện bệnh thận."
+    },
+    {
+     "han": "样本",
+     "pinyin": "yàngběn",
+     "vi": "mẫu bệnh phẩm",
+     "col": "采集样本",
+     "ex": "护士从手臂采集样本。",
+     "exv": "Điều dưỡng lấy mẫu từ cánh tay."
+    },
+    {
+     "han": "实验室",
+     "pinyin": "shíyànshì",
+     "vi": "phòng thí nghiệm",
+     "col": "送实验室",
+     "ex": "样本要送实验室检查。",
+     "exv": "Mẫu bệnh phẩm phải đưa đến phòng thí nghiệm kiểm tra."
+    },
+    {
+     "han": "显微镜",
+     "pinyin": "xiǎnwēijìng",
+     "vi": "kính hiển vi",
+     "col": "显微镜下",
+     "ex": "在显微镜下看样本。",
+     "exv": "Nhìn mẫu bệnh phẩm dưới kính hiển vi."
+    },
+    {
+     "han": "试管",
+     "pinyin": "shìguǎn",
+     "vi": "ống nghiệm",
+     "col": "试管里",
+     "ex": "把血放在试管里。",
+     "exv": "Cho máu vào ống nghiệm."
+    },
+    {
+     "han": "针头",
+     "pinyin": "zhēntóu",
+     "vi": "đầu kim tiêm",
+     "col": "一次性针头",
+     "ex": "每次打针都要用一次性针头。",
+     "exv": "Mỗi lần tiêm đều phải dùng đầu kim dùng một lần."
+    },
+    {
+     "han": "胆固醇",
+     "pinyin": "dǎngùchún",
+     "vi": "cholesterol",
+     "col": "胆固醇高",
+     "ex": "胆固醇高会增加心脏病的风险。",
+     "exv": "Cholesterol cao làm tăng nguy cơ bệnh tim."
+    },
+    {
+     "han": "血糖",
+     "pinyin": "xuètáng",
+     "vi": "đường huyết",
+     "col": "测血糖",
+     "ex": "空腹测血糖最准确。",
+     "exv": "Đo đường huyết lúc đói là chính xác nhất."
+    },
+    {
+     "han": "抗体",
+     "pinyin": "kàngtǐ",
+     "vi": "kháng thể",
+     "col": "产生抗体",
+     "ex": "病好以后身体会产生抗体。",
+     "exv": "Sau khi khỏi bệnh, cơ thể sẽ tạo kháng thể."
+    },
+    {
+     "han": "培养",
+     "pinyin": "péiyǎng",
+     "vi": "nuôi cấy",
+     "col": "细菌培养",
+     "ex": "细菌培养能找到致病菌。",
+     "exv": "Nuôi cấy vi khuẩn có thể tìm ra vi khuẩn gây bệnh."
+    },
+    {
+     "han": "活检",
+     "pinyin": "huójiǎn",
+     "vi": "sinh thiết",
+     "col": "活检结果",
+     "ex": "活检结果要等几天。",
+     "exv": "Kết quả sinh thiết phải chờ vài ngày."
+    },
+    {
+     "han": "X光",
+     "pinyin": "X guāng",
+     "vi": "chụp X-quang",
+     "col": "拍X光",
+     "ex": "怀疑骨折要拍X光。",
+     "exv": "Nghi gãy xương phải chụp X-quang."
+    },
+    {
+     "han": "核磁共振",
+     "pinyin": "hécí gòngzhèn",
+     "vi": "chụp cộng hưởng từ",
+     "col": "做核磁共振",
+     "ex": "核磁共振能清楚看到软组织。",
+     "exv": "Chụp cộng hưởng từ có thể thấy rõ mô mềm."
+    },
+    {
+     "han": "扫描",
+     "pinyin": "sǎomiáo",
+     "vi": "quét, chụp quét",
+     "col": "扫描结果",
+     "ex": "扫描结果三天后出来。",
+     "exv": "Kết quả chụp quét ba ngày sau mới có."
+    },
+    {
+     "han": "超声",
+     "pinyin": "chāoshēng",
+     "vi": "siêu âm",
+     "col": "做超声",
+     "ex": "超声可以检查宝宝的发育。",
+     "exv": "Siêu âm có thể kiểm tra sự phát triển của em bé."
+    },
+    {
+     "han": "筛查",
+     "pinyin": "shāichá",
+     "vi": "sàng lọc",
+     "col": "早期筛查",
+     "ex": "早期筛查能早发现疾病。",
+     "exv": "Sàng lọc sớm có thể phát hiện bệnh sớm."
+    },
+    {
+     "han": "报告",
+     "pinyin": "bàogào",
+     "vi": "báo cáo, kết quả",
+     "col": "检查报告",
+     "ex": "检查报告明天可以拿。",
+     "exv": "Báo cáo kiểm tra ngày mai có thể lấy."
+    },
+    {
+     "han": "结果",
+     "pinyin": "jiéguǒ",
+     "vi": "kết quả",
+     "col": "等结果",
+     "ex": "病人正在等检查结果。",
+     "exv": "Bệnh nhân đang chờ kết quả kiểm tra."
+    }
+   ]
+  },
+  {
+   "topic": "Y tế 3 — Y tế công cộng và dịch bệnh",
+   "hsk": "HSK6",
+   "hskNote": "Mức đặt theo chủ đề xã hội/sức khỏe cấp 6; tài liệu HSK tham khảo không có bảng từ từng cấp nên nhãn này là mức đặt chủ đề, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Thuật ngữ dịch tễ chuyên ngành coi là ngoài khung.",
+   "cards": [
+    {
+     "han": "公共卫生",
+     "pinyin": "gōnggòng wèishēng",
+     "vi": "y tế công cộng",
+     "col": "公共卫生宣传",
+     "ex": "公共卫生宣传教大家洗手。",
+     "exv": "Tuyên truyền y tế công cộng dạy mọi người rửa tay."
+    },
+    {
+     "han": "流行病",
+     "pinyin": "liúxíngbìng",
+     "vi": "dịch bệnh lưu hành",
+     "col": "预防流行病",
+     "ex": "预防流行病要从卫生做起。",
+     "exv": "Phòng dịch bệnh lưu hành phải bắt đầu từ vệ sinh."
+    },
+    {
+     "han": "大流行",
+     "pinyin": "dà liúxíng",
+     "vi": "đại dịch",
+     "col": "全球大流行",
+     "ex": "全球大流行同时影响很多国家。",
+     "exv": "Đại dịch toàn cầu đồng thời ảnh hưởng nhiều nước."
+    },
+    {
+     "han": "爆发",
+     "pinyin": "bàofā",
+     "vi": "bùng phát",
+     "col": "疫情爆发",
+     "ex": "流感爆发让学校停课了。",
+     "exv": "Cúm bùng phát làm trường học phải nghỉ."
+    },
+    {
+     "han": "隔离",
+     "pinyin": "gélí",
+     "vi": "cách ly",
+     "col": "居家隔离",
+     "ex": "旅客要居家隔离五天。",
+     "exv": "Du khách phải cách ly tại nhà năm ngày."
+    },
+    {
+     "han": "传播",
+     "pinyin": "chuánbō",
+     "vi": "lây truyền",
+     "col": "阻止传播",
+     "ex": "口罩能帮助阻止流感传播。",
+     "exv": "Khẩu trang giúp ngăn lây truyền cúm."
+    },
+    {
+     "han": "传染",
+     "pinyin": "chuánrǎn",
+     "vi": "lây nhiễm",
+     "col": "容易传染",
+     "ex": "水痘很容易传染。",
+     "exv": "Thủy đậu rất dễ lây nhiễm."
+    },
+    {
+     "han": "免疫力",
+     "pinyin": "miǎnyìlì",
+     "vi": "khả năng miễn dịch",
+     "col": "提高免疫力",
+     "ex": "运动和睡眠能提高免疫力。",
+     "exv": "Vận động và ngủ đủ giúp tăng khả năng miễn dịch."
+    },
+    {
+     "han": "卫生",
+     "pinyin": "wèishēng",
+     "vi": "vệ sinh",
+     "col": "注意卫生",
+     "ex": "注意卫生要从洗手开始。",
+     "exv": "Chú ý vệ sinh phải bắt đầu từ rửa tay."
+    },
+    {
+     "han": "消毒",
+     "pinyin": "xiāodú",
+     "vi": "khử trùng",
+     "col": "消毒双手",
+     "ex": "进病房前要消毒双手。",
+     "exv": "Trước khi vào buồng bệnh phải khử trùng hai tay."
+    },
+    {
+     "han": "口罩",
+     "pinyin": "kǒuzhào",
+     "vi": "khẩu trang",
+     "col": "戴口罩",
+     "ex": "生病的时候要戴口罩。",
+     "exv": "Lúc ốm phải đeo khẩu trang."
+    },
+    {
+     "han": "疫苗",
+     "pinyin": "yìmiáo",
+     "vi": "vắc xin",
+     "col": "打疫苗",
+     "ex": "流感疫苗每年打一次。",
+     "exv": "Vắc xin cúm mỗi năm tiêm một lần."
+    },
+    {
+     "han": "变异",
+     "pinyin": "biànyì",
+     "vi": "biến thể, đột biến",
+     "col": "病毒变异",
+     "ex": "新的变异传播得更快。",
+     "exv": "Biến thể mới lây lan nhanh hơn."
+    },
+    {
+     "han": "监测",
+     "pinyin": "jiāncè",
+     "vi": "giám sát",
+     "col": "疫情监测",
+     "ex": "疫情监测能早发现爆发。",
+     "exv": "Giám sát dịch bệnh có thể phát hiện bùng phát sớm."
+    },
+    {
+     "han": "死亡率",
+     "pinyin": "sǐwánglǜ",
+     "vi": "tỷ lệ tử vong",
+     "col": "死亡率很高",
+     "ex": "死亡率很高，医生很担心。",
+     "exv": "Tỷ lệ tử vong rất cao, bác sĩ rất lo lắng."
+    },
+    {
+     "han": "发病率",
+     "pinyin": "fābìnglǜ",
+     "vi": "tỷ lệ mắc bệnh",
+     "col": "发病率数据",
+     "ex": "发病率数据说明有多少人生病。",
+     "exv": "Số liệu tỷ lệ mắc bệnh cho biết có bao nhiêu người ốm."
+    },
+    {
+     "han": "宣传",
+     "pinyin": "xuānchuán",
+     "vi": "tuyên truyền",
+     "col": "健康宣传",
+     "ex": "健康宣传教大家预防疾病。",
+     "exv": "Tuyên truyền sức khỏe dạy mọi người phòng bệnh."
+    },
+    {
+     "han": "政策",
+     "pinyin": "zhèngcè",
+     "vi": "chính sách",
+     "col": "卫生政策",
+     "ex": "好的卫生政策能保护大家。",
+     "exv": "Chính sách y tế tốt có thể bảo vệ mọi người."
+    },
+    {
+     "han": "医疗体系",
+     "pinyin": "yīliáo tǐxì",
+     "vi": "hệ thống y tế",
+     "col": "强大的医疗体系",
+     "ex": "强大的医疗体系对每个人都公平。",
+     "exv": "Hệ thống y tế mạnh công bằng với mọi người."
+    },
+    {
+     "han": "健康",
+     "pinyin": "jiànkāng",
+     "vi": "sức khỏe",
+     "col": "保持健康",
+     "ex": "运动和好睡眠能保持健康。",
+     "exv": "Vận động và ngủ ngon giúp giữ sức khỏe."
+    }
+   ]
+  },
+  {
+   "topic": "Y tế 4 — Nghiên cứu y khoa và y đức",
+   "hsk": "HSK6",
+   "hskNote": "Mức đặt theo chủ đề học thuật cấp 6; tài liệu HSK tham khảo không có bảng từ từng cấp nên nhãn này là mức đặt chủ đề, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Thuật ngữ nghiên cứu y khoa coi là ngoài khung.",
+   "cards": [
+    {
+     "han": "临床试验",
+     "pinyin": "línchuáng shìyàn",
+     "vi": "thử nghiệm lâm sàng",
+     "col": "参加临床试验",
+     "ex": "病人可以参加新药的临床试验。",
+     "exv": "Bệnh nhân có thể tham gia thử nghiệm lâm sàng thuốc mới."
+    },
+    {
+     "han": "安慰剂",
+     "pinyin": "ānwèijì",
+     "vi": "giả dược",
+     "col": "安慰剂组",
+     "ex": "安慰剂组吃的是没有药效的片剂。",
+     "exv": "Nhóm giả dược uống viên không có tác dụng thuốc."
+    },
+    {
+     "han": "伦理",
+     "pinyin": "lúnlǐ",
+     "vi": "đạo đức, luân lý",
+     "col": "医学伦理",
+     "ex": "医学伦理保护研究中的病人。",
+     "exv": "Đạo đức y học bảo vệ bệnh nhân trong nghiên cứu."
+    },
+    {
+     "han": "知情同意",
+     "pinyin": "zhīqíng tóngyì",
+     "vi": "đồng ý sau khi biết rõ",
+     "col": "签署知情同意",
+     "ex": "试验开始前要签署知情同意。",
+     "exv": "Trước khi thử nghiệm bắt đầu phải ký đồng ý sau khi biết rõ."
+    },
+    {
+     "han": "同行评审",
+     "pinyin": "tóngháng píngshěn",
+     "vi": "bình duyệt đồng nghiệp",
+     "col": "经过同行评审",
+     "ex": "论文经过同行评审才能发表。",
+     "exv": "Bài báo qua bình duyệt đồng nghiệp mới được công bố."
+    },
+    {
+     "han": "循证",
+     "pinyin": "xúnzhèng",
+     "vi": "dựa trên bằng chứng",
+     "col": "循证医学",
+     "ex": "循证医学用最好的研究做决定。",
+     "exv": "Y học dựa trên bằng chứng dùng nghiên cứu tốt nhất để quyết định."
+    },
+    {
+     "han": "假设",
+     "pinyin": "jiǎshè",
+     "vi": "giả thuyết",
+     "col": "验证假设",
+     "ex": "要用真实数据验证假设。",
+     "exv": "Phải dùng dữ liệu thật để kiểm chứng giả thuyết."
+    },
+    {
+     "han": "方法",
+     "pinyin": "fāngfǎ",
+     "vi": "phương pháp",
+     "col": "研究方法",
+     "ex": "好的研究方法能避免偏差。",
+     "exv": "Phương pháp nghiên cứu tốt tránh được thiên lệch."
+    },
+    {
+     "han": "对照组",
+     "pinyin": "duìzhàozǔ",
+     "vi": "nhóm đối chứng",
+     "col": "设立对照组",
+     "ex": "对照组不接受新治疗。",
+     "exv": "Nhóm đối chứng không nhận phương pháp mới."
+    },
+    {
+     "han": "双盲",
+     "pinyin": "shuāngmáng",
+     "vi": "mù đôi",
+     "col": "双盲试验",
+     "ex": "双盲试验里谁都不知道谁吃了药。",
+     "exv": "Trong thử nghiệm mù đôi, không ai biết ai đã uống thuốc."
+    },
+    {
+     "han": "疗效",
+     "pinyin": "liáoxiào",
+     "vi": "hiệu quả điều trị",
+     "col": "证明疗效",
+     "ex": "试验要先证明疗效才能批准。",
+     "exv": "Thử nghiệm phải chứng minh hiệu quả điều trị trước khi phê duyệt."
+    },
+    {
+     "han": "不良反应",
+     "pinyin": "bùliáng fǎnyìng",
+     "vi": "phản ứng bất lợi",
+     "col": "报告不良反应",
+     "ex": "出现不良反应要马上告诉医生。",
+     "exv": "Xuất hiện phản ứng bất lợi phải báo ngay cho bác sĩ."
+    },
+    {
+     "han": "保密",
+     "pinyin": "bǎomì",
+     "vi": "bảo mật",
+     "col": "病人保密",
+     "ex": "病人保密要求不公开姓名。",
+     "exv": "Bảo mật bệnh nhân yêu cầu không công khai tên."
+    },
+    {
+     "han": "方案",
+     "pinyin": "fāng'àn",
+     "vi": "phương án, phác đồ",
+     "col": "研究方案",
+     "ex": "每个试验都要严格执行研究方案。",
+     "exv": "Mỗi thử nghiệm đều phải thực hiện nghiêm ngặt phác đồ nghiên cứu."
+    },
+    {
+     "han": "参与者",
+     "pinyin": "cānyùzhě",
+     "vi": "người tham gia",
+     "col": "试验参与者",
+     "ex": "每个试验参与者随时可以退出。",
+     "exv": "Mỗi người tham gia thử nghiệm đều có thể rút lui bất cứ lúc nào."
+    },
+    {
+     "han": "发表",
+     "pinyin": "fābiǎo",
+     "vi": "công bố",
+     "col": "发表论文",
+     "ex": "研究结果发表以后医生都能看到。",
+     "exv": "Kết quả nghiên cứu sau khi công bố, bác sĩ đều có thể xem."
+    },
+    {
+     "han": "统计",
+     "pinyin": "tǒngjì",
+     "vi": "thống kê",
+     "col": "统计结果",
+     "ex": "统计结果说明差异是不是偶然。",
+     "exv": "Kết quả thống kê cho biết khác biệt có phải ngẫu nhiên không."
+    },
+    {
+     "han": "可重复性",
+     "pinyin": "kě chóngfùxìng",
+     "vi": "khả năng lặp lại",
+     "col": "检验可重复性",
+     "ex": "重复研究可以检验可重复性。",
+     "exv": "Làm lại nghiên cứu có thể kiểm tra khả năng lặp lại."
+    },
+    {
+     "han": "突破",
+     "pinyin": "tūpò",
+     "vi": "đột phá",
+     "col": "重大突破",
+     "ex": "新药是治疗上的重大突破。",
+     "exv": "Thuốc mới là đột phá lớn trong điều trị."
+    },
+    {
+     "han": "基因治疗",
+     "pinyin": "jīyīn zhìliáo",
+     "vi": "liệu pháp gen",
+     "col": "基因治疗研究",
+     "ex": "基因治疗研究还在早期阶段。",
+     "exv": "Nghiên cứu liệu pháp gen vẫn đang ở giai đoạn đầu."
+    }
+   ]
+  }
+]; }
