@@ -51,6 +51,11 @@ p{margin:8px 0}
 .ph-fig{margin:0;text-align:center;font-size:13px;color:var(--mut)}
 .ph-arrow{font-size:22px;align-self:center}
 .jawline{margin:8px 0;font-size:14px}
+.ph-anim{position:relative}
+.ph-anim-frame{position:absolute;left:0;top:0;width:100%;opacity:0;animation-name:phFrame;animation-timing-function:linear;animation-iteration-count:infinite}
+.ph-anim-frame:first-child{position:relative}
+@keyframes phFrame{0%{opacity:1}5.88%{opacity:1}5.89%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion: reduce){.ph-anim-frame{animation:none!important;opacity:0}.ph-anim-frame:last-child{opacity:1}}
 .jaw-segs i{display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--line2);margin-right:2px}
 .jaw-segs i.on{background:var(--amber)}
 .g-tile{border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:14px 10px;font-size:17px;cursor:pointer;min-width:110px;text-align:center}
@@ -173,17 +178,53 @@ function frontMouthSVG(p) {
 }
 function jawTxt(x) { return String(x).replace(".", ","); }
 function jawSegsHTML(x) { var h = ""; for (var i = 0; i < 8; i++) h += '<i class="' + (i < Math.round(x * 2) ? "on" : "") + '"></i>'; return h; }
-function mouthFiguresHTML(p) {
-  var side = function (q, cap) { return '<figure class="ph-fig">' + mouthSVG(q) + '<figcaption>' + cap + '</figcaption></figure>'; };
-  var front = function (q, cap) { return '<figure class="ph-fig">' + frontMouthSVG(q) + '<figcaption>' + cap + '</figcaption></figure>'; };
+/* ---------- Ảnh động khẩu hình (vẽ từ code có sẵn, CSS chạy khung hình) ----------
+   Mỗi góc ĐÚNG 1 ảnh động, không còn ảnh tĩnh bên cạnh: 17 khung hình xếp chồng,
+   CSS hiện lần lượt từng khung (110ms/khung, lặp vô hạn). Khung đầu nằm trong
+   luồng trang để giữ chiều cao; các khung còn lại phủ lên trên.
+   - Âm đôi: nội suy từ tư thế âm đầu sang tư thế âm cuối theo RB_PH_GLIDE.
+   - Âm đơn: nội suy từ miệng đóng (o nhỏ, r = 0) tới đúng khẩu hình đích.
+   - 4 khung cuối giữ nguyên tư thế đích = "giữ một nhịp" rồi lặp lại.
+   - prefers-reduced-motion: tắt chuyển động, chỉ hiện khung cuối (khẩu hình đích).
+   Khung hình là dữ kiện thuần túy (phAnimFrames) nên test được mà không cần chạy CSS. */
+var PH_ANIM_STEPS = 12, PH_ANIM_HOLD = 4, PH_ANIM_FRAME_MS = 110;
+function phAnimNum(v) { return v == null ? 0 : v; }
+function phAnimFrames(p) {
+  var tgt = RB_PH_GLIDE[p.s];
+  var start, end;
+  if (tgt) {
+    start = p;
+    end = RB_PH_TARGETS[tgt] ? Object.assign({ s: tgt }, RB_PH_TARGETS[tgt]) : p;
+  } else {
+    start = { s: p.s, h: p.h, f: p.f, r: 0, o: 0.05, tip: 0.1, teeth: p.teeth };
+    end = p;
+  }
+  var fields = ["h", "f", "r", "o", "tip"], frames = [];
+  for (var i = 0; i <= PH_ANIM_STEPS; i++) {
+    var t = i / PH_ANIM_STEPS, q = { s: end.s, teeth: end.teeth };
+    fields.forEach(function (k) { q[k] = phAnimNum(start[k]) + (phAnimNum(end[k]) - phAnimNum(start[k])) * t; });
+    frames.push(q);
+  }
+  for (var j = 0; j < PH_ANIM_HOLD; j++) frames.push(end);
+  return frames;
+}
+function mouthAnimHTML(p) {
+  var frames = phAnimFrames(p);
+  var total = frames.length * PH_ANIM_FRAME_MS;
+  var side = frames.map(function (q, i) { return '<div class="ph-anim-frame" style="animation-duration:' + total + 'ms;animation-delay:-' + (i * PH_ANIM_FRAME_MS) + 'ms">' + mouthSVG(q) + '</div>'; }).join("");
+  var front = frames.map(function (q, i) { return '<div class="ph-anim-frame" style="animation-duration:' + total + 'ms;animation-delay:-' + (i * PH_ANIM_FRAME_MS) + 'ms">' + frontMouthSVG(q) + '</div>'; }).join("");
   var jawNote = '<span class="mut">(độ mở hàm do trang tự gán, tương đối — để so sánh giữa các âm)</span>';
   var tgt = RB_PH_GLIDE[p.s];
-  if (tgt) {
-    var e = RB_PH_TARGETS[tgt] || p;
-    return '<div class="ph-figs">' + side(p, "Mặt cắt bên - Bắt đầu") + '<div class="ph-arrow">→</div>' + side(e, "Mặt cắt bên - Kết thúc") + '</div><div class="ph-figs" style="margin-top:8px">' + front(p, "Nhìn trực diện - Bắt đầu") + '<div class="ph-arrow">→</div>' + front(e, "Nhìn trực diện - Kết thúc") + '</div><div class="jawline"><span>Độ mở hàm: <b>' + jawTxt(RB_PH_JAW[p.s]) + ' → ' + jawTxt(RB_PH_JAW[tgt] === undefined ? 1.5 : RB_PH_JAW[tgt]) + '/4</b></span><span class="jaw-segs">' + jawSegsHTML(RB_PH_JAW[p.s]) + '</span>→<span class="jaw-segs">' + jawSegsHTML(RB_PH_JAW[tgt] === undefined ? 1.5 : RB_PH_JAW[tgt]) + '</span>' + jawNote + '</div>';
-  }
-  return '<div class="ph-figs">' + side(p, "Mặt cắt bên") + front(p, "Nhìn trực diện") + '</div><div class="jawline"><span>Độ mở hàm: <b>' + jawTxt(RB_PH_JAW[p.s]) + '/4</b></span><span class="jaw-segs">' + jawSegsHTML(RB_PH_JAW[p.s]) + '</span>' + jawNote + '</div>';
+  var jaw = tgt
+    ? '<span>Độ mở hàm: <b>' + jawTxt(RB_PH_JAW[p.s]) + ' → ' + jawTxt(RB_PH_JAW[tgt] === undefined ? 1.5 : RB_PH_JAW[tgt]) + '/4</b></span><span class="jaw-segs">' + jawSegsHTML(RB_PH_JAW[p.s]) + '</span>→<span class="jaw-segs">' + jawSegsHTML(RB_PH_JAW[tgt] === undefined ? 1.5 : RB_PH_JAW[tgt]) + '</span>'
+    : '<span>Độ mở hàm: <b>' + jawTxt(RB_PH_JAW[p.s]) + '/4</b></span><span class="jaw-segs">' + jawSegsHTML(RB_PH_JAW[p.s]) + '</span>';
+  return '<div class="ph-figs">'
+    + '<figure class="ph-fig"><div class="ph-anim" data-anim-sym="' + esc(p.s) + '">' + side + '</div><figcaption>Mặt cắt bên — ảnh động</figcaption></figure>'
+    + '<figure class="ph-fig"><div class="ph-anim" data-anim-sym="' + esc(p.s) + '">' + front + '</div><figcaption>Nhìn trực diện — ảnh động</figcaption></figure>'
+    + '</div><div class="jawline">' + jaw + jawNote + '</div>'
+    + '<p class="mut">Ảnh động lặp lại từ đầu đến cuối âm (âm đơn: từ miệng đóng đến đúng khẩu hình rồi giữ một nhịp).</p>';
 }
+function mouthFiguresHTML(p) { return mouthAnimHTML(p); }
 
 /* ---------- Store: một nguồn số liệu duy nhất ---------- */
 var LS_NEW = "ielts_rebuild_v1", LS_OLD = "ielts_standalone_v1";
