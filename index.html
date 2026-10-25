@@ -94,7 +94,8 @@ iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radiu
 <div id="previewBanner">Bạn đang ở chế độ khách — tiến trình lưu trên máy này, chưa đồng bộ tài khoản. Đăng nhập ở mục Của tôi → Tài khoản để đồng bộ.</div>
 <nav class="tabbar" id="tabBar">
 <button class="tab" data-tab="home">Học</button>
-<button class="tab" data-tab="roadmap">Lộ trình</button>
+<button class="tab" data-tab="roadmap">Bản đồ</button>
+<button class="tab" data-tab="mypath">Lộ trình riêng</button>
 <button class="tab" data-tab="practice">Luyện tập</button>
 <button class="tab" data-tab="review">Ôn tập</button>
 <button class="tab" data-tab="mine">Của tôi</button>
@@ -299,6 +300,12 @@ function nextStepButtonHTML() { return '<button class="btn btn-primary" id="btnN
 function wireNextStep() {
   var b = $("#btnNextStep"); if (!b) return;
   b.onclick = function () {
+    var pp = (typeof authState !== "undefined" && authState.user) ? buildPersonalPath().items[0] : null;
+    if (pp) {
+      backFromLesson();
+      if (pp.stepId) openStep(stepById(pp.stepId), { noNudge: true }); else go("review");
+      return;
+    }
     var ns = nextLearnStep();
     if (ns) { backFromLesson(); openStep(ns, { noNudge: true }); }
     else { backFromLesson(); go("home"); }
@@ -333,6 +340,7 @@ function render() {
   if (curLesson) { renderLesson(app); return; }
   if (curTab === "home") viewHome(app);
   else if (curTab === "roadmap") viewRoadmap(app);
+  else if (curTab === "mypath") viewMyPath(app);
   else if (curTab === "practice") viewPractice(app);
   else if (curTab === "review") viewReview(app);
   else viewMine(app);
@@ -354,7 +362,8 @@ function resumeLine(step) {
   return step.title;
 }
 function viewHome(app) {
-  var ns = nextLearnStep();
+  var ppNext = (typeof authState !== "undefined" && authState.user) ? buildPersonalPath().items[0] : null;
+  var ns = (ppNext && ppNext.stepId) ? stepById(ppNext.stepId) : nextLearnStep();
   var done = doneLearnCount(), total = learningSteps().length;
   var pct = Math.round(done / total * 100);
   var due = dueCount();
@@ -363,8 +372,12 @@ function viewHome(app) {
     html += '<section class="card" id="nextCard"><h2>Bạn đã học xong chương 1!</h2><p>Bạn đã đi hết ' + total + ' bước học của chương 1.</p>'
       + (state.testDone ? '<p>Bạn đã qua bài kiểm tra cuối chương 1. Hãy ôn tập mỗi ngày để nhớ lâu.</p><button class="btn btn-primary" id="nextBtn">Vào Ôn tập</button>'
         : '<p>Hãy làm bài kiểm tra cuối chương để chốt lại chương này.</p><button class="btn btn-primary" id="nextBtn">Làm bài kiểm tra cuối chương</button>') + '</section>';
+  } else if (ppNext && !ppNext.stepId) {
+    html += '<section class="card" id="nextCard"><div class="mut">Bài tiếp theo — lộ trình riêng của bạn</div><h2>Ôn điểm yếu</h2>'
+      + '<p class="mut">Ôn tập · Sổ lỗi sai</p>'
+      + '<button class="btn btn-primary" id="nextBtn">Ôn ngay</button></section>';
   } else {
-    html += '<section class="card" id="nextCard"><div class="mut">Bài tiếp theo</div><h2>' + esc(resumeLine(ns)) + '</h2>'
+    html += '<section class="card" id="nextCard"><div class="mut">Bài tiếp theo' + (ppNext ? ' — lộ trình riêng của bạn' : '') + '</div><h2>' + esc(resumeLine(ns)) + '</h2>'
       + '<p class="mut">' + esc(ns.type) + ' · khoảng ' + ns.mins + ' phút (ước tính)</p>'
       + '<button class="btn btn-primary" id="nextBtn">' + (done === 0 && (state.pos["vocab:69"] || 0) === 0 ? "Bắt đầu học" : "Vào học") + '</button></section>';
   }
@@ -375,7 +388,8 @@ function viewHome(app) {
   html += '<p><button class="dimlink" id="quickCheckLink">Tôi đã biết chút ít — kiểm tra nhanh để gợi ý điểm bắt đầu</button> · <button class="dimlink" id="loginLink">Đăng nhập</button></p>';
   app.innerHTML = html;
   var ll = $("#loginLink"); if (ll) { try { ll.textContent = (typeof authState !== "undefined" && authState.user) ? "Tài khoản: " + authState.user.email : "Đăng nhập"; } catch (e) {} }
-  $("#nextBtn").onclick = function () {
+  var nbHome = $("#nextBtn"); if (nbHome) nbHome.onclick = function () {
+    if (ppNext && !ppNext.stepId) { go("review"); return; }
     if (!ns) { if (state.testDone) go("review"); else openStep(stepById("test")); return; }
     openStep(ns, { noNudge: true });
   };
@@ -470,18 +484,53 @@ function personalPathCardHTML() {
   return h;
 }
 
-/* ---------- LỘ TRÌNH ---------- */
+
+/* ---------- TRANG RIENG: LO TRINH RIENG (tach khoi trang Ban do) ---------- */
+/* Bam vao trang nay la bat dau hoc ngay buoc tiep theo cua rieng ban.
+   Khach chua dang nhap chi thay loi moi dang nhap + nut sang the Tai khoan,
+   khong hien lo trinh rieng cua ai, khong tu bia tien trinh. */
+function viewMyPath(app) {
+  var html = '<h2>Lộ trình riêng</h2>';
+  if (typeof authState === "undefined" || !authState.user) {
+    html += '<section class="card" id="myPathGuest"><h3>Lộ trình riêng — Cá nhân hóa cực chi tiết</h3>'
+      + '<p class="mut">Lộ trình riêng chỉ mở khi bạn đăng nhập — khách dùng lộ trình 13 chặng chuẩn ở trang Bản đồ. Đăng nhập ở thẻ Tài khoản để mở lộ trình riêng của bạn.</p>'
+      + '<button class="btn btn-primary" id="myPathLogin">Đăng nhập — sang thẻ Tài khoản</button></section>';
+    app.innerHTML = html;
+    var ml = $("#myPathLogin"); if (ml) ml.onclick = function () { go("mine"); };
+    return;
+  }
+  var pp = buildPersonalPath();
+  var nx = pp.items[0];
+  html += '<section class="card" id="myPathNext"><h3>Bắt đầu học ngay</h3>'
+    + (nx ? '<p>Bước tiếp theo: <b>' + esc(nx.title) + '</b>' + (nx.reason ? '<br><span class="mut">' + esc(nx.reason) + '</span>' : '') + '</p>'
+      + '<button class="btn btn-primary" id="myPathStart">Vào học</button>'
+      : '<p>Bạn đã xong chương 1 — hãy ôn tập mỗi ngày để nhớ lâu.</p><button class="btn btn-primary" id="myPathStart">Vào Ôn tập</button>')
+    + '</section>';
+  html += personalPathCardHTML();
+  app.innerHTML = html;
+  var ms = $("#myPathStart");
+  if (ms) ms.onclick = function () {
+    if (nx && nx.stepId) openStep(stepById(nx.stepId), { noNudge: true });
+    else go("review");
+  };
+  $$("#ppCard [data-pace]").forEach(function (b) { b.onclick = function () { setPace(b.dataset.pace); }; });
+  $$("#ppCard [data-ppstep]").forEach(function (b) { b.onclick = function () { openStep(stepById(b.dataset.ppstep), { noNudge: true }); }; });
+  $$("#ppCard [data-ppreview]").forEach(function (b) { b.onclick = function () { go("review"); }; });
+  var ppe = $("#ppExplainBtn");
+  if (ppe) ppe.onclick = function () {
+    var pp2 = buildPersonalPath();
+    var sum = "Trình độ: đã xong " + pp2.done + "/" + pp2.total + " bước chương 1. Phần yếu nhất: " + (pp2.weak ? pp2.weak.name + " (" + pp2.weak.pct + "%)" : "chưa có kiểm tra") + ". Mục đến hạn ôn: " + pp2.dueCount + ". Nhịp độ: " + pp2.pace + ". Bước tiếp theo: " + (pp2.items[0] ? pp2.items[0].title : "không có") + ".";
+    callAiTutorChat([{ role: "user", text: sum + " Giải thích ngắn vì sao lộ trình riêng của tôi xếp như vậy, bằng tiếng Việt đơn giản." }]).then(function (r) { state.personalExplain = r; saveState(); render(); }, function (err) { toast(err); });
+  };
+  var vcb = $("#vipComposeBtn"); if (vcb) vcb.onclick = function () { vipComposePath(); };
+  var vrb = $("#vipRequestBtn"); if (vrb) vrb.onclick = function () { sendVipRequest(); };
+}
+
+/* ---------- BẢN ĐỒ (lộ trình chung, đã tách lộ trình riêng) ---------- */
 function viewRoadmap(app) {
   var done = doneLearnCount(), total = learningSteps().length;
-  var html = '<h2>Lộ trình học</h2>';
-  if (typeof authState !== "undefined" && authState.user) {
-    var pp0 = buildPersonalPath();
-    var nx0 = pp0.items[0];
-    html += '<section class="card" id="ppRoadmap"><h3>Lộ trình riêng của bạn — Cá nhân hóa cực chi tiết</h3>'
-      + '<p>' + (nx0 ? 'Bước tiếp theo: <b>' + esc(nx0.title) + '</b>' : 'Bạn đã xong chương 1.') + '</p>'
-      + '<p class="mut">Nhịp độ: ' + (pp0.pace === "nhanh" ? "Tăng tốc" : pp0.pace === "ky" ? "Kỹ hơn" : "Vừa") + (pp0.dueCount ? ' · ' + pp0.dueCount + ' mục đến hạn ôn' : '') + '</p>'
-      + '<button class="btn btn-primary" id="ppGoMine">Xem lộ trình riêng đầy đủ</button></section>';
-  }
+  var html = '<h2>Bản đồ</h2>';
+  html += '<section class="card" id="myPathLink"><h3>Lộ trình riêng của bạn</h3><p class="mut">Lộ trình riêng đã tách ra thành trang riêng — bấm vào là bắt đầu học ngay bước tiếp theo của riêng bạn.</p><button class="btn btn-primary" id="myPathGo">Mở lộ trình riêng</button></section>';
   html += '<section class="card"><h3>Sổ tay chương 1</h3><p><b>Mục tiêu:</b> ' + esc(RB_CH1_GUIDEBOOK.goal) + '</p>'
     + '<p><b>Ngữ pháp chính:</b> ' + esc(RB_CH1_GUIDEBOOK.grammar.join(" · ")) + '</p>'
     + '<p><b>Cụm câu then chốt:</b> ' + esc(RB_CH1_GUIDEBOOK.phrases.join(" · ")) + '</p>'
@@ -528,7 +577,7 @@ function viewRoadmap(app) {
   var mc1 = $("#mapCh1"); if (mc1) mc1.onclick = function () { var ns = nextLearnStep(); openStep(ns || stepById("pron1"), { noNudge: true }); };
   var mct = $("#mapChatType"); if (mct) mct.onclick = function () { openLesson({ type: "chat", chatMode: "type" }); };
   var mcv = $("#mapChatVoice"); if (mcv) mcv.onclick = function () { openLesson({ type: "chat", chatMode: "voice" }); };
-  var pgm = $("#ppGoMine"); if (pgm) pgm.onclick = function () { go("mine"); };
+  var mpg = $("#myPathGo"); if (mpg) mpg.onclick = function () { go("mypath"); };
   $$("#skippedList .step-row[data-skip]").forEach(function (btn) {
     btn.onclick = function () { openStep(stepById(btn.dataset.skip), { noNudge: true }); };
   });
@@ -750,7 +799,7 @@ function viewMine(app) {
     }).join("") + '<p class="mut">' + RB_BAND_NOTE + '</p></section>';
   }
   html += levelHTML + phaseHTML + mockHTML;
-  if (typeof authState !== "undefined" && authState.user) { html += personalPathCardHTML(); } else { html += '<section class="card" id="ppGuest"><h3>Lộ trình riêng — Cá nhân hóa cực chi tiết</h3><p class="mut">Lộ trình riêng mở khi bạn đăng nhập — khách dùng lộ trình 13 chặng chuẩn ở tab Lộ trình. Đăng nhập ở thẻ Tài khoản phía trên để mở.</p></section>'; }
+  if (typeof authState !== "undefined" && authState.user) { html += personalPathCardHTML(); } else { html += '<section class="card" id="ppGuest"><h3>Lộ trình riêng — Cá nhân hóa cực chi tiết</h3><p class="mut">Lộ trình riêng mở khi bạn đăng nhập — khách dùng lộ trình 13 chặng chuẩn ở trang Bản đồ. Đăng nhập ở thẻ Tài khoản phía trên để mở.</p></section>'; }
   html += '<section class="card"><h3>Bảng chú giải</h3>' + RB_GLOSSARY.map(function (g) { return '<p><b>' + esc(g.t) + ':</b> ' + esc(g.d) + '</p>'; }).join("") + '</section>';
   html += '<section class="card"><h3>Gia sư AI</h3><p>' + esc(RB_AI.tutor.label) + '.</p><p class="mut">Gia sư dùng model gemini-3.5-flash qua Supabase, cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p>'
     + '<button class="btn" id="tutorTry">Thử gọi gia sư</button></section>';
