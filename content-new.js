@@ -709,3 +709,14 @@ var BK_FORMAT = [
   { old: "Sách cũ viết cho thi giấy, chưa nhắc thi trên máy tính.",
     now: "Hiện nay có cả thi giấy và thi trên máy tính với cùng format 4 kỹ năng; bài thi thử của web này theo format trên nhưng ghi rõ giới hạn kho (phần Đọc của thi thử mới có 15 câu do kho tự soạn hiện tại, không mạo nhận là đề đủ)." }
 ];
+
+// ---------- GĐ2+GĐ3 CÒN LẠI (25/10/2026): hằng số dùng chung ----------
+var RB_GD23_LISTEN_STEPS = [
+  { name: "Nghe lấy ý chính", desc: "Nghe một lượt, nắm ý chính, chưa cần hiểu từng từ." },
+  { name: "Nghe lấy chi tiết", desc: "Nghe lại, ghi các con số, tên và ý chi tiết." },
+  { name: "Đối chiếu đáp án", desc: "Làm câu hỏi rồi đối chiếu với những gì đã nghe." },
+  { name: "Nghe lại đoạn khó", desc: "Nghe lại đúng đoạn chưa nghe rõ." },
+  { name: "Ôn từ mới", desc: "Ghi lại từ mới trong bài và ôn theo lịch giãn cách." }
+];
+var RB_GD23_SELF_LEVELS = ["Chưa nhớ", "Nhớ lơ mơ", "Nhớ khá", "Nhớ chắc"];
+var RB_GD23_SPEECH_AREAS = ["Phát âm", "Lưu loát", "Từ vựng", "Ngữ pháp", "Mạch lạc"];
