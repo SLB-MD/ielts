@@ -803,7 +803,7 @@ function renderVocab(app, l) {
   $$("[data-azsound]").forEach(function (b) {
     b.onclick = function () { var s = b.dataset.azsound; if (phTryOpenSound(s)) openLesson({ type: "pron", step: stepById("pron1"), sound: s, sub: 0 }); };
   });
-  var mb2 = $("#btnMirror"); if (mb2) mb2.onclick = function () { var slot = $("#vocabMirrorSlot"); if (!slot) return; if (slot.innerHTML) { mirrorStop(); slot.innerHTML = ""; } else { mirrorStop(); var sym0 = firstSymFromIpa(c.ipa); slot.innerHTML = mirrorHTML(sym0); wireMirror(slot, sym0); } };
+  var mb2 = $("#btnMirror"); if (mb2) mb2.onclick = function () { var slot = $("#vocabMirrorSlot"); if (!slot) return; if (slot.innerHTML) { mirrorStop(); slot.innerHTML = ""; } else { mirrorStop(); var sym0 = (l.setIdx === 69 ? (RB_AZ_FIRST_SYM[c.w] || firstSymFromIpa(c.ipa)) : firstSymFromIpa(c.ipa)); slot.innerHTML = mirrorHTML(sym0); wireMirror(slot, sym0); } };
   $("#btnPrev").onclick = function () { state.pos["vocab:" + l.setIdx] = Math.max(0, pos - 1); saveState(); render(); };
   var advance = function (known) {
     var key = "s" + l.setIdx + ":" + pos;
@@ -1351,7 +1351,7 @@ function renderPronLesson(app, l) {
    Video chỉ lưu trên máy (IndexedDB, tối đa 12), không gửi đi đâu.
    Độ chính xác nhận diện trên mặt thật CHƯA đo — giao diện ghi rõ điều này. */
 var aiRec = null, aiBlob = null, aiUrl = null;
-var MR = { slot: null, sym: null, stream: null, rec: null, chunks: [], segTimer: null, curBlob: null, stopping: false, fm: null, fmOn: false, fmBusy: false, holdStart: 0, autoDone: false, pendingAuto: false, pendingManual: false, stableCount: 0, momentDone: {}, urls: [], diagFm: "chưa tải", diagFace: false, diagScore: "chưa chạy", diagSends: 0, diagResults: 0, diagLm: 0, diagSendErr: "", diagVState: "", diagRetry: "chưa", fmRetried: false, fmStartAt: 0, fmGen: 0 };
+var MR = { slot: null, sym: null, stream: null, rec: null, chunks: [], segTimer: null, curBlob: null, stopping: false, fm: null, fmOn: false, fmBusy: false, holdStart: 0, autoDone: false, pendingAuto: false, pendingManual: false, stableCount: 0, momentDone: {}, urls: [], diagFm: "chưa tải", diagFace: false, diagScore: "chưa chạy", diagSends: 0, diagResults: 0, diagLm: 0, diagSendErr: "", diagVState: "", diagRetry: "chưa", fmRetried: false, fmStartAt: 0, fmGen: 0, engine: "", engineFallback: false, lm: null, lmOn: false, lmBusy: false, lmGen: 0, lmRetried: false, lmStartAt: 0, sessionId: 0, sessionActive: false, procSamples: [], sessionMoment: null, manualLocked: false, lastLiveScore: null, lastProc: null, micWant: true, micOn: false, audioStream: null, audioRec: null, audioBlob: null, audioTranscript: "", audioSid: 0, audioSlot: null, audioDiscard: false, srRec: null };
 function mrSupported() { try { return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia); } catch (e) { return false; } }
 function mrRecSupported() { try { return typeof MediaRecorder !== "undefined"; } catch (e) { return false; } }
 function mrPickMime() {
@@ -1506,7 +1506,7 @@ function mrVidAddFull(rec) {
         var list = (all.result || []).sort(function (a, b) { return a.id - b.id; });
         while (list.length >= 12) { store.delete(list.shift().id); }
         var req = store.add(rec);
-        req.onsuccess = function () { db.close(); resolve(); };
+        req.onsuccess = function () { db.close(); resolve(req.result); };
         req.onerror = function () { db.close(); reject(req.error); };
       };
       all.onerror = function () { db.close(); reject(all.error); };
@@ -1555,8 +1555,10 @@ function mirrorHTML(sym) {
       + '<p class="mr-status mut">Bấm “Bật camera” để soi khẩu hình cạnh hình mẫu.</p>'
       + '<p class="mr-diag mut">' + esc(mrDiagText()) + '</p>'
       + '<p class="mr-diag2 mut">' + esc(mrDiagDetailText()) + '</p>'
-      + '<div class="mr-feed"><p class="mut">Điểm % dưới đây là <b>ĐIỂM KHỚP KHẨU HÌNH</b> (hình miệng nhìn thấy được), <b>KHÔNG</b> phải điểm phát âm theo âm thanh. Điểm phát âm theo âm thanh do AI chấm (pronounce) hiển thị riêng ở bước AI chấm, không trộn hai điểm thành một. Ngưỡng điểm và vùng đích là tạm (chưa đo trên mặt thật) và có thể chỉnh.</p><div class="mr-feed-body"><p class="mut">Bật camera để xem điểm khớp từng khung hình.</p></div></div>'
+      + '<div class="mr-feed"><p class="mut">Điểm % dưới đây là <b>ĐIỂM KHỚP KHẨU HÌNH</b> (hình miệng nhìn thấy được), <b>KHÔNG</b> phải điểm phát âm theo âm thanh. Điểm tiếng (phát âm theo âm thanh) hiển thị riêng ở ô kết quả lần tập bên dưới — AI chấm khi đã đăng nhập, ước lượng tại chỗ khi chưa đăng nhập — không trộn hai điểm thành một. Ngưỡng điểm và vùng đích là tạm (chưa đo trên mặt thật) và có thể chỉnh.</p><div class="mr-feed-body"><p class="mut">Bật camera để xem điểm khớp từng khung hình.</p></div></div>'
       + '<div class="row"><button class="btn btn-primary mr-start">📷 Bật camera</button><button class="btn mr-stop" style="display:none">Tắt camera</button><button class="btn mr-save" disabled>💾 Lưu video mẫu</button><button class="btn mr-clear">Xóa hết video</button></div>'
+      + '<div class="row"><button class="btn mr-mic">🎤 Mic kèm theo: Bật</button><span class="mut mr-mic-status">Mic sẽ tự bật cùng camera để chấm tiếng trong cùng lần tập.</span></div>'
+      + '<div class="mr-session"><p class="mut">Mỗi lần tập: camera theo miệng + mic thu tiếng cùng lúc — hãy đọc to từ ví dụ của âm trong lúc soi gương. Tắt camera để xem điểm quá trình (từ lúc mở miệng đến lúc kết thúc âm) và điểm tiếng — hai số riêng, không trộn.</p></div>'
       + '<p class="mut mr-lib-count">Thư viện: chưa có video mẫu nào.</p>'
       + '<p class="mut">Nhận diện khẩu hình tự động chỉ là gợi ý — độ chính xác trên mặt thật chưa được đo, nên hãy đối chiếu thêm bằng mắt với hình mẫu.</p>';
   }
@@ -1581,7 +1583,7 @@ function mrRenderLib(slot) {
       var media = "";
       if (v.blob) { var url = URL.createObjectURL(v.blob); MR.urls.push(url); media = '<video controls src="' + url + '"></video>'; }
       else if (v.shot) { media = '<img src="' + v.shot + '" style="width:100%;border-radius:12px" alt="Khung hình đúng">'; }
-      var cap = v.kind === "moment" ? ('Khoảnh khắc đúng · Khớp khẩu hình ' + (v.score != null ? v.score + '%' : '')) : '';
+      var cap = ""; if (v.kind === "moment") cap = 'Khoảnh khắc đúng nhất' + (v.score != null ? ' · Khớp khẩu hình ' + v.score + '%' : ''); else if (v.score != null) cap = 'Video mẫu · Khớp khẩu hình ' + v.score + '%';
       return '<div class="mr-item">' + media + '<p class="mut">Âm /' + esc(v.sym) + '/ · ' + (cap ? cap + ' · ' : '') + new Date(v.ts).toLocaleString("vi-VN") + '</p><button class="btn mr-del" data-id="' + v.id + '">Xóa video này</button></div>';
     }).join("") + '</div>';
     lib.querySelectorAll(".mr-del").forEach(function (b) {
@@ -1591,11 +1593,27 @@ function mrRenderLib(slot) {
 }
 function mrDiagText() {
   var tg = MR.sym ? RB_MIRROR_TARGETS[MR.sym] : null;
-  return "Chẩn đoán gương — FaceMesh: " + MR.diagFm + " · Mặt: " + (MR.diagFace ? "đã thấy" : "chưa thấy") + " · Đích âm " + (MR.sym ? "/" + MR.sym + "/" : "") + ": " + (tg ? "có" : "không có — chỉ tự soi") + " · Chấm: " + MR.diagScore;
+  return "Chẩn đoán gương — " + (MR.engine === "landmarker" ? "FaceLandmarker: " : "FaceMesh: ") + MR.diagFm + " · Mặt: " + (MR.diagFace ? "đã thấy" : "chưa thấy") + " · Đích âm " + (MR.sym ? "/" + MR.sym + "/" : "") + ": " + (tg ? "có" : "không có — chỉ tự soi") + " · Chấm: " + MR.diagScore;
 }
 function mrDiagDetailText() { return "Chi tiết — Gửi: " + MR.diagSends + " · Kết quả: " + MR.diagResults + " · Điểm mốc: " + MR.diagLm + " · Lỗi gửi: " + (MR.diagSendErr || "không") + " · Video: " + (MR.diagVState || "chưa gửi") + " · Thử lại: " + MR.diagRetry; }
 function mrDiagUpdate(slot) { var d = slot && slot.querySelector(".mr-diag"); if (d) d.textContent = mrDiagText(); var d2 = slot && slot.querySelector(".mr-diag2"); if (d2) d2.textContent = mrDiagDetailText(); }
 function mrSetStatus(slot, t) { var s = slot && slot.querySelector(".mr-status"); if (s) s.textContent = t; }
+function mrSaveSessionClip(slot, blob, score, shot, kind, isManual) {
+  /* Mot lan tap chi luu MOT clip dung nhat: neu da co clip cua lan tap nay thi
+     xoa + them lai (khong dung put vi IDB gia cua test cu khong co put) roi cap
+     nhat sessionMoment; luu tay sau do van duoc phep cap nhat lai entry. */
+  if (!blob && !shot) return Promise.resolve(null);
+  if (isManual) MR.manualLocked = true; /* clip nguoi dung chon dung yen den het lan tap; luu tay sau van duoc cap nhat lai entry, luu tu dong thi bi chan */
+  var rec = { sym: MR.sym, ts: Date.now(), blob: blob || null, shot: shot || "", kind: kind, score: score != null ? score : null };
+  var addNew = function () {
+    return mrVidAddFull(rec).then(function (id) { MR.sessionMoment = { id: id, score: score }; return id; });
+  };
+  if (MR.sessionMoment && MR.sessionMoment.id != null) {
+    var oldId = MR.sessionMoment.id;
+    return mrVidDelete(oldId).then(addNew, addNew);
+  }
+  return addNew();
+}
 function mrSaveCurrent(slot, auto) {
   if (!MR.curBlob) {
     /* Chưa có đoạn hoàn tất nhưng đang quay: cắt ngay đoạn đang quay để lưu,
@@ -1609,7 +1627,7 @@ function mrSaveCurrent(slot, auto) {
     toast("Chưa có đoạn video nào — bật camera rồi chờ vài giây.");
     return;
   }
-  mrVidAdd(MR.sym, MR.curBlob).then(function () {
+  mrSaveSessionClip(slot, MR.curBlob, MR.lastLiveScore, null, "video", !auto).then(function () {
     mrRenderLib(slot);
     var libEl = slot.querySelector(".mr-lib");
     if (libEl && libEl.scrollIntoView) { try { libEl.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {} }
@@ -1651,11 +1669,15 @@ function mrStartSeg(slot) {
   try { MR.rec.start(); } catch (e) { MR.rec = null; }
 }
 function mirrorStop() {
-  MR.stopping = true; MR.fmOn = false; MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingManual = false; MR.stableCount = 0;
+  if (MR.sessionActive && MR.slot) { try { mrFinishSession(MR.slot); } catch (e) {} }
+  MR.stopping = true; MR.fmOn = false; MR.lmOn = false; MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingManual = false; MR.stableCount = 0;
   if (MR.segTimer) { clearInterval(MR.segTimer); MR.segTimer = null; }
   var slot = MR.slot;
   if (MR.rec && MR.rec.state === "recording") { try { MR.rec.stop(); } catch (e) {} }
   MR.rec = null;
+  if (MR.lm) { try { var lc = MR.lm.close(); if (lc && lc.catch) lc.catch(function () {}); } catch (e) {} }
+  MR.lm = null; MR.lmOn = false;
+  mrMicStopAll();
   if (MR.stream) { MR.stream.getTracks().forEach(function (t) { try { t.stop(); } catch (e) {} }); }
   MR.stream = null; MR.curBlob = null;
   if (slot) {
@@ -1670,12 +1692,127 @@ function mirrorStop() {
   }
   MR.stopping = false; MR.slot = null;
 }
+
+/* ---------- Cham theo qua trinh (tu luc mo mieng den luc ket thuc am) ----------
+   Am doi: duong dich noi suy tuyen tinh tu am dau sang am cuoi theo RB_PH_GLIDE
+   (muc thieu o mot dau thi giu nguyen gia tri dau con lai).
+   Am don: 25% dau noi suy tu mieng dong MR_PROC_REST toi dich, 75% con lai giu dich
+   (RB_PH_JAW xac nhan do mo ham cua dich; muc khong co dich so thi bo qua, khong bia).
+   mrProcessScore: cua so tu mau mo mieng dau tien tru lui 4 mau, den mau cuoi co
+   tong >= 50 (khong co thi lay mau dinh cao nhat); resample thanh 8 diem deu;
+   tong = round(0.5*trung binh ca qua trinh + 0.3*khung hinh tot nhat + 0.2*luc mo mieng). */
+var MR_PROC_REST = { o: 0, r: 0, s: 0.2 };
+var MR_PROC_START = { "eɪ": "e", "aɪ": "ɑ:", "ɔɪ": "ɔ:", "əʊ": "ə", "aʊ": "ɑ:", "ɪə": "ɪ", "eə": "e", "ʊə": "ʊ" };
+function mrScorePoint(obs, tgt) {
+  var keys = ["o", "r", "s"], sum = 0, n = 0;
+  keys.forEach(function (k) {
+    var z = tgt[k]; if (!z) return;
+    var v = obs[k]; if (v == null || isNaN(v)) return;
+    var score;
+    if (v >= z[0] && v <= z[1]) score = 100;
+    else {
+      var dist = v < z[0] ? z[0] - v : v - z[1];
+      var tol = Math.max(0.15, z[1] - z[0]);
+      score = Math.max(0, Math.round(100 - (dist / tol) * 100));
+    }
+    sum += score; n++;
+  });
+  if (!n) return null;
+  return Math.round(sum / n);
+}
+function mrTargetPath(sym, K) {
+  K = K || 8;
+  var tg = RB_MIRROR_TARGETS[sym]; if (!tg) return null;
+  var mid = function (z) { return z ? (z[0] + z[1]) / 2 : null; };
+  var path = [];
+  var glideEnd = RB_PH_GLIDE[sym];
+  if (glideEnd) {
+    var startSym = MR_PROC_START[sym];
+    var tgS = startSym ? RB_MIRROR_TARGETS[startSym] : null;
+    var tgE = RB_PH_GLIDE[sym] ? RB_MIRROR_TARGETS[glideEnd] : null;
+    for (var k = 0; k < K; k++) {
+      var t = K === 1 ? 0 : k / (K - 1);
+      var pt = {};
+      ["o", "r", "s"].forEach(function (key) {
+        var a = tgS ? mid(tgS[key]) : null, b = tgE ? mid(tgE[key]) : null;
+        if (a != null && b != null) pt[key] = a + (b - a) * t;
+        else if (a != null) pt[key] = a;
+        else if (b != null) pt[key] = b;
+        else pt[key] = null;
+      });
+      path.push(pt);
+    }
+    return path;
+  }
+  for (var k2 = 0; k2 < K; k2++) {
+    var t2 = K === 1 ? 0 : k2 / (K - 1);
+    var pt2 = {};
+    ["o", "r", "s"].forEach(function (key) {
+      var goal = mid(tg[key]);
+      if (goal == null) pt2[key] = null;
+      else if (t2 < 0.25) { var u = t2 / 0.25; pt2[key] = MR_PROC_REST[key] + (goal - MR_PROC_REST[key]) * u; }
+      else pt2[key] = goal;
+    });
+    path.push(pt2);
+  }
+  return path;
+}
+function mrProcessScore(samples, sym) {
+  var tg = RB_MIRROR_TARGETS[sym]; if (!tg) return null;
+  var path = mrTargetPath(sym, 8); if (!path) return null;
+  var hasNum = path.some(function (p) { return p.o != null || p.r != null || p.s != null; });
+  if (!hasNum) return { total: null, pathAvg: null, peak: null, start: null, glide: !!RB_PH_GLIDE[sym], note: "âm này camera khó chấm tự động — hãy tự soi theo hình mẫu" };
+  samples = samples || [];
+  var firstOpen = -1;
+  for (var i = 0; i < samples.length; i++) {
+    if (samples[i] && samples[i].o != null && samples[i].o > 0.15) { firstOpen = i; break; }
+  }
+  if (firstOpen < 0) return { total: null, pathAvg: null, peak: null, start: null, glide: !!RB_PH_GLIDE[sym], note: "chưa thấy miệng mở — hãy mở miệng đọc âm trong lúc soi gương" };
+  var startIdx = Math.max(0, firstOpen - 4);
+  var endIdx = -1;
+  for (var j = samples.length - 1; j >= startIdx; j--) {
+    if (samples[j] && samples[j].total != null && samples[j].total >= 50) { endIdx = j; break; }
+  }
+  if (endIdx < 0) {
+    var best = -1, bestV = -1;
+    for (var j2 = startIdx; j2 < samples.length; j2++) {
+      if (samples[j2] && samples[j2].total != null && samples[j2].total > bestV) { bestV = samples[j2].total; best = j2; }
+    }
+    endIdx = best >= 0 ? best : samples.length - 1;
+  }
+  var win = samples.slice(startIdx, endIdx + 1);
+  var scorable = win.filter(function (x) { return x && (x.o != null || x.r != null || x.s != null); });
+  if (scorable.length < 6) return { total: null, pathAvg: null, peak: null, start: null, glide: !!RB_PH_GLIDE[sym], note: "chưa đủ khung hình chấm được — cần ít nhất 6 khung hình trong lúc đọc âm" };
+  if (win.length < 6) return { total: null, pathAvg: null, peak: null, start: null, glide: !!RB_PH_GLIDE[sym], note: "quá trình quá ngắn — hãy đọc âm chậm hơn một chút" };
+  var K = 8, pts = [];
+  for (var k = 0; k < K; k++) {
+    var idx = win.length === 1 ? 0 : Math.round(k * (win.length - 1) / (K - 1));
+    var sm = win[idx];
+    var tgtPt = {
+      o: path[k].o != null ? [path[k].o, path[k].o] : null,
+      r: path[k].r != null ? [path[k].r, path[k].r] : null,
+      s: path[k].s != null ? [path[k].s, path[k].s] : null
+    };
+    pts.push(mrScorePoint(sm, tgtPt));
+  }
+  var valid = pts.filter(function (x) { return x != null; });
+  if (!valid.length) return { total: null, pathAvg: null, peak: null, start: null, glide: !!RB_PH_GLIDE[sym], note: "chưa đủ khung hình chấm được — cần ít nhất 6 khung hình trong lúc đọc âm" };
+  var pathAvg = Math.round(valid.reduce(function (a, b) { return a + b; }, 0) / valid.length);
+  var peak = 0;
+  win.forEach(function (x) { if (x && x.total != null && x.total > peak) peak = x.total; });
+  var startScore = pts[0] != null ? pts[0] : 0;
+  var total = Math.round(0.5 * pathAvg + 0.3 * peak + 0.2 * startScore);
+  return { total: total, pathAvg: pathAvg, peak: peak, start: startScore, glide: !!RB_PH_GLIDE[sym], note: "" };
+}
 function mrOnResults(res) {
   var slot = MR.slot;
   if (!MR.fmOn || !slot) return;
   var lm = res.multiFaceLandmarks && res.multiFaceLandmarks[0];
   MR.diagResults++;
   MR.diagLm = lm ? lm.length : 0;
+  mrHandleLandmarks(slot, lm);
+}
+function mrHandleLandmarks(slot, lm) {
           if (!lm) { MR.diagFace = false; MR.diagScore = "đứng — chưa thấy mặt"; mrDiagUpdate(slot); return; }
           MR.diagFace = true;
           var idx = mrIndices(lm), tg = RB_MIRROR_TARGETS[MR.sym];
@@ -1683,16 +1820,21 @@ function mrOnResults(res) {
           try { mrDrawFrame(slot, lm); } catch (e) {}
           var score = mrScoreFrame(idx, tg);
           mrRenderFeedback(slot, score);
+          MR.lastLiveScore = score ? score.total : null;
+          if (MR.sessionActive && score) {
+            MR.procSamples.push({ o: idx.open, r: idx.round, s: idx.spread, total: score.total });
+            if (MR.procSamples.length > 900) MR.procSamples.splice(0, MR.procSamples.length - 900);
+          }
           MR.diagScore = score ? ("đang chạy (tổng " + score.total + "%)") : "đứng — âm khó chấm tự động";
           mrDiagUpdate(slot);
           /* Bắt khoảnh khắc: tổng điểm >= ngưỡng trong N khung hình liên tiếp. */
           if (score && score.total >= MR_CAPTURE_MIN_SCORE) MR.stableCount++;
           else MR.stableCount = 0;
-          if (score && MR.stableCount >= MR_CAPTURE_FRAMES && !MR.momentDone[MR.sym]) {
+          if (score && MR.stableCount >= MR_CAPTURE_FRAMES && !MR.manualLocked && (!MR.sessionMoment || score.total > MR.sessionMoment.score)) {
             MR.momentDone[MR.sym] = true;
             MR.autoDone = true; /* khoảnh khắc đã gồm clip nên không lưu thêm video tự bắt trùng */
             var shot = mrSnapshotFrame(slot);
-            mrVidAddFull({ sym: MR.sym, ts: Date.now(), blob: MR.curBlob || null, shot: shot, kind: "moment", score: score.total, items: score.items }).then(function () {
+            mrSaveSessionClip(slot, MR.curBlob || null, score.total, shot, "moment", false).then(function () {
               mrRenderLib(slot);
               toast("Đã bắt khoảnh khắc nói đúng — xem ở mục “Video mẫu đúng của bạn” ngay bên dưới.");
             }, function () {});
@@ -1707,7 +1849,7 @@ function mrOnResults(res) {
           if (!has) { mrSetStatus(slot, "Âm này camera khó chấm tự động — hãy tự soi gương: " + (tg.hint || "")); return; }
           if (pass) {
             if (!MR.holdStart) MR.holdStart = Date.now();
-            if (Date.now() - MR.holdStart >= 1000 && !MR.autoDone) {
+            if (Date.now() - MR.holdStart >= 1000 && !MR.autoDone && !MR.manualLocked) {
               MR.autoDone = true; MR.pendingAuto = true;
               mrSetStatus(slot, "Đạt! Đang lưu video mẫu…");
             } else mrSetStatus(slot, "Đang giữ đúng khẩu hình…");
@@ -1741,10 +1883,91 @@ function mrMaybeRetry(slot) {
   MR.diagRetry = "đã thử lại 1 lần"; mrDiagUpdate(MR.slot);
   return true;
 }
+
+/* ---------- Bo nhan dien chinh: MediaPipe Tasks Vision FaceLandmarker (CDN mien phi) ----------
+   FaceLandmarker tra 478 diem, 468 diem dau trung topology FaceMesh nen mrIndices,
+   mrDrawFrame, MR_LIP_OUTER/INNER dung nguyen khong doi. FaceMesh cu chi chay khi
+   bo moi khong tai duoc, chan doan ghi ro dang dung bo nao. */
+function mrImportVision() {
+  if (window.__mrVisionStub) return Promise.resolve(window.__mrVisionStub);
+  try {
+    var p = import("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs");
+    return Promise.race([p, new Promise(function (_, rej) { setTimeout(function () { rej(new Error("hết thời gian tải FaceLandmarker")); }, 9000); })]);
+  } catch (e) { return Promise.reject(e); }
+}
+function mrBootEngine(slot) {
+  if (MR.engine === "landmarker") { mrLmBoot(slot); return; }
+  if (MR.engine === "facemesh") { mrFaceMesh(slot); return; }
+  if (window.__mrForceLandmarker || !window.FaceMesh) { mrLmBoot(slot); return; }
+  mrFaceMesh(slot);
+}
+function mrLmPump(slot) {
+  var v = slot && slot.querySelector(".mr-video");
+  if (!v || v.readyState < 2 || !MR.lm) return false;
+  MR.diagVState = v.readyState + "/" + (v.videoWidth || 0) + "x" + (v.videoHeight || 0);
+  MR.diagSends++;
+  var done = function (res) {
+    var lm = res && res.faceLandmarks && res.faceLandmarks[0];
+    MR.diagResults++;
+    MR.diagLm = lm ? lm.length : 0;
+    if (MR.lmOn && MR.slot === slot) mrHandleLandmarks(slot, lm);
+    mrDiagUpdate(slot);
+  };
+  var fail = function (err) { MR.diagSendErr = (err && (err.message || err.name)) || String(err); mrDiagUpdate(slot); };
+  try {
+    var r = MR.lm.detectForVideo(v, performance.now());
+    if (r && r.then) r.then(done, fail); else done(r);
+  } catch (e) { fail(e); }
+  mrDiagUpdate(slot);
+  return true;
+}
+function mrMaybeRetryLm(slot) {
+  if (MR.engine !== "landmarker" || !MR.lmOn || MR.diagResults > 0 || MR.lmRetried || !MR.lmStartAt) return false;
+  if (Date.now() - MR.lmStartAt < 8000) return false;
+  MR.lmRetried = true; MR.diagRetry = "đang thử lại lần 1"; mrDiagUpdate(slot);
+  MR.lmOn = false;
+  try { if (MR.lm && MR.lm.close) { var c = MR.lm.close(); if (c && c.catch) c.catch(function () {}); } } catch (e) {}
+  MR.lm = null;
+  mrBootEngine(slot);
+  MR.diagRetry = "đã thử lại 1 lần"; mrDiagUpdate(MR.slot);
+  return true;
+}
+function mrLmBoot(slot) {
+  if (MR.lmBusy) return;
+  MR.lmBusy = true;
+  MR.diagFm = "đang tải"; mrDiagUpdate(slot);
+  var failLm = function () {
+    MR.lmBusy = false;
+    MR.engine = "facemesh"; MR.engineFallback = true;
+    mrFaceMesh(slot);
+  };
+  var visionMod = null;
+  mrImportVision().then(function (mod) {
+    visionMod = mod;
+    return mod.FilesetResolver.forVisionTasks("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm");
+  }).then(function (vision) {
+    var tryCreate = function (delegate) {
+      return visionMod.FaceLandmarker.createFromOptions(vision, { baseOptions: { modelAssetPath: "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task", delegate: delegate }, runningMode: "VIDEO", numFaces: 1 });
+    };
+    return Promise.resolve().then(function () { return tryCreate("GPU"); }).catch(function () { return tryCreate("CPU"); });
+  }).then(function (inst) {
+    MR.lm = inst; MR.engine = "landmarker"; MR.lmOn = true;
+    MR.diagFm = "đã tải"; MR.diagScore = "đang chờ khung hình đầu tiên"; mrDiagUpdate(slot);
+    MR.lmGen = (MR.lmGen || 0) + 1; var gen = MR.lmGen; MR.lmStartAt = Date.now();
+    var pump = function () {
+      if (!MR.lmOn || !MR.stream || MR.slot !== slot || MR.lmGen !== gen) return;
+      if (mrMaybeRetryLm(slot)) return;
+      mrLmPump(slot);
+      setTimeout(pump, 120);
+    };
+    pump();
+    MR.lmBusy = false;
+  }).catch(function () { failLm(); });
+}
 function mrFaceMesh(slot) {
   if (MR.fmBusy) return;
   MR.fmBusy = true;
-  var fail = function () { MR.fmBusy = false; MR.diagFm = "không tải được"; MR.diagScore = "đứng — FaceMesh không tải được"; mrDiagUpdate(slot); mrSetStatus(slot, "Không bật được nhận diện khẩu hình tự động — vẫn soi gương và lưu video mẫu bằng tay được."); };
+  var fail = function () { MR.fmBusy = false; MR.engine = "facemesh"; MR.diagFm = MR.engineFallback ? "cả hai bộ đều không tải được" : "không tải được"; MR.diagScore = "đứng — FaceMesh không tải được"; mrDiagUpdate(slot); mrSetStatus(slot, "Không bật được nhận diện khẩu hình tự động — vẫn soi gương và lưu video mẫu bằng tay được."); };
   var boot = function () {
     try {
       if (!window.FaceMesh) { fail(); return; }
@@ -1753,7 +1976,7 @@ function mrFaceMesh(slot) {
         MR.fm.setOptions({ maxNumFaces: 1, refineLandmarks: false, minDetectionConfidence: 0.5, minTrackingConfidence: 0.5 });
         MR.fm.onResults(mrOnResults);
       }
-      MR.fmOn = true; MR.diagFm = "đã tải"; MR.diagScore = "đang chờ khung hình đầu tiên"; mrDiagUpdate(slot);
+      MR.fmOn = true; MR.engine = "facemesh"; MR.diagFm = MR.engineFallback ? "đã tải (dự phòng)" : "đã tải"; MR.diagScore = "đang chờ khung hình đầu tiên"; mrDiagUpdate(slot);
       MR.fmGen = (MR.fmGen || 0) + 1; var gen = MR.fmGen; MR.fmStartAt = Date.now();
       var pump = function () {
         if (!MR.fmOn || !MR.stream || MR.slot !== slot || MR.fmGen !== gen) return;
@@ -1775,11 +1998,213 @@ function mrFaceMesh(slot) {
   s.onerror = function () { if (done) return; done = true; clearTimeout(to); fail(); };
   document.head.appendChild(s);
 }
+
+/* ---------- Guong + mic cung mot lan tap ----------
+   Xin mic RIENG (khong gop vao getUserMedia video — gop se lam ca camera cung loi
+   khi mic bi tu choi). Mic bi tu choi thi guong van chay phan hinh, ghi ro chua
+   cham tieng, khong bia ket qua gop. Diem tieng: AI cham (pronounce) khi dang nhap,
+   uoc luong tai cho tu ban ghi trinh duyet khi chua dang nhap — hai so rieng biet,
+   khong tron voi % khop khau hinh. */
+function mrPickAudioMime() {
+  if (!mrRecSupported() || !MediaRecorder.isTypeSupported) return "";
+  var cands = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"];
+  for (var i = 0; i < cands.length; i++) if (MediaRecorder.isTypeSupported(cands[i])) return cands[i];
+  return "";
+}
+function mrMicStart(slot) {
+  if (MR.micOn) return;
+  if (!mrSupported()) return;
+  navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+    MR.audioStream = stream; MR.audioSid = MR.sessionId; MR.audioSlot = slot;
+    MR.audioBlob = null; MR.audioTranscript = "";
+    var ex = RB_PH_ALL_EXAMPLES[MR.sym] || "";
+    var st = slot.querySelector(".mr-mic-status");
+    if (st) st.textContent = "Mic đang thu — đọc to từ ví dụ “" + ex + "” trong lúc soi gương.";
+    var btn = slot.querySelector(".mr-mic");
+    if (btn) btn.textContent = "🎤 Mic kèm theo: Tắt";
+    if (mrRecSupported()) {
+      try {
+        var mime = mrPickAudioMime();
+        var rec = mime ? new MediaRecorder(stream, { mimeType: mime }) : new MediaRecorder(stream);
+        MR.audioRec = rec;
+        var selfRec = rec, chunks = [];
+        rec.ondataavailable = function (e) { if (e.data && e.data.size) chunks.push(e.data); };
+        rec.onstop = function () {
+          var blob = chunks.length ? new Blob(chunks, { type: mime || (selfRec && selfRec.mimeType) || "" }) : null;
+          if (MR.audioDiscard) { MR.audioDiscard = false; }
+          else if (MR.audioSid === MR.sessionId && MR.audioSlot) { MR.audioBlob = blob; mrFinishAudio(MR.audioSlot); }
+          if (MR.audioRec === selfRec) MR.audioRec = null;
+          try { stream.getTracks().forEach(function (t) { try { t.stop(); } catch (e) {} }); } catch (e) {}
+          MR.audioStream = null;
+        };
+        try { rec.start(); } catch (e) { MR.audioRec = null; }
+      } catch (e) { MR.audioRec = null; }
+    }
+    MR.micOn = true;
+    var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SR) {
+      try {
+        var sr = new SR();
+        sr.lang = "en-US"; sr.continuous = true; sr.interimResults = false;
+        sr.onresult = function (ev) {
+          var rs = ev.results || [];
+          for (var i = 0; i < rs.length; i++) {
+            var r = rs[i];
+            if (r.isFinal) {
+              var t = (r[0] && r[0].transcript) || "";
+              if (t) MR.audioTranscript = (MR.audioTranscript ? MR.audioTranscript + " " : "") + t;
+            }
+          }
+        };
+        sr.onerror = function () {};
+        try { sr.start(); } catch (e) {}
+        MR.srRec = sr;
+      } catch (e) { MR.srRec = null; }
+    }
+  }, function () {
+    MR.micOn = false; MR.micWant = false;
+    var st2 = slot.querySelector(".mr-mic-status");
+    if (st2) st2.textContent = "Chưa cho phép mic — gương chạy phần hình, chưa chấm tiếng.";
+    var b2 = slot.querySelector(".mr-mic");
+    if (b2) b2.textContent = "🎤 Mic kèm theo: Bật";
+  });
+}
+function mrMicStopAll() {
+  try { if (MR.srRec) { try { MR.srRec.stop(); } catch (e) {} } } catch (e) {}
+  MR.srRec = null;
+  if (MR.audioRec && MR.audioRec.state === "recording") {
+    try { MR.audioRec.stop(); } catch (e) {}
+  } else {
+    if (MR.audioStream) { MR.audioStream.getTracks().forEach(function (t) { try { t.stop(); } catch (e) {} }); }
+    MR.audioStream = null; MR.audioRec = null;
+  }
+  MR.micOn = false;
+}
+function mrLocalAudioEstimate(transcript, ref) {
+  var norm = function (x) { return String(x || "").toLowerCase().replace(/[^a-z\s']/g, " ").replace(/\s+/g, " ").trim(); };
+  var t = norm(transcript), r = norm(ref);
+  if (!t) return { score: null, note: "không nghe được bản ghi — hãy đọc to từ ví dụ và thử lại (chưa chấm tiếng)" };
+  if (!r) return { score: null, note: "âm này chưa có từ ví dụ để đối chiếu tiếng" };
+  var words = t.split(" ");
+  if (words.indexOf(r) >= 0) return { score: 90, note: "nghe đúng từ ví dụ “" + ref + "” — bản ghi trình duyệt chỉ là ước lượng, chưa phải AI chấm" };
+  return { score: 40, note: "nghe được “" + t + "” nhưng chưa đúng từ ví dụ “" + ref + "” — bản ghi trình duyệt chỉ là ước lượng, chưa phải AI chấm" };
+}
+function mrCallPronounce(audioBase64, mimeType, referenceText) {
+  /* Chi dung cho guong — KHONG cham vao stub callPronounce (buoc 7 phat am). */
+  return new Promise(function (resolve, reject) {
+    var loginMsg = "Cần đăng nhập để dùng chấm phát âm AI (đăng nhập mở ở giai đoạn 2).";
+    var ready = window.__supabaseReady;
+    if (!ready || typeof ready.then !== "function") { reject(new Error(loginMsg)); return; }
+    ready.then(function (client) {
+      if (!client || !client.auth || !client.auth.getSession) { reject(new Error(loginMsg)); return; }
+      client.auth.getSession().then(function (res) {
+        var sess = res && res.data && res.data.session;
+        if (!sess || !sess.access_token) { reject(new Error(loginMsg)); return; }
+        fetch(supabaseFnUrl("pronounce"), { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + sess.access_token, "apikey": window.SUPABASE_ANON_KEY || "" }, body: JSON.stringify({ audioBase64: audioBase64, mimeType: mimeType, referenceText: referenceText }) })
+          .then(function (resp) {
+            if (!resp.ok) {
+              if (resp.status === 401) throw new Error(loginMsg);
+              if (resp.status === 429) throw new Error("AI đã hết lượt cho phép — hãy thử lại sau.");
+              if (resp.status === 502 || resp.status === 503) throw new Error("AI đang bận — hãy thử lại sau ít phút.");
+              throw new Error("AI chưa trả lời được (lỗi máy chủ " + resp.status + ") — hãy thử lại.");
+            }
+            return resp.json();
+          })
+          .then(function (data) {
+            if (data && (data.score != null || data.transcript)) resolve(data);
+            else reject(new Error("AI trả về trống — hãy thử gửi lại."));
+          })
+          .catch(function (e) { reject(new Error((e && e.message) || "Mất mạng — hãy kiểm tra kết nối rồi gửi lại.")); });
+      }, function () { reject(new Error(loginMsg)); });
+    }, function () { reject(new Error(loginMsg)); });
+  });
+}
+function mrBlobToBase64(blob, cb) {
+  try {
+    if (typeof FileReader !== "undefined") {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var du = reader.result || "";
+        cb(du.indexOf(",") >= 0 ? du.slice(du.indexOf(",") + 1) : du);
+      };
+      reader.onerror = function () { cb(null); };
+      reader.readAsDataURL(blob);
+      return;
+    }
+  } catch (e) {}
+  try {
+    if (blob.arrayBuffer) {
+      blob.arrayBuffer().then(function (buf) {
+        var bytes = new Uint8Array(buf), bin = "";
+        for (var i = 0; i < bytes.length; i += 8192) {
+          var chunk = bytes.subarray(i, i + 8192);
+          bin += String.fromCharCode.apply(null, chunk);
+        }
+        cb(btoa(bin));
+      }, function () { cb(null); });
+      return;
+    }
+  } catch (e) {}
+  cb(null);
+}
+function mrRenderSessionBox(slot, audioHTML) {
+  if (!slot || slot.isConnected === false) return;
+  var box = slot.querySelector(".mr-session");
+  if (!box) return;
+  var proc = MR.lastProc, procHTML = "";
+  if (proc && proc.total != null) {
+    procHTML = '<p><b>Điểm quá trình: ' + proc.total + '%</b> (so đường miệng thật với đường đích của âm /' + esc(MR.sym) + '/ từ lúc mở miệng đến lúc kết thúc âm' + (proc.glide ? ' — trượt từ âm đầu sang âm cuối' : ' — từ miệng đóng mở ra đúng hình rồi giữ') + ').</p>'
+      + '<p class="mut">Cách tính: trung bình cả quá trình ' + proc.pathAvg + '% · khung hình tốt nhất ' + proc.peak + '% · lúc mở miệng ' + proc.start + '%.</p>';
+  } else {
+    procHTML = '<p>Chưa chấm được điểm quá trình' + (proc && proc.note ? ' (' + esc(proc.note) + ')' : '') + ' — hãy mở miệng đọc âm trong lúc soi gương rồi tắt camera để chấm lại.</p>';
+  }
+  box.innerHTML = procHTML + (audioHTML || "");
+}
+function mrFinishSession(slot) {
+  MR.sessionActive = false;
+  MR.lastProc = mrProcessScore(MR.procSamples, MR.sym);
+  var audioHTML = "";
+  if (MR.audioRec && MR.audioRec.state === "recording") audioHTML = '<p>Điểm tiếng: đang chấm…</p>';
+  else if (!MR.micWant) audioHTML = '<p>Điểm tiếng: chưa chấm (mic đã tắt — lần tập này chỉ chấm hình).</p>';
+  else audioHTML = '<p>Điểm tiếng: chưa chấm (mic chưa bật hoặc chưa cho phép — gương vẫn chấm phần hình).</p>';
+  mrRenderSessionBox(slot, audioHTML);
+}
+function mrFinishAudio(slot) {
+  if (!slot) return;
+  var ref = RB_PH_ALL_EXAMPLES[MR.sym] || "";
+  var est = mrLocalAudioEstimate(MR.audioTranscript, ref);
+  var renderEst = function (extra) {
+    var html = est.score != null
+      ? '<p><b>Điểm tiếng (ước lượng tại chỗ): ' + est.score + '%</b> — ' + esc(est.note) + '</p>'
+      : '<p>Điểm tiếng: chưa chấm (' + esc(est.note) + ')</p>';
+    if (extra) html += '<p class="mut">' + esc(extra) + '</p>';
+    mrRenderSessionBox(slot, html);
+  };
+  renderEst("");
+  if (!MR.audioBlob) return;
+  mrBlobToBase64(MR.audioBlob, function (b64) {
+    if (!b64) return;
+    mrCallPronounce(b64, MR.audioBlob.type || "audio/webm", ref).then(function (r) {
+      var sc = r.score;
+      if (sc != null && sc <= 1) sc = Math.round(sc * 100);
+      else if (sc != null) sc = Math.round(sc);
+      var html = '<p><b>Điểm tiếng (AI chấm): ' + sc + '%</b>' + (r.transcript ? ' — nghe được: “' + esc(r.transcript) + '”' : '') + '</p>';
+      if (r.issues && r.issues.length) {
+        var iss = r.issues.slice(0, 3).map(function (x) { return esc(typeof x === "string" ? x : (x.text || x.word || String(x))); }).join("; ");
+        html += '<p class="mut">Cần sửa: ' + iss + '</p>';
+      }
+      mrRenderSessionBox(slot, html);
+    }, function (err) {
+      var msg = (err && err.message) || String(err);
+      if (msg.indexOf("đăng nhập") < 0) renderEst("AI chấm chưa được (" + msg + ") — giữ kết quả ước lượng tại chỗ.");
+    });
+  });
+}
 function mirrorStart(slot) {
   if (!mrSupported()) return;
   navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(function (stream) {
     MR.stream = stream; MR.slot = slot; MR.sym = slot.querySelector(".mr-sel").value || MR.sym;
-    MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingManual = false; MR.stableCount = 0; MR.momentDone = {}; MR.diagSends = 0; MR.diagResults = 0; MR.diagLm = 0; MR.diagSendErr = ""; MR.diagVState = ""; MR.diagRetry = "chưa"; MR.fmRetried = false;
+    MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingManual = false; MR.stableCount = 0; MR.momentDone = {}; MR.diagSends = 0; MR.diagResults = 0; MR.diagLm = 0; MR.diagSendErr = ""; MR.diagVState = ""; MR.diagRetry = "chưa"; MR.fmRetried = false; MR.lmRetried = false; MR.sessionId++; MR.sessionActive = true; MR.procSamples = []; MR.sessionMoment = null; MR.manualLocked = false; MR.lastLiveScore = null; MR.lastProc = null; MR.audioBlob = null; MR.audioTranscript = "";
     var v = slot.querySelector(".mr-video");
     if (v) { v.srcObject = stream; v.style.display = "block"; }
     var ov0 = slot.querySelector(".mr-overlay"); if (ov0) ov0.style.display = "block";
@@ -1794,7 +2219,11 @@ function mirrorStart(slot) {
     } else {
       mrSetStatus(slot, "Đang soi gương. Trình duyệt này không hỗ trợ quay video — vẫn soi gương được, nhưng không lưu video mẫu.");
     }
-    mrFaceMesh(slot);
+    var ex0 = RB_PH_ALL_EXAMPLES[MR.sym] || "";
+    var sb0 = slot.querySelector(".mr-session");
+    if (sb0) sb0.innerHTML = '<p>Đang tập âm /' + esc(MR.sym) + '/ — hãy đọc to từ ví dụ “' + esc(ex0) + '” trong lúc soi gương. Tắt camera để xem điểm quá trình và điểm tiếng.</p>';
+    mrBootEngine(slot);
+    if (MR.micWant) mrMicStart(slot);
   }, function () { toast("Bạn chưa cho phép dùng camera."); });
 }
 function wireMirror(slot, sym) {
@@ -1809,6 +2238,21 @@ function wireMirror(slot, sym) {
   var st = slot.querySelector(".mr-start"); if (st) st.onclick = function () { mirrorStart(slot); };
   var sp = slot.querySelector(".mr-stop"); if (sp) sp.onclick = function () { mirrorStop(); };
   var sv = slot.querySelector(".mr-save"); if (sv) sv.onclick = function () { mrSaveCurrent(slot, false); };
+  var micBtn = slot.querySelector(".mr-mic");
+  if (micBtn) micBtn.onclick = function () {
+    MR.micWant = !MR.micWant;
+    if (MR.micWant) {
+      micBtn.textContent = "🎤 Mic kèm theo: Tắt";
+      var st = slot.querySelector(".mr-mic-status");
+      if (st) st.textContent = (MR.slot === slot && MR.stream) ? "Mic sẽ bật ngay — đang xin quyền mic…" : "Mic sẽ tự bật cùng camera ở lần tập tới.";
+      if (MR.slot === slot && MR.stream) mrMicStart(slot);
+    } else {
+      MR.audioDiscard = true; mrMicStopAll(); MR.audioBlob = null; MR.audioTranscript = "";
+      micBtn.textContent = "🎤 Mic kèm theo: Bật";
+      var st2 = slot.querySelector(".mr-mic-status");
+      if (st2) st2.textContent = "Mic đã tắt — lần tập này chỉ chấm hình.";
+    }
+  };
   var cl = slot.querySelector(".mr-clear"); if (cl) cl.onclick = function () { mrVidClear().then(function () { mrRenderLib(slot); toast("Đã xóa hết video mẫu."); }); };
   mrRenderLib(slot);
 }
