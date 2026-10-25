@@ -31725,7 +31725,7 @@ const CONTENT = {
      "o": [
       "Tôi rất mệt",
       "Tôi khỏe, cảm ơn bạn",
-      "Tôi không biết"
+      "Tôi không khỏe lắm"
      ],
      "a": 1,
      "why": "Candidate nói: I am fine, thank you - Tôi khỏe, cảm ơn bạn."

@@ -71,7 +71,7 @@ p{margin:8px 0}
 #nudgeModal .box{background:#fff;border-radius:18px;padding:20px;max-width:480px}
 input[type=text],input[type=number],input[type=email],input[type=password]{border:1.5px solid var(--line);border-radius:12px;padding:9px 12px;font-size:16px}
 iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radius:14px}
-.mirror-box{margin-top:14px}.mr-video{transform:scaleX(-1);width:100%;max-width:420px;border-radius:14px;background:#000}.mr-stage{position:relative;max-width:420px}
+.mr-video{transform:scaleX(-1);width:100%;max-width:420px;border-radius:14px;background:#000}.mr-stage{position:relative;max-width:420px}
 @media (min-width:1200px){.mr-video,.mr-stage{max-width:640px}}.mr-overlay{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}.mr-feed table{width:100%;border-collapse:collapse}.mr-feed td,.mr-feed th{border-bottom:1px solid #E7DCC6;padding:4px 6px;text-align:left;font-size:13px}.mr-lib-row{display:flex;gap:10px;flex-wrap:wrap}.mr-item{width:280px}.mr-item video{width:100%;border-radius:12px}.ai-good{color:#1E9E6A;font-weight:700}.ai-mid{color:#B7791F;font-weight:700}.ai-bad{color:#D9534F;font-weight:700}
 .mr-overlay{filter:drop-shadow(0 0 3px rgba(0,0,0,0.85))}
 .chat-msg{border:1.5px solid var(--line2);border-radius:14px;padding:10px 12px;margin:8px 0;background:#fff}
@@ -138,7 +138,7 @@ function phDescFull(p) {
 }
 /* ---------- Store: một nguồn số liệu duy nhất ---------- */
 var LS_NEW = "ielts_rebuild_v1", LS_OLD = "ielts_standalone_v1";
-function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], vocabSkipped: [], chatStars: [], chatReports: [], chatVoicePrefs: {}, testDone: false, xpClaimed: {}, mems: {}, selfRate: {}, unsure: {}, videoUnknown: {}, plan: null, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {}, freeze: { count: 0, used: [], granted: [] }, push: { enabled: false, time: "20:00", types: { srs: true, path: true, checkin: true }, permission: "default", subscribed: false, serverSynced: false, lastLocalDay: "" } }; }
+function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], vocabSkipped: [], chatStars: [], chatReports: [], chatVoicePrefs: {}, testDone: false, xpClaimed: {}, mems: {}, unsure: {}, videoUnknown: {}, plan: null, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {}, freeze: { count: 0, used: [], granted: [] }, push: { enabled: false, time: "20:00", types: { srs: true, path: true, checkin: true }, permission: "default", subscribed: false, serverSynced: false, lastLocalDay: "" } }; }
 function saveState() { try { localStorage.setItem(LS_NEW, JSON.stringify(state)); } catch (e) {} try { if (typeof authState !== "undefined" && authState.user) scheduleSyncPush(); } catch (e2) {} }
 function normHardFails(st) {
   /* Mục khó cũ chưa có số lần sai: mục từ Sổ lỗi sai (quiz/drill) vốn đã sai
@@ -2724,7 +2724,7 @@ function skillLevelRows() {
   var rp = sd("roleplay:", CONTENT.roleplay.length); row("Nhập vai", rp[0], rp[1]);
   var wr = sd("write:", CONTENT.writing.length); row("Viết", wr[0], wr[1]);
   var dr = sd("drill:", CONTENT.writingDrills.length); row("Luyện viết từng bước", dr[0], dr[1]);
-  var ty = sd("typing:", CONTENT.typing.length); row("Gõ câu", ty[0], ty[1]);
+  var ty = (function () { var done = {}, so = state.skillDone || {}; Object.keys(so).forEach(function (k) { var m = k.match(/^typing:(?:(nentang|coban|nangcao):)?(\d+)$/); if (!m) return; if (m[1]) { var sets = typingSets(m[1]); var s = sets[+m[2]]; var gi = CONTENT.typing.indexOf(s); if (gi >= 0) done[gi] = true; } else done[+m[2]] = true; }); return [Object.keys(done).length, CONTENT.typing.length]; })(); row("Gõ câu", ty[0], ty[1]);
   var go2 = sd("gramOld:", CONTENT.grammar.length); row("Ngữ pháp kho cũ", go2[0], go2[1]);
   return '<div class="sumcard"><b>Mức độ từng kỹ năng (/100 — % bài đã xong, không phải điểm thi):</b>' + rows.join("") + '</div>';
 }
@@ -2774,7 +2774,7 @@ function renderBkLife(app, l) {
   var sub = it.band + " · " + it.skill + " · Bối cảnh: " + it.scene + " · Nội dung tự soạn của web";
   if (it.qs) {
     if (!l.quiz) {
-      var playBtn = it.skill === "Nghe" ? '<button class="btn btn-primary" id="bkLifePlay">🔊 Nghe đoạn</button>' : "";
+      var playBtn = it.skill === "Nghe" ? '<button class="btn" id="bkLifePlay">🔊 Nghe đoạn</button>' : "";
       app.innerHTML = skillHead(l.title, sub) + '<div class="qblock"><p>' + esc(it.text) + '</p><p class="mut">' + esc(it.vi) + '</p>'
         + '<div class="row">' + playBtn + '<button class="btn btn-primary" id="bkLifeStart">Làm bài (' + it.qs.length + ' câu)</button></div></div>';
       wireBack();
@@ -3480,12 +3480,6 @@ function phMirrorScoreNow(l) {
   if (MR.lastProc && MR.lastProc.total != null) return MR.lastProc.total;
   return MR.lastLiveScore;
 }
-function phUpdatePassStatus(l, sym) {
-  var el = $("#phPassStatus");
-  var chk = phPassCheck(l.aiScore, phMirrorScoreNow(l), { camDenied: MR.camDenied, micDenied: MR.micDenied });
-  if (el) el.textContent = chk.ok ? chk.reason + " Bấm 'Đã đạt chuẩn — sang âm sau' để qua." : "Chưa đạt chuẩn: " + chk.reason;
-  return chk;
-}
 function phCompleteSound(app, step, l, sym) {
   state.phDone[sym] = true;
   if (state.phSkipped) state.phSkipped = state.phSkipped.filter(function (x) { return x !== sym; });
@@ -4083,11 +4077,6 @@ function mrVidAddFull(rec) {
     });
   });
 }
-function mrVidAdd(sym, blob, extra) {
-  var rec = { sym: sym, ts: Date.now(), blob: blob };
-  if (extra) Object.assign(rec, extra);
-  return mrVidAddFull(rec);
-}
 function mrVidDelete(id) {
   return mrDb().then(function (db) {
     return new Promise(function (resolve) {
@@ -4101,33 +4090,6 @@ function mrVidClear() {
       db.transaction("videos", "readwrite").objectStore("videos").clear().onsuccess = function () { db.close(); resolve(); };
     });
   });
-}
-function mirrorHTML(sym) {
-  var waves = RB_PH_WAVES[1].concat(RB_PH_WAVES[2], RB_PH_WAVES[3]);
-  var opts = waves.map(function (s) {
-    return '<option value="' + esc(s) + '"' + (s === sym ? " selected" : "") + '>/' + esc(s) + '/ — ' + esc(RB_PH_ALL_EXAMPLES[s] || "") + '</option>';
-  }).join("");
-  var cam = "";
-  if (!mrSupported()) {
-    cam = '<p class="mut">Trình duyệt này chưa hỗ trợ camera (cần mở qua https và cho phép camera) — các phần học khác vẫn chạy bình thường.</p>';
-  } else {
-    cam = '<div class="mr-stage"><video class="mr-video" autoplay muted playsinline style="display:none"></video><canvas class="mr-overlay" style="display:none"></canvas></div>'
-      + '<p class="mr-status mut">Bấm “Phát âm” để bật cả camera lẫn mic cùng lúc và soi khẩu hình cạnh hình mẫu.</p>'
-      + '<p class="mr-diag mut">' + esc(mrDiagText()) + '</p>'
-      + '<p class="mr-diag2 mut">' + esc(mrDiagDetailText()) + '</p>'
-      + '<div class="mr-feed"><p class="mut">Điểm % dưới đây là <b>ĐIỂM KHỚP KHẨU HÌNH</b> (hình miệng nhìn thấy được), <b>KHÔNG</b> phải điểm phát âm theo âm thanh. Điểm tiếng (phát âm theo âm thanh) hiển thị riêng ở ô kết quả lần tập bên dưới — AI chấm khi đã đăng nhập, ước lượng tại chỗ khi chưa đăng nhập — không trộn hai điểm thành một. Ngưỡng điểm và vùng đích là tạm (chưa đo trên mặt thật) và có thể chỉnh.</p><div class="mr-feed-body"><p class="mut">Bấm “Phát âm” để xem điểm khớp từng khung hình.</p></div></div>'
-      + '<div class="row"><button class="btn btn-primary mr-speak">🎤 Phát âm</button><button class="btn mr-save" disabled>💾 Lưu video mẫu</button><button class="btn mr-clear">Xóa hết video</button></div>'
-      + '<p class="mut mr-mic-status">Bấm “Phát âm” để bật cả camera lẫn mic cùng lúc — đọc to từ ví dụ trong lúc soi gương, hệ thống sẽ tự chuyển sang AI chấm khi đã thấy mở mồm và nghe được âm thanh (bấm lại nút “Phát âm” để dừng và chấm ngay nếu muốn).</p>'
-      + '<div class="mr-session"><p class="mut">Mỗi lần tập: camera theo miệng + mic thu tiếng cùng lúc — hãy đọc to từ ví dụ của âm trong lúc soi gương. Đọc xong, hệ thống tự chuyển sang chấm để xem điểm quá trình (từ lúc mở miệng đến lúc kết thúc âm) và điểm tiếng — hai số riêng, không trộn.</p></div>'
-      + '<p class="mut mr-lib-count">Thư viện: chưa có video mẫu nào.</p>'
-      + '<p class="mut">Nhận diện khẩu hình tự động chỉ là gợi ý — độ chính xác trên mặt thật chưa được đo, nên hãy đối chiếu thêm bằng mắt với hình mẫu.</p>';
-  }
-  return '<div class="mirror-box card"><h3>📹 Gương khẩu hình</h3>'
-    + '<div class="row"><label class="mut">Âm đang luyện:</label><select class="mr-sel">' + opts + '</select></div>'
-    + '<p class="mut">Soi miệng của chính bạn trong khung camera dưới — miệng người thật trong video bài học là mẫu để bắt chước, không có hình vẽ mẫu.</p>'
-    + cam
-    + '<div class="mr-lib"></div>'
-    + '<p class="mut">🔒 Riêng tư: video chỉ lưu trên máy của bạn, không gửi đi đâu cả.</p></div>';
 }
 function mrRenderLib(slot) {
   var lib = slot.querySelector(".mr-lib");
@@ -4430,6 +4392,10 @@ function mrHandleLandmarks(slot, lm) {
             var shot = mrSnapshotFrame(slot);
             mrSaveSessionClip(slot, MR.curBlob || null, score.total, shot, "moment", false).then(function () {
               mrRenderLib(slot);
+              /* Đợt dọn code thừa: khung tập mới không còn .mr-lib bên trong nên
+                 phải refresh cả mục thư viện riêng, nếu không khoảnh khắc đã lưu
+                 mà mục "Video mẫu đúng của bạn" vẫn hiện trống. */
+              mrRefreshLibSections();
               toast("Đã bắt khoảnh khắc nói đúng — xem ở mục “Video mẫu đúng của bạn” ngay bên dưới.");
             }, function () {});
           }
@@ -4839,31 +4805,6 @@ function mirrorStart(slot) {
     if (MR.micWant) mrMicStart(slot);
   }, function () { MR.camDenied = true; toast("Bạn chưa cho phép dùng camera."); });
 }
-function wireMirror(slot, sym) {
-  MR.slot = slot; MR.sym = sym;
-  var sel = slot.querySelector(".mr-sel");
-  if (sel) sel.onchange = function () {
-    mirrorStop();
-    var ns = sel.value;
-    slot.innerHTML = mirrorHTML(ns);
-    wireMirror(slot, ns);
-  };
-  var spk = slot.querySelector(".mr-speak");
-  if (spk) spk.onclick = function () {
-    /* MOT NUT cho ca camera lan mic: bam 1 = bat ca hai; bam lai = dung + cham
-       ngay (du phong khi tu-cham chua kich hoat, vd chua nghe duoc am thanh). */
-    if (slot._mrRunning && MR.stream) { mirrorStop(); return; }
-    MR.micWant = true;
-    mirrorStart(slot);
-    MR.autoGradeOn = true;
-    MR.onAutoGrade = function () { try { mirrorStop(); } catch (e) {} };
-    var st2 = slot.querySelector(".mr-mic-status");
-    if (st2) st2.textContent = "Đang ghi cả camera lẫn mic — đọc to từ ví dụ trong lúc soi gương, hệ thống sẽ tự chuyển sang AI chấm.";
-  };
-  var sv = slot.querySelector(".mr-save"); if (sv) sv.onclick = function () { mrSaveCurrent(slot, false); };
-  var cl = slot.querySelector(".mr-clear"); if (cl) cl.onclick = function () { mrVidClear().then(function () { mrRenderLib(slot); toast("Đã xóa hết video mẫu."); }); };
-  mrRenderLib(slot);
-}
 function firstSymFromIpa(ipa) {
   var s = String(ipa || "").replace(/[\/\sˈˌː]/g, "");
   if (s.length >= 2 && RB_PH_ALL_EXAMPLES[s.slice(0, 2)]) return s.slice(0, 2);
@@ -4887,15 +4828,6 @@ function firstSymFromIpa(ipa) {
    Trong phiên: chỉ hội thoại, không điểm số, không bảng đúng/sai chen ngang. */
 function chatNormText(s) {
   return String(s || "").toLowerCase().replace(/[.,!?;:"'()\[\]{}<>«»“”‘’]/g, " ").replace(/\s+/g, " ").trim();
-}
-function chatIsEcho(heard, spoken) {
-  var h = chatNormText(heard), s = chatNormText(spoken);
-  if (!h || !s) return false;
-  if (h === s) return true;
-  if (s.indexOf(h) >= 0) return true;
-  var hw = h.split(" "), sw = s.split(" ");
-  for (var i = 0; i < hw.length; i++) if (sw.indexOf(hw[i]) < 0) return false;
-  return true;
 }
 /* ----- Trò chuyện song ngữ + giọng tách đoạn + bắt âm chuẩn (25/10) -----
    Tách đoạn Việt/Anh: đoạn có dấu tiếng Việt (hoặc từ Việt quen thuộc) đọc
@@ -4997,13 +4929,6 @@ function chatSpeakSegments(text, opts) {
   })();
 }
 function chatSpeakText(text) { chatSpeakSegments(text, {}); }
-/* Câu đã đủ nghĩa: kết thúc bằng dấu câu và từ 3 từ trở lên -> gửi sớm.
-   GIU LAI de tuong thich cu; duong live moi dung chatLiveSentenceComplete ben duoi. */
-function chatVoiceMeaningComplete(t) {
-  var s = String(t || "").trim();
-  if (!/[.!?…]$/.test(s)) return false;
-  return s.split(/\s+/).filter(Boolean).length >= 3;
-}
 /* Heuristic cau ro y cho noi live (25/10): ban ghi phai la cau hoan chinh,
    ro nghia — co chu ngu + vi ngu day du, khong phai manh cau lung — roi moi
    tinh la xong luot. Quy tac tren ban ghi, KHONG phai hieu nghia hoan hao nhu
