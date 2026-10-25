@@ -1537,6 +1537,7 @@ const CONTENT = {
   {
    "topic": "Học tập và giáo dục",
    "theme": "Education - Giáo dục",
+   "band": "Band 6.5",
    "cards": [
     {
      "w": "curriculum",
@@ -1703,6 +1704,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Environment - Môi trường",
+   "band": "Band 7.0",
    "cards": [
     {
      "w": "pollution",
@@ -2035,6 +2037,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Technology - Công nghệ",
+   "band": "Band 6.5",
    "cards": [
     {
      "w": "innovation",
@@ -2367,6 +2370,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Society - Xã hội",
+   "band": "Band 7.0",
    "cards": [
     {
      "w": "community",
@@ -2699,6 +2703,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Science - Khoa học",
+   "band": "Band 7.5+",
    "cards": [
     {
      "w": "research",
@@ -3031,6 +3036,7 @@ const CONTENT = {
   {
    "topic": "Mua sắm và tiền bạc",
    "theme": "Business & Marketing - Kinh doanh và tiếp thị",
+   "band": "Band 7.0",
    "cards": [
     {
      "w": "brand",
@@ -3363,6 +3369,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Media & Advertising - Truyền thông và quảng cáo",
+   "band": "Band 6.5",
    "cards": [
     {
      "w": "broadcast",
@@ -4691,6 +4698,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Globalisation - Toàn cầu hóa",
+   "band": "Band 7.0",
    "cards": [
     {
      "w": "multinational",
@@ -5519,8 +5527,8 @@ const CONTENT = {
    ]
   },
   {
-   "topic": "Bảng chữ cái và phát âm",
-   "theme": "Từ vựng quanh bảng chữ cái - Words about the Alphabet",
+   "topic": "Từ vựng lớp học đầu tiên",
+   "theme": "Từ vựng lớp học đầu tiên - First Classroom Words",
    "cards": [
     {
      "w": "alphabet",
@@ -12622,8 +12630,8 @@ const CONTENT = {
      "ipa": "/kɒf/",
      "vi": "ho; cơn ho",
      "col": "have a cough",
-     "ex": "He has had a bad cough for three days.",
-     "exv": "Anh ấy bị ho nặng được ba ngày rồi."
+     "ex": "She has a cough, so she drinks warm water.",
+     "exv": "Cô ấy bị ho nên uống nước ấm."
     },
     {
      "w": "rest",
@@ -14221,8 +14229,8 @@ const CONTENT = {
      "ipa": "/ləˈbɒrətri/",
      "vi": "phòng thí nghiệm",
      "col": "a research laboratory",
-     "ex": "The samples were analysed in a research laboratory.",
-     "exv": "Các mẫu được phân tích trong một phòng thí nghiệm nghiên cứu."
+     "ex": "The laboratory is closed on Sundays.",
+     "exv": "Phòng thí nghiệm đóng cửa vào chủ nhật."
     },
     {
      "w": "observation",
@@ -16271,14 +16279,14 @@ const CONTENT = {
      "why": "Chân lý/sự thật hiển nhiên dùng hiện tại đơn."
     },
     {
-     "q": "The Earth ___ around the Sun.",
+     "q": "The Sun ___ in the east.",
      "o": [
-      "revolves",
-      "is revolve",
-      "revolving"
+      "rises",
+      "is rise",
+      "rising"
      ],
      "a": 0,
-     "why": "Sự thật hiển nhiên dùng hiện tại đơn: revolves."
+     "why": "Sự thật hiển nhiên dùng hiện tại đơn: rises."
     },
     {
      "q": "Listen! The lecturer ___ the chart on the screen now.",
@@ -16620,14 +16628,14 @@ const CONTENT = {
      "why": "Chủ ngữ report nhận hành động và có yesterday nên dùng bị động quá khứ was written."
     },
     {
-     "q": "English ___ in many countries.",
+     "q": "This book ___ into many languages.",
      "o": [
-      "speaks",
-      "is spoken",
-      "speaking"
+      "translates",
+      "is translated",
+      "translating"
      ],
      "a": 1,
-     "why": "English là đối tượng được nói nên dùng bị động hiện tại is spoken."
+     "why": "Sách chịu tác động nên dùng bị động hiện tại: is translated."
     },
     {
      "q": "The bridge ___ in 1990.",
@@ -16846,7 +16854,7 @@ const CONTENT = {
      "why": "Because chỉ nguyên nhân, cô ấy ở nhà vì bị ốm."
     },
     {
-     "q": "___ it rained heavily, the match continued.",
+     "q": "___ she was tired, she finished the report.",
      "o": [
       "Because",
       "Although",
@@ -17062,11 +17070,11 @@ const CONTENT = {
      "why": "Chân lý/điều kiện loại 0-1: invest (hiện tại)."
     },
     {
-     "q": "If it rains tomorrow, we ___ at home.",
+     "q": "If the sun shines tomorrow, we ___ to the beach.",
      "o": [
-      "will stay",
-      "would stay",
-      "stayed"
+      "will go",
+      "would go",
+      "went"
      ],
      "a": 0,
      "why": "Câu điều kiện loại 1, mệnh đề chính dùng will cộng động từ nguyên mẫu."
@@ -18006,14 +18014,14 @@ const CONTENT = {
      "why": "Nevertheless mở đầu câu tương phản với ý linh hoạt ở câu trước."
     },
     {
-     "q": "Demand rose sharply. ___, prices increased.",
+     "q": "The factory closed last year. ___, hundreds of workers lost their jobs.",
      "o": [
       "Whereas",
       "Nevertheless",
       "Consequently"
      ],
      "a": 2,
-     "why": "Consequently chỉ kết quả do nhu cầu tăng mạnh nên giá tăng."
+     "why": "Consequently chỉ kết quả do nhà máy đóng cửa nên công nhân mất việc."
     }
    ]
   },
@@ -22955,14 +22963,14 @@ const CONTENT = {
      "why": "Nhóm trẻ em xác định (ở khu phố của tôi) nên dùng The."
     },
     {
-     "q": "She plays ___ piano very well.",
+     "q": "She plays ___ violin very well.",
      "o": [
       "a",
       "the",
       "an"
      ],
      "a": 1,
-     "why": "Sau động từ play với nhạc cụ, tiếng Anh dùng the piano."
+     "why": "Sau động từ play với nhạc cụ, tiếng Anh dùng the: the violin."
     }
    ]
   },

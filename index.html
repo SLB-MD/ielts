@@ -363,6 +363,37 @@ function openLessonFor(step) {
   else if (step.kind === "pron") openLesson({ type: "pron", step: step });
 }
 function openLesson(l) { examTimerStop(); examPartTimerStop(); curLesson = l; returnTab = curTab; render(); }
+function practiceNextTarget() {
+  var pp = null;
+  try { if (typeof authState !== "undefined" && authState.user) pp = buildPersonalPath().items[0]; } catch (e) {}
+  if (pp && pp.stepId) { var st = stepById(pp.stepId); if (st) return { kind: "step", title: st.title, type: st.type, step: st }; }
+  var ns = nextLearnStep();
+  if (ns) return { kind: "step", title: ns.title, type: ns.type, step: ns };
+  var rb = (typeof rbFirstUndoneAcrossBands === "function") ? rbFirstUndoneAcrossBands() : null;
+  if (rb) return { kind: "lesson", title: rb.title, type: rb.type, lesson: rb.lesson };
+  return { kind: "review", title: "Ôn tập", type: "Sổ lỗi sai · Thẻ đến hạn" };
+}
+function openPracticeNext(t) {
+  if (!t) return;
+  if (t.kind === "step") openStep(t.step, { noNudge: true });
+  else if (t.kind === "lesson") openRoadmapStepLesson(t.lesson);
+  else go("review");
+}
+function openRoadmapStepLesson(lesson) {
+  lessonStart = Date.now(); runWrong = []; runFirstTry = {};
+  var l = { type: lesson.type };
+  Object.keys(lesson).forEach(function (k) { if (k !== "type") l[k] = lesson[k]; });
+  openLesson(l);
+}
+function guideLine(id, text) {
+  try {
+    if (!state.guidesSeen) state.guidesSeen = {};
+    if (state.guidesSeen[id]) return "";
+    state.guidesSeen[id] = true;
+    try { saveState(); } catch (e) {}
+    return '<p class="mut" data-guide="' + esc(id) + '">' + esc(text) + '</p>';
+  } catch (e) { return ""; }
+}
 function backFromLesson() { examTimerStop(); examPartTimerStop(); curLesson = null; go(returnTab || "home"); }
 function nextStepButtonHTML() { return '<button class="btn btn-primary" id="btnNextStep">Tiếp tục sang bài tiếp →</button>'; }
 function wireNextStep() {
@@ -381,9 +412,11 @@ function wireNextStep() {
 }
 function elapsedText() { var s = Math.max(0, Math.round((Date.now() - lessonStart) / 1000)); return s < 60 ? s + " giây" : Math.floor(s / 60) + " phút " + (s % 60) + " giây"; }
 function lessonHead(step, sub) {
-  var n = stepIdx(step.id) + 1;
+  step = step || { id: "", title: "", type: "" };
+  var ci = stepIdx(step.id);
+  var chChip = (ci >= 0) ? '<span class="chip cur">Chương 1 · Bước ' + (ci + 1) + '/' + RB_CH1_STEPS.length + '</span>' : "";
   return '<div class="lessonframe"><div class="row"><button class="btn" id="btnBack">← Quay lại</button>'
-    + '<span class="chip cur">Chương 1 · Bước ' + n + '/' + RB_CH1_STEPS.length + '</span>'
+    + chChip
     + '<span class="chip">' + esc(step.type) + '</span></div>'
     + '<div style="margin-top:6px"><b>' + esc(step.title) + '</b>' + (sub ? '<div class="mut">' + sub + '</div>' : "") + '</div></div>';
 }
@@ -971,7 +1004,7 @@ function viewHome(app) {
     + '<div class="bar' + (streakDays() >= 7 ? ' gold' : '') + '" style="margin-top:8px"><i id="chProgressBar" style="width:' + pct + '%"></i></div><div class="mut">' + pct + '% chương 1' + (streakDays() >= 1 ? ' · Chuỗi ' + streakDays() + ' ngày' : '') + '</div></section>';
   html += '<section class="card" id="u7PlayCard"><h3>🎮 Chơi thử ngay</h3><p class="mut">Chơi thử một ván nối từ nhanh, không cần đăng nhập, không cần chọn gì thêm. Ván thử không lưu lên tài khoản.</p><button class="btn btn-amber" id="u7PlayNow">🎮 Chơi thử ngay</button></section>';
   html += '<section class="card" id="homeFreezeStrip"><p>❄️ Đóng băng chuỗi: còn <b>' + (function () { normFreeze(state); return state.freeze.count; })() + ' lượt</b> (tối đa 3, miễn phí). Lỡ ngày mà còn lượt thì chuỗi tự giữ.</p></section>';
-  html += '<section class="card"><h3>🗺️ Bản đồ 13 chương</h3><p class="mut">Từ Band 0 tới 7,5+ — chương 1 đang mở, các chương sau sắp mở theo thứ tự, cổng 80% (chuẩn nội bộ).</p><button class="btn" id="mapGo">Xem bản đồ 13 chương</button></section>';
+  html += '<section class="card"><h3>🗺️ Bản đồ 13 chương</h3><p class="mut">Từ Band 0 tới 7,5+ — mọi chương đều đã mở bước học từ kho có sẵn, học tự do theo chặng.</p><button class="btn" id="mapGo">Xem bản đồ 13 chương</button></section>';
   if (due > 0) html += '<section class="card" id="reviewStrip"><p>Có <b>' + due + ' mục đến hạn ôn</b> hôm nay — ôn đúng lúc sắp quên là nhớ lâu nhất.</p><button class="btn btn-amber" id="reviewGo">Ôn ngay</button></section>';
   html += '<p><button class="dimlink" id="quickCheckLink">Tôi đã biết chút ít — kiểm tra nhanh để gợi ý điểm bắt đầu</button> · <button class="dimlink" id="loginLink">Đăng nhập</button></p>';
   app.innerHTML = html;
@@ -1153,16 +1186,30 @@ function viewRoadmap(app) {
   }
   html += '</section>';
   html += gd23MidHTML();
-  html += '<h3>Bản đồ 13 chương</h3><p class="mut">Mỗi chương ghi rõ mục tiêu và năng lực làm được. Chương chưa dựng xong ghi "sắp mở" — không bịa nội dung bài học bên trong. Cổng giữa các chương là mốc 80% (chuẩn nội bộ của web, không phải chuẩn IELTS).</p>';
+  html += '<h3>Bản đồ 13 chương</h3><p class="mut">Mỗi chương ghi rõ mục tiêu và năng lực làm được. Chương đã mở có bước học xếp từ kho có sẵn — bấm vào bước để học ngay, học tự do theo chặng. Bài kiểm tra cuối chương chỉ có ở chương 1; các chương sau chưa có bài kiểm tra cuối chương.</p>';
   RB_CHAPTER_MAP.forEach(function (ch, ci) {
     var isOpen = ch.status === "open";
-    var d2 = isOpen ? done + '/' + total + ' bước' : 'Sắp mở';
+    var chSteps = ci === 0 ? [] : rbChSteps(ch.band);
+    var hasSteps = chSteps.length > 0;
+    var d2 = ci === 0 ? done + '/' + total + ' bước' : (hasSteps ? chSteps.length + ' bước' : 'Sắp mở');
+    var chipTxt = ci === 0 ? 'Đang mở · ' + d2 : (hasSteps ? 'Đã mở · ' + d2 : 'Sắp mở');
     var gb = ci === 0 ? RB_CH1_GUIDEBOOK : CL_GUIDEBOOKS[ch.band];
-    html += '<section class="card chapter-row" data-ch="' + esc(ch.band) + '"><div class="row"><b>Chương ' + esc(ch.band) + ': ' + esc(ch.title) + '</b><span class="chip' + (isOpen ? ' cur' : '') + '">' + (isOpen ? 'Đang mở · ' + d2 : 'Sắp mở') + '</span></div>'
+    html += '<section class="card chapter-row" data-ch="' + esc(ch.band) + '"><div class="row"><b>Chương ' + esc(ch.band) + ': ' + esc(ch.title) + '</b><span class="chip' + (isOpen ? ' cur' : '') + '">' + chipTxt + '</span></div>'
       + '<p><b>Mục tiêu:</b> ' + esc(ch.goal) + '</p>'
       + '<p><b>Học xong làm được:</b> ' + esc(ch.can.join(" · ")) + '</p>'
-      + (isOpen ? '<button class="btn btn-primary" id="mapCh1">Vào học chương 1</button>' : '<p class="mut">Cổng: mở khi bạn học xong 80% chương trước (chuẩn nội bộ).</p>')
-      + '<details class="u7RoadNote" data-ch-note="' + esc(ch.band) + '"><summary><b>Ghi chú lộ trình — bấm để mở</b></summary>'
+      + (ci === 0 ? '<button class="btn btn-primary" id="mapCh1">Vào học chương 1</button>' : (hasSteps ? '<button class="btn" data-chopen="' + esc(ch.band) + '">Mở chương này</button>' : '<p class="mut">Cổng: mở khi bạn học xong 80% chương trước (chuẩn nội bộ).</p>'));
+    if (hasSteps) {
+      var lastType = "";
+      var rows = "";
+      chSteps.forEach(function (st, si) {
+        if (st.type !== lastType) { rows += '<p style="margin:10px 0 2px"><b>' + esc(st.type) + '</b></p>'; lastType = st.type; }
+        rows += '<button class="step-row" data-rstep="' + esc(ch.band) + ':' + si + '"><span><b>' + esc(st.title) + '</b><br><span class="mut">' + esc(st.type) + '</span></span><span class="st">' + (rbStepDone(st) ? "✓" : "→") + '</span></button>';
+      });
+      var missing = rbChMissing(ch.band);
+      html += '<details class="ch-steps" data-ch-steps="' + esc(ch.band) + '" style="margin-top:8px"><summary><b>Các bước (' + chSteps.length + ')</b> — bấm để mở</summary><div>' + rows + '</div></details>'
+        + (missing.length ? '<p class="mut">Chưa có bước: ' + esc(missing.join(", ")) + '.</p>' : "");
+    }
+    html += '<details class="u7RoadNote" data-ch-note="' + esc(ch.band) + '"><summary><b>Ghi chú lộ trình — bấm để mở</b></summary>'
       + '<p><b>Lý do xếp chương này:</b> ' + (ci === 0 ? 'Chương mở đầu: học từ cái quen thuộc nhất — chào hỏi, từ lớp học, 44 âm — rồi mới lên câu dài và bài khó.' : 'Chương này xếp sau chương ' + esc(RB_CHAPTER_MAP[ci - 1].band) + ': học xong chương trước mới đủ nền để học chương này, cổng mở ở mốc 80% (chuẩn nội bộ).') + '</p>'
       + '<p><b>Mục tiêu:</b> ' + esc(ch.goal) + '</p>'
       + '<p><b>Dạng bài yếu cần chú ý:</b> ' + (ci === 0 ? 'Xem Sổ lỗi sai — dạng nào sai nhiều thì ôn dạng đó trước, đừng học dàn trải.' : 'Khi tới chương này, ôn lại dạng bài yếu nhất ở chương trước theo Sổ lỗi sai trước khi học bài mới.') + '</p>'
@@ -1182,6 +1229,19 @@ function viewRoadmap(app) {
   var gb = $("#gateBtn"); if (gb) gb.onclick = function () { openStep(stepById("test")); };
   var mrB = $("#midReviewBtn"); if (mrB) mrB.onclick = function () { lessonStart = Date.now(); runWrong = []; runFirstTry = {}; openLesson({ type: "midReview" }); };
   var mc1 = $("#mapCh1"); if (mc1) mc1.onclick = function () { var ns = nextLearnStep(); openStep(ns || stepById("pron1"), { noNudge: true }); };
+  $$("[data-rstep]").forEach(function (btn) {
+    btn.onclick = function () {
+      var parts = btn.dataset.rstep.split(":");
+      var st = rbChSteps(parts[0])[+parts[1]];
+      if (st) openRoadmapStepLesson(st.lesson);
+    };
+  });
+  $$("[data-chopen]").forEach(function (btn) {
+    btn.onclick = function () {
+      var st = rbFirstUndoneStep(btn.dataset.chopen) || rbChSteps(btn.dataset.chopen)[0];
+      if (st) openRoadmapStepLesson(st.lesson);
+    };
+  });
   var mct = $("#mapChatType"); if (mct) mct.onclick = function () { openLesson({ type: "chat", chatMode: "type" }); };
   var mcv = $("#mapChatVoice"); if (mcv) mcv.onclick = function () { openLesson({ type: "chat", chatMode: "voice" }); };
   var mpg = $("#myPathGo"); if (mpg) mpg.onclick = function () { go("mypath"); };
@@ -1200,39 +1260,111 @@ function viewRoadmap(app) {
 function skillDoneMark(key) { return (state.skillDone && state.skillDone[key]) ? " ✓" : ""; }
 function viewPractice(app) {
   var c = skillCounts();
-  var html = '<h2>Luyện tập</h2><p class="mut">Luyện riêng theo từng kỹ năng, đúng format thi. Trò chơi nằm trong này, không còn là cửa riêng.</p>'
-    + '<p class="mut">Mọi bài dưới đây đều từ kho tự soạn của web, xếp theo đúng định dạng thi IELTS. Số lượng đếm thật từ kho, không ghi số mẫu.</p>'
-    + u8ClassHTML() + '<section class="card" id="u7PlayCardPractice"><h3>🎮 Chơi thử ngay</h3><p class="mut">Trò chơi nằm trong Luyện tập — bấm là chơi thử một ván nối từ nhanh, không cần đăng nhập. Ván thử không lưu lên tài khoản.</p><button class="btn btn-amber" id="u7PlayNowPractice">🎮 Chơi thử ngay</button></section>';
+  function doneK(k) { return !!(state.skillDone && state.skillDone[k]); }
+  function nextOf(items) {
+    for (var i = 0; i < items.length; i++) if (!doneK(items[i].key)) return items[i].label;
+    return null;
+  }
+  function nextTxt(items) { var f = nextOf(items); return f ? " · tiếp theo: " + f : " · đã xong hết"; }
+  /* --- Nut chinh: buoc tiep theo cua nguoi hoc --- */
+  var pT = practiceNextTarget();
+  var html = '<h2>Luyện tập</h2>'
+    + '<section class="card" id="practiceNextCard"><p class="mut">Tiếp theo nên luyện</p><h3>' + esc(pT.title) + '</h3><p class="mut">' + esc(pT.type) + '</p>'
+    + '<button class="btn btn-primary" id="practiceNextBtn">Tiếp theo nên luyện</button></section>'
+    + guideLine("practiceIntro", "Luyện riêng theo từng kỹ năng — mở nhóm cần luyện, bấm bài để học.")
+    + '<details style="margin-top:8px"><summary><b>Xem thêm</b></summary>'
+    + '<p class="mut">Luyện riêng theo từng kỹ năng, đúng format thi. Trò chơi nằm trong này, không còn là cửa riêng.</p>'
+    + '<p class="mut">Mọi bài dưới đây đều từ kho tự soạn của web, xếp theo đúng định dạng thi IELTS. Số lượng đếm thật từ kho, không ghi số mẫu.</p></details>';
+  /* --- Tu vung: 89 bo xep theo band --- */
+  var vocabByBand = {}, vocabBandOrder = [];
+  CONTENT.vocab.forEach(function (s, i) {
+    var b = s.band || "Chưa xếp band";
+    if (!vocabByBand[b]) { vocabByBand[b] = []; vocabBandOrder.push(b); }
+    vocabByBand[b].push(i);
+  });
+  vocabBandOrder.sort(function (a, b) {
+    if (a === "Chưa xếp band") return 1;
+    if (b === "Chưa xếp band") return -1;
+    return bandSortVal(a) - bandSortVal(b);
+  });
+  var vocabNextItems = [];
+  vocabBandOrder.forEach(function (b) {
+    vocabByBand[b].forEach(function (i) {
+      var s = CONTENT.vocab[i];
+      vocabNextItems.push({ label: s.topic, key: "vocabPos:" + i, pos: i, done: (state.pos["vocab:" + i] || 0) >= s.cards.length });
+    });
+  });
+  var vocabNext = null;
+  for (var vi = 0; vi < vocabNextItems.length; vi++) if (!vocabNextItems[vi].done) { vocabNext = vocabNextItems[vi].label; break; }
+  html += '<details class="card" id="practiceGrpVocab"><summary><b>📚 Từ vựng — ' + CONTENT.vocab.length + ' bộ' + (vocabNext ? ' · tiếp theo: ' + vocabNext : ' · đã xong hết') + '</b></summary>'
+    + '<p class="mut">Bộ từ theo chặng — bấm bộ để học thẻ, phát âm từng thẻ.</p>';
+  vocabBandOrder.forEach(function (b) {
+    html += '<details style="margin-top:8px"><summary><b>' + esc(b) + ' · ' + vocabByBand[b].length + ' bộ</b></summary><div class="row" style="margin-top:6px">';
+    vocabByBand[b].forEach(function (i) {
+      var s = CONTENT.vocab[i];
+      html += '<button class="btn" data-vocabset="' + i + '">' + esc(s.topic) + ' (' + s.cards.length + ' từ)' + ((state.pos["vocab:" + i] || 0) >= s.cards.length ? ' ✓' : '') + '</button>';
+    });
+    html += '</div></details>';
+  });
+  html += '</details>';
+  /* --- Doc --- */
   var readLevels = ["Band 0", "Band 2.0", "Band 2.5", "Band 3.0", "Band 3.5", "Band 4.0", "Band 4.5", "Band 5.0", "Band 5.5", "Band 6.0", "Band 6.5", "Band 7.0", "Band 7.5+"];
   var readByLevel = {};
   CONTENT.reading.forEach(function (r, i) { (readByLevel[r.level] = readByLevel[r.level] || []).push(i); });
-  html += '<section class="card"><h3>📖 Đọc — ' + c.readingItems + ' bài · ' + c.readingQs + ' câu · đủ 11 dạng chính thống</h3>'
-    + '<p class="mut">11 dạng: trắc nghiệm, đúng/sai/không có thông tin, hoàn thành câu tóm tắt, nối tiêu đề, có/không/không có thông tin theo tác giả, hoàn thành bảng, tìm thông tin theo đoạn, hoàn thành câu, nối đặc điểm, điền từ vào sơ đồ, trả lời ngắn. Mở một bài để đọc rồi làm câu hỏi ngay dưới bài.</p>';
+  var readNextItems = [];
+  readLevels.forEach(function (lv) { (readByLevel[lv] || []).forEach(function (i) { readNextItems.push({ label: CONTENT.reading[i].title, key: "read:" + i }); }); });
+  html += '<details class="card" id="practiceGrpRead"><summary><b>📖 Đọc — ' + c.readingItems + ' bài · ' + c.readingQs + ' câu · đủ 11 dạng chính thống' + nextTxt(readNextItems) + '</b></summary>'
+    + '<details style="margin-top:8px"><summary><b>Xem thêm</b></summary><p class="mut">11 dạng: trắc nghiệm, đúng/sai/không có thông tin, hoàn thành câu tóm tắt, nối tiêu đề, có/không/không có thông tin theo tác giả, hoàn thành bảng, tìm thông tin theo đoạn, hoàn thành câu, nối đặc điểm, điền từ vào sơ đồ, trả lời ngắn. Mở một bài để đọc rồi làm câu hỏi ngay dưới bài.</p></details>';
   readLevels.forEach(function (lv) {
     var idxs = readByLevel[lv]; if (!idxs) return;
     html += '<details style="margin-top:8px"><summary><b>' + esc(lv) + ' · ' + idxs.length + ' bài</b></summary><div class="row" style="margin-top:6px">';
     idxs.forEach(function (i) { var r = CONTENT.reading[i]; html += '<button class="btn" data-skillread="' + i + '">' + esc(r.title) + ' (' + r.questions.length + ' câu)' + skillDoneMark("read:" + i) + '</button>'; });
     html += '</div></details>';
   });
-  html += '</section>';
-  html += '<section class="card"><h3>🎧 Nghe — ' + c.listenLongItems + ' bài dài · ' + c.listenLongQs + ' câu hỏi + ' + c.listenSingles + ' câu nghe ngắn</h3>'
-    + '<p class="mut">Bài nghe dài: nghe toàn bài rồi trả lời câu hỏi hiểu nội dung (trắc nghiệm, đúng/sai, điền từ, nối). Câu nghe ngắn: nghe một câu rồi chọn đúng câu vừa nghe trong 3 câu — dạng luyện nghe-chép và nhận diện câu của web cũ, không phải câu hỏi hiểu nội dung.</p>'
-    + '<details style="margin-top:8px"><summary><b>Bài nghe dài · ' + c.listenLongItems + ' bài · ' + c.listenLongQs + ' câu hỏi</b></summary><div class="row" style="margin-top:6px">';
+  html += '</details>';
+  /* --- Nghe: nhom chao hoi tach rieng khoi Section 1 --- */
+  var greetIdx = [];
+  if (typeof RB_LISTEN_LABELS !== "undefined") Object.keys(RB_LISTEN_LABELS).forEach(function (k) { greetIdx.push(+k); });
+  var greetSet = {}; greetIdx.forEach(function (i) { greetSet[i] = true; });
   var lpOrder = CONTENT.listeningPlus.map(function (r, i) { return i; }).sort(function (a, b) { var ba = bandSortVal(CONTENT.listeningPlus[a].band), bb = bandSortVal(CONTENT.listeningPlus[b].band); return ba - bb || a - b; });
+  var listenNextItems = [];
+  greetIdx.forEach(function (i) { if (CONTENT.listening[i]) listenNextItems.push({ label: CONTENT.listening[i].topic, key: "listen:" + i }); });
+  ["Section 1", "Section 2", "Section 3", "Section 4"].forEach(function (sec) {
+    CONTENT.listening.forEach(function (r, i) { if (r.section === sec && !greetSet[i]) listenNextItems.push({ label: r.topic, key: "listen:" + i }); });
+  });
+  lpOrder.forEach(function (i) { listenNextItems.push({ label: CONTENT.listeningPlus[i].topic, key: "listenLong:" + i }); });
+  html += '<details class="card" id="practiceGrpListen"><summary><b>🎧 Nghe — ' + c.listenLongItems + ' bài dài · ' + c.listenLongQs + ' câu hỏi + ' + c.listenSingles + ' câu nghe ngắn' + nextTxt(listenNextItems) + '</b></summary>'
+    + '<details style="margin-top:8px"><summary><b>Xem thêm</b></summary><p class="mut">Bài nghe dài: nghe toàn bài rồi trả lời câu hỏi hiểu nội dung (trắc nghiệm, đúng/sai, điền từ, nối). Câu nghe ngắn: nghe một câu rồi chọn đúng câu vừa nghe trong 3 câu — dạng luyện nghe-chép và nhận diện câu của web cũ, không phải câu hỏi hiểu nội dung.</p></details>';
+  if (greetIdx.length) {
+    html += '<details style="margin-top:8px"><summary><b>Nghe chậm: chào hỏi · ' + greetIdx.length + ' câu</b></summary><div class="row" style="margin-top:6px">';
+    greetIdx.forEach(function (i) { var r = CONTENT.listening[i]; if (r) html += '<button class="btn" data-skilllisten="' + i + '">' + esc(r.topic) + skillDoneMark("listen:" + i) + '</button>'; });
+    html += '</div></details>';
+  }
+  html += '<details style="margin-top:8px"><summary><b>Bài nghe dài · ' + c.listenLongItems + ' bài · ' + c.listenLongQs + ' câu hỏi</b></summary><div class="row" style="margin-top:6px">';
   lpOrder.forEach(function (i) { var r = CONTENT.listeningPlus[i];
     html += '<button class="btn" data-skilllistenlong="' + i + '">' + esc(r.section) + ' — ' + esc(r.topic) + ' (' + r.questions.length + ' câu)' + skillDoneMark("listenLong:" + i) + '</button>';
   });
   html += '</div></details>';
   ["Section 1", "Section 2", "Section 3", "Section 4"].forEach(function (sec) {
-    var idxs = []; CONTENT.listening.forEach(function (r, i) { if (r.section === sec) idxs.push(i); });
+    var idxs = []; CONTENT.listening.forEach(function (r, i) { if (r.section === sec && !greetSet[i]) idxs.push(i); });
     if (!idxs.length) return;
     html += '<details style="margin-top:8px"><summary><b>' + esc(sec) + ' · ' + idxs.length + ' câu nghe ngắn</b></summary><div class="row" style="margin-top:6px">';
     idxs.forEach(function (i) { var r = CONTENT.listening[i]; html += '<button class="btn" data-skilllisten="' + i + '">' + esc(r.topic) + skillDoneMark("listen:" + i) + '</button>'; });
     html += '</div></details>';
   });
-  html += '</section>';
-  html += '<section class="card"><h3>🗣️ Nói — ' + c.speakTotal + ' kịch bản (Part 1: ' + c.speakP1 + ' · Part 2: ' + c.speakP2 + ' · Part 3: ' + c.speakP3 + ') + ' + c.roleplay + ' tình huống nhập vai</h3>'
-    + '<p class="mut">Mỗi kịch bản: đọc hội thoại mẫu (giám khảo – thí sinh, kèm tiếng Việt), nghe từng câu, rồi làm câu hỏi từ vựng và cấu trúc rút ra từ chính bài mẫu. Nói Part 3 là thảo luận mở rộng, khó hơn Part 1.</p>';
+  html += '</details>';
+  /* --- Noi --- */
+  var speakNextItems = [];
+  [1, 2, 3].forEach(function (p) {
+    var idxs = []; CONTENT.speaking.forEach(function (s, i) { if (s.partNum === p) idxs.push(i); });
+    idxs.sort(function (a, b) { var ba = bandSortVal(CONTENT.speaking[a].band), bb = bandSortVal(CONTENT.speaking[b].band); return ba - bb || a - b; });
+    idxs.forEach(function (i) { speakNextItems.push({ label: CONTENT.speaking[i].topic, key: "speak:" + i }); });
+  });
+  CONTENT.roleplay.forEach(function (r, i) { speakNextItems.push({ label: r.title, key: "roleplay:" + i }); });
+  html += '<details class="card" id="practiceGrpSpeak"><summary><b>🗣️ Nói — ' + c.speakTotal + ' kịch bản (Part 1: ' + c.speakP1 + ' · Part 2: ' + c.speakP2 + ' · Part 3: ' + c.speakP3 + ') + ' + c.roleplay + ' tình huống nhập vai' + nextTxt(speakNextItems) + '</b></summary>'
+    + '<details style="margin-top:8px"><summary><b>Xem thêm</b></summary>'
+    + '<p class="mut">Mỗi kịch bản: đọc hội thoại mẫu (giám khảo – thí sinh, kèm tiếng Việt), nghe từng câu, rồi làm câu hỏi từ vựng và cấu trúc rút ra từ chính bài mẫu. Nói Part 3 là thảo luận mở rộng, khó hơn Part 1.</p>'
+    + '<p class="mut">Trò chuyện tự do với AI: gõ tay (chỉ gõ chữ) hoặc nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Mô hình nguồn chính là AI trò chuyện liên tục (không phải người thật). Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p></details>';
   [1, 2, 3].forEach(function (p) {
     var idxs = []; CONTENT.speaking.forEach(function (s, i) { if (s.partNum === p) idxs.push(i); });
     idxs.sort(function (a, b) { var ba = bandSortVal(CONTENT.speaking[a].band), bb = bandSortVal(CONTENT.speaking[b].band); return ba - bb || a - b; });
@@ -1243,10 +1375,17 @@ function viewPractice(app) {
   html += '<details style="margin-top:8px"><summary><b>Nhập vai · ' + c.roleplay + ' tình huống</b></summary><div class="row" style="margin-top:6px">';
   CONTENT.roleplay.forEach(function (r, i) { html += '<button class="btn" data-skillroleplay="' + i + '">' + esc(r.title) + skillDoneMark("roleplay:" + i) + '</button>'; });
   html += '</div></details>';
-  html += '<div class="row" style="margin-top:10px"><button class="btn btn-primary" data-chat="type">Trò chuyện gõ tay với AI — Đang mở</button><button class="btn btn-primary" data-chat="voice">Trò chuyện nói live với AI — Đang mở</button></div>'
-    + '<p class="mut">Trò chuyện tự do với AI: gõ tay (chỉ gõ chữ) hoặc nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Mô hình nguồn chính là AI trò chuyện liên tục (không phải người thật). Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p></section>';
-  html += '<section class="card"><h3>✍️ Viết — ' + c.writeTotal + ' bài (Task 1: ' + c.writeT1 + ' · Task 2: ' + c.writeT2 + ' · Thư và email: ' + c.writeMail + ') + ' + c.writeDrills + ' bài luyện viết từng bước</h3>'
-    + '<p class="mut">Mỗi bài viết đi theo 3 bước: viết bản nháp → AI chấm 4 tiêu chí + đối chiếu bài mẫu 2 cột → viết lại bản sửa (lưu cả hai bản). Task 2 nặng gấp đôi Task 1 khi tính band Viết. Thư và email theo format General Training Task 1, không phải Academic. Bài luyện từng bước: nối câu, paraphrase, sắp xếp câu — gõ câu của bạn rồi so với bài mẫu.</p>';
+  html += '<div class="row" style="margin-top:10px"><button class="btn" data-chat="type">Trò chuyện gõ tay với AI — Đang mở</button><button class="btn" data-chat="voice">Trò chuyện nói live với AI — Đang mở</button></div></details>';
+  /* --- Viet --- */
+  var writeNextItems = [];
+  [["Task 1", function (w) { return w.type === "Task 1"; }], ["Task 2", function (w) { return w.type === "Task 2"; }], ["Thư và email (General Training Task 1)", function (w) { return w.type !== "Task 1" && w.type !== "Task 2"; }]].forEach(function (grp) {
+    var idxs = []; CONTENT.writing.forEach(function (w, i) { if (grp[1](w)) idxs.push(i); });
+    idxs.sort(function (a, b) { var ba = bandSortVal(CONTENT.writing[a].band), bb = bandSortVal(CONTENT.writing[b].band); return ba - bb || a - b; });
+    idxs.forEach(function (i) { writeNextItems.push({ label: CONTENT.writing[i].title, key: "write:" + i }); });
+  });
+  CONTENT.writingDrills.forEach(function (d, i) { writeNextItems.push({ label: d.title, key: "drill:" + i }); });
+  html += '<details class="card" id="practiceGrpWrite"><summary><b>✍️ Viết — ' + c.writeTotal + ' bài (Task 1: ' + c.writeT1 + ' · Task 2: ' + c.writeT2 + ' · Thư và email: ' + c.writeMail + ') + ' + c.writeDrills + ' bài luyện viết từng bước' + nextTxt(writeNextItems) + '</b></summary>'
+    + '<details style="margin-top:8px"><summary><b>Xem thêm</b></summary><p class="mut">Mỗi bài viết đi theo 3 bước: viết bản nháp → AI chấm 4 tiêu chí + đối chiếu bài mẫu 2 cột → viết lại bản sửa (lưu cả hai bản). Task 2 nặng gấp đôi Task 1 khi tính band Viết. Thư và email theo format General Training Task 1, không phải Academic. Bài luyện từng bước: nối câu, paraphrase, sắp xếp câu — gõ câu của bạn rồi so với bài mẫu.</p></details>';
   [["Task 1", function (w) { return w.type === "Task 1"; }], ["Task 2", function (w) { return w.type === "Task 2"; }], ["Thư và email (General Training Task 1)", function (w) { return w.type !== "Task 1" && w.type !== "Task 2"; }]].forEach(function (grp) {
     var idxs = []; CONTENT.writing.forEach(function (w, i) { if (grp[1](w)) idxs.push(i); });
     idxs.sort(function (a, b) { var ba = bandSortVal(CONTENT.writing[a].band), bb = bandSortVal(CONTENT.writing[b].band); return ba - bb || a - b; });
@@ -1256,35 +1395,70 @@ function viewPractice(app) {
   });
   html += '<details style="margin-top:8px"><summary><b>Luyện viết từng bước · ' + c.writeDrills + ' bài</b></summary><div class="row" style="margin-top:6px">';
   CONTENT.writingDrills.forEach(function (d, i) { html += '<button class="btn" data-skilldrill="' + i + '">' + esc(d.title) + skillDoneMark("drill:" + i) + '</button>'; });
-  html += '</div></details></section>';
-  var gameDefs2 = [["match", "🔗", "Nối từ thần tốc"], ["unscramble", "🔤", "Giải mã chữ"], ["listeng", "👂", "Nghe và đoán"], ["typerace", "⌨️", "Đua gõ câu"], ["order", "🧩", "Xếp câu đúng"], ["quiz", "🧗", "Quiz leo thang"]];
-  html += '<section class="card"><h3>🎮 Khu Trò chơi — 6 game + kỷ lục riêng</h3><p class="mut">Chơi để ôn từ vựng, nghe, gõ câu, xếp câu và ngữ pháp. Trả lời sai trong game cũng vào Sổ lỗi sai. Mỗi game có kỷ lục riêng, lưu trên máy này.</p><div class="row">' + gameDefs2.map(function (gd) { var b = gameBest(gd[0]); return '<button class="btn" data-gamebtn="' + gd[0] + '">' + gd[1] + ' ' + gd[2] + (b ? ' · 🏆 ' + b.score + ' điểm' : ' · chưa chơi') + '</button>'; }).join("") + '</div></section>';
-  html += '<section class="card"><h3>⌨️ Gõ câu — 2 chế độ + 3 pha</h3><p class="mut">Cơ bản: câu Band 5.0–5.5 · Nâng cao: câu Band 6.0+. 3 pha: nhìn mẫu rồi gõ, nghe rồi gõ, nhớ rồi gõ.</p><div class="row"><button class="btn btn-primary" data-typingmode="coban">Gõ câu — Cơ bản</button><button class="btn" data-typingmode="nangcao">Gõ câu — Nâng cao</button></div></section>';
-  html += '<section class="card" id="gd23Practice"><h3>🆕 Luyện mới — GĐ2/GĐ3</h3>'
-    + '<p class="mut">Đề tự sinh trộn dạng từ kho câu sẵn có; nói theo câu khoét trống; quiz video chỉ từ đoạn đã đánh dấu; Speech Analyzer 5 mảng sau bài nói.</p>'
-    + '<div class="row"><button class="btn btn-primary" data-mixedquiz="1">Đề tự sinh trộn dạng</button><button class="btn btn-primary" data-clozespeak="1">Luyện nói cloze</button><button class="btn" data-videounknown="1">Video — đánh dấu không biết</button><button class="btn" data-speechanalyzer="1">Speech Analyzer 5 mảng</button></div></section>';
-  html += '<section class="card"><h3>🎯 Buổi Ôn điểm yếu tự sinh</h3><p class="mut">Tự sinh từ Sổ lỗi sai của bạn: câu sai nhiều nhất lên đầu, kèm phần yếu nhất từ kiểm tra.</p><p><button class="btn btn-primary" data-weaksession="1">Mở buổi Ôn điểm yếu</button> <span class="mut">' + dueHard().length + ' mục đến hạn ôn</span></p></section>';
+  html += '</div></details></details>';
+  /* --- Ngu phap: tram nen tang Band 0 + kho cu --- */
+  var gramNextItems = [];
+  RB_NEW_GRAMMAR.forEach(function (g, i) { gramNextItems.push({ label: g.name, key: "gramNew:" + i }); });
+  CONTENT.grammar.forEach(function (g, i) { gramNextItems.push({ label: g.name, key: "gramOld:" + i }); });
   var gramFams = {}; CONTENT.grammar.forEach(function (g, i) { (gramFams[g.fam] = gramFams[g.fam] || []).push(i); });
-  html += '<section class="card"><h3>📚 Ngữ pháp kho cũ — ' + CONTENT.grammar.length + ' trạm</h3><p class="mut">Kho ngữ pháp tự soạn cũ, xếp theo nhóm: xem ví dụ trước rồi làm quiz, sai vào Sổ lỗi sai.</p>';
+  html += '<details class="card" id="practiceGrpGram"><summary><b>📚 Ngữ pháp — ' + (RB_NEW_GRAMMAR.length + CONTENT.grammar.length) + ' trạm' + nextTxt(gramNextItems) + '</b></summary>'
+    + '<p class="mut">Kho ngữ pháp tự soạn cũ, xếp theo nhóm: xem ví dụ trước rồi làm quiz, sai vào Sổ lỗi sai.</p>'
+    + '<details style="margin-top:8px"><summary><b>Trạm nền tảng Band 0 · ' + RB_NEW_GRAMMAR.length + ' trạm</b></summary><div class="row" style="margin-top:6px">';
+  RB_NEW_GRAMMAR.forEach(function (g, i) { html += '<button class="btn" data-gramnew="' + i + '">' + esc(g.name) + skillDoneMark("gramNew:" + i) + '</button>'; });
+  html += '</div></details>';
   Object.keys(gramFams).forEach(function (fam) { html += '<details style="margin-top:8px"><summary><b>' + esc(fam) + ' · ' + gramFams[fam].length + ' trạm</b></summary><div class="row" style="margin-top:6px">'; gramFams[fam].forEach(function (i) { var g = CONTENT.grammar[i]; html += '<button class="btn" data-skillgramold="' + i + '">' + esc(g.name) + skillDoneMark("gramOld:" + i) + '</button>'; }); html += '</div></details>'; });
-  html += '</section>';
-  html += '<section class="card"><h3>🎓 Buổi thi kết thúc đợt</h3>'
+  html += '</details>';
+  /* --- Go cau: 3 che do la chip chon --- */
+  var typingNextItems = [];
+  ["nentang", "coban", "nangcao"].forEach(function (m) {
+    typingSets(m).forEach(function (s, i) { typingNextItems.push({ label: s.title + " (" + (m === "nentang" ? "Nền tảng" : m === "coban" ? "Cơ bản" : "Nâng cao") + ")", key: "typing:" + m + ":" + i, mode: m, idx: i }); });
+  });
+  var typingNext = null;
+  for (var tni = 0; tni < typingNextItems.length; tni++) if (!typingDone(typingNextItems[tni].mode, typingNextItems[tni].idx)) { typingNext = typingNextItems[tni].label; break; }
+  html += '<details class="card" id="practiceGrpTyping"><summary><b>⌨️ Gõ câu — ' + CONTENT.typing.length + ' bộ · 3 pha' + (typingNext ? ' · tiếp theo: ' + typingNext : ' · đã xong hết') + '</b></summary>'
+    + '<p class="mut">Nền tảng: câu Band 0–4,5 · Cơ bản: câu Band 5,0–5,5 · Nâng cao: câu Band 6,0+. 3 pha: nhìn mẫu rồi gõ, nghe rồi gõ, nhớ rồi gõ.</p>'
+    + '<div class="row"><button class="btn" data-typingmode="nentang">Nền tảng (Band 0–4,5)</button><button class="btn" data-typingmode="coban">Cơ bản (Band 5,0–5,5)</button><button class="btn" data-typingmode="nangcao">Nâng cao (Band 6,0+)</button></div></details>';
+  /* --- Tro choi --- */
+  var gameDefs2 = [["match", "🔗", "Nối từ thần tốc"], ["unscramble", "🔤", "Giải mã chữ"], ["listeng", "👂", "Nghe và đoán"], ["typerace", "⌨️", "Đua gõ câu"], ["order", "🧩", "Xếp câu đúng"], ["quiz", "🧗", "Quiz leo thang"]];
+  html += '<details class="card" id="u7PlayCardPractice"><summary><b>🎮 Trò chơi — 6 game + kỷ lục riêng</b></summary>'
+    + '<p class="mut">Chơi thử một ván nối từ nhanh, không cần đăng nhập. Ván thử không lưu lên tài khoản.</p><p><button class="btn" id="u7PlayNowPractice">🎮 Chơi thử ngay</button></p>'
+    + '<p class="mut">Chơi để ôn từ vựng, nghe, gõ câu, xếp câu và ngữ pháp. Trả lời sai trong game cũng vào Sổ lỗi sai. Mỗi game có kỷ lục riêng, lưu trên máy này.</p><div class="row">' + gameDefs2.map(function (gd) { var b = gameBest(gd[0]); return '<button class="btn" data-gamebtn="' + gd[0] + '">' + gd[1] + ' ' + gd[2] + (b ? ' · 🏆 ' + b.score + ' điểm' : ' · chưa chơi') + '</button>'; }).join("") + '</div></details>';
+  /* --- Luyen moi GĐ2/GĐ3 --- */
+  html += '<details class="card" id="gd23Practice"><summary><b>🆕 Luyện mới — GĐ2/GĐ3</b></summary>'
+    + '<p class="mut">Đề tự sinh trộn dạng từ kho câu sẵn có; nói theo câu khoét trống; quiz video chỉ từ đoạn đã đánh dấu; Speech Analyzer 5 mảng sau bài nói.</p>'
+    + '<div class="row"><button class="btn" data-mixedquiz="1">Đề tự sinh trộn dạng</button><button class="btn" data-clozespeak="1">Luyện nói cloze</button><button class="btn" data-videounknown="1">Video — đánh dấu không biết</button><button class="btn" data-speechanalyzer="1">Speech Analyzer 5 mảng</button></div></details>';
+  /* --- On diem yeu --- */
+  html += '<details class="card" id="practiceGrpWeak"><summary><b>🎯 Buổi Ôn điểm yếu tự sinh</b></summary>'
+    + '<p class="mut">Tự sinh từ Sổ lỗi sai của bạn: câu sai nhiều nhất lên đầu, kèm phần yếu nhất từ kiểm tra.</p><p><button class="btn" data-weaksession="1">Mở buổi Ôn điểm yếu</button> <span class="mut">' + dueHard().length + ' mục đến hạn ôn</span></p></details>';
+  /* --- Lop hoc + noi dung sach --- */
+  html += '<details class="card" id="practiceGrpClass"><summary><b>🏫 Lớp học (Classes)</b></summary>' + u8ClassHTML() + '</details>';
+  html += '<details class="card" id="practiceGrpBk"><summary><b>📚 Nội dung mới theo nghiên cứu sách</b></summary>' + bkPracticeHTML() + '</details>';
+  /* --- Thi: buoi thi ket thuc dot + thi thu --- */
+  html += '<details class="card" id="practiceGrpExam"><summary><b>🎓 Thi — buổi thi kết thúc đợt + thi thử đúng format</b></summary>'
+    + '<h3>Buổi thi kết thúc đợt</h3>'
     + '<p class="mut">Cuối mỗi đợt học, thi 4 bài riêng từng kỹ năng (Nghe, Đọc, Nói, Viết) để biết trình độ mình đang ở đâu. Khác với bài kiểm tra cuối chương (mở bước tiếp theo) và khác với thi thử gộp 4 kỹ năng. Kết quả từng đợt lưu lại và hiện ở mục Của tôi → Đánh giá mức độ để so sánh các đợt với nhau.</p>'
-    + '<div class="row"><button class="btn btn-primary" data-phaseexam="1">Mở buổi thi — Đợt 1</button><button class="btn" data-phaseexam="2">Đợt 2</button><button class="btn" data-phaseexam="3">Đợt 3</button></div>'
-    + '<p class="mut">Mỗi đợt lấy bộ bài khác nhau trong kho, đợt càng sau bài càng khó dần (xếp theo band trong kho). Nghe/Đọc chấm theo đáp án; Nói/Viết AI chấm 4 tiêu chí (ghi rõ "Máy ước lượng").</p></section>';
-  html += '<section class="card"><h3>📝 Thi thử đúng format</h3>'
+    + '<div class="row"><button class="btn" data-phaseexam="1">Mở buổi thi — Đợt 1</button><button class="btn" data-phaseexam="2">Đợt 2</button><button class="btn" data-phaseexam="3">Đợt 3</button></div>'
+    + '<details style="margin-top:8px"><summary><b>Xem thêm</b></summary><p class="mut">Mỗi đợt lấy bộ bài khác nhau trong kho, đợt càng sau bài càng khó dần (xếp theo band trong kho). Nghe/Đọc chấm theo đáp án; Nói/Viết AI chấm 4 tiêu chí (ghi rõ "Máy ước lượng").</p></details>'
+    + '<h3>Thi thử đúng format</h3>'
     + '<p class="mut">Thi thử gộp 4 kỹ năng như một kỳ thi thật: Nghe 40 câu (30 phút), Đọc 3 bài (60 phút), Viết Task 1 + Task 2 (60 phút), Nói Part 1-2-3 (14 phút). Mỗi phần thi có đồng hồ đếm ngược chạy thật, hết giờ bài tự nộp. Kết quả lưu thành mốc đã thi thử.</p>'
-    + '<div class="row"><button class="btn btn-primary" data-mocktest="4.5">Thi thử chặng 4,5</button><button class="btn" data-mocktest="5.5">Chặng 5,5</button><button class="btn" data-mocktest="6.5">Chặng 6,5</button><button class="btn" data-mocktest="7.5">Chặng 7,5+</button></div>'
-    + '<p class="mut">Chặng chọn bài có độ khó gần chặng đó nhất trong kho; bài nào thay thế vì kho thiếu đúng độ khó sẽ ghi rõ trong màn thi.</p></section>';
-  html += bkPracticeHTML();
-  html += '<section class="card"><h3>Bổ trợ</h3>'
+    + '<div class="row"><button class="btn" data-mocktest="4.5">Thi thử chặng 4,5</button><button class="btn" data-mocktest="5.5">Chặng 5,5</button><button class="btn" data-mocktest="6.5">Chặng 6,5</button><button class="btn" data-mocktest="7.5">Chặng 7,5+</button></div>'
+    + '<details style="margin-top:8px"><summary><b>Xem thêm</b></summary><p class="mut">Chặng chọn bài có độ khó gần chặng đó nhất trong kho; bài nào thay thế vì kho thiếu đúng độ khó sẽ ghi rõ trong màn thi.</p></details></details>';
+  /* --- Bo tro chuong 1 --- */
+  html += '<details class="card" id="practiceGrpSupport"><summary><b>Bổ trợ — chương 1</b></summary>'
     + '<button class="step-row" data-practice="classroom"><span>Từ vựng lớp học đầu tiên (20 từ)</span><span class="st">→</span></button>'
     + '<button class="step-row" data-practice="gram0"><span>Ngữ pháp: Tôi là... (I am...)</span><span class="st">→</span></button>'
     + '<button class="step-row" data-practice="gram1"><span>Ngữ pháp: Đây là... (This is...)</span><span class="st">→</span></button>'
     + '<button class="step-row" data-practice="gram2"><span>Ngữ pháp: Tôi tên là... (My name is...)</span><span class="st">→</span></button>'
     + '<button class="step-row" data-practice="pron1"><span>Phát âm · 44 âm</span><span class="st">→</span></button>'
-    + '<button class="step-row" data-practice="test"><span>Bài kiểm tra cuối chương 1</span><span class="st">→</span></button></section>';
+    + '<button class="step-row" data-practice="test"><span>Bài kiểm tra cuối chương 1</span><span class="st">→</span></button></details>';
+  /* --- Kiem tra dau vao (trial + zeroTest) --- */
+  var entryNext = doneK("entryZero") ? (doneK("entryTrial") ? null : "Kiểm tra đầu vào — Band 5,0–7,5+") : "Kiểm tra đầu vào — Band 0";
+  html += '<details class="card" id="practiceGrpEntry"><summary><b>📝 Kiểm tra đầu vào' + (entryNext ? ' · tiếp theo: ' + entryNext : ' · đã xong hết') + '</b></summary>'
+    + '<p class="mut">Làm để biết mình đang ở đâu — sai vào Sổ lỗi sai, làm lại được.</p>'
+    + '<button class="step-row" data-entrycheck="zero"><span>Kiểm tra đầu vào — Band 0 (6 câu)</span><span class="st">' + (doneK("entryZero") ? '✓' : '→') + '</span></button>'
+    + '<button class="step-row" data-entrycheck="trial"><span>Kiểm tra đầu vào — Band 5,0–7,5+ (16 câu)</span><span class="st">' + (doneK("entryTrial") ? '✓' : '→') + '</span></button></details>';
   app.innerHTML = html;
+  var pnb = $("#practiceNextBtn"); if (pnb) pnb.onclick = function () { openPracticeNext(practiceNextTarget()); };
   $$("[data-practice]").forEach(function (btn) {
     btn.onclick = function () { openStep(stepById(btn.dataset.practice)); };
   });
@@ -1316,9 +1490,11 @@ function viewPractice(app) {
   $$("[data-bkerr]").forEach(function (b) { b.onclick = function () { openSkill("bkErr", 0, { idx: +b.dataset.bkerr, skillKey: "bkErr:" + b.dataset.bkerr, title: BK_VIET_ERRORS[+b.dataset.bkerr].title }); }; });
   $$("[data-bklife]").forEach(function (b) { b.onclick = function () { openSkill("bkLife", 0, { idx: +b.dataset.bklife, skillKey: "bkLife:" + b.dataset.bklife, title: BK_LIFE[+b.dataset.bklife].title }); }; });
   $$("[data-bktone]").forEach(function (b) { b.onclick = function () { openSkill("bkTone", 0, { idx: +b.dataset.bktone, skillKey: "bkTone:" + b.dataset.bktone, title: BK_TONE[+b.dataset.bktone].title }); }; });
+  $$("[data-vocabset]").forEach(function (b) { b.onclick = function () { lessonStart = Date.now(); runWrong = []; runFirstTry = {}; openLesson({ type: "vocab", setIdx: +b.dataset.vocabset }); }; });
+  $$("[data-gramnew]").forEach(function (b) { b.onclick = function () { lessonStart = Date.now(); runWrong = []; runFirstTry = {}; openLesson({ type: "grammar", gIdx: +b.dataset.gramnew }); }; });
+  $$("[data-entrycheck]").forEach(function (b) { b.onclick = function () { lessonStart = Date.now(); runWrong = []; runFirstTry = {}; openLesson({ type: "entryCheck", part: b.dataset.entrycheck }); }; });
   var pnPr = $("#u7PlayNowPractice"); if (pnPr) pnPr.onclick = function () { openLesson({ type: "u7trial" }); };
 }
-
 
 /* ---------- ÔN TẬP: MỘT hàng đợi duy nhất ---------- */
 function viewReview(app) {
@@ -1394,7 +1570,7 @@ function viewReview(app) {
 /* ---------- CHAT LOC (GĐ2, f7/f18): Ke hoach ngay dich + lich diem danh ---------- */
 function clPlanHTML(remainMins, goal) {
   var p = state.plan || {};
-  var h = '<div id="clPlan"><h4>Kế hoạch tới ngày đích</h4><p class="mut">Chọn band mục tiêu và ngày muốn đạt — web tính ngược số ngày cần học và báo đang đúng tiến độ hay chậm bao nhiêu ngày (chỉ tính chương 1, vì các chương sau chưa mở).</p>';
+  var h = '<div id="clPlan"><h4>Kế hoạch tới ngày đích</h4><p class="mut">Chọn band mục tiêu và ngày muốn đạt — web tính ngược số ngày cần học và báo đang đúng tiến độ hay chậm bao nhiêu ngày (hiện chỉ tính chương 1; các chương sau đã mở bước học nhưng chưa tính vào ước tính này).</p>';
   h += '<div class="row"><select id="planBandSel">' + RB_CHAPTER_MAP.map(function (ch) { return '<option value="' + esc(ch.band) + '"' + (p.band === ch.band ? ' selected' : '') + '>' + esc(ch.band) + ' — ' + esc(ch.title) + '</option>'; }).join("") + '</select><input type="date" id="planDateInp" value="' + esc(p.date || "") + '"><button class="btn btn-amber" id="planSaveBtn">Lưu kế hoạch</button></div>';
   if (p.date) {
     var today = new Date(todayStr() + "T00:00:00"), tgt = new Date(p.date + "T00:00:00");
@@ -1429,9 +1605,14 @@ function viewMine(app) {
   var goal = state.goal || 30;
   var weeks = Math.max(1, Math.ceil(Math.ceil(remainMins / goal) / 7));
   var html = '<h2>Của tôi</h2>';
-  html += accountCardHTML();
+  var mineT = practiceNextTarget();
+  html += '<section class="card" id="mineNextCard"><p class="mut">Học tiếp</p><h3>' + esc(mineT.title) + '</h3><p class="mut">' + esc(mineT.type) + '</p><button class="btn btn-primary" id="mineNextBtn">Học tiếp</button></section>';
+  html += guideLine("mineIntro", "Tiến trình, mục tiêu và cài đặt của bạn — mở nhóm cần xem.");
+  html += '<details class="card" id="mineGrpAccount"><summary><b>Tài khoản</b></summary>';
+  html += accountCardHTML() + '</details>';
+  html += '<details class="card" id="mineGrpProgress"><summary><b>Tiến trình của tôi</b></summary>';
   html += '<section class="card" id="mineStats"><h3>Điểm XP</h3><p><b>' + (state.xp || 0) + ' XP</b> · Cấp ' + lv.level + ' · còn ' + (lv.next - (state.xp || 0)) + ' XP nữa lên cấp ' + (lv.level + 1) + '</p>'
-    + '<p class="mut">Cách nhận XP:</p><ul>' + RB_XP_RULES.map(function (r) { return '<li>' + esc(r.what) + ': +' + r.xp + ' XP</li>'; }).join("") + '</ul></section>';
+    + '<details style="margin-top:8px"><summary><b>Cách nhận XP — bấm để mở</b></summary><ul>' + RB_XP_RULES.map(function (r) { return '<li>' + esc(r.what) + ': +' + r.xp + ' XP</li>'; }).join("") + '</ul></details></section>';
   html += gd23MasteryHTML();
   html += '<section class="card"><h3>Mục tiêu ngày</h3><div class="row">'
     + '<button class="btn" id="goalMinus">−</button><input type="number" id="goalInp" value="' + goal + '" min="15" max="180" style="width:90px">'
@@ -1440,7 +1621,6 @@ function viewMine(app) {
     + '<p class="mut">Với mục tiêu này, bạn còn khoảng ' + weeks + ' tuần nữa để xong chương 1 (ước tính). Web tĩnh không gửi thông báo khi bạn đóng trang — hãy tự mở web mỗi ngày để giữ chuỗi.</p>' + clPlanHTML(remainMins, goal) + '</section>';
   html += freezeStatusHTML();
   html += clCalHTML();
-  html += pushCardHTML();
   html += '<section class="card"><h3>Tiến trình của bạn</h3><p>Thẻ đã thuộc: ' + known + ' · Mục khó chưa xong: ' + hardN + ' · Từ đã lưu: ' + savedN + '</p>'
     + (state.migrated ? '<p class="mut">Đã chuyển tiến trình cũ của bạn sang bản mới; bản cũ vẫn còn nguyên để hoàn tác.</p>' : "") + '<p><button class="btn" id="quickCheckBtn">Kiểm tra trình độ (tùy chọn, không bắt buộc)</button></p></section>';
   var levelHTML = "";
@@ -1480,18 +1660,23 @@ function viewMine(app) {
   }
   levelHTML += skillLevelRows();
   html += levelHTML + phaseHTML + mockHTML;
+  html += '<details style="margin-top:8px"><summary><b>Bảng chú giải</b></summary>' + RB_GLOSSARY.map(function (g) { return '<p><b>' + esc(g.t) + ':</b> ' + esc(g.d) + '</p>'; }).join("") + '</details>';
+  html += '</details>';
+  html += '<details class="card" id="mineGrpSettings"><summary><b>Nhắc học và cài đặt</b></summary>';
+  html += pushCardHTML();
   if (typeof authState !== "undefined" && authState.user) { html += personalPathCardHTML(); } else { html += '<section class="card" id="ppGuest"><h3>Lộ trình riêng — Cá nhân hóa cực chi tiết</h3><p class="mut">Lộ trình riêng mở khi bạn đăng nhập — khách dùng lộ trình 13 chặng chuẩn ở trang Bản đồ. Đăng nhập ở thẻ Tài khoản phía trên để mở.</p></section>'; }
-  html += u8CoachHTML();
-  html += '<section class="card"><h3>Bảng chú giải</h3>' + RB_GLOSSARY.map(function (g) { return '<p><b>' + esc(g.t) + ':</b> ' + esc(g.d) + '</p>'; }).join("") + '</section>';
-  html += '<section class="card"><h3>Gia sư AI</h3><p>' + esc(RB_AI.tutor.label) + '.</p><p class="mut">Gia sư dùng model gemini-3.5-flash qua Supabase, cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p>'
-    + '<button class="btn" id="tutorTry">Thử gọi gia sư</button><p style="margin-top:10px"><textarea id="tutorModeInp" rows="2" style="width:100%" placeholder="Gõ câu hoặc câu hỏi cần gia sư giúp..."></textarea></p><p><button class="btn" id="tutorExplainBtn">AI giải thích</button> <button class="btn" id="tutorFixBtn">AI sửa câu của tôi</button></p><div class="why" id="tutorModeOut"></div><p class="mut">AI giải thích dùng mode explain, AI sửa câu dùng mode fix — cần đăng nhập, hết lượt báo rõ.</p></section>';
-  html += '<section class="card"><h3>Trò chuyện với AI</h3><p class="mut">Trò chuyện tự do với AI đã mở: vào Luyện tập → Nói, chọn 1 trong 2 loại riêng — gõ tay (chỉ gõ chữ) hoặc nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mô hình nguồn là AI trò chuyện liên tục, không phải người thật. Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p></section>';
+  html += '<details style="margin-top:8px"><summary><b>🧭 AI Coach — 3 gợi ý tiếp theo</b></summary>' + u8CoachHTML() + '</details>';
+  html += '<details style="margin-top:8px"><summary><b>Gia sư AI</b></summary><section class="card"><h3>Gia sư AI</h3><p>' + esc(RB_AI.tutor.label) + '.</p><p class="mut">Gia sư dùng model gemini-3.5-flash qua Supabase, cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p>'
+    + '<button class="btn" id="tutorTry">Thử gọi gia sư</button><p style="margin-top:10px"><textarea id="tutorModeInp" rows="2" style="width:100%" placeholder="Gõ câu hoặc câu hỏi cần gia sư giúp..."></textarea></p><p><button class="btn" id="tutorExplainBtn">AI giải thích</button> <button class="btn" id="tutorFixBtn">AI sửa câu của tôi</button></p><div class="why" id="tutorModeOut"></div><p class="mut">AI giải thích dùng mode explain, AI sửa câu dùng mode fix — cần đăng nhập, hết lượt báo rõ.</p></section></details>';
+  html += '<details style="margin-top:8px"><summary><b>Trò chuyện với AI</b></summary><section class="card"><h3>Trò chuyện với AI</h3><p class="mut">Trò chuyện tự do với AI đã mở: vào Luyện tập → Nói, chọn 1 trong 2 loại riêng — gõ tay (chỉ gõ chữ) hoặc nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mô hình nguồn là AI trò chuyện liên tục, không phải người thật. Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p></section></details>';
+  html += '</details>';
   app.innerHTML = html;
   var setGoal = function (v) { v = Math.max(15, Math.min(180, Math.round(v) || 30)); state.goal = v; saveState(); render(); };
   $("#goalMinus").onclick = function () { setGoal((state.goal || 30) - 5); };
   $("#goalPlus").onclick = function () { setGoal((state.goal || 30) + 5); };
   $("#goalInp").onchange = function (e) { setGoal(+e.target.value); };
   $("#checkinBtn").onclick = checkinToday;
+  var mnB = $("#mineNextBtn"); if (mnB) mnB.onclick = function () { openPracticeNext(practiceNextTarget()); };
   var plSave = $("#planSaveBtn"); if (plSave) plSave.onclick = function () { if (!state.plan) state.plan = {}; state.plan.band = $("#planBandSel").value; state.plan.date = $("#planDateInp").value; saveState(); render(); };
   wirePushCard();
   $("#tutorTry").onclick = function () { callAiTutor("Xin chào").then(function (r) { toast("Gia sư đã trả lời: " + String(r).slice(0, 80)); }, function (err) { toast(err); }); };
@@ -1954,7 +2139,7 @@ function accountCardHTML() {
       + '<p class="mut">Tiến trình khách lưu trên máy này (thẻ đã thuộc: ' + known + ' · mục khó chưa xong: ' + hardN + ' · ' + (state.xp || 0) + ' XP) và không mất khi tắt trang. Đăng nhập để đồng bộ theo tài khoản; tiến trình khách sẽ gộp lên tài khoản (phần tài khoản đã có được giữ nguyên).</p>'
       + '<p><input type="text" id="accEmail" placeholder="Email" autocomplete="email"> <input type="password" id="accPw" placeholder="Mật khẩu (từ 6 ký tự)"></p>'
       + '<p><b>Chọn một trong hai:</b> Đăng nhập để đồng bộ tiến trình theo tài khoản, hoặc Dùng tài khoản khách để học tiếp ngay không cần đăng nhập.</p>'
-      + '<div class="row"><button class="btn btn-primary" id="accLogin">Đăng nhập</button><button class="btn" id="accSignup">Đăng ký</button><button class="btn" id="accForgot">Quên mật khẩu</button></div>'
+      + '<div class="row"><button class="btn" id="accLogin">Đăng nhập</button><button class="btn" id="accSignup">Đăng ký</button><button class="btn" id="accForgot">Quên mật khẩu</button></div>'
       + '<div class="row"><button class="btn" id="accGuest">Dùng tài khoản khách</button></div>'
       + '<p class="mut">Nhập email + mật khẩu rồi bấm Đăng nhập hoặc Đăng ký. Bấm Dùng tài khoản khách để học tiếp ngay — tiến trình vẫn lưu trên máy này.</p>';
   } else {
@@ -2426,13 +2611,35 @@ function renderArcadeLesson(app, l) {
   }
 }
 /* 4. Go cau: 2 che do (Co ban/Nang cao) + 3 pha (nhin-go, nghe-go, nho-go). */
-function typingSets(mode) { return CONTENT.typing.filter(function (s) { var lv = s.level || ""; if (mode === "nangcao") return lv.indexOf("6.0") >= 0 || lv.indexOf("6.5") >= 0 || lv.indexOf("7.") >= 0; return lv.indexOf("5.0") >= 0 || lv.indexOf("5.5") >= 0; }); }
+function typingSets(mode) { return CONTENT.typing.filter(function (s) { return typingModeOfLevel(s.level) === (mode || "coban"); }); }
+function typingDoneKey(mode, i) { return "typing:" + mode + ":" + i; }
+function typingDone(mode, i) { return !!(state.skillDone && (state.skillDone[typingDoneKey(mode, i)] || state.skillDone["typing:" + i])); }
 function renderTypingLesson(app, l) {
-  var sets = typingSets(l.mode || "coban");
-  var head = skillHead("Gõ câu — " + (l.mode === "nangcao" ? "Nâng cao" : "Cơ bản"), "3 pha: Pha 1 nhìn mẫu rồi gõ · Pha 2 nghe rồi gõ · Pha 3 nhớ rồi gõ. Gõ đúng chính tả, sai vào Sổ lỗi sai.");
+  var mode = l.mode || "coban";
+  var sets = typingSets(mode);
+  var modeName = mode === "nangcao" ? "Nâng cao" : (mode === "nentang" ? "Nền tảng" : "Cơ bản");
+  var head = skillHead("Gõ câu — " + modeName, "3 pha: Pha 1 nhìn mẫu rồi gõ · Pha 2 nghe rồi gõ · Pha 3 nhớ rồi gõ. Gõ đúng chính tả, sai vào Sổ lỗi sai.");
   if (l.setIdx === undefined) {
-    app.innerHTML = head + '<div class="qblock"><p>Chọn một bộ câu để gõ:</p>' + sets.map(function (s, i) { return '<button class="btn" data-tset="' + i + '">' + esc(s.title) + ' (' + s.sentences.length + ' câu)' + skillDoneMark("typing:" + i) + '</button>'; }).join("") + '</div>';
+    var nextI = -1;
+    for (var ti = 0; ti < sets.length; ti++) if (!typingDone(mode, ti)) { nextI = ti; break; }
+    var byLevel = {};
+    sets.forEach(function (s, i) { (byLevel[s.level] = byLevel[s.level] || []).push(i); });
+    var levelOrder = Object.keys(byLevel).sort(function (a, b) { return bandSortVal(a) - bandSortVal(b); });
+    var picker = '<div class="qblock"><div class="row">'
+      + [["nentang", "Nền tảng (Band 0–4,5)"], ["coban", "Cơ bản (Band 5,0–5,5)"], ["nangcao", "Nâng cao (Band 6,0+)"]].map(function (mm) {
+        return '<button class="btn' + (mm[0] === mode ? ' btn-amber' : '') + '" data-tmode="' + mm[0] + '">' + mm[1] + '</button>';
+      }).join("") + '</div>';
+    if (nextI >= 0) picker += '<p style="margin-top:10px"><button class="btn btn-primary" id="tpNextSet">Gõ tiếp bộ kế tiếp: ' + esc(sets[nextI].title) + '</button></p>';
+    else picker += '<p style="margin-top:10px">Đã gõ xong hết các bộ ở chế độ này — chọn bộ khác để gõ lại.</p>';
+    levelOrder.forEach(function (lv) {
+      picker += '<details style="margin-top:8px"><summary><b>' + esc(lv) + ' · ' + byLevel[lv].length + ' bộ</b></summary><div class="row" style="margin-top:6px">'
+        + byLevel[lv].map(function (i) { var s = sets[i]; return '<button class="btn" data-tset="' + i + '">' + esc(s.title) + ' (' + s.sentences.length + ' câu)' + (typingDone(mode, i) ? " ✓" : "") + '</button>'; }).join("") + '</div></details>';
+    });
+    picker += '</div>';
+    app.innerHTML = head + picker;
     wireBack();
+    var tpN = $("#tpNextSet"); if (tpN) tpN.onclick = function () { l.setIdx = nextI; l.phase = 0; l.si = 0; l.correct = 0; l.phasesDone = {}; render(); };
+    $$("[data-tmode]").forEach(function (b) { b.onclick = function () { l.mode = b.dataset.tmode; l.setIdx = undefined; render(); }; });
     $$("[data-tset]").forEach(function (b) { b.onclick = function () { l.setIdx = +b.dataset.tset; l.phase = 0; l.si = 0; l.correct = 0; l.phasesDone = {}; render(); }; });
     return;
   }
@@ -2443,7 +2650,7 @@ function renderTypingLesson(app, l) {
   if (l.si >= set.sentences.length) {
     l.phasesDone[l.phase] = true;
     var allDone = l.phasesDone[0] && l.phasesDone[1] && l.phasesDone[2];
-    if (allDone && !l.xpGiven) { if (!state.skillDone) state.skillDone = {}; var was = !!state.skillDone["typing:" + l.setIdx]; state.skillDone["typing:" + l.setIdx] = true; awardXp(was ? 5 : 10); l.xpGiven = true; saveState(); }
+    if (allDone && !l.xpGiven) { if (!state.skillDone) state.skillDone = {}; var was = typingDone(l.mode || "coban", l.setIdx); state.skillDone[typingDoneKey(l.mode || "coban", l.setIdx)] = true; awardXp(was ? 5 : 10); l.xpGiven = true; saveState(); }
     app.innerHTML = head + '<div class="summarybox"><h2>Xong Pha ' + (l.phase + 1) + '</h2><p>Đúng ngay lần đầu: ' + (l.correct || 0) + '/' + set.sentences.length + ' câu.</p>' + (allDone ? '<p><b>Đã xong cả 3 pha của bộ này.</b></p>' : '<p><button class="btn btn-primary" id="tpNextPhase">Sang Pha ' + (l.phase + 2) + '</button></p>') + '<p><button class="btn" id="tpBackSets">Chọn bộ khác</button></p></div>';
     wireBack();
     var nx = $("#tpNextPhase"); if (nx) nx.onclick = function () { l.phase++; l.si = 0; l.correct = 0; render(); };
@@ -2634,6 +2841,10 @@ function bkPracticeHTML() {
   return html;
 }
 
+function renderEntryCheck(app, l) {
+  if (l.part === "zero") { l.title = "Kiểm tra đầu vào — Band 0"; l.skillKey = "entryZero"; renderQuizEngine(app, l, CONTENT.zeroTest, "skill", "entryZero"); }
+  else { l.title = "Kiểm tra đầu vào — Band 5,0–7,5+"; l.skillKey = "entryTrial"; renderQuizEngine(app, l, CONTENT.trial, "skill", "entryTrial"); }
+}
 function renderLesson(app) {
   var l = curLesson;
   if (l.type === "vocab") renderVocab(app, l);
@@ -2658,6 +2869,7 @@ function renderLesson(app) {
   else if (l.type === "weakSession") renderWeakSession(app, l);
   else if (l.type === "pronEntry") renderPronEntry(app, l);
   else if (l.type === "skillGramOld") renderSkillGramOld(app, l);
+  else if (l.type === "entryCheck") renderEntryCheck(app, l);
   else if (l.type === "bkErr") renderBkErr(app, l);
   else if (l.type === "bkLife") renderBkLife(app, l);
   else if (l.type === "bkTone") renderBkTone(app, l);
@@ -2803,19 +3015,22 @@ function vocabKnownStopAndGrade() {
 
 /* ----- Từ vựng: một màn một thẻ ----- */
 function renderVocab(app, l) {
-  var step = l.step, cards = CONTENT.vocab[l.setIdx].cards;
+  var set0 = CONTENT.vocab[l.setIdx];
+  var step = l.step || { id: "vocab:" + l.setIdx, title: set0.topic, type: "Từ vựng" };
+  var cards = set0.cards;
   var pos = state.pos["vocab:" + l.setIdx] || 0;
   if (pos >= cards.length) {
     app.innerHTML = stepHeader(step) + finishSummaryHTML("Bạn đã học xong bộ này!", '<p>Bạn đã đi hết ' + cards.length + ' thẻ của bộ này trong ' + elapsedText() + '.</p>', "", { chest: { key: step.id, title: step.title }, starsKey: "vocab:" + l.setIdx, appeal: "vocab:" + l.setIdx });
     wireBack(); wireNextStep();
+    if (!l.step) { var nsV = $("#btnNextStep"); if (nsV) { nsV.textContent = "Về Luyện tập"; nsV.onclick = function () { backFromLesson(); }; } }
     $("#btnRedo").onclick = function () { state.pos["vocab:" + l.setIdx] = 0; saveState(); lessonStart = Date.now(); render(); };
     return;
   }
   var c = cards[pos], st = state.cards["s" + l.setIdx + ":" + pos] || { box: 0 };
   var clMemoKey = "s" + l.setIdx + ":" + pos;
   var big = c.w;
-  var html = stepHeader(step, "Bộ " + step.deckNo + " trong chương 1.");
-  html += '<div class="qblock"><div class="row"><span class="chip">Bộ ' + step.deckNo + ' trong chương 1</span><span class="chip" id="cardCounter">Thẻ ' + (pos + 1) + '/' + cards.length + ' trong bộ này</span><span class="chip" id="vocabRound">Vòng ' + gd23VocabRound(pos, cards.length).round + '/' + gd23VocabRound(pos, cards.length).total + '</span><span class="chip">Nấc nhớ: ' + (st.box || 0) + '/5</span>' + (st.due ? '<span class="chip">Hẹn ôn: ' + esc(st.due) + '</span>' : '') + '</div>'
+  var html = stepHeader(step, l.step ? "Bộ " + step.deckNo + " trong chương 1." : "Bộ từ vựng · " + (set0.band || "chưa xếp band") + ".");
+  html += '<div class="qblock"><div class="row"><span class="chip">' + (l.step ? "Bộ " + step.deckNo + " trong chương 1" : "Bộ từ vựng · " + (set0.band || "chưa xếp band")) + '</span><span class="chip" id="cardCounter">Thẻ ' + (pos + 1) + '/' + cards.length + ' trong bộ này</span><span class="chip" id="vocabRound">Vòng ' + gd23VocabRound(pos, cards.length).round + '/' + gd23VocabRound(pos, cards.length).total + '</span><span class="chip">Nấc nhớ: ' + (st.box || 0) + '/5</span>' + (st.due ? '<span class="chip">Hẹn ôn: ' + esc(st.due) + '</span>' : '') + '</div>'
     + '<div class="bigletter" id="cardBig">' + esc(big) + '</div>'
     + '<p><b>' + esc(c.vi || "") + '</b></p>'
     + (c.ipa ? '<p class="mut">' + esc(c.ipa) + '</p>' : "")
@@ -2848,12 +3063,13 @@ function renderVocab(app, l) {
     awardXp(1);
     state.pos["vocab:" + l.setIdx] = pos + 1; saveState();
     if (pos + 1 >= cards.length) {
-      finishStep(step.id);
+      if (l.step) finishStep(step.id);
       var firstTryN = Object.keys(runFirstTry).filter(function (k) { return runFirstTry[k]; }).length;
       var wrongHTML = runWrong.length ? '<div class="sumcard"><b>Thẻ chưa vững (' + runWrong.length + '):</b> ' + runWrong.map(function (i) { var cc = cards[i]; return esc(cc.w); }).join(", ") + ' — các thẻ này sẽ xuất hiện lại theo lịch ôn.</div>' : "";
       app.innerHTML = stepHeader(step) + finishSummaryHTML("Bạn đã học xong bộ này!",
         '<p>Kết quả: ' + firstTryN + '/' + cards.length + ' thẻ thuộc ngay lần đầu · Thời gian học thật: ' + elapsedText() + '.</p>', wrongHTML, { chest: { key: step.id, title: step.title }, starsKey: "vocab:" + l.setIdx, appeal: "vocab:" + l.setIdx });
       wireBack(); wireNextStep();
+      if (!l.step) { var nsV = $("#btnNextStep"); if (nsV) { nsV.textContent = "Về Luyện tập"; nsV.onclick = function () { backFromLesson(); }; } }
       $("#btnRedo").onclick = function () { state.pos["vocab:" + l.setIdx] = 0; saveState(); lessonStart = Date.now(); runFirstTry = {}; runWrong = []; render(); };
     } else render();
   };
@@ -2872,7 +3088,7 @@ function renderVocab(app, l) {
     if (!cur.due) state.cards[key] = { box: cur.box || 0, due: addDaysStr(todayStr(), 1) };
     state.pos["vocab:" + l.setIdx] = pos + 1; saveState();
     if (pos + 1 >= cards.length) {
-      finishStep(step.id);
+      if (l.step) finishStep(step.id);
       var firstTryN = Object.keys(runFirstTry).filter(function (k) { return runFirstTry[k]; }).length;
       var skipWords = (state.vocabSkipped || []).filter(function (k) { return k.indexOf("s" + l.setIdx + ":") === 0; }).map(function (k) { var ci = +k.split(":")[1]; return cards[ci] ? esc(cards[ci].w) : k; }).join(", ");
       var wrongHTML = runWrong.length ? '<div class="sumcard"><b>Thẻ chưa vững (' + runWrong.length + '):</b> ' + runWrong.map(function (i) { var cc = cards[i]; return esc(cc.w); }).join(", ") + ' — các thẻ này sẽ xuất hiện lại theo lịch ôn.</div>' : "";
@@ -2880,6 +3096,7 @@ function renderVocab(app, l) {
       app.innerHTML = stepHeader(step) + finishSummaryHTML("Bạn đã học xong bộ này!",
         '<p>Kết quả: ' + firstTryN + '/' + cards.length + ' thẻ thuộc ngay lần đầu · Thời gian học thật: ' + elapsedText() + '.</p>', wrongHTML, { chest: { key: step.id, title: step.title }, starsKey: "vocab:" + l.setIdx, appeal: "vocab:" + l.setIdx });
       wireBack(); wireNextStep();
+      if (!l.step) { var nsV = $("#btnNextStep"); if (nsV) { nsV.textContent = "Về Luyện tập"; nsV.onclick = function () { backFromLesson(); }; } }
       $("#btnRedo").onclick = function () { state.pos["vocab:" + l.setIdx] = 0; saveState(); lessonStart = Date.now(); runFirstTry = {}; runWrong = []; render(); };
     } else render();
   };
@@ -2892,7 +3109,8 @@ function renderVocab(app, l) {
 
 /* ----- Trạm ngữ pháp ----- */
 function renderGrammar(app, l) {
-  var step = l.step, g = RB_NEW_GRAMMAR[l.gIdx];
+  var g = RB_NEW_GRAMMAR[l.gIdx];
+  var step = l.step || { id: "gramNew:" + l.gIdx, title: g.name, type: "Ngữ pháp · Câu đầu tiên" };
   if (l.quiz) { renderQuizEngine(app, l, g.quiz, "practice", "gram" + l.gIdx); return; }
   var html = stepHeader(step);
   html += '<div class="qblock"><p class="mut">' + esc(g.hook) + '</p>'
@@ -2965,9 +3183,11 @@ function renderQuizEngine(app, l, questions, mode, lessonId) {
     }).join("") + '<p class="mut">Các câu này đã vào Sổ lỗi sai để ôn lại sau.</p></div>' : "";
     var stats = '<p>Kết quả: ' + firstN + '/' + total + ' câu đúng ngay lần đầu (' + pct + '%) · Thời gian học thật: ' + elapsedText() + '.</p>';
     if (mode === "practice") {
-      finishStep(step.id);
+      if (stepIdx(step.id) >= 0) finishStep(step.id);
+      else { if (!state.skillDone) state.skillDone = {}; var wasP = !!state.skillDone[step.id]; state.skillDone[step.id] = true; awardXp(wasP ? 5 : 10); saveState(); }
       app.innerHTML = stepHeader(step) + finishSummaryHTML("Hoàn thành bài luyện!", stats, wrongHTML, { chest: { key: step.id, title: step.title }, starsKey: step.id, appeal: "gram:" + step.id }) + clRetrySectionHTML();
       wireBack(); wireNextStep(); clWireRetry(l);
+      if (stepIdx(step.id) < 0) { var nsP = $("#btnNextStep"); if (nsP) { nsP.textContent = "Về Luyện tập"; nsP.onclick = function () { backFromLesson(); }; } }
       $("#btnRedo").onclick = function () { l.qi = 0; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
     } else if (mode === "skill") {
       var was = !!(state.skillDone && state.skillDone[l.skillKey]);

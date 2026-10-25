@@ -24,8 +24,11 @@
 })();
 
 // ---------- 3. NHÃN CHƯƠNG BAND 0 (D2) + NHÃN NGHE (E) ----------
-// E: các mục nghe chào hỏi Band 0 (listening #96, #97, #98) không còn mang nhãn "Section 1".
-var RB_LISTEN_LABELS = { 96: "Nghe chậm: chào hỏi", 97: "Nghe chậm: chào hỏi", 98: "Nghe chậm: chào hỏi" };
+// E: các mục nghe chậm chào hỏi Band 0 — khóa là CHỈ SỐ 0-based trong CONTENT.listening,
+// tức mục đếm từ 1 là #97 (Chào hỏi buổi sáng), #98 (Giới thiệu tên), #108 (Tạm biệt).
+// Mục #99 (Hỏi tuổi, Band 2.0) KHÔNG thuộc nhóm này. Nhóm này dùng để tách riêng
+// 3 mục nghe chậm chào hỏi khỏi nhóm Section 1 ở tab Luyện tập.
+var RB_LISTEN_LABELS = { 96: "Nghe chậm: chào hỏi", 97: "Nghe chậm: chào hỏi", 107: "Nghe chậm: chào hỏi" };
 
 // ---------- 4. BA TRẠM NGỮ PHÁP SIÊ NHỎ BAND 0 (D1) ----------
 // Khuôn trạm: ví dụ trước — quy tắc sau — mẹo hình ảnh — khối Làm mẫu — 8 câu luyện có giải thích.
@@ -415,19 +418,126 @@ var RB_PH_PAIR_REASONS = {
 // Chương chưa dựng xong ghi "sắp mở" — không bịa nội dung bài học bên trong.
 var RB_CHAPTER_MAP = [
   { band: "Band 0", title: "Chào hỏi và 44 âm", status: "open", goal: "Hiểu 20 từ lớp học, nói được 3 câu I am... / This is... / My name is..., đọc đúng 44 âm tiếng Anh theo đợt khó.", can: ["Chào hỏi và giới thiệu tên", "Hiểu 20 từ lớp học", "Đọc đúng 44 âm tiếng Anh"] },
-  { band: "Band 2,0", title: "Câu đơn giản và từ quen thuộc", status: "soon", goal: "Hiểu và nói những câu rất đơn giản về bản thân và những việc quen thuộc hằng ngày.", can: ["Nói câu đơn về tên, tuổi, nơi ở", "Hiểu câu hỏi đơn giản khi nói chậm và rõ"] },
-  { band: "Band 2,5", title: "Nói về bản thân và gia đình", status: "soon", goal: "Kể ngắn gọn về gia đình, bạn bè và thói quen hằng ngày bằng câu đơn nối nhau.", can: ["Giới thiệu gia đình bằng vài câu đơn", "Nói về việc mình làm mỗi ngày"] },
-  { band: "Band 3,0", title: "Giao tiếp đơn giản hằng ngày", status: "soon", goal: "Xoay xở trong các tình huống quen thuộc: mua đồ, hỏi đường, hỏi giờ.", can: ["Hỏi và trả lời về giá cả, giờ giấc", "Hiểu biển báo và thông báo ngắn"] },
-  { band: "Band 3,5", title: "Mô tả người và việc quen thuộc", status: "soon", goal: "Mô tả người, đồ vật và nơi chốn quen thuộc bằng câu đơn và câu ghép đơn giản.", can: ["Mô tả ngoại hình và tính cách đơn giản", "Kể lại một việc đã làm hôm qua"] },
-  { band: "Band 4,0", title: "Giao tiếp cơ bản trong đời sống", status: "soon", goal: "Giao tiếp được ở mức cơ bản trong học tập và đời sống, dù còn ngập ngừng và sai nhiều.", can: ["Trao đổi thông tin cơ bản qua lại", "Viết đoạn ngắn về chủ đề quen thuộc"] },
-  { band: "Band 4,5", title: "Đọc - nghe đoạn ngắn, viết đoạn ngắn", status: "soon", goal: "Đọc hiểu đoạn văn ngắn, nghe hiểu ý chính của đoạn hội thoại chậm, viết đoạn văn có mở - thân - kết đơn giản.", can: ["Tìm ý chính trong đoạn ngắn", "Viết đoạn văn 5-7 câu đúng chủ đề"] },
-  { band: "Band 5,0", title: "Giao tiếp công việc và học tập cơ bản", status: "soon", goal: "Dùng tiếng Anh ở mức đủ cho giao tiếp hằng ngày và học tập cơ bản, còn sai nhưng người nghe vẫn hiểu.", can: ["Trình bày quan điểm đơn giản có lý do", "Đọc hiểu bài văn ngắn và trả lời câu hỏi"] },
-  { band: "Band 5,5", title: "Trình bày ý kiến, viết bài ngắn", status: "soon", goal: "Trình bày ý kiến có lý do và ví dụ, viết bài ngắn có cấu trúc rõ ràng.", can: ["Nói liền mạch 1-2 phút về chủ đề quen thuộc", "Viết bài Task 2 ngắn có luận điểm"] },
-  { band: "Band 6,0", title: "Giao tiếp tự tin trong học tập và công việc", status: "soon", goal: "Dùng tiếng Anh tự tin trong hầu hết tình huống học tập và công việc, dù còn sai ở câu phức tạp.", can: ["Thảo luận và tranh luận ở mức cơ bản", "Đọc hiểu bài dài và tóm tắt ý chính"] },
-  { band: "Band 6,5", title: "Lập luận và viết bài có cấu trúc", status: "soon", goal: "Lập luận có chiều sâu, dùng từ nối và câu phức tương đối chính xác.", can: ["Viết bài Task 2 có phản biện và kết luận", "Nói Part 3 có mở rộng ý"] },
-  { band: "Band 7,0", title: "Dùng tiếng Anh linh hoạt, chính xác", status: "soon", goal: "Dùng tiếng Anh linh hoạt trong học thuật và công việc, sai sót hiếm và không cản trở giao tiếp.", can: ["Dùng từ ngữ ít phổ biến đúng ngữ cảnh", "Viết bài có giọng văn phù hợp"] },
-  { band: "Band 7,5+", title: "Gần như người bản địa trong học thuật và công việc", status: "soon", goal: "Giao tiếp gần như trôi chảy, hiểu cả hàm ý và sắc thái trong văn bản và hội thoại phức tạp.", can: ["Hiểu hàm ý và giọng điệu trong bài khó", "Viết và nói có phong cách riêng, chính xác cao"] }
+  { band: "Band 2,0", title: "Câu đơn giản và từ quen thuộc", status: "open", goal: "Hiểu và nói những câu rất đơn giản về bản thân và những việc quen thuộc hằng ngày.", can: ["Nói câu đơn về tên, tuổi, nơi ở", "Hiểu câu hỏi đơn giản khi nói chậm và rõ"] },
+  { band: "Band 2,5", title: "Nói về bản thân và gia đình", status: "open", goal: "Kể ngắn gọn về gia đình, bạn bè và thói quen hằng ngày bằng câu đơn nối nhau.", can: ["Giới thiệu gia đình bằng vài câu đơn", "Nói về việc mình làm mỗi ngày"] },
+  { band: "Band 3,0", title: "Giao tiếp đơn giản hằng ngày", status: "open", goal: "Xoay xở trong các tình huống quen thuộc: mua đồ, hỏi đường, hỏi giờ.", can: ["Hỏi và trả lời về giá cả, giờ giấc", "Hiểu biển báo và thông báo ngắn"] },
+  { band: "Band 3,5", title: "Mô tả người và việc quen thuộc", status: "open", goal: "Mô tả người, đồ vật và nơi chốn quen thuộc bằng câu đơn và câu ghép đơn giản.", can: ["Mô tả ngoại hình và tính cách đơn giản", "Kể lại một việc đã làm hôm qua"] },
+  { band: "Band 4,0", title: "Giao tiếp cơ bản trong đời sống", status: "open", goal: "Giao tiếp được ở mức cơ bản trong học tập và đời sống, dù còn ngập ngừng và sai nhiều.", can: ["Trao đổi thông tin cơ bản qua lại", "Viết đoạn ngắn về chủ đề quen thuộc"] },
+  { band: "Band 4,5", title: "Đọc - nghe đoạn ngắn, viết đoạn ngắn", status: "open", goal: "Đọc hiểu đoạn văn ngắn, nghe hiểu ý chính của đoạn hội thoại chậm, viết đoạn văn có mở - thân - kết đơn giản.", can: ["Tìm ý chính trong đoạn ngắn", "Viết đoạn văn 5-7 câu đúng chủ đề"] },
+  { band: "Band 5,0", title: "Giao tiếp công việc và học tập cơ bản", status: "open", goal: "Dùng tiếng Anh ở mức đủ cho giao tiếp hằng ngày và học tập cơ bản, còn sai nhưng người nghe vẫn hiểu.", can: ["Trình bày quan điểm đơn giản có lý do", "Đọc hiểu bài văn ngắn và trả lời câu hỏi"] },
+  { band: "Band 5,5", title: "Trình bày ý kiến, viết bài ngắn", status: "open", goal: "Trình bày ý kiến có lý do và ví dụ, viết bài ngắn có cấu trúc rõ ràng.", can: ["Nói liền mạch 1-2 phút về chủ đề quen thuộc", "Viết bài Task 2 ngắn có luận điểm"] },
+  { band: "Band 6,0", title: "Giao tiếp tự tin trong học tập và công việc", status: "open", goal: "Dùng tiếng Anh tự tin trong hầu hết tình huống học tập và công việc, dù còn sai ở câu phức tạp.", can: ["Thảo luận và tranh luận ở mức cơ bản", "Đọc hiểu bài dài và tóm tắt ý chính"] },
+  { band: "Band 6,5", title: "Lập luận và viết bài có cấu trúc", status: "open", goal: "Lập luận có chiều sâu, dùng từ nối và câu phức tương đối chính xác.", can: ["Viết bài Task 2 có phản biện và kết luận", "Nói Part 3 có mở rộng ý"] },
+  { band: "Band 7,0", title: "Dùng tiếng Anh linh hoạt, chính xác", status: "open", goal: "Dùng tiếng Anh linh hoạt trong học thuật và công việc, sai sót hiếm và không cản trở giao tiếp.", can: ["Dùng từ ngữ ít phổ biến đúng ngữ cảnh", "Viết bài có giọng văn phù hợp"] },
+  { band: "Band 7,5+", title: "Gần như người bản địa trong học thuật và công việc", status: "open", goal: "Giao tiếp gần như trôi chảy, hiểu cả hàm ý và sắc thái trong văn bản và hội thoại phức tạp.", can: ["Hiểu hàm ý và giọng điệu trong bài khó", "Viết và nói có phong cách riêng, chính xác cao"] }
 ];
+
+// ---------- DON LON XON (25/10/2026): BUOC LO TRINH CHANG 2-13 TU KHO CO SAN ----------
+// Moi buoc la mot bai kho co san, xep theo chang (band) cua chinh bai do.
+// Thu tu trong chuong: Tu vung -> Ngu phap -> Doc -> Nghe ngan -> Nghe dai ->
+// Noi -> Nhap vai -> Viet -> Luyen viet -> Go cau. Bo tu chua gan band (16 bo)
+// khong vao chuong nao — van mo duoc o tab Luyen tap, muc "Chua xep band".
+// Bai kiem tra cuoi chuong chi co o chuong 1; cac chuong sau chua co.
+function typingModeOfLevel(lv) {
+  lv = lv || "";
+  if (lv.indexOf("6.0") >= 0 || lv.indexOf("6.5") >= 0 || lv.indexOf("7.") >= 0) return "nangcao";
+  if (lv.indexOf("5.0") >= 0 || lv.indexOf("5.5") >= 0) return "coban";
+  return "nentang";
+}
+var RB_CH_STEP_TYPES = ["Từ vựng", "Ngữ pháp", "Đọc", "Nghe ngắn", "Nghe dài", "Nói", "Nhập vai", "Viết", "Luyện viết", "Gõ câu"];
+var RB_CH_STEPS_CACHE = null;
+function rbBuildChSteps() {
+  var out = {};
+  if (typeof CONTENT === "undefined") return out;
+  var bands = ["Band 2,0", "Band 2,5", "Band 3,0", "Band 3,5", "Band 4,0", "Band 4,5",
+               "Band 5,0", "Band 5,5", "Band 6,0", "Band 6,5", "Band 7,0", "Band 7,5+"];
+  bands.forEach(function (b) { out[b] = []; });
+  function add(band, title, type, lesson, doneKey) {
+    // Kho ghi band kieu "Band 2.0" (cham), ban do chuong ghi "Band 2,0" (phay):
+    // chuan hoa ve dang phay de khop chuong.
+    band = String(band || "").replace(".", ",");
+    if (out[band]) out[band].push({ title: title, type: type, lesson: lesson, doneKey: doneKey });
+  }
+  (CONTENT.vocab || []).forEach(function (s, i) {
+    if (s.band) add(s.band, s.topic + " (" + s.cards.length + " từ)", "Từ vựng",
+      { type: "vocab", setIdx: i }, "vocabPos:" + i);
+  });
+  (CONTENT.grammar || []).forEach(function (g, i) {
+    if (g.level) add(g.level, g.name, "Ngữ pháp",
+      { type: "skillGramOld", idx: i, skillKey: "gramOld:" + i, title: g.name }, "gramOld:" + i);
+  });
+  (CONTENT.reading || []).forEach(function (r, i) {
+    if (r.level) add(r.level, r.title, "Đọc", { type: "skillRead", idx: i }, "read:" + i);
+  });
+  (CONTENT.listening || []).forEach(function (r, i) {
+    if (r.band) add(r.band, r.topic, "Nghe ngắn", { type: "skillListen", idx: i }, "listen:" + i);
+  });
+  (CONTENT.listeningPlus || []).forEach(function (r, i) {
+    if (r.band) add(r.band, r.section + " — " + r.topic, "Nghe dài",
+      { type: "skillListenLong", idx: i }, "listenLong:" + i);
+  });
+  (CONTENT.speaking || []).forEach(function (s, i) {
+    if (s.band) add(s.band, s.topic, "Nói", { type: "skillSpeak", idx: i }, "speak:" + i);
+  });
+  (CONTENT.roleplay || []).forEach(function (r, i) {
+    if (r.band) add(r.band, r.title, "Nhập vai", { type: "skillRoleplay", idx: i }, "roleplay:" + i);
+  });
+  (CONTENT.writing || []).forEach(function (w, i) {
+    if (w.band) add(w.band, w.title, "Viết", { type: "skillWrite", idx: i }, "write:" + i);
+  });
+  (CONTENT.writingDrills || []).forEach(function (d, i) {
+    if (d.band) add(d.band, d.title, "Luyện viết", { type: "skillDrill", idx: i }, "drill:" + i);
+  });
+  var modeLists = { nentang: [], coban: [], nangcao: [] };
+  (CONTENT.typing || []).forEach(function (s, gi) {
+    modeLists[typingModeOfLevel(s.level)].push({ gi: gi, s: s });
+  });
+  Object.keys(modeLists).forEach(function (m) {
+    modeLists[m].forEach(function (it, j) {
+      add(it.s.level, it.s.title, "Gõ câu",
+        { type: "skillTyping", mode: m, setIdx: j }, "typing:" + m + ":" + j);
+    });
+  });
+  return out;
+}
+function rbChSteps(band) {
+  if (!RB_CH_STEPS_CACHE) RB_CH_STEPS_CACHE = rbBuildChSteps();
+  return RB_CH_STEPS_CACHE[band] || [];
+}
+function rbChMissing(band) {
+  var have = {};
+  rbChSteps(band).forEach(function (st) { have[st.type] = true; });
+  return RB_CH_STEP_TYPES.filter(function (t) { return !have[t]; });
+}
+function rbStepDone(st) {
+  if (!st) return false;
+  try {
+    if (st.doneKey.indexOf("vocabPos:") === 0) {
+      var vi = +st.doneKey.split(":")[1];
+      var set = CONTENT.vocab[vi];
+      return !!set && (state.pos["vocab:" + vi] || 0) >= set.cards.length;
+    }
+    if (st.doneKey.indexOf("typing:") === 0) {
+      return !!(state.skillDone && (state.skillDone[st.doneKey] || state.skillDone["typing:" + st.lesson.setIdx]));
+    }
+    return !!(state.skillDone && state.skillDone[st.doneKey]);
+  } catch (e) { return false; }
+}
+function rbFirstUndoneStep(band) {
+  var steps = rbChSteps(band);
+  for (var i = 0; i < steps.length; i++) if (!rbStepDone(steps[i])) return steps[i];
+  return steps[0] || null;
+}
+function rbFirstUndoneAcrossBands() {
+  var bands = ["Band 2,0", "Band 2,5", "Band 3,0", "Band 3,5", "Band 4,0", "Band 4,5",
+               "Band 5,0", "Band 5,5", "Band 6,0", "Band 6,5", "Band 7,0", "Band 7,5+"];
+  for (var i = 0; i < bands.length; i++) {
+    var steps = rbChSteps(bands[i]);
+    for (var j = 0; j < steps.length; j++) if (!rbStepDone(steps[j])) return steps[j];
+  }
+  return null;
+}
+
 // ---------- CHAT LOC (GĐ2, a17): So tay chang cho 12 chuong sau ----------
 // Noi dung tu soan tong quat theo muc tieu tung chuong (RB_CHAPTER_MAP),
 // khong chep sach hay de thi. Chuong 1 dung RB_CH1_GUIDEBOOK san co.
