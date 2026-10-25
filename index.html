@@ -67,7 +67,7 @@ p{margin:8px 0}
 #nudgeModal .box{background:#fff;border-radius:18px;padding:20px;max-width:480px}
 input[type=text],input[type=number]{border:1.5px solid var(--line);border-radius:12px;padding:9px 12px;font-size:16px}
 iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radius:14px}
-.mirror-box{margin-top:14px}.mr-video{transform:scaleX(-1);width:100%;max-width:420px;border-radius:14px;background:#000}.mr-lib-row{display:flex;gap:10px;flex-wrap:wrap}.mr-item{width:280px}.mr-item video{width:100%;border-radius:12px}.ai-good{color:#1E9E6A;font-weight:700}.ai-mid{color:#B7791F;font-weight:700}.ai-bad{color:#D9534F;font-weight:700}
+.mirror-box{margin-top:14px}.mr-video{transform:scaleX(-1);width:100%;max-width:420px;border-radius:14px;background:#000}.mr-stage{position:relative;max-width:420px}.mr-overlay{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}.mr-feed table{width:100%;border-collapse:collapse}.mr-feed td,.mr-feed th{border-bottom:1px solid #E7DCC6;padding:4px 6px;text-align:left;font-size:13px}.mr-lib-row{display:flex;gap:10px;flex-wrap:wrap}.mr-item{width:280px}.mr-item video{width:100%;border-radius:12px}.ai-good{color:#1E9E6A;font-weight:700}.ai-mid{color:#B7791F;font-weight:700}.ai-bad{color:#D9534F;font-weight:700}
 </style>
 </head>
 <body>
@@ -1035,7 +1035,7 @@ function renderPronLesson(app, l) {
    Video chỉ lưu trên máy (IndexedDB, tối đa 12), không gửi đi đâu.
    Độ chính xác nhận diện trên mặt thật CHƯA đo — giao diện ghi rõ điều này. */
 var aiRec = null, aiBlob = null, aiUrl = null;
-var MR = { slot: null, sym: null, stream: null, rec: null, chunks: [], segTimer: null, curBlob: null, stopping: false, fm: null, fmOn: false, fmBusy: false, holdStart: 0, autoDone: false, pendingAuto: false, urls: [] };
+var MR = { slot: null, sym: null, stream: null, rec: null, chunks: [], segTimer: null, curBlob: null, stopping: false, fm: null, fmOn: false, fmBusy: false, holdStart: 0, autoDone: false, pendingAuto: false, pendingManual: false, stableCount: 0, momentDone: {}, urls: [] };
 function mrSupported() { try { return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia); } catch (e) { return false; } }
 function mrRecSupported() { try { return typeof MediaRecorder !== "undefined"; } catch (e) { return false; } }
 function mrPickMime() {
@@ -1053,6 +1053,103 @@ function mrIndices(lm) {
   var round = mrClamp(0.7 * mrClamp((0.235 - wRatio) / 0.125) + 0.3 * mrClamp((tall - 0.5) / 0.5));
   var open = mrClamp((oRatio - 0.008) / 0.115);
   return { round: round, spread: spread, open: open };
+}
+/* ---------- Gương nâng cấp: vẽ khung hình + điểm khớp khẩu hình % + bắt khoảnh khắc ----------
+   Ngưỡng dưới đây là TẠM (chưa đo độ chính xác trên mặt thật — chủ web vẫn cần thử
+   /u:/ và /æ/ trên điện thoại thật), ghi rõ để chỉnh được, không quảng cáo tuyệt đối.
+   Điểm % này là ĐIỂM KHỚP KHẨU HÌNH (hình miệng nhìn thấy được), KHÔNG phải điểm
+   phát âm theo âm thanh — điểm âm thanh do AI chấm (pronounce) hiển thị riêng. */
+var MR_SCORE_PASS = 80;        /* % một mục được tính là "đạt" */
+var MR_CAPTURE_FRAMES = 6;     /* số khung hình liên tiếp đạt mới tự bắt khoảnh khắc */
+var MR_CAPTURE_MIN_SCORE = 80; /* % tổng tối thiểu của một khung hình để tính là đạt */
+var MR_LIP_OUTER = [61, 146, 91, 181, 84, 17, 314, 405, 321, 375, 291, 409, 270, 269, 267, 0, 37, 39, 40, 185];
+var MR_LIP_INNER = [78, 95, 88, 178, 87, 14, 317, 402, 318, 324, 308, 415, 310, 311, 312, 13, 82, 81, 80, 191];
+function mrScoreFrame(idx, tg) {
+  if (!tg) return null;
+  var defs = [
+    { key: "o", label: "Mở hàm", v: idx.open, lo: "Mở hàm thêm một chút", hi: "Khép hàm lại một chút" },
+    { key: "r", label: "Tròn môi", v: idx.round, lo: "Tròn môi hơn, chu môi ra trước một chút", hi: "Thả lỏng môi, bớt chu ra" },
+    { key: "s", label: "Rộng môi", v: idx.spread, lo: "Kéo môi dẹt sang hai bên hơn như đang cười nhẹ", hi: "Thả lỏng môi, bớt kéo dẹt sang hai bên" },
+  ];
+  var items = [];
+  defs.forEach(function (d) {
+    var z = tg[d.key];
+    if (!z) return;
+    var score, ok, tip = "";
+    if (d.v >= z[0] && d.v <= z[1]) { score = 100; ok = true; }
+    else {
+      var dist = d.v < z[0] ? z[0] - d.v : d.v - z[1];
+      var tol = Math.max(0.15, z[1] - z[0]);
+      score = Math.max(0, Math.round(100 - (dist / tol) * 100));
+      ok = score >= MR_SCORE_PASS;
+      tip = d.v < z[0] ? d.lo : d.hi;
+    }
+    items.push({ key: d.key, label: d.label, v: d.v, lo: z[0], hi: z[1], score: score, ok: ok, tip: tip });
+  });
+  if (!items.length) return null;
+  var total = Math.round(items.reduce(function (a, it) { return a + it.score; }, 0) / items.length);
+  return { total: total, items: items };
+}
+function mrRenderFeedback(slot, score) {
+  var body = slot && slot.querySelector(".mr-feed-body");
+  if (!body) return;
+  if (!score) {
+    body.innerHTML = '<p class="mut">Âm này camera khó chấm tự động — hãy tự soi gương và đối chiếu với hình mẫu.</p>';
+    return;
+  }
+  var rows = score.items.map(function (it) {
+    return '<tr><td>' + esc(it.label) + '</td><td>' + it.v.toFixed(2) + ' (đích ' + it.lo.toFixed(2) + '–' + it.hi.toFixed(2) + ')</td><td>' + it.score + '%</td><td>' + (it.ok ? '<span class="ai-good">Đạt</span>' : '<span class="ai-bad">Chưa đạt</span>') + '</td><td>' + (it.ok ? '' : esc(it.tip)) + '</td></tr>';
+  }).join("");
+  body.innerHTML = '<p><b>Điểm khớp khẩu hình: ' + score.total + '%</b> <span class="mut">(chỉ tính hình miệng nhìn thấy được, không phải điểm phát âm theo âm thanh)</span></p>'
+    + '<table><tr><th>Mục</th><th>Số đo (đích)</th><th>Điểm</th><th>Kết quả</th><th>Gợi ý sửa</th></tr>' + rows + '</table>'
+    + '<p class="mut">Giữ ổn định: ' + MR.stableCount + '/' + MR_CAPTURE_FRAMES + ' khung hình đạt liên tiếp để tự bắt khoảnh khắc.</p>';
+}
+function mrDrawFrame(slot, lm) {
+  var cv = slot && slot.querySelector(".mr-overlay");
+  var v = slot && slot.querySelector(".mr-video");
+  if (!cv || !v) return;
+  var W = v.videoWidth || v.clientWidth || 640, H = v.videoHeight || v.clientHeight || 480;
+  if (cv.width !== W) { cv.width = W; cv.height = H; }
+  var ctx = null;
+  try { ctx = cv.getContext && cv.getContext("2d"); } catch (e) {}
+  if (!ctx) return;
+  /* Video hiển thị đã lật ngang bằng CSS scaleX(-1) nên điểm vẽ phải lật x:
+     x_hiển_thị = (1 - x_gốc) * W. Vị trí lưỡi camera không thấy nên không vẽ lưỡi. */
+  var px = function (i) { var p = lm[i]; return p ? [(1 - p.x) * W, p.y * H] : null; };
+  ctx.clearRect(0, 0, W, H);
+  ctx.lineWidth = Math.max(2, W / 320);
+  var ring = function (ids, color) {
+    ctx.strokeStyle = color; ctx.beginPath();
+    ids.forEach(function (id, k) {
+      var p = px(id); if (!p) return;
+      if (k === 0) ctx.moveTo(p[0], p[1]); else ctx.lineTo(p[0], p[1]);
+    });
+    ctx.closePath(); ctx.stroke();
+  };
+  ring(MR_LIP_OUTER, "#FFB800");
+  ring(MR_LIP_INNER, "#FF6B4A");
+  ctx.fillStyle = "#FFFFFF";
+  [61, 291, 0, 17, 13, 14].forEach(function (id) {
+    var p = px(id); if (!p) return;
+    ctx.beginPath(); ctx.arc(p[0], p[1], Math.max(3, W / 160), 0, Math.PI * 2); ctx.fill();
+  });
+}
+function mrSnapshotFrame(slot) {
+  try {
+    var v = slot && slot.querySelector(".mr-video");
+    var cv = slot && slot.querySelector(".mr-overlay");
+    if (!v) return "";
+    var W = v.videoWidth || v.clientWidth || 640, H = v.videoHeight || v.clientHeight || 480;
+    var c = document.createElement("canvas"); c.width = W; c.height = H;
+    var ctx = c.getContext && c.getContext("2d");
+    if (!ctx) return "";
+    ctx.save();
+    ctx.translate(W, 0); ctx.scale(-1, 1); /* khung video lật ngang cho khớp hình gương */
+    ctx.drawImage(v, 0, 0, W, H);
+    ctx.restore();
+    if (cv) ctx.drawImage(cv, 0, 0, W, H); /* lớp vẽ đã ở tọa độ hiển thị nên chép thẳng */
+    return c.toDataURL("image/png");
+  } catch (e) { return ""; }
 }
 function mrDb() {
   return new Promise(function (resolve, reject) {
@@ -1076,7 +1173,7 @@ function mrVidAll() {
     });
   });
 }
-function mrVidAdd(sym, blob) {
+function mrVidAddFull(rec) {
   return mrDb().then(function (db) {
     return new Promise(function (resolve, reject) {
       var store = db.transaction("videos", "readwrite").objectStore("videos");
@@ -1084,13 +1181,18 @@ function mrVidAdd(sym, blob) {
       all.onsuccess = function () {
         var list = (all.result || []).sort(function (a, b) { return a.id - b.id; });
         while (list.length >= 12) { store.delete(list.shift().id); }
-        var req = store.add({ sym: sym, ts: Date.now(), blob: blob });
+        var req = store.add(rec);
         req.onsuccess = function () { db.close(); resolve(); };
         req.onerror = function () { db.close(); reject(req.error); };
       };
       all.onerror = function () { db.close(); reject(all.error); };
     });
   });
+}
+function mrVidAdd(sym, blob, extra) {
+  var rec = { sym: sym, ts: Date.now(), blob: blob };
+  if (extra) Object.assign(rec, extra);
+  return mrVidAddFull(rec);
 }
 function mrVidDelete(id) {
   return mrDb().then(function (db) {
@@ -1125,9 +1227,11 @@ function mirrorHTML(sym) {
   if (!mrSupported()) {
     cam = '<p class="mut">Trình duyệt này chưa hỗ trợ camera (cần mở qua https và cho phép camera) — các phần học khác vẫn chạy bình thường.</p>';
   } else {
-    cam = '<video class="mr-video" autoplay muted playsinline style="display:none"></video>'
+    cam = '<div class="mr-stage"><video class="mr-video" autoplay muted playsinline style="display:none"></video><canvas class="mr-overlay" style="display:none"></canvas></div>'
       + '<p class="mr-status mut">Bấm “Bật camera” để soi khẩu hình cạnh hình mẫu.</p>'
+      + '<div class="mr-feed"><p class="mut">Điểm % dưới đây là <b>ĐIỂM KHỚP KHẨU HÌNH</b> (hình miệng nhìn thấy được), <b>KHÔNG</b> phải điểm phát âm theo âm thanh. Điểm phát âm theo âm thanh do AI chấm (pronounce) hiển thị riêng ở bước AI chấm, không trộn hai điểm thành một. Ngưỡng điểm và vùng đích là tạm (chưa đo trên mặt thật) và có thể chỉnh.</p><div class="mr-feed-body"><p class="mut">Bật camera để xem điểm khớp từng khung hình.</p></div></div>'
       + '<div class="row"><button class="btn btn-primary mr-start">📷 Bật camera</button><button class="btn mr-stop" style="display:none">Tắt camera</button><button class="btn mr-save" disabled>💾 Lưu video mẫu</button><button class="btn mr-clear">Xóa hết video</button></div>'
+      + '<p class="mut mr-lib-count">Thư viện: chưa có video mẫu nào.</p>'
       + '<p class="mut">Nhận diện khẩu hình tự động chỉ là gợi ý — độ chính xác trên mặt thật chưa được đo, nên hãy đối chiếu thêm bằng mắt với hình mẫu.</p>';
   }
   return '<div class="mirror-box card"><h3>📹 Gương khẩu hình</h3>'
@@ -1140,27 +1244,49 @@ function mirrorHTML(sym) {
 function mrRenderLib(slot) {
   var lib = slot.querySelector(".mr-lib");
   if (!lib) return;
+  var cnt = slot.querySelector(".mr-lib-count");
   MR.urls.forEach(function (u) { try { URL.revokeObjectURL(u); } catch (e) {} });
   MR.urls = [];
   if (typeof indexedDB === "undefined") { lib.innerHTML = '<p class="mut">Trình duyệt này không lưu được video mẫu.</p>'; return; }
   mrVidAll().then(function (list) {
+    if (cnt) cnt.textContent = list.length ? ("Thư viện: " + list.length + " video mẫu.") : "Thư viện: chưa có video mẫu nào.";
     if (!list.length) { lib.innerHTML = '<p class="mut">Chưa có video mẫu nào.</p>'; return; }
     lib.innerHTML = '<h4>Video mẫu đúng của bạn</h4><div class="mr-lib-row">' + list.slice().reverse().map(function (v) {
-      var url = URL.createObjectURL(v.blob); MR.urls.push(url);
-      return '<div class="mr-item"><video controls src="' + url + '"></video><p class="mut">Âm /' + esc(v.sym) + '/ · ' + new Date(v.ts).toLocaleString("vi-VN") + '</p><button class="btn mr-del" data-id="' + v.id + '">Xóa video này</button></div>';
+      var media = "";
+      if (v.blob) { var url = URL.createObjectURL(v.blob); MR.urls.push(url); media = '<video controls src="' + url + '"></video>'; }
+      else if (v.shot) { media = '<img src="' + v.shot + '" style="width:100%;border-radius:12px" alt="Khung hình đúng">'; }
+      var cap = v.kind === "moment" ? ('Khoảnh khắc đúng · Khớp khẩu hình ' + (v.score != null ? v.score + '%' : '')) : '';
+      return '<div class="mr-item">' + media + '<p class="mut">Âm /' + esc(v.sym) + '/ · ' + (cap ? cap + ' · ' : '') + new Date(v.ts).toLocaleString("vi-VN") + '</p><button class="btn mr-del" data-id="' + v.id + '">Xóa video này</button></div>';
     }).join("") + '</div>';
     lib.querySelectorAll(".mr-del").forEach(function (b) {
       b.onclick = function () { mrVidDelete(+b.dataset.id).then(function () { mrRenderLib(slot); }); };
     });
-  }, function () { lib.innerHTML = '<p class="mut">Không đọc được thư viện video mẫu.</p>'; });
+  }, function (err) { lib.innerHTML = '<p class="mut">Không đọc được thư viện video mẫu' + (err ? ' (lỗi: ' + (err.name || err.message || String(err)) + ')' : '') + '.</p>'; });
 }
 function mrSetStatus(slot, t) { var s = slot && slot.querySelector(".mr-status"); if (s) s.textContent = t; }
 function mrSaveCurrent(slot, auto) {
-  if (!MR.curBlob) { toast("Chưa có đoạn video nào — bật camera rồi chờ vài giây."); return; }
+  if (!MR.curBlob) {
+    /* Chưa có đoạn hoàn tất nhưng đang quay: cắt ngay đoạn đang quay để lưu,
+       thay vì chỉ báo "chưa có đoạn nào" (bẫy hay gặp: bấm Lưu trước nhịp 7 giây). */
+    if (MR.rec && MR.rec.state === "recording" && !MR.stopping) {
+      MR.pendingManual = true;
+      try { MR.rec.stop(); } catch (e) {}
+      mrSetStatus(slot, "Đang cắt đoạn vừa quay để lưu…");
+      return;
+    }
+    toast("Chưa có đoạn video nào — bật camera rồi chờ vài giây.");
+    return;
+  }
   mrVidAdd(MR.sym, MR.curBlob).then(function () {
     mrRenderLib(slot);
-    toast(auto ? "Đã lưu video mẫu tự bắt." : "Đã lưu video mẫu.");
-  }, function () { toast("Không lưu được video mẫu trên trình duyệt này."); });
+    var libEl = slot.querySelector(".mr-lib");
+    if (libEl && libEl.scrollIntoView) { try { libEl.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {} }
+    toast(auto ? "Đã lưu video mẫu tự bắt — xem ở mục “Video mẫu đúng của bạn” ngay bên dưới." : "Đã lưu video mẫu — xem ở mục “Video mẫu đúng của bạn” ngay bên dưới.");
+  }, function (err) {
+    var why = err ? (err.name || err.message || String(err)) : "lỗi không rõ";
+    mrSetStatus(slot, "Không lưu được video mẫu (" + why + ") — hãy chụp dòng này gửi lại.");
+    toast("Không lưu được video mẫu trên trình duyệt này (" + why + ").");
+  });
 }
 function mrStartSeg(slot) {
   if (!MR.stream || MR.stopping) return;
@@ -1169,20 +1295,31 @@ function mrStartSeg(slot) {
     var mime = mrPickMime();
     MR.rec = mime ? new MediaRecorder(MR.stream, { mimeType: mime }) : new MediaRecorder(MR.stream);
   } catch (e) { MR.rec = null; return; }
+  var selfRec = MR.rec;
+  var selfMime = mime;
   MR.rec.ondataavailable = function (e) { if (e.data && e.data.size) MR.chunks.push(e.data); };
   MR.rec.onstop = function () {
+    /* Dùng selfRec thay vì MR.rec: mirrorStop() có thể đã gán MR.rec = null trước
+       khi onstop bất đồng bộ chạy — đọc MR.rec.mimeType lúc đó gây crash và làm
+       mất đoạn quay + lệnh lưu tự động đang chờ. */
+    var wantAuto = MR.pendingAuto, wantManual = MR.pendingManual;
+    MR.pendingAuto = false; MR.pendingManual = false;
     if (MR.chunks.length) {
-      MR.curBlob = new Blob(MR.chunks, { type: MR.rec.mimeType || "video/webm" });
+      MR.curBlob = new Blob(MR.chunks, { type: selfMime || (selfRec && selfRec.mimeType) || "" });
       var saveBtn = slot.querySelector(".mr-save"); if (saveBtn) saveBtn.disabled = false;
-      if (MR.pendingAuto) { MR.pendingAuto = false; mrSaveCurrent(slot, true); }
+      if (wantAuto || wantManual) mrSaveCurrent(slot, wantAuto);
+    } else if (wantManual) {
+      toast("Đoạn quay quá ngắn nên chưa lưu được — hãy quay thêm vài giây rồi bấm Lưu lại.");
     }
-    MR.rec = null;
-    if (!MR.stopping) mrStartSeg(slot);
+    if (MR.rec === selfRec) MR.rec = null;
+    /* Chỉ quay đoạn mới khi chính recorder này vẫn là recorder hiện tại (tránh
+       onstop cũ khởi động lại sau khi người học đã tắt camera hoặc mở lại gương). */
+    if (!MR.stopping && MR.stream && MR.rec === null) mrStartSeg(slot);
   };
   try { MR.rec.start(); } catch (e) { MR.rec = null; }
 }
 function mirrorStop() {
-  MR.stopping = true; MR.fmOn = false; MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false;
+  MR.stopping = true; MR.fmOn = false; MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingManual = false; MR.stableCount = 0;
   if (MR.segTimer) { clearInterval(MR.segTimer); MR.segTimer = null; }
   var slot = MR.slot;
   if (MR.rec && MR.rec.state === "recording") { try { MR.rec.stop(); } catch (e) {} }
@@ -1191,6 +1328,9 @@ function mirrorStop() {
   MR.stream = null; MR.curBlob = null;
   if (slot) {
     var v = slot.querySelector(".mr-video"); if (v) { v.srcObject = null; v.style.display = "none"; }
+    var ov = slot.querySelector(".mr-overlay");
+    if (ov) { ov.style.display = "none"; try { var ocx = ov.getContext && ov.getContext("2d"); if (ocx) ocx.clearRect(0, 0, ov.width, ov.height); } catch (e) {} }
+    var fb = slot.querySelector(".mr-feed-body"); if (fb) fb.innerHTML = '<p class="mut">Bật camera để xem điểm khớp từng khung hình.</p>';
     var st = slot.querySelector(".mr-start"); if (st) st.style.display = "inline-block";
     var sp = slot.querySelector(".mr-stop"); if (sp) sp.style.display = "none";
     var sv = slot.querySelector(".mr-save"); if (sv) sv.disabled = true;
@@ -1213,6 +1353,22 @@ function mrFaceMesh(slot) {
           if (!lm) return;
           var idx = mrIndices(lm), tg = RB_MIRROR_TARGETS[MR.sym];
           if (!tg) return;
+          try { mrDrawFrame(slot, lm); } catch (e) {}
+          var score = mrScoreFrame(idx, tg);
+          mrRenderFeedback(slot, score);
+          /* Bắt khoảnh khắc: tổng điểm >= ngưỡng trong N khung hình liên tiếp. */
+          if (score && score.total >= MR_CAPTURE_MIN_SCORE) MR.stableCount++;
+          else MR.stableCount = 0;
+          if (score && MR.stableCount >= MR_CAPTURE_FRAMES && !MR.momentDone[MR.sym]) {
+            MR.momentDone[MR.sym] = true;
+            MR.autoDone = true; /* khoảnh khắc đã gồm clip nên không lưu thêm video tự bắt trùng */
+            var shot = mrSnapshotFrame(slot);
+            mrVidAddFull({ sym: MR.sym, ts: Date.now(), blob: MR.curBlob || null, shot: shot, kind: "moment", score: score.total, items: score.items }).then(function () {
+              mrRenderLib(slot);
+              toast("Đã bắt khoảnh khắc nói đúng — xem ở mục “Video mẫu đúng của bạn” ngay bên dưới.");
+            }, function () {});
+          }
+          if (MR.momentDone[MR.sym]) { mrSetStatus(slot, "Đã bắt khoảnh khắc đúng — xem ở mục “Video mẫu đúng của bạn” ngay bên dưới."); return; }
           var keys = [["r", idx.round], ["s", idx.spread], ["o", idx.open]];
           var has = false, pass = true;
           keys.forEach(function (kv) {
@@ -1256,14 +1412,16 @@ function mirrorStart(slot) {
   if (!mrSupported()) return;
   navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(function (stream) {
     MR.stream = stream; MR.slot = slot; MR.sym = slot.querySelector(".mr-sel").value || MR.sym;
-    MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false;
+    MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false; MR.pendingManual = false; MR.stableCount = 0; MR.momentDone = {};
     var v = slot.querySelector(".mr-video");
     if (v) { v.srcObject = stream; v.style.display = "block"; }
+    var ov0 = slot.querySelector(".mr-overlay"); if (ov0) ov0.style.display = "block";
     var st = slot.querySelector(".mr-start"); if (st) st.style.display = "none";
     var sp = slot.querySelector(".mr-stop"); if (sp) sp.style.display = "inline-block";
     mrSetStatus(slot, "Đang soi gương — làm hình miệng như hình mẫu và giữ đúng khoảng 1 giây để tự bắt video.");
     if (mrRecSupported()) {
       mrStartSeg(slot);
+      var sv0 = slot.querySelector(".mr-save"); if (sv0) sv0.disabled = false;
       MR.segTimer = setInterval(function () { if (MR.rec && MR.rec.state === "recording") { try { MR.rec.stop(); } catch (e) {} } }, 7000);
     } else {
       mrSetStatus(slot, "Đang soi gương. Trình duyệt này không hỗ trợ quay video — vẫn soi gương được, nhưng không lưu video mẫu.");
