@@ -67,6 +67,7 @@ p{margin:8px 0}
 #nudgeModal .box{background:#fff;border-radius:18px;padding:20px;max-width:480px}
 input[type=text],input[type=number]{border:1.5px solid var(--line);border-radius:12px;padding:9px 12px;font-size:16px}
 iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radius:14px}
+.mirror-box{margin-top:14px}.mr-video{transform:scaleX(-1);width:100%;max-width:420px;border-radius:14px;background:#000}.mr-lib-row{display:flex;gap:10px;flex-wrap:wrap}.mr-item{width:280px}.mr-item video{width:100%;border-radius:12px}.ai-good{color:#1E9E6A;font-weight:700}.ai-mid{color:#B7791F;font-weight:700}.ai-bad{color:#D9534F;font-weight:700}
 </style>
 </head>
 <body>
@@ -170,7 +171,7 @@ function jawSegsHTML(x) { var h = ""; for (var i = 0; i < 8; i++) h += '<i class
 function mouthFiguresHTML(p) {
   var side = function (q, cap) { return '<figure class="ph-fig">' + mouthSVG(q) + '<figcaption>' + cap + '</figcaption></figure>'; };
   var front = function (q, cap) { return '<figure class="ph-fig">' + frontMouthSVG(q) + '<figcaption>' + cap + '</figcaption></figure>'; };
-  var jawNote = '<span class="mut">(thang tương đối của trang - để so sánh độ mở miệng giữa các âm)</span>';
+  var jawNote = '<span class="mut">(độ mở hàm do trang tự gán, tương đối — để so sánh giữa các âm)</span>';
   var tgt = RB_PH_GLIDE[p.s];
   if (tgt) {
     var e = RB_PH_TARGETS[tgt] || p;
@@ -206,7 +207,7 @@ function loadState() {
   return st;
 }
 var state = loadState();
-var curTab = "home", curLesson = null, returnTab = "home", nudgeShown = false, lessonStart = 0, runFirstTry = {}, runWrong = [];
+var curTab = "home", curLesson = null, returnTab = "home", nudgeShown = false, phNudgeShown = false, lessonStart = 0, runFirstTry = {}, runWrong = [];
 
 function awardXp(n) { state.xp = (state.xp || 0) + n; saveState(); }
 function xpLevel(xp) {
@@ -446,7 +447,7 @@ function viewPractice(app) {
   var groups = [
     { t: "Từ vựng", items: [{ id: "letters", label: "Chữ cái A-Z (26 thẻ)" }, { id: "classroom", label: "Từ vựng lớp học đầu tiên (20 từ)" }] },
     { t: "Ngữ pháp", items: [{ id: "gram0", label: "Tôi là... (I am...)" }, { id: "gram1", label: "Đây là... (This is...)" }, { id: "gram2", label: "Tôi tên là... (My name is...)" }] },
-    { t: "Phát âm", items: [{ id: "pron1", label: "Phát âm · Đợt 1 (âm quen)" }] },
+    { t: "Phát âm", items: [{ id: "pron1", label: "Phát âm · 44 âm" }] },
     { t: "Video", items: [{ id: "video", label: "Bài hát bảng chữ cái" }] },
     { t: "Trò chơi", items: [{ id: "game", label: "Chơi để nhớ: nối chữ với từ" }] },
     { t: "Đánh giá", items: [{ id: "test", label: "Bài kiểm tra cuối chương 1" }] }
@@ -545,6 +546,22 @@ function viewMine(app) {
     + '<p class="mut">Với mục tiêu này, bạn còn khoảng ' + weeks + ' tuần nữa để xong chương 1 (ước tính). Web tĩnh không gửi thông báo khi bạn đóng trang — hãy tự mở web mỗi ngày để giữ chuỗi.</p></section>';
   html += '<section class="card"><h3>Tiến trình của bạn</h3><p>Thẻ đã thuộc: ' + known + ' · Mục khó chưa xong: ' + hardN + ' · Từ đã lưu: ' + savedN + '</p>'
     + (state.migrated ? '<p class="mut">Đã chuyển tiến trình cũ của bạn sang bản mới; bản cũ vẫn còn nguyên để hoàn tác.</p>' : "") + '</section>';
+  var levelHTML = "";
+  if (state.lastTest) {
+    var lt = state.lastTest;
+    var weakestP = lt.parts.slice().sort(function (a, b) { return a.pct - b.pct; })[0];
+    levelHTML = '<section class="card" id="mineLevel"><h3>Đánh giá mức độ</h3>'
+      + '<p><b>Band ước lượng: ' + fmtBandComma(lt.band) + '</b> <span class="mut">(kiểm tra cuối chương 1, ngày ' + esc(lt.date) + ')</span></p>'
+      + lt.parts.map(function (pt) { return '<p>Phần "' + esc(pt.name) + '": ' + pt.c + '/' + pt.n + ' (' + pt.pct + '%)</p>'; }).join("")
+      + '<p><b>Phần yếu nhất: ' + esc(weakestP.name) + ' (' + weakestP.pct + '%)</b> — hãy luyện lại bước tương ứng trong chương 1.</p>'
+      + '<p class="mut">' + RB_BAND_NOTE + ' Band ở đây chỉ là ước lượng từ kiểm tra nội bộ, không phải điểm thi IELTS thật.</p>'
+      + '<button class="btn btn-amber" id="levelWeakBtn">Luyện phần yếu nhất</button></section>';
+  } else {
+    levelHTML = '<section class="card" id="mineLevel"><h3>Đánh giá mức độ</h3>'
+      + '<p>Chưa có bài kiểm tra — bạn chưa làm bài kiểm tra cuối chương nào.</p>'
+      + '<p class="mut">Làm bài kiểm tra cuối chương 1 ở Lộ trình để xem mức độ của mình (band ước lượng + % từng phần + phần yếu nhất).</p></section>';
+  }
+  html += levelHTML;
   html += '<section class="card"><h3>Bảng chú giải</h3>' + RB_GLOSSARY.map(function (g) { return '<p><b>' + esc(g.t) + ':</b> ' + esc(g.d) + '</p>'; }).join("") + '</section>';
   html += '<section class="card"><h3>Gia sư AI</h3><p>' + esc(RB_AI.tutor.label) + '.</p><p class="mut">Gia sư dùng model gemini-3.5-flash qua Supabase, cần đăng nhập để dùng (đăng nhập mở ở giai đoạn 2).</p>'
     + '<button class="btn" id="tutorTry">Thử gọi gia sư</button></section>';
@@ -559,6 +576,7 @@ function viewMine(app) {
   $("#checkinBtn").onclick = checkinToday;
   $("#tutorTry").onclick = function () { callAiTutor("Xin chào").then(function () {}, function (err) { toast(err); }); };
   $("#quickCheckBtn").onclick = function () { openLesson({ type: "quickcheck" }); };
+  var lw = $("#levelWeakBtn"); if (lw) lw.onclick = function () { var lt2 = state.lastTest; var wp = lt2.parts.slice().sort(function (a, b) { return a.pct - b.pct; })[0]; if (typeof openStep === "function") { openStep(wp.name === "Chữ cái" ? stepById("letters") : stepById("classroom"), { noNudge: true }); } else { go("roadmap"); } };
 }
 
 /* ---------- Đường dây AI: giữ nguyên hợp đồng, chưa gọi khi chưa đăng nhập ---------- */
@@ -628,15 +646,16 @@ function renderVocab(app, l) {
     + '<p>' + esc(c.col || "") + ' — ' + esc(c.ex || "") + '</p><p class="mut">' + esc(c.exv || "") + '</p>'
     + (c.ex2 ? '<p class="mut">Thêm: ' + esc(c.ex2) + '</p>' : "")
     + (c.tip ? '<p>💡 ' + esc(c.tip) + '</p>' : "")
-    + '<div class="row"><button class="btn" id="btnSpeak">🔊 Nghe</button>'
+    + '<div class="row"><button class="btn" id="btnSpeak">🔊 Nghe</button><button class="btn" id="btnMirror">📹 Gương</button>'
     + (l.setIdx === 69 && c.vid ? '<button class="btn" id="btnVid">Xem video chữ</button>' : "")
-    + '</div><div id="vidBox"></div>'
+    + '</div><div id="vidBox"></div><div id="vocabMirrorSlot"></div>'
     + '<div class="row" style="margin-top:12px"><button class="btn" id="btnPrev"' + (pos === 0 ? " disabled" : "") + '>← Thẻ trước</button>'
     + '<button class="btn" id="btnNotKnow">Chưa thuộc</button><button class="btn btn-primary" id="btnKnow">Đã thuộc</button></div></div>';
   app.innerHTML = html;
   wireBack();
   $("#btnSpeak").onclick = function () { speak(l.setIdx === 69 ? c.w : c.w); };
   var vb = $("#btnVid"); if (vb) vb.onclick = function () { $("#vidBox").innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + c.vid + '" allowfullscreen></iframe>'; };
+  var mb2 = $("#btnMirror"); if (mb2) mb2.onclick = function () { var slot = $("#vocabMirrorSlot"); if (!slot) return; if (slot.innerHTML) { mirrorStop(); slot.innerHTML = ""; } else { mirrorStop(); var sym0 = firstSymFromIpa(c.ipa); slot.innerHTML = mirrorHTML(sym0); wireMirror(slot, sym0); } };
   $("#btnPrev").onclick = function () { state.pos["vocab:" + l.setIdx] = Math.max(0, pos - 1); saveState(); render(); };
   var advance = function (known) {
     var key = "s" + l.setIdx + ":" + pos;
@@ -796,86 +815,481 @@ function renderQuizEngine(app, l, questions, mode, lessonId) {
 
 /* ----- Phát âm: MỘT bảng 44 âm, khóa tiến tuần tự trong đợt ----- */
 function phDone(sym) { return !!(state.phDone && state.phDone[sym]); }
-function phWave1Idx() { var w = RB_PH_WAVES[1]; for (var i = 0; i < w.length; i++) if (!phDone(w[i])) return i; return w.length; }
+function phAllOrder() { return RB_PH_WAVES[1].concat(RB_PH_WAVES[2], RB_PH_WAVES[3]); }
+function phNextSym() { var o = phAllOrder(); for (var i = 0; i < o.length; i++) if (!phDone(o[i])) return o[i]; return null; }
+function phWaveOf(sym) { if (RB_PH_WAVES[1].indexOf(sym) >= 0) return 1; if (RB_PH_WAVES[2].indexOf(sym) >= 0) return 2; return 3; }
+function phEntry(sym) { var all = RB_PH1.concat(RB_PH2); for (var i = 0; i < all.length; i++) if (all[i].s === sym) return all[i]; return null; }
+function phSegText(seg, sym) { function mm(v) { return Math.floor(v / 60) + ":" + ("0" + (v % 60)).slice(-2); } return "Đoạn video này chỉ đúng âm /" + sym + "/ (từ " + mm(seg[0]) + (seg[1] ? " đến " + mm(seg[1]) : " đến hết video") + " trong video BBC 44 âm)."; }
+function phObsStripHTML(p) { var seg = p.seg; var segUrl = "https://www.youtube-nocookie.com/embed/QxQUapA-2w4?start=" + seg[0] + (seg[1] ? "&end=" + seg[1] : "") + "&rel=0"; return '<div class="ph-obs">' + mouthFiguresHTML(p) + '<p class="mut">' + phSegText(seg, p.s) + '</p><iframe src="' + segUrl + '" id="phSegFrame" allowfullscreen></iframe><p class="mut">Chỉ xem đúng đoạn này cho âm /' + esc(p.s) + '/ — không xem thêm đoạn khác trong video.</p></div>'; }
 function renderPron(app, l) {
   var step = l.step;
   if (l.sound) { renderPronLesson(app, l); return; }
-  var html = stepHeader(step, "Đợt 1 học theo thứ tự — học xong âm trước mới mở âm sau. Đợt 2 và 3 sẽ mở ở giai đoạn tiếp theo.");
+  var html = stepHeader(step, "Thứ tự gợi ý: học từ trên xuống. Âm đang học được làm nổi bật — bạn có thể bấm xem bất kỳ âm nào trước cũng được.");
   html += '<p class="mut">Một bảng duy nhất 44 âm, chia theo độ khó với người Việt: quen 23, hay lệch 15, khó 6. Độ mở hàm ghi trong bài học là do trang tự gán, tương đối.</p>';
   var waveNames = { 1: "Đợt 1 — âm quen", 2: "Đợt 2 — âm hay lệch", 3: "Đợt 3 — âm mới hẳn" };
+  var order = phAllOrder();
   [1, 2, 3].forEach(function (wv) {
     var list = RB_PH_WAVES[wv];
     html += '<h3>' + waveNames[wv] + ' (' + list.length + ' âm)</h3><div class="ph-table" id="phTable">';
     list.forEach(function (sym) {
       var ex = RB_PH_ALL_EXAMPLES[sym] || "";
       var cls = "", lock = "", st = "";
-      if (wv === 1) {
-        var idx = RB_PH_WAVES[1].indexOf(sym), cur = phWave1Idx();
-        if (phDone(sym)) { cls = "done"; st = " ✓ Đã xong"; }
-        else if (idx === cur) { cls = "cur"; st = " ▶ Đang học"; }
-        else { cls = "lock"; lock = "1"; st = " 🔒 Khóa"; }
-      } else { cls = "lock"; lock = "2"; st = " · Sắp ra mắt"; }
+      var cur = phNextSym();
+      if (phDone(sym)) { cls = "done"; st = " ✓ Đã xong"; }
+      else if (sym === cur) { cls = "cur"; st = " ▶ Đang học"; }
       html += '<button class="ph-btn ' + cls + '" data-s="' + esc(sym) + '" data-lock="' + lock + '">/' + esc(sym) + '/<br><span class="mut">' + esc(ex) + '</span><br><span class="mut">' + st + '</span></button>';
     });
     html += '</div>';
   });
-  html += '<p class="mut">Bước AI chấm và gương khẩu hình sẽ mở ở giai đoạn tiếp theo (đường dây chấm phát âm đã sống, cần đăng nhập để dùng).</p>';
+  html += '<p class="mut">Gương khẩu hình và bước AI chấm đã có trong bài học cả 3 đợt (AI chấm cần đăng nhập, mở ở giai đoạn 2).</p>';
   app.innerHTML = html;
   wireBack();
   $$("#phTable .ph-btn").forEach(function (b) {
     b.onclick = function () {
       var sym = b.dataset.s;
-      if (b.dataset.lock === "2") { toast("Bài học đợt này sẽ mở ở giai đoạn tiếp theo."); return; }
-      if (b.dataset.lock === "1") { toast("Âm này đang khóa — học xong âm trước để mở âm này."); return; }
-      l.sound = sym; l.sub = 0; render();
+      var cur = phNextSym();
+      if (cur && !phDone(sym) && phAllOrder().indexOf(sym) > phAllOrder().indexOf(cur) && !phNudgeShown) {
+        phNudgeShown = true;
+        toast("Bạn đang xem vượt trước — cứ xem thoải mái, các âm trước vẫn chờ bạn học nốt nhé.");
+      }
+      l.sound = sym; l.sub = 0; l.diffOk = false; l.diffHeard1 = false; l.diffHeard2 = false; l.diffRevealed = false; l.diffLogged = false; render();
     };
   });
 }
 function renderPronLesson(app, l) {
   var step = l.step, sym = l.sound;
-  var p = RB_PH1.filter(function (x) { return x.s === sym; })[0];
-  if (!p) { toast("Âm này chưa có bài học trong đợt 1."); l.sound = null; render(); return; }
+  var p = phEntry(sym);
+  if (!p) { toast("Âm này chưa có bài học."); l.sound = null; render(); return; }
   var sub = l.sub || 0;
   var seg = p.seg;
   var segUrl = "https://www.youtube-nocookie.com/embed/QxQUapA-2w4?start=" + seg[0] + (seg[1] ? "&end=" + seg[1] : "") + "&rel=0";
-  var html = stepHeader(step, "Âm /" + sym + "/ — Đợt 1");
+  var html = stepHeader(step, "Âm /" + sym + "/ — Đợt " + phWaveOf(sym));
   html += '<div class="qblock"><h2 style="text-align:center;font-size:52px;margin:4px 0">/' + esc(sym) + '/</h2>';
   if (sub === 0) {
-    html += '<p><b>Bước 1 — Nghe âm:</b> nghe đoạn video BBC rồi nghe giọng trình duyệt đọc từ ví dụ.</p>'
-      + '<iframe src="' + segUrl + '" id="phSegFrame" allowfullscreen></iframe>'
+    html += '<p><b>Bước 1 — Nghe âm:</b> nhìn hình khẩu hình rồi xem đúng đoạn video BBC của âm này, sau đó nghe giọng trình duyệt đọc từ ví dụ.</p>'
+      + phObsStripHTML(p)
       + '<div class="row"><button class="btn" id="phSpeak">🔊 Nghe từ "' + esc(p.w) + '"</button></div>';
   } else if (sub === 1) {
     html += '<p><b>Bước 2 — Khẩu hình:</b> ' + esc(p.ex) + '</p>' + mouthFiguresHTML(p)
-      + '<p class="mut">Hình minh họa khẩu hình khi phát âm: hình mặt cắt bên cho thấy lưỡi, răng và vòm miệng; hình nhìn trực diện cho thấy môi và độ mở hàm — nhìn cả hai góc để bắt chước theo.</p>';
+      + '<p class="mut">Hình minh họa khẩu hình khi phát âm: hình mặt cắt bên cho thấy lưỡi, răng và vòm miệng; hình nhìn trực diện cho thấy môi và độ mở hàm — nhìn cả hai góc để bắt chước theo.</p>'
+      + '<div class="row"><button class="btn" id="phMirrorBtn">📹 Gương khẩu hình</button></div><div id="phMirrorSlot"></div>';
   } else if (sub === 2) {
     html += '<p><b>Bước 3 — Từ đơn:</b></p><p style="font-size:30px"><b>' + esc(p.w) + '</b> <span class="mut">— ' + esc(p.vi) + '</span></p>'
       + '<div class="row"><button class="btn" id="phSpeak">🔊 Nghe từ "' + esc(p.w) + '"</button></div>';
+  } else if (sub === 3) {
+    var phr = RB_PH_PHRASES[sym] || { ph: p.w, vi: p.vi };
+    html += '<p><b>Bước 4 — Cụm từ:</b> đọc từ trong một cụm ngắn, không đọc rời rạc từng từ.</p><p style="font-size:26px"><b>' + esc(phr.ph) + '</b></p><p class="mut">' + esc(phr.vi) + '</p>'
+      + '<div class="row"><button class="btn" id="phSpeakPhrase">🔊 Nghe cụm từ</button></div>';
+  } else if (sub === 4) {
+    html += '<p><b>Bước 5 — Câu mẫu:</b></p><p style="font-size:22px"><b>' + esc(p.sen) + '</b></p><p class="mut">' + esc(p.senVi) + '</p>'
+      + '<div class="row"><button class="btn" id="phSpeakSen">🔊 Nghe câu mẫu</button></div>';
+  } else if (sub === 5) {
+    var pair = RB_PH_PAIRS[sym];
+    html += '<p><b>Bước 6 — Phân biệt:</b> nghe cả 2 từ, rồi chọn từ chứa âm /' + esc(sym) + '/.</p>'
+      + '<div class="row"><button class="btn" id="diffHear1">🔊 Nghe từ 1</button><button class="btn" id="diffHear2">🔊 Nghe từ 2</button></div>'
+      + '<div class="row"><button class="btn btn-primary" id="diffReveal"' + (l.diffHeard1 && l.diffHeard2 ? "" : " disabled") + '>Hiện lựa chọn</button></div>'
+      + '<div id="diffChoices"></div><div class="why" id="diffWhy"></div>';
   } else {
-    html += '<p><b>Bước 4 — Câu mẫu:</b></p><p style="font-size:22px"><b>' + esc(p.sen) + '</b></p><p class="mut">' + esc(p.senVi) + '</p>'
-      + '<div class="row"><button class="btn" id="phSpeakSen">🔊 Nghe câu mẫu</button></div>'
-      + '<p class="mut">Bước Phân biệt và AI chấm sẽ mở ở giai đoạn tiếp theo (đường dây chấm phát âm đã sống, cần đăng nhập để dùng).</p>';
+    html += '<p><b>Bước 7 — AI chấm:</b> ghi âm chính bạn đọc từ ví dụ, nghe lại rồi tự đánh giá. Chấm AI thật đã sống ở web cũ, cần đăng nhập để dùng — đăng nhập mở ở giai đoạn 2.</p>'
+      + '<p>Từ mẫu: <b>' + esc(p.w) + '</b> <span class="mut">— ' + esc(p.vi) + '</span></p>'
+      + '<div class="row"><button class="btn" id="aiRec">🔴 Ghi âm</button><button class="btn" id="aiPlay"' + (aiBlob ? "" : " disabled") + '>▶ Nghe lại bản ghi</button><button class="btn btn-primary" id="aiSend"' + (aiBlob ? "" : " disabled") + '>Gửi AI chấm</button></div>'
+      + '<div id="aiResult"></div>'
+      + '<div class="sumcard"><b>Tự đánh giá (theo tai của bạn, không phải điểm AI):</b>'
+      + '<p><span class="ai-good">● Xanh — nghe giống mẫu:</span> âm nghe rõ, giống từ mẫu.</p>'
+      + '<p><span class="ai-mid">● Vàng — gần giống:</span> nghe được nhưng còn lệch môi/lưỡi.</p>'
+      + '<p><span class="ai-bad">● Đỏ — khác nhiều:</span> nghe thành âm khác hoặc không rõ.</p>'
+      + '<p class="mut">Bản ghi chỉ ở trên máy của bạn, chỉ gửi lên hàm chấm khi bạn bấm “Gửi AI chấm”.</p></div>';
   }
   html += '<div class="row" style="margin-top:14px">'
     + (sub > 0 ? '<button class="btn" id="phPrev">← Bước trước</button>' : "")
-    + (sub < 3 ? '<button class="btn btn-primary" id="phNext">Bước tiếp theo</button>' : '<button class="btn btn-primary" id="phDone">Đã thuộc âm này</button>')
+    + (sub < 6 ? (sub === 5 && !l.diffOk ? '<button class="btn btn-primary" id="phNext" disabled>Bước tiếp theo</button><span class="mut">Nghe cả 2 từ, hiện lựa chọn rồi chọn đúng để sang bước tiếp.</span>' : '<button class="btn btn-primary" id="phNext">Bước tiếp theo</button>') : '<button class="btn btn-primary" id="phDone">Đã thuộc âm này</button>')
     + '</div></div>';
   app.innerHTML = html;
   wireBack();
   var sp = $("#phSpeak"); if (sp) sp.onclick = function () { speak(p.w); };
+  var spp = $("#phSpeakPhrase"); if (spp) spp.onclick = function () { var phr = RB_PH_PHRASES[sym] || { ph: p.w }; speak(phr.ph); };
   var sps = $("#phSpeakSen"); if (sps) sps.onclick = function () { speak(p.sen); };
   var pv = $("#phPrev"); if (pv) pv.onclick = function () { l.sub = sub - 1; render(); };
   var nx = $("#phNext"); if (nx) nx.onclick = function () { l.sub = sub + 1; render(); };
+  var mb = $("#phMirrorBtn");
+  if (mb) mb.onclick = function () {
+    var slot = $("#phMirrorSlot");
+    if (!slot) return;
+    if (slot.innerHTML) { mirrorStop(); slot.innerHTML = ""; }
+    else { mirrorStop(); slot.innerHTML = mirrorHTML(sym); wireMirror(slot, sym); }
+  };
+  /* Bước 6 — Phân biệt: nghe trước, chọn sau; sai vào Sổ lỗi sai, chọn lại tới khi đúng. */
+  var pair = RB_PH_PAIRS[sym];
+  var wireDiffChoices = function () {
+    $$("#diffChoices .diff-opt").forEach(function (b) {
+      b.onclick = function () {
+        var i = +b.dataset.i, whyEl = $("#diffWhy");
+        if (i === 0) {
+          b.classList.add("ok"); l.diffOk = true;
+          if (whyEl) { whyEl.textContent = "Đúng rồi! Từ chứa âm /" + sym + "/ là \"" + pair.a + "\"."; whyEl.classList.add("show"); }
+          render();
+        } else {
+          b.classList.add("bad");
+          if (!l.diffLogged) {
+            l.diffLogged = true;
+            recordQuizError("pron", phAllOrder().indexOf(sym), { q: "Phân biệt âm /" + sym + "/: từ nào chứa âm này?", o: [pair.a, pair.b], a: 0, why: "Từ chứa âm /" + sym + "/ là \"" + pair.a + "\". " + (pair.minimal ? "Đây là cặp tối thiểu thật (hai từ chỉ khác nhau ở âm này)." : "Đây là cặp hay nhầm, không phải cặp tối thiểu thật.") });
+          }
+          if (whyEl) { whyEl.innerHTML = "Chưa đúng. Đáp án đúng: <b>" + esc(pair.a) + "</b> — " + esc(pair.minimal ? "cặp tối thiểu thật, chỉ khác nhau ở âm này." : "cặp hay nhầm.") + ' <button class="btn" id="diffRetry">Nghe lại rồi chọn lại</button>'; whyEl.classList.add("show"); }
+          var rt = $("#diffRetry"); if (rt) rt.onclick = function () { render(); };
+        }
+      };
+    });
+  };
+  var fillDiffChoices = function () {
+    var box = $("#diffChoices");
+    if (!box) return;
+    box.innerHTML = '<div class="row">' + [pair.a, pair.b].map(function (wd, i) {
+      return '<button class="btn diff-opt" data-i="' + i + '">' + esc(wd) + '</button>';
+    }).join("") + '</div>';
+    wireDiffChoices();
+  };
+  if (sub === 5 && pair) {
+    var h1 = $("#diffHear1"); if (h1) h1.onclick = function () { speak(pair.a); l.diffHeard1 = true; render(); };
+    var h2 = $("#diffHear2"); if (h2) h2.onclick = function () { speak(pair.b); l.diffHeard2 = true; render(); };
+    var rv = $("#diffReveal");
+    if (rv) rv.onclick = function () { l.diffRevealed = true; render(); fillDiffChoices(); };
+    if (l.diffRevealed && !l.diffOk) fillDiffChoices();
+  }
+  /* Bước 7 — AI chấm: ghi âm tự nghe lại + tự đánh giá; nút gửi AI dùng đúng hợp đồng pronounce. */
+  if (sub === 6) {
+    var recBtn = $("#aiRec");
+    if (recBtn) recBtn.onclick = function () {
+      if (typeof MediaRecorder === "undefined" || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        toast("Trình duyệt này không hỗ trợ ghi âm — hãy tự đọc to và tự đánh giá theo 3 mức dưới.");
+        return;
+      }
+      if (aiRec && aiRec.state === "recording") {
+        aiRec.stop(); recBtn.textContent = "🔴 Ghi âm"; render(); return;
+      }
+      navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+        var chunks = [];
+        try { aiRec = new MediaRecorder(stream); } catch (e) { toast("Không bật được ghi âm trên trình duyệt này."); return; }
+        aiRec.ondataavailable = function (e) { if (e.data && e.data.size) chunks.push(e.data); };
+        aiRec.onstop = function () {
+          stream.getTracks().forEach(function (t) { t.stop(); });
+          if (chunks.length) {
+            aiBlob = new Blob(chunks, { type: aiRec.mimeType || "audio/webm" });
+            if (aiUrl) URL.revokeObjectURL(aiUrl);
+            aiUrl = URL.createObjectURL(aiBlob);
+          }
+          aiRec = null; render();
+        };
+        aiRec.start(); recBtn.textContent = "⏹ Dừng ghi"; toast("Đang ghi âm — đọc từ \"" + p.w + "\" rồi bấm Dừng ghi.");
+      }, function () { toast("Bạn chưa cho phép dùng micrô — hãy tự đọc to và tự đánh giá theo 3 mức dưới."); });
+    };
+    var playBtn = $("#aiPlay");
+    if (playBtn) playBtn.onclick = function () { if (aiUrl) { var a = new Audio(aiUrl); a.play(); } };
+    var sendBtn = $("#aiSend");
+    if (sendBtn) sendBtn.onclick = function () {
+      if (!aiBlob) { toast("Hãy ghi âm trước rồi mới gửi AI chấm."); return; }
+      var res = $("#aiResult");
+      if (res) res.innerHTML = '<p class="mut">Đang gửi bản ghi lên hàm chấm phát âm…</p>';
+      var reader = new FileReader();
+      reader.onload = function () {
+        var b64 = String(reader.result).split(",")[1] || "";
+        callPronounce(b64, aiBlob.type || "audio/webm", p.w).then(function (r) {
+          var out = "";
+          if (r && typeof r.score === "number") {
+            var s = r.score > 1 ? r.score : r.score * 100;
+            out += '<p><b>Điểm AI (thật, từ hàm chấm phát âm): ' + Math.round(s) + '/100</b></p>';
+          }
+          if (r && r.transcript) out += '<p class="mut">AI nghe được: ' + esc(r.transcript) + '</p>';
+          if (r && r.words && r.words.length) {
+            out += '<p>' + r.words.map(function (wd) {
+              var ws = typeof wd.score === "number" ? (wd.score > 1 ? wd.score : wd.score * 100) : null;
+              var cls = ws === null ? "" : (ws >= 80 ? "ai-good" : (ws >= 50 ? "ai-mid" : "ai-bad"));
+              return '<span class="' + cls + '">' + esc(wd.text || wd.word || "") + (ws !== null ? ' (' + Math.round(ws) + ')' : "") + '</span>';
+            }).join(" ") + '</p>';
+          }
+          if (r && r.issues && r.issues.length) out += '<p class="mut">' + r.issues.map(function (is) { return esc(is.text || is.message || JSON.stringify(is)); }).join("<br>") + '</p>';
+          if (r && r.modelUsed) out += '<p class="mut">Model: ' + esc(r.modelUsed) + '</p>';
+          if (res) res.innerHTML = out || '<p class="mut">Hàm chấm đã trả về nhưng không có điểm — hãy tự đánh giá theo 3 mức dưới.</p>';
+        }, function (err) {
+          if (res) res.innerHTML = '<p class="mut">' + esc(err) + ' Chấm AI thật đã sống ở web cũ (hàm pronounce, điểm theo từng từ, 3 mức màu theo âm vị) và sẽ dùng được ngay khi đăng nhập mở ở giai đoạn 2. Trong lúc chờ, hãy tự nghe lại bản ghi và tự đánh giá theo 3 mức dưới.</p>';
+        });
+      };
+      reader.readAsDataURL(aiBlob);
+    };
+  }
   var dn = $("#phDone"); if (dn) dn.onclick = function () {
     state.phDone[sym] = true; saveState();
-    var next = RB_PH_WAVES[1][phWave1Idx()];
+    var next = phNextSym();
     if (!next) {
       finishStep(step.id);
-      app.innerHTML = stepHeader(step) + finishSummaryHTML("Bạn đã học xong đợt 1!",
-        '<p>Bạn đã học xong ' + RB_PH_WAVES[1].length + ' âm quen thuộc nhất trong ' + elapsedText() + '.</p>', "");
+      app.innerHTML = stepHeader(step) + finishSummaryHTML("Bạn đã học xong 44 âm!",
+        '<p>Bạn đã học xong 44 âm tiếng Anh trong ' + elapsedText() + '.</p>', "");
       wireBack(); wireNextStep();
       $("#btnRedo").onclick = function () { lessonStart = Date.now(); l.sound = null; render(); };
-    } else { l.sound = next; l.sub = 0; render(); }
+    } else { l.sound = next; l.sub = 0; l.diffOk = false; l.diffHeard1 = false; l.diffHeard2 = false; l.diffRevealed = false; l.diffLogged = false; render(); }
   };
+}
+
+/* ---------- Gương khẩu hình (port từ code cũ của trang, gọn cho bản mới) ----------
+   Camera chỉ bật khi người học bấm nút. Video tự bắt: đoạn quay xoay vòng 7 giây,
+   khi giữ đúng vùng đích khoảng 1 giây thì đoạn hiện tại được lưu tự động.
+   Video chỉ lưu trên máy (IndexedDB, tối đa 12), không gửi đi đâu.
+   Độ chính xác nhận diện trên mặt thật CHƯA đo — giao diện ghi rõ điều này. */
+var aiRec = null, aiBlob = null, aiUrl = null;
+var MR = { slot: null, sym: null, stream: null, rec: null, chunks: [], segTimer: null, curBlob: null, stopping: false, fm: null, fmOn: false, fmBusy: false, holdStart: 0, autoDone: false, pendingAuto: false, urls: [] };
+function mrSupported() { try { return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia); } catch (e) { return false; } }
+function mrRecSupported() { try { return typeof MediaRecorder !== "undefined"; } catch (e) { return false; } }
+function mrPickMime() {
+  if (!mrRecSupported() || !MediaRecorder.isTypeSupported) return "";
+  var cands = ["video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm", "video/mp4"];
+  for (var i = 0; i < cands.length; i++) if (MediaRecorder.isTypeSupported(cands[i])) return cands[i];
+  return "";
+}
+function mrClamp(v) { return Math.max(0, Math.min(1, v)); }
+function mrIndices(lm) {
+  var d = function (a, b) { return Math.hypot(lm[a].x - lm[b].x, lm[a].y - lm[b].y); };
+  var W = d(61, 291), Ho = d(0, 17), Oi = d(13, 14), FW = d(234, 454) || 1e-6;
+  var wRatio = W / FW, oRatio = Oi / FW, tall = Ho / Math.max(W, 1e-6);
+  var spread = mrClamp(0.6 * mrClamp((wRatio - 0.20) / 0.13) + 0.4 * mrClamp((0.42 - tall) / 0.30));
+  var round = mrClamp(0.7 * mrClamp((0.235 - wRatio) / 0.125) + 0.3 * mrClamp((tall - 0.5) / 0.5));
+  var open = mrClamp((oRatio - 0.008) / 0.115);
+  return { round: round, spread: spread, open: open };
+}
+function mrDb() {
+  return new Promise(function (resolve, reject) {
+    try {
+      var req = indexedDB.open("ielts_mirror_videos_db", 1);
+      req.onupgradeneeded = function () { if (!req.result.objectStoreNames.contains("videos")) req.result.createObjectStore("videos", { keyPath: "id", autoIncrement: true }); };
+      req.onsuccess = function () { resolve(req.result); };
+      req.onerror = function () { reject(req.error); };
+    } catch (e) { reject(e); }
+  });
+}
+function mrVidAll() {
+  return mrDb().then(function (db) {
+    return new Promise(function (resolve, reject) {
+      var tx = db.transaction("videos", "readonly"), out = [];
+      tx.objectStore("videos").openCursor().onsuccess = function (e) {
+        var c = e.target.result;
+        if (c) { out.push(c.value); c.continue(); } else { db.close(); resolve(out); }
+      };
+      tx.onerror = function () { db.close(); reject(tx.error); };
+    });
+  });
+}
+function mrVidAdd(sym, blob) {
+  return mrDb().then(function (db) {
+    return new Promise(function (resolve, reject) {
+      var store = db.transaction("videos", "readwrite").objectStore("videos");
+      var all = store.getAll();
+      all.onsuccess = function () {
+        var list = (all.result || []).sort(function (a, b) { return a.id - b.id; });
+        while (list.length >= 12) { store.delete(list.shift().id); }
+        var req = store.add({ sym: sym, ts: Date.now(), blob: blob });
+        req.onsuccess = function () { db.close(); resolve(); };
+        req.onerror = function () { db.close(); reject(req.error); };
+      };
+      all.onerror = function () { db.close(); reject(all.error); };
+    });
+  });
+}
+function mrVidDelete(id) {
+  return mrDb().then(function (db) {
+    return new Promise(function (resolve) {
+      db.transaction("videos", "readwrite").objectStore("videos").delete(id).onsuccess = function () { db.close(); resolve(); };
+    });
+  });
+}
+function mrVidClear() {
+  return mrDb().then(function (db) {
+    return new Promise(function (resolve) {
+      db.transaction("videos", "readwrite").objectStore("videos").clear().onsuccess = function () { db.close(); resolve(); };
+    });
+  });
+}
+function mirrorModelHTML(sym) {
+  var p1 = phEntry(sym);
+  if (p1) return mouthFiguresHTML(p1);
+  if (RB_PH_TARGETS[sym]) {
+    var p2 = Object.assign({ s: sym }, RB_PH_TARGETS[sym]);
+    return mouthFiguresHTML(p2);
+  }
+  var ex = RB_PH_ALL_EXAMPLES[sym] || "";
+  return '<p class="mut">Chưa có hình mẫu cho âm này. Từ ví dụ: ' + esc(ex) + '.</p>';
+}
+function mirrorHTML(sym) {
+  var waves = RB_PH_WAVES[1].concat(RB_PH_WAVES[2], RB_PH_WAVES[3]);
+  var opts = waves.map(function (s) {
+    return '<option value="' + esc(s) + '"' + (s === sym ? " selected" : "") + '>/' + esc(s) + '/ — ' + esc(RB_PH_ALL_EXAMPLES[s] || "") + '</option>';
+  }).join("");
+  var cam = "";
+  if (!mrSupported()) {
+    cam = '<p class="mut">Trình duyệt này chưa hỗ trợ camera (cần mở qua https và cho phép camera) — các phần học khác vẫn chạy bình thường.</p>';
+  } else {
+    cam = '<video class="mr-video" autoplay muted playsinline style="display:none"></video>'
+      + '<p class="mr-status mut">Bấm “Bật camera” để soi khẩu hình cạnh hình mẫu.</p>'
+      + '<div class="row"><button class="btn btn-primary mr-start">📷 Bật camera</button><button class="btn mr-stop" style="display:none">Tắt camera</button><button class="btn mr-save" disabled>💾 Lưu video mẫu</button><button class="btn mr-clear">Xóa hết video</button></div>'
+      + '<p class="mut">Nhận diện khẩu hình tự động chỉ là gợi ý — độ chính xác trên mặt thật chưa được đo, nên hãy đối chiếu thêm bằng mắt với hình mẫu.</p>';
+  }
+  return '<div class="mirror-box card"><h3>📹 Gương khẩu hình</h3>'
+    + '<div class="row"><label class="mut">Âm đang luyện:</label><select class="mr-sel">' + opts + '</select></div>'
+    + '<div class="mr-model">' + mirrorModelHTML(sym) + '</div>'
+    + cam
+    + '<div class="mr-lib"></div>'
+    + '<p class="mut">🔒 Riêng tư: video chỉ lưu trên máy của bạn, không gửi đi đâu cả.</p></div>';
+}
+function mrRenderLib(slot) {
+  var lib = slot.querySelector(".mr-lib");
+  if (!lib) return;
+  MR.urls.forEach(function (u) { try { URL.revokeObjectURL(u); } catch (e) {} });
+  MR.urls = [];
+  if (typeof indexedDB === "undefined") { lib.innerHTML = '<p class="mut">Trình duyệt này không lưu được video mẫu.</p>'; return; }
+  mrVidAll().then(function (list) {
+    if (!list.length) { lib.innerHTML = '<p class="mut">Chưa có video mẫu nào.</p>'; return; }
+    lib.innerHTML = '<h4>Video mẫu đúng của bạn</h4><div class="mr-lib-row">' + list.slice().reverse().map(function (v) {
+      var url = URL.createObjectURL(v.blob); MR.urls.push(url);
+      return '<div class="mr-item"><video controls src="' + url + '"></video><p class="mut">Âm /' + esc(v.sym) + '/ · ' + new Date(v.ts).toLocaleString("vi-VN") + '</p><button class="btn mr-del" data-id="' + v.id + '">Xóa video này</button></div>';
+    }).join("") + '</div>';
+    lib.querySelectorAll(".mr-del").forEach(function (b) {
+      b.onclick = function () { mrVidDelete(+b.dataset.id).then(function () { mrRenderLib(slot); }); };
+    });
+  }, function () { lib.innerHTML = '<p class="mut">Không đọc được thư viện video mẫu.</p>'; });
+}
+function mrSetStatus(slot, t) { var s = slot && slot.querySelector(".mr-status"); if (s) s.textContent = t; }
+function mrSaveCurrent(slot, auto) {
+  if (!MR.curBlob) { toast("Chưa có đoạn video nào — bật camera rồi chờ vài giây."); return; }
+  mrVidAdd(MR.sym, MR.curBlob).then(function () {
+    mrRenderLib(slot);
+    toast(auto ? "Đã lưu video mẫu tự bắt." : "Đã lưu video mẫu.");
+  }, function () { toast("Không lưu được video mẫu trên trình duyệt này."); });
+}
+function mrStartSeg(slot) {
+  if (!MR.stream || MR.stopping) return;
+  MR.chunks = [];
+  try {
+    var mime = mrPickMime();
+    MR.rec = mime ? new MediaRecorder(MR.stream, { mimeType: mime }) : new MediaRecorder(MR.stream);
+  } catch (e) { MR.rec = null; return; }
+  MR.rec.ondataavailable = function (e) { if (e.data && e.data.size) MR.chunks.push(e.data); };
+  MR.rec.onstop = function () {
+    if (MR.chunks.length) {
+      MR.curBlob = new Blob(MR.chunks, { type: MR.rec.mimeType || "video/webm" });
+      var saveBtn = slot.querySelector(".mr-save"); if (saveBtn) saveBtn.disabled = false;
+      if (MR.pendingAuto) { MR.pendingAuto = false; mrSaveCurrent(slot, true); }
+    }
+    MR.rec = null;
+    if (!MR.stopping) mrStartSeg(slot);
+  };
+  try { MR.rec.start(); } catch (e) { MR.rec = null; }
+}
+function mirrorStop() {
+  MR.stopping = true; MR.fmOn = false; MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false;
+  if (MR.segTimer) { clearInterval(MR.segTimer); MR.segTimer = null; }
+  var slot = MR.slot;
+  if (MR.rec && MR.rec.state === "recording") { try { MR.rec.stop(); } catch (e) {} }
+  MR.rec = null;
+  if (MR.stream) { MR.stream.getTracks().forEach(function (t) { try { t.stop(); } catch (e) {} }); }
+  MR.stream = null; MR.curBlob = null;
+  if (slot) {
+    var v = slot.querySelector(".mr-video"); if (v) { v.srcObject = null; v.style.display = "none"; }
+    var st = slot.querySelector(".mr-start"); if (st) st.style.display = "inline-block";
+    var sp = slot.querySelector(".mr-stop"); if (sp) sp.style.display = "none";
+    var sv = slot.querySelector(".mr-save"); if (sv) sv.disabled = true;
+  }
+  MR.stopping = false; MR.slot = null;
+}
+function mrFaceMesh(slot) {
+  if (MR.fmBusy) return;
+  MR.fmBusy = true;
+  var fail = function () { MR.fmBusy = false; mrSetStatus(slot, "Không bật được nhận diện khẩu hình tự động — vẫn soi gương và lưu video mẫu bằng tay được."); };
+  var boot = function () {
+    try {
+      if (!window.FaceMesh) { fail(); return; }
+      if (!MR.fm) {
+        MR.fm = new window.FaceMesh({ locateFile: function (f) { return "https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/" + f; } });
+        MR.fm.setOptions({ maxNumFaces: 1, refineLandmarks: false, minDetectionConfidence: 0.5, minTrackingConfidence: 0.5 });
+        MR.fm.onResults(function (res) {
+          if (!MR.fmOn || MR.slot !== slot) return;
+          var lm = res.multiFaceLandmarks && res.multiFaceLandmarks[0];
+          if (!lm) return;
+          var idx = mrIndices(lm), tg = RB_MIRROR_TARGETS[MR.sym];
+          if (!tg) return;
+          var keys = [["r", idx.round], ["s", idx.spread], ["o", idx.open]];
+          var has = false, pass = true;
+          keys.forEach(function (kv) {
+            var z = tg[kv[0]];
+            if (z) { has = true; if (kv[1] < z[0] || kv[1] > z[1]) pass = false; }
+          });
+          if (!has) { mrSetStatus(slot, "Âm này camera khó chấm tự động — hãy tự soi gương: " + (tg.hint || "")); return; }
+          if (pass) {
+            if (!MR.holdStart) MR.holdStart = Date.now();
+            if (Date.now() - MR.holdStart >= 1000 && !MR.autoDone) {
+              MR.autoDone = true; MR.pendingAuto = true;
+              mrSetStatus(slot, "Đạt! Đang lưu video mẫu…");
+            } else mrSetStatus(slot, "Đang giữ đúng khẩu hình…");
+          } else {
+            MR.holdStart = 0;
+            mrSetStatus(slot, "Chưa đúng vùng đích — " + (tg.hint || "hãy soi gương và chỉnh theo hình mẫu."));
+          }
+        });
+      }
+      MR.fmOn = true;
+      var pump = function () {
+        if (!MR.fmOn || !MR.stream || MR.slot !== slot) return;
+        var v = slot.querySelector(".mr-video");
+        if (v && v.readyState >= 2) { try { MR.fm.send({ image: v }); } catch (e) {} }
+        setTimeout(pump, 120);
+      };
+      pump();
+      MR.fmBusy = false;
+    } catch (e) { fail(); }
+  };
+  if (window.FaceMesh) { boot(); return; }
+  var done = false;
+  var to = setTimeout(function () { if (!done) { done = true; fail(); } }, 9000);
+  var s = document.createElement("script");
+  s.src = "https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js";
+  s.onload = function () { if (done) return; done = true; clearTimeout(to); boot(); };
+  s.onerror = function () { if (done) return; done = true; clearTimeout(to); fail(); };
+  document.head.appendChild(s);
+}
+function mirrorStart(slot) {
+  if (!mrSupported()) return;
+  navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(function (stream) {
+    MR.stream = stream; MR.slot = slot; MR.sym = slot.querySelector(".mr-sel").value || MR.sym;
+    MR.holdStart = 0; MR.autoDone = false; MR.pendingAuto = false;
+    var v = slot.querySelector(".mr-video");
+    if (v) { v.srcObject = stream; v.style.display = "block"; }
+    var st = slot.querySelector(".mr-start"); if (st) st.style.display = "none";
+    var sp = slot.querySelector(".mr-stop"); if (sp) sp.style.display = "inline-block";
+    mrSetStatus(slot, "Đang soi gương — làm hình miệng như hình mẫu và giữ đúng khoảng 1 giây để tự bắt video.");
+    if (mrRecSupported()) {
+      mrStartSeg(slot);
+      MR.segTimer = setInterval(function () { if (MR.rec && MR.rec.state === "recording") { try { MR.rec.stop(); } catch (e) {} } }, 7000);
+    } else {
+      mrSetStatus(slot, "Đang soi gương. Trình duyệt này không hỗ trợ quay video — vẫn soi gương được, nhưng không lưu video mẫu.");
+    }
+    mrFaceMesh(slot);
+  }, function () { toast("Bạn chưa cho phép dùng camera."); });
+}
+function wireMirror(slot, sym) {
+  MR.slot = slot; MR.sym = sym;
+  var sel = slot.querySelector(".mr-sel");
+  if (sel) sel.onchange = function () {
+    mirrorStop();
+    var ns = sel.value;
+    slot.innerHTML = mirrorHTML(ns);
+    wireMirror(slot, ns);
+  };
+  var st = slot.querySelector(".mr-start"); if (st) st.onclick = function () { mirrorStart(slot); };
+  var sp = slot.querySelector(".mr-stop"); if (sp) sp.onclick = function () { mirrorStop(); };
+  var sv = slot.querySelector(".mr-save"); if (sv) sv.onclick = function () { mrSaveCurrent(slot, false); };
+  var cl = slot.querySelector(".mr-clear"); if (cl) cl.onclick = function () { mrVidClear().then(function () { mrRenderLib(slot); toast("Đã xóa hết video mẫu."); }); };
+  mrRenderLib(slot);
+}
+function firstSymFromIpa(ipa) {
+  var s = String(ipa || "").replace(/[\/\sˈˌː]/g, "");
+  if (s.length >= 2 && RB_PH_ALL_EXAMPLES[s.slice(0, 2)]) return s.slice(0, 2);
+  return s[0] || "m";
 }
 
 /* ----- Trò chơi: nối chữ với từ ----- */
@@ -943,6 +1357,7 @@ function renderTest(app, l) {
       var pass = c >= need; if (!pass) allPass = false;
       partHTML += '<p>Phần "' + esc(pt.name) + '": ' + c + '/' + pt.idx.length + ' (' + Math.round(c / pt.idx.length * 100) + '%)' + (pass ? ' — đạt' : ' — chưa đạt (cần từ 50%)') + '</p>';
     });
+    var partsArr = RB_CH1_TEST.parts.map(function (pt) { var c = pt.idx.filter(function (i) { return l.answers && l.answers[i]; }).length; return { name: pt.name, c: c, n: pt.idx.length, pct: Math.round(c / pt.idx.length * 100) }; });
     var band = rawToBand(score, total, "reading");
     var wrongHTML = "";
     if (runWrong.length) wrongHTML = '<div class="sumcard"><b>Câu chưa vững:</b>' + runWrong.map(function (i) {
@@ -954,6 +1369,7 @@ function renderTest(app, l) {
       return ca - cb;
     })[0];
     if (allPass) { state.testDone = true; saveState(); }
+    state.lastTest = { score: score, total: total, band: band, parts: partsArr, date: todayStr(), passed: allPass }; saveState();
     var stats = '<p>Kết quả: ' + score + '/' + total + ' câu đúng · Thời gian học thật: ' + elapsedText() + '.</p>' + partHTML
       + '<p><b>Band ước lượng: ' + fmtBandComma(band) + '</b> <span class="mut">(dùng bảng Đọc làm bảng chung cho kiểm tra tổng hợp)</span><br><span class="mut">' + RB_BAND_NOTE + '</span></p>'
       + (allPass ? '<p><b>Bạn đã qua bài kiểm tra cuối chương 1!</b></p>' : '<p><b>Chưa đạt — mỗi phần cần từ 50% trở lên.</b> Ôn lại các câu sai rồi làm lại nhé.</p>');
