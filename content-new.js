@@ -24,7 +24,6 @@
 })();
 
 // ---------- 3. NHÃN CHƯƠNG BAND 0 (D2) + NHÃN NGHE (E) ----------
-var RB_VIDEO_BAND0 = { title: "Alphabet Song", channel: "BBC Super Movers", label: "Dành cho người mới bắt đầu", embed: "https://www.youtube-nocookie.com/embed/jYeMpUdufNk", note: "Học bảng chữ cái qua bài hát vận động vui nhộn — bước đầu tiên cho người mới bắt đầu." };
 // E: các mục nghe chào hỏi Band 0 (listening #96, #97, #98) không còn mang nhãn "Section 1".
 var RB_LISTEN_LABELS = { 96: "Nghe chậm: chào hỏi", 97: "Nghe chậm: chào hỏi", 98: "Nghe chậm: chào hỏi" };
 
@@ -94,16 +93,16 @@ var RB_NEW_GRAMMAR = [
 // Không hỏi bằng ký hiệu IPA trần — hỏi bằng từ ví dụ. Hai phần, mỗi phần phải đạt từ 50% trở lên.
 var RB_CH1_TEST = {
   title: "Bài kiểm tra cuối chương 1",
-  parts: [{ name: "Chữ cái", idx: [0, 1, 3, 5, 7] }, { name: "Âm và chào hỏi", idx: [2, 4, 6] }],
+  parts: [{ name: "Âm và câu nói hàng ngày", idx: [0, 1, 3, 5, 7] }, { name: "Âm và chào hỏi", idx: [2, 4, 6] }],
   questions: [
-    { q: "Chữ nào đứng sau chữ G trong bảng chữ cái?", o: ["H", "F", "K", "Z"], a: 0, why: "Bảng chữ cái: ... F, G, H, I ... — sau G là H." },
-    { q: "Tên chữ H đọc gần giống gì?", o: ["ếch", "hát", "hi", "hồ"], a: 0, why: "Tên chữ H đọc gần giống 'ếch' — nghe nút loa mới là chuẩn." },
+    { q: "Từ nào có âm giống âm trong từ 'ship'?", o: ["fish", "sheep", "cat", "sun"], a: 0, why: "fish và ship đều có âm 'i' ngắn, nghe giống nhau; sheep có âm 'i' dài, nghe khác." },
+    { q: "Bạn gặp một người bạn mới, câu nào đúng nhất để chào và giới thiệu tên?", o: ["Hello! My name is Linh.", "Goodbye!", "Thank you!", "Sorry!"], a: 0, why: "Gặp người mới: chào Hello rồi giới thiệu tên bằng My name is..." },
     { q: "Từ nào đọc giống âm trong 'see': sea hay cat?", o: ["sea", "cat", "dog", "sun"], a: 0, why: "sea đọc là /siː/, giống âm trong see; cat đọc là /kæt/, khác âm." },
-    { q: "Chữ X thường đứng ở đâu trong từ?", o: ["Cuối từ (box, fox)", "Đầu từ", "Giữa từ", "Không có trong từ"], a: 0, why: "X thường ở cuối từ: box, fox." },
+    { q: "Bạn muốn nói 'Tôi là học sinh', câu nào đúng?", o: ["I am a student.", "I is a student.", "I are a student.", "I be a student."], a: 0, why: "I luôn đi với am: I am a student." },
     { q: "Khi gặp người mới, câu chào nào đúng nhất?", o: ["Hello! My name is...", "Goodbye!", "Thank you!", "Sorry!"], a: 0, why: "Gặp người mới: chào Hello rồi giới thiệu tên." },
-    { q: "Chữ nào là nguyên âm?", o: ["E", "B", "T", "S"], a: 0, why: "5 chữ thường được tính là nguyên âm: A, E, I, O, U (chữ Y đôi khi cũng đóng vai trò nguyên âm) — E là một trong số đó." },
+    { q: "Từ nào có âm giống âm trong từ 'book'?", o: ["good", "food", "cat", "sun"], a: 0, why: "good và book đều có âm 'u' ngắn, nghe giống nhau; food có âm 'u' dài, nghe khác." },
     { q: "'Thank you' nghĩa là gì?", o: ["Cảm ơn bạn", "Xin chào", "Tạm biệt", "Xin lỗi"], a: 0, why: "'Thank you' nghĩa là 'Cảm ơn bạn' — câu nói lịch sự dùng rất nhiều mỗi ngày." },
-    { q: "Tên chữ Z đọc theo kiểu Anh là gì?", o: ["zed", "zee", "zet", "zi"], a: 0, why: "Kiểu Anh đọc là 'zed' (dùng trong IELTS); 'zee' là kiểu Mỹ." }
+    { q: "Sau khi giới thiệu tên, câu lịch sự nên nói thêm là gì?", o: ["Nice to meet you!", "Goodbye!", "Thank you!", "Sorry!"], a: 0, why: "Nice to meet you! nghĩa là 'Rất vui được gặp bạn', nói ngay khi làm quen." }
   ]
 };
 
@@ -225,19 +224,17 @@ var RB_AI = {
 };
 
 // ---------- 10. LỘ TRÌNH CHƯƠNG 1 (thứ tự HIỂN THỊ) ----------
-// Hàng kiểm tra cuối chương đứng ở vị trí 80% (sau 6 bước học), hàng cuối là trò chơi.
-// Cổng mở khi học xong 6/7 bước học (mốc 80% — chuẩn nội bộ của web, không phải chuẩn IELTS).
+// Hàng kiểm tra cuối chương đứng sau 4 bước học.
+// Cổng mở khi học xong 4/5 bước học (mốc 80% — chuẩn nội bộ của web, không phải chuẩn IELTS).
 var RB_CH1_STEPS = [
   { id: "classroom", kind: "vocab", setIdx: 24, deckNo: 2, title: "Học xong: hiểu và nói 20 từ dùng trong lớp học", type: "Từ vựng · Từ lớp học", mins: 8 },
-  { id: "video", kind: "video", title: "Học xong: hát theo bài hát bảng chữ cái", type: "Xem video", mins: 5 },
   { id: "gram0", kind: "grammar", gIdx: 0, title: "Học xong: tự giới thiệu 'Tôi là...'", type: "Ngữ pháp · Câu đầu tiên", mins: 6 },
   { id: "gram1", kind: "grammar", gIdx: 1, title: "Học xong: chỉ đồ vật và giới thiệu người 'Đây là...'", type: "Ngữ pháp · Câu đầu tiên", mins: 6 },
   { id: "gram2", kind: "grammar", gIdx: 2, title: "Học xong: nói tên mình 'Tôi tên là...'", type: "Ngữ pháp · Câu đầu tiên", mins: 6 },
   { id: "pron1", kind: "pron", wave: 1, title: "Học xong: đọc đúng 44 âm tiếng Anh", type: "Phát âm · 44 âm", mins: 15 },
   { id: "test", kind: "test", title: "Bài kiểm tra cuối chương 1", type: "Đánh giá", mins: 10 },
-  { id: "game", kind: "game", title: "Học xong: nhớ chữ cái qua trò chơi nối chữ với từ", type: "Chơi để nhớ", mins: 5 }
 ];
-var RB_CH1_GATE_NEED = 6; /* 80% của 7 bước học còn lại (làm tròn lên) sau khi bỏ 2 bước chữ cái */
+var RB_CH1_GATE_NEED = 4; /* 80% của 5 bước học còn lại (làm tròn lên) sau khi bỏ 2 bước chữ cái video/game */
 var RB_CH1_GUIDEBOOK = {
   goal: "Học xong chương này, bạn hiểu 20 từ dùng trong lớp học, nói được 3 câu đầu tiên: I am..., This is..., My name is..., và đọc đúng 44 âm tiếng Anh theo đợt khó.",
   grammar: ["Tôi là... (I am...)", "Đây là... (This is...)", "Tôi tên là... (My name is...)"],
