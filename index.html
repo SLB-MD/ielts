@@ -114,6 +114,7 @@ iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radiu
 .path-node .pn-st{font-size:13px}
 .path-node.done .pn-st{color:var(--green);font-weight:700}
 .path-node.cur .pn-st{color:#8A6100;font-weight:700}
+.tracksw{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tracksw .btn.on{background:#FFC800;border-color:#E0A800}.zh-han{font-size:44px;line-height:1.4}
 .path-node.skipped .pn-st{color:var(--mut)}
 #bottombar{position:fixed;left:0;right:0;bottom:0;z-index:44;background:#fff;border-top:1.5px solid var(--line2);padding:10px 16px;display:flex;gap:10px;justify-content:space-between;align-items:center;box-shadow:0 -2px 10px rgba(31,36,48,.08)}
 #bottombar .btn{margin:0}
@@ -231,7 +232,7 @@ function phDescFull(p) {
 }
 /* ---------- Store: một nguồn số liệu duy nhất ---------- */
 var LS_NEW = "ielts_rebuild_v1", LS_OLD = "ielts_standalone_v1";
-function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], vocabSkipped: [], chatStars: [], chatReports: [], chatVoicePrefs: {}, testDone: false, chapterTestDone: {}, entryPlaced: null, entrySkipped: false, xpClaimed: {}, mems: {}, unsure: {}, videoUnknown: {}, plan: null, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {}, freeze: { count: 0, used: [], granted: [] }, push: { enabled: false, time: "20:00", types: { srs: true, path: true, checkin: true }, permission: "default", subscribed: false, serverSynced: false, lastLocalDay: "" } }; }
+function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], vocabSkipped: [], chatStars: [], chatReports: [], chatVoicePrefs: {}, testDone: false, chapterTestDone: {}, entryPlaced: null, entrySkipped: false, xpClaimed: {}, track: "en", zhPos: {}, zhDone: {}, zhHard: {}, zhPhDone: {}, zhPhSkipped: [], zhEntrySkipped: false, mems: {}, unsure: {}, videoUnknown: {}, plan: null, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {}, freeze: { count: 0, used: [], granted: [] }, push: { enabled: false, time: "20:00", types: { srs: true, path: true, checkin: true }, permission: "default", subscribed: false, serverSynced: false, lastLocalDay: "" } }; }
 function saveState() { try { localStorage.setItem(LS_NEW, JSON.stringify(state)); } catch (e) {} try { if (typeof authState !== "undefined" && authState.user) scheduleSyncPush(); } catch (e2) {} }
 function normHardFails(st) {
   /* Mục khó cũ chưa có số lần sai: mục từ Sổ lỗi sai (quiz/drill) vốn đã sai
@@ -580,7 +581,10 @@ function updateBottomBar() {
   if (!sum) { dropBarNext(); return; }
   var btn = ensureBarNext();
   btn.style.display = "inline-block";
-  if (curLesson.type === "entryCheck" && curLesson.placedTarget) {
+  if (curLesson.zhNext) {
+    btn.textContent = "Bài tiếp theo →";
+    btn.onclick = function () { var t = zhSessionTarget(); backFromLesson(); if (t.kind === "zhLesson") openLesson(t.lesson); };
+  } else if (curLesson.type === "entryCheck" && curLesson.placedTarget) {
     var pt = curLesson.placedTarget;
     btn.textContent = "Học tiếp: " + pt.title + " →";
     btn.onclick = function () { backFromLesson(); openSessionTarget(pt); };
@@ -909,6 +913,7 @@ function applyLessonLayout(app) {
 }
 function go(tab) { examTimerStop(); examPartTimerStop(); curTab = tab; curLesson = null; render(); }
 function render() {
+  normZh();
   try { settleStreakFreeze(); } catch (e) {}
   try { var bn = $("#previewBanner"); if (bn) bn.textContent = authBannerText(); } catch (e) {}
   try {
@@ -922,13 +927,13 @@ function render() {
   var app = $("#app");
   if (curLesson) { renderLesson(app); applyLessonLayout(app); u7PositionUpdate(); updateBottomBar(); return; }
   app.classList.remove("lesson-view");
-  if (curTab === "home") { viewHome(app); try { pushShowTodayReminder(); } catch (e) {} }
-  else if (curTab === "roadmap") viewRoadmap(app);
+  if (curTab === "home") { if (state.track === "zh") viewHomeZh(app); else { viewHome(app); try { pushShowTodayReminder(); } catch (e) {} } }
+  else if (curTab === "roadmap") { if (state.track === "zh") viewRoadmapZh(app); else viewRoadmap(app); }
   else if (curTab === "mypath") viewMyPath(app);
-  else if (curTab === "practice") viewPractice(app);
-  else if (curTab === "review") viewReview(app);
+  else if (curTab === "practice") { if (state.track === "zh") viewPracticeZh(app); else viewPractice(app); }
+  else if (curTab === "review") { if (state.track === "zh") viewReviewZh(app); else viewReview(app); }
   else viewMine(app);
-  u7PositionUpdate(); updateBottomBar();
+  u7PositionUpdate(); updateBottomBar(); wireTrackSwitch();
 }
 $("#tabBar").addEventListener("click", function (e) {
   var b = e.target.closest(".tab"); if (b) go(b.dataset.tab);
@@ -1203,7 +1208,7 @@ function viewHome(app) {
   var streak = streakDays();
   var lv = xpLevel(state.xp || 0);
   var info = homePathInfo();
-  var html = '<div class="stat-strip" id="homeStatusStrip"><span>🔥 Chuỗi ' + streak + ' ngày</span><span class="sep">·</span><span>' + (state.xp || 0) + ' XP · Cấp ' + lv.level + '</span><span class="sep">·</span><span>Mục tiêu ' + (state.goal || 30) + ' phút/ngày</span><button class="dimlink" id="statProgressLink">Tiến trình của tôi →</button></div>';
+  var html = trackSwitchHTML() + '<div class="stat-strip" id="homeStatusStrip"><span>🔥 Chuỗi ' + streak + ' ngày</span><span class="sep">·</span><span>' + (state.xp || 0) + ' XP · Cấp ' + lv.level + '</span><span class="sep">·</span><span>Mục tiêu ' + (state.goal || 30) + ' phút/ngày</span><button class="dimlink" id="statProgressLink">Tiến trình của tôi →</button></div>';
   html += '<p id="homeGreet">' + (fresh ? 'Chào bạn mới! Cùng 2812 bắt đầu nhé.' : 'Chào bạn! Hôm nay mình cùng 2812 học tiếp nhé.') + '</p>';
   if (fresh) {
     html += '<section class="card" id="u7Welcome">'
@@ -1400,7 +1405,7 @@ function viewMyPath(app) {
 /* ---------- BẢN ĐỒ (lộ trình chung, đã tách lộ trình riêng) ---------- */
 function viewRoadmap(app) {
   var done = doneLearnCount(), total = learningSteps().length;
-  var html = '<h2>Bản đồ</h2>';
+  var html = trackSwitchHTML() + '<h2>Bản đồ</h2>';
   html += '<section class="card" id="myPathLink"><h3>Lộ trình riêng của bạn</h3><p class="mut">Lộ trình riêng đã tách ra thành trang riêng — bấm vào là bắt đầu học ngay bước tiếp theo của riêng bạn.</p><button class="btn" id="myPathGo">Mở lộ trình riêng</button></section>';
   html += '<section class="card"><h3>Sổ tay chương 1</h3><details><summary><b>Xem chi tiết sổ tay</b></summary><p><b>Mục tiêu:</b> ' + esc(RB_CH1_GUIDEBOOK.goal) + '</p>'
     + '<p><b>Ngữ pháp chính:</b> ' + esc(RB_CH1_GUIDEBOOK.grammar.join(" · ")) + '</p>'
@@ -1528,7 +1533,7 @@ function viewPractice(app) {
   function nextTxt(items) { var f = nextOf(items); return f ? " · tiếp theo: " + f : " · đã xong hết"; }
   /* --- Nut chinh: buoc tiep theo cua nguoi hoc --- */
   var pT = practiceNextTarget();
-  var html = '<h2>Luyện tập</h2>'
+  var html = trackSwitchHTML() + '<h2>Luyện tập</h2>'
     + '<section class="card next-card" id="practiceNextCard"><p class="eyebrow">TIẾP THEO NÊN LUYỆN</p><h3>' + esc(pT.title) + '</h3><p class="mut">' + esc(pT.type) + '</p>'
     + '<button class="btn btn-primary" id="practiceNextBtn">Tiếp theo nên luyện</button></section>'
     + guideLine("practiceIntro", "Luyện riêng theo từng kỹ năng — mở nhóm cần luyện, bấm bài để học.")
@@ -1759,7 +1764,7 @@ function viewPractice(app) {
 /* ---------- ÔN TẬP: MỘT hàng đợi duy nhất ---------- */
 function viewReview(app) {
   var cards = dueCards(), hards = dueHard();
-  var html = '<h2>Ôn tập</h2><p class="mut">Lịch ôn: ' + RB_SCHEDULE_TEXT + '.</p><details class="guide-more"><summary><b>Xem thêm về lịch ôn</b></summary><p class="mut">Ôn giãn cách là ôn lại đúng lúc sắp quên, các lần ôn cách nhau xa dần. Đúng 2 lần liên tiếp ở các lần ôn cách quãng mới "tốt nghiệp" (xong hẳn).</p></details>';
+  var html = trackSwitchHTML() + '<h2>Ôn tập</h2><p class="mut">Lịch ôn: ' + RB_SCHEDULE_TEXT + '.</p><details class="guide-more"><summary><b>Xem thêm về lịch ôn</b></summary><p class="mut">Ôn giãn cách là ôn lại đúng lúc sắp quên, các lần ôn cách nhau xa dần. Đúng 2 lần liên tiếp ở các lần ôn cách quãng mới "tốt nghiệp" (xong hẳn).</p></details>';
   if (hards.length) {
     html += '<section class="card"><h3>Điểm yếu của bạn</h3><p class="mut">Các câu bạn từng làm sai — ôn tới khi sửa xong:</p><div id="reviewList">';
     hards.forEach(function (it) {
@@ -2039,6 +2044,11 @@ function mergeGuestIntoAccount(guest, acc) {
   merged.personalPath = (acc && acc.personalPath) || (guest && guest.personalPath) || null;
   merged.entryPlaced = (acc && acc.entryPlaced) || (guest && guest.entryPlaced) || null;
   merged.entrySkipped = !!((acc && acc.entrySkipped) || (guest && guest.entrySkipped));
+  merged.track = (acc && acc.track) ? acc.track : (guest.track || "en");
+  ["zhPos", "zhDone", "zhHard", "zhPhDone"].forEach(function (f) { var out = {}; Object.keys(guest[f] || {}).forEach(function (k) { out[k] = guest[f][k]; }); Object.keys((acc && acc[f]) || {}).forEach(function (k) { out[k] = acc[f][k]; }); merged[f] = out; });
+  merged.zhPhSkipped = unionArr(guest.zhPhSkipped, acc.zhPhSkipped);
+  merged.zhEntrySkipped = !!((acc && acc.zhEntrySkipped) || (guest && guest.zhEntrySkipped));
+  merged.zhEntryPlaced = (acc && acc.zhEntryPlaced) || (guest && guest.zhEntryPlaced) || null;
   merged.vipRequests = (guest && guest.vipRequests) || [];
   function unionArr(a, b) { var out = (a || []).slice(); (b || []).forEach(function (x) { if (out.indexOf(x) < 0) out.push(x); }); return out; }
   merged.skipped = unionArr(guest.skipped, acc.skipped);
@@ -2127,6 +2137,14 @@ function syncPull(uid) {
           else if (k === "pushOpts") acc.pushOpts = r.state || null;
           else if (k === "entryPlaced") acc.entryPlaced = r.state || null;
           else if (k === "entrySkipped") acc.entrySkipped = !!r.state;
+          else if (k === "track") acc.track = (r.state === "zh") ? "zh" : "en";
+          else if (k === "zhPos") acc.zhPos = r.state || {};
+          else if (k === "zhDone") acc.zhDone = r.state || {};
+          else if (k === "zhHard") acc.zhHard = r.state || {};
+          else if (k === "zhPhDone") acc.zhPhDone = r.state || {};
+          else if (k === "zhPhSkipped") acc.zhPhSkipped = r.state || [];
+          else if (k === "zhEntrySkipped") acc.zhEntrySkipped = !!r.state;
+          else if (k === "zhEntryPlaced") acc.zhEntryPlaced = r.state || null;
         }
       });
       function pullWords() {
@@ -2186,6 +2204,14 @@ function syncPush() {
       (function () { var pp = (typeof pushPrefs === "function") ? pushPrefs() : { time: "20:00", types: { srs: true, path: true, checkin: true } }; row("rb", "pushOpts", { time: pp.time, types: pp.types || {} }); })();
       row("rb", "entryPlaced", state.entryPlaced || null);
       row("rb", "entrySkipped", !!state.entrySkipped);
+      row("rb", "track", state.track === "zh" ? "zh" : "en");
+      row("rb", "zhPos", state.zhPos || {});
+      row("rb", "zhDone", state.zhDone || {});
+      row("rb", "zhHard", state.zhHard || {});
+      row("rb", "zhPhDone", state.zhPhDone || {});
+      row("rb", "zhPhSkipped", state.zhPhSkipped || []);
+      row("rb", "zhEntrySkipped", !!state.zhEntrySkipped);
+      row("rb", "zhEntryPlaced", state.zhEntryPlaced || null);
       /* KHÔNG BAO GIỜ đẩy vip: cờ VIP chỉ chủ web bật trong Supabase. */
       var chain = null;
       try { chain = client.from("progress").upsert(rows); } catch (e) { chain = null; }
@@ -3155,7 +3181,11 @@ function renderEntryPlace(app, l) {
 }
 function renderLesson(app) {
   var l = curLesson;
-  if (l.type === "vocab") renderVocab(app, l);
+  if (l.type === "zhVocab") renderZhVocab(app, l);
+  else if (l.type === "zhPh") renderZhPh(app, l);
+  else if (l.type === "zhEntry") renderZhEntry(app, l);
+  else if (l.type === "zhHskk") renderZhHskk(app, l);
+  else if (l.type === "vocab") renderVocab(app, l);
   else if (l.type === "grammar") renderGrammar(app, l);
   else if (l.type === "pron") renderPron(app, l);
   else if (l.type === "test") renderTest(app, l);
@@ -8064,6 +8094,389 @@ function renderSpeechAnalyzer(app, l) {
   };
 }
 
+
+
+/* ---------- TRACK TIENG TRUNG HSK (26/10/2026) ---------- */
+function normZh() {
+  if (!state) return;
+  if (state.track !== "zh" && state.track !== "en") state.track = "en";
+  if (!state.zhPos || typeof state.zhPos !== "object") state.zhPos = {};
+  if (!state.zhDone || typeof state.zhDone !== "object") state.zhDone = {};
+  if (!state.zhHard || typeof state.zhHard !== "object") state.zhHard = {};
+  if (!state.zhPhDone || typeof state.zhPhDone !== "object") state.zhPhDone = {};
+  if (!Array.isArray(state.zhPhSkipped)) state.zhPhSkipped = [];
+  if (state.zhEntrySkipped == null) state.zhEntrySkipped = false;
+}
+function zhSpeak(text) { try { if (window.speechSynthesis && window.SpeechSynthesisUtterance) { window.speechSynthesis.cancel(); var u = new SpeechSynthesisUtterance(text); u.lang = "zh-CN"; u.rate = 0.85; window.speechSynthesis.speak(u); } } catch (e) {} }
+function trackSwitchHTML() {
+  var zh = state.track === "zh";
+  return '<div class="tracksw" id="trackSwitch"><button class="btn' + (zh ? "" : " on") + '" data-track-switch="en">Tiếng Anh · IELTS</button><button class="btn' + (zh ? " on" : "") + '" data-track-switch="zh">Tiếng Trung · HSK</button></div>';
+}
+function wireTrackSwitch() {
+  $$("[data-track-switch]").forEach(function (b) { b.onclick = function () { state.track = b.dataset.trackSwitch; curLesson = null; saveState(); render(); }; });
+}
+function isZhNewUser() {
+  if (state.zhEntryPlaced || state.zhEntrySkipped) return false;
+  if (Object.keys(state.zhPos || {}).length > 0) return false;
+  if (Object.keys(state.zhDone || {}).length > 0) return false;
+  if (Object.keys(state.zhPhDone || {}).length > 0) return false;
+  return true;
+}
+function zhStageSets(stage) {
+  var out = [];
+  (CONTENT.zhVocab || []).forEach(function (s, i) { if (s.hsk === "HSK" + stage) out.push({ key: "zhvocab:" + i, idx: i, set: s, stage: stage }); });
+  return out;
+}
+function zhSets() {
+  var out = [{ key: "starter", idx: -1, set: ZH_STARTER, stage: 1 }];
+  [4, 5, 6].forEach(function (st) { zhStageSets(st).forEach(function (d) { out.push(d); }); });
+  return out;
+}
+function zhSetByKey(key) {
+  if (key === "starter") return { key: key, idx: -1, set: ZH_STARTER, stage: 1 };
+  var parts = String(key).split(":");
+  var i = +parts[1];
+  var s = (CONTENT.zhVocab || [])[i];
+  if (!s) return null;
+  return { key: key, idx: i, set: s, stage: parseInt((s.hsk || "").replace("HSK", ""), 10) || 0 };
+}
+function zhSetPos(d) { return state.zhPos[d.key] || 0; }
+function zhSetDone(d) { return zhSetPos(d) >= d.set.cards.length; }
+function zhPhStatus(i) {
+  var s = ZH_PH_STEPS[i];
+  if (state.zhPhDone[s.id]) return "done";
+  if (state.zhPhSkipped.indexOf(s.id) >= 0) return "skipped";
+  var cur = zhPhCurrent();
+  return (cur && cur.idx === i) ? "cur" : "future";
+}
+function zhPhCurrent() {
+  for (var i = 0; i < ZH_PH_STEPS.length; i++) {
+    var s = ZH_PH_STEPS[i];
+    if (!state.zhPhDone[s.id] && state.zhPhSkipped.indexOf(s.id) < 0) return { step: s, idx: i };
+  }
+  return null;
+}
+function zhSessionTarget() {
+  var placed = state.zhEntryPlaced ? state.zhEntryPlaced.stage : 0;
+  if (placed >= 4) {
+    var psets = zhSets();
+    for (var j = 0; j < psets.length; j++) if (psets[j].stage >= placed && !zhSetDone(psets[j])) return { kind: "zhLesson", title: psets[j].set.topic, type: "Tiếng Trung · Từ vựng chặng " + psets[j].stage, lesson: { type: "zhVocab", setKey: psets[j].key, idx: psets[j].idx } };
+  }
+  var cur = zhPhCurrent();
+  if (cur) return { kind: "zhLesson", title: "Phát âm: " + cur.step.title, type: "Tiếng Trung · Pinyin chặng 1", lesson: { type: "zhPh", idx: cur.idx } };
+  var sets = zhSets();
+  for (var i = 0; i < sets.length; i++) if (!zhSetDone(sets[i])) return { kind: "zhLesson", title: sets[i].set.topic, type: "Tiếng Trung · Từ vựng chặng " + sets[i].stage, lesson: { type: "zhVocab", setKey: sets[i].key, idx: sets[i].idx } };
+  if (!state.zhDone["hskk:elem"]) return { kind: "zhLesson", title: "Luyện HSKK Sơ cấp — nghe nhắc lại", type: "Tiếng Trung · HSKK", lesson: { type: "zhHskk" } };
+  return { kind: "zhLesson", title: "Ôn lại mạch pinyin chặng 1", type: "Tiếng Trung · Ôn tập", lesson: { type: "zhPh", idx: 0 } };
+}
+function zhOpenTarget(t) { if (t && t.kind === "zhLesson") openLesson(t.lesson); }
+function zhAwardOnce(key) {
+  if (!state.zhDone[key]) { state.zhDone[key] = true; awardXp(10); saveState(); return true; }
+  return false;
+}
+function zhPhNodeHTML(i) {
+  var s = ZH_PH_STEPS[i];
+  var st = zhPhStatus(i);
+  var icon = st === "done" ? "✓" : st === "cur" ? "▶" : st === "skipped" ? "↩" : "○";
+  var txt = st === "done" ? "Đã xong" : st === "cur" ? "Đang học · Bạn đang ở đây" : st === "skipped" ? "Đã bỏ qua — bấm để học lại" : "Chưa tới · Học theo thứ tự";
+  return '<button class="path-node ' + st + '" data-zhph="' + i + '"><span class="dotwrap"><span class="dot">' + icon + '</span></span><span><span class="pn-title">Phát âm: ' + esc(s.title) + '</span><br><span class="pn-type">Tiếng Trung · Pinyin · lý thuyết trước, thực hành sau</span><br><span class="pn-st">' + txt + '</span></span></button>';
+}
+function zhSetNodeHTML(d) {
+  var dd = zhSetDone(d);
+  var pp = zhSetPos(d);
+  return '<button class="path-node ' + (dd ? "done" : "cur") + '" data-zhset="' + d.key + '"><span class="dotwrap"><span class="dot">' + (dd ? "✓" : "▶") + '</span></span><span><span class="pn-title">' + esc(d.set.topic) + '</span><br><span class="pn-type">Tiếng Trung · Từ vựng chặng ' + d.stage + ' · ' + d.set.cards.length + ' thẻ · đã học ' + pp + '/' + d.set.cards.length + '</span><br><span class="pn-st">' + (dd ? "Đã xong" : "Bấm để học") + '</span></span></button>';
+}
+function zhStageBanner(st, done, total) {
+  return '<div class="unit-banner"><b>Chặng ' + st.stage + ': ' + esc(st.title) + '</b><p class="mut">' + esc(st.desc) + ' · Từ tích lũy (sách cũ): ' + st.oldCum + ' · Hệ E: ' + st.eCum + (total != null ? ' · Đã xong ' + done + '/' + total : '') + '</p></div>';
+}
+function zhMapHTML(detailed) {
+  var html = "";
+  var phDoneN = ZH_PH_STEPS.filter(function (s) { return state.zhPhDone[s.id]; }).length;
+  var starter = zhSetByKey("starter");
+  var stDone = zhSetDone(starter);
+  html += zhStageBanner(ZH_STAGES[0], phDoneN + (stDone ? 1 : 0), ZH_PH_STEPS.length + 1);
+  html += '<div class="path-v">';
+  ZH_PH_STEPS.forEach(function (s, i) { html += zhPhNodeHTML(i); });
+  html += '<button class="path-node ' + (stDone ? "done" : (zhPhCurrent() ? "future" : "cur")) + '" data-zhset="starter"><span class="dotwrap"><span class="dot">' + (stDone ? "✓" : "▶") + '</span></span><span><span class="pn-title">' + esc(starter.set.topic) + '</span><br><span class="pn-type">Tiếng Trung · Từ vựng chặng 1 · ' + starter.set.cards.length + ' thẻ · đã học ' + zhSetPos(starter) + '/' + starter.set.cards.length + '</span><br><span class="pn-st">' + (stDone ? "Đã xong" : "Chưa tới") + '</span></span></button>';
+  html += '</div>';
+  [1, 2, 3, 4, 5].forEach(function (si) {
+    var st = ZH_STAGES[si];
+    var sets = zhStageSets(st.stage);
+    var dn = sets.filter(function (d) { return zhSetDone(d); }).length;
+    html += zhStageBanner(st, sets.length ? dn : null, sets.length || null);
+    if (!sets.length) {
+      html += '<p class="mut">Nội dung chặng này đang xây — sẽ mở ở đợt sau (chặng 2–3 đầy đủ, từ điển bấm tra, thi thử HSK).</p>';
+    } else {
+      html += '<div class="path-v">';
+      sets.forEach(function (d) { html += zhSetNodeHTML(d); });
+      html += '</div>';
+    }
+    if (detailed) html += '<details class="guide-more"><summary><b>Xem ghi chú nhãn HSK của chặng này</b></summary><p class="mut">' + esc(sets.length ? sets[0].set.hskNote : st.note) + '</p></details>';
+  });
+  return html;
+}
+function zhSystemEHTML() {
+  var rows = ZH_STAGES.map(function (st) { return '<tr><td>Chặng ' + st.stage + '</td><td>' + st.oldCum + '</td><td>' + st.eCum + '</td></tr>'; }).join("");
+  return '<details class="card" id="zhSystemE"><summary><b>Lớp bổ sung HSK 3.0 — hệ E (bấm để mở)</b></summary>'
+    + '<p class="mut">Nền tảng web theo Giáo trình chuẩn HSK (hệ 6 cấp cũ). Bảng dưới đối chiếu số từ tích lũy: cột "Sách cũ" là thang của bộ giáo trình Bùi gửi; cột "Hệ E" là đề cương thi HSK 3.0 năm 2025 (đã đối chiếu văn bản gốc ngày 25/10/2026). Phần bổ sung từ hệ E (vượt ngoài sách cũ) sẽ có ở đợt sau — web không dùng số hệ F (khung dạy học GF 0025-2021) để ghi nhãn.</p>'
+    + '<table><tr><th>Chặng</th><th>Sách cũ (tích lũy)</th><th>Hệ E (tích lũy)</th></tr>' + rows + '<tr><td>Chặng 7–9 (hệ E)</td><td>— (ngoài bộ 6 cấp)</td><td>11000</td></tr></table>'
+    + '<p class="mut">Học xong bộ giáo trình cũ đạt đích HSK cũ ở cấp tương ứng; muốn thi theo HSK 3.0 thì cần thêm từ vựng và kỹ năng theo khung mới.</p></details>';
+}
+function zhHskkHTML() {
+  return '<section class="card" id="zhHskkCard"><h3>Luyện HSKK — thi nói riêng</h3>'
+    + '<p class="mut">HSKK là bài thi nói riêng, thi bằng ghi âm, gồm 3 cấp: Sơ cấp, Trung cấp, Cao cấp. Web giữ mục này riêng, không gộp nói vào đề từng cấp — vì tới 25/10/2026 chưa có bằng chứng chính thức nào cho thấy nói đã tích hợp có điểm riêng vào từng đề HSK 3.0.</p>'
+    + '<p><b>Sơ cấp:</b> 27 câu / 20 phút (gồm 7 phút chuẩn bị): nghe nhắc lại 15 câu, nghe trả lời 10 câu, trả lời câu hỏi 2 câu.</p>'
+    + '<p><b>Trung cấp và Cao cấp:</b> format chi tiết sẽ bổ sung khi có nguồn chính thức; hiện web mới có bài luyện Sơ cấp.</p>'
+    + '<p class="mut">Ghi chú: HSK 3.0 ra mắt toàn cầu ngày 13/12/2026 — sau mốc này cần kiểm tra lại cấu trúc đề và HSKK.</p>'
+    + '<div class="row"><button class="btn" id="zhHskkBtn">Luyện HSKK Sơ cấp</button></div>'
+    + '<p class="mut">Bài luyện này là tự luyện nghe–nhắc lại, chưa chấm điểm — chấm nói AI cho track Trung sẽ có ở đợt sau.</p></section>';
+}
+function wireZhMap(scope) {
+  (scope || document).querySelectorAll("[data-zhph]").forEach(function (b) { b.onclick = function () {
+    var i = +b.dataset.zhph;
+    if (zhPhStatus(i) === "future") { toast("Học xong bước phát âm trước đã — mạch pinyin đi theo thứ tự."); return; }
+    openLesson({ type: "zhPh", idx: i });
+  }; });
+  (scope || document).querySelectorAll("[data-zhset]").forEach(function (b) { b.onclick = function () {
+    var d = zhSetByKey(b.dataset.zhset);
+    if (d) openLesson({ type: "zhVocab", setKey: d.key, idx: d.idx });
+  }; });
+}
+function wireZhHskk() {
+  var hb = $("#zhHskkBtn"); if (hb) hb.onclick = function () { openLesson({ type: "zhHskk" }); };
+}
+function viewHomeZh(app) {
+  var fresh = isZhNewUser();
+  var streak = streakDays();
+  var lv = xpLevel(state.xp || 0);
+  var html = trackSwitchHTML();
+  html += '<div class="stat-strip" id="homeStatusStrip"><span>🔥 Chuỗi ' + streak + ' ngày</span><span class="sep">·</span><span>' + (state.xp || 0) + ' XP · Cấp ' + lv.level + '</span><span class="sep">·</span><span>Mục tiêu ' + (state.goal || 30) + ' phút/ngày</span><button class="dimlink" id="statProgressLink">Tiến trình của tôi →</button></div>';
+  html += '<p id="homeGreet">' + (fresh ? 'Chào bạn mới! Cùng 2812 bắt đầu tiếng Trung nhé.' : 'Chào bạn! Hôm nay mình cùng 2812 học tiếng Trung nhé.') + '</p>';
+  if (fresh) {
+    html += '<section class="card next-card" id="zhEntryWelcome"><div class="hero-pair">' + mascPairHTML(false) + '<div class="hero-text"><p class="eyebrow">CHÀO BẠN MỚI · TIẾNG TRUNG</p><h2>Bạn muốn bắt đầu từ đâu?</h2><p class="mut">Làm kiểm tra xếp chặng nội bộ của web để xếp đúng chặng (khuyên dùng) — đây không phải đề thi HSK thật. Bỏ qua thì học từ chặng 1.</p><div class="row"><button class="btn btn-primary" id="zhEntryStartBtn">Kiểm tra đầu vào HSK</button><button class="btn" id="zhNextBtn">Bỏ qua, học từ chặng 1</button></div></div></div></section>';
+  } else {
+    var t = zhSessionTarget();
+    html += '<section class="card next-card" id="zhNextCard"><div class="hero-pair">' + mascPairHTML(false) + '<div class="hero-text"><p class="eyebrow">▶ TIẾP THEO · TIẾNG TRUNG</p><h2>' + esc(t.title) + '</h2><p class="mut">' + esc(t.type) + '</p><button class="btn btn-primary" id="zhNextBtn">Học tiếp: ' + esc(t.title) + ' →</button></div></div></section>';
+  }
+  html += '<section id="zhHomePath">' + zhMapHTML(false) + '</section>';
+  html += zhHskkHTML();
+  html += zhSystemEHTML();
+  html += '<details class="card" id="zhHomeMore"><summary><b>Xem thêm</b></summary>'
+    + '<p>' + (fresh ? '' : '<button class="dimlink" id="zhEntryRedoLink">Làm lại kiểm tra đầu vào HSK</button> · ') + '<button class="dimlink" id="zhToRoadmap">Xem bản đồ tiếng Trung →</button> · <button class="dimlink" id="zhLoginLink">Đăng nhập</button></p>'
+    + '<p>❄️ Đóng băng chuỗi: còn <b>' + (function () { normFreeze(state); return state.freeze.count; })() + ' lượt</b> (tối đa 3, miễn phí). Lỡ ngày mà còn lượt thì chuỗi tự giữ.</p></details>';
+  app.innerHTML = html;
+  var nb = $("#zhNextBtn"); if (nb) nb.onclick = function () {
+    if (fresh) { state.zhEntrySkipped = true; saveState(); openLesson({ type: "zhPh", idx: 0 }); return; }
+    zhOpenTarget(zhSessionTarget());
+  };
+  var esb = $("#zhEntryStartBtn"); if (esb) esb.onclick = function () { openLesson({ type: "zhEntry" }); };
+  var erl = $("#zhEntryRedoLink"); if (erl) erl.onclick = function () { openLesson({ type: "zhEntry" }); };
+  var spl = $("#statProgressLink"); if (spl) spl.onclick = function () { go("mine"); };
+  var mg = $("#zhToRoadmap"); if (mg) mg.onclick = function () { go("roadmap"); };
+  var lg = $("#zhLoginLink"); if (lg) lg.onclick = function () { go("mine"); };
+  wireZhMap(app);
+  wireZhHskk();
+}
+function viewRoadmapZh(app) {
+  var html = trackSwitchHTML() + '<h2>Bản đồ tiếng Trung</h2>';
+  html += '<p class="mut">6 chặng theo Giáo trình chuẩn HSK (hệ 6 cấp cũ) + lớp bổ sung HSK 3.0 hệ E. Chặng 2–3 đầy đủ, từ điển bấm tra và thi thử sẽ mở ở đợt sau.</p>';
+  html += zhMapHTML(true);
+  html += zhHskkHTML();
+  html += zhSystemEHTML();
+  app.innerHTML = html;
+  wireZhMap(app);
+  wireZhHskk();
+}
+function viewPracticeZh(app) {
+  var t = zhSessionTarget();
+  var html = trackSwitchHTML() + '<h2>Luyện tập · Tiếng Trung</h2>'
+    + '<section class="card next-card" id="zhPracticeNextCard"><p class="eyebrow">TIẾP THEO NÊN LUYỆN</p><h3>' + esc(t.title) + '</h3><p class="mut">' + esc(t.type) + '</p><button class="btn btn-primary" id="zhPracticeNextBtn">Tiếp theo nên luyện</button></section>';
+  html += '<details open><summary><b>Mạch pinyin chặng 1</b></summary><div class="path-v">';
+  ZH_PH_STEPS.forEach(function (s, i) { html += zhPhNodeHTML(i); });
+  html += '</div></details>';
+  var starter = zhSetByKey("starter");
+  html += '<details><summary><b>Từ vựng chặng 1</b></summary><div class="path-v">' + zhSetNodeHTML(starter) + '</div></details>';
+  [4, 5, 6].forEach(function (st) {
+    var sets = zhStageSets(st);
+    html += '<details><summary><b>Từ vựng chặng ' + st + ' (' + sets.length + ' bộ)</b></summary><div class="path-v">';
+    sets.forEach(function (d) { html += zhSetNodeHTML(d); });
+    html += '</div></details>';
+  });
+  html += '<details><summary><b>HSKK — thi nói riêng</b></summary>' + zhHskkHTML() + '</details>';
+  html += '<p><button class="btn" id="zhPracticeEntryBtn">Làm lại kiểm tra đầu vào HSK</button></p>';
+  app.innerHTML = html;
+  var pb = $("#zhPracticeNextBtn"); if (pb) pb.onclick = function () { zhOpenTarget(zhSessionTarget()); };
+  var eb = $("#zhPracticeEntryBtn"); if (eb) eb.onclick = function () { openLesson({ type: "zhEntry" }); };
+  wireZhMap(app);
+  wireZhHskk();
+}
+function viewReviewZh(app) {
+  var items = Object.keys(state.zhHard || {});
+  var html = trackSwitchHTML() + '<h2>Ôn tập · Tiếng Trung</h2><p class="mut">Các thẻ tiếng Trung bạn đã đánh dấu khó — học lại tới khi nhớ.</p>';
+  if (!items.length) {
+    html += '<section class="card"><div class="hero-pair"><svg class="snake sm masc-bob" aria-hidden="true" focusable="false"><use href="#msc-snake"/></svg><div class="hero-text"><p>Chưa có thẻ tiếng Trung nào đánh dấu khó.</p><p class="mut">Học tiếp chặng tiếng Trung, thẻ nào khó thì bấm "Đánh dấu khó" — thẻ sẽ về đây.</p></div></div><div class="row"><button class="btn btn-primary" id="zhReviewNextBtn">Học tiếp bước kế tiếp</button></div></section>';
+  } else {
+    html += '<section class="card"><h3>Thẻ khó (' + items.length + ')</h3>';
+    items.forEach(function (k) { var h = state.zhHard[k]; html += '<div class="sumcard"><p class="zh-han">' + esc(h.han) + '</p><p>' + esc(h.pinyin) + ' — ' + esc(h.vi) + '</p><div class="row"><button class="btn" data-zhhard-review="' + esc(k) + '">Học lại thẻ này</button><button class="btn" data-zhhard-done="' + esc(k) + '">Đã nhớ rồi</button></div></div>'; });
+    html += '</section>';
+  }
+  html += '<p class="mut">Sổ lỗi sai và lịch ôn giãn cách cho track Trung sẽ có ở đợt sau.</p>';
+  app.innerHTML = html;
+  var rb = $("#zhReviewNextBtn"); if (rb) rb.onclick = function () { zhOpenTarget(zhSessionTarget()); };
+  $$("[data-zhhard-review]").forEach(function (b) { b.onclick = function () {
+    var h = state.zhHard[b.dataset.zhhardReview];
+    if (h) { state.zhPos[h.setKey] = h.idx; saveState(); openLesson({ type: "zhVocab", setKey: h.setKey, idx: h.idx }); }
+  }; });
+  $$("[data-zhhard-done]").forEach(function (b) { b.onclick = function () {
+    delete state.zhHard[b.dataset.zhhardDone]; saveState(); render();
+  }; });
+}
+
+
+function renderZhQuiz(app, l, qs, onFinish, finishExtra) {
+  if (l.qi == null) { l.qi = 0; l.score = 0; l.picked = -1; }
+  if (l.qi >= qs.length) {
+    if (!l.finished) { l.finished = true; try { onFinish(l.score, qs.length); } catch (e) {} saveState(); }
+    l.zhNext = true;
+    var wrong = (l.wrong || []).map(function (w) { return '<p>· ' + esc(w) + '</p>'; }).join("");
+    var extra = "";
+    try { extra = finishExtra ? finishExtra(l.score, qs.length) : ""; } catch (e) {}
+    app.innerHTML = lessonHead({ title: l.title || "Bài luyện", type: l.typeLabel || "Tiếng Trung" }) + finishSummaryHTML("Xong bài luyện!", '<p>Bạn đúng ' + l.score + '/' + qs.length + ' câu.</p>' + extra + (wrong ? '<p><b>Xem lại câu sai:</b></p>' + wrong : '<p>Đúng hết — tốt lắm!</p>'), "");
+    wireBack();
+    var rb = $("#btnRedo"); if (rb) rb.onclick = function () { l.qi = 0; l.score = 0; l.picked = -1; l.finished = false; l.wrong = []; render(); };
+    return;
+  }
+  var q = qs[l.qi];
+  var html = lessonHead({ title: l.title || "Bài luyện", type: l.typeLabel || "Tiếng Trung" })
+    + '<div class="qblock"><p><b>Câu ' + (l.qi + 1) + '/' + qs.length + ':</b> ' + esc(q.q) + '</p>';
+  q.o.forEach(function (opt, i) { html += '<p><button class="btn" data-zhq="' + i + '">' + esc(opt) + '</button></p>'; });
+  if (l.picked >= 0) {
+    var ok = l.picked === q.a;
+    html += '<div class="why"><p><b>' + (ok ? 'Đúng rồi!' : 'Chưa đúng — đáp án đúng: ' + esc(q.o[q.a])) + '</b></p><p class="mut">' + esc(q.why || "") + '</p><button class="btn btn-primary" id="zhQuizNext">Đã hiểu →</button></div>';
+  }
+  html += '</div>';
+  app.innerHTML = html;
+  wireBack();
+  $$("[data-zhq]").forEach(function (b) { b.onclick = function () {
+    if (l.picked >= 0) return;
+    l.picked = +b.dataset.zhq;
+    if (l.picked === q.a) l.score++;
+    else { if (!l.wrong) l.wrong = []; l.wrong.push(q.q + ' — đáp án đúng: ' + q.o[q.a]); }
+    render();
+  }; });
+  var nx = $("#zhQuizNext"); if (nx) nx.onclick = function () { l.qi++; l.picked = -1; render(); };
+}
+function renderZhVocab(app, l) {
+  var d = zhSetByKey(l.setKey);
+  if (!d) { curLesson = null; render(); return; }
+  var cards = d.set.cards;
+  var pos = state.zhPos[d.key] || 0;
+  if (pos >= cards.length) {
+    zhAwardOnce("set:" + d.key);
+    l.zhNext = true;
+    app.innerHTML = lessonHead({ title: d.set.topic, type: "Tiếng Trung · Từ vựng chặng " + d.stage }) + finishSummaryHTML("Bạn đã học xong bộ này!", '<p>Bạn đã đi hết ' + cards.length + ' thẻ của bộ này trong ' + elapsedText() + '.</p>', "");
+    wireBack();
+    var rb = $("#btnRedo"); if (rb) rb.onclick = function () { state.zhPos[d.key] = 0; saveState(); render(); };
+    return;
+  }
+  var c = cards[pos];
+  var hardKey = d.key + ":" + pos;
+  var isHard = !!(state.zhHard || {})[hardKey];
+  var html = lessonHead({ title: d.set.topic, type: "Tiếng Trung · Từ vựng chặng " + d.stage }, d.set.hskNote || "");
+  html += '<p class="mut">Pha: <b>1. Lý thuyết</b> (thẻ từ: chữ Hán, pinyin, nghĩa, cụm đi kèm, ví dụ) → 2. Thực hành (nghe và nhắc lại dưới thẻ)</p><div class="qblock"><div class="row"><span class="chip">Thẻ ' + (pos + 1) + '/' + cards.length + ' trong bộ này</span><span class="chip">' + esc(d.set.hsk || "") + '</span></div>'
+    + '<div class="zh-han" id="zhCardHan">' + esc(c.han) + '</div>'
+    + '<p><b>' + esc(c.pinyin) + '</b> — ' + esc(c.vi) + '</p>'
+    + '<p class="mut">Cụm đi kèm: ' + esc(c.col || "") + '</p>'
+    + '<p>Ví dụ: ' + esc(c.ex || "") + '</p><p class="mut">' + esc(c.exv || "") + '</p>'
+    + '<div class="row"><button class="btn" id="zhListen">🔊 Nghe</button><button class="btn" id="zhHardBtn">' + (isHard ? 'Đã đánh dấu khó ✓' : 'Đánh dấu khó') + '</button><button class="btn" id="zhPrev">← Thẻ trước</button><button class="btn btn-primary" id="zhNext">Thẻ tiếp theo →</button></div></div>';
+  app.innerHTML = html;
+  wireBack();
+  $("#zhListen").onclick = function () { zhSpeak(c.han); };
+  $("#zhHardBtn").onclick = function () { if (isHard) delete state.zhHard[hardKey]; else state.zhHard[hardKey] = { han: c.han, pinyin: c.pinyin, vi: c.vi, setKey: d.key, idx: pos }; saveState(); render(); };
+  $("#zhPrev").onclick = function () { state.zhPos[d.key] = Math.max(0, pos - 1); saveState(); render(); };
+  $("#zhNext").onclick = function () { state.zhPos[d.key] = pos + 1; saveState(); render(); };
+}
+function renderZhPh(app, l) {
+  var step = ZH_PH_STEPS[l.idx];
+  if (!step) { curLesson = null; render(); return; }
+  var st = zhPhStatus(l.idx);
+  if (st === "future") {
+    app.innerHTML = lessonHead({ title: "Phát âm: " + step.title, type: "Tiếng Trung · Pinyin" }) + '<div class="qblock"><p>Bước này chưa mở — mạch pinyin đi theo thứ tự, học xong bước trước đã.</p><div class="row"><button class="btn" id="zhPhBack">Quay lại</button></div></div>';
+    wireBack();
+    var bb = $("#zhPhBack"); if (bb) bb.onclick = function () { backFromLesson(); };
+    return;
+  }
+  if (l.quiz) {
+    l.title = "Phát âm: " + step.title; l.typeLabel = "Tiếng Trung · Pinyin";
+    renderZhQuiz(app, l, step.quiz, function (score, total) {
+      if (state.zhPhSkipped.indexOf(step.id) >= 0) state.zhPhSkipped.splice(state.zhPhSkipped.indexOf(step.id), 1);
+      state.zhPhDone[step.id] = true;
+      zhAwardOnce("ph:" + step.id);
+    });
+    return;
+  }
+  var html = lessonHead({ title: "Phát âm: " + step.title, type: "Tiếng Trung · Pinyin" });
+  html += phaseBarHTML(1) + '<div class="qblock"><p class="mut">' + esc(step.hook) + '</p>'
+    + '<p><b>Ví dụ trước:</b></p>' + step.examples.map(function (e) { return '<p>· ' + esc(e) + '</p>'; }).join("")
+    + (step.id === "tones" ? '<div class="row"><button class="btn" id="zhPhListen">🔊 Nghe 4 thanh mẫu (mā má mǎ mà)</button></div>' : '')
+    + '<details class="rule-more"><summary><b>Xem quy tắc + mẹo</b></summary><p><b>Quy tắc:</b> ' + esc(step.rule) + '</p><p>💡 <b>Mẹo:</b> ' + esc(step.tip) + '</p></details>'
+    + videoSlotHTML()
+    + '<p class="mut">Bài này có ' + step.quiz.length + ' câu hỏi thực hành.</p>'
+    + '<div class="row"><button class="btn btn-primary" id="zhPhStart">Vào luyện tập →</button>' + (st === "done" ? '' : ' <button class="btn" id="zhPhSkip">Bỏ qua bước này</button>') + '</div>'
+    + (st === "skipped" ? '<p class="mut">Bước này bạn đã bỏ qua trước đó — làm lại để tính là xong.</p>' : '')
+    + '</div>';
+  app.innerHTML = html;
+  wireBack();
+  var pl = $("#zhPhListen"); if (pl) pl.onclick = function () { zhSpeak("妈麻马骂吗"); };
+  $("#zhPhStart").onclick = function () { l.quiz = true; l.qi = 0; l.score = 0; l.picked = -1; l.finished = false; l.wrong = []; lessonStart = Date.now(); render(); };
+  var sk = $("#zhPhSkip"); if (sk) sk.onclick = function () {
+    if (state.zhPhSkipped.indexOf(step.id) < 0) state.zhPhSkipped.push(step.id);
+    saveState();
+    var t = zhSessionTarget();
+    if (t.kind === "zhLesson") openLesson(t.lesson); else { curLesson = null; go("home"); }
+  };
+}
+function renderZhEntry(app, l) {
+  if (l.quiz) {
+    l.title = "Kiểm tra đầu vào HSK"; l.typeLabel = "Tiếng Trung · Xếp chặng";
+    renderZhQuiz(app, l, ZH_ENTRY_QS, function (score, total) {
+      var stage = zhEntryStageFor(score, total);
+      state.zhEntryPlaced = { stage: stage, score: score, total: total, at: Date.now() };
+    }, function (score, total) {
+      var pl = state.zhEntryPlaced;
+      var st = pl ? pl.stage : 1;
+      var nextNote = (st >= 4)
+        ? 'Nút "Bài tiếp theo" ở thanh dưới sẽ đưa bạn tới bộ từ đầu tiên của chặng ' + st + '.'
+        : (st >= 2)
+          ? 'Chặng 2–3 đầy đủ sẽ mở ở đợt sau; trước mắt nút "Bài tiếp theo" đưa bạn ôn lại mạch pinyin chặng 1 để chắc nền tảng.'
+          : 'Nút "Bài tiếp theo" ở thanh dưới sẽ đưa bạn tới bước phát âm đầu tiên chặng 1.';
+      return '<p><b>Kết quả này xếp bạn bắt đầu ở chặng ' + st + '.</b> (Đúng ' + score + '/' + total + ': 0–3 → chặng 1, 4–6 → chặng 2, 7–8 → chặng 3, 9–10 → chặng 4.)</p><p class="mut">Đây là kiểm tra xếp chặng nội bộ của web, không phải đề thi HSK thật. ' + nextNote + '</p>';
+    });
+    return;
+  }
+  app.innerHTML = lessonHead({ title: "Kiểm tra đầu vào HSK", type: "Tiếng Trung · Xếp chặng" }, "Kiểm tra xếp chặng nội bộ của web — không phải đề thi HSK thật.") + '<div class="qblock"><p>10 câu hỏi ngắn: thanh điệu, từ cơ bản và pinyin. Làm xong web xếp bạn vào chặng phù hợp (chặng 1–4).</p><p class="mut">Chặng 5–6 cần vốn từ lớn hơn — kiểm tra này xếp tối đa tới chặng 4; học lên rồi web sẽ mở tiếp.</p><div class="row"><button class="btn btn-primary" id="zhEntryGo">Bắt đầu làm bài →</button></div></div>';
+  wireBack();
+  $("#zhEntryGo").onclick = function () { l.quiz = true; l.qi = 0; l.score = 0; l.picked = -1; l.finished = false; l.wrong = []; lessonStart = Date.now(); render(); };
+}
+function renderZhHskk(app, l) {
+  var ss = ZH_HSKK_SENTENCES;
+  var i = l.i || 0;
+  if (i >= ss.length) {
+    zhAwardOnce("hskk:elem");
+    l.zhNext = true;
+    app.innerHTML = lessonHead({ title: "Luyện HSKK Sơ cấp", type: "Tiếng Trung · HSKK" }) + finishSummaryHTML("Xong bài luyện HSKK Sơ cấp!", '<p>Bạn đã nghe–nhắc lại ' + ss.length + ' câu trong ' + elapsedText() + '.</p><p class="mut">Bài này là tự luyện, chưa chấm điểm — chấm nói AI cho track Trung sẽ có ở đợt sau.</p>', "");
+    wireBack();
+    var rb = $("#btnRedo"); if (rb) rb.onclick = function () { l.i = 0; render(); };
+    return;
+  }
+  var s = ss[i];
+  app.innerHTML = lessonHead({ title: "Luyện HSKK Sơ cấp", type: "Tiếng Trung · HSKK" }) + '<div class="qblock"><p class="mut">Nghe câu mẫu rồi nhắc lại thành tiếng. Câu ' + (i + 1) + '/' + ss.length + '.</p>'
+    + '<div class="zh-han">' + esc(s.han) + '</div><p><b>' + esc(s.pinyin) + '</b></p><p class="mut">' + esc(s.vi) + '</p>'
+    + '<div class="row"><button class="btn" id="zhHskkListen">🔊 Nghe</button><button class="btn btn-primary" id="zhHskkNext">Câu tiếp theo →</button></div></div>';
+  wireBack();
+  $("#zhHskkListen").onclick = function () { zhSpeak(s.han); };
+  $("#zhHskkNext").onclick = function () { l.i = i + 1; render(); };
+}
 
 /* ---------- Khởi động ---------- */
 render();

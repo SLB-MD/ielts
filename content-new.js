@@ -2305,3 +2305,138 @@ var RB_NEW_GRAMMAR_MISTAKES = [
   "Dùng 'This is' cho nhiều đồ vật ('This is books') — số nhiều phải dùng 'These are'.",
   "Nói 'My name are Linh' hoặc 'I name is Linh' — đúng chỉ có 'My name is + tên'."
 ];
+
+// ---------- TRACK TIENG TRUNG HSK: DU LIEU (26/10/2026) ----------
+// Tu soan theo chu de/cau truc cua Giao trinh chuan HSK (he 6 cap cu);
+// cau vi du tu viet, KHONG trich nguyen van giao trinh.
+// He dem HSK 3.0 dung he E (de cuong thi 2025, da doi chieu van ban goc):
+// tich luy 300/500/1000/2000/3600/5400/11000. KHONG dung so he F.
+var ZH_STAGES = [
+  { stage: 1, title: "Phat am va chao hoi", oldCum: 150, eCum: 300, desc: "2 bai ngu am + 13 chu de; nghe–noi la truc chinh", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." },
+  { stage: 2, title: "Trong am, ngu dieu va so sanh buoc dau", oldCum: 300, eCum: 500, desc: "Trong am tu/cau, ngu dieu cau, so sanh buoc dau", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." },
+  { stage: 3, title: "Tu hoi thoai sang doan van", oldCum: 600, eCum: 1000, desc: "Bo ngu, cau chu ba, cau chu bi, doan van ngan", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." },
+  { stage: 4, title: "Hoc theo chu de, mo rong theo chu", oldCum: 1200, eCum: 2000, desc: "Moi bai 1 chu de lon; dung chu dan tu; cap diem de nham", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." },
+  { stage: 5, title: "Hoc qua tu, doan van dai", oldCum: 2500, eCum: 3600, desc: "Tu vung la truc chinh; tu su, nghi luan; viet doan tu 100 chu", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." },
+  { stage: 6, title: "Van ban dai va viet lai", oldCum: 5000, eCum: 5400, desc: "Bai khoa 700–1500 chu; viet rut gon 300–350 chu", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." }
+];
+var ZH_PH_STEPS = [
+  { id: "tones", title: "Thanh dieu: 4 thanh + thanh nhe",
+    hook: "Noi tieng Trung ma sai thanh la sai nghia: ma (me) khac ma (ngua) — chi khac dau thanh.",
+    examples: ["ma 妈 — me (thanh 1, cao deu)", "ma 麻 — te, gai (thanh 2, di len)", "ma 马 — ngua (thanh 3, xuong roi len)", "ma 骂 — mang (thanh 4, di xuong)", "ma 吗 — tro tu hoi (thanh nhe, doc luot)"],
+    rule: "Thanh dieu la do cao cua giong khi doc mot am tiet. Tieng Trung pho thong co 4 thanh chinh + thanh nhe. Nhin dau thanh la biet thanh nao.",
+    tip: "Tap doc tung thanh voi tay ve duong di cua giong: ngang, len, cong, xuong.",
+    quiz: [
+      { q: "“ma” mang dau thanh nao?", o: ["Dau ngang", "Dau len", "Dau cong", "Dau xuong"], a: 0, why: "Dau ngang la thanh 1, doc cao va deu." },
+      { q: "“ma” la thanh may?", o: ["Thanh 1", "Thanh 2", "Thanh 3", "Thanh 4"], a: 2, why: "Dau cong xuong roi len la thanh 3." },
+      { q: "Tu nao doc bang thanh 4?", o: ["ma", "ma", "ma", "ma"], a: 3, why: "Chi tu mang dau xuong moi la thanh 4." },
+      { q: "“ma” khong dau thuong la gi?", o: ["Thanh 1", "Thanh 2", "Thanh 4", "Thanh nhe"], a: 3, why: "Khong dau thuong la thanh nhe, doc ngan va luot." },
+      { q: "Cap nao chi khac nhau o thanh dieu?", o: ["ma – ma", "ma – ba", "ma – na", "ma – la"], a: 0, why: "Cung van ma, chi khac dau thanh thi nghia da khac." },
+      { q: "Hai thanh 3 di lien nhau thi thanh dau doc thanh gi?", o: ["Van thanh 3", "Thanh 2", "Thanh 4", "Thanh nhe"], a: 1, why: "Quy tac bien dieu: 3 + 3 doc thanh 2 + 3." }
+    ] },
+  { id: "finals", title: "Van mau co ban",
+    hook: "Van mau la phan van sau thanh mau: b + ao = bao.",
+    examples: ["a, o, e, i, u, u — 6 van mau don", "ai, ei, ao, ou — van mau kep, doc truot tu am nay sang am kia", "an, en, ang, eng — van mau mui, ket thuc bang n hoac ng"],
+    rule: "Mot am tiet = thanh mau (khong bat buoc) + van mau (bat buoc) + thanh dieu. Van mau quyet dinh van cua am tiet.",
+    tip: "Doc van mau mui thi hoi thoat ra mui o cuoi: an khac ang o do sau cua am mui.",
+    quiz: [
+      { q: "Am nao la van mau (phan van)?", o: ["b", "a", "m", "d"], a: 1, why: "a la van mau don; b, m, d la thanh mau." },
+      { q: "“ao” la van mau gi?", o: ["Van mau don", "Van mau kep", "Van mau mui", "Thanh mau"], a: 1, why: "ao truot tu a sang o nen la van mau kep." },
+      { q: "Tu “hao” (hao) co van mau nao?", o: ["a", "ao", "ou", "an"], a: 1, why: "hao = h + ao." },
+      { q: "Van mau mui la van mau ket thuc bang gi?", o: ["i hoac u", "n hoac ng", "a hoac o", "e"], a: 1, why: "an, en, ang, eng deu ket thuc bang am mui." },
+      { q: "“an” va “ang” khac nhau o dau?", o: ["Khong khac", "ang doc mui sau hon, co ng cuoi", "an dai hon", "ang la thanh mau"], a: 1, why: "ang co ng cuoi nen am mui sau hon an." },
+      { q: "“ei” doc gan giong gi?", o: ["ay", "au", "ei (e roi i nhe)", "ao"], a: 2, why: "ei truot tu e sang i nhe." }
+    ] },
+  { id: "initials", title: "Thanh mau co ban",
+    hook: "Thanh mau la phu am dau: b, p, m, f la 4 thanh mau moi.",
+    examples: ["b, p, m, f — moi", "d, t, n, l — dau luoi", "g, k, h — cuong luoi", "j, q, x — mat luoi; zh, ch, sh, r — quat luoi; z, c, s — dau luoi"],
+    rule: "Co 21 thanh mau (khong tinh y, w). Phan biet cap bat hoi/khong bat hoi: b–p, d–t, g–k, j–q, zh–ch, z–c.",
+    tip: "Nghe mau roi nhai theo, chu y bat hoi: p, t, k, q, ch, c co luong hoi manh.",
+    quiz: [
+      { q: "Am nao la thanh mau (phan dau)?", o: ["a", "b", "ao", "an"], a: 1, why: "b la phu am dau; a, ao, an la van mau." },
+      { q: "“zh, ch, sh” goi la nhom gi?", o: ["Thanh mau dau luoi", "Thanh mau quat luoi", "Van mau", "Thanh dieu"], a: 1, why: "zh, ch, sh uon luoi len nen goi la quat luoi." },
+      { q: "“q” trong pinyin doc gan giong gi?", o: ["k", "ch mem, bat hoi nhe", "s", "z"], a: 1, why: "q mem hon ch va co bat hoi." },
+      { q: "Tu “Zhongguo” bat dau bang thanh mau nao?", o: ["z", "zh", "j", "ch"], a: 1, why: "Zhong = zh + ong." },
+      { q: "Cap nao khac nhau o bat hoi?", o: ["b – m", "d – t", "n – l", "g – h"], a: 1, why: "d khong bat hoi, t bat hoi manh." },
+      { q: "“r” trong pinyin (nhu trong ren) doc gan giong gi?", o: ["r rung manh nhu tieng Viet", "r mem, gan nhu “z” nhe co rung", "l", "y"], a: 1, why: "r tieng Trung mem va co ma sat, khong rung manh." }
+    ] },
+  { id: "rules", title: "Quy tac viet pinyin hay nham",
+    hook: "Viet pinyin co vai cho gon lai — nho 4 quy tac nay la du doc dung.",
+    examples: ["u sau j, q, x, y → u: ju, qu, xu, yu", "iou co thanh mau → iu: jiu (khong viet jiou)", "uen co thanh mau → un: lun (khong viet luen)", "i dung mot minh → yi; u dung mot minh → wu; u dung mot minh → yu"],
+    rule: "Cac quy tac gon nay chi doi CACH VIET, khong doi cach doc. Ngoai ra: hai thanh 3 lien nhau thi thanh dau doc thanh thanh 2.",
+    tip: "Gap pinyin la thi tach ra: thanh mau + van mau + dau thanh, doc tung phan roi noi lai.",
+    quiz: [
+      { q: "“u” sau j, q, x, y viet thanh gi?", o: ["u", "u", "v", "yu"], a: 1, why: "Bo hai cham: ju, qu, xu, yu." },
+      { q: "“iou” khi co thanh mau di truoc viet gon thanh gi?", o: ["iou", "iu", "io", "u"], a: 1, why: "Bo o giua: jiu thay cho jiou." },
+      { q: "“uen” khi co thanh mau di truoc viet gon thanh gi?", o: ["uen", "un", "ueng", "en"], a: 1, why: "Bo e giua: lun thay cho luen." },
+      { q: "Am “i” dung mot minh, them gi o dau?", o: ["Khong them", "y → yi", "w → wi", "j → ji"], a: 1, why: "i dung mot minh them y: yi." },
+      { q: "Am “u” dung mot minh, them gi o dau?", o: ["y → yu", "w → wu", "j → ju", "Khong them"], a: 1, why: "u dung mot minh them w: wu." },
+      { q: "Hai thanh 3 di lien nhau (vi du ni hao) thi thanh 3 dau tien doc thanh gi?", o: ["Van thanh 3", "Thanh 2", "Thanh 4", "Thanh nhe"], a: 1, why: "Quy tac bien dieu: 3 + 3 → 2 + 3." }
+    ] }
+];
+// Bo tu khoi dong chặng 1 (tu soan theo chu de sach HSK1: chao hoi, ban than,
+// giao tiep toi thieu). Cac tu la tu co ban thong dung; cau vi du tu soan,
+// khong trich nguyen van giao trinh.
+var ZH_STARTER = {
+  topic: "Chặng 1 — Chào hỏi và làm quen",
+  hsk: "HSK1",
+  hskNote: "Bộ tự soạn theo chủ đề sách HSK1 (chào hỏi, bản thân, giao tiếp tối thiểu). Các từ là từ cơ bản thông dụng; câu ví dụ tự soạn, không trích nguyên văn giáo trình.",
+  cards: [
+    { han: "你", pinyin: "nǐ", vi: "bạn", col: "你好", ex: "你好吗？", exv: "Bạn có khỏe không?" },
+    { han: "好", pinyin: "hǎo", vi: "tốt; khỏe", col: "很好", ex: "我很好，谢谢。", exv: "Tôi rất khỏe, cảm ơn." },
+    { han: "我", pinyin: "wǒ", vi: "tôi", col: "我们", ex: "我是中国人。", exv: "Tôi là người Trung Quốc." },
+    { han: "是", pinyin: "shì", vi: "là", col: "是学生", ex: "我是学生。", exv: "Tôi là học sinh." },
+    { han: "不", pinyin: "bù", vi: "không", col: "不是", ex: "我不是老师，我是学生。", exv: "Tôi không phải giáo viên, tôi là học sinh." },
+    { han: "吗", pinyin: "ma", vi: "trợ từ câu hỏi", col: "好吗", ex: "你好吗？", exv: "Bạn khỏe không?" },
+    { han: "呢", pinyin: "ne", vi: "trợ từ (còn… thì sao)", col: "你呢", ex: "我很好，你呢？", exv: "Tôi rất khỏe, còn bạn thì sao?" },
+    { han: "谢谢", pinyin: "xièxie", vi: "cảm ơn", col: "谢谢你", ex: "谢谢你的帮助。", exv: "Cảm ơn sự giúp đỡ của bạn." },
+    { han: "再见", pinyin: "zàijiàn", vi: "tạm biệt", col: "明天见", ex: "今天先这样，明天见。", exv: "Hôm nay thế này trước nhé, mai gặp." },
+    { han: "请", pinyin: "qǐng", vi: "mời; xin", col: "请坐", ex: "请坐，喝茶吧。", exv: "Mời ngồi, uống trà nhé." },
+    { han: "对不起", pinyin: "duìbuqi", vi: "xin lỗi", col: "说对不起", ex: "对不起，我迟到了。", exv: "Xin lỗi, tôi đến muộn rồi." },
+    { han: "没关系", pinyin: "méi guānxi", vi: "không sao", col: "没关系", ex: "没关系，下次早一点。", exv: "Không sao, lần sau sớm hơn một chút." },
+    { han: "叫", pinyin: "jiào", vi: "gọi là; tên là", col: "叫什么", ex: "你叫什么名字？", exv: "Bạn tên là gì?" },
+    { han: "姓", pinyin: "xìng", vi: "họ", col: "贵姓", ex: "请问您贵姓？", exv: "Xin hỏi quý danh của ông/bà là gì?" },
+    { han: "朋友", pinyin: "péngyou", vi: "bạn bè", col: "好朋友", ex: "他是我的好朋友。", exv: "Anh ấy là bạn thân của tôi." },
+    { han: "老师", pinyin: "lǎoshī", vi: "thầy/cô giáo", col: "王老师", ex: "王老师是我的老师。", exv: "Thầy Vương là giáo viên của tôi." },
+    { han: "学生", pinyin: "xuéshēng", vi: "học sinh; sinh viên", col: "中国学生", ex: "我是中国学生。", exv: "Tôi là học sinh Trung Quốc." },
+    { han: "今天", pinyin: "jīntiān", vi: "hôm nay", col: "今天天气", ex: "今天天气很好。", exv: "Hôm nay thời tiết rất đẹp." },
+    { han: "中国", pinyin: "Zhōngguó", vi: "Trung Quốc", col: "中国人", ex: "我爱中国。", exv: "Tôi yêu Trung Quốc." },
+    { han: "人", pinyin: "rén", vi: "người", col: "中国人", ex: "中国人很多。", exv: "Người Trung Quốc rất đông." }
+  ]
+};
+// Cau luyen HSKK So cap: nghe–nhac lai (tu soan, chao hoi/gioi thieu co ban).
+var ZH_HSKK_SENTENCES = [
+  { han: "你好！", pinyin: "Nǐ hǎo!", vi: "Chào bạn!" },
+  { han: "我叫小明。", pinyin: "Wǒ jiào Xiǎo Míng.", vi: "Tôi tên là Tiểu Minh." },
+  { han: "我是中国人。", pinyin: "Wǒ shì Zhōngguó rén.", vi: "Tôi là người Trung Quốc." },
+  { han: "你是哪国人？", pinyin: "Nǐ shì nǎ guó rén?", vi: "Bạn là người nước nào?" },
+  { han: "我今年二十岁。", pinyin: "Wǒ jīnnián èrshí suì.", vi: "Năm nay tôi 20 tuổi." },
+  { han: "谢谢你！", pinyin: "Xièxie nǐ!", vi: "Cảm ơn bạn!" },
+  { han: "再见！", pinyin: "Zàijiàn!", vi: "Tạm biệt!" },
+  { han: "请问，你叫什么名字？", pinyin: "Qǐngwèn, nǐ jiào shénme míngzi?", vi: "Xin hỏi, bạn tên là gì?" },
+  { han: "我是学生。", pinyin: "Wǒ shì xuéshēng.", vi: "Tôi là học sinh." },
+  { han: "今天天气很好。", pinyin: "Jīntiān tiānqì hěn hǎo.", vi: "Hôm nay thời tiết rất đẹp." }
+];
+// Kiem tra xep chang noi bo (khong phai de thi HSK that): thanh dieu, tu co ban, pinyin.
+var ZH_ENTRY_QS = [
+  { q: "“mā” mang dấu thanh nào?", o: ["Dấu ngang", "Dấu lên", "Dấu cong", "Dấu xuống"], a: 0, why: "Dấu ngang là thanh 1." },
+  { q: "“mǎ” là thanh mấy?", o: ["Thanh 1", "Thanh 2", "Thanh 3", "Thanh 4"], a: 2, why: "Dấu cong xuống rồi lên là thanh 3." },
+  { q: "Từ nào đọc bằng thanh 4?", o: ["mā", "má", "mǎ", "mà"], a: 3, why: "Chỉ từ mang dấu xuống mới là thanh 4." },
+  { q: "“ma” không dấu thường là gì?", o: ["Thanh 1", "Thanh 2", "Thanh 4", "Thanh nhẹ"], a: 3, why: "Không dấu thường là thanh nhẹ, đọc ngắn và lướt." },
+  { q: "“你” nghĩa là gì?", o: ["Tôi", "Bạn", "Anh ấy", "Chúng ta"], a: 1, why: "你 là ngôi thứ hai: bạn." },
+  { q: "“谢谢” nghĩa là gì?", o: ["Tạm biệt", "Xin lỗi", "Cảm ơn", "Xin chào"], a: 2, why: "谢谢 là cảm ơn." },
+  { q: "“再见” nghĩa là gì?", o: ["Cảm ơn", "Tạm biệt", "Xin lỗi", "Mời ngồi"], a: 1, why: "再见 dùng khi chào tạm biệt." },
+  { q: "“中国” đọc là gì?", o: ["Zhōngguó", "Zhōngwén", "Zhōngxué", "Zhōngrén"], a: 0, why: "中国 đọc là Zhōngguó." },
+  { q: "“朋友” đọc là gì?", o: ["péngyou", "péngyǒu", "píngyou", "pèngyou"], a: 0, why: "朋友 đọc là péngyou." },
+  { q: "“老师” đọc là gì?", o: ["lǎoshī", "láoshī", "lǎoshǐ", "lāoshī"], a: 0, why: "老师 đọc là lǎoshī." }
+];
+function ZH_STAGE_SETS(stage) {
+  var out = [];
+  (CONTENT.zhVocab || []).forEach(function (s, i) { if (s.hsk === "HSK" + stage) out.push(i); });
+  return out;
+}
+function zhEntryStageFor(score, total) {
+  if (score >= 9) return 4;
+  if (score >= 7) return 3;
+  if (score >= 4) return 2;
+  return 1;
+}
