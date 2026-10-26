@@ -28011,13 +28011,13 @@ const CONTENT = {
     {
      "type": "DLC",
      "q": "Sơ đồ toa tàu giường nằm: nhãn 1 chỉ khu vực cạnh cửa ra vào, nơi hành khách để các vali lớn. Từ trong bài cho khu vực này là ___ area.",
-     "a": "luggage",
+     "answer": "luggage",
      "why": "Bài viết: 'there is a luggage area for large suitcases' - khu vực hành lý nằm ngay cạnh cửa ra vào."
     },
     {
      "type": "DLC",
      "q": "Sơ đồ toa tàu giường nằm: nhãn 2 chỉ loại giường trong các khoang được gấp xuống vào ban đêm. Từ trong bài là ___ beds.",
-     "a": "bunk",
+     "answer": "bunk",
      "why": "Bài viết: 'bunk beds that are folded down at night' - giường tầng được gấp xuống ban đêm."
     },
     {
@@ -28088,13 +28088,13 @@ const CONTENT = {
     {
      "type": "DLC",
      "q": "Sơ đồ điệu nhảy của ong trên tổ: nhãn 1 chỉ đoạn chạy thẳng ở giữa hình số 8, trong đó con ong lắc phần bụng sang hai bên. Đoạn chạy này trong bài gọi là waggle ___.",
-     "a": "run",
+     "answer": "run",
      "why": "Bài viết gọi đoạn chạy thẳng ở giữa điệu nhảy là 'the waggle run'."
     },
     {
      "type": "DLC",
      "q": "Sơ đồ điệu nhảy của ong trên tổ: nhãn 2 chỉ đường mốc trên mặt tổ dùng để so sánh hướng của đoạn chạy. Từ trong bài chỉ đường mốc này là the ___.",
-     "a": "vertical",
+     "answer": "vertical",
      "why": "Góc của đoạn chạy được đo so với 'the vertical line' - đường thẳng đứng trên mặt tổ."
     },
     {
@@ -28165,13 +28165,13 @@ const CONTENT = {
     {
      "type": "DLC",
      "q": "Sơ đồ dòng chảy của sông: nhãn 1 chỉ những khúc uốn cong rộng của dòng sông ở vùng đất bằng phẳng. Từ trong bài chỉ các khúc uốn này là ___.",
-     "a": "meanders",
+     "answer": "meanders",
      "why": "Bài viết: 'the river slows and bends into wide curves called meanders' - các khúc uốn gọi là meanders."
     },
     {
      "type": "DLC",
      "q": "Sơ đồ dòng chảy của sông: nhãn 2 chỉ vùng đất bằng mới hình thành nơi dòng sông đổ ra biển. Từ trong bài là ___.",
-     "a": "delta",
+     "answer": "delta",
      "why": "Cuối hành trình, sông thả bùn cát xuống và bồi đắp vùng đất mới gọi là delta (châu thổ)."
     },
     {
