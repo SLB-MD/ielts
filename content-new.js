@@ -421,10 +421,10 @@ var RB_CHAPTER_MAP = [
 
 // ---------- DON LON XON (25/10/2026): BUOC LO TRINH CHANG 2-13 TU KHO CO SAN ----------
 // Moi buoc la mot bai kho co san, xep theo chang (band) cua chinh bai do.
-// Thu tu trong chuong: Tu vung -> Ngu phap -> Doc -> Nghe ngan -> Nghe dai ->
-// Noi -> Nhap vai -> Viet -> Luyen viet -> Go cau. Bo tu chua gan band (16 bo)
-// khong vao chuong nao — van mo duoc o tab Luyen tap, muc "Chua xep band".
-// Bai kiem tra cuoi chuong chi co o chuong 1; cac chuong sau chua co.
+// Thứ tự trong chương: Từ vựng -> Ngữ pháp -> Đọc -> Nghe ngắn -> Nghe dài ->
+// Nói -> Nhập vai -> Viết -> Luyện viết -> Gõ câu. Bộ từ chưa gắn band (16 bộ)
+// không vào chương nào — vẫn mở được ở tab Luyện tập, mục "Chưa xếp band".
+// Bài kiểm tra cuối chương chỉ có ở chương 1; các chương sau chưa có.
 function typingModeOfLevel(lv) {
   lv = lv || "";
   if (lv.indexOf("6.0") >= 0 || lv.indexOf("6.5") >= 0 || lv.indexOf("7.") >= 0) return "nangcao";
@@ -526,8 +526,8 @@ function rbFirstUndoneAcrossBands() {
 }
 
 // ---------- CHAT LOC (GĐ2, a17): So tay chang cho 12 chuong sau ----------
-// Noi dung tu soan tong quat theo muc tieu tung chuong (RB_CHAPTER_MAP),
-// khong chep sach hay de thi. Chuong 1 dung RB_CH1_GUIDEBOOK san co.
+// Nội dung tự soạn tổng quát theo mục tiêu từng chương (RB_CHAPTER_MAP),
+// không chép sách hay đề thi. Chương 1 dùng RB_CH1_GUIDEBOOK sẵn có.
 var CL_GUIDEBOOKS = {
   "Band 2,0": { grammar: ["Câu đơn với to be và have got", "Thì hiện tại đơn cho thói quen", "Mạo từ a/an/the cơ bản"], phrases: ["I live in... (Tôi sống ở...)", "I like... (Tôi thích...)", "Can you help me? (Bạn giúp tôi được không?)"], mistakes: ["Quên thêm -s cho ngôi thứ ba số ít (he go thành he goes)", "Dùng sai a/an trước nguyên âm", "Bỏ mạo từ the trước danh từ đã xác định"] },
   "Band 2,5": { grammar: ["Thì hiện tại tiếp diễn", "Câu so sánh hơn với -er và more", "Từ nối and/but/because"], phrases: ["I am doing... (Tôi đang...)", "My family has... (Gia đình tôi có...)", "I usually... (Tôi thường...)"], mistakes: ["Nhầm thì hiện tại đơn với tiếp diễn", "So sánh hơn thiếu than", "Dùng very thay vì so sánh khi cần"] },
@@ -601,12 +601,12 @@ CONTENT.reading.push.apply(CONTENT.reading, [{"topic":"Một ngày ở trường
 CONTENT.roleplay.push.apply(CONTENT.roleplay, [{"title":"Buying a Notebook in a Shop - Mua vở ở cửa hàng","setting":"Bạn vào một cửa hàng văn phòng phẩm gần nhà để mua vở và bút cho năm học mới. Bạn hỏi màu sắc, giá tiền và thanh toán lịch sự.","partner":"Nhân viên cửa hàng","goal":"Hỏi được màu và giá, mua đủ vở và bút rồi thanh toán lịch sự.","band":"Band 2.0","chunks":["I want to buy a notebook","I like the blue one","How much is it","I want a pen, too","Thank you very much"],"turns":[{"from":"partner","text":"Hello. Can I help you?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Tôi muốn mua một quyển vở, làm ơn.","expect":"Hello. I want to buy a notebook, please.","keywords":["hello","want","buy","notebook"],"hint":"Hello. I want to buy...","tip":"Nối âm: want to đọc liền thành một nhịp. Ngữ điệu lên nhẹ ở please để nghe lịch sự.","chunks":["I want to buy a notebook"]},{"from":"partner","text":"We have blue notebooks and red notebooks. Which colour do you like?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi thích quyển màu xanh. Nó bao nhiêu tiền ạ?","expect":"I like the blue one. How much is it?","keywords":["like","blue","how much"],"hint":"I like the blue one....","tip":"Câu hỏi How much lên giọng nhẹ ở cuối. Phát âm blue rõ âm l, không đọc thành bu.","chunks":["How much is it"]},{"from":"partner","text":"It is three dollars. Do you need a pen, too?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, tôi cũng muốn một cái bút. Cảm ơn bạn rất nhiều.","expect":"Yes, I want a pen, too. Thank you very much.","keywords":["want","pen","thank you"],"hint":"Yes, I want a pen,...","tip":"Ngữ điệu: too lên giọng nhẹ, thank you very much xuống giọng để chốt lời cảm ơn.","chunks":["I want a pen, too","Thank you very much"]}]},{"title":"Asking the Way to the Bus Stop - Hỏi đường ra bến xe buýt","setting":"Bạn đang đi bộ trong một khu phố lạ và cần ra bến xe buýt. Bạn hỏi một người đi đường và xác nhận lại chỉ dẫn trước khi đi.","partner":"Người đi đường","goal":"Hỏi được đường ra bến xe buýt và xác nhận lại chỉ dẫn cho chắc chắn.","band":"Band 2.0","chunks":["Excuse me, where is","Go straight","turn left at the bank","next to the park","Thank you very much"],"turns":[{"from":"partner","text":"Hello. Do you need some help?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Xin lỗi, bến xe buýt ở đâu ạ?","expect":"Excuse me, where is the bus stop, please?","keywords":["excuse me","where is","bus stop"],"hint":"Excuse me, where is...","tip":"Câu hỏi Where lên giọng nhẹ ở cuối. Nối âm: where is đọc liền thành một nhịp.","chunks":["Excuse me, where is"]},{"from":"partner","text":"Go straight, then turn left at the bank. The bus stop is next to the park."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Đi thẳng rồi rẽ trái ở ngân hàng, phải không ạ?","expect":"Go straight and turn left at the bank, right?","keywords":["go straight","turn left","bank"],"hint":"Go straight and...","tip":"Câu hỏi xác nhận right lên giọng ở cuối. Nhấn vào straight và left để người nghe dễ theo.","chunks":["Go straight","turn left at the bank"]},{"from":"partner","text":"Yes, right. It is only five minutes from here."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn rất nhiều. Tạm biệt!","expect":"Thank you very much. Goodbye!","keywords":["thank you","goodbye"],"hint":"Thank you very much....","tip":"Ngữ điệu: thank you very much nói ấm và rõ, goodbye xuống giọng nhẹ để chào tạm biệt.","chunks":["Thank you very much"]}]},{"title":"Ordering Food at a Small Restaurant - Gọi món ở quán ăn nhỏ","setting":"Bạn vào một quán ăn nhỏ buổi tối cùng bạn bè. Nhân viên đưa thực đơn và hỏi bạn muốn ăn, uống gì.","partner":"Nhân viên phục vụ","goal":"Gọi được món ăn, đồ uống và chốt đơn lịch sự.","band":"Band 2.5","chunks":["Good evening","I would like rice and chicken","a glass of orange juice","No, thank you","That is all"],"turns":[{"from":"partner","text":"Good evening. Here is the menu. What would you like?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào buổi tối. Tôi muốn cơm và gà, làm ơn.","expect":"Good evening. I would like rice and chicken, please.","keywords":["good evening","would like","rice","chicken"],"hint":"Good evening. I would like...","tip":"Cụm would like đọc mềm và lịch sự hơn want. Nhấn vào rice và chicken để nhân viên nghe rõ món.","chunks":["I would like rice and chicken"]},{"from":"partner","text":"Would you like something to drink?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, tôi muốn một ly nước cam, làm ơn.","expect":"Yes, I would like a glass of orange juice, please.","keywords":["would like","glass","orange juice"],"hint":"Yes, I would like a glass...","tip":"Phát âm: orange có âm đầu o rõ, juice có âm cuối s nhẹ. Nói cả cụm a glass of orange juice trong một hơi.","chunks":["a glass of orange juice"]},{"from":"partner","text":"Anything else? Our soup today is very good."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Không, cảm ơn. Thế là đủ rồi.","expect":"No, thank you. That is all.","keywords":["thank you","that is all"],"hint":"No, thank you....","tip":"Ngữ điệu: that is all xuống giọng để chốt đơn. Nói No nhẹ nhàng kèm thank you để nghe lịch sự.","chunks":["That is all"]}]},{"title":"Buying a Train Ticket - Mua vé tàu","setting":"Bạn ra ga mua vé tàu đi Hà Nội vào sáng mai. Nhân viên bán vé hỏi điểm đến, loại vé và báo giá.","partner":"Nhân viên bán vé","goal":"Mua được vé tàu khứ hồi đi Hà Nội và thanh toán đúng giá.","band":"Band 3.0","chunks":["I want to go to Hanoi","a return ticket","How much is it","Here is the money","Thank you very much"],"turns":[{"from":"partner","text":"Good morning. Where do you want to go?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào buổi sáng. Tôi muốn đi Hà Nội vào sáng mai.","expect":"Good morning. I want to go to Hanoi tomorrow morning.","keywords":["good morning","want","hanoi","tomorrow"],"hint":"Good morning. I want to go...","tip":"Nối âm: want to go đọc liền thành một nhịp. Nhấn vào Hanoi và tomorrow morning để rõ điểm đến và thời gian.","chunks":["I want to go to Hanoi"]},{"from":"partner","text":"The train leaves at eight o'clock. Do you want a single ticket or a return ticket?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi muốn vé khứ hồi. Nó bao nhiêu tiền ạ?","expect":"I want a return ticket. How much is it, please?","keywords":["return ticket","how much"],"hint":"I want a return ticket....","tip":"Phát âm: return nhấn âm hai, ticket nhấn âm đầu. Câu hỏi How much lên giọng nhẹ ở cuối.","chunks":["a return ticket","How much is it"]},{"from":"partner","text":"It is one hundred thousand dong."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Đây là tiền. Cảm ơn bạn rất nhiều.","expect":"Here is the money. Thank you very much.","keywords":["money","thank you"],"hint":"Here is the money....","tip":"Ngữ điệu: here is the money nói rõ ràng, thank you very much xuống giọng để kết thúc giao dịch.","chunks":["Thank you very much"]}]},{"title":"Borrowing a Book at the Library - Mượn sách ở thư viện","setting":"Bạn vào thư viện tìm sách về động vật. Thủ thư chỉ vị trí sách và nhắc thời hạn mượn.","partner":"Thủ thư","goal":"Tìm được sách về động vật, biết thời hạn mượn và hứa trả đúng hạn.","band":"Band 3.0","chunks":["I am looking for a book","about animals","How long can I borrow","I will return it on time","Thank you"],"turns":[{"from":"partner","text":"Hello. Can I help you find a book?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Tôi đang tìm một cuốn sách về động vật.","expect":"Hello. I am looking for a book about animals.","keywords":["looking for","book","animals"],"hint":"Hello. I am looking for...","tip":"Cụm looking for đọc liền thành một nhịp, âm cuối của looking nối sang for. Nhấn vào book và animals.","chunks":["I am looking for a book"]},{"from":"partner","text":"Animal books are on the second floor, next to the science books."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi có thể mượn cuốn sách này trong bao lâu?","expect":"How long can I borrow this book?","keywords":["how long","borrow","book"],"hint":"How long can I borrow...","tip":"Câu hỏi How long lên giọng nhẹ ở cuối. Phát âm borrow rõ âm r ở giữa, không đọc thành boro.","chunks":["How long can I borrow"]},{"from":"partner","text":"You can keep it for two weeks. Please return it on time."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn. Tôi sẽ trả đúng hạn.","expect":"Thank you. I will return it on time.","keywords":["thank you","return","on time"],"hint":"Thank you. I will return...","tip":"Ngữ điệu: on time xuống giọng để khẳng định lời hứa trả đúng hạn. Nối âm: return it đọc liền.","chunks":["I will return it on time"]}]},{"title":"Booking a Simple Hotel Room - Đặt phòng khách sạn đơn giản","setting":"Bạn gọi điện cho khách sạn Sunrise để đặt một phòng đơn trong hai đêm. Nhân viên lễ tân báo giá, tiện nghi và hỏi tên bạn.","partner":"Nhân viên lễ tân","goal":"Đặt được phòng đơn hai đêm, xác nhận tiện nghi và để lại tên, ngày đến.","band":"Band 3.5","chunks":["I would like to book a single room","for two nights","Does the room have wifi","air conditioning","My name is Linh"],"turns":[{"from":"partner","text":"Good afternoon. Welcome to Sunrise Hotel. How can I help you?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào buổi chiều. Tôi muốn đặt một phòng đơn trong hai đêm, làm ơn.","expect":"Good afternoon. I would like to book a single room for two nights, please.","keywords":["good afternoon","book","single room","two nights"],"hint":"Good afternoon. I would like to book...","tip":"Cụm would like to book đọc mềm và liền mạch. Nhấn vào single room và two nights để rõ yêu cầu đặt phòng.","chunks":["I would like to book a single room"]},{"from":"partner","text":"A single room costs 500,000 dong per night, including breakfast."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Phòng có wifi và điều hòa không ạ?","expect":"Does the room have wifi and air conditioning?","keywords":["room","wifi","air conditioning"],"hint":"Does the room have...","tip":"Câu hỏi Yes/No lên giọng ở cuối. Phát âm wifi rõ hai âm tiết, conditioning nhấn âm hai.","chunks":["air conditioning"]},{"from":"partner","text":"Yes, it has both. May I have your name, please?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tên tôi là Linh. Tôi sẽ đến vào thứ Sáu.","expect":"My name is Linh. I will arrive on Friday.","keywords":["name","linh","arrive","friday"],"hint":"My name is Linh....","tip":"Ngữ điệu: my name is Linh nói rõ từng chữ vì đây là thông tin quan trọng, arrive nhấn âm hai.","chunks":["My name is Linh"]}]},{"title":"Complaining about a Dish - Phàn nàn về món ăn","setting":"Bạn đang ăn tối ở nhà hàng thì phát hiện món ăn quá mặn và đã nguội. Bạn phàn nàn lịch sự với nhân viên phục vụ.","partner":"Nhân viên phục vụ","goal":"Phàn nàn lịch sự về món ăn, nhận món mới và cảm ơn nhân viên.","band":"Band 4.0","chunks":["Excuse me","this dish is too salty","a glass of water","Thank you for your help","I appreciate it"],"turns":[{"from":"partner","text":"Is everything all right with your food?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Xin lỗi, món ăn này quá mặn và đã nguội.","expect":"Excuse me, this dish is too salty and it is cold.","keywords":["excuse me","dish","salty","cold"],"hint":"Excuse me, this dish...","tip":"Giọng điềm tĩnh, không gắt: excuse me nói nhẹ để mở đầu phàn nàn lịch sự. Nhấn vào salty và cold.","chunks":["this dish is too salty"]},{"from":"partner","text":"I am very sorry. I will ask the kitchen to make a new one for you."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn. Tôi cũng muốn thêm một ly nước, làm ơn.","expect":"Thank you. I would also like a glass of water, please.","keywords":["thank you","also","glass of water"],"hint":"Thank you. I would also like...","tip":"Từ also nhấn nhẹ để thêm yêu cầu mà không làm mất mạch câu. Cụm a glass of water đọc liền trong một hơi.","chunks":["a glass of water"]},{"from":"partner","text":"Of course. Your new dish will come in ten minutes."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn đã giúp đỡ. Tôi rất cảm kích.","expect":"Thank you for your help. I appreciate it.","keywords":["thank you","help","appreciate"],"hint":"Thank you for your help....","tip":"Phát âm: appreciate nhấn âm hai, âm cuối t nhẹ. Ngữ điệu xuống ở cuối để lời cảm ơn nghe chân thành.","chunks":["Thank you for your help"]}]},{"title":"Returning a Faulty Shirt - Đổi trả áo bị lỗi","setting":"Bạn mang chiếc áo mới mua hôm qua ra cửa hàng vì một chiếc nút bị hỏng. Nhân viên hỏi hóa đơn và đưa ra hai lựa chọn đổi hoặc hoàn tiền.","partner":"Nhân viên cửa hàng","goal":"Đổi được chiếc áo bị lỗi sang chiếc khác cùng cỡ một cách lịch sự.","band":"Band 4.5","chunks":["exchange this shirt","a button is broken","here is the receipt","I bought it yesterday","in the same size"],"turns":[{"from":"partner","text":"Hello. How can I help you today?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Tôi muốn đổi chiếc áo này vì một chiếc nút bị hỏng.","expect":"Hello. I would like to exchange this shirt because a button is broken.","keywords":["exchange","shirt","button","broken"],"hint":"Hello. I would like to exchange...","tip":"Phát âm: exchange nhấn âm hai, broken rõ âm cuối n. Nói because chậm một nhịp để tách lý do đổi hàng.","chunks":["exchange this shirt"]},{"from":"partner","text":"Do you have the receipt with you?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, đây là hóa đơn. Tôi đã mua nó hôm qua.","expect":"Yes, here is the receipt. I bought it yesterday.","keywords":["receipt","bought","yesterday"],"hint":"Yes, here is the receipt....","tip":"Phát âm: receipt có âm p câm, đọc là rơ-siit; bought là dạng quá khứ của buy, âm cuối t rõ.","chunks":["here is the receipt"]},{"from":"partner","text":"You can choose another shirt in the same size, or we can give you a refund."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi muốn đổi sang một chiếc áo khác cùng cỡ, làm ơn.","expect":"I would like another shirt in the same size, please.","keywords":["another shirt","same size"],"hint":"I would like another shirt...","tip":"Cụm in the same size đọc liền thành một nhịp. Ngữ điệu please lên nhẹ để nghe lịch sự.","chunks":["in the same size"]}]},{"title":"A Simple Interview for a Weekend Job - Phỏng vấn việc làm thêm cuối tuần","setting":"Bạn tới phỏng vấn cho một công việc làm thêm cuối tuần tại cửa hàng. Người quản lý hỏi lý do ứng tuyển, thời gian rảnh và mời bạn đặt câu hỏi.","partner":"Người quản lý cửa hàng","goal":"Trả lời rõ ràng, lịch sự về lý do ứng tuyển và thời gian rảnh, rồi hỏi về giờ làm việc.","band":"Band 4.5","chunks":["this weekend job","gain experience","free on both days","I can start this Saturday","What time does the shift start"],"turns":[{"from":"partner","text":"Good morning. Please tell me why you want this weekend job."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào buổi sáng. Tôi muốn công việc cuối tuần này vì tôi muốn có kinh nghiệm và trang trải học phí.","expect":"Good morning. I want this weekend job because I want to gain experience and pay for my studies.","keywords":["weekend job","gain experience","studies"],"hint":"Good morning. I want this weekend job...","tip":"Ngữ điệu tự tin: xuống giọng ở cuối câu khẳng định. Nhấn vào experience và studies để lý do nghe thuyết phục.","chunks":["gain experience"]},{"from":"partner","text":"Can you work on both Saturday and Sunday?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, tôi rảnh cả hai ngày và có thể bắt đầu vào thứ Bảy này.","expect":"Yes, I am free on both days, and I can start this Saturday.","keywords":["free","both days","start","saturday"],"hint":"Yes, I am free on both days,...","tip":"Nghỉ ngắn sau dấu phẩy để tách hai ý: rảnh cả hai ngày và bắt đầu thứ Bảy này. Nhấn vào free và start.","chunks":["free on both days"]},{"from":"partner","text":"Good. Do you have any questions for us?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Ca làm việc bắt đầu lúc mấy giờ ạ?","expect":"What time does the shift start, please?","keywords":["what time","shift","start"],"hint":"What time does the shift...","tip":"Câu hỏi What time lên giọng nhẹ ở cuối. Phát âm shift rõ âm sh đầu, không đọc thành sit.","chunks":["the shift start"]}]},{"title":"Negotiating a Work Contract - Đàm phán hợp đồng công việc","setting":"Bạn nhận được lời mời làm trợ lý marketing và tới gặp giám đốc nhân sự để trao đổi về lương, thời gian thử việc, làm việc từ xa và các điều khoản hợp đồng trước khi ký. Giọng điệu trang trọng, lịch sự.","partner":"Giám đốc nhân sự","goal":"Đàm phán thành công mức lương, thời gian thử việc và làm việc từ xa, chốt các điều khoản ghi rõ trong hợp đồng.","band":"Band 7.5+","chunks":["accept the position in principle","below my expectation","on condition that","written clearly into the contract","look forward to joining your team"],"turns":[{"from":"partner","text":"Thank you for coming in. We are pleased to offer you the position of marketing assistant, starting next month."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn quý công ty đã đưa ra lời mời. Tôi rất vui lòng nhận vị trí này về nguyên tắc, nhưng tôi muốn trao đổi thêm về mức lương và giờ làm việc trước khi ký hợp đồng.","expect":"Thank you very much for the offer. I am delighted to accept the position in principle, but I would like to discuss the salary and working hours before I sign the contract.","keywords":["delighted","accept","in principle","salary","working hours"],"hint":"Thank you very much for the offer....","tip":"Giọng trang trọng: nghỉ ngắn sau dấu phẩy trước but để tách lời cảm ơn và điều kiện đàm phán. Nhấn vào delighted, salary và contract.","chunks":["accept the position in principle"]},{"from":"partner","text":"Of course. We propose a monthly salary of twenty million dong, with a three-month probation period."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn về lời đề nghị, nhưng mức này thấp hơn kỳ vọng của tôi. Với hai năm kinh nghiệm liên quan, tôi đề xuất hai mươi tư triệu đồng và thời gian thử việc hai tháng.","expect":"I appreciate the offer, but that figure is below my expectation. With two years of relevant experience, I would propose twenty-four million dong and a two-month probation period instead.","keywords":["appreciate","below","expectation","relevant experience","probation period"],"hint":"I appreciate the offer, but...","tip":"Giọng điềm tĩnh, không gay gắt: appreciate nói chậm và ấm để mở đầu phản hồi lịch sự. Nhấn vào below, expectation và probation period.","chunks":["below my expectation","a two-month probation period"]},{"from":"partner","text":"We could consider twenty-two million, with a review after six months. What about working hours and remote work?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi có thể chấp nhận hai mươi hai triệu với điều kiện hiệu suất của tôi được đánh giá sau sáu tháng. Tôi cũng đề xuất làm việc từ xa hai ngày một tuần vì phần lớn công việc có thể làm trực tuyến.","expect":"I can accept twenty-two million on condition that my performance is reviewed after six months. I would also propose working remotely two days a week, as much of the work can be done online.","keywords":["accept","on condition","performance","reviewed","remotely"],"hint":"I can accept twenty-two million...","tip":"Ngữ điệu: liệt kê điều kiện bằng giọng đều, nghỉ ngắn sau dấu chấm để tách hai đề xuất. Nhấn vào condition, performance và remotely.","chunks":["on condition that","working remotely"]},{"from":"partner","text":"Remote work two days a week is acceptable, provided you attend Monday meetings in person. Shall we agree on these terms?"},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi đồng ý, với điều kiện mọi điều khoản được ghi rõ trong hợp đồng và bảo hiểm đầy đủ được bao gồm.","expect":"I agree, provided that all these terms are written clearly into the contract and that full insurance is included.","keywords":["agree","provided","terms","contract","insurance"],"hint":"I agree, provided that...","tip":"Phát âm trang trọng: provided nhấn âm hai, insurance nhấn âm hai. Nghỉ ngắn sau dấu phẩy để nhấn mạnh điều kiện chốt.","chunks":["written clearly into the contract"]},{"from":"partner","text":"We will send the revised contract tomorrow. Welcome to the team."},{"from":"learner","prompt":"Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn quý công ty. Tôi mong được gia nhập đội ngũ và đóng góp cho công ty.","expect":"Thank you. I look forward to joining your team and contributing to the company.","keywords":["look forward","joining","team","contributing"],"hint":"Thank you. I look forward...","tip":"Ngữ điệu ấm và xuống giọng ở cuối để kết thúc đàm phán tích cực. Cụm look forward to đọc liền, to đọc nhẹ.","chunks":["look forward to joining your team"]}]}]);
 
 // ---------- U7-1. VIET LAI WHY 523 CAU DOC/NGHE (Doc 393 + Nghe dai 130) ----------
-// Kho cu nam trong content.js (khong sua file do). content-new.js nap sau
+// Kho cũ nằm trong content.js (không sửa file đó). content-new.js nạp sau
 // content.js nen viet lai why tai day, truoc khi bat ky man nao ve ra.
 // Cach viet lai (khong bia du kien moi): moi why moi lay dung bang chung
-// cua chinh cau do (doan trich trong why cu) + dap an dung cua chinh cau
-// do + quy tac theo dang cau, theo chuan: vi du truoc, quy tac sau,
-// tieng Viet don gian, khong mui ten, khong thuat ngu kho.
+// của chính câu đó (đoạn trích trong why cũ) + đáp án đúng của chính câu
+// đó + quy tắc theo dạng câu, theo chuẩn: ví dụ trước, quy tắc sau,
+// tiếng Việt đơn giản, không mũi tên, không thuật ngữ khó.
 (function () {
   if (typeof CONTENT === "undefined") return;
   function u7WhyEvidence(oldWhy) {
@@ -657,8 +657,8 @@ CONTENT.roleplay.push.apply(CONTENT.roleplay, [{"title":"Buying a Notebook in a 
 })();
 
 // ---------- NOI DUNG MOI THEO NGHIEN CUU SACH (dot 25/10) ----------
-// Tu soan 100%, vi du truoc - quy tac sau, tieng Viet don gian.
-// Khong chep nguyen van sach, khong chep de thi that, khong sao chep
+// Tự soạn 100%, ví dụ trước - quy tắc sau, tiếng Việt đơn giản.
+// Không chép nguyên văn sách, không chép đề thi thật, không sao chép
 // hinh/video cua ben thu ba. Moi muc gan dung chang theo RB_CHAPTER_MAP.
 // Nhom 1: loi rieng cho nguoi Viet (khoang trong so 1 cua KHOANG-TRONG.md).
 var BK_VIET_ERRORS = [
@@ -711,9 +711,9 @@ var BK_VIET_ERRORS = [
     dist: "Walking home, I started the rain.",
     rule: "Câu mở đầu bằng Walking home thì chủ ngữ của câu chính phải là người đang đi bộ. Câu sai có chủ ngữ là the rain (cơn mưa) — mưa không đi bộ được. Cách sửa: viết rõ chủ ngữ I ngay từ đầu: 'While I was walking home, ...'." }
 ];
-// Nhom 2: vi du doi song nguoi Viet (khoang trong so 8 cua KHOANG-TRONG.md).
-// Doc/Nghe: doan ngan + cau hoi trac nghiem. Noi/Viet: de bai + dan y +
-// bai mau tu soan de doi chieu, khong cham diem (tu luyen).
+// Nhóm 2: ví dụ đời sống người Việt (khoảng trống số 8 của KHOANG-TRONG.md).
+// Đọc/Nghe: đoạn ngắn + câu hỏi trắc nghiệm. Nói/Viết: đề bài + dàn ý +
+// bài mẫu tự soạn để đối chiếu, không chấm điểm (tự luyện).
 var BK_LIFE = [
   { band: "Band 2,0", skill: "Đọc", scene: "Chợ", title: "Mua cam ở chợ",
     text: "Lan goes to the market in the morning. She asks: 'How much are these oranges?' The seller says: '30,000 dong a kilo.' Lan says: 'I'll take two kilos, please.'",
@@ -2306,76 +2306,76 @@ var RB_NEW_GRAMMAR_MISTAKES = [
   "Nói 'My name are Linh' hoặc 'I name is Linh' — đúng chỉ có 'My name is + tên'."
 ];
 
-// ---------- TRACK TIENG TRUNG HSK: DU LIEU (26/10/2026) ----------
-// Tu soan theo chu de/cau truc cua Giao trinh chuan HSK (he 6 cap cu);
-// cau vi du tu viet, KHONG trich nguyen van giao trinh.
-// He dem HSK 3.0 dung he E (de cuong thi 2025, da doi chieu van ban goc):
-// tich luy 300/500/1000/2000/3600/5400/11000. KHONG dung so he F.
+// ---------- TRACK TIẾNG TRUNG HSK: DỮ LIỆU (26/10/2026) ----------
+// Tự soạn theo chủ đề/cấu trúc của Giáo trình chuẩn HSK (hệ 6 cấp cũ);
+// câu ví dụ tự viết, KHÔNG trích nguyên văn giáo trình.
+// Hệ đếm HSK 3.0 dùng hệ E (đề cương thi 2025, đã đối chiếu văn bản gốc):
+// tích lũy 300/500/1000/2000/3600/5400/11000. KHÔNG dùng số hệ F.
 var ZH_STAGES = [
-  { stage: 1, title: "Phat am va chao hoi", oldCum: 150, eCum: 300, desc: "2 bai ngu am + 13 chu de; nghe–noi la truc chinh", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." },
-  { stage: 2, title: "Trong am, ngu dieu va so sanh buoc dau", oldCum: 300, eCum: 500, desc: "Trong am tu/cau, ngu dieu cau, so sanh buoc dau", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." },
-  { stage: 3, title: "Tu hoi thoai sang doan van", oldCum: 600, eCum: 1000, desc: "Bo ngu, cau chu ba, cau chu bi, doan van ngan", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." },
-  { stage: 4, title: "Hoc theo chu de, mo rong theo chu", oldCum: 1200, eCum: 2000, desc: "Moi bai 1 chu de lon; dung chu dan tu; cap diem de nham", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." },
-  { stage: 5, title: "Hoc qua tu, doan van dai", oldCum: 2500, eCum: 3600, desc: "Tu vung la truc chinh; tu su, nghi luan; viet doan tu 100 chu", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." },
-  { stage: 6, title: "Van ban dai va viet lai", oldCum: 5000, eCum: 5400, desc: "Bai khoa 700–1500 chu; viet rut gon 300–350 chu", note: "Nhan HSK cua web la muc dat chu de theo tien trinh cap, khong phai xac nhan tung tu nam trong khung HSK 2.0 chinh thuc." }
+  { stage: 1, title: "Phát âm và chào hỏi", oldCum: 150, eCum: 300, desc: "2 bài ngữ âm + 13 chủ đề; nghe–nói là trục chính", note: "Nhãn HSK của web là mức đặt chủ đề theo tiến trình cấp, không phải xác nhận từng từ nằm trong khung HSK 2.0 chính thức." },
+  { stage: 2, title: "Trọng âm, ngữ điệu và so sánh bước đầu", oldCum: 300, eCum: 500, desc: "Trọng âm từ/câu, ngữ điệu câu, so sánh bước đầu", note: "Nhãn HSK của web là mức đặt chủ đề theo tiến trình cấp, không phải xác nhận từng từ nằm trong khung HSK 2.0 chính thức." },
+  { stage: 3, title: "Từ hội thoại sang đoạn văn", oldCum: 600, eCum: 1000, desc: "Bổ ngữ, câu chữ 把, câu chữ 被, đoạn văn ngắn", note: "Nhãn HSK của web là mức đặt chủ đề theo tiến trình cấp, không phải xác nhận từng từ nằm trong khung HSK 2.0 chính thức." },
+  { stage: 4, title: "Học theo chủ đề, mở rộng theo chữ", oldCum: 1200, eCum: 2000, desc: "Mỗi bài 1 chủ đề lớn; dùng chữ dẫn từ; cặp điểm dễ nhầm", note: "Nhãn HSK của web là mức đặt chủ đề theo tiến trình cấp, không phải xác nhận từng từ nằm trong khung HSK 2.0 chính thức." },
+  { stage: 5, title: "Học qua từ, đoạn văn dài", oldCum: 2500, eCum: 3600, desc: "Từ vựng là trục chính; tự sự, nghị luận; viết đoạn từ 100 chữ", note: "Nhãn HSK của web là mức đặt chủ đề theo tiến trình cấp, không phải xác nhận từng từ nằm trong khung HSK 2.0 chính thức." },
+  { stage: 6, title: "Văn bản dài và viết lại", oldCum: 5000, eCum: 5400, desc: "Bài khóa 700–1500 chữ; viết rút gọn 300–350 chữ", note: "Nhãn HSK của web là mức đặt chủ đề theo tiến trình cấp, không phải xác nhận từng từ nằm trong khung HSK 2.0 chính thức." }
 ];
 var ZH_PH_STEPS = [
-  { id: "tones", title: "Thanh dieu: 4 thanh + thanh nhe",
-    hook: "Noi tieng Trung ma sai thanh la sai nghia: ma (me) khac ma (ngua) — chi khac dau thanh.",
-    examples: ["ma 妈 — me (thanh 1, cao deu)", "ma 麻 — te, gai (thanh 2, di len)", "ma 马 — ngua (thanh 3, xuong roi len)", "ma 骂 — mang (thanh 4, di xuong)", "ma 吗 — tro tu hoi (thanh nhe, doc luot)"],
-    rule: "Thanh dieu la do cao cua giong khi doc mot am tiet. Tieng Trung pho thong co 4 thanh chinh + thanh nhe. Nhin dau thanh la biet thanh nao.",
-    tip: "Tap doc tung thanh voi tay ve duong di cua giong: ngang, len, cong, xuong.",
+  { id: "tones", title: "Thanh điệu: 4 thanh + thanh nhẹ",
+    hook: "Nói tiếng Trung mà sai thanh là sai nghĩa: mā (mẹ) khác mǎ (ngựa) — chỉ khác dấu thanh.",
+    examples: ["mā 妈 — mẹ (thanh 1, cao đều)", "má 麻 — tê, gai (thanh 2, đi lên)", "mǎ 马 — ngựa (thanh 3, xuống rồi lên)", "mà 骂 — mắng (thanh 4, đi xuống)", "ma 吗 — trợ từ hỏi (thanh nhẹ, đọc lướt)"],
+    rule: "Thanh điệu là độ cao của giọng khi đọc một âm tiết. Tiếng Trung phổ thông có 4 thanh chính + thanh nhẹ. Nhìn dấu thanh là biết thanh nào.",
+    tip: "Tập đọc từng thanh với tay vẽ đường đi của giọng: ngang, lên, cong, xuống.",
     quiz: [
-      { q: "“ma” mang dau thanh nao?", o: ["Dau ngang", "Dau len", "Dau cong", "Dau xuong"], a: 0, why: "Dau ngang la thanh 1, doc cao va deu." },
-      { q: "“ma” la thanh may?", o: ["Thanh 1", "Thanh 2", "Thanh 3", "Thanh 4"], a: 2, why: "Dau cong xuong roi len la thanh 3." },
-      { q: "Tu nao doc bang thanh 4?", o: ["ma", "ma", "ma", "ma"], a: 3, why: "Chi tu mang dau xuong moi la thanh 4." },
-      { q: "“ma” khong dau thuong la gi?", o: ["Thanh 1", "Thanh 2", "Thanh 4", "Thanh nhe"], a: 3, why: "Khong dau thuong la thanh nhe, doc ngan va luot." },
-      { q: "Cap nao chi khac nhau o thanh dieu?", o: ["ma – ma", "ma – ba", "ma – na", "ma – la"], a: 0, why: "Cung van ma, chi khac dau thanh thi nghia da khac." },
-      { q: "Hai thanh 3 di lien nhau thi thanh dau doc thanh gi?", o: ["Van thanh 3", "Thanh 2", "Thanh 4", "Thanh nhe"], a: 1, why: "Quy tac bien dieu: 3 + 3 doc thanh 2 + 3." }
+      { q: "“mā” mang dấu thanh nào?", o: ["Dấu ngang", "Dấu lên", "Dấu cong", "Dấu xuống"], a: 0, why: "Dấu ngang là thanh 1, đọc cao và đều." },
+      { q: "“mǎ” là thanh mấy?", o: ["Thanh 1", "Thanh 2", "Thanh 3", "Thanh 4"], a: 2, why: "Dấu cong xuống rồi lên là thanh 3." },
+      { q: "Từ nào đọc bằng thanh 4?", o: ["mā", "má", "mǎ", "mà"], a: 3, why: "Chỉ từ mang dấu xuống mới là thanh 4." },
+      { q: "“ma” không dấu thường là gì?", o: ["Thanh 1", "Thanh 2", "Thanh 4", "Thanh nhẹ"], a: 3, why: "Không dấu thường là thanh nhẹ, đọc ngắn và lướt." },
+      { q: "Cặp nào chỉ khác nhau ở thanh điệu?", o: ["mā – mà", "mā – bā", "mā – nā", "mā – lā"], a: 0, why: "Cùng vần ma, chỉ khác dấu thanh thì nghĩa đã khác." },
+      { q: "Hai thanh 3 đi liền nhau thì thanh đầu đọc thành gì?", o: ["Vẫn thanh 3", "Thanh 2", "Thanh 4", "Thanh nhẹ"], a: 1, why: "Quy tắc biến điệu: 3 + 3 đọc thành 2 + 3." }
     ] },
-  { id: "finals", title: "Van mau co ban",
-    hook: "Van mau la phan van sau thanh mau: b + ao = bao.",
-    examples: ["a, o, e, i, u, u — 6 van mau don", "ai, ei, ao, ou — van mau kep, doc truot tu am nay sang am kia", "an, en, ang, eng — van mau mui, ket thuc bang n hoac ng"],
-    rule: "Mot am tiet = thanh mau (khong bat buoc) + van mau (bat buoc) + thanh dieu. Van mau quyet dinh van cua am tiet.",
-    tip: "Doc van mau mui thi hoi thoat ra mui o cuoi: an khac ang o do sau cua am mui.",
+  { id: "finals", title: "Vận mẫu cơ bản",
+    hook: "Vận mẫu là phần vần sau thanh mẫu: b + ao = bao.",
+    examples: ["a, o, e, i, u, ü — 6 vận mẫu đơn", "ai, ei, ao, ou — vận mẫu kép, đọc trượt từ âm này sang âm kia", "an, en, ang, eng — vận mẫu mũi, kết thúc bằng n hoặc ng"],
+    rule: "Một âm tiết = thanh mẫu (không bắt buộc) + vận mẫu (bắt buộc) + thanh điệu. Vận mẫu quyết định vần của âm tiết.",
+    tip: "Đọc vận mẫu mũi thì hơi thoát ra mũi ở cuối: an khác ang ở độ sâu của âm mũi.",
     quiz: [
-      { q: "Am nao la van mau (phan van)?", o: ["b", "a", "m", "d"], a: 1, why: "a la van mau don; b, m, d la thanh mau." },
-      { q: "“ao” la van mau gi?", o: ["Van mau don", "Van mau kep", "Van mau mui", "Thanh mau"], a: 1, why: "ao truot tu a sang o nen la van mau kep." },
-      { q: "Tu “hao” (hao) co van mau nao?", o: ["a", "ao", "ou", "an"], a: 1, why: "hao = h + ao." },
-      { q: "Van mau mui la van mau ket thuc bang gi?", o: ["i hoac u", "n hoac ng", "a hoac o", "e"], a: 1, why: "an, en, ang, eng deu ket thuc bang am mui." },
-      { q: "“an” va “ang” khac nhau o dau?", o: ["Khong khac", "ang doc mui sau hon, co ng cuoi", "an dai hon", "ang la thanh mau"], a: 1, why: "ang co ng cuoi nen am mui sau hon an." },
-      { q: "“ei” doc gan giong gi?", o: ["ay", "au", "ei (e roi i nhe)", "ao"], a: 2, why: "ei truot tu e sang i nhe." }
+      { q: "Âm nào là vận mẫu (phần vần)?", o: ["b", "a", "m", "d"], a: 1, why: "a là vận mẫu đơn; b, m, d là thanh mẫu." },
+      { q: "“ao” là vận mẫu gì?", o: ["Vận mẫu đơn", "Vận mẫu kép", "Vận mẫu mũi", "Thanh mẫu"], a: 1, why: "ao trượt từ a sang o nên là vận mẫu kép." },
+      { q: "Từ “hǎo” (hảo) có vận mẫu nào?", o: ["a", "ao", "ou", "an"], a: 1, why: "hǎo = h + ao." },
+      { q: "Vận mẫu mũi là vận mẫu kết thúc bằng gì?", o: ["i hoặc u", "n hoặc ng", "a hoặc o", "e"], a: 1, why: "an, en, ang, eng đều kết thúc bằng âm mũi." },
+      { q: "“an” và “ang” khác nhau ở đâu?", o: ["Không khác", "ang đọc mũi sâu hơn, có ng cuối", "an dài hơn", "ang là thanh mẫu"], a: 1, why: "ang có ng cuối nên âm mũi sâu hơn an." },
+      { q: "“ei” đọc gần giống gì?", o: ["ay", "au", "ei (e rồi i nhẹ)", "ao"], a: 2, why: "ei trượt từ e sang i nhẹ." }
     ] },
-  { id: "initials", title: "Thanh mau co ban",
-    hook: "Thanh mau la phu am dau: b, p, m, f la 4 thanh mau moi.",
-    examples: ["b, p, m, f — moi", "d, t, n, l — dau luoi", "g, k, h — cuong luoi", "j, q, x — mat luoi; zh, ch, sh, r — quat luoi; z, c, s — dau luoi"],
-    rule: "Co 21 thanh mau (khong tinh y, w). Phan biet cap bat hoi/khong bat hoi: b–p, d–t, g–k, j–q, zh–ch, z–c.",
-    tip: "Nghe mau roi nhai theo, chu y bat hoi: p, t, k, q, ch, c co luong hoi manh.",
+  { id: "initials", title: "Thanh mẫu cơ bản",
+    hook: "Thanh mẫu là phụ âm đầu: b, p, m, f là 4 thanh mẫu môi.",
+    examples: ["b, p, m, f — môi", "d, t, n, l — đầu lưỡi", "g, k, h — cuống lưỡi", "j, q, x — mặt lưỡi; zh, ch, sh, r — quặt lưỡi; z, c, s — đầu lưỡi"],
+    rule: "Có 21 thanh mẫu (không tính y, w). Phân biệt cặp bật hơi/không bật hơi: b–p, d–t, g–k, j–q, zh–ch, z–c.",
+    tip: "Nghe mẫu rồi nhại theo, chú ý bật hơi: p, t, k, q, ch, c có luồng hơi mạnh.",
     quiz: [
-      { q: "Am nao la thanh mau (phan dau)?", o: ["a", "b", "ao", "an"], a: 1, why: "b la phu am dau; a, ao, an la van mau." },
-      { q: "“zh, ch, sh” goi la nhom gi?", o: ["Thanh mau dau luoi", "Thanh mau quat luoi", "Van mau", "Thanh dieu"], a: 1, why: "zh, ch, sh uon luoi len nen goi la quat luoi." },
-      { q: "“q” trong pinyin doc gan giong gi?", o: ["k", "ch mem, bat hoi nhe", "s", "z"], a: 1, why: "q mem hon ch va co bat hoi." },
-      { q: "Tu “Zhongguo” bat dau bang thanh mau nao?", o: ["z", "zh", "j", "ch"], a: 1, why: "Zhong = zh + ong." },
-      { q: "Cap nao khac nhau o bat hoi?", o: ["b – m", "d – t", "n – l", "g – h"], a: 1, why: "d khong bat hoi, t bat hoi manh." },
-      { q: "“r” trong pinyin (nhu trong ren) doc gan giong gi?", o: ["r rung manh nhu tieng Viet", "r mem, gan nhu “z” nhe co rung", "l", "y"], a: 1, why: "r tieng Trung mem va co ma sat, khong rung manh." }
+      { q: "Âm nào là thanh mẫu (phần đầu)?", o: ["a", "b", "ao", "an"], a: 1, why: "b là phụ âm đầu; a, ao, an là vận mẫu." },
+      { q: "“zh, ch, sh” gọi là nhóm gì?", o: ["Thanh mẫu đầu lưỡi", "Thanh mẫu quặt lưỡi", "Vận mẫu", "Thanh điệu"], a: 1, why: "zh, ch, sh uốn lưỡi lên nên gọi là quặt lưỡi." },
+      { q: "“q” trong pinyin đọc gần giống gì?", o: ["k", "ch mềm, bật hơi nhẹ", "s", "z"], a: 1, why: "q mềm hơn ch và có bật hơi." },
+      { q: "Từ “Zhōngguó” bắt đầu bằng thanh mẫu nào?", o: ["z", "zh", "j", "ch"], a: 1, why: "Zhōng = zh + ōng." },
+      { q: "Cặp nào khác nhau ở bật hơi?", o: ["b – m", "d – t", "n – l", "g – h"], a: 1, why: "d không bật hơi, t bật hơi mạnh." },
+      { q: "“r” trong pinyin (như trong rén) đọc gần giống gì?", o: ["r rung mạnh như tiếng Việt", "r mềm, gần như “z” nhẹ có rung", "l", "y"], a: 1, why: "r tiếng Trung mềm và có ma sát, không rung mạnh." }
     ] },
-  { id: "rules", title: "Quy tac viet pinyin hay nham",
-    hook: "Viet pinyin co vai cho gon lai — nho 4 quy tac nay la du doc dung.",
-    examples: ["u sau j, q, x, y → u: ju, qu, xu, yu", "iou co thanh mau → iu: jiu (khong viet jiou)", "uen co thanh mau → un: lun (khong viet luen)", "i dung mot minh → yi; u dung mot minh → wu; u dung mot minh → yu"],
-    rule: "Cac quy tac gon nay chi doi CACH VIET, khong doi cach doc. Ngoai ra: hai thanh 3 lien nhau thi thanh dau doc thanh thanh 2.",
-    tip: "Gap pinyin la thi tach ra: thanh mau + van mau + dau thanh, doc tung phan roi noi lai.",
+  { id: "rules", title: "Quy tắc viết pinyin hay nhầm",
+    hook: "Viết pinyin có vài chỗ gọn lại — nhớ 4 quy tắc này là đủ đọc đúng.",
+    examples: ["ü sau j, q, x, y → u: ju, qu, xu, yu", "iou có thanh mẫu → iu: jiu (không viết jiou)", "uen có thanh mẫu → un: lun (không viết luen)", "i đứng một mình → yi; u đứng một mình → wu; ü đứng một mình → yu"],
+    rule: "Các quy tắc gọn này chỉ đổi CÁCH VIẾT, không đổi cách đọc. Ngoài ra: hai thanh 3 liền nhau thì thanh đầu đọc thành thanh 2.",
+    tip: "Gặp pinyin lạ thì tách ra: thanh mẫu + vận mẫu + dấu thanh, đọc từng phần rồi nối lại.",
     quiz: [
-      { q: "“u” sau j, q, x, y viet thanh gi?", o: ["u", "u", "v", "yu"], a: 1, why: "Bo hai cham: ju, qu, xu, yu." },
-      { q: "“iou” khi co thanh mau di truoc viet gon thanh gi?", o: ["iou", "iu", "io", "u"], a: 1, why: "Bo o giua: jiu thay cho jiou." },
-      { q: "“uen” khi co thanh mau di truoc viet gon thanh gi?", o: ["uen", "un", "ueng", "en"], a: 1, why: "Bo e giua: lun thay cho luen." },
-      { q: "Am “i” dung mot minh, them gi o dau?", o: ["Khong them", "y → yi", "w → wi", "j → ji"], a: 1, why: "i dung mot minh them y: yi." },
-      { q: "Am “u” dung mot minh, them gi o dau?", o: ["y → yu", "w → wu", "j → ju", "Khong them"], a: 1, why: "u dung mot minh them w: wu." },
-      { q: "Hai thanh 3 di lien nhau (vi du ni hao) thi thanh 3 dau tien doc thanh gi?", o: ["Van thanh 3", "Thanh 2", "Thanh 4", "Thanh nhe"], a: 1, why: "Quy tac bien dieu: 3 + 3 → 2 + 3." }
+      { q: "“ü” sau j, q, x, y viết thành gì?", o: ["ü", "u", "v", "yu"], a: 1, why: "Bỏ hai chấm: ju, qu, xu, yu." },
+      { q: "“iou” khi có thanh mẫu đi trước viết gọn thành gì?", o: ["iou", "iu", "io", "u"], a: 1, why: "Bỏ o giữa: jiu thay cho jiou." },
+      { q: "“uen” khi có thanh mẫu đi trước viết gọn thành gì?", o: ["uen", "un", "ueng", "en"], a: 1, why: "Bỏ e giữa: lun thay cho luen." },
+      { q: "Âm “i” đứng một mình, thêm gì ở đầu?", o: ["Không thêm", "y → yi", "w → wi", "j → ji"], a: 1, why: "i đứng một mình thêm y: yi." },
+      { q: "Âm “u” đứng một mình, thêm gì ở đầu?", o: ["y → yu", "w → wu", "j → ju", "Không thêm"], a: 1, why: "u đứng một mình thêm w: wu." },
+      { q: "Hai thanh 3 đi liền nhau (ví dụ nǐ hǎo) thì thanh 3 đầu tiên đọc thành gì?", o: ["Vẫn thanh 3", "Thanh 2", "Thanh 4", "Thanh nhẹ"], a: 1, why: "Quy tắc biến điệu: 3 + 3 → 2 + 3." }
     ] }
 ];
-// Bo tu khoi dong chặng 1 (tu soan theo chu de sach HSK1: chao hoi, ban than,
-// giao tiep toi thieu). Cac tu la tu co ban thong dung; cau vi du tu soan,
-// khong trich nguyen van giao trinh.
+// Bộ từ khởi động chặng 1 (tự soạn theo chủ đề sách HSK1: chào hỏi, bản thân,
+// giao tiếp tối thiểu). Các từ là từ cơ bản thông dụng; câu ví dụ tự soạn,
+// không trích nguyên văn giáo trình.
 var ZH_STARTER = {
   topic: "Chặng 1 — Chào hỏi và làm quen",
   hsk: "HSK1",
@@ -2403,7 +2403,7 @@ var ZH_STARTER = {
     { han: "人", pinyin: "rén", vi: "người", col: "中国人", ex: "中国人很多。", exv: "Người Trung Quốc rất đông." }
   ]
 };
-// Cau luyen HSKK So cap: nghe–nhac lai (tu soan, chao hoi/gioi thieu co ban).
+// Câu luyện HSKK Sơ cấp: nghe–nhắc lại (tự soạn, chào hỏi/giới thiệu cơ bản).
 var ZH_HSKK_SENTENCES = [
   { han: "你好！", pinyin: "Nǐ hǎo!", vi: "Chào bạn!" },
   { han: "我叫小明。", pinyin: "Wǒ jiào Xiǎo Míng.", vi: "Tôi tên là Tiểu Minh." },
@@ -2416,7 +2416,7 @@ var ZH_HSKK_SENTENCES = [
   { han: "我是学生。", pinyin: "Wǒ shì xuéshēng.", vi: "Tôi là học sinh." },
   { han: "今天天气很好。", pinyin: "Jīntiān tiānqì hěn hǎo.", vi: "Hôm nay thời tiết rất đẹp." }
 ];
-// Kiem tra xep chang noi bo (khong phai de thi HSK that): thanh dieu, tu co ban, pinyin.
+// Kiểm tra xếp chặng nội bộ (không phải đề thi HSK thật): thanh điệu, từ cơ bản, pinyin.
 var ZH_ENTRY_QS = [
   { q: "“mā” mang dấu thanh nào?", o: ["Dấu ngang", "Dấu lên", "Dấu cong", "Dấu xuống"], a: 0, why: "Dấu ngang là thanh 1." },
   { q: "“mǎ” là thanh mấy?", o: ["Thanh 1", "Thanh 2", "Thanh 3", "Thanh 4"], a: 2, why: "Dấu cong xuống rồi lên là thanh 3." },
