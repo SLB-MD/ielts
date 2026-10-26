@@ -2170,7 +2170,1344 @@ if (typeof CONTENT !== "undefined") { CONTENT.zhVocab = [
      "exv": "Nghiên cứu liệu pháp gen vẫn đang ở giai đoạn đầu."
     }
    ]
-  }
+  },
+  {
+  "topic": "Gia đình và đời sống hằng ngày",
+  "hsk": "HSK2",
+  "hskNote": "Bộ tự soạn theo chủ đề sách HSK2. Các từ là từ thông dụng ở trình độ này; câu ví dụ tự soạn, không trích nguyên văn giáo trình. Nhãn HSK2 là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "cards": [
+   {
+    "han": "爸爸",
+    "pinyin": "bàba",
+    "vi": "bố",
+    "col": "我的爸爸",
+    "ex": "我爸爸每天早上六点起床。",
+    "exv": "Bố tôi mỗi sáng dậy lúc 6 giờ."
+   },
+   {
+    "han": "妈妈",
+    "pinyin": "māma",
+    "vi": "mẹ",
+    "col": "我的妈妈",
+    "ex": "我妈妈做的饭很好吃。",
+    "exv": "Cơm mẹ tôi nấu rất ngon."
+   },
+   {
+    "han": "哥哥",
+    "pinyin": "gēge",
+    "vi": "anh trai",
+    "col": "大哥哥",
+    "ex": "我哥哥在北京工作。",
+    "exv": "Anh trai tôi làm việc ở Bắc Kinh."
+   },
+   {
+    "han": "姐姐",
+    "pinyin": "jiějie",
+    "vi": "chị gái",
+    "col": "好姐姐",
+    "ex": "我姐姐是医生。",
+    "exv": "Chị gái tôi là bác sĩ."
+   },
+   {
+    "han": "弟弟",
+    "pinyin": "dìdi",
+    "vi": "em trai",
+    "col": "小弟弟",
+    "ex": "我弟弟今年十岁。",
+    "exv": "Em trai tôi năm nay 10 tuổi."
+   },
+   {
+    "han": "妹妹",
+    "pinyin": "mèimei",
+    "vi": "em gái",
+    "col": "小妹妹",
+    "ex": "我妹妹喜欢画画。",
+    "exv": "Em gái tôi thích vẽ."
+   },
+   {
+    "han": "孩子",
+    "pinyin": "háizi",
+    "vi": "con; trẻ con",
+    "col": "小孩子",
+    "ex": "孩子们在公园里玩。",
+    "exv": "Bọn trẻ chơi trong công viên."
+   },
+   {
+    "han": "家人",
+    "pinyin": "jiārén",
+    "vi": "người nhà",
+    "col": "一家人",
+    "ex": "一家人周末常常一起吃饭。",
+    "exv": "Cả nhà cuối tuần thường ăn cơm cùng nhau."
+   },
+   {
+    "han": "妻子",
+    "pinyin": "qīzi",
+    "vi": "vợ",
+    "col": "他的妻子",
+    "ex": "他的妻子是老师。",
+    "exv": "Vợ anh ấy là giáo viên."
+   },
+   {
+    "han": "丈夫",
+    "pinyin": "zhàngfu",
+    "vi": "chồng",
+    "col": "她的丈夫",
+    "ex": "她的丈夫每天送孩子上学。",
+    "exv": "Chồng cô ấy mỗi ngày đưa con đi học."
+   },
+   {
+    "han": "儿子",
+    "pinyin": "érzi",
+    "vi": "con trai",
+    "col": "大儿子",
+    "ex": "我儿子在上海上大学。",
+    "exv": "Con trai tôi học đại học ở Thượng Hải."
+   },
+   {
+    "han": "女儿",
+    "pinyin": "nǚ'ér",
+    "vi": "con gái",
+    "col": "小女儿",
+    "ex": "我女儿很喜欢唱歌。",
+    "exv": "Con gái tôi rất thích hát."
+   },
+   {
+    "han": "奶奶",
+    "pinyin": "nǎinai",
+    "vi": "bà nội",
+    "col": "老奶奶",
+    "ex": "奶奶每天下午去公园散步。",
+    "exv": "Bà nội mỗi chiều đi dạo trong công viên."
+   },
+   {
+    "han": "爷爷",
+    "pinyin": "yéye",
+    "vi": "ông nội",
+    "col": "老爷爷",
+    "ex": "爷爷喜欢喝茶看报纸。",
+    "exv": "Ông nội thích uống trà, đọc báo."
+   },
+   {
+    "han": "外公",
+    "pinyin": "wàigōng",
+    "vi": "ông ngoại",
+    "col": "我的外公",
+    "ex": "我外公住在农村。",
+    "exv": "Ông ngoại tôi sống ở nông thôn."
+   },
+   {
+    "han": "外婆",
+    "pinyin": "wàipó",
+    "vi": "bà ngoại",
+    "col": "我的外婆",
+    "ex": "我外婆做的饺子最好吃。",
+    "exv": "Bánh chẻo bà ngoại tôi làm là ngon nhất."
+   },
+   {
+    "han": "叔叔",
+    "pinyin": "shūshu",
+    "vi": "chú; bác trai",
+    "col": "王叔叔",
+    "ex": "王叔叔是我的邻居。",
+    "exv": "Chú Vương là hàng xóm của tôi."
+   },
+   {
+    "han": "阿姨",
+    "pinyin": "āyí",
+    "vi": "cô; dì",
+    "col": "李阿姨",
+    "ex": "李阿姨对我们很好。",
+    "exv": "Cô Lý rất tốt với chúng tôi."
+   },
+   {
+    "han": "邻居",
+    "pinyin": "línjū",
+    "vi": "hàng xóm",
+    "col": "新邻居",
+    "ex": "新邻居是一对年轻夫妇。",
+    "exv": "Hàng xóm mới là một đôi vợ chồng trẻ."
+   },
+   {
+    "han": "家庭",
+    "pinyin": "jiātíng",
+    "vi": "gia đình",
+    "col": "幸福的家庭",
+    "ex": "这是一个幸福的家庭。",
+    "exv": "Đây là một gia đình hạnh phúc."
+   }
+  ]
+ },
+  {
+  "topic": "Thời gian",
+  "hsk": "HSK2",
+  "hskNote": "Bộ tự soạn theo chủ đề sách HSK2. Các từ là từ thông dụng ở trình độ này; câu ví dụ tự soạn, không trích nguyên văn giáo trình. Nhãn HSK2 là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "cards": [
+   {
+    "han": "明天",
+    "pinyin": "míngtiān",
+    "vi": "ngày mai",
+    "col": "明天见",
+    "ex": "明天我们一起去学校。",
+    "exv": "Ngày mai chúng ta cùng đi học."
+   },
+   {
+    "han": "昨天",
+    "pinyin": "zuótiān",
+    "vi": "hôm qua",
+    "col": "昨天晚上",
+    "ex": "昨天晚上下雨了。",
+    "exv": "Tối hôm qua trời mưa."
+   },
+   {
+    "han": "前天",
+    "pinyin": "qiántiān",
+    "vi": "hôm kia",
+    "col": "前天上午",
+    "ex": "前天上午我去看朋友了。",
+    "exv": "Sáng hôm kia tôi đi thăm bạn."
+   },
+   {
+    "han": "后天",
+    "pinyin": "hòutiān",
+    "vi": "ngày kia",
+    "col": "后天早上",
+    "ex": "后天早上我们去机场。",
+    "exv": "Sáng ngày kia chúng ta ra sân bay."
+   },
+   {
+    "han": "早上",
+    "pinyin": "zǎoshang",
+    "vi": "buổi sáng",
+    "col": "每天早上",
+    "ex": "我每天早上七点起床。",
+    "exv": "Tôi mỗi sáng dậy lúc 7 giờ."
+   },
+   {
+    "han": "中午",
+    "pinyin": "zhōngwǔ",
+    "vi": "buổi trưa",
+    "col": "中午休息",
+    "ex": "中午休息一个小时。",
+    "exv": "Buổi trưa nghỉ một tiếng."
+   },
+   {
+    "han": "晚上",
+    "pinyin": "wǎnshang",
+    "vi": "buổi tối",
+    "col": "今天晚上",
+    "ex": "今天晚上我们一起吃饭吧。",
+    "exv": "Tối nay chúng ta cùng ăn cơm nhé."
+   },
+   {
+    "han": "现在",
+    "pinyin": "xiànzài",
+    "vi": "bây giờ",
+    "col": "现在就去",
+    "ex": "现在就去，别等了。",
+    "exv": "Bây giờ đi ngay đi, đừng đợi nữa."
+   },
+   {
+    "han": "以前",
+    "pinyin": "yǐqián",
+    "vi": "trước đây",
+    "col": "以前住",
+    "ex": "我以前住在河内。",
+    "exv": "Trước đây tôi sống ở Hà Nội."
+   },
+   {
+    "han": "以后",
+    "pinyin": "yǐhòu",
+    "vi": "sau này; sau đó",
+    "col": "以后再说",
+    "ex": "这个问题以后再说吧。",
+    "exv": "Vấn đề này để sau hãy nói."
+   },
+   {
+    "han": "时候",
+    "pinyin": "shíhou",
+    "vi": "lúc; khi",
+    "col": "小时候",
+    "ex": "我小时候住在农村。",
+    "exv": "Lúc nhỏ tôi sống ở nông thôn."
+   },
+   {
+    "han": "星期",
+    "pinyin": "xīngqī",
+    "vi": "tuần",
+    "col": "下星期",
+    "ex": "下星期我去上海出差。",
+    "exv": "Tuần sau tôi đi Thượng Hải công tác."
+   },
+   {
+    "han": "今年",
+    "pinyin": "jīnnián",
+    "vi": "năm nay",
+    "col": "今年夏天",
+    "ex": "今年夏天很热。",
+    "exv": "Mùa hè năm nay rất nóng."
+   },
+   {
+    "han": "去年",
+    "pinyin": "qùnián",
+    "vi": "năm ngoái",
+    "col": "去年冬天",
+    "ex": "去年冬天不太冷。",
+    "exv": "Mùa đông năm ngoái không lạnh lắm."
+   },
+   {
+    "han": "明年",
+    "pinyin": "míngnián",
+    "vi": "năm sau",
+    "col": "明年计划",
+    "ex": "明年我计划去中国学习。",
+    "exv": "Năm sau tôi dự định sang Trung Quốc học."
+   },
+   {
+    "han": "每周",
+    "pinyin": "měizhōu",
+    "vi": "mỗi tuần",
+    "col": "每周一次",
+    "ex": "我们每周见一次。",
+    "exv": "Chúng tôi mỗi tuần gặp nhau một lần."
+   },
+   {
+    "han": "每天",
+    "pinyin": "měitiān",
+    "vi": "mỗi ngày",
+    "col": "每天早上",
+    "ex": "他每天早上跑步。",
+    "exv": "Anh ấy mỗi sáng chạy bộ."
+   },
+   {
+    "han": "每年",
+    "pinyin": "měinián",
+    "vi": "mỗi năm",
+    "col": "每年春节",
+    "ex": "我们每年春节都回家。",
+    "exv": "Mỗi năm dịp Tết chúng tôi đều về nhà."
+   },
+   {
+    "han": "半天",
+    "pinyin": "bàntiān",
+    "vi": "nửa ngày",
+    "col": "花了半天",
+    "ex": "这件事花了半天时间。",
+    "exv": "Việc này tốn nửa ngày."
+   },
+   {
+    "han": "小时",
+    "pinyin": "xiǎoshí",
+    "vi": "giờ (tiếng đồng hồ)",
+    "col": "两个小时",
+    "ex": "从这里到机场要两个小时。",
+    "exv": "Từ đây ra sân bay mất hai tiếng."
+   }
+  ]
+ },
+  {
+  "topic": "Ăn uống",
+  "hsk": "HSK2",
+  "hskNote": "Bộ tự soạn theo chủ đề sách HSK2. Các từ là từ thông dụng ở trình độ này; câu ví dụ tự soạn, không trích nguyên văn giáo trình. Nhãn HSK2 là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "cards": [
+   {
+    "han": "吃饭",
+    "pinyin": "chīfàn",
+    "vi": "ăn cơm",
+    "col": "一起吃饭",
+    "ex": "我们一起吃饭吧。",
+    "exv": "Chúng ta cùng ăn cơm nhé."
+   },
+   {
+    "han": "喝水",
+    "pinyin": "hēshuǐ",
+    "vi": "uống nước",
+    "col": "多喝水",
+    "ex": "天气热，要多喝水。",
+    "exv": "Trời nóng, phải uống nhiều nước."
+   },
+   {
+    "han": "米饭",
+    "pinyin": "mǐfàn",
+    "vi": "cơm",
+    "col": "一碗米饭",
+    "ex": "我要一碗米饭。",
+    "exv": "Tôi muốn một bát cơm."
+   },
+   {
+    "han": "面条",
+    "pinyin": "miàntiáo",
+    "vi": "mì sợi",
+    "col": "一碗面条",
+    "ex": "中午吃一碗面条吧。",
+    "exv": "Trưa ăn một bát mì nhé."
+   },
+   {
+    "han": "面包",
+    "pinyin": "miànbāo",
+    "vi": "bánh mì",
+    "col": "买面包",
+    "ex": "早上我去买面包。",
+    "exv": "Buổi sáng tôi đi mua bánh mì."
+   },
+   {
+    "han": "水果",
+    "pinyin": "shuǐguǒ",
+    "vi": "hoa quả",
+    "col": "吃水果",
+    "ex": "每天吃一点水果对身体好。",
+    "exv": "Mỗi ngày ăn ít hoa quả thì tốt cho sức khỏe."
+   },
+   {
+    "han": "苹果",
+    "pinyin": "píngguǒ",
+    "vi": "quả táo",
+    "col": "红苹果",
+    "ex": "这个苹果很甜。",
+    "exv": "Quả táo này rất ngọt."
+   },
+   {
+    "han": "香蕉",
+    "pinyin": "xiāngjiāo",
+    "vi": "quả chuối",
+    "col": "一根香蕉",
+    "ex": "他每天吃一根香蕉。",
+    "exv": "Anh ấy mỗi ngày ăn một quả chuối."
+   },
+   {
+    "han": "鸡蛋",
+    "pinyin": "jīdàn",
+    "vi": "trứng gà",
+    "col": "煮鸡蛋",
+    "ex": "早上吃一个煮鸡蛋。",
+    "exv": "Buổi sáng ăn một quả trứng luộc."
+   },
+   {
+    "han": "牛奶",
+    "pinyin": "niúnǎi",
+    "vi": "sữa bò",
+    "col": "一杯牛奶",
+    "ex": "早上喝一杯牛奶。",
+    "exv": "Buổi sáng uống một cốc sữa."
+   },
+   {
+    "han": "咖啡",
+    "pinyin": "kāfēi",
+    "vi": "cà phê",
+    "col": "一杯咖啡",
+    "ex": "下午喝一杯咖啡吧。",
+    "exv": "Buổi chiều uống một cốc cà phê nhé."
+   },
+   {
+    "han": "茶",
+    "pinyin": "chá",
+    "vi": "trà",
+    "col": "一杯茶",
+    "ex": "早上喝一杯茶，很舒服。",
+    "exv": "Buổi sáng uống một chén trà, rất dễ chịu."
+   },
+   {
+    "han": "菜",
+    "pinyin": "cài",
+    "vi": "món ăn",
+    "col": "一个菜",
+    "ex": "今天做一个菜就够了。",
+    "exv": "Hôm nay nấu một món là đủ rồi."
+   },
+   {
+    "han": "肉",
+    "pinyin": "ròu",
+    "vi": "thịt",
+    "col": "不吃肉",
+    "ex": "他不吃肉，只吃蔬菜。",
+    "exv": "Anh ấy không ăn thịt, chỉ ăn rau."
+   },
+   {
+    "han": "鱼",
+    "pinyin": "yú",
+    "vi": "cá",
+    "col": "一条鱼",
+    "ex": "今天买了一条鱼。",
+    "exv": "Hôm nay mua một con cá."
+   },
+   {
+    "han": "盐",
+    "pinyin": "yán",
+    "vi": "muối",
+    "col": "少放盐",
+    "ex": "做菜要少放盐。",
+    "exv": "Nấu ăn nên cho ít muối."
+   },
+   {
+    "han": "糖",
+    "pinyin": "táng",
+    "vi": "đường",
+    "col": "不放糖",
+    "ex": "这杯茶不放糖。",
+    "exv": "Chén trà này không cho đường."
+   },
+   {
+    "han": "饭馆",
+    "pinyin": "fànguǎn",
+    "vi": "quán ăn",
+    "col": "一家饭馆",
+    "ex": "学校旁边有一家饭馆。",
+    "exv": "Bên cạnh trường có một quán ăn."
+   },
+   {
+    "han": "服务员",
+    "pinyin": "fúwùyuán",
+    "vi": "nhân viên phục vụ",
+    "col": "叫服务员",
+    "ex": "请叫服务员来一下。",
+    "exv": "Xin gọi nhân viên phục vụ tới một chút."
+   },
+   {
+    "han": "买单",
+    "pinyin": "mǎidān",
+    "vi": "thanh toán (tính tiền)",
+    "col": "买单吧",
+    "ex": "吃完了，买单吧。",
+    "exv": "Ăn xong rồi, thanh toán nhé."
+   }
+  ]
+ },
+  {
+  "topic": "Đi lại và mua sắm",
+  "hsk": "HSK2",
+  "hskNote": "Bộ tự soạn theo chủ đề sách HSK2. Các từ là từ thông dụng ở trình độ này; câu ví dụ tự soạn, không trích nguyên văn giáo trình. Nhãn HSK2 là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "cards": [
+   {
+    "han": "出租车",
+    "pinyin": "chūzūchē",
+    "vi": "taxi",
+    "col": "打出租车",
+    "ex": "去机场打出租车吧。",
+    "exv": "Ra sân bay thì bắt taxi nhé."
+   },
+   {
+    "han": "公共汽车",
+    "pinyin": "gōnggòngqìchē",
+    "vi": "xe buýt",
+    "col": "坐公共汽车",
+    "ex": "我每天坐公共汽车去上班。",
+    "exv": "Tôi mỗi ngày đi xe buýt đi làm."
+   },
+   {
+    "han": "地铁",
+    "pinyin": "dìtiě",
+    "vi": "tàu điện ngầm",
+    "col": "坐地铁",
+    "ex": "坐地铁比开车快。",
+    "exv": "Đi tàu điện ngầm nhanh hơn lái xe."
+   },
+   {
+    "han": "火车",
+    "pinyin": "huǒchē",
+    "vi": "tàu hỏa",
+    "col": "坐火车",
+    "ex": "坐火车去北京要五个小时。",
+    "exv": "Đi tàu hỏa tới Bắc Kinh mất năm tiếng."
+   },
+   {
+    "han": "飞机",
+    "pinyin": "fēijī",
+    "vi": "máy bay",
+    "col": "坐飞机",
+    "ex": "坐飞机去上海只要两个小时。",
+    "exv": "Đi máy bay tới Thượng Hải chỉ mất hai tiếng."
+   },
+   {
+    "han": "船",
+    "pinyin": "chuán",
+    "vi": "thuyền",
+    "col": "坐船",
+    "ex": "我们可以坐船去那个小岛。",
+    "exv": "Chúng ta có thể đi thuyền ra hòn đảo nhỏ đó."
+   },
+   {
+    "han": "自行车",
+    "pinyin": "zìxíngchē",
+    "vi": "xe đạp",
+    "col": "骑自行车",
+    "ex": "他每天骑自行车上学。",
+    "exv": "Anh ấy mỗi ngày đạp xe đi học."
+   },
+   {
+    "han": "开车",
+    "pinyin": "kāichē",
+    "vi": "lái xe",
+    "col": "会开车",
+    "ex": "你会开车吗？",
+    "exv": "Bạn biết lái xe không?"
+   },
+   {
+    "han": "走路",
+    "pinyin": "zǒulù",
+    "vi": "đi bộ",
+    "col": "走路去",
+    "ex": "学校很近，走路去就行。",
+    "exv": "Trường rất gần, đi bộ là được."
+   },
+   {
+    "han": "过马路",
+    "pinyin": "guòmǎlù",
+    "vi": "qua đường",
+    "col": "过马路小心",
+    "ex": "过马路要小心。",
+    "exv": "Qua đường phải cẩn thận."
+   },
+   {
+    "han": "红绿灯",
+    "pinyin": "hónglǜdēng",
+    "vi": "đèn giao thông",
+    "col": "看红绿灯",
+    "ex": "过马路要看红绿灯。",
+    "exv": "Qua đường phải nhìn đèn giao thông."
+   },
+   {
+    "han": "商店",
+    "pinyin": "shāngdiàn",
+    "vi": "cửa hàng",
+    "col": "一家商店",
+    "ex": "这条街上有很多商店。",
+    "exv": "Trên con phố này có nhiều cửa hàng."
+   },
+   {
+    "han": "超市",
+    "pinyin": "chāoshì",
+    "vi": "siêu thị",
+    "col": "去超市",
+    "ex": "周末我们去超市买东西。",
+    "exv": "Cuối tuần chúng tôi đi siêu thị mua đồ."
+   },
+   {
+    "han": "便宜",
+    "pinyin": "piányi",
+    "vi": "rẻ",
+    "col": "很便宜",
+    "ex": "这件衣服很便宜。",
+    "exv": "Chiếc áo này rất rẻ."
+   },
+   {
+    "han": "贵",
+    "pinyin": "guì",
+    "vi": "đắt",
+    "col": "太贵了",
+    "ex": "这件衣服太贵了，我不买。",
+    "exv": "Chiếc áo này đắt quá, tôi không mua."
+   },
+   {
+    "han": "钱",
+    "pinyin": "qián",
+    "vi": "tiền",
+    "col": "没有钱",
+    "ex": "我今天没有带钱。",
+    "exv": "Hôm nay tôi không mang tiền."
+   },
+   {
+    "han": "付款",
+    "pinyin": "fùkuǎn",
+    "vi": "trả tiền",
+    "col": "付款吧",
+    "ex": "买好了，付款吧。",
+    "exv": "Mua xong rồi, trả tiền nhé."
+   },
+   {
+    "han": "找钱",
+    "pinyin": "zhǎoqián",
+    "vi": "trả lại tiền thừa",
+    "col": "找钱给我",
+    "ex": "请找钱给我。",
+    "exv": "Xin trả lại tiền thừa cho tôi."
+   },
+   {
+    "han": "试穿",
+    "pinyin": "shìchuān",
+    "vi": "mặc thử",
+    "col": "试穿一下",
+    "ex": "这件衣服可以试穿一下吗？",
+    "exv": "Chiếc áo này có thể mặc thử một chút không?"
+   },
+   {
+    "han": "打折",
+    "pinyin": "dǎzhé",
+    "vi": "giảm giá",
+    "col": "正在打折",
+    "ex": "这家商店正在打折。",
+    "exv": "Cửa hàng này đang giảm giá."
+   }
+  ]
+ },
+  {
+  "topic": "Học tập và công việc",
+  "hsk": "HSK3",
+  "hskNote": "Bộ tự soạn theo chủ đề sách HSK3. Các từ là từ thông dụng ở trình độ này; câu ví dụ tự soạn, không trích nguyên văn giáo trình. Nhãn HSK3 là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "cards": [
+   {
+    "han": "学习",
+    "pinyin": "xuéxí",
+    "vi": "học tập",
+    "col": "努力学习",
+    "ex": "我们要努力学习汉语。",
+    "exv": "Chúng ta phải chăm học tiếng Trung."
+   },
+   {
+    "han": "课堂",
+    "pinyin": "kètáng",
+    "vi": "lớp học; giờ học",
+    "col": "在课堂上",
+    "ex": "在课堂上要认真听讲。",
+    "exv": "Trong giờ học phải chăm chú nghe giảng."
+   },
+   {
+    "han": "作业",
+    "pinyin": "zuòyè",
+    "vi": "bài tập về nhà",
+    "col": "做作业",
+    "ex": "晚上我先做作业再看电视。",
+    "exv": "Buổi tối tôi làm bài tập trước rồi mới xem ti vi."
+   },
+   {
+    "han": "考试",
+    "pinyin": "kǎoshì",
+    "vi": "kỳ thi",
+    "col": "参加考试",
+    "ex": "下星期我们参加考试。",
+    "exv": "Tuần sau chúng tôi dự thi."
+   },
+   {
+    "han": "成绩",
+    "pinyin": "chéngjì",
+    "vi": "thành tích; điểm số",
+    "col": "成绩很好",
+    "ex": "他的成绩很好。",
+    "exv": "Điểm số của anh ấy rất tốt."
+   },
+   {
+    "han": "课程",
+    "pinyin": "kèchéng",
+    "vi": "khóa học; môn học",
+    "col": "一门课程",
+    "ex": "这门课程很有意思。",
+    "exv": "Môn học này rất thú vị."
+   },
+   {
+    "han": "教材",
+    "pinyin": "jiàocái",
+    "vi": "giáo trình",
+    "col": "新教材",
+    "ex": "我们用新教材学习。",
+    "exv": "Chúng tôi học bằng giáo trình mới."
+   },
+   {
+    "han": "词典",
+    "pinyin": "cídiǎn",
+    "vi": "từ điển",
+    "col": "查词典",
+    "ex": "不认识的字可以查词典。",
+    "exv": "Chữ không biết có thể tra từ điển."
+   },
+   {
+    "han": "笔记",
+    "pinyin": "bǐjì",
+    "vi": "ghi chép",
+    "col": "做笔记",
+    "ex": "上课要做笔记。",
+    "exv": "Lên lớp phải ghi chép."
+   },
+   {
+    "han": "复习",
+    "pinyin": "fùxí",
+    "vi": "ôn tập",
+    "col": "复习功课",
+    "ex": "考试前要认真复习功课。",
+    "exv": "Trước kỳ thi phải ôn bài nghiêm túc."
+   },
+   {
+    "han": "预习",
+    "pinyin": "yùxí",
+    "vi": "chuẩn bị bài trước",
+    "col": "预习课文",
+    "ex": "明天上课前先预习课文。",
+    "exv": "Trước giờ học ngày mai hãy chuẩn bị bài trước."
+   },
+   {
+    "han": "毕业",
+    "pinyin": "bìyè",
+    "vi": "tốt nghiệp",
+    "col": "大学毕业",
+    "ex": "他去年大学毕业了。",
+    "exv": "Anh ấy năm ngoái tốt nghiệp đại học."
+   },
+   {
+    "han": "工作",
+    "pinyin": "gōngzuò",
+    "vi": "công việc; làm việc",
+    "col": "找工作",
+    "ex": "他正在找工作。",
+    "exv": "Anh ấy đang tìm việc."
+   },
+   {
+    "han": "公司",
+    "pinyin": "gōngsī",
+    "vi": "công ty",
+    "col": "一家公司",
+    "ex": "这家公司有两百多人。",
+    "exv": "Công ty này có hơn hai trăm người."
+   },
+   {
+    "han": "老板",
+    "pinyin": "lǎobǎn",
+    "vi": "sếp; ông chủ",
+    "col": "我的老板",
+    "ex": "我的老板对我们很好。",
+    "exv": "Sếp của tôi rất tốt với chúng tôi."
+   },
+   {
+    "han": "同事",
+    "pinyin": "tóngshì",
+    "vi": "đồng nghiệp",
+    "col": "新同事",
+    "ex": "新同事是昨天来的。",
+    "exv": "Đồng nghiệp mới hôm qua mới tới."
+   },
+   {
+    "han": "会议",
+    "pinyin": "huìyì",
+    "vi": "cuộc họp",
+    "col": "开一个会议",
+    "ex": "下午三点开一个会议。",
+    "exv": "Chiều ba giờ họp một cuộc họp."
+   },
+   {
+    "han": "办公室",
+    "pinyin": "bàngōngshì",
+    "vi": "văn phòng",
+    "col": "在办公室",
+    "ex": "他在办公室工作。",
+    "exv": "Anh ấy làm việc trong văn phòng."
+   },
+   {
+    "han": "加班",
+    "pinyin": "jiābān",
+    "vi": "làm thêm giờ",
+    "col": "加班到很晚",
+    "ex": "昨天他加班到很晚。",
+    "exv": "Hôm qua anh ấy làm thêm tới rất muộn."
+   },
+   {
+    "han": "请假",
+    "pinyin": "qǐngjià",
+    "vi": "xin nghỉ",
+    "col": "请假一天",
+    "ex": "今天我请假一天。",
+    "exv": "Hôm nay tôi xin nghỉ một ngày."
+   }
+  ]
+ },
+  {
+  "topic": "Du lịch",
+  "hsk": "HSK3",
+  "hskNote": "Bộ tự soạn theo chủ đề sách HSK3. Các từ là từ thông dụng ở trình độ này; câu ví dụ tự soạn, không trích nguyên văn giáo trình. Nhãn HSK3 là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "cards": [
+   {
+    "han": "旅行",
+    "pinyin": "lǚxíng",
+    "vi": "du lịch (chuyến đi)",
+    "col": "一次旅行",
+    "ex": "这是一次愉快的旅行。",
+    "exv": "Đây là một chuyến du lịch vui vẻ."
+   },
+   {
+    "han": "旅游",
+    "pinyin": "lǚyóu",
+    "vi": "du lịch (tham quan)",
+    "col": "旅游景点",
+    "ex": "北京有很多旅游景点。",
+    "exv": "Bắc Kinh có nhiều điểm tham quan du lịch."
+   },
+   {
+    "han": "景点",
+    "pinyin": "jǐngdiǎn",
+    "vi": "điểm tham quan",
+    "col": "有名景点",
+    "ex": "这个景点很有名。",
+    "exv": "Điểm tham quan này rất nổi tiếng."
+   },
+   {
+    "han": "风景",
+    "pinyin": "fēngjǐng",
+    "vi": "phong cảnh",
+    "col": "美丽的风景",
+    "ex": "这里的风景很美丽。",
+    "exv": "Phong cảnh ở đây rất đẹp."
+   },
+   {
+    "han": "照片",
+    "pinyin": "zhàopiàn",
+    "vi": "ảnh",
+    "col": "拍照片",
+    "ex": "我们在长城拍了很多照片。",
+    "exv": "Chúng tôi chụp nhiều ảnh ở Vạn Lý Trường Thành."
+   },
+   {
+    "han": "相机",
+    "pinyin": "xiàngjī",
+    "vi": "máy ảnh",
+    "col": "带相机",
+    "ex": "旅行要带相机。",
+    "exv": "Đi du lịch phải mang máy ảnh."
+   },
+   {
+    "han": "行李",
+    "pinyin": "xíngli",
+    "vi": "hành lý",
+    "col": "行李很多",
+    "ex": "我们的行李很多。",
+    "exv": "Hành lý của chúng tôi rất nhiều."
+   },
+   {
+    "han": "护照",
+    "pinyin": "hùzhào",
+    "vi": "hộ chiếu",
+    "col": "带护照",
+    "ex": "出国要带护照。",
+    "exv": "Ra nước ngoài phải mang hộ chiếu."
+   },
+   {
+    "han": "签证",
+    "pinyin": "qiānzhèng",
+    "vi": "thị thực",
+    "col": "办签证",
+    "ex": "去中国要办签证。",
+    "exv": "Sang Trung Quốc phải làm thị thực."
+   },
+   {
+    "han": "机票",
+    "pinyin": "jīpiào",
+    "vi": "vé máy bay",
+    "col": "买机票",
+    "ex": "我已经买了机票。",
+    "exv": "Tôi đã mua vé máy bay rồi."
+   },
+   {
+    "han": "酒店",
+    "pinyin": "jiǔdiàn",
+    "vi": "khách sạn",
+    "col": "住酒店",
+    "ex": "我们住在市中心的酒店。",
+    "exv": "Chúng tôi ở khách sạn trung tâm thành phố."
+   },
+   {
+    "han": "房间",
+    "pinyin": "fángjiān",
+    "vi": "phòng",
+    "col": "一个房间",
+    "ex": "请给我一个房间。",
+    "exv": "Xin cho tôi một phòng."
+   },
+   {
+    "han": "预订",
+    "pinyin": "yùdìng",
+    "vi": "đặt trước",
+    "col": "预订房间",
+    "ex": "我们提前预订了房间。",
+    "exv": "Chúng tôi đã đặt phòng trước."
+   },
+   {
+    "han": "导游",
+    "pinyin": "dǎoyóu",
+    "vi": "hướng dẫn viên",
+    "col": "导游介绍",
+    "ex": "导游给我们介绍了长城的历史。",
+    "exv": "Hướng dẫn viên giới thiệu cho chúng tôi lịch sử Vạn Lý Trường Thành."
+   },
+   {
+    "han": "地图",
+    "pinyin": "dìtú",
+    "vi": "bản đồ",
+    "col": "一张地图",
+    "ex": "买一张地图吧。",
+    "exv": "Mua một tấm bản đồ nhé."
+   },
+   {
+    "han": "方向",
+    "pinyin": "fāngxiàng",
+    "vi": "phương hướng",
+    "col": "问方向",
+    "ex": "不认识路可以问方向。",
+    "exv": "Không biết đường có thể hỏi phương hướng."
+   },
+   {
+    "han": "迷路",
+    "pinyin": "mílù",
+    "vi": "lạc đường",
+    "col": "迷路了",
+    "ex": "我们在老街迷路了。",
+    "exv": "Chúng tôi lạc đường ở phố cổ."
+   },
+   {
+    "han": "纪念品",
+    "pinyin": "jìniànpǐn",
+    "vi": "đồ lưu niệm",
+    "col": "买纪念品",
+    "ex": "给朋友买一点纪念品。",
+    "exv": "Mua ít đồ lưu niệm cho bạn bè."
+   },
+   {
+    "han": "假期",
+    "pinyin": "jiàqī",
+    "vi": "kỳ nghỉ",
+    "col": "假期旅行",
+    "ex": "假期我们去旅行。",
+    "exv": "Kỳ nghỉ chúng tôi đi du lịch."
+   },
+   {
+    "han": "出发",
+    "pinyin": "chūfā",
+    "vi": "xuất phát",
+    "col": "明天出发",
+    "ex": "我们明天早上出发。",
+    "exv": "Sáng mai chúng tôi xuất phát."
+   }
+  ]
+ },
+  {
+  "topic": "Sức khỏe",
+  "hsk": "HSK3",
+  "hskNote": "Bộ tự soạn theo chủ đề sách HSK3. Các từ là từ thông dụng ở trình độ này; câu ví dụ tự soạn, không trích nguyên văn giáo trình. Nhãn HSK3 là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "cards": [
+   {
+    "han": "身体",
+    "pinyin": "shēntǐ",
+    "vi": "cơ thể; sức khỏe",
+    "col": "身体健康",
+    "ex": "希望你身体健康。",
+    "exv": "Chúc bạn sức khỏe tốt."
+   },
+   {
+    "han": "生病",
+    "pinyin": "shēngbìng",
+    "vi": "bị ốm",
+    "col": "生病了",
+    "ex": "他生病了，今天没来上课。",
+    "exv": "Anh ấy bị ốm, hôm nay không tới lớp."
+   },
+   {
+    "han": "感冒",
+    "pinyin": "gǎnmào",
+    "vi": "cảm",
+    "col": "感冒了",
+    "ex": "我感冒了，头很疼。",
+    "exv": "Tôi bị cảm, đầu rất đau."
+   },
+   {
+    "han": "发烧",
+    "pinyin": "fāshāo",
+    "vi": "sốt",
+    "col": "发烧了",
+    "ex": "孩子发烧了，要去医院。",
+    "exv": "Đứa bé bị sốt, phải đi bệnh viện."
+   },
+   {
+    "han": "咳嗽",
+    "pinyin": "késou",
+    "vi": "ho",
+    "col": "咳嗽了",
+    "ex": "他咳嗽了三天。",
+    "exv": "Anh ấy ho ba ngày rồi."
+   },
+   {
+    "han": "头疼",
+    "pinyin": "tóuténg",
+    "vi": "đau đầu",
+    "col": "头疼得厉害",
+    "ex": "我头疼得厉害，想休息一下。",
+    "exv": "Tôi đau đầu dữ dội, muốn nghỉ một chút."
+   },
+   {
+    "han": "肚子疼",
+    "pinyin": "dùziténg",
+    "vi": "đau bụng",
+    "col": "肚子疼了",
+    "ex": "吃了冷东西，肚子疼了。",
+    "exv": "Ăn đồ lạnh nên đau bụng."
+   },
+   {
+    "han": "药",
+    "pinyin": "yào",
+    "vi": "thuốc",
+    "col": "吃药",
+    "ex": "生病了要按时吃药。",
+    "exv": "Ốm thì phải uống thuốc đúng giờ."
+   },
+   {
+    "han": "吃药",
+    "pinyin": "chīyào",
+    "vi": "uống thuốc",
+    "col": "按时吃药",
+    "ex": "记得按时吃药。",
+    "exv": "Nhớ uống thuốc đúng giờ."
+   },
+   {
+    "han": "看病",
+    "pinyin": "kànbìng",
+    "vi": "đi khám bệnh",
+    "col": "去看病",
+    "ex": "不舒服就去看病吧。",
+    "exv": "Không khỏe thì đi khám bệnh nhé."
+   },
+   {
+    "han": "医院",
+    "pinyin": "yīyuàn",
+    "vi": "bệnh viện",
+    "col": "去医院",
+    "ex": "他去医院看病了。",
+    "exv": "Anh ấy đi bệnh viện khám rồi."
+   },
+   {
+    "han": "大夫",
+    "pinyin": "dàifu",
+    "vi": "bác sĩ (cách gọi thân mật)",
+    "col": "看大夫",
+    "ex": "去看大夫吧。",
+    "exv": "Đi khám bác sĩ nhé."
+   },
+   {
+    "han": "休息",
+    "pinyin": "xiūxi",
+    "vi": "nghỉ ngơi",
+    "col": "好好休息",
+    "ex": "生病了要好好休息。",
+    "exv": "Ốm thì phải nghỉ ngơi cho tốt."
+   },
+   {
+    "han": "锻炼",
+    "pinyin": "duànliàn",
+    "vi": "rèn luyện; tập thể dục",
+    "col": "锻炼身体",
+    "ex": "每天锻炼身体对健康有好处。",
+    "exv": "Mỗi ngày tập thể dục có lợi cho sức khỏe."
+   },
+   {
+    "han": "睡眠",
+    "pinyin": "shuìmián",
+    "vi": "giấc ngủ",
+    "col": "睡眠不足",
+    "ex": "睡眠不足会头疼。",
+    "exv": "Thiếu ngủ sẽ đau đầu."
+   },
+   {
+    "han": "精神",
+    "pinyin": "jīngshén",
+    "vi": "tinh thần",
+    "col": "精神很好",
+    "ex": "睡了一觉，精神很好。",
+    "exv": "Ngủ một giấc, tinh thần rất tốt."
+   },
+   {
+    "han": "累",
+    "pinyin": "lèi",
+    "vi": "mệt",
+    "col": "很累",
+    "ex": "工作了一天，很累。",
+    "exv": "Làm việc cả ngày, rất mệt."
+   },
+   {
+    "han": "舒服",
+    "pinyin": "shūfu",
+    "vi": "thoải mái; dễ chịu",
+    "col": "很舒服",
+    "ex": "洗个热水澡，很舒服。",
+    "exv": "Tắm nước nóng, rất dễ chịu."
+   },
+   {
+    "han": "疼",
+    "pinyin": "téng",
+    "vi": "đau",
+    "col": "很疼",
+    "ex": "我的腿很疼。",
+    "exv": "Chân tôi rất đau."
+   },
+   {
+    "han": "康复",
+    "pinyin": "kāngfù",
+    "vi": "hồi phục",
+    "col": "早日康复",
+    "ex": "希望你早日康复。",
+    "exv": "Chúc bạn sớm hồi phục."
+   }
+  ]
+ },
+  {
+  "topic": "Xã hội và giao tiếp",
+  "hsk": "HSK3",
+  "hskNote": "Bộ tự soạn theo chủ đề sách HSK3. Các từ là từ thông dụng ở trình độ này; câu ví dụ tự soạn, không trích nguyên văn giáo trình. Nhãn HSK3 là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "cards": [
+   {
+    "han": "社会",
+    "pinyin": "shèhuì",
+    "vi": "xã hội",
+    "col": "现代社会",
+    "ex": "现代社会变化很快。",
+    "exv": "Xã hội hiện đại thay đổi rất nhanh."
+   },
+   {
+    "han": "关系",
+    "pinyin": "guānxi",
+    "vi": "quan hệ",
+    "col": "好关系",
+    "ex": "他们关系很好。",
+    "exv": "Quan hệ của họ rất tốt."
+   },
+   {
+    "han": "交流",
+    "pinyin": "jiāoliú",
+    "vi": "giao lưu; trao đổi",
+    "col": "交流经验",
+    "ex": "大家交流学习经验。",
+    "exv": "Mọi người trao đổi kinh nghiệm học tập."
+   },
+   {
+    "han": "讨论",
+    "pinyin": "tǎolùn",
+    "vi": "thảo luận",
+    "col": "讨论问题",
+    "ex": "我们一起讨论这个问题。",
+    "exv": "Chúng ta cùng thảo luận vấn đề này."
+   },
+   {
+    "han": "意见",
+    "pinyin": "yìjiàn",
+    "vi": "ý kiến",
+    "col": "提意见",
+    "ex": "请提意见吧。",
+    "exv": "Xin hãy nêu ý kiến."
+   },
+   {
+    "han": "建议",
+    "pinyin": "jiànyì",
+    "vi": "đề nghị; gợi ý",
+    "col": "一个建议",
+    "ex": "我有一个建议。",
+    "exv": "Tôi có một đề nghị."
+   },
+   {
+    "han": "决定",
+    "pinyin": "juédìng",
+    "vi": "quyết định",
+    "col": "做决定",
+    "ex": "我们明天做决定。",
+    "exv": "Ngày mai chúng ta quyết định."
+   },
+   {
+    "han": "选择",
+    "pinyin": "xuǎnzé",
+    "vi": "lựa chọn",
+    "col": "自己选择",
+    "ex": "这是你自己选择的结果。",
+    "exv": "Đây là kết quả do chính bạn lựa chọn."
+   },
+   {
+    "han": "帮助",
+    "pinyin": "bāngzhù",
+    "vi": "giúp đỡ",
+    "col": "帮助别人",
+    "ex": "帮助别人是好事。",
+    "exv": "Giúp đỡ người khác là việc tốt."
+   },
+   {
+    "han": "感谢",
+    "pinyin": "gǎnxiè",
+    "vi": "cảm ơn (trang trọng)",
+    "col": "感谢你的帮助",
+    "ex": "感谢你的帮助。",
+    "exv": "Cảm ơn sự giúp đỡ của bạn."
+   },
+   {
+    "han": "道歉",
+    "pinyin": "dàoqiàn",
+    "vi": "xin lỗi (trang trọng)",
+    "col": "向他道歉",
+    "ex": "我向他道歉了。",
+    "exv": "Tôi đã xin lỗi anh ấy."
+   },
+   {
+    "han": "邀请",
+    "pinyin": "yāoqǐng",
+    "vi": "mời",
+    "col": "邀请朋友",
+    "ex": "我邀请朋友来家里吃饭。",
+    "exv": "Tôi mời bạn bè tới nhà ăn cơm."
+   },
+   {
+    "han": "参加",
+    "pinyin": "cānjiā",
+    "vi": "tham gia",
+    "col": "参加活动",
+    "ex": "我参加了学校的活动。",
+    "exv": "Tôi đã tham gia hoạt động của trường."
+   },
+   {
+    "han": "组织",
+    "pinyin": "zǔzhī",
+    "vi": "tổ chức",
+    "col": "组织活动",
+    "ex": "学生会组织了一次活动。",
+    "exv": "Hội sinh viên tổ chức một hoạt động."
+   },
+   {
+    "han": "活动",
+    "pinyin": "huódòng",
+    "vi": "hoạt động",
+    "col": "学校活动",
+    "ex": "学校活动很多。",
+    "exv": "Hoạt động của trường rất nhiều."
+   },
+   {
+    "han": "文化",
+    "pinyin": "wénhuà",
+    "vi": "văn hóa",
+    "col": "中国文化",
+    "ex": "我对中国文化很感兴趣。",
+    "exv": "Tôi rất quan tâm tới văn hóa Trung Quốc."
+   },
+   {
+    "han": "传统",
+    "pinyin": "chuántǒng",
+    "vi": "truyền thống",
+    "col": "传统节日",
+    "ex": "春节是中国传统节日。",
+    "exv": "Tết là lễ hội truyền thống của Trung Quốc."
+   },
+   {
+    "han": "习惯",
+    "pinyin": "xíguàn",
+    "vi": "thói quen",
+    "col": "好习惯",
+    "ex": "早起是好习惯。",
+    "exv": "Dậy sớm là thói quen tốt."
+   },
+   {
+    "han": "礼貌",
+    "pinyin": "lǐmào",
+    "vi": "lễ phép",
+    "col": "很有礼貌",
+    "ex": "这个孩子很有礼貌。",
+    "exv": "Đứa bé này rất lễ phép."
+   },
+   {
+    "han": "态度",
+    "pinyin": "tàidu",
+    "vi": "thái độ",
+    "col": "学习态度",
+    "ex": "他的学习态度很认真。",
+    "exv": "Thái độ học tập của anh ấy rất nghiêm túc."
+   }
+  ]
+ }
+
 ]; }
 /* ============ LÝ THUYẾT TRƯỚC — THỰC HÀNH SAU (đợt nội dung chuẩn 26/10/2026) ============
    Các map lý thuyết dùng chung cho mẫu 2 pha "1. Lý thuyết → 2. Thực hành".
@@ -2403,6 +3740,44 @@ var ZH_STARTER = {
     { han: "人", pinyin: "rén", vi: "người", col: "中国人", ex: "中国人很多。", exv: "Người Trung Quốc rất đông." }
   ]
 };
+// ---------- VIET CHU TUONG TAC DOT 2f (26/10/2026) ----------
+// 30 chu Han net don gian (<=6 net) tu bo khoi dong va bo HSK2, moi net la
+// 1 path SVG ve tay (viewBox 100x100). st = ten net theo thu tu, d = path
+// tuong ung (so path == so net). pinyin/nghia la am doc rieng cua chu;
+// src chi ro chu nay lay tu the tu / tu nao trong kho (khong bia nghia).
+// Chu nao khong chac chan thu tu net thi KHONG dua vao day.
+var ZH_STROKES = [
+  { han: "人", py: "rén", vi: "người", src: "Thẻ từ bộ khởi động", note: "", st: ["撇", "捺"], d: ["M58,12 L26,88", "M46,16 Q64,50 84,88"] },
+  { han: "上", py: "shàng", vi: "trên", src: "Trong từ 早上 (zǎoshang — buổi sáng)", note: "Trong từ 早上, 上 đọc nhẹ (shang).", st: ["竖", "横", "横"], d: ["M50,10 L50,48", "M22,48 L78,48", "M18,84 L82,84"] },
+  { han: "女", py: "nǚ", vi: "nữ; con gái", src: "Trong từ 女儿 (nǚ'ér — con gái)", note: "", st: ["撇点", "撇", "横"], d: ["M66,10 Q50,26 38,40", "M40,40 L22,88", "M28,58 L86,58"] },
+  { han: "子", py: "zǐ", vi: "con", src: "Trong từ 孩子 (háizi — con; trẻ con)", note: "Trong từ 孩子, 子 đọc nhẹ (zi).", st: ["横", "竖钩", "横"], d: ["M24,18 L76,18", "M50,18 L50,70 Q50,84 66,76", "M22,88 L78,88"] },
+  { han: "小", py: "xiǎo", vi: "nhỏ", src: "Trong từ 小时 (xiǎoshí — giờ)", note: "", st: ["竖钩", "点", "点"], d: ["M50,12 L50,66 Q50,82 64,74", "M30,34 L22,46", "M70,34 L78,46"] },
+  { han: "马", py: "mǎ", vi: "ngựa", src: "Trong từ 过马路 (guòmǎlù — qua đường)", note: "", st: ["横折", "竖折折钩", "横"], d: ["M22,16 L78,16 L78,44", "M46,20 L46,72 L72,72 L72,60", "M20,88 L80,88"] },
+  { han: "不", py: "bù", vi: "không", src: "Thẻ từ bộ khởi động", note: "", st: ["横", "撇", "竖", "点"], d: ["M20,16 L80,16", "M70,16 L28,86", "M50,32 L50,88", "M66,50 L78,62"] },
+  { han: "天", py: "tiān", vi: "trời; ngày", src: "Trong từ 明天 (míngtiān — ngày mai)", note: "", st: ["横", "横", "撇", "捺"], d: ["M20,16 L80,16", "M26,40 L74,40", "M62,40 L28,88", "M38,40 L80,88"] },
+  { han: "午", py: "wǔ", vi: "trưa", src: "Trong từ 中午 (zhōngwǔ — buổi trưa)", note: "", st: ["撇", "横", "竖", "横"], d: ["M68,12 L32,38", "M22,44 L78,44", "M50,20 L50,78", "M24,82 L76,82"] },
+  { han: "见", py: "jiàn", vi: "thấy; gặp", src: "Trong từ 再见 (zàijiàn — tạm biệt)", note: "", st: ["竖", "横折", "撇", "竖弯钩"], d: ["M30,14 L30,60", "M30,14 L74,14 L74,52", "M62,30 L36,62", "M74,52 L74,82 Q74,92 58,92 Q48,92 48,80"] },
+  { han: "车", py: "chē", vi: "xe", src: "Trong từ 出租车 (chūzūchē — taxi)", note: "", st: ["横", "撇折", "横", "竖"], d: ["M20,14 L80,14", "M68,14 L36,44 L80,44", "M20,68 L80,68", "M50,14 L50,90"] },
+  { han: "水", py: "shuǐ", vi: "nước", src: "Trong từ 喝水 (hēshuǐ — uống nước)", note: "", st: ["竖钩", "横撇", "撇", "捺"], d: ["M50,10 L50,74 Q50,86 38,84", "M28,30 L58,30 L40,54", "M76,30 L56,52", "M56,52 L84,88"] },
+  { han: "火", py: "huǒ", vi: "lửa", src: "Trong từ 火车 (huǒchē — tàu hỏa)", note: "", st: ["点", "撇", "撇", "捺"], d: ["M28,12 L20,24", "M50,16 L22,88", "M58,24 L40,56", "M48,28 L82,88"] },
+  { han: "牛", py: "niú", vi: "bò", src: "Trong từ 牛奶 (niúnǎi — sữa bò)", note: "", st: ["撇", "横", "横", "竖"], d: ["M72,12 L30,40", "M24,46 L76,46", "M22,68 L78,68", "M50,12 L50,90"] },
+  { han: "开", py: "kāi", vi: "mở", src: "Trong từ 开车 (kāichē — lái xe)", note: "", st: ["横", "横", "撇", "竖"], d: ["M20,16 L80,16", "M26,40 L74,40", "M58,40 L28,88", "M68,40 L68,88"] },
+  { han: "友", py: "yǒu", vi: "bạn", src: "Trong từ 朋友 (péngyou — bạn bè)", note: "Trong từ 朋友, 友 đọc nhẹ (you).", st: ["横", "撇", "横撇", "捺"], d: ["M24,16 L76,16", "M56,16 L30,52", "M34,54 L72,54 L48,78", "M50,54 L82,88"] },
+  { han: "今", py: "jīn", vi: "nay", src: "Trong từ 今天 (jīntiān — hôm nay)", note: "", st: ["撇", "捺", "横", "竖"], d: ["M52,10 L26,44", "M48,10 L76,44", "M24,58 L76,58", "M50,58 L50,90"] },
+  { han: "付", py: "fù", vi: "trả; giao", src: "Trong từ 付款 (fùkuǎn — trả tiền)", note: "", st: ["撇", "竖", "横", "竖钩", "点"], d: ["M36,12 L20,40", "M30,40 L30,88", "M44,26 L78,26", "M62,26 L62,70 Q62,84 76,76", "M70,44 L80,56"] },
+  { han: "打", py: "dǎ", vi: "đánh", src: "Trong từ 打折 (dǎzhé — giảm giá)", note: "", st: ["横", "竖", "提", "横", "竖"], d: ["M20,26 L40,26", "M30,26 L30,58", "M30,58 L44,50", "M52,26 L80,26", "M66,26 L66,88"] },
+  { han: "外", py: "wài", vi: "ngoài", src: "Trong từ 外公 (wàigōng — ông ngoại)", note: "", st: ["撇", "横撇", "点", "竖", "点"], d: ["M34,12 L18,40", "M22,42 L46,42 L32,60", "M40,60 L48,70", "M68,12 L68,78", "M58,74 L50,84"] },
+  { han: "市", py: "shì", vi: "chợ; thành phố", src: "Trong từ 超市 (chāoshì — siêu thị)", note: "", st: ["点", "横折", "竖", "横折", "竖"], d: ["M50,12 L42,22", "M24,28 L76,28 L76,44", "M30,44 L30,88", "M30,50 L70,50 L70,64", "M70,50 L70,88"] },
+  { han: "好", py: "hǎo", vi: "tốt; khỏe", src: "Thẻ từ bộ khởi động", note: "", st: ["撇点", "撇", "横", "横", "竖钩", "横"], d: ["M42,10 Q32,24 24,36", "M26,36 L14,86", "M18,54 L46,54", "M52,20 L84,20", "M68,20 L68,68 Q68,82 80,74", "M52,88 L84,88"] },
+  { han: "吗", py: "ma", vi: "trợ từ câu hỏi", src: "Thẻ từ bộ khởi động", note: "", st: ["竖", "横折", "横", "横折", "竖折折钩", "横"], d: ["M18,18 L18,60", "M18,18 L44,18 L44,60", "M18,60 L44,60", "M50,18 L84,18 L84,44", "M64,20 L64,72 L80,72 L80,60", "M50,88 L84,88"] },
+  { han: "妈", py: "mā", vi: "mẹ", src: "Trong từ 妈妈 (māma — mẹ)", note: "", st: ["撇点", "撇", "横", "横折", "竖折折钩", "横"], d: ["M42,10 Q32,24 24,36", "M26,36 L14,86", "M18,54 L46,54", "M50,18 L84,18 L84,44", "M64,20 L64,72 L80,72 L80,60", "M50,88 L84,88"] },
+  { han: "年", py: "nián", vi: "năm", src: "Trong từ 今年 (jīnnián — năm nay)", note: "", st: ["撇", "横", "横", "竖", "横", "竖"], d: ["M62,12 L30,40", "M22,44 L78,44", "M24,60 L76,60", "M50,12 L50,76", "M22,76 L78,76", "M50,76 L50,90"] },
+  { han: "早", py: "zǎo", vi: "sớm", src: "Trong từ 早上 (zǎoshang — buổi sáng)", note: "", st: ["竖", "横折", "横", "横", "横", "竖"], d: ["M28,12 L28,56", "M28,12 L72,12 L72,56", "M28,34 L72,34", "M28,56 L72,56", "M26,70 L74,70", "M50,62 L50,90"] },
+  { han: "自", py: "zì", vi: "tự", src: "Trong từ 自行车 (zìxíngchē — xe đạp)", note: "", st: ["撇", "竖", "横折", "横", "横", "横"], d: ["M56,10 L30,32", "M28,16 L28,86", "M28,16 L76,16 L76,86", "M28,42 L76,42", "M28,64 L76,64", "M28,86 L76,86"] },
+  { han: "灯", py: "dēng", vi: "đèn", src: "Trong từ 红绿灯 (hónglǜdēng — đèn giao thông)", note: "", st: ["点", "撇", "撇", "捺", "横", "竖"], d: ["M26,12 L20,22", "M42,14 L16,86", "M44,24 L30,52", "M40,28 L50,86", "M54,26 L84,26", "M70,26 L70,88"] },
+  { han: "再", py: "zài", vi: "lại", src: "Trong từ 再见 (zàijiàn — tạm biệt)", note: "", st: ["横", "竖", "横", "横", "竖", "横"], d: ["M24,14 L76,14", "M28,14 L28,44", "M28,44 L76,44", "M24,60 L76,60", "M50,60 L50,86", "M22,86 L78,86"] },
+  { han: "米", py: "mǐ", vi: "gạo", src: "Trong từ 米饭 (mǐfàn — cơm)", note: "", st: ["点", "撇", "横", "竖", "撇", "捺"], d: ["M50,10 L44,20", "M62,18 L30,40", "M22,46 L78,46", "M50,18 L50,86", "M50,56 L26,88", "M50,56 L76,88"] }
+];
 // Câu luyện HSKK Sơ cấp: nghe–nhắc lại (tự soạn, chào hỏi/giới thiệu cơ bản).
 var ZH_HSKK_SENTENCES = [
   { han: "你好！", pinyin: "Nǐ hǎo!", vi: "Chào bạn!" },
@@ -2429,6 +3804,2377 @@ var ZH_ENTRY_QS = [
   { q: "“朋友” đọc là gì?", o: ["péngyou", "péngyǒu", "píngyou", "pèngyou"], a: 0, why: "朋友 đọc là péngyou." },
   { q: "“老师” đọc là gì?", o: ["lǎoshī", "láoshī", "lǎoshǐ", "lāoshī"], a: 0, why: "老师 đọc là lǎoshī." }
 ];
+// ---------- DOT 2c (26/10/2026): NGU PHAP / DOC / NGHE TRACK TRUNG ----------
+// Tu soan 100% theo chu de/diem ngu phap cua Giao trinh chuan HSK (he 6 cap cu);
+// khong trich nguyen van giao trinh hay trang khac. 12 tram ngu phap chon cac diem
+// chac chan dung trinh do HSK2-HSK3; ly hop tu (离合词) va bo ngu ket qua/xu huong
+// de dot sau de giu dung 12 tram tap trung. Tien trinh dung lai zhDone san co
+// (khoa zhGram:/zhRead:/zhListen:) nen dong bo Supabase theo dung mau row rb zhDone.
+var ZH_GRAMMAR = [
+ {
+  "id": "le",
+  "stage": 2,
+  "title": "了 — đã / rồi",
+  "hook": "“我吃饭了” — tôi ăn cơm rồi: thêm 了 là việc xong rồi.",
+  "examples": [
+   "我昨天买了一本书。(Wǒ zuótiān mǎi le yì běn shū.) — Hôm qua tôi đã mua một quyển sách.",
+   "他已经回家了。(Tā yǐjīng huí jiā le.) — Anh ấy đã về nhà rồi.",
+   "下雨了，快回家吧。(Xià yǔ le, kuài huí jiā ba.) — Mưa rồi, mau về nhà đi.",
+   "我吃饭了，你呢？(Wǒ chī fàn le, nǐ ne?) — Tôi ăn cơm rồi, còn bạn?"
+  ],
+  "speak": "我昨天买了一本书。他已经回家了。下雨了，快回家吧。我吃饭了，你呢？",
+  "rule": "了 đứng sau động từ báo việc đã xong (买了书); đứng cuối câu báo tình huống mới xuất hiện (下雨了). Có 已经 thì cuối câu vẫn dùng 了.",
+  "tip": "Đừng dịch 了 lúc nào cũng là “đã”: ở cuối câu nó hay là “rồi”.",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK2 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "Câu nào dùng 了 đúng để nói việc đã xong?",
+    "o": [
+     "我昨天去学校了",
+     "我昨天去学校",
+     "我了昨天去学校",
+     "我昨天了去学校"
+    ],
+    "a": 0,
+    "why": "了 đứng sau động từ 去: 昨天去学校了."
+   },
+   {
+    "q": "“下雨了” nghĩa là gì?",
+    "o": [
+     "Mưa rồi",
+     "Sắp mưa",
+     "Hôm qua mưa",
+     "Mưa rất to"
+    ],
+    "a": 0,
+    "why": "了 cuối câu báo tình huống mới: trời đã mưa rồi."
+   },
+   {
+    "q": "Điền vào chỗ trống: 他___回家了。",
+    "o": [
+     "已经",
+     "都",
+     "很",
+     "在"
+    ],
+    "a": 0,
+    "why": "已经…了 là cặp hay đi cùng nhau: đã… rồi."
+   },
+   {
+    "q": "Câu nào dùng 了 SAI?",
+    "o": [
+     "我吃饭了",
+     "他来了",
+     "她走了",
+     "我了吃饭"
+    ],
+    "a": 3,
+    "why": "了 không đứng trước động từ: phải nói 我吃饭了."
+   },
+   {
+    "q": "Trong “我买了一本书”, 了 báo điều gì?",
+    "o": [
+     "Việc đã xong",
+     "Việc sắp làm",
+     "Việc đang làm",
+     "Câu hỏi"
+    ],
+    "a": 0,
+    "why": "了 sau 买 báo việc mua đã xong."
+   },
+   {
+    "q": "Câu nào đúng?",
+    "o": [
+     "明天我去了北京",
+     "昨天我去了北京",
+     "现在我去了北京",
+     "每天我去了北京"
+    ],
+    "a": 1,
+    "why": "了 báo việc đã xong nên đi với thời gian quá khứ như 昨天."
+   }
+  ]
+ },
+ {
+  "id": "guo",
+  "stage": 2,
+  "title": "过 — từng (kinh nghiệm)",
+  "hook": "“我去过中国” — tôi từng đi Trung Quốc: 过 nói kinh nghiệm đã có.",
+  "examples": [
+   "我去过北京。(Wǒ qù guo Běijīng.) — Tôi từng đi Bắc Kinh.",
+   "你吃过中国菜吗？(Nǐ chī guo Zhōngguó cài ma?) — Bạn từng ăn món Trung Quốc chưa?",
+   "他没去过上海。(Tā méi qù guo Shànghǎi.) — Anh ấy chưa từng đi Thượng Hải.",
+   "我看过这部电影。(Wǒ kàn guo zhè bù diànyǐng.) — Tôi từng xem bộ phim này."
+  ],
+  "speak": "我去过北京。你吃过中国菜吗？他没去过上海。我看过这部电影。",
+  "rule": "过 đứng sau động từ, nghĩa là “từng làm”, nhấn mạnh kinh nghiệm. Phủ định dùng 没…过, không dùng 不…过.",
+  "tip": "了 nói việc xong, 过 nói từng trải: 我吃了饭 (ăn rồi) khác 我吃过饭 (từng ăn).",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK2 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "“我去过北京” nhấn mạnh điều gì?",
+    "o": [
+     "Từng đi Bắc Kinh",
+     "Đang đi Bắc Kinh",
+     "Sắp đi Bắc Kinh",
+     "Muốn đi Bắc Kinh"
+    ],
+    "a": 0,
+    "why": "过 sau động từ báo kinh nghiệm từng có."
+   },
+   {
+    "q": "Phủ định của “去过” là gì?",
+    "o": [
+     "没去过",
+     "不去过",
+     "没去",
+     "不去"
+    ],
+    "a": 0,
+    "why": "Kinh nghiệm chưa có dùng 没…过."
+   },
+   {
+    "q": "Điền vào chỗ trống: 你吃___中国菜吗？",
+    "o": [
+     "了",
+     "过",
+     "着",
+     "的"
+    ],
+    "a": 1,
+    "why": "Hỏi kinh nghiệm từng ăn thì dùng 过."
+   },
+   {
+    "q": "Câu nào nhấn mạnh “từng trải”?",
+    "o": [
+     "我吃了饭",
+     "我吃过饭",
+     "我在吃饭",
+     "我要吃饭"
+    ],
+    "a": 1,
+    "why": "吃过 mới là từng ăn; 吃了 chỉ báo ăn xong."
+   },
+   {
+    "q": "Câu nào SAI?",
+    "o": [
+     "我没去过上海",
+     "你去过吗",
+     "我不去过上海",
+     "我看过这部电影"
+    ],
+    "a": 2,
+    "why": "Không nói 不去过, phải nói 没去过."
+   },
+   {
+    "q": "过 đứng ở đâu trong câu?",
+    "o": [
+     "Trước chủ ngữ",
+     "Sau động từ",
+     "Trước động từ",
+     "Cuối câu"
+    ],
+    "a": 1,
+    "why": "Công thức: động từ + 过."
+   }
+  ]
+ },
+ {
+  "id": "zhe",
+  "stage": 2,
+  "title": "着 — đang giữ trạng thái",
+  "hook": "“门开着” — cửa đang mở: 着 nói trạng thái đang giữ nguyên.",
+  "examples": [
+   "门开着。(Mén kāi zhe.) — Cửa đang mở.",
+   "他穿着一件红衣服。(Tā chuān zhe yí jiàn hóng yīfu.) — Anh ấy đang mặc một chiếc áo đỏ.",
+   "她笑着说。(Tā xiào zhe shuō.) — Cô ấy vừa cười vừa nói.",
+   "墙上挂着一幅画。(Qiáng shang guà zhe yì fú huà.) — Trên tường đang treo một bức tranh."
+  ],
+  "speak": "门开着。他穿着一件红衣服。她笑着说。墙上挂着一幅画。",
+  "rule": "着 đứng sau động từ, báo trạng thái đang duy trì: cửa đang mở, áo đang mặc, tranh đang treo. Dạng “động từ + 着 + động từ” nghĩa là vừa… vừa… (笑着说).",
+  "tip": "着 khác 在: 在 + động từ là đang làm việc gì; 着 là trạng thái giữ nguyên.",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK2 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "“门开着” nghĩa là gì?",
+    "o": [
+     "Cửa đang mở",
+     "Cửa đã đóng",
+     "Cửa sắp mở",
+     "Cửa rất to"
+    ],
+    "a": 0,
+    "why": "开着 = trạng thái cửa đang mở."
+   },
+   {
+    "q": "“她笑着说” nghĩa là gì?",
+    "o": [
+     "Cô ấy vừa cười vừa nói",
+     "Cô ấy cười xong mới nói",
+     "Cô ấy sắp cười",
+     "Cô ấy không nói"
+    ],
+    "a": 0,
+    "why": "笑着说 là vừa cười vừa nói."
+   },
+   {
+    "q": "Điền vào chỗ trống: 墙上挂___一幅画。",
+    "o": [
+     "了",
+     "过",
+     "着",
+     "的"
+    ],
+    "a": 2,
+    "why": "Tranh đang treo giữ trạng thái nên dùng 着."
+   },
+   {
+    "q": "Câu nào nói trạng thái đang giữ (không phải đang làm)?",
+    "o": [
+     "他在看书",
+     "他穿着一件红衣服",
+     "他要去学校",
+     "他昨天来了"
+    ],
+    "a": 1,
+    "why": "穿着 nói áo đang mặc trên người, là trạng thái giữ."
+   },
+   {
+    "q": "Câu nào SAI?",
+    "o": [
+     "他穿着衣服",
+     "门开着",
+     "他笑着说",
+     "他着穿衣服"
+    ],
+    "a": 3,
+    "why": "着 đứng sau động từ: 穿着, không nói 着穿."
+   },
+   {
+    "q": "着 đứng ở đâu?",
+    "o": [
+     "Trước chủ ngữ",
+     "Sau động từ",
+     "Trước động từ",
+     "Cuối câu hỏi"
+    ],
+    "a": 1,
+    "why": "Công thức: động từ + 着."
+   }
+  ]
+ },
+ {
+  "id": "bijiao",
+  "stage": 2,
+  "title": "比较 — so sánh hơn (比)",
+  "hook": "“今天比昨天冷” — hôm nay lạnh hơn hôm qua: 比 là so sánh.",
+  "examples": [
+   "今天比昨天冷。(Jīntiān bǐ zuótiān lěng.) — Hôm nay lạnh hơn hôm qua.",
+   "他比我高。(Tā bǐ wǒ gāo.) — Anh ấy cao hơn tôi.",
+   "这个比那个便宜。(Zhè ge bǐ nà ge piányi.) — Cái này rẻ hơn cái kia.",
+   "我的汉语比他的汉语好。(Wǒ de Hànyǔ bǐ tā de Hànyǔ hǎo.) — Tiếng Trung của tôi tốt hơn của anh ấy."
+  ],
+  "speak": "今天比昨天冷。他比我高。这个比那个便宜。我的汉语比他的汉语好。",
+  "rule": "Công thức: A 比 B + tính từ. Có thể thêm 更, 多 hoặc 一点儿 sau tính từ. Phủ định so sánh dùng 没有: 他没有我高 (anh ấy không cao bằng tôi).",
+  "tip": "比 không đi với 很: không nói “比昨天很冷”.",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK2 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "“今天比昨天冷” nghĩa là gì?",
+    "o": [
+     "Hôm nay lạnh hơn hôm qua",
+     "Hôm qua lạnh hơn hôm nay",
+     "Hai hôm lạnh như nhau",
+     "Hôm nay rất lạnh"
+    ],
+    "a": 0,
+    "why": "A 比 B + 冷: A lạnh hơn B."
+   },
+   {
+    "q": "Điền vào chỗ trống: 他___我高。",
+    "o": [
+     "比",
+     "被",
+     "把",
+     "和"
+    ],
+    "a": 0,
+    "why": "So sánh hơn dùng 比."
+   },
+   {
+    "q": "Câu nào SAI?",
+    "o": [
+     "他比我高",
+     "今天比昨天冷",
+     "今天比昨天很冷",
+     "这个比那个便宜"
+    ],
+    "a": 2,
+    "why": "比 không đi với 很."
+   },
+   {
+    "q": "“他没有我高” nghĩa là gì?",
+    "o": [
+     "Anh ấy không cao bằng tôi",
+     "Anh ấy cao hơn tôi",
+     "Anh ấy rất cao",
+     "Tôi không cao"
+    ],
+    "a": 0,
+    "why": "没有 trong câu so sánh là phủ định: không bằng."
+   },
+   {
+    "q": "Điền vào chỗ trống: 我的汉语比他的汉语___。",
+    "o": [
+     "好",
+     "很",
+     "吗",
+     "了"
+    ],
+    "a": 0,
+    "why": "Sau 比 là tính từ so sánh: 好."
+   },
+   {
+    "q": "比 đứng ở đâu?",
+    "o": [
+     "Giữa hai đối tượng so sánh",
+     "Đầu câu",
+     "Cuối câu",
+     "Trước chủ ngữ"
+    ],
+    "a": 0,
+    "why": "Công thức: A 比 B + tính từ."
+   }
+  ]
+ },
+ {
+  "id": "dedide",
+  "stage": 2,
+  "title": "的 / 地 / 得 — ba chữ de",
+  "hook": "“我的书、高兴地说、跑得很快” — ba chữ de đọc giống nhau, viết khác nhau.",
+  "examples": [
+   "这是我的书。(Zhè shì wǒ de shū.) — Đây là sách của tôi.",
+   "他高兴地说。(Tā gāoxìng de shuō.) — Anh ấy vui vẻ nói.",
+   "他跑得很快。(Tā pǎo de hěn kuài.) — Anh ấy chạy rất nhanh.",
+   "她唱得很好听。(Tā chàng de hěn hǎotīng.) — Cô ấy hát rất hay."
+  ],
+  "speak": "这是我的书。他高兴地说。他跑得很快。她唱得很好听。",
+  "rule": "的 nối định ngữ với danh từ (我的书); 地 nối trạng ngữ với động từ (高兴地说); 得 nối động từ với bổ ngữ mức độ (跑得很快).",
+  "tip": "Mẹo nhớ: 的 trước danh từ, 地 trước động từ, 得 sau động từ.",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK2 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "Điền vào chỗ trống: 这是___书。",
+    "o": [
+     "我的",
+     "我地",
+     "我得",
+     "我着"
+    ],
+    "a": 0,
+    "why": "的 nối định ngữ với danh từ 书."
+   },
+   {
+    "q": "Điền vào chỗ trống: 他高兴___说。",
+    "o": [
+     "的",
+     "地",
+     "得",
+     "着"
+    ],
+    "a": 1,
+    "why": "Trạng ngữ trước động từ 说 dùng 地."
+   },
+   {
+    "q": "Điền vào chỗ trống: 他跑___很快。",
+    "o": [
+     "的",
+     "地",
+     "得",
+     "着"
+    ],
+    "a": 2,
+    "why": "Bổ ngữ mức độ sau động từ 跑 dùng 得."
+   },
+   {
+    "q": "Câu nào SAI?",
+    "o": [
+     "他跑得很快",
+     "他高兴地说",
+     "这是我的书",
+     "他跑的地很快"
+    ],
+    "a": 3,
+    "why": "跑的地很快 sai: sau động từ phải là 得."
+   },
+   {
+    "q": "的 dùng trước loại từ nào?",
+    "o": [
+     "Danh từ",
+     "Động từ",
+     "Tính từ đứng sau",
+     "Trạng ngữ"
+    ],
+    "a": 0,
+    "why": "的 nối định ngữ với danh từ."
+   },
+   {
+    "q": "地 đứng ở đâu?",
+    "o": [
+     "Trước động từ",
+     "Sau động từ",
+     "Trước danh từ",
+     "Cuối câu"
+    ],
+    "a": 0,
+    "why": "地 nối trạng ngữ với động từ đứng sau nó."
+   }
+  ]
+ },
+ {
+  "id": "haishihuozhe",
+  "stage": 2,
+  "title": "还是 / 或者 — hay là / hoặc",
+  "hook": "“你喝茶还是喝咖啡？” — hỏi lựa chọn thì dùng 还是, kể lựa chọn thì dùng 或者.",
+  "examples": [
+   "你喝茶还是喝咖啡？(Nǐ hē chá háishi hē kāfēi?) — Bạn uống trà hay cà phê?",
+   "明天或者后天都可以。(Míngtiān huòzhě hòutiān dōu kěyǐ.) — Ngày mai hoặc ngày kia đều được.",
+   "你去还是我去？(Nǐ qù háishi wǒ qù?) — Bạn đi hay tôi đi?",
+   "周末或者去公园，或者在家休息。(Zhōumò huòzhě qù gōngyuán, huòzhě zài jiā xiūxi.) — Cuối tuần hoặc đi công viên, hoặc ở nhà nghỉ."
+  ],
+  "speak": "你喝茶还是喝咖啡？明天或者后天都可以。你去还是我去？周末或者去公园，或者在家休息。",
+  "rule": "还是 dùng trong câu hỏi lựa chọn (thường có dấu ?). 或者 dùng trong câu kể để nêu các lựa chọn, có thể lặp lại: 或者…或者….",
+  "tip": "Thấy dấu ? và hai lựa chọn thì chọn 还是; câu kể “cái này hay cái kia đều được” thì chọn 或者.",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK2 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "Câu hỏi lựa chọn “Bạn uống trà hay cà phê?” dùng từ nào?",
+    "o": [
+     "还是",
+     "或者",
+     "但是",
+     "如果"
+    ],
+    "a": 0,
+    "why": "Câu hỏi lựa chọn dùng 还是."
+   },
+   {
+    "q": "Câu kể “Ngày mai hoặc ngày kia đều được” dùng từ nào?",
+    "o": [
+     "还是",
+     "或者",
+     "但是",
+     "不但"
+    ],
+    "a": 1,
+    "why": "Câu kể nêu lựa chọn dùng 或者."
+   },
+   {
+    "q": "Điền vào chỗ trống: 你想去北京___去上海？",
+    "o": [
+     "还是",
+     "或者",
+     "但是",
+     "而且"
+    ],
+    "a": 0,
+    "why": "Đây là câu hỏi lựa chọn nên dùng 还是."
+   },
+   {
+    "q": "Điền vào chỗ trống: 周末我___去公园，___在家休息。",
+    "o": [
+     "或者…或者",
+     "还是…还是",
+     "不但…而且",
+     "虽然…但是"
+    ],
+    "a": 0,
+    "why": "Câu kể nêu hai lựa chọn dùng 或者…或者."
+   },
+   {
+    "q": "Câu hỏi lựa chọn nào SAI?",
+    "o": [
+     "你喝茶还是喝咖啡？",
+     "你去还是我去？",
+     "你去或者我去？",
+     "你喜欢红色还是蓝色？"
+    ],
+    "a": 2,
+    "why": "Câu hỏi lựa chọn không dùng 或者, phải dùng 还是."
+   },
+   {
+    "q": "或者 có dùng trong câu hỏi lựa chọn không?",
+    "o": [
+     "Không, chỉ dùng trong câu kể",
+     "Có, dùng như 还是",
+     "Chỉ dùng cuối câu",
+     "Chỉ dùng với 但是"
+    ],
+    "a": 0,
+    "why": "或者 nêu lựa chọn trong câu kể, không dùng để hỏi."
+   }
+  ]
+ },
+ {
+  "id": "ba",
+  "stage": 3,
+  "title": "把 — câu chữ 把",
+  "hook": "“请把门关上” — hãy đóng cửa lại: 把 nhấn mạnh việc xử lý đồ vật.",
+  "examples": [
+   "请把门关上。(Qǐng bǎ mén guān shang.) — Xin hãy đóng cửa lại.",
+   "我把书放在桌子上了。(Wǒ bǎ shū fàng zài zhuōzi shang le.) — Tôi đã đặt sách lên bàn rồi.",
+   "他把房间打扫干净了。(Tā bǎ fángjiān dǎsǎo gānjìng le.) — Anh ấy đã dọn phòng sạch rồi.",
+   "请把这句话写下来。(Qǐng bǎ zhè jù huà xiě xiàlai.) — Xin hãy viết câu này xuống."
+  ],
+  "speak": "请把门关上。我把书放在桌子上了。他把房间打扫干净了。请把这句话写下来。",
+  "rule": "Công thức: 把 + tân ngữ + động từ + thành phần khác (kết quả, xu hướng, nơi chốn…). Động từ trong câu 把 không đứng trơ trọi một mình.",
+  "tip": "Nhớ công thức: 把 + cái gì + làm sao (kết quả ra sao).",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK3 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "“请把门关上” nghĩa là gì?",
+    "o": [
+     "Xin hãy đóng cửa lại",
+     "Xin hãy mở cửa ra",
+     "Cửa đang mở",
+     "Cửa rất to"
+    ],
+    "a": 0,
+    "why": "把门关上: xử lý cái cửa bằng cách đóng lại."
+   },
+   {
+    "q": "Công thức câu 把 là gì?",
+    "o": [
+     "把 + tân ngữ + động từ + thành phần khác",
+     "把 + động từ + tân ngữ",
+     "动词 + 把 + tân ngữ",
+     "把 + tính từ + danh từ"
+    ],
+    "a": 0,
+    "why": "把 đưa tân ngữ lên trước động từ, sau động từ còn thành phần khác."
+   },
+   {
+    "q": "Câu 把 nào đúng?",
+    "o": [
+     "我把书放在桌子上了",
+     "我把放在桌子上书",
+     "我把书放",
+     "我放把书在桌子上"
+    ],
+    "a": 0,
+    "why": "把书放在桌子上: 把 + 书 + 放 + 在桌子上."
+   },
+   {
+    "q": "Điền vào chỗ trống: 请把这句话___下来。",
+    "o": [
+     "写",
+     "书",
+     "门",
+     "很"
+    ],
+    "a": 0,
+    "why": "把这句话写下来: viết câu này xuống."
+   },
+   {
+    "q": "Câu nào SAI?",
+    "o": [
+     "请把门关上",
+     "我把房间打扫干净了",
+     "他把书看",
+     "请把这句话写下来"
+    ],
+    "a": 2,
+    "why": "把书看 sai: động từ 看 đứng trơ, thiếu kết quả sau nó."
+   },
+   {
+    "q": "Câu 把 nhấn mạnh điều gì?",
+    "o": [
+     "Việc xử lý đồ vật ra sao",
+     "Thời gian làm việc",
+     "Người làm việc",
+     "Nơi chốn"
+    ],
+    "a": 0,
+    "why": "Câu 把 nhấn mạnh đồ vật được xử lý thế nào."
+   }
+  ]
+ },
+ {
+  "id": "bei",
+  "stage": 3,
+  "title": "被 — câu bị động",
+  "hook": "“我的书被他拿走了” — sách của tôi bị anh ấy lấy đi mất: 被 nói việc xảy ra với chủ ngữ.",
+  "examples": [
+   "我的书被他拿走了。(Wǒ de shū bèi tā ná zǒu le.) — Sách của tôi bị anh ấy lấy đi mất.",
+   "杯子被打碎了。(Bēizi bèi dǎ suì le.) — Cái cốc bị đánh vỡ rồi.",
+   "他被老师表扬了。(Tā bèi lǎoshī biǎoyáng le.) — Anh ấy được cô giáo khen.",
+   "我的作业被老师收走了。(Wǒ de zuòyè bèi lǎoshī shōu zǒu le.) — Bài tập của tôi bị cô giáo thu đi mất."
+  ],
+  "speak": "我的书被他拿走了。杯子被打碎了。他被老师表扬了。我的作业被老师收走了。",
+  "rule": "Công thức: chủ ngữ + 被 + (người gây ra) + động từ + kết quả. Sau động từ thường có kết quả (走了, 碎了…), không đứng trơ.",
+  "tip": "Bị động không chỉ là chuyện xấu: 被表扬 là được khen, vẫn dùng 被.",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK3 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "“我的书被他拿走了” nghĩa là gì?",
+    "o": [
+     "Sách của tôi bị anh ấy lấy đi mất",
+     "Anh ấy lấy sách của tôi cho tôi",
+     "Tôi lấy sách của anh ấy",
+     "Sách của tôi rất mới"
+    ],
+    "a": 0,
+    "why": "Chủ ngữ 书 là thứ chịu tác động của 拿走."
+   },
+   {
+    "q": "Điền vào chỗ trống: 杯子被___碎了。",
+    "o": [
+     "打",
+     "书",
+     "很",
+     "门"
+    ],
+    "a": 0,
+    "why": "杯子被打碎了: cốc bị đánh vỡ."
+   },
+   {
+    "q": "Công thức câu 被 là gì?",
+    "o": [
+     "Chủ ngữ + 被 + người gây ra + động từ + kết quả",
+     "被 + chủ ngữ + động từ",
+     "Chủ ngữ + động từ + 被",
+     "被 + tính từ + danh từ"
+    ],
+    "a": 0,
+    "why": "被 đưa người gây ra lên trước động từ, sau động từ có kết quả."
+   },
+   {
+    "q": "Câu nào nói “anh ấy được cô giáo khen”?",
+    "o": [
+     "他被老师表扬了",
+     "老师被他表扬了",
+     "他表扬老师了",
+     "老师表扬他了"
+    ],
+    "a": 0,
+    "why": "他被老师表扬了: anh ấy là người được khen."
+   },
+   {
+    "q": "Câu nào SAI?",
+    "o": [
+     "我的作业被老师收走了",
+     "杯子被打碎了",
+     "他被表扬老师了",
+     "他被老师表扬了"
+    ],
+    "a": 2,
+    "why": "被表扬老师了 sai thứ tự: phải là 被老师表扬了."
+   },
+   {
+    "q": "Sau động từ trong câu 被 thường có gì?",
+    "o": [
+     "Kết quả (走了, 碎了…)",
+     "Tên riêng",
+     "Số lượng",
+     "Dấu hỏi"
+    ],
+    "a": 0,
+    "why": "Động từ trong câu 被 cần thành phần kết quả đi sau."
+   }
+  ]
+ },
+ {
+  "id": "yuelaiyue",
+  "stage": 3,
+  "title": "越来越 — càng ngày càng",
+  "hook": "“天气越来越冷了” — trời càng ngày càng lạnh: 越来越 nói mức độ tăng dần.",
+  "examples": [
+   "天气越来越冷了。(Tiānqì yuè lái yuè lěng le.) — Trời càng ngày càng lạnh.",
+   "他的汉语越来越好。(Tā de Hànyǔ yuè lái yuè hǎo.) — Tiếng Trung của anh ấy càng ngày càng tốt.",
+   "东西越来越贵。(Dōngxi yuè lái yuè guì.) — Đồ đạc càng ngày càng đắt.",
+   "我越来越喜欢北京了。(Wǒ yuè lái yuè xǐhuan Běijīng le.) — Tôi càng ngày càng thích Bắc Kinh."
+  ],
+  "speak": "天气越来越冷了。他的汉语越来越好。东西越来越贵。我越来越喜欢北京了。",
+  "rule": "Công thức: 越来越 + tính từ hoặc động từ tâm lý (喜欢, 爱…). Nó diễn tả mức độ thay đổi dần theo thời gian.",
+  "tip": "越来越 đi với tính từ hoặc cảm xúc, không đi với số lượng cụ thể hay tên riêng.",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK3 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "“天气越来越冷了” nghĩa là gì?",
+    "o": [
+     "Trời càng ngày càng lạnh",
+     "Trời lạnh một hôm",
+     "Trời sắp lạnh",
+     "Trời lạnh nhất"
+    ],
+    "a": 0,
+    "why": "越来越 + 冷: mức lạnh tăng dần."
+   },
+   {
+    "q": "Điền vào chỗ trống: 他的汉语越来越___。",
+    "o": [
+     "好",
+     "书",
+     "北京",
+     "三百"
+    ],
+    "a": 0,
+    "why": "越来越 đi với tính từ: 好."
+   },
+   {
+    "q": "越来越 dùng với loại từ nào?",
+    "o": [
+     "Tính từ hoặc động từ tâm lý",
+     "Danh từ cụ thể",
+     "Số lượng",
+     "Tên riêng"
+    ],
+    "a": 0,
+    "why": "越来越 + tính từ (好, 冷) hoặc 喜欢."
+   },
+   {
+    "q": "Câu nào SAI?",
+    "o": [
+     "天气越来越冷",
+     "他越来越高",
+     "东西越来越三百块",
+     "我越来越喜欢北京"
+    ],
+    "a": 2,
+    "why": "三百块 là số lượng cụ thể, không đi với 越来越."
+   },
+   {
+    "q": "“我越来越喜欢北京了” nghĩa là gì?",
+    "o": [
+     "Tôi càng ngày càng thích Bắc Kinh",
+     "Tôi thích Bắc Kinh một lần",
+     "Tôi không thích Bắc Kinh",
+     "Tôi sắp đi Bắc Kinh"
+    ],
+    "a": 0,
+    "why": "越来越喜欢: mức thích tăng dần."
+   },
+   {
+    "q": "Điền vào chỗ trống: 东西越来越___。",
+    "o": [
+     "贵",
+     "桌子",
+     "昨天",
+     "吗"
+    ],
+    "a": 0,
+    "why": "越来越 + tính từ 贵."
+   }
+  ]
+ },
+ {
+  "id": "suiran",
+  "stage": 3,
+  "title": "虽然…但是 — tuy… nhưng…",
+  "hook": "“虽然今天很冷，但是他还是去跑步了” — tuy lạnh nhưng anh ấy vẫn đi chạy.",
+  "examples": [
+   "虽然今天很冷，但是他还是去跑步了。(Suīrán jīntiān hěn lěng, dànshì tā háishi qù pǎobù le.) — Tuy hôm nay rất lạnh nhưng anh ấy vẫn đi chạy.",
+   "虽然她很忙，但是每天都给我打电话。(Suīrán tā hěn máng, dànshì měitiān dōu gěi wǒ dǎ diànhuà.) — Tuy cô ấy rất bận nhưng ngày nào cũng gọi điện cho tôi.",
+   "虽然路很远，但是我们走到了。(Suīrán lù hěn yuǎn, dànshì wǒmen zǒu dào le.) — Tuy đường rất xa nhưng chúng tôi đã đi tới.",
+   "虽然他累了，但是还在工作。(Suīrán tā lèi le, dànshì hái zài gōngzuò.) — Tuy anh ấy mệt rồi nhưng vẫn đang làm việc."
+  ],
+  "speak": "虽然今天很冷，但是他还是去跑步了。虽然她很忙，但是每天都给我打电话。虽然路很远，但是我们走到了。虽然他累了，但是还在工作。",
+  "rule": "虽然 mở đầu vế nhượng bộ (tuy…), 但是 mở đầu vế chính (nhưng…). Hai từ hay đi thành cặp; 但是 và 可是 chỉ chọn một, không dùng cả hai.",
+  "tip": "Nhớ cặp đôi: thấy 虽然 thì tìm 但是 ở vế sau.",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK3 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "“虽然今天很冷，但是他还是去跑步了” nghĩa là gì?",
+    "o": [
+     "Tuy hôm nay rất lạnh nhưng anh ấy vẫn đi chạy",
+     "Vì hôm nay lạnh nên anh ấy đi chạy",
+     "Hôm nay lạnh nên anh ấy không chạy",
+     "Anh ấy chạy vì trời lạnh"
+    ],
+    "a": 0,
+    "why": "虽然…但是 là nhượng bộ: tuy… nhưng…."
+   },
+   {
+    "q": "Điền vào chỗ trống: 虽然她很忙，___每天都给我打电话。",
+    "o": [
+     "但是",
+     "因为",
+     "如果",
+     "而且"
+    ],
+    "a": 0,
+    "why": "Cặp với 虽然 là 但是."
+   },
+   {
+    "q": "Câu nào SAI?",
+    "o": [
+     "虽然冷，但是他去了",
+     "虽然忙，但是她来了",
+     "虽然累，但是可是他还在工作",
+     "虽然远，但是我们走到了"
+    ],
+    "a": 2,
+    "why": "但是 và 可是 chỉ chọn một, không dùng cả hai."
+   },
+   {
+    "q": "虽然 nêu lên điều gì?",
+    "o": [
+     "Vế nhượng bộ (tuy…)",
+     "Nguyên nhân",
+     "Giả thiết",
+     "Kết quả"
+    ],
+    "a": 0,
+    "why": "虽然 mở đầu vế nhượng bộ, vế chính dùng 但是."
+   },
+   {
+    "q": "Điền vào chỗ trống: 虽然路很远，___我们走到了。",
+    "o": [
+     "但是",
+     "所以",
+     "就",
+     "或者"
+    ],
+    "a": 0,
+    "why": "Cặp 虽然…但是."
+   },
+   {
+    "q": "Cặp nào khác với 虽然…但是 về ý nghĩa?",
+    "o": [
+     "因为…所以",
+     "如果…就",
+     "不但…而且",
+     "还是…或者"
+    ],
+    "a": 0,
+    "why": "因为…所以 là nguyên nhân – kết quả, không phải nhượng bộ."
+   }
+  ]
+ },
+ {
+  "id": "ruguo",
+  "stage": 3,
+  "title": "如果…就 — nếu… thì…",
+  "hook": "“如果明天下雨，我们就不去公园了” — nếu mai mưa thì chúng ta không đi công viên nữa.",
+  "examples": [
+   "如果明天下雨，我们就不去公园了。(Rúguǒ míngtiān xià yǔ, wǒmen jiù bú qù gōngyuán le.) — Nếu ngày mai mưa thì chúng ta không đi công viên nữa.",
+   "如果你有时间，就来我家吧。(Rúguǒ nǐ yǒu shíjiān, jiù lái wǒ jiā ba.) — Nếu bạn có thời gian thì đến nhà tôi nhé.",
+   "如果不舒服，就早点儿休息。(Rúguǒ bù shūfu, jiù zǎo diǎnr xiūxi.) — Nếu không khỏe thì nghỉ sớm một chút.",
+   "如果他不来，我就自己去。(Rúguǒ tā bù lái, wǒ jiù zìjǐ qù.) — Nếu anh ấy không đến thì tôi tự đi."
+  ],
+  "speak": "如果明天下雨，我们就不去公园了。如果你有时间，就来我家吧。如果不舒服，就早点儿休息。如果他不来，我就自己去。",
+  "rule": "如果 nêu giả thiết ở vế đầu, 就 nêu kết quả ở vế sau và đứng trước động từ của vế sau.",
+  "tip": "Nhớ cặp đôi: 如果 ở vế đầu, 就 ở vế sau.",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK3 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "“如果明天下雨，我们就不去公园了” nghĩa là gì?",
+    "o": [
+     "Nếu ngày mai mưa thì chúng ta không đi công viên nữa",
+     "Ngày mai mưa nên đi công viên",
+     "Ngày mai không mưa",
+     "Chúng ta đi công viên vì mưa"
+    ],
+    "a": 0,
+    "why": "如果…就 là giả thiết – kết quả."
+   },
+   {
+    "q": "Điền vào chỗ trống: 如果你有时间，___来我家吧。",
+    "o": [
+     "就",
+     "但是",
+     "因为",
+     "或者"
+    ],
+    "a": 0,
+    "why": "Vế kết quả dùng 就."
+   },
+   {
+    "q": "就 đứng ở đâu?",
+    "o": [
+     "Trước động từ của vế sau",
+     "Cuối câu",
+     "Trước chủ ngữ vế đầu",
+     "Sau danh từ"
+    ],
+    "a": 0,
+    "why": "就 đứng trước động từ vế kết quả: 就来, 就去."
+   },
+   {
+    "q": "Câu nào SAI?",
+    "o": [
+     "如果下雨，我们就不去了",
+     "如果你来，我就高兴",
+     "如果就下雨，我们不去",
+     "如果不舒服，就早点儿休息"
+    ],
+    "a": 2,
+    "why": "就 không đứng trong vế 如果."
+   },
+   {
+    "q": "Điền vào chỗ trống: 如果他不来，我___自己去。",
+    "o": [
+     "就",
+     "但是",
+     "而且",
+     "被"
+    ],
+    "a": 0,
+    "why": "Vế kết quả dùng 就."
+   },
+   {
+    "q": "如果 nêu lên điều gì?",
+    "o": [
+     "Giả thiết",
+     "Nguyên nhân",
+     "Nhượng bộ",
+     "So sánh"
+    ],
+    "a": 0,
+    "why": "如果 = nếu, nêu giả thiết."
+   }
+  ]
+ },
+ {
+  "id": "budan",
+  "stage": 3,
+  "title": "不但…而且 — không những… mà còn…",
+  "hook": "“他不但会说汉语，而且会写汉字” — anh ấy không những nói được tiếng Trung mà còn viết được chữ Hán.",
+  "examples": [
+   "他不但会说汉语，而且会写汉字。(Tā búdàn huì shuō Hànyǔ, érqiě huì xiě Hànzì.) — Anh ấy không những nói được tiếng Trung mà còn viết được chữ Hán.",
+   "这件衣服不但便宜，而且好看。(Zhè jiàn yīfu búdàn piányi, érqiě hǎokàn.) — Chiếc áo này không những rẻ mà còn đẹp.",
+   "她不但聪明，而且很努力。(Tā búdàn cōngming, érqiě hěn nǔlì.) — Cô ấy không những thông minh mà còn rất chăm chỉ.",
+   "北京不但大，而且很美。(Běijīng búdàn dà, érqiě hěn měi.) — Bắc Kinh không những lớn mà còn rất đẹp."
+  ],
+  "speak": "他不但会说汉语，而且会写汉字。这件衣服不但便宜，而且好看。她不但聪明，而且很努力。北京不但大，而且很美。",
+  "rule": "不但 ở vế đầu, 而且 ở vế sau. Hai vế cùng chủ ngữ thì 不但 đứng sau chủ ngữ (他不但…). Vế sau thường tiến thêm một bậc so với vế trước.",
+  "tip": "Cùng một người/vật thì 不但 đứng sau chủ ngữ, đừng đặt 不但 lên trước chủ ngữ.",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK3 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "quiz": [
+   {
+    "q": "“他不但会说汉语，而且会写汉字” nghĩa là gì?",
+    "o": [
+     "Anh ấy không những nói được mà còn viết được",
+     "Anh ấy chỉ nói được",
+     "Anh ấy chỉ viết được",
+     "Anh ấy không nói cũng không viết"
+    ],
+    "a": 0,
+    "why": "不但…而且: vế sau tiến thêm một bậc."
+   },
+   {
+    "q": "Câu nào đúng khi hai vế cùng chủ ngữ “他”?",
+    "o": [
+     "他不但会说汉语，而且会写汉字",
+     "不但他会说汉语，而且会写汉字",
+     "他会说汉语不但，而且会写汉字",
+     "他不但会说汉语，而且汉字"
+    ],
+    "a": 0,
+    "why": "Cùng chủ ngữ thì 不但 đứng sau chủ ngữ."
+   },
+   {
+    "q": "Điền vào chỗ trống: 这件衣服不但便宜，___好看。",
+    "o": [
+     "而且",
+     "但是",
+     "如果",
+     "或者"
+    ],
+    "a": 0,
+    "why": "Cặp với 不但 là 而且."
+   },
+   {
+    "q": "Điền vào chỗ trống: 她不但聪明，___很努力。",
+    "o": [
+     "而且",
+     "但是",
+     "就",
+     "被"
+    ],
+    "a": 0,
+    "why": "Cặp 不但…而且."
+   },
+   {
+    "q": "Vế sau của 不但…而且 thường thế nào so với vế trước?",
+    "o": [
+     "Tiến thêm một bậc",
+     "Yếu hơn hẳn",
+     "Trái ngược",
+     "Không liên quan"
+    ],
+    "a": 0,
+    "why": "而且 nêu thêm điểm mạnh hơn: viết được là tiến hơn nói được."
+   },
+   {
+    "q": "Câu nào SAI?",
+    "o": [
+     "他不但会说，而且会写",
+     "北京不但大，而且很美",
+     "她不但聪明，而且很努力",
+     "这件衣服不但便宜，而且很贵"
+    ],
+    "a": 3,
+    "why": "便宜 và 很贵 trái ngược nhau, không phải tiến thêm một bậc cùng hướng."
+   }
+  ]
+ }
+];
+var ZH_READING = [
+ {
+  "id": "nha",
+  "stage": 2,
+  "title": "Nhà của Tiểu Minh",
+  "topic": "Nhà cửa",
+  "text": "小明的家在三楼。家里有三口人：爸爸、妈妈和小明。客厅很大，沙发很舒服。他的房间不大，但是很干净。晚上，一家人在客厅看电视。",
+  "pinyin": "Xiǎo Míng de jiā zài sān lóu. Jiā lǐ yǒu sān kǒu rén: bàba, māma hé Xiǎo Míng. Kètīng hěn dà, shāfā hěn shūfu. Tā de fángjiān bù dà, dànshì hěn gānjìng. Wǎnshang, yì jiā rén zài kètīng kàn diànshì.",
+  "vi": "Nhà của Tiểu Minh ở tầng 3. Nhà có 3 người: bố, mẹ và Tiểu Minh. Phòng khách rất rộng, ghế sofa rất thoải mái. Phòng của cậu ấy không lớn nhưng rất sạch. Buổi tối, cả nhà xem tivi ở phòng khách.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); đoạn văn và câu hỏi tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "questions": [
+   {
+    "q": "Nhà của Tiểu Minh ở tầng mấy?",
+    "o": [
+     "Tầng 2",
+     "Tầng 3",
+     "Tầng 4",
+     "Tầng 5"
+    ],
+    "a": 1,
+    "why": "在三楼: ở tầng 3."
+   },
+   {
+    "q": "Đúng hay sai: Nhà Tiểu Minh có 4 người.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Bài viết: 家里有三口人 — nhà có 3 người."
+   },
+   {
+    "q": "Phòng khách thế nào?",
+    "o": [
+     "Rất rộng",
+     "Rất nhỏ",
+     "Rất tối",
+     "Rất cũ"
+    ],
+    "a": 0,
+    "why": "客厅很大: phòng khách rất rộng."
+   },
+   {
+    "q": "Điền vào chỗ trống: 他的房间不大，但是很___。",
+    "o": [
+     "干净",
+     "大",
+     "高",
+     "远"
+    ],
+    "a": 0,
+    "why": "Bài viết: 房间不大，但是很干净."
+   },
+   {
+    "q": "Buổi tối cả nhà làm gì?",
+    "o": [
+     "Xem tivi",
+     "Nấu cơm",
+     "Đọc sách",
+     "Đi ngủ"
+    ],
+    "a": 0,
+    "why": "晚上，一家人在客厅看电视."
+   }
+  ]
+ },
+ {
+  "id": "truong",
+  "stage": 2,
+  "title": "Một ngày ở trường",
+  "topic": "Trường học",
+  "text": "我每天早上七点去学校。上午有四节课：汉语、数学、英语和体育。午饭后，我和同学在操场上踢足球。下午三点放学，我坐公共汽车回家。老师说我的汉语越来越好，我很高兴。",
+  "pinyin": "Wǒ měitiān zǎoshang qī diǎn qù xuéxiào. Shàngwǔ yǒu sì jié kè: Hànyǔ, shùxué, Yīngyǔ hé tǐyù. Wǔfàn hòu, wǒ hé tóngxué zài cāochǎng shang tī zúqiú. Xiàwǔ sān diǎn fàngxué, wǒ zuò gōnggòng qìchē huí jiā. Lǎoshī shuō wǒ de Hànyǔ yuè lái yuè hǎo, wǒ hěn gāoxìng.",
+  "vi": "Mỗi ngày tôi đi học lúc 7 giờ sáng. Buổi sáng có 4 tiết: tiếng Trung, toán, tiếng Anh và thể dục. Sau bữa trưa, tôi và bạn học đá bóng ở sân trường. 3 giờ chiều tan học, tôi đi xe buýt về nhà. Cô giáo nói tiếng Trung của tôi càng ngày càng tốt, tôi rất vui.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); đoạn văn và câu hỏi tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "questions": [
+   {
+    "q": "Mấy giờ đi học?",
+    "o": [
+     "6 giờ",
+     "7 giờ",
+     "8 giờ",
+     "9 giờ"
+    ],
+    "a": 1,
+    "why": "早上七点去学校: 7 giờ sáng đi học."
+   },
+   {
+    "q": "Buổi sáng có mấy tiết học?",
+    "o": [
+     "2 tiết",
+     "3 tiết",
+     "4 tiết",
+     "5 tiết"
+    ],
+    "a": 2,
+    "why": "上午有四节课: buổi sáng có 4 tiết."
+   },
+   {
+    "q": "Sau bữa trưa làm gì?",
+    "o": [
+     "Đá bóng ở sân trường",
+     "Ngủ trưa",
+     "Đọc sách",
+     "Về nhà"
+    ],
+    "a": 0,
+    "why": "午饭后…在操场上踢足球."
+   },
+   {
+    "q": "Về nhà bằng phương tiện gì?",
+    "o": [
+     "Xe buýt",
+     "Tàu điện ngầm",
+     "Xe đạp",
+     "Đi bộ"
+    ],
+    "a": 0,
+    "why": "坐公共汽车回家: đi xe buýt về nhà."
+   },
+   {
+    "q": "Đúng hay sai: Cô giáo nói tiếng Trung của tôi càng ngày càng kém.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Bài viết: 老师说我的汉语越来越好 — càng ngày càng tốt."
+   }
+  ]
+ },
+ {
+  "id": "thoitiet",
+  "stage": 2,
+  "title": "Hôm nay trời đẹp",
+  "topic": "Thời tiết",
+  "text": "今天天气很好。早上有点儿冷，中午很暖和。天空很蓝，没有云。下午刮了一点儿风，但是不冷。明天可能下雨，出门别忘了带伞。",
+  "pinyin": "Jīntiān tiānqì hěn hǎo. Zǎoshang yǒudiǎnr lěng, zhōngwǔ hěn nuǎnhuo. Tiānkōng hěn lán, méi yǒu yún. Xiàwǔ guā le yìdiǎnr fēng, dànshì bù lěng. Míngtiān kěnéng xià yǔ, chū mén bié wàng le dài sǎn.",
+  "vi": "Hôm nay thời tiết rất đẹp. Sáng hơi lạnh, trưa rất ấm. Bầu trời rất xanh, không có mây. Chiều có gió nhẹ nhưng không lạnh. Ngày mai có thể mưa, ra ngoài đừng quên mang ô.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); đoạn văn và câu hỏi tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "questions": [
+   {
+    "q": "Buổi sáng thời tiết thế nào?",
+    "o": [
+     "Hơi lạnh",
+     "Rất nóng",
+     "Mưa to",
+     "Có tuyết"
+    ],
+    "a": 0,
+    "why": "早上有点儿冷: sáng hơi lạnh."
+   },
+   {
+    "q": "Buổi trưa thế nào?",
+    "o": [
+     "Rất ấm",
+     "Rất lạnh",
+     "Mưa",
+     "Có gió lớn"
+    ],
+    "a": 0,
+    "why": "中午很暖和: trưa rất ấm."
+   },
+   {
+    "q": "Đúng hay sai: Hôm nay trời có nhiều mây.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Bài viết: 天空很蓝，没有云 — không có mây."
+   },
+   {
+    "q": "Buổi chiều thế nào?",
+    "o": [
+     "Có gió nhẹ nhưng không lạnh",
+     "Mưa rất to",
+     "Rất nóng",
+     "Có tuyết"
+    ],
+    "a": 0,
+    "why": "下午刮了一点儿风，但是不冷."
+   },
+   {
+    "q": "Ngày mai ra ngoài nên mang gì?",
+    "o": [
+     "Ô",
+     "Kính râm",
+     "Áo mưa dày",
+     "Găng tay"
+    ],
+    "a": 0,
+    "why": "明天可能下雨，出门别忘了带伞: có thể mưa nên mang ô."
+   }
+  ]
+ },
+ {
+  "id": "banbe",
+  "stage": 2,
+  "title": "Bạn thân của tôi",
+  "topic": "Bạn bè",
+  "text": "我的好朋友叫小红。她今年二十岁，是大学生。她很高，也很漂亮。我们每个星期六一起去图书馆看书。她喜欢唱歌，我喜欢画画。我们常常互相帮助，从来不吵架。",
+  "pinyin": "Wǒ de hǎo péngyou jiào Xiǎo Hóng. Tā jīnnián èrshí suì, shì dàxuéshēng. Tā hěn gāo, yě hěn piàoliang. Wǒmen měi ge xīngqīliù yìqǐ qù túshūguǎn kàn shū. Tā xǐhuan chàng gē, wǒ xǐhuan huà huà. Wǒmen chángcháng hùxiāng bāngzhù, cónglái bù chǎojià.",
+  "vi": "Bạn thân của tôi tên là Tiểu Hồng. Năm nay cô ấy 20 tuổi, là sinh viên đại học. Cô ấy rất cao và cũng rất xinh. Mỗi thứ bảy chúng tôi cùng đi thư viện đọc sách. Cô ấy thích hát, tôi thích vẽ. Chúng tôi thường giúp đỡ lẫn nhau, không bao giờ cãi nhau.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); đoạn văn và câu hỏi tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "questions": [
+   {
+    "q": "Tiểu Hồng năm nay bao nhiêu tuổi?",
+    "o": [
+     "18 tuổi",
+     "19 tuổi",
+     "20 tuổi",
+     "21 tuổi"
+    ],
+    "a": 2,
+    "why": "她今年二十岁: năm nay 20 tuổi."
+   },
+   {
+    "q": "Mỗi thứ bảy hai người cùng đi đâu?",
+    "o": [
+     "Thư viện",
+     "Công viên",
+     "Rạp phim",
+     "Quán ăn"
+    ],
+    "a": 0,
+    "why": "每个星期六一起去图书馆看书."
+   },
+   {
+    "q": "Tiểu Hồng thích làm gì?",
+    "o": [
+     "Hát",
+     "Vẽ",
+     "Chạy bộ",
+     "Nấu ăn"
+    ],
+    "a": 0,
+    "why": "她喜欢唱歌: cô ấy thích hát."
+   },
+   {
+    "q": "Đúng hay sai: Hai người thường cãi nhau.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Bài viết: 从来不吵架 — không bao giờ cãi nhau."
+   },
+   {
+    "q": "Điền vào chỗ trống: 我们常常互相___。",
+    "o": [
+     "帮助",
+     "吵架",
+     "唱歌",
+     "画画"
+    ],
+    "a": 0,
+    "why": "我们常常互相帮助: thường giúp đỡ lẫn nhau."
+   }
+  ]
+ },
+ {
+  "id": "dilam",
+  "stage": 3,
+  "title": "Ngày đầu đi làm",
+  "topic": "Đi làm",
+  "text": "我上个月开始在一家公司工作。公司离我家不远，坐地铁只要二十分钟。我的工作是写报告，有时候还要开会。同事们都很友好，常常帮助我。虽然工作有点儿忙，但是我学到了很多东西。",
+  "pinyin": "Wǒ shàng ge yuè kāishǐ zài yì jiā gōngsī gōngzuò. Gōngsī lí wǒ jiā bù yuǎn, zuò dìtiě zhǐ yào èrshí fēnzhōng. Wǒ de gōngzuò shì xiě bàogào, yǒu shíhou hái yào kāi huì. Tóngshìmen dōu hěn yǒuhǎo, chángcháng bāngzhù wǒ. Suīrán gōngzuò yǒudiǎnr máng, dànshì wǒ xué dào le hěn duō dōngxi.",
+  "vi": "Tháng trước tôi bắt đầu làm việc ở một công ty. Công ty không xa nhà tôi, đi tàu điện ngầm chỉ mất 20 phút. Công việc của tôi là viết báo cáo, thỉnh thoảng còn phải họp. Các đồng nghiệp đều rất thân thiện, thường giúp đỡ tôi. Tuy công việc hơi bận nhưng tôi đã học được rất nhiều thứ.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); đoạn văn và câu hỏi tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "questions": [
+   {
+    "q": "Bắt đầu đi làm từ khi nào?",
+    "o": [
+     "Tháng này",
+     "Tháng trước",
+     "Năm ngoái",
+     "Tuần trước"
+    ],
+    "a": 1,
+    "why": "上个月开始…工作: tháng trước bắt đầu làm việc."
+   },
+   {
+    "q": "Đi làm bằng tàu điện ngầm mất bao lâu?",
+    "o": [
+     "10 phút",
+     "20 phút",
+     "30 phút",
+     "40 phút"
+    ],
+    "a": 1,
+    "why": "坐地铁只要二十分钟: chỉ mất 20 phút."
+   },
+   {
+    "q": "Công việc chính là gì?",
+    "o": [
+     "Viết báo cáo",
+     "Bán hàng",
+     "Dạy học",
+     "Lái xe"
+    ],
+    "a": 0,
+    "why": "我的工作是写报告."
+   },
+   {
+    "q": "Đúng hay sai: Các đồng nghiệp không giúp đỡ tôi.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Bài viết: 同事们…常常帮助我 — thường giúp đỡ tôi."
+   },
+   {
+    "q": "Điền vào chỗ trống: 虽然工作有点儿忙，但是我___了很多东西。",
+    "o": [
+     "学到",
+     "忘记",
+     "买到",
+     "看到"
+    ],
+    "a": 0,
+    "why": "但是我学到了很多东西: tôi đã học được rất nhiều thứ."
+   }
+  ]
+ },
+ {
+  "id": "dichoi",
+  "stage": 3,
+  "title": "Cuối tuần đi công viên",
+  "topic": "Đi chơi",
+  "text": "星期六早上，天气晴朗，我们一家人去公园玩。公园里有很多花，还有一个大湖。爸爸妈妈在湖边散步，我和弟弟在草地上放风筝。中午我们在公园外面的小饭馆吃饭。大家都玩得很开心，下午四点才回家。",
+  "pinyin": "Xīngqīliù zǎoshang, tiānqì qínglǎng, wǒmen yì jiā rén qù gōngyuán wán. Gōngyuán lǐ yǒu hěn duō huā, hái yǒu yí ge dà hú. Bàba māma zài hú biān sànbù, wǒ hé dìdi zài cǎodì shang fàng fēngzheng. Zhōngwǔ wǒmen zài gōngyuán wàimiàn de xiǎo fànguǎn chī fàn. Dàjiā dōu wán de hěn kāixīn, xiàwǔ sì diǎn cái huí jiā.",
+  "vi": "Sáng thứ bảy, trời nắng đẹp, cả nhà chúng tôi đi công viên chơi. Trong công viên có nhiều hoa, còn có một cái hồ lớn. Bố mẹ đi dạo bên hồ, tôi và em trai thả diều trên bãi cỏ. Trưa chúng tôi ăn cơm ở quán nhỏ ngoài công viên. Mọi người đều chơi rất vui, 4 giờ chiều mới về nhà.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); đoạn văn và câu hỏi tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "questions": [
+   {
+    "q": "Cả nhà đi đâu chơi?",
+    "o": [
+     "Công viên",
+     "Bãi biển",
+     "Rạp phim",
+     "Thư viện"
+    ],
+    "a": 0,
+    "why": "我们一家人去公园玩."
+   },
+   {
+    "q": "Bố mẹ làm gì ở công viên?",
+    "o": [
+     "Đi dạo bên hồ",
+     "Thả diều",
+     "Ăn cơm",
+     "Chụp ảnh"
+    ],
+    "a": 0,
+    "why": "爸爸妈妈在湖边散步."
+   },
+   {
+    "q": "Tôi và em trai làm gì?",
+    "o": [
+     "Thả diều trên bãi cỏ",
+     "Đi dạo bên hồ",
+     "Bơi",
+     "Đọc sách"
+    ],
+    "a": 0,
+    "why": "我和弟弟在草地上放风筝."
+   },
+   {
+    "q": "Ăn trưa ở đâu?",
+    "o": [
+     "Quán nhỏ ngoài công viên",
+     "Trong nhà",
+     "Bên hồ",
+     "Ở trường"
+    ],
+    "a": 0,
+    "why": "在公园外面的小饭馆吃饭."
+   },
+   {
+    "q": "Đúng hay sai: Mọi người chơi không vui.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Bài viết: 大家都玩得很开心 — mọi người đều chơi rất vui."
+   }
+  ]
+ },
+ {
+  "id": "suckhoe",
+  "stage": 3,
+  "title": "Bị cảm",
+  "topic": "Sức khỏe",
+  "text": "昨天我觉得头疼，还有点儿发烧，就去医院看医生了。医生说我感冒了，要多喝水，好好休息。妈妈给我做了热汤，还买了药。我吃了药，睡了一觉，今天感觉好多了。以后天气冷的时候，我一定多穿衣服。",
+  "pinyin": "Zuótiān wǒ juéde tóu téng, hái yǒudiǎnr fāshāo, jiù qù yīyuàn kàn yīshēng le. Yīshēng shuō wǒ gǎnmào le, yào duō hē shuǐ, hǎohāo xiūxi. Māma gěi wǒ zuò le rè tāng, hái mǎi le yào. Wǒ chī le yào, shuì le yí jiào, jīntiān gǎnjué hǎo duō le. Yǐhòu tiānqì lěng de shíhou, wǒ yídìng duō chuān yīfu.",
+  "vi": "Hôm qua tôi thấy đau đầu, còn hơi sốt, nên đã đi bệnh viện khám bác sĩ. Bác sĩ nói tôi bị cảm, phải uống nhiều nước, nghỉ ngơi cho tốt. Mẹ nấu canh nóng cho tôi, còn mua thuốc. Tôi uống thuốc, ngủ một giấc, hôm nay cảm thấy khá hơn nhiều. Sau này khi trời lạnh, tôi nhất định mặc nhiều áo hơn.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); đoạn văn và câu hỏi tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "questions": [
+   {
+    "q": "Hôm qua người kể bị sao?",
+    "o": [
+     "Đau đầu và hơi sốt",
+     "Đau bụng",
+     "Đau chân",
+     "Mất ngủ"
+    ],
+    "a": 0,
+    "why": "觉得头疼，还有点儿发烧: đau đầu và hơi sốt."
+   },
+   {
+    "q": "Bác sĩ dặn gì?",
+    "o": [
+     "Uống nhiều nước và nghỉ ngơi tốt",
+     "Không uống nước",
+     "Đi làm ngay",
+     "Ăn đồ lạnh"
+    ],
+    "a": 0,
+    "why": "要多喝水，好好休息."
+   },
+   {
+    "q": "Mẹ đã làm gì?",
+    "o": [
+     "Nấu canh nóng và mua thuốc",
+     "Đưa đi công viên",
+     "Mua quần áo",
+     "Nấu cơm nguội"
+    ],
+    "a": 0,
+    "why": "妈妈给我做了热汤，还买了药."
+   },
+   {
+    "q": "Hôm nay cảm thấy thế nào?",
+    "o": [
+     "Khá hơn nhiều",
+     "Nặng hơn",
+     "Không đổi",
+     "Mệt hơn"
+    ],
+    "a": 0,
+    "why": "今天感觉好多了: hôm nay khá hơn nhiều."
+   },
+   {
+    "q": "Đúng hay sai: Bác sĩ nói không cần nghỉ ngơi.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Bác sĩ dặn 好好休息 — nghỉ ngơi cho tốt."
+   }
+  ]
+ },
+ {
+  "id": "muasam",
+  "stage": 3,
+  "title": "Mua áo ở trung tâm thương mại",
+  "topic": "Mua sắm",
+  "text": "星期天，我和朋友去商场买衣服。我看中了一件蓝色的毛衣，穿上很舒服。可是价格有点儿贵，要三百块。售货员说可以便宜一点儿，最后两百五十块卖给我了。我还买了一条裤子，朋友买了一双鞋。我们都对今天买的东西很满意。",
+  "pinyin": "Xīngqītiān, wǒ hé péngyou qù shāngchǎng mǎi yīfu. Wǒ kàn zhòng le yí jiàn lán sè de máoyī, chuān shang hěn shūfu. Kěshì jiàgé yǒudiǎnr guì, yào sān bǎi kuài. Shòuhuòyuán shuō kěyǐ piányi yìdiǎnr, zuìhòu liǎng bǎi wǔshí kuài mài gěi wǒ le. Wǒ hái mǎi le yì tiáo kùzi, péngyou mǎi le yì shuāng xié. Wǒmen dōu duì jīntiān mǎi de dōngxi hěn mǎnyì.",
+  "vi": "Chủ nhật, tôi và bạn đi trung tâm thương mại mua quần áo. Tôi ưng một chiếc áo len màu xanh, mặc lên rất thoải mái. Nhưng giá hơi đắt, 300 đồng. Nhân viên bán hàng nói có thể rẻ hơn một chút, cuối cùng bán cho tôi 250 đồng. Tôi còn mua một chiếc quần, bạn tôi mua một đôi giày. Chúng tôi đều rất hài lòng với những thứ mua hôm nay.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); đoạn văn và câu hỏi tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+  "questions": [
+   {
+    "q": "Người kể ưng món gì đầu tiên?",
+    "o": [
+     "Áo len màu xanh",
+     "Áo len màu đỏ",
+     "Quần",
+     "Giày"
+    ],
+    "a": 0,
+    "why": "看中了一件蓝色的毛衣: ưng áo len màu xanh."
+   },
+   {
+    "q": "Giá ban đầu của áo len là bao nhiêu?",
+    "o": [
+     "250 đồng",
+     "300 đồng",
+     "350 đồng",
+     "380 đồng"
+    ],
+    "a": 1,
+    "why": "要三百块: 300 đồng."
+   },
+   {
+    "q": "Cuối cùng mua với giá bao nhiêu?",
+    "o": [
+     "200 đồng",
+     "250 đồng",
+     "300 đồng",
+     "350 đồng"
+    ],
+    "a": 1,
+    "why": "最后两百五十块卖给我了: 250 đồng."
+   },
+   {
+    "q": "Người bạn mua gì?",
+    "o": [
+     "Một đôi giày",
+     "Một chiếc quần",
+     "Một chiếc áo",
+     "Một chiếc mũ"
+    ],
+    "a": 0,
+    "why": "朋友买了一双鞋."
+   },
+   {
+    "q": "Đúng hay sai: Mọi người không hài lòng với những thứ đã mua.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Bài viết: 我们都…很满意 — đều rất hài lòng."
+   }
+  ]
+ }
+];
+var ZH_LISTENING = [
+ {
+  "id": "hen",
+  "stage": 2,
+  "title": "Hẹn nhau xem phim",
+  "topic": "Hẹn gặp",
+  "lines": [
+   {
+    "sp": "A",
+    "han": "星期六你有时间吗？",
+    "py": "Xīngqīliù nǐ yǒu shíjiān ma?",
+    "vi": "Thứ bảy bạn có thời gian không?"
+   },
+   {
+    "sp": "B",
+    "han": "有啊，怎么了？",
+    "py": "Yǒu a, zěnme le?",
+    "vi": "Có, sao thế?"
+   },
+   {
+    "sp": "A",
+    "han": "我们一起去看电影吧。",
+    "py": "Wǒmen yìqǐ qù kàn diànyǐng ba.",
+    "vi": "Chúng mình cùng đi xem phim nhé."
+   },
+   {
+    "sp": "B",
+    "han": "好啊，几点？",
+    "py": "Hǎo a, jǐ diǎn?",
+    "vi": "Được, mấy giờ?"
+   },
+   {
+    "sp": "A",
+    "han": "下午三点，在学校门口见。",
+    "py": "Xiàwǔ sān diǎn, zài xuéxiào ménkǒu jiàn.",
+    "vi": "3 giờ chiều, gặp ở cổng trường."
+   },
+   {
+    "sp": "B",
+    "han": "好，不见不散。",
+    "py": "Hǎo, bú jiàn bú sàn.",
+    "vi": "Được, không gặp không về."
+   }
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+  "questions": [
+   {
+    "q": "Hai người hẹn làm gì?",
+    "o": [
+     "Xem phim",
+     "Đá bóng",
+     "Ăn cơm",
+     "Đọc sách"
+    ],
+    "a": 0,
+    "why": "我们一起去看电影吧: cùng đi xem phim."
+   },
+   {
+    "q": "Hẹn lúc mấy giờ?",
+    "o": [
+     "1 giờ chiều",
+     "2 giờ chiều",
+     "3 giờ chiều",
+     "4 giờ chiều"
+    ],
+    "a": 2,
+    "why": "下午三点: 3 giờ chiều."
+   },
+   {
+    "q": "Hẹn gặp ở đâu?",
+    "o": [
+     "Cổng trường",
+     "Cổng công viên",
+     "Quán ăn",
+     "Nhà của A"
+    ],
+    "a": 0,
+    "why": "在学校门口见: gặp ở cổng trường."
+   },
+   {
+    "q": "Đúng hay sai: Hai người hẹn nhau vào thứ bảy.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 0,
+    "why": "星期六你有时间吗: hỏi về thứ bảy."
+   }
+  ]
+ },
+ {
+  "id": "nhao",
+  "stage": 2,
+  "title": "Nhà mới gần trường",
+  "topic": "Nhà ở",
+  "lines": [
+   {
+    "sp": "A",
+    "han": "你的新家怎么样？",
+    "py": "Nǐ de xīn jiā zěnmeyàng?",
+    "vi": "Nhà mới của bạn thế nào?"
+   },
+   {
+    "sp": "B",
+    "han": "很好，离学校很近。",
+    "py": "Hěn hǎo, lí xuéxiào hěn jìn.",
+    "vi": "Rất tốt, gần trường."
+   },
+   {
+    "sp": "A",
+    "han": "房租贵吗？",
+    "py": "Fángzū guì ma?",
+    "vi": "Tiền thuê đắt không?"
+   },
+   {
+    "sp": "B",
+    "han": "不贵，一个月两千块。",
+    "py": "Bú guì, yí ge yuè liǎng qiān kuài.",
+    "vi": "Không đắt, một tháng 2000 đồng."
+   },
+   {
+    "sp": "A",
+    "han": "真不错，有空我去看看。",
+    "py": "Zhēn búcuò, yǒu kòng wǒ qù kànkan.",
+    "vi": "Thật tốt, rảnh tôi qua xem."
+   }
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+  "questions": [
+   {
+    "q": "Nhà mới gần đâu?",
+    "o": [
+     "Trường học",
+     "Công ty",
+     "Bệnh viện",
+     "Chợ"
+    ],
+    "a": 0,
+    "why": "离学校很近: gần trường."
+   },
+   {
+    "q": "Tiền thuê một tháng bao nhiêu?",
+    "o": [
+     "1000 đồng",
+     "1500 đồng",
+     "2000 đồng",
+     "2500 đồng"
+    ],
+    "a": 2,
+    "why": "一个月两千块."
+   },
+   {
+    "q": "Đúng hay sai: Tiền thuê nhà rất đắt.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "B nói 不贵: không đắt."
+   },
+   {
+    "q": "A muốn làm gì khi rảnh?",
+    "o": [
+     "Qua xem nhà mới",
+     "Thuê nhà chung",
+     "Chuyển nhà",
+     "Mua nhà"
+    ],
+    "a": 0,
+    "why": "有空我去看看: rảnh tôi qua xem."
+   }
+  ]
+ },
+ {
+  "id": "hoibai",
+  "stage": 2,
+  "title": "Hỏi bài toán",
+  "topic": "Trường học",
+  "lines": [
+   {
+    "sp": "A",
+    "han": "这道数学题你会做吗？",
+    "py": "Zhè dào shùxué tí nǐ huì zuò ma?",
+    "vi": "Bài toán này bạn biết làm không?"
+   },
+   {
+    "sp": "B",
+    "han": "我也不会，我们问老师吧。",
+    "py": "Wǒ yě bú huì, wǒmen wèn lǎoshī ba.",
+    "vi": "Tôi cũng không biết, chúng mình hỏi cô giáo nhé."
+   },
+   {
+    "sp": "A",
+    "han": "老师现在在办公室吗？",
+    "py": "Lǎoshī xiànzài zài bàngōngshì ma?",
+    "vi": "Cô giáo bây giờ ở văn phòng không?"
+   },
+   {
+    "sp": "B",
+    "han": "在，下课后我们一起去。",
+    "py": "Zài, xià kè hòu wǒmen yìqǐ qù.",
+    "vi": "Có, sau giờ học chúng mình cùng đi."
+   }
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+  "questions": [
+   {
+    "q": "Hai người hỏi về bài gì?",
+    "o": [
+     "Bài toán",
+     "Bài văn",
+     "Bài tiếng Anh",
+     "Bài vẽ"
+    ],
+    "a": 0,
+    "why": "这道数学题: bài toán."
+   },
+   {
+    "q": "Cả hai có biết làm bài không?",
+    "o": [
+     "Đều không biết",
+     "Đều biết",
+     "Chỉ A biết",
+     "Chỉ B biết"
+    ],
+    "a": 0,
+    "why": "B nói 我也不会: tôi cũng không biết."
+   },
+   {
+    "q": "Hai người định hỏi ai?",
+    "o": [
+     "Cô giáo",
+     "Bạn khác",
+     "Bố mẹ",
+     "Anh trai"
+    ],
+    "a": 0,
+    "why": "我们问老师吧: hỏi cô giáo."
+   },
+   {
+    "q": "Khi nào hai người đi hỏi?",
+    "o": [
+     "Sau giờ học",
+     "Trước giờ học",
+     "Giờ ra chơi",
+     "Ngày mai"
+    ],
+    "a": 0,
+    "why": "下课后我们一起去."
+   }
+  ]
+ },
+ {
+  "id": "anuong",
+  "stage": 2,
+  "title": "Đi ăn mì",
+  "topic": "Ăn uống",
+  "lines": [
+   {
+    "sp": "A",
+    "han": "你饿了吗？我们去吃饭吧。",
+    "py": "Nǐ è le ma? Wǒmen qù chī fàn ba.",
+    "vi": "Bạn đói chưa? Chúng mình đi ăn nhé."
+   },
+   {
+    "sp": "B",
+    "han": "好啊，你想吃什么？",
+    "py": "Hǎo a, nǐ xiǎng chī shénme?",
+    "vi": "Được, bạn muốn ăn gì?"
+   },
+   {
+    "sp": "A",
+    "han": "我想吃面条，你呢？",
+    "py": "Wǒ xiǎng chī miàntiáo, nǐ ne?",
+    "vi": "Tôi muốn ăn mì, còn bạn?"
+   },
+   {
+    "sp": "B",
+    "han": "我也想吃面条，再要两个菜吧。",
+    "py": "Wǒ yě xiǎng chī miàntiáo, zài yào liǎng ge cài ba.",
+    "vi": "Tôi cũng muốn ăn mì, gọi thêm 2 món nữa nhé."
+   },
+   {
+    "sp": "A",
+    "han": "好，老板，两碗面条，两个菜！",
+    "py": "Hǎo, lǎobǎn, liǎng wǎn miàntiáo, liǎng ge cài!",
+    "vi": "Được, chủ quán, 2 bát mì, 2 món!"
+   }
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+  "questions": [
+   {
+    "q": "Hai người muốn ăn gì?",
+    "o": [
+     "Mì",
+     "Cơm",
+     "Bánh bao",
+     "Phở"
+    ],
+    "a": 0,
+    "why": "我想吃面条: muốn ăn mì."
+   },
+   {
+    "q": "Gọi mấy bát mì?",
+    "o": [
+     "1 bát",
+     "2 bát",
+     "3 bát",
+     "4 bát"
+    ],
+    "a": 1,
+    "why": "两碗面条: 2 bát mì."
+   },
+   {
+    "q": "Gọi thêm mấy món?",
+    "o": [
+     "1 món",
+     "2 món",
+     "3 món",
+     "Không gọi thêm"
+    ],
+    "a": 1,
+    "why": "再要两个菜: thêm 2 món."
+   },
+   {
+    "q": "Đúng hay sai: Hai người muốn ăn cơm.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Cả hai đều nói 想吃面条: muốn ăn mì."
+   }
+  ]
+ },
+ {
+  "id": "thoitietnghe",
+  "stage": 2,
+  "title": "Ngày mai mưa",
+  "topic": "Thời tiết",
+  "lines": [
+   {
+    "sp": "A",
+    "han": "明天天气怎么样？",
+    "py": "Míngtiān tiānqì zěnmeyàng?",
+    "vi": "Ngày mai thời tiết thế nào?"
+   },
+   {
+    "sp": "B",
+    "han": "天气预报说会下雨，还会降温。",
+    "py": "Tiānqì yùbào shuō huì xià yǔ, hái huì jiàngwēn.",
+    "vi": "Dự báo nói sẽ mưa, còn hạ nhiệt."
+   },
+   {
+    "sp": "A",
+    "han": "那我得多穿一件衣服，还要带伞。",
+    "py": "Nà wǒ děi duō chuān yí jiàn yīfu, hái yào dài sǎn.",
+    "vi": "Vậy tôi phải mặc thêm một áo, còn mang ô."
+   },
+   {
+    "sp": "B",
+    "han": "对，别感冒了。",
+    "py": "Duì, bié gǎnmào le.",
+    "vi": "Đúng, đừng để bị cảm."
+   }
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+  "questions": [
+   {
+    "q": "Ngày mai thời tiết thế nào?",
+    "o": [
+     "Mưa và hạ nhiệt",
+     "Nắng đẹp",
+     "Có tuyết",
+     "Gió lớn"
+    ],
+    "a": 0,
+    "why": "会下雨，还会降温: sẽ mưa, còn hạ nhiệt."
+   },
+   {
+    "q": "A cần mang gì?",
+    "o": [
+     "Ô",
+     "Kính râm",
+     "Mũ",
+     "Găng tay"
+    ],
+    "a": 0,
+    "why": "还要带伞: còn mang ô."
+   },
+   {
+    "q": "A cần mặc thêm gì?",
+    "o": [
+     "Một chiếc áo",
+     "Một chiếc quần",
+     "Một đôi giày",
+     "Một chiếc khăn"
+    ],
+    "a": 0,
+    "why": "多穿一件衣服: mặc thêm một áo."
+   },
+   {
+    "q": "Đúng hay sai: Ngày mai trời nắng đẹp.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Dự báo nói 会下雨: sẽ mưa."
+   }
+  ]
+ },
+ {
+  "id": "xinnghi",
+  "stage": 3,
+  "title": "Xin nghỉ một ngày",
+  "topic": "Công việc",
+  "lines": [
+   {
+    "sp": "A",
+    "han": "王经理，我明天想请一天假。",
+    "py": "Wáng jīnglǐ, wǒ míngtiān xiǎng qǐng yì tiān jià.",
+    "vi": "Giám đốc Vương, ngày mai tôi muốn xin nghỉ một ngày."
+   },
+   {
+    "sp": "B",
+    "han": "有什么事吗？",
+    "py": "Yǒu shénme shì ma?",
+    "vi": "Có việc gì không?"
+   },
+   {
+    "sp": "A",
+    "han": "我妈妈生病了，我要带她去医院。",
+    "py": "Wǒ māma shēng bìng le, wǒ yào dài tā qù yīyuàn.",
+    "vi": "Mẹ tôi ốm rồi, tôi phải đưa bà đi bệnh viện."
+   },
+   {
+    "sp": "B",
+    "han": "好吧，你去吧，工作我帮你安排。",
+    "py": "Hǎo ba, nǐ qù ba, gōngzuò wǒ bāng nǐ ānpái.",
+    "vi": "Được, bạn đi đi, công việc tôi sắp xếp giúp bạn."
+   },
+   {
+    "sp": "A",
+    "han": "谢谢经理！",
+    "py": "Xièxie jīnglǐ!",
+    "vi": "Cảm ơn giám đốc!"
+   }
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+  "questions": [
+   {
+    "q": "A xin nghỉ mấy ngày?",
+    "o": [
+     "Nửa ngày",
+     "1 ngày",
+     "2 ngày",
+     "3 ngày"
+    ],
+    "a": 1,
+    "why": "请一天假: xin nghỉ một ngày."
+   },
+   {
+    "q": "A xin nghỉ vì sao?",
+    "o": [
+     "Mẹ ốm, đưa mẹ đi bệnh viện",
+     "Mình ốm",
+     "Đi du lịch",
+     "Chuyển nhà"
+    ],
+    "a": 0,
+    "why": "我妈妈生病了，我要带她去医院."
+   },
+   {
+    "q": "Ai sắp xếp công việc giúp A?",
+    "o": [
+     "Giám đốc Vương",
+     "Đồng nghiệp",
+     "Mẹ của A",
+     "Không ai"
+    ],
+    "a": 0,
+    "why": "工作我帮你安排: giám đốc sắp xếp giúp."
+   },
+   {
+    "q": "Đúng hay sai: Giám đốc không đồng ý cho nghỉ.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Giám đốc nói 好吧，你去吧: được, bạn đi đi."
+   }
+  ]
+ },
+ {
+  "id": "dulich",
+  "stage": 3,
+  "title": "Đi Thượng Hải chơi",
+  "topic": "Đi chơi",
+  "lines": [
+   {
+    "sp": "A",
+    "han": "国庆节你有什么打算？",
+    "py": "Guóqìng Jié nǐ yǒu shénme dǎsuàn?",
+    "vi": "Lễ Quốc khánh bạn có dự định gì?"
+   },
+   {
+    "sp": "B",
+    "han": "我打算和家人去上海玩三天。",
+    "py": "Wǒ dǎsuàn hé jiārén qù Shànghǎi wán sān tiān.",
+    "vi": "Tôi định cùng gia đình đi Thượng Hải chơi 3 ngày."
+   },
+   {
+    "sp": "A",
+    "han": "上海有什么好玩的？",
+    "py": "Shànghǎi yǒu shénme hǎowán de?",
+    "vi": "Thượng Hải có gì vui?"
+   },
+   {
+    "sp": "B",
+    "han": "有外滩，还有很多好吃的。",
+    "py": "Yǒu Wàitān, hái yǒu hěn duō hǎochī de.",
+    "vi": "Có Bến Thượng Hải, còn nhiều món ngon."
+   },
+   {
+    "sp": "A",
+    "han": "听起来不错，祝你们玩得开心！",
+    "py": "Tīng qǐlai búcuò, zhù nǐmen wán de kāixīn!",
+    "vi": "Nghe hay đấy, chúc các bạn chơi vui!"
+   }
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+  "questions": [
+   {
+    "q": "B định đi đâu?",
+    "o": [
+     "Thượng Hải",
+     "Bắc Kinh",
+     "Quảng Châu",
+     "Hà Nội"
+    ],
+    "a": 0,
+    "why": "去上海玩: đi Thượng Hải chơi."
+   },
+   {
+    "q": "B đi với ai?",
+    "o": [
+     "Gia đình",
+     "Bạn bè",
+     "Một mình",
+     "Đồng nghiệp"
+    ],
+    "a": 0,
+    "why": "和家人去: cùng gia đình đi."
+   },
+   {
+    "q": "Đi chơi mấy ngày?",
+    "o": [
+     "2 ngày",
+     "3 ngày",
+     "4 ngày",
+     "5 ngày"
+    ],
+    "a": 1,
+    "why": "玩三天: chơi 3 ngày."
+   },
+   {
+    "q": "Thượng Hải có gì?",
+    "o": [
+     "Bến Thượng Hải và nhiều món ngon",
+     "Vạn Lý Trường Thành",
+     "Tử Cấm Thành",
+     "Biển"
+    ],
+    "a": 0,
+    "why": "有外滩，还有很多好吃的."
+   }
+  ]
+ },
+ {
+  "id": "khambenh",
+  "stage": 3,
+  "title": "Đi khám vì đau đầu",
+  "topic": "Sức khỏe",
+  "lines": [
+   {
+    "sp": "A",
+    "han": "医生，我最近总是头疼，睡不好。",
+    "py": "Yīshēng, wǒ zuìjìn zǒngshì tóu téng, shuì bù hǎo.",
+    "vi": "Bác sĩ, dạo này tôi luôn đau đầu, ngủ không ngon."
+   },
+   {
+    "sp": "B",
+    "han": "你每天几点睡觉？",
+    "py": "Nǐ měitiān jǐ diǎn shuìjiào?",
+    "vi": "Mỗi ngày bạn ngủ lúc mấy giờ?"
+   },
+   {
+    "sp": "A",
+    "han": "常常十二点以后才睡。",
+    "py": "Chángcháng shí'èr diǎn yǐhòu cái shuì.",
+    "vi": "Thường sau 12 giờ mới ngủ."
+   },
+   {
+    "sp": "B",
+    "han": "你要早点儿睡，少看手机，多运动。",
+    "py": "Nǐ yào zǎo diǎnr shuì, shǎo kàn shǒujī, duō yùndòng.",
+    "vi": "Bạn phải ngủ sớm hơn, ít xem điện thoại, vận động nhiều."
+   },
+   {
+    "sp": "A",
+    "han": "好的，我一定注意。",
+    "py": "Hǎo de, wǒ yídìng zhùyì.",
+    "vi": "Vâng, tôi nhất định chú ý."
+   }
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+  "questions": [
+   {
+    "q": "Bệnh nhân bị sao?",
+    "o": [
+     "Đau đầu và ngủ không ngon",
+     "Đau bụng",
+     "Sốt cao",
+     "Ho nhiều"
+    ],
+    "a": 0,
+    "why": "总是头疼，睡不好."
+   },
+   {
+    "q": "Bệnh nhân thường ngủ lúc nào?",
+    "o": [
+     "Sau 12 giờ",
+     "Trước 10 giờ",
+     "Lúc 9 giờ",
+     "Lúc 11 giờ"
+    ],
+    "a": 0,
+    "why": "常常十二点以后才睡."
+   },
+   {
+    "q": "Bác sĩ dặn gì?",
+    "o": [
+     "Ngủ sớm, ít xem điện thoại, vận động nhiều",
+     "Thức khuya hơn",
+     "Uống thuốc ngủ",
+     "Nằm cả ngày"
+    ],
+    "a": 0,
+    "why": "要早点儿睡，少看手机，多运动."
+   },
+   {
+    "q": "Đúng hay sai: Bác sĩ dặn thức khuya hơn.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Bác sĩ dặn 早点儿睡: ngủ sớm hơn."
+   }
+  ]
+ },
+ {
+  "id": "maccamua",
+  "stage": 3,
+  "title": "Mặc cả mua áo",
+  "topic": "Mua sắm",
+  "lines": [
+   {
+    "sp": "A",
+    "han": "这件衣服多少钱？",
+    "py": "Zhè jiàn yīfu duōshao qián?",
+    "vi": "Chiếc áo này bao nhiêu tiền?"
+   },
+   {
+    "sp": "B",
+    "han": "三百八十块。",
+    "py": "Sān bǎi bāshí kuài.",
+    "vi": "380 đồng."
+   },
+   {
+    "sp": "A",
+    "han": "太贵了，能便宜一点儿吗？",
+    "py": "Tài guì le, néng piányi yìdiǎnr ma?",
+    "vi": "Đắt quá, có thể rẻ hơn chút không?"
+   },
+   {
+    "sp": "B",
+    "han": "最低三百块，不能再少了。",
+    "py": "Zuì dī sān bǎi kuài, bù néng zài shǎo le.",
+    "vi": "Thấp nhất 300 đồng, không thể ít hơn nữa."
+   },
+   {
+    "sp": "A",
+    "han": "好吧，我买了。",
+    "py": "Hǎo ba, wǒ mǎi le.",
+    "vi": "Được, tôi mua."
+   }
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+  "questions": [
+   {
+    "q": "Giá ban đầu là bao nhiêu?",
+    "o": [
+     "300 đồng",
+     "350 đồng",
+     "380 đồng",
+     "400 đồng"
+    ],
+    "a": 2,
+    "why": "三百八十块: 380 đồng."
+   },
+   {
+    "q": "Giá cuối cùng là bao nhiêu?",
+    "o": [
+     "250 đồng",
+     "280 đồng",
+     "300 đồng",
+     "380 đồng"
+    ],
+    "a": 2,
+    "why": "最低三百块: thấp nhất 300 đồng."
+   },
+   {
+    "q": "Khách chê áo thế nào?",
+    "o": [
+     "Đắt quá",
+     "Xấu quá",
+     "Cũ quá",
+     "Nhỏ quá"
+    ],
+    "a": 0,
+    "why": "太贵了: đắt quá."
+   },
+   {
+    "q": "Đúng hay sai: Cuối cùng khách không mua áo.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "Khách nói 好吧，我买了: được, tôi mua."
+   }
+  ]
+ },
+ {
+  "id": "chuyennha",
+  "stage": 3,
+  "title": "Nhờ giúp chuyển nhà",
+  "topic": "Bạn bè",
+  "lines": [
+   {
+    "sp": "A",
+    "han": "星期天你有空吗？我想请你帮忙。",
+    "py": "Xīngqītiān nǐ yǒu kòng ma? Wǒ xiǎng qǐng nǐ bāngmáng.",
+    "vi": "Chủ nhật bạn rảnh không? Tôi muốn nhờ bạn giúp."
+   },
+   {
+    "sp": "B",
+    "han": "当然有空，帮什么忙？",
+    "py": "Dāngrán yǒu kòng, bāng shénme máng?",
+    "vi": "Đương nhiên rảnh, giúp việc gì?"
+   },
+   {
+    "sp": "A",
+    "han": "我要搬家，东西很多，你能来帮我搬吗？",
+    "py": "Wǒ yào bān jiā, dōngxi hěn duō, nǐ néng lái bāng wǒ bān ma?",
+    "vi": "Tôi sắp chuyển nhà, đồ rất nhiều, bạn đến giúp tôi chuyển được không?"
+   },
+   {
+    "sp": "B",
+    "han": "没问题，星期天早上九点我去你家。",
+    "py": "Méi wèntí, xīngqītiān zǎoshang jiǔ diǎn wǒ qù nǐ jiā.",
+    "vi": "Không vấn đề, sáng chủ nhật 9 giờ tôi đến nhà bạn."
+   },
+   {
+    "sp": "A",
+    "han": "太谢谢你了！",
+    "py": "Tài xièxie nǐ le!",
+    "vi": "Cảm ơn bạn nhiều!"
+   }
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+  "questions": [
+   {
+    "q": "A nhờ giúp việc gì?",
+    "o": [
+     "Chuyển nhà",
+     "Dọn phòng",
+     "Sửa xe",
+     "Nấu ăn"
+    ],
+    "a": 0,
+    "why": "我要搬家: tôi sắp chuyển nhà."
+   },
+   {
+    "q": "B đến giúp lúc nào?",
+    "o": [
+     "Sáng chủ nhật 9 giờ",
+     "Chiều chủ nhật 9 giờ",
+     "Sáng thứ bảy 9 giờ",
+     "Tối chủ nhật"
+    ],
+    "a": 0,
+    "why": "星期天早上九点我去你家."
+   },
+   {
+    "q": "B đến giúp ở đâu?",
+    "o": [
+     "Nhà của A",
+     "Nhà của B",
+     "Công ty",
+     "Trường học"
+    ],
+    "a": 0,
+    "why": "我去你家: tôi đến nhà bạn."
+   },
+   {
+    "q": "Đúng hay sai: B từ chối giúp.",
+    "o": [
+     "Đúng",
+     "Sai"
+    ],
+    "a": 1,
+    "why": "B nói 没问题: không vấn đề."
+   }
+  ]
+ }
+];
+// Dot 2b (26/10/2026): anh xa nay chay theo nhan hsk nen khong can doi logic —
+// them 4 bo hsk "HSK2" la du: chang 2 -> cac chi so bo HSK2 moi, chang 3 ->
+// cac chi so bo HSK3 moi (kiem chung bang test_zh_sets_hsk23.js).
 function ZH_STAGE_SETS(stage) {
   var out = [];
   (CONTENT.zhVocab || []).forEach(function (s, i) { if (s.hsk === "HSK" + stage) out.push(i); });
@@ -2440,3 +6186,1062 @@ function zhEntryStageFor(score, total) {
   if (score >= 4) return 2;
   return 1;
 }
+// ---------- DOT 2d (26/10/2026): NOI / NHAP VAI / VIET TRACK TRUNG ----------
+// Tu soan 100% theo chu de doi song cua Giao trinh chuan HSK (he 6 cap cu),
+// trinh do HSK2-HSK3; khong trich nguyen van giao trinh hay trang khac.
+// Nghe/noi dung giong doc may zh-CN (zhSpeak), khong phai audio thu san.
+// AI cham tieng Trung DANG CHO nang cap (parent bao pronounce v5): moi cho
+// can cham AI deu ghi ro cho nang cap, khong tinh dat cung khong tinh
+// chua dat, khong noi ham cham tieng Anh vao. Tien trinh dung lai zhDone
+// san co (khoa zhSpeak:/zhRole:/zhWrite:) + zhAwardOnce, dong bo theo
+// dung mau row rb zhDone, khong them khoa state moi.
+var ZH_SPEAK = [
+ {
+  "id": "chaohoi", "stage": 2, "title": "Chào hỏi và làm quen", "topic": "Chào hỏi",
+  "hook": "“你好！你叫什么名字？” — chào hỏi và hỏi tên là câu mở đầu quen thuộc nhất.",
+  "lines": [
+   { "sp": "A", "han": "你好！你叫什么名字？", "py": "Nǐ hǎo! Nǐ jiào shénme míngzi?", "vi": "Chào bạn! Bạn tên là gì?" },
+   { "sp": "B", "han": "你好！我叫小红。你呢？", "py": "Nǐ hǎo! Wǒ jiào Xiǎo Hóng. Nǐ ne?", "vi": "Chào bạn! Tôi tên là Tiểu Hồng. Còn bạn?" },
+   { "sp": "A", "han": "我叫大明，很高兴认识你。", "py": "Wǒ jiào Dà Míng, hěn gāoxìng rènshi nǐ.", "vi": "Tôi tên là Đại Minh, rất vui được quen bạn." },
+   { "sp": "B", "han": "我也很高兴认识你。", "py": "Wǒ yě hěn gāoxìng rènshi nǐ.", "vi": "Tôi cũng rất vui được quen bạn." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "giadinh", "stage": 2, "title": "Nói về gia đình", "topic": "Gia đình",
+  "hook": "“你家有几口人？” — hỏi nhà có mấy người là cách mở chuyện về gia đình.",
+  "lines": [
+   { "sp": "A", "han": "你家有几口人？", "py": "Nǐ jiā yǒu jǐ kǒu rén?", "vi": "Nhà bạn có mấy người?" },
+   { "sp": "B", "han": "我家有四口人：爸爸、妈妈、我和妹妹。", "py": "Wǒ jiā yǒu sì kǒu rén: bàba, māma, wǒ hé mèimei.", "vi": "Nhà tôi có 4 người: bố, mẹ, tôi và em gái." },
+   { "sp": "A", "han": "你妹妹今年多大了？", "py": "Nǐ mèimei jīnnián duō dà le?", "vi": "Em gái bạn năm nay mấy tuổi?" },
+   { "sp": "B", "han": "她今年十岁，上小学三年级。", "py": "Tā jīnnián shí suì, shàng xiǎoxué sān niánjí.", "vi": "Em ấy năm nay 10 tuổi, học lớp 3 tiểu học." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "truonghoc", "stage": 2, "title": "Ở trường học", "topic": "Trường học",
+  "hook": "“你是哪个班的？” — hỏi bạn học lớp nào là câu làm quen ở trường.",
+  "lines": [
+   { "sp": "A", "han": "你是哪个班的？", "py": "Nǐ shì nǎ ge bān de?", "vi": "Bạn học lớp nào?" },
+   { "sp": "B", "han": "我是二班的，你呢？", "py": "Wǒ shì èr bān de, nǐ ne?", "vi": "Tôi học lớp 2, còn bạn?" },
+   { "sp": "A", "han": "我是一班的。你们班有多少学生？", "py": "Wǒ shì yì bān de. Nǐmen bān yǒu duōshao xuésheng?", "vi": "Tôi học lớp 1. Lớp bạn có bao nhiêu học sinh?" },
+   { "sp": "B", "han": "我们班有三十个学生。", "py": "Wǒmen bān yǒu sānshí ge xuésheng.", "vi": "Lớp chúng tôi có 30 học sinh." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "muasam", "stage": 2, "title": "Mua quần áo", "topic": "Mua sắm",
+  "hook": "“这件衣服多少钱？” — hỏi giá là câu đầu tiên khi đi mua đồ.",
+  "lines": [
+   { "sp": "A", "han": "这件衣服多少钱？", "py": "Zhè jiàn yīfu duōshao qián?", "vi": "Cái áo này bao nhiêu tiền?" },
+   { "sp": "B", "han": "一百五十块。", "py": "Yì bǎi wǔshí kuài.", "vi": "150 tệ." },
+   { "sp": "A", "han": "有点儿贵，能便宜一点儿吗？", "py": "Yǒu diǎnr guì, néng piányi yì diǎnr ma?", "vi": "Hơi đắt, có thể rẻ hơn một chút không?" },
+   { "sp": "B", "han": "好吧，一百二十块，你要吗？", "py": "Hǎo ba, yì bǎi èrshí kuài, nǐ yào ma?", "vi": "Được rồi, 120 tệ, bạn có lấy không?" },
+   { "sp": "A", "han": "好，我要了。", "py": "Hǎo, wǒ yào le.", "vi": "Được, tôi lấy." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "anuong", "stage": 2, "title": "Gọi món ăn", "topic": "Ăn uống",
+  "hook": "“你想吃什么？” — hỏi muốn ăn gì là câu mở đầu khi đi ăn cùng nhau.",
+  "lines": [
+   { "sp": "A", "han": "你想吃什么？", "py": "Nǐ xiǎng chī shénme?", "vi": "Bạn muốn ăn gì?" },
+   { "sp": "B", "han": "我想吃面条，你呢？", "py": "Wǒ xiǎng chī miàntiáo, nǐ ne?", "vi": "Tôi muốn ăn mì, còn bạn?" },
+   { "sp": "A", "han": "我想吃米饭和鱼。", "py": "Wǒ xiǎng chī mǐfàn hé yú.", "vi": "Tôi muốn ăn cơm và cá." },
+   { "sp": "B", "han": "好，我们再要两杯水。", "py": "Hǎo, wǒmen zài yào liǎng bēi shuǐ.", "vi": "Được, chúng mình gọi thêm hai cốc nước." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "thoitiet", "stage": 2, "title": "Nói về thời tiết", "topic": "Thời tiết",
+  "hook": "“今天天气怎么样？” — hỏi thời tiết hôm nay thế nào là câu chuyện phiếm dễ nhất.",
+  "lines": [
+   { "sp": "A", "han": "今天天气怎么样？", "py": "Jīntiān tiānqì zěnmeyàng?", "vi": "Hôm nay thời tiết thế nào?" },
+   { "sp": "B", "han": "今天很冷，还下雪了。", "py": "Jīntiān hěn lěng, hái xià xuě le.", "vi": "Hôm nay rất lạnh, còn có tuyết nữa." },
+   { "sp": "A", "han": "明天会更冷吗？", "py": "Míngtiān huì gèng lěng ma?", "vi": "Ngày mai có lạnh hơn không?" },
+   { "sp": "B", "han": "天气预报说明天会晴天，但是风很大。", "py": "Tiānqì yùbào shuō míngtiān huì qíngtiān, dànshì fēng hěn dà.", "vi": "Dự báo nói mai trời nắng, nhưng gió rất to." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "dilam", "stage": 3, "title": "Nói về công việc", "topic": "Đi làm",
+  "hook": "“你在哪儿工作？” — hỏi làm việc ở đâu là câu làm quen của người đi làm.",
+  "lines": [
+   { "sp": "A", "han": "你在哪儿工作？", "py": "Nǐ zài nǎr gōngzuò?", "vi": "Bạn làm việc ở đâu?" },
+   { "sp": "B", "han": "我在一家公司工作，你呢？", "py": "Wǒ zài yì jiā gōngsī gōngzuò, nǐ ne?", "vi": "Tôi làm ở một công ty, còn bạn?" },
+   { "sp": "A", "han": "我在学校工作，我是老师。", "py": "Wǒ zài xuéxiào gōngzuò, wǒ shì lǎoshī.", "vi": "Tôi làm ở trường, tôi là giáo viên." },
+   { "sp": "B", "han": "你的工作忙吗？", "py": "Nǐ de gōngzuò máng ma?", "vi": "Công việc của bạn có bận không?" },
+   { "sp": "A", "han": "有时候很忙，不过我很喜欢。", "py": "Yǒu shíhou hěn máng, búguò wǒ hěn xǐhuan.", "vi": "Có lúc rất bận, nhưng tôi rất thích." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "dilai", "stage": 3, "title": "Đi xe buýt", "topic": "Đi lại",
+  "hook": "“去火车站坐几路车？” — hỏi đi ga tàu ngồi xe số mấy là câu cần nhất khi đi lại.",
+  "lines": [
+   { "sp": "A", "han": "请问，去火车站坐几路车？", "py": "Qǐngwèn, qù huǒchē zhàn zuò jǐ lù chē?", "vi": "Xin hỏi, đi ga tàu ngồi xe số mấy?" },
+   { "sp": "B", "han": "坐三路车，在第三站下车。", "py": "Zuò sān lù chē, zài dì sān zhàn xià chē.", "vi": "Ngồi xe số 3, xuống ở trạm thứ ba." },
+   { "sp": "A", "han": "要多长时间？", "py": "Yào duō cháng shíjiān?", "vi": "Mất bao lâu?" },
+   { "sp": "B", "han": "大概二十分钟。", "py": "Dàgài èrshí fēnzhōng.", "vi": "Khoảng 20 phút." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "suckhoe", "stage": 3, "title": "Bị cảm", "topic": "Sức khỏe",
+  "hook": "“你怎么了？看起来不太舒服。” — hỏi thăm người ốm bắt đầu bằng câu quan tâm.",
+  "lines": [
+   { "sp": "A", "han": "你怎么了？看起来不太舒服。", "py": "Nǐ zěnme le? Kàn qǐlai bú tài shūfu.", "vi": "Bạn sao thế? Trông không được khỏe lắm." },
+   { "sp": "B", "han": "我感冒了，头有点儿疼。", "py": "Wǒ gǎnmào le, tóu yǒu diǎnr téng.", "vi": "Tôi bị cảm rồi, đầu hơi đau." },
+   { "sp": "A", "han": "你吃药了吗？", "py": "Nǐ chī yào le ma?", "vi": "Bạn uống thuốc chưa?" },
+   { "sp": "B", "han": "吃了，还喝了很多水。", "py": "Chī le, hái hē le hěn duō shuǐ.", "vi": "Uống rồi, còn uống rất nhiều nước." },
+   { "sp": "A", "han": "那你早点儿休息吧。", "py": "Nà nǐ zǎo diǎnr xiūxi ba.", "vi": "Vậy bạn nghỉ sớm nhé." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "banbe", "stage": 3, "title": "Hẹn bạn bè", "topic": "Bạn bè",
+  "hook": "“周末你有什么打算？” — hỏi cuối tuần định làm gì là cách rủ bạn đi chơi.",
+  "lines": [
+   { "sp": "A", "han": "周末你有什么打算？", "py": "Zhōumò nǐ yǒu shénme dǎsuan?", "vi": "Cuối tuần bạn có dự định gì?" },
+   { "sp": "B", "han": "我想和朋友去公园，你去吗？", "py": "Wǒ xiǎng hé péngyou qù gōngyuán, nǐ qù ma?", "vi": "Tôi muốn cùng bạn đi công viên, bạn đi không?" },
+   { "sp": "A", "han": "好啊，几点见？", "py": "Hǎo a, jǐ diǎn jiàn?", "vi": "Được, mấy giờ gặp?" },
+   { "sp": "B", "han": "上午九点，在公园门口见。", "py": "Shàngwǔ jiǔ diǎn, zài gōngyuán ménkǒu jiàn.", "vi": "9 giờ sáng, gặp ở cổng công viên." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "dulich", "stage": 3, "title": "Đi du lịch", "topic": "Du lịch",
+  "hook": "“假期你想去哪儿玩？” — hỏi kỳ nghỉ muốn đi chơi đâu là câu mở chuyện du lịch.",
+  "lines": [
+   { "sp": "A", "han": "假期你想去哪儿玩？", "py": "Jiàqī nǐ xiǎng qù nǎr wán?", "vi": "Kỳ nghỉ bạn muốn đi chơi đâu?" },
+   { "sp": "B", "han": "我想去北京，看看长城。", "py": "Wǒ xiǎng qù Běijīng, kànkan Chángchéng.", "vi": "Tôi muốn đi Bắc Kinh, xem Vạn Lý Trường Thành." },
+   { "sp": "A", "han": "你打算去几天？", "py": "Nǐ dǎsuan qù jǐ tiān?", "vi": "Bạn định đi mấy ngày?" },
+   { "sp": "B", "han": "大概五天。", "py": "Dàgài wǔ tiān.", "vi": "Khoảng 5 ngày." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "sothich", "stage": 3, "title": "Sở thích của bạn", "topic": "Sở thích",
+  "hook": "“你平时喜欢做什么？” — hỏi bình thường thích làm gì là cách tìm điểm chung.",
+  "lines": [
+   { "sp": "A", "han": "你平时喜欢做什么？", "py": "Nǐ píngshí xǐhuan zuò shénme?", "vi": "Bình thường bạn thích làm gì?" },
+   { "sp": "B", "han": "我喜欢看书和听音乐。", "py": "Wǒ xǐhuan kàn shū hé tīng yīnyuè.", "vi": "Tôi thích đọc sách và nghe nhạc." },
+   { "sp": "A", "han": "你喜欢什么音乐？", "py": "Nǐ xǐhuan shénme yīnyuè?", "vi": "Bạn thích nhạc gì?" },
+   { "sp": "B", "han": "我喜欢轻音乐，听了很放松。", "py": "Wǒ xǐhuan qīng yīnyuè, tīng le hěn fàngsōng.", "vi": "Tôi thích nhạc nhẹ, nghe rất thư giãn." }
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+  }
+ ];
+var ZH_ROLE = [
+ {
+  "id": "cuahang", "stage": 2, "title": "Ở cửa hàng", "setting": "Cửa hàng quần áo",
+  "you": "Khách mua hàng", "partner": "Nhân viên cửa hàng",
+  "goal": "Hỏi giá, mặc thử rồi mua một cái áo.",
+  "turns": [
+   { "from": "partner", "han": "欢迎光临！您想买什么？", "py": "Huānyíng guānglín! Nín xiǎng mǎi shénme?", "vi": "Chào mừng quý khách! Quý khách muốn mua gì?" },
+   { "from": "you", "han": "我想买一件毛衣。", "py": "Wǒ xiǎng mǎi yí jiàn máoyī.", "vi": "Tôi muốn mua một cái áo len." },
+   { "from": "partner", "han": "这件怎么样？很暖和。", "py": "Zhè jiàn zěnmeyàng? Hěn nuǎnhuo.", "vi": "Cái này thế nào? Rất ấm." },
+   { "from": "you", "han": "我可以试一下吗？", "py": "Wǒ kěyǐ shì yí xià ma?", "vi": "Tôi có thể mặc thử không?" },
+   { "from": "partner", "han": "当然可以，试衣间在那边。", "py": "Dāngrán kěyǐ, shìyījiān zài nàbian.", "vi": "Tất nhiên được, phòng thử đồ ở bên kia." },
+   { "from": "you", "han": "正好，我买这件。", "py": "Zhèng hǎo, wǒ mǎi zhè jiàn.", "vi": "Vừa đẹp, tôi mua cái này." },
+   { "from": "partner", "han": "一共二百块，谢谢！", "py": "Yígòng èr bǎi kuài, xièxie!", "vi": "Tổng cộng 200 tệ, cảm ơn!" }
+  ],
+  "chunks": ["这件多少钱？ — Cái này bao nhiêu tiền?", "我可以试一下吗？ — Tôi mặc thử được không?", "我要这件。 — Tôi lấy cái này."],
+  "tip": "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Đối tác nói gì chưa hiểu thì bấm Nghe lại.",
+  "note": "Tình huống tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Thoại đối tác nghe bằng giọng đọc máy zh-CN. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "nhahang", "stage": 2, "title": "Ở nhà hàng", "setting": "Nhà hàng",
+  "you": "Khách ăn", "partner": "Nhân viên phục vụ",
+  "goal": "Chọn chỗ ngồi, gọi món rồi tính tiền.",
+  "turns": [
+   { "from": "partner", "han": "您好，几位？", "py": "Nín hǎo, jǐ wèi?", "vi": "Chào quý khách, mấy người ạ?" },
+   { "from": "you", "han": "两位，靠窗的位子还有吗？", "py": "Liǎng wèi, kào chuāng de wèizi hái yǒu ma?", "vi": "Hai người, còn chỗ gần cửa sổ không?" },
+   { "from": "partner", "han": "有，这边请。", "py": "Yǒu, zhèbian qǐng.", "vi": "Còn, mời bên này." },
+   { "from": "you", "han": "我要一碗面条和一杯水。", "py": "Wǒ yào yì wǎn miàntiáo hé yì bēi shuǐ.", "vi": "Tôi muốn một bát mì và một cốc nước." },
+   { "from": "partner", "han": "好的，稍等一下。", "py": "Hǎo de, shāo děng yí xià.", "vi": "Vâng, chờ một lát ạ." },
+   { "from": "you", "han": "买单，谢谢！", "py": "Mǎi dān, xièxie!", "vi": "Tính tiền, cảm ơn!" }
+  ],
+  "chunks": ["几位？ — Mấy người ạ?", "我要一碗面条。 — Tôi muốn một bát mì.", "买单，谢谢！ — Tính tiền, cảm ơn!"],
+  "tip": "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Đối tác nói gì chưa hiểu thì bấm Nghe lại.",
+  "note": "Tình huống tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Thoại đối tác nghe bằng giọng đọc máy zh-CN. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "hoiduong", "stage": 2, "title": "Hỏi đường", "setting": "Ngoài đường",
+  "you": "Người hỏi đường", "partner": "Người đi đường",
+  "goal": "Hỏi đường tới bệnh viện và hiểu chỉ dẫn.",
+  "turns": [
+   { "from": "you", "han": "请问，去医院怎么走？", "py": "Qǐngwèn, qù yīyuàn zěnme zǒu?", "vi": "Xin hỏi, đi bệnh viện đi thế nào?" },
+   { "from": "partner", "han": "一直往前走，第二个路口右转。", "py": "Yìzhí wǎng qián zǒu, dì èr ge lùkǒu yòu zhuǎn.", "vi": "Đi thẳng, đến ngã tư thứ hai rẽ phải." },
+   { "from": "you", "han": "要走多远？", "py": "Yào zǒu duō yuǎn?", "vi": "Phải đi bao xa?" },
+   { "from": "partner", "han": "大概十分钟就到了。", "py": "Dàgài shí fēnzhōng jiù dào le.", "vi": "Khoảng 10 phút là tới." },
+   { "from": "you", "han": "谢谢！", "py": "Xièxie!", "vi": "Cảm ơn!" }
+  ],
+  "chunks": ["请问，去……怎么走？ — Xin hỏi, đi…… đi thế nào?", "一直往前走 — Đi thẳng", "大概十分钟就到了。 — Khoảng 10 phút là tới."],
+  "tip": "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Đối tác nói gì chưa hiểu thì bấm Nghe lại.",
+  "note": "Tình huống tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Thoại đối tác nghe bằng giọng đọc máy zh-CN. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "truonghocrole", "stage": 2, "title": "Học sinh mới ở trường", "setting": "Lớp học",
+  "you": "Học sinh mới", "partner": "Bạn cùng lớp",
+  "goal": "Làm quen với bạn cùng lớp trong ngày đầu tới trường.",
+  "turns": [
+   { "from": "partner", "han": "你是新来的吗？", "py": "Nǐ shì xīn lái de ma?", "vi": "Bạn là học sinh mới à?" },
+   { "from": "you", "han": "是的，我今天第一天来。", "py": "Shì de, wǒ jīntiān dì yì tiān lái.", "vi": "Vâng, hôm nay là ngày đầu tôi đến." },
+   { "from": "partner", "han": "你叫什么名字？", "py": "Nǐ jiào shénme míngzi?", "vi": "Bạn tên là gì?" },
+   { "from": "you", "han": "我叫小李，你呢？", "py": "Wǒ jiào Xiǎo Lǐ, nǐ ne?", "vi": "Tôi tên là Tiểu Lý, còn bạn?" },
+   { "from": "partner", "han": "我叫小王，坐我旁边吧。", "py": "Wǒ jiào Xiǎo Wáng, zuò wǒ pángbiān ba.", "vi": "Tôi tên là Tiểu Vương, ngồi cạnh tôi nhé." },
+   { "from": "you", "han": "好，谢谢！", "py": "Hǎo, xièxie!", "vi": "Được, cảm ơn!" }
+  ],
+  "chunks": ["你是新来的吗？ — Bạn là học sinh mới à?", "我叫……，你呢？ — Tôi tên là……，còn bạn?", "坐我旁边吧。 — Ngồi cạnh tôi nhé."],
+  "tip": "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Đối tác nói gì chưa hiểu thì bấm Nghe lại.",
+  "note": "Tình huống tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Thoại đối tác nghe bằng giọng đọc máy zh-CN. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "benhvien", "stage": 3, "title": "Đi khám bệnh", "setting": "Bệnh viện",
+  "you": "Bệnh nhân", "partner": "Bác sĩ",
+  "goal": "Nói rõ mình khó chịu ở đâu, bị mấy ngày rồi.",
+  "turns": [
+   { "from": "partner", "han": "你哪儿不舒服？", "py": "Nǐ nǎr bù shūfu?", "vi": "Bạn khó chịu ở đâu?" },
+   { "from": "you", "han": "我头疼，还发烧。", "py": "Wǒ tóu téng, hái fāshāo.", "vi": "Tôi đau đầu, còn sốt." },
+   { "from": "partner", "han": "几天了？", "py": "Jǐ tiān le?", "vi": "Mấy ngày rồi?" },
+   { "from": "you", "han": "两天了。", "py": "Liǎng tiān le.", "vi": "Hai ngày rồi." },
+   { "from": "partner", "han": "先量一下体温，再去做检查。", "py": "Xiān liàng yí xià tǐwēn, zài qù zuò jiǎnchá.", "vi": "Đo nhiệt độ trước, rồi đi làm kiểm tra." },
+   { "from": "you", "han": "好的，谢谢医生。", "py": "Hǎo de, xièxie yīshēng.", "vi": "Vâng, cảm ơn bác sĩ." }
+  ],
+  "chunks": ["你哪儿不舒服？ — Bạn khó chịu ở đâu?", "我头疼，还发烧。 — Tôi đau đầu, còn sốt.", "谢谢医生。 — Cảm ơn bác sĩ."],
+  "tip": "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Đối tác nói gì chưa hiểu thì bấm Nghe lại.",
+  "note": "Tình huống tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Thoại đối tác nghe bằng giọng đọc máy zh-CN. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "benxe", "stage": 3, "title": "Mua vé ở bến xe", "setting": "Bến xe",
+  "you": "Hành khách", "partner": "Nhân viên bán vé",
+  "goal": "Hỏi giờ xe, hỏi giá vé rồi mua hai vé.",
+  "turns": [
+   { "from": "partner", "han": "您去哪儿？", "py": "Nín qù nǎr?", "vi": "Quý khách đi đâu?" },
+   { "from": "you", "han": "我去上海，几点有车？", "py": "Wǒ qù Shànghǎi, jǐ diǎn yǒu chē?", "vi": "Tôi đi Thượng Hải, mấy giờ có xe?" },
+   { "from": "partner", "han": "上午十点有一班车。", "py": "Shàngwǔ shí diǎn yǒu yì bān chē.", "vi": "10 giờ sáng có một chuyến." },
+   { "from": "you", "han": "票多少钱一张？", "py": "Piào duōshao qián yì zhāng?", "vi": "Vé bao nhiêu tiền một vé?" },
+   { "from": "partner", "han": "一百块。", "py": "Yì bǎi kuài.", "vi": "100 tệ." },
+   { "from": "you", "han": "我要两张。", "py": "Wǒ yào liǎng zhāng.", "vi": "Tôi muốn hai vé." }
+  ],
+  "chunks": ["几点有车？ — Mấy giờ có xe?", "票多少钱一张？ — Vé bao nhiêu tiền một vé?", "我要两张。 — Tôi muốn hai vé."],
+  "tip": "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Đối tác nói gì chưa hiểu thì bấm Nghe lại.",
+  "note": "Tình huống tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Thoại đối tác nghe bằng giọng đọc máy zh-CN. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "khachsan", "stage": 3, "title": "Thuê phòng khách sạn", "setting": "Khách sạn",
+  "you": "Khách thuê phòng", "partner": "Lễ tân",
+  "goal": "Hỏi phòng trống, chọn phòng đôi và chốt giá một đêm.",
+  "turns": [
+   { "from": "partner", "han": "您好，请问您要住几天？", "py": "Nín hǎo, qǐngwèn nín yào zhù jǐ tiān?", "vi": "Chào quý khách, xin hỏi quý khách ở mấy ngày?" },
+   { "from": "you", "han": "三天，有空房间吗？", "py": "Sān tiān, yǒu kòng fángjiān ma?", "vi": "Ba ngày, còn phòng trống không?" },
+   { "from": "partner", "han": "有，您要单人间还是双人间？", "py": "Yǒu, nín yào dān rén jiān háishi shuāng rén jiān?", "vi": "Còn, quý khách muốn phòng đơn hay phòng đôi?" },
+   { "from": "you", "han": "双人间，多少钱一晚？", "py": "Shuāng rén jiān, duōshao qián yì wǎn?", "vi": "Phòng đôi, bao nhiêu tiền một đêm?" },
+   { "from": "partner", "han": "三百块一晚。", "py": "Sān bǎi kuài yì wǎn.", "vi": "300 tệ một đêm." },
+   { "from": "you", "han": "好，就这间。", "py": "Hǎo, jiù zhè jiān.", "vi": "Được, lấy phòng này." }
+  ],
+  "chunks": ["有空房间吗？ — Còn phòng trống không?", "单人间还是双人间？ — Phòng đơn hay phòng đôi?", "多少钱一晚？ — Bao nhiêu tiền một đêm?"],
+  "tip": "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Đối tác nói gì chưa hiểu thì bấm Nghe lại.",
+  "note": "Tình huống tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Thoại đối tác nghe bằng giọng đọc máy zh-CN. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "goidien", "stage": 3, "title": "Gọi điện rủ bạn đi chơi", "setting": "Cuộc gọi điện thoại",
+  "you": "Người gọi điện", "partner": "Bạn",
+  "goal": "Gọi điện rủ bạn ngày mai cùng đi xem phim và chốt giờ.",
+  "turns": [
+   { "from": "you", "han": "喂，你好！我是小明。", "py": "Wéi, nǐ hǎo! Wǒ shì Xiǎo Míng.", "vi": "A lô, chào bạn! Tôi là Tiểu Minh." },
+   { "from": "partner", "han": "你好，小明！有什么事吗？", "py": "Nǐ hǎo, Xiǎo Míng! Yǒu shénme shì ma?", "vi": "Chào Tiểu Minh! Có việc gì không?" },
+   { "from": "you", "han": "明天你有时间吗？我们一起去看电影吧。", "py": "Míngtiān nǐ yǒu shíjiān ma? Wǒmen yìqǐ qù kàn diànyǐng ba.", "vi": "Ngày mai bạn có thời gian không? Chúng mình cùng đi xem phim nhé." },
+   { "from": "partner", "han": "好啊，几点？", "py": "Hǎo a, jǐ diǎn?", "vi": "Được, mấy giờ?" },
+   { "from": "you", "han": "下午三点见。", "py": "Xiàwǔ sān diǎn jiàn.", "vi": "3 giờ chiều gặp." },
+   { "from": "partner", "han": "好，明天见！", "py": "Hǎo, míngtiān jiàn!", "vi": "Được, mai gặp!" }
+  ],
+  "chunks": ["喂，你好！我是…… — A lô, chào bạn! Tôi là……", "明天你有时间吗？ — Ngày mai bạn có thời gian không?", "我们一起去看电影吧。 — Chúng mình cùng đi xem phim nhé."],
+  "tip": "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Đối tác nói gì chưa hiểu thì bấm Nghe lại.",
+  "note": "Tình huống tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Thoại đối tác nghe bằng giọng đọc máy zh-CN. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+  }
+ ];
+var ZH_WRITE = [
+ {
+  "id": "sapxep-chaohoi", "stage": 2, "title": "Sắp xếp: Hôm nay đi học", "kind": "order",
+  "prompt": "Sắp xếp các từ thành câu đúng: hôm nay tôi đi học ở trường.",
+  "words": ["我", "今天", "去", "学校", "上课"],
+  "why": "Trật tự đúng: chủ ngữ 我 → thời gian 今天 → động từ 去 → nơi chốn 学校 → việc 上课.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); câu và từ tự viết, không trích nguyên văn giáo trình. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+ },
+ {
+  "id": "sapxep-muado", "stage": 2, "title": "Sắp xếp: Mẹ mua áo mới", "kind": "order",
+  "prompt": "Sắp xếp các từ thành câu đúng: hôm qua mẹ đã mua một cái áo mới.",
+  "words": ["妈妈", "昨天", "买了", "一件", "新衣服"],
+  "why": "Trật tự đúng: chủ ngữ 妈妈 → thời gian 昨天 → động từ 买了 → số lượng 一件 → đồ vật 新衣服.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); câu và từ tự viết, không trích nguyên văn giáo trình. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+ },
+ {
+  "id": "sapxep-dilam", "stage": 3, "title": "Sắp xếp: Anh ấy đi làm", "kind": "order",
+  "prompt": "Sắp xếp các từ thành câu đúng: anh ấy mỗi ngày 8 giờ sáng đi làm.",
+  "words": ["他", "每天", "早上", "八点", "去", "上班"],
+  "why": "Trật tự đúng: chủ ngữ 他 → tần suất 每天 → buổi 早上 → giờ 八点 → động từ 去 → việc 上班.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); câu và từ tự viết, không trích nguyên văn giáo trình. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+ },
+ {
+  "id": "dientu-giadinh", "stage": 2, "title": "Điền từ: Gia đình", "kind": "fill",
+  "prompt": "Chọn từ đúng điền vào chỗ trống trong các câu về gia đình.",
+  "questions": [
+   { "q": "我家有___口人。(Nhà tôi có 4 người.)", "o": ["三", "四", "五", "六"], "a": 1, "why": "四口人: nhà có 4 người." },
+   { "q": "我妹妹今年___岁。(Em gái tôi năm nay 10 tuổi.)", "o": ["九", "十", "十一", "十二"], "a": 1, "why": "十岁: 10 tuổi." }
+  ],
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); câu và đáp án tự viết, không trích nguyên văn giáo trình. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+ },
+ {
+  "id": "dientu-anuong", "stage": 2, "title": "Điền từ: Ăn uống", "kind": "fill",
+  "prompt": "Chọn từ đúng điền vào chỗ trống trong các câu về ăn uống.",
+  "questions": [
+   { "q": "我想吃___。(Tôi muốn ăn mì.)", "o": ["米饭", "面条", "面包", "水果"], "a": 1, "why": "面条 là mì." },
+   { "q": "我们再要两___水。(Chúng mình gọi thêm hai cốc nước.)", "o": ["杯", "个", "本", "张"], "a": 0, "why": "杯 là lượng từ cho cốc nước: 两杯水." }
+  ],
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); câu và đáp án tự viết, không trích nguyên văn giáo trình. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+ },
+ {
+  "id": "dientu-dilam", "stage": 3, "title": "Điền từ: Đi làm", "kind": "fill",
+  "prompt": "Chọn từ đúng điền vào chỗ trống trong các câu về công việc.",
+  "questions": [
+   { "q": "他在一家公司___。(Anh ấy làm việc ở một công ty.)", "o": ["学习", "工作", "休息", "睡觉"], "a": 1, "why": "工作 là làm việc." },
+   { "q": "我的工作有时候很___，不过我很喜欢。(Công việc của tôi có lúc rất bận, nhưng tôi rất thích.)", "o": ["忙", "闲", "早", "晚"], "a": 0, "why": "很忙: rất bận." }
+  ],
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); câu và đáp án tự viết, không trích nguyên văn giáo trình. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+ },
+ {
+  "id": "viet-gioithieu", "stage": 2, "title": "Viết: Giới thiệu bản thân", "kind": "free",
+  "prompt": "Viết 3–4 câu giới thiệu bản thân bằng tiếng Trung: tên, tuổi, là học sinh hay sinh viên, sở thích.",
+  "model": "大家好！我叫小明。我今年二十岁。我是学生。我喜欢看书和听音乐。",
+  "analysis": "Bài mẫu mở đầu bằng 大家好，rồi đi theo thứ tự: tên → tuổi → thân phận → sở thích, mỗi ý một câu ngắn.",
+  "phrases": ["我叫…… — Tôi tên là……", "我今年……岁 — Năm nay tôi…… tuổi", "我是学生 — Tôi là học sinh"],
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); đề và bài mẫu tự viết, không trích nguyên văn giáo trình. Phần này chỉ đối chiếu bài mẫu, chưa có AI chấm tiếng Trung — AI chấm đang chờ nâng cấp, không có điểm, không tính đạt cũng không tính chưa đạt."
+ },
+ {
+  "id": "viet-cuoituan", "stage": 3, "title": "Viết: Kể về cuối tuần", "kind": "free",
+  "prompt": "Viết một đoạn ngắn 4–5 câu kể cuối tuần của bạn: đi đâu, với ai, làm gì, cảm thấy thế nào.",
+  "model": "上个周末，我和朋友去公园了。我们在公园散步，还拍了很多照片。中午我们在附近的饭馆吃饭。下午我们回家了。我觉得很开心。",
+  "analysis": "Bài mẫu kể theo thứ tự thời gian: cuối tuần → buổi sáng, buổi trưa, buổi chiều → cảm nghĩ ở câu cuối.",
+  "phrases": ["上个周末 — Cuối tuần trước", "我和朋友去…… — Tôi cùng bạn đi……", "我觉得很开心 — Tôi thấy rất vui"],
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); đề và bài mẫu tự viết, không trích nguyên văn giáo trình. Phần này chỉ đối chiếu bài mẫu, chưa có AI chấm tiếng Trung — AI chấm đang chờ nâng cấp, không có điểm, không tính đạt cũng không tính chưa đạt."
+  }
+ ];
+
+// ============================================================
+//  noi-dung-2b-draft.js — NHÁP đợt mở rộng 2b (CHƯA append vào build).
+//  Chỉ chứa các lệnh push; điều phối viên append vào cuối content-new.js.
+//  Nội dung tự soạn 100%, tiếng Việt đơn giản, ví dụ trước.
+// ============================================================
+CONTENT.vocab.push.apply(CONTENT.vocab, [
+{
+"topic": "Môi trường và biến đổi khí hậu",
+"theme": "Environment - Môi trường",
+"band": "Band 7.5+",
+"cards": [
+{"w": "mitigation", "ipa": "/ˌmɪtɪˈɡeɪʃn/", "vi": "sự giảm nhẹ (tác động)", "col": "climate mitigation", "ex": "Planting trees is one simple form of climate mitigation.", "exv": "Trồng cây là một cách đơn giản để giảm nhẹ tác động của khí hậu."},
+{"w": "adaptation", "ipa": "/ˌædæpˈteɪʃn/", "vi": "sự thích ứng", "col": "climate adaptation", "ex": "Farmers need climate adaptation because the weather is changing.", "exv": "Nông dân cần thích ứng với khí hậu vì thời tiết đang thay đổi."},
+{"w": "carbon sequestration", "ipa": "/ˈkɑːbən ˌsiːkwesˈtreɪʃn/", "vi": "sự giữ lại carbon", "col": "carbon sequestration in forests", "ex": "Forests help carbon sequestration in forests by storing carbon in trees and soil.", "exv": "Rừng giúp giữ lại carbon bằng cách lưu carbon trong cây và đất."},
+{"w": "reforestation", "ipa": "/ˌriːfɒrɪˈsteɪʃn/", "vi": "sự trồng rừng lại", "col": "a reforestation project", "ex": "The village started a reforestation project on the empty hills.", "exv": "Ngôi làng bắt đầu một dự án trồng rừng lại trên những quả đồi trống."},
+{"w": "afforestation", "ipa": "/əˌfɒrɪˈsteɪʃn/", "vi": "sự trồng rừng mới", "col": "afforestation on dry land", "ex": "Afforestation on dry land can slowly turn bare land green again.", "exv": "Trồng rừng mới trên đất khô có thể dần làm đất trống xanh trở lại."},
+{"w": "permafrost", "ipa": "/ˈpɜːməfrɒst/", "vi": "lớp đất đóng băng vĩnh cửu", "col": "melting permafrost", "ex": "Melting permafrost releases gases that warm the planet further.", "exv": "Lớp đất đóng băng tan ra thải khí làm hành tinh nóng thêm."},
+{"w": "decarbonisation", "ipa": "/diːˌkɑːbənaɪˈzeɪʃn/", "vi": "sự giảm carbon", "col": "decarbonisation of transport", "ex": "Electric buses are part of the decarbonisation of transport in the city.", "exv": "Xe buýt điện là một phần của việc giảm carbon trong giao thông thành phố."},
+{"w": "ocean acidification", "ipa": "/ˈəʊʃn əˌsɪdɪfɪˈkeɪʃn/", "vi": "sự axit hóa đại dương", "col": "ocean acidification and coral", "ex": "Ocean acidification and coral are linked, because acid water harms coral reefs.", "exv": "Axit hóa đại dương và san hô có liên quan, vì nước axit làm hại rạn san hô."},
+{"w": "sea-level rise", "ipa": "/ˈsiː levl raɪz/", "vi": "sự dâng mực nước biển", "col": "sea-level rise in coastal cities", "ex": "Sea-level rise in coastal cities forces people to build stronger sea walls.", "exv": "Mực nước biển dâng ở thành phố ven biển buộc người dân xây đê biển chắc hơn."},
+{"w": "climate resilience", "ipa": "/ˈklaɪmət rɪˈzɪliəns/", "vi": "khả năng chống chịu khí hậu", "col": "build climate resilience", "ex": "Strong houses and early warnings help villages build climate resilience.", "exv": "Nhà chắc và cảnh báo sớm giúp các làng xây khả năng chống chịu khí hậu."},
+{"w": "environmental degradation", "ipa": "/ɪnˌvaɪrənˈmentl ˌdeɡrəˈdeɪʃn/", "vi": "sự suy thoái môi trường", "col": "stop environmental degradation", "ex": "We must stop environmental degradation before the soil loses all its life.", "exv": "Chúng ta phải chặn suy thoái môi trường trước khi đất mất hết sự sống."},
+{"w": "carbon offset", "ipa": "/ˈkɑːbən ˈɒfset/", "vi": "sự bù trừ carbon", "col": "buy a carbon offset", "ex": "Some travellers buy a carbon offset when they fly, to support tree planting.", "exv": "Một số khách du lịch mua bù trừ carbon khi bay, để ủng hộ trồng cây."},
+{"w": "emission reduction", "ipa": "/ɪˈmɪʃn rɪˈdʌkʃn/", "vi": "sự cắt giảm khí thải", "col": "an emission reduction plan", "ex": "The factory published an emission reduction plan for the next five years.", "exv": "Nhà máy công bố kế hoạch cắt giảm khí thải cho năm năm tới."},
+{"w": "extreme weather", "ipa": "/ɪkˈstriːm ˈweðə(r)/", "vi": "thời tiết cực đoan", "col": "extreme weather events", "ex": "Extreme weather events, like long heatwaves, are becoming more common.", "exv": "Các hiện tượng thời tiết cực đoan, như đợt nắng nóng dài, ngày càng phổ biến."},
+{"w": "water scarcity", "ipa": "/ˈwɔːtə(r) ˈskeəsəti/", "vi": "sự khan hiếm nước", "col": "water scarcity in dry regions", "ex": "Water scarcity in dry regions makes farming much harder every year.", "exv": "Khan hiếm nước ở vùng khô khiến việc trồng trọt khó hơn mỗi năm."},
+{"w": "food security", "ipa": "/fuːd sɪˈkjʊərəti/", "vi": "an ninh lương thực", "col": "protect food security", "ex": "Good storage and fair prices help protect food security for poor families.", "exv": "Kho chứa tốt và giá hợp lý giúp bảo vệ an ninh lương thực cho gia đình nghèo."},
+{"w": "ecological footprint", "ipa": "/ˌiːkəˈlɒdʒɪkl ˈfʊtprɪnt/", "vi": "dấu chân sinh thái", "col": "reduce your ecological footprint", "ex": "Cycling to work is one way to reduce your ecological footprint.", "exv": "Đạp xe đi làm là một cách giảm dấu chân sinh thái của bạn."},
+{"w": "renewable transition", "ipa": "/rɪˈnjuːəbl trænˈzɪʃn/", "vi": "sự chuyển đổi sang năng lượng tái tạo", "col": "a renewable transition plan", "ex": "The town approved a renewable transition plan based on wind and sun power.", "exv": "Thị trấn duyệt kế hoạch chuyển đổi sang năng lượng tái tạo dùng gió và nắng."},
+{"w": "green technology", "ipa": "/ɡriːn tekˈnɒlədʒi/", "vi": "công nghệ xanh", "col": "invest in green technology", "ex": "Many firms now invest in green technology to save energy and cut waste.", "exv": "Nhiều công ty nay đầu tư vào công nghệ xanh để tiết kiệm năng lượng và giảm rác."},
+{"w": "climate policy", "ipa": "/ˈklaɪmət ˈpɒləsi/", "vi": "chính sách khí hậu", "col": "a national climate policy", "ex": "A clear national climate policy helps firms plan for cleaner production.", "exv": "Một chính sách khí hậu quốc gia rõ ràng giúp doanh nghiệp lên kế hoạch sản xuất sạch hơn."}
+]
+},
+{
+"topic": "Kinh tế và việc làm",
+"theme": "Economy - Kinh tế",
+"band": "Band 7.5+",
+"cards": [
+{"w": "labour market", "ipa": "/ˈleɪbə(r) ˈmɑːkɪt/", "vi": "thị trường lao động", "col": "the labour market today", "ex": "The labour market today needs workers who can learn new skills quickly.", "exv": "Thị trường lao động ngày nay cần người lao động học kỹ năng mới nhanh."},
+{"w": "job creation", "ipa": "/dʒɒb kriˈeɪʃn/", "vi": "sự tạo việc làm", "col": "support job creation", "ex": "Small firms do a lot to support job creation in towns and cities.", "exv": "Doanh nghiệp nhỏ đóng góp nhiều cho việc tạo việc làm ở thị trấn và thành phố."},
+{"w": "wage growth", "ipa": "/weɪdʒ ɡrəʊθ/", "vi": "sự tăng lương", "col": "slow wage growth", "ex": "Slow wage growth makes it hard for families to keep up with rising prices.", "exv": "Tăng lương chậm khiến gia đình khó theo kịp giá cả tăng."},
+{"w": "skills gap", "ipa": "/skɪlz ɡæp/", "vi": "khoảng trống kỹ năng", "col": "close the skills gap", "ex": "Training courses can help close the skills gap in technology jobs.", "exv": "Các khóa đào tạo có thể giúp lấp khoảng trống kỹ năng trong việc làm công nghệ."},
+{"w": "remote working", "ipa": "/rɪˈməʊt ˈwɜːkɪŋ/", "vi": "làm việc từ xa", "col": "remote working from home", "ex": "Remote working from home saves travel time but needs strong self-discipline.", "exv": "Làm việc từ xa tại nhà tiết kiệm thời gian đi lại nhưng cần kỷ luật cao."},
+{"w": "gig economy", "ipa": "/ɡɪɡ ɪˈkɒnəmi/", "vi": "kinh tế làm việc ngắn hạn", "col": "workers in the gig economy", "ex": "Workers in the gig economy often do short jobs for several different firms.", "exv": "Người lao động trong kinh tế làm việc ngắn hạn thường làm việc ngắn cho nhiều công ty."},
+{"w": "job security", "ipa": "/dʒɒb sɪˈkjʊərəti/", "vi": "sự ổn định việc làm", "col": "better job security", "ex": "A long contract gives workers better job security than a one-week job.", "exv": "Hợp đồng dài hạn cho người lao động ổn định việc làm hơn việc làm một tuần."},
+{"w": "workforce planning", "ipa": "/ˈwɜːkfɔːs ˈplænɪŋ/", "vi": "kế hoạch nhân lực", "col": "careful workforce planning", "ex": "Careful workforce planning helps a hospital avoid staff shortages.", "exv": "Kế hoạch nhân lực cẩn thận giúp bệnh viện tránh thiếu nhân viên."},
+{"w": "productivity growth", "ipa": "/ˌprɒdʌkˈtɪvəti ɡrəʊθ/", "vi": "sự tăng năng suất", "col": "productivity growth and wages", "ex": "Productivity growth and wages should rise together, but they often do not.", "exv": "Tăng năng suất và lương nên tăng cùng nhau, nhưng thường thì không."},
+{"w": "economic downturn", "ipa": "/ˌiːkəˈnɒmɪk ˈdaʊntɜːn/", "vi": "sự suy thoái kinh tế", "col": "during an economic downturn", "ex": "During an economic downturn, many shops sell less and hire fewer staff.", "exv": "Trong suy thoái kinh tế, nhiều cửa hàng bán ít hơn và thuê ít nhân viên hơn."},
+{"w": "fiscal policy", "ipa": "/ˈfɪskl ˈpɒləsi/", "vi": "chính sách tài khóa", "col": "government fiscal policy", "ex": "Government fiscal policy decides how much the state spends and taxes.", "exv": "Chính sách tài khóa của nhà nước quyết định nhà nước chi và thu thuế bao nhiêu."},
+{"w": "monetary policy", "ipa": "/ˈmɒnɪtri ˈpɒləsi/", "vi": "chính sách tiền tệ", "col": "tight monetary policy", "ex": "Tight monetary policy raises interest rates to slow down rising prices.", "exv": "Chính sách tiền tệ chặt làm lãi suất tăng để kìm giá cả tăng."},
+{"w": "central bank", "ipa": "/ˈsentrəl bæŋk/", "vi": "ngân hàng trung ương", "col": "the central bank decision", "ex": "The central bank decision on interest rates affects loans for homes and firms.", "exv": "Quyết định của ngân hàng trung ương về lãi suất ảnh hưởng tới khoản vay mua nhà và vay doanh nghiệp."},
+{"w": "trade deficit", "ipa": "/treɪd ˈdefɪsɪt/", "vi": "thâm hụt thương mại", "col": "a large trade deficit", "ex": "A large trade deficit means a country imports much more than it exports.", "exv": "Thâm hụt thương mại lớn nghĩa là một nước nhập khẩu nhiều hơn xuất khẩu rất nhiều."},
+{"w": "consumer spending", "ipa": "/kənˈsjuːmə(r) ˈspendɪŋ/", "vi": "chi tiêu của người tiêu dùng", "col": "weak consumer spending", "ex": "Weak consumer spending is a warning sign for shops and restaurants.", "exv": "Chi tiêu người tiêu dùng yếu là dấu hiệu cảnh báo cho cửa hàng và nhà hàng."},
+{"w": "cost of living", "ipa": "/kɒst əv ˈlɪvɪŋ/", "vi": "chi phí sinh hoạt", "col": "the rising cost of living", "ex": "The rising cost of living hits young renters hardest in big cities.", "exv": "Chi phí sinh hoạt tăng đánh mạnh nhất vào người trẻ thuê nhà ở thành phố lớn."},
+{"w": "minimum wage", "ipa": "/ˈmɪnɪməm weɪdʒ/", "vi": "lương tối thiểu", "col": "raise the minimum wage", "ex": "Some argue we should raise the minimum wage to protect low-paid workers.", "exv": "Một số người cho rằng nên tăng lương tối thiểu để bảo vệ người lao động lương thấp."},
+{"w": "automation risk", "ipa": "/ˌɔːtəˈmeɪʃn rɪsk/", "vi": "nguy cơ tự động hóa", "col": "automation risk for routine jobs", "ex": "Automation risk for routine jobs pushes workers to learn new, creative skills.", "exv": "Nguy cơ tự động hóa với việc làm lặp lại thúc người lao động học kỹ năng mới, sáng tạo."},
+{"w": "career transition", "ipa": "/kəˈrɪə(r) trænˈzɪʃn/", "vi": "sự chuyển đổi nghề nghiệp", "col": "a career transition at 40", "ex": "A career transition at 40 is common when whole industries change.", "exv": "Chuyển đổi nghề nghiệp ở tuổi 40 là chuyện thường khi cả ngành nghề thay đổi."},
+{"w": "flexible working", "ipa": "/ˈfleksəbl ˈwɜːkɪŋ/", "vi": "làm việc linh hoạt", "col": "offer flexible working", "ex": "Firms that offer flexible working often keep good staff for longer.", "exv": "Công ty cho làm việc linh hoạt thường giữ được nhân viên giỏi lâu hơn."}
+]
+},
+{
+"topic": "Luật pháp và công lý",
+"theme": "Law - Luật pháp",
+"band": "Band 7.5+",
+"cards": [
+{"w": "legislation", "ipa": "/ˌledʒɪsˈleɪʃn/", "vi": "luật, văn bản pháp luật", "col": "new legislation on safety", "ex": "New legislation on safety requires firms to report serious accidents.", "exv": "Luật mới về an toàn yêu cầu doanh nghiệp báo cáo tai nạn nghiêm trọng."},
+{"w": "judicial system", "ipa": "/dʒuˈdɪʃl ˈsɪstəm/", "vi": "hệ thống tư pháp", "col": "trust in the judicial system", "ex": "Trust in the judicial system grows when trials are open and fair.", "exv": "Niềm tin vào hệ thống tư pháp tăng khi xét xử công khai và công bằng."},
+{"w": "civil rights", "ipa": "/ˈsɪvl raɪts/", "vi": "quyền công dân", "col": "protect civil rights", "ex": "Laws must protect civil rights for every person, not only for some groups.", "exv": "Luật phải bảo vệ quyền công dân cho mọi người, không chỉ một số nhóm."},
+{"w": "justice system", "ipa": "/ˈdʒʌstɪs ˈsɪstəm/", "vi": "hệ thống công lý", "col": "reform the justice system", "ex": "Many experts want to reform the justice system to make trials faster.", "exv": "Nhiều chuyên gia muốn cải cách hệ thống công lý để xét xử nhanh hơn."},
+{"w": "legal reform", "ipa": "/ˈliːɡl rɪˈfɔːm/", "vi": "cải cách pháp luật", "col": "a legal reform programme", "ex": "A legal reform programme should be debated in public before it becomes law.", "exv": "Chương trình cải cách pháp luật nên được tranh luận công khai trước khi thành luật."},
+{"w": "due process", "ipa": "/djuː ˈprəʊses/", "vi": "trình tự pháp lý đúng", "col": "the right to due process", "ex": "Every accused person has the right to due process and a fair hearing.", "exv": "Mọi bị cáo đều có quyền được xét xử đúng trình tự và công bằng."},
+{"w": "human rights", "ipa": "/ˈhjuːmən raɪts/", "vi": "quyền con người", "col": "respect human rights", "ex": "Schools should teach children to respect human rights from an early age.", "exv": "Trường học nên dạy trẻ tôn trọng quyền con người từ sớm."},
+{"w": "constitutional law", "ipa": "/ˌkɒnstɪˈtjuːʃənl lɔː/", "vi": "luật hiến pháp", "col": "study constitutional law", "ex": "Law students study constitutional law to understand the power of the state.", "exv": "Sinh viên luật học luật hiến pháp để hiểu quyền lực của nhà nước."},
+{"w": "legal aid", "ipa": "/ˈliːɡl eɪd/", "vi": "trợ giúp pháp lý", "col": "free legal aid", "ex": "Free legal aid helps poor people get a lawyer when they cannot pay.", "exv": "Trợ giúp pháp lý miễn phí giúp người nghèo có luật sư khi không trả nổi phí."},
+{"w": "court ruling", "ipa": "/kɔːt ˈruːlɪŋ/", "vi": "phán quyết của tòa", "col": "a landmark court ruling", "ex": "A landmark court ruling changed how firms treat personal data.", "exv": "Một phán quyết tòa mang tính bước ngoặt đã đổi cách doanh nghiệp xử lý dữ liệu cá nhân."},
+{"w": "appeal", "ipa": "/əˈpiːl/", "vi": "sự kháng cáo", "col": "file an appeal", "ex": "The defendant decided to file an appeal against the first decision.", "exv": "Bị cáo quyết định kháng cáo quyết định đầu tiên."},
+{"w": "defendant", "ipa": "/dɪˈfendənt/", "vi": "bị cáo", "col": "the defendant in court", "ex": "The defendant in court listened quietly while the witness spoke.", "exv": "Bị cáo tại tòa lặng nghe khi nhân chứng nói."},
+{"w": "prosecution", "ipa": "/ˌprɒsɪˈkjuːʃn/", "vi": "bên công tố, sự truy tố", "col": "the prosecution case", "ex": "The prosecution case rested on two documents and one witness.", "exv": "Vụ truy tố dựa vào hai tài liệu và một nhân chứng."},
+{"w": "verdict", "ipa": "/ˈvɜːdɪkt/", "vi": "phán quyết (của bồi thẩm đoàn)", "col": "reach a verdict", "ex": "After three days, the jury managed to reach a verdict.", "exv": "Sau ba ngày, bồi thẩm đoàn đã đưa ra được phán quyết."},
+{"w": "penalty", "ipa": "/ˈpenlti/", "vi": "hình phạt", "col": "a heavy penalty", "ex": "The firm paid a heavy penalty for breaking safety rules.", "exv": "Công ty chịu hình phạt nặng vì vi phạm quy tắc an toàn."},
+{"w": "public defender", "ipa": "/ˈpʌblɪk dɪˈfendə(r)/", "vi": "luật sư bào chữa công", "col": "a public defender for the accused", "ex": "A public defender for the accused is paid by the state, not by the client.", "exv": "Luật sư bào chữa công cho bị cáo do nhà nước trả, không phải khách hàng trả."},
+{"w": "legal precedent", "ipa": "/ˈliːɡl ˈpresɪdənt/", "vi": "án lệ, tiền lệ pháp lý", "col": "set a legal precedent", "ex": "This case may set a legal precedent for future online privacy cases.", "exv": "Vụ này có thể tạo án lệ cho các vụ riêng tư trực tuyến sau này."},
+{"w": "rule of law", "ipa": "/ruːl əv lɔː/", "vi": "pháp quyền, sự thượng tôn pháp luật", "col": "respect the rule of law", "ex": "A fair society must respect the rule of law, even in hard times.", "exv": "Một xã hội công bằng phải tôn trọng pháp quyền, ngay cả lúc khó khăn."},
+{"w": "civil lawsuit", "ipa": "/ˈsɪvl ˈlɔːsuːt/", "vi": "vụ kiện dân sự", "col": "file a civil lawsuit", "ex": "The customer decided to file a civil lawsuit after the firm refused a refund.", "exv": "Khách hàng quyết định kiện dân sự sau khi công ty từ chối hoàn tiền."},
+{"w": "intellectual property", "ipa": "/ˌɪntəˈlektʃuəl ˈprɒpəti/", "vi": "sở hữu trí tuệ", "col": "protect intellectual property", "ex": "Inventors need laws to protect intellectual property for their new ideas.", "exv": "Nhà sáng chế cần luật để bảo vệ sở hữu trí tuệ cho ý tưởng mới của họ."}
+]
+}
+]);
+CONTENT.vocab.push.apply(CONTENT.vocab, [
+{
+"topic": "Giáo dục đại học và nghiên cứu",
+"theme": "Higher Education - Giáo dục đại học",
+"band": "Band 7.0",
+"cards": [
+{"w": "doctoral degree", "ipa": "/ˈdɒktərəl dɪˈɡriː/", "vi": "bằng tiến sĩ", "col": "complete a doctoral degree", "ex": "She hopes to complete a doctoral degree in biology within four years.", "exv": "Cô ấy hy vọng hoàn thành bằng tiến sĩ sinh học trong bốn năm."},
+{"w": "research proposal", "ipa": "/rɪˈsɜːtʃ prəˈpəʊzl/", "vi": "đề cương nghiên cứu", "col": "write a research proposal", "ex": "First, students must write a research proposal and explain why the topic matters.", "exv": "Trước tiên, sinh viên phải viết đề cương nghiên cứu và giải thích vì sao đề tài quan trọng."},
+{"w": "field study", "ipa": "/fiːld ˈstʌdi/", "vi": "nghiên cứu thực địa", "col": "a field study in a village", "ex": "A field study in a village taught the team more than books alone could.", "exv": "Nghiên cứu thực địa ở một ngôi làng dạy nhóm nhiều hơn chỉ đọc sách."},
+{"w": "academic journal", "ipa": "/ˌækəˈdemɪk ˈdʒɜːnl/", "vi": "tạp chí học thuật", "col": "publish in an academic journal", "ex": "Young researchers dream of publishing in an academic journal one day.", "exv": "Nhà nghiên cứu trẻ mơ một ngày công bố trên tạp chí học thuật."},
+{"w": "research ethics", "ipa": "/rɪˈsɜːtʃ ˈeθɪks/", "vi": "đạo đức nghiên cứu", "col": "follow research ethics", "ex": "All teams must follow research ethics and protect the people in the study.", "exv": "Mọi nhóm phải tuân theo đạo đức nghiên cứu và bảo vệ người tham gia nghiên cứu."},
+{"w": "literature review", "ipa": "/ˈlɪtrətʃə(r) rɪˈvjuː/", "vi": "tổng quan tài liệu", "col": "a literature review chapter", "ex": "A literature review chapter shows what other writers already found.", "exv": "Chương tổng quan tài liệu cho thấy các tác giả khác đã tìm ra điều gì."},
+{"w": "case study", "ipa": "/keɪs ˈstʌdi/", "vi": "nghiên cứu tình huống", "col": "a case study of one school", "ex": "A case study of one school can show problems that big surveys miss.", "exv": "Nghiên cứu tình huống một trường học có thể chỉ ra vấn đề mà khảo sát lớn bỏ sót."},
+{"w": "academic integrity", "ipa": "/ˌækəˈdemɪk ɪnˈteɡrəti/", "vi": "liêm chính học thuật", "col": "uphold academic integrity", "ex": "Universities ask students to uphold academic integrity and cite their sources.", "exv": "Trường đại học yêu cầu sinh viên giữ liêm chính học thuật và trích dẫn nguồn."},
+{"w": "scholarly article", "ipa": "/ˈskɒləli ˈɑːtɪkl/", "vi": "bài báo học thuật", "col": "read a scholarly article", "ex": "Try to read a scholarly article slowly, and note its main argument first.", "exv": "Hãy thử đọc chậm một bài báo học thuật, và ghi luận điểm chính trước."},
+{"w": "research method", "ipa": "/rɪˈsɜːtʃ ˈmeθəd/", "vi": "phương pháp nghiên cứu", "col": "choose a research method", "ex": "You must choose a research method that fits your question, not the easiest one.", "exv": "Bạn phải chọn phương pháp nghiên cứu hợp với câu hỏi, không phải cách dễ nhất."},
+{"w": "critical analysis", "ipa": "/ˈkrɪtɪkl əˈnæləsɪs/", "vi": "phân tích phản biện", "col": "a critical analysis of the data", "ex": "A critical analysis of the data showed that the first result was too weak.", "exv": "Phân tích phản biện dữ liệu cho thấy kết quả đầu tiên còn quá yếu."},
+{"w": "academic writing", "ipa": "/ˌækəˈdemɪk ˈraɪtɪŋ/", "vi": "viết học thuật", "col": "academic writing skills", "ex": "Academic writing skills grow when students rewrite their drafts several times.", "exv": "Kỹ năng viết học thuật tăng khi sinh viên viết lại bản nháp nhiều lần."},
+{"w": "thesis defence", "ipa": "/ˈθiːsɪs dɪˈfens/", "vi": "buổi bảo vệ luận văn", "col": "prepare for a thesis defence", "ex": "He spent two weeks to prepare for a thesis defence in front of three teachers.", "exv": "Anh ấy dành hai tuần chuẩn bị cho buổi bảo vệ luận văn trước ba thầy cô."},
+{"w": "research grant", "ipa": "/rɪˈsɜːtʃ ɡrɑːnt/", "vi": "khoản tài trợ nghiên cứu", "col": "apply for a research grant", "ex": "The team will apply for a research grant to buy lab equipment.", "exv": "Nhóm sẽ xin tài trợ nghiên cứu để mua thiết bị phòng thí nghiệm."},
+{"w": "graduation rate", "ipa": "/ˌɡrædʒuˈeɪʃn reɪt/", "vi": "tỷ lệ tốt nghiệp", "col": "a high graduation rate", "ex": "A high graduation rate often means strong student support at the university.", "exv": "Tỷ lệ tốt nghiệp cao thường nghĩa là trường hỗ trợ sinh viên tốt."},
+{"w": "campus life", "ipa": "/ˈkæmpəs laɪf/", "vi": "đời sống trong trường", "col": "campus life for new students", "ex": "Campus life for new students is easier when clubs welcome them in week one.", "exv": "Đời sống trong trường với sinh viên mới dễ hơn khi câu lạc bộ chào đón họ ngay tuần đầu."},
+{"w": "exchange programme", "ipa": "/ɪksˈtʃeɪndʒ ˈprəʊɡræm/", "vi": "chương trình trao đổi", "col": "join an exchange programme", "ex": "She wants to join an exchange programme and study abroad for one term.", "exv": "Cô ấy muốn tham gia chương trình trao đổi và học ở nước ngoài một học kỳ."},
+{"w": "academic calendar", "ipa": "/ˌækəˈdemɪk ˈkælɪndə(r)/", "vi": "lịch học thuật", "col": "check the academic calendar", "ex": "Always check the academic calendar before you book a holiday during term time.", "exv": "Luôn kiểm tra lịch học thuật trước khi đặt kỳ nghỉ trong học kỳ."},
+{"w": "entrance exam", "ipa": "/ˈentrəns ɪɡˈzæm/", "vi": "kỳ thi đầu vào", "col": "pass the entrance exam", "ex": "To study medicine, he must pass the entrance exam with a very high score.", "exv": "Để học y khoa, anh ấy phải đỗ kỳ thi đầu vào với điểm rất cao."},
+{"w": "lifelong learning", "ipa": "/ˈlaɪflɒŋ ˈlɜːnɪŋ/", "vi": "học tập suốt đời", "col": "a habit of lifelong learning", "ex": "A habit of lifelong learning helps workers stay useful when jobs change.", "exv": "Thói quen học tập suốt đời giúp người lao động vẫn hữu ích khi việc làm thay đổi."}
+]
+},
+{
+"topic": "Thành phố và giao thông bền vững",
+"theme": "Cities and Transport - Thành phố và giao thông",
+"band": "Band 7.0",
+"cards": [
+{"w": "urban planning", "ipa": "/ˈɜːbən ˈplænɪŋ/", "vi": "quy hoạch đô thị", "col": "good urban planning", "ex": "Good urban planning puts parks, schools and shops within walking distance.", "exv": "Quy hoạch đô thị tốt đặt công viên, trường học và cửa hàng trong tầm đi bộ."},
+{"w": "congestion charge", "ipa": "/kənˈdʒestʃən tʃɑːdʒ/", "vi": "phí chống tắc đường", "col": "pay a congestion charge", "ex": "Drivers must pay a congestion charge to enter the city centre at peak times.", "exv": "Tài xế phải trả phí chống tắc đường để vào trung tâm thành phố giờ cao điểm."},
+{"w": "cycle lane", "ipa": "/ˈsaɪkl leɪn/", "vi": "làn đường xe đạp", "col": "a safe cycle lane", "ex": "A safe cycle lane encourages more people to ride to work.", "exv": "Làn đường xe đạp an toàn khuyến khích nhiều người đạp xe đi làm."},
+{"w": "pedestrian zone", "ipa": "/pəˈdestriən zəʊn/", "vi": "khu vực đi bộ", "col": "a pedestrian zone in the old town", "ex": "A pedestrian zone in the old town is full of cafes and street music.", "exv": "Khu vực đi bộ ở phố cổ đầy quán cà phê và nhạc đường phố."},
+{"w": "electric bus", "ipa": "/ɪˈlektrɪk bʌs/", "vi": "xe buýt điện", "col": "ride an electric bus", "ex": "I ride an electric bus to work, and it is quieter than the old diesel bus.", "exv": "Tôi đi xe buýt điện đi làm, và nó êm hơn xe buýt dầu cũ."},
+{"w": "car sharing", "ipa": "/kɑː(r) ˈʃeərɪŋ/", "vi": "dùng chung xe hơi", "col": "a car sharing scheme", "ex": "A car sharing scheme lets neighbours use one car instead of owning three.", "exv": "Chương trình dùng chung xe hơi cho hàng xóm dùng một xe thay vì sở hữu ba xe."},
+{"w": "traffic flow", "ipa": "/ˈtræfɪk fləʊ/", "vi": "luồng giao thông", "col": "improve traffic flow", "ex": "Better traffic lights can improve traffic flow without building new roads.", "exv": "Đèn giao thông tốt hơn có thể cải thiện luồng giao thông mà không cần xây đường mới."},
+{"w": "smart city", "ipa": "/smɑːt ˈsɪti/", "vi": "thành phố thông minh", "col": "build a smart city", "ex": "To build a smart city, planners use live data on traffic, water and power.", "exv": "Để xây thành phố thông minh, nhà quy hoạch dùng dữ liệu trực tiếp về giao thông, nước và điện."},
+{"w": "city centre", "ipa": "/ˈsɪti ˈsentə(r)/", "vi": "trung tâm thành phố", "col": "live near the city centre", "ex": "Many students live near the city centre because buses run late there.", "exv": "Nhiều sinh viên sống gần trung tâm thành phố vì xe buýt chạy muộn ở đó."},
+{"w": "suburban area", "ipa": "/səˈbɜːbən ˈeəriə/", "vi": "khu vực ngoại ô", "col": "a quiet suburban area", "ex": "A quiet suburban area suits families who want a garden and less noise.", "exv": "Khu vực ngoại ô yên tĩnh hợp với gia đình muốn có vườn và ít ồn."},
+{"w": "housing shortage", "ipa": "/ˈhaʊzɪŋ ˈʃɔːtɪdʒ/", "vi": "sự thiếu nhà ở", "col": "a serious housing shortage", "ex": "A serious housing shortage pushes rents up faster than wages.", "exv": "Thiếu nhà ở nghiêm trọng đẩy tiền thuê tăng nhanh hơn lương."},
+{"w": "green belt", "ipa": "/ɡriːn belt/", "vi": "vành đai xanh", "col": "protect the green belt", "ex": "The council promised to protect the green belt around the city from new building.", "exv": "Hội đồng hứa bảo vệ vành đai xanh quanh thành phố khỏi xây dựng mới."},
+{"w": "public square", "ipa": "/ˈpʌblɪk skweə(r)/", "vi": "quảng trường công cộng", "col": "meet in the public square", "ex": "Friends often meet in the public square before walking to the market.", "exv": "Bạn bè thường gặp nhau ở quảng trường công cộng trước khi đi bộ ra chợ."},
+{"w": "peak-hour traffic", "ipa": "/piːk aʊə(r) ˈtræfɪk/", "vi": "giao thông giờ cao điểm", "col": "avoid peak-hour traffic", "ex": "Leave home early if you want to avoid peak-hour traffic on the main road.", "exv": "Hãy rời nhà sớm nếu muốn tránh giao thông giờ cao điểm trên đường chính."},
+{"w": "metro line", "ipa": "/ˈmetrəʊ laɪn/", "vi": "tuyến tàu điện ngầm", "col": "a new metro line", "ex": "A new metro line will cut the trip from the suburbs to the centre to 20 minutes.", "exv": "Tuyến tàu điện ngầm mới sẽ rút chuyến đi từ ngoại ô vào trung tâm còn 20 phút."},
+{"w": "bus network", "ipa": "/bʌs ˈnetwɜːk/", "vi": "mạng lưới xe buýt", "col": "a reliable bus network", "ex": "A reliable bus network matters more than one fast line alone.", "exv": "Mạng lưới xe buýt đáng tin quan trọng hơn chỉ một tuyến nhanh."},
+{"w": "walkability", "ipa": "/ˌwɔːkəˈbɪləti/", "vi": "sự thuận tiện đi bộ", "col": "improve walkability", "ex": "Wide pavements and shade trees improve walkability in hot cities.", "exv": "Vỉa hè rộng và cây bóng mát cải thiện sự thuận tiện đi bộ ở thành phố nóng."},
+{"w": "urban renewal", "ipa": "/ˈɜːbən rɪˈnjuːəl/", "vi": "sự đổi mới đô thị", "col": "an urban renewal project", "ex": "An urban renewal project turned an old factory area into homes and studios.", "exv": "Dự án đổi mới đô thị biến khu nhà máy cũ thành nhà ở và xưởng làm việc."},
+{"w": "air quality", "ipa": "/eə(r) ˈkwɒləti/", "vi": "chất lượng không khí", "col": "monitor air quality", "ex": "Schools now monitor air quality and keep children inside on bad days.", "exv": "Trường học nay theo dõi chất lượng không khí và giữ trẻ trong nhà vào ngày xấu."},
+{"w": "noise pollution", "ipa": "/nɔɪz pəˈluːʃn/", "vi": "ô nhiễm tiếng ồn", "col": "reduce noise pollution", "ex": "Double windows help reduce noise pollution for flats near busy roads.", "exv": "Cửa sổ hai lớp giúp giảm ô nhiễm tiếng ồn cho căn hộ gần đường đông."}
+]
+},
+{
+"topic": "Truyền thông và xã hội số",
+"theme": "Digital Society - Xã hội số",
+"band": "Band 7.0",
+"cards": [
+{"w": "digital literacy", "ipa": "/ˈdɪdʒɪtl ˈlɪtərəsi/", "vi": "năng lực số", "col": "teach digital literacy", "ex": "Schools should teach digital literacy so children can judge online news.", "exv": "Trường học nên dạy năng lực số để trẻ đánh giá được tin tức trực tuyến."},
+{"w": "misinformation", "ipa": "/ˌmɪsɪnfəˈmeɪʃn/", "vi": "thông tin sai lệch", "col": "spread misinformation online", "ex": "False health claims spread misinformation online very fast.", "exv": "Lời khẳng định sức khỏe sai lan truyền thông tin sai lệch trực tuyến rất nhanh."},
+{"w": "fact-checking", "ipa": "/fækt ˈtʃekɪŋ/", "vi": "sự kiểm chứng sự thật", "col": "do fact-checking first", "ex": "Do fact-checking first before you share a shocking story.", "exv": "Hãy kiểm chứng sự thật trước khi chia sẻ một câu chuyện gây sốc."},
+{"w": "social media influence", "ipa": "/ˈsəʊʃl ˈmiːdiə ˈɪnfluəns/", "vi": "ảnh hưởng của mạng xã hội", "col": "social media influence on teens", "ex": "Social media influence on teens worries many parents and teachers.", "exv": "Ảnh hưởng của mạng xã hội lên thanh thiếu niên khiến nhiều phụ huynh và giáo viên lo."},
+{"w": "digital footprint", "ipa": "/ˈdɪdʒɪtl ˈfʊtprɪnt/", "vi": "dấu vết số", "col": "your digital footprint", "ex": "Your digital footprint stays online long after you delete a post.", "exv": "Dấu vết số của bạn còn ở trực tuyến lâu sau khi bạn xóa bài đăng."},
+{"w": "echo chamber", "ipa": "/ˈekəʊ ˈtʃeɪmbə(r)/", "vi": "buồng vang (chỉ nghe ý giống mình)", "col": "stuck in an echo chamber", "ex": "If you only follow people who agree with you, you live in an echo chamber.", "exv": "Nếu bạn chỉ theo dõi người đồng ý với mình, bạn sống trong buồng vang."},
+{"w": "viral content", "ipa": "/ˈvaɪrəl ˈkɒntent/", "vi": "nội dung lan truyền mạnh", "col": "create viral content", "ex": "Short, funny videos often become viral content overnight.", "exv": "Video ngắn, hài hước thường thành nội dung lan truyền mạnh chỉ sau một đêm."},
+{"w": "online community", "ipa": "/ˈɒnlaɪn kəˈmjuːnəti/", "vi": "cộng đồng trực tuyến", "col": "join an online community", "ex": "She joined an online community of learners who practise English daily.", "exv": "Cô ấy tham gia cộng đồng trực tuyến của người học luyện tiếng Anh hằng ngày."},
+{"w": "digital divide", "ipa": "/ˈdɪdʒɪtl dɪˈvaɪd/", "vi": "khoảng cách số", "col": "bridge the digital divide", "ex": "Cheap phones and free wifi can help bridge the digital divide.", "exv": "Điện thoại rẻ và wifi miễn phí có thể giúp thu hẹp khoảng cách số."},
+{"w": "cyberbullying", "ipa": "/ˈsaɪbəbʊliɪŋ/", "vi": "bắt nạt trực tuyến", "col": "stop cyberbullying", "ex": "Schools must act fast to stop cyberbullying and support the victim.", "exv": "Trường học phải hành động nhanh để chặn bắt nạt trực tuyến và hỗ trợ nạn nhân."},
+{"w": "data protection", "ipa": "/ˈdeɪtə prəˈtekʃn/", "vi": "bảo vệ dữ liệu", "col": "strong data protection rules", "ex": "Strong data protection rules limit what firms can do with your photos.", "exv": "Quy tắc bảo vệ dữ liệu chặt hạn chế điều công ty được làm với ảnh của bạn."},
+{"w": "media literacy", "ipa": "/ˈmiːdiə ˈlɪtərəsi/", "vi": "năng lực truyền thông", "col": "build media literacy", "ex": "Lessons that build media literacy teach students to spot biased reports.", "exv": "Bài học xây năng lực truyền thông dạy học sinh nhận ra bản tin thiên lệch."},
+{"w": "information overload", "ipa": "/ˌɪnfəˈmeɪʃn ˈəʊvələʊd/", "vi": "quá tải thông tin", "col": "suffer from information overload", "ex": "Too many alerts can make workers suffer from information overload.", "exv": "Quá nhiều thông báo có thể khiến người lao động bị quá tải thông tin."},
+{"w": "virtual identity", "ipa": "/ˈvɜːtʃuəl aɪˈdentəti/", "vi": "danh tính ảo", "col": "a separate virtual identity", "ex": "Some gamers keep a separate virtual identity that differs from real life.", "exv": "Một số game thủ giữ danh tính ảo riêng, khác với đời thật."},
+{"w": "online reputation", "ipa": "/ˈɒnlaɪn ˌrepjuˈteɪʃn/", "vi": "danh tiếng trực tuyến", "col": "protect your online reputation", "ex": "Think before you post, because one rude comment can harm your online reputation.", "exv": "Hãy nghĩ trước khi đăng, vì một bình luận thô lỗ có thể hại danh tiếng trực tuyến của bạn."},
+{"w": "digital citizenship", "ipa": "/ˈdɪdʒɪtl ˈsɪtɪzənʃɪp/", "vi": "công dân số", "col": "lessons in digital citizenship", "ex": "Lessons in digital citizenship teach respect, honesty and safety online.", "exv": "Bài học về công dân số dạy sự tôn trọng, trung thực và an toàn trực tuyến."},
+{"w": "content creator", "ipa": "/ˈkɒntent kriˈeɪtə(r)/", "vi": "người sáng tạo nội dung", "col": "a popular content creator", "ex": "A popular content creator can earn money from short teaching videos.", "exv": "Người sáng tạo nội dung nổi tiếng có thể kiếm tiền từ video dạy ngắn."},
+{"w": "deepfake", "ipa": "/ˈdiːpfeɪk/", "vi": "video giả mạo sâu", "col": "a deepfake video", "ex": "A deepfake video can make a famous person seem to say things they never said.", "exv": "Video giả mạo sâu có thể khiến người nổi tiếng dường như nói điều họ chưa từng nói."},
+{"w": "algorithm transparency", "ipa": "/ˈælɡərɪðəm trænsˈpærənsi/", "vi": "sự minh bạch thuật toán", "col": "demand algorithm transparency", "ex": "Users now demand algorithm transparency from big video platforms.", "exv": "Người dùng nay yêu cầu minh bạch thuật toán từ các nền tảng video lớn."},
+{"w": "screen dependency", "ipa": "/skriːn dɪˈpendənsi/", "vi": "sự phụ thuộc màn hình", "col": "reduce screen dependency", "ex": "A phone-free evening helps families reduce screen dependency step by step.", "exv": "Buổi tối không điện thoại giúp gia đình giảm phụ thuộc màn hình từng bước."}
+]
+}
+]);
+CONTENT.listening.push.apply(CONTENT.listening, [
+{"section": "Section 4", "topic": "Rạn san hô và đa dạng sinh học biển", "band": "Band 7.5+", "text": "Coral reefs cover less than one percent of the ocean floor, yet they support about a quarter of all marine species. A single reef can shelter thousands of fish, crabs, and molluscs, and it protects nearby coasts by breaking large waves before they reach the shore. When sea water becomes warmer, corals expel the tiny algae that feed them, and the reef turns white in a process called bleaching. If the heat lasts only a short time, the reef may recover, but repeated bleaching weakens it and leaves less food for the animals that depend on it. Scientists now grow coral fragments in underwater nurseries and return them to damaged reefs, hoping to rebuild the living structure faster than nature alone could manage. Local fishing rules also matter, because overfishing removes the fish that clean algae from coral and keep the reef in balance."},
+{"section": "Section 4", "topic": "Trí tuệ nhân tạo và thị trường việc làm", "band": "Band 7.5+", "text": "The debate about artificial intelligence and work often swings between fear and excitement, but the evidence points to a more mixed picture. Machines now handle routine tasks such as sorting documents, checking forms, and answering simple questions, which frees human workers for jobs that need judgement, empathy, and creativity. At the same time, whole roles built only on repetition are shrinking, and workers without new training may find it harder to move into better-paid work. Economists therefore argue that education systems should teach adaptable skills, such as problem solving and clear communication, rather than narrow facts that a machine can learn faster. Employers also share responsibility, because short retraining courses inside firms can help older workers shift to new roles instead of leaving the labour market altogether. The fairest outcome will depend less on the technology itself than on the policies that surround it."},
+{"section": "Section 4", "topic": "Đảo nhiệt đô thị", "band": "Band 7.5+", "text": "On a hot summer night, the centre of a large city can be five degrees warmer than the countryside around it, a gap known as the urban heat island effect. Concrete, asphalt, and glass absorb heat during the day and release it slowly after dark, while the lack of trees means there is little shade and almost no cooling from leaves. This extra heat is not merely uncomfortable, because it raises the risk of heatstroke for elderly people and increases the demand for air conditioning, which in turn produces more waste heat. Planners have begun to respond with green roofs, tree-lined streets, and lighter building materials that reflect rather than store sunlight. Water features and small parks can also help, since evaporation cools the air in much the same way that sweat cools the skin. A cooler city is therefore a design choice, not an accident of geography."},
+{"section": "Section 4", "topic": "Khảo cổ học dưới nước", "band": "Band 7.5+", "text": "Underwater archaeology studies what the sea has preserved and what it has hidden, from sunken ships to flooded settlements that once stood on dry land. Unlike a site on land, a wreck lies in darkness and cold water, where low oxygen can protect wood, rope, and even paper for centuries. Divers map the site with photographs and careful measurements before anything is moved, because the position of each object tells a story about how the ship sank or how the cargo was stored. Raising artefacts is only the second step, since wood that has soaked for hundreds of years may collapse within hours if it dries in open air. Conservators therefore keep finds wet and treat them slowly, sometimes for years, before they can be shown in a museum. Each successful project reminds us that history does not end at the shoreline."},
+{"section": "Section 4", "topic": "Trí nhớ dài hạn và việc học", "band": "Band 7.5+", "text": "Long-term memory does not work like a video recording, because every time we recall an event we partly rebuild it from fragments. This rebuilding explains why two witnesses can remember the same accident differently, and why a memory can grow more confident even as its details change. For learners, the lesson is practical rather than abstract, since testing yourself forces the brain to rebuild the material and strengthens the path to it. Spreading practice over several days works better than studying for six hours in one night, because sleep gives the brain time to consolidate what was practised. Teachers can use this knowledge by returning to old topics briefly at the start of each lesson, instead of teaching each unit once and never revisiting it. In short, forgetting is not the enemy of learning, because the effort of remembering is what makes knowledge last."},
+{"section": "Section 4", "topic": "Năng lượng hạt nhân và an toàn", "band": "Band 7.5+", "text": "Nuclear power divides public opinion more sharply than almost any other energy source, because its benefits and its risks both seem unusually large. A single plant can supply electricity for a whole city without producing carbon dioxide during operation, which makes it attractive to countries trying to cut emissions quickly. Yet the same plant produces waste that stays dangerous for thousands of years, and a serious accident, however rare, can force thousands of people from their homes. Modern designs try to reduce these risks with passive safety systems that shut the reactor down without human action or external power. Supporters argue that these designs, combined with strict inspection, make nuclear power safer than coal, which harms health every day through air pollution. Critics reply that cost, waste, and public trust remain unsolved, and that cheaper solar and wind power now offer a simpler path."},
+{"section": "Section 1", "topic": "Đặt vé xem phim", "band": "Band 2.0", "text": "A: Good evening. I would like to book two tickets for the film at 7 o'clock, please. B: Certainly. Do you want seats at the back? A: Yes, please. B: There are two seats in row H, numbers 12 and 13. Is that OK? A: Yes. How much are the tickets? B: Each ticket costs 90000 dong, so two tickets cost 180000 dong. A: Can I pay by card? B: Yes, of course. Please arrive early. A: Thank you very much. B: You are welcome. Enjoy the film!"},
+{"section": "Section 1", "topic": "Mua thuốc ở hiệu thuốc", "band": "Band 2.0", "text": "A: Good morning. I have a headache and a sore throat. Can you help me? B: Of course. How long have you felt like this? A: Since yesterday evening. B: This medicine is good for headaches. Take one tablet twice a day. A: How much is it? B: It costs 45000 dong. A: I would like some cough sweets as well. B: Here you are. Drink a lot of water and rest at home today. A: Thank you for your help. B: You are welcome. Get well soon!"},
+{"section": "Section 1", "topic": "Đăng ký thẻ thành viên siêu thị", "band": "Band 2.0", "text": "A: Good afternoon. I would like to get a member card, please. B: Certainly. May I have your name and phone number? A: My name is Lan Anh, and my phone number is 0987654321. B: Thank you. The card is free, and you will get 5 percent off every Friday. A: That sounds good. Can I use the card today? B: Yes, you can use it straight away at the checkout. A: Great. Thank you very much. B: You are welcome. Have a nice day!"},
+{"section": "Section 2", "topic": "Thông báo của tiệm cắt tóc Sunny", "band": "Band 2.0", "text": "Good morning, and welcome to Sunny Hair Salon. Our salon opens at 9 o'clock in the morning and closes at 8 o'clock in the evening. We are open every day except Monday. To book an appointment, please call us or come to the salon on Flower Street. A haircut costs 80000 dong, and washing your hair costs 30000 dong extra. On Saturday and Sunday, please book one day before, because the salon is very busy. Thank you for choosing Sunny Hair Salon!"},
+{"section": "Section 2", "topic": "Hỏi đường đến ga tàu", "band": "Band 2.0", "text": "A: Excuse me, how can I get to the train station? B: Go straight along this road for about five minutes. A: Do I turn left at the end of the road? B: Yes, turn left, and then walk past the small market. A: Is the station far from the market? B: No, it is near. After the market, turn right, and you will see the station. A: How long does it take on foot? B: About ten minutes. A: Thank you. B: You are welcome. Have a safe trip!"},
+{"section": "Section 1", "topic": "Mua vé xe buýt tháng", "band": "Band 2.0", "text": "A: Good morning. I would like to buy a monthly bus ticket, please. B: Certainly. Do you travel to school or to work? A: I travel to school every day, from Monday to Friday. B: A student monthly ticket costs 100000 dong. May I see your student card? A: Yes, here it is. B: Thank you. This ticket is valid for one month. A: Thank you. B: You are welcome!"},
+{"section": "Section 1", "topic": "Chào buổi chiều ở lớp học", "band": "Band 0", "text": "A: Good afternoon, class! B: Good afternoon, teacher! A: How are you today? B: We are fine, thank you. And you? A: I am very well, thank you. Please sit down. B: Yes, teacher. A: Let us start our lesson now. B: OK, teacher!"},
+{"section": "Section 1", "topic": "Tôi là học sinh mới", "band": "Band 0", "text": "A: Hello! What is your name? B: Hello! My name is Minh. A: Nice to meet you, Minh. I am Lan. B: Nice to meet you too, Lan. A: Are you a new student? B: Yes, I am. A: Welcome to our class! B: Thank you very much!"},
+{"section": "Section 1", "topic": "Đếm từ một đến mười", "band": "Band 0", "text": "Teacher: Let us count together. One, two, three, four, five. Class: One, two, three, four, five. Teacher: Good! Now six, seven, eight, nine, ten. Class: Six, seven, eight, nine, ten. Teacher: Very good! Count again, please. Class: One, two, three, four, five, six, seven, eight, nine, ten!"},
+{"section": "Section 1", "topic": "Hôm nay là thứ Hai", "band": "Band 0", "text": "A: Hello, Nam. What day is it today? B: Today is Monday. A: Is it Monday today? B: Yes, it is. Tomorrow is Tuesday. A: What time is it now? B: It is 8 o'clock in the morning. A: It is time for school! B: Yes! Let us go!"}
+]);
+CONTENT.zhVocab.push.apply(CONTENT.zhVocab, [
+{
+"topic": "Công việc văn phòng — Làm việc trong văn phòng",
+"hsk": "HSK4",
+"hskNote": "Mức đặt theo chủ đề công việc văn phòng cấp 4; tài liệu HSK tham khảo không có bảng từ từng cấp nên nhãn này là mức đặt chủ đề, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+"cards": [
+{"han": "会议室", "pinyin": "huìyìshì", "vi": "phòng họp", "col": "在会议室开会", "ex": "我们在会议室开会。", "exv": "Chúng tôi họp trong phòng họp."},
+{"han": "复印", "pinyin": "fùyìn", "vi": "photocopy", "col": "复印文件", "ex": "请帮我复印这份文件。", "exv": "Hãy giúp tôi photocopy tài liệu này."},
+{"han": "打印", "pinyin": "dǎyìn", "vi": "in (tài liệu)", "col": "打印报告", "ex": "他先打印报告，再交给经理。", "exv": "Anh ấy in báo cáo trước, rồi giao cho giám đốc."},
+{"han": "文件", "pinyin": "wénjiàn", "vi": "tài liệu, văn kiện", "col": "整理文件", "ex": "下班前要整理好文件。", "exv": "Trước khi tan làm phải sắp xếp xong tài liệu."},
+{"han": "总结", "pinyin": "zǒngjié", "vi": "tổng kết", "col": "写总结", "ex": "这个星期我要写一份总结。", "exv": "Tuần này tôi phải viết một bản tổng kết."},
+{"han": "计划", "pinyin": "jìhuà", "vi": "kế hoạch", "col": "做计划", "ex": "我们先做计划，再开始工作。", "exv": "Chúng tôi làm kế hoạch trước, rồi mới bắt đầu làm việc."},
+{"han": "商量", "pinyin": "shāngliang", "vi": "bàn bạc", "col": "跟同事商量", "ex": "这个办法要跟同事商量一下。", "exv": "Cách này phải bàn bạc với đồng nghiệp một chút."},
+{"han": "批准", "pinyin": "pīzhǔn", "vi": "phê duyệt", "col": "经理批准", "ex": "经理批准了这个计划。", "exv": "Giám đốc đã phê duyệt kế hoạch này."},
+{"han": "负责", "pinyin": "fùzé", "vi": "phụ trách", "col": "负责这个任务", "ex": "小王负责这个任务。", "exv": "Tiểu Vương phụ trách nhiệm vụ này."},
+{"han": "任务", "pinyin": "rènwu", "vi": "nhiệm vụ", "col": "完成任务", "ex": "今天必须完成这个任务。", "exv": "Hôm nay phải hoàn thành nhiệm vụ này."},
+{"han": "进度", "pinyin": "jìndù", "vi": "tiến độ", "col": "工作进度", "ex": "经理每天问工作进度。", "exv": "Giám đốc mỗi ngày hỏi tiến độ công việc."},
+{"han": "截止日期", "pinyin": "jiézhǐ rìqī", "vi": "hạn chót", "col": "记住截止日期", "ex": "请记住报告的截止日期。", "exv": "Hãy nhớ hạn chót của báo cáo."},
+{"han": "汇报", "pinyin": "huìbào", "vi": "báo cáo (trình bày)", "col": "向经理汇报", "ex": "星期五向经理汇报工作。", "exv": "Thứ Sáu báo cáo công việc với giám đốc."},
+{"han": "审批", "pinyin": "shěnpī", "vi": "xét duyệt", "col": "等审批", "ex": "这份文件还在等审批。", "exv": "Tài liệu này vẫn đang chờ xét duyệt."},
+{"han": "预算", "pinyin": "yùsuàn", "vi": "ngân sách dự kiến", "col": "做预算", "ex": "活动开始前要先做预算。", "exv": "Trước khi bắt đầu hoạt động phải làm ngân sách dự kiến trước."},
+{"han": "部门", "pinyin": "bùmén", "vi": "phòng ban", "col": "我们部门", "ex": "我们部门有十个人。", "exv": "Phòng ban chúng tôi có mười người."},
+{"han": "经理", "pinyin": "jīnglǐ", "vi": "giám đốc, quản lý", "col": "请问经理", "ex": "这个问题请问经理。", "exv": "Vấn đề này hãy hỏi giám đốc."},
+{"han": "秘书", "pinyin": "mìshū", "vi": "thư ký", "col": "经理的秘书", "ex": "经理的秘书帮他安排会议。", "exv": "Thư ký của giám đốc giúp anh ấy sắp xếp cuộc họp."},
+{"han": "协议", "pinyin": "xiéyì", "vi": "thỏa thuận", "col": "签协议", "ex": "两家公司签了协议。", "exv": "Hai công ty đã ký thỏa thuận."},
+{"han": "安排", "pinyin": "ānpái", "vi": "sắp xếp", "col": "安排时间", "ex": "秘书帮我安排时间见客户。", "exv": "Thư ký giúp tôi sắp xếp thời gian gặp khách hàng."}
+]
+},
+{
+"topic": "Sức khỏe và bệnh viện — Khám bệnh và chăm sóc",
+"hsk": "HSK4",
+"hskNote": "Mức đặt theo chủ đề sức khỏe và bệnh viện cấp 4; tài liệu HSK tham khảo không có bảng từ từng cấp nên nhãn này là mức đặt chủ đề, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+"cards": [
+{"han": "检查", "pinyin": "jiǎnchá", "vi": "kiểm tra", "col": "做检查", "ex": "医生先做检查，再开药。", "exv": "Bác sĩ kiểm tra trước, rồi mới kê thuốc."},
+{"han": "治疗", "pinyin": "zhìliáo", "vi": "điều trị", "col": "接受治疗", "ex": "他住院接受治疗。", "exv": "Anh ấy nằm viện để điều trị."},
+{"han": "症状", "pinyin": "zhèngzhuàng", "vi": "triệu chứng", "col": "有什么症状", "ex": "你有什么症状？请告诉医生。", "exv": "Bạn có triệu chứng gì? Hãy nói với bác sĩ."},
+{"han": "诊断", "pinyin": "zhěnduàn", "vi": "chẩn đoán", "col": "医生的诊断", "ex": "医生的诊断是感冒。", "exv": "Chẩn đoán của bác sĩ là cảm lạnh."},
+{"han": "处方", "pinyin": "chǔfāng", "vi": "đơn thuốc", "col": "拿处方", "ex": "拿着处方去药房买药。", "exv": "Cầm đơn thuốc ra hiệu thuốc mua thuốc."},
+{"han": "药房", "pinyin": "yàofáng", "vi": "hiệu thuốc", "col": "医院的药房", "ex": "医院的药房在二楼。", "exv": "Hiệu thuốc của bệnh viện ở tầng 2."},
+{"han": "手术", "pinyin": "shǒushù", "vi": "phẫu thuật", "col": "做手术", "ex": "他明天要做手术。", "exv": "Ngày mai anh ấy phải phẫu thuật."},
+{"han": "病房", "pinyin": "bìngfáng", "vi": "phòng bệnh", "col": "安静的病房", "ex": "病房很安静，适合休息。", "exv": "Phòng bệnh rất yên tĩnh, thích hợp để nghỉ ngơi."},
+{"han": "体检", "pinyin": "tǐjiǎn", "vi": "khám sức khỏe tổng quát", "col": "每年体检", "ex": "公司每年安排员工体检。", "exv": "Công ty mỗi năm sắp xếp cho nhân viên khám sức khỏe."},
+{"han": "血压", "pinyin": "xuèyā", "vi": "huyết áp", "col": "量血压", "ex": "护士先帮他量血压。", "exv": "Y tá đo huyết áp cho anh ấy trước."},
+{"han": "过敏", "pinyin": "guòmǐn", "vi": "dị ứng", "col": "对花粉过敏", "ex": "她对花粉过敏，春天很难受。", "exv": "Cô ấy dị ứng phấn hoa, mùa xuân rất khó chịu."},
+{"han": "伤口", "pinyin": "shāngkǒu", "vi": "vết thương", "col": "伤口很疼", "ex": "伤口很疼，要小心。", "exv": "Vết thương rất đau, phải cẩn thận."},
+{"han": "发炎", "pinyin": "fāyán", "vi": "viêm, sưng viêm", "col": "伤口发炎", "ex": "伤口发炎了，要去看医生。", "exv": "Vết thương bị viêm rồi, phải đi khám bác sĩ."},
+{"han": "打针", "pinyin": "dǎzhēn", "vi": "tiêm", "col": "去打针", "ex": "孩子怕打针，妈妈安慰他。", "exv": "Đứa trẻ sợ tiêm, mẹ an ủi nó."},
+{"han": "输液", "pinyin": "shūyè", "vi": "truyền dịch", "col": "输液三天", "ex": "医生让他输液三天。", "exv": "Bác sĩ bảo anh ấy truyền dịch ba ngày."},
+{"han": "护理", "pinyin": "hùlǐ", "vi": "chăm sóc (bệnh nhân)", "col": "护理病人", "ex": "护士认真护理病人。", "exv": "Y tá chăm sóc bệnh nhân chu đáo."},
+{"han": "营养", "pinyin": "yíngyǎng", "vi": "dinh dưỡng", "col": "注意营养", "ex": "生病的时候要注意营养。", "exv": "Lúc ốm phải chú ý dinh dưỡng."},
+{"han": "心理", "pinyin": "xīnlǐ", "vi": "tâm lý", "col": "心理压力", "ex": "工作太多，心理压力很大。", "exv": "Việc nhiều quá nên áp lực tâm lý rất lớn."},
+{"han": "预防", "pinyin": "yùfáng", "vi": "phòng ngừa", "col": "预防感冒", "ex": "多运动可以预防感冒。", "exv": "Tập thể dục nhiều có thể phòng ngừa cảm lạnh."},
+{"han": "复查", "pinyin": "fùchá", "vi": "tái khám", "col": "下周复查", "ex": "医生让他下周来复查。", "exv": "Bác sĩ bảo anh ấy tuần sau đến tái khám."}
+]
+}
+]);
+ZH_GRAMMAR.push.apply(ZH_GRAMMAR, [
+{
+"id": "s4-suiran", "stage": 4, "title": "虽然…但是 — tuy… nhưng…",
+"hook": "“虽然很累，但是我还想学” — mệt thì mệt, nhưng vẫn muốn học: tuy… nhưng… nói hai mặt trái ngược.",
+"examples": [
+"虽然今天下雨，但是我们还是去公园。(Suīrán jīntiān xià yǔ, dànshì wǒmen háishi qù gōngyuán.) — Tuy hôm nay mưa, nhưng chúng tôi vẫn đi công viên.",
+"虽然他很累，但是他没有休息。(Suīrán tā hěn lèi, dànshì tā méiyǒu xiūxi.) — Tuy anh ấy rất mệt, nhưng anh ấy không nghỉ.",
+"虽然这件衣服很贵，但是我很喜欢。(Suīrán zhè jiàn yīfu hěn guì, dànshì wǒ hěn xǐhuan.) — Tuy chiếc áo này rất đắt, nhưng tôi rất thích.",
+"虽然工作很难，但是大家都很努力。(Suīrán gōngzuò hěn nán, dànshì dàjiā dōu hěn nǔlì.) — Tuy công việc rất khó, nhưng mọi người đều rất cố gắng."
+],
+"speak": "虽然今天下雨，但是我们还是去公园。虽然他很累，但是他没有休息。虽然这件衣服很贵，但是我很喜欢。虽然工作很难，但是大家都很努力。",
+"rule": "虽然 nêu điều trái ngược ở vế đầu, 但是 nêu ý chính ở vế sau. Hai chữ thường đi thành cặp, 但是 đứng đầu vế sau.",
+"tip": "Hãy nhớ: 虽然 là “tuy”, 但是 là “nhưng” — nói điều khó trước, rồi nói quyết định sau.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+"quiz": [
+{"q": "Điền chỗ trống: 虽然今天很忙，___ 我还是来了。", "o": ["但是", "如果", "而且", "因为"], "a": 0, "why": "虽然 đi với 但是: tuy bận, nhưng vẫn đến."},
+{"q": "Câu nào dùng 虽然…但是 đúng?", "o": ["虽然下雨，但是我们去公园", "虽然下雨，如果我们去公园", "虽然下雨，而且我们去公园", "虽然下雨，因为我们去公园"], "a": 0, "why": "虽然…但是 là cặp nói hai mặt trái ngược."},
+{"q": "“虽然很贵，但是我很喜欢” nghĩa là gì?", "o": ["Tuy đắt nhưng tôi rất thích", "Vì đắt nên tôi thích", "Nếu đắt thì tôi thích", "Không những đắt mà còn thích"], "a": 0, "why": "虽然 = tuy, 但是 = nhưng: tuy đắt nhưng rất thích."}
+]
+},
+{
+"id": "s4-budan", "stage": 4, "title": "不但…而且 — không những… mà còn…",
+"hook": "“他不但会唱歌，而且会跳舞” — không những hát hay, mà còn nhảy giỏi: một người có hai điểm tốt.",
+"examples": [
+"他不但会唱歌，而且会跳舞。(Tā búdàn huì chànggē, érqiě huì tiàowǔ.) — Anh ấy không những biết hát mà còn biết nhảy.",
+"这家饭馆不但便宜，而且很好吃。(Zhè jiā fànguǎn búdàn piányi, érqiě hěn hǎochī.) — Nhà hàng này không những rẻ mà còn rất ngon.",
+"她不但学习好，而且很热心。(Tā búdàn xuéxí hǎo, érqiě hěn rèxīn.) — Cô ấy không những học giỏi mà còn rất nhiệt tình.",
+"这个城市不但干净，而且很安静。(Zhège chéngshì búdàn gānjìng, érqiě hěn ānjìng.) — Thành phố này không những sạch mà còn rất yên tĩnh."
+],
+"speak": "他不但会唱歌，而且会跳舞。这家饭馆不但便宜，而且很好吃。她不但学习好，而且很热心。这个城市不但干净，而且很安静。",
+"rule": "不但 nêu điểm tốt thứ nhất, 而且 nêu điểm tốt thứ hai, và điểm sau thường mạnh hơn điểm trước. Hai chữ đi thành cặp.",
+"tip": "Hãy nhớ thứ tự: 不但 trước, 而且 sau — giống như “không những… mà còn…” trong tiếng Việt.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+"quiz": [
+{"q": "Điền chỗ trống: 她不但聪明，___ 很努力。", "o": ["而且", "但是", "如果", "因为"], "a": 0, "why": "不但 đi với 而且: không những thông minh mà còn chăm chỉ."},
+{"q": "Câu nào dùng 不但…而且 đúng?", "o": ["他不但会中文，而且会英文", "他不但会中文，但是会英文", "他不但会中文，如果会英文", "他不但会中文，因为会英文"], "a": 0, "why": "不但…而且 là cặp nói hai điểm tốt cùng lúc."}
+]
+},
+{
+"id": "s4-ruguo", "stage": 4, "title": "如果…就 — nếu… thì…",
+"hook": "“如果下雨，我们就不去” — nếu mưa thì không đi: đặt điều kiện trước, rồi nói kết quả sau.",
+"examples": [
+"如果明天下雨，我们就不去爬山。(Rúguǒ míngtiān xià yǔ, wǒmen jiù bú qù páshān.) — Nếu ngày mai mưa, chúng tôi sẽ không đi leo núi.",
+"如果你有时间，就帮我一下。(Rúguǒ nǐ yǒu shíjiān, jiù bāng wǒ yí xià.) — Nếu bạn có thời gian thì giúp tôi một chút.",
+"如果他不来，我们就先开始。(Rúguǒ tā bù lái, wǒmen jiù xiān kāishǐ.) — Nếu anh ấy không đến, chúng tôi sẽ bắt đầu trước.",
+"如果身体不舒服，就早点儿休息。(Rúguǒ shēntǐ bù shūfu, jiù zǎo diǎnr xiūxi.) — Nếu cơ thể không khỏe thì nghỉ sớm một chút."
+],
+"speak": "如果明天下雨，我们就不去爬山。如果你有时间，就帮我一下。如果他不来，我们就先开始。如果身体不舒服，就早点儿休息。",
+"rule": "如果 nêu điều kiện ở vế đầu, 就 nêu kết quả ở vế sau. 就 thường đứng trước động từ của vế sau.",
+"tip": "Hãy nhớ: 如果 là “nếu”, 就 là “thì” — điều kiện chưa xảy ra, kết quả đi sau nó.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+"quiz": [
+{"q": "Điền chỗ trống: 如果你累了，___ 休息一下。", "o": ["就", "但是", "而且", "因为"], "a": 0, "why": "如果…就: nếu mệt thì nghỉ một chút."},
+{"q": "“如果明天下雨，我们就不去” nghĩa là gì?", "o": ["Nếu ngày mai mưa thì chúng tôi không đi", "Tuy ngày mai mưa nhưng chúng tôi vẫn đi", "Vì ngày mai mưa nên chúng tôi đi", "Không những mưa mà chúng tôi còn đi"], "a": 0, "why": "如果 nêu điều kiện mưa, 就 nêu kết quả không đi."}
+]
+},
+{
+"id": "s4-ba", "stage": 4, "title": "把字句 — câu chữ 把 (nâng cao)",
+"hook": "“我把书放在桌子上了” — tôi đặt sách lên bàn rồi: 把 đưa đồ vật lên trước động từ.",
+"examples": [
+"我把书放在桌子上了。(Wǒ bǎ shū fàng zài zhuōzi shang le.) — Tôi đã đặt sách lên bàn rồi.",
+"请把门关上。(Qǐng bǎ mén guān shang.) — Hãy đóng cửa lại.",
+"他把房间打扫干净了。(Tā bǎ fángjiān dǎsǎo gānjìng le.) — Anh ấy đã dọn phòng sạch rồi.",
+"妈妈把衣服洗干净了。(Māma bǎ yīfu xǐ gānjìng le.) — Mẹ đã giặt quần áo sạch rồi."
+],
+"speak": "我把书放在桌子上了。请把门关上。他把房间打扫干净了。妈妈把衣服洗干净了。",
+"rule": "把 + đồ vật + động từ + kết quả hoặc phương hướng. Sau động từ phải có thêm thành phần như 上, 干净, 在桌子上 — động từ không đứng trơ một mình.",
+"tip": "Hãy nhớ công thức: 把 + cái gì + làm gì + kết quả ra sao.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+"quiz": [
+{"q": "Câu nào là câu chữ 把 đúng?", "o": ["我把书放在桌子上了", "我把书放", "我放把书在桌子上", "我书把放在桌子上"], "a": 0, "why": "把 + 书 + 放 + 在桌子上: đồ vật lên trước động từ, sau động từ có phương hướng."},
+{"q": "“请把门关上” nghĩa là gì?", "o": ["Hãy đóng cửa lại", "Hãy mở cửa ra", "Hãy lau cửa đi", "Hãy khóa cửa lại"], "a": 0, "why": "把门关上: đóng cửa lại, 上 chỉ phương hướng đóng vào."}
+]
+},
+{
+"id": "s4-bei", "stage": 4, "title": "被字句 — câu chữ 被 (nâng cao)",
+"hook": "“我的手机被弟弟拿走了” — điện thoại của tôi bị em trai lấy đi mất: 被 nói việc không may xảy ra với đồ vật.",
+"examples": [
+"我的手机被弟弟拿走了。(Wǒ de shǒujī bèi dìdi ná zǒu le.) — Điện thoại của tôi bị em trai lấy đi mất.",
+"衣服被雨淋湿了。(Yīfu bèi yǔ lín shī le.) — Quần áo bị mưa làm ướt.",
+"他的自行车被偷了。(Tā de zìxíngchē bèi tōu le.) — Xe đạp của anh ấy bị trộm mất.",
+"这个消息被大家知道了。(Zhège xiāoxi bèi dàjiā zhīdào le.) — Tin này đã bị mọi người biết rồi."
+],
+"speak": "我的手机被弟弟拿走了。衣服被雨淋湿了。他的自行车被偷了。这个消息被大家知道了。",
+"rule": "被 + người gây ra (có thể bỏ) + động từ + kết quả. Câu 被 thường nói việc không mong muốn, và sau động từ phải có kết quả như 走了, 湿了, 偷了.",
+"tip": "Hãy nhớ: đồ vật chịu tác động đứng trước 被, người làm ra việc (nếu có) đứng sau 被.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+"quiz": [
+{"q": "Câu nào là câu chữ 被 đúng?", "o": ["他的自行车被偷了", "他的自行车偷了被", "被他的自行车偷了", "他的被自行车偷了"], "a": 0, "why": "自行车 + 被 + 偷了: đồ vật trước 被, động từ và kết quả sau."},
+{"q": "“衣服被雨淋湿了” nghĩa là gì?", "o": ["Quần áo bị mưa làm ướt", "Quần áo làm mưa bị ướt", "Mưa bị quần áo làm ướt", "Quần áo phơi ngoài mưa"], "a": 0, "why": "衣服 chịu tác động, 雨 gây ra việc làm ướt."}
+]
+},
+{
+"id": "s4-bijiao", "stage": 4, "title": "比较句 — câu so sánh (比…更… / 没有…那么…)",
+"hook": "“今天比昨天更冷” — hôm nay lạnh hơn hôm qua: 比 nói hơn, 没有…那么 nói kém hơn.",
+"examples": [
+"今天比昨天更冷。(Jīntiān bǐ zuótiān gèng lěng.) — Hôm nay lạnh hơn hôm qua.",
+"这件衣服比那件更贵。(Zhè jiàn yīfu bǐ nà jiàn gèng guì.) — Chiếc áo này đắt hơn chiếc kia.",
+"北京没有上海那么热。(Běijīng méiyǒu Shànghǎi nàme rè.) — Bắc Kinh không nóng bằng Thượng Hải.",
+"我的中文没有他那么好。(Wǒ de Zhōngwén méiyǒu tā nàme hǎo.) — Tiếng Trung của tôi không tốt bằng anh ấy."
+],
+"speak": "今天比昨天更冷。这件衣服比那件更贵。北京没有上海那么热。我的中文没有他那么好。",
+"rule": "比…更…: A 比 B 更 + tính từ (A hơn B). 没有…那么…: A 没有 B 那么 + tính từ (A không bằng B). Tính từ đứng cuối câu so sánh.",
+"tip": "Hãy nhớ: 比 là “hơn”, 没有…那么 là “không bằng” — hai mẫu ngược nhau, đừng đổi chỗ.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng câu nằm trong khung từ vựng HSK 2.0 chính thức.",
+"quiz": [
+{"q": "“今天比昨天更冷” nghĩa là gì?", "o": ["Hôm nay lạnh hơn hôm qua", "Hôm qua lạnh hơn hôm nay", "Hôm nay và hôm qua lạnh như nhau", "Hôm nay không lạnh"], "a": 0, "why": "比…更…: hôm nay hơn hôm qua về độ lạnh."},
+{"q": "“我的中文没有他那么好” nghĩa là gì?", "o": ["Tiếng Trung của tôi không tốt bằng anh ấy", "Tiếng Trung của tôi tốt hơn anh ấy", "Tiếng Trung của tôi tốt như anh ấy", "Anh ấy không biết tiếng Trung"], "a": 0, "why": "没有…那么…: tôi không bằng anh ấy."},
+{"q": "Điền chỗ trống: 这件衣服___那件更贵。", "o": ["比", "被", "把", "跟"], "a": 0, "why": "比…更贵: chiếc áo này đắt hơn chiếc kia."}
+]
+}
+]);
+ZH_READING.push.apply(ZH_READING, [
+{
+"id": "s4-reading-congviec", "stage": 4, "title": "Tuần đầu đi làm của Tiểu Vương", "topic": "Công việc",
+"text": "小王上个月开始在一家公司工作。他的工作是整理文件和安排会议。每天早上八点，他先检查今天的任务。上午，他跟同事讨论新的计划。中午，大家一起去食堂吃饭。下午，他把报告交给经理，经理会告诉他哪里要改。刚开始的时候，他觉得工作很难，但是同事都很热心。现在，他已经习惯了新的工作，也交了几个好朋友。",
+"pinyin": "Xiǎo Wáng shàng ge yuè kāishǐ zài yì jiā gōngsī gōngzuò. Tā de gōngzuò shì zhěnglǐ wénjiàn hé ānpái huìyì. Měitiān zǎoshang bā diǎn, tā xiān jiǎnchá jīntiān de rènwu. Shàngwǔ, tā gēn tóngshì tǎolùn xīn de jìhuà. Zhōngwǔ, dàjiā yìqǐ qù shítáng chī fàn. Xiàwǔ, tā bǎ bàogào jiāo gěi jīnglǐ, jīnglǐ huì gàosu tā nǎlǐ yào gǎi. Gāng kāishǐ de shíhou, tā juéde gōngzuò hěn nán, dànshì tóngshì dōu hěn rèxīn. Xiànzài, tā yǐjīng xíguàn le xīn de gōngzuò, yě jiāo le jǐ ge hǎo péngyou.",
+"vi": "Tháng trước Tiểu Vương bắt đầu làm việc ở một công ty. Công việc của anh ấy là sắp xếp tài liệu và sắp xếp cuộc họp. Mỗi sáng 8 giờ, anh ấy kiểm tra nhiệm vụ hôm nay trước. Buổi sáng, anh ấy thảo luận kế hoạch mới với đồng nghiệp. Buổi trưa, mọi người cùng đi ăn ở nhà ăn. Buổi chiều, anh ấy giao báo cáo cho giám đốc, giám đốc sẽ nói chỗ nào cần sửa. Lúc mới bắt đầu, anh ấy thấy công việc rất khó, nhưng đồng nghiệp đều rất nhiệt tình. Bây giờ, anh ấy đã quen với công việc mới, cũng kết bạn với vài người bạn tốt.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+"questions": [
+{"q": "Công việc của Tiểu Vương là gì?", "o": ["Sắp xếp tài liệu và sắp xếp cuộc họp", "Lái xe và giao hàng", "Nấu ăn và dọn phòng", "Bán quần áo và thu tiền"], "a": 0, "why": "Bài viết: 他的工作是整理文件和安排会议."},
+{"q": "Buổi chiều Tiểu Vương làm gì?", "o": ["Giao báo cáo cho giám đốc", "Đi họp ở công ty khác", "Về nhà sớm", "Đi mua tài liệu"], "a": 0, "why": "Bài viết: 下午，他把报告交给经理."},
+{"q": "Lúc mới bắt đầu, Tiểu Vương thấy thế nào?", "o": ["Thấy công việc rất khó", "Thấy công việc rất dễ", "Thấy công việc rất buồn", "Thấy công việc rất nhanh"], "a": 0, "why": "Bài viết: 刚开始的时候，他觉得工作很难."},
+{"q": "Bây giờ Tiểu Vương ra sao?", "o": ["Đã quen việc mới và có bạn tốt", "Đã nghỉ việc ở công ty", "Đã chuyển sang công ty khác", "Vẫn chưa quen việc"], "a": 0, "why": "Bài viết: 现在，他已经习惯了新的工作，也交了几个好朋友."}
+]
+},
+{
+"id": "s4-reading-tintuc", "stage": 4, "title": "Tuyến tàu điện ngầm mới của thành phố", "topic": "Tin tức",
+"text": "昨天，市里开通了一条新的地铁线。这条线一共有十个站，从城东到城西。很多市民早上坐地铁去上班，比以前快二十分钟。车站里有清楚的标志，老人和孩子也容易找到路。市政府说，新地铁可以减少路上的汽车。记者采访了一位司机，他说现在开车没有以前那么堵了。不过，也有人说，早上高峰的时候车上还是很挤。",
+"pinyin": "Zuótiān, shì lǐ kāitōng le yì tiáo xīn de dìtiě xiàn. Zhè tiáo xiàn yígòng yǒu shí ge zhàn, cóng chéng dōng dào chéng xī. Hěn duō shìmín zǎoshang zuò dìtiě qù shàngbān, bǐ yǐqián kuài èr shí fēnzhōng. Chēzhàn lǐ yǒu qīngchu de biāozhì, lǎorén hé háizi yě róngyì zhǎodào lù. Shì zhèngfǔ shuō, xīn dìtiě kěyǐ jiǎnshǎo lù shang de qìchē. Jìzhě cǎifǎng le yí wèi sījī, tā shuō xiànzài kāi chē méiyǒu yǐqián nàme dǔ le. Búguò, yě yǒu rén shuō, zǎoshang gāofēng de shíhou chē shang háishi hěn jǐ.",
+"vi": "Hôm qua, thành phố khai trương một tuyến tàu điện ngầm mới. Tuyến này tổng cộng có mười ga, từ phía đông thành phố đến phía tây. Nhiều người dân buổi sáng đi tàu điện ngầm đi làm, nhanh hơn trước hai mươi phút. Trong ga có biển chỉ dẫn rõ ràng, người già và trẻ em cũng dễ tìm đường. Chính quyền thành phố nói tàu điện ngầm mới có thể giảm ô tô trên đường. Phóng viên phỏng vấn một tài xế, anh ấy nói bây giờ lái xe không tắc như trước. Tuy nhiên, cũng có người nói giờ cao điểm buổi sáng trên xe vẫn rất đông.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+"questions": [
+{"q": "Tuyến tàu điện ngầm mới có mấy ga?", "o": ["Tám ga", "Mười ga", "Mười hai ga", "Hai mươi ga"], "a": 1, "why": "Bài viết: 这条线一共有十个站."},
+{"q": "Đi tàu điện ngầm đi làm nhanh hơn trước bao nhiêu?", "o": ["Mười phút", "Hai mươi phút", "Ba mươi phút", "Một giờ"], "a": 1, "why": "Bài viết: 比以前快二十分钟."},
+{"q": "Theo chính quyền thành phố, tàu điện ngầm mới có tác dụng gì?", "o": ["Giảm ô tô trên đường", "Tăng giá vé xe buýt", "Đóng cửa các ga cũ", "Cấm xe đạp"], "a": 0, "why": "Bài viết: 新地铁可以减少路上的汽车."},
+{"q": "Vấn đề còn lại được nhắc đến là gì?", "o": ["Giờ cao điểm buổi sáng trên xe vẫn rất đông", "Ga tàu không có biển chỉ dẫn", "Tàu chạy quá chậm", "Không ai đi tàu điện ngầm"], "a": 0, "why": "Bài viết: 早上高峰的时候车上还是很挤."}
+]
+},
+{
+"id": "s4-reading-moitruong", "stage": 4, "title": "Ngày trồng cây của khu dân cư", "topic": "Môi trường",
+"text": "上个星期六，小区组织居民一起种树。早上八点，三十多个人来到小区的空地上。大家先把垃圾分类，再把树苗种进土里。孩子们负责浇水，大人负责扶树苗。种完树以后，大家又在公园里捡垃圾。一个小时以后，公园变得干净多了。居委会说，以后每个月都要组织一次这样的活动。居民们都说，这样的活动不但对环境好，而且让邻居更熟悉。",
+"pinyin": "Shàng ge xīngqīliù, xiǎoqū zǔzhī jūmín yìqǐ zhòng shù. Zǎoshang bā diǎn, sān shí duō ge rén láidào xiǎoqū de kōngdì shang. Dàjiā xiān bǎ lājī fēnlèi, zài bǎ shùmiáo zhòng jìn tǔ lǐ. Háizimen fùzé jiāo shuǐ, dàren fùzé fú shùmiáo. Zhòng wán shù yǐhòu, dàjiā yòu zài gōngyuán lǐ jiǎn lājī. Yí ge xiǎoshí yǐhòu, gōngyuán biàn de gānjìng duō le. Jūwěihuì shuō, yǐhòu měi ge yuè dōu yào zǔzhī yí cì zhèyàng de huódòng. Jūmínmen dōu shuō, zhèyàng de huódòng búdàn duì huánjìng hǎo, érqiě ràng línjū gèng shúxi.",
+"vi": "Thứ Bảy tuần trước, khu dân cư tổ chức cư dân cùng trồng cây. Sáng 8 giờ, hơn ba mươi người đến bãi đất trống của khu. Mọi người phân loại rác trước, rồi trồng cây con xuống đất. Trẻ em phụ trách tưới nước, người lớn phụ trách đỡ cây con. Trồng cây xong, mọi người lại nhặt rác trong công viên. Một giờ sau, công viên sạch hơn nhiều. Ban quản lý khu nói sau này mỗi tháng đều tổ chức một hoạt động như vậy. Cư dân đều nói hoạt động như vậy không những tốt cho môi trường mà còn khiến hàng xóm thân thiết hơn.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+"questions": [
+{"q": "Có bao nhiêu người tham gia trồng cây?", "o": ["Hơn mười người", "Hơn hai mươi người", "Hơn ba mươi người", "Hơn năm mươi người"], "a": 2, "why": "Bài viết: 三十多个人来到小区的空地上."},
+{"q": "Trẻ em phụ trách việc gì?", "o": ["Tưới nước", "Đỡ cây con", "Phân loại rác", "Nhặt rác"], "a": 0, "why": "Bài viết: 孩子们负责浇水."},
+{"q": "Sau một giờ, công viên thế nào?", "o": ["Sạch hơn nhiều", "Đông hơn nhiều", "Ồn hơn nhiều", "Tối hơn nhiều"], "a": 0, "why": "Bài viết: 公园变得干净多了."},
+{"q": "Sau này khu dân cư sẽ tổ chức hoạt động này bao lâu một lần?", "o": ["Mỗi tuần một lần", "Mỗi tháng một lần", "Mỗi năm một lần", "Mỗi ngày một lần"], "a": 1, "why": "Bài viết: 以后每个月都要组织一次这样的活动."}
+]
+},
+{
+"id": "s4-reading-dulich", "stage": 4, "title": "Chuyến đi Hàng Châu", "topic": "Du lịch",
+"text": "去年夏天，我和朋友去杭州旅行。我们先去西湖，湖边有很多柳树。上午，我们坐船游湖，风很舒服。中午，我们在一家小饭馆吃西湖有名的菜。下午，我们去茶园看茶农采茶，还买了一包新茶。晚上，我们在夜市买纪念品，也尝了当地的小吃。虽然走了很多路，但是大家都很开心。回来以后，我把照片发给家人，他们也想去杭州看看。",
+"pinyin": "Qùnián xiàtiān, wǒ hé péngyou qù Hángzhōu lǚxíng. Wǒmen xiān qù Xī Hú, hú biān yǒu hěn duō liǔshù. Shàngwǔ, wǒmen zuò chuán yóu hú, fēng hěn shūfu. Zhōngwǔ, wǒmen zài yì jiā xiǎo fànguǎn chī Xī Hú yǒumíng de cài. Xiàwǔ, wǒmen qù cháyuán kàn chánóng cǎi chá, hái mǎi le yì bāo xīn chá. Wǎnshang, wǒmen zài yèshì mǎi jìniànpǐn, yě cháng le dāngdì de xiǎochī. Suīrán zǒu le hěn duō lù, dànshì dàjiā dōu hěn kāixīn. Huílai yǐhòu, wǒ bǎ zhàopiàn fā gěi jiārén, tāmen yě xiǎng qù Hángzhōu kànkan.",
+"vi": "Mùa hè năm ngoái, tôi và bạn bè đi du lịch Hàng Châu. Chúng tôi đến Tây Hồ trước, bên hồ có nhiều cây liễu. Buổi sáng, chúng tôi ngồi thuyền dạo hồ, gió rất dễ chịu. Buổi trưa, chúng tôi ăn món nổi tiếng của Tây Hồ ở một quán nhỏ. Buổi chiều, chúng tôi đến vườn chè xem nông dân hái chè, còn mua một gói chè mới. Buổi tối, chúng tôi mua đồ lưu niệm ở chợ đêm, cũng nếm món ăn vặt địa phương. Tuy đi bộ rất nhiều đường, nhưng mọi người đều rất vui. Sau khi về, tôi gửi ảnh cho gia đình, họ cũng muốn đến Hàng Châu xem.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.",
+"questions": [
+{"q": "Buổi sáng nhóm đi đâu và làm gì?", "o": ["Ngồi thuyền dạo hồ Tây Hồ", "Đi vườn chè hái chè", "Đi chợ đêm mua đồ", "Đi nhà hàng ăn trưa"], "a": 0, "why": "Bài viết: 上午，我们坐船游湖."},
+{"q": "Buổi chiều nhóm mua gì?", "o": ["Một gói chè mới", "Một chiếc áo", "Một quyển sách", "Một chiếc thuyền"], "a": 0, "why": "Bài viết: 还买了一包新茶."},
+{"q": "Tuy đi bộ nhiều nhưng mọi người thế nào?", "o": ["Đều rất vui", "Đều rất mệt và buồn", "Đều muốn về sớm", "Đều không nói chuyện"], "a": 0, "why": "Bài viết: 虽然走了很多路，但是大家都很开心."},
+{"q": "Sau khi về, tác giả làm gì?", "o": ["Gửi ảnh cho gia đình", "Viết một quyển sách", "Mở một quán ăn", "Lên kế hoạch đi tiếp"], "a": 0, "why": "Bài viết: 回来以后，我把照片发给家人."}
+]
+}
+]);
+ZH_LISTENING.push.apply(ZH_LISTENING, [
+{
+"id": "s4-listen-hencongviec", "stage": 4, "title": "Hẹn họp công việc", "topic": "Hẹn công việc",
+"lines": [
+{"sp": "A", "han": "明天上午你有时间吗？", "py": "Míngtiān shàngwǔ nǐ yǒu shíjiān ma?", "vi": "Sáng mai bạn có thời gian không?"},
+{"sp": "B", "han": "有啊，十点以后都可以。", "py": "Yǒu a, shí diǎn yǐhòu dōu kěyǐ.", "vi": "Có, sau 10 giờ lúc nào cũng được."},
+{"sp": "A", "han": "那我们十点半在会议室见吧。", "py": "Nà wǒmen shí diǎn bàn zài huìyìshì jiàn ba.", "vi": "Vậy 10 giờ rưỡi chúng ta gặp ở phòng họp nhé."},
+{"sp": "B", "han": "好，你要带什么文件吗？", "py": "Hǎo, nǐ yào dài shénme wénjiàn ma?", "vi": "Được, bạn cần mang tài liệu gì không?"},
+{"sp": "A", "han": "请带上个月的报告，我想讨论一下。", "py": "Qǐng dài shàng ge yuè de bàogào, wǒ xiǎng tǎolùn yí xià.", "vi": "Hãy mang báo cáo tháng trước, tôi muốn thảo luận một chút."},
+{"sp": "B", "han": "没问题，明天见。", "py": "Méi wèntí, míngtiān jiàn.", "vi": "Không vấn đề, mai gặp."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Hai người hẹn gặp lúc mấy giờ?", "o": ["9 giờ", "10 giờ", "10 giờ rưỡi", "11 giờ"], "a": 2, "why": "A nói: 我们十点半在会议室见吧."},
+{"q": "Hai người gặp ở đâu?", "o": ["Ở nhà ăn", "Ở phòng họp", "Ở văn phòng giám đốc", "Ở cổng công ty"], "a": 1, "why": "A nói: 在会议室见吧."},
+{"q": "B cần mang theo gì?", "o": ["Báo cáo tháng trước", "Báo cáo tháng này", "Một quyển sách", "Một chiếc máy tính"], "a": 0, "why": "A nói: 请带上个月的报告."}
+]
+},
+{
+"id": "s4-listen-thuenha", "stage": 4, "title": "Đi xem nhà thuê", "topic": "Thuê nhà",
+"lines": [
+{"sp": "A", "han": "请问，这间房子多少钱一个月？", "py": "Qǐngwèn, zhè jiān fángzi duōshao qián yí ge yuè?", "vi": "Xin hỏi, căn nhà này bao nhiêu tiền một tháng?"},
+{"sp": "B", "han": "两千五百块，不包括水电。", "py": "Liǎng qiān wǔ bǎi kuài, bù bāokuò shuǐdiàn.", "vi": "2500 tệ, không bao gồm điện nước."},
+{"sp": "A", "han": "房子离地铁站远吗？", "py": "Fángzi lí dìtiě zhàn yuǎn ma?", "vi": "Nhà cách ga tàu điện ngầm có xa không?"},
+{"sp": "B", "han": "不远，走路十分钟就到了。", "py": "Bù yuǎn, zǒulù shí fēnzhōng jiù dào le.", "vi": "Không xa, đi bộ mười phút là tới."},
+{"sp": "A", "han": "我可以先看一下房间吗？", "py": "Wǒ kěyǐ xiān kàn yí xià fángjiān ma?", "vi": "Tôi xem phòng trước được không?"},
+{"sp": "B", "han": "当然可以，请跟我来。", "py": "Dāngrán kěyǐ, qǐng gēn wǒ lái.", "vi": "Tất nhiên được, mời đi theo tôi."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Tiền thuê nhà một tháng là bao nhiêu?", "o": ["1500 tệ", "2000 tệ", "2500 tệ", "3000 tệ"], "a": 2, "why": "B nói: 两千五百块."},
+{"q": "Tiền thuê có bao gồm điện nước không?", "o": ["Có, bao gồm hết", "Không, không bao gồm", "Chỉ bao gồm nước", "Chỉ bao gồm điện"], "a": 1, "why": "B nói: 不包括水电."},
+{"q": "Từ nhà đi bộ đến ga tàu mất bao lâu?", "o": ["Năm phút", "Mười phút", "Mười lăm phút", "Hai mươi phút"], "a": 1, "why": "B nói: 走路十分钟就到了."}
+]
+},
+{
+"id": "s4-listen-khambenh", "stage": 4, "title": "Đi khám vì sốt và đau đầu", "topic": "Khám bệnh",
+"lines": [
+{"sp": "A", "han": "医生，我头疼，还发烧。", "py": "Yīshēng, wǒ tóu téng, hái fāshāo.", "vi": "Bác sĩ, tôi đau đầu, còn sốt."},
+{"sp": "B", "han": "你发烧几天了？", "py": "Nǐ fāshāo jǐ tiān le?", "vi": "Bạn sốt mấy ngày rồi?"},
+{"sp": "A", "han": "两天了，昨天晚上更严重。", "py": "Liǎng tiān le, zuótiān wǎnshang gèng yánzhòng.", "vi": "Hai ngày rồi, tối qua nặng hơn."},
+{"sp": "B", "han": "先量一下体温，再做检查。", "py": "Xiān liàng yí xià tǐwēn, zài zuò jiǎnchá.", "vi": "Đo thân nhiệt trước, rồi kiểm tra."},
+{"sp": "A", "han": "医生，我要吃药吗？", "py": "Yīshēng, wǒ yào chī yào ma?", "vi": "Bác sĩ, tôi phải uống thuốc không?"},
+{"sp": "B", "han": "要吃药，多喝水，多休息。", "py": "Yào chī yào, duō hē shuǐ, duō xiūxi.", "vi": "Phải uống thuốc, uống nhiều nước, nghỉ ngơi nhiều."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Bệnh nhân bị làm sao?", "o": ["Đau đầu và sốt", "Đau bụng và ho", "Đau chân và mệt", "Đau răng và sốt"], "a": 0, "why": "A nói: 我头疼，还发烧."},
+{"q": "Bệnh nhân sốt mấy ngày rồi?", "o": ["Một ngày", "Hai ngày", "Ba ngày", "Bốn ngày"], "a": 1, "why": "A nói: 两天了."},
+{"q": "Bác sĩ dặn bệnh nhân làm gì?", "o": ["Uống thuốc, uống nhiều nước, nghỉ ngơi nhiều", "Không uống thuốc, chỉ nghỉ ngơi", "Đi làm ngay", "Tập thể dục nặng"], "a": 0, "why": "B nói: 要吃药，多喝水，多休息."}
+]
+},
+{
+"id": "s4-listen-muasamonline", "stage": 4, "title": "Đổi giày mua trên mạng", "topic": "Mua sắm online",
+"lines": [
+{"sp": "A", "han": "你看，我在网上买的鞋子到了。", "py": "Nǐ kàn, wǒ zài wǎng shang mǎi de xiézi dào le.", "vi": "Bạn xem, giày tôi mua trên mạng đã đến."},
+{"sp": "B", "han": "颜色好看吗？跟照片一样吗？", "py": "Yánsè hǎokàn ma? Gēn zhàopiàn yíyàng ma?", "vi": "Màu đẹp không? Giống ảnh không?"},
+{"sp": "A", "han": "颜色一样，但是有点儿小。", "py": "Yánsè yíyàng, dànshì yǒu diǎnr xiǎo.", "vi": "Màu giống, nhưng hơi nhỏ."},
+{"sp": "B", "han": "那你可以换大一号的。", "py": "Nà nǐ kěyǐ huàn dà yí hào de.", "vi": "Vậy bạn có thể đổi sang cỡ lớn hơn một số."},
+{"sp": "A", "han": "换货要钱吗？", "py": "Huàn huò yào qián ma?", "vi": "Đổi hàng có mất tiền không?"},
+{"sp": "B", "han": "不用，七天内免费换。", "py": "Bú yòng, qī tiān nèi miǎnfèi huàn.", "vi": "Không, trong bảy ngày đổi miễn phí."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Đôi giày có vấn đề gì?", "o": ["Màu khác ảnh", "Hơi nhỏ", "Bị rách", "Giao nhầm hàng"], "a": 1, "why": "A nói: 颜色一样，但是有点儿小."},
+{"q": "A nên đổi sang cỡ nào?", "o": ["Cỡ nhỏ hơn một số", "Cỡ lớn hơn một số", "Cỡ giống như cũ", "Cỡ lớn hơn hai số"], "a": 1, "why": "B nói: 换大一号的."},
+{"q": "Đổi hàng trong bao lâu thì miễn phí?", "o": ["Ba ngày", "Năm ngày", "Bảy ngày", "Mười ngày"], "a": 2, "why": "B nói: 七天内免费换."}
+]
+},
+{
+"id": "s4-listen-hoithamdulich", "stage": 4, "title": "Hỏi đường đi Tây Hồ", "topic": "Hỏi thăm du lịch",
+"lines": [
+{"sp": "A", "han": "请问，去西湖怎么走？", "py": "Qǐngwèn, qù Xī Hú zěnme zǒu?", "vi": "Xin hỏi, đi Tây Hồ thế nào?"},
+{"sp": "B", "han": "坐二号地铁，在西湖站下车。", "py": "Zuò èr hào dìtiě, zài Xī Hú zhàn xià chē.", "vi": "Đi tàu số 2, xuống ở ga Tây Hồ."},
+{"sp": "A", "han": "从车站走过去要多久？", "py": "Cóng chēzhàn zǒu guòqu yào duō jiǔ?", "vi": "Từ ga đi bộ qua đó mất bao lâu?"},
+{"sp": "B", "han": "大概十分钟，路上有标志。", "py": "Dàgài shí fēnzhōng, lù shang yǒu biāozhì.", "vi": "Khoảng mười phút, trên đường có biển chỉ."},
+{"sp": "A", "han": "西湖门票多少钱？", "py": "Xī Hú ménpiào duōshao qián?", "vi": "Vé vào Tây Hồ bao nhiêu tiền?"},
+{"sp": "B", "han": "湖边免费，坐船才要钱。", "py": "Hú biān miǎnfèi, zuò chuán cái yào qián.", "vi": "Ven hồ miễn phí, ngồi thuyền mới mất tiền."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Đi Tây Hồ bằng phương tiện nào?", "o": ["Tàu số 1", "Tàu số 2", "Xe buýt số 2", "Taxi"], "a": 1, "why": "B nói: 坐二号地铁."},
+{"q": "Từ ga đi bộ đến Tây Hồ mất bao lâu?", "o": ["Khoảng năm phút", "Khoảng mười phút", "Khoảng hai mươi phút", "Khoảng nửa giờ"], "a": 1, "why": "B nói: 大概十分钟."},
+{"q": "Đi dạo ven hồ có mất tiền không?", "o": ["Có, vé rất đắt", "Không, ven hồ miễn phí", "Chỉ miễn phí buổi sáng", "Chỉ miễn phí cho trẻ em"], "a": 1, "why": "B nói: 湖边免费，坐船才要钱."}
+]
+}
+]);
+ZH_SPEAK.push.apply(ZH_SPEAK, [
+{
+"id": "s4-speak-congviec", "stage": 4, "title": "Họp nhóm chia việc", "topic": "Công việc",
+"hook": "“我们先讨论一下计划吧” — họp nhóm bắt đầu bằng việc thảo luận kế hoạch.",
+"lines": [
+{"sp": "A", "han": "我们先讨论一下计划吧。", "py": "Wǒmen xiān tǎolùn yí xià jìhuà ba.", "vi": "Chúng ta thảo luận kế hoạch trước nhé."},
+{"sp": "B", "han": "好，这个星期要完成报告。", "py": "Hǎo, zhège xīngqī yào wánchéng bàogào.", "vi": "Được, tuần này phải hoàn thành báo cáo."},
+{"sp": "A", "han": "谁负责写第一部分？", "py": "Shéi fùzé xiě dì yí bùfen?", "vi": "Ai phụ trách viết phần đầu?"},
+{"sp": "B", "han": "我负责第一部分，你负责第二部分。", "py": "Wǒ fùzé dì yí bùfen, nǐ fùzé dì èr bùfen.", "vi": "Tôi phụ trách phần đầu, bạn phụ trách phần hai."},
+{"sp": "A", "han": "星期五我们再开会检查进度。", "py": "Xīngqīwǔ wǒmen zài kāihuì jiǎnchá jìndù.", "vi": "Thứ Sáu chúng ta họp lại kiểm tra tiến độ."}
+],
+"note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp."
+},
+{
+"id": "s4-speak-thuenha", "stage": 4, "title": "Xem nhà thuê", "topic": "Thuê nhà",
+"hook": "“这间房子很亮，也很安静” — khen nhà sáng và yên tĩnh là cách mở chuyện khi xem nhà.",
+"lines": [
+{"sp": "A", "han": "这间房子很亮，也很安静。", "py": "Zhè jiān fángzi hěn liàng, yě hěn ānjìng.", "vi": "Căn nhà này rất sáng, cũng rất yên tĩnh."},
+{"sp": "B", "han": "是啊，早上阳光很好。", "py": "Shì a, zǎoshang yángguāng hěn hǎo.", "vi": "Đúng, buổi sáng nắng rất tốt."},
+{"sp": "A", "han": "厨房可以用吗？", "py": "Chúfáng kěyǐ yòng ma?", "vi": "Bếp dùng được không?"},
+{"sp": "B", "han": "可以，冰箱和洗衣机都可以用。", "py": "Kěyǐ, bīngxiāng hé xǐyījī dōu kěyǐ yòng.", "vi": "Được, tủ lạnh và máy giặt đều dùng được."},
+{"sp": "A", "han": "那我下个月一号搬进来。", "py": "Nà wǒ xià ge yuè yí hào bān jìnlai.", "vi": "Vậy mùng 1 tháng sau tôi dọn vào."}
+],
+"note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp."
+},
+{
+"id": "s4-speak-khambenh", "stage": 4, "title": "Ở phòng khám", "topic": "Khám bệnh",
+"hook": "“医生，我咳嗽三天了” — nói triệu chứng và số ngày là cách mở chuyện ở phòng khám.",
+"lines": [
+{"sp": "A", "han": "医生，我咳嗽三天了。", "py": "Yīshēng, wǒ késou sān tiān le.", "vi": "Bác sĩ, tôi ho ba ngày rồi."},
+{"sp": "B", "han": "还有别的症状吗？", "py": "Hái yǒu bié de zhèngzhuàng ma?", "vi": "Còn triệu chứng khác không?"},
+{"sp": "A", "han": "有一点儿头疼，不发烧。", "py": "Yǒu yì diǎnr tóu téng, bù fāshāo.", "vi": "Hơi đau đầu, không sốt."},
+{"sp": "B", "han": "先做检查，再开药给你。", "py": "Xiān zuò jiǎnchá, zài kāi yào gěi nǐ.", "vi": "Kiểm tra trước, rồi kê thuốc cho bạn."},
+{"sp": "A", "han": "谢谢医生，我会多休息。", "py": "Xièxie yīshēng, wǒ huì duō xiūxi.", "vi": "Cảm ơn bác sĩ, tôi sẽ nghỉ ngơi nhiều."}
+],
+"note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp."
+},
+{
+"id": "s4-speak-muasam", "stage": 4, "title": "Đổi áo mua trên mạng", "topic": "Mua sắm",
+"hook": "“这件衣服有点儿大，我想换小一号” — áo hơi rộng thì nói rõ muốn đổi nhỏ hơn một cỡ.",
+"lines": [
+{"sp": "A", "han": "这件衣服有点儿大，我想换小一号。", "py": "Zhè jiàn yīfu yǒu diǎnr dà, wǒ xiǎng huàn xiǎo yí hào.", "vi": "Chiếc áo này hơi rộng, tôi muốn đổi nhỏ hơn một cỡ."},
+{"sp": "B", "han": "可以，七天内都能换。", "py": "Kěyǐ, qī tiān nèi dōu néng huàn.", "vi": "Được, trong bảy ngày đều đổi được."},
+{"sp": "A", "han": "换货要自己付运费吗？", "py": "Huàn huò yào zìjǐ fù yùnfèi ma?", "vi": "Đổi hàng có tự trả phí vận chuyển không?"},
+{"sp": "B", "han": "不用，这次免费。", "py": "Bú yòng, zhè cì miǎnfèi.", "vi": "Không, lần này miễn phí."},
+{"sp": "A", "han": "太好了，谢谢！", "py": "Tài hǎo le, xièxie!", "vi": "Tuyệt quá, cảm ơn!"}
+],
+"note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp."
+},
+{
+"id": "s4-speak-dulich", "stage": 4, "title": "Lên kế hoạch leo núi", "topic": "Du lịch",
+"hook": "“这个周末我们去爬山吧” — rủ đi leo núi cuối tuần là cách mở kế hoạch đi chơi.",
+"lines": [
+{"sp": "A", "han": "这个周末我们去爬山吧。", "py": "Zhège zhōumò wǒmen qù páshān ba.", "vi": "Cuối tuần này chúng ta đi leo núi nhé."},
+{"sp": "B", "han": "好啊，几点出发？", "py": "Hǎo a, jǐ diǎn chūfā?", "vi": "Được, mấy giờ xuất phát?"},
+{"sp": "A", "han": "早上八点，在学校门口见。", "py": "Zǎoshang bā diǎn, zài xuéxiào ménkǒu jiàn.", "vi": "8 giờ sáng, gặp ở cổng trường."},
+{"sp": "B", "han": "要带水和雨衣吗？", "py": "Yào dài shuǐ hé yǔyī ma?", "vi": "Cần mang nước và áo mưa không?"},
+{"sp": "A", "han": "要带，山上天气变化很快。", "py": "Yào dài, shān shang tiānqì biànhuà hěn kuài.", "vi": "Cần mang, thời tiết trên núi thay đổi rất nhanh."}
+],
+"note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp."
+},
+{
+"id": "s4-speak-moitruong", "stage": 4, "title": "Trồng cây ở khu phố", "topic": "Môi trường",
+"hook": "“我们小区可以多种一些树吗” — hỏi khu phố có trồng thêm cây được không là cách mở chuyện về môi trường.",
+"lines": [
+{"sp": "A", "han": "我们小区可以多种一些树吗？", "py": "Wǒmen xiǎoqū kěyǐ duō zhòng yìxiē shù ma?", "vi": "Khu chúng ta có thể trồng thêm cây không?"},
+{"sp": "B", "han": "可以，大家周末一起种树。", "py": "Kěyǐ, dàjiā zhōumò yìqǐ zhòng shù.", "vi": "Được, mọi người cuối tuần cùng trồng cây."},
+{"sp": "A", "han": "还要把垃圾分类，对吗？", "py": "Hái yào bǎ lājī fēnlèi, duì ma?", "vi": "Còn phải phân loại rác, đúng không?"},
+{"sp": "B", "han": "对，分类以后回收更容易。", "py": "Duì, fēnlèi yǐhòu huíshōu gèng róngyì.", "vi": "Đúng, phân loại xong tái chế dễ hơn."},
+{"sp": "A", "han": "好，我先告诉邻居们。", "py": "Hǎo, wǒ xiān gàosu línjūmen.", "vi": "Được, tôi báo cho hàng xóm trước."}
+],
+"note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp."
+}
+]);
+ZH_ROLE.push.apply(ZH_ROLE, [
+{
+"id": "s4-role-phongvan", "stage": 4, "title": "Phỏng vấn xin việc", "setting": "Văn phòng công ty",
+"you": "Ứng viên xin việc", "partner": "Người phỏng vấn",
+"goal": "Giới thiệu kinh nghiệm, hỏi giờ làm và lương, kết thúc lịch sự.",
+"turns": [
+{"from": "partner", "han": "请先介绍一下你自己。", "py": "Qǐng xiān jièshào yí xià nǐ zìjǐ.", "vi": "Hãy giới thiệu về bản thân bạn trước."},
+{"from": "you", "han": "我叫小李，去年大学毕业，做过一年销售。", "py": "Wǒ jiào Xiǎo Lǐ, qùnián dàxué bìyè, zuò guo yì nián xiāoshòu.", "vi": "Tôi tên là Tiểu Lý, năm ngoái tốt nghiệp đại học, đã làm bán hàng một năm."},
+{"from": "partner", "han": "你为什么想来我们公司？", "py": "Nǐ wèishénme xiǎng lái wǒmen gōngsī?", "vi": "Vì sao bạn muốn đến công ty chúng tôi?"},
+{"from": "you", "han": "因为我想学习更多，也想长期工作。", "py": "Yīnwèi wǒ xiǎng xuéxí gèng duō, yě xiǎng chángqī gōngzuò.", "vi": "Vì tôi muốn học thêm, cũng muốn làm việc lâu dài."},
+{"from": "partner", "han": "星期一到星期五上班，早上九点到下午六点。", "py": "Xīngqīyī dào xīngqīwǔ shàngbān, zǎoshang jiǔ diǎn dào xiàwǔ liù diǎn.", "vi": "Làm việc từ thứ Hai đến thứ Sáu, sáng 9 giờ đến chiều 6 giờ."},
+{"from": "you", "han": "谢谢，我可以接受。希望有机会跟你们合作。", "py": "Xièxie, wǒ kěyǐ jiēshòu. Xīwàng yǒu jīhuì gēn nǐmen hézuò.", "vi": "Cảm ơn, tôi có thể chấp nhận. Hy vọng có cơ hội hợp tác với các bạn."}
+]
+},
+{
+"id": "s4-role-thuenha", "stage": 4, "title": "Thuê nhà với chủ nhà", "setting": "Căn nhà cho thuê",
+"you": "Người thuê nhà", "partner": "Chủ nhà",
+"goal": "Hỏi giá, hỏi đồ dùng, chốt ngày dọn vào.",
+"turns": [
+{"from": "you", "han": "请问，房租多少钱一个月？", "py": "Qǐngwèn, fángzū duōshao qián yí ge yuè?", "vi": "Xin hỏi, tiền thuê nhà bao nhiêu một tháng?"},
+{"from": "partner", "han": "两千块一个月，不包括水电。", "py": "Liǎng qiān kuài yí ge yuè, bù bāokuò shuǐdiàn.", "vi": "2000 tệ một tháng, không bao gồm điện nước."},
+{"from": "you", "han": "房间里有洗衣机和冰箱吗？", "py": "Fángjiān lǐ yǒu xǐyījī hé bīngxiāng ma?", "vi": "Trong phòng có máy giặt và tủ lạnh không?"},
+{"from": "partner", "han": "都有，还可以上网。", "py": "Dōu yǒu, hái kěyǐ shàngwǎng.", "vi": "Đều có, còn có thể lên mạng."},
+{"from": "you", "han": "我下个月一号可以搬进来吗？", "py": "Wǒ xià ge yuè yí hào kěyǐ bān jìnlai ma?", "vi": "Mùng 1 tháng sau tôi có thể dọn vào không?"},
+{"from": "partner", "han": "可以，我们先签协议。", "py": "Kěyǐ, wǒmen xiān qiān xiéyì.", "vi": "Được, chúng ta ký thỏa thuận trước."}
+]
+},
+{
+"id": "s4-role-khambenh", "stage": 4, "title": "Khám bệnh ở bệnh viện", "setting": "Phòng khám bệnh viện",
+"you": "Bệnh nhân", "partner": "Bác sĩ",
+"goal": "Nói triệu chứng, nghe chẩn đoán và dặn dò, hẹn tái khám.",
+"turns": [
+{"from": "you", "han": "医生，我这两天一直咳嗽。", "py": "Yīshēng, wǒ zhè liǎng tiān yìzhí késou.", "vi": "Bác sĩ, hai ngày nay tôi ho liên tục."},
+{"from": "partner", "han": "发烧吗？喉咙疼不疼？", "py": "Fāshāo ma? Hóulóng téng bu téng?", "vi": "Có sốt không? Cổ họng có đau không?"},
+{"from": "you", "han": "不发烧，但是喉咙有点儿疼。", "py": "Bù fāshāo, dànshì hóulóng yǒu diǎnr téng.", "vi": "Không sốt, nhưng cổ họng hơi đau."},
+{"from": "partner", "han": "先做检查，可能是感冒。", "py": "Xiān zuò jiǎnchá, kěnéng shì gǎnmào.", "vi": "Kiểm tra trước, có thể là cảm lạnh."},
+{"from": "you", "han": "我要吃药几天？", "py": "Wǒ yào chī yào jǐ tiān?", "vi": "Tôi phải uống thuốc mấy ngày?"},
+{"from": "partner", "han": "吃三天，下周来复查。", "py": "Chī sān tiān, xià zhōu lái fùchá.", "vi": "Uống ba ngày, tuần sau đến tái khám."}
+]
+},
+{
+"id": "s4-role-khieunai", "stage": 4, "title": "Khiếu nại đơn hàng online", "setting": "Cuộc gọi với dịch vụ khách hàng",
+"you": "Khách hàng", "partner": "Nhân viên dịch vụ khách hàng",
+"goal": "Nói rõ đơn hàng bị lỗi, yêu cầu đổi hàng miễn phí.",
+"turns": [
+{"from": "you", "han": "你好，我在网上买的衣服有问题。", "py": "Nǐ hǎo, wǒ zài wǎng shang mǎi de yīfu yǒu wèntí.", "vi": "Chào bạn, quần áo tôi mua trên mạng có vấn đề."},
+{"from": "partner", "han": "请问，是什么问题？", "py": "Qǐngwèn, shì shénme wèntí?", "vi": "Xin hỏi, là vấn đề gì?"},
+{"from": "you", "han": "衣服的颜色跟照片不一样。", "py": "Yīfu de yánsè gēn zhàopiàn bù yíyàng.", "vi": "Màu quần áo không giống ảnh."},
+{"from": "partner", "han": "对不起，您想换还是退？", "py": "Duìbuqǐ, nín xiǎng huàn háishi tuì?", "vi": "Xin lỗi, quý khách muốn đổi hay trả?"},
+{"from": "you", "han": "我想换一件，颜色要跟照片一样。", "py": "Wǒ xiǎng huàn yí jiàn, yánsè yào gēn zhàopiàn yíyàng.", "vi": "Tôi muốn đổi một cái, màu phải giống ảnh."},
+{"from": "partner", "han": "好的，七天内免费换，请放心。", "py": "Hǎo de, qī tiān nèi miǎnfèi huàn, qǐng fàngxīn.", "vi": "Được, trong bảy ngày đổi miễn phí, xin yên tâm."}
+]
+}
+]);
+ZH_WRITE.push.apply(ZH_WRITE, [
+{
+"id": "s4-write-sapxep-ba", "stage": 4, "title": "Sắp xếp: Câu chữ 把 với dọn phòng", "kind": "order",
+"prompt": "Sắp xếp các từ thành câu đúng: anh ấy đã dọn phòng sạch rồi.",
+"words": ["他", "把", "房间", "打扫", "干净了"],
+"why": "Trật tự đúng: chủ ngữ 他 → 把 → đồ vật 房间 → động từ 打扫 → kết quả 干净了.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "s4-write-sapxep-bei", "stage": 4, "title": "Sắp xếp: Câu chữ 被 với xe đạp", "kind": "order",
+"prompt": "Sắp xếp các từ thành câu đúng: xe đạp của anh ấy bị trộm mất.",
+"words": ["他的", "自行车", "被", "偷", "了"],
+"why": "Trật tự đúng: đồ vật chịu tác động 他的自行车 → 被 → động từ 偷 → kết quả 了.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "s4-write-dientu-congviec", "stage": 4, "title": "Điền từ: Công việc văn phòng", "kind": "fill",
+"prompt": "Chọn từ đúng điền vào câu về công việc văn phòng.",
+"questions": [
+{"q": "星期五我们要 ___ 报告，经理要看。", "o": ["写", "吃", "买", "跑"], "a": 0, "why": "Viết báo cáo: 写报告, giám đốc cần xem báo cáo."},
+{"q": "这个任务 ___ 小王负责。", "o": ["被", "把", "由", "跟"], "a": 2, "why": "由小王负责: nhiệm vụ do Tiểu Vương phụ trách; 由 nêu người chịu trách nhiệm."}
+],
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "s4-write-viet-dulich", "stage": 4, "title": "Viết: Kể về một chuyến đi", "kind": "free",
+"prompt": "Viết một đoạn ngắn (5-8 câu) kể về một chuyến đi của bạn: đi đâu, đi với ai, làm gì, cảm thấy thế nào.",
+"model": "去年夏天，我和朋友去杭州旅行。我们先去西湖，湖边有很多柳树。上午，我们坐船游湖，风很舒服。下午，我们去茶园看茶农采茶，还买了一包新茶。虽然走了很多路，但是大家都很开心。",
+"analysis": "Đoạn mẫu mở đầu bằng thời gian và người đi cùng, rồi kể theo thứ tự buổi sáng — buổi chiều, cuối cùng nói cảm xúc bằng 虽然…但是. Viết theo khung này thì đoạn văn rõ ràng, không bị nhảy ý.",
+"phrases": ["去年夏天，我和朋友去…旅行。", "上午，我们…，下午，我们…。", "虽然…，但是大家都很开心。"],
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Bài viết tự do đối chiếu với đoạn mẫu, không chấm điểm tự động."
+}
+]);
+// noi-dung-2b-fix.js — FILE VÁ đợt 2b (bổ sung cho đủ chuẩn các phân hệ Trung chặng 4).
+// Chỉ chứa LỆNH SỬA các mục s4- đã có trong content-new.js; không tạo mục mới, không viết lại toàn bộ mục.
+// Nạp SAU content-new.js.
+
+// ---------- 1. NGỮ PHÁP chặng 4: mỗi trạm đủ đúng 6 quiz ----------
+// s4-suiran: đã có 3, thêm 3.
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-suiran"; })[0]; if (_g) _g.quiz.push({ "q": "Điền chỗ trống: 虽然很晚，___ 他还在学习。", "o": ["但是", "如果", "而且", "因为"], "a": 0, "why": "虽然 đi với 但是: tuy muộn, nhưng anh ấy vẫn học." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-suiran"; })[0]; if (_g) _g.quiz.push({ "q": "“虽然天气很冷，但是我们去跑步” nghĩa là gì?", "o": ["Tuy trời rất lạnh nhưng chúng tôi đi chạy bộ", "Vì trời rất lạnh nên chúng tôi đi chạy bộ", "Nếu trời rất lạnh thì chúng tôi đi chạy bộ", "Không những trời lạnh mà chúng tôi còn đi chạy bộ"], "a": 0, "why": "虽然 = tuy, 但是 = nhưng: tuy lạnh nhưng vẫn đi chạy bộ." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-suiran"; })[0]; if (_g) _g.quiz.push({ "q": "Chọn câu viết đúng mẫu 虽然…但是:", "o": ["虽然他很忙，但是他来帮忙", "虽然他很忙，如果他来帮忙", "虽然他很忙，而且他来帮忙", "虽然他很忙，因为他来帮忙"], "a": 0, "why": "虽然…但是 là cặp nói hai mặt trái ngược: tuy bận nhưng vẫn đến giúp." });
+// s4-budan: đã có 2, thêm 4.
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-budan"; })[0]; if (_g) _g.quiz.push({ "q": "Điền chỗ trống: 这家饭馆不但便宜，___ 很好吃。", "o": ["而且", "但是", "如果", "因为"], "a": 0, "why": "不但 đi với 而且: không những rẻ mà còn rất ngon." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-budan"; })[0]; if (_g) _g.quiz.push({ "q": "“他不但会唱歌，而且会跳舞” nghĩa là gì?", "o": ["Anh ấy không những biết hát mà còn biết nhảy", "Anh ấy tuy biết hát nhưng không biết nhảy", "Vì anh ấy biết hát nên biết nhảy", "Nếu anh ấy biết hát thì biết nhảy"], "a": 0, "why": "不但 = không những, 而且 = mà còn: một người có hai điểm tốt." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-budan"; })[0]; if (_g) _g.quiz.push({ "q": "Chọn câu viết đúng mẫu 不但…而且:", "o": ["这个城市不但干净，而且很安静", "这个城市不但干净，但是很安静", "这个城市不但干净，如果很安静", "这个城市不但干净，因为很安静"], "a": 0, "why": "不但…而且 là cặp nói hai điểm tốt cùng lúc." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-budan"; })[0]; if (_g) _g.quiz.push({ "q": "Câu nào nói hai điểm tốt bằng 不但…而且?", "o": ["他不但跑得快，而且跳得远", "他虽然跑得快，但是跳得远", "他如果跑得快，就跳得远", "他因为跑得快，所以跳得远"], "a": 0, "why": "只有 不但…而且 nói hai điểm tốt cùng lúc; 虽然…但是 nói hai mặt trái ngược." });
+// s4-ruguo: đã có 2, thêm 4.
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-ruguo"; })[0]; if (_g) _g.quiz.push({ "q": "Điền chỗ trống: 如果你有时间，___ 帮我一下。", "o": ["就", "但是", "而且", "因为"], "a": 0, "why": "如果…就: nếu có thời gian thì giúp một chút." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-ruguo"; })[0]; if (_g) _g.quiz.push({ "q": "“如果身体不舒服，就早点儿休息” nghĩa là gì?", "o": ["Nếu cơ thể không khỏe thì nghỉ sớm một chút", "Tuy cơ thể không khỏe nhưng vẫn làm việc", "Vì cơ thể không khỏe nên phải làm việc", "Không những cơ thể không khỏe mà còn phải làm việc"], "a": 0, "why": "如果 nêu điều kiện không khỏe, 就 nêu kết quả nghỉ sớm." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-ruguo"; })[0]; if (_g) _g.quiz.push({ "q": "Câu nào dùng 如果…就 đúng?", "o": ["如果他不来，我们就先开始", "如果他不来，我们但是先开始", "如果他不来，我们而且先开始", "如果他不来，我们因为先开始"], "a": 0, "why": "如果 nêu điều kiện, 就 nêu kết quả ở vế sau." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-ruguo"; })[0]; if (_g) _g.quiz.push({ "q": "Câu nào dùng 如果…就 đúng để nói điều kiện?", "o": ["如果你累了，就休息一下", "如果你累了，但是休息一下", "如果你累了，而且休息一下", "如果你累了，因为休息一下"], "a": 0, "why": "如果…就: nếu mệt thì nghỉ một chút." });
+// s4-ba: đã có 2, thêm 4.
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-ba"; })[0]; if (_g) _g.quiz.push({ "q": "Chọn câu chữ 把 viết đúng:", "o": ["我把房间打扫干净了", "我把房间打扫", "我打扫把房间干净了", "我房间把打扫干净了"], "a": 0, "why": "把 + 房间 + 打扫 + 干净了: đồ vật trước động từ, sau động từ có kết quả." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-ba"; })[0]; if (_g) _g.quiz.push({ "q": "“妈妈把衣服洗干净了” nghĩa là gì?", "o": ["Mẹ đã giặt quần áo sạch rồi", "Mẹ đã mua quần áo mới rồi", "Quần áo đã giặt sạch cho mẹ", "Mẹ đã phơi quần áo rồi"], "a": 0, "why": "把衣服洗干净了: giặt quần áo cho sạch rồi." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-ba"; })[0]; if (_g) _g.quiz.push({ "q": "Điền chỗ trống: 请把门___。", "o": ["关上", "关", "上关", "在关"], "a": 0, "why": "Sau động từ phải có thêm thành phần như 上: 把门关上 mới đủ nghĩa." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-ba"; })[0]; if (_g) _g.quiz.push({ "q": "Vì sao câu “我把书放” là sai?", "o": ["Vì sau động từ thiếu thành phần kết quả hoặc phương hướng", "Vì câu thiếu chữ 把", "Vì câu thiếu chủ ngữ", "Vì câu thiếu đồ vật"], "a": 0, "why": "Câu 把: động từ không đứng trơ một mình, phải có thêm như 在桌子上." });
+// s4-bei: đã có 2, thêm 4.
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-bei"; })[0]; if (_g) _g.quiz.push({ "q": "Điền chỗ trống: 我的手机被弟弟___了。", "o": ["拿走了", "拿", "走拿", "被拿"], "a": 0, "why": "被 + 弟弟 + 拿走了: người gây ra sau 被, động từ và kết quả sau đó." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-bei"; })[0]; if (_g) _g.quiz.push({ "q": "“这个消息被大家知道了” nghĩa là gì?", "o": ["Tin này đã bị mọi người biết rồi", "Mọi người đã bị tin này biết rồi", "Tin này làm mọi người biết nhau", "Mọi người chưa biết tin này"], "a": 0, "why": "消息 chịu tác động, 大家 là người biết tin." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-bei"; })[0]; if (_g) _g.quiz.push({ "q": "Chọn câu chữ 被 viết đúng:", "o": ["衣服被雨淋湿了", "衣服雨被淋湿了", "被衣服雨淋湿了", "衣服被淋湿雨了"], "a": 0, "why": "衣服 + 被 + 雨 + 淋湿了: đồ vật trước 被, người gây ra và kết quả sau." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-bei"; })[0]; if (_g) _g.quiz.push({ "q": "Trong câu chữ 被, đồ vật chịu tác động đứng ở đâu?", "o": ["Trước chữ 被", "Sau chữ 被", "Cuối câu", "Thay cho động từ"], "a": 0, "why": "Đồ vật chịu tác động đứng trước 被, người làm ra việc (nếu có) đứng sau 被." });
+// s4-bijiao: đã có 3, thêm 3.
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-bijiao"; })[0]; if (_g) _g.quiz.push({ "q": "“北京没有上海那么热” nghĩa là gì?", "o": ["Bắc Kinh không nóng bằng Thượng Hải", "Bắc Kinh nóng hơn Thượng Hải", "Bắc Kinh nóng như Thượng Hải", "Bắc Kinh không nóng"], "a": 0, "why": "没有…那么…: Bắc Kinh không bằng Thượng Hải về độ nóng." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-bijiao"; })[0]; if (_g) _g.quiz.push({ "q": "Điền chỗ trống: 这件衣服比那件___贵。", "o": ["更", "被", "把", "没有"], "a": 0, "why": "比…更贵: chiếc áo này đắt hơn chiếc kia." });
+var _g = ZH_GRAMMAR.filter(function (x) { return x.id === "s4-bijiao"; })[0]; if (_g) _g.quiz.push({ "q": "Câu nào dùng 没有…那么… đúng?", "o": ["我的中文没有他那么好", "我的中文比他那么好", "我的中文被他那么好", "我的中文把他那么好"], "a": 0, "why": "没有…那么…: tôi không tốt bằng anh ấy." });
+
+// ---------- 2. ĐỌC chặng 4: mỗi bài đủ đúng 5 câu hỏi (đã có 4, thêm 1) ----------
+var _r = ZH_READING.filter(function (x) { return x.id === "s4-reading-congviec"; })[0]; if (_r) _r.questions.push({ "q": "Mỗi sáng 8 giờ, Tiểu Vương làm gì trước?", "o": ["Kiểm tra nhiệm vụ hôm nay", "Giao báo cáo cho giám đốc", "Đi ăn ở nhà ăn", "Thảo luận kế hoạch mới"], "a": 0, "why": "Bài viết: 每天早上八点，他先检查今天的任务." });
+var _r = ZH_READING.filter(function (x) { return x.id === "s4-reading-tintuc"; })[0]; if (_r) _r.questions.push({ "q": "Tuyến tàu điện ngầm mới chạy từ đâu đến đâu?", "o": ["Từ phía đông thành phố đến phía tây", "Từ phía tây thành phố đến phía đông", "Từ phía nam thành phố đến phía bắc", "Chỉ chạy trong trung tâm thành phố"], "a": 0, "why": "Bài viết: 这条线一共有十个站，从城东到城西." });
+var _r = ZH_READING.filter(function (x) { return x.id === "s4-reading-moitruong"; })[0]; if (_r) _r.questions.push({ "q": "Trước khi trồng cây, mọi người làm gì?", "o": ["Phân loại rác", "Tưới nước cho cây", "Nhặt rác trong công viên", "Đỡ cây con"], "a": 0, "why": "Bài viết: 大家先把垃圾分类，再把树苗种进土里." });
+var _r = ZH_READING.filter(function (x) { return x.id === "s4-reading-dulich"; })[0]; if (_r) _r.questions.push({ "q": "Buổi trưa nhóm ăn gì, ở đâu?", "o": ["Món nổi tiếng của Tây Hồ ở một quán nhỏ", "Chè mới ở vườn chè", "Món ăn vặt ở chợ đêm", "Cơm ở khách sạn"], "a": 0, "why": "Bài viết: 中午，我们在一家小饭馆吃西湖有名的菜." });
+
+// ---------- 3. NGHE chặng 4: mỗi đoạn đủ đúng 4 câu hỏi (đã có 3, thêm 1) ----------
+var _l = ZH_LISTENING.filter(function (x) { return x.id === "s4-listen-hencongviec"; })[0]; if (_l) _l.questions.push({ "q": "B nói sau 10 giờ thì thế nào?", "o": ["Lúc nào cũng được", "Chỉ rảnh đúng lúc 10 giờ", "Bận cả buổi sáng", "Chỉ rảnh buổi chiều"], "a": 0, "why": "B nói: 有啊，十点以后都可以." });
+var _l = ZH_LISTENING.filter(function (x) { return x.id === "s4-listen-thuenha"; })[0]; if (_l) _l.questions.push({ "q": "Cuối đoạn, A muốn làm gì?", "o": ["Xem phòng trước", "Ký hợp đồng ngay", "Trả tiền ngay", "Dọn vào ngay"], "a": 0, "why": "A nói: 我可以先看一下房间吗？" });
+var _l = ZH_LISTENING.filter(function (x) { return x.id === "s4-listen-khambenh"; })[0]; if (_l) _l.questions.push({ "q": "Bác sĩ bảo làm gì trước?", "o": ["Đo thân nhiệt trước, rồi kiểm tra", "Uống thuốc trước, rồi đo thân nhiệt", "Về nhà nghỉ trước", "Chụp phim trước"], "a": 0, "why": "B nói: 先量一下体温，再做检查." });
+var _l = ZH_LISTENING.filter(function (x) { return x.id === "s4-listen-muasamonline"; })[0]; if (_l) _l.questions.push({ "q": "Màu đôi giày so với ảnh thế nào?", "o": ["Giống ảnh", "Khác ảnh", "Đậm hơn ảnh", "Nhạt hơn ảnh"], "a": 0, "why": "A nói: 颜色一样，但是有点儿小." });
+var _l = ZH_LISTENING.filter(function (x) { return x.id === "s4-listen-hoithamdulich"; })[0]; if (_l) _l.questions.push({ "q": "Ngồi thuyền ở Tây Hồ có mất tiền không?", "o": ["Có, ngồi thuyền mới mất tiền", "Không, tất cả đều miễn phí", "Chỉ mất tiền buổi tối", "Chỉ mất tiền cuối tuần"], "a": 0, "why": "B nói: 湖边免费，坐船才要钱." });
+
+// ---------- 4. NHẬP VAI chặng 4: bổ sung tip + chunks + note ----------
+// Lưu ý: 4 kịch bản s4- hiện chưa có sẵn tip/chunks/note, nên tip/chunks gán mới,
+// còn note gán mới bằng đúng câu chuẩn trong mẫu (không có phần note cũ để giữ).
+var _ro = ZH_ROLE.filter(function (x) { return x.id === "s4-role-phongvan"; })[0]; if (_ro) { _ro.tip = "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Chưa rõ giờ làm hay lương thì hỏi lại bằng câu đơn giản, đừng im lặng."; _ro.chunks = ["请先介绍一下你自己。 — Hãy giới thiệu về bản thân bạn trước.", "我叫小李，去年大学毕业。 — Tôi tên là Tiểu Lý, năm ngoái tốt nghiệp đại học.", "希望有机会跟你们合作。 — Hy vọng có cơ hội hợp tác với các bạn."]; if (!_ro.note) { _ro.note = " Bài này là tự luyện nhập vai, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt."; } else if (_ro.note.indexOf("chờ nâng cấp") < 0) { _ro.note += " Bài này là tự luyện nhập vai, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt."; } }
+var _ro = ZH_ROLE.filter(function (x) { return x.id === "s4-role-thuenha"; })[0]; if (_ro) { _ro.tip = "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Hỏi giá thì hỏi rõ giá đã gồm điện nước chưa, rồi mới chốt ngày dọn vào."; _ro.chunks = ["房租多少钱一个月？ — Tiền thuê nhà bao nhiêu một tháng?", "房间里有洗衣机和冰箱吗？ — Trong phòng có máy giặt và tủ lạnh không?", "我们先签协议。 — Chúng ta ký thỏa thuận trước."]; if (!_ro.note) { _ro.note = " Bài này là tự luyện nhập vai, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt."; } else if (_ro.note.indexOf("chờ nâng cấp") < 0) { _ro.note += " Bài này là tự luyện nhập vai, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt."; } }
+var _ro = ZH_ROLE.filter(function (x) { return x.id === "s4-role-khambenh"; })[0]; if (_ro) { _ro.tip = "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Nói rõ triệu chứng và số ngày bị bệnh trước, rồi mới hỏi thuốc uống mấy ngày."; _ro.chunks = ["我这两天一直咳嗽。 — Hai ngày nay tôi ho liên tục.", "不发烧，但是喉咙有点儿疼。 — Không sốt, nhưng cổ họng hơi đau.", "下周来复查。 — Tuần sau đến tái khám."]; if (!_ro.note) { _ro.note = " Bài này là tự luyện nhập vai, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt."; } else if (_ro.note.indexOf("chờ nâng cấp") < 0) { _ro.note += " Bài này là tự luyện nhập vai, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt."; } }
+var _ro = ZH_ROLE.filter(function (x) { return x.id === "s4-role-khieunai"; })[0]; if (_ro) { _ro.tip = "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Khiếu nại thì nói rõ lỗi sai ở đâu, rồi nói rõ mình muốn đổi hay trả."; _ro.chunks = ["我在网上买的衣服有问题。 — Quần áo tôi mua trên mạng có vấn đề.", "衣服的颜色跟照片不一样。 — Màu quần áo không giống ảnh.", "七天内免费换。 — Trong bảy ngày đổi miễn phí."]; if (!_ro.note) { _ro.note = " Bài này là tự luyện nhập vai, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt."; } else if (_ro.note.indexOf("chờ nâng cấp") < 0) { _ro.note += " Bài này là tự luyện nhập vai, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt."; } }
+// [2b-fix bổ sung bởi điều phối viên] Viết tự do chặng 4: note phải chứa "chưa có AI chấm" (test A8).
+var _wf = ZH_WRITE.filter(function (x) { return x.id === "s4-write-viet-dulich"; })[0];
+if (_wf && (_wf.note || "").indexOf("chưa có AI chấm") < 0) _wf.note += " Phần này chỉ đối chiếu bài mẫu, chưa có AI chấm tiếng Trung — AI chấm đang chờ nâng cấp, không có điểm, không tính đạt cũng không tính chưa đạt.";
