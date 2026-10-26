@@ -8707,7 +8707,7 @@ function renderZhQuiz(app, l, qs, onFinish, finishExtra, opts) {
   q.o.forEach(function (opt, i) { html += '<p><button class="btn" data-zhq="' + i + '">' + esc(opt) + '</button></p>'; });
   if (l.picked >= 0) {
     var ok = l.picked === q.a;
-    html += '<div class="why"><p><b>' + (ok ? 'Đúng rồi!' : 'Chưa đúng — đáp án đúng: ' + esc(q.o[q.a])) + '</b></p><p class="mut">' + esc(q.why || "") + '</p><button class="btn btn-primary" id="zhQuizNext">Đã hiểu →</button></div>';
+    html += '<div class="why show"><p><b>' + (ok ? 'Đúng rồi!' : 'Chưa đúng — đáp án đúng: ' + esc(q.o[q.a])) + '</b></p><p class="mut">' + esc(q.why || "") + '</p><button class="btn btn-primary" id="zhQuizNext">Đã hiểu →</button></div>';
   }
   if (opts.onSkip) html += '<div class="row"><button class="btn" id="zhQuizSkip">Bỏ qua bước này</button></div>';
   html += '</div>';
