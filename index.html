@@ -591,9 +591,10 @@ function updateBottomBar() {
   var app = $("#app");
   var back = $("#bbBack");
   if (back && !back.dataset.wired) { back.dataset.wired = "1"; back.onclick = backFromLesson; }
-  if (!curLesson) { bar.style.display = "none"; document.body.classList.remove("has-bottombar"); dropBarNext(); BAR_RESULT = null; bar.querySelectorAll("[data-bar-result]").forEach(function (b) { b.remove(); }); return; }
+  if (!curLesson) { bar.style.display = "none"; document.body.classList.remove("has-bottombar"); dropBarNext(); BAR_RESULT = null; BAR_NEXT = null; bar.querySelectorAll("[data-bar-result]").forEach(function (b) { b.remove(); }); bar.querySelectorAll("[data-bar-next]").forEach(function (b) { b.remove(); }); return; }
   bar.style.display = "flex"; document.body.classList.add("has-bottombar");
   renderBarResultBtns(bar);
+  renderBarNextBtn(bar);
   var sum = app ? app.querySelector(".summarybox[data-summary-next]") : null;
   if (!sum) { dropBarNext(); return; }
   var btn = ensureBarNext();
@@ -3416,6 +3417,21 @@ function renderBarResultBtns(bar) {
 }
 function setBarResult(r) { BAR_RESULT = r || null; updateBottomBar(); }
 function clearBarResult() { if (!BAR_RESULT) return; BAR_RESULT = null; updateBottomBar(); }
+/* Nut chinh cua bai quiz Trung o thanh duoi (tuong duong nut "Da hieu →"
+   trong the): chi hien sau khi nguoi hoc da chon dap an; bam thi sang cau
+   tiep theo, giong nut trong the. Rieng biet voi BAR_RESULT (nut ket qua
+   cham) de khong pha hanh vi the tu / luyen am tieng Anh. */
+var BAR_NEXT = null;
+function renderBarNextBtn(bar) {
+  if (!bar) return;
+  bar.querySelectorAll("[data-bar-next]").forEach(function (b) { b.remove(); });
+  if (!BAR_NEXT) return;
+  var b = document.createElement("button");
+  b.className = "btn btn-primary"; b.setAttribute("data-bar-next", "1");
+  b.textContent = BAR_NEXT.label || "Đã hiểu →";
+  b.onclick = function () { var f = BAR_NEXT.fn; BAR_NEXT = null; renderBarNextBtn(bar); if (f) f(); };
+  bar.appendChild(b);
+}
 /* Video mau ban dia theo tu (YouGlish, tai len luc bam nut — khong tu chay):
    co che nhung chinh thuc cua YouGlish (widget.js + YG.Widget + fetch), che do
    han che bat, khong tu phat. Phat lai that tung tu can kiem chung tren
@@ -8669,9 +8685,11 @@ function viewReviewZh(app) {
 }
 
 
-function renderZhQuiz(app, l, qs, onFinish, finishExtra) {
+function renderZhQuiz(app, l, qs, onFinish, finishExtra, opts) {
+  opts = opts || {};
   if (l.qi == null) { l.qi = 0; l.score = 0; l.picked = -1; }
   if (l.qi >= qs.length) {
+    BAR_NEXT = null;
     if (!l.finished) { l.finished = true; try { onFinish(l.score, qs.length); } catch (e) {} saveState(); }
     l.zhNext = true;
     var wrong = (l.wrong || []).map(function (w) { return '<p>· ' + esc(w) + '</p>'; }).join("");
@@ -8685,14 +8703,19 @@ function renderZhQuiz(app, l, qs, onFinish, finishExtra) {
   var q = qs[l.qi];
   var html = lessonHead({ title: l.title || "Bài luyện", type: l.typeLabel || "Tiếng Trung" })
     + '<div class="qblock"><p><b>Câu ' + (l.qi + 1) + '/' + qs.length + ':</b> ' + esc(q.q) + '</p>';
+  if (opts.listen && q.speak) html += '<div class="row"><button class="btn" id="zhQuizListen">🔊 Nghe</button></div>';
   q.o.forEach(function (opt, i) { html += '<p><button class="btn" data-zhq="' + i + '">' + esc(opt) + '</button></p>'; });
   if (l.picked >= 0) {
     var ok = l.picked === q.a;
     html += '<div class="why"><p><b>' + (ok ? 'Đúng rồi!' : 'Chưa đúng — đáp án đúng: ' + esc(q.o[q.a])) + '</b></p><p class="mut">' + esc(q.why || "") + '</p><button class="btn btn-primary" id="zhQuizNext">Đã hiểu →</button></div>';
   }
+  if (opts.onSkip) html += '<div class="row"><button class="btn" id="zhQuizSkip">Bỏ qua bước này</button></div>';
   html += '</div>';
   app.innerHTML = html;
+  var zhQuizAdvance = function () { l.qi++; l.picked = -1; render(); };
+  BAR_NEXT = (opts.barNext && l.picked >= 0) ? { label: "Đã hiểu →", fn: zhQuizAdvance } : null;
   wireBack();
+  var qls = $("#zhQuizListen"); if (qls) qls.onclick = function () { zhSpeak(q.speak); };
   $$("[data-zhq]").forEach(function (b) { b.onclick = function () {
     if (l.picked >= 0) return;
     l.picked = +b.dataset.zhq;
@@ -8700,7 +8723,8 @@ function renderZhQuiz(app, l, qs, onFinish, finishExtra) {
     else { if (!l.wrong) l.wrong = []; l.wrong.push(q.q + ' — đáp án đúng: ' + q.o[q.a]); }
     render();
   }; });
-  var nx = $("#zhQuizNext"); if (nx) nx.onclick = function () { l.qi++; l.picked = -1; render(); };
+  var nx = $("#zhQuizNext"); if (nx) nx.onclick = zhQuizAdvance;
+  var qsk = $("#zhQuizSkip"); if (qsk) qsk.onclick = function () { BAR_NEXT = null; opts.onSkip(); };
 }
 function renderZhVocab(app, l) {
   var d = zhSetByKey(l.setKey);
@@ -8773,6 +8797,14 @@ function renderZhPh(app, l) {
       if (state.zhPhSkipped.indexOf(step.id) >= 0) state.zhPhSkipped.splice(state.zhPhSkipped.indexOf(step.id), 1);
       state.zhPhDone[step.id] = true;
       zhAwardOnce("ph:" + step.id);
+    }, null, {
+      listen: true, barNext: true,
+      onSkip: function () {
+        if (state.zhPhSkipped.indexOf(step.id) < 0) state.zhPhSkipped.push(step.id);
+        saveState();
+        var t = zhSessionTarget();
+        if (t.kind === "zhLesson") openLesson(t.lesson); else { curLesson = null; go("home"); }
+      }
     });
     return;
   }
