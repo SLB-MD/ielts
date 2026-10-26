@@ -114,7 +114,12 @@ iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radiu
 .path-node .pn-st{font-size:13px}
 .path-node.done .pn-st{color:var(--green);font-weight:700}
 .path-node.cur .pn-st{color:#8A6100;font-weight:700}
-.tracksw{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tracksw .btn.on{background:#FFC800;border-color:#E0A800}.zh-han{font-size:44px;line-height:1.4}
+.tracksw{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tracksw .btn.on{background:#FFC800;border-color:#E0A800}
+body.landing-on #tabBar,body.landing-on #previewBanner,body.landing-on #tutorFloatBtn{display:none}
+.land-grid{display:grid;gap:12px;margin:16px 0}
+@media(min-width:700px){.land-grid{grid-template-columns:1fr 1fr}}
+.land-opt{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-height:64px;padding:14px 16px;text-align:left;border-width:2px}
+.land-opt b{font-size:18px}.zh-han{font-size:44px;line-height:1.4}
 .path-node.skipped .pn-st{color:var(--mut)}
 #bottombar{position:fixed;left:0;right:0;bottom:0;z-index:44;background:#fff;border-top:1.5px solid var(--line2);padding:10px 16px;display:flex;gap:10px;justify-content:space-between;align-items:center;box-shadow:0 -2px 10px rgba(31,36,48,.08)}
 #bottombar .btn{margin:0}
@@ -232,7 +237,7 @@ function phDescFull(p) {
 }
 /* ---------- Store: một nguồn số liệu duy nhất ---------- */
 var LS_NEW = "ielts_rebuild_v1", LS_OLD = "ielts_standalone_v1";
-function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], vocabSkipped: [], chatStars: [], chatReports: [], chatVoicePrefs: {}, testDone: false, chapterTestDone: {}, entryPlaced: null, entrySkipped: false, xpClaimed: {}, track: "en", zhPos: {}, zhDone: {}, zhHard: {}, zhPhDone: {}, zhPhSkipped: [], zhEntrySkipped: false, mems: {}, unsure: {}, videoUnknown: {}, plan: null, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {}, freeze: { count: 0, used: [], granted: [] }, push: { enabled: false, time: "20:00", types: { srs: true, path: true, checkin: true }, permission: "default", subscribed: false, serverSynced: false, lastLocalDay: "" } }; }
+function freshState() { return { progress: {}, cards: {}, hard: {}, xp: 0, checkin: {}, studyLog: {}, savedWords: {}, goal: 30, pos: {}, skipped: [], phDone: {}, phSkipped: [], vocabSkipped: [], chatStars: [], chatReports: [], chatVoicePrefs: {}, testDone: false, chapterTestDone: {}, entryPlaced: null, entrySkipped: false, xpClaimed: {}, track: "en", trackChosen: false, authSkipped: false, zhPos: {}, zhDone: {}, zhHard: {}, zhPhDone: {}, zhPhSkipped: [], zhEntrySkipped: false, mems: {}, unsure: {}, videoUnknown: {}, plan: null, migrated: false, targetBand: null, pace: "vua", personalPath: null, personalExplain: "", vipRequests: [], accountMerge: null, phaseExams: [], mockTests: [], skillDone: {}, writingAttempts: {}, freeze: { count: 0, used: [], granted: [] }, push: { enabled: false, time: "20:00", types: { srs: true, path: true, checkin: true }, permission: "default", subscribed: false, serverSynced: false, lastLocalDay: "" } }; }
 function saveState() { try { localStorage.setItem(LS_NEW, JSON.stringify(state)); } catch (e) {} try { if (typeof authState !== "undefined" && authState.user) scheduleSyncPush(); } catch (e2) {} }
 function normHardFails(st) {
   /* Mục khó cũ chưa có số lần sai: mục từ Sổ lỗi sai (quiz/drill) vốn đã sai
@@ -266,7 +271,7 @@ function loadState() {
   return st;
 }
 var state = loadState();
-var curTab = "home", curLesson = null, returnTab = "home", nudgeShown = false, phNudgeShown = false, phViewMode = "wave", phNudgePhShown = false, lessonStart = 0, runFirstTry = {}, runWrong = [];
+var curTab = "home", curLesson = null, returnTab = "home", nudgeShown = false, phNudgeShown = false, phViewMode = "wave", phNudgePhShown = false, lessonStart = 0, runFirstTry = {}, runWrong = [], landingBypass = false;
 
 function awardXp(n) { state.xp = (state.xp || 0) + n; saveState(); }
 function xpLevel(xp) {
@@ -923,6 +928,23 @@ function render() {
       return;
     }
   } catch (e) {}
+  var landingSkip = landingBypass; landingBypass = false;
+  if (!curLesson && !landingSkip && landingNeeded()) {
+    var loggedIn = false;
+    try { loggedIn = !!(typeof authState !== "undefined" && authState.user); } catch (e) {}
+    var showAuth = !loggedIn && !state.authSkipped;
+    var appL = $("#app");
+    if (appL) {
+      appL.classList.remove("lesson-view");
+      if (showAuth) { appL.innerHTML = landingAuthHTML(); wireLandingAuth(); }
+      else { appL.innerHTML = landingHTML(); wireLanding(); }
+    }
+    document.body.classList.add("landing-on");
+    $$("#tabBar .tab").forEach(function (b) { b.classList.remove("on"); });
+    updateBottomBar();
+    return;
+  }
+  document.body.classList.remove("landing-on");
   $$("#tabBar .tab").forEach(function (b) { b.classList.toggle("on", b.dataset.tab === curTab); });
   var app = $("#app");
   if (curLesson) { renderLesson(app); applyLessonLayout(app); u7PositionUpdate(); updateBottomBar(); return; }
@@ -1201,6 +1223,20 @@ function resumeLine(step) {
   }
   return step.title;
 }
+function stepTypeIcon(type) {
+  var t = String(type || "");
+  if (t.indexOf("Từ vựng") >= 0) return "📚";
+  if (t.indexOf("Ngữ pháp") >= 0) return "🔤";
+  if (t.indexOf("Đọc") >= 0) return "📖";
+  if (t.indexOf("Nghe") >= 0) return "🎧";
+  if (t.indexOf("Nói") >= 0) return "🗣️";
+  if (t.indexOf("Nhập vai") >= 0) return "🎭";
+  if (t.indexOf("Viết") >= 0) return "✍️";
+  if (t.indexOf("Phát âm") >= 0) return "🎤";
+  if (t.indexOf("Gõ câu") >= 0) return "⌨️";
+  if (t.indexOf("Kiểm tra") >= 0) return "📝";
+  return "";
+}
 function viewHome(app) {
   var done = doneLearnCount(), total = learningSteps().length;
   var due = dueCount();
@@ -1221,9 +1257,8 @@ function viewHome(app) {
     var t = sessionTarget();
     var heroEyebrow = t.kind === "review" ? "BUỔI HỌC HÔM NAY · ÔN TRƯỚC" : (t.fromPp ? "TIẾP THEO · LỘ TRÌNH RIÊNG" : "TIẾP THEO");
     var heroSub = esc(t.type) + (t.step ? " · khoảng " + t.step.mins + " phút (ước tính)" : "");
-    var xpChip = "";
-    if (t.step) xpChip = '<p><span class="chip tip" id="nextXpPromise" data-tip="XP chỉ là điểm khích lệ trong web, không phải điểm thi. Cách nhận XP đầy đủ ở tab Của tôi.">+' + (stepDone(t.step.id) ? 5 : 10) + ' XP khi xong bài này</span></p>';
-    html += '<section class="card next-card" id="nextCard"><div class="hero-pair">' + mascPairHTML(false) + '<div class="hero-text"><p class="eyebrow">▶ ' + heroEyebrow + '</p><h2>' + esc(t.title) + '</h2><p class="mut">' + heroSub + '</p>' + xpChip + '<button class="btn btn-primary" id="nextBtn">Học tiếp: ' + esc(t.title) + ' →</button></div></div></section>';
+    var xpVal = t.step ? (stepDone(t.step.id) ? 5 : 10) : 0;
+    html += '<section class="card next-card" id="nextCard"><div class="hero-pair">' + mascPairHTML(false) + '<div class="hero-text"><p class="eyebrow">▶ ' + heroEyebrow + '</p><h2>' + esc(t.title) + '</h2><p class="mut">' + heroSub + '</p><button class="btn btn-primary" id="nextBtn">Học tiếp: ' + esc(t.title) + ' →' + (xpVal ? ' · +' + xpVal + ' XP' : '') + '</button></div></div></section>';
   }
   if (!fresh && due > 0) html += '<p class="mut" id="reviewStrip">Có <b>' + due + ' mục đến hạn ôn</b> hôm nay — nút “Học tiếp” ở trên sẽ ôn trước.</p>';
   var curStep = null, curTitle = "";
@@ -1235,17 +1270,17 @@ function viewHome(app) {
     var curId = nextLearnStep() ? nextLearnStep().id : null;
     learningSteps().forEach(function (s) {
       var st = stepDone(s.id) ? "done" : (state.skipped.indexOf(s.id) >= 0 ? "skipped" : (s.id === curId ? "cur" : "future"));
-      var icon = st === "done" ? "✓" : st === "cur" ? "▶" : st === "skipped" ? "↩" : "○";
+      var icon = st === "skipped" ? "↩" : (stepTypeIcon(s.type) || (st === "done" ? "✓" : st === "cur" ? "▶" : "○"));
       var stTxt = st === "done" ? "Đã xong" : st === "cur" ? "Đang học · Bạn đang ở đây" : st === "skipped" ? "Đã bỏ qua — bấm để học lại" : "Chưa tới";
       html += '<button class="path-node ' + st + '" data-path-step="' + s.id + '"><span class="dotwrap"><span class="dot">' + icon + '</span></span><span><span class="pn-title">' + esc(s.title) + '</span><br><span class="pn-type">' + esc(s.type) + ' · khoảng ' + s.mins + ' phút</span><br><span class="pn-st">' + stTxt + '</span></span></button>';
     });
     var gateSt = state.testDone ? "done" : (gateOpen() ? "cur" : "future");
     var gateTxt = state.testDone ? "Đã xong" : (gateOpen() ? "Đang học · Bạn đang ở đây" : "Chưa tới · Mở khi xong 80% chương 1");
-    html += '<button class="path-node ' + gateSt + '" data-path-test="1"><span class="dotwrap"><span class="dot">' + (gateSt === "done" ? "✓" : gateSt === "cur" ? "▶" : "○") + '</span></span><span><span class="pn-title">Bài kiểm tra cuối chương 1</span><br><span class="pn-type">Kiểm tra cuối chương</span><br><span class="pn-st">' + gateTxt + '</span></span></button>';
+    html += '<button class="path-node ' + gateSt + '" data-path-test="1"><span class="dotwrap"><span class="dot">📝</span></span><span><span class="pn-title">Bài kiểm tra cuối chương 1</span><br><span class="pn-type">Kiểm tra cuối chương</span><br><span class="pn-st">' + gateTxt + '</span></span></button>';
   } else {
     info.steps.forEach(function (st, si) {
       var stt = rbStepDone(st) ? "done" : (si === info.steps.findIndex(function (x) { return !rbStepDone(x); }) ? "cur" : "future");
-      var icon2 = stt === "done" ? "✓" : stt === "cur" ? "▶" : "○";
+      var icon2 = stepTypeIcon(st.type) || (stt === "done" ? "✓" : stt === "cur" ? "▶" : "○");
       var stTxt2 = stt === "done" ? "Đã xong" : stt === "cur" ? "Đang học · Bạn đang ở đây" : "Chưa tới";
       html += '<button class="path-node ' + stt + '" data-path-rstep="' + esc(info.band) + ':' + si + '"><span class="dotwrap"><span class="dot">' + icon2 + '</span></span><span><span class="pn-title">' + esc(st.title) + '</span><br><span class="pn-type">' + esc(st.type) + '</span><br><span class="pn-st">' + stTxt2 + '</span></span></button>';
     });
@@ -1407,7 +1442,7 @@ function viewRoadmap(app) {
   var done = doneLearnCount(), total = learningSteps().length;
   var html = trackSwitchHTML() + '<h2>Bản đồ</h2>';
   html += '<section class="card" id="myPathLink"><h3>Lộ trình riêng của bạn</h3><p class="mut">Lộ trình riêng đã tách ra thành trang riêng — bấm vào là bắt đầu học ngay bước tiếp theo của riêng bạn.</p><button class="btn" id="myPathGo">Mở lộ trình riêng</button></section>';
-  html += '<section class="card"><h3>Sổ tay chương 1</h3><details><summary><b>Xem chi tiết sổ tay</b></summary><p><b>Mục tiêu:</b> ' + esc(RB_CH1_GUIDEBOOK.goal) + '</p>'
+  html += '<section class="card"><h3>Sổ tay chương 1</h3><div class="row"><button class="btn" data-gbopen="ch1">📖 Mở sổ tay chặng</button></div><details id="ch1Guidebook"><summary><b>Xem chi tiết sổ tay</b></summary><p><b>Mục tiêu:</b> ' + esc(RB_CH1_GUIDEBOOK.goal) + '</p>'
     + '<p><b>Ngữ pháp chính:</b> ' + esc(RB_CH1_GUIDEBOOK.grammar.join(" · ")) + '</p>'
     + '<p><b>Cụm câu then chốt:</b> ' + esc(RB_CH1_GUIDEBOOK.phrases.join(" · ")) + '</p>'
     + '<p><b>Lỗi người Việt hay mắc:</b> ' + esc(RB_CH1_GUIDEBOOK.mistakes.join(" · ")) + '</p></details></section>';
@@ -1448,7 +1483,7 @@ function viewRoadmap(app) {
     var d2 = ci === 0 ? done + '/' + total + ' bước' : (hasSteps ? chSteps.length + ' bước' : 'Sắp mở');
     var chipTxt = ci === 0 ? 'Đang mở · ' + d2 : (hasSteps ? 'Đã mở · ' + d2 : 'Sắp mở');
     var gb = ci === 0 ? RB_CH1_GUIDEBOOK : CL_GUIDEBOOKS[ch.band];
-    html += '<section class="card chapter-row" data-ch="' + esc(ch.band) + '"><div class="row"><b>Chương ' + esc(ch.band) + ': ' + esc(ch.title) + '</b><span class="chip' + (isOpen ? ' cur' : '') + '">' + chipTxt + '</span></div>'
+    html += '<section class="card chapter-row" data-ch="' + esc(ch.band) + '"><div class="row"><b>Chương ' + esc(ch.band) + ': ' + esc(ch.title) + '</b><span class="chip' + (isOpen ? ' cur' : '') + '">' + chipTxt + '</span><button class="btn" data-gbopen="' + esc(ch.band) + '">📖 Sổ tay chặng</button></div>'
       + '<p><b>Mục tiêu:</b> ' + esc(ch.goal) + '</p>'
       + '<details><summary><b>Học xong làm được — bấm để mở</b></summary><p>' + esc(ch.can.join(" · ")) + '</p></details>'
       + (ci === 0 ? '<button class="btn btn-primary" id="mapCh1">Vào học chương 1</button>' : (hasSteps ? '<button class="btn" data-chopen="' + esc(ch.band) + '">Mở chương này</button>' : '<p class="mut">Cổng: mở khi bạn học xong 80% chương trước (chuẩn nội bộ).</p>'));
@@ -1489,6 +1524,10 @@ function viewRoadmap(app) {
     btn.onclick = function () { openStep(stepById(btn.dataset.step)); };
   });
   var gb = $("#gateBtn"); if (gb) gb.onclick = function () { openStep(stepById("test")); };
+  $$("[data-gbopen]").forEach(function (btn) { btn.onclick = function () {
+    var t = btn.dataset.gbopen === "ch1" ? document.getElementById("ch1Guidebook") : document.querySelector('[data-cl-gb="' + btn.dataset.gbopen + '"]');
+    if (t) { t.open = true; if (t.scrollIntoView) t.scrollIntoView(); }
+  }; });
   var mrB = $("#midReviewBtn"); if (mrB) mrB.onclick = function () { lessonStart = Date.now(); runWrong = []; runFirstTry = {}; openLesson({ type: "midReview" }); };
   var mc1 = $("#mapCh1"); if (mc1) mc1.onclick = function () { var ns = nextLearnStep(); openStep(ns || stepById("pron1"), { noNudge: true }); };
   $$("[data-rstep]").forEach(function (btn) {
@@ -1539,7 +1578,27 @@ function viewPractice(app) {
     + guideLine("practiceIntro", "Luyện riêng theo từng kỹ năng — mở nhóm cần luyện, bấm bài để học.")
     + '<details style="margin-top:8px"><summary><b>Xem thêm</b></summary>'
     + '<p class="mut">Luyện riêng theo từng kỹ năng, đúng format thi. Trò chơi nằm trong này, không còn là cửa riêng.</p>'
-    + '<p class="mut">Mọi bài dưới đây đều từ kho tự soạn của web, xếp theo đúng định dạng thi IELTS. Số lượng đếm thật từ kho, không ghi số mẫu.</p></details>';
+    + '<p class="mut">Mọi bài dưới đây đều từ kho tự soạn của web, xếp theo đúng định dạng thi IELTS. Số lượng đếm thật từ kho, không ghi số mẫu.</p></details>'
+  /* --- 4 nhom theo muc dich (kieu Practice Hub cua Duolingo) --- */
+  var ppStageBtns = '<div class="row" style="margin-top:6px"><button class="btn" data-ppch="ch1">Chương 1: Chào hỏi và 44 âm</button>'
+    + RB_CHAPTER_MAP.slice(1).map(function (ch) { return '<button class="btn" data-ppch="' + esc(ch.band) + '">Chương ' + esc(ch.band) + ': ' + esc(ch.title) + '</button>'; }).join("") + '</div>'
+    + '<p class="mut">Bấm chương để học tiếp bước chưa xong đầu tiên của chương đó.</p>';
+  var ppTestBtns = (function () {
+    var rows = '<div class="row" style="margin-top:6px"><button class="btn" data-ppchtest="ch1">Kiểm tra cuối chương 1</button>';
+    RB_CHAPTER_MAP.slice(1).forEach(function (ch) {
+      var steps = rbChSteps(ch.band);
+      if (!steps.length) return;
+      var dc = steps.filter(function (st) { return rbStepDone(st); }).length;
+      var need = Math.ceil(steps.length * 0.8);
+      var passed = !!((state.chapterTestDone || {})[ch.band]);
+      rows += '<button class="btn" data-ppchtest="' + esc(ch.band) + '"' + ((!passed && dc < need) ? ' disabled' : '') + '">Kiểm tra cuối chương ' + esc(ch.band) + (passed ? ' \u2713 (làm lại)' : (dc >= need ? '' : ' · chưa mở')) + '</button>';
+    });
+    return rows + '</div><p class="mut">Kiểm tra cuối chương mở khi xong 80% số bước chương (chuẩn nội bộ).</p>';
+  })();
+  html += '<details class="card practice-purpose" id="ppWeak"><summary><b>🎯 Ôn điểm yếu</b> — lỗi sai + mục khó đến hạn</summary><div id="ppWeakBody"></div></details>'
+    + '<details class="card practice-purpose" id="ppSkill"><summary><b>📚 Theo kỹ năng</b> — từ vựng, ngữ pháp, đọc, nghe, nói, viết, gõ câu, trò chơi</summary><div id="ppSkillBody"></div></details>'
+    + '<details class="card practice-purpose" id="ppStage"><summary><b>🗺️ Theo chặng</b> — 13 chương + kiểm tra đầu vào</summary><div id="ppStageBody">' + ppStageBtns + '</div></details>'
+    + '<details class="card practice-purpose" id="ppExam"><summary><b>🎓 Thi</b> — kiểm tra cuối chương + thi thử đúng format</summary><div id="ppExamBody">' + ppTestBtns + '</div></details>';
   /* --- Tu vung: 89 bo xep theo band --- */
   var vocabByBand = {}, vocabBandOrder = [];
   CONTENT.vocab.forEach(function (s, i) {
@@ -1723,7 +1782,25 @@ function viewPractice(app) {
     + '<button class="step-row" data-entrycheck="zero"><span>Kiểm tra đầu vào — Band 0 (6 câu)</span><span class="st">' + (doneK("entryZero") ? '✓' : '→') + '</span></button>'
     + '<button class="step-row" data-entrycheck="trial"><span>Kiểm tra đầu vào — Band 5,0–7,5+ (16 câu)</span><span class="st">' + (doneK("entryTrial") ? '✓' : '→') + '</span></button></details>';
   app.innerHTML = html;
+  (function () {
+    var move = function (id, bodyId) { var el = document.getElementById(id), body = document.getElementById(bodyId); if (el && body) body.appendChild(el); };
+    move("practiceGrpWeak", "ppWeakBody");
+    ["practiceGrpVocab", "practiceGrpRead", "practiceGrpListen", "practiceGrpSpeak", "practiceGrpWrite", "practiceGrpGram", "practiceGrpTyping", "u7PlayCardPractice", "gd23Practice", "practiceGrpClass", "practiceGrpBk"].forEach(function (id) { move(id, "ppSkillBody"); });
+    ["practiceGrpSupport", "practiceGrpEntry"].forEach(function (id) { move(id, "ppStageBody"); });
+    move("practiceGrpExam", "ppExamBody");
+  })();
   var pnb = $("#practiceNextBtn"); if (pnb) pnb.onclick = function () { openPracticeNext(practiceNextTarget()); };
+  $$("[data-ppch]").forEach(function (b) { b.onclick = function () {
+    lessonStart = Date.now(); runWrong = []; runFirstTry = {};
+    if (b.dataset.ppch === "ch1") { var ns = nextLearnStep(); openStep(ns || stepById("pron1"), { noNudge: true }); return; }
+    var st = rbFirstUndoneStep(b.dataset.ppch) || rbChSteps(b.dataset.ppch)[0];
+    if (st) openRoadmapStepLesson(st.lesson);
+  }; });
+  $$("[data-ppchtest]").forEach(function (b) { b.onclick = function () {
+    lessonStart = Date.now(); runWrong = []; runFirstTry = {};
+    if (b.dataset.ppchtest === "ch1") { openStep(stepById("test")); return; }
+    openLesson({ type: "chapterTest", band: b.dataset.ppchtest });
+  }; });
   $$("[data-practice]").forEach(function (btn) {
     btn.onclick = function () { openStep(stepById(btn.dataset.practice)); };
   });
@@ -1765,6 +1842,10 @@ function viewPractice(app) {
 function viewReview(app) {
   var cards = dueCards(), hards = dueHard();
   var html = trackSwitchHTML() + '<h2>Ôn tập</h2><p class="mut">Lịch ôn: ' + RB_SCHEDULE_TEXT + '.</p><details class="guide-more"><summary><b>Xem thêm về lịch ôn</b></summary><p class="mut">Ôn giãn cách là ôn lại đúng lúc sắp quên, các lần ôn cách nhau xa dần. Đúng 2 lần liên tiếp ở các lần ôn cách quãng mới "tốt nghiệp" (xong hẳn).</p></details>';
+  if (cards.length || hards.length) {
+    var dueN = cards.length + hards.length;
+    html += '<section class="card next-card" id="reviewStartCard"><p class="eyebrow">BUỔI ÔN HÔM NAY</p><h3>Ôn ' + dueN + ' mục đến hạn</h3><p class="mut">Một phiên trộn: câu sai cũ trước, thêm vài thẻ mới làm quen. Làm đúng ở đây chưa tốt nghiệp mục — ôn lại đúng 2 lần cách quãng ở tab này mới tính.</p><button class="btn btn-primary" id="reviewStartBtn">Bắt đầu buổi ôn</button></section>';
+  }
   if (hards.length) {
     html += '<section class="card"><h3>Điểm yếu của bạn</h3><p class="mut">Các câu bạn từng làm sai — ôn tới khi sửa xong:</p><div id="reviewList">';
     hards.forEach(function (it) {
@@ -1793,6 +1874,7 @@ function viewReview(app) {
   if (!cards.length && !hards.length) html += '<section class="card"><div class="hero-pair"><svg class="snake sm masc-bob" aria-hidden="true" focusable="false"><use href="#msc-snake"/></svg><div class="hero-text"><p>Hôm nay không có mục nào đến hạn ôn. Tốt lắm!</p><p class="mut">Hôm nay chưa có mục nào đến hạn ôn — cứ học tiếp, mục khó sẽ tự về đây đúng ngày.</p></div></div><div class="row"><button class="btn btn-primary" id="reviewNextStep">Học tiếp bước kế tiếp</button><button class="btn" id="reviewRoadmap">Xem lộ trình</button></div></section>';
   app.innerHTML = html;
   var rns = $("#reviewNextStep"); if (rns) rns.onclick = function () { openSessionTarget(sessionTarget()); };
+  var rsb = $("#reviewStartBtn"); if (rsb) rsb.onclick = function () { lessonStart = Date.now(); runWrong = []; runFirstTry = {}; openLesson({ type: "reviewSession" }); };
   var rrm = $("#reviewRoadmap"); if (rrm) rrm.onclick = function () { go("roadmap"); };
   $$("[data-memo-save]").forEach(function (b) {
     b.onclick = function () {
@@ -1951,7 +2033,7 @@ function viewMine(app) {
   var lw = $("#levelWeakBtn"); if (lw) lw.onclick = function () { var lt2 = state.lastTest; var wp = lt2.parts.slice().sort(function (a, b) { return a.pct - b.pct; })[0]; if (typeof openStep === "function") { openStep(wp.name === "Âm và câu nói hàng ngày" ? stepById("pron1") : stepById("classroom"), { noNudge: true }); } else { go("roadmap"); } };
   var phBtn = $("#phaseAgainBtn"); if (phBtn) phBtn.onclick = function () { var all = state.phaseExams || []; var nx = all.length ? all[all.length - 1].phase + 1 : 1; openLesson({ type: "phaseExam", phase: nx }); };
   var aL = $("#accLogin"); if (aL) aL.onclick = function () { authDoSignIn(); };
-  var aG = $("#accGuest"); if (aG) aG.onclick = function () { toast("Bạn đang học ở chế độ khách — tiến trình lưu trên máy này."); go("home"); };
+  var aG = $("#accGuest"); if (aG) aG.onclick = function () { state.authSkipped = true; saveState(); toast("Bạn đang học ở chế độ khách — tiến trình lưu trên máy này."); go("home"); };
   var aS = $("#accSignup"); if (aS) aS.onclick = function () { authDoSignUp(); };
   var aF = $("#accForgot"); if (aF) aF.onclick = function () { authDoResetPassword(); };
   var aC = $("#accChangePw"); if (aC) aC.onclick = function () { authDoChangePassword(); };
@@ -2045,6 +2127,8 @@ function mergeGuestIntoAccount(guest, acc) {
   merged.entryPlaced = (acc && acc.entryPlaced) || (guest && guest.entryPlaced) || null;
   merged.entrySkipped = !!((acc && acc.entrySkipped) || (guest && guest.entrySkipped));
   merged.track = (acc && acc.track) ? acc.track : (guest.track || "en");
+  merged.trackChosen = !!((acc && acc.trackChosen) || (guest && guest.trackChosen));
+  merged.authSkipped = !!((acc && acc.authSkipped) || (guest && guest.authSkipped));
   ["zhPos", "zhDone", "zhHard", "zhPhDone"].forEach(function (f) { var out = {}; Object.keys(guest[f] || {}).forEach(function (k) { out[k] = guest[f][k]; }); Object.keys((acc && acc[f]) || {}).forEach(function (k) { out[k] = acc[f][k]; }); merged[f] = out; });
   merged.zhPhSkipped = unionArr(guest.zhPhSkipped, acc.zhPhSkipped);
   merged.zhEntrySkipped = !!((acc && acc.zhEntrySkipped) || (guest && guest.zhEntrySkipped));
@@ -2138,6 +2222,8 @@ function syncPull(uid) {
           else if (k === "entryPlaced") acc.entryPlaced = r.state || null;
           else if (k === "entrySkipped") acc.entrySkipped = !!r.state;
           else if (k === "track") acc.track = (r.state === "zh") ? "zh" : "en";
+          else if (k === "trackChosen") acc.trackChosen = !!r.state;
+          else if (k === "authSkipped") acc.authSkipped = !!r.state;
           else if (k === "zhPos") acc.zhPos = r.state || {};
           else if (k === "zhDone") acc.zhDone = r.state || {};
           else if (k === "zhHard") acc.zhHard = r.state || {};
@@ -2205,6 +2291,8 @@ function syncPush() {
       row("rb", "entryPlaced", state.entryPlaced || null);
       row("rb", "entrySkipped", !!state.entrySkipped);
       row("rb", "track", state.track === "zh" ? "zh" : "en");
+      row("rb", "trackChosen", !!state.trackChosen);
+      row("rb", "authSkipped", !!state.authSkipped);
       row("rb", "zhPos", state.zhPos || {});
       row("rb", "zhDone", state.zhDone || {});
       row("rb", "zhHard", state.zhHard || {});
@@ -2352,7 +2440,7 @@ function authDoRecoveryPassword() {
       try { if (window.history && window.history.replaceState) window.history.replaceState(null, "", window.location.pathname); } catch (e) {}
       if (recoveryState) recoveryState.done = true;
       toast("Đã đặt mật khẩu mới — hãy đăng nhập bằng mật khẩu mới.");
-      curLesson = null; curTab = "mine"; render();
+      curLesson = null; curTab = "mine"; landingBypass = true; render();
     }, function (e) {
       var msg = authErrorText(e);
       var m3 = $("#recMsg"); if (m3) m3.textContent = msg;
@@ -2363,7 +2451,7 @@ function authDoRecoveryPassword() {
 function wireRecovery() {
   var set = $("#recSetPw"); if (set) set.onclick = function () { authDoRecoveryPassword(); };
   var cancel = $("#recCancel"); if (cancel) cancel.onclick = function () { if (recoveryState) recoveryState.done = true; go("home"); };
-  var toMine = $("#recToMine"); if (toMine) toMine.onclick = function () { if (recoveryState) recoveryState.done = true; go("mine"); };
+  var toMine = $("#recToMine"); if (toMine) toMine.onclick = function () { if (recoveryState) recoveryState.done = true; landingBypass = true; go("mine"); };
 }
 function authDoSignIn() {
   var email = ($("#accEmail") && $("#accEmail").value || "").trim();
@@ -2937,6 +3025,8 @@ function renderTypingLesson(app, l) {
   if (l.setIdx === undefined) {
     var nextI = -1;
     for (var ti = 0; ti < sets.length; ti++) if (!typingDone(mode, ti)) { nextI = ti; break; }
+    if (nextI >= 0 && !l.pick) { l.setIdx = nextI; l.phase = 0; l.si = 0; l.correct = 0; l.phasesDone = {}; l.theoryDone = false; }
+    else {
     var byLevel = {};
     sets.forEach(function (s, i) { (byLevel[s.level] = byLevel[s.level] || []).push(i); });
     var levelOrder = Object.keys(byLevel).sort(function (a, b) { return bandSortVal(a) - bandSortVal(b); });
@@ -2954,9 +3044,10 @@ function renderTypingLesson(app, l) {
     app.innerHTML = head + picker;
     wireBack();
     var tpN = $("#tpNextSet"); if (tpN) tpN.onclick = function () { l.setIdx = nextI; l.phase = 0; l.si = 0; l.correct = 0; l.phasesDone = {}; l.theoryDone = false; render(); };
-    $$("[data-tmode]").forEach(function (b) { b.onclick = function () { l.mode = b.dataset.tmode; l.setIdx = undefined; render(); }; });
+    $$("[data-tmode]").forEach(function (b) { b.onclick = function () { l.mode = b.dataset.tmode; l.setIdx = undefined; l.pick = true; render(); }; });
     $$("[data-tset]").forEach(function (b) { b.onclick = function () { l.setIdx = +b.dataset.tset; l.phase = 0; l.si = 0; l.correct = 0; l.phasesDone = {}; l.theoryDone = false; render(); }; });
     return;
+    }
   }
   var set = sets[l.setIdx];
   if (!set) { l.setIdx = undefined; render(); return; }
@@ -2969,7 +3060,7 @@ function renderTypingLesson(app, l) {
     app.innerHTML = head + '<div class="summarybox"><h2>Xong Pha ' + (l.phase + 1) + '</h2><p>Đúng ngay lần đầu: ' + (l.correct || 0) + '/' + set.sentences.length + ' câu.</p>' + (allDone ? '<p><b>Đã xong cả 3 pha của bộ này.</b></p>' : '<p><button class="btn btn-primary" id="tpNextPhase">Sang Pha ' + (l.phase + 2) + '</button></p>') + '<p><button class="btn" id="tpBackSets">Chọn bộ khác</button></p></div>';
     wireBack();
     var nx = $("#tpNextPhase"); if (nx) nx.onclick = function () { l.phase++; l.si = 0; l.correct = 0; render(); };
-    $("#tpBackSets").onclick = function () { l.setIdx = undefined; render(); };
+    $("#tpBackSets").onclick = function () { l.setIdx = undefined; l.pick = true; render(); };
     return;
   }
   if (!l.theoryDone && l.phase === 0 && l.si === 0) {
@@ -3005,6 +3096,42 @@ function renderWeakSession(app, l) {
   wireBack();
   var answered = false;
   $$("[data-wi]").forEach(function (b) { b.onclick = function () { if (answered) return; answered = true; var i = +b.dataset.wi; if (i === q0.a) { b.classList.add("ok"); l.first++; } else { b.classList.add("bad"); var cb = document.querySelector('[data-wi="' + q0.a + '"]'); if (cb) cb.classList.add("ok"); } var wEl = $("#wsWhy"); wEl.textContent = "Đáp án đúng: " + (q0.o ? q0.o[q0.a] : "") + " — " + (q0.why || ""); wEl.classList.add("show"); $("#wsNext").style.display = "inline-block"; $("#wsNext").onclick = function () { l.qi++; render(); }; }; });
+}
+/* Buoi on tron tab On tap: cau sai cu + the moi lam quen.
+   Lam dung o day CHUA tot nghiep muc — on lai o tab On tap dung 2 lan
+   cach quang moi tinh (giong Buoi On diem yeu). */
+function reviewMixQuestions() {
+  var mix = gd23ReviewMix();
+  var qs = [];
+  mix.dueHard.filter(function (d) { return d.h && d.h.kind === "quiz" && d.h.q; }).forEach(function (d) {
+    qs.push({ q: d.h.q, o: d.h.options, a: d.h.a, why: d.h.why });
+  });
+  var pool = [];
+  (CONTENT.vocab || []).forEach(function (s) { (s.cards || []).forEach(function (c) { if (c && c.w && c.vi) pool.push(c); }); });
+  var meaningQ = function (c, tag, posBase) {
+    var distract = [];
+    for (var i = 0; i < pool.length && distract.length < 3; i++) {
+      var v = pool[(pool.indexOf(c) + 1 + i * 7) % pool.length];
+      if (v && v.vi !== c.vi && distract.indexOf(v.vi) < 0) distract.push(v.vi);
+    }
+    var opts = distract.slice(); var pos = posBase % 4;
+    opts.splice(pos, 0, c.vi);
+    return { q: 'Từ "' + c.w + '" nghĩa là gì?' + tag, o: opts, a: pos, why: '"' + c.w + '" nghĩa là ' + c.vi + '.' };
+  };
+  mix.fresh.forEach(function (it, fi) { if (it.card) qs.push(meaningQ(it.card, " (thẻ mới làm quen trước)", fi * 3 + 1)); });
+  if (!qs.length) dueCards().forEach(function (it, di) { if (it.card) qs.push(meaningQ(it.card, " (thẻ đến hạn)", di)); });
+  return qs.slice(0, 20);
+}
+function renderReviewSession(app, l) {
+  l.title = "Buổi ôn trộn"; l.sub = "Câu sai cũ trước + vài thẻ mới làm quen. Làm đúng ở đây chưa tốt nghiệp mục — ôn lại ở tab Ôn tập đúng 2 lần cách quãng mới tính.";
+  l.skillKey = "reviewSession";
+  if (!l.qsBuilt) { l.qsBuilt = true; l.qs = reviewMixQuestions(); }
+  if (!l.qs.length) {
+    app.innerHTML = skillHead(l.title, l.sub) + '<div class="qblock"><p>Hôm nay không còn mục nào để trộn thành phiên — sang tab Ôn tập ôn từng mục nhé.</p><p><button class="btn btn-primary" id="rsReview">Sang tab Ôn tập</button></p></div>';
+    wireBack(); $("#rsReview").onclick = function () { backFromLesson(); go("review"); }; return;
+  }
+  renderQuizEngine(app, l, l.qs, "skill", "reviewSession");
+  var ns = $("#btnNextStep"); if (ns && ns.textContent.indexOf("Về Luyện tập") >= 0) ns.textContent = "Về Ôn tập";
 }
 /* 8. Kiem tra phat am dau vao: 4 tu de, uoc luong tai cho (khong tinh dat chuan), goi y am yeu. */
 function pronEntryWords() { return [{ w: "man", sym: "m" }, { w: "net", sym: "n" }, { w: "pen", sym: "p" }, { w: "book", sym: "b" }]; }
@@ -3206,6 +3333,7 @@ function renderLesson(app) {
   else if (l.type === "game") renderArcadeLesson(app, l);
   else if (l.type === "skillTyping") renderTypingLesson(app, l);
   else if (l.type === "weakSession") renderWeakSession(app, l);
+  else if (l.type === "reviewSession") renderReviewSession(app, l);
   else if (l.type === "pronEntry") renderPronEntry(app, l);
   else if (l.type === "skillGramOld") renderSkillGramOld(app, l);
   else if (l.type === "entryCheck") renderEntryCheck(app, l);
@@ -3607,7 +3735,7 @@ function renderQuizEngine(app, l, questions, mode, lessonId, phase) {
       app.innerHTML = stepHeader(step) + finishSummaryHTML("Hoàn thành bài luyện!", stats, wrongHTML, { chest: { key: step.id, title: step.title }, starsKey: step.id, appeal: "gram:" + step.id }) + clRetrySectionHTML();
       wireBack(); wireNextStep(); clWireRetry(l);
       if (stepIdx(step.id) < 0) { var nsP = $("#btnNextStep"); if (nsP) { nsP.textContent = "Về Luyện tập"; nsP.onclick = function () { backFromLesson(); }; } }
-      $("#btnRedo").onclick = function () { l.qi = 0; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
+      $("#btnRedo").onclick = function () { l.qi = 0; l.streak = 0; l.encourage = ""; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
     } else if (mode === "skill") {
       var was = !!(state.skillDone && state.skillDone[l.skillKey]);
       if (!state.skillDone) state.skillDone = {};
@@ -3625,17 +3753,17 @@ function renderQuizEngine(app, l, questions, mode, lessonId, phase) {
       app.innerHTML = head + finishSummaryHTML("Hoàn thành bài luyện!", stats, wrongHTML, { starsKey: l.skillKey, appeal: "skill:" + l.skillKey }) + clRetrySectionHTML();
       wireBack(); clWireRetry(l);
       var ns = $("#btnNextStep"); if (ns && l.type !== "entryCheck") { ns.textContent = "Về Luyện tập"; ns.onclick = function () { backFromLesson(); }; }
-      $("#btnRedo").onclick = function () { l.qi = 0; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
+      $("#btnRedo").onclick = function () { l.qi = 0; l.streak = 0; l.encourage = ""; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
     } else if (mode === "phase" || mode === "mock") {
       if (typeof l.onDone === "function") { l.onDone({ firstN: firstN, total: total, wrong: runWrong.slice(), questions: qs }); return; }
       app.innerHTML = head + finishSummaryHTML("Hoàn thành bài kiểm tra!", stats, wrongHTML);
       wireBack();
       var ns2 = $("#btnNextStep"); if (ns2) { ns2.textContent = "Về Luyện tập"; ns2.onclick = function () { backFromLesson(); }; }
-      $("#btnRedo").onclick = function () { l.qi = 0; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
+      $("#btnRedo").onclick = function () { l.qi = 0; l.streak = 0; l.encourage = ""; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
     } else {
       app.innerHTML = stepHeader(step) + finishSummaryHTML("Hoàn thành bài kiểm tra!", stats, wrongHTML);
       wireBack(); wireNextStep();
-      $("#btnRedo").onclick = function () { l.qi = 0; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
+      $("#btnRedo").onclick = function () { l.qi = 0; l.streak = 0; l.encourage = ""; l.wrongs = 0; l.revealed = false; l.hint = ""; l.answered = false; runFirstTry = {}; runWrong = []; lessonStart = Date.now(); render(); };
     }
     return;
   }
@@ -3654,7 +3782,8 @@ function renderQuizEngine(app, l, questions, mode, lessonId, phase) {
   var qStrict = gd23Strictness(gd23StrictBandForLesson(l, lessonId));
   var qStrictText = "Mức chấm gõ đáp án: " + qStrict.label + ((mode === "phase" || mode === "mock" || mode === "test") ? " — nhưng bài thi chỉ tính đúng nguyên văn, không khoan dung" : "");
   var html = head + '<div class="les-progress"><i style="width:' + Math.round(qi / qs.length * 100) + '%"></i></div>';
-  html += '<div class="qblock" id="quizBox"><div class="row"><span class="chip">Câu ' + (qi + 1) + '/' + qs.length + '</span>' + clQChips + '<span class="chip" id="quizStrictChip">' + esc(qStrictText) + '</span></div>'
+  html += '<div class="qblock" id="quizBox"><div class="row"><span class="chip">Câu ' + (qi + 1) + '/' + qs.length + '</span>' + clQChips + '<span class="chip cur" id="quizStreakChip">🔥 ' + (l.streak || 0) + ' lần liên tiếp</span>' + '<span class="chip" id="quizStrictChip">' + esc(qStrictText) + '</span></div>'
+    + (l.encourage && !l.encourageShown ? '<div class="sumcard" id="quizEncourage"><b>' + esc(l.encourage) + '</b><p><button class="btn btn-primary" id="encOk">Tiếp tục →</button></p></div>' : '')
     + '<p><b>' + esc(q.q) + '</b></p>';
   if (q.o) {
     q.o.forEach(function (opt, i) {
@@ -3665,40 +3794,57 @@ function renderQuizEngine(app, l, questions, mode, lessonId, phase) {
       + '<button class="btn btn-primary" id="quizSend">Trả lời</button>';
   }
   html += '<div class="why' + (whyText ? ' show' : '') + '" id="quizWhy">' + esc(whyText) + '</div>'
+    + '<div class="row" id="diffRow" style="display:' + (answered ? 'flex' : 'none') + ';gap:8px;margin-top:8px"><span class="mut">Câu này với bạn:</span><button class="btn" data-diff="easy">Quá dễ</button><button class="btn" data-diff="hard">Quá khó</button></div>'
     + '<button class="btn" id="quizUnsureBtn" style="display:none">Đúng nhưng chưa chắc</button>'
     + '<button class="btn btn-primary" id="quizNext" style="display:none">Câu tiếp theo</button></div>';
   app.innerHTML = html;
   wireBack();
   var whyEl = $("#quizWhy");
   if (whyEl && whyText) setWhy(whyEl, whyText);
+  $$("#diffRow [data-diff]").forEach(function (b) { b.onclick = function () {
+    if (!state.diff) state.diff = {};
+    state.diff[lessonId + ":" + qi] = b.dataset.diff; saveState();
+    $$("#diffRow [data-diff]").forEach(function (x) { x.disabled = true; });
+    b.textContent = "✓ Đã ghi nhận";
+  }; });
+  var encB = $("#quizEncourage"); if (encB) { l.encourageShown = true; var encOk = $("#encOk"); if (encOk) encOk.onclick = function () { encB.style.display = "none"; }; }
   var markWrong = function () {
+    l.streak = 0;
     if (runFirstTry[qi] === undefined) { runFirstTry[qi] = false; if (runWrong.indexOf(qi) < 0) runWrong.push(qi); if (!l.clRetry) recordQuizError(lessonId, qi, q); }
   };
   var showNext = function () { var nx0 = $("#quizNext"); if (nx0) nx0.style.display = "inline-block"; };
+  var showDiff = function () { var dr = $("#diffRow"); if (dr) dr.style.display = "flex"; };
+  var bumpStreak = function () {
+    l.streak = (l.streak || 0) + 1;
+    if (l.streak % 5 === 0 && mode !== "phase" && mode !== "mock" && mode !== "test") {
+      l.encourage = l.streak === 5 ? "🎉 2812: Được 5 câu liên tiếp rồi — giỏi lắm! Nghỉ một hơi rồi làm tiếp nhé." : "🔥 2812: " + l.streak + " câu liên tiếp! Phong độ đang lên — giữ nhịp này nhé.";
+      l.encourageShown = false;
+    }
+  };
   var finishOneShot = function () {
     $$("#quizBox .q-opt").forEach(function (x) { x.disabled = true; });
     var inp = $("#quizInp"); if (inp) inp.disabled = true;
     var snd = $("#quizSend"); if (snd) snd.disabled = true;
     var ans = q.o ? q.o[q.a] : String(q.answer).split("|")[0];
     setWhy(whyEl, "Đáp án đúng: " + ans + " — " + q.why);
-    l.answered = true; showNext();
+    l.answered = true; showNext(); showDiff();
   };
   if (q.o) {
     $$("#quizBox .q-opt").forEach(function (b) {
       b.onclick = function () {
         var i = +b.dataset.i;
         if (mode === "phase" || mode === "mock" || mode === "test") {
-          if (i === q.a) { b.classList.add("ok"); if (runFirstTry[qi] === undefined) runFirstTry[qi] = true; }
+          if (i === q.a) { b.classList.add("ok"); if (runFirstTry[qi] === undefined) { runFirstTry[qi] = true; bumpStreak(); } }
           else { b.classList.add("bad"); markWrong(); $$("#quizBox .q-opt")[q.a].classList.add("ok"); }
           finishOneShot();
           return;
         }
         if (i === q.a) {
           b.classList.add("ok");
-          if (runFirstTry[qi] === undefined) runFirstTry[qi] = true;
+          if (runFirstTry[qi] === undefined) { runFirstTry[qi] = true; bumpStreak(); }
           setWhy(whyEl, "Đúng rồi! Câu đúng: " + q.o[q.a] + " — " + q.why + " 💡 Mẹo: đọc lại câu đúng một lần nữa rồi hãy sang câu sau.");
           $$("#quizBox .q-opt").forEach(function (x) { x.disabled = true; });
-          l.answered = true; showNext(); gd23ShowUnsure(l, lessonId, qi, q);
+          l.answered = true; showNext(); showDiff(); gd23ShowUnsure(l, lessonId, qi, q);
         } else {
           b.classList.add("bad"); b.disabled = true; markWrong();
           l.wrongs = (l.wrongs || 0) + 1;
@@ -3716,17 +3862,17 @@ function renderQuizEngine(app, l, questions, mode, lessonId, phase) {
     if (sndBtn) sndBtn.onclick = function () {
       var v = $("#quizInp") ? $("#quizInp").value : "";
       if (mode === "phase" || mode === "mock" || mode === "test") {
-        if (textAnsOk(v, q.answer)) { if (runFirstTry[qi] === undefined) runFirstTry[qi] = true; setWhy(whyEl, "Đúng rồi! " + q.why); }
+        if (textAnsOk(v, q.answer)) { if (runFirstTry[qi] === undefined) { runFirstTry[qi] = true; bumpStreak(); } setWhy(whyEl, "Đúng rồi! " + q.why); }
         else { markWrong(); setWhy(whyEl, "Chưa đúng. Đáp án đúng: " + String(q.answer).split("|")[0] + " — " + q.why); }
         whyEl.classList.add("show"); finishOneShot();
         return;
       }
       var tol = gd23TolerantCheck(v, q.answer, qStrict);
       if (tol.ok) {
-        if (runFirstTry[qi] === undefined) runFirstTry[qi] = true;
+        if (runFirstTry[qi] === undefined) { runFirstTry[qi] = true; bumpStreak(); }
         setWhy(whyEl, "Đúng rồi! Câu đúng: " + String(q.answer).split("|")[0] + " — " + q.why + (tol.minor.length ? " (Có lỗi nhỏ: " + tol.minor.join("; ") + " — vẫn tính đúng ở mức " + qStrict.label + ", hãy sửa lại cho đúng hẳn.)" : "") + " 💡 Mẹo: đọc lại câu đúng một lần nữa rồi hãy sang câu sau.");
         var inp2 = $("#quizInp"); if (inp2) inp2.disabled = true;
-        sndBtn.disabled = true; l.answered = true; showNext(); gd23ShowUnsure(l, lessonId, qi, q);
+        sndBtn.disabled = true; l.answered = true; showNext(); showDiff(); gd23ShowUnsure(l, lessonId, qi, q);
       } else {
         markWrong();
         l.wrongs = (l.wrongs || 0) + 1;
@@ -5945,8 +6091,9 @@ function renderSkillRead(app, l) {
     gd23DictWire();
     return;
   }
-  app.innerHTML = '<details style="margin-bottom:10px"><summary><b>Xem lại bài đọc</b></summary><div class="qblock">' + paraHTML(r.text) + '</div></details><div id="quizSlot"></div>';
+  app.innerHTML = '<div class="qblock" id="readPassage"><div class="row"><b>Bài đọc</b><button class="btn" id="readPassageToggle">Ẩn bài đọc</button></div><div id="readPassageBody">' + paraHTML(r.text) + '</div></div><div id="quizSlot"></div>';
   renderQuizEngine($("#quizSlot"), l, r.questions, "skill", "read:" + l.idx, 2);
+  var rpt = $("#readPassageToggle"); if (rpt) rpt.onclick = function () { var rb = $("#readPassageBody"); if (!rb) return; var hid = rb.style.display === "none"; rb.style.display = hid ? "" : "none"; rpt.textContent = hid ? "Ẩn bài đọc" : "Hiện bài đọc"; };
 }
 function renderSkillListen(app, l) {
   var item = CONTENT.listening[l.idx];
@@ -8100,6 +8247,8 @@ function renderSpeechAnalyzer(app, l) {
 function normZh() {
   if (!state) return;
   if (state.track !== "zh" && state.track !== "en") state.track = "en";
+  if (state.trackChosen == null) state.trackChosen = false;
+  if (state.authSkipped == null) state.authSkipped = false;
   if (!state.zhPos || typeof state.zhPos !== "object") state.zhPos = {};
   if (!state.zhDone || typeof state.zhDone !== "object") state.zhDone = {};
   if (!state.zhHard || typeof state.zhHard !== "object") state.zhHard = {};
@@ -8113,7 +8262,53 @@ function trackSwitchHTML() {
   return '<div class="tracksw" id="trackSwitch"><button class="btn' + (zh ? "" : " on") + '" data-track-switch="en">Tiếng Anh · IELTS</button><button class="btn' + (zh ? " on" : "") + '" data-track-switch="zh">Tiếng Trung · HSK</button></div>';
 }
 function wireTrackSwitch() {
-  $$("[data-track-switch]").forEach(function (b) { b.onclick = function () { state.track = b.dataset.trackSwitch; curLesson = null; saveState(); render(); }; });
+  $$("[data-track-switch]").forEach(function (b) { b.onclick = function () { state.track = b.dataset.trackSwitch; state.trackChosen = true; curLesson = null; saveState(); render(); }; });
+}
+/* ---------- TRANG MO DAU (26/10/2026, thu tu chot: auth truoc, ngon ngu sau) --
+   Chi hien cho nguoi moi that su: chua chon track, chua co tien trinh o ca hai
+   track. Nguoi da chon track, hoac da co tien trinh (ke ca nguoi dung cu chua
+   tung qua trang mo dau), vao thang man chinh nhu cu.
+   Trong luong lan dau: man auth truoc (Dang nhap / Dang ky / Bo qua khach),
+   man chon ngon ngu sau. Da dang nhap hoac da bo qua thi chi hien man chon
+   ngon ngu, khong hoi dang nhap lai. Dang nhap sau van lam duoc tu tab Cua toi. */
+function landingNeeded() {
+  if (state.trackChosen) return false;
+  if (!isNewUser()) return false;
+  if (!isZhNewUser()) return false;
+  if (state.xp) return false;
+  if (state.checkin && Object.keys(state.checkin).length > 0) return false;
+  return true;
+}
+function landingAuthHTML() {
+  return '<section class="card" id="landingAuth"><div class="hero-pair">' + mascPairHTML(false)
+    + '<div class="hero-text"><p class="eyebrow">CHÀO BẠN MỚI</p><h2>Bạn muốn đăng nhập không?</h2>'
+    + '<p class="mut">Đăng nhập thì tiến trình theo tài khoản, đổi máy vẫn còn. Bỏ qua thì học ngay với tư cách khách, tiến trình chỉ lưu trên máy này.</p></div></div>'
+    + '<div class="row"><button class="btn" id="landLogin">Đăng nhập</button><button class="btn" id="landSignup">Đăng ký</button><button class="btn" id="landGuest">Bỏ qua, học với tư cách khách</button></div>'
+    + '<p class="mut">Đăng nhập sau vẫn làm được từ tab Của tôi → Tài khoản.</p></section>';
+}
+function wireLandingAuth() {
+  /* Dang nhap/Dang ky mo dung man Tai khoan san co (the Cua toi). Co landingBypass
+     de lan render ke tiep toi duoc the Tai khoan; render sau do (vd dang nhap xong)
+     neu chua chon ngon ngu thi toi man chon ngon ngu, khong quay lai man auth. */
+  var li = $("#landLogin"); if (li) li.onclick = function () { landingBypass = true; go("mine"); };
+  var su = $("#landSignup"); if (su) su.onclick = function () { landingBypass = true; go("mine"); };
+  var g = $("#landGuest"); if (g) g.onclick = function () { state.authSkipped = true; saveState(); render(); };
+}
+function landingHTML() {
+  return '<section class="card" id="landingScreen"><div class="hero-pair">' + mascPairHTML(false)
+    + '<div class="hero-text"><p class="eyebrow">CHÀO BẠN MỚI</p><h2>Bạn muốn học ngôn ngữ nào?</h2>'
+    + '<p class="mut">Chọn một lần là vào học ngay. Sau này đổi ngôn ngữ được bất cứ lúc nào ở đầu màn chính.</p></div></div>'
+    + '<div class="land-grid">'
+    + '<button class="btn land-opt" id="landEn"><b>Tiếng Anh · IELTS</b><span class="mut">Học nghe, nói, đọc, viết để thi IELTS, từ Band 0 tới 7,5+.</span></button>'
+    + '<button class="btn land-opt" id="landZh"><b>Tiếng Trung · HSK</b><span class="mut">Học chữ Hán, pinyin, nghe, nói, đọc, viết theo 6 cấp HSK.</span></button>'
+    + '</div></section>';
+}
+function chooseLandingTrack(t) {
+  state.track = t; state.trackChosen = true; saveState(); go("home");
+}
+function wireLanding() {
+  var e = $("#landEn"); if (e) e.onclick = function () { chooseLandingTrack("en"); };
+  var z = $("#landZh"); if (z) z.onclick = function () { chooseLandingTrack("zh"); };
 }
 function isZhNewUser() {
   if (state.zhEntryPlaced || state.zhEntrySkipped) return false;
@@ -8162,6 +8357,15 @@ function zhSessionTarget() {
     var psets = zhSets();
     for (var j = 0; j < psets.length; j++) if (psets[j].stage >= placed && !zhSetDone(psets[j])) return { kind: "zhLesson", title: psets[j].set.topic, type: "Tiếng Trung · Từ vựng chặng " + psets[j].stage, lesson: { type: "zhVocab", setKey: psets[j].key, idx: psets[j].idx } };
   }
+  if (placed === 2 || placed === 3) {
+    /* Kho hien tai CHUA co bo HSK2/HSK3 rieng (chi co HSK4/5/6 + bo khoi dong
+       chặng 1) nen khong the vao "bo cua dung chang" — di hoc noi bang bo
+       that gan nhat thay vi day ve pinyin chặng 1, va ghi ro la hoc noi. */
+    var psets2 = zhStageSets(placed);
+    for (var j2 = 0; j2 < psets2.length; j2++) if (!zhSetDone(psets2[j2])) return { kind: "zhLesson", title: psets2[j2].set.topic, type: "Tiếng Trung · Từ vựng chặng " + psets2[j2].stage, lesson: { type: "zhVocab", setKey: psets2[j2].key, idx: psets2[j2].idx } };
+    var near = zhSets();
+    for (var j3 = 0; j3 < near.length; j3++) if (!zhSetDone(near[j3])) return { kind: "zhLesson", title: near[j3].set.topic, type: "Tiếng Trung · Từ vựng chặng " + near[j3].stage + " (học nối)", lesson: { type: "zhVocab", setKey: near[j3].key, idx: near[j3].idx } };
+  }
   var cur = zhPhCurrent();
   if (cur) return { kind: "zhLesson", title: "Phát âm: " + cur.step.title, type: "Tiếng Trung · Pinyin chặng 1", lesson: { type: "zhPh", idx: cur.idx } };
   var sets = zhSets();
@@ -8177,14 +8381,14 @@ function zhAwardOnce(key) {
 function zhPhNodeHTML(i) {
   var s = ZH_PH_STEPS[i];
   var st = zhPhStatus(i);
-  var icon = st === "done" ? "✓" : st === "cur" ? "▶" : st === "skipped" ? "↩" : "○";
+  var icon = st === "skipped" ? "↩" : "🎤";
   var txt = st === "done" ? "Đã xong" : st === "cur" ? "Đang học · Bạn đang ở đây" : st === "skipped" ? "Đã bỏ qua — bấm để học lại" : "Chưa tới · Học theo thứ tự";
   return '<button class="path-node ' + st + '" data-zhph="' + i + '"><span class="dotwrap"><span class="dot">' + icon + '</span></span><span><span class="pn-title">Phát âm: ' + esc(s.title) + '</span><br><span class="pn-type">Tiếng Trung · Pinyin · lý thuyết trước, thực hành sau</span><br><span class="pn-st">' + txt + '</span></span></button>';
 }
 function zhSetNodeHTML(d) {
   var dd = zhSetDone(d);
   var pp = zhSetPos(d);
-  return '<button class="path-node ' + (dd ? "done" : "cur") + '" data-zhset="' + d.key + '"><span class="dotwrap"><span class="dot">' + (dd ? "✓" : "▶") + '</span></span><span><span class="pn-title">' + esc(d.set.topic) + '</span><br><span class="pn-type">Tiếng Trung · Từ vựng chặng ' + d.stage + ' · ' + d.set.cards.length + ' thẻ · đã học ' + pp + '/' + d.set.cards.length + '</span><br><span class="pn-st">' + (dd ? "Đã xong" : "Bấm để học") + '</span></span></button>';
+  return '<button class="path-node ' + (dd ? "done" : "cur") + '" data-zhset="' + d.key + '"><span class="dotwrap"><span class="dot">📚</span></span><span><span class="pn-title">' + esc(d.set.topic) + '</span><br><span class="pn-type">Tiếng Trung · Từ vựng chặng ' + d.stage + ' · ' + d.set.cards.length + ' thẻ · đã học ' + pp + '/' + d.set.cards.length + '</span><br><span class="pn-st">' + (dd ? "Đã xong" : "Bấm để học") + '</span></span></button>';
 }
 function zhStageBanner(st, done, total) {
   return '<div class="unit-banner"><b>Chặng ' + st.stage + ': ' + esc(st.title) + '</b><p class="mut">' + esc(st.desc) + ' · Từ tích lũy (sách cũ): ' + st.oldCum + ' · Hệ E: ' + st.eCum + (total != null ? ' · Đã xong ' + done + '/' + total : '') + '</p></div>';
@@ -8197,7 +8401,7 @@ function zhMapHTML(detailed) {
   html += zhStageBanner(ZH_STAGES[0], phDoneN + (stDone ? 1 : 0), ZH_PH_STEPS.length + 1);
   html += '<div class="path-v">';
   ZH_PH_STEPS.forEach(function (s, i) { html += zhPhNodeHTML(i); });
-  html += '<button class="path-node ' + (stDone ? "done" : (zhPhCurrent() ? "future" : "cur")) + '" data-zhset="starter"><span class="dotwrap"><span class="dot">' + (stDone ? "✓" : "▶") + '</span></span><span><span class="pn-title">' + esc(starter.set.topic) + '</span><br><span class="pn-type">Tiếng Trung · Từ vựng chặng 1 · ' + starter.set.cards.length + ' thẻ · đã học ' + zhSetPos(starter) + '/' + starter.set.cards.length + '</span><br><span class="pn-st">' + (stDone ? "Đã xong" : "Chưa tới") + '</span></span></button>';
+  html += '<button class="path-node ' + (stDone ? "done" : (zhPhCurrent() ? "future" : "cur")) + '" data-zhset="starter"><span class="dotwrap"><span class="dot">📚</span></span><span><span class="pn-title">' + esc(starter.set.topic) + '</span><br><span class="pn-type">Tiếng Trung · Từ vựng chặng 1 · ' + starter.set.cards.length + ' thẻ · đã học ' + zhSetPos(starter) + '/' + starter.set.cards.length + '</span><br><span class="pn-st">' + (stDone ? "Đã xong" : "Chưa tới") + '</span></span></button>';
   html += '</div>';
   [1, 2, 3, 4, 5].forEach(function (si) {
     var st = ZH_STAGES[si];
@@ -8205,7 +8409,7 @@ function zhMapHTML(detailed) {
     var dn = sets.filter(function (d) { return zhSetDone(d); }).length;
     html += zhStageBanner(st, sets.length ? dn : null, sets.length || null);
     if (!sets.length) {
-      html += '<p class="mut">Nội dung chặng này đang xây — sẽ mở ở đợt sau (chặng 2–3 đầy đủ, từ điển bấm tra, thi thử HSK).</p>';
+      html += '<p class="mut">Chặng này chưa có bộ từ riêng — nội dung đầy đủ của chặng (viết chữ, từ điển bấm tra, thi thử HSK) vẫn mở ở đợt sau, web không mạo nhận đã đủ. Trong lúc chờ, học nối bằng bộ từ thật gần nhất:</p><div class="row"><button class="btn" data-zhbridge="' + st.stage + '">Học bộ từ gần nhất →</button></div>';
     } else {
       html += '<div class="path-v">';
       sets.forEach(function (d) { html += zhSetNodeHTML(d); });
@@ -8241,6 +8445,11 @@ function wireZhMap(scope) {
     var d = zhSetByKey(b.dataset.zhset);
     if (d) openLesson({ type: "zhVocab", setKey: d.key, idx: d.idx });
   }; });
+  (scope || document).querySelectorAll("[data-zhbridge]").forEach(function (b) { b.onclick = function () {
+    var all = zhSets();
+    for (var i = 0; i < all.length; i++) if (!zhSetDone(all[i])) { openLesson({ type: "zhVocab", setKey: all[i].key, idx: all[i].idx }); return; }
+    toast("Bạn đã học hết các bộ từ hiện có — chờ đợt bổ sung chặng sau.");
+  }; });
 }
 function wireZhHskk() {
   var hb = $("#zhHskkBtn"); if (hb) hb.onclick = function () { openLesson({ type: "zhHskk" }); };
@@ -8256,7 +8465,8 @@ function viewHomeZh(app) {
     html += '<section class="card next-card" id="zhEntryWelcome"><div class="hero-pair">' + mascPairHTML(false) + '<div class="hero-text"><p class="eyebrow">CHÀO BẠN MỚI · TIẾNG TRUNG</p><h2>Bạn muốn bắt đầu từ đâu?</h2><p class="mut">Làm kiểm tra xếp chặng nội bộ của web để xếp đúng chặng (khuyên dùng) — đây không phải đề thi HSK thật. Bỏ qua thì học từ chặng 1.</p><div class="row"><button class="btn btn-primary" id="zhEntryStartBtn">Kiểm tra đầu vào HSK</button><button class="btn" id="zhNextBtn">Bỏ qua, học từ chặng 1</button></div></div></div></section>';
   } else {
     var t = zhSessionTarget();
-    html += '<section class="card next-card" id="zhNextCard"><div class="hero-pair">' + mascPairHTML(false) + '<div class="hero-text"><p class="eyebrow">▶ TIẾP THEO · TIẾNG TRUNG</p><h2>' + esc(t.title) + '</h2><p class="mut">' + esc(t.type) + '</p><button class="btn btn-primary" id="zhNextBtn">Học tiếp: ' + esc(t.title) + ' →</button></div></div></section>';
+    var zhXp = (t.title.indexOf("Ôn lại") === 0) ? "" : " · +10 XP";
+    html += '<section class="card next-card" id="zhNextCard"><div class="hero-pair">' + mascPairHTML(false) + '<div class="hero-text"><p class="eyebrow">▶ TIẾP THEO · TIẾNG TRUNG</p><h2>' + esc(t.title) + '</h2><p class="mut">' + esc(t.type) + '</p><button class="btn btn-primary" id="zhNextBtn">Học tiếp: ' + esc(t.title) + ' →' + zhXp + '</button></div></div></section>';
   }
   html += '<section id="zhHomePath">' + zhMapHTML(false) + '</section>';
   html += zhHskkHTML();
