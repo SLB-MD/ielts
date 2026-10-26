@@ -3455,7 +3455,7 @@ function ygStartFetch(word, lang) {
 function nativeVideoHTML(word, lang) {
   return '<div class="native-vid" id="ygBox" data-native-word="' + esc(word) + '" data-native-lang="' + esc(lang) + '">'
     + '<p><b>🎬 Video người bản địa nói từ này</b></p>'
-    + '<div class="yg-slot"></div>'
+    + '<div class="yg-slot" id="ygSlot"></div>'
     + '<p class="mut yg-status">Bấm nút dưới để xem clip người thật nói từ này (nguồn YouGlish, dùng video YouTube; chế độ hạn chế đã bật).</p>'
     + '<div class="row"><button class="btn" id="ygLoadBtn">▶ Xem người bản địa nói</button></div>'
     + '<p class="mut">Powered by YouGlish.com · Video mở trong trang, không rời khỏi bài học.</p></div>';
