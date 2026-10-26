@@ -1871,6 +1871,7 @@ const CONTENT = {
   {
    "topic": "Thức ăn và sức khỏe",
    "theme": "Health - Sức khỏe",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "obesity",
@@ -2204,6 +2205,7 @@ const CONTENT = {
   {
    "topic": "Công việc và nghề nghiệp",
    "theme": "Work & Careers - Công việc và sự nghiệp",
+   "band": "Band 5.0",
    "cards": [
     {
      "w": "career",
@@ -2537,6 +2539,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Crime & Law - Tội phạm và luật pháp",
+   "band": "Band 5.0",
    "cards": [
     {
      "w": "crime",
@@ -2870,6 +2873,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Culture & Arts - Văn hóa và nghệ thuật",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "heritage",
@@ -3203,6 +3207,7 @@ const CONTENT = {
   {
    "topic": "Du lịch và giao thông",
    "theme": "Transport - Giao thông vận tải",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "commute",
@@ -3536,6 +3541,7 @@ const CONTENT = {
   {
    "topic": "Thức ăn và sức khỏe",
    "theme": "Food & Nutrition - Thực phẩm và dinh dưỡng",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "nutrient",
@@ -3702,6 +3708,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Psychology - Tâm lý học",
+   "band": "Band 5.0",
    "cards": [
     {
      "w": "behaviour",
@@ -3868,6 +3875,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Geography - Địa lý",
+   "band": "Band 5.5",
    "cards": [
     {
      "w": "continent",
@@ -4034,6 +4042,7 @@ const CONTENT = {
   {
    "topic": "Du lịch và giao thông",
    "theme": "Tourism - Du lịch",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "destination",
@@ -4200,6 +4209,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Agriculture - Nông nghiệp",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "harvest",
@@ -4366,6 +4376,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Energy - Năng lượng",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "consumption",
@@ -4532,6 +4543,7 @@ const CONTENT = {
   {
    "topic": "Nhà ở và nơi sống",
    "theme": "Urbanisation - Đô thị hóa",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "metropolis",
@@ -4865,6 +4877,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Animals & Wildlife - Động vật hoang dã",
+   "band": "Band 7.0",
    "cards": [
     {
      "w": "predator",
@@ -5031,6 +5044,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "History & Heritage - Lịch sử và di sản",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "ancient",
@@ -5197,6 +5211,7 @@ const CONTENT = {
   {
    "topic": "Thể thao và vận động",
    "theme": "Sports & Leisure - Thể thao và giải trí",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "athlete",
@@ -5363,6 +5378,7 @@ const CONTENT = {
   {
    "topic": "Bản thân và gia đình",
    "theme": "Family & Relationships - Gia đình và các mối quan hệ",
+   "band": "Band 6.0",
    "cards": [
     {
      "w": "sibling",
@@ -28396,482 +28412,578 @@ const CONTENT = {
   {
    "section": "Section 1",
    "topic": "Đăng ký phòng tập",
-   "text": "Good morning. I'd like to join the fitness centre, please."
+   "text": "Good morning. I'd like to join the fitness centre, please.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký phòng tập",
-   "text": "My name is Daniel Carter, that's C-A-R-T-E-R."
+   "text": "My name is Daniel Carter, that's C-A-R-T-E-R.",
+   "band": "Band 0"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký phòng tập",
-   "text": "I live at 42 Bridge Street, next to the post office."
+   "text": "I live at 42 Bridge Street, next to the post office.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký phòng tập",
-   "text": "The monthly membership costs thirty-five pounds, including all classes."
+   "text": "The monthly membership costs thirty-five pounds, including all classes.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 1",
    "topic": "Thuê nhà",
-   "text": "We're looking for a two-bedroom flat within walking distance of the station."
+   "text": "We're looking for a two-bedroom flat within walking distance of the station.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 1",
    "topic": "Thuê nhà",
-   "text": "The rent is eight hundred pounds a month, not including electricity."
+   "text": "The rent is eight hundred pounds a month, not including electricity.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 1",
    "topic": "Thuê nhà",
-   "text": "We'd like to move in on the fifteenth of September."
+   "text": "We'd like to move in on the fifteenth of September.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 1",
    "topic": "Đặt tour du lịch",
-   "text": "The coach tour leaves at a quarter past eight from the main square."
+   "text": "The coach tour leaves at a quarter past eight from the main square.",
+   "band": "Band 3.5"
   },
   {
    "section": "Section 1",
    "topic": "Đặt tour du lịch",
-   "text": "Lunch is included in the price, but drinks are extra."
+   "text": "Lunch is included in the price, but drinks are extra.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 1",
    "topic": "Đặt tour du lịch",
-   "text": "You should bring a waterproof jacket, as the weather can change quickly."
+   "text": "You should bring a waterproof jacket, as the weather can change quickly.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi thông tin khóa học",
-   "text": "The photography course starts on Monday the third of October."
+   "text": "The photography course starts on Monday the third of October.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi thông tin khóa học",
-   "text": "Students need to bring their own camera, but tripods are provided."
+   "text": "Students need to bring their own camera, but tripods are provided.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu bảo tàng",
-   "text": "Welcome to the City Museum, which first opened its doors in nineteen twenty-three."
+   "text": "Welcome to the City Museum, which first opened its doors in nineteen twenty-three.",
+   "band": "Band 4.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu bảo tàng",
-   "text": "On the ground floor, you'll find the exhibition of local history."
+   "text": "On the ground floor, you'll find the exhibition of local history.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu bảo tàng",
-   "text": "The museum is closed on Mondays, except during public holidays."
+   "text": "The museum is closed on Mondays, except during public holidays.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu bảo tàng",
-   "text": "Photography is allowed in most galleries, but please do not use flash."
+   "text": "Photography is allowed in most galleries, but please do not use flash.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn an toàn ở bể bơi",
-   "text": "Children under the age of eight must be accompanied by an adult at all times."
+   "text": "Children under the age of eight must be accompanied by an adult at all times.",
+   "band": "Band 4.0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn an toàn ở bể bơi",
-   "text": "The deep end of the pool is two metres, so diving is only permitted there."
+   "text": "The deep end of the pool is two metres, so diving is only permitted there.",
+   "band": "Band 4.0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo sự kiện cộng đồng",
-   "text": "This year's summer festival will take place in Riverside Park on the last weekend of July."
+   "text": "This year's summer festival will take place in Riverside Park on the last weekend of July.",
+   "band": "Band 4.0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo sự kiện cộng đồng",
-   "text": "Entry is free, although there is a small charge for the boat rides."
+   "text": "Entry is free, although there is a small charge for the boat rides.",
+   "band": "Band 4.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu thư viện",
-   "text": "Members may borrow up to ten books at a time for a period of three weeks."
+   "text": "Members may borrow up to ten books at a time for a period of three weeks.",
+   "band": "Band 4.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu thư viện",
-   "text": "The computer room on the second floor is open until nine in the evening."
+   "text": "The computer room on the second floor is open until nine in the evening.",
+   "band": "Band 4.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu thư viện",
-   "text": "If you lose your library card, a replacement will cost five pounds."
+   "text": "If you lose your library card, a replacement will cost five pounds.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo sự kiện cộng đồng",
-   "text": "Volunteers are needed to help set up the stalls on Friday afternoon."
+   "text": "Volunteers are needed to help set up the stalls on Friday afternoon.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
-   "text": "I think we should divide the presentation into three equal parts."
+   "text": "I think we should divide the presentation into three equal parts.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
-   "text": "The deadline for the essay has been extended to the end of next week."
+   "text": "The deadline for the essay has been extended to the end of next week.",
+   "band": "Band 4.5"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
-   "text": "According to our survey, most students prefer studying in the library."
+   "text": "According to our survey, most students prefer studying in the library.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi ý kiến giảng viên",
-   "text": "Your introduction is clear, but the conclusion needs to summarise the main findings."
+   "text": "Your introduction is clear, but the conclusion needs to summarise the main findings.",
+   "band": "Band 4.5"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi ý kiến giảng viên",
-   "text": "I'd suggest adding more recent data to support your argument."
+   "text": "I'd suggest adding more recent data to support your argument.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
-   "text": "We interviewed forty local residents for the project last month."
+   "text": "We interviewed forty local residents for the project last month.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 3",
    "topic": "Chọn đề tài nghiên cứu",
-   "text": "The topic is interesting, but the scope might be too broad for one semester."
+   "text": "The topic is interesting, but the scope might be too broad for one semester.",
+   "band": "Band 4.5"
   },
   {
    "section": "Section 3",
    "topic": "Chọn đề tài nghiên cứu",
-   "text": "Let's focus on the effects of social media on teenagers' study habits."
+   "text": "Let's focus on the effects of social media on teenagers' study habits.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi ý kiến giảng viên",
-   "text": "Remember to reference all your sources using the Harvard system."
+   "text": "Remember to reference all your sources using the Harvard system.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
-   "text": "The results were surprising because they contradicted our original hypothesis."
+   "text": "The results were surprising because they contradicted our original hypothesis.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 3",
    "topic": "Chọn đề tài nghiên cứu",
-   "text": "We could compare the reading habits of children in urban and rural areas."
+   "text": "We could compare the reading habits of children in urban and rural areas.",
+   "band": "Band 4.5"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi ý kiến giảng viên",
-   "text": "Your methodology section should explain exactly how the data was collected."
+   "text": "Your methodology section should explain exactly how the data was collected.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: kiến trúc bền vững",
-   "text": "In today's lecture, we shall examine how buildings can be designed to reduce energy consumption."
+   "text": "In today's lecture, we shall examine how buildings can be designed to reduce energy consumption.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: kiến trúc bền vững",
-   "text": "Passive houses maintain a comfortable temperature without conventional heating systems."
+   "text": "Passive houses maintain a comfortable temperature without conventional heating systems.",
+   "band": "Band 2.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: tâm lý học hành vi",
-   "text": "Behavioural economics challenges the traditional assumption that consumers always act rationally."
+   "text": "Behavioural economics challenges the traditional assumption that consumers always act rationally.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: tâm lý học hành vi",
-   "text": "Studies show that people tend to value losses more heavily than equivalent gains."
+   "text": "Studies show that people tend to value losses more heavily than equivalent gains.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: hải dương học",
-   "text": "Ocean currents play a crucial role in regulating the climate of coastal regions."
+   "text": "Ocean currents play a crucial role in regulating the climate of coastal regions.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: hải dương học",
-   "text": "The melting of polar ice is contributing to a gradual rise in sea levels worldwide."
+   "text": "The melting of polar ice is contributing to a gradual rise in sea levels worldwide.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: lịch sử y học",
-   "text": "Before the discovery of antibiotics, even minor infections could prove fatal."
+   "text": "Before the discovery of antibiotics, even minor infections could prove fatal.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: lịch sử y học",
-   "text": "The introduction of anaesthesia in the nineteenth century transformed surgical practice."
+   "text": "The introduction of anaesthesia in the nineteenth century transformed surgical practice.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: ngôn ngữ học",
-   "text": "Children acquire their first language through interaction rather than formal instruction."
+   "text": "Children acquire their first language through interaction rather than formal instruction.",
+   "band": "Band 3.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: ngôn ngữ học",
-   "text": "It is estimated that a language disappears somewhere in the world every two weeks."
+   "text": "It is estimated that a language disappears somewhere in the world every two weeks.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: thiên văn học",
-   "text": "The telescope, first used by Galileo in sixteen oh nine, revolutionised our view of the universe."
+   "text": "The telescope, first used by Galileo in sixteen oh nine, revolutionised our view of the universe.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: thiên văn học",
-   "text": "Distances in space are so vast that astronomers measure them in light years."
+   "text": "Distances in space are so vast that astronomers measure them in light years.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Đặt lịch khám răng",
-   "text": "Hello, I'd like to book a dental appointment for next Tuesday at half past ten, if possible."
+   "text": "Hello, I'd like to book a dental appointment for next Tuesday at half past ten, if possible.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Mua vé tàu",
-   "text": "Could I have a return ticket to Manchester, leaving on the 8:15 train tomorrow morning, please?"
+   "text": "Could I have a return ticket to Manchester, leaving on the 8:15 train tomorrow morning, please?",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký thẻ thư viện",
-   "text": "I'd like to apply for a library card, and I have brought my passport and a recent electricity bill."
+   "text": "I'd like to apply for a library card, and I have brought my passport and a recent electricity bill.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Thuê xe đạp",
-   "text": "How much does it cost to hire a bicycle for three days, and is a helmet included in the price?"
+   "text": "How much does it cost to hire a bicycle for three days, and is a helmet included in the price?",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Đặt bàn nhà hàng",
-   "text": "I'd like to reserve a table for five people at seven o'clock on Saturday evening, near the window."
+   "text": "I'd like to reserve a table for five people at seven o'clock on Saturday evening, near the window.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi giờ mở cửa ngân hàng",
-   "text": "Excuse me, could you tell me what time the bank opens on Saturday mornings during the winter?"
+   "text": "Excuse me, could you tell me what time the bank opens on Saturday mornings during the winter?",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký lớp học nấu ăn",
-   "text": "I'm interested in joining the Italian cooking class that starts on 12 March at the community centre."
+   "text": "I'm interested in joining the Italian cooking class that starts on 12 March at the community centre.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Mua bảo hiểm du lịch",
-   "text": "I need travel insurance for a two-week holiday in Spain, starting from 5 July, for two adults."
+   "text": "I need travel insurance for a two-week holiday in Spain, starting from 5 July, for two adults.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Đặt phòng khách sạn",
-   "text": "I'd like to book a double room with breakfast for three nights, from the 18th to the 21st of April."
+   "text": "I'd like to book a double room with breakfast for three nights, from the 18th to the 21st of April.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi thông tin bưu điện",
-   "text": "How much would it cost to send this parcel to Australia, and how long will it take to arrive?"
+   "text": "How much would it cost to send this parcel to Australia, and how long will it take to arrive?",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký tài khoản ngân hàng",
-   "text": "I'd like to open a savings account, please, and I've got my driving licence and proof of address with me."
+   "text": "I'd like to open a savings account, please, and I've got my driving licence and proof of address with me.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 1",
    "topic": "Thuê thiết bị cắm trại",
-   "text": "We'd like to hire a four-person tent and two sleeping bags for the weekend of the 24th and 25th."
+   "text": "We'd like to hire a four-person tent and two sleeping bags for the weekend of the 24th and 25th.",
+   "band": "Band 5.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu công viên quốc gia",
-   "text": "Welcome to Snowdonia National Park, which covers over 800 square miles and welcomes two million visitors each year."
+   "text": "Welcome to Snowdonia National Park, which covers over 800 square miles and welcomes two million visitors each year.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn tham quan nhà máy",
-   "text": "During today's factory tour, please stay with your guide at all times and wear the safety helmet provided."
+   "text": "During today's factory tour, please stay with your guide at all times and wear the safety helmet provided.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo hội chợ việc làm",
-   "text": "The annual jobs fair will take place at the exhibition centre on Friday 9 May, with over sixty employers attending."
+   "text": "The annual jobs fair will take place at the exhibition centre on Friday 9 May, with over sixty employers attending.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu câu lạc bộ nhiếp ảnh",
-   "text": "Our photography club meets every Thursday evening at 7:30 in Room 4, and new members of all levels are welcome."
+   "text": "Our photography club meets every Thursday evening at 7:30 in Room 4, and new members of all levels are welcome.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu trang trại hữu cơ",
-   "text": "Greenfield Organic Farm produces fresh vegetables without chemicals and delivers boxes to homes every Wednesday."
+   "text": "Greenfield Organic Farm produces fresh vegetables without chemicals and delivers boxes to homes every Wednesday.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn tham quan lâu đài",
-   "text": "The castle tour begins at the main gate at eleven o'clock and lasts approximately ninety minutes in total."
+   "text": "The castle tour begins at the main gate at eleven o'clock and lasts approximately ninety minutes in total.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo lễ hội ẩm thực",
-   "text": "This year's food festival runs from 14 to 16 June in Market Square, featuring chefs from twelve different countries."
+   "text": "This year's food festival runs from 14 to 16 June in Market Square, featuring chefs from twelve different countries.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu trung tâm thể thao",
-   "text": "The new sports centre includes a 25-metre swimming pool, two gyms and six badminton courts for public use."
+   "text": "The new sports centre includes a 25-metre swimming pool, two gyms and six badminton courts for public use.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn đi xe buýt thành phố",
-   "text": "To travel across the city, take bus number 42 from Central Station and get off at the stop opposite the museum."
+   "text": "To travel across the city, take bus number 42 from Central Station and get off at the stop opposite the museum.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo triển lãm nghệ thuật",
-   "text": "The art exhibition opens on 3 October at the City Gallery and displays more than one hundred modern paintings."
+   "text": "The art exhibition opens on 3 October at the City Gallery and displays more than one hundred modern paintings.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu vườn bách thảo",
-   "text": "Founded in 1820, the botanical garden is home to over 8,000 plant species from five continents around the world."
+   "text": "Founded in 1820, the botanical garden is home to over 8,000 plant species from five continents around the world.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn an toàn khi đi biển",
-   "text": "For your safety at the beach, always swim between the red and yellow flags and never swim alone after dark."
+   "text": "For your safety at the beach, always swim between the red and yellow flags and never swim alone after dark.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận đề tài thuyết trình",
-   "text": "I think our presentation should focus on renewable energy in rural areas, because the data are easier to find."
+   "text": "I think our presentation should focus on renewable energy in rural areas, because the data are easier to find.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi giảng viên về hạn nộp bài",
-   "text": "Excuse me, Dr Carter, could you confirm whether the essay deadline is the 28th or the 30th of November?"
+   "text": "Excuse me, Dr Carter, could you confirm whether the essay deadline is the 28th or the 30th of November?",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Chọn phương pháp khảo sát",
-   "text": "Shall we use an online questionnaire for our survey, or would face-to-face interviews give us better results?"
+   "text": "Shall we use an online questionnaire for our survey, or would face-to-face interviews give us better results?",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Phân công việc nhóm học kỳ",
-   "text": "I'll write the introduction this week, and you could prepare the charts for the second part of the report."
+   "text": "I'll write the introduction this week, and you could prepare the charts for the second part of the report.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận kết quả thí nghiệm",
-   "text": "The results were surprising because the temperature rose much faster in the second experiment than in the first."
+   "text": "The results were surprising because the temperature rose much faster in the second experiment than in the first.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Chuẩn bị hội thảo khoa học",
-   "text": "We need to submit our poster for the science conference by Friday, so let's check the layout this afternoon."
+   "text": "We need to submit our poster for the science conference by Friday, so let's check the layout this afternoon.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Chọn sách tham khảo",
-   "text": "The tutor recommended the 2021 edition of this textbook, as it includes a useful chapter on research methods."
+   "text": "The tutor recommended the 2021 edition of this textbook, as it includes a useful chapter on research methods.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận chương trình thực tập",
-   "text": "My internship starts in June at a local charity, where I'll work three days a week with the marketing team."
+   "text": "My internship starts in June at a local charity, where I'll work three days a week with the marketing team.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Đánh giá bài thuyết trình nhóm",
-   "text": "Our group presentation went well overall, although we spoke a little too quickly during the final section."
+   "text": "Our group presentation went well overall, although we spoke a little too quickly during the final section.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Lên kế hoạch nghiên cứu thực địa",
-   "text": "For the field trip next month, we should visit the river valley first and collect water samples in the morning."
+   "text": "For the field trip next month, we should visit the river valley first and collect water samples in the morning.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận cách chia điểm nhóm",
-   "text": "Do you think the tutor will mark us as a group, or will each member receive an individual grade this time?"
+   "text": "Do you think the tutor will mark us as a group, or will each member receive an individual grade this time?",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Xin gia hạn nộp bài tập",
-   "text": "I'm sorry, but could I have a two-day extension for this assignment, as I've been unwell since Monday?"
+   "text": "I'm sorry, but could I have a two-day extension for this assignment, as I've been unwell since Monday?",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: biến đổi khí hậu ven biển",
-   "text": "In this lecture, we will consider how rising sea levels threaten coastal cities and low-lying farmland worldwide."
+   "text": "In this lecture, we will consider how rising sea levels threaten coastal cities and low-lying farmland worldwide.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: hành vi động vật",
-   "text": "Today we examine how elephants communicate over long distances using sounds that humans cannot easily hear."
+   "text": "Today we examine how elephants communicate over long distances using sounds that humans cannot easily hear.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: kinh tế học cơ bản",
-   "text": "This lecture introduces the basic principle of supply and demand and how it influences prices in a free market."
+   "text": "This lecture introduces the basic principle of supply and demand and how it influences prices in a free market.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: lịch sử điện ảnh",
-   "text": "In today's lecture, we trace the development of cinema from silent black-and-white films to modern digital productions."
+   "text": "In today's lecture, we trace the development of cinema from silent black-and-white films to modern digital productions.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: dinh dưỡng học",
-   "text": "We shall now discuss why a balanced diet requires proteins, vitamins and minerals in the correct proportions daily."
+   "text": "We shall now discuss why a balanced diet requires proteins, vitamins and minerals in the correct proportions daily.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: thám hiểm vũ trụ",
-   "text": "This lecture explores how space exploration changed after the first human landing on the Moon in July 1969."
+   "text": "This lecture explores how space exploration changed after the first human landing on the Moon in July 1969.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: nghệ thuật thời Phục hưng",
-   "text": "Today's lecture focuses on Renaissance art in Italy and the artists who transformed painting during the 15th century."
+   "text": "Today's lecture focuses on Renaissance art in Italy and the artists who transformed painting during the 15th century.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: quản lý nguồn nước",
-   "text": "In this lecture, we look at how governments manage water resources in regions that suffer from frequent droughts."
+   "text": "In this lecture, we look at how governments manage water resources in regions that suffer from frequent droughts.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: sự phát triển của ngôn ngữ",
-   "text": "We will examine how languages develop over centuries through contact between different cultures and trading nations."
+   "text": "We will examine how languages develop over centuries through contact between different cultures and trading nations.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: robot trong y học",
-   "text": "This lecture considers how robots are now assisting surgeons to perform operations with greater precision and safety."
+   "text": "This lecture considers how robots are now assisting surgeons to perform operations with greater precision and safety.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: khảo cổ học",
-   "text": "Today we shall investigate how archaeologists use carbon dating to estimate the age of ancient tools and bones."
+   "text": "Today we shall investigate how archaeologists use carbon dating to estimate the age of ancient tools and bones.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: âm nhạc cổ điển",
-   "text": "In this lecture, we explore how classical composers such as Mozart structured their symphonies in the 18th century."
+   "text": "In this lecture, we explore how classical composers such as Mozart structured their symphonies in the 18th century.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 1",
@@ -28948,242 +29060,290 @@ const CONTENT = {
   {
    "section": "Section 1",
    "topic": "Đặt lịch cắt tóc",
-   "text": "A: Good morning, Sunny Hair Salon. How can I help you? B: Hi, I would like to book a haircut for this Saturday, please. A: We have two free slots on Saturday, one at 9.30 in the morning and one at 3.15 in the afternoon. B: I will take the morning one, please. A: May I have your name and phone number? B: It is Lan Anh, and my number is 0912 345 678. A: Thank you. A standard cut is 150,000 dong, and it takes about 40 minutes."
+   "text": "A: Good morning, Sunny Hair Salon. How can I help you? B: Hi, I would like to book a haircut for this Saturday, please. A: We have two free slots on Saturday, one at 9.30 in the morning and one at 3.15 in the afternoon. B: I will take the morning one, please. A: May I have your name and phone number? B: It is Lan Anh, and my number is 0912 345 678. A: Thank you. A standard cut is 150,000 dong, and it takes about 40 minutes.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi thuê phòng trọ",
-   "text": "A: Hello, I saw your advert for a room in Alley 12, Nguyen Trai Street. Is it still available? B: Yes, it is. The room is 20 square metres, with its own bathroom and a small balcony. A: How much is the rent? B: It is 3,500,000 dong a month, plus electricity at 3,500 dong per unit. A: Can I come and see it tomorrow evening? B: Of course. I am free after 6 pm. Just call me when you arrive at the gate."
+   "text": "A: Hello, I saw your advert for a room in Alley 12, Nguyen Trai Street. Is it still available? B: Yes, it is. The room is 20 square metres, with its own bathroom and a small balcony. A: How much is the rent? B: It is 3,500,000 dong a month, plus electricity at 3,500 dong per unit. A: Can I come and see it tomorrow evening? B: Of course. I am free after 6 pm. Just call me when you arrive at the gate.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Mua vé xem phim",
-   "text": "A: Two tickets for the 7.45 show of The Last Journey, please. B: I am sorry, that show is sold out. The next one starts at 9.20 tonight. A: That is a bit late, but okay. Can we have seats in the middle? B: Row G, seats 8 and 9 are still free. That is 90,000 dong per ticket. A: Here is my card. B: Thank you. Please arrive 10 minutes early, because the doors close at 9.15."
+   "text": "A: Two tickets for the 7.45 show of The Last Journey, please. B: I am sorry, that show is sold out. The next one starts at 9.20 tonight. A: That is a bit late, but okay. Can we have seats in the middle? B: Row G, seats 8 and 9 are still free. That is 90,000 dong per ticket. A: Here is my card. B: Thank you. Please arrive 10 minutes early, because the doors close at 9.15.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký lớp yoga",
-   "text": "A: I would like to join the beginners yoga class, please. B: The beginners class runs on Tuesday and Thursday evenings, from 6.00 to 7.00. A: How many people are in each class? B: A maximum of 12, and our teacher, Ms Hoa, has 8 years of experience. A: What is the fee? B: 600,000 dong for 8 sessions. You also need to bring your own mat. A: No problem. Can I start next Tuesday?"
+   "text": "A: I would like to join the beginners yoga class, please. B: The beginners class runs on Tuesday and Thursday evenings, from 6.00 to 7.00. A: How many people are in each class? B: A maximum of 12, and our teacher, Ms Hoa, has 8 years of experience. A: What is the fee? B: 600,000 dong for 8 sessions. You also need to bring your own mat. A: No problem. Can I start next Tuesday?",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi đường ra bến xe",
-   "text": "A: Excuse me, could you tell me the way to the central bus station? B: Sure. Go straight along this road for about 300 metres, then turn left at the traffic lights. A: Is it far from here? B: Not really. It is only a 10-minute walk. You will see a big blue sign with a white bus on it. A: Thank you very much. B: You are welcome. The station is open from 5 am to 10 pm every day."
+   "text": "A: Excuse me, could you tell me the way to the central bus station? B: Sure. Go straight along this road for about 300 metres, then turn left at the traffic lights. A: Is it far from here? B: Not really. It is only a 10-minute walk. You will see a big blue sign with a white bus on it. A: Thank you very much. B: You are welcome. The station is open from 5 am to 10 pm every day.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Đặt bánh sinh nhật",
-   "text": "A: I would like to order a birthday cake for my daughter, please. B: What size would you like? Our most popular one serves 10 people and costs 350,000 dong. A: That size is fine. Can it be a chocolate cake with strawberries on top? B: Certainly. What name should we write on the cake? A: Please write Happy Birthday, Mai Phuong. I will collect it at 4 pm on Friday. B: Perfect. We need a deposit of 100,000 dong today, please."
+   "text": "A: I would like to order a birthday cake for my daughter, please. B: What size would you like? Our most popular one serves 10 people and costs 350,000 dong. A: That size is fine. Can it be a chocolate cake with strawberries on top? B: Certainly. What name should we write on the cake? A: Please write Happy Birthday, Mai Phuong. I will collect it at 4 pm on Friday. B: Perfect. We need a deposit of 100,000 dong today, please.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Đổi size áo",
-   "text": "A: Excuse me, I bought this shirt yesterday, but it is too small. Can I exchange it for a larger size? B: Of course. Do you have the receipt with you? A: Yes, here it is. The shirt was 280,000 dong. B: Let me check. We have size L in the same colour, dark blue. A: Great, that is the colour I want. B: Here you are. Please try it on in fitting room number 2, just to be sure."
+   "text": "A: Excuse me, I bought this shirt yesterday, but it is too small. Can I exchange it for a larger size? B: Of course. Do you have the receipt with you? A: Yes, here it is. The shirt was 280,000 dong. B: Let me check. We have size L in the same colour, dark blue. A: Great, that is the colour I want. B: Here you are. Please try it on in fitting room number 2, just to be sure.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi giá gửi xe",
-   "text": "A: Excuse me, how much is it to park a motorbike here for the whole day? B: It is 5,000 dong during the day, until 6 pm. After 6 pm, the price is 10,000 dong. A: And what about overnight parking? B: Overnight is 20,000 dong, and you must collect your bike before 8 am the next day. A: I see. Do you accept card payments? B: Sorry, we only take cash or bank transfer at the moment."
+   "text": "A: Excuse me, how much is it to park a motorbike here for the whole day? B: It is 5,000 dong during the day, until 6 pm. After 6 pm, the price is 10,000 dong. A: And what about overnight parking? B: Overnight is 20,000 dong, and you must collect your bike before 8 am the next day. A: I see. Do you accept card payments? B: Sorry, we only take cash or bank transfer at the moment.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký thẻ xe buýt",
-   "text": "A: I would like to apply for a monthly bus pass, please. B: You need one photo, your ID card, and this form. The pass costs 200,000 dong a month. A: I am a student. Is there a discount? B: Yes, students pay only 100,000 dong if they show a valid student card. A: Here is my student card. How long does it take? B: Your pass will be ready in 3 working days. You can pick it up at this counter."
+   "text": "A: I would like to apply for a monthly bus pass, please. B: You need one photo, your ID card, and this form. The pass costs 200,000 dong a month. A: I am a student. Is there a discount? B: Yes, students pay only 100,000 dong if they show a valid student card. A: Here is my student card. How long does it take? B: Your pass will be ready in 3 working days. You can pick it up at this counter.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Hẹn sửa ống nước",
-   "text": "A: Hello, the tap in my kitchen is leaking badly. Can you send a plumber today? B: We can come this afternoon between 2 and 4 pm. What is your address? A: Flat 506, Building C, Green Valley Apartments. B: Our call-out fee is 100,000 dong, and repairs start from 150,000 dong, depending on the problem. A: That is fine. Please call me 15 minutes before you arrive. B: No problem. My name is Tuan, and I will be your plumber today."
+   "text": "A: Hello, the tap in my kitchen is leaking badly. Can you send a plumber today? B: We can come this afternoon between 2 and 4 pm. What is your address? A: Flat 506, Building C, Green Valley Apartments. B: Our call-out fee is 100,000 dong, and repairs start from 150,000 dong, depending on the problem. A: That is fine. Please call me 15 minutes before you arrive. B: No problem. My name is Tuan, and I will be your plumber today.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Mua hoa tặng mẹ",
-   "text": "A: I am looking for a bunch of flowers for my mother. It is her birthday today. B: How about pink roses? They are very fresh this morning, 25,000 dong each. A: Ten roses would be lovely. Could you add some white baby breath as well? B: Of course. With wrapping and a card, the total is 280,000 dong. A: Perfect. Can I pick them up at 5.30 this evening? B: Yes, we will keep them in water until you come."
+   "text": "A: I am looking for a bunch of flowers for my mother. It is her birthday today. B: How about pink roses? They are very fresh this morning, 25,000 dong each. A: Ten roses would be lovely. Could you add some white baby breath as well? B: Of course. With wrapping and a card, the total is 280,000 dong. A: Perfect. Can I pick them up at 5.30 this evening? B: Yes, we will keep them in water until you come.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi thủ tục làm hộ chiếu",
-   "text": "A: Good morning. I need to apply for a passport for the first time. What documents do I need? B: You need your ID card, your household registration book, and two photos sized 4 by 6 centimetres. A: Do I have to book an appointment online first? B: Yes, please register on the portal and choose a time slot. The fee is 200,000 dong. A: How long will I wait for the passport? B: Eight working days. We will send it to your home address by post if you wish."
+   "text": "A: Good morning. I need to apply for a passport for the first time. What documents do I need? B: You need your ID card, your household registration book, and two photos sized 4 by 6 centimetres. A: Do I have to book an appointment online first? B: Yes, please register on the portal and choose a time slot. The fee is 200,000 dong. A: How long will I wait for the passport? B: Eight working days. We will send it to your home address by post if you wish.",
+   "band": "Band 5.5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn an toàn bể bơi",
-   "text": "Welcome to Riverside Swimming Pool. Before you get into the water, please listen carefully to our safety rules. Children under 10 must be with an adult at all times. The shallow end is 1.2 metres deep, while the deep end is 2.5 metres, so please do not dive at the shallow end. Our lifeguards are on duty from 6 am to 8 pm, and swimming is not allowed outside these hours. Finally, please shower before entering the pool and do not run on the wet floor."
+   "text": "Welcome to Riverside Swimming Pool. Before you get into the water, please listen carefully to our safety rules. Children under 10 must be with an adult at all times. The shallow end is 1.2 metres deep, while the deep end is 2.5 metres, so please do not dive at the shallow end. Our lifeguards are on duty from 6 am to 8 pm, and swimming is not allowed outside these hours. Finally, please shower before entering the pool and do not run on the wet floor.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu chợ cuối tuần",
-   "text": "If you are free on Saturday morning, come and visit the Riverside Weekend Market in District 2. The market opens at 7 am and closes at 1 pm, and entry is completely free. More than 60 stalls sell fresh vegetables, homemade cakes, flowers and handmade gifts. This Saturday, there is also a small cooking class for children at 9 am, but places are limited to 15 children, so please register at the information desk early. Parking is available behind the community hall for 5,000 dong per motorbike."
+   "text": "If you are free on Saturday morning, come and visit the Riverside Weekend Market in District 2. The market opens at 7 am and closes at 1 pm, and entry is completely free. More than 60 stalls sell fresh vegetables, homemade cakes, flowers and handmade gifts. This Saturday, there is also a small cooking class for children at 9 am, but places are limited to 15 children, so please register at the information desk early. Parking is available behind the community hall for 5,000 dong per motorbike.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo trên tàu",
-   "text": "Good afternoon, ladies and gentlemen. This is the SE4 train from Sai Gon to Ha Noi. We will arrive at Nha Trang station in about 15 minutes, at 3.40 pm. Passengers getting off at Nha Trang, please check that you have all your luggage with you. The dining car is now open on coach number 8 and serves hot meals until 9 pm. Our next stop after Nha Trang will be Dieu Tri, where we expect to arrive at 6.25 pm. Thank you for travelling with us."
+   "text": "Good afternoon, ladies and gentlemen. This is the SE4 train from Sai Gon to Ha Noi. We will arrive at Nha Trang station in about 15 minutes, at 3.40 pm. Passengers getting off at Nha Trang, please check that you have all your luggage with you. The dining car is now open on coach number 8 and serves hot meals until 9 pm. Our next stop after Nha Trang will be Dieu Tri, where we expect to arrive at 6.25 pm. Thank you for travelling with us.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu câu lạc bộ sách",
-   "text": "Hello everyone, and welcome to the Sunrise Book Club. We meet on the first Friday of every month at 7 pm in Room 204 of the city library. Each month we choose one book together, and next month we will discuss a famous travel novel chosen by our members. Membership costs 50,000 dong a year, which covers tea, coffee and printed discussion notes. New members are very welcome, and you do not need to finish the whole book before your first meeting. Just come, listen, and share what you think."
+   "text": "Hello everyone, and welcome to the Sunrise Book Club. We meet on the first Friday of every month at 7 pm in Room 204 of the city library. Each month we choose one book together, and next month we will discuss a famous travel novel chosen by our members. Membership costs 50,000 dong a year, which covers tea, coffee and printed discussion notes. New members are very welcome, and you do not need to finish the whole book before your first meeting. Just come, listen, and share what you think.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn tham quan nông trại",
-   "text": "Welcome to Green Valley Farm. Our guided tour starts every hour from 8 am, and the last tour leaves at 4 pm. The tour lasts about 90 minutes and costs 80,000 dong for adults and 40,000 dong for children. During the tour, you will feed the goats, collect eggs and learn how we grow vegetables without chemicals. Please stay with your guide at all times and do not feed the animals with food from outside the farm. At the end of the tour, you can taste our fresh milk in the farm shop."
+   "text": "Welcome to Green Valley Farm. Our guided tour starts every hour from 8 am, and the last tour leaves at 4 pm. The tour lasts about 90 minutes and costs 80,000 dong for adults and 40,000 dong for children. During the tour, you will feed the goats, collect eggs and learn how we grow vegetables without chemicals. Please stay with your guide at all times and do not feed the animals with food from outside the farm. At the end of the tour, you can taste our fresh milk in the farm shop.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo thư viện",
-   "text": "This is an announcement from the Central Library. From next Monday, the 15th, our opening hours will change. We will open at 7.30 am and close at 9 pm from Monday to Friday. At weekends, we close earlier, at 5.30 pm. Also, the reading room on the third floor will be closed for repairs from the 20th to the 27th, but all other floors will stay open as normal. Please remember that you can renew your books online, so you do not need to come to the library in person."
+   "text": "This is an announcement from the Central Library. From next Monday, the 15th, our opening hours will change. We will open at 7.30 am and close at 9 pm from Monday to Friday. At weekends, we close earlier, at 5.30 pm. Also, the reading room on the third floor will be closed for repairs from the 20th to the 27th, but all other floors will stay open as normal. Please remember that you can renew your books online, so you do not need to come to the library in person.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu phòng gym mới",
-   "text": "Welcome to FitLife Gym, the newest gym in our neighbourhood. We are open every day from 5.30 am to 10 pm. On the first floor, you will find over 40 exercise machines and a large area for free weights. The second floor is for group classes, including spinning at 6 pm and Zumba at 7 pm on weekdays. This month only, new members pay just 299,000 dong for the first month, with no joining fee. Your membership also includes one free session with a personal trainer."
+   "text": "Welcome to FitLife Gym, the newest gym in our neighbourhood. We are open every day from 5.30 am to 10 pm. On the first floor, you will find over 40 exercise machines and a large area for free weights. The second floor is for group classes, including spinning at 6 pm and Zumba at 7 pm on weekdays. This month only, new members pay just 299,000 dong for the first month, with no joining fee. Your membership also includes one free session with a personal trainer.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn phân loại rác",
-   "text": "Good morning, residents. From the 1st of next month, our building will start separating rubbish into three groups. Green bins are for food waste, such as fruit skins and leftover rice, and they are emptied every evening at 7 pm. Blue bins are for things we can recycle, like paper, plastic bottles and cans. Black bins are for everything else. Please tie your bags carefully and put them in the correct bin on the ground floor. This small habit will keep our building clean and help protect the environment."
+   "text": "Good morning, residents. From the 1st of next month, our building will start separating rubbish into three groups. Green bins are for food waste, such as fruit skins and leftover rice, and they are emptied every evening at 7 pm. Blue bins are for things we can recycle, like paper, plastic bottles and cans. Black bins are for everything else. Please tie your bags carefully and put them in the correct bin on the ground floor. This small habit will keep our building clean and help protect the environment.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu lễ hội ẩm thực",
-   "text": "The annual City Food Festival returns to Flower Park this weekend, from Friday the 12th to Sunday the 14th. This year, more than 100 food stalls will offer dishes from 12 different countries. The festival opens at 10 am and closes at 10 pm, and entry tickets cost 30,000 dong for adults, while children under 6 get in free. Do not miss the cooking show by Chef Andre Nguyen at 5 pm on Saturday. Please note that the festival is cashless, so bring a bank card or your phone to pay."
+   "text": "The annual City Food Festival returns to Flower Park this weekend, from Friday the 12th to Sunday the 14th. This year, more than 100 food stalls will offer dishes from 12 different countries. The festival opens at 10 am and closes at 10 pm, and entry tickets cost 30,000 dong for adults, while children under 6 get in free. Do not miss the cooking show by Chef Andre Nguyen at 5 pm on Saturday. Please note that the festival is cashless, so bring a bank card or your phone to pay.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo thay đổi giờ xe buýt",
-   "text": "Attention, passengers. From Monday the 22nd, bus number 14 will follow a new timetable. On weekdays, the first bus will leave the station at 5.15 am instead of 5.45 am, and buses will run every 12 minutes in the morning rush hour. The last bus of the day will leave at 10.30 pm. At weekends, the timetable stays the same as before. We are making this change because more and more students and office workers are using this route early in the morning."
+   "text": "Attention, passengers. From Monday the 22nd, bus number 14 will follow a new timetable. On weekdays, the first bus will leave the station at 5.15 am instead of 5.45 am, and buses will run every 12 minutes in the morning rush hour. The last bus of the day will leave at 10.30 pm. At weekends, the timetable stays the same as before. We are making this change because more and more students and office workers are using this route early in the morning.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu khóa học sơ cứu",
-   "text": "Our First Aid Course for beginners will take place on Saturday the 20th at the Community Health Centre on Le Loi Street. The course runs from 8 am to 4.30 pm, with a one-hour lunch break. You will learn how to help someone who is choking, how to treat small burns, and how to do CPR correctly. The course costs 450,000 dong, including a handbook and a certificate. There are only 20 places, and you must register at least 3 days before the course starts."
+   "text": "Our First Aid Course for beginners will take place on Saturday the 20th at the Community Health Centre on Le Loi Street. The course runs from 8 am to 4.30 pm, with a one-hour lunch break. You will learn how to help someone who is choking, how to treat small burns, and how to do CPR correctly. The course costs 450,000 dong, including a handbook and a certificate. There are only 20 places, and you must register at least 3 days before the course starts.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn dùng ứng dụng đặt xe",
-   "text": "Booking a car with the GoRide app is quick and easy. First, open the app and type your destination in the box at the top of the screen. Next, choose the type of car you want: a standard car carries 4 people, while a large car is better for groups of 6 or 7. The app will show you the price before you confirm, so there are no surprises. After your trip, please rate your driver from 1 to 5 stars. If you leave something in the car, tap Help and we will contact the driver for you."
+   "text": "Booking a car with the GoRide app is quick and easy. First, open the app and type your destination in the box at the top of the screen. Next, choose the type of car you want: a standard car carries 4 people, while a large car is better for groups of 6 or 7. The app will show you the price before you confirm, so there are no surprises. After your trip, please rate your driver from 1 to 5 stars. If you leave something in the car, tap Help and we will contact the driver for you.",
+   "band": "Band 6.0"
   },
   {
    "section": "Section 3",
    "topic": "Bàn nguồn tài liệu bài luận",
-   "text": "Minh: For our essay on air pollution, I think we should use at least 8 sources. Linh: I agree, but our teacher said academic journals count more than newspapers. Minh: I found three good journal articles in the library database yesterday. Linh: Great. I will look for government reports on the health ministry website, because they have the latest numbers. Minh: Let us meet on Thursday at 3 pm to check the reference list together, before the draft is due on Monday."
+   "text": "Minh: For our essay on air pollution, I think we should use at least 8 sources. Linh: I agree, but our teacher said academic journals count more than newspapers. Minh: I found three good journal articles in the library database yesterday. Linh: Great. I will look for government reports on the health ministry website, because they have the latest numbers. Minh: Let us meet on Thursday at 3 pm to check the reference list together, before the draft is due on Monday.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Phản hồi bản nháp thuyết trình",
-   "text": "Tutor: I have read your draft slides. The structure is clear, but your introduction is too long. Student: Should I cut the background section, then? Tutor: Yes, keep only two background points, and move faster to your main argument. Student: What about the chart on slide 6? Tutor: The chart is useful, but the numbers are too small to read. Make the font at least size 24. Student: Thank you. I will send you the new version by Friday morning."
+   "text": "Tutor: I have read your draft slides. The structure is clear, but your introduction is too long. Student: Should I cut the background section, then? Tutor: Yes, keep only two background points, and move faster to your main argument. Student: What about the chart on slide 6? Tutor: The chart is useful, but the numbers are too small to read. Make the font at least size 24. Student: Thank you. I will send you the new version by Friday morning.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Chọn phương pháp khảo sát",
-   "text": "Ha: Should we use an online questionnaire or face-to-face interviews for our survey? Duc: Online is cheaper and faster. We can reach 200 students in one week. Ha: True, but people often skip questions online. Interviews give us deeper answers. Duc: Then let us do both: a questionnaire for 200 students, plus 10 short interviews. Ha: That sounds balanced. I will design the questionnaire tonight, and you can write the interview questions."
+   "text": "Ha: Should we use an online questionnaire or face-to-face interviews for our survey? Duc: Online is cheaper and faster. We can reach 200 students in one week. Ha: True, but people often skip questions online. Interviews give us deeper answers. Duc: Then let us do both: a questionnaire for 200 students, plus 10 short interviews. Ha: That sounds balanced. I will design the questionnaire tonight, and you can write the interview questions.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Bàn lịch học nhóm",
-   "text": "Trang: Our group needs a fixed study time before the exam on the 18th. Khoa: I am free on Monday and Wednesday afternoons, after 2 pm. Trang: Wednesday is better for me. Mai has a part-time job on Mondays. Khoa: Let us meet every Wednesday from 3 to 5 pm in the library, room B. Trang: Good. Each week, one person prepares 10 practice questions. I will start this week with the grammar unit. Khoa: Deal. I will book the room today."
+   "text": "Trang: Our group needs a fixed study time before the exam on the 18th. Khoa: I am free on Monday and Wednesday afternoons, after 2 pm. Trang: Wednesday is better for me. Mai has a part-time job on Mondays. Khoa: Let us meet every Wednesday from 3 to 5 pm in the library, room B. Trang: Good. Each week, one person prepares 10 practice questions. I will start this week with the grammar unit. Khoa: Deal. I will book the room today.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Tranh luận về học trực tuyến",
-   "text": "An: I think online learning is better because students can study anytime, anywhere. Binh: I disagree. In a real classroom, you can ask the teacher questions immediately. An: But online courses are cheaper, and students in small towns can learn from top teachers. Binh: That is true, but many students lose motivation without classmates around them. An: Maybe the best answer is a mix: lectures online, and discussions in class. Binh: I can agree with that."
+   "text": "An: I think online learning is better because students can study anytime, anywhere. Binh: I disagree. In a real classroom, you can ask the teacher questions immediately. An: But online courses are cheaper, and students in small towns can learn from top teachers. Binh: That is true, but many students lose motivation without classmates around them. An: Maybe the best answer is a mix: lectures online, and discussions in class. Binh: I can agree with that.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Chuẩn bị thực địa",
-   "text": "Teacher: Next Tuesday, our class will visit the river delta for fieldwork. Please listen to the plan. Student: What time do we leave, teacher? Teacher: The bus leaves the main gate at 6.30 am, so be there by 6.15. Each group needs a notebook, a camera, and sample bottles. Student: Should we bring our own lunch? Teacher: Yes, and wear boots, because the ground near the river is wet. We will be back at school by 4 pm."
+   "text": "Teacher: Next Tuesday, our class will visit the river delta for fieldwork. Please listen to the plan. Student: What time do we leave, teacher? Teacher: The bus leaves the main gate at 6.30 am, so be there by 6.15. Each group needs a notebook, a camera, and sample bottles. Student: Should we bring our own lunch? Teacher: Yes, and wear boots, because the ground near the river is wet. We will be back at school by 4 pm.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Phân công bài tập lớn",
-   "text": "Phuc: Our group project has four parts, and the deadline is the 30th. Let us divide the work today. Yen: I am good at numbers, so I will do the data analysis. Phuc: Then I will write the introduction and the conclusion. What about the presentation slides? Yen: Son can design the slides, he is fast with design tools. Phuc: And we all meet on the 25th to practise. Yen: Agreed. If anyone falls behind, tell the group early, not at the last minute."
+   "text": "Phuc: Our group project has four parts, and the deadline is the 30th. Let us divide the work today. Yen: I am good at numbers, so I will do the data analysis. Phuc: Then I will write the introduction and the conclusion. What about the presentation slides? Yen: Son can design the slides, he is fast with design tools. Phuc: And we all meet on the 25th to practise. Yen: Agreed. If anyone falls behind, tell the group early, not at the last minute.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Bàn câu hỏi phỏng vấn nghiên cứu",
-   "text": "Nga: For our research interviews, our questions must be open questions, not yes-no questions. Tam: Right. Instead of asking Do you like the canteen, we should ask What do you think about the food in the canteen? Nga: Exactly. We also need to avoid two questions in one sentence. Tam: How many questions should we prepare? Nga: About 12 main questions, and the whole interview should last no more than 20 minutes, so people do not get tired."
+   "text": "Nga: For our research interviews, our questions must be open questions, not yes-no questions. Tam: Right. Instead of asking Do you like the canteen, we should ask What do you think about the food in the canteen? Nga: Exactly. We also need to avoid two questions in one sentence. Tam: How many questions should we prepare? Nga: About 12 main questions, and the whole interview should last no more than 20 minutes, so people do not get tired.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Đánh giá bài thuyết trình thử",
-   "text": "Tutor: Your practice presentation was much better than last week. Your voice was clear and you looked at the audience. Student: Thank you. Which part was still weak? Tutor: The ending. You stopped suddenly without a summary. Add one final slide with your three main points. Student: I also spoke too fast in the middle part. Tutor: Yes, about 160 words a minute. Try to slow down to around 130, and pause after each main point."
+   "text": "Tutor: Your practice presentation was much better than last week. Your voice was clear and you looked at the audience. Student: Thank you. Which part was still weak? Tutor: The ending. You stopped suddenly without a summary. Add one final slide with your three main points. Student: I also spoke too fast in the middle part. Tutor: Yes, about 160 words a minute. Try to slow down to around 130, and pause after each main point.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Chọn chủ đề hội thảo",
-   "text": "Vy: Our department seminar is in November, and we must choose a topic this week. Long: Last year the topic was technology in education. Let us choose something new. Vy: What about mental health for first-year students? Many new students feel stressed. Long: That is a strong topic, and we can invite a doctor from the university hospital as a speaker. Vy: Good idea. I will write a short proposal and send it to our teacher by Friday."
+   "text": "Vy: Our department seminar is in November, and we must choose a topic this week. Long: Last year the topic was technology in education. Let us choose something new. Vy: What about mental health for first-year students? Many new students feel stressed. Long: That is a strong topic, and we can invite a doctor from the university hospital as a speaker. Vy: Good idea. I will write a short proposal and send it to our teacher by Friday.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Bàn ngân sách dự án sinh viên",
-   "text": "Quan: Our student project has a total budget of 5,000,000 dong. We need to plan carefully. Hanh: The room rental is 1,200,000 dong for one day. Printing posters costs about 600,000 dong. Quan: That leaves us 3,200,000 dong for speakers, water and gifts. Hanh: We should keep 500,000 dong aside for unexpected costs. Quan: Agreed. I will make a simple budget table tonight and share it in our group chat, so everyone can check the numbers."
+   "text": "Quan: Our student project has a total budget of 5,000,000 dong. We need to plan carefully. Hanh: The room rental is 1,200,000 dong for one day. Printing posters costs about 600,000 dong. Quan: That leaves us 3,200,000 dong for speakers, water and gifts. Hanh: We should keep 500,000 dong aside for unexpected costs. Quan: Agreed. I will make a simple budget table tonight and share it in our group chat, so everyone can check the numbers.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 3",
    "topic": "Chuẩn bị bảo vệ đồ án",
-   "text": "Student: Teacher, my thesis defence is in two weeks. I am worried about the questions from the panel. Teacher: That is normal. Prepare short answers for three common questions: why you chose the topic, your method, and the limits of your study. Student: How long should my presentation be? Teacher: No more than 15 minutes, with about 12 slides. And bring two printed copies of your thesis. Student: Thank you, teacher. I will practise with my classmates this weekend."
+   "text": "Student: Teacher, my thesis defence is in two weeks. I am worried about the questions from the panel. Teacher: That is normal. Prepare short answers for three common questions: why you chose the topic, your method, and the limits of your study. Student: How long should my presentation be? Teacher: No more than 15 minutes, with about 12 slides. And bring two printed copies of your thesis. Student: Thank you, teacher. I will practise with my classmates this weekend.",
+   "band": "Band 6.5"
   },
   {
    "section": "Section 4",
    "topic": "Lịch sử của cà phê",
-   "text": "Coffee was first discovered in Ethiopia more than a thousand years ago, when a farmer noticed his goats became energetic after eating red coffee berries. From Ethiopia, coffee travelled to Yemen, where people began roasting the beans and brewing them as a drink. By the 17th century, coffee houses had opened across Europe and became popular places to meet and exchange news. Today, coffee is grown in more than 70 countries, and Brazil is the largest producer in the world. Every day, people drink over two billion cups of coffee worldwide."
+   "text": "Coffee was first discovered in Ethiopia more than a thousand years ago, when a farmer noticed his goats became energetic after eating red coffee berries. From Ethiopia, coffee travelled to Yemen, where people began roasting the beans and brewing them as a drink. By the 17th century, coffee houses had opened across Europe and became popular places to meet and exchange news. Today, coffee is grown in more than 70 countries, and Brazil is the largest producer in the world. Every day, people drink over two billion cups of coffee worldwide.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Giấc ngủ và trí nhớ",
-   "text": "Sleep is not just rest for the body; it is also essential for the memory. While we sleep, the brain sorts the information we learned during the day and moves important facts into long-term memory. Studies show that students who sleep well after studying remember more than those who stay up all night. Most adults need between 7 and 9 hours of sleep each night. Going to bed at the same time every day also helps the brain work better the next morning."
+   "text": "Sleep is not just rest for the body; it is also essential for the memory. While we sleep, the brain sorts the information we learned during the day and moves important facts into long-term memory. Studies show that students who sleep well after studying remember more than those who stay up all night. Most adults need between 7 and 9 hours of sleep each night. Going to bed at the same time every day also helps the brain work better the next morning.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Kiến trúc nhà sàn",
-   "text": "Stilt houses are a traditional type of home found in many parts of Southeast Asia. The house stands on tall wooden posts, usually two to three metres above the ground. This design protects families from floods and keeps wild animals away at night. The space under the house is often used to store tools or to keep chickens and pigs. The roof is large and steep, so heavy rain runs off quickly. Even today, many families in mountain areas still choose this simple and practical design."
+   "text": "Stilt houses are a traditional type of home found in many parts of Southeast Asia. The house stands on tall wooden posts, usually two to three metres above the ground. This design protects families from floods and keeps wild animals away at night. The space under the house is often used to store tools or to keep chickens and pigs. The roof is large and steep, so heavy rain runs off quickly. Even today, many families in mountain areas still choose this simple and practical design.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Vi nhựa trong đại dương",
-   "text": "Microplastics are tiny pieces of plastic, smaller than five millimetres, that pollute our oceans. They come from plastic bottles, bags and clothes that slowly break into smaller and smaller pieces. Fish and sea birds often mistake these pieces for food, which can harm their health. Scientists have found microplastics in sea salt, drinking water and even in the air we breathe. Reducing single-use plastic is one of the most effective ways to slow this growing problem."
+   "text": "Microplastics are tiny pieces of plastic, smaller than five millimetres, that pollute our oceans. They come from plastic bottles, bags and clothes that slowly break into smaller and smaller pieces. Fish and sea birds often mistake these pieces for food, which can harm their health. Scientists have found microplastics in sea salt, drinking water and even in the air we breathe. Reducing single-use plastic is one of the most effective ways to slow this growing problem.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Ngôn ngữ ký hiệu",
-   "text": "Sign language is a complete and natural language that uses hand shapes, movements and facial expressions instead of sounds. It is the main language of many deaf communities around the world. Interestingly, sign languages are not the same everywhere; British Sign Language and American Sign Language are quite different from each other. Children who learn sign language early can communicate with their families from a very young age. Today, more schools are teaching basic signs to all students, so that deaf and hearing children can play and learn together."
+   "text": "Sign language is a complete and natural language that uses hand shapes, movements and facial expressions instead of sounds. It is the main language of many deaf communities around the world. Interestingly, sign languages are not the same everywhere; British Sign Language and American Sign Language are quite different from each other. Children who learn sign language early can communicate with their families from a very young age. Today, more schools are teaching basic signs to all students, so that deaf and hearing children can play and learn together.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Năng lượng thủy triều",
-   "text": "Tidal energy uses the natural rise and fall of the sea to produce electricity. Twice a day, tides move huge amounts of water near the coast, and special turbines under the water can turn this movement into power. Unlike solar or wind energy, tides are easy to predict years in advance. However, building tidal power stations is expensive, and the equipment must survive in salty sea water. Countries such as South Korea and France already operate large tidal power plants."
+   "text": "Tidal energy uses the natural rise and fall of the sea to produce electricity. Twice a day, tides move huge amounts of water near the coast, and special turbines under the water can turn this movement into power. Unlike solar or wind energy, tides are easy to predict years in advance. However, building tidal power stations is expensive, and the equipment must survive in salty sea water. Countries such as South Korea and France already operate large tidal power plants.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Hành vi của ong mật",
-   "text": "Honeybees live in large colonies that may contain up to 60,000 bees. Each colony has one queen, whose main job is to lay eggs, sometimes as many as 2,000 in a single day. Worker bees collect nectar from flowers and, in doing so, help plants produce seeds and fruit. When a worker bee finds a good source of flowers, she performs a special dance to tell the others where it is. Bees are responsible for pollinating about one third of the food we eat, so protecting them is vital."
+   "text": "Honeybees live in large colonies that may contain up to 60,000 bees. Each colony has one queen, whose main job is to lay eggs, sometimes as many as 2,000 in a single day. Worker bees collect nectar from flowers and, in doing so, help plants produce seeds and fruit. When a worker bee finds a good source of flowers, she performs a special dance to tell the others where it is. Bees are responsible for pollinating about one third of the food we eat, so protecting them is vital.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Thư viện công cộng đầu tiên",
-   "text": "The first free public libraries appeared in the 19th century, when towns in Britain and America decided that everyone should be able to read books for free. Before that, most libraries charged a fee, so only wealthy people could use them. In 1850, Britain passed a law allowing towns to build libraries with public money. The idea spread quickly, and by the early 20th century, thousands of public libraries had opened around the world. Today, public libraries also offer computers, study rooms and free classes to their communities."
+   "text": "The first free public libraries appeared in the 19th century, when towns in Britain and America decided that everyone should be able to read books for free. Before that, most libraries charged a fee, so only wealthy people could use them. In 1850, Britain passed a law allowing towns to build libraries with public money. The idea spread quickly, and by the early 20th century, thousands of public libraries had opened around the world. Today, public libraries also offer computers, study rooms and free classes to their communities.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Nhiếp ảnh đường phố",
-   "text": "Street photography captures real moments of everyday life in public places. The photographer usually works quietly with a small camera, waiting for interesting light, gestures or expressions. Unlike studio photography, nothing is arranged in advance, so each picture is a surprise. Famous street photographers often spend many hours walking the same streets, learning how people move at different times of day. Many people believe street photography is important because it records how our cities and our daily lives change over time."
+   "text": "Street photography captures real moments of everyday life in public places. The photographer usually works quietly with a small camera, waiting for interesting light, gestures or expressions. Unlike studio photography, nothing is arranged in advance, so each picture is a surprise. Famous street photographers often spend many hours walking the same streets, learning how people move at different times of day. Many people believe street photography is important because it records how our cities and our daily lives change over time.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Kinh tế chia sẻ",
-   "text": "The sharing economy allows people to rent things they own to others, often through a mobile app. A family might rent out a spare room to travellers, or a driver might use his own car to carry passengers. This model became popular after 2008, when smartphones made it easy to connect strangers safely. Supporters say the sharing economy saves money and reduces waste. Critics, however, worry about workers rights, because many people in this economy have no fixed salary or insurance."
+   "text": "The sharing economy allows people to rent things they own to others, often through a mobile app. A family might rent out a spare room to travellers, or a driver might use his own car to carry passengers. This model became popular after 2008, when smartphones made it easy to connect strangers safely. Supporters say the sharing economy saves money and reduces waste. Critics, however, worry about workers rights, because many people in this economy have no fixed salary or insurance.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Âm nhạc và não bộ",
-   "text": "Listening to music is one of the few activities that uses almost every part of the brain at the same time. Music can change our heart rate, reduce stress and even help people remember old memories. Patients with memory problems sometimes remember songs from their youth even when they have forgotten names and faces. Learning an instrument as a child can also improve language skills and concentration. For these reasons, many doctors now use music as part of treatment in hospitals."
+   "text": "Listening to music is one of the few activities that uses almost every part of the brain at the same time. Music can change our heart rate, reduce stress and even help people remember old memories. Patients with memory problems sometimes remember songs from their youth even when they have forgotten names and faces. Learning an instrument as a child can also improve language skills and concentration. For these reasons, many doctors now use music as part of treatment in hospitals.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 4",
    "topic": "Bản đồ số",
-   "text": "Digital maps have changed the way we travel in less than twenty years. In the past, drivers used thick paper maps and often had to stop and ask for directions. Today, a phone can show our exact position using satellites and can update the route when traffic changes. Digital maps do more than guide drivers; they help ambulances find patients faster and help scientists track floods and forest fires. However, experts warn that we should still learn basic map skills, in case the battery dies or the signal is lost."
+   "text": "Digital maps have changed the way we travel in less than twenty years. In the past, drivers used thick paper maps and often had to stop and ask for directions. Today, a phone can show our exact position using satellites and can update the route when traffic changes. Digital maps do more than guide drivers; they help ambulances find patients faster and help scientists track floods and forest fires. However, experts warn that we should still learn basic map skills, in case the battery dies or the signal is lost.",
+   "band": "Band 7.0"
   },
   {
    "section": "Section 1",
