@@ -10102,7 +10102,7 @@ function zhChapterTestQuestions(stage) {
   return parts;
 }
 function zhChapterTestMapHTML(stage) {
-  if (stage === 2 || stage === 3 || stage === 4) {
+  if (stage === 2 || stage === 3 || stage === 4 || stage === 5 || stage === 6) {
     var c = zhChapterTestCount(stage);
     if (zhChapterTestPassed(stage)) return '<p><button class="btn" data-zhchaptertest="' + stage + '">Kiểm tra cuối chặng ' + stage + ' — ✓ Đã qua (làm lại)</button></p>';
     if (c.done >= c.need) return '<p><button class="btn btn-primary" data-zhchaptertest="' + stage + '">Kiểm tra cuối chặng ' + stage + '</button> <span class="mut">Đã mở (đủ 80% bước chặng).</span></p>';
@@ -10112,17 +10112,17 @@ function zhChapterTestMapHTML(stage) {
 }
 function zhPracticeExamHTML() {
   var btns = '';
-  [2, 3, 4].forEach(function (stage) {
+  [2, 3, 4, 5, 6].forEach(function (stage) {
     var c = zhChapterTestCount(stage);
     if (zhChapterTestPassed(stage)) btns += '<button class="btn" data-zhchaptertest="' + stage + '">Kiểm tra cuối chặng ' + stage + ' ✓ (làm lại)</button>';
     else btns += '<button class="btn" data-zhchaptertest="' + stage + '"' + (c.done >= c.need ? '' : ' disabled') + '>Kiểm tra cuối chặng ' + stage + (c.done >= c.need ? '' : ' · chưa mở') + '</button>';
   });
-  [2, 3, 4].forEach(function (hsk) {
+  [2, 3, 4, 5, 6].forEach(function (hsk) {
     var m = zhMockBuild(hsk);
     btns += '<button class="btn" data-zhmock="' + hsk + '">Thi thử HSK' + hsk + ' (rút gọn: Nghe ' + m.listen.n + ' + Đọc ' + m.read.n + ' + Viết ' + m.write.n + ' câu)</button>';
   });
   return '<div class="row" style="margin-top:6px">' + btns + '</div>'
-    + '<p class="mut">Kiểm tra cuối chặng mở khi xong 80% số bước chặng (chuẩn nội bộ); mỗi phần cần từ 50% đúng lần đầu mới tính qua — chưa qua chỉ cần học lại đúng phần yếu, vẫn đi tiếp. Chặng 1/5/6: kiểm tra cuối chặng + thi thử chờ phân hệ (chưa có bài, web không bịa).</p>';
+    + '<p class="mut">Kiểm tra cuối chặng mở khi xong 80% số bước chặng (chuẩn nội bộ); mỗi phần cần từ 50% đúng lần đầu mới tính qua — chưa qua chỉ cần học lại đúng phần yếu, vẫn đi tiếp. Chặng 1: kiểm tra cuối chặng + thi thử chờ phân hệ (chưa có bài, web không bịa).</p>';
 }
 function zhFirstUndoneModule(kind, stage) {
   var arr = kind === "gram" ? ZH_GRAMMAR : kind === "read" ? ZH_READING : ZH_LISTENING;
@@ -10135,7 +10135,7 @@ function zhFirstUndoneModule(kind, stage) {
 }
 function renderZhChapterTest(app, l) {
   var stage = l.stage;
-  if (stage !== 2 && stage !== 3 && stage !== 4) {
+  if (stage !== 2 && stage !== 3 && stage !== 4 && stage !== 5 && stage !== 6) {
     app.innerHTML = lessonHead({ title: "Kiểm tra cuối chặng " + stage, type: "Tiếng Trung · Kiểm tra cuối chặng" }, "Bài kiểm tra tổng hợp của chặng này")
       + '<div class="qblock"><p>Kiểm tra cuối chặng ' + stage + ' chưa có — chặng này chưa đủ phân hệ nên web không bịa bài kiểm tra.</p><p><button class="btn btn-primary" id="zhCtBack">Về bản đồ</button></p></div>';
     wireBack(); $("#zhCtBack").onclick = function () { backFromLesson(); }; return;
@@ -10263,7 +10263,7 @@ function zhMockAdvance(l, timedOut) {
 }
 function renderZhMock(app, l) {
   var hsk = l.hsk;
-  if (hsk !== 2 && hsk !== 3 && hsk !== 4) {
+  if (hsk !== 2 && hsk !== 3 && hsk !== 4 && hsk !== 5 && hsk !== 6) {
     app.innerHTML = lessonHead({ title: "Thi thử HSK" + hsk + " (bản rút gọn)", type: "Tiếng Trung · Thi thử HSK" }, "Thi thử gộp 3 phần từ đúng ngân hàng của web, lọc theo chặng.")
       + '<div class="qblock"><p>Thi thử HSK' + hsk + ' chưa có — chặng này chưa đủ phân hệ nên web không bịa bài thi thử.</p><p><button class="btn btn-primary" id="zhMockBack">Về bản đồ</button></p></div>';
     wireBack(); $("#zhMockBack").onclick = function () { backFromLesson(); }; return;

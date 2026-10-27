@@ -7900,3 +7900,6330 @@ ZH_WRITE.push(
 { "q": "不管用什么方式，读书的习惯本身才是最 ___ 的。", "o": [ "宝贵", "便宜", "简单", "困难" ], "a": 0, "why": "最宝贵的: quý giá nhất — thói quen đọc mới là quý giá nhất." } ], "note": ZH_S6_NOTE },
 { "id": "s6-write-viet-khihau", "stage": 6, "title": "Viết: Tôi có thể làm gì cho môi trường", "kind": "free", "prompt": "Viết một đoạn ngắn (6-10 câu) về những việc bạn có thể làm cho môi trường: trong sinh hoạt hàng ngày, ở trường hoặc ở công ty, và vì sao bạn nghĩ những việc nhỏ cũng quan trọng.", "model": "保护环境不是一个人的事，是所有人的事。虽然一个人的力量很小，但是大家一起做，改变就会很大。我每天都从小事做起：少用塑料袋，节约用水，少开车，多坐公共交通。我还告诉身边的朋友，环境问题就在我们身边，夏天更热，电费更高。从今天开始，从我做起，我希望更多人一起行动。", "analysis": "Đoạn mẫu mở đầu bằng nhận định chung (不是一个人的事), rồi thừa nhận sức một người nhỏ nhưng nhấn mạnh cùng làm sẽ lớn (虽然…但是), sau đó liệt kê việc cụ thể (少用塑料袋…), cuối cùng kêu gọi hành động. Viết theo khung nhận định — việc cụ thể — kêu gọi thì đoạn văn có sức thuyết phục.", "phrases": [ "保护环境不是一个人的事，是所有人的事。", "虽然一个人的力量很小，但是大家一起做，改变就会很大。", "从今天开始，从我做起。" ], "note": ZH_S6_NOTE_FREE }
 );
+
+/* ---------- PHA 3 (27/10/2026): PHA 3 — BO TU TIENG TRUNG (9 bo/180 the, HSK1 5 + HSK2 2 + HSK3 2; kiem chung doc lap: san sang ghep, 0 the bi bo; giu xuésheng cho 学生 theo quy uoc am nhe cuoi nhu 爸爸/妈妈) ---------- */
+(function(){ if(typeof CONTENT==="undefined"||!CONTENT.zhVocab)return; CONTENT.zhVocab.push.apply(CONTENT.zhVocab,[
+  {
+   "topic": "HSK1 — Gia đình và bản thân",
+   "hsk": "HSK1",
+   "hskNote": "Bộ tự soạn theo chủ đề HSK1, các từ là từ cơ bản thông dụng theo chủ đề, câu ví dụ tự soạn không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không mạo nhận từng từ nằm trong khung từ vựng chính thức.",
+   "cards": [
+    {"han": "我", "pinyin": "wǒ", "vi": "tôi", "col": "我是学生", "ex": "我是越南人。", "exv": "Tôi là người Việt Nam."},
+    {"han": "你", "pinyin": "nǐ", "vi": "bạn", "col": "你好", "ex": "你好，你叫什么名字？", "exv": "Xin chào, bạn tên là gì?"},
+    {"han": "他", "pinyin": "tā", "vi": "anh ấy, ông ấy", "col": "他是我的朋友", "ex": "他是我的朋友。", "exv": "Anh ấy là bạn của tôi."},
+    {"han": "她", "pinyin": "tā", "vi": "chị ấy, cô ấy", "col": "她是我的姐姐", "ex": "她是我的姐姐。", "exv": "Chị ấy là chị gái của tôi."},
+    {"han": "我们", "pinyin": "wǒmen", "vi": "chúng tôi, chúng ta", "col": "我们是同学", "ex": "我们是同学。", "exv": "Chúng tôi là bạn học."},
+    {"han": "你们", "pinyin": "nǐmen", "vi": "các bạn", "col": "你们好吗", "ex": "你们好吗？", "exv": "Các bạn có khỏe không?"},
+    {"han": "他们", "pinyin": "tāmen", "vi": "họ (nam hoặc chung)", "col": "他们是我的朋友", "ex": "他们是我的朋友。", "exv": "Họ là bạn của tôi."},
+    {"han": "爸爸", "pinyin": "bàba", "vi": "bố", "col": "我爸爸", "ex": "我爸爸是老师。", "exv": "Bố tôi là giáo viên."},
+    {"han": "妈妈", "pinyin": "māma", "vi": "mẹ", "col": "我妈妈", "ex": "我妈妈很漂亮。", "exv": "Mẹ tôi rất xinh đẹp."},
+    {"han": "哥哥", "pinyin": "gēge", "vi": "anh trai", "col": "我哥哥", "ex": "我哥哥很高。", "exv": "Anh trai tôi rất cao."},
+    {"han": "姐姐", "pinyin": "jiějie", "vi": "chị gái", "col": "我姐姐", "ex": "我姐姐是学生。", "exv": "Chị gái tôi là học sinh."},
+    {"han": "弟弟", "pinyin": "dìdi", "vi": "em trai", "col": "我弟弟", "ex": "我弟弟今年十岁。", "exv": "Em trai tôi năm nay mười tuổi."},
+    {"han": "妹妹", "pinyin": "mèimei", "vi": "em gái", "col": "我妹妹", "ex": "我妹妹很可爱。", "exv": "Em gái tôi rất đáng yêu."},
+    {"han": "朋友", "pinyin": "péngyou", "vi": "bạn bè", "col": "好朋友", "ex": "他是我的好朋友。", "exv": "Anh ấy là bạn thân của tôi."},
+    {"han": "名字", "pinyin": "míngzi", "vi": "tên", "col": "叫什么名字", "ex": "请问，你叫什么名字？", "exv": "Xin hỏi, bạn tên là gì?"},
+    {"han": "人", "pinyin": "rén", "vi": "người", "col": "很多人", "ex": "这里有很多人。", "exv": "Ở đây có rất nhiều người."},
+    {"han": "男", "pinyin": "nán", "vi": "nam", "col": "男的", "ex": "他是男的。", "exv": "Anh ấy là nam."},
+    {"han": "女", "pinyin": "nǚ", "vi": "nữ", "col": "女的", "ex": "她是女的。", "exv": "Cô ấy là nữ."},
+    {"han": "孩子", "pinyin": "háizi", "vi": "trẻ con", "col": "孩子们", "ex": "孩子们在公园玩。", "exv": "Bọn trẻ đang chơi trong công viên."},
+    {"han": "家", "pinyin": "jiā", "vi": "nhà, gia đình", "col": "我家", "ex": "我家有四口人。", "exv": "Nhà tôi có bốn người."}
+   ]
+  },
+  {
+   "topic": "HSK1 — Số và thời gian",
+   "hsk": "HSK1",
+   "hskNote": "Bộ tự soạn theo chủ đề HSK1, các từ là từ cơ bản thông dụng theo chủ đề, câu ví dụ tự soạn không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không mạo nhận từng từ nằm trong khung từ vựng chính thức.",
+   "cards": [
+    {"han": "一", "pinyin": "yī", "vi": "một", "col": "一本书", "ex": "我有一本书。", "exv": "Tôi có một quyển sách."},
+    {"han": "二", "pinyin": "èr", "vi": "hai", "col": "两个苹果", "ex": "我有两个苹果。", "exv": "Tôi có hai quả táo."},
+    {"han": "三", "pinyin": "sān", "vi": "ba", "col": "三个朋友", "ex": "我有三个朋友。", "exv": "Tôi có ba người bạn."},
+    {"han": "四", "pinyin": "sì", "vi": "bốn", "col": "四个季节", "ex": "一年有四个季节。", "exv": "Một năm có bốn mùa."},
+    {"han": "五", "pinyin": "wǔ", "vi": "năm", "col": "五点", "ex": "我五点回家。", "exv": "Tôi về nhà lúc năm giờ."},
+    {"han": "六", "pinyin": "liù", "vi": "sáu", "col": "六岁", "ex": "他今年六岁。", "exv": "Cậu ấy năm nay sáu tuổi."},
+    {"han": "七", "pinyin": "qī", "vi": "bảy", "col": "七天", "ex": "一个星期有七天。", "exv": "Một tuần có bảy ngày."},
+    {"han": "八", "pinyin": "bā", "vi": "tám", "col": "八点", "ex": "我八点上课。", "exv": "Tôi vào học lúc tám giờ."},
+    {"han": "九", "pinyin": "jiǔ", "vi": "chín", "col": "九点", "ex": "现在是九点。", "exv": "Bây giờ là chín giờ."},
+    {"han": "十", "pinyin": "shí", "vi": "mười", "col": "十块钱", "ex": "我有十块钱。", "exv": "Tôi có mười đồng."},
+    {"han": "零", "pinyin": "líng", "vi": "số không", "col": "零加五", "ex": "零加五等于五。", "exv": "Không cộng năm bằng năm."},
+    {"han": "百", "pinyin": "bǎi", "vi": "trăm", "col": "一百个学生", "ex": "学校里有一百个学生。", "exv": "Trong trường có một trăm học sinh."},
+    {"han": "千", "pinyin": "qiān", "vi": "nghìn", "col": "一千页", "ex": "这本书有一千页。", "exv": "Quyển sách này có một nghìn trang."},
+    {"han": "今天", "pinyin": "jīntiān", "vi": "hôm nay", "col": "今天天气很好", "ex": "今天天气很好。", "exv": "Hôm nay thời tiết rất đẹp."},
+    {"han": "点", "pinyin": "diǎn", "vi": "giờ (chỉ giờ)", "col": "三点", "ex": "我们三点见。", "exv": "Chúng ta gặp nhau lúc ba giờ."},
+    {"han": "分", "pinyin": "fēn", "vi": "phút", "col": "五分", "ex": "现在是两点五分。", "exv": "Bây giờ là hai giờ năm phút."},
+    {"han": "现在", "pinyin": "xiànzài", "vi": "bây giờ", "col": "现在是八点", "ex": "现在是八点。", "exv": "Bây giờ là tám giờ."},
+    {"han": "早上", "pinyin": "zǎoshang", "vi": "buổi sáng", "col": "早上六点", "ex": "我早上六点起床。", "exv": "Tôi dậy lúc sáu giờ sáng."},
+    {"han": "晚上", "pinyin": "wǎnshang", "vi": "buổi tối", "col": "晚上看书", "ex": "我晚上看书。", "exv": "Buổi tối tôi đọc sách."},
+    {"han": "中午", "pinyin": "zhōngwǔ", "vi": "buổi trưa", "col": "中午一起吃饭", "ex": "我们中午一起吃饭。", "exv": "Buổi trưa chúng ta cùng ăn cơm."}
+   ]
+  },
+  {
+   "topic": "HSK1 — Ăn uống hằng ngày",
+   "hsk": "HSK1",
+   "hskNote": "Bộ tự soạn theo chủ đề HSK1, các từ là từ cơ bản thông dụng theo chủ đề, câu ví dụ tự soạn không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không mạo nhận từng từ nằm trong khung từ vựng chính thức.",
+   "cards": [
+    {"han": "吃", "pinyin": "chī", "vi": "ăn", "col": "吃饭", "ex": "我们一起吃饭吧。", "exv": "Chúng ta cùng ăn cơm nhé."},
+    {"han": "喝", "pinyin": "hē", "vi": "uống", "col": "喝水", "ex": "请喝水。", "exv": "Mời bạn uống nước."},
+    {"han": "饭", "pinyin": "fàn", "vi": "cơm, bữa ăn", "col": "吃饭", "ex": "现在吃午饭。", "exv": "Bây giờ ăn cơm trưa."},
+    {"han": "水", "pinyin": "shuǐ", "vi": "nước", "col": "一杯水", "ex": "我想喝一杯水。", "exv": "Tôi muốn uống một cốc nước."},
+    {"han": "米饭", "pinyin": "mǐfàn", "vi": "cơm (gạo nấu)", "col": "吃米饭", "ex": "我每天吃米饭。", "exv": "Tôi ăn cơm mỗi ngày."},
+    {"han": "面条", "pinyin": "miàntiáo", "vi": "mì sợi", "col": "吃面条", "ex": "今天我吃面条。", "exv": "Hôm nay tôi ăn mì sợi."},
+    {"han": "饺子", "pinyin": "jiǎozi", "vi": "bánh chẻo", "col": "吃饺子", "ex": "我喜欢吃饺子。", "exv": "Tôi thích ăn bánh chẻo."},
+    {"han": "包子", "pinyin": "bāozi", "vi": "bánh bao", "col": "吃包子", "ex": "早上我吃包子。", "exv": "Buổi sáng tôi ăn bánh bao."},
+    {"han": "苹果", "pinyin": "píngguǒ", "vi": "quả táo", "col": "一个苹果", "ex": "我买了一个苹果。", "exv": "Tôi mua một quả táo."},
+    {"han": "香蕉", "pinyin": "xiāngjiāo", "vi": "quả chuối", "col": "一根香蕉", "ex": "他吃了一根香蕉。", "exv": "Anh ấy đã ăn một quả chuối."},
+    {"han": "鸡蛋", "pinyin": "jīdàn", "vi": "trứng gà", "col": "一个鸡蛋", "ex": "早上我吃一个鸡蛋。", "exv": "Buổi sáng tôi ăn một quả trứng."},
+    {"han": "牛奶", "pinyin": "niúnǎi", "vi": "sữa bò", "col": "喝牛奶", "ex": "孩子每天喝牛奶。", "exv": "Trẻ con uống sữa mỗi ngày."},
+    {"han": "茶", "pinyin": "chá", "vi": "trà", "col": "喝茶", "ex": "我爸爸喜欢喝茶。", "exv": "Bố tôi thích uống trà."},
+    {"han": "咖啡", "pinyin": "kāfēi", "vi": "cà phê", "col": "喝咖啡", "ex": "早上我喝咖啡。", "exv": "Buổi sáng tôi uống cà phê."},
+    {"han": "水果", "pinyin": "shuǐguǒ", "vi": "trái cây", "col": "吃水果", "ex": "多吃水果对身体好。", "exv": "Ăn nhiều trái cây tốt cho sức khỏe."},
+    {"han": "肉", "pinyin": "ròu", "vi": "thịt", "col": "吃肉", "ex": "我不吃肉。", "exv": "Tôi không ăn thịt."},
+    {"han": "鱼", "pinyin": "yú", "vi": "cá", "col": "吃鱼", "ex": "今天我们吃鱼。", "exv": "Hôm nay chúng ta ăn cá."},
+    {"han": "好吃", "pinyin": "hǎochī", "vi": "ngon", "col": "很好吃", "ex": "这道菜很好吃。", "exv": "Món này rất ngon."},
+    {"han": "饿", "pinyin": "è", "vi": "đói", "col": "我饿了", "ex": "我饿了，想吃饭。", "exv": "Tôi đói rồi, muốn ăn cơm."},
+    {"han": "渴", "pinyin": "kě", "vi": "khát", "col": "我渴了", "ex": "我渴了，想喝水。", "exv": "Tôi khát rồi, muốn uống nước."}
+   ]
+  },
+  {
+   "topic": "HSK1 — Trường học và lớp học",
+   "hsk": "HSK1",
+   "hskNote": "Bộ tự soạn theo chủ đề HSK1, các từ là từ cơ bản thông dụng theo chủ đề, câu ví dụ tự soạn không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không mạo nhận từng từ nằm trong khung từ vựng chính thức.",
+   "cards": [
+    {"han": "学校", "pinyin": "xuéxiào", "vi": "trường học", "col": "我的学校", "ex": "我的学校很大。", "exv": "Trường của tôi rất lớn."},
+    {"han": "老师", "pinyin": "lǎoshī", "vi": "thầy cô giáo", "col": "我的老师", "ex": "我的老师很好。", "exv": "Cô giáo của tôi rất tốt."},
+    {"han": "学生", "pinyin": "xuésheng", "vi": "học sinh, sinh viên", "col": "好学生", "ex": "他是一个好学生。", "exv": "Cậu ấy là một học sinh giỏi."},
+    {"han": "同学", "pinyin": "tóngxué", "vi": "bạn học", "col": "我的同学", "ex": "我的同学很多。", "exv": "Bạn học của tôi rất đông."},
+    {"han": "课", "pinyin": "kè", "vi": "tiết học, bài học", "col": "上课", "ex": "我们八点上课。", "exv": "Chúng tôi vào học lúc tám giờ."},
+    {"han": "书", "pinyin": "shū", "vi": "sách", "col": "一本书", "ex": "这是一本汉语书。", "exv": "Đây là một quyển sách tiếng Trung."},
+    {"han": "本子", "pinyin": "běnzi", "vi": "vở", "col": "一个本子", "ex": "我买了一个本子。", "exv": "Tôi mua một quyển vở."},
+    {"han": "笔", "pinyin": "bǐ", "vi": "bút", "col": "一支笔", "ex": "我有一支笔。", "exv": "Tôi có một cây bút."},
+    {"han": "桌子", "pinyin": "zhuōzi", "vi": "cái bàn", "col": "一张桌子", "ex": "教室里有很多桌子。", "exv": "Trong lớp học có nhiều cái bàn."},
+    {"han": "椅子", "pinyin": "yǐzi", "vi": "cái ghế", "col": "一把椅子", "ex": "请坐在这把椅子上。", "exv": "Mời bạn ngồi lên chiếc ghế này."},
+    {"han": "教室", "pinyin": "jiàoshì", "vi": "phòng học", "col": "在教室里", "ex": "我们在教室里上课。", "exv": "Chúng tôi học trong phòng học."},
+    {"han": "黑板", "pinyin": "hēibǎn", "vi": "bảng đen", "col": "看黑板", "ex": "请看黑板。", "exv": "Mời các em nhìn lên bảng."},
+    {"han": "读", "pinyin": "dú", "vi": "đọc", "col": "读书", "ex": "请读这句话。", "exv": "Mời bạn đọc câu này."},
+    {"han": "写", "pinyin": "xiě", "vi": "viết", "col": "写字", "ex": "他在写汉字。", "exv": "Cậu ấy đang viết chữ Hán."},
+    {"han": "听", "pinyin": "tīng", "vi": "nghe", "col": "听老师说", "ex": "请听老师说。", "exv": "Mời các em nghe cô giáo nói."},
+    {"han": "说", "pinyin": "shuō", "vi": "nói", "col": "说汉语", "ex": "我说汉语。", "exv": "Tôi nói tiếng Trung."},
+    {"han": "问", "pinyin": "wèn", "vi": "hỏi", "col": "问老师", "ex": "不懂就问老师。", "exv": "Không hiểu thì hỏi thầy cô."},
+    {"han": "回答", "pinyin": "huídá", "vi": "trả lời", "col": "回答问题", "ex": "请回答这个问题。", "exv": "Mời bạn trả lời câu hỏi này."},
+    {"han": "学习", "pinyin": "xuéxí", "vi": "học tập", "col": "学习汉语", "ex": "我喜欢学习汉语。", "exv": "Tôi thích học tiếng Trung."},
+    {"han": "汉语", "pinyin": "Hànyǔ", "vi": "tiếng Trung", "col": "学汉语", "ex": "我在学汉语。", "exv": "Tôi đang học tiếng Trung."}
+   ]
+  },
+  {
+   "topic": "HSK1 — Đi lại trong thành phố",
+   "hsk": "HSK1",
+   "hskNote": "Bộ tự soạn theo chủ đề HSK1, các từ là từ cơ bản thông dụng theo chủ đề, câu ví dụ tự soạn không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không mạo nhận từng từ nằm trong khung từ vựng chính thức.",
+   "cards": [
+    {"han": "路", "pinyin": "lù", "vi": "đường", "col": "这条路", "ex": "这条路很长。", "exv": "Con đường này rất dài."},
+    {"han": "街", "pinyin": "jiē", "vi": "phố", "col": "大街", "ex": "大街上人很多。", "exv": "Trên phố lớn có rất nhiều người."},
+    {"han": "桥", "pinyin": "qiáo", "vi": "cầu", "col": "一座桥", "ex": "河上有一座桥。", "exv": "Trên sông có một cây cầu."},
+    {"han": "公园", "pinyin": "gōngyuán", "vi": "công viên", "col": "去公园", "ex": "星期天我们去公园。", "exv": "Chủ nhật chúng tôi đi công viên."},
+    {"han": "商店", "pinyin": "shāngdiàn", "vi": "cửa hàng", "col": "去商店", "ex": "妈妈去商店买东西。", "exv": "Mẹ đi cửa hàng mua đồ."},
+    {"han": "地铁", "pinyin": "dìtiě", "vi": "tàu điện ngầm", "col": "坐地铁", "ex": "我每天坐地铁上学。", "exv": "Tôi đi tàu điện ngầm đến trường mỗi ngày."},
+    {"han": "公共汽车", "pinyin": "gōnggòngqìchē", "vi": "xe buýt", "col": "坐公共汽车", "ex": "他坐公共汽车回家。", "exv": "Anh ấy đi xe buýt về nhà."},
+    {"han": "出租车", "pinyin": "chūzūchē", "vi": "xe taxi", "col": "坐出租车", "ex": "我们坐出租车去机场。", "exv": "Chúng tôi đi taxi ra sân bay."},
+    {"han": "火车", "pinyin": "huǒchē", "vi": "tàu hỏa", "col": "坐火车", "ex": "我坐火车去北京。", "exv": "Tôi đi tàu hỏa đến Bắc Kinh."},
+    {"han": "飞机", "pinyin": "fēijī", "vi": "máy bay", "col": "坐飞机", "ex": "他坐飞机去上海。", "exv": "Anh ấy đi máy bay đến Thượng Hải."},
+    {"han": "自行车", "pinyin": "zìxíngchē", "vi": "xe đạp", "col": "骑自行车", "ex": "我骑自行车上学。", "exv": "Tôi đạp xe đến trường."},
+    {"han": "走", "pinyin": "zǒu", "vi": "đi bộ", "col": "走路", "ex": "我走路去学校。", "exv": "Tôi đi bộ đến trường."},
+    {"han": "来", "pinyin": "lái", "vi": "đến, lại", "col": "来学校", "ex": "请来学校找我。", "exv": "Mời bạn đến trường tìm tôi."},
+    {"han": "去", "pinyin": "qù", "vi": "đi", "col": "去公园", "ex": "我们去公园玩吧。", "exv": "Chúng ta đi công viên chơi nhé."},
+    {"han": "回", "pinyin": "huí", "vi": "về, trở lại", "col": "回家", "ex": "我五点回家。", "exv": "Tôi về nhà lúc năm giờ."},
+    {"han": "近", "pinyin": "jìn", "vi": "gần", "col": "很近", "ex": "学校离我家很近。", "exv": "Trường học rất gần nhà tôi."},
+    {"han": "远", "pinyin": "yuǎn", "vi": "xa", "col": "很远", "ex": "机场离这里很远。", "exv": "Sân bay cách đây rất xa."},
+    {"han": "左", "pinyin": "zuǒ", "vi": "trái", "col": "左边", "ex": "商店在左边。", "exv": "Cửa hàng ở bên trái."},
+    {"han": "右", "pinyin": "yòu", "vi": "phải", "col": "右边", "ex": "学校在右边。", "exv": "Trường học ở bên phải."},
+    {"han": "前面", "pinyin": "qiánmiàn", "vi": "phía trước", "col": "在前面", "ex": "公园在前面。", "exv": "Công viên ở phía trước."}
+   ]
+  },
+  {
+   "topic": "HSK2 — Thời tiết và bốn mùa",
+   "hsk": "HSK2",
+   "hskNote": "Bộ tự soạn theo chủ đề HSK2, các từ là từ cơ bản thông dụng theo chủ đề, câu ví dụ tự soạn không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không mạo nhận từng từ nằm trong khung từ vựng chính thức.",
+   "cards": [
+    {"han": "天气", "pinyin": "tiānqì", "vi": "thời tiết", "col": "今天天气很好", "ex": "今天天气很好。", "exv": "Hôm nay thời tiết rất đẹp."},
+    {"han": "晴天", "pinyin": "qíngtiān", "vi": "ngày nắng", "col": "今天是晴天", "ex": "今天是晴天，我们去公园吧。", "exv": "Hôm nay trời nắng, chúng ta đi công viên nhé."},
+    {"han": "阴天", "pinyin": "yīntiān", "vi": "ngày nhiều mây", "col": "今天是阴天", "ex": "今天是阴天，没有太阳。", "exv": "Hôm nay trời nhiều mây, không có nắng."},
+    {"han": "下雨", "pinyin": "xiàyǔ", "vi": "mưa", "col": "正在下雨", "ex": "外面正在下雨。", "exv": "Bên ngoài đang mưa."},
+    {"han": "下雪", "pinyin": "xiàxuě", "vi": "tuyết rơi", "col": "正在下雪", "ex": "冬天这里常常下雪。", "exv": "Mùa đông ở đây thường có tuyết rơi."},
+    {"han": "风", "pinyin": "fēng", "vi": "gió", "col": "风很大", "ex": "今天风很大。", "exv": "Hôm nay gió rất lớn."},
+    {"han": "云", "pinyin": "yún", "vi": "mây", "col": "白云", "ex": "天上有白云。", "exv": "Trên trời có mây trắng."},
+    {"han": "冷", "pinyin": "lěng", "vi": "lạnh", "col": "很冷", "ex": "冬天很冷。", "exv": "Mùa đông rất lạnh."},
+    {"han": "热", "pinyin": "rè", "vi": "nóng", "col": "很热", "ex": "夏天很热。", "exv": "Mùa hè rất nóng."},
+    {"han": "凉快", "pinyin": "liángkuai", "vi": "mát mẻ", "col": "很凉快", "ex": "秋天很凉快。", "exv": "Mùa thu rất mát mẻ."},
+    {"han": "暖和", "pinyin": "nuǎnhuo", "vi": "ấm áp", "col": "很暖和", "ex": "春天很暖和。", "exv": "Mùa xuân rất ấm áp."},
+    {"han": "春天", "pinyin": "chūntiān", "vi": "mùa xuân", "col": "在春天", "ex": "春天花开了。", "exv": "Mùa xuân hoa nở."},
+    {"han": "夏天", "pinyin": "xiàtiān", "vi": "mùa hè", "col": "在夏天", "ex": "夏天我喜欢游泳。", "exv": "Mùa hè tôi thích bơi."},
+    {"han": "秋天", "pinyin": "qiūtiān", "vi": "mùa thu", "col": "在秋天", "ex": "秋天天气凉快。", "exv": "Mùa thu thời tiết mát mẻ."},
+    {"han": "冬天", "pinyin": "dōngtiān", "vi": "mùa đông", "col": "在冬天", "ex": "冬天我们穿厚衣服。", "exv": "Mùa đông chúng tôi mặc áo dày."},
+    {"han": "季节", "pinyin": "jìjié", "vi": "mùa", "col": "四个季节", "ex": "一年有四个季节。", "exv": "Một năm có bốn mùa."},
+    {"han": "度", "pinyin": "dù", "vi": "độ", "col": "三十度", "ex": "今天三十度。", "exv": "Hôm nay ba mươi độ."},
+    {"han": "温度", "pinyin": "wēndù", "vi": "nhiệt độ", "col": "温度很高", "ex": "今天温度很高。", "exv": "Hôm nay nhiệt độ rất cao."},
+    {"han": "太阳", "pinyin": "tàiyang", "vi": "mặt trời", "col": "太阳出来了", "ex": "太阳出来了，天气很好。", "exv": "Mặt trời lên rồi, thời tiết rất đẹp."},
+    {"han": "月亮", "pinyin": "yuèliang", "vi": "mặt trăng", "col": "月亮很圆", "ex": "今天月亮很圆。", "exv": "Hôm nay mặt trăng rất tròn."}
+   ]
+  },
+  {
+   "topic": "HSK2 — Nhà ở và đồ dùng trong nhà",
+   "hsk": "HSK2",
+   "hskNote": "Bộ tự soạn theo chủ đề HSK2, các từ là từ cơ bản thông dụng theo chủ đề, câu ví dụ tự soạn không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không mạo nhận từng từ nằm trong khung từ vựng chính thức.",
+   "cards": [
+    {"han": "房子", "pinyin": "fángzi", "vi": "ngôi nhà", "col": "一座房子", "ex": "我家是一座小房子。", "exv": "Nhà tôi là một ngôi nhà nhỏ."},
+    {"han": "房间", "pinyin": "fángjiān", "vi": "phòng", "col": "我的房间", "ex": "我的房间很干净。", "exv": "Phòng của tôi rất sạch sẽ."},
+    {"han": "客厅", "pinyin": "kètīng", "vi": "phòng khách", "col": "在客厅里", "ex": "我们在客厅里看电视。", "exv": "Chúng tôi xem ti-vi trong phòng khách."},
+    {"han": "厨房", "pinyin": "chúfáng", "vi": "nhà bếp", "col": "在厨房里", "ex": "妈妈在厨房里做饭。", "exv": "Mẹ đang nấu cơm trong bếp."},
+    {"han": "厕所", "pinyin": "cèsuǒ", "vi": "nhà vệ sinh", "col": "去厕所", "ex": "厕所在哪里？", "exv": "Nhà vệ sinh ở đâu?"},
+    {"han": "卧室", "pinyin": "wòshì", "vi": "phòng ngủ", "col": "我的卧室", "ex": "我的卧室不大。", "exv": "Phòng ngủ của tôi không lớn."},
+    {"han": "门", "pinyin": "mén", "vi": "cửa", "col": "开门", "ex": "请开门。", "exv": "Mời bạn mở cửa."},
+    {"han": "窗户", "pinyin": "chuānghu", "vi": "cửa sổ", "col": "开窗户", "ex": "请开窗户。", "exv": "Mời bạn mở cửa sổ."},
+    {"han": "床", "pinyin": "chuáng", "vi": "giường", "col": "一张床", "ex": "卧室里有一张床。", "exv": "Trong phòng ngủ có một chiếc giường."},
+    {"han": "沙发", "pinyin": "shāfā", "vi": "ghế sô-pha", "col": "坐在沙发上", "ex": "他坐在沙发上看书。", "exv": "Anh ấy ngồi trên ghế sô-pha đọc sách."},
+    {"han": "电视", "pinyin": "diànshì", "vi": "ti-vi", "col": "看电视", "ex": "晚上我看电视。", "exv": "Buổi tối tôi xem ti-vi."},
+    {"han": "电话", "pinyin": "diànhuà", "vi": "điện thoại", "col": "打电话", "ex": "我给他打电话。", "exv": "Tôi gọi điện thoại cho anh ấy."},
+    {"han": "电脑", "pinyin": "diànnǎo", "vi": "máy tính", "col": "用电脑", "ex": "我用电脑学习。", "exv": "Tôi dùng máy tính để học."},
+    {"han": "衣服", "pinyin": "yīfu", "vi": "quần áo", "col": "穿衣服", "ex": "冬天要穿厚衣服。", "exv": "Mùa đông phải mặc áo dày."},
+    {"han": "鞋", "pinyin": "xié", "vi": "giày", "col": "一双鞋", "ex": "我买了一双鞋。", "exv": "Tôi mua một đôi giày."},
+    {"han": "帽子", "pinyin": "màozi", "vi": "mũ", "col": "戴帽子", "ex": "夏天他戴帽子。", "exv": "Mùa hè anh ấy đội mũ."},
+    {"han": "钥匙", "pinyin": "yàoshi", "vi": "chìa khóa", "col": "一把钥匙", "ex": "我的钥匙在哪里？", "exv": "Chìa khóa của tôi ở đâu?"},
+    {"han": "镜子", "pinyin": "jìngzi", "vi": "gương", "col": "一面镜子", "ex": "墙上有一面镜子。", "exv": "Trên tường có một tấm gương."},
+    {"han": "楼", "pinyin": "lóu", "vi": "tòa nhà, tầng", "col": "三楼", "ex": "我家在三楼。", "exv": "Nhà tôi ở tầng ba."},
+    {"han": "电梯", "pinyin": "diàntī", "vi": "thang máy", "col": "坐电梯", "ex": "我们坐电梯上楼。", "exv": "Chúng tôi đi thang máy lên tầng."}
+   ]
+  },
+  {
+   "topic": "HSK3 — Giải trí và sở thích",
+   "hsk": "HSK3",
+   "hskNote": "Bộ tự soạn theo chủ đề HSK3, các từ là từ cơ bản thông dụng theo chủ đề, câu ví dụ tự soạn không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không mạo nhận từng từ nằm trong khung từ vựng chính thức.",
+   "cards": [
+    {"han": "兴趣", "pinyin": "xìngqù", "vi": "sở thích, hứng thú", "col": "有兴趣", "ex": "我对音乐有兴趣。", "exv": "Tôi có hứng thú với âm nhạc."},
+    {"han": "爱好", "pinyin": "àihào", "vi": "sở thích", "col": "我的爱好", "ex": "我的爱好是游泳。", "exv": "Sở thích của tôi là bơi lội."},
+    {"han": "音乐", "pinyin": "yīnyuè", "vi": "âm nhạc", "col": "听音乐", "ex": "我喜欢听音乐。", "exv": "Tôi thích nghe nhạc."},
+    {"han": "歌曲", "pinyin": "gēqǔ", "vi": "bài hát", "col": "一首歌曲", "ex": "这首歌曲很好听。", "exv": "Bài hát này rất hay."},
+    {"han": "电影", "pinyin": "diànyǐng", "vi": "phim", "col": "看电影", "ex": "星期天我们去看电影。", "exv": "Chủ nhật chúng tôi đi xem phim."},
+    {"han": "电视剧", "pinyin": "diànshìjù", "vi": "phim truyền hình", "col": "看电视剧", "ex": "妈妈喜欢看电视剧。", "exv": "Mẹ thích xem phim truyền hình."},
+    {"han": "小说", "pinyin": "xiǎoshuō", "vi": "tiểu thuyết", "col": "读小说", "ex": "我喜欢读小说。", "exv": "Tôi thích đọc tiểu thuyết."},
+    {"han": "唱歌", "pinyin": "chànggē", "vi": "hát", "col": "喜欢唱歌", "ex": "她喜欢唱歌。", "exv": "Cô ấy thích hát."},
+    {"han": "跳舞", "pinyin": "tiàowǔ", "vi": "nhảy múa", "col": "喜欢跳舞", "ex": "姐姐喜欢跳舞。", "exv": "Chị gái thích nhảy múa."},
+    {"han": "钓鱼", "pinyin": "diàoyú", "vi": "câu cá", "col": "去钓鱼", "ex": "星期天爸爸去钓鱼。", "exv": "Chủ nhật bố đi câu cá."},
+    {"han": "游泳", "pinyin": "yóuyǒng", "vi": "bơi lội", "col": "喜欢游泳", "ex": "夏天我喜欢游泳。", "exv": "Mùa hè tôi thích bơi."},
+    {"han": "跑步", "pinyin": "pǎobù", "vi": "chạy bộ", "col": "去跑步", "ex": "早上他去跑步。", "exv": "Buổi sáng anh ấy đi chạy bộ."},
+    {"han": "足球", "pinyin": "zúqiú", "vi": "bóng đá", "col": "踢足球", "ex": "孩子们在踢足球。", "exv": "Bọn trẻ đang đá bóng."},
+    {"han": "篮球", "pinyin": "lánqiú", "vi": "bóng rổ", "col": "打篮球", "ex": "我喜欢打篮球。", "exv": "Tôi thích chơi bóng rổ."},
+    {"han": "游戏", "pinyin": "yóuxì", "vi": "trò chơi", "col": "玩游戏", "ex": "孩子们喜欢玩游戏。", "exv": "Bọn trẻ thích chơi trò chơi."},
+    {"han": "棋", "pinyin": "qí", "vi": "cờ", "col": "下棋", "ex": "爷爷喜欢下棋。", "exv": "Ông thích đánh cờ."},
+    {"han": "照相", "pinyin": "zhàoxiàng", "vi": "chụp ảnh", "col": "喜欢照相", "ex": "旅游的时候我喜欢照相。", "exv": "Khi đi du lịch tôi thích chụp ảnh."},
+    {"han": "收集", "pinyin": "shōují", "vi": "sưu tầm", "col": "收集邮票", "ex": "他喜欢收集邮票。", "exv": "Anh ấy thích sưu tầm tem."},
+    {"han": "表演", "pinyin": "biǎoyǎn", "vi": "biểu diễn", "col": "看表演", "ex": "我们在看表演。", "exv": "Chúng tôi đang xem biểu diễn."},
+    {"han": "观众", "pinyin": "guānzhòng", "vi": "khán giả", "col": "很多观众", "ex": "表演有很多观众。", "exv": "Buổi biểu diễn có rất nhiều khán giả."}
+   ]
+  },
+  {
+   "topic": "HSK3 — Môi trường và thành phố",
+   "hsk": "HSK3",
+   "hskNote": "Bộ tự soạn theo chủ đề HSK3, các từ là từ cơ bản thông dụng theo chủ đề, câu ví dụ tự soạn không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không mạo nhận từng từ nằm trong khung từ vựng chính thức.",
+   "cards": [
+    {"han": "环境", "pinyin": "huánjìng", "vi": "môi trường", "col": "保护环境", "ex": "我们要保护环境。", "exv": "Chúng ta phải bảo vệ môi trường."},
+    {"han": "污染", "pinyin": "wūrǎn", "vi": "ô nhiễm", "col": "空气污染", "ex": "空气污染对身体不好。", "exv": "Ô nhiễm không khí không tốt cho sức khỏe."},
+    {"han": "空气", "pinyin": "kōngqì", "vi": "không khí", "col": "新鲜空气", "ex": "公园里的空气很新鲜。", "exv": "Không khí trong công viên rất trong lành."},
+    {"han": "干净", "pinyin": "gānjìng", "vi": "sạch sẽ", "col": "很干净", "ex": "这个城市很干净。", "exv": "Thành phố này rất sạch sẽ."},
+    {"han": "安静", "pinyin": "ānjìng", "vi": "yên tĩnh", "col": "很安静", "ex": "图书馆很安静。", "exv": "Thư viện rất yên tĩnh."},
+    {"han": "吵", "pinyin": "chǎo", "vi": "ồn ào", "col": "很吵", "ex": "大街上很吵。", "exv": "Trên phố lớn rất ồn ào."},
+    {"han": "垃圾", "pinyin": "lājī", "vi": "rác", "col": "扔垃圾", "ex": "不要到处扔垃圾。", "exv": "Đừng vứt rác bừa bãi."},
+    {"han": "回收", "pinyin": "huíshōu", "vi": "tái chế", "col": "回收垃圾", "ex": "我们要回收垃圾。", "exv": "Chúng ta phải tái chế rác."},
+    {"han": "节约", "pinyin": "jiéyuē", "vi": "tiết kiệm", "col": "节约用水", "ex": "我们要节约用水。", "exv": "Chúng ta phải tiết kiệm nước."},
+    {"han": "保护", "pinyin": "bǎohù", "vi": "bảo vệ", "col": "保护环境", "ex": "保护环境，人人有责。", "exv": "Bảo vệ môi trường là trách nhiệm của mọi người."},
+    {"han": "植物", "pinyin": "zhíwù", "vi": "thực vật, cây cối", "col": "种植物", "ex": "公园里有很多植物。", "exv": "Trong công viên có rất nhiều cây cối."},
+    {"han": "树", "pinyin": "shù", "vi": "cây", "col": "一棵树", "ex": "学校前面有一棵树。", "exv": "Trước trường học có một cái cây."},
+    {"han": "花", "pinyin": "huā", "vi": "hoa", "col": "一朵花", "ex": "春天花开了。", "exv": "Mùa xuân hoa nở."},
+    {"han": "草", "pinyin": "cǎo", "vi": "cỏ", "col": "小草", "ex": "公园里有绿绿的小草。", "exv": "Trong công viên có cỏ xanh."},
+    {"han": "河", "pinyin": "hé", "vi": "sông", "col": "一条河", "ex": "城市旁边有一条河。", "exv": "Bên cạnh thành phố có một dòng sông."},
+    {"han": "湖", "pinyin": "hú", "vi": "hồ", "col": "一个湖", "ex": "公园里有一个湖。", "exv": "Trong công viên có một cái hồ."},
+    {"han": "城市", "pinyin": "chéngshì", "vi": "thành phố", "col": "大城市", "ex": "这是一个大城市。", "exv": "Đây là một thành phố lớn."},
+    {"han": "农村", "pinyin": "nóngcūn", "vi": "nông thôn", "col": "在农村", "ex": "农村的空气很新鲜。", "exv": "Không khí ở nông thôn rất trong lành."},
+    {"han": "交通", "pinyin": "jiāotōng", "vi": "giao thông", "col": "交通很方便", "ex": "这个城市交通很方便。", "exv": "Giao thông của thành phố này rất thuận tiện."},
+    {"han": "人口", "pinyin": "rénkǒu", "vi": "dân số", "col": "人口很多", "ex": "这个城市人口很多。", "exv": "Thành phố này dân số rất đông."}
+   ]
+  }
+]); })();
+
+/* ---------- PHA 3 (27/10/2026): PHA 3 — MODULE TIENG TRUNG (67 muc p3-, chang 2 +12, chang 3 +19, chang 4/5/6 moi chang +12; kiem chung doc lap: 0 muc bi bo; sua 3x 'bù rènzhēn' -> 'bú rènzhēn' de thong nhat quy uoc bien thanh 不 truoc thanh 4 trong batch) ---------- */
+// Pha 3 — Bổ sung module tiếng Trung (tự soạn 100%, không trích nguyên văn giáo trình).
+// CHỈ append vào ZH_*; KHÔNG thêm bộ zhVocab; KHÔNG mở cổng kiểm tra/thi thử nào.
+// Quy ước pinyin theo mẫu cũ: giữ dấu thanh gốc, riêng 一/不 biến thanh theo câu
+// (ví dụ: 一边 đọc yìbiān vì 边 thanh 1; 不去 đọc búqù vì 去 thanh 4).
+// Trường speak ở mục ngữ pháp giữ dạng chữ Hán thuần như mẫu cũ để đọc máy;
+// mọi câu đó đều đã có đủ pinyin + dịch tiếng Việt ở trường examples.
+(function () {
+var N2 = "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.";
+var N3 = "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.";
+var N4 = "Bài tự soạn theo chủ đề đời sống trình độ HSK4 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.";
+var N5 = "Bài tự soạn theo chủ đề đời sống trình độ HSK5 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.";
+var N6 = "Bài tự soạn theo chủ đề đời sống trình độ HSK6 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.";
+function spNote(st) { return "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK" + st + " (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."; }
+function roNote(st) { return "Tình huống tự soạn theo chủ đề đời sống trình độ HSK" + st + " (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Thoại đối tác nghe bằng giọng đọc máy zh-CN. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."; }
+var RO_TIP = "Học để dùng được, không học vẹt: hiểu ý từng lượt rồi nói lại bằng lời của mình cũng được. Đối tác nói gì chưa hiểu thì bấm Nghe lại.";
+
+ZH_GRAMMAR.push.apply(ZH_GRAMMAR, [
+{
+"id": "p3-s2-g-zai", "stage": 2, "title": "在…买东西 — ở (nơi chốn) mua đồ",
+"hook": "“我在市场买青菜” — tôi mua rau xanh ở chợ: 在 + nơi chốn nói làm việc ở đâu.",
+"examples": [
+"我在市场买青菜。(Wǒ zài shìchǎng mǎi qīngcài.) — Tôi mua rau xanh ở chợ.",
+"他在学校上课。(Tā zài xuéxiào shàngkè.) — Anh ấy học ở trường.",
+"我们在家里吃饭。(Wǒmen zài jiā lǐ chī fàn.) — Chúng tôi ăn cơm ở nhà.",
+"妈妈在超市买水果。(Māma zài chāoshì mǎi shuǐguǒ.) — Mẹ mua hoa quả ở siêu thị."
+],
+"speak": "我在市场买青菜。他在学校上课。我们在家里吃饭。妈妈在超市买水果。",
+"rule": "在 đứng trước nơi chốn, sau chủ ngữ: 我 + 在 + 市场 + 买青菜. Hỏi ở đâu dùng 在哪里, ví dụ: 你在哪里买菜？— Bạn mua rau ở đâu?",
+"tip": "Đừng đặt nơi chốn sau động từ kiểu “买青菜在市场”: trong tiếng Trung, nơi chốn đi với 在 phải đứng trước động từ.",
+"note": N2,
+"quiz": [
+{"q": "Câu nào đúng?", "o": ["我在市场买青菜", "我市场在买青菜", "我买青菜在市场", "市场我在买青菜"], "a": 0, "why": "在 + nơi chốn đứng trước động từ 买: 在市场买青菜."},
+{"q": "“他在学校上课” nghĩa là gì?", "o": ["Anh ấy học ở trường", "Anh ấy đi chợ", "Anh ấy ăn cơm ở nhà", "Anh ấy mua đồ ở siêu thị"], "a": 0, "why": "在学校 là ở trường, 上课 là học."},
+{"q": "Điền vào chỗ trống: 我___家里吃饭。", "o": ["在", "是", "有", "和"], "a": 0, "why": "在家里 là ở nhà."},
+{"q": "Câu nào dùng 在 SAI?", "o": ["我在市场买菜", "他在家里看书", "我们在学校上课", "我买菜在市场"], "a": 3, "why": "在 + nơi chốn phải đứng trước động từ, không đứng cuối câu."},
+{"q": "Hỏi “bạn mua rau ở đâu” nói thế nào?", "o": ["你在哪里买菜？", "你买菜哪里？", "你在哪里菜买？", "哪里你在买菜？"], "a": 0, "why": "在哪里 hỏi nơi chốn, đứng trước động từ 买."},
+{"q": "“妈妈在超市买水果” — mẹ mua gì?", "o": ["Hoa quả", "Rau xanh", "Quần áo", "Sách"], "a": 0, "why": "水果 là hoa quả, 超市 là siêu thị."}
+]
+},
+{
+"id": "p3-s2-g-hui", "stage": 2, "title": "会 — biết làm (qua học tập)",
+"hook": "“我会用电脑上网课” — tôi biết dùng máy tính học online: 会 nói kỹ năng đã học được.",
+"examples": [
+"我会用电脑上网课。(Wǒ huì yòng diànnǎo shàng wǎngkè.) — Tôi biết dùng máy tính học online.",
+"她会说汉语。(Tā huì shuō Hànyǔ.) — Cô ấy biết nói tiếng Trung.",
+"我不会做这道菜。(Wǒ bú huì zuò zhè dào cài.) — Tôi không biết làm món này.",
+"他会骑自行车。(Tā huì qí zìxíngchē.) — Anh ấy biết đi xe đạp."
+],
+"speak": "我会用电脑上网课。她会说汉语。我不会做这道菜。他会骑自行车。",
+"rule": "会 + động từ: biết làm việc đó vì đã học. Phủ định: 不会. Hỏi: 你会…吗？Trong 4 ví dụ này, 会 là “biết làm”, không phải “sẽ”. Chú ý: 不 trước 会 (thanh 4) đọc thành bú, nên đọc bú huì.",
+"tip": "Người Việt hay dịch 会 lúc nào cũng là “sẽ”: ở bài này hãy nhớ 会 = biết làm sau khi học.",
+"note": N2,
+"quiz": [
+{"q": "“我会说汉语” nghĩa là gì?", "o": ["Tôi biết nói tiếng Trung", "Tôi sẽ nói tiếng Trung", "Tôi thích tiếng Trung", "Tôi đang nói tiếng Trung"], "a": 0, "why": "会 + 说 là biết nói (kỹ năng đã học)."},
+{"q": "Phủ định của 会 là gì?", "o": ["不会", "没会", "不有会", "会不"], "a": 0, "why": "不会 là không biết làm."},
+{"q": "Điền vào chỗ trống: 她___用电脑。", "o": ["会", "是", "在", "有"], "a": 0, "why": "会用电脑 là biết dùng máy tính."},
+{"q": "Câu nào SAI?", "o": ["我会骑自行车", "她会说汉语", "我会用电脑", "我说会汉语"], "a": 3, "why": "会 đứng trước động từ 说, không đứng sau 说."},
+{"q": "Hỏi bạn có biết dùng máy tính không, nói thế nào?", "o": ["你会用电脑吗？", "你用电脑会吗？", "你会电脑用吗？", "会你用电脑吗？"], "a": 0, "why": "你会…吗 là mẫu hỏi biết làm hay không."},
+{"q": "“我不会做这道菜” — tôi thế nào với món này?", "o": ["Không biết làm", "Không thích ăn", "Đang làm", "Đã làm xong"], "a": 0, "why": "不会做 là không biết làm."}
+]
+},
+{
+"id": "p3-s3-g-yibian", "stage": 3, "title": "一边…一边… — vừa… vừa… (hai việc cùng lúc)",
+"hook": "“我一边上网课，一边记笔记” — tôi vừa học online vừa ghi chép: hai việc cùng một người, cùng lúc.",
+"examples": [
+"我一边上网课，一边记笔记。(Wǒ yìbiān shàng wǎngkè, yìbiān jì bǐjì.) — Tôi vừa học online vừa ghi chép.",
+"他一边吃饭，一边看电视。(Tā yìbiān chī fàn, yìbiān kàn diànshì.) — Anh ấy vừa ăn cơm vừa xem tivi.",
+"我们一边走路，一边聊天。(Wǒmen yìbiān zǒu lù, yìbiān liáo tiān.) — Chúng tôi vừa đi bộ vừa trò chuyện.",
+"妈妈一边做饭，一边听音乐。(Māma yìbiān zuò fàn, yìbiān tīng yīnyuè.) — Mẹ vừa nấu cơm vừa nghe nhạc."
+],
+"speak": "我一边上网课，一边记笔记。他一边吃饭，一边看电视。我们一边走路，一边聊天。妈妈一边做饭，一边听音乐。",
+"rule": "Chủ ngữ + 一边 + việc 1 + 一边 + việc 2; hai việc cùng lúc, cùng một người. Chú ý thanh điệu: 一 trước 边 (thanh 1) đọc thành yì, nên trong câu này đọc yìbiān.",
+"tip": "Đừng dùng 一边 cho hai việc làm lần lượt (trước rồi sau): việc lần lượt dùng 先…再….",
+"note": N3,
+"quiz": [
+{"q": "Câu nào nói hai việc cùng lúc?", "o": ["我一边上网课，一边记笔记", "我先上网课，再记笔记", "我上网课记笔记", "我一边上网课，记笔记"], "a": 0, "why": "Cần hai 一边 mới nói hai việc cùng lúc."},
+{"q": "一边 trong câu đọc là gì?", "o": ["yìbiān", "yībiān", "yíbiān", "yìbiàn"], "a": 0, "why": "一 trước 边 (thanh 1) đọc thành yì: yìbiān."},
+{"q": "Điền vào chỗ trống: 他一边吃饭，___看电视。", "o": ["一边", "先", "再", "就"], "a": 0, "why": "Việc thứ hai cũng cần 一边."},
+{"q": "Câu nào SAI?", "o": ["我一边走路，一边聊天", "他一边吃饭，一边看电视", "我一边上课，一边记笔记", "我一边吃饭，看电视"], "a": 3, "why": "Câu cuối thiếu 一边 thứ hai."},
+{"q": "“妈妈一边做饭，一边听音乐” — mẹ làm gì cùng lúc?", "o": ["Nấu cơm và nghe nhạc", "Ăn cơm và xem tivi", "Đi bộ và trò chuyện", "Học và ghi chép"], "a": 0, "why": "做饭 là nấu cơm, 听音乐 là nghe nhạc."},
+{"q": "Muốn nói “vừa đi bộ vừa trò chuyện” dùng mẫu nào?", "o": ["一边…一边…", "先…再…", "因为…所以…", "如果…就…"], "a": 0, "why": "Hai việc cùng lúc dùng 一边…一边…."}
+]
+},
+{
+"id": "p3-s3-g-xianzai", "stage": 3, "title": "先…再… — trước… rồi… (làm lần lượt)",
+"hook": "“我先去市场，再回家做饭” — tôi đi chợ trước, rồi về nhà nấu cơm: việc trước, việc sau, thứ tự không đổi được.",
+"examples": [
+"我先去市场，再回家做饭。(Wǒ xiān qù shìchǎng, zài huí jiā zuò fàn.) — Tôi đi chợ trước, rồi về nhà nấu cơm.",
+"他先洗手，再吃饭。(Tā xiān xǐ shǒu, zài chī fàn.) — Anh ấy rửa tay trước, rồi ăn cơm.",
+"我们先上课，再做作业。(Wǒmen xiān shàngkè, zài zuò zuòyè.) — Chúng tôi học trước, rồi làm bài tập.",
+"你先坐公共汽车，再走路去学校。(Nǐ xiān zuò gōnggòng qìchē, zài zǒu lù qù xuéxiào.) — Bạn đi xe buýt trước, rồi đi bộ tới trường."
+],
+"speak": "我先去市场，再回家做饭。他先洗手，再吃饭。我们先上课，再做作业。你先坐公共汽车，再走路去学校。",
+"rule": "先 + việc trước, 再 + việc sau. 先 đọc xiān (thanh 1), 再 đọc zài (thanh 4). Đảo thứ tự hai việc là đổi nghĩa.",
+"tip": "Phân biệt cho rõ: cùng lúc dùng 一边…一边…, lần lượt dùng 先…再….",
+"note": N3,
+"quiz": [
+{"q": "“我先去市场，再回家做饭” — việc nào làm trước?", "o": ["Đi chợ", "Về nhà nấu cơm", "Ăn cơm", "Rửa tay"], "a": 0, "why": "先去市场 là đi chợ trước."},
+{"q": "Điền vào chỗ trống: 他先洗手，___吃饭。", "o": ["再", "一边", "还", "就"], "a": 0, "why": "Việc sau dùng 再."},
+{"q": "Câu nào nói việc lần lượt đúng?", "o": ["我们先上课，再做作业", "我们一边上课，一边做作业", "我们上课做作业", "我们再上课，先做作业"], "a": 0, "why": "先上课，再做作业 là học trước, rồi làm bài tập."},
+{"q": "“你先坐公共汽车，再走路去学校” — bạn đi thế nào?", "o": ["Đi xe buýt trước, rồi đi bộ", "Đi bộ trước, rồi đi xe buýt", "Chỉ đi xe buýt", "Chỉ đi bộ"], "a": 0, "why": "先坐公共汽车 là đi xe buýt trước."},
+{"q": "先 đọc là gì?", "o": ["xiān", "xiǎn", "xiàn", "xián"], "a": 0, "why": "先 là thanh 1: xiān."},
+{"q": "Muốn nói “học trước, rồi làm bài tập” dùng mẫu nào?", "o": ["先…再…", "一边…一边…", "虽然…但是…", "因为…所以…"], "a": 0, "why": "Việc lần lượt dùng 先…再…."}
+]
+},
+{
+"id": "p3-s3-g-chule", "stage": 3, "title": "除了…以外，还… — ngoài… còn…",
+"hook": "“除了汉语以外，我还学英语” — ngoài tiếng Trung, tôi còn học tiếng Anh: thêm một thứ nữa, không phải loại trừ.",
+"examples": [
+"除了汉语以外，我还学英语。(Chúle Hànyǔ yǐwài, wǒ hái xué Yīngyǔ.) — Ngoài tiếng Trung, tôi còn học tiếng Anh.",
+"除了市场以外，他还去超市买东西。(Chúle shìchǎng yǐwài, tā hái qù chāoshì mǎi dōngxi.) — Ngoài chợ, anh ấy còn đi siêu thị mua đồ.",
+"除了米饭以外，我们还吃面条。(Chúle mǐfàn yǐwài, wǒmen hái chī miàntiáo.) — Ngoài cơm, chúng tôi còn ăn mì.",
+"除了星期六以外，星期天我也休息。(Chúle Xīngqīliù yǐwài, Xīngqītiān wǒ yě xiūxi.) — Ngoài thứ bảy, chủ nhật tôi cũng nghỉ."
+],
+"speak": "除了汉语以外，我还学英语。除了市场以外，他还去超市买东西。除了米饭以外，我们还吃面条。除了星期六以外，星期天我也休息。",
+"rule": "除了 A 以外 + 还/也 + B: ngoài A, còn B (A vẫn tính). Nhưng nếu sau đó là 都 thì nghĩa đổi thành “trừ A ra, tất cả đều…”, ví dụ: 除了星期天以外，我每天都上班 (trừ chủ nhật, ngày nào tôi cũng đi làm). 除了 đọc chúle: 除 thanh 2, 了 nhẹ.",
+"tip": "Người Việt dễ nhầm nhất ở đây: nhìn chữ sau dấu phẩy mà đoán nghĩa — thấy 还/也 là “còn”, thấy 都 là “trừ”.",
+"note": N3,
+"quiz": [
+{"q": "“除了汉语以外，我还学英语” — tôi học gì?", "o": ["Tiếng Trung và tiếng Anh", "Chỉ tiếng Anh", "Chỉ tiếng Trung", "Không học gì"], "a": 0, "why": "还学英语 là còn học tiếng Anh, ngoài tiếng Trung."},
+{"q": "Điền vào chỗ trống: 除了米饭以外，我们___吃面条。", "o": ["还", "都", "就", "才"], "a": 0, "why": "还 mới là “còn”; 都 sẽ đổi nghĩa thành loại trừ."},
+{"q": "“除了星期天以外，我每天都上班” nghĩa là gì?", "o": ["Trừ chủ nhật, ngày nào tôi cũng đi làm", "Ngoài chủ nhật, tôi còn đi làm", "Tôi chỉ đi làm chủ nhật", "Tôi nghỉ mọi ngày"], "a": 0, "why": "都 là tất cả đều, nên chủ nhật bị loại ra."},
+{"q": "Câu nào dùng 除了…以外 mà nghĩa KHÁC “ngoài ra còn”?", "o": ["除了市场以外，他还去超市买东西", "除了星期天以外，我每天都上班", "除了汉语以外，我还学英语", "除了米饭以外，我们还吃面条"], "a": 1, "why": "Câu có 都 nghĩa là loại trừ, không phải “còn”."},
+{"q": "除了 đọc đúng là gì?", "o": ["chúle", "chūle", "chùle", "chúliǎo"], "a": 0, "why": "除 thanh 2, 了 nhẹ: chúle."},
+{"q": "Muốn nói “ngoài cơm còn ăn mì” dùng mẫu nào?", "o": ["除了…以外，还…", "除了…以外，都…", "虽然…但是…", "如果…就…"], "a": 0, "why": "“Còn” dùng 还, không dùng 都."}
+]
+}
+]);
+
+ZH_GRAMMAR.push.apply(ZH_GRAMMAR, [
+{
+"id": "p3-s4-g-duilaishuo", "stage": 4, "title": "对…来说 — đối với… mà nói",
+"hook": "“对我来说，住在河内很方便” — đối với tôi, sống ở Hà Nội rất tiện: nêu góc nhìn của một người.",
+"examples": [
+"对我来说，住在河内很方便。(Duì wǒ lái shuō, zhù zài Hénèi hěn fāngbiàn.) — Đối với tôi, sống ở Hà Nội rất tiện.",
+"对学生来说，早上上课有一点早。(Duì xuésheng lái shuō, zǎoshang shàngkè yǒu yìdiǎn zǎo.) — Đối với học sinh, học buổi sáng hơi sớm.",
+"对他来说，学汉语不难。(Duì tā lái shuō, xué Hànyǔ bù nán.) — Đối với anh ấy, học tiếng Trung không khó.",
+"对我们来说，坐公共汽车比开车便宜。(Duì wǒmen lái shuō, zuò gōnggòng qìchē bǐ kāi chē piányi.) — Đối với chúng tôi, đi xe buýt rẻ hơn lái xe."
+],
+"speak": "对我来说，住在河内很方便。对学生来说，早上上课有一点早。对他来说，学汉语不难。对我们来说，坐公共汽车比开车便宜。",
+"rule": "对 + người + 来说, + nhận xét. 来说 đọc lái shuō: 来 thanh 2, 说 thanh 1. Mẫu này nêu góc nhìn, không nêu người nhận đồ.",
+"tip": "Đừng nhầm 对…来说 với 给: 对…来说 là “đứng ở góc nhìn của ai”, 给 mới là “cho ai”.",
+"note": N4,
+"quiz": [
+{"q": "“对我来说，住在河内很方便” — ai thấy tiện?", "o": ["Tôi", "Anh ấy", "Học sinh", "Chúng tôi"], "a": 0, "why": "对我来说 là đối với tôi."},
+{"q": "Điền vào chỗ trống: 对学生___，早上上课有一点早。", "o": ["来说", "给说", "在说", "是说"], "a": 0, "why": "对学生来说 là đối với học sinh."},
+{"q": "“对他来说，学汉语不难” nghĩa là gì?", "o": ["Đối với anh ấy, học tiếng Trung không khó", "Anh ấy không học tiếng Trung", "Anh ấy dạy tiếng Trung", "Tiếng Trung rất khó"], "a": 0, "why": "对他来说 nêu góc nhìn của anh ấy."},
+{"q": "Câu nào đúng?", "o": ["对我们来说，坐公共汽车比开车便宜", "对我们给说，坐公共汽车比开车便宜", "我们对来说，坐公共汽车比开车便宜", "对我们来说开车，坐公共汽车比便宜"], "a": 0, "why": "Đúng mẫu: 对 + người + 来说 + nhận xét."},
+{"q": "来说 đọc là gì?", "o": ["lái shuō", "lài shuō", "lái shuǒ", "lái shuò"], "a": 0, "why": "来 thanh 2, 说 thanh 1: lái shuō."},
+{"q": "Muốn nói “đối với chúng tôi, đi xe buýt rẻ hơn lái xe” dùng mẫu nào?", "o": ["对…来说", "给…来说", "在…来说", "比…来说"], "a": 0, "why": "Góc nhìn của ai dùng 对…来说."}
+]
+},
+{
+"id": "p3-s4-g-jiyou", "stage": 4, "title": "既…又… — vừa… vừa… (hai đặc điểm cùng chiều)",
+"hook": "“这个房间既便宜又干净” — phòng này vừa rẻ vừa sạch: hai đặc điểm tốt cùng một lúc.",
+"examples": [
+"这个房间既便宜又干净。(Zhège fángjiān jì piányi yòu gānjìng.) — Phòng này vừa rẻ vừa sạch.",
+"这件衣服既好看又舒服。(Zhè jiàn yīfu jì hǎokàn yòu shūfu.) — Cái áo này vừa đẹp vừa thoải mái.",
+"他既认真又努力。(Tā jì rènzhēn yòu nǔlì.) — Anh ấy vừa nghiêm túc vừa nỗ lực.",
+"北京的冬天既冷又干。(Běijīng de dōngtiān jì lěng yòu gān.) — Mùa đông Bắc Kinh vừa lạnh vừa khô."
+],
+"speak": "这个房间既便宜又干净。这件衣服既好看又舒服。他既认真又努力。北京的冬天既冷又干。",
+"rule": "既 + đặc điểm 1 + 又 + đặc điểm 2; hai đặc điểm cùng chiều (cùng tốt hoặc cùng xấu), không dùng mẫu này cho một tốt một xấu. 既 đọc jì (thanh 4), 又 đọc yòu (thanh 4).",
+"tip": "Phân biệt: 一边…一边… nói hai VIỆC cùng lúc, 既…又… nói hai ĐẶC ĐIỂM cùng lúc.",
+"note": N4,
+"quiz": [
+{"q": "“这个房间既便宜又干净” — phòng thế nào?", "o": ["Vừa rẻ vừa sạch", "Vừa rẻ vừa bẩn", "Vừa đắt vừa sạch", "Chỉ rẻ"], "a": 0, "why": "既便宜又干净 là vừa rẻ vừa sạch."},
+{"q": "Điền vào chỗ trống: 这件衣服既好看___舒服。", "o": ["又", "还", "也", "就"], "a": 0, "why": "既 đi với 又."},
+{"q": "Câu nào dùng 既…又… SAI về nghĩa?", "o": ["他既认真又努力", "这个房间既便宜又干净", "北京的冬天既冷又干", "这件衣服既好看又难看"], "a": 3, "why": "好看 và 难看 trái chiều, không dùng 既…又…."},
+{"q": "既 đọc là gì?", "o": ["jì", "jī", "jǐ", "jí"], "a": 0, "why": "既 là thanh 4: jì."},
+{"q": "“他既认真又努力” — anh ấy thế nào?", "o": ["Vừa nghiêm túc vừa nỗ lực", "Chỉ nghiêm túc", "Chỉ nỗ lực", "Không nghiêm túc"], "a": 0, "why": "既认真又努力 là vừa nghiêm túc vừa nỗ lực."},
+{"q": "Muốn nói hai đặc điểm tốt cùng lúc dùng mẫu nào?", "o": ["既…又…", "一边…一边…", "先…再…", "虽然…但是…"], "a": 0, "why": "Hai đặc điểm dùng 既…又…; hai việc dùng 一边…一边…."}
+]
+},
+{
+"id": "p3-s5-g-yuqi", "stage": 5, "title": "与其…不如… — thay vì… chi bằng…",
+"hook": "“与其在家等，不如去市场看看” — thay vì ở nhà chờ, chi bằng đi chợ xem: bỏ phương án kém, chọn phương án tốt hơn.",
+"examples": [
+"与其在家等，不如去市场看看。(Yǔqí zài jiā děng, bùrú qù shìchǎng kànkan.) — Thay vì ở nhà chờ, chi bằng đi chợ xem thử.",
+"与其抱怨，不如想办法解决问题。(Yǔqí bàoyuàn, bùrú xiǎng bànfǎ jiějué wèntí.) — Thay vì than phiền, chi bằng nghĩ cách giải quyết vấn đề.",
+"与其坐公共汽车，不如骑自行车，又快又健康。(Yǔqí zuò gōnggòng qìchē, bùrú qí zìxíngchē, yòu kuài yòu jiànkāng.) — Thay vì đi xe buýt, chi bằng đi xe đạp, vừa nhanh vừa khỏe.",
+"与其一个人想，不如和同学讨论。(Yǔqí yí ge rén xiǎng, bùrú hé tóngxué tǎolùn.) — Thay vì một mình nghĩ, chi bằng thảo luận với bạn học."
+],
+"speak": "与其在家等，不如去市场看看。与其抱怨，不如想办法解决问题。与其坐公共汽车，不如骑自行车，又快又健康。与其一个人想，不如和同学讨论。",
+"rule": "与其 + phương án bỏ + 不如 + phương án chọn. 与其 đọc yǔqí: 与 thanh 3, 其 thanh 2. 不如 đọc bùrú: 不 trước 如 (thanh 2) giữ bù.",
+"tip": "Đừng đảo ngược: phương án sau 不如 mới là phương án được khuyên chọn.",
+"note": N5,
+"quiz": [
+{"q": "“与其在家等，不如去市场看看” — khuyên làm gì?", "o": ["Đi chợ xem thử", "Ở nhà chờ", "Không làm gì", "Đi chợ mua đồ đắt"], "a": 0, "why": "Phương án sau 不如 là phương án được chọn: 去市场看看."},
+{"q": "Điền vào chỗ trống: 与其抱怨，___想办法解决问题。", "o": ["不如", "而且", "但是", "如果"], "a": 0, "why": "与其 đi với 不如."},
+{"q": "Câu nào khuyên đi xe đạp thay vì xe buýt?", "o": ["与其坐公共汽车，不如骑自行车", "与其骑自行车，不如坐公共汽车", "与其坐公共汽车，而且骑自行车", "与其坐公共汽车，但是骑自行车"], "a": 0, "why": "Phương án sau 不如 (骑自行车) là phương án được chọn."},
+{"q": "与其 đọc là gì?", "o": ["yǔqí", "yúqí", "yǔqì", "yùqí"], "a": 0, "why": "与 thanh 3, 其 thanh 2: yǔqí."},
+{"q": "“与其一个人想，不如和同学讨论” nghĩa là gì?", "o": ["Thay vì một mình nghĩ, chi bằng thảo luận với bạn học", "Một mình nghĩ tốt hơn thảo luận", "Không nên thảo luận", "Chỉ nên một mình nghĩ"], "a": 0, "why": "不如和同学讨论 là khuyên thảo luận với bạn học."},
+{"q": "Muốn khuyên “thay vì than phiền, hãy nghĩ cách” dùng mẫu nào?", "o": ["与其…不如…", "虽然…但是…", "因为…所以…", "一边…一边…"], "a": 0, "why": "So sánh hai phương án, chọn phương án tốt hơn dùng 与其…不如…."}
+]
+},
+{
+"id": "p3-s5-g-budebu", "stage": 5, "title": "不得不 — đành phải / không thể không",
+"hook": "“为了赶公共汽车，他不得不早起” — để kịp xe buýt, anh ấy đành phải dậy sớm: không muốn nhưng hoàn cảnh bắt buộc.",
+"examples": [
+"为了赶公共汽车，他不得不早起。(Wèile gǎn gōnggòng qìchē, tā bùdébù zǎo qǐ.) — Để kịp xe buýt, anh ấy đành phải dậy sớm.",
+"天气太冷了，我们不得不穿外套。(Tiānqì tài lěng le, wǒmen bùdébù chuān wàitào.) — Trời lạnh quá, chúng tôi đành phải mặc áo khoác.",
+"网络不好，他不得不去学校上课。(Wǎngluò bù hǎo, tā bùdébù qù xuéxiào shàngkè.) — Mạng không tốt, anh ấy đành phải tới trường học.",
+"为了省钱，她不得不自己做饭。(Wèile shěng qián, tā bùdébù zìjǐ zuò fàn.) — Để tiết kiệm tiền, cô ấy đành phải tự nấu cơm."
+],
+"speak": "为了赶公共汽车，他不得不早起。天气太冷了，我们不得不穿外套。网络不好，他不得不去学校上课。为了省钱，她不得不自己做饭。",
+"rule": "不得不 + động từ: hoàn cảnh bắt buộc, không phải vì thích. Đọc bùdébù. 为了… đọc wèile: 为 thanh 4, 了 nhẹ, nghĩa là “để…”.",
+"tip": "Phân biệt: 必须 là “phải” theo quy định, 不得不 là “đành phải” vì hoàn cảnh dồn tới.",
+"note": N5,
+"quiz": [
+{"q": "“为了赶公共汽车，他不得不早起” — vì sao anh ấy dậy sớm?", "o": ["Để kịp xe buýt", "Vì thích dậy sớm", "Vì trời lạnh", "Vì mạng không tốt"], "a": 0, "why": "为了赶公共汽车 là để kịp xe buýt."},
+{"q": "Điền vào chỗ trống: 天气太冷了，我们___穿外套。", "o": ["不得不", "不会", "不想", "不能"], "a": 0, "why": "Trời lạnh quá nên đành phải mặc áo khoác: 不得不."},
+{"q": "“网络不好，他不得不去学校上课” nghĩa là gì?", "o": ["Mạng không tốt, anh ấy đành phải tới trường học", "Mạng tốt, anh ấy ở nhà học", "Anh ấy thích tới trường", "Anh ấy không đi học"], "a": 0, "why": "网络不好 là mạng không tốt, nên đành phải tới trường."},
+{"q": "不得不 đọc là gì?", "o": ["bùdébù", "búdébù", "bùdèbù", "búdèbú"], "a": 0, "why": "不得 đọc bùdé, 不 cuối đọc bù: bùdébù."},
+{"q": "Câu nào dùng 不得不 đúng?", "o": ["为了省钱，她不得不自己做饭", "为了省钱，她不得不不做饭", "为了省钱，她不会得不做饭", "为了省钱，她得不得不做饭"], "a": 0, "why": "不得不 + động từ: 不得不自己做饭."},
+{"q": "不得不 khác 必须 ở điểm nào?", "o": ["不得不 là đành phải vì hoàn cảnh; 必须 là phải theo quy định", "不得不 là không phải làm; 必须 là thích làm", "Hai từ giống hệt nhau", "不得不 chỉ dùng cho quá khứ"], "a": 0, "why": "不得不 nhấn mạnh hoàn cảnh bắt buộc."}
+]
+},
+{
+"id": "p3-s6-g-guigen", "stage": 6, "title": "归根到底 — rốt cuộc / xét cho cùng",
+"hook": "“归根到底，健康最重要” — rốt cuộc, sức khỏe là quan trọng nhất: gạt chi tiết sang một bên, chốt điều cốt lõi.",
+"examples": [
+"归根到底，健康最重要。(Guī gēn dào dǐ, jiànkāng zuì zhòngyào.) — Rốt cuộc, sức khỏe là quan trọng nhất.",
+"归根到底，学习要靠自己努力。(Guī gēn dào dǐ, xuéxí yào kào zìjǐ nǔlì.) — Rốt cuộc, học tập phải dựa vào chính mình nỗ lực.",
+"归根到底，时间比钱更宝贵。(Guī gēn dào dǐ, shíjiān bǐ qián gèng bǎoguì.) — Rốt cuộc, thời gian quý hơn tiền.",
+"归根到底，城市和农村都需要年轻人。(Guī gēn dào dǐ, chéngshì hé nóngcūn dōu xūyào niánqīng rén.) — Rốt cuộc, thành phố và nông thôn đều cần người trẻ."
+],
+"speak": "归根到底，健康最重要。归根到底，学习要靠自己努力。归根到底，时间比钱更宝贵。归根到底，城市和农村都需要年轻人。",
+"rule": "归根到底 đứng đầu câu kết luận, sau đó là ý chính. Đọc guī gēn dào dǐ: 归 thanh 1, 根 thanh 1, 到 thanh 4, 底 thanh 3.",
+"tip": "Dùng ở cuối đoạn lập luận để chốt ý, không dùng ở đầu đoạn khi chưa nêu lý do.",
+"note": N6,
+"quiz": [
+{"q": "“归根到底，健康最重要” — ý chốt là gì?", "o": ["Sức khỏe là quan trọng nhất", "Tiền là quan trọng nhất", "Thời gian không quan trọng", "Học tập không quan trọng"], "a": 0, "why": "归根到底 chốt ý chính: 健康最重要."},
+{"q": "归根到底 thường đứng ở đâu?", "o": ["Đầu câu kết luận", "Cuối câu hỏi", "Giữa hai động từ", "Sau lượng từ"], "a": 0, "why": "归根到底 mở đầu câu kết luận."},
+{"q": "“归根到底，时间比钱更宝贵” nghĩa là gì?", "o": ["Rốt cuộc, thời gian quý hơn tiền", "Tiền quý hơn thời gian", "Thời gian và tiền bằng nhau", "Không cần thời gian"], "a": 0, "why": "时间比钱更宝贵 là thời gian quý hơn tiền."},
+{"q": "归根到底 đọc là gì?", "o": ["guī gēn dào dǐ", "guǐ gēn dào dǐ", "guī gèn dào dǐ", "guī gēn dào dì"], "a": 0, "why": "归 1, 根 1, 到 4, 底 3: guī gēn dào dǐ."},
+{"q": "Câu nào dùng 归根到底 đúng?", "o": ["归根到底，城市和农村都需要年轻人", "城市归根到底和农村都需要年轻人", "归根到底年轻人，城市和农村都需", "归根到底需要，城市和农村年轻人"], "a": 0, "why": "归根到底 đứng đầu câu kết luận."},
+{"q": "Muốn chốt đoạn lập luận bằng “rốt cuộc” dùng từ nào?", "o": ["归根到底", "一边", "与其", "不得不"], "a": 0, "why": "归根到底 là “rốt cuộc / xét cho cùng”."}
+]
+},
+{
+"id": "p3-s6-g-tongshi", "stage": 6, "title": "与此同时 — đồng thời (cùng lúc đó, ở phía khác)",
+"hook": "“城市在发展，与此同时，农村也在变化” — thành phố đang phát triển, đồng thời nông thôn cũng đang thay đổi: hai chuyện song song.",
+"examples": [
+"城市在发展，与此同时，农村也在变化。(Chéngshì zài fāzhǎn, yǔ cǐ tóngshí, nóngcūn yě zài biànhuà.) — Thành phố đang phát triển, đồng thời nông thôn cũng đang thay đổi.",
+"他在北京工作，与此同时，他还在网上学习。(Tā zài Běijīng gōngzuò, yǔ cǐ tóngshí, tā hái zài wǎngshang xuéxí.) — Anh ấy làm việc ở Bắc Kinh, đồng thời còn học trên mạng.",
+"年轻人去城市找工作，与此同时，家乡需要他们回来。(Niánqīng rén qù chéngshì zhǎo gōngzuò, yǔ cǐ tóngshí, jiāxiāng xūyào tāmen huí lái.) — Người trẻ đi thành phố tìm việc, đồng thời quê nhà cần họ trở về.",
+"网课越来越多，与此同时，学生也需要学会自己安排时间。(Wǎngkè yuè lái yuè duō, yǔ cǐ tóngshí, xuésheng yě xūyào xué huì zìjǐ ānpái shíjiān.) — Lớp học online ngày càng nhiều, đồng thời học sinh cũng cần học cách tự sắp xếp thời gian."
+],
+"speak": "城市在发展，与此同时，农村也在变化。他在北京工作，与此同时，他还在网上学习。年轻人去城市找工作，与此同时，家乡需要他们回来。网课越来越多，与此同时，学生也需要学会自己安排时间。",
+"rule": "与此同时 nối hai sự việc song song, thường ở đầu vế sau, sau dấu phẩy. Đọc yǔ cǐ tóngshí: 与 thanh 3, 此 thanh 3, 同 thanh 2, 时 thanh 2.",
+"tip": "Phân biệt: 一边…一边… là một người làm hai việc; 与此同时 là hai sự việc song song, có thể khác chủ thể.",
+"note": N6,
+"quiz": [
+{"q": "“城市在发展，与此同时，农村也在变化” — hai chuyện nào song song?", "o": ["Thành phố phát triển và nông thôn thay đổi", "Thành phố phát triển và thành phố thay đổi", "Nông thôn phát triển và thành phố đứng yên", "Chỉ nông thôn thay đổi"], "a": 0, "why": "与此同时 nối hai sự việc song song."},
+{"q": "与此同时 thường đứng ở đâu?", "o": ["Đầu vế sau, sau dấu phẩy", "Cuối câu hỏi", "Giữa chủ ngữ và lượng từ", "Trước chủ ngữ đầu tiên"], "a": 0, "why": "与此同时 mở đầu vế sau."},
+{"q": "“他在北京工作，与此同时，他还在网上学习” nghĩa là gì?", "o": ["Anh ấy làm việc ở Bắc Kinh, đồng thời còn học trên mạng", "Anh ấy nghỉ làm để học", "Anh ấy chỉ học, không làm", "Anh ấy rời Bắc Kinh"], "a": 0, "why": "与此同时 là đồng thời, hai việc song song."},
+{"q": "与此同时 đọc là gì?", "o": ["yǔ cǐ tóngshí", "yú cǐ tóngshí", "yǔ cì tóngshí", "yǔ cǐ tōngshí"], "a": 0, "why": "与 3, 此 3, 同 2, 时 2: yǔ cǐ tóngshí."},
+{"q": "Câu nào dùng 与此同时 đúng?", "o": ["网课越来越多，与此同时，学生也需要学会自己安排时间", "网课与此同时越来越多，学生也需要学会自己安排时间", "网课越来越多，学生与此同时也需要学会自己安排时间不对", "与此同时网课越来越多学生也需要学会自己安排时间"], "a": 0, "why": "与此同时 đứng đầu vế sau."},
+{"q": "Muốn nối hai sự việc song song của hai chủ thể khác nhau dùng từ nào?", "o": ["与此同时", "一边…一边…", "先…再…", "与其…不如…"], "a": 0, "why": "Hai sự việc song song dùng 与此同时; một người hai việc dùng 一边…一边…."}
+]
+}
+]);
+
+ZH_READING.push.apply(ZH_READING, [
+{
+"id": "p3-s2-r-cho", "stage": 2, "title": "Chợ buổi sáng ở Hà Nội", "topic": "Đi chợ",
+"text": "早上，妈妈去市场买菜。市场里有很多人。青菜很新鲜，鸡蛋也不贵。妈妈买了青菜、鸡蛋和水果。回家以后，妈妈做饭给我们吃。我们都说妈妈做的饭很好吃。",
+"pinyin": "Zǎoshang, māma qù shìchǎng mǎi cài. Shìchǎng lǐ yǒu hěn duō rén. Qīngcài hěn xīnxiān, jīdàn yě bú guì. Māma mǎi le qīngcài, jīdàn hé shuǐguǒ. Huí jiā yǐhòu, māma zuò fàn gěi wǒmen chī. Wǒmen dōu shuō māma zuò de fàn hěn hǎochī.",
+"vi": "Buổi sáng, mẹ đi chợ mua đồ ăn. Trong chợ có rất nhiều người. Rau xanh rất tươi, trứng gà cũng không đắt. Mẹ mua rau xanh, trứng gà và hoa quả. Sau khi về nhà, mẹ nấu cơm cho chúng tôi ăn. Chúng tôi đều nói cơm mẹ nấu rất ngon.",
+"note": N2,
+"questions": [
+{"q": "Buổi sáng mẹ đi đâu?", "o": ["Đi chợ", "Đi trường", "Đi làm", "Đi công viên"], "a": 0, "why": "妈妈去市场买菜: mẹ đi chợ mua đồ ăn."},
+{"q": "Trong chợ có gì?", "o": ["Rất nhiều người", "Rất ít người", "Không có ai", "Chỉ có mẹ"], "a": 0, "why": "市场里有很多人: trong chợ có rất nhiều người."},
+{"q": "Rau xanh thế nào?", "o": ["Rất tươi", "Rất cũ", "Rất đắt", "Rất ít"], "a": 0, "why": "青菜很新鲜: rau xanh rất tươi."},
+{"q": "Mẹ mua những gì?", "o": ["Rau xanh, trứng gà và hoa quả", "Chỉ mua rau xanh", "Chỉ mua trứng gà", "Quần áo và sách"], "a": 0, "why": "妈妈买了青菜、鸡蛋和水果."},
+{"q": "Chúng tôi nói cơm mẹ nấu thế nào?", "o": ["Rất ngon", "Không ngon", "Rất mặn", "Chưa ăn"], "a": 0, "why": "妈妈做的饭很好吃: cơm mẹ nấu rất ngon."}
+]
+},
+{
+"id": "p3-s2-r-xebuyt", "stage": 2, "title": "Đi xe buýt đi học", "topic": "Đi xe buýt",
+"text": "我每天坐公共汽车去学校。公共汽车站离我家不远。早上，车上有很多学生。七点半，我上车去学校。车上，我和同学聊天。八点，我到学校，开始上课。",
+"pinyin": "Wǒ měitiān zuò gōnggòng qìchē qù xuéxiào. Gōnggòng qìchē zhàn lí wǒ jiā bù yuǎn. Zǎoshang, chē shang yǒu hěn duō xuésheng. Qī diǎn bàn, wǒ shàng chē qù xuéxiào. Chē shang, wǒ hé tóngxué liáo tiān. Bā diǎn, wǒ dào xuéxiào, kāishǐ shàngkè.",
+"vi": "Mỗi ngày tôi đi xe buýt tới trường. Trạm xe buýt không xa nhà tôi. Buổi sáng, trên xe có nhiều học sinh. 7 giờ rưỡi, tôi lên xe đi học. Trên xe, tôi và bạn học trò chuyện. 8 giờ, tôi tới trường, bắt đầu học.",
+"note": N2,
+"questions": [
+{"q": "Tôi đi học bằng gì?", "o": ["Xe buýt", "Xe đạp", "Tàu điện ngầm", "Đi bộ"], "a": 0, "why": "坐公共汽车去学校: đi xe buýt tới trường."},
+{"q": "Trạm xe buýt cách nhà thế nào?", "o": ["Không xa", "Rất xa", "Ở trường", "Ở chợ"], "a": 0, "why": "公共汽车站离我家不远: trạm xe buýt không xa nhà tôi."},
+{"q": "Mấy giờ tôi lên xe?", "o": ["7 giờ rưỡi", "7 giờ", "8 giờ", "6 giờ rưỡi"], "a": 0, "why": "七点半，我上车: 7 giờ rưỡi tôi lên xe."},
+{"q": "Trên xe tôi làm gì?", "o": ["Trò chuyện với bạn học", "Ngủ", "Ăn cơm", "Đọc báo"], "a": 0, "why": "车上，我和同学聊天: trên xe tôi trò chuyện với bạn học."},
+{"q": "Mấy giờ tôi tới trường?", "o": ["8 giờ", "7 giờ rưỡi", "9 giờ", "7 giờ"], "a": 0, "why": "八点，我到学校: 8 giờ tôi tới trường."}
+]
+},
+{
+"id": "p3-s3-r-que", "stage": 3, "title": "Quê nhà ở miền Bắc", "topic": "Quê nhà",
+"text": "我的家乡在越南北部的一个村子里。村子前面有一条小河，后面有很多田地。爷爷奶奶住在村子里，他们种青菜，也养鸡。每年夏天，我回老家看爷爷奶奶。早上，我和爷爷去田地里走路。晚上，我们一家人吃饭，聊天，很开心。",
+"pinyin": "Wǒ de jiāxiāng zài Yuènán běibù de yí ge cūnzi lǐ. Cūnzi qiánmiàn yǒu yì tiáo xiǎo hé, hòumiàn yǒu hěn duō tiándì. Yéye nǎinai zhù zài cūnzi lǐ, tāmen zhòng qīngcài, yě yǎng jī. Měi nián xiàtiān, wǒ huí lǎojiā kàn yéye nǎinai. Zǎoshang, wǒ hé yéye qù tiándì lǐ zǒu lù. Wǎnshang, wǒmen yì jiā rén chī fàn, liáo tiān, hěn kāixīn.",
+"vi": "Quê tôi ở một làng thuộc miền Bắc Việt Nam. Trước làng có một con sông nhỏ, sau làng có nhiều ruộng. Ông bà sống ở làng, ông bà trồng rau xanh, cũng nuôi gà. Mỗi năm mùa hè, tôi về quê thăm ông bà. Buổi sáng, tôi và ông đi bộ ra ruộng. Buổi tối, cả nhà ăn cơm, trò chuyện, rất vui.",
+"note": N3,
+"questions": [
+{"q": "Quê của tôi ở đâu?", "o": ["Một làng ở miền Bắc Việt Nam", "Một thành phố ở miền Nam", "Ở Bắc Kinh", "Ở Thượng Hải"], "a": 0, "why": "我的家乡在越南北部的一个村子里."},
+{"q": "Trước làng có gì?", "o": ["Một con sông nhỏ", "Một con đường lớn", "Một trường học", "Một siêu thị"], "a": 0, "why": "村子前面有一条小河."},
+{"q": "Ông bà ở quê làm gì?", "o": ["Trồng rau xanh và nuôi gà", "Chỉ nuôi gà", "Chỉ trồng rau", "Đi làm ở thành phố"], "a": 0, "why": "他们种青菜，也养鸡."},
+{"q": "Mùa nào tôi về quê?", "o": ["Mùa hè", "Mùa đông", "Mùa xuân", "Mùa thu"], "a": 0, "why": "每年夏天，我回老家."},
+{"q": "Buổi tối cả nhà làm gì?", "o": ["Ăn cơm và trò chuyện", "Đi chợ", "Đi học", "Đi xe buýt"], "a": 0, "why": "晚上，我们一家人吃饭，聊天."}
+]
+},
+{
+"id": "p3-s3-r-hocline", "stage": 3, "title": "Một buổi học online", "topic": "Học online",
+"text": "今天晚上，我在家里上网课。老师在电脑里讲课，同学也在网上听课。开始的时候，网络不太好，我听不清楚。后来，网络好了，我能听清楚老师的话。下课以后，我做作业，还复习今天的课。我觉得上网课很方便，不用去学校。",
+"pinyin": "Jīntiān wǎnshang, wǒ zài jiā lǐ shàng wǎngkè. Lǎoshī zài diànnǎo lǐ jiǎngkè, tóngxué yě zài wǎngshang tīngkè. Kāishǐ de shíhou, wǎngluò bú tài hǎo, wǒ tīng bù qīngchu. Hòulái, wǎngluò hǎo le, wǒ néng tīng qīngchu lǎoshī de huà. Xiàkè yǐhòu, wǒ zuò zuòyè, hái fùxí jīntiān de kè. Wǒ juéde shàng wǎngkè hěn fāngbiàn, bú yòng qù xuéxiào.",
+"vi": "Tối nay, tôi học online ở nhà. Cô giáo giảng bài trên máy tính, bạn học cũng nghe giảng trên mạng. Lúc bắt đầu, mạng không tốt lắm, tôi nghe không rõ. Sau đó, mạng tốt rồi, tôi có thể nghe rõ lời cô giáo. Sau giờ học, tôi làm bài tập, còn ôn bài hôm nay. Tôi thấy học online rất tiện, không cần tới trường.",
+"note": N3,
+"questions": [
+{"q": "Tối nay tôi học ở đâu?", "o": ["Ở nhà", "Ở trường", "Ở công viên", "Ở nhà bạn"], "a": 0, "why": "我在家里上网课: tôi học online ở nhà."},
+{"q": "Lúc bắt đầu mạng thế nào?", "o": ["Không tốt lắm", "Rất tốt", "Không có mạng", "Rất nhanh"], "a": 0, "why": "开始的时候，网络不太好."},
+{"q": "Sau đó tôi nghe thế nào?", "o": ["Nghe rõ lời cô giáo", "Vẫn nghe không rõ", "Không nghe gì", "Không học nữa"], "a": 0, "why": "后来，网络好了，我能听清楚老师的话."},
+{"q": "Sau giờ học tôi làm gì?", "o": ["Làm bài tập và ôn bài", "Chỉ chơi điện thoại", "Đi chợ", "Đi ngủ ngay"], "a": 0, "why": "下课以后，我做作业，还复习今天的课."},
+{"q": "Tôi thấy học online thế nào?", "o": ["Rất tiện, không cần tới trường", "Rất bất tiện", "Rất khó", "Không thích"], "a": 0, "why": "我觉得上网课很方便，不用去学校."}
+]
+},
+{
+"id": "p3-s3-r-thoitiet", "stage": 3, "title": "Thời tiết miền Bắc đổi mùa", "topic": "Thời tiết miền Bắc",
+"text": "河内的冬天很冷，有时候还下小雨。早上出门的时候，要穿外套，还要带雨伞。妈妈说，天气冷的时候要多穿衣服，不要感冒。下午，雨停了，但是风很大。晚上，家里很暖和，我们喝热水，吃热饭。我喜欢冬天，因为可以穿好看的毛衣。",
+"pinyin": "Hénèi de dōngtiān hěn lěng, yǒu shíhou hái xià xiǎoyǔ. Zǎoshang chūmén de shíhou, yào chuān wàitào, hái yào dài yǔsǎn. Māma shuō, tiānqì lěng de shíhou yào duō chuān yīfu, bú yào gǎnmào. Xiàwǔ, yǔ tíng le, dànshì fēng hěn dà. Wǎnshang, jiā lǐ hěn nuǎnhuo, wǒmen hē rè shuǐ, chī rè fàn. Wǒ xǐhuan dōngtiān, yīnwèi kěyǐ chuān hǎokàn de máoyī.",
+"vi": "Mùa đông Hà Nội rất lạnh, có lúc còn mưa nhỏ. Buổi sáng lúc ra khỏi nhà, phải mặc áo khoác, còn phải mang ô. Mẹ nói, lúc trời lạnh phải mặc nhiều áo, đừng để bị cảm. Buổi chiều, mưa tạnh rồi, nhưng gió rất to. Buổi tối, trong nhà rất ấm, chúng tôi uống nước nóng, ăn cơm nóng. Tôi thích mùa đông, vì có thể mặc áo len đẹp.",
+"note": N3,
+"questions": [
+{"q": "Mùa đông Hà Nội thế nào?", "o": ["Rất lạnh, có lúc mưa nhỏ", "Rất nóng", "Không mưa", "Rất ấm"], "a": 0, "why": "河内的冬天很冷，有时候还下小雨."},
+{"q": "Buổi sáng ra ngoài cần gì?", "o": ["Áo khoác và ô", "Chỉ cần ô", "Chỉ cần áo len", "Không cần gì"], "a": 0, "why": "要穿外套，还要带雨伞."},
+{"q": "Mẹ dặn gì khi trời lạnh?", "o": ["Mặc nhiều áo, đừng để bị cảm", "Mặc ít áo", "Không cần mặc áo", "Ra ngoài chơi"], "a": 0, "why": "要多穿衣服，不要感冒."},
+{"q": "Buổi chiều thế nào?", "o": ["Mưa tạnh nhưng gió rất to", "Vẫn mưa to", "Không có gió", "Trời nóng"], "a": 0, "why": "下午，雨停了，但是风很大."},
+{"q": "Vì sao tôi thích mùa đông?", "o": ["Vì có thể mặc áo len đẹp", "Vì trời nóng", "Vì không cần mặc áo", "Vì được nghỉ học"], "a": 0, "why": "我喜欢冬天，因为可以穿好看的毛衣."}
+]
+}
+]);
+
+ZH_READING.push.apply(ZH_READING, [
+{
+"id": "p3-s4-r-tro", "stage": 4, "title": "Thuê trọ chung với bạn", "topic": "Ở trọ",
+"text": "小王在河内上大学，他和一个同学合租一个房间。房间不大，但是很干净，离学校也不远。每个月，他们一起付房租，还一起付水电费。住进来以前，他们和房东签了一个合同。合同上写了房租、水电费和住的时间。小王说，合租可以省钱，还可以和同学一起学习。",
+"pinyin": "Xiǎo Wáng zài Hénèi shàng dàxué, tā hé yí ge tóngxué hézū yí ge fángjiān. Fángjiān bù dà, dànshì hěn gānjìng, lí xuéxiào yě bù yuǎn. Měi ge yuè, tāmen yìqǐ fù fángzū, hái yìqǐ fù shuǐdiànfèi. Zhù jìnlái yǐqián, tāmen hé fángdōng qiān le yí ge hétong. Hétong shang xiě le fángzū, shuǐdiànfèi hé zhù de shíjiān. Xiǎo Wáng shuō, hézū kěyǐ shěng qián, hái kěyǐ hé tóngxué yìqǐ xuéxí.",
+"vi": "Tiểu Vương học đại học ở Hà Nội, cậu ấy thuê chung một phòng với một bạn học. Phòng không lớn, nhưng rất sạch, cũng không xa trường. Mỗi tháng, họ cùng trả tiền thuê phòng, còn cùng trả tiền nước điện. Trước khi dọn vào ở, họ và chủ nhà ký một hợp đồng. Trên hợp đồng viết tiền thuê phòng, tiền nước điện và thời gian ở. Tiểu Vương nói, thuê chung có thể tiết kiệm tiền, còn có thể cùng bạn học học tập.",
+"note": N4,
+"questions": [
+{"q": "Tiểu Vương thuê phòng với ai?", "o": ["Một bạn học", "Một mình", "Với bố mẹ", "Với thầy giáo"], "a": 0, "why": "他和一个同学合租一个房间."},
+{"q": "Phòng thế nào?", "o": ["Không lớn nhưng rất sạch, không xa trường", "Rất lớn và rất xa trường", "Rất bẩn", "Ở quê"], "a": 0, "why": "房间不大，但是很干净，离学校也不远."},
+{"q": "Mỗi tháng họ cùng trả gì?", "o": ["Tiền thuê phòng và tiền nước điện", "Chỉ tiền thuê phòng", "Chỉ tiền nước điện", "Tiền ăn"], "a": 0, "why": "他们一起付房租，还一起付水电费."},
+{"q": "Trước khi dọn vào ở họ làm gì?", "o": ["Ký hợp đồng với chủ nhà", "Mua phòng", "Trả tiền ăn", "Chuyển trường"], "a": 0, "why": "他们和房东签了一个合同."},
+{"q": "Theo Tiểu Vương, thuê chung có lợi gì?", "o": ["Tiết kiệm tiền và cùng bạn học học tập", "Tốn nhiều tiền hơn", "Không được học", "Phải ở xa trường"], "a": 0, "why": "合租可以省钱，还可以和同学一起学习."}
+]
+},
+{
+"id": "p3-s4-r-trungquoc", "stage": 4, "title": "Một tuần ở Thượng Hải", "topic": "Cuộc sống ở Trung Quốc",
+"text": "小李去上海玩了一个星期。上海很大，人很多，地铁也很方便。早上，他坐地铁去外滩，看黄浦江。下午，他去市场买东西，还吃了上海的小吃。晚上，他在路边散步，看很高的楼。他说，上海很热闹，但是生活也很快，早上大家都很忙。",
+"pinyin": "Xiǎo Lǐ qù Shànghǎi wán le yí ge xīngqī. Shànghǎi hěn dà, rén hěn duō, dìtiě yě hěn fāngbiàn. Zǎoshang, tā zuò dìtiě qù Wàitān, kàn Huángpǔ Jiāng. Xiàwǔ, tā qù shìchǎng mǎi dōngxi, hái chī le Shànghǎi de xiǎochī. Wǎnshang, tā zài lùbiān sànbù, kàn hěn gāo de lóu. Tā shuō, Shànghǎi hěn rènao, dànshì shēnghuó yě hěn kuài, zǎoshang dàjiā dōu hěn máng.",
+"vi": "Tiểu Lý đi Thượng Hải chơi một tuần. Thượng Hải rất lớn, người rất đông, tàu điện ngầm cũng rất tiện. Buổi sáng, cậu ấy đi tàu điện ngầm tới bến Ngoại Than, ngắm sông Hoàng Phố. Buổi chiều, cậu ấy đi chợ mua đồ, còn ăn đồ ăn vặt Thượng Hải. Buổi tối, cậu ấy đi dạo bên đường, ngắm những tòa nhà rất cao. Cậu ấy nói, Thượng Hải rất nhộn nhịp, nhưng cuộc sống cũng rất nhanh, buổi sáng mọi người đều rất bận.",
+"note": N4,
+"questions": [
+{"q": "Tiểu Lý đi Thượng Hải bao lâu?", "o": ["Một tuần", "Một ngày", "Một tháng", "Một năm"], "a": 0, "why": "小李去上海玩了一个星期."},
+{"q": "Đi lại ở Thượng Hải bằng gì thì tiện?", "o": ["Tàu điện ngầm", "Xe đạp", "Đi bộ", "Máy bay"], "a": 0, "why": "地铁也很方便."},
+{"q": "Buổi sáng cậu ấy làm gì?", "o": ["Đi tàu điện ngầm tới Ngoại Than, ngắm sông Hoàng Phố", "Đi chợ", "Ăn đồ ăn vặt", "Đi dạo bên đường"], "a": 0, "why": "早上，他坐地铁去外滩，看黄浦江."},
+{"q": "Buổi chiều cậu ấy làm gì?", "o": ["Đi chợ mua đồ và ăn đồ ăn vặt Thượng Hải", "Ngắm sông", "Đi dạo bên đường", "Về nhà"], "a": 0, "why": "下午，他去市场买东西，还吃了上海的小吃."},
+{"q": "Cậu ấy cảm nhận gì về Thượng Hải?", "o": ["Rất nhộn nhịp nhưng cuộc sống rất nhanh, buổi sáng mọi người đều bận", "Rất vắng và chậm", "Không có tàu điện ngầm", "Buổi sáng mọi người đều rảnh"], "a": 0, "why": "上海很热闹，但是生活也很快，早上大家都很忙."}
+]
+},
+{
+"id": "p3-s5-r-hocline", "stage": 5, "title": "Học online: lợi và hại", "topic": "Học online",
+"text": "现在，越来越多学生上网课。网课有一个很大的优点：不用去学校，在家里就能上课，还可以看很多次。但是，网课也有缺点。有的学生不认真听课，一边上课一边玩手机。还有的学生家里网络不好，听不清楚老师的话。所以，老师说，上网课的时候，学生要自己安排时间，认真听课，才能学好。",
+"pinyin": "Xiànzài, yuè lái yuè duō xuésheng shàng wǎngkè. Wǎngkè yǒu yí ge hěn dà de yōudiǎn: bú yòng qù xuéxiào, zài jiā lǐ jiù néng shàngkè, hái kěyǐ kàn hěn duō cì. Dànshì, wǎngkè yě yǒu quēdiǎn. Yǒude xuésheng bú rènzhēn tīngkè, yìbiān shàngkè yìbiān wán shǒujī. Hái yǒude xuésheng jiā lǐ wǎngluò bù hǎo, tīng bù qīngchu lǎoshī de huà. Suǒyǐ, lǎoshī shuō, shàng wǎngkè de shíhou, xuésheng yào zìjǐ ānpái shíjiān, rènzhēn tīngkè, cái néng xué hǎo.",
+"vi": "Hiện nay, ngày càng nhiều học sinh học online. Học online có một ưu điểm rất lớn: không cần tới trường, ở nhà là có thể học, còn có thể xem nhiều lần. Nhưng học online cũng có khuyết điểm. Có học sinh không nghe giảng nghiêm túc, vừa học vừa chơi điện thoại. Còn có học sinh nhà mạng không tốt, nghe không rõ lời thầy cô. Vì vậy, thầy cô nói, khi học online, học sinh phải tự sắp xếp thời gian, nghe giảng nghiêm túc, mới có thể học tốt.",
+"note": N5,
+"questions": [
+{"q": "Ưu điểm lớn của học online là gì?", "o": ["Không cần tới trường, ở nhà là có thể học", "Phải tới trường mỗi ngày", "Không được xem lại bài", "Phải đi xe buýt"], "a": 0, "why": "不用去学校，在家里就能上课."},
+{"q": "Bài học online có thể xem mấy lần?", "o": ["Nhiều lần", "Chỉ một lần", "Không xem lại được", "Chỉ xem ở trường"], "a": 0, "why": "还可以看很多次."},
+{"q": "Một khuyết điểm là gì?", "o": ["Có học sinh vừa học vừa chơi điện thoại", "Học sinh nào cũng nghiêm túc", "Không có bài tập", "Không có thầy cô"], "a": 0, "why": "有的学生不认真听课，一边上课一边玩手机."},
+{"q": "Một khuyết điểm khác là gì?", "o": ["Nhà mạng không tốt, nghe không rõ lời thầy cô", "Mạng lúc nào cũng tốt", "Không có điện thoại", "Không có máy tính"], "a": 0, "why": "家里网络不好，听不清楚老师的话."},
+{"q": "Thầy cô khuyên học sinh thế nào khi học online?", "o": ["Tự sắp xếp thời gian, nghe giảng nghiêm túc", "Vừa học vừa chơi điện thoại", "Không cần làm bài tập", "Không cần nghe giảng"], "a": 0, "why": "学生要自己安排时间，认真听课，才能学好."}
+]
+},
+{
+"id": "p3-s5-r-que", "stage": 5, "title": "Quê nhà đang thay đổi", "topic": "Quê nhà",
+"text": "小王的家乡在变。以前，村子里只有一条小路，现在有了一条大路，公共汽车可以直接开到村子里。以前，年轻人都要去城市找工作，现在，有的年轻人回来开小店，还在网上卖家乡的东西。但是，村子里的老人还是住在老房子里，他们希望孩子多回家看看。小王说，家乡变好了，可是家乡的人情没有变。",
+"pinyin": "Xiǎo Wáng de jiāxiāng zài biàn. Yǐqián, cūnzi lǐ zhǐyǒu yì tiáo xiǎo lù, xiànzài yǒu le yì tiáo dà lù, gōnggòng qìchē kěyǐ zhíjiē kāi dào cūnzi lǐ. Yǐqián, niánqīng rén dōu yào qù chéngshì zhǎo gōngzuò, xiànzài, yǒude niánqīng rén huí lái kāi xiǎo diàn, hái zài wǎngshang mài jiāxiāng de dōngxi. Dànshì, cūnzi lǐ de lǎorén háishi zhù zài lǎo fángzi lǐ, tāmen xīwàng háizi duō huí jiā kànkan. Xiǎo Wáng shuō, jiāxiāng biàn hǎo le, kěshì jiāxiāng de rénqíng méiyǒu biàn.",
+"vi": "Quê của Tiểu Vương đang thay đổi. Trước đây, trong làng chỉ có một con đường nhỏ, bây giờ có một con đường lớn, xe buýt có thể chạy thẳng vào làng. Trước đây, người trẻ đều phải đi thành phố tìm việc, bây giờ, có người trẻ trở về mở cửa hàng nhỏ, còn bán đồ của quê nhà trên mạng. Nhưng người già trong làng vẫn sống trong nhà cũ, họ mong con cái về nhà thăm nhiều hơn. Tiểu Vương nói, quê đã tốt lên, nhưng tình người ở quê không thay đổi.",
+"note": N5,
+"questions": [
+{"q": "Trước đây đường trong làng thế nào?", "o": ["Chỉ có một con đường nhỏ", "Đã có đường lớn", "Không có đường", "Có nhiều đường lớn"], "a": 0, "why": "以前，村子里只有一条小路."},
+{"q": "Bây giờ xe buýt thế nào?", "o": ["Có thể chạy thẳng vào làng", "Không vào được làng", "Chỉ chạy ở thành phố", "Không có xe buýt"], "a": 0, "why": "公共汽车可以直接开到村子里."},
+{"q": "Bây giờ có người trẻ làm gì ở quê?", "o": ["Trở về mở cửa hàng nhỏ và bán đồ quê trên mạng", "Chỉ đi thành phố", "Không làm gì", "Chỉ ở nhà cũ"], "a": 0, "why": "有的年轻人回来开小店，还在网上卖家乡的东西."},
+{"q": "Người già trong làng mong gì?", "o": ["Con cái về nhà thăm nhiều hơn", "Con cái đi thành phố", "Dọn ra thành phố", "Mở cửa hàng"], "a": 0, "why": "他们希望孩子多回家看看."},
+{"q": "Tiểu Vương kết luận gì?", "o": ["Quê đã tốt lên, nhưng tình người ở quê không thay đổi", "Quê không thay đổi gì", "Tình người ở quê đã thay đổi", "Quê xấu đi"], "a": 0, "why": "家乡变好了，可是家乡的人情没有变."}
+]
+},
+{
+"id": "p3-s6-r-thoitiet", "stage": 6, "title": "Khí hậu miền Bắc thay đổi và đời sống", "topic": "Thời tiết và sức khỏe",
+"text": "最近几年，河内的天气变化很大。夏天越来越热，有时候热得让人不想出门。冬天有时候很冷，还下雨，老人和孩子容易感冒。天气变化的时候，很多人不舒服，医生说要注意保暖，多喝热水，还要多运动。归根到底，天气我们不能改变，但是我们可以改变自己的生活习惯：早睡早起，少吃冷的东西，多吃热的饭菜。这样，身体才会更健康。",
+"pinyin": "Zuìjìn jǐ nián, Hénèi de tiānqì biànhuà hěn dà. Xiàtiān yuè lái yuè rè, yǒu shíhou rè de ràng rén bù xiǎng chūmén. Dōngtiān yǒu shíhou hěn lěng, hái xià yǔ, lǎorén hé háizi róngyì gǎnmào. Tiānqì biànhuà de shíhou, hěn duō rén bù shūfu, yīshēng shuō yào zhùyì bǎonuǎn, duō hē rè shuǐ, hái yào duō yùndòng. Guī gēn dào dǐ, tiānqì wǒmen bù néng gǎibiàn, dànshì wǒmen kěyǐ gǎibiàn zìjǐ de shēnghuó xíguàn: zǎo shuì zǎo qǐ, shǎo chī lěng de dōngxi, duō chī rè de fàncài. Zhèyàng, shēntǐ cái huì gèng jiànkāng.",
+"vi": "Mấy năm gần đây, thời tiết Hà Nội thay đổi rất lớn. Mùa hè ngày càng nóng, có lúc nóng tới mức khiến người ta không muốn ra khỏi nhà. Mùa đông có lúc rất lạnh, còn mưa, người già và trẻ em dễ bị cảm. Khi thời tiết thay đổi, nhiều người không khỏe, bác sĩ nói phải chú ý giữ ấm, uống nhiều nước nóng, còn phải vận động nhiều. Rốt cuộc, thời tiết chúng ta không thể thay đổi, nhưng chúng ta có thể thay đổi thói quen sống của mình: ngủ sớm dậy sớm, ăn ít đồ lạnh, ăn nhiều cơm nóng. Như vậy, cơ thể mới khỏe hơn.",
+"note": N6,
+"questions": [
+{"q": "Mấy năm gần đây thời tiết Hà Nội thế nào?", "o": ["Thay đổi rất lớn", "Không thay đổi", "Chỉ nóng lên một chút", "Chỉ lạnh đi"], "a": 0, "why": "河内的天气变化很大."},
+{"q": "Mùa hè thế nào?", "o": ["Ngày càng nóng, có lúc nóng tới mức không muốn ra khỏi nhà", "Ngày càng lạnh", "Không thay đổi", "Chỉ mưa"], "a": 0, "why": "夏天越来越热，有时候热得让人不想出门."},
+{"q": "Mùa đông ai dễ bị cảm?", "o": ["Người già và trẻ em", "Chỉ người trẻ", "Chỉ người đi làm", "Không ai"], "a": 0, "why": "老人和孩子容易感冒."},
+{"q": "Bác sĩ khuyên gì khi thời tiết thay đổi?", "o": ["Chú ý giữ ấm, uống nhiều nước nóng, vận động nhiều", "Ăn nhiều đồ lạnh", "Thức khuya", "Không vận động"], "a": 0, "why": "要注意保暖，多喝热水，还要多运动."},
+{"q": "Kết luận “rốt cuộc” của bài là gì?", "o": ["Không thay đổi được thời tiết, nhưng thay đổi được thói quen sống của mình", "Không làm gì được cả", "Chỉ cần uống thuốc", "Thời tiết không ảnh hưởng sức khỏe"], "a": 0, "why": "天气我们不能改变，但是我们可以改变自己的生活习惯."}
+]
+},
+{
+"id": "p3-s6-r-trungquoc", "stage": 6, "title": "Cuộc sống nhanh ở thành phố lớn Trung Quốc", "topic": "Cuộc sống ở Trung Quốc",
+"text": "在北京和上海这样的大城市，生活很快。早上，地铁里有很多人，大家都赶着去上班。白天，工作很忙，有时候中午只能吃很快的外卖。晚上，有的人还要加班，或者在网上学习。但是，与此同时，也有很多人开始注意健康：早上跑步，晚上散步，周末去公园。城市生活给了年轻人很多机会，也给了他们很多压力。怎么在机会和压力之间找到平衡，是每个年轻人都想知道的问题。",
+"pinyin": "Zài Běijīng hé Shànghǎi zhèyàng de dà chéngshì, shēnghuó hěn kuài. Zǎoshang, dìtiě lǐ yǒu hěn duō rén, dàjiā dōu gǎnzhe qù shàngbān. Báitiān, gōngzuò hěn máng, yǒu shíhou zhōngwǔ zhǐ néng chī hěn kuài de wàimài. Wǎnshang, yǒude rén hái yào jiābān, huòzhě zài wǎngshang xuéxí. Dànshì, yǔ cǐ tóngshí, yě yǒu hěn duō rén kāishǐ zhùyì jiànkāng: zǎoshang pǎobù, wǎnshang sànbù, zhōumò qù gōngyuán. Chéngshì shēnghuó gěi le niánqīng rén hěn duō jīhuì, yě gěi le tāmen hěn duō yālì. Zěnme zài jīhuì hé yālì zhījiān zhǎo dào pínghéng, shì měi ge niánqīng rén dōu xiǎng zhīdào de wèntí.",
+"vi": "Ở những thành phố lớn như Bắc Kinh và Thượng Hải, cuộc sống rất nhanh. Buổi sáng, trong tàu điện ngầm có rất nhiều người, mọi người đều vội đi làm. Ban ngày, công việc rất bận, có lúc buổi trưa chỉ có thể ăn đồ giao nhanh. Buổi tối, có người còn phải làm thêm, hoặc học trên mạng. Nhưng đồng thời, cũng có nhiều người bắt đầu chú ý sức khỏe: sáng chạy bộ, tối đi dạo, cuối tuần đi công viên. Cuộc sống thành phố cho người trẻ nhiều cơ hội, cũng cho họ nhiều áp lực. Làm sao tìm được cân bằng giữa cơ hội và áp lực, là câu hỏi mà mỗi người trẻ đều muốn biết.",
+"note": N6,
+"questions": [
+{"q": "Buổi sáng trong tàu điện ngầm thế nào?", "o": ["Có rất nhiều người, mọi người đều vội đi làm", "Rất vắng", "Không có ai", "Mọi người đều rảnh"], "a": 0, "why": "早上，地铁里有很多人，大家都赶着去上班."},
+{"q": "Ban ngày bận thì buổi trưa ăn gì?", "o": ["Đồ giao nhanh", "Cơm nhà nấu kỹ", "Không ăn", "Đồ ăn vặt ở chợ"], "a": 0, "why": "有时候中午只能吃很快的外卖."},
+{"q": "Đồng thời, nhiều người chú ý sức khỏe bằng cách nào?", "o": ["Sáng chạy bộ, tối đi dạo, cuối tuần đi công viên", "Chỉ làm thêm", "Chỉ học trên mạng", "Không vận động"], "a": 0, "why": "早上跑步，晚上散步，周末去公园."},
+{"q": "Cuộc sống thành phố cho người trẻ những gì?", "o": ["Nhiều cơ hội và nhiều áp lực", "Chỉ cơ hội", "Chỉ áp lực", "Không có gì"], "a": 0, "why": "城市生活给了年轻人很多机会，也给了他们很多压力."},
+{"q": "Câu hỏi cuối của bài là gì?", "o": ["Làm sao tìm được cân bằng giữa cơ hội và áp lực", "Làm sao đi làm nhanh hơn", "Làm sao ăn nhanh hơn", "Làm sao nghỉ việc"], "a": 0, "why": "怎么在机会和压力之间找到平衡."}
+]
+}
+]);
+
+ZH_LISTENING.push.apply(ZH_LISTENING, [
+{
+"id": "p3-s2-l-tro", "stage": 2, "title": "Hỏi thuê phòng trọ", "topic": "Ở trọ",
+"lines": [
+{"sp": "A", "han": "你好，我想租一个房间。", "py": "Nǐ hǎo, wǒ xiǎng zū yí ge fángjiān.", "vi": "Chào bạn, tôi muốn thuê một phòng."},
+{"sp": "B", "han": "你好，房间在三楼，离学校很近。", "py": "Nǐ hǎo, fángjiān zài sān lóu, lí xuéxiào hěn jìn.", "vi": "Chào bạn, phòng ở tầng 3, gần trường."},
+{"sp": "A", "han": "房租一个月多少钱？", "py": "Fángzū yí ge yuè duōshao qián?", "vi": "Tiền thuê một tháng bao nhiêu?"},
+{"sp": "B", "han": "一个月两千块，水电费另外付。", "py": "Yí ge yuè liǎng qiān kuài, shuǐdiànfèi lìngwài fù.", "vi": "Một tháng 2000 tệ, tiền nước điện trả riêng."},
+{"sp": "A", "han": "房间里有几个人住？", "py": "Fángjiān lǐ yǒu jǐ ge rén zhù?", "vi": "Trong phòng có mấy người ở?"},
+{"sp": "B", "han": "两个人，你可以和一个同学一起住。", "py": "Liǎng ge rén, nǐ kěyǐ hé yí ge tóngxué yìqǐ zhù.", "vi": "Hai người, bạn có thể ở chung với một bạn học."},
+{"sp": "A", "han": "明天上午我可以去看看吗？", "py": "Míngtiān shàngwǔ wǒ kěyǐ qù kànkan ma?", "vi": "Sáng mai tôi có thể tới xem không?"},
+{"sp": "B", "han": "可以，十点我在楼下等你。", "py": "Kěyǐ, shí diǎn wǒ zài lóu xià děng nǐ.", "vi": "Được, 10 giờ tôi đợi bạn dưới nhà."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Phòng ở tầng mấy?", "o": ["Tầng 3", "Tầng 2", "Tầng 4", "Tầng 1"], "a": 0, "why": "房间在三楼: phòng ở tầng 3."},
+{"q": "Tiền thuê một tháng bao nhiêu?", "o": ["2000 tệ", "1000 tệ", "3000 tệ", "1500 tệ"], "a": 0, "why": "一个月两千块."},
+{"q": "Tiền nước điện thế nào?", "o": ["Trả riêng", "Đã gồm trong tiền thuê", "Miễn phí", "Không cần trả"], "a": 0, "why": "水电费另外付: tiền nước điện trả riêng."},
+{"q": "Hẹn xem phòng lúc mấy giờ?", "o": ["10 giờ sáng mai", "9 giờ sáng mai", "10 giờ tối", "3 giờ chiều"], "a": 0, "why": "十点我在楼下等你: 10 giờ tôi đợi bạn dưới nhà."}
+]
+},
+{
+"id": "p3-s2-l-thoitiet", "stage": 2, "title": "Thời tiết miền Bắc ngày mai", "topic": "Thời tiết miền Bắc",
+"lines": [
+{"sp": "A", "han": "明天河内的天气怎么样？", "py": "Míngtiān Hénèi de tiānqì zěnmeyàng?", "vi": "Ngày mai thời tiết Hà Nội thế nào?"},
+{"sp": "B", "han": "明天很冷，还下小雨。", "py": "Míngtiān hěn lěng, hái xià xiǎoyǔ.", "vi": "Ngày mai rất lạnh, còn mưa nhỏ."},
+{"sp": "A", "han": "我要穿什么衣服？", "py": "Wǒ yào chuān shénme yīfu?", "vi": "Tôi phải mặc quần áo gì?"},
+{"sp": "B", "han": "你要穿外套，还要穿毛衣。", "py": "Nǐ yào chuān wàitào, hái yào chuān máoyī.", "vi": "Bạn phải mặc áo khoác, còn phải mặc áo len."},
+{"sp": "A", "han": "我要带雨伞吗？", "py": "Wǒ yào dài yǔsǎn ma?", "vi": "Tôi có phải mang ô không?"},
+{"sp": "B", "han": "要带，明天上午下雨，下午雨停了。", "py": "Yào dài, míngtiān shàngwǔ xià yǔ, xiàwǔ yǔ tíng le.", "vi": "Phải mang, sáng mai mưa, chiều mưa tạnh."},
+{"sp": "A", "han": "谢谢，我知道了。", "py": "Xièxie, wǒ zhīdào le.", "vi": "Cảm ơn, tôi biết rồi."},
+{"sp": "B", "han": "不客气，早上出门要多穿衣服。", "py": "Bú kèqi, zǎoshang chūmén yào duō chuān yīfu.", "vi": "Không có gì, sáng ra ngoài phải mặc nhiều áo."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Ngày mai Hà Nội thế nào?", "o": ["Rất lạnh, còn mưa nhỏ", "Rất nóng", "Không mưa", "Rất ấm"], "a": 0, "why": "明天很冷，还下小雨."},
+{"q": "Phải mặc gì?", "o": ["Áo khoác và áo len", "Chỉ áo len", "Chỉ áo khoác", "Áo ngắn tay"], "a": 0, "why": "你要穿外套，还要穿毛衣."},
+{"q": "Có phải mang ô không?", "o": ["Phải mang", "Không cần mang", "Chỉ mang buổi chiều", "Chỉ mang buổi tối"], "a": 0, "why": "要带: phải mang."},
+{"q": "Buổi chiều thế nào?", "o": ["Mưa tạnh", "Mưa to hơn", "Bắt đầu mưa", "Có tuyết"], "a": 0, "why": "下午雨停了: chiều mưa tạnh."}
+]
+},
+{
+"id": "p3-s3-l-cho", "stage": 3, "title": "Mặc cả ở chợ", "topic": "Đi chợ",
+"lines": [
+{"sp": "A", "han": "这个青菜多少钱一斤？", "py": "Zhège qīngcài duōshao qián yì jīn?", "vi": "Rau này bao nhiêu tiền một cân?"},
+{"sp": "B", "han": "五块钱一斤。", "py": "Wǔ kuài qián yì jīn.", "vi": "5 tệ một cân."},
+{"sp": "A", "han": "有点儿贵，四块钱可以吗？", "py": "Yǒu diǎnr guì, sì kuài qián kěyǐ ma?", "vi": "Hơi đắt, 4 tệ được không?"},
+{"sp": "B", "han": "四块钱不行，五块钱已经很便宜了。", "py": "Sì kuài qián bù xíng, wǔ kuài qián yǐjīng hěn piányi le.", "vi": "4 tệ không được, 5 tệ đã rất rẻ rồi."},
+{"sp": "A", "han": "那我买两斤，还要一斤鸡蛋。", "py": "Nà wǒ mǎi liǎng jīn, hái yào yì jīn jīdàn.", "vi": "Vậy tôi mua 2 cân, còn muốn 1 cân trứng."},
+{"sp": "B", "han": "好，青菜十块钱，鸡蛋八块钱，一共十八块钱。", "py": "Hǎo, qīngcài shí kuài qián, jīdàn bā kuài qián, yígòng shíbā kuài qián.", "vi": "Được, rau 10 tệ, trứng 8 tệ, tổng cộng 18 tệ."},
+{"sp": "A", "han": "给你二十块钱。", "py": "Gěi nǐ èrshí kuài qián.", "vi": "Gửi bạn 20 tệ."},
+{"sp": "B", "han": "找你两块钱，谢谢！", "py": "Zhǎo nǐ liǎng kuài qián, xièxie!", "vi": "Trả lại bạn 2 tệ, cảm ơn!"}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Rau bao nhiêu tiền một cân?", "o": ["5 tệ", "4 tệ", "8 tệ", "10 tệ"], "a": 0, "why": "五块钱一斤."},
+{"q": "A trả giá bao nhiêu?", "o": ["4 tệ", "3 tệ", "5 tệ", "6 tệ"], "a": 0, "why": "四块钱可以吗: 4 tệ được không?"},
+{"q": "A mua những gì?", "o": ["2 cân rau và 1 cân trứng", "Chỉ rau", "Chỉ trứng", "2 cân trứng"], "a": 0, "why": "我买两斤，还要一斤鸡蛋."},
+{"q": "Tổng cộng bao nhiêu tiền, trả lại bao nhiêu?", "o": ["Tổng 18 tệ, trả lại 2 tệ", "Tổng 20 tệ, trả lại 2 tệ", "Tổng 18 tệ, trả lại 0 tệ", "Tổng 10 tệ, trả lại 10 tệ"], "a": 0, "why": "一共十八块钱，找你两块钱."}
+]
+},
+{
+"id": "p3-s3-l-xebuyt", "stage": 3, "title": "Xe buýt đông buổi sáng", "topic": "Đi xe buýt",
+"lines": [
+{"sp": "A", "han": "去学校坐几路公共汽车？", "py": "Qù xuéxiào zuò jǐ lù gōnggòng qìchē?", "vi": "Đi trường đi xe buýt số mấy?"},
+{"sp": "B", "han": "坐三路车，在学校门口下车。", "py": "Zuò sān lù chē, zài xuéxiào ménkǒu xià chē.", "vi": "Đi xe số 3, xuống ở cổng trường."},
+{"sp": "A", "han": "早上车上人多吗？", "py": "Zǎoshang chē shang rén duō ma?", "vi": "Buổi sáng trên xe đông người không?"},
+{"sp": "B", "han": "很多，有时候没有位子。", "py": "Hěn duō, yǒu shíhou méiyǒu wèizi.", "vi": "Rất đông, có lúc không có chỗ ngồi."},
+{"sp": "A", "han": "那我要早一点出门。", "py": "Nà wǒ yào zǎo yìdiǎn chūmén.", "vi": "Vậy tôi phải ra khỏi nhà sớm hơn một chút."},
+{"sp": "B", "han": "对，七点出门，八点以前可以到学校。", "py": "Duì, qī diǎn chūmén, bā diǎn yǐqián kěyǐ dào xuéxiào.", "vi": "Đúng, 7 giờ ra khỏi nhà, trước 8 giờ có thể tới trường."},
+{"sp": "A", "han": "下车以后走路远吗？", "py": "Xià chē yǐhòu zǒu lù yuǎn ma?", "vi": "Sau khi xuống xe đi bộ có xa không?"},
+{"sp": "B", "han": "不远，走五分钟就到了。", "py": "Bù yuǎn, zǒu wǔ fēnzhōng jiù dào le.", "vi": "Không xa, đi 5 phút là tới."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Đi trường đi xe buýt số mấy?", "o": ["Số 3", "Số 5", "Số 7", "Số 8"], "a": 0, "why": "坐三路车."},
+{"q": "Xuống xe ở đâu?", "o": ["Cổng trường", "Cổng chợ", "Cổng công viên", "Nhà của A"], "a": 0, "why": "在学校门口下车."},
+{"q": "Buổi sáng trên xe thế nào?", "o": ["Rất đông, có lúc không có chỗ ngồi", "Rất vắng", "Không có ai", "Chỉ có học sinh"], "a": 0, "why": "很多，有时候没有位子."},
+{"q": "Xuống xe đi bộ bao lâu tới trường?", "o": ["5 phút", "10 phút", "15 phút", "30 phút"], "a": 0, "why": "走五分钟就到了."}
+]
+},
+{
+"id": "p3-s3-l-que", "stage": 3, "title": "Gọi điện về quê", "topic": "Quê nhà",
+"lines": [
+{"sp": "A", "han": "妈妈，你在家吗？", "py": "Māma, nǐ zài jiā ma?", "vi": "Mẹ, mẹ ở nhà không?"},
+{"sp": "B", "han": "我在家，你最近怎么样？", "py": "Wǒ zài jiā, nǐ zuìjìn zěnmeyàng?", "vi": "Mẹ ở nhà, dạo này con thế nào?"},
+{"sp": "A", "han": "我很好，学校里有很多作业。", "py": "Wǒ hěn hǎo, xuéxiào lǐ yǒu hěn duō zuòyè.", "vi": "Con rất tốt, ở trường có nhiều bài tập."},
+{"sp": "B", "han": "你要认真学习，也要注意身体。", "py": "Nǐ yào rènzhēn xuéxí, yě yào zhùyì shēntǐ.", "vi": "Con phải học nghiêm túc, cũng phải chú ý sức khỏe."},
+{"sp": "A", "han": "爷爷奶奶身体好吗？", "py": "Yéye nǎinai shēntǐ hǎo ma?", "vi": "Ông bà sức khỏe có tốt không?"},
+{"sp": "B", "han": "他们都很好，爷爷每天去田地里走路。", "py": "Tāmen dōu hěn hǎo, yéye měitiān qù tiándì lǐ zǒu lù.", "vi": "Ông bà đều rất tốt, ông mỗi ngày đi bộ ra ruộng."},
+{"sp": "A", "han": "夏天我回家看你们。", "py": "Xiàtiān wǒ huí jiā kàn nǐmen.", "vi": "Mùa hè con về nhà thăm mọi người."},
+{"sp": "B", "han": "好，我们在家里等你。", "py": "Hǎo, wǒmen zài jiā lǐ děng nǐ.", "vi": "Được, bố mẹ ở nhà đợi con."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "A ở trường thế nào?", "o": ["Rất tốt, có nhiều bài tập", "Không tốt", "Không có bài tập", "Đã nghỉ học"], "a": 0, "why": "我很好，学校里有很多作业."},
+{"q": "Mẹ dặn A gì?", "o": ["Học nghiêm túc và chú ý sức khỏe", "Chỉ học, không cần sức khỏe", "Nghỉ học", "Về quê ngay"], "a": 0, "why": "你要认真学习，也要注意身体."},
+{"q": "Ông bà sức khỏe thế nào?", "o": ["Đều rất tốt", "Không tốt", "Ông không tốt", "Bà không tốt"], "a": 0, "why": "他们都很好."},
+{"q": "Mùa nào A về nhà?", "o": ["Mùa hè", "Mùa đông", "Mùa xuân", "Mùa thu"], "a": 0, "why": "夏天我回家看你们."}
+]
+}
+]);
+
+ZH_LISTENING.push.apply(ZH_LISTENING, [
+{
+"id": "p3-s4-l-hocline", "stage": 4, "title": "Nhóm học online làm bài tập", "topic": "Học online",
+"lines": [
+{"sp": "A", "han": "明天晚上我们一起上网课做作业，好吗？", "py": "Míngtiān wǎnshang wǒmen yìqǐ shàng wǎngkè zuò zuòyè, hǎo ma?", "vi": "Tối mai chúng mình cùng học online làm bài tập nhé?"},
+{"sp": "B", "han": "好，几点开始？", "py": "Hǎo, jǐ diǎn kāishǐ?", "vi": "Được, mấy giờ bắt đầu?"},
+{"sp": "A", "han": "八点开始，先讨论问题，再一起写。", "py": "Bā diǎn kāishǐ, xiān tǎolùn wèntí, zài yìqǐ xiě.", "vi": "8 giờ bắt đầu, thảo luận vấn đề trước, rồi cùng viết."},
+{"sp": "B", "han": "好，我先看课文，再想问题。", "py": "Hǎo, wǒ xiān kàn kèwén, zài xiǎng wèntí.", "vi": "Được, tôi đọc bài trước, rồi nghĩ vấn đề."},
+{"sp": "A", "han": "网络不好的时候，我们怎么办？", "py": "Wǎngluò bù hǎo de shíhou, wǒmen zěnme bàn?", "vi": "Khi mạng không tốt, chúng mình làm sao?"},
+{"sp": "B", "han": "网络不好就关电脑，再重新进来。", "py": "Wǎngluò bù hǎo jiù guān diànnǎo, zài chóngxīn jìnlái.", "vi": "Mạng không tốt thì tắt máy tính, rồi vào lại."},
+{"sp": "A", "han": "好，明天八点在网上见。", "py": "Hǎo, míngtiān bā diǎn zài wǎngshang jiàn.", "vi": "Được, mai 8 giờ gặp trên mạng."},
+{"sp": "B", "han": "好，不见不散。", "py": "Hǎo, bú jiàn bú sàn.", "vi": "Được, không gặp không về."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK4 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Mấy giờ bắt đầu học nhóm?", "o": ["8 giờ tối mai", "7 giờ tối mai", "8 giờ sáng mai", "9 giờ tối mai"], "a": 0, "why": "八点开始: 8 giờ bắt đầu."},
+{"q": "Nhóm làm theo thứ tự nào?", "o": ["Thảo luận vấn đề trước, rồi cùng viết", "Viết trước, rồi thảo luận", "Chỉ viết, không thảo luận", "Chỉ thảo luận, không viết"], "a": 0, "why": "先讨论问题，再一起写."},
+{"q": "Mạng không tốt thì làm sao?", "o": ["Tắt máy tính, rồi vào lại", "Không học nữa", "Đi tới trường", "Gọi điện cho thầy cô"], "a": 0, "why": "网络不好就关电脑，再重新进来."},
+{"q": "Hai người hẹn gặp ở đâu?", "o": ["Trên mạng", "Ở trường", "Ở nhà của A", "Ở chợ"], "a": 0, "why": "明天八点在网上见: mai 8 giờ gặp trên mạng."}
+]
+},
+{
+"id": "p3-s4-l-xebuyt", "stage": 4, "title": "Đi xe buýt giờ cao điểm", "topic": "Đi xe buýt",
+"lines": [
+{"sp": "A", "han": "现在去学校要多长时间？", "py": "Xiànzài qù xuéxiào yào duō cháng shíjiān?", "vi": "Bây giờ đi trường mất bao lâu?"},
+{"sp": "B", "han": "现在是高峰时间，路上很堵车。", "py": "Xiànzài shì gāofēng shíjiān, lù shang hěn dǔchē.", "vi": "Bây giờ là giờ cao điểm, trên đường rất tắc."},
+{"sp": "A", "han": "坐公共汽车要一个小时吗？", "py": "Zuò gōnggòng qìchē yào yí ge xiǎoshí ma?", "vi": "Đi xe buýt mất một tiếng không?"},
+{"sp": "B", "han": "差不多，有时候要一个多小时。", "py": "Chàbuduō, yǒu shíhou yào yí ge duō xiǎoshí.", "vi": "Gần như vậy, có lúc mất hơn một tiếng."},
+{"sp": "A", "han": "那我坐地铁去，地铁快一点。", "py": "Nà wǒ zuò dìtiě qù, dìtiě kuài yìdiǎn.", "vi": "Vậy tôi đi tàu điện ngầm, tàu điện nhanh hơn một chút."},
+{"sp": "B", "han": "对，坐地铁只要半个小时。", "py": "Duì, zuò dìtiě zhǐ yào bàn ge xiǎoshí.", "vi": "Đúng, đi tàu điện chỉ mất nửa tiếng."},
+{"sp": "A", "han": "地铁站离学校远吗？", "py": "Dìtiě zhàn lí xuéxiào yuǎn ma?", "vi": "Ga tàu điện cách trường có xa không?"},
+{"sp": "B", "han": "不远，出站走十分钟就到了。", "py": "Bù yuǎn, chū zhàn zǒu shí fēnzhōng jiù dào le.", "vi": "Không xa, ra ga đi 10 phút là tới."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK4 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "Bây giờ là giờ gì?", "o": ["Giờ cao điểm", "Giờ thấp điểm", "Buổi tối", "Cuối tuần"], "a": 0, "why": "现在是高峰时间."},
+{"q": "Đi xe buýt mất bao lâu?", "o": ["Khoảng một tiếng, có lúc hơn một tiếng", "Nửa tiếng", "10 phút", "2 tiếng"], "a": 0, "why": "差不多，有时候要一个多小时."},
+{"q": "Đi tàu điện mất bao lâu?", "o": ["Nửa tiếng", "Một tiếng", "Hơn một tiếng", "10 phút"], "a": 0, "why": "坐地铁只要半个小时."},
+{"q": "Ra ga đi bộ bao lâu tới trường?", "o": ["10 phút", "5 phút", "30 phút", "1 tiếng"], "a": 0, "why": "出站走十分钟就到了."}
+]
+},
+{
+"id": "p3-s5-l-hocline", "stage": 5, "title": "Tranh luận: học online hay tới trường", "topic": "Học online",
+"lines": [
+{"sp": "A", "han": "你觉得上网课好，还是去学校上课好？", "py": "Nǐ juéde shàng wǎngkè hǎo, háishi qù xuéxiào shàngkè hǎo?", "vi": "Bạn thấy học online tốt, hay tới trường học tốt?"},
+{"sp": "B", "han": "我觉得上网课很方便，在家里就能上课。", "py": "Wǒ juéde shàng wǎngkè hěn fāngbiàn, zài jiā lǐ jiù néng shàngkè.", "vi": "Tôi thấy học online rất tiện, ở nhà là có thể học."},
+{"sp": "A", "han": "可是，在家里上课容易不认真，还想玩手机。", "py": "Kěshì, zài jiā lǐ shàngkè róngyì bú rènzhēn, hái xiǎng wán shǒujī.", "vi": "Nhưng ở nhà học dễ không nghiêm túc, còn muốn chơi điện thoại."},
+{"sp": "B", "han": "对，这是一个缺点。可是，去学校要花很多时间在路上。", "py": "Duì, zhè shì yí ge quēdiǎn. Kěshì, qù xuéxiào yào huā hěn duō shíjiān zài lù shang.", "vi": "Đúng, đó là một khuyết điểm. Nhưng tới trường phải tốn nhiều thời gian trên đường."},
+{"sp": "A", "han": "我同意，路上时间太长了。", "py": "Wǒ tóngyì, lù shang shíjiān tài cháng le.", "vi": "Tôi đồng ý, thời gian trên đường quá dài."},
+{"sp": "B", "han": "所以，我觉得两种课都有优点和缺点。", "py": "Suǒyǐ, wǒ juéde liǎng zhǒng kè dōu yǒu yōudiǎn hé quēdiǎn.", "vi": "Vì vậy, tôi thấy hai loại lớp học đều có ưu điểm và khuyết điểm."},
+{"sp": "A", "han": "那我们怎么办？", "py": "Nà wǒmen zěnme bàn?", "vi": "Vậy chúng mình làm sao?"},
+{"sp": "B", "han": "我们可以自己安排时间，认真听课，不管在哪儿上课。", "py": "Wǒmen kěyǐ zìjǐ ānpái shíjiān, rènzhēn tīngkè, bùguǎn zài nǎr shàngkè.", "vi": "Chúng mình có thể tự sắp xếp thời gian, nghe giảng nghiêm túc, dù học ở đâu."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK5 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "B thấy học online tiện vì sao?", "o": ["Ở nhà là có thể học", "Không có bài tập", "Không cần thầy cô", "Không cần mạng"], "a": 0, "why": "在家里就能上课."},
+{"q": "A phản đối học ở nhà vì sao?", "o": ["Dễ không nghiêm túc, còn muốn chơi điện thoại", "Phải tốn thời gian trên đường", "Không có máy tính", "Không có bạn học"], "a": 0, "why": "在家里上课容易不认真，还想玩手机."},
+{"q": "B nói tới trường tốn gì?", "o": ["Nhiều thời gian trên đường", "Nhiều tiền ăn", "Nhiều bài tập", "Nhiều thời gian chơi"], "a": 0, "why": "去学校要花很多时间在路上."},
+{"q": "Kết luận chung của hai người là gì?", "o": ["Hai loại lớp học đều có ưu điểm và khuyết điểm; tự sắp xếp thời gian và nghe giảng nghiêm túc mới quan trọng", "Chỉ học online mới tốt", "Chỉ tới trường mới tốt", "Không cần học nữa"], "a": 0, "why": "两种课都有优点和缺点…自己安排时间，认真听课."}
+]
+},
+{
+"id": "p3-s5-l-thoitiet", "stage": 5, "title": "Thời tiết thay đổi và sức khỏe", "topic": "Thời tiết và sức khỏe",
+"lines": [
+{"sp": "A", "han": "医生，我最近不舒服，天气一变我就感冒。", "py": "Yīshēng, wǒ zuìjìn bù shūfu, tiānqì yí biàn wǒ jiù gǎnmào.", "vi": "Bác sĩ, dạo này tôi không khỏe, thời tiết vừa thay đổi là tôi bị cảm."},
+{"sp": "B", "han": "你平时运动吗？", "py": "Nǐ píngshí yùndòng ma?", "vi": "Bình thường bạn có vận động không?"},
+{"sp": "A", "han": "我不常运动，每天都在家里上网课。", "py": "Wǒ bù cháng yùndòng, měitiān dōu zài jiā lǐ shàng wǎngkè.", "vi": "Tôi không thường vận động, mỗi ngày đều ở nhà học online."},
+{"sp": "B", "han": "你要多运动，早上跑步，晚上散步。", "py": "Nǐ yào duō yùndòng, zǎoshang pǎobù, wǎnshang sànbù.", "vi": "Bạn phải vận động nhiều, sáng chạy bộ, tối đi dạo."},
+{"sp": "A", "han": "天气冷的时候，我要注意什么？", "py": "Tiānqì lěng de shíhou, wǒ yào zhùyì shénme?", "vi": "Khi trời lạnh, tôi phải chú ý gì?"},
+{"sp": "B", "han": "要注意保暖，多穿衣服，多喝热水。", "py": "Yào zhùyì bǎonuǎn, duō chuān yīfu, duō hē rè shuǐ.", "vi": "Phải chú ý giữ ấm, mặc nhiều áo, uống nhiều nước nóng."},
+{"sp": "A", "han": "我还要早睡早起吗？", "py": "Wǒ hái yào zǎo shuì zǎo qǐ ma?", "vi": "Tôi còn phải ngủ sớm dậy sớm không?"},
+{"sp": "B", "han": "对，早睡早起，身体才会更健康。", "py": "Duì, zǎo shuì zǎo qǐ, shēntǐ cái huì gèng jiànkāng.", "vi": "Đúng, ngủ sớm dậy sớm, cơ thể mới khỏe hơn."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK5 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "A bị gì?", "o": ["Thời tiết vừa thay đổi là bị cảm", "Bị đau chân", "Bị đau răng", "Không bị gì"], "a": 0, "why": "天气一变我就感冒."},
+{"q": "Bình thường A có vận động không?", "o": ["Không thường vận động", "Mỗi ngày chạy bộ", "Mỗi ngày đi dạo", "Chơi thể thao ở trường"], "a": 0, "why": "我不常运动."},
+{"q": "Trời lạnh phải chú ý gì?", "o": ["Giữ ấm, mặc nhiều áo, uống nhiều nước nóng", "Mặc ít áo", "Uống nước lạnh", "Không ra khỏi nhà cả ngày"], "a": 0, "why": "要注意保暖，多穿衣服，多喝热水."},
+{"q": "Bác sĩ khuyên ngủ thế nào?", "o": ["Ngủ sớm dậy sớm", "Thức khuya dậy muộn", "Ngủ trưa dài", "Không cần ngủ sớm"], "a": 0, "why": "早睡早起，身体才会更健康."}
+]
+},
+{
+"id": "p3-s6-l-que", "stage": 6, "title": "Người trẻ muốn về quê làm việc", "topic": "Quê nhà",
+"lines": [
+{"sp": "A", "han": "听说你想回老家工作，是真的吗？", "py": "Tīngshuō nǐ xiǎng huí lǎojiā gōngzuò, shì zhēn de ma?", "vi": "Nghe nói bạn muốn về quê làm việc, có thật không?"},
+{"sp": "B", "han": "是真的，我在城市工作了五年，现在想回家。", "py": "Shì zhēn de, wǒ zài chéngshì gōngzuò le wǔ nián, xiànzài xiǎng huí jiā.", "vi": "Thật, tôi làm việc ở thành phố 5 năm rồi, bây giờ muốn về nhà."},
+{"sp": "A", "han": "为什么想回家？城市不是机会更多吗？", "py": "Wèishénme xiǎng huí jiā? Chéngshì bú shì jīhuì gèng duō ma?", "vi": "Vì sao muốn về nhà? Thành phố không phải cơ hội nhiều hơn sao?"},
+{"sp": "B", "han": "城市机会多，可是压力也很大，我每天都很累。", "py": "Chéngshì jīhuì duō, kěshì yālì yě hěn dà, wǒ měitiān dōu hěn lèi.", "vi": "Thành phố cơ hội nhiều, nhưng áp lực cũng rất lớn, tôi mỗi ngày đều rất mệt."},
+{"sp": "A", "han": "回家以后你想做什么？", "py": "Huí jiā yǐhòu nǐ xiǎng zuò shénme?", "vi": "Sau khi về nhà bạn muốn làm gì?"},
+{"sp": "B", "han": "我想开一个小店，在网上卖家乡的东西。", "py": "Wǒ xiǎng kāi yí ge xiǎo diàn, zài wǎngshang mài jiāxiāng de dōngxi.", "vi": "Tôi muốn mở một cửa hàng nhỏ, bán đồ quê nhà trên mạng."},
+{"sp": "A", "han": "家里人同意吗？", "py": "Jiā lǐ rén tóngyì ma?", "vi": "Người nhà có đồng ý không?"},
+{"sp": "B", "han": "他们都同意，还说回家也是一种选择。", "py": "Tāmen dōu tóngyì, hái shuō huí jiā yě shì yì zhǒng xuǎnzé.", "vi": "Họ đều đồng ý, còn nói về nhà cũng là một lựa chọn."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK6 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "B làm việc ở thành phố bao lâu?", "o": ["5 năm", "3 năm", "1 năm", "10 năm"], "a": 0, "why": "我在城市工作了五年."},
+{"q": "Vì sao B muốn về quê?", "o": ["Thành phố áp lực rất lớn, mỗi ngày đều rất mệt", "Thành phố không có cơ hội", "Quê không có việc", "B không thích làm việc"], "a": 0, "why": "城市机会多，可是压力也很大，我每天都很累."},
+{"q": "Về quê B muốn làm gì?", "o": ["Mở cửa hàng nhỏ, bán đồ quê nhà trên mạng", "Đi làm ở thành phố khác", "Nghỉ ngơi không làm gì", "Đi học lại"], "a": 0, "why": "我想开一个小店，在网上卖家乡的东西."},
+{"q": "Người nhà của B thế nào?", "o": ["Đều đồng ý, nói về nhà cũng là một lựa chọn", "Không đồng ý", "Muốn B ở lại thành phố", "Không nói gì"], "a": 0, "why": "他们都同意，还说回家也是一种选择."}
+]
+},
+{
+"id": "p3-s6-l-hocline", "stage": 6, "title": "Giáo dục online trong tương lai", "topic": "Học online",
+"lines": [
+{"sp": "A", "han": "你觉得以后的网课会怎么样？", "py": "Nǐ juéde yǐhòu de wǎngkè huì zěnmeyàng?", "vi": "Bạn thấy lớp học online sau này sẽ thế nào?"},
+{"sp": "B", "han": "我觉得网课会越来越多，因为很方便。", "py": "Wǒ juéde wǎngkè huì yuè lái yuè duō, yīnwèi hěn fāngbiàn.", "vi": "Tôi thấy lớp học online sẽ ngày càng nhiều, vì rất tiện."},
+{"sp": "A", "han": "可是，网课不能代替所有的课。", "py": "Kěshì, wǎngkè bù néng dàitì suǒyǒu de kè.", "vi": "Nhưng lớp học online không thể thay thế tất cả các lớp học."},
+{"sp": "B", "han": "对，有的课要在学校上，比如做实验的课。", "py": "Duì, yǒude kè yào zài xuéxiào shàng, bǐrú zuò shíyàn de kè.", "vi": "Đúng, có lớp phải học ở trường, ví dụ lớp làm thí nghiệm."},
+{"sp": "A", "han": "学生自己安排时间也很重要。", "py": "Xuésheng zìjǐ ānpái shíjiān yě hěn zhòngyào.", "vi": "Học sinh tự sắp xếp thời gian cũng rất quan trọng."},
+{"sp": "B", "han": "对，老师也要学会在网上教课。", "py": "Duì, lǎoshī yě yào xué huì zài wǎngshang jiāo kè.", "vi": "Đúng, thầy cô cũng phải học cách dạy trên mạng."},
+{"sp": "A", "han": "归根到底，网课好不好，要看怎么用。", "py": "Guī gēn dào dǐ, wǎngkè hǎo bu hǎo, yào kàn zěnme yòng.", "vi": "Rốt cuộc, lớp học online tốt hay không, phải xem dùng thế nào."},
+{"sp": "B", "han": "我同意，用得好，网课就是一个好工具。", "py": "Wǒ tóngyì, yòng de hǎo, wǎngkè jiù shì yí ge hǎo gōngjù.", "vi": "Tôi đồng ý, dùng tốt thì lớp học online là một công cụ tốt."}
+],
+"note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK6 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Nhãn HSK là mức đặt theo chủ đề/trình độ.",
+"questions": [
+{"q": "B dự đoán lớp học online sau này thế nào?", "o": ["Ngày càng nhiều, vì rất tiện", "Ngày càng ít", "Không thay đổi", "Biến mất"], "a": 0, "why": "网课会越来越多，因为很方便."},
+{"q": "A phản đối điểm nào?", "o": ["Lớp học online không thể thay thế tất cả các lớp học", "Lớp học online không tiện", "Không ai học online", "Học online quá đắt"], "a": 0, "why": "网课不能代替所有的课."},
+{"q": "Ví dụ lớp phải học ở trường là lớp nào?", "o": ["Lớp làm thí nghiệm", "Lớp học online", "Lớp tự học", "Lớp thể dục"], "a": 0, "why": "比如做实验的课."},
+{"q": "Kết luận “rốt cuộc” của hai người là gì?", "o": ["Lớp học online tốt hay không, phải xem dùng thế nào", "Lớp học online lúc nào cũng tốt", "Lớp học online lúc nào cũng xấu", "Không nên dùng lớp học online"], "a": 0, "why": "归根到底，网课好不好，要看怎么用."}
+]
+}
+]);
+
+ZH_SPEAK.push.apply(ZH_SPEAK, [
+{
+"id": "p3-s2-s-cho", "stage": 2, "title": "Mua rau ở chợ", "topic": "Đi chợ",
+"hook": "“这个青菜多少钱一斤？” — hỏi giá rau theo cân là câu đầu tiên khi đi chợ.",
+"lines": [
+{"sp": "A", "han": "这个青菜多少钱一斤？", "py": "Zhège qīngcài duōshao qián yì jīn?", "vi": "Rau này bao nhiêu tiền một cân?"},
+{"sp": "B", "han": "五块钱一斤，很新鲜。", "py": "Wǔ kuài qián yì jīn, hěn xīnxiān.", "vi": "5 tệ một cân, rất tươi."},
+{"sp": "A", "han": "我要两斤，还要一斤鸡蛋。", "py": "Wǒ yào liǎng jīn, hái yào yì jīn jīdàn.", "vi": "Tôi muốn 2 cân, còn muốn 1 cân trứng."},
+{"sp": "B", "han": "好，一共十八块钱。", "py": "Hǎo, yígòng shíbā kuài qián.", "vi": "Được, tổng cộng 18 tệ."},
+{"sp": "A", "han": "给你二十块钱。", "py": "Gěi nǐ èrshí kuài qián.", "vi": "Gửi bạn 20 tệ."},
+{"sp": "B", "han": "找你两块钱，谢谢！", "py": "Zhǎo nǐ liǎng kuài qián, xièxie!", "vi": "Trả lại bạn 2 tệ, cảm ơn!"},
+{"sp": "A", "han": "谢谢，明天我再来。", "py": "Xièxie, míngtiān wǒ zài lái.", "vi": "Cảm ơn, mai tôi lại tới."},
+{"sp": "B", "han": "好，明天见！", "py": "Hǎo, míngtiān jiàn!", "vi": "Được, mai gặp!"}
+],
+"note": spNote(2)
+},
+{
+"id": "p3-s2-s-hocline", "stage": 2, "title": "Học online buổi tối", "topic": "Học online",
+"hook": "“今天晚上你上网课吗？” — hỏi tối nay bạn có học online không là cách mở chuyện về buổi học tối.",
+"lines": [
+{"sp": "A", "han": "今天晚上你上网课吗？", "py": "Jīntiān wǎnshang nǐ shàng wǎngkè ma?", "vi": "Tối nay bạn học online không?"},
+{"sp": "B", "han": "上，八点开始，你呢？", "py": "Shàng, bā diǎn kāishǐ, nǐ ne?", "vi": "Học, 8 giờ bắt đầu, còn bạn?"},
+{"sp": "A", "han": "我也上，我们一起做作业吧。", "py": "Wǒ yě shàng, wǒmen yìqǐ zuò zuòyè ba.", "vi": "Tôi cũng học, chúng mình cùng làm bài tập nhé."},
+{"sp": "B", "han": "好，你先看课文，我先想问题。", "py": "Hǎo, nǐ xiān kàn kèwén, wǒ xiān xiǎng wèntí.", "vi": "Được, bạn đọc bài trước, tôi nghĩ vấn đề trước."},
+{"sp": "A", "han": "网络不好的时候怎么办？", "py": "Wǎngluò bù hǎo de shíhou zěnme bàn?", "vi": "Khi mạng không tốt thì làm sao?"},
+{"sp": "B", "han": "网络不好就重新进来，不用担心。", "py": "Wǎngluò bù hǎo jiù chóngxīn jìnlái, bú yòng dānxīn.", "vi": "Mạng không tốt thì vào lại, không cần lo."},
+{"sp": "A", "han": "好，晚上八点在网上见。", "py": "Hǎo, wǎnshang bā diǎn zài wǎngshang jiàn.", "vi": "Được, tối 8 giờ gặp trên mạng."},
+{"sp": "B", "han": "好，不见不散。", "py": "Hǎo, bú jiàn bú sàn.", "vi": "Được, không gặp không về."}
+],
+"note": spNote(2)
+},
+{
+"id": "p3-s3-s-tro", "stage": 3, "title": "Nói về phòng trọ với bạn", "topic": "Ở trọ",
+"hook": "“你的房间离学校远吗？” — hỏi phòng có xa trường không là câu đầu tiên khi nói về phòng trọ.",
+"lines": [
+{"sp": "A", "han": "你的房间离学校远吗？", "py": "Nǐ de fángjiān lí xuéxiào yuǎn ma?", "vi": "Phòng của bạn cách trường có xa không?"},
+{"sp": "B", "han": "不远，走路十分钟就到了。", "py": "Bù yuǎn, zǒu lù shí fēnzhōng jiù dào le.", "vi": "Không xa, đi bộ 10 phút là tới."},
+{"sp": "A", "han": "房租一个月多少钱？", "py": "Fángzū yí ge yuè duōshao qián?", "vi": "Tiền thuê một tháng bao nhiêu?"},
+{"sp": "B", "han": "一个月两千块，我和一个同学一起住。", "py": "Yí ge yuè liǎng qiān kuài, wǒ hé yí ge tóngxué yìqǐ zhù.", "vi": "Một tháng 2000 tệ, tôi ở chung với một bạn học."},
+{"sp": "A", "han": "房间干净吗？", "py": "Fángjiān gānjìng ma?", "vi": "Phòng có sạch không?"},
+{"sp": "B", "han": "很干净，房东每个星期都来看一次。", "py": "Hěn gānjìng, fángdōng měi ge xīngqī dōu lái kàn yí cì.", "vi": "Rất sạch, chủ nhà mỗi tuần đều tới xem một lần."},
+{"sp": "A", "han": "真不错，有空我去看看。", "py": "Zhēn búcuò, yǒu kòng wǒ qù kànkan.", "vi": "Thật tốt, rảnh tôi qua xem."},
+{"sp": "B", "han": "好，星期六上午我带你去看。", "py": "Hǎo, Xīngqīliù shàngwǔ wǒ dài nǐ qù kàn.", "vi": "Được, sáng thứ bảy tôi dẫn bạn đi xem."}
+],
+"note": spNote(3)
+},
+{
+"id": "p3-s3-s-que", "stage": 3, "title": "Kể về quê nhà", "topic": "Quê nhà",
+"hook": "“你的家乡在哪儿？” — hỏi quê bạn ở đâu là cách mở chuyện về quê nhà.",
+"lines": [
+{"sp": "A", "han": "你的家乡在哪儿？", "py": "Nǐ de jiāxiāng zài nǎr?", "vi": "Quê của bạn ở đâu?"},
+{"sp": "B", "han": "我的家乡在越南北部的一个村子里。", "py": "Wǒ de jiāxiāng zài Yuènán běibù de yí ge cūnzi lǐ.", "vi": "Quê tôi ở một làng thuộc miền Bắc Việt Nam."},
+{"sp": "A", "han": "村子里有什么？", "py": "Cūnzi lǐ yǒu shénme?", "vi": "Trong làng có gì?"},
+{"sp": "B", "han": "村子前面有一条小河，后面有很多田地。", "py": "Cūnzi qiánmiàn yǒu yì tiáo xiǎo hé, hòumiàn yǒu hěn duō tiándì.", "vi": "Trước làng có một con sông nhỏ, sau làng có nhiều ruộng."},
+{"sp": "A", "han": "你夏天回家吗？", "py": "Nǐ xiàtiān huí jiā ma?", "vi": "Mùa hè bạn về nhà không?"},
+{"sp": "B", "han": "回家，我回家看爷爷奶奶。", "py": "Huí jiā, wǒ huí jiā kàn yéye nǎinai.", "vi": "Về, tôi về nhà thăm ông bà."},
+{"sp": "A", "han": "真好，我也想去你的家乡看看。", "py": "Zhēn hǎo, wǒ yě xiǎng qù nǐ de jiāxiāng kànkan.", "vi": "Thật tốt, tôi cũng muốn tới quê bạn xem thử."},
+{"sp": "B", "han": "好，夏天我们一起回家。", "py": "Hǎo, xiàtiān wǒmen yìqǐ huí jiā.", "vi": "Được, mùa hè chúng mình cùng về nhà."}
+],
+"note": spNote(3)
+},
+{
+"id": "p3-s3-s-thoitiet", "stage": 3, "title": "Trời lạnh thì mặc gì", "topic": "Thời tiết miền Bắc",
+"hook": "“明天很冷，你穿什么衣服？” — hỏi mai lạnh thì mặc gì là câu mở chuyện về thời tiết miền Bắc.",
+"lines": [
+{"sp": "A", "han": "明天很冷，你穿什么衣服？", "py": "Míngtiān hěn lěng, nǐ chuān shénme yīfu?", "vi": "Ngày mai rất lạnh, bạn mặc quần áo gì?"},
+{"sp": "B", "han": "我穿外套，还穿毛衣。", "py": "Wǒ chuān wàitào, hái chuān máoyī.", "vi": "Tôi mặc áo khoác, còn mặc áo len."},
+{"sp": "A", "han": "你带雨伞吗？明天还下小雨。", "py": "Nǐ dài yǔsǎn ma? Míngtiān hái xià xiǎoyǔ.", "vi": "Bạn mang ô không? Ngày mai còn mưa nhỏ."},
+{"sp": "B", "han": "带，明天上午下雨，下午雨停了。", "py": "Dài, míngtiān shàngwǔ xià yǔ, xiàwǔ yǔ tíng le.", "vi": "Mang, sáng mai mưa, chiều mưa tạnh."},
+{"sp": "A", "han": "早上出门要多穿衣服，不要感冒。", "py": "Zǎoshang chūmén yào duō chuān yīfu, bú yào gǎnmào.", "vi": "Sáng ra ngoài phải mặc nhiều áo, đừng để bị cảm."},
+{"sp": "B", "han": "对，我还要带围巾。", "py": "Duì, wǒ hái yào dài wéijīn.", "vi": "Đúng, tôi còn phải mang khăn quàng."},
+{"sp": "A", "han": "好，明天早上我们一起去学校。", "py": "Hǎo, míngtiān zǎoshang wǒmen yìqǐ qù xuéxiào.", "vi": "Được, sáng mai chúng mình cùng đi học."},
+{"sp": "B", "han": "好，八点在学校门口见。", "py": "Hǎo, bā diǎn zài xuéxiào ménkǒu jiàn.", "vi": "Được, 8 giờ gặp ở cổng trường."}
+],
+"note": spNote(3)
+}
+]);
+
+ZH_SPEAK.push.apply(ZH_SPEAK, [
+{
+"id": "p3-s4-s-tro", "stage": 4, "title": "Bàn chuyện thuê trọ chung", "topic": "Ở trọ",
+"hook": "“我们一起合租，好吗？” — rủ bạn thuê chung là câu mở chuyện bàn chuyện ở trọ.",
+"lines": [
+{"sp": "A", "han": "我们一起合租，好吗？", "py": "Wǒmen yìqǐ hézū, hǎo ma?", "vi": "Chúng mình thuê chung nhé?"},
+{"sp": "B", "han": "好，租在哪儿？", "py": "Hǎo, zū zài nǎr?", "vi": "Được, thuê ở đâu?"},
+{"sp": "A", "han": "租在学校附近，走路十分钟就到了。", "py": "Zū zài xuéxiào fùjìn, zǒu lù shí fēnzhōng jiù dào le.", "vi": "Thuê gần trường, đi bộ 10 phút là tới."},
+{"sp": "B", "han": "房租一个月多少钱？", "py": "Fángzū yí ge yuè duōshao qián?", "vi": "Tiền thuê một tháng bao nhiêu?"},
+{"sp": "A", "han": "一个月四千块，我们两个人一起付。", "py": "Yí ge yuè sì qiān kuài, wǒmen liǎng ge rén yìqǐ fù.", "vi": "Một tháng 4000 tệ, hai chúng mình cùng trả."},
+{"sp": "B", "han": "水电费怎么付？", "py": "Shuǐdiànfèi zěnme fù?", "vi": "Tiền nước điện trả thế nào?"},
+{"sp": "A", "han": "水电费也一起付，每个月一起算。", "py": "Shuǐdiànfèi yě yìqǐ fù, měi ge yuè yìqǐ suàn.", "vi": "Tiền nước điện cũng cùng trả, mỗi tháng cùng tính."},
+{"sp": "B", "han": "好，明天我们一起去看房间。", "py": "Hǎo, míngtiān wǒmen yìqǐ qù kàn fángjiān.", "vi": "Được, mai chúng mình cùng đi xem phòng."}
+],
+"note": spNote(4)
+},
+{
+"id": "p3-s4-s-trungquoc", "stage": 4, "title": "Tàu điện ngầm Thượng Hải", "topic": "Cuộc sống ở Trung Quốc",
+"hook": "“上海的地铁方便吗？” — hỏi tàu điện ngầm Thượng Hải có tiện không là cách mở chuyện về thành phố Trung Quốc.",
+"lines": [
+{"sp": "A", "han": "上海的地铁方便吗？", "py": "Shànghǎi de dìtiě fāngbiàn ma?", "vi": "Tàu điện ngầm Thượng Hải có tiện không?"},
+{"sp": "B", "han": "很方便，早上坐地铁去哪儿都很快。", "py": "Hěn fāngbiàn, zǎoshang zuò dìtiě qù nǎr dōu hěn kuài.", "vi": "Rất tiện, sáng đi tàu điện đi đâu cũng rất nhanh."},
+{"sp": "A", "han": "早上地铁里人多吗？", "py": "Zǎoshang dìtiě lǐ rén duō ma?", "vi": "Sáng trong tàu điện đông người không?"},
+{"sp": "B", "han": "很多，大家都赶着去上班。", "py": "Hěn duō, dàjiā dōu gǎnzhe qù shàngbān.", "vi": "Rất đông, mọi người đều vội đi làm."},
+{"sp": "A", "han": "你去外滩坐几号线？", "py": "Nǐ qù Wàitān zuò jǐ hào xiàn?", "vi": "Bạn đi Ngoại Than đi tuyến số mấy?"},
+{"sp": "B", "han": "我坐二号线，在外滩站下车。", "py": "Wǒ zuò èr hào xiàn, zài Wàitān zhàn xià chē.", "vi": "Tôi đi tuyến số 2, xuống ở ga Ngoại Than."},
+{"sp": "A", "han": "下午你还去哪儿？", "py": "Xiàwǔ nǐ hái qù nǎr?", "vi": "Chiều bạn còn đi đâu?"},
+{"sp": "B", "han": "下午我去市场买东西，晚上在路边散步。", "py": "Xiàwǔ wǒ qù shìchǎng mǎi dōngxi, wǎnshang zài lùbiān sànbù.", "vi": "Chiều tôi đi chợ mua đồ, tối đi dạo bên đường."}
+],
+"note": spNote(4)
+},
+{
+"id": "p3-s5-s-hocline", "stage": 5, "title": "Ý kiến: học online có tốt không", "topic": "Học online",
+"hook": "“你觉得上网课好不好？” — hỏi bạn thấy học online tốt không là cách mở chuyện nêu ý kiến.",
+"lines": [
+{"sp": "A", "han": "你觉得上网课好不好？", "py": "Nǐ juéde shàng wǎngkè hǎo bu hǎo?", "vi": "Bạn thấy học online tốt không?"},
+{"sp": "B", "han": "我觉得上网课很方便，在家里就能上课。", "py": "Wǒ juéde shàng wǎngkè hěn fāngbiàn, zài jiā lǐ jiù néng shàngkè.", "vi": "Tôi thấy học online rất tiện, ở nhà là có thể học."},
+{"sp": "A", "han": "可是，在家里上课容易不认真。", "py": "Kěshì, zài jiā lǐ shàngkè róngyì bú rènzhēn.", "vi": "Nhưng ở nhà học dễ không nghiêm túc."},
+{"sp": "B", "han": "对，这是一个缺点。可是，去学校要花很多时间在路上。", "py": "Duì, zhè shì yí ge quēdiǎn. Kěshì, qù xuéxiào yào huā hěn duō shíjiān zài lù shang.", "vi": "Đúng, đó là một khuyết điểm. Nhưng tới trường phải tốn nhiều thời gian trên đường."},
+{"sp": "A", "han": "所以，两种课都有优点和缺点。", "py": "Suǒyǐ, liǎng zhǒng kè dōu yǒu yōudiǎn hé quēdiǎn.", "vi": "Vì vậy, hai loại lớp học đều có ưu điểm và khuyết điểm."},
+{"sp": "B", "han": "对，我们可以自己安排时间，认真听课。", "py": "Duì, wǒmen kěyǐ zìjǐ ānpái shíjiān, rènzhēn tīngkè.", "vi": "Đúng, chúng mình có thể tự sắp xếp thời gian, nghe giảng nghiêm túc."},
+{"sp": "A", "han": "与其抱怨，不如想办法学好。", "py": "Yǔqí bàoyuàn, bùrú xiǎng bànfǎ xué hǎo.", "vi": "Thay vì than phiền, chi bằng nghĩ cách học tốt."},
+{"sp": "B", "han": "我同意，今天晚上我们一起上网课吧。", "py": "Wǒ tóngyì, jīntiān wǎnshang wǒmen yìqǐ shàng wǎngkè ba.", "vi": "Tôi đồng ý, tối nay chúng mình cùng học online nhé."}
+],
+"note": spNote(5)
+},
+{
+"id": "p3-s5-s-que", "stage": 5, "title": "Quê nhà thay đổi ra sao", "topic": "Quê nhà",
+"hook": "“你的家乡变了吗？” — hỏi quê bạn có thay đổi không là cách mở chuyện về quê nhà đổi thay.",
+"lines": [
+{"sp": "A", "han": "你的家乡变了吗？", "py": "Nǐ de jiāxiāng biàn le ma?", "vi": "Quê của bạn có thay đổi không?"},
+{"sp": "B", "han": "变了，以前只有一条小路，现在有了一条大路。", "py": "Biàn le, yǐqián zhǐyǒu yì tiáo xiǎo lù, xiànzài yǒu le yì tiáo dà lù.", "vi": "Thay đổi rồi, trước đây chỉ có một con đường nhỏ, bây giờ có một con đường lớn."},
+{"sp": "A", "han": "年轻人还去城市找工作吗？", "py": "Niánqīng rén hái qù chéngshì zhǎo gōngzuò ma?", "vi": "Người trẻ còn đi thành phố tìm việc không?"},
+{"sp": "B", "han": "有的年轻人回来开小店，还在网上卖家乡的东西。", "py": "Yǒude niánqīng rén huí lái kāi xiǎo diàn, hái zài wǎngshang mài jiāxiāng de dōngxi.", "vi": "Có người trẻ trở về mở cửa hàng nhỏ, còn bán đồ quê nhà trên mạng."},
+{"sp": "A", "han": "村子里的老人住在哪儿？", "py": "Cūnzi lǐ de lǎorén zhù zài nǎr?", "vi": "Người già trong làng sống ở đâu?"},
+{"sp": "B", "han": "他们还是住在老房子里，希望孩子多回家看看。", "py": "Tāmen háishi zhù zài lǎo fángzi lǐ, xīwàng háizi duō huí jiā kànkan.", "vi": "Họ vẫn sống trong nhà cũ, mong con cái về nhà thăm nhiều hơn."},
+{"sp": "A", "han": "家乡变好了，可是家乡的人情没有变，对吗？", "py": "Jiāxiāng biàn hǎo le, kěshì jiāxiāng de rénqíng méiyǒu biàn, duì ma?", "vi": "Quê đã tốt lên, nhưng tình người ở quê không thay đổi, đúng không?"},
+{"sp": "B", "han": "对，这就是我最喜欢家乡的地方。", "py": "Duì, zhè jiù shì wǒ zuì xǐhuan jiāxiāng de dìfang.", "vi": "Đúng, đó chính là điều tôi thích nhất ở quê nhà."}
+],
+"note": spNote(5)
+},
+{
+"id": "p3-s6-s-thoitiet", "stage": 6, "title": "Biện luận: thời tiết thay đổi ảnh hưởng đời sống ra sao", "topic": "Thời tiết và sức khỏe",
+"hook": "“天气变化对生活有什么影响？” — hỏi thời tiết thay đổi ảnh hưởng đời sống ra sao là cách mở đầu một bài biện luận.",
+"lines": [
+{"sp": "A", "han": "天气变化对生活有什么影响？", "py": "Tiānqì biànhuà duì shēnghuó yǒu shénme yǐngxiǎng?", "vi": "Thời tiết thay đổi ảnh hưởng đời sống ra sao?"},
+{"sp": "B", "han": "夏天越来越热，有时候热得让人不想出门。", "py": "Xiàtiān yuè lái yuè rè, yǒu shíhou rè de ràng rén bù xiǎng chūmén.", "vi": "Mùa hè ngày càng nóng, có lúc nóng tới mức khiến người ta không muốn ra khỏi nhà."},
+{"sp": "A", "han": "冬天呢？", "py": "Dōngtiān ne?", "vi": "Còn mùa đông?"},
+{"sp": "B", "han": "冬天有时候很冷，还下雨，老人和孩子容易感冒。", "py": "Dōngtiān yǒu shíhou hěn lěng, hái xià yǔ, lǎorén hé háizi róngyì gǎnmào.", "vi": "Mùa đông có lúc rất lạnh, còn mưa, người già và trẻ em dễ bị cảm."},
+{"sp": "A", "han": "我们能做什么？", "py": "Wǒmen néng zuò shénme?", "vi": "Chúng ta có thể làm gì?"},
+{"sp": "B", "han": "我们要注意保暖，多喝热水，还要多运动。", "py": "Wǒmen yào zhùyì bǎonuǎn, duō hē rè shuǐ, hái yào duō yùndòng.", "vi": "Chúng ta phải chú ý giữ ấm, uống nhiều nước nóng, còn phải vận động nhiều."},
+{"sp": "A", "han": "归根到底，天气我们不能改变，但是我们可以改变自己的生活习惯。", "py": "Guī gēn dào dǐ, tiānqì wǒmen bù néng gǎibiàn, dànshì wǒmen kěyǐ gǎibiàn zìjǐ de shēnghuó xíguàn.", "vi": "Rốt cuộc, thời tiết chúng ta không thể thay đổi, nhưng chúng ta có thể thay đổi thói quen sống của mình."},
+{"sp": "B", "han": "对，早睡早起，身体才会更健康。", "py": "Duì, zǎo shuì zǎo qǐ, shēntǐ cái huì gèng jiànkāng.", "vi": "Đúng, ngủ sớm dậy sớm, cơ thể mới khỏe hơn."}
+],
+"note": spNote(6)
+},
+{
+"id": "p3-s6-s-que", "stage": 6, "title": "Thành phố hay quê nhà tốt hơn cho người trẻ", "topic": "Quê nhà",
+"hook": "“年轻人应该去城市，还是留在家乡？” — hỏi người trẻ nên đi thành phố hay ở lại quê nhà là cách mở một bài biện luận.",
+"lines": [
+{"sp": "A", "han": "年轻人应该去城市，还是留在家乡？", "py": "Niánqīng rén yīnggāi qù chéngshì, háishi liú zài jiāxiāng?", "vi": "Người trẻ nên đi thành phố, hay ở lại quê nhà?"},
+{"sp": "B", "han": "城市机会多，可是压力也很大。", "py": "Chéngshì jīhuì duō, kěshì yālì yě hěn dà.", "vi": "Thành phố cơ hội nhiều, nhưng áp lực cũng rất lớn."},
+{"sp": "A", "han": "家乡呢？", "py": "Jiāxiāng ne?", "vi": "Còn quê nhà?"},
+{"sp": "B", "han": "家乡生活慢一点，可是工作机会少一点。", "py": "Jiāxiāng shēnghuó màn yìdiǎn, kěshì gōngzuò jīhuì shǎo yìdiǎn.", "vi": "Quê nhà cuộc sống chậm hơn một chút, nhưng cơ hội việc làm ít hơn một chút."},
+{"sp": "A", "han": "与此同时，家乡也在变化，年轻人可以回来开小店。", "py": "Yǔ cǐ tóngshí, jiāxiāng yě zài biànhuà, niánqīng rén kěyǐ huí lái kāi xiǎo diàn.", "vi": "Đồng thời, quê nhà cũng đang thay đổi, người trẻ có thể trở về mở cửa hàng nhỏ."},
+{"sp": "B", "han": "对，在网上卖家乡的东西也是一种工作。", "py": "Duì, zài wǎngshang mài jiāxiāng de dōngxi yě shì yì zhǒng gōngzuò.", "vi": "Đúng, bán đồ quê nhà trên mạng cũng là một công việc."},
+{"sp": "A", "han": "归根到底，城市和农村都需要年轻人。", "py": "Guī gēn dào dǐ, chéngshì hé nóngcūn dōu xūyào niánqīng rén.", "vi": "Rốt cuộc, thành phố và nông thôn đều cần người trẻ."},
+{"sp": "B", "han": "对，不管在哪儿，都要认真工作，好好生活。", "py": "Duì, bùguǎn zài nǎr, dōu yào rènzhēn gōngzuò, hǎohāo shēnghuó.", "vi": "Đúng, dù ở đâu, đều phải làm việc nghiêm túc, sống thật tốt."}
+],
+"note": spNote(6)
+}
+]);
+
+ZH_ROLE.push.apply(ZH_ROLE, [
+{
+"id": "p3-s2-ro-xebuyt", "stage": 2, "title": "Trên xe buýt hỏi đường", "setting": "Trên xe buýt",
+"you": "Hành khách", "partner": "Người đi xe cùng",
+"goal": "Hỏi xe đi đâu, xuống ở đâu.",
+"turns": [
+{"from": "partner", "han": "请问，你去哪儿？", "py": "Qǐngwèn, nǐ qù nǎr?", "vi": "Xin hỏi, bạn đi đâu?"},
+{"from": "you", "han": "我去学校，坐这辆车对吗？", "py": "Wǒ qù xuéxiào, zuò zhè liàng chē duì ma?", "vi": "Tôi đi trường, đi xe này đúng không?"},
+{"from": "partner", "han": "对，这辆车去学校，在学校门口下车。", "py": "Duì, zhè liàng chē qù xuéxiào, zài xuéxiào ménkǒu xià chē.", "vi": "Đúng, xe này đi trường, xuống ở cổng trường."},
+{"from": "you", "han": "车上人多吗？", "py": "Chē shang rén duō ma?", "vi": "Trên xe đông người không?"},
+{"from": "partner", "han": "早上人很多，有时候没有位子。", "py": "Zǎoshang rén hěn duō, yǒu shíhou méiyǒu wèizi.", "vi": "Buổi sáng rất đông, có lúc không có chỗ ngồi."},
+{"from": "you", "han": "谢谢，我知道了。", "py": "Xièxie, wǒ zhīdào le.", "vi": "Cảm ơn, tôi biết rồi."},
+{"from": "partner", "han": "不客气，学校门口到了，你下车吧。", "py": "Bú kèqi, xuéxiào ménkǒu dào le, nǐ xià chē ba.", "vi": "Không có gì, cổng trường tới rồi, bạn xuống xe đi."}
+],
+"chunks": ["坐这辆车对吗？ (Zuò zhè liàng chē duì ma?) — Đi xe này đúng không?", "在学校门口下车。 (Zài xuéxiào ménkǒu xià chē.) — Xuống ở cổng trường.", "谢谢，我知道了。 (Xièxie, wǒ zhīdào le.) — Cảm ơn, tôi biết rồi."],
+"tip": RO_TIP, "note": roNote(2)
+},
+{
+"id": "p3-s2-ro-tro", "stage": 2, "title": "Xem phòng trọ với chủ nhà", "setting": "Phòng trọ cho thuê",
+"you": "Người muốn thuê phòng", "partner": "Chủ nhà",
+"goal": "Hỏi giá, xem phòng, hẹn ngày dọn vào.",
+"turns": [
+{"from": "partner", "han": "你好，你想看房间吗？", "py": "Nǐ hǎo, nǐ xiǎng kàn fángjiān ma?", "vi": "Chào bạn, bạn muốn xem phòng không?"},
+{"from": "you", "han": "想看，房间在几楼？", "py": "Xiǎng kàn, fángjiān zài jǐ lóu?", "vi": "Muốn xem, phòng ở tầng mấy?"},
+{"from": "partner", "han": "在三楼，离学校很近。", "py": "Zài sān lóu, lí xuéxiào hěn jìn.", "vi": "Ở tầng 3, gần trường."},
+{"from": "you", "han": "房租一个月多少钱？", "py": "Fángzū yí ge yuè duōshao qián?", "vi": "Tiền thuê một tháng bao nhiêu?"},
+{"from": "partner", "han": "一个月两千块，水电费另外付。", "py": "Yí ge yuè liǎng qiān kuài, shuǐdiànfèi lìngwài fù.", "vi": "Một tháng 2000 tệ, tiền nước điện trả riêng."},
+{"from": "you", "han": "我可以和一个同学一起住吗？", "py": "Wǒ kěyǐ hé yí ge tóngxué yìqǐ zhù ma?", "vi": "Tôi có thể ở chung với một bạn học không?"},
+{"from": "partner", "han": "可以，两个人一起住。", "py": "Kěyǐ, liǎng ge rén yìqǐ zhù.", "vi": "Được, hai người ở chung."},
+{"from": "you", "han": "好，明天上午我来看房间。", "py": "Hǎo, míngtiān shàngwǔ wǒ lái kàn fángjiān.", "vi": "Được, sáng mai tôi tới xem phòng."}
+],
+"chunks": ["房间在几楼？ (Fángjiān zài jǐ lóu?) — Phòng ở tầng mấy?", "房租一个月多少钱？ (Fángzū yí ge yuè duōshao qián?) — Tiền thuê một tháng bao nhiêu?", "明天上午我来看房间。 (Míngtiān shàngwǔ wǒ lái kàn fángjiān.) — Sáng mai tôi tới xem phòng."],
+"tip": RO_TIP, "note": roNote(2)
+},
+{
+"id": "p3-s3-ro-cho", "stage": 3, "title": "Mua rau, mặc cả ở chợ", "setting": "Chợ buổi sáng",
+"you": "Người đi chợ", "partner": "Người bán rau",
+"goal": "Hỏi giá, mặc cả, mua rau và trứng, tính tiền.",
+"turns": [
+{"from": "partner", "han": "你要买什么？", "py": "Nǐ yào mǎi shénme?", "vi": "Bạn muốn mua gì?"},
+{"from": "you", "han": "我要买青菜，这个青菜多少钱一斤？", "py": "Wǒ yào mǎi qīngcài, zhège qīngcài duōshao qián yì jīn?", "vi": "Tôi muốn mua rau, rau này bao nhiêu tiền một cân?"},
+{"from": "partner", "han": "五块钱一斤，很新鲜。", "py": "Wǔ kuài qián yì jīn, hěn xīnxiān.", "vi": "5 tệ một cân, rất tươi."},
+{"from": "you", "han": "有点儿贵，四块钱可以吗？", "py": "Yǒu diǎnr guì, sì kuài qián kěyǐ ma?", "vi": "Hơi đắt, 4 tệ được không?"},
+{"from": "partner", "han": "四块钱不行，五块钱已经很便宜了。", "py": "Sì kuài qián bù xíng, wǔ kuài qián yǐjīng hěn piányi le.", "vi": "4 tệ không được, 5 tệ đã rất rẻ rồi."},
+{"from": "you", "han": "那我买两斤，还要一斤鸡蛋。", "py": "Nà wǒ mǎi liǎng jīn, hái yào yì jīn jīdàn.", "vi": "Vậy tôi mua 2 cân, còn muốn 1 cân trứng."},
+{"from": "partner", "han": "好，一共十八块钱。", "py": "Hǎo, yígòng shíbā kuài qián.", "vi": "Được, tổng cộng 18 tệ."},
+{"from": "you", "han": "给你二十块钱。", "py": "Gěi nǐ èrshí kuài qián.", "vi": "Gửi bạn 20 tệ."}
+],
+"chunks": ["这个青菜多少钱一斤？ (Zhège qīngcài duōshao qián yì jīn?) — Rau này bao nhiêu tiền một cân?", "有点儿贵，四块钱可以吗？ (Yǒu diǎnr guì, sì kuài qián kěyǐ ma?) — Hơi đắt, 4 tệ được không?", "一共十八块钱。 (Yígòng shíbā kuài qián.) — Tổng cộng 18 tệ."],
+"tip": RO_TIP, "note": roNote(3)
+},
+{
+"id": "p3-s3-ro-hocline", "stage": 3, "title": "Hỏi bài trong lớp học online", "setting": "Lớp học online",
+"you": "Học sinh", "partner": "Thầy giáo dạy online",
+"goal": "Nói mạng không tốt, hỏi lại bài, hẹn ôn lại.",
+"turns": [
+{"from": "you", "han": "老师，我听不清楚，你可以再说一次吗？", "py": "Lǎoshī, wǒ tīng bù qīngchu, nǐ kěyǐ zài shuō yí cì ma?", "vi": "Thầy ơi, em nghe không rõ, thầy có thể nói lại một lần không?"},
+{"from": "partner", "han": "可以，你哪儿听不清楚？", "py": "Kěyǐ, nǐ nǎr tīng bù qīngchu?", "vi": "Được, em chỗ nào nghe không rõ?"},
+{"from": "you", "han": "网络不好，刚才的话我没有听清楚。", "py": "Wǎngluò bù hǎo, gāngcái de huà wǒ méiyǒu tīng qīngchu.", "vi": "Mạng không tốt, lời vừa rồi em không nghe rõ."},
+{"from": "partner", "han": "好，我再说一次，你认真听。", "py": "Hǎo, wǒ zài shuō yí cì, nǐ rènzhēn tīng.", "vi": "Được, thầy nói lại một lần, em nghe nghiêm túc nhé."},
+{"from": "you", "han": "谢谢老师，下课以后我再复习一次。", "py": "Xièxie lǎoshī, xiàkè yǐhòu wǒ zài fùxí yí cì.", "vi": "Cảm ơn thầy, sau giờ học em ôn lại một lần nữa."},
+{"from": "partner", "han": "好，有问题你再问我。", "py": "Hǎo, yǒu wèntí nǐ zài wèn wǒ.", "vi": "Được, có vấn đề em lại hỏi thầy."},
+{"from": "you", "han": "好，老师再见！", "py": "Hǎo, lǎoshī zàijiàn!", "vi": "Được, chào thầy!"},
+{"from": "partner", "han": "再见！", "py": "Zàijiàn!", "vi": "Tạm biệt!"}
+],
+"chunks": ["我听不清楚，你可以再说一次吗？ (Wǒ tīng bù qīngchu, nǐ kěyǐ zài shuō yí cì ma?) — Em nghe không rõ, thầy nói lại một lần được không?", "网络不好。 (Wǎngluò bù hǎo.) — Mạng không tốt.", "下课以后我再复习一次。 (Xiàkè yǐhòu wǒ zài fùxí yí cì.) — Sau giờ học em ôn lại một lần nữa."],
+"tip": RO_TIP, "note": roNote(3)
+},
+{
+"id": "p3-s3-ro-que", "stage": 3, "title": "Về quê mua quà cho ông bà", "setting": "Chợ quê",
+"you": "Người về quê thăm nhà", "partner": "Người bán hàng ở quê",
+"goal": "Mua quà cho ông bà, hỏi giá, tính tiền.",
+"turns": [
+{"from": "partner", "han": "你要买什么？", "py": "Nǐ yào mǎi shénme?", "vi": "Bạn muốn mua gì?"},
+{"from": "you", "han": "我回家看爷爷奶奶，想买一点水果。", "py": "Wǒ huí jiā kàn yéye nǎinai, xiǎng mǎi yìdiǎn shuǐguǒ.", "vi": "Tôi về nhà thăm ông bà, muốn mua một ít hoa quả."},
+{"from": "partner", "han": "苹果很新鲜，十块钱一斤。", "py": "Píngguǒ hěn xīnxiān, shí kuài qián yì jīn.", "vi": "Táo rất tươi, 10 tệ một cân."},
+{"from": "you", "han": "我买两斤苹果，还要一斤香蕉。", "py": "Wǒ mǎi liǎng jīn píngguǒ, hái yào yì jīn xiāngjiāo.", "vi": "Tôi mua 2 cân táo, còn muốn 1 cân chuối."},
+{"from": "partner", "han": "好，一共二十八块钱。", "py": "Hǎo, yígòng èrshíbā kuài qián.", "vi": "Được, tổng cộng 28 tệ."},
+{"from": "you", "han": "给你三十块钱。", "py": "Gěi nǐ sānshí kuài qián.", "vi": "Gửi bạn 30 tệ."},
+{"from": "partner", "han": "找你两块钱，谢谢！", "py": "Zhǎo nǐ liǎng kuài qián, xièxie!", "vi": "Trả lại bạn 2 tệ, cảm ơn!"},
+{"from": "you", "han": "谢谢，再见！", "py": "Xièxie, zàijiàn!", "vi": "Cảm ơn, tạm biệt!"}
+],
+"chunks": ["我回家看爷爷奶奶。 (Wǒ huí jiā kàn yéye nǎinai.) — Tôi về nhà thăm ông bà.", "我买两斤苹果。 (Wǒ mǎi liǎng jīn píngguǒ.) — Tôi mua 2 cân táo.", "一共二十八块钱。 (Yígòng èrshíbā kuài qián.) — Tổng cộng 28 tệ."],
+"tip": RO_TIP, "note": roNote(3)
+}
+]);
+
+ZH_ROLE.push.apply(ZH_ROLE, [
+{
+"id": "p3-s4-ro-tro", "stage": 4, "title": "Ký hợp đồng thuê phòng", "setting": "Phòng trọ, ký hợp đồng",
+"you": "Người thuê phòng", "partner": "Chủ nhà",
+"goal": "Hỏi rõ tiền thuê, tiền nước điện, thời gian ở, rồi ký hợp đồng.",
+"turns": [
+{"from": "partner", "han": "你想租这个房间吗？", "py": "Nǐ xiǎng zū zhège fángjiān ma?", "vi": "Bạn muốn thuê phòng này không?"},
+{"from": "you", "han": "想租，房租一个月多少钱？", "py": "Xiǎng zū, fángzū yí ge yuè duōshao qián?", "vi": "Muốn thuê, tiền thuê một tháng bao nhiêu?"},
+{"from": "partner", "han": "一个月两千块，水电费另外付。", "py": "Yí ge yuè liǎng qiān kuài, shuǐdiànfèi lìngwài fù.", "vi": "Một tháng 2000 tệ, tiền nước điện trả riêng."},
+{"from": "you", "han": "合同上写了什么？", "py": "Hétong shang xiě le shénme?", "vi": "Trên hợp đồng viết gì?"},
+{"from": "partner", "han": "合同上写了房租、水电费和住的时间。", "py": "Hétong shang xiě le fángzū, shuǐdiànfèi hé zhù de shíjiān.", "vi": "Trên hợp đồng viết tiền thuê, tiền nước điện và thời gian ở."},
+{"from": "you", "han": "我可以住一年吗？", "py": "Wǒ kěyǐ zhù yì nián ma?", "vi": "Tôi có thể ở một năm không?"},
+{"from": "partner", "han": "可以，一年以后你还可以再租。", "py": "Kěyǐ, yì nián yǐhòu nǐ hái kěyǐ zài zū.", "vi": "Được, sau một năm bạn còn có thể thuê tiếp."},
+{"from": "you", "han": "好，我签合同。", "py": "Hǎo, wǒ qiān hétong.", "vi": "Được, tôi ký hợp đồng."},
+{"from": "partner", "han": "好，钥匙给你，欢迎你住进来。", "py": "Hǎo, yàoshi gěi nǐ, huānyíng nǐ zhù jìnlái.", "vi": "Được, chìa khóa gửi bạn, chào mừng bạn dọn vào ở."}
+],
+"chunks": ["合同上写了什么？ (Hétong shang xiě le shénme?) — Trên hợp đồng viết gì?", "我可以住一年吗？ (Wǒ kěyǐ zhù yì nián ma?) — Tôi có thể ở một năm không?", "好，我签合同。 (Hǎo, wǒ qiān hétong.) — Được, tôi ký hợp đồng."],
+"tip": RO_TIP, "note": roNote(4)
+},
+{
+"id": "p3-s4-ro-xebuyt", "stage": 4, "title": "Hỏi xe ở bến xe buýt", "setting": "Bến xe buýt",
+"you": "Hành khách", "partner": "Nhân viên bến xe",
+"goal": "Hỏi xe đi trường, so sánh xe buýt và tàu điện, chọn cách đi nhanh hơn.",
+"turns": [
+{"from": "partner", "han": "请问，你去哪儿？", "py": "Qǐngwèn, nǐ qù nǎr?", "vi": "Xin hỏi, bạn đi đâu?"},
+{"from": "you", "han": "我去学校，坐几路车？", "py": "Wǒ qù xuéxiào, zuò jǐ lù chē?", "vi": "Tôi đi trường, đi xe số mấy?"},
+{"from": "partner", "han": "坐三路车，在学校门口下车。", "py": "Zuò sān lù chē, zài xuéxiào ménkǒu xià chē.", "vi": "Đi xe số 3, xuống ở cổng trường."},
+{"from": "you", "han": "早上车上人多吗？", "py": "Zǎoshang chē shang rén duō ma?", "vi": "Buổi sáng trên xe đông người không?"},
+{"from": "partner", "han": "很多，现在是高峰时间，路上很堵车。", "py": "Hěn duō, xiànzài shì gāofēng shíjiān, lù shang hěn dǔchē.", "vi": "Rất đông, bây giờ là giờ cao điểm, trên đường rất tắc."},
+{"from": "you", "han": "那我坐地铁去，地铁快一点，对吗？", "py": "Nà wǒ zuò dìtiě qù, dìtiě kuài yìdiǎn, duì ma?", "vi": "Vậy tôi đi tàu điện, tàu điện nhanh hơn một chút, đúng không?"},
+{"from": "partner", "han": "对，坐地铁只要半个小时。", "py": "Duì, zuò dìtiě zhǐ yào bàn ge xiǎoshí.", "vi": "Đúng, đi tàu điện chỉ mất nửa tiếng."},
+{"from": "you", "han": "谢谢，我去坐地铁。", "py": "Xièxie, wǒ qù zuò dìtiě.", "vi": "Cảm ơn, tôi đi tàu điện."},
+{"from": "partner", "han": "不客气，路上小心。", "py": "Bú kèqi, lù shang xiǎoxīn.", "vi": "Không có gì, trên đường cẩn thận."}
+],
+"chunks": ["我去学校，坐几路车？ (Wǒ qù xuéxiào, zuò jǐ lù chē?) — Tôi đi trường, đi xe số mấy?", "现在是高峰时间。 (Xiànzài shì gāofēng shíjiān.) — Bây giờ là giờ cao điểm.", "坐地铁只要半个小时。 (Zuò dìtiě zhǐ yào bàn ge xiǎoshí.) — Đi tàu điện chỉ mất nửa tiếng."],
+"tip": RO_TIP, "note": roNote(4)
+},
+{
+"id": "p3-s5-ro-hocline", "stage": 5, "title": "Nhóm học online phân công bài tập", "setting": "Nhóm học online",
+"you": "Nhóm trưởng", "partner": "Bạn học trong nhóm",
+"goal": "Chia việc làm bài tập nhóm, hẹn giờ nộp.",
+"turns": [
+{"from": "you", "han": "明天晚上我们一起做作业，好吗？", "py": "Míngtiān wǎnshang wǒmen yìqǐ zuò zuòyè, hǎo ma?", "vi": "Tối mai chúng mình cùng làm bài tập nhé?"},
+{"from": "partner", "han": "好，作业有几个问题？", "py": "Hǎo, zuòyè yǒu jǐ ge wèntí?", "vi": "Được, bài tập có mấy vấn đề?"},
+{"from": "you", "han": "有三个问题，我做第一个，你做第二个，好吗？", "py": "Yǒu sān ge wèntí, wǒ zuò dì yí ge, nǐ zuò dì èr ge, hǎo ma?", "vi": "Có 3 vấn đề, tôi làm vấn đề thứ nhất, bạn làm vấn đề thứ hai, được không?"},
+{"from": "partner", "han": "好，第三个问题谁做？", "py": "Hǎo, dì sān ge wèntí shéi zuò?", "vi": "Được, vấn đề thứ ba ai làm?"},
+{"from": "you", "han": "第三个问题我们一起讨论，再一起写。", "py": "Dì sān ge wèntí wǒmen yìqǐ tǎolùn, zài yìqǐ xiě.", "vi": "Vấn đề thứ ba chúng mình cùng thảo luận, rồi cùng viết."},
+{"from": "partner", "han": "好，什么时候交作业？", "py": "Hǎo, shénme shíhou jiāo zuòyè?", "vi": "Được, khi nào nộp bài tập?"},
+{"from": "you", "han": "后天上午交，明天晚上八点我们再见。", "py": "Hòutiān shàngwǔ jiāo, míngtiān wǎnshang bā diǎn wǒmen zài jiàn.", "vi": "Sáng ngày kia nộp, tối mai 8 giờ chúng mình lại gặp."},
+{"from": "partner", "han": "好，不见不散。", "py": "Hǎo, bú jiàn bú sàn.", "vi": "Được, không gặp không về."}
+],
+"chunks": ["我做第一个，你做第二个。 (Wǒ zuò dì yí ge, nǐ zuò dì èr ge.) — Tôi làm vấn đề thứ nhất, bạn làm vấn đề thứ hai.", "第三个问题我们一起讨论。 (Dì sān ge wèntí wǒmen yìqǐ tǎolùn.) — Vấn đề thứ ba chúng mình cùng thảo luận.", "后天上午交。 (Hòutiān shàngwǔ jiāo.) — Sáng ngày kia nộp."],
+"tip": RO_TIP, "note": roNote(5)
+},
+{
+"id": "p3-s5-ro-tro", "stage": 5, "title": "Thương lượng tiền trọ với chủ nhà", "setting": "Phòng trọ, thương lượng giá",
+"you": "Người thuê phòng", "partner": "Chủ nhà",
+"goal": "Xin giảm tiền thuê, nói rõ ở lâu dài, chốt giá.",
+"turns": [
+{"from": "you", "han": "房租一个月三千块，有点儿贵，可以便宜一点吗？", "py": "Fángzū yí ge yuè sān qiān kuài, yǒu diǎnr guì, kěyǐ piányi yìdiǎn ma?", "vi": "Tiền thuê một tháng 3000 tệ, hơi đắt, có thể rẻ hơn một chút không?"},
+{"from": "partner", "han": "三千块已经很便宜了，房间离学校很近。", "py": "Sān qiān kuài yǐjīng hěn piányi le, fángjiān lí xuéxiào hěn jìn.", "vi": "3000 tệ đã rất rẻ rồi, phòng gần trường."},
+{"from": "you", "han": "我想住一年，每个月都按时付房租。", "py": "Wǒ xiǎng zhù yì nián, měi ge yuè dōu ànshí fù fángzū.", "vi": "Tôi muốn ở một năm, mỗi tháng đều trả tiền thuê đúng giờ."},
+{"from": "partner", "han": "你住一年，我可以便宜两百块。", "py": "Nǐ zhù yì nián, wǒ kěyǐ piányi liǎng bǎi kuài.", "vi": "Bạn ở một năm, tôi có thể rẻ 200 tệ."},
+{"from": "you", "han": "两千八百块，好吗？", "py": "Liǎng qiān bā bǎi kuài, hǎo ma?", "vi": "2800 tệ, được không?"},
+{"from": "partner", "han": "好，两千八百块，我们签合同。", "py": "Hǎo, liǎng qiān bā bǎi kuài, wǒmen qiān hétong.", "vi": "Được, 2800 tệ, chúng ta ký hợp đồng."},
+{"from": "you", "han": "好，谢谢！", "py": "Hǎo, xièxie!", "vi": "Được, cảm ơn!"},
+{"from": "partner", "han": "不客气，欢迎你住进来。", "py": "Bú kèqi, huānyíng nǐ zhù jìnlái.", "vi": "Không có gì, chào mừng bạn dọn vào ở."}
+],
+"chunks": ["可以便宜一点吗？ (Kěyǐ piányi yìdiǎn ma?) — Có thể rẻ hơn một chút không?", "我想住一年。 (Wǒ xiǎng zhù yì nián.) — Tôi muốn ở một năm.", "两千八百块，好吗？ (Liǎng qiān bā bǎi kuài, hǎo ma?) — 2800 tệ, được không?"],
+"tip": RO_TIP, "note": roNote(5)
+},
+{
+"id": "p3-s6-ro-hocline", "stage": 6, "title": "Họp nhóm quyết định học online hay trực tiếp", "setting": "Họp nhóm học tập",
+"you": "Nhóm trưởng", "partner": "Bạn học trong nhóm",
+"goal": "Quyết định học online hay trực tiếp cho dự án, chia việc, chốt ngày nộp.",
+"turns": [
+{"from": "you", "han": "我们的项目应该在网上做，还是在学校做？", "py": "Wǒmen de xiàngmù yīnggāi zài wǎngshang zuò, háishi zài xuéxiào zuò?", "vi": "Dự án của chúng mình nên làm trên mạng, hay làm ở trường?"},
+{"from": "partner", "han": "在网上做很方便，可是在学校讨论更清楚。", "py": "Zài wǎngshang zuò hěn fāngbiàn, kěshì zài xuéxiào tǎolùn gèng qīngchu.", "vi": "Làm trên mạng rất tiện, nhưng thảo luận ở trường rõ hơn."},
+{"from": "you", "han": "对，两种办法都有优点和缺点。", "py": "Duì, liǎng zhǒng bànfǎ dōu yǒu yōudiǎn hé quēdiǎn.", "vi": "Đúng, hai cách đều có ưu điểm và khuyết điểm."},
+{"from": "partner", "han": "与其一直讨论，不如先在网上做，再去学校讨论。", "py": "Yǔqí yìzhí tǎolùn, bùrú xiān zài wǎngshang zuò, zài qù xuéxiào tǎolùn.", "vi": "Thay vì thảo luận mãi, chi bằng làm trên mạng trước, rồi tới trường thảo luận."},
+{"from": "you", "han": "我同意，你先做第一个问题，我做第二个问题。", "py": "Wǒ tóngyì, nǐ xiān zuò dì yí ge wèntí, wǒ zuò dì èr ge wèntí.", "vi": "Tôi đồng ý, bạn làm vấn đề thứ nhất trước, tôi làm vấn đề thứ hai."},
+{"from": "partner", "han": "好，第三个问题我们一起讨论。", "py": "Hǎo, dì sān ge wèntí wǒmen yìqǐ tǎolùn.", "vi": "Được, vấn đề thứ ba chúng mình cùng thảo luận."},
+{"from": "you", "han": "归根到底，项目做好最重要，不管在哪儿做。", "py": "Guī gēn dào dǐ, xiàngmù zuò hǎo zuì zhòngyào, bùguǎn zài nǎr zuò.", "vi": "Rốt cuộc, làm tốt dự án là quan trọng nhất, dù làm ở đâu."},
+{"from": "partner", "han": "对，后天上午我们一起交项目。", "py": "Duì, hòutiān shàngwǔ wǒmen yìqǐ jiāo xiàngmù.", "vi": "Đúng, sáng ngày kia chúng mình cùng nộp dự án."}
+],
+"chunks": ["我们的项目应该在网上做，还是在学校做？ (Wǒmen de xiàngmù yīnggāi zài wǎngshang zuò, háishi zài xuéxiào zuò?) — Dự án nên làm trên mạng hay ở trường?", "与其一直讨论，不如先在网上做。 (Yǔqí yìzhí tǎolùn, bùrú xiān zài wǎngshang zuò.) — Thay vì thảo luận mãi, chi bằng làm trên mạng trước.", "归根到底，项目做好最重要。 (Guī gēn dào dǐ, xiàngmù zuò hǎo zuì zhòngyào.) — Rốt cuộc, làm tốt dự án là quan trọng nhất."],
+"tip": RO_TIP, "note": roNote(6)
+},
+{
+"id": "p3-s6-ro-tro", "stage": 6, "title": "Tư vấn cho bạn mới thuê trọ ở Hà Nội", "setting": "Hà Nội, tư vấn thuê trọ",
+"you": "Bạn mới tới Hà Nội", "partner": "Bạn đã ở Hà Nội lâu",
+"goal": "Hỏi kinh nghiệm thuê trọ: giá, vị trí, hợp đồng, ở chung.",
+"turns": [
+{"from": "you", "han": "我刚来河内，想租一个房间，你有什么建议？", "py": "Wǒ gāng lái Hénèi, xiǎng zū yí ge fángjiān, nǐ yǒu shénme jiànyì?", "vi": "Tôi mới tới Hà Nội, muốn thuê một phòng, bạn có gợi ý gì?"},
+{"from": "partner", "han": "对你来说，住在学校附近最方便。", "py": "Duì nǐ lái shuō, zhù zài xuéxiào fùjìn zuì fāngbiàn.", "vi": "Đối với bạn, sống gần trường là tiện nhất."},
+{"from": "you", "han": "房租一个月大概多少钱？", "py": "Fángzū yí ge yuè dàgài duōshao qián?", "vi": "Tiền thuê một tháng khoảng bao nhiêu?"},
+{"from": "partner", "han": "大概两千到三千块，合租可以省钱。", "py": "Dàgài liǎng qiān dào sān qiān kuài, hézū kěyǐ shěng qián.", "vi": "Khoảng 2000 tới 3000 tệ, thuê chung có thể tiết kiệm tiền."},
+{"from": "you", "han": "签合同的时候要注意什么？", "py": "Qiān hétong de shíhou yào zhùyì shénme?", "vi": "Khi ký hợp đồng phải chú ý gì?"},
+{"from": "partner", "han": "要注意房租、水电费和住的时间，都要写清楚。", "py": "Yào zhùyì fángzū, shuǐdiànfèi hé zhù de shíjiān, dōu yào xiě qīngchu.", "vi": "Phải chú ý tiền thuê, tiền nước điện và thời gian ở, đều phải viết rõ."},
+{"from": "you", "han": "归根到底，安全和方便最重要，对吗？", "py": "Guī gēn dào dǐ, ānquán hé fāngbiàn zuì zhòngyào, duì ma?", "vi": "Rốt cuộc, an toàn và tiện lợi là quan trọng nhất, đúng không?"},
+{"from": "partner", "han": "对，看清楚再签合同。", "py": "Duì, kàn qīngchu zài qiān hétong.", "vi": "Đúng, xem rõ rồi hãy ký hợp đồng."}
+],
+"chunks": ["你有什么建议？ (Nǐ yǒu shénme jiànyì?) — Bạn có gợi ý gì?", "对你来说，住在学校附近最方便。 (Duì nǐ lái shuō, zhù zài xuéxiào fùjìn zuì fāngbiàn.) — Đối với bạn, sống gần trường là tiện nhất.", "看清楚再签合同。 (Kàn qīngchu zài qiān hétong.) — Xem rõ rồi hãy ký hợp đồng."],
+"tip": RO_TIP, "note": roNote(6)
+}
+]);
+
+ZH_WRITE.push.apply(ZH_WRITE, [
+{
+"id": "p3-s2-w-cho", "stage": 2, "title": "Sắp xếp: Hôm nay mẹ đi chợ mua rau", "kind": "order",
+"prompt": "Sắp xếp các từ thành câu đúng: hôm nay mẹ đi chợ mua rau xanh.",
+"words": ["今天", "妈妈", "去", "市场", "买青菜"],
+"why": "Câu đúng: 今天妈妈去市场买青菜。(Jīntiān māma qù shìchǎng mǎi qīngcài.) — Hôm nay mẹ đi chợ mua rau xanh. Trật tự đúng: thời gian 今天 → chủ ngữ 妈妈 → động từ 去 → nơi chốn 市场 → việc 买青菜.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); câu và từ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "p3-s2-w-hocline", "stage": 2, "title": "Điền từ: Học online", "kind": "fill",
+"prompt": "Chọn từ đúng điền vào chỗ trống trong các câu về học online.",
+"questions": [
+{"q": "我在家里___。(Wǒ zài jiā lǐ ___ . — Tôi học online ở nhà.)", "o": ["上网课", "去学校", "买菜", "看电视"], "a": 0, "why": "上网课 là học online; 在家里上网课 là học online ở nhà."},
+{"q": "老师在___里讲课。(Lǎoshī zài ___ lǐ jiǎngkè. — Cô giáo giảng bài trên máy tính.)", "o": ["电脑", "市场", "学校门口", "公共汽车"], "a": 0, "why": "电脑 là máy tính."},
+{"q": "网络不好的时候，我听___。(Wǎngluò bù hǎo de shíhou, wǒ tīng ___. — Khi mạng không tốt, tôi nghe không rõ.)", "o": ["不清楚", "很清楚", "很快", "很好"], "a": 0, "why": "听不清楚 là nghe không rõ."}
+],
+"why": "Ba câu đều về buổi học online ở nhà: học online (上网课), giảng trên máy tính (电脑), mạng xấu thì nghe không rõ (听不清楚).",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK2 (hệ 6 cấp cũ); câu và đáp án tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "p3-s3-w-yibian", "stage": 3, "title": "Sắp xếp: Vừa học online vừa ghi chép", "kind": "order",
+"prompt": "Sắp xếp các từ thành câu đúng: tôi vừa học online vừa ghi chép.",
+"words": ["我", "一边", "上网课", "一边", "记笔记"],
+"why": "Câu đúng: 我一边上网课，一边记笔记。(Wǒ yìbiān shàng wǎngkè, yìbiān jì bǐjì.) — Tôi vừa học online vừa ghi chép. Trật tự đúng: chủ ngữ 我 → 一边 + việc 1 上网课 → 一边 + việc 2 记笔记.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); câu và từ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "p3-s3-w-xianzai", "stage": 3, "title": "Sắp xếp: Đi chợ trước, rồi về nhà nấu cơm", "kind": "order",
+"prompt": "Sắp xếp các từ thành câu đúng: tôi đi chợ trước, rồi về nhà nấu cơm.",
+"words": ["我", "先", "去市场", "再", "回家做饭"],
+"why": "Câu đúng: 我先去市场，再回家做饭。(Wǒ xiān qù shìchǎng, zài huí jiā zuò fàn.) — Tôi đi chợ trước, rồi về nhà nấu cơm. Trật tự đúng: chủ ngữ 我 → 先 + việc trước 去市场 → 再 + việc sau 回家做饭.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); câu và từ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "p3-s3-w-cho", "stage": 3, "title": "Điền từ: Đi chợ", "kind": "fill",
+"prompt": "Chọn từ đúng điền vào chỗ trống trong các câu về đi chợ.",
+"questions": [
+{"q": "这个青菜多少钱___？(Zhège qīngcài duōshao qián ___? — Rau này bao nhiêu tiền một cân?)", "o": ["一斤", "一个", "一本", "一张"], "a": 0, "why": "一斤 là một cân."},
+{"q": "一共___块钱。(Yígòng ___ kuài qián. — Tổng cộng 18 tệ.)", "o": ["十八", "八十", "八", "十"], "a": 0, "why": "十八 là 18."},
+{"q": "找你___块钱。(Zhǎo nǐ ___ kuài qián. — Trả lại bạn 2 tệ.)", "o": ["两", "十", "二十", "十八"], "a": 0, "why": "两块钱 là 2 tệ."}
+],
+"why": "Ba câu đều về mua bán ở chợ: giá theo cân (一斤), tổng tiền 18 tệ (十八), tiền trả lại 2 tệ (两块钱).",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); câu và đáp án tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "p3-s3-w-que", "stage": 3, "title": "Viết: Kể về quê nhà", "kind": "free",
+"prompt": "Viết một đoạn ngắn 4–5 câu kể về quê nhà của bạn: quê ở đâu, trước làng/sau làng có gì, ông bà làm gì, bạn về quê khi nào, cảm thấy thế nào.",
+"model": "我的家乡在越南北部的一个村子里。村子前面有一条小河，后面有很多田地。爷爷奶奶住在村子里，他们种青菜，也养鸡。每年夏天，我回老家看爷爷奶奶。我觉得家乡很好，我很喜欢家乡。",
+"modelPy": "Wǒ de jiāxiāng zài Yuènán běibù de yí ge cūnzi lǐ. Cūnzi qiánmiàn yǒu yì tiáo xiǎo hé, hòumiàn yǒu hěn duō tiándì. Yéye nǎinai zhù zài cūnzi lǐ, tāmen zhòng qīngcài, yě yǎng jī. Měi nián xiàtiān, wǒ huí lǎojiā kàn yéye nǎinai. Wǒ juéde jiāxiāng hěn hǎo, wǒ hěn xǐhuan jiāxiāng.",
+"modelVi": "Quê tôi ở một làng thuộc miền Bắc Việt Nam. Trước làng có một con sông nhỏ, sau làng có nhiều ruộng. Ông bà sống ở làng, ông bà trồng rau xanh, cũng nuôi gà. Mỗi năm mùa hè, tôi về quê thăm ông bà. Tôi thấy quê nhà rất tốt, tôi rất thích quê nhà.",
+"analysis": "Bài mẫu kể theo thứ tự: quê ở đâu → trước/sau làng có gì → ông bà làm gì → khi nào về quê → cảm nghĩ ở câu cuối.",
+"phrases": ["我的家乡在…… (Wǒ de jiāxiāng zài……) — Quê của tôi ở……", "村子前面有…… (Cūnzi qiánmiàn yǒu……) — Trước làng có……", "我觉得家乡很好。 (Wǒ juéde jiāxiāng hěn hǎo.) — Tôi thấy quê nhà rất tốt."],
+"why": "Bài mẫu dùng đủ 5 ý trong đề: vị trí quê → cảnh trước/sau làng → việc của ông bà → mùa hè về quê → cảm nghĩ. Viết đủ 5 ý, mỗi ý một câu ngắn là đạt yêu cầu đối chiếu.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); đề và bài mẫu tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Phần này chỉ đối chiếu bài mẫu, chưa có AI chấm tiếng Trung — AI chấm đang chờ nâng cấp, không có điểm, không tính đạt cũng không tính chưa đạt."
+},
+{
+"id": "p3-s4-w-duilaishuo", "stage": 4, "title": "Sắp xếp: Đối với tôi, sống ở Hà Nội rất tiện", "kind": "order",
+"prompt": "Sắp xếp các từ thành câu đúng: đối với tôi, sống ở Hà Nội rất tiện.",
+"words": ["对", "我", "来说", "住在河内", "很方便"],
+"why": "Câu đúng: 对我来说，住在河内很方便。(Duì wǒ lái shuō, zhù zài Hénèi hěn fāngbiàn.) — Đối với tôi, sống ở Hà Nội rất tiện. Trật tự đúng: 对 + người 我 + 来说 → nhận xét 住在河内很方便.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4 (hệ 6 cấp cũ); câu và từ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "p3-s4-w-tro", "stage": 4, "title": "Điền từ: Thuê trọ", "kind": "fill",
+"prompt": "Chọn từ đúng điền vào chỗ trống trong các câu về thuê trọ.",
+"questions": [
+{"q": "房间离学校___。(Fángjiān lí xuéxiào ___. — Phòng không xa trường.)", "o": ["不远", "很远", "很大", "很小"], "a": 0, "why": "不远 là không xa."},
+{"q": "每个月一起付___和水电费。(Měi ge yuè yìqǐ fù ___ hé shuǐdiànfèi. — Mỗi tháng cùng trả tiền thuê phòng và tiền nước điện.)", "o": ["房租", "作业", "衣服", "水果"], "a": 0, "why": "房租 là tiền thuê phòng."},
+{"q": "住进来以前，和房东签一个___。(Zhù jìnlái yǐqián, hé fángdōng qiān yí ge ___. — Trước khi dọn vào ở, ký một hợp đồng với chủ nhà.)", "o": ["合同", "课文", "作业", "问题"], "a": 0, "why": "合同 là hợp đồng."}
+],
+"why": "Ba câu đều về thuê trọ: phòng không xa trường (不远), tiền thuê phòng (房租), hợp đồng với chủ nhà (合同).",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK4 (hệ 6 cấp cũ); câu và đáp án tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "p3-s5-w-yuqi", "stage": 5, "title": "Sắp xếp: Thay vì ở nhà chờ, chi bằng đi chợ xem thử", "kind": "order",
+"prompt": "Sắp xếp các từ thành câu đúng: thay vì ở nhà chờ, chi bằng đi chợ xem thử.",
+"words": ["与其", "在家等", "不如", "去市场看看"],
+"why": "Câu đúng: 与其在家等，不如去市场看看。(Yǔqí zài jiā děng, bùrú qù shìchǎng kànkan.) — Thay vì ở nhà chờ, chi bằng đi chợ xem thử. Trật tự đúng: 与其 + phương án bỏ 在家等 → 不如 + phương án chọn 去市场看看.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK5 (hệ 6 cấp cũ); câu và từ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "p3-s5-w-hocline", "stage": 5, "title": "Viết: Ý kiến của bạn về học online", "kind": "free",
+"prompt": "Viết một đoạn ngắn 5–6 câu nêu ý kiến của bạn: học online có tốt không, ưu điểm là gì, khuyết điểm là gì, kết luận của bạn là gì.",
+"model": "我觉得上网课很方便。在家里就能上课，还可以看很多次。但是，在家里上课容易不认真，还想玩手机。所以，学生要自己安排时间，认真听课。与其抱怨，不如想办法学好。我觉得两种课都有优点和缺点。",
+"modelPy": "Wǒ juéde shàng wǎngkè hěn fāngbiàn. Zài jiā lǐ jiù néng shàngkè, hái kěyǐ kàn hěn duō cì. Dànshì, zài jiā lǐ shàngkè róngyì bú rènzhēn, hái xiǎng wán shǒujī. Suǒyǐ, xuésheng yào zìjǐ ānpái shíjiān, rènzhēn tīngkè. Yǔqí bàoyuàn, bùrú xiǎng bànfǎ xué hǎo. Wǒ juéde liǎng zhǒng kè dōu yǒu yōudiǎn hé quēdiǎn.",
+"modelVi": "Tôi thấy học online rất tiện. Ở nhà là có thể học, còn có thể xem nhiều lần. Nhưng ở nhà học dễ không nghiêm túc, còn muốn chơi điện thoại. Vì vậy, học sinh phải tự sắp xếp thời gian, nghe giảng nghiêm túc. Thay vì than phiền, chi bằng nghĩ cách học tốt. Tôi thấy hai loại lớp học đều có ưu điểm và khuyết điểm.",
+"analysis": "Bài mẫu nêu ý kiến theo thứ tự: mở đầu ý kiến → ưu điểm → khuyết điểm → cách khắc phục (dùng 与其…不如…) → kết luận hai mặt.",
+"phrases": ["我觉得…… (Wǒ juéde……) — Tôi thấy……", "在家里就能上课。 (Zài jiā lǐ jiù néng shàngkè.) — Ở nhà là có thể học.", "两种课都有优点和缺点。 (Liǎng zhǒng kè dōu yǒu yōudiǎn hé quēdiǎn.) — Hai loại lớp học đều có ưu điểm và khuyết điểm."],
+"why": "Bài mẫu dùng đủ 4 ý trong đề: ý kiến mở đầu → ưu điểm → khuyết điểm → kết luận hai mặt, kèm một câu 与其…不如… để nêu cách khắc phục.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK5 (hệ 6 cấp cũ); đề và bài mẫu tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Phần này chỉ đối chiếu bài mẫu, chưa có AI chấm tiếng Trung — AI chấm đang chờ nâng cấp, không có điểm, không tính đạt cũng không tính chưa đạt."
+},
+{
+"id": "p3-s6-w-guigen", "stage": 6, "title": "Sắp xếp: Rốt cuộc, thời tiết chúng ta không thể thay đổi", "kind": "order",
+"prompt": "Sắp xếp các từ thành câu đúng: rốt cuộc, thời tiết chúng ta không thể thay đổi.",
+"words": ["归根到底", "天气", "我们", "不能改变"],
+"why": "Câu đúng: 归根到底，天气我们不能改变。(Guī gēn dào dǐ, tiānqì wǒmen bù néng gǎibiàn.) — Rốt cuộc, thời tiết chúng ta không thể thay đổi. Trật tự đúng: 归根到底 mở đầu câu kết luận → chủ đề 天气 → chủ ngữ 我们 → 不能改变.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK6 (hệ 6 cấp cũ); câu và từ tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+},
+{
+"id": "p3-s6-w-thoitiet", "stage": 6, "title": "Viết: Lập luận về thời tiết thay đổi và sức khỏe", "kind": "free",
+"prompt": "Viết một đoạn ngắn 5–6 câu lập luận: thời tiết thay đổi ảnh hưởng đời sống ra sao, mùa hè và mùa đông khác nhau thế nào, chúng ta nên làm gì, kết luận “rốt cuộc” của bạn là gì.",
+"model": "最近几年，河内的天气变化很大。夏天越来越热，有时候热得让人不想出门。冬天有时候很冷，还下雨，老人和孩子容易感冒。我们要注意保暖，多喝热水，还要多运动。归根到底，天气我们不能改变，但是我们可以改变自己的生活习惯。这样，身体才会更健康。",
+"modelPy": "Zuìjìn jǐ nián, Hénèi de tiānqì biànhuà hěn dà. Xiàtiān yuè lái yuè rè, yǒu shíhou rè de ràng rén bù xiǎng chūmén. Dōngtiān yǒu shíhou hěn lěng, hái xià yǔ, lǎorén hé háizi róngyì gǎnmào. Wǒmen yào zhùyì bǎonuǎn, duō hē rè shuǐ, hái yào duō yùndòng. Guī gēn dào dǐ, tiānqì wǒmen bù néng gǎibiàn, dànshì wǒmen kěyǐ gǎibiàn zìjǐ de shēnghuó xíguàn. Zhèyàng, shēntǐ cái huì gèng jiànkāng.",
+"modelVi": "Mấy năm gần đây, thời tiết Hà Nội thay đổi rất lớn. Mùa hè ngày càng nóng, có lúc nóng tới mức khiến người ta không muốn ra khỏi nhà. Mùa đông có lúc rất lạnh, còn mưa, người già và trẻ em dễ bị cảm. Chúng ta phải chú ý giữ ấm, uống nhiều nước nóng, còn phải vận động nhiều. Rốt cuộc, thời tiết chúng ta không thể thay đổi, nhưng chúng ta có thể thay đổi thói quen sống của mình. Như vậy, cơ thể mới khỏe hơn.",
+"analysis": "Bài mẫu lập luận theo thứ tự: nhận xét chung → mùa hè → mùa đông → nên làm gì → kết luận 归根到底 → hệ quả ở câu cuối.",
+"phrases": ["最近几年，河内的天气变化很大。 (Zuìjìn jǐ nián, Hénèi de tiānqì biànhuà hěn dà.) — Mấy năm gần đây, thời tiết Hà Nội thay đổi rất lớn.", "归根到底，天气我们不能改变。 (Guī gēn dào dǐ, tiānqì wǒmen bù néng gǎibiàn.) — Rốt cuộc, thời tiết chúng ta không thể thay đổi.", "这样，身体才会更健康。 (Zhèyàng, shēntǐ cái huì gèng jiànkāng.) — Như vậy, cơ thể mới khỏe hơn."],
+"why": "Bài mẫu dùng đủ 4 ý trong đề: ảnh hưởng chung → hè/đông đối chiếu → nên làm gì → kết luận 归根到底, mỗi ý rõ ràng, không lan man.",
+"note": "Bài tự soạn theo chủ đề đời sống trình độ HSK6 (hệ 6 cấp cũ); đề và bài mẫu tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Phần này chỉ đối chiếu bài mẫu, chưa có AI chấm tiếng Trung — AI chấm đang chờ nâng cấp, không có điểm, không tính đạt cũng không tính chưa đạt."
+}
+]);
+})();
+
+/* ---------- PHA 3 (27/10/2026): PHA 3 — IELTS CHUONG MONG 2,0/2,5/3,0 (moi chuong +34 buoc) ---------- */
+/* PHA 3 BO SUNG (a) — CHUONG IELTS MONG: Band 2.0, Band 2.5, Band 3.0.
+   Tu soan 100%, khong chep sach hay de thi that. Nhan band la uoc luong
+   noi bo cua web theo chuan quoc te, khong phai diem thi that.
+   Chi append vao CONTENT, khong sua file chinh. Moi chuong +34 buoc:
+   tu vung 6 bo x 20 the, ngu phap 3 tram, doc 4 bai, nghe dai 3 bai,
+   noi 4 kich ban, nhap vai 4, viet 3, luyen viet 3, go cau 4 bo x 10 cau. */
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.vocab.push.apply(CONTENT.vocab, [
+    {"topic": "Đồ dùng trong bếp", "theme": "Đồ dùng trong bếp - Kitchen Things", "band": "Band 2.0", "cards": [
+      {"w": "pot", "ipa": "/pɒt/", "vi": "cái nồi", "col": "a big pot", "ex": "Mum cooks rice in a big pot.", "exv": "Mẹ nấu cơm trong một cái nồi lớn."},
+      {"w": "pan", "ipa": "/pæn/", "vi": "cái chảo", "col": "a small pan", "ex": "I fry eggs in a small pan.", "exv": "Tôi chiên trứng trong một cái chảo nhỏ."},
+      {"w": "plate", "ipa": "/pleɪt/", "vi": "cái đĩa", "col": "a clean plate", "ex": "Put the rice on a clean plate.", "exv": "Hãy đặt cơm lên một cái đĩa sạch."},
+      {"w": "bowl", "ipa": "/bəʊl/", "vi": "cái bát", "col": "a bowl of soup", "ex": "I eat a bowl of soup.", "exv": "Tôi ăn một bát canh."},
+      {"w": "spoon", "ipa": "/spuːn/", "vi": "cái thìa", "col": "a small spoon", "ex": "Take a small spoon, please.", "exv": "Hãy lấy một cái thìa nhỏ."},
+      {"w": "fork", "ipa": "/fɔːk/", "vi": "cái nĩa", "col": "a fork and a spoon", "ex": "We need a fork and a spoon.", "exv": "Chúng ta cần một cái nĩa và một cái thìa."},
+      {"w": "knife", "ipa": "/naɪf/", "vi": "con dao", "col": "a sharp knife", "ex": "Mum cuts bread with a sharp knife.", "exv": "Mẹ cắt bánh mì bằng một con dao sắc."},
+      {"w": "cup", "ipa": "/kʌp/", "vi": "cái cốc", "col": "a cup of tea", "ex": "Grandma drinks a cup of tea.", "exv": "Bà uống một cốc trà."},
+      {"w": "glass", "ipa": "/ɡlɑːs/", "vi": "cái ly thủy tinh", "col": "a glass of water", "ex": "I drink a glass of water.", "exv": "Tôi uống một ly nước."},
+      {"w": "chopsticks", "ipa": "/ˈtʃɒpstɪks/", "vi": "đôi đũa", "col": "a pair of chopsticks", "ex": "We eat rice with chopsticks.", "exv": "Chúng ta ăn cơm bằng đũa."},
+      {"w": "rice cooker", "ipa": "/ˈraɪs ˌkʊkə(r)/", "vi": "nồi cơm điện", "col": "an electric rice cooker", "ex": "The rice cooker is on the table.", "exv": "Nồi cơm điện ở trên bàn."},
+      {"w": "kettle", "ipa": "/ˈketl/", "vi": "ấm đun nước", "col": "an electric kettle", "ex": "Mum boils water in the kettle.", "exv": "Mẹ đun nước trong ấm."},
+      {"w": "fridge", "ipa": "/frɪdʒ/", "vi": "tủ lạnh", "col": "in the fridge", "ex": "The milk is in the fridge.", "exv": "Sữa ở trong tủ lạnh."},
+      {"w": "stove", "ipa": "/stəʊv/", "vi": "cái bếp", "col": "on the stove", "ex": "The pot is on the stove.", "exv": "Cái nồi ở trên bếp."},
+      {"w": "sink", "ipa": "/sɪŋk/", "vi": "bồn rửa", "col": "in the sink", "ex": "Wash the plates in the sink.", "exv": "Hãy rửa đĩa trong bồn rửa."},
+      {"w": "towel", "ipa": "/ˈtaʊəl/", "vi": "khăn lau", "col": "a clean towel", "ex": "Dry your hands with a towel.", "exv": "Hãy lau tay bằng khăn."},
+      {"w": "soap", "ipa": "/səʊp/", "vi": "xà phòng", "col": "a bar of soap", "ex": "We wash our hands with soap.", "exv": "Chúng ta rửa tay bằng xà phòng."},
+      {"w": "salt", "ipa": "/sɔːlt/", "vi": "muối", "col": "a little salt", "ex": "Add a little salt to the soup.", "exv": "Hãy cho một ít muối vào canh."},
+      {"w": "sugar", "ipa": "/ˈʃʊɡə(r)/", "vi": "đường", "col": "a spoon of sugar", "ex": "I put a spoon of sugar in my tea.", "exv": "Tôi cho một thìa đường vào trà."},
+      {"w": "oil", "ipa": "/ɔɪl/", "vi": "dầu ăn", "col": "cooking oil", "ex": "Mum pours cooking oil into the pan.", "exv": "Mẹ đổ dầu ăn vào chảo."}
+    ]},
+    {"topic": "Buổi sáng ở nhà", "theme": "Buổi sáng ở nhà - Morning at Home", "band": "Band 2.0", "cards": [
+      {"w": "wake", "ipa": "/weɪk/", "vi": "thức dậy", "col": "wake up early", "ex": "I wake up early every day.", "exv": "Tôi thức dậy sớm mỗi ngày."},
+      {"w": "wash", "ipa": "/wɒʃ/", "vi": "rửa", "col": "wash your face", "ex": "I wash my face in the morning.", "exv": "Tôi rửa mặt vào buổi sáng."},
+      {"w": "brush", "ipa": "/brʌʃ/", "vi": "chải, đánh", "col": "brush your teeth", "ex": "Brush your teeth after breakfast.", "exv": "Hãy đánh răng sau bữa sáng."},
+      {"w": "breakfast", "ipa": "/ˈbrekfəst/", "vi": "bữa sáng", "col": "eat breakfast", "ex": "We eat breakfast at six.", "exv": "Chúng ta ăn sáng lúc sáu giờ."},
+      {"w": "bread", "ipa": "/bred/", "vi": "bánh mì", "col": "a loaf of bread", "ex": "I eat bread for breakfast.", "exv": "Tôi ăn bánh mì vào bữa sáng."},
+      {"w": "egg", "ipa": "/eɡ/", "vi": "quả trứng", "col": "a boiled egg", "ex": "Mum gives me a boiled egg.", "exv": "Mẹ cho tôi một quả trứng luộc."},
+      {"w": "milk", "ipa": "/mɪlk/", "vi": "sữa", "col": "a glass of milk", "ex": "I drink a glass of milk.", "exv": "Tôi uống một ly sữa."},
+      {"w": "banana", "ipa": "/bəˈnɑːnə/", "vi": "quả chuối", "col": "a ripe banana", "ex": "I eat a ripe banana.", "exv": "Tôi ăn một quả chuối chín."},
+      {"w": "shirt", "ipa": "/ʃɜːt/", "vi": "áo sơ mi", "col": "a white shirt", "ex": "I wear a white shirt.", "exv": "Tôi mặc một chiếc áo sơ mi trắng."},
+      {"w": "trousers", "ipa": "/ˈtraʊzəz/", "vi": "quần dài", "col": "a pair of trousers", "ex": "My trousers are blue.", "exv": "Quần dài của tôi màu xanh dương."},
+      {"w": "shoes", "ipa": "/ʃuːz/", "vi": "giày", "col": "a pair of shoes", "ex": "Put on your shoes, please.", "exv": "Hãy mang giày vào."},
+      {"w": "socks", "ipa": "/sɒks/", "vi": "tất", "col": "a pair of socks", "ex": "My socks are white.", "exv": "Tất của tôi màu trắng."},
+      {"w": "schoolbag", "ipa": "/ˈskuːlbæɡ/", "vi": "cặp sách", "col": "my schoolbag", "ex": "My books are in my schoolbag.", "exv": "Sách của tôi ở trong cặp sách."},
+      {"w": "book", "ipa": "/bʊk/", "vi": "quyển sách", "col": "a new book", "ex": "I have a new book.", "exv": "Tôi có một quyển sách mới."},
+      {"w": "pen", "ipa": "/pen/", "vi": "cái bút", "col": "a blue pen", "ex": "I write with a blue pen.", "exv": "Tôi viết bằng một cái bút xanh."},
+      {"w": "bottle", "ipa": "/ˈbɒtl/", "vi": "cái chai", "col": "a water bottle", "ex": "I take a water bottle to school.", "exv": "Tôi mang một chai nước đến trường."},
+      {"w": "bus", "ipa": "/bʌs/", "vi": "xe buýt", "col": "by bus", "ex": "I go to school by bus.", "exv": "Tôi đi học bằng xe buýt."},
+      {"w": "leave", "ipa": "/liːv/", "vi": "rời khỏi", "col": "leave home", "ex": "I leave home at half past six.", "exv": "Tôi rời khỏi nhà lúc sáu giờ rưỡi."},
+      {"w": "hurry", "ipa": "/ˈhʌri/", "vi": "vội", "col": "hurry up", "ex": "Hurry up, or we miss the bus.", "exv": "Nhanh lên, không chúng ta lỡ xe buýt."},
+      {"w": "ready", "ipa": "/ˈredi/", "vi": "sẵn sàng", "col": "be ready", "ex": "I am ready for school.", "exv": "Tôi đã sẵn sàng đi học."}
+    ]},
+    {"topic": "Bạn bè và thầy cô", "theme": "Bạn bè và thầy cô - Friends and Teachers", "band": "Band 2.0", "cards": [
+      {"w": "friend", "ipa": "/frend/", "vi": "bạn", "col": "a good friend", "ex": "Lan is my good friend.", "exv": "Lan là bạn tốt của tôi."},
+      {"w": "teacher", "ipa": "/ˈtiːtʃə(r)/", "vi": "thầy cô giáo", "col": "our teacher", "ex": "Our teacher is very kind.", "exv": "Cô giáo của chúng tôi rất tốt bụng."},
+      {"w": "classmate", "ipa": "/ˈklɑːsmeɪt/", "vi": "bạn cùng lớp", "col": "my classmate", "ex": "Nam is my classmate.", "exv": "Nam là bạn cùng lớp của tôi."},
+      {"w": "kind", "ipa": "/kaɪnd/", "vi": "tốt bụng", "col": "a kind teacher", "ex": "She is a kind teacher.", "exv": "Cô ấy là một cô giáo tốt bụng."},
+      {"w": "helpful", "ipa": "/ˈhelpfl/", "vi": "hay giúp đỡ", "col": "a helpful friend", "ex": "He is a helpful friend.", "exv": "Anh ấy là một người bạn hay giúp đỡ."},
+      {"w": "funny", "ipa": "/ˈfʌni/", "vi": "vui tính", "col": "a funny story", "ex": "He tells a funny story.", "exv": "Anh ấy kể một câu chuyện vui."},
+      {"w": "tall", "ipa": "/tɔːl/", "vi": "cao", "col": "a tall boy", "ex": "Minh is a tall boy.", "exv": "Minh là một cậu bé cao."},
+      {"w": "short", "ipa": "/ʃɔːt/", "vi": "thấp", "col": "a short girl", "ex": "Mai is a short girl.", "exv": "Mai là một cô bé thấp."},
+      {"w": "young", "ipa": "/jʌŋ/", "vi": "trẻ", "col": "a young teacher", "ex": "Our teacher is young.", "exv": "Cô giáo của chúng tôi còn trẻ."},
+      {"w": "old", "ipa": "/əʊld/", "vi": "già, cũ", "col": "an old man", "ex": "My grandpa is an old man.", "exv": "Ông tôi là một ông già."},
+      {"w": "smile", "ipa": "/smaɪl/", "vi": "cười, nụ cười", "col": "a big smile", "ex": "She has a big smile.", "exv": "Cô ấy có một nụ cười tươi."},
+      {"w": "help", "ipa": "/help/", "vi": "giúp đỡ", "col": "help a friend", "ex": "I help my friend with homework.", "exv": "Tôi giúp bạn làm bài tập."},
+      {"w": "play", "ipa": "/pleɪ/", "vi": "chơi", "col": "play together", "ex": "We play together at break.", "exv": "Chúng ta chơi cùng nhau giờ ra chơi."},
+      {"w": "study", "ipa": "/ˈstʌdi/", "vi": "học", "col": "study English", "ex": "We study English every day.", "exv": "Chúng ta học tiếng Anh mỗi ngày."},
+      {"w": "together", "ipa": "/təˈɡeðə(r)/", "vi": "cùng nhau", "col": "play together", "ex": "We walk home together.", "exv": "Chúng ta cùng nhau đi bộ về nhà."},
+      {"w": "lunch", "ipa": "/lʌntʃ/", "vi": "bữa trưa", "col": "eat lunch", "ex": "We eat lunch at school.", "exv": "Chúng ta ăn trưa ở trường."},
+      {"w": "break", "ipa": "/breɪk/", "vi": "giờ ra chơi", "col": "at break", "ex": "We play football at break.", "exv": "Chúng ta chơi bóng đá giờ ra chơi."},
+      {"w": "game", "ipa": "/ɡeɪm/", "vi": "trò chơi", "col": "a fun game", "ex": "This is a fun game.", "exv": "Đây là một trò chơi vui."},
+      {"w": "sing", "ipa": "/sɪŋ/", "vi": "hát", "col": "sing a song", "ex": "We sing a song in class.", "exv": "Chúng ta hát một bài hát trong lớp."},
+      {"w": "draw", "ipa": "/drɔː/", "vi": "vẽ", "col": "draw a picture", "ex": "I draw a picture of my family.", "exv": "Tôi vẽ một bức tranh về gia đình tôi."}
+    ]},
+    {"topic": "Quần áo bốn mùa", "theme": "Quần áo bốn mùa - Clothes for Four Seasons", "band": "Band 2.0", "cards": [
+      {"w": "T-shirt", "ipa": "/ˈtiː ʃɜːt/", "vi": "áo phông", "col": "a red T-shirt", "ex": "I wear a red T-shirt.", "exv": "Tôi mặc một chiếc áo phông đỏ."},
+      {"w": "dress", "ipa": "/dres/", "vi": "váy liền", "col": "a pink dress", "ex": "Mai wears a pink dress.", "exv": "Mai mặc một chiếc váy liền màu hồng."},
+      {"w": "skirt", "ipa": "/skɜːt/", "vi": "váy", "col": "a blue skirt", "ex": "Her skirt is blue.", "exv": "Váy của cô ấy màu xanh dương."},
+      {"w": "jacket", "ipa": "/ˈdʒækɪt/", "vi": "áo khoác", "col": "a warm jacket", "ex": "Wear a warm jacket.", "exv": "Hãy mặc một chiếc áo khoác ấm."},
+      {"w": "coat", "ipa": "/kəʊt/", "vi": "áo choàng dài", "col": "a long coat", "ex": "Grandma wears a long coat.", "exv": "Bà mặc một chiếc áo choàng dài."},
+      {"w": "hat", "ipa": "/hæt/", "vi": "mũ", "col": "a big hat", "ex": "I wear a big hat in the sun.", "exv": "Tôi đội một chiếc mũ lớn khi trời nắng."},
+      {"w": "cap", "ipa": "/kæp/", "vi": "mũ lưỡi trai", "col": "a red cap", "ex": "Nam wears a red cap.", "exv": "Nam đội một chiếc mũ lưỡi trai đỏ."},
+      {"w": "scarf", "ipa": "/skɑːf/", "vi": "khăn quàng", "col": "a soft scarf", "ex": "I wear a soft scarf in winter.", "exv": "Tôi quàng một chiếc khăn mềm vào mùa đông."},
+      {"w": "gloves", "ipa": "/ɡlʌvz/", "vi": "găng tay", "col": "a pair of gloves", "ex": "My gloves are warm.", "exv": "Găng tay của tôi rất ấm."},
+      {"w": "raincoat", "ipa": "/ˈreɪnkəʊt/", "vi": "áo mưa", "col": "a yellow raincoat", "ex": "Take your raincoat today.", "exv": "Hôm nay hãy mang áo mưa."},
+      {"w": "umbrella", "ipa": "/ʌmˈbrelə/", "vi": "ô, dù", "col": "a small umbrella", "ex": "I have a small umbrella.", "exv": "Tôi có một chiếc ô nhỏ."},
+      {"w": "sandals", "ipa": "/ˈsændlz/", "vi": "dép xăng-đan", "col": "a pair of sandals", "ex": "I wear sandals in summer.", "exv": "Tôi đi dép xăng-đan vào mùa hè."},
+      {"w": "boots", "ipa": "/buːts/", "vi": "ủng, giày cao cổ", "col": "a pair of boots", "ex": "He wears boots in the rain.", "exv": "Anh ấy đi ủng khi trời mưa."},
+      {"w": "jeans", "ipa": "/dʒiːnz/", "vi": "quần bò", "col": "a pair of jeans", "ex": "My jeans are new.", "exv": "Quần bò của tôi còn mới."},
+      {"w": "shorts", "ipa": "/ʃɔːts/", "vi": "quần soóc", "col": "a pair of shorts", "ex": "I wear shorts in summer.", "exv": "Tôi mặc quần soóc vào mùa hè."},
+      {"w": "sweater", "ipa": "/ˈswetə(r)/", "vi": "áo len", "col": "a thick sweater", "ex": "This sweater is thick.", "exv": "Chiếc áo len này dày."},
+      {"w": "pocket", "ipa": "/ˈpɒkɪt/", "vi": "túi áo", "col": "in my pocket", "ex": "My pen is in my pocket.", "exv": "Bút của tôi ở trong túi áo."},
+      {"w": "wear", "ipa": "/weə(r)/", "vi": "mặc, đội, đi", "col": "wear a hat", "ex": "I wear a hat every day.", "exv": "Tôi đội mũ mỗi ngày."},
+      {"w": "put on", "ipa": "/pʊt ɒn/", "vi": "mặc vào", "col": "put on your coat", "ex": "Put on your coat. It is cold.", "exv": "Hãy mặc áo khoác vào. Trời lạnh."},
+      {"w": "change", "ipa": "/tʃeɪndʒ/", "vi": "thay (quần áo)", "col": "change clothes", "ex": "I change clothes after school.", "exv": "Tôi thay quần áo sau giờ học."}
+    ]},
+    {"topic": "Đi chợ mua rau quả", "theme": "Đi chợ mua rau quả - At the Market", "band": "Band 2.0", "cards": [
+      {"w": "market", "ipa": "/ˈmɑːkɪt/", "vi": "chợ", "col": "go to the market", "ex": "Mum goes to the market.", "exv": "Mẹ đi chợ."},
+      {"w": "vegetable", "ipa": "/ˈvedʒtəbl/", "vi": "rau", "col": "fresh vegetables", "ex": "We buy fresh vegetables.", "exv": "Chúng ta mua rau tươi."},
+      {"w": "tomato", "ipa": "/təˈmɑːtəʊ/", "vi": "cà chua", "col": "a red tomato", "ex": "This tomato is red.", "exv": "Quả cà chua này màu đỏ."},
+      {"w": "potato", "ipa": "/pəˈteɪtəʊ/", "vi": "khoai tây", "col": "a big potato", "ex": "I peel a big potato.", "exv": "Tôi gọt một củ khoai tây lớn."},
+      {"w": "carrot", "ipa": "/ˈkærət/", "vi": "cà rốt", "col": "a long carrot", "ex": "Rabbits like carrots.", "exv": "Thỏ thích cà rốt."},
+      {"w": "onion", "ipa": "/ˈʌnjən/", "vi": "hành tây", "col": "a white onion", "ex": "Mum cuts an onion.", "exv": "Mẹ cắt một củ hành tây."},
+      {"w": "cabbage", "ipa": "/ˈkæbɪdʒ/", "vi": "bắp cải", "col": "a green cabbage", "ex": "We cook cabbage for lunch.", "exv": "Chúng ta nấu bắp cải cho bữa trưa."},
+      {"w": "cucumber", "ipa": "/ˈkjuːkʌmbə(r)/", "vi": "dưa chuột", "col": "a cool cucumber", "ex": "I eat a cool cucumber.", "exv": "Tôi ăn một quả dưa chuột mát."},
+      {"w": "orange", "ipa": "/ˈɒrɪndʒ/", "vi": "quả cam", "col": "a sweet orange", "ex": "This orange is sweet.", "exv": "Quả cam này ngọt."},
+      {"w": "apple", "ipa": "/ˈæpl/", "vi": "quả táo", "col": "a red apple", "ex": "I eat a red apple.", "exv": "Tôi ăn một quả táo đỏ."},
+      {"w": "mango", "ipa": "/ˈmæŋɡəʊ/", "vi": "quả xoài", "col": "a ripe mango", "ex": "This mango is ripe.", "exv": "Quả xoài này chín."},
+      {"w": "lemon", "ipa": "/ˈlemən/", "vi": "quả chanh", "col": "a sour lemon", "ex": "This lemon is sour.", "exv": "Quả chanh này chua."},
+      {"w": "kilo", "ipa": "/ˈkiːləʊ/", "vi": "ki-lô-gam", "col": "a kilo of rice", "ex": "Mum buys a kilo of rice.", "exv": "Mẹ mua một ki-lô-gam gạo."},
+      {"w": "price", "ipa": "/praɪs/", "vi": "giá", "col": "a good price", "ex": "The price is good.", "exv": "Giá cả hợp lý."},
+      {"w": "cheap", "ipa": "/tʃiːp/", "vi": "rẻ", "col": "very cheap", "ex": "These apples are cheap.", "exv": "Những quả táo này rẻ."},
+      {"w": "expensive", "ipa": "/ɪkˈspensɪv/", "vi": "đắt", "col": "too expensive", "ex": "This fish is too expensive.", "exv": "Con cá này đắt quá."},
+      {"w": "fresh", "ipa": "/freʃ/", "vi": "tươi", "col": "fresh fish", "ex": "The fish is fresh.", "exv": "Cá còn tươi."},
+      {"w": "buy", "ipa": "/baɪ/", "vi": "mua", "col": "buy some fruit", "ex": "We buy some fruit.", "exv": "Chúng ta mua một ít trái cây."},
+      {"w": "sell", "ipa": "/sel/", "vi": "bán", "col": "sell vegetables", "ex": "She sells vegetables.", "exv": "Cô ấy bán rau."},
+      {"w": "bag", "ipa": "/bæɡ/", "vi": "cái túi", "col": "a big bag", "ex": "Put the fruit in a bag.", "exv": "Hãy bỏ trái cây vào túi."}
+    ]},
+    {"topic": "Con vật quanh nhà", "theme": "Con vật quanh nhà - Animals around the House", "band": "Band 2.0", "cards": [
+      {"w": "dog", "ipa": "/dɒɡ/", "vi": "con chó", "col": "a small dog", "ex": "My dog is small.", "exv": "Con chó của tôi nhỏ."},
+      {"w": "cat", "ipa": "/kæt/", "vi": "con mèo", "col": "a white cat", "ex": "The cat is white.", "exv": "Con mèo màu trắng."},
+      {"w": "chicken", "ipa": "/ˈtʃɪkɪn/", "vi": "con gà", "col": "a brown chicken", "ex": "We have a brown chicken.", "exv": "Chúng ta có một con gà nâu."},
+      {"w": "duck", "ipa": "/dʌk/", "vi": "con vịt", "col": "a yellow duck", "ex": "The duck swims in the pond.", "exv": "Con vịt bơi trong ao."},
+      {"w": "pig", "ipa": "/pɪɡ/", "vi": "con lợn", "col": "a fat pig", "ex": "The pig is fat.", "exv": "Con lợn béo."},
+      {"w": "cow", "ipa": "/kaʊ/", "vi": "con bò", "col": "a black cow", "ex": "The cow gives milk.", "exv": "Con bò cho sữa."},
+      {"w": "buffalo", "ipa": "/ˈbʌfələʊ/", "vi": "con trâu", "col": "a strong buffalo", "ex": "The buffalo is strong.", "exv": "Con trâu khỏe."},
+      {"w": "bird", "ipa": "/bɜːd/", "vi": "con chim", "col": "a little bird", "ex": "A little bird sings.", "exv": "Một chú chim nhỏ đang hót."},
+      {"w": "fish", "ipa": "/fɪʃ/", "vi": "con cá", "col": "a red fish", "ex": "I see a red fish.", "exv": "Tôi thấy một con cá đỏ."},
+      {"w": "mouse", "ipa": "/maʊs/", "vi": "con chuột", "col": "a grey mouse", "ex": "A grey mouse runs fast.", "exv": "Một con chuột xám chạy nhanh."},
+      {"w": "frog", "ipa": "/frɒɡ/", "vi": "con ếch", "col": "a green frog", "ex": "The frog jumps high.", "exv": "Con ếch nhảy cao."},
+      {"w": "butterfly", "ipa": "/ˈbʌtəflaɪ/", "vi": "con bướm", "col": "a pretty butterfly", "ex": "A pretty butterfly flies.", "exv": "Một con bướm đẹp đang bay."},
+      {"w": "ant", "ipa": "/ænt/", "vi": "con kiến", "col": "a tiny ant", "ex": "A tiny ant walks.", "exv": "Một con kiến nhỏ đang đi."},
+      {"w": "bee", "ipa": "/biː/", "vi": "con ong", "col": "a busy bee", "ex": "The bee makes honey.", "exv": "Con ong làm mật."},
+      {"w": "goat", "ipa": "/ɡəʊt/", "vi": "con dê", "col": "a white goat", "ex": "The goat eats grass.", "exv": "Con dê ăn cỏ."},
+      {"w": "rabbit", "ipa": "/ˈræbɪt/", "vi": "con thỏ", "col": "a soft rabbit", "ex": "The rabbit is soft.", "exv": "Con thỏ mềm mại."},
+      {"w": "horse", "ipa": "/hɔːs/", "vi": "con ngựa", "col": "a fast horse", "ex": "The horse runs fast.", "exv": "Con ngựa chạy nhanh."},
+      {"w": "feather", "ipa": "/ˈfeðə(r)/", "vi": "lông vũ", "col": "a soft feather", "ex": "This feather is soft.", "exv": "Chiếc lông vũ này mềm."},
+      {"w": "tail", "ipa": "/teɪl/", "vi": "cái đuôi", "col": "a long tail", "ex": "The dog has a long tail.", "exv": "Con chó có một cái đuôi dài."},
+      {"w": "wing", "ipa": "/wɪŋ/", "vi": "cái cánh", "col": "a small wing", "ex": "The bird has two wings.", "exv": "Con chim có hai cánh."}
+    ]}
+  ]);
+  CONTENT.grammar.push.apply(CONTENT.grammar, [
+    {"fam": "Động từ và sở thích", "hook": "Muốn nói thích gì, dùng like hoặc love, rồi tới cái mình thích hoặc việc mình thích làm.", "level": "Band 2.0", "name": "like và love + V-ing — nói sở thích",
+     "explain": "Nhìn ví dụ trước nhé. Lan nói: I like apples. Nam nói: I like swimming. Hoa nói: She loves reading. Cả lớp nói: They love playing football. Sau ví dụ là quy tắc. Ta dùng like hoặc love để nói sở thích. Sau like/love, ta dùng danh từ (apples, football) hoặc động từ thêm -ing (swimming, reading). Với he, she và một người, like thành likes, love thành loves.",
+     "examples": ["I like swimming.", "She loves reading books.", "They like playing football."],
+     "tip": "Nhớ: sau like/love, động từ thêm -ing, không dùng dạng nguyên thể.",
+     "model": "I like reading, and I love swimming on Sundays.",
+     "modelVi": "Tôi thích đọc sách, và tôi rất thích bơi vào Chủ nhật.",
+     "quiz": [
+       {"q": "I ___ swimming.", "o": ["like", "likes", "liking", "to like"], "a": 0, "why": "I đi với like, không thêm -s."},
+       {"q": "She ___ reading books.", "o": ["love", "loves", "loving", "to love"], "a": 1, "why": "She đi với loves, thêm -s."},
+       {"q": "They ___ playing football.", "o": ["likes", "like", "loving", "to like"], "a": 1, "why": "They đi với like, không thêm -s."},
+       {"q": "He ___ apples.", "o": ["like", "likes", "liking", "to like"], "a": 1, "why": "He đi với likes, thêm -s."},
+       {"q": "I like ___ in the river.", "o": ["swim", "swimming", "swims", "to swim"], "a": 1, "why": "Sau like, động từ thêm -ing: swimming."},
+       {"q": "She loves ___ songs.", "o": ["sing", "singing", "sings", "to sing"], "a": 1, "why": "Sau loves, động từ thêm -ing: singing."},
+       {"q": "We like ___ together.", "o": ["play", "playing", "plays", "to play"], "a": 1, "why": "Sau like, động từ thêm -ing: playing."},
+       {"q": "My mum ___ cooking.", "o": ["love", "loves", "loving", "to love"], "a": 1, "why": "My mum là một người, số ít, nên đi với loves."}
+     ]},
+    {"fam": "Câu hỏi", "hook": "Muốn hỏi, đặt từ Wh- lên đầu, rồi tới be, rồi tới chủ ngữ.", "level": "Band 2.0", "name": "Câu hỏi Wh- với be — What, Where, Who, When",
+     "explain": "Nhìn ví dụ trước nhé. Hỏi đồ vật: What is this? It is a pen. Hỏi nơi chốn: Where is Lan? She is at home. Hỏi người: Who is he? He is my brother. Hỏi thời gian: When is the lesson? It is at seven. Sau ví dụ là quy tắc. What hỏi cái gì, Where hỏi ở đâu, Who hỏi ai, When hỏi khi nào. Công thức: từ Wh- + am/is/are + chủ ngữ.",
+     "examples": ["What is your name?", "Where is my book?", "Who is that girl?"],
+     "tip": "What hỏi đồ vật, Who hỏi người — đừng đổi hai từ này cho nhau.",
+     "model": "Where is your school? It is near my house.",
+     "modelVi": "Trường của bạn ở đâu? Nó ở gần nhà tôi.",
+     "quiz": [
+       {"q": "___ is your name?", "o": ["What", "Where", "Who", "When"], "a": 0, "why": "Hỏi tên, dùng What."},
+       {"q": "___ is Lan? She is at home.", "o": ["What", "Where", "Who", "When"], "a": 1, "why": "Hỏi nơi chốn, dùng Where."},
+       {"q": "___ is that man? He is my teacher.", "o": ["What", "Where", "Who", "When"], "a": 2, "why": "Hỏi người, dùng Who."},
+       {"q": "___ is the test? It is on Monday.", "o": ["What", "Where", "Who", "When"], "a": 3, "why": "Hỏi thời gian, dùng When."},
+       {"q": "___ is this? It is a pen.", "o": ["What", "Where", "Who", "When"], "a": 0, "why": "Hỏi đồ vật, dùng What."},
+       {"q": "___ are my shoes? They are under the bed.", "o": ["What", "Where", "Who", "When"], "a": 1, "why": "Hỏi nơi chốn, dùng Where."},
+       {"q": "___ is your best friend?", "o": ["What", "Where", "Who", "When"], "a": 2, "why": "Hỏi người, dùng Who."},
+       {"q": "___ is your birthday? It is in May.", "o": ["What", "Where", "Who", "When"], "a": 3, "why": "Hỏi thời gian, dùng When."}
+     ]},
+    {"fam": "Giới từ", "hook": "Muốn nói đồ vật ở đâu, dùng giới từ chỉ chỗ sau be.", "level": "Band 2.0", "name": "Giới từ chỉ chỗ: under, behind, next to, between, in front of",
+     "explain": "Nhìn ví dụ trước nhé. The cat is under the table. The school is behind the park. My house is next to the shop. The book is between the pen and the ruler. The bus stop is in front of the school. Sau ví dụ là quy tắc. under là ở dưới, behind là ở phía sau, next to là ở cạnh, between là ở giữa hai vật, in front of là ở phía trước.",
+     "examples": ["The cat is under the table.", "My house is next to the shop.", "The book is between the pen and the ruler."],
+     "tip": "between dùng khi vật ở giữa hai vật khác.",
+     "model": "My bag is under the desk, next to my chair.",
+     "modelVi": "Cặp của tôi ở dưới bàn, cạnh ghế của tôi.",
+     "quiz": [
+       {"q": "The cat is ___ the table.", "o": ["under", "behind", "next to", "between"], "a": 0, "why": "Mèo ở dưới bàn, dùng under."},
+       {"q": "My house is ___ the shop.", "o": ["under", "behind", "next to", "between"], "a": 2, "why": "Nhà ở cạnh cửa hàng, dùng next to."},
+       {"q": "The school is ___ the park.", "o": ["under", "behind", "next to", "in front of"], "a": 1, "why": "Trường ở phía sau công viên, dùng behind."},
+       {"q": "The book is ___ the pen and the ruler.", "o": ["under", "behind", "next to", "between"], "a": 3, "why": "Sách ở giữa bút và thước, dùng between."},
+       {"q": "The bus stop is ___ the school.", "o": ["under", "behind", "next to", "in front of"], "a": 3, "why": "Bến xe ở phía trước trường, dùng in front of."},
+       {"q": "The dog is ___ the bed.", "o": ["under", "behind", "next to", "between"], "a": 0, "why": "Chó ở dưới gầm giường, dùng under."},
+       {"q": "Lan sits ___ Mai in class.", "o": ["under", "behind", "next to", "between"], "a": 2, "why": "Lan ngồi cạnh Mai, dùng next to."},
+       {"q": "The garden is ___ the house.", "o": ["under", "between", "in front of", "behind"], "a": 3, "why": "Vườn ở phía sau nhà, dùng behind."}
+     ]}
+  ]);
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    {"topic": "Cuộc sống quanh em", "level": "Band 2.0", "title": "Lan's New Bicycle",
+     "text": "Lan is nine years old. She lives with her family in a small town. Last Sunday was her birthday.\n\nHer parents gave her a new bicycle. It is red, and it has a small bell. Lan was very happy.\n\nIn the morning, Lan rides her bicycle in the park near her house. Her father runs after her and says, \"Slow down, Lan!\"\n\nLan wears a pink helmet. She stops at the big tree and drinks some water. Then she rides again.\n\nIn the afternoon, Lan rides to her friend Mai's house. The two girls ride together in the park. Lan says, \"My new bicycle is the best birthday gift!\"",
+     "questions": [
+       {"type": "MC", "q": "Lan bao nhiêu tuổi?", "o": ["Tám tuổi", "Chín tuổi", "Mười tuổi"], "options": ["Tám tuổi", "Chín tuổi", "Mười tuổi"], "a": 1, "why": "Đoạn 1: Lan chín tuổi."},
+       {"type": "TF", "q": "Xe đạp mới của Lan màu xanh dương.", "o": ["True", "False"], "options": ["True", "False"], "a": 1, "why": "Đoạn 2: xe đạp mới màu đỏ, không phải màu xanh dương."},
+       {"type": "MATCH", "q": "Ai chạy theo sau Lan trong công viên?", "o": ["Mẹ của Lan", "Bố của Lan", "Bạn Mai"], "options": ["Mẹ của Lan", "Bố của Lan", "Bạn Mai"], "a": 1, "why": "Đoạn 3: bố chạy theo sau Lan."},
+       {"type": "COMP", "q": "Lan đội một chiếc mũ bảo hiểm màu hồng: Lan wears a pink ___.", "answer": "helmet", "why": "Đoạn 4: Lan đội mũ bảo hiểm màu hồng."},
+       {"type": "MC", "q": "Buổi chiều, Lan đạp xe tới nhà ai?", "o": ["Nhà bạn Mai", "Nhà cô giáo", "Nhà bà ngoại"], "options": ["Nhà bạn Mai", "Nhà cô giáo", "Nhà bà ngoại"], "a": 0, "why": "Đoạn 5: buổi chiều Lan đạp xe tới nhà bạn Mai."}
+     ],
+     "translation": "Lan chín tuổi, sống cùng gia đình ở một thị trấn nhỏ. Sinh nhật Chủ nhật vừa rồi, bố mẹ tặng Lan một chiếc xe đạp mới màu đỏ có chuông nhỏ. Buổi sáng, Lan đạp xe trong công viên gần nhà, bố chạy theo sau và nhắc đi chậm lại. Lan đội mũ bảo hiểm màu hồng, dừng ở gốc cây lớn uống nước rồi lại đạp tiếp. Buổi chiều, Lan đạp xe tới nhà bạn Mai, hai bạn cùng đạp xe trong công viên. Lan nói xe đạp mới là món quà sinh nhật tuyệt nhất.",
+     "phrases": [{"en": "new bicycle", "vi": "xe đạp mới"}, {"en": "wear a helmet", "vi": "đội mũ bảo hiểm"}, {"en": "slow down", "vi": "đi chậm lại"}, {"en": "ride together", "vi": "cùng nhau đạp xe"}, {"en": "birthday gift", "vi": "quà sinh nhật"}]},
+    {"topic": "Cuộc sống quanh em", "level": "Band 2.0", "title": "Cooking Rice with Grandma",
+     "text": "Every Sunday, Hoa goes to her grandma's house in the village. The house is small, with a big garden.\n\nIn the morning, Grandma says, \"Hoa, help me cook rice.\" Hoa washes the rice in a big bowl. She washes it three times.\n\nGrandma puts the rice in the pot and adds some water. She says, \"Not too much water, or the rice is soft.\"\n\nWhile the rice cooks, Hoa picks vegetables in the garden. She picks tomatoes and green beans.\n\nAt lunch, the family eats rice, fish and vegetables. Hoa says, \"Grandma, your rice is very good!\" Grandma smiles.",
+     "questions": [
+       {"type": "MC", "q": "Hoa vo gạo mấy lần?", "o": ["Hai lần", "Ba lần", "Bốn lần"], "options": ["Hai lần", "Ba lần", "Bốn lần"], "a": 1, "why": "Đoạn 2: Hoa vo gạo ba lần."},
+       {"type": "TF", "q": "Nhà của bà ngoại ở thành phố.", "o": ["True", "False"], "options": ["True", "False"], "a": 1, "why": "Đoạn 1: nhà của bà ở làng quê, không phải thành phố."},
+       {"type": "MATCH", "q": "Hoa hái gì trong vườn?", "o": ["Cà chua và đậu xanh", "Cà rốt và hành tây", "Táo và chuối"], "options": ["Cà chua và đậu xanh", "Cà rốt và hành tây", "Táo và chuối"], "a": 0, "why": "Đoạn 4: Hoa hái cà chua và đậu xanh."},
+       {"type": "COMP", "q": "Bà cho gạo vào trong ___: Grandma puts the rice in the ___.", "answer": "pot", "why": "Đoạn 3: bà cho gạo vào nồi."},
+       {"type": "MC", "q": "Bữa trưa, cả nhà ăn gì?", "o": ["Cơm, cá và rau", "Bánh mì, trứng và sữa", "Mì và gà"], "options": ["Cơm, cá và rau", "Bánh mì, trứng và sữa", "Mì và gà"], "a": 0, "why": "Đoạn 5: bữa trưa cả nhà ăn cơm, cá và rau."}
+     ],
+     "translation": "Chủ nhật nào Hoa cũng về nhà bà ngoại ở làng quê. Ngôi nhà nhỏ, có một khu vườn lớn. Buổi sáng, bà nhờ Hoa giúp nấu cơm. Hoa vo gạo trong một cái bát lớn, vo ba lần. Bà cho gạo vào nồi và thêm một ít nước, dặn không cho quá nhiều nước kẻo cơm nhão. Trong lúc chờ cơm chín, Hoa ra vườn hái cà chua và đậu xanh. Bữa trưa, cả nhà ăn cơm, cá và rau. Hoa khen cơm bà nấu rất ngon, bà mỉm cười.",
+     "phrases": [{"en": "wash the rice", "vi": "vo gạo"}, {"en": "add some water", "vi": "thêm một ít nước"}, {"en": "pick vegetables", "vi": "hái rau"}, {"en": "at lunch", "vi": "vào bữa trưa"}, {"en": "smile", "vi": "mỉm cười"}]},
+    {"topic": "Cuộc sống quanh em", "level": "Band 2.0", "title": "The Lost Key",
+     "text": "Nam is a schoolboy. Every day he goes home at five o'clock and opens the door with his key.\n\nOne afternoon, Nam cannot find his key. He looks in his schoolbag. No key. He looks in his pockets. No key.\n\nNam is sad. He sits on the steps and thinks. \"Where is my key?\" he says.\n\nThen his friend Minh comes. Minh says, \"Look under the big tree! Your key is there.\" Nam runs to the tree.\n\nThe key is under the tree, near his football. Nam is happy. He says, \"Thank you, Minh! Now I can go home.\"",
+     "questions": [
+       {"type": "MC", "q": "Mỗi ngày Nam về nhà lúc mấy giờ?", "o": ["Lúc bốn giờ", "Lúc năm giờ", "Lúc sáu giờ"], "options": ["Lúc bốn giờ", "Lúc năm giờ", "Lúc sáu giờ"], "a": 1, "why": "Đoạn 1: mỗi ngày Nam về nhà lúc năm giờ."},
+       {"type": "TF", "q": "Nam tìm thấy chìa khóa trong cặp sách.", "o": ["True", "False"], "options": ["True", "False"], "a": 1, "why": "Đoạn 2: Nam tìm trong cặp sách nhưng không thấy chìa khóa."},
+       {"type": "MATCH", "q": "Ai giúp Nam tìm chìa khóa?", "o": ["Cô giáo", "Bạn Minh", "Anh trai"], "options": ["Cô giáo", "Bạn Minh", "Anh trai"], "a": 1, "why": "Đoạn 4: bạn Minh chỉ cho Nam chỗ chìa khóa."},
+       {"type": "COMP", "q": "Chìa khóa ở dưới gốc cây lớn: The key is under the big ___.", "answer": "tree", "why": "Đoạn 4 và 5: chìa khóa ở dưới gốc cây lớn."},
+       {"type": "MC", "q": "Cuối cùng chìa khóa ở đâu?", "o": ["Dưới gốc cây, gần quả bóng", "Trong cặp sách", "Trên bậc thềm"], "options": ["Dưới gốc cây, gần quả bóng", "Trong cặp sách", "Trên bậc thềm"], "a": 0, "why": "Đoạn 5: chìa khóa ở dưới gốc cây, gần quả bóng của Nam."}
+     ],
+     "translation": "Nam là một học sinh. Mỗi ngày cậu về nhà lúc năm giờ và mở cửa bằng chìa khóa. Một buổi chiều, Nam không tìm thấy chìa khóa. Cậu tìm trong cặp sách, không thấy. Cậu tìm trong túi áo, cũng không thấy. Nam buồn bã ngồi trên bậc thềm suy nghĩ. Rồi bạn Minh tới, bảo cậu nhìn dưới gốc cây lớn. Nam chạy tới gốc cây và thấy chìa khóa ở đó, gần quả bóng. Nam vui mừng cảm ơn Minh rồi về nhà.",
+     "phrases": [{"en": "cannot find", "vi": "không tìm thấy"}, {"en": "look in", "vi": "nhìn vào trong"}, {"en": "sit on the steps", "vi": "ngồi trên bậc thềm"}, {"en": "thank you", "vi": "cảm ơn"}, {"en": "go home", "vi": "về nhà"}]},
+    {"topic": "Cuộc sống quanh em", "level": "Band 2.0", "title": "A Visit to Grandparents in the Village",
+     "text": "Last summer, Tuan and his sister Linh visited their grandparents in a village. The village is far from their town.\n\nThey went by bus. The bus went past green fields and a long river. Tuan saw buffaloes in the fields.\n\nGrandpa met them at the bus stop. He took them home on his old bicycle. Linh sat behind Grandpa.\n\nIn the village, the children swam in the river and caught small fish. In the evening, they ate sticky rice with Grandma.\n\nTuan says, \"The village is quiet and beautiful. I want to come back next summer!\" Linh agrees.",
+     "questions": [
+       {"type": "MC", "q": "Tuấn và Linh đi về làng bằng phương tiện gì?", "o": ["Xe buýt", "Tàu hỏa", "Ô tô"], "options": ["Xe buýt", "Tàu hỏa", "Ô tô"], "a": 0, "why": "Đoạn 2: hai bạn đi bằng xe buýt."},
+       {"type": "TF", "q": "Ngôi làng ở gần thị trấn của hai bạn.", "o": ["True", "False"], "options": ["True", "False"], "a": 1, "why": "Đoạn 1: ngôi làng ở xa thị trấn của hai bạn."},
+       {"type": "MATCH", "q": "Các bạn nhỏ làm gì ở sông?", "o": ["Bơi và bắt cá nhỏ", "Giặt quần áo", "Chèo thuyền"], "options": ["Bơi và bắt cá nhỏ", "Giặt quần áo", "Chèo thuyền"], "a": 0, "why": "Đoạn 4: các bạn bơi ở sông và bắt cá nhỏ."},
+       {"type": "COMP", "q": "Ông chở hai bạn về nhà bằng chiếc xe đạp cũ: on his old ___.", "answer": "bicycle", "why": "Đoạn 3: ông chở hai bạn về nhà bằng xe đạp cũ."},
+       {"type": "MC", "q": "Buổi tối, các bạn ăn gì?", "o": ["Xôi", "Bánh mì và trứng", "Mì"], "options": ["Xôi", "Bánh mì và trứng", "Mì"], "a": 0, "why": "Đoạn 4: buổi tối các bạn ăn xôi với bà."}
+     ],
+     "translation": "Hè năm ngoái, Tuấn và em gái Linh về thăm ông bà ở một ngôi làng xa thị trấn. Hai bạn đi bằng xe buýt, xe đi qua cánh đồng xanh và một dòng sông dài, Tuấn thấy trâu trên đồng. Ông ra bến xe đón hai bạn, chở về nhà bằng chiếc xe đạp cũ, Linh ngồi sau ông. Ở làng, các bạn tắm sông, bắt cá nhỏ, buổi tối ăn xôi với bà. Tuấn nói làng quê yên tĩnh và đẹp, cậu muốn quay lại vào hè tới, Linh đồng ý.",
+     "phrases": [{"en": "far from", "vi": "xa"}, {"en": "go past", "vi": "đi qua"}, {"en": "bus stop", "vi": "bến xe buýt"}, {"en": "catch small fish", "vi": "bắt cá nhỏ"}, {"en": "come back", "vi": "quay lại"}]}
+  ]);
+  CONTENT.listeningPlus.push.apply(CONTENT.listeningPlus, [
+    {"section": "Section 1", "band": "Band 2.0", "topic": "Mua vé xe buýt đi thăm bà",
+     "text": "A: Good morning. I want two bus tickets to Green Village, please. B: Good morning. When do you want to go? A: On Saturday morning, please. B: There is a bus at 7:30 and a bus at 9:00. Which one do you want? A: The 7:30 bus, please. We want to visit my grandma early. B: The 7:30 bus arrives at 10:15. A ticket costs 60000 dong. A: Two tickets, please. That is 120000 dong. B: Here you are. Can you sit near the front? A: Yes, please. We like seats near the front. B: Seats 5 and 6 are free. The bus leaves from stop 4. A: Thank you. Stop 4, at 7:30, seats 5 and 6. B: Yes. Please bring your tickets. The last bus back is at 5:00 in the afternoon. A: Thank you very much. B: You are welcome. Have a nice trip!",
+     "questions": [
+       {"type": "MC", "q": "Which bus does the customer choose?", "o": ["The 7:30 bus", "The 9:00 bus", "The 10:15 bus", "The 5:00 bus"], "a": 0, "why": "Khách chọn chuyến xe 7 giờ 30 vì muốn tới thăm bà sớm."},
+       {"type": "MC", "q": "How much are two tickets?", "o": ["60000 dong", "120000 dong", "100000 dong", "150000 dong"], "a": 1, "why": "Một vé giá 60000 đồng nên hai vé là 120000 đồng."},
+       {"type": "MATCH", "q": "Where does the bus leave from?", "o": ["Stop 2", "Stop 4", "Stop 5"], "a": 1, "why": "Xe khởi hành từ điểm dừng số 4."},
+       {"type": "COMP", "q": "The bus arrives at ___.", "answer": "10:15", "why": "Xe 7 giờ 30 tới nơi lúc 10 giờ 15."},
+       {"type": "TF", "q": "The last bus back is at 5:00 in the afternoon.", "o": ["True", "False"], "a": 0, "why": "Câu này đúng vì nhân viên nói chuyến xe cuối về lúc 5 giờ chiều."}
+     ]},
+    {"section": "Section 1", "band": "Band 2.0", "topic": "Hỏi giờ mở cửa nhà sách",
+     "text": "A: Excuse me, what time does the bookshop open? B: It opens at 8 o'clock in the morning, from Monday to Saturday. A: And what time does it close? B: It closes at 9 o'clock in the evening. A: Is it open on Sunday? B: Yes, on Sunday it opens at 9 o'clock and closes at 6 o'clock. A: Thank you. I want to buy notebooks and pens for my children. B: Notebooks are on the first floor, and pens are on the second floor. A: How much is a notebook? B: A notebook costs 15000 dong. A: Good. Do you sell story books for children? B: Yes, children's books are near the front door. There are many funny stories. A: Great. I will come on Sunday morning. B: You are welcome. See you on Sunday!",
+     "questions": [
+       {"type": "MC", "q": "What time does the bookshop open from Monday to Saturday?", "o": ["At 7 o'clock", "At 8 o'clock", "At 9 o'clock", "At 10 o'clock"], "a": 1, "why": "Nhà sách mở cửa lúc 8 giờ sáng từ thứ Hai đến thứ Bảy."},
+       {"type": "MC", "q": "What time does the bookshop close on Sunday?", "o": ["At 5 o'clock", "At 6 o'clock", "At 9 o'clock", "At 8 o'clock"], "a": 1, "why": "Chủ nhật nhà sách đóng cửa lúc 6 giờ chiều."},
+       {"type": "MATCH", "q": "Where are the pens?", "o": ["On the first floor", "On the second floor", "Near the front door"], "a": 1, "why": "Bút ở tầng hai, vở ở tầng một."},
+       {"type": "COMP", "q": "Notebooks are on the ___ floor.", "answer": "first", "why": "Vở ở tầng một theo lời nhân viên."},
+       {"type": "TF", "q": "Children's books are near the front door.", "o": ["True", "False"], "a": 0, "why": "Câu này đúng vì nhân viên nói sách thiếu nhi ở gần cửa trước."}
+     ]},
+    {"section": "Section 1", "band": "Band 2.0", "topic": "Thông báo lớp học vẽ cuối tuần",
+     "text": "Good morning, students. I have good news about a new drawing class. The class meets on Saturday morning in the art room. It starts at 8 o'clock and finishes at 10 o'clock. Our teacher is Miss Thu. She teaches us to draw animals, flowers and houses. We also draw with colours, and we show our pictures to our friends. The class is free for all students in our school. There are 20 places in the class. You only need to bring pencils and paper. If you want to join, please write your name on the list in Room 3 before Friday. The first lesson is this Saturday. At the end of the month, parents can come and see our pictures. We hope many students join the class. Thank you.",
+     "questions": [
+       {"type": "MC", "q": "When does the drawing class meet?", "o": ["On Saturday morning", "On Sunday morning", "On Friday afternoon", "On Monday morning"], "a": 0, "why": "Lớp học vẽ gặp nhau vào sáng thứ Bảy."},
+       {"type": "MC", "q": "Who is the teacher?", "o": ["Miss Thu", "Miss Lan", "Mr Tuan", "Mrs Hoa"], "a": 0, "why": "Giáo viên của lớp là cô Thu."},
+       {"type": "MATCH", "q": "Where should students write their name to join?", "o": ["Room 3", "Room 5", "The art room"], "a": 0, "why": "Học sinh muốn tham gia ghi tên vào danh sách ở phòng 3."},
+       {"type": "COMP", "q": "The class finishes at ___ o'clock.", "answer": "10", "why": "Lớp học kết thúc lúc 10 giờ."},
+       {"type": "TF", "q": "Students must pay for the drawing class.", "o": ["True", "False"], "a": 1, "why": "Câu này sai vì lớp học miễn phí cho mọi học sinh trong trường."}
+     ]}
+  ]);
+  CONTENT.speaking.push.apply(CONTENT.speaking, [
+    {"partNum": 1, "topicStd": "Đồ ăn và gia đình", "part": "Part 1", "topic": "Food at Home - Món ăn ở nhà", "band": "Band 2.0",
+     "lines": [
+       {"who": "Examiner", "en": "What do you eat for breakfast?", "vi": "Bạn ăn gì vào bữa sáng?"},
+       {"who": "Candidate", "en": "I eat bread and eggs for breakfast. Sometimes I drink milk, too.", "vi": "Tôi ăn bánh mì và trứng vào bữa sáng. Thỉnh thoảng tôi cũng uống sữa."},
+       {"who": "Examiner", "en": "Who cooks in your family?", "vi": "Ai nấu ăn trong gia đình bạn?"},
+       {"who": "Candidate", "en": "My mum cooks. She cooks rice, fish and vegetables.", "vi": "Mẹ tôi nấu ăn. Mẹ nấu cơm, cá và rau."},
+       {"who": "Examiner", "en": "What is your favourite food?", "vi": "Món ăn yêu thích của bạn là gì?"},
+       {"who": "Candidate", "en": "My favourite food is fried chicken. I like it very much.", "vi": "Món ăn yêu thích của tôi là gà rán. Tôi rất thích nó."},
+       {"who": "Examiner", "en": "Do you help your mum cook?", "vi": "Bạn có giúp mẹ nấu ăn không?"},
+       {"who": "Candidate", "en": "Yes, I wash vegetables and put plates on the table.", "vi": "Có, tôi rửa rau và bày đĩa lên bàn."}
+     ],
+     "quiz": [
+       {"q": "Candidate ăn gì vào bữa sáng?", "o": ["Bánh mì và trứng", "Mì và gà", "Cơm và cá"], "a": 0, "why": "Candidate nói: I eat bread and eggs for breakfast."},
+       {"q": "Ai nấu ăn trong gia đình Candidate?", "o": ["Mẹ", "Bố", "Bà"], "a": 0, "why": "Candidate nói: My mum cooks."},
+       {"q": "Candidate giúp mẹ làm gì?", "o": ["Rửa rau và bày đĩa lên bàn", "Nấu cơm một mình", "Đi chợ một mình"], "a": 0, "why": "Candidate nói: I wash vegetables and put plates on the table."}
+     ]},
+    {"partNum": 1, "topicStd": "Nhà ở và nơi sống", "part": "Part 1", "topic": "My Room - Phòng của tôi", "band": "Band 2.0",
+     "lines": [
+       {"who": "Examiner", "en": "Is your room big or small?", "vi": "Phòng của bạn lớn hay nhỏ?"},
+       {"who": "Candidate", "en": "My room is small, but it is clean and quiet.", "vi": "Phòng của tôi nhỏ, nhưng sạch sẽ và yên tĩnh."},
+       {"who": "Examiner", "en": "What is in your room?", "vi": "Trong phòng của bạn có gì?"},
+       {"who": "Candidate", "en": "There is a bed, a desk and a bookshelf. My books are on the shelf.", "vi": "Có một cái giường, một cái bàn học và một giá sách. Sách của tôi ở trên giá."},
+       {"who": "Examiner", "en": "Where do you study?", "vi": "Bạn học ở đâu?"},
+       {"who": "Candidate", "en": "I study at my desk, near the window.", "vi": "Tôi học ở bàn học, gần cửa sổ."},
+       {"who": "Examiner", "en": "Do you like your room?", "vi": "Bạn có thích phòng của mình không?"},
+       {"who": "Candidate", "en": "Yes, I like it very much. I read and draw there every day.", "vi": "Có, tôi rất thích nó. Tôi đọc sách và vẽ ở đó mỗi ngày."}
+     ],
+     "quiz": [
+       {"q": "Phòng của Candidate như thế nào?", "o": ["Nhỏ nhưng sạch sẽ và yên tĩnh", "Lớn và ồn ào", "Nhỏ và bừa bộn"], "a": 0, "why": "Candidate nói: My room is small, but it is clean and quiet."},
+       {"q": "Candidate học ở đâu?", "o": ["Ở bàn học, gần cửa sổ", "Ở giường", "Ở ngoài vườn"], "a": 0, "why": "Candidate nói: I study at my desk, near the window."},
+       {"q": "Candidate làm gì trong phòng mỗi ngày?", "o": ["Đọc sách và vẽ", "Chơi bóng đá", "Nấu ăn"], "a": 0, "why": "Candidate nói: I read and draw there every day."}
+     ]},
+    {"partNum": 2, "topicStd": "Bạn bè", "part": "Part 2", "topic": "Describe a friend you like", "band": "Band 2.0",
+     "lines": [
+       {"who": "Cue card", "en": "Describe a friend you like. You should say: who the friend is, how you met, what you do together, and explain why you like this friend.", "vi": "Hãy mô tả một người bạn mà bạn thích. Bạn nên nói: bạn đó là ai, bạn gặp bạn đó như thế nào, hai bạn cùng làm gì, và giải thích vì sao bạn thích người bạn này."},
+       {"who": "Candidate", "en": "I am going to talk about my friend Hoa.", "vi": "Tôi sẽ nói về bạn Hoa của tôi."},
+       {"who": "Candidate", "en": "Hoa is in my class. She sits next to me.", "vi": "Hoa học cùng lớp với tôi. Bạn ấy ngồi cạnh tôi."},
+       {"who": "Candidate", "en": "I met Hoa on my first day at school. She helped me find my classroom.", "vi": "Tôi gặp Hoa vào ngày đầu tiên đi học. Bạn ấy đã giúp tôi tìm phòng học."},
+       {"who": "Candidate", "en": "We play together at break, and we study English together after school.", "vi": "Chúng tôi chơi cùng nhau giờ ra chơi, và cùng học tiếng Anh sau giờ học."},
+       {"who": "Candidate", "en": "Hoa is kind and funny. She always smiles and helps her friends.", "vi": "Hoa tốt bụng và vui tính. Bạn ấy luôn mỉm cười và giúp đỡ bạn bè."},
+       {"who": "Candidate", "en": "Last week, Hoa helped me with my maths homework. I did not understand the lesson, but she explained it slowly.", "vi": "Tuần trước, Hoa đã giúp tôi làm bài tập toán. Tôi không hiểu bài, nhưng bạn ấy đã giải thích chậm rãi."},
+       {"who": "Candidate", "en": "I like Hoa because she is kind, helpful and fun. I hope we are friends for a long time.", "vi": "Tôi thích Hoa vì bạn ấy tốt bụng, hay giúp đỡ và vui tính. Tôi mong chúng tôi là bạn của nhau thật lâu."}
+     ],
+     "quiz": [
+       {"q": "Candidate gặp Hoa khi nào?", "o": ["Ngày đầu tiên đi học", "Ở lớp học vẽ", "Ở công viên"], "a": 0, "why": "Candidate nói: I met Hoa on my first day at school."},
+       {"q": "Hai bạn cùng làm gì sau giờ học?", "o": ["Cùng học tiếng Anh", "Cùng nấu ăn", "Cùng đi chợ"], "a": 0, "why": "Candidate nói: we study English together after school."},
+       {"q": "Vì sao Candidate thích Hoa?", "o": ["Vì Hoa tốt bụng, hay giúp đỡ và vui tính", "Vì Hoa học giỏi nhất lớp", "Vì Hoa sống gần nhà"], "a": 0, "why": "Candidate nói: she is kind, helpful and fun."}
+     ]},
+    {"partNum": 3, "topicStd": "Trẻ em và thời gian rảnh", "part": "Part 3", "topic": "Free Time for Children - Thời gian rảnh của trẻ em", "band": "Band 2.0",
+     "lines": [
+       {"who": "Examiner", "en": "Do children today play outside a lot?", "vi": "Trẻ em ngày nay có chơi ngoài trời nhiều không?"},
+       {"who": "Candidate", "en": "Not a lot. Many children stay at home and watch TV or play games on phones.", "vi": "Không nhiều. Nhiều trẻ em ở nhà xem TV hoặc chơi trò chơi trên điện thoại."},
+       {"who": "Examiner", "en": "Is sport good for children?", "vi": "Thể thao có tốt cho trẻ em không?"},
+       {"who": "Candidate", "en": "Yes, sport is very good. It keeps children strong and helps them make friends.", "vi": "Có, thể thao rất tốt. Nó giúp trẻ em khỏe mạnh và kết bạn."},
+       {"who": "Examiner", "en": "Should parents limit TV time?", "vi": "Cha mẹ có nên giới hạn thời gian xem TV không?"},
+       {"who": "Candidate", "en": "Yes, I think so. Children should watch TV for a short time and play outside more.", "vi": "Có, tôi nghĩ vậy. Trẻ em nên xem TV trong thời gian ngắn và chơi ngoài trời nhiều hơn."}
+     ],
+     "quiz": [
+       {"q": "Theo Candidate, nhiều trẻ em ngày nay làm gì ở nhà?", "o": ["Xem TV hoặc chơi trò chơi trên điện thoại", "Đọc sách cả ngày", "Nấu ăn cùng bố mẹ"], "a": 0, "why": "Candidate nói: Many children stay at home and watch TV or play games on phones."},
+       {"q": "Theo Candidate, thể thao giúp trẻ em điều gì?", "o": ["Khỏe mạnh và kết bạn", "Học giỏi toán", "Ngủ ngon hơn"], "a": 0, "why": "Candidate nói: It keeps children strong and helps them make friends."},
+       {"q": "Candidate nghĩ trẻ em nên làm gì?", "o": ["Xem TV ít và chơi ngoài trời nhiều hơn", "Xem TV cả ngày", "Không chơi thể thao"], "a": 0, "why": "Candidate nói: Children should watch TV for a short time and play outside more."}
+     ]}
+  ]);
+  CONTENT.roleplay.push.apply(CONTENT.roleplay, [
+    {"title": "Mua áo ở chợ - Buying a Shirt at the Market", "setting": "Bạn đi chợ với mẹ và muốn mua một chiếc áo. Bạn hỏi màu, cỡ và giá, rồi trả tiền.", "partner": "Người bán hàng ở chợ", "goal": "Hỏi được màu, cỡ và giá, mua được áo vừa ý và trả tiền lịch sự.", "band": "Band 2.0",
+     "chunks": ["I want to buy a shirt", "I like the blue one", "How much is it", "Size M, please", "Thank you very much"],
+     "turns": [
+       {"from": "partner", "text": "Hello! What do you want to buy?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào cô. Cháu muốn mua một chiếc áo, ạ.", "expect": "Hello. I want to buy a shirt, please.", "keywords": ["hello", "want", "buy", "shirt"], "hint": "Hello. I want to buy...", "tip": "Nói please ở cuối để nghe lịch sự.", "chunks": ["I want to buy a shirt"]},
+       {"from": "partner", "text": "We have blue shirts and white shirts. Which colour do you like?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cháu thích áo màu xanh. Áo này bao nhiêu tiền ạ?", "expect": "I like the blue one. How much is it?", "keywords": ["like", "blue", "how much"], "hint": "I like the blue one....", "tip": "Câu hỏi How much lên giọng nhẹ ở cuối.", "chunks": ["I like the blue one", "How much is it"]},
+       {"from": "partner", "text": "It is 80000 dong. What size do you need?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cỡ M ạ. Cháu lấy chiếc áo này. Cảm ơn cô rất nhiều.", "expect": "Size M, please. I take this shirt. Thank you very much.", "keywords": ["size", "take", "thank"], "hint": "Size M, please....", "tip": "Nói thank you very much khi nhận đồ để chốt lời cảm ơn.", "chunks": ["Size M, please", "Thank you very much"]}
+     ]},
+    {"title": "Đặt bàn ở quán phở - Booking a Table at a Pho Restaurant", "setting": "Bạn gọi điện tới quán phở để đặt bàn cho gia đình vào buổi tối. Bạn nói số người, giờ giấc và hỏi giá một bát phở.", "partner": "Nhân viên quán phở", "goal": "Đặt được bàn cho 4 người lúc 7 giờ tối và hỏi được giá một bát phở.", "band": "Band 2.0",
+     "chunks": ["I want to book a table", "For four people", "At seven o'clock", "How much is a bowl of pho", "Thank you very much"],
+     "turns": [
+       {"from": "partner", "text": "Hello, Pho Restaurant. How can I help you?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Tôi muốn đặt một bàn, làm ơn.", "expect": "Hello. I want to book a table, please.", "keywords": ["want", "book", "table"], "hint": "Hello. I want to book...", "tip": "book a table là đặt bàn trước.", "chunks": ["I want to book a table"]},
+       {"from": "partner", "text": "For how many people, and at what time?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cho bốn người, lúc bảy giờ tối.", "expect": "For four people, at seven o'clock in the evening.", "keywords": ["four", "seven"], "hint": "For four people,...", "tip": "Nói rõ số người trước, rồi tới giờ.", "chunks": ["For four people", "At seven o'clock"]},
+       {"from": "partner", "text": "OK. A table for four at seven. Do you want to order now?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Một bát phở bao nhiêu tiền ạ? Cảm ơn bạn rất nhiều.", "expect": "How much is a bowl of pho? Thank you very much.", "keywords": ["how much", "pho", "thank"], "hint": "How much is a bowl of pho?...", "tip": "a bowl of pho là một bát phở.", "chunks": ["How much is a bowl of pho", "Thank you very much"]}
+     ]},
+    {"title": "Mượn bút của bạn - Borrowing a Pen from a Friend", "setting": "Trong giờ học, bút của bạn bị hỏng. Bạn hỏi mượn bút của bạn cùng lớp, hứa trả lại sau giờ học và cảm ơn bạn.", "partner": "Bạn cùng lớp", "goal": "Mượn được bút, hứa trả lại sau giờ học và cảm ơn bạn lịch sự.", "band": "Band 2.0",
+     "chunks": ["My pen is broken", "Can I borrow your pen", "Thank you very much", "I will give it back", "You are very kind"],
+     "turns": [
+       {"from": "partner", "text": "Hello, Lan. What is wrong?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Bút của mình bị hỏng. Mình mượn bút của bạn được không?", "expect": "My pen is broken. Can I borrow your pen, please?", "keywords": ["broken", "borrow", "pen"], "hint": "My pen is broken....", "tip": "Can I borrow...? là câu hỏi mượn đồ lịch sự.", "chunks": ["My pen is broken", "Can I borrow your pen"]},
+       {"from": "partner", "text": "Yes, here you are."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn rất nhiều. Mình sẽ trả lại sau giờ học.", "expect": "Thank you very much. I will give it back after the lesson.", "keywords": ["thank", "give back", "lesson"], "hint": "Thank you very much....", "tip": "give back là trả lại đồ đã mượn.", "chunks": ["Thank you very much", "I will give it back"]},
+       {"from": "partner", "text": "OK, no problem."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Bạn tốt quá. Cảm ơn bạn lần nữa.", "expect": "You are very kind. Thank you again.", "keywords": ["kind", "thank"], "hint": "You are very kind....", "tip": "Thank you again là cảm ơn lần nữa, dùng khi kết thúc.", "chunks": ["You are very kind"]}
+     ]},
+    {"title": "Hẹn bạn đi đá bóng chiều thứ Bảy - Inviting a Friend to Play Football on Saturday Afternoon", "setting": "Bạn muốn rủ bạn cùng lớp đi đá bóng vào chiều thứ Bảy ở sân trường. Bạn nói giờ giấc, địa điểm và những bạn khác cùng đi.", "partner": "Bạn cùng lớp", "goal": "Hẹn được bạn đi đá bóng lúc 4 giờ chiều thứ Bảy ở sân trường.", "band": "Band 2.0",
+     "chunks": ["Do you want to play football", "On Saturday", "At four o'clock", "At the school playground", "See you on Saturday"],
+     "turns": [
+       {"from": "partner", "text": "Hi! What is new?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào Nam. Thứ Bảy bạn có muốn đi đá bóng không?", "expect": "Hi, Nam. Do you want to play football on Saturday?", "keywords": ["want", "play", "football", "Saturday"], "hint": "Hi, Nam. Do you want to play...", "tip": "Do you want to...? là câu rủ rê lịch sự.", "chunks": ["Do you want to play football", "On Saturday"]},
+       {"from": "partner", "text": "Yes! What time?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Lúc bốn giờ chiều, ở sân trường.", "expect": "At four o'clock in the afternoon, at the school playground.", "keywords": ["four", "playground"], "hint": "At four o'clock...", "tip": "Nói giờ trước, rồi tới địa điểm.", "chunks": ["At four o'clock", "At the school playground"]},
+       {"from": "partner", "text": "Great! Who else will come?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Minh và Tuấn cũng sẽ tới. Hẹn gặp bạn thứ Bảy nhé!", "expect": "Minh and Tuan will come, too. See you on Saturday!", "keywords": ["come", "Saturday"], "hint": "Minh and Tuan will come,...", "tip": "See you on Saturday! là câu chào hẹn gặp lại.", "chunks": ["See you on Saturday"]}
+     ]}
+  ]);
+  CONTENT.writing.push.apply(CONTENT.writing, [
+    {"wtype": "Bảng số liệu", "type": "Task 1", "band": "Band 2.0", "title": "Bảng số liệu: môn thể thao yêu thích",
+     "prompt": "The table below shows the favourite sports of 30 students in class 6A. Summarise the information in 5-7 simple sentences.",
+     "dataDesc": "Dữ kiện bảng: Bóng đá 12 học sinh; cầu lông 8; bơi 6; chạy bộ 4. Tổng 30 học sinh. Bóng đá được thích nhất, chạy bộ ít nhất.",
+     "model": "The table shows the favourite sports of 30 students in class 6A.\n\nFootball is the most popular sport. Twelve students like football best. Badminton is the second favourite sport, with eight students. Six students like swimming. Running is the least popular sport. Only four students like running best.\n\nIn short, most students in class 6A like football and badminton.",
+     "analysis": "Cấu trúc 3 đoạn: mở bài nêu bảng nói về gì; thân bài nêu số liệu từ cao xuống thấp; kết bài tóm tắt ý chính. Điểm ngôn ngữ đáng học: most popular (được thích nhất), second favourite (thích thứ hai), least popular (ít nhất), only (chỉ).",
+     "phrases": [{"en": "The table shows...", "vi": "Bảng cho thấy..."}, {"en": "is the most popular", "vi": "là môn được thích nhất"}, {"en": "Only four students", "vi": "Chỉ có bốn học sinh"}, {"en": "In short", "vi": "Tóm lại"}]},
+    {"wtype": "Ý kiến", "type": "Task 2", "band": "Band 2.0", "title": "Opinion: Trẻ em giúp việc nhà",
+     "prompt": "Some people think children should help with housework. Do you agree or disagree? Write 5-7 simple sentences and give reasons.",
+     "dataDesc": "Dàn ý gợi ý: Mở bài — nêu ý kiến (đồng ý). Thân — lý do 1: giúp cha mẹ đỡ mệt; lý do 2: học cách tự lo cho mình. Kết — khẳng định lại ý kiến.",
+     "model": "I agree that children should help with housework.\n\nFirst, housework is a lot of work. When children help, their parents are less tired. Second, children learn to take care of themselves. They learn to wash dishes, tidy their rooms and cook rice.\n\nIn short, helping with housework is good for children and for their families.",
+     "analysis": "Cấu trúc 3 đoạn: mở bài nêu ý kiến; thân bài nêu hai lý do, mỗi lý do một câu giải thích; kết bài khẳng định lại. Điểm ngôn ngữ đáng học: I agree that... (Tôi đồng ý rằng...), First/Second (Trước hết/Thứ hai), take care of (chăm lo).",
+     "phrases": [{"en": "I agree that...", "vi": "Tôi đồng ý rằng..."}, {"en": "First, ... Second, ...", "vi": "Trước hết, ... Thứ hai, ..."}, {"en": "take care of themselves", "vi": "tự lo cho mình"}, {"en": "In short", "vi": "Tóm lại"}]},
+    {"wtype": "Ưu và nhược điểm", "type": "Task 2", "band": "Band 2.0", "title": "Ưu và nhược điểm: xem TV",
+     "prompt": "Watching TV has advantages and disadvantages for children. Write 5-7 simple sentences about the good points and the bad points.",
+     "dataDesc": "Dàn ý gợi ý: Mở — TV có điểm tốt và chưa tốt. Điểm tốt: học từ mới, biết tin tức. Điểm chưa tốt: xem nhiều hại mắt, ít vận động. Kết — xem ít và chọn chương trình hay.",
+     "model": "Watching TV has good points and bad points for children.\n\nOn the good side, children can learn new words and know about the world. On the bad side, watching TV too much is bad for their eyes. Children also play outside less when they watch TV all day.\n\nIn short, children should watch TV for a short time and choose good programmes.",
+     "analysis": "Cấu trúc 3 đoạn: mở bài nêu hai mặt; thân bài nêu điểm tốt rồi điểm chưa tốt; kết bài đưa lời khuyên. Điểm ngôn ngữ đáng học: On the good side / On the bad side (Về mặt tốt / Về mặt chưa tốt), too much (quá nhiều), for a short time (trong thời gian ngắn).",
+     "phrases": [{"en": "On the good side", "vi": "Về mặt tốt"}, {"en": "On the bad side", "vi": "Về mặt chưa tốt"}, {"en": "too much", "vi": "quá nhiều"}, {"en": "for a short time", "vi": "trong thời gian ngắn"}]}
+  ]);
+  CONTENT.writingDrills.push.apply(CONTENT.writingDrills, [
+    {"band": "Band 2.0", "kind": "combine", "title": "Nối câu bằng and: bữa sáng", "prompt": "Nối hai câu thành một câu bằng and. / Combine the sentences with and.", "given": "I eat bread. / I drink milk.", "model": "I eat bread and drink milk.", "note": "Khi nối hai việc cùng chủ ngữ, chỉ cần giữ chủ ngữ một lần và nối hai động từ bằng and."},
+    {"band": "Band 2.0", "kind": "order", "title": "Sắp xếp thành câu: giờ giấc", "prompt": "Sắp xếp các từ thành câu đúng. / Put the words in the correct order.", "given": "school / to / at / go / seven / I", "model": "I go to school at seven.", "note": "Câu tiếng Anh thường theo thứ tự: chủ ngữ — động từ — nơi chốn — thời gian."},
+    {"band": "Band 2.0", "kind": "correct", "title": "Thêm -s cho ngôi thứ ba: thói quen", "prompt": "Viết lại câu, thêm -s cho động từ với he/she. / Rewrite the sentence with -s for he/she.", "given": "She (go) to school by bus.", "model": "She goes to school by bus.", "note": "Với he, she và một người, động từ ở hiện tại đơn thêm -s: go thành goes."}
+  ]);
+  CONTENT.typing.push.apply(CONTENT.typing, [
+    {"level": "Band 2.0", "title": "Đồ dùng trong bếp", "sentences": ["Mum cooks rice in a big pot.", "I fry eggs in a small pan.", "Put the rice on a clean plate.", "I eat a bowl of soup.", "We eat rice with chopsticks.", "The milk is in the fridge.", "Wash the plates in the sink.", "Add a little salt to the soup.", "I put a spoon of sugar in my tea.", "Mum pours cooking oil into the pan."]},
+    {"level": "Band 2.0", "title": "Buổi sáng của em", "sentences": ["I wake up early every day.", "I wash my face in the morning.", "Brush your teeth after breakfast.", "We eat breakfast at six.", "I wear a white shirt.", "My books are in my schoolbag.", "I take a water bottle to school.", "I go to school by bus.", "I leave home at half past six.", "I am ready for school."]},
+    {"level": "Band 2.0", "title": "Đi chợ với mẹ", "sentences": ["Mum goes to the market.", "We buy fresh vegetables.", "This tomato is red.", "I peel a big potato.", "Rabbits like carrots.", "We cook cabbage for lunch.", "This orange is sweet.", "The price is good.", "These apples are cheap.", "Put the fruit in a bag."]},
+    {"level": "Band 2.0", "title": "Con vật quanh nhà", "sentences": ["My dog is small.", "The cat is white.", "The duck swims in the pond.", "The cow gives milk.", "A little bird sings.", "The frog jumps high.", "A pretty butterfly flies.", "The bee makes honey.", "The goat eats grass.", "The horse runs fast."]}
+  ]);
+  CONTENT.vocab.push.apply(CONTENT.vocab, [
+    {"topic": "Giúp mẹ việc nhà", "theme": "Giúp mẹ việc nhà - Housework", "band": "Band 2.5", "cards": [
+      {"w": "sweep", "ipa": "/swiːp/", "vi": "quét", "col": "sweep the floor", "ex": "I sweep the floor every morning.", "exv": "Tôi quét nhà mỗi buổi sáng."},
+      {"w": "mop", "ipa": "/mɒp/", "vi": "lau nhà", "col": "mop the floor", "ex": "Mum mops the floor.", "exv": "Mẹ lau nhà."},
+      {"w": "tidy", "ipa": "/ˈtaɪdi/", "vi": "dọn gọn", "col": "tidy the room", "ex": "I tidy my room.", "exv": "Tôi dọn gọn phòng của mình."},
+      {"w": "dust", "ipa": "/dʌst/", "vi": "lau bụi", "col": "dust the table", "ex": "I dust the table.", "exv": "Tôi lau bụi trên bàn."},
+      {"w": "cook", "ipa": "/kʊk/", "vi": "nấu", "col": "cook rice", "ex": "Mum cooks rice.", "exv": "Mẹ nấu cơm."},
+      {"w": "water", "ipa": "/ˈwɔːtə(r)/", "vi": "tưới", "col": "water the flowers", "ex": "I water the flowers.", "exv": "Tôi tưới hoa."},
+      {"w": "feed", "ipa": "/fiːd/", "vi": "cho ăn", "col": "feed the dog", "ex": "I feed the dog.", "exv": "Tôi cho chó ăn."},
+      {"w": "rubbish", "ipa": "/ˈrʌbɪʃ/", "vi": "rác", "col": "take out the rubbish", "ex": "I take out the rubbish.", "exv": "Tôi mang rác ra ngoài."},
+      {"w": "broom", "ipa": "/bruːm/", "vi": "chổi", "col": "a new broom", "ex": "This broom is new.", "exv": "Cái chổi này mới."},
+      {"w": "bucket", "ipa": "/ˈbʌkɪt/", "vi": "cái xô", "col": "a big bucket", "ex": "Mum takes a big bucket.", "exv": "Mẹ lấy một cái xô lớn."},
+      {"w": "cloth", "ipa": "/klɒθ/", "vi": "giẻ lau", "col": "a clean cloth", "ex": "Wipe the table with a cloth.", "exv": "Hãy lau bàn bằng giẻ lau."},
+      {"w": "powder", "ipa": "/ˈpaʊdə(r)/", "vi": "bột giặt", "col": "washing powder", "ex": "Mum buys washing powder.", "exv": "Mẹ mua bột giặt."},
+      {"w": "bed", "ipa": "/bed/", "vi": "giường", "col": "make the bed", "ex": "I make my bed.", "exv": "Tôi dọn giường của mình."},
+      {"w": "room", "ipa": "/ruːm/", "vi": "phòng", "col": "my room", "ex": "My room is clean.", "exv": "Phòng của tôi sạch sẽ."},
+      {"w": "table", "ipa": "/ˈteɪbl/", "vi": "cái bàn", "col": "clean the table", "ex": "I clean the table.", "exv": "Tôi lau bàn."},
+      {"w": "clothes", "ipa": "/kləʊðz/", "vi": "quần áo", "col": "wash clothes", "ex": "Mum washes clothes.", "exv": "Mẹ giặt quần áo."},
+      {"w": "dishes", "ipa": "/ˈdɪʃɪz/", "vi": "bát đĩa", "col": "wash the dishes", "ex": "I wash the dishes after lunch.", "exv": "Tôi rửa bát đĩa sau bữa trưa."},
+      {"w": "flowers", "ipa": "/ˈflaʊəz/", "vi": "hoa", "col": "fresh flowers", "ex": "The flowers are fresh.", "exv": "Những bông hoa còn tươi."},
+      {"w": "garden", "ipa": "/ˈɡɑːdn/", "vi": "vườn", "col": "in the garden", "ex": "We play in the garden.", "exv": "Chúng ta chơi trong vườn."},
+      {"w": "kitchen", "ipa": "/ˈkɪtʃɪn/", "vi": "nhà bếp", "col": "in the kitchen", "ex": "Mum cooks in the kitchen.", "exv": "Mẹ nấu ăn trong bếp."}
+    ]},
+    {"topic": "Thời tiết và mùa ở Việt Nam", "theme": "Thời tiết và mùa ở Việt Nam - Weather and Seasons", "band": "Band 2.5", "cards": [
+      {"w": "sunny", "ipa": "/ˈsʌni/", "vi": "nắng", "col": "a sunny day", "ex": "Today is a sunny day.", "exv": "Hôm nay là một ngày nắng."},
+      {"w": "rainy", "ipa": "/ˈreɪni/", "vi": "mưa", "col": "a rainy day", "ex": "It is a rainy day.", "exv": "Hôm nay là một ngày mưa."},
+      {"w": "cloudy", "ipa": "/ˈklaʊdi/", "vi": "nhiều mây", "col": "a cloudy sky", "ex": "The sky is cloudy.", "exv": "Bầu trời nhiều mây."},
+      {"w": "windy", "ipa": "/ˈwɪndi/", "vi": "gió", "col": "a windy day", "ex": "It is a windy day.", "exv": "Hôm nay là một ngày gió."},
+      {"w": "hot", "ipa": "/hɒt/", "vi": "nóng", "col": "a hot day", "ex": "Today is hot.", "exv": "Hôm nay nóng."},
+      {"w": "cool", "ipa": "/kuːl/", "vi": "mát", "col": "cool weather", "ex": "The weather is cool.", "exv": "Thời tiết mát mẻ."},
+      {"w": "cold", "ipa": "/kəʊld/", "vi": "lạnh", "col": "a cold morning", "ex": "It is a cold morning.", "exv": "Buổi sáng nay lạnh."},
+      {"w": "storm", "ipa": "/stɔːm/", "vi": "bão", "col": "a big storm", "ex": "A big storm is coming.", "exv": "Một cơn bão lớn đang tới."},
+      {"w": "rain", "ipa": "/reɪn/", "vi": "mưa", "col": "in the rain", "ex": "We walk in the rain.", "exv": "Chúng ta đi bộ trong mưa."},
+      {"w": "fog", "ipa": "/fɒɡ/", "vi": "sương mù", "col": "thick fog", "ex": "There is thick fog.", "exv": "Có sương mù dày đặc."},
+      {"w": "spring", "ipa": "/sprɪŋ/", "vi": "mùa xuân", "col": "in spring", "ex": "Flowers bloom in spring.", "exv": "Hoa nở vào mùa xuân."},
+      {"w": "summer", "ipa": "/ˈsʌmə(r)/", "vi": "mùa hè", "col": "in summer", "ex": "We swim in summer.", "exv": "Chúng ta bơi vào mùa hè."},
+      {"w": "autumn", "ipa": "/ˈɔːtəm/", "vi": "mùa thu", "col": "in autumn", "ex": "Leaves fall in autumn.", "exv": "Lá rụng vào mùa thu."},
+      {"w": "winter", "ipa": "/ˈwɪntə(r)/", "vi": "mùa đông", "col": "in winter", "ex": "It is cold in winter.", "exv": "Mùa đông lạnh."},
+      {"w": "season", "ipa": "/ˈsiːzn/", "vi": "mùa", "col": "four seasons", "ex": "There are four seasons in a year.", "exv": "Một năm có bốn mùa."},
+      {"w": "temperature", "ipa": "/ˈtemprətʃə(r)/", "vi": "nhiệt độ", "col": "high temperature", "ex": "The temperature is high today.", "exv": "Hôm nay nhiệt độ cao."},
+      {"w": "degree", "ipa": "/dɪˈɡriː/", "vi": "độ", "col": "30 degrees", "ex": "It is 30 degrees today.", "exv": "Hôm nay 30 độ."},
+      {"w": "dry", "ipa": "/draɪ/", "vi": "khô", "col": "dry season", "ex": "The dry season is hot.", "exv": "Mùa khô nóng."},
+      {"w": "wet", "ipa": "/wet/", "vi": "ướt", "col": "wet clothes", "ex": "My clothes are wet.", "exv": "Quần áo của tôi ướt."},
+      {"w": "breeze", "ipa": "/briːz/", "vi": "gió nhẹ", "col": "a cool breeze", "ex": "A cool breeze blows.", "exv": "Một làn gió nhẹ mát thổi."}
+    ]},
+    {"topic": "Phương tiện đi lại trong phố", "theme": "Phương tiện đi lại trong phố - Transport in the City", "band": "Band 2.5", "cards": [
+      {"w": "bicycle", "ipa": "/ˈbaɪsɪkl/", "vi": "xe đạp", "col": "by bicycle", "ex": "I go to school by bicycle.", "exv": "Tôi đi học bằng xe đạp."},
+      {"w": "motorbike", "ipa": "/ˈməʊtəbaɪk/", "vi": "xe máy", "col": "a fast motorbike", "ex": "Dad rides a motorbike.", "exv": "Bố đi xe máy."},
+      {"w": "car", "ipa": "/kɑː(r)/", "vi": "ô tô", "col": "a red car", "ex": "My uncle has a red car.", "exv": "Chú tôi có một chiếc ô tô đỏ."},
+      {"w": "taxi", "ipa": "/ˈtæksi/", "vi": "taxi", "col": "take a taxi", "ex": "We take a taxi home.", "exv": "Chúng ta đi taxi về nhà."},
+      {"w": "train", "ipa": "/treɪn/", "vi": "tàu hỏa", "col": "by train", "ex": "We travel by train.", "exv": "Chúng ta đi du lịch bằng tàu hỏa."},
+      {"w": "boat", "ipa": "/bəʊt/", "vi": "thuyền", "col": "a small boat", "ex": "A small boat floats on the river.", "exv": "Một chiếc thuyền nhỏ trôi trên sông."},
+      {"w": "ferry", "ipa": "/ˈferi/", "vi": "phà", "col": "take a ferry", "ex": "We take a ferry across the river.", "exv": "Chúng ta đi phà qua sông."},
+      {"w": "truck", "ipa": "/trʌk/", "vi": "xe tải", "col": "a big truck", "ex": "A big truck carries rice.", "exv": "Một chiếc xe tải lớn chở gạo."},
+      {"w": "walk", "ipa": "/wɔːk/", "vi": "đi bộ", "col": "walk to school", "ex": "I walk to school.", "exv": "Tôi đi bộ đến trường."},
+      {"w": "ride", "ipa": "/raɪd/", "vi": "cưỡi, lái (xe đạp)", "col": "ride a bicycle", "ex": "I ride a bicycle.", "exv": "Tôi đi xe đạp."},
+      {"w": "drive", "ipa": "/draɪv/", "vi": "lái (ô tô)", "col": "drive a car", "ex": "Dad drives a car.", "exv": "Bố lái ô tô."},
+      {"w": "traffic", "ipa": "/ˈtræfɪk/", "vi": "giao thông", "col": "heavy traffic", "ex": "There is heavy traffic.", "exv": "Giao thông đông đúc."},
+      {"w": "traffic light", "ipa": "/ˈtræfɪk laɪt/", "vi": "đèn giao thông", "col": "at the traffic light", "ex": "Stop at the traffic light.", "exv": "Hãy dừng lại ở đèn giao thông."},
+      {"w": "zebra crossing", "ipa": "/ˌzebrə ˈkrɒsɪŋ/", "vi": "vạch qua đường", "col": "at the zebra crossing", "ex": "Cross the road at the zebra crossing.", "exv": "Hãy qua đường ở vạch qua đường."},
+      {"w": "pavement", "ipa": "/ˈpeɪvmənt/", "vi": "vỉa hè", "col": "on the pavement", "ex": "Walk on the pavement.", "exv": "Hãy đi bộ trên vỉa hè."},
+      {"w": "bridge", "ipa": "/brɪdʒ/", "vi": "cầu", "col": "a long bridge", "ex": "The bridge is long.", "exv": "Cây cầu dài."},
+      {"w": "station", "ipa": "/ˈsteɪʃn/", "vi": "ga, bến", "col": "at the station", "ex": "We wait at the station.", "exv": "Chúng ta chờ ở ga."},
+      {"w": "ticket", "ipa": "/ˈtɪkɪt/", "vi": "vé", "col": "a bus ticket", "ex": "I buy a bus ticket.", "exv": "Tôi mua một vé xe buýt."},
+      {"w": "passenger", "ipa": "/ˈpæsɪndʒə(r)/", "vi": "hành khách", "col": "many passengers", "ex": "There are many passengers.", "exv": "Có nhiều hành khách."},
+      {"w": "traffic jam", "ipa": "/ˈtræfɪk dʒæm/", "vi": "tắc đường", "col": "in a traffic jam", "ex": "We sit in a traffic jam.", "exv": "Chúng ta ngồi trong dòng xe tắc đường."}
+    ]},
+    {"topic": "Môn thể thao yêu thích", "theme": "Môn thể thao yêu thích - Favourite Sports", "band": "Band 2.5", "cards": [
+      {"w": "football", "ipa": "/ˈfʊtbɔːl/", "vi": "bóng đá", "col": "play football", "ex": "We play football.", "exv": "Chúng ta chơi bóng đá."},
+      {"w": "badminton", "ipa": "/ˈbædmɪntən/", "vi": "cầu lông", "col": "play badminton", "ex": "I play badminton.", "exv": "Tôi chơi cầu lông."},
+      {"w": "swimming", "ipa": "/ˈswɪmɪŋ/", "vi": "bơi", "col": "go swimming", "ex": "We go swimming.", "exv": "Chúng ta đi bơi."},
+      {"w": "running", "ipa": "/ˈrʌnɪŋ/", "vi": "chạy bộ", "col": "go running", "ex": "Dad goes running.", "exv": "Bố đi chạy bộ."},
+      {"w": "cycling", "ipa": "/ˈsaɪklɪŋ/", "vi": "đạp xe", "col": "go cycling", "ex": "We go cycling.", "exv": "Chúng ta đi đạp xe."},
+      {"w": "volleyball", "ipa": "/ˈvɒlibɔːl/", "vi": "bóng chuyền", "col": "play volleyball", "ex": "They play volleyball.", "exv": "Họ chơi bóng chuyền."},
+      {"w": "basketball", "ipa": "/ˈbɑːskɪtbɔːl/", "vi": "bóng rổ", "col": "play basketball", "ex": "Nam plays basketball.", "exv": "Nam chơi bóng rổ."},
+      {"w": "chess", "ipa": "/tʃes/", "vi": "cờ vua", "col": "play chess", "ex": "Grandpa plays chess.", "exv": "Ông chơi cờ vua."},
+      {"w": "skipping", "ipa": "/ˈskɪpɪŋ/", "vi": "nhảy dây", "col": "go skipping", "ex": "Girls go skipping.", "exv": "Các bạn gái đi nhảy dây."},
+      {"w": "goal", "ipa": "/ɡəʊl/", "vi": "bàn thắng, khung thành", "col": "score a goal", "ex": "Minh scores a goal.", "exv": "Minh ghi một bàn thắng."},
+      {"w": "ball", "ipa": "/bɔːl/", "vi": "quả bóng", "col": "a new ball", "ex": "This ball is new.", "exv": "Quả bóng này mới."},
+      {"w": "racket", "ipa": "/ˈrækɪt/", "vi": "vợt", "col": "a badminton racket", "ex": "My racket is light.", "exv": "Vợt của tôi nhẹ."},
+      {"w": "team", "ipa": "/tiːm/", "vi": "đội", "col": "our team", "ex": "Our team wins.", "exv": "Đội của chúng ta thắng."},
+      {"w": "win", "ipa": "/wɪn/", "vi": "thắng", "col": "win the match", "ex": "We win the match.", "exv": "Chúng ta thắng trận đấu."},
+      {"w": "lose", "ipa": "/luːz/", "vi": "thua", "col": "lose the game", "ex": "Sometimes we lose the game.", "exv": "Thỉnh thoảng chúng ta thua trận."},
+      {"w": "match", "ipa": "/mætʃ/", "vi": "trận đấu", "col": "a football match", "ex": "It is a football match.", "exv": "Đó là một trận bóng đá."},
+      {"w": "player", "ipa": "/ˈpleɪə(r)/", "vi": "cầu thủ", "col": "a good player", "ex": "He is a good player.", "exv": "Anh ấy là một cầu thủ giỏi."},
+      {"w": "coach", "ipa": "/kəʊtʃ/", "vi": "huấn luyện viên", "col": "our coach", "ex": "Our coach is kind.", "exv": "Huấn luyện viên của chúng ta tốt bụng."},
+      {"w": "practice", "ipa": "/ˈpræktɪs/", "vi": "luyện tập", "col": "practice every day", "ex": "We practice every day.", "exv": "Chúng ta luyện tập mỗi ngày."},
+      {"w": "healthy", "ipa": "/ˈhelθi/", "vi": "khỏe mạnh", "col": "stay healthy", "ex": "Sport keeps us healthy.", "exv": "Thể thao giúp chúng ta khỏe mạnh."}
+    ]},
+    {"topic": "Trái cây và đồ uống", "theme": "Trái cây và đồ uống - Fruit and Drinks", "band": "Band 2.5", "cards": [
+      {"w": "papaya", "ipa": "/pəˈpaɪə/", "vi": "đu đủ", "col": "a ripe papaya", "ex": "This papaya is ripe.", "exv": "Quả đu đủ này chín."},
+      {"w": "dragon fruit", "ipa": "/ˈdræɡən fruːt/", "vi": "thanh long", "col": "a red dragon fruit", "ex": "Dragon fruit is sweet.", "exv": "Thanh long ngọt."},
+      {"w": "rambutan", "ipa": "/ræmˈbuːtən/", "vi": "chôm chôm", "col": "red rambutans", "ex": "Rambutans are red.", "exv": "Chôm chôm màu đỏ."},
+      {"w": "longan", "ipa": "/ˈlɒŋɡən/", "vi": "nhãn", "col": "sweet longans", "ex": "Longans are sweet.", "exv": "Nhãn ngọt."},
+      {"w": "watermelon", "ipa": "/ˈwɔːtəmelən/", "vi": "dưa hấu", "col": "a big watermelon", "ex": "This watermelon is big.", "exv": "Quả dưa hấu này lớn."},
+      {"w": "pineapple", "ipa": "/ˈpaɪnæpl/", "vi": "dứa", "col": "a sour pineapple", "ex": "This pineapple is sour.", "exv": "Quả dứa này chua."},
+      {"w": "coconut", "ipa": "/ˈkəʊkənʌt/", "vi": "dừa", "col": "fresh coconut", "ex": "I drink fresh coconut.", "exv": "Tôi uống nước dừa tươi."},
+      {"w": "star fruit", "ipa": "/ˈstɑː fruːt/", "vi": "khế", "col": "a yellow star fruit", "ex": "Star fruit is sour.", "exv": "Khế chua."},
+      {"w": "custard apple", "ipa": "/ˈkʌstəd ˈæpl/", "vi": "na", "col": "a soft custard apple", "ex": "This custard apple is soft.", "exv": "Quả na này mềm."},
+      {"w": "guava", "ipa": "/ˈɡwɑːvə/", "vi": "ổi", "col": "a green guava", "ex": "Guavas are green.", "exv": "Ổi màu xanh."},
+      {"w": "sugar cane juice", "ipa": "/ˈʃʊɡə keɪn dʒuːs/", "vi": "nước mía", "col": "a glass of sugar cane juice", "ex": "I drink sugar cane juice.", "exv": "Tôi uống nước mía."},
+      {"w": "orange juice", "ipa": "/ˈɒrɪndʒ dʒuːs/", "vi": "nước cam", "col": "a glass of orange juice", "ex": "Mum makes orange juice.", "exv": "Mẹ làm nước cam."},
+      {"w": "lemonade", "ipa": "/ˌleməˈneɪd/", "vi": "nước chanh", "col": "cold lemonade", "ex": "Cold lemonade is good.", "exv": "Nước chanh lạnh rất ngon."},
+      {"w": "iced tea", "ipa": "/ˌaɪst ˈtiː/", "vi": "trà đá", "col": "a glass of iced tea", "ex": "Dad drinks iced tea.", "exv": "Bố uống trà đá."},
+      {"w": "coffee", "ipa": "/ˈkɒfi/", "vi": "cà phê", "col": "a cup of coffee", "ex": "Dad drinks a cup of coffee.", "exv": "Bố uống một cốc cà phê."},
+      {"w": "milk tea", "ipa": "/ˈmɪlk tiː/", "vi": "trà sữa", "col": "sweet milk tea", "ex": "Milk tea is sweet.", "exv": "Trà sữa ngọt."},
+      {"w": "sweet", "ipa": "/swiːt/", "vi": "ngọt", "col": "very sweet", "ex": "This fruit is very sweet.", "exv": "Quả này rất ngọt."},
+      {"w": "sour", "ipa": "/ˈsaʊə(r)/", "vi": "chua", "col": "a little sour", "ex": "This fruit is a little sour.", "exv": "Quả này hơi chua."},
+      {"w": "peel", "ipa": "/piːl/", "vi": "gọt vỏ", "col": "peel the fruit", "ex": "Mum peels the fruit.", "exv": "Mẹ gọt vỏ trái cây."},
+      {"w": "slice", "ipa": "/slaɪs/", "vi": "cắt lát", "col": "slice the watermelon", "ex": "Dad slices the watermelon.", "exv": "Bố cắt dưa hấu thành lát."}
+    ]},
+    {"topic": "Khi bị ốm nhẹ", "theme": "Khi bị ốm nhẹ - When You Are a Little Ill", "band": "Band 2.5", "cards": [
+      {"w": "headache", "ipa": "/ˈhedeɪk/", "vi": "đau đầu", "col": "a bad headache", "ex": "I have a bad headache.", "exv": "Tôi bị đau đầu nặng."},
+      {"w": "stomach ache", "ipa": "/ˈstʌmək eɪk/", "vi": "đau bụng", "col": "a stomach ache", "ex": "He has a stomach ache.", "exv": "Anh ấy bị đau bụng."},
+      {"w": "cough", "ipa": "/kɒf/", "vi": "ho", "col": "a bad cough", "ex": "She has a bad cough.", "exv": "Cô ấy ho nặng."},
+      {"w": "cold", "ipa": "/kəʊld/", "vi": "cảm lạnh", "col": "catch a cold", "ex": "I catch a cold.", "exv": "Tôi bị cảm lạnh."},
+      {"w": "fever", "ipa": "/ˈfiːvə(r)/", "vi": "sốt", "col": "a high fever", "ex": "He has a high fever.", "exv": "Anh ấy sốt cao."},
+      {"w": "sore throat", "ipa": "/ˌsɔː ˈθrəʊt/", "vi": "đau họng", "col": "a sore throat", "ex": "I have a sore throat.", "exv": "Tôi bị đau họng."},
+      {"w": "runny nose", "ipa": "/ˌrʌni ˈnəʊz/", "vi": "chảy nước mũi", "col": "a runny nose", "ex": "She has a runny nose.", "exv": "Cô ấy bị chảy nước mũi."},
+      {"w": "medicine", "ipa": "/ˈmedsn/", "vi": "thuốc", "col": "take medicine", "ex": "Take your medicine.", "exv": "Hãy uống thuốc của bạn."},
+      {"w": "doctor", "ipa": "/ˈdɒktə(r)/", "vi": "bác sĩ", "col": "see a doctor", "ex": "See a doctor, please.", "exv": "Hãy đi khám bác sĩ."},
+      {"w": "nurse", "ipa": "/nɜːs/", "vi": "y tá", "col": "a kind nurse", "ex": "The nurse is kind.", "exv": "Cô y tá tốt bụng."},
+      {"w": "hospital", "ipa": "/ˈhɒspɪtl/", "vi": "bệnh viện", "col": "in hospital", "ex": "He is in hospital.", "exv": "Anh ấy đang ở bệnh viện."},
+      {"w": "clinic", "ipa": "/ˈklɪnɪk/", "vi": "phòng khám", "col": "a small clinic", "ex": "There is a small clinic.", "exv": "Có một phòng khám nhỏ."},
+      {"w": "rest", "ipa": "/rest/", "vi": "nghỉ ngơi", "col": "take a rest", "ex": "Take a rest at home.", "exv": "Hãy nghỉ ngơi ở nhà."},
+      {"w": "better", "ipa": "/ˈbetə(r)/", "vi": "khá hơn", "col": "feel better", "ex": "I feel better today.", "exv": "Hôm nay tôi thấy khá hơn."},
+      {"w": "sick", "ipa": "/sɪk/", "vi": "ốm", "col": "feel sick", "ex": "I feel sick today.", "exv": "Hôm nay tôi thấy ốm."},
+      {"w": "ill", "ipa": "/ɪl/", "vi": "ốm", "col": "fall ill", "ex": "He falls ill.", "exv": "Anh ấy bị ốm."},
+      {"w": "thermometer", "ipa": "/θəˈmɒmɪtə(r)/", "vi": "nhiệt kế", "col": "a thermometer", "ex": "Mum uses a thermometer.", "exv": "Mẹ dùng nhiệt kế."},
+      {"w": "bandage", "ipa": "/ˈbændɪdʒ/", "vi": "băng gạc", "col": "a clean bandage", "ex": "The nurse puts a bandage on.", "exv": "Cô y tá băng bó lại."},
+      {"w": "warm", "ipa": "/wɔːm/", "vi": "ấm", "col": "warm water", "ex": "Drink warm water.", "exv": "Hãy uống nước ấm."},
+      {"w": "sleep", "ipa": "/sliːp/", "vi": "ngủ", "col": "get some sleep", "ex": "Get some sleep, please.", "exv": "Hãy ngủ một giấc nhé."}
+    ]}
+  ]);
+  CONTENT.grammar.push.apply(CONTENT.grammar, [
+    {"fam": "So sánh", "hook": "Muốn nói cái này hơn cái kia, dùng tính từ thêm -er hoặc more + tính từ, rồi tới than.", "level": "Band 2.5", "name": "So sánh hơn với -er và more",
+     "explain": "Nhìn ví dụ trước nhé. My brother is taller than me. This book is more interesting than that book. Her bag is bigger than my bag. Sau ví dụ là quy tắc. Tính từ ngắn (tall, big) thêm -er: taller, bigger; tính từ một âm tiết kết thúc bằng một nguyên âm + một phụ âm thì gấp đôi phụ âm cuối: big thành bigger. Tính từ dài (interesting, beautiful) dùng more + tính từ. Sau tính từ so sánh luôn có than.",
+     "examples": ["My brother is taller than me.", "This book is more interesting than that book.", "Her bag is bigger than my bag."],
+     "tip": "Sau tính từ so sánh luôn có than, đừng quên.",
+     "model": "My school is bigger than her school, and my bag is more beautiful than her bag.",
+     "modelVi": "Trường của tôi lớn hơn trường của bạn ấy, và cặp của tôi đẹp hơn cặp của bạn ấy.",
+     "quiz": [
+       {"q": "My brother is ___ than me.", "o": ["tall", "taller", "tallest", "more tall"], "a": 1, "why": "Tính từ ngắn tall thêm -er: taller."},
+       {"q": "This book is ___ than that book.", "o": ["interesting", "more interesting", "interestinger", "most interesting"], "a": 1, "why": "Tính từ dài interesting dùng more: more interesting."},
+       {"q": "Her bag is ___ than my bag.", "o": ["big", "bigger", "biggest", "more big"], "a": 1, "why": "Tính từ ngắn big gấp đôi phụ âm cuối rồi thêm -er: bigger."},
+       {"q": "Lan is ___ than Mai.", "o": ["old", "older", "oldest", "more old"], "a": 1, "why": "Tính từ ngắn old thêm -er: older."},
+       {"q": "This cake is ___ than that cake.", "o": ["delicious", "more delicious", "deliciouser", "most delicious"], "a": 1, "why": "Tính từ dài delicious dùng more: more delicious."},
+       {"q": "My house is ___ than your house.", "o": ["small", "smaller", "smallest", "more small"], "a": 1, "why": "Tính từ ngắn small thêm -er: smaller."},
+       {"q": "He runs ___ than me.", "o": ["fast", "faster", "fastest", "more fast"], "a": 1, "why": "Tính từ ngắn fast thêm -er: faster."},
+       {"q": "This story is ___ than that story.", "o": ["funny", "funnier", "funniest", "more funny"], "a": 1, "why": "Tính từ kết thúc bằng y đổi thành i rồi thêm -er: funnier."}
+     ]},
+    {"fam": "Từ nối", "hook": "Muốn nối hai ý, dùng and (và), but (nhưng), because (vì).", "level": "Band 2.5", "name": "Nối câu bằng and, but và because",
+     "explain": "Nhìn ví dụ trước nhé. I like apples and bananas. It is sunny, but it is windy. I stay at home because I am sick. Sau ví dụ là quy tắc. and nối hai ý giống nhau hoặc cùng hướng, but nối hai ý trái nhau, because nối lý do: ý sau because là lý do của ý trước.",
+     "examples": ["I like apples and bananas.", "It is sunny, but it is windy.", "I stay at home because I am sick."],
+     "tip": "because đứng trước lý do, không đứng trước kết quả.",
+     "model": "I like football and badminton, but I stay at home today because I have a cold.",
+     "modelVi": "Tôi thích bóng đá và cầu lông, nhưng hôm nay tôi ở nhà vì tôi bị cảm lạnh.",
+     "quiz": [
+       {"q": "I like apples ___ bananas.", "o": ["and", "but", "because", "so"], "a": 0, "why": "Hai ý thích giống nhau, nối bằng and."},
+       {"q": "It is sunny, ___ it is windy.", "o": ["and", "but", "because", "so"], "a": 1, "why": "Hai ý trái nhau (nắng nhưng gió), nối bằng but."},
+       {"q": "I stay at home ___ I am sick.", "o": ["and", "but", "because", "so"], "a": 2, "why": "Ý sau là lý do (bị ốm), nối bằng because."},
+       {"q": "She is small, ___ she runs fast.", "o": ["and", "but", "because", "so"], "a": 1, "why": "Hai ý trái nhau (nhỏ nhưng chạy nhanh), nối bằng but."},
+       {"q": "We play football ___ volleyball.", "o": ["and", "but", "because", "so"], "a": 0, "why": "Hai môn thể thao cùng hướng, nối bằng and."},
+       {"q": "He is tired ___ he works a lot.", "o": ["and", "but", "because", "so"], "a": 2, "why": "Ý sau là lý do (làm việc nhiều), nối bằng because."},
+       {"q": "I like tea, ___ I do not like coffee.", "o": ["and", "but", "because", "so"], "a": 1, "why": "Hai ý trái nhau (thích trà nhưng không thích cà phê), nối bằng but."},
+       {"q": "Lan is happy ___ she wins the game.", "o": ["and", "but", "because", "so"], "a": 2, "why": "Ý sau là lý do (thắng trận), nối bằng because."}
+     ]},
+    {"fam": "Thì quá khứ", "hook": "Muốn nói hôm qua ở đâu, thế nào, dùng was/were thay cho am/is/are.", "level": "Band 2.5", "name": "was và were — hôm qua ở đâu, thế nào",
+     "explain": "Nhìn ví dụ trước nhé. Yesterday I was at home. She was happy. They were at school. We were tired. Sau ví dụ là quy tắc. was/were là dạng quá khứ của am/is/are, dùng với yesterday (hôm qua), last night (tối qua). I, he, she, it và một người hay một vật đi với was. You, we, they và nhiều người hay nhiều vật đi với were.",
+     "examples": ["Yesterday I was at home.", "She was happy.", "They were at school."],
+     "tip": "was đi với một người, were đi với nhiều người — giống is/are.",
+     "model": "Yesterday we were at the park, and the weather was sunny.",
+     "modelVi": "Hôm qua chúng tôi ở công viên, và thời tiết nắng.",
+     "quiz": [
+       {"q": "Yesterday I ___ at home.", "o": ["was", "were", "am", "is"], "a": 0, "why": "I đi với was ở quá khứ."},
+       {"q": "She ___ happy yesterday.", "o": ["was", "were", "is", "are"], "a": 0, "why": "She là một người, đi với was."},
+       {"q": "They ___ at school yesterday.", "o": ["was", "were", "is", "are"], "a": 1, "why": "They là nhiều người, đi với were."},
+       {"q": "We ___ tired last night.", "o": ["was", "were", "are", "is"], "a": 1, "why": "We là nhiều người, đi với were."},
+       {"q": "He ___ sick yesterday.", "o": ["was", "were", "are", "is"], "a": 0, "why": "He là một người, đi với was."},
+       {"q": "You ___ late this morning.", "o": ["was", "were", "is", "are"], "a": 1, "why": "You luôn đi với were ở quá khứ."},
+       {"q": "The weather ___ sunny yesterday.", "o": ["was", "were", "is", "are"], "a": 0, "why": "The weather là một vật, số ít, đi với was."},
+       {"q": "My friends ___ at the park.", "o": ["was", "were", "is", "are"], "a": 1, "why": "My friends là nhiều người, đi với were."}
+     ]}
+  ]);
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    {"topic": "Cuộc sống quanh em", "level": "Band 2.5", "title": "Helping Mother on Sunday",
+     "text": "On Sunday morning, Linh helps her mother at home. Her mother cooks lunch, and Linh cleans the house.\n\nFirst, Linh sweeps the floor and tidies her room. She puts her books on the shelf and her toys in a box.\n\nThen Linh washes the dishes and waters the flowers in the garden. The flowers are red and yellow.\n\nAt noon, Linh and her mother eat lunch together. They eat rice, soup and fried fish. Linh says, \"Mum, the fish is very good!\"\n\nIn the afternoon, Linh reads a story book and her mother rests. Linh is happy because her house is clean and her mother is not tired.",
+     "questions": [
+       {"type": "MC", "q": "Đầu tiên Linh làm gì?", "o": ["Quét nhà và dọn phòng", "Rửa bát đĩa", "Tưới hoa"], "options": ["Quét nhà và dọn phòng", "Rửa bát đĩa", "Tưới hoa"], "a": 0, "why": "Đoạn 2: đầu tiên Linh quét nhà và dọn phòng."},
+       {"type": "TF", "q": "Mẹ của Linh nấu bữa trưa.", "o": ["True", "False"], "options": ["True", "False"], "a": 0, "why": "Đoạn 1: mẹ nấu bữa trưa, Linh dọn nhà."},
+       {"type": "MATCH", "q": "Hoa trong vườn màu gì?", "o": ["Đỏ và vàng", "Hồng và trắng", "Xanh dương và tím"], "options": ["Đỏ và vàng", "Hồng và trắng", "Xanh dương và tím"], "a": 0, "why": "Đoạn 3: hoa màu đỏ và vàng."},
+       {"type": "COMP", "q": "Linh cất đồ chơi vào trong ___: her toys in a ___.", "answer": "box", "why": "Đoạn 2: Linh cất đồ chơi vào một cái hộp."},
+       {"type": "MC", "q": "Buổi chiều, vì sao Linh vui?", "o": ["Nhà sạch và mẹ không mệt", "Linh được đồ chơi mới", "Linh đi công viên"], "options": ["Nhà sạch và mẹ không mệt", "Linh được đồ chơi mới", "Linh đi công viên"], "a": 0, "why": "Đoạn 5: Linh vui vì nhà sạch và mẹ không mệt."}
+     ],
+     "translation": "Sáng Chủ nhật, Linh giúp mẹ ở nhà. Mẹ nấu bữa trưa, Linh dọn nhà. Đầu tiên, Linh quét nhà và dọn phòng, xếp sách lên giá và cất đồ chơi vào hộp. Sau đó Linh rửa bát đĩa và tưới hoa trong vườn, hoa màu đỏ và vàng. Buổi trưa, hai mẹ con ăn cơm, canh và cá rán cùng nhau, Linh khen cá mẹ nấu rất ngon. Buổi chiều, Linh đọc truyện còn mẹ nghỉ ngơi. Linh vui vì nhà sạch sẽ và mẹ không mệt.",
+     "phrases": [{"en": "help her mother", "vi": "giúp mẹ"}, {"en": "sweep the floor", "vi": "quét nhà"}, {"en": "tidy her room", "vi": "dọn phòng"}, {"en": "wash the dishes", "vi": "rửa bát đĩa"}, {"en": "take a rest", "vi": "nghỉ ngơi"}]},
+    {"topic": "Cuộc sống quanh em", "level": "Band 2.5", "title": "The School Football Match",
+     "text": "Last Friday, class 6A played a football match with class 6B. The match was on the school playground.\n\nIn the first half, class 6B scored a goal. Class 6A was sad, but their coach said, \"Play together! Do not give up!\"\n\nIn the second half, Minh scored a goal for class 6A. Then Tuan scored one more goal. Class 6A won the match 2-1.\n\nThe players were very happy. They thanked their coach and shook hands with class 6B.\n\nAfter the match, the two classes drank water and ate bananas together. Minh says, \"Football is fun when we play together!\"",
+     "questions": [
+       {"type": "MC", "q": "Lớp 6A đá với lớp nào?", "o": ["Lớp 6B", "Lớp 6C", "Lớp 5A"], "options": ["Lớp 6B", "Lớp 6C", "Lớp 5A"], "a": 0, "why": "Đoạn 1: lớp 6A đá trận bóng với lớp 6B."},
+       {"type": "TF", "q": "Lớp 6A thắng trận với tỉ số 2-1.", "o": ["True", "False"], "options": ["True", "False"], "a": 0, "why": "Đoạn 3: lớp 6A thắng trận 2-1."},
+       {"type": "MATCH", "q": "Ai ghi bàn cho lớp 6A?", "o": ["Minh và Tuấn", "Chỉ Minh", "Huấn luyện viên"], "options": ["Minh và Tuấn", "Chỉ Minh", "Huấn luyện viên"], "a": 0, "why": "Đoạn 3: Minh ghi một bàn, rồi Tuấn ghi thêm một bàn."},
+       {"type": "COMP", "q": "Hiệp một, lớp 6B ghi một ___: scored a ___.", "answer": "goal", "why": "Đoạn 2: hiệp một lớp 6B ghi một bàn thắng."},
+       {"type": "MC", "q": "Sau trận đấu, hai lớp làm gì?", "o": ["Uống nước và ăn chuối cùng nhau", "Về nhà ngay", "Đá thêm một trận nữa"], "options": ["Uống nước và ăn chuối cùng nhau", "Về nhà ngay", "Đá thêm một trận nữa"], "a": 0, "why": "Đoạn 5: sau trận đấu hai lớp uống nước và ăn chuối cùng nhau."}
+     ],
+     "translation": "Thứ Sáu tuần trước, lớp 6A đá một trận bóng với lớp 6B trên sân trường. Hiệp một, lớp 6B ghi một bàn. Lớp 6A buồn, nhưng huấn luyện viên nói: Hãy chơi cùng nhau! Đừng bỏ cuộc! Hiệp hai, Minh ghi một bàn cho lớp 6A, rồi Tuấn ghi thêm một bàn nữa. Lớp 6A thắng trận 2-1. Các cầu thủ rất vui, cảm ơn huấn luyện viên và bắt tay lớp 6B. Sau trận đấu, hai lớp uống nước và ăn chuối cùng nhau. Minh nói bóng đá thật vui khi chơi cùng nhau.",
+     "phrases": [{"en": "football match", "vi": "trận bóng đá"}, {"en": "score a goal", "vi": "ghi bàn"}, {"en": "give up", "vi": "bỏ cuộc"}, {"en": "shake hands", "vi": "bắt tay"}, {"en": "play together", "vi": "chơi cùng nhau"}]},
+    {"topic": "Cuộc sống quanh em", "level": "Band 2.5", "title": "Learning to Swim in Summer",
+     "text": "In summer, Hoa learns to swim at the town pool. The pool is big and clean.\n\nHer teacher is Mr Nam. He is kind and funny. On the first day, Hoa is scared of the water.\n\nMr Nam says, \"Hold my hand and kick your legs.\" Hoa holds his hand and kicks her legs slowly.\n\nAfter one week, Hoa can float on the water. After two weeks, she can swim a short way by herself.\n\nNow Hoa loves swimming. She swims every Sunday with her friends. She says, \"Swimming is fun, and it keeps me healthy!\"",
+     "questions": [
+       {"type": "MC", "q": "Hoa học bơi ở đâu?", "o": ["Ở bể bơi của thị trấn", "Ở sông", "Ở biển"], "options": ["Ở bể bơi của thị trấn", "Ở sông", "Ở biển"], "a": 0, "why": "Đoạn 1: Hoa học bơi ở bể bơi của thị trấn."},
+       {"type": "TF", "q": "Ngày đầu tiên Hoa sợ nước.", "o": ["True", "False"], "options": ["True", "False"], "a": 0, "why": "Đoạn 2: ngày đầu tiên Hoa sợ nước."},
+       {"type": "MATCH", "q": "Thầy dạy bơi của Hoa là ai?", "o": ["Thầy Nam", "Thầy Tuấn", "Cô Thu"], "options": ["Thầy Nam", "Thầy Tuấn", "Cô Thu"], "a": 0, "why": "Đoạn 2: thầy dạy bơi là thầy Nam."},
+       {"type": "COMP", "q": "Sau một tuần, Hoa có thể ___ trên mặt nước: can ___ on the water.", "answer": "float", "why": "Đoạn 4: sau một tuần Hoa có thể nổi trên mặt nước."},
+       {"type": "MC", "q": "Bây giờ Hoa bơi khi nào?", "o": ["Chủ nhật nào cũng bơi cùng bạn", "Mỗi ngày một mình", "Chỉ vào mùa đông"], "options": ["Chủ nhật nào cũng bơi cùng bạn", "Mỗi ngày một mình", "Chỉ vào mùa đông"], "a": 0, "why": "Đoạn 5: Hoa bơi mỗi Chủ nhật cùng bạn bè."}
+     ],
+     "translation": "Vào mùa hè, Hoa học bơi ở bể bơi của thị trấn. Bể bơi lớn và sạch. Thầy dạy là thầy Nam, thầy tốt bụng và vui tính. Ngày đầu tiên, Hoa sợ nước. Thầy Nam nói: Nắm tay thầy và đạp chân đi. Hoa nắm tay thầy và đạp chân chậm rãi. Sau một tuần, Hoa có thể nổi trên mặt nước. Sau hai tuần, em có thể tự bơi một đoạn ngắn. Bây giờ Hoa rất thích bơi, Chủ nhật nào em cũng bơi cùng bạn bè. Em nói bơi thật vui và giúp em khỏe mạnh.",
+     "phrases": [{"en": "learn to swim", "vi": "học bơi"}, {"en": "be scared of", "vi": "sợ"}, {"en": "hold my hand", "vi": "nắm tay tôi"}, {"en": "kick your legs", "vi": "đạp chân"}, {"en": "keep me healthy", "vi": "giúp tôi khỏe mạnh"}]},
+    {"topic": "Cuộc sống quanh em", "level": "Band 2.5", "title": "Rainy Season in My Town",
+     "text": "In my town, the rainy season starts in May and ends in October. It rains almost every day.\n\nIn the morning, children wear raincoats and take umbrellas to school. The roads are wet and muddy.\n\nSometimes the rain is very heavy. Water runs on the streets, and people walk slowly.\n\nBut the rainy season is also good. The trees are green, the rice grows fast, and the air is cool.\n\nMy family likes the rainy season. In the evening, we stay at home, drink hot tea and listen to the rain.",
+     "questions": [
+       {"type": "MC", "q": "Mùa mưa bắt đầu vào tháng nào?", "o": ["Tháng Năm", "Tháng Mười", "Tháng Một"], "options": ["Tháng Năm", "Tháng Mười", "Tháng Một"], "a": 0, "why": "Đoạn 1: mùa mưa bắt đầu vào tháng Năm."},
+       {"type": "TF", "q": "Mùa mưa trời mưa gần như mỗi ngày.", "o": ["True", "False"], "options": ["True", "False"], "a": 0, "why": "Đoạn 1: mùa mưa trời mưa gần như mỗi ngày."},
+       {"type": "MATCH", "q": "Trẻ em mang gì đến trường?", "o": ["Áo mưa và ô", "Ủng và găng tay", "Sách và bóng"], "options": ["Áo mưa và ô", "Ủng và găng tay", "Sách và bóng"], "a": 0, "why": "Đoạn 2: trẻ em mặc áo mưa và mang ô đến trường."},
+       {"type": "COMP", "q": "Đường ướt và ___: The roads are wet and ___.", "answer": "muddy", "why": "Đoạn 2: đường ướt và lầy."},
+       {"type": "MC", "q": "Buổi tối, gia đình làm gì?", "o": ["Ở nhà, uống trà nóng và nghe tiếng mưa", "Đi bơi", "Chơi bóng đá"], "options": ["Ở nhà, uống trà nóng và nghe tiếng mưa", "Đi bơi", "Chơi bóng đá"], "a": 0, "why": "Đoạn 5: buổi tối gia đình ở nhà, uống trà nóng và nghe tiếng mưa."}
+     ],
+     "translation": "Ở thị trấn của tôi, mùa mưa bắt đầu vào tháng Năm và kết thúc vào tháng Mười, trời mưa gần như mỗi ngày. Buổi sáng, trẻ em mặc áo mưa và mang ô đến trường, đường ướt và lầy. Đôi khi mưa rất to, nước chảy trên đường và mọi người đi chậm rãi. Nhưng mùa mưa cũng có điểm tốt: cây xanh, lúa lớn nhanh và không khí mát mẻ. Gia đình tôi thích mùa mưa, buổi tối chúng tôi ở nhà, uống trà nóng và nghe tiếng mưa.",
+     "phrases": [{"en": "rainy season", "vi": "mùa mưa"}, {"en": "almost every day", "vi": "gần như mỗi ngày"}, {"en": "wet and muddy", "vi": "ướt và lầy"}, {"en": "grow fast", "vi": "lớn nhanh"}, {"en": "listen to the rain", "vi": "nghe tiếng mưa"}]}
+  ]);
+  CONTENT.listeningPlus.push.apply(CONTENT.listeningPlus, [
+    {"section": "Section 1", "band": "Band 2.5", "topic": "Gọi điện đặt bánh sinh nhật",
+     "text": "A: Good afternoon, Happy Cake Shop. How can I help you? B: Good afternoon. I want to order a birthday cake, please. A: Of course. What size do you want? B: A medium cake, please. It is for my daughter. She is ten years old. A: What flavour do you like? We have chocolate, strawberry and vanilla. B: Chocolate, please. My daughter loves chocolate. Can you write Happy Birthday on the cake, please? A: Yes, we can write it in pink letters. A: How many people will eat the cake? B: About twelve people. A: A medium chocolate cake costs 350000 dong. B: That is fine. When can I pick it up? A: You can pick it up on Saturday morning, after 9 o'clock. B: Perfect. My name is Mrs Lan, and my phone number is 0987654321. A: Thank you, Mrs Lan. See you on Saturday!",
+     "questions": [
+       {"type": "MC", "q": "What size cake does the customer order?", "o": ["A small cake", "A medium cake", "A large cake", "An extra large cake"], "a": 1, "why": "Khách đặt một chiếc bánh cỡ vừa."},
+       {"type": "MC", "q": "What flavour does the customer choose?", "o": ["Chocolate", "Strawberry", "Vanilla", "Lemon"], "a": 0, "why": "Khách chọn vị sô-cô-la vì con gái thích sô-cô-la."},
+       {"type": "MATCH", "q": "When can the customer pick up the cake?", "o": ["On Saturday morning, after 9 o'clock", "On Friday evening", "On Sunday morning"], "a": 0, "why": "Khách có thể lấy bánh vào sáng thứ Bảy, sau 9 giờ."},
+       {"type": "COMP", "q": "A medium chocolate cake costs ___ dong.", "answer": "350000", "why": "Bánh sô-cô-la cỡ vừa giá 350000 đồng."},
+       {"type": "TF", "q": "The cake is for the customer's son.", "o": ["True", "False"], "a": 1, "why": "Câu này sai vì bánh dành cho con gái của khách, bé mười tuổi."}
+     ]},
+    {"section": "Section 1", "band": "Band 2.5", "topic": "Hướng dẫn làm thẻ thư viện",
+     "text": "A: Excuse me, I want to make a library card. What do I need? B: You need one photo and your student card. A: I have my student card here. What about the photo? B: You can take a photo at the shop next door. It costs 20000 dong. A: How much is the library card? B: The card is free for students. You only pay 50000 dong if you lose the card. A: How many books can I borrow? B: You can borrow three books for two weeks. A: Can I borrow books on Sunday? B: Yes, the library is open on Sunday, from 8 o'clock to 5 o'clock. A: One more question. Where is the reading room? B: It is on the second floor. A: Thank you very much. I will bring my photo tomorrow. B: You are welcome. See you tomorrow!",
+     "questions": [
+       {"type": "MC", "q": "What does the student need for a library card?", "o": ["One photo and a student card", "Two photos and money", "Only money", "A passport"], "a": 0, "why": "Làm thẻ thư viện cần một tấm ảnh và thẻ học sinh."},
+       {"type": "MC", "q": "How many books can the student borrow?", "o": ["Two books", "Three books", "Five books", "Ten books"], "a": 1, "why": "Học sinh có thể mượn ba cuốn sách trong hai tuần."},
+       {"type": "MATCH", "q": "Where is the reading room?", "o": ["On the second floor", "On the first floor", "Next door"], "a": 0, "why": "Phòng đọc ở tầng hai."},
+       {"type": "COMP", "q": "The card is free for ___.", "answer": "students", "why": "Thẻ thư viện miễn phí cho học sinh."},
+       {"type": "TF", "q": "The library is open on Sunday from 8 o'clock to 5 o'clock.", "o": ["True", "False"], "a": 0, "why": "Câu này đúng vì nhân viên nói thư viện mở cửa Chủ nhật từ 8 giờ đến 5 giờ."}
+     ]},
+    {"section": "Section 1", "band": "Band 2.5", "topic": "Thông báo nghỉ học vì bão",
+     "text": "Good morning, students and parents. I have an important announcement. Because of the storm, there is no school tomorrow, on Friday. All classes are cancelled. Please stay at home and stay safe. Do not go out in heavy rain and strong wind. The storm brings heavy rain and strong wind to our town. Teachers will send homework to your class group. Please finish your homework at home. On Saturday, school is open again, if the weather is good. Classes on Saturday start at 7:30 as usual. Please bring your homework to school on Saturday. Please listen to the school announcement on Saturday morning. If you have any questions, please call the school office. The phone number is 02438501234. We hope to see you all on Saturday. Thank you, and stay safe.",
+     "questions": [
+       {"type": "MC", "q": "Why is there no school on Friday?", "o": ["Because of the storm", "Because of a holiday", "Because the teachers are sick", "Because of a football match"], "a": 0, "why": "Ngày thứ Sáu nghỉ học vì bão."},
+       {"type": "MC", "q": "When is school open again?", "o": ["On Saturday, if the weather is good", "On Sunday", "On Monday", "On Friday evening"], "a": 0, "why": "Thứ Bảy trường mở cửa trở lại nếu thời tiết tốt."},
+       {"type": "MATCH", "q": "What should students do at home?", "o": ["Finish their homework", "Play football", "Go swimming"], "a": 0, "why": "Học sinh nên làm xong bài tập ở nhà."},
+       {"type": "COMP", "q": "The school office phone number is ___.", "answer": "02438501234", "why": "Số điện thoại văn phòng trường là 02438501234."},
+       {"type": "TF", "q": "Students should go out in heavy rain.", "o": ["True", "False"], "a": 1, "why": "Câu này sai vì thông báo dặn học sinh ở nhà, không ra ngoài khi mưa to và gió mạnh."}
+     ]}
+  ]);
+  CONTENT.speaking.push.apply(CONTENT.speaking, [
+    {"partNum": 1, "topicStd": "Nhà ở và nơi sống", "part": "Part 1", "topic": "My Street - Con phố của tôi", "band": "Band 2.5",
+     "lines": [
+       {"who": "Examiner", "en": "Where do you live?", "vi": "Bạn sống ở đâu?"},
+       {"who": "Candidate", "en": "I live in a small street near the market. My house is next to a park.", "vi": "Tôi sống ở một con phố nhỏ gần chợ. Nhà tôi cạnh công viên."},
+       {"who": "Examiner", "en": "What is near your house?", "vi": "Gần nhà bạn có gì?"},
+       {"who": "Candidate", "en": "There is a park, a small shop and a bus stop near my house.", "vi": "Gần nhà tôi có công viên, một cửa hàng nhỏ và một bến xe buýt."},
+       {"who": "Examiner", "en": "Do you like your neighbourhood?", "vi": "Bạn có thích khu phố của mình không?"},
+       {"who": "Candidate", "en": "Yes, it is quiet and friendly. My neighbours are kind.", "vi": "Có, khu phố yên tĩnh và thân thiện. Hàng xóm của tôi tốt bụng."},
+       {"who": "Examiner", "en": "What do you do in the park?", "vi": "Bạn làm gì ở công viên?"},
+       {"who": "Candidate", "en": "I play badminton and ride my bicycle in the park.", "vi": "Tôi chơi cầu lông và đạp xe trong công viên."}
+     ],
+     "quiz": [
+       {"q": "Nhà của Candidate ở đâu?", "o": ["Ở phố nhỏ gần chợ, cạnh công viên", "Ở trung tâm thành phố", "Ở làng quê xa"], "a": 0, "why": "Candidate nói: I live in a small street near the market. My house is next to a park."},
+       {"q": "Gần nhà Candidate có gì?", "o": ["Công viên, cửa hàng nhỏ và bến xe buýt", "Sông và núi", "Trường học và bệnh viện"], "a": 0, "why": "Candidate nói: There is a park, a small shop and a bus stop near my house."},
+       {"q": "Candidate làm gì ở công viên?", "o": ["Chơi cầu lông và đạp xe", "Bơi và câu cá", "Đá bóng và chạy bộ"], "a": 0, "why": "Candidate nói: I play badminton and ride my bicycle in the park."}
+     ]},
+    {"partNum": 1, "topicStd": "Thể thao và sức khỏe", "part": "Part 1", "topic": "Sports - Thể thao", "band": "Band 2.5",
+     "lines": [
+       {"who": "Examiner", "en": "Do you like sport?", "vi": "Bạn có thích thể thao không?"},
+       {"who": "Candidate", "en": "Yes, I like sport very much. I play football every week.", "vi": "Có, tôi rất thích thể thao. Tôi chơi bóng đá mỗi tuần."},
+       {"who": "Examiner", "en": "Who do you play with?", "vi": "Bạn chơi với ai?"},
+       {"who": "Candidate", "en": "I play with my friends at school. Our team is strong.", "vi": "Tôi chơi với bạn bè ở trường. Đội của chúng tôi mạnh."},
+       {"who": "Examiner", "en": "Do you watch sport on TV?", "vi": "Bạn có xem thể thao trên TV không?"},
+       {"who": "Candidate", "en": "Yes, I watch football matches with my dad.", "vi": "Có, tôi xem các trận bóng đá cùng bố."},
+       {"who": "Examiner", "en": "Is sport good for health?", "vi": "Thể thao có tốt cho sức khỏe không?"},
+       {"who": "Candidate", "en": "Yes, sport keeps me strong and healthy.", "vi": "Có, thể thao giúp tôi khỏe mạnh."}
+     ],
+     "quiz": [
+       {"q": "Candidate chơi môn thể thao nào mỗi tuần?", "o": ["Bóng đá", "Cầu lông", "Bơi"], "a": 0, "why": "Candidate nói: I play football every week."},
+       {"q": "Candidate chơi với ai?", "o": ["Với bạn bè ở trường", "Với anh trai", "Một mình"], "a": 0, "why": "Candidate nói: I play with my friends at school."},
+       {"q": "Candidate xem thể thao với ai?", "o": ["Với bố", "Với mẹ", "Với thầy giáo"], "a": 0, "why": "Candidate nói: I watch football matches with my dad."}
+     ]},
+    {"partNum": 2, "topicStd": "Địa điểm và du lịch", "part": "Part 2", "topic": "Describe a place you like to visit", "band": "Band 2.5",
+     "lines": [
+       {"who": "Cue card", "en": "Describe a place you like to visit. You should say: where the place is, when you go there, what you do there, and explain why you like it.", "vi": "Hãy mô tả một địa điểm bạn thích đến thăm. Bạn nên nói: địa điểm đó ở đâu, bạn đến đó khi nào, bạn làm gì ở đó, và giải thích vì sao bạn thích nó."},
+       {"who": "Candidate", "en": "I am going to talk about the park near my house.", "vi": "Tôi sẽ nói về công viên gần nhà tôi."},
+       {"who": "Candidate", "en": "The park is at the end of my street, next to the lake.", "vi": "Công viên ở cuối phố nhà tôi, cạnh hồ."},
+       {"who": "Candidate", "en": "I go there every Sunday morning with my friends.", "vi": "Tôi đến đó mỗi sáng Chủ nhật cùng bạn bè."},
+       {"who": "Candidate", "en": "We ride bicycles, play badminton and sit under the big trees.", "vi": "Chúng tôi đạp xe, chơi cầu lông và ngồi dưới những cây lớn."},
+       {"who": "Candidate", "en": "Sometimes we buy ice cream at a small shop near the park.", "vi": "Thỉnh thoảng chúng tôi mua kem ở một cửa hàng nhỏ gần công viên."},
+       {"who": "Candidate", "en": "I like the park because it is green, quiet and beautiful.", "vi": "Tôi thích công viên vì nó xanh, yên tĩnh và đẹp."},
+       {"who": "Candidate", "en": "I feel happy and healthy when I play there.", "vi": "Tôi cảm thấy vui và khỏe khi chơi ở đó."}
+     ],
+     "quiz": [
+       {"q": "Công viên ở đâu?", "o": ["Cuối phố, cạnh hồ", "Giữa thành phố", "Gần trường học"], "a": 0, "why": "Candidate nói: The park is at the end of my street, next to the lake."},
+       {"q": "Candidate đến công viên khi nào?", "o": ["Mỗi sáng Chủ nhật cùng bạn bè", "Mỗi tối một mình", "Chỉ vào mùa hè"], "a": 0, "why": "Candidate nói: I go there every Sunday morning with my friends."},
+       {"q": "Vì sao Candidate thích công viên?", "o": ["Vì nó xanh, yên tĩnh và đẹp", "Vì nó lớn nhất thành phố", "Vì có nhiều trò chơi"], "a": 0, "why": "Candidate nói: it is green, quiet and beautiful."}
+     ]},
+    {"partNum": 3, "topicStd": "Trẻ em và truyền thông", "part": "Part 3", "topic": "Children and TV - Trẻ em và TV", "band": "Band 2.5",
+     "lines": [
+       {"who": "Examiner", "en": "Do children watch too much TV today?", "vi": "Trẻ em ngày nay có xem TV quá nhiều không?"},
+       {"who": "Candidate", "en": "Yes, I think so. Many children watch TV for hours every day.", "vi": "Có, tôi nghĩ vậy. Nhiều trẻ em xem TV hàng giờ mỗi ngày."},
+       {"who": "Examiner", "en": "What programmes are good for children?", "vi": "Chương trình nào tốt cho trẻ em?"},
+       {"who": "Candidate", "en": "Programmes about animals, science and stories are good. They help children learn new things.", "vi": "Chương trình về động vật, khoa học và truyện kể rất tốt. Chúng giúp trẻ em học điều mới."},
+       {"who": "Examiner", "en": "Should parents choose programmes for children?", "vi": "Cha mẹ có nên chọn chương trình cho trẻ em không?"},
+       {"who": "Candidate", "en": "Yes, parents should choose good programmes and limit TV time, so children also play outside.", "vi": "Có, cha mẹ nên chọn chương trình hay và giới hạn thời gian xem TV, để trẻ em còn chơi ngoài trời."}
+     ],
+     "quiz": [
+       {"q": "Theo Candidate, nhiều trẻ em xem TV bao lâu mỗi ngày?", "o": ["Hàng giờ", "Mười phút", "Không xem"], "a": 0, "why": "Candidate nói: Many children watch TV for hours every day."},
+       {"q": "Chương trình nào tốt cho trẻ em?", "o": ["Về động vật, khoa học và truyện kể", "Về xe hơi và mua sắm", "Về tin tức chính trị"], "a": 0, "why": "Candidate nói: Programmes about animals, science and stories are good."},
+       {"q": "Theo Candidate, cha mẹ nên làm gì?", "o": ["Chọn chương trình hay và giới hạn thời gian xem TV", "Để trẻ em xem cả ngày", "Cấm trẻ em xem TV hẳn"], "a": 0, "why": "Candidate nói: parents should choose good programmes and limit TV time."}
+     ]}
+  ]);
+  CONTENT.roleplay.push.apply(CONTENT.roleplay, [
+    {"title": "Mua vé xem phim - Buying Cinema Tickets", "setting": "Bạn muốn đi xem phim hoạt hình với bạn vào buổi tối. Bạn hỏi giờ chiếu, chọn ghế giữa và hỏi giá vé.", "partner": "Nhân viên rạp chiếu phim", "goal": "Mua được 2 vé phim lúc 7 giờ tối, ghế giữa, và hỏi được giá vé.", "band": "Band 2.5",
+     "chunks": ["I want to buy two cinema tickets", "The cartoon film", "At seven o'clock", "Seats in the middle", "Thank you very much"],
+     "turns": [
+       {"from": "partner", "text": "Hello! Welcome to Star Cinema."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Tôi muốn mua hai vé xem phim, làm ơn.", "expect": "Hello. I want to buy two cinema tickets, please.", "keywords": ["want", "buy", "tickets"], "hint": "Hello. I want to buy...", "tip": "cinema tickets là vé xem phim.", "chunks": ["I want to buy two cinema tickets"]},
+       {"from": "partner", "text": "Which film, and at what time?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Phim hoạt hình, lúc bảy giờ tối.", "expect": "The cartoon film, at seven o'clock in the evening.", "keywords": ["cartoon", "seven"], "hint": "The cartoon film,...", "tip": "Nói tên phim trước, rồi tới giờ.", "chunks": ["The cartoon film", "At seven o'clock"]},
+       {"from": "partner", "text": "We have seats in the middle. Two tickets cost 120000 dong."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tốt quá. Tôi lấy hai vé này. Cảm ơn bạn rất nhiều.", "expect": "Good. I take the two tickets. Thank you very much.", "keywords": ["take", "tickets", "thank"], "hint": "Good. I take...", "tip": "Nói Good trước khi nhận vé nghe tự nhiên.", "chunks": ["Seats in the middle", "Thank you very much"]}
+     ]},
+    {"title": "Đổi áo sai cỡ ở cửa hàng - Exchanging a Shirt of the Wrong Size", "setting": "Hôm qua bạn mua một chiếc áo nhưng áo quá chật. Bạn mang áo tới cửa hàng để đổi sang cỡ M.", "partner": "Nhân viên cửa hàng", "goal": "Đổi được áo cỡ S sang cỡ M và cảm ơn nhân viên.", "band": "Band 2.5",
+     "chunks": ["I bought this shirt yesterday", "It is too small", "Size M, please", "Can I change this shirt", "It fits well"],
+     "turns": [
+       {"from": "partner", "text": "Hello! How can I help you?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Hôm qua tôi mua chiếc áo này, nhưng nó quá chật.", "expect": "Hello. I bought this shirt yesterday, but it is too small.", "keywords": ["bought", "shirt", "small"], "hint": "Hello. I bought this shirt...", "tip": "too small là quá chật.", "chunks": ["I bought this shirt yesterday", "It is too small"]},
+       {"from": "partner", "text": "What size do you need?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cỡ M ạ. Tôi đổi chiếc áo này được không?", "expect": "Size M, please. Can I change this shirt?", "keywords": ["size", "change", "shirt"], "hint": "Size M, please....", "tip": "Can I change...? là câu hỏi đổi đồ lịch sự.", "chunks": ["Size M, please", "Can I change this shirt"]},
+       {"from": "partner", "text": "Yes, here is size M. Please try it on."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Áo vừa lắm. Cảm ơn bạn rất nhiều.", "expect": "It fits well. Thank you very much.", "keywords": ["fits", "thank"], "hint": "It fits well....", "tip": "fits well là vừa vặn.", "chunks": ["It fits well"]}
+     ]},
+    {"title": "Nhờ cô giáo giải thích bài tập - Asking the Teacher to Explain Homework", "setting": "Bạn không hiểu bài toán số 3. Bạn nhờ cô giáo giải thích lại và hứa sẽ làm lại bài ở nhà.", "partner": "Cô giáo", "goal": "Nhờ cô giải thích lại bài toán và hứa làm lại bài ở nhà.", "band": "Band 2.5",
+     "chunks": ["I do not understand", "This maths problem", "Can you explain it again", "Now I understand", "I will do it again"],
+     "turns": [
+       {"from": "partner", "text": "Hello. Do you have a question?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Thưa cô, em không hiểu bài toán này.", "expect": "Excuse me, Miss. I do not understand this maths problem.", "keywords": ["understand", "maths", "problem"], "hint": "Excuse me, Miss. I do not understand...", "tip": "Excuse me, Miss mở đầu lịch sự khi hỏi cô giáo.", "chunks": ["I do not understand", "This maths problem"]},
+       {"from": "partner", "text": "Which part do you not understand?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Em không hiểu câu số 3. Cô giải thích lại giúp em được không ạ?", "expect": "I do not understand question 3. Can you explain it again, please?", "keywords": ["question", "explain", "again"], "hint": "I do not understand question 3....", "tip": "explain it again là giải thích lại.", "chunks": ["Can you explain it again"]},
+       {"from": "partner", "text": "Of course. Look: first you add 25 and 30, then you get 55."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Bây giờ em hiểu rồi. Cảm ơn cô. Em sẽ làm lại bài ở nhà.", "expect": "Now I understand. Thank you, Miss. I will do it again at home.", "keywords": ["understand", "thank", "again"], "hint": "Now I understand....", "tip": "Nói I will do it again để hứa làm lại bài.", "chunks": ["Now I understand", "I will do it again"]}
+     ]},
+    {"title": "Mời bạn ăn trưa ở căng tin - Inviting a Friend to Lunch at the Canteen", "setting": "Bạn muốn mời bạn cùng lớp ăn trưa ở căng tin trường vào lúc mười một giờ rưỡi. Bạn nói địa điểm, giờ giấc và món ăn.", "partner": "Bạn cùng lớp", "goal": "Mời được bạn ăn trưa lúc 11 giờ 30 ở căng tin.", "band": "Band 2.5",
+     "chunks": ["Do you want to have lunch with me", "At the school canteen", "At half past eleven", "Rice and chicken", "See you then"],
+     "turns": [
+       {"from": "partner", "text": "Hi! What are you doing?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào Hoa. Hôm nay bạn có muốn ăn trưa cùng mình không?", "expect": "Hi, Hoa. Do you want to have lunch with me today?", "keywords": ["want", "lunch"], "hint": "Hi, Hoa. Do you want to have lunch...", "tip": "have lunch with me là ăn trưa cùng mình.", "chunks": ["Do you want to have lunch with me"]},
+       {"from": "partner", "text": "Yes! Where and when?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Ở căng tin trường, lúc mười một giờ rưỡi.", "expect": "At the school canteen, at half past eleven.", "keywords": ["canteen", "eleven"], "hint": "At the school canteen,...", "tip": "half past eleven là mười một giờ rưỡi.", "chunks": ["At the school canteen", "At half past eleven"]},
+       {"from": "partner", "text": "Great! What will we eat?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cơm và gà. Hẹn gặp bạn lúc mười một giờ rưỡi nhé!", "expect": "Rice and chicken. See you at half past eleven!", "keywords": ["rice", "chicken", "eleven"], "hint": "Rice and chicken....", "tip": "See you at... là hẹn gặp lúc...", "chunks": ["Rice and chicken", "See you then"]}
+     ]}
+  ]);
+  CONTENT.writing.push.apply(CONTENT.writing, [
+    {"wtype": "Biểu đồ cột", "type": "Task 1", "band": "Band 2.5", "title": "Biểu đồ cột: phương tiện đến trường",
+     "prompt": "The bar chart below shows how 50 students in class 6B go to school. Summarise the information in 5-7 simple sentences.",
+     "dataDesc": "Dữ kiện: xe đạp 20 học sinh; xe buýt 15; đi bộ 10; xe máy cùng bố mẹ 5. Tổng 50 học sinh. Xe đạp nhiều nhất, xe máy ít nhất.",
+     "model": "The bar chart shows how 50 students in class 6B go to school.\n\nTwenty students go to school by bicycle. This is the most popular way. Fifteen students go by bus. Ten students walk to school. Only five students go by motorbike with their parents.\n\nIn short, most students in class 6B go to school by bicycle or by bus.",
+     "analysis": "Cấu trúc 3 đoạn: mở bài nêu biểu đồ nói về gì; thân bài nêu số liệu từ cao xuống thấp; kết bài tóm tắt ý chính. Điểm ngôn ngữ đáng học: by bicycle/by bus (bằng xe đạp/bằng xe buýt), the most popular way (cách phổ biến nhất), only (chỉ).",
+     "phrases": [{"en": "The bar chart shows...", "vi": "Biểu đồ cột cho thấy..."}, {"en": "by bicycle", "vi": "bằng xe đạp"}, {"en": "the most popular way", "vi": "cách phổ biến nhất"}, {"en": "In short", "vi": "Tóm lại"}]},
+    {"wtype": "Ý kiến", "type": "Task 2", "band": "Band 2.5", "title": "Opinion: Trẻ em chơi ngoài trời mỗi ngày",
+     "prompt": "Some people think children should play outside every day. Do you agree or disagree? Write 5-7 simple sentences and give reasons.",
+     "dataDesc": "Dàn ý gợi ý: Mở bài — nêu ý kiến (đồng ý). Thân — lý do 1: khỏe mạnh nhờ chạy nhảy; lý do 2: kết bạn, học chơi cùng nhau. Kết — khẳng định lại ý kiến.",
+     "model": "I agree that children should play outside every day.\n\nFirst, playing outside keeps children strong and healthy. They run, jump and play games. Second, children make friends when they play outside. They learn to play together and share toys.\n\nIn short, playing outside every day is good for children.",
+     "analysis": "Cấu trúc 3 đoạn: mở bài nêu ý kiến; thân bài nêu hai lý do, mỗi lý do một câu giải thích; kết bài khẳng định lại. Điểm ngôn ngữ đáng học: keep children strong and healthy (giúp trẻ em khỏe mạnh), make friends (kết bạn), share toys (chia sẻ đồ chơi).",
+     "phrases": [{"en": "I agree that...", "vi": "Tôi đồng ý rằng..."}, {"en": "keep children strong and healthy", "vi": "giúp trẻ em khỏe mạnh"}, {"en": "make friends", "vi": "kết bạn"}, {"en": "In short", "vi": "Tóm lại"}]},
+    {"wtype": "Câu hỏi hai phần", "type": "Task 2", "band": "Band 2.5", "title": "Chủ nhật của bạn",
+     "prompt": "What do you usually do on Sunday? Why do you like it? Write 5-7 simple sentences.",
+     "dataDesc": "Dàn ý gợi ý: Chủ nhật làm gì (giúp mẹ buổi sáng, chơi bóng buổi chiều, đọc sách) và vì sao thích (vui, khỏe, gần gia đình).",
+     "model": "On Sunday, I usually help my mother in the morning and play football in the afternoon.\n\nIn the morning, I sweep the floor and water the flowers. In the afternoon, I play football with my friends at school. I like Sunday because I am happy and healthy. I also spend time with my family.\n\nSunday is my favourite day.",
+     "analysis": "Cấu trúc 3 đoạn: mở bài trả lời cả hai câu hỏi ngắn gọn; thân bài kể chi tiết buổi sáng và buổi chiều; kết bài nêu cảm nghĩ. Điểm ngôn ngữ đáng học: usually (thường), spend time with my family (dành thời gian với gia đình), my favourite day (ngày yêu thích nhất của tôi).",
+     "phrases": [{"en": "On Sunday", "vi": "Vào Chủ nhật"}, {"en": "help my mother", "vi": "giúp mẹ"}, {"en": "spend time with my family", "vi": "dành thời gian với gia đình"}, {"en": "my favourite day", "vi": "ngày yêu thích nhất của tôi"}]}
+  ]);
+  CONTENT.writingDrills.push.apply(CONTENT.writingDrills, [
+    {"band": "Band 2.5", "kind": "combine", "title": "Nối câu bằng so: mệt", "prompt": "Nối hai câu thành một câu bằng so. / Combine the sentences with so.", "given": "I am tired. / I go to bed early.", "model": "I am tired, so I go to bed early.", "note": "so nối kết quả: ý trước là nguyên nhân, ý sau là kết quả."},
+    {"band": "Band 2.5", "kind": "order", "title": "Sắp xếp thành câu: hiện tại tiếp diễn", "prompt": "Sắp xếp các từ thành câu đúng. / Put the words in the correct order.", "given": "cooking / is / rice / Mum", "model": "Mum is cooking rice.", "note": "Hiện tại tiếp diễn: chủ ngữ + am/is/are + động từ thêm -ing."},
+    {"band": "Band 2.5", "kind": "combine", "title": "Nối câu bằng and: việc nhà", "prompt": "Nối hai câu thành một câu bằng and. / Combine the sentences with and.", "given": "I sweep the floor. / I mop the floor.", "model": "I sweep the floor and mop the floor.", "note": "Khi nối hai việc cùng chủ ngữ, chỉ giữ chủ ngữ một lần và nối hai động từ bằng and."}
+  ]);
+  CONTENT.typing.push.apply(CONTENT.typing, [
+    {"level": "Band 2.5", "title": "Việc nhà mỗi ngày", "sentences": ["I sweep the floor every morning.", "Mum mops the floor.", "I tidy my room.", "I dust the table.", "Mum cooks rice.", "I water the flowers.", "I feed the dog.", "I take out the rubbish.", "I wash the dishes after lunch.", "My room is clean."]},
+    {"level": "Band 2.5", "title": "Thời tiết bốn mùa", "sentences": ["Today is a sunny day.", "It is a rainy day.", "The sky is cloudy.", "It is a cold morning.", "Flowers bloom in spring.", "We swim in summer.", "Leaves fall in autumn.", "It is cold in winter.", "The temperature is high today.", "My clothes are wet."]},
+    {"level": "Band 2.5", "title": "Đi lại trong phố", "sentences": ["I go to school by bicycle.", "Dad rides a motorbike.", "We travel by train.", "We take a ferry across the river.", "I walk to school.", "Stop at the traffic light.", "Cross the road at the zebra crossing.", "Walk on the pavement.", "We wait at the station.", "There is heavy traffic."]},
+    {"level": "Band 2.5", "title": "Thể thao và sức khỏe", "sentences": ["We play football.", "I play badminton.", "We go swimming.", "Dad goes running.", "Minh scores a goal.", "Our team wins.", "Sometimes we lose the game.", "He is a good player.", "We practice every day.", "Sport keeps us healthy."]}
+  ]);
+  CONTENT.vocab.push.apply(CONTENT.vocab, [
+    {"topic": "Các phòng trong trường", "theme": "Các phòng trong trường - Rooms in the School", "band": "Band 3.0", "cards": [
+      {"w": "library", "ipa": "/ˈlaɪbrəri/", "vi": "thư viện", "col": "in the library", "ex": "We read in the library.", "exv": "Chúng ta đọc sách trong thư viện."},
+      {"w": "laboratory", "ipa": "/ləˈbɒrətri/", "vi": "phòng thí nghiệm", "col": "in the laboratory", "ex": "We study science in the laboratory.", "exv": "Chúng ta học khoa học trong phòng thí nghiệm."},
+      {"w": "computer room", "ipa": "/kəmˈpjuːtə ruːm/", "vi": "phòng máy tính", "col": "in the computer room", "ex": "We learn typing in the computer room.", "exv": "Chúng ta học gõ phím trong phòng máy tính."},
+      {"w": "gym", "ipa": "/dʒɪm/", "vi": "phòng tập", "col": "in the gym", "ex": "We play in the gym.", "exv": "Chúng ta chơi trong phòng tập."},
+      {"w": "playground", "ipa": "/ˈpleɪɡraʊnd/", "vi": "sân chơi", "col": "on the playground", "ex": "We play on the playground.", "exv": "Chúng ta chơi trên sân chơi."},
+      {"w": "canteen", "ipa": "/kænˈtiːn/", "vi": "căng tin", "col": "in the canteen", "ex": "We eat lunch in the canteen.", "exv": "Chúng ta ăn trưa ở căng tin."},
+      {"w": "office", "ipa": "/ˈɒfɪs/", "vi": "văn phòng", "col": "in the office", "ex": "Teachers work in the office.", "exv": "Thầy cô làm việc trong văn phòng."},
+      {"w": "classroom", "ipa": "/ˈklɑːsruːm/", "vi": "phòng học", "col": "in the classroom", "ex": "We study in the classroom.", "exv": "Chúng ta học trong phòng học."},
+      {"w": "corridor", "ipa": "/ˈkɒrɪdɔː(r)/", "vi": "hành lang", "col": "in the corridor", "ex": "Do not run in the corridor.", "exv": "Đừng chạy trong hành lang."},
+      {"w": "staircase", "ipa": "/ˈsteəkeɪs/", "vi": "cầu thang", "col": "on the staircase", "ex": "Walk slowly on the staircase.", "exv": "Hãy đi chậm trên cầu thang."},
+      {"w": "blackboard", "ipa": "/ˈblækbɔːd/", "vi": "bảng đen", "col": "on the blackboard", "ex": "The teacher writes on the blackboard.", "exv": "Cô giáo viết trên bảng đen."},
+      {"w": "projector", "ipa": "/prəˈdʒektə(r)/", "vi": "máy chiếu", "col": "a new projector", "ex": "Our class has a new projector.", "exv": "Lớp chúng ta có một máy chiếu mới."},
+      {"w": "notebook", "ipa": "/ˈnəʊtbʊk/", "vi": "vở", "col": "my notebook", "ex": "My notebook is blue.", "exv": "Vở của tôi màu xanh dương."},
+      {"w": "dictionary", "ipa": "/ˈdɪkʃənri/", "vi": "từ điển", "col": "a big dictionary", "ex": "Use a dictionary, please.", "exv": "Hãy dùng từ điển nhé."},
+      {"w": "atlas", "ipa": "/ˈætləs/", "vi": "tập bản đồ", "col": "an atlas", "ex": "We look at an atlas.", "exv": "Chúng ta xem tập bản đồ."},
+      {"w": "globe", "ipa": "/ɡləʊb/", "vi": "quả địa cầu", "col": "a small globe", "ex": "The globe is on the desk.", "exv": "Quả địa cầu ở trên bàn."},
+      {"w": "calculator", "ipa": "/ˈkælkjəleɪtə(r)/", "vi": "máy tính cầm tay", "col": "my calculator", "ex": "I use my calculator.", "exv": "Tôi dùng máy tính cầm tay."},
+      {"w": "ruler", "ipa": "/ˈruːlə(r)/", "vi": "thước kẻ", "col": "a long ruler", "ex": "This ruler is long.", "exv": "Thước kẻ này dài."},
+      {"w": "compass", "ipa": "/ˈkʌmpəs/", "vi": "com-pa", "col": "a compass", "ex": "Draw a circle with a compass.", "exv": "Hãy vẽ một hình tròn bằng com-pa."},
+      {"w": "eraser", "ipa": "/ɪˈreɪzə(r)/", "vi": "cục tẩy", "col": "a small eraser", "ex": "I need a small eraser.", "exv": "Tôi cần một cục tẩy nhỏ."}
+    ]},
+    {"topic": "Du lịch trong nước", "theme": "Du lịch trong nước - Travelling in Vietnam", "band": "Band 3.0", "cards": [
+      {"w": "beach", "ipa": "/biːtʃ/", "vi": "bãi biển", "col": "at the beach", "ex": "We swim at the beach.", "exv": "Chúng ta bơi ở bãi biển."},
+      {"w": "island", "ipa": "/ˈaɪlənd/", "vi": "đảo", "col": "a small island", "ex": "The island is small.", "exv": "Hòn đảo nhỏ."},
+      {"w": "mountain", "ipa": "/ˈmaʊntɪn/", "vi": "núi", "col": "a high mountain", "ex": "The mountain is high.", "exv": "Ngọn núi cao."},
+      {"w": "waterfall", "ipa": "/ˈwɔːtəfɔːl/", "vi": "thác nước", "col": "a big waterfall", "ex": "We see a big waterfall.", "exv": "Chúng ta thấy một thác nước lớn."},
+      {"w": "temple", "ipa": "/ˈtempl/", "vi": "đền", "col": "an old temple", "ex": "The temple is old.", "exv": "Ngôi đền cổ."},
+      {"w": "pagoda", "ipa": "/pəˈɡəʊdə/", "vi": "chùa", "col": "a quiet pagoda", "ex": "The pagoda is quiet.", "exv": "Ngôi chùa yên tĩnh."},
+      {"w": "museum", "ipa": "/mjuːˈziːəm/", "vi": "bảo tàng", "col": "in the museum", "ex": "We learn in the museum.", "exv": "Chúng ta học hỏi trong bảo tàng."},
+      {"w": "hotel", "ipa": "/həʊˈtel/", "vi": "khách sạn", "col": "a big hotel", "ex": "We stay in a big hotel.", "exv": "Chúng ta ở trong một khách sạn lớn."},
+      {"w": "guesthouse", "ipa": "/ˈɡesthaʊs/", "vi": "nhà nghỉ", "col": "a small guesthouse", "ex": "We stay in a small guesthouse.", "exv": "Chúng ta ở trong một nhà nghỉ nhỏ."},
+      {"w": "souvenir", "ipa": "/ˌsuːvəˈnɪə(r)/", "vi": "quà lưu niệm", "col": "a small souvenir", "ex": "Mum buys a small souvenir.", "exv": "Mẹ mua một món quà lưu niệm nhỏ."},
+      {"w": "guide", "ipa": "/ɡaɪd/", "vi": "hướng dẫn viên", "col": "our guide", "ex": "Our guide is friendly.", "exv": "Hướng dẫn viên của chúng ta thân thiện."},
+      {"w": "camera", "ipa": "/ˈkæmərə/", "vi": "máy ảnh", "col": "my camera", "ex": "I take photos with my camera.", "exv": "Tôi chụp ảnh bằng máy ảnh."},
+      {"w": "backpack", "ipa": "/ˈbækpæk/", "vi": "ba lô", "col": "my backpack", "ex": "My backpack is heavy.", "exv": "Ba lô của tôi nặng."},
+      {"w": "map", "ipa": "/mæp/", "vi": "bản đồ", "col": "a city map", "ex": "We look at a city map.", "exv": "Chúng ta xem bản đồ thành phố."},
+      {"w": "journey", "ipa": "/ˈdʒɜːni/", "vi": "hành trình", "col": "a long journey", "ex": "It is a long journey.", "exv": "Đó là một hành trình dài."},
+      {"w": "stay", "ipa": "/steɪ/", "vi": "ở lại", "col": "stay for two days", "ex": "We stay for two days.", "exv": "Chúng ta ở lại hai ngày."},
+      {"w": "visit", "ipa": "/ˈvɪzɪt/", "vi": "thăm", "col": "visit the museum", "ex": "We visit the museum.", "exv": "Chúng ta thăm bảo tàng."},
+      {"w": "enjoy", "ipa": "/ɪnˈdʒɔɪ/", "vi": "thích thú", "col": "enjoy the trip", "ex": "We enjoy the trip.", "exv": "Chúng ta thích thú với chuyến đi."},
+      {"w": "photo", "ipa": "/ˈfəʊtəʊ/", "vi": "bức ảnh", "col": "take photos", "ex": "We take photos.", "exv": "Chúng ta chụp ảnh."},
+      {"w": "trip", "ipa": "/trɪp/", "vi": "chuyến đi", "col": "a school trip", "ex": "It is a school trip.", "exv": "Đó là một chuyến đi của trường."}
+    ]},
+    {"topic": "Thiên nhiên quanh ta", "theme": "Thiên nhiên quanh ta - Nature around Us", "band": "Band 3.0", "cards": [
+      {"w": "river", "ipa": "/ˈrɪvə(r)/", "vi": "sông", "col": "a long river", "ex": "The river is long.", "exv": "Dòng sông dài."},
+      {"w": "lake", "ipa": "/leɪk/", "vi": "hồ", "col": "a big lake", "ex": "The lake is big.", "exv": "Hồ lớn."},
+      {"w": "forest", "ipa": "/ˈfɒrɪst/", "vi": "rừng", "col": "a green forest", "ex": "The forest is green.", "exv": "Khu rừng xanh."},
+      {"w": "hill", "ipa": "/hɪl/", "vi": "đồi", "col": "a small hill", "ex": "We climb a small hill.", "exv": "Chúng ta leo một quả đồi nhỏ."},
+      {"w": "valley", "ipa": "/ˈvæli/", "vi": "thung lũng", "col": "a deep valley", "ex": "The valley is deep.", "exv": "Thung lũng sâu."},
+      {"w": "cave", "ipa": "/keɪv/", "vi": "hang động", "col": "a dark cave", "ex": "The cave is dark.", "exv": "Hang động tối."},
+      {"w": "sunrise", "ipa": "/ˈsʌnraɪz/", "vi": "bình minh", "col": "at sunrise", "ex": "We wake up at sunrise.", "exv": "Chúng ta thức dậy lúc bình minh."},
+      {"w": "sunset", "ipa": "/ˈsʌnset/", "vi": "hoàng hôn", "col": "at sunset", "ex": "The sky is red at sunset.", "exv": "Bầu trời đỏ lúc hoàng hôn."},
+      {"w": "rainbow", "ipa": "/ˈreɪnbəʊ/", "vi": "cầu vồng", "col": "a beautiful rainbow", "ex": "A rainbow is beautiful.", "exv": "Cầu vồng đẹp."},
+      {"w": "wind", "ipa": "/wɪnd/", "vi": "gió", "col": "strong wind", "ex": "The wind is strong.", "exv": "Gió mạnh."},
+      {"w": "flood", "ipa": "/flʌd/", "vi": "lũ", "col": "a big flood", "ex": "The flood is dangerous.", "exv": "Trận lũ nguy hiểm."},
+      {"w": "thunder", "ipa": "/ˈθʌndə(r)/", "vi": "sấm", "col": "loud thunder", "ex": "The thunder is loud.", "exv": "Tiếng sấm lớn."},
+      {"w": "lightning", "ipa": "/ˈlaɪtnɪŋ/", "vi": "chớp", "col": "bright lightning", "ex": "We see bright lightning.", "exv": "Chúng ta thấy chớp sáng."},
+      {"w": "heavy rain", "ipa": "/ˌhevi ˈreɪn/", "vi": "mưa to", "col": "in heavy rain", "ex": "Do not go out in heavy rain.", "exv": "Đừng ra ngoài khi mưa to."},
+      {"w": "muddy", "ipa": "/ˈmʌdi/", "vi": "lầy", "col": "a muddy road", "ex": "The road is muddy.", "exv": "Con đường lầy."},
+      {"w": "shade", "ipa": "/ʃeɪd/", "vi": "bóng râm", "col": "in the shade", "ex": "We sit in the shade.", "exv": "Chúng ta ngồi trong bóng râm."},
+      {"w": "leaf", "ipa": "/liːf/", "vi": "lá cây", "col": "a green leaf", "ex": "The leaf is green.", "exv": "Chiếc lá xanh."},
+      {"w": "branch", "ipa": "/brɑːntʃ/", "vi": "cành cây", "col": "a long branch", "ex": "The branch is long.", "exv": "Cành cây dài."},
+      {"w": "stone", "ipa": "/stəʊn/", "vi": "hòn đá", "col": "a small stone", "ex": "I pick up a small stone.", "exv": "Tôi nhặt một hòn đá nhỏ."},
+      {"w": "sand", "ipa": "/sænd/", "vi": "cát", "col": "soft sand", "ex": "The sand is soft.", "exv": "Cát mềm."}
+    ]},
+    {"topic": "Nghề nghiệp quanh em", "theme": "Nghề nghiệp quanh em - Jobs around Us", "band": "Band 3.0", "cards": [
+      {"w": "farmer", "ipa": "/ˈfɑːmə(r)/", "vi": "nông dân", "col": "a hard-working farmer", "ex": "The farmer grows rice.", "exv": "Người nông dân trồng lúa."},
+      {"w": "fisherman", "ipa": "/ˈfɪʃəmən/", "vi": "ngư dân", "col": "a brave fisherman", "ex": "The fisherman catches fish.", "exv": "Người ngư dân bắt cá."},
+      {"w": "driver", "ipa": "/ˈdraɪvə(r)/", "vi": "tài xế", "col": "a bus driver", "ex": "The bus driver is kind.", "exv": "Bác tài xế xe buýt tốt bụng."},
+      {"w": "chef", "ipa": "/ʃef/", "vi": "đầu bếp", "col": "a good chef", "ex": "The chef cooks well.", "exv": "Đầu bếp nấu ăn ngon."},
+      {"w": "singer", "ipa": "/ˈsɪŋə(r)/", "vi": "ca sĩ", "col": "a famous singer", "ex": "She is a famous singer.", "exv": "Cô ấy là một ca sĩ nổi tiếng."},
+      {"w": "policeman", "ipa": "/pəˈliːsmən/", "vi": "cảnh sát (nam)", "col": "a kind policeman", "ex": "The policeman helps people.", "exv": "Chú cảnh sát giúp đỡ mọi người."},
+      {"w": "firefighter", "ipa": "/ˈfaɪəfaɪtə(r)/", "vi": "lính cứu hỏa", "col": "a brave firefighter", "ex": "The firefighter is brave.", "exv": "Người lính cứu hỏa dũng cảm."},
+      {"w": "postman", "ipa": "/ˈpəʊstmən/", "vi": "người đưa thư", "col": "our postman", "ex": "Our postman brings letters.", "exv": "Người đưa thư mang thư tới."},
+      {"w": "shopkeeper", "ipa": "/ˈʃɒpkiːpə(r)/", "vi": "chủ cửa hàng", "col": "a friendly shopkeeper", "ex": "The shopkeeper is friendly.", "exv": "Chủ cửa hàng thân thiện."},
+      {"w": "tailor", "ipa": "/ˈteɪlə(r)/", "vi": "thợ may", "col": "a good tailor", "ex": "The tailor makes clothes.", "exv": "Người thợ may may quần áo."},
+      {"w": "carpenter", "ipa": "/ˈkɑːpəntə(r)/", "vi": "thợ mộc", "col": "a skilled carpenter", "ex": "The carpenter makes tables.", "exv": "Người thợ mộc làm bàn."},
+      {"w": "builder", "ipa": "/ˈbɪldə(r)/", "vi": "thợ xây", "col": "a strong builder", "ex": "The builder builds houses.", "exv": "Người thợ xây xây nhà."},
+      {"w": "artist", "ipa": "/ˈɑːtɪst/", "vi": "họa sĩ", "col": "a talented artist", "ex": "The artist paints pictures.", "exv": "Họa sĩ vẽ tranh."},
+      {"w": "writer", "ipa": "/ˈraɪtə(r)/", "vi": "nhà văn", "col": "a famous writer", "ex": "The writer writes stories.", "exv": "Nhà văn viết truyện."},
+      {"w": "engineer", "ipa": "/ˌendʒɪˈnɪə(r)/", "vi": "kỹ sư", "col": "a good engineer", "ex": "The engineer builds bridges.", "exv": "Kỹ sư xây cầu."},
+      {"w": "scientist", "ipa": "/ˈsaɪəntɪst/", "vi": "nhà khoa học", "col": "a clever scientist", "ex": "The scientist studies plants.", "exv": "Nhà khoa học nghiên cứu cây cối."},
+      {"w": "pilot", "ipa": "/ˈpaɪlət/", "vi": "phi công", "col": "a brave pilot", "ex": "The pilot flies a plane.", "exv": "Phi công lái máy bay."},
+      {"w": "gardener", "ipa": "/ˈɡɑːdnə(r)/", "vi": "người làm vườn", "col": "our gardener", "ex": "Our gardener waters flowers.", "exv": "Người làm vườn tưới hoa."},
+      {"w": "librarian", "ipa": "/laɪˈbreəriən/", "vi": "thủ thư", "col": "our librarian", "ex": "Our librarian is kind.", "exv": "Thủ thư của chúng ta tốt bụng."},
+      {"w": "dentist", "ipa": "/ˈdentɪst/", "vi": "nha sĩ", "col": "a kind dentist", "ex": "The dentist checks my teeth.", "exv": "Nha sĩ kiểm tra răng của tôi."}
+    ]},
+    {"topic": "Món ăn Việt Nam", "theme": "Món ăn Việt Nam - Vietnamese Food", "band": "Band 3.0", "cards": [
+      {"w": "pho", "ipa": "/fəʊ/", "vi": "phở", "col": "a bowl of pho", "ex": "I eat a bowl of pho.", "exv": "Tôi ăn một bát phở."},
+      {"w": "spring rolls", "ipa": "/ˌsprɪŋ ˈrəʊlz/", "vi": "nem rán", "col": "crispy spring rolls", "ex": "Spring rolls are crispy.", "exv": "Nem rán giòn."},
+      {"w": "sticky rice", "ipa": "/ˌstɪki ˈraɪs/", "vi": "xôi", "col": "a plate of sticky rice", "ex": "We eat sticky rice.", "exv": "Chúng ta ăn xôi."},
+      {"w": "banh mi", "ipa": "/ˌbɑːn ˈmiː/", "vi": "bánh mì", "col": "a tasty banh mi", "ex": "This banh mi is tasty.", "exv": "Chiếc bánh mì này ngon."},
+      {"w": "noodle soup", "ipa": "/ˈnuːdl suːp/", "vi": "mì nước", "col": "a hot noodle soup", "ex": "Mum cooks noodle soup.", "exv": "Mẹ nấu mì nước."},
+      {"w": "fried rice", "ipa": "/ˌfraɪd ˈraɪs/", "vi": "cơm rang", "col": "a plate of fried rice", "ex": "I like fried rice.", "exv": "Tôi thích cơm rang."},
+      {"w": "grilled fish", "ipa": "/ˌɡrɪld ˈfɪʃ/", "vi": "cá nướng", "col": "tasty grilled fish", "ex": "Grilled fish is tasty.", "exv": "Cá nướng ngon."},
+      {"w": "sour soup", "ipa": "/ˌsaʊə ˈsuːp/", "vi": "canh chua", "col": "a bowl of sour soup", "ex": "We eat sour soup.", "exv": "Chúng ta ăn canh chua."},
+      {"w": "sweet soup", "ipa": "/ˌswiːt ˈsuːp/", "vi": "chè", "col": "a bowl of sweet soup", "ex": "Children like sweet soup.", "exv": "Trẻ em thích chè."},
+      {"w": "fish sauce", "ipa": "/ˈfɪʃ sɔːs/", "vi": "nước mắm", "col": "a little fish sauce", "ex": "Add a little fish sauce.", "exv": "Hãy cho một ít nước mắm."},
+      {"w": "chilli", "ipa": "/ˈtʃɪli/", "vi": "ớt", "col": "a red chilli", "ex": "This chilli is hot.", "exv": "Quả ớt này cay."},
+      {"w": "herbs", "ipa": "/hɜːbz/", "vi": "rau thơm", "col": "fresh herbs", "ex": "Pho has fresh herbs.", "exv": "Phở có rau thơm tươi."},
+      {"w": "peanut", "ipa": "/ˈpiːnʌt/", "vi": "lạc", "col": "roasted peanuts", "ex": "We eat roasted peanuts.", "exv": "Chúng ta ăn lạc rang."},
+      {"w": "sesame", "ipa": "/ˈsesəmi/", "vi": "vừng", "col": "sesame seeds", "ex": "The cake has sesame seeds.", "exv": "Bánh có hạt vừng."},
+      {"w": "steamed", "ipa": "/stiːmd/", "vi": "hấp", "col": "steamed fish", "ex": "Steamed fish is healthy.", "exv": "Cá hấp tốt cho sức khỏe."},
+      {"w": "boiled", "ipa": "/bɔɪld/", "vi": "luộc", "col": "boiled eggs", "ex": "We eat boiled eggs.", "exv": "Chúng ta ăn trứng luộc."},
+      {"w": "tasty", "ipa": "/ˈteɪsti/", "vi": "ngon", "col": "very tasty", "ex": "This dish is very tasty.", "exv": "Món này rất ngon."},
+      {"w": "delicious", "ipa": "/dɪˈlɪʃəs/", "vi": "ngon tuyệt", "col": "so delicious", "ex": "The food is so delicious.", "exv": "Thức ăn ngon tuyệt."},
+      {"w": "dish", "ipa": "/dɪʃ/", "vi": "món ăn", "col": "a new dish", "ex": "Mum cooks a new dish.", "exv": "Mẹ nấu một món ăn mới."},
+      {"w": "recipe", "ipa": "/ˈresəpi/", "vi": "công thức nấu ăn", "col": "a simple recipe", "ex": "Grandma has a simple recipe.", "exv": "Bà có một công thức nấu ăn đơn giản."}
+    ]},
+    {"topic": "Cảm xúc và tính cách", "theme": "Cảm xúc và tính cách - Feelings and Character", "band": "Band 3.0", "cards": [
+      {"w": "happy", "ipa": "/ˈhæpi/", "vi": "vui", "col": "very happy", "ex": "I am very happy.", "exv": "Tôi rất vui."},
+      {"w": "sad", "ipa": "/sæd/", "vi": "buồn", "col": "a little sad", "ex": "She is a little sad.", "exv": "Cô ấy hơi buồn."},
+      {"w": "angry", "ipa": "/ˈæŋɡri/", "vi": "tức giận", "col": "very angry", "ex": "He is very angry.", "exv": "Anh ấy rất tức giận."},
+      {"w": "scared", "ipa": "/skeəd/", "vi": "sợ", "col": "a little scared", "ex": "I am a little scared.", "exv": "Tôi hơi sợ."},
+      {"w": "excited", "ipa": "/ɪkˈsaɪtɪd/", "vi": "hào hứng", "col": "very excited", "ex": "We are very excited.", "exv": "Chúng ta rất hào hứng."},
+      {"w": "bored", "ipa": "/bɔːd/", "vi": "chán", "col": "a little bored", "ex": "He is a little bored.", "exv": "Anh ấy hơi chán."},
+      {"w": "tired", "ipa": "/ˈtaɪəd/", "vi": "mệt", "col": "very tired", "ex": "Mum is very tired.", "exv": "Mẹ rất mệt."},
+      {"w": "proud", "ipa": "/praʊd/", "vi": "tự hào", "col": "very proud", "ex": "Dad is very proud.", "exv": "Bố rất tự hào."},
+      {"w": "shy", "ipa": "/ʃaɪ/", "vi": "nhút nhát", "col": "a shy girl", "ex": "She is a shy girl.", "exv": "Cô ấy là một cô bé nhút nhát."},
+      {"w": "friendly", "ipa": "/ˈfrendli/", "vi": "thân thiện", "col": "a friendly boy", "ex": "He is a friendly boy.", "exv": "Anh ấy là một cậu bé thân thiện."},
+      {"w": "polite", "ipa": "/pəˈlaɪt/", "vi": "lịch sự", "col": "a polite student", "ex": "Lan is a polite student.", "exv": "Lan là một học sinh lịch sự."},
+      {"w": "honest", "ipa": "/ˈɒnɪst/", "vi": "trung thực", "col": "an honest boy", "ex": "Nam is an honest boy.", "exv": "Nam là một cậu bé trung thực."},
+      {"w": "hard-working", "ipa": "/ˌhɑːd ˈwɜːkɪŋ/", "vi": "chăm chỉ", "col": "a hard-working student", "ex": "Hoa is a hard-working student.", "exv": "Hoa là một học sinh chăm chỉ."},
+      {"w": "lazy", "ipa": "/ˈleɪzi/", "vi": "lười", "col": "do not be lazy", "ex": "Do not be lazy.", "exv": "Đừng lười biếng."},
+      {"w": "careful", "ipa": "/ˈkeəfl/", "vi": "cẩn thận", "col": "a careful girl", "ex": "She is a careful girl.", "exv": "Cô ấy là một cô bé cẩn thận."},
+      {"w": "brave", "ipa": "/breɪv/", "vi": "dũng cảm", "col": "a brave boy", "ex": "He is a brave boy.", "exv": "Anh ấy là một cậu bé dũng cảm."},
+      {"w": "quiet", "ipa": "/ˈkwaɪət/", "vi": "trầm tính, yên lặng", "col": "a quiet girl", "ex": "Mai is a quiet girl.", "exv": "Mai là một cô bé trầm tính."},
+      {"w": "noisy", "ipa": "/ˈnɔɪzi/", "vi": "ồn ào", "col": "a noisy class", "ex": "Our class is noisy.", "exv": "Lớp chúng ta ồn ào."},
+      {"w": "clever", "ipa": "/ˈklevə(r)/", "vi": "thông minh", "col": "a clever boy", "ex": "Minh is a clever boy.", "exv": "Minh là một cậu bé thông minh."},
+      {"w": "cheerful", "ipa": "/ˈtʃɪəfl/", "vi": "vui vẻ", "col": "a cheerful girl", "ex": "Lan is a cheerful girl.", "exv": "Lan là một cô bé vui vẻ."}
+    ]}
+  ]);
+  CONTENT.grammar.push.apply(CONTENT.grammar, [
+    {"fam": "Thì quá khứ", "hook": "Muốn kể việc đã xong hôm qua, tuần trước, dùng động từ thêm -ed.", "level": "Band 3.0", "name": "Quá khứ đơn với -ed — việc đã xong",
+     "explain": "Nhìn ví dụ trước nhé. Yesterday I played football. Last week we watched a film. She cleaned her room yesterday. Sau ví dụ là quy tắc. Động từ có quy tắc thêm -ed: play thành played, watch thành watched. Động từ kết thúc bằng e chỉ thêm -d: live thành lived. Động từ kết thúc bằng phụ âm + y đổi y thành i rồi thêm -ed: study thành studied. Dùng với yesterday (hôm qua), last week (tuần trước), last Sunday (Chủ nhật tuần trước).",
+     "examples": ["Yesterday I played football.", "Last week we watched a film.", "She cleaned her room yesterday."],
+     "tip": "Động từ thêm -ed có cách đọc khác nhau, nhưng cách viết thì theo quy tắc trên.",
+     "model": "Last Sunday, I visited my grandma and played with my cousins.",
+     "modelVi": "Chủ nhật tuần trước, tôi đã thăm bà và chơi với các anh chị em họ.",
+     "quiz": [
+       {"q": "Yesterday I ___ football.", "o": ["play", "played", "playing", "plays"], "a": 1, "why": "Yesterday là quá khứ, play thêm -ed: played."},
+       {"q": "Last week we ___ a film.", "o": ["watch", "watched", "watching", "watches"], "a": 1, "why": "Last week là quá khứ, watch thêm -ed: watched."},
+       {"q": "She ___ her room yesterday.", "o": ["clean", "cleaned", "cleaning", "cleans"], "a": 1, "why": "Yesterday là quá khứ, clean thêm -ed: cleaned."},
+       {"q": "He ___ his bike last Sunday.", "o": ["wash", "washed", "washing", "washes"], "a": 1, "why": "Last Sunday là quá khứ, wash thêm -ed: washed."},
+       {"q": "They ___ to the park yesterday.", "o": ["walk", "walked", "walking", "walks"], "a": 1, "why": "Yesterday là quá khứ, walk thêm -ed: walked."},
+       {"q": "I ___ English last night.", "o": ["study", "studied", "studying", "studies"], "a": 1, "why": "study kết thúc bằng phụ âm + y nên đổi y thành i rồi thêm -ed: studied."},
+       {"q": "Mum ___ rice yesterday.", "o": ["cook", "cooked", "cooking", "cooks"], "a": 1, "why": "Yesterday là quá khứ, cook thêm -ed: cooked."},
+       {"q": "We ___ at the party last week.", "o": ["dance", "danced", "dancing", "dances"], "a": 1, "why": "dance kết thúc bằng e nên chỉ thêm -d: danced."}
+     ]},
+    {"fam": "Câu hỏi", "hook": "Muốn hỏi về việc đã qua, dùng did cùng từ Wh- đặt lên đầu.", "level": "Band 3.0", "name": "Câu hỏi Wh- ở quá khứ đơn: What did you do?",
+     "explain": "Nhìn ví dụ trước nhé. What did you do yesterday? I played football. Where did you go last Sunday? I went to the park. Who did you meet? I met my friend Hoa. Sau ví dụ là quy tắc. Công thức: từ Wh- + did + chủ ngữ + động từ nguyên thể. did đã mang nghĩa quá khứ nên động từ sau did không thêm -ed: did you play, không phải did you played. Trả lời ở quá khứ.",
+     "examples": ["What did you do yesterday?", "Where did you go last Sunday?", "Who did you meet?"],
+     "tip": "Sau did, động từ về dạng nguyên thể: did you play, không phải did you played.",
+     "model": "What did you eat yesterday? I ate rice and fish.",
+     "modelVi": "Hôm qua bạn đã ăn gì? Tôi đã ăn cơm và cá.",
+     "quiz": [
+       {"q": "What ___ you do yesterday?", "o": ["did", "do", "does", "are"], "a": 0, "why": "Hỏi việc đã qua, dùng did."},
+       {"q": "Where ___ you go last Sunday?", "o": ["did", "do", "does", "are"], "a": 0, "why": "Hỏi việc đã qua, dùng did."},
+       {"q": "Who ___ you meet at the park?", "o": ["did", "do", "does", "are"], "a": 0, "why": "Hỏi việc đã qua, dùng did."},
+       {"q": "What did you ___ yesterday?", "o": ["play", "played", "playing", "plays"], "a": 0, "why": "Sau did, động từ về dạng nguyên thể: play."},
+       {"q": "When ___ they arrive?", "o": ["did", "do", "does", "are"], "a": 0, "why": "Hỏi việc đã qua, dùng did."},
+       {"q": "What did she ___ last night?", "o": ["watch", "watched", "watching", "watches"], "a": 0, "why": "Sau did, động từ về dạng nguyên thể: watch."},
+       {"q": "Where did he ___ his book?", "o": ["buy", "bought", "buying", "buys"], "a": 0, "why": "Sau did, động từ về dạng nguyên thể: buy."},
+       {"q": "Who did you ___ with yesterday?", "o": ["play", "played", "playing", "plays"], "a": 0, "why": "Sau did, động từ về dạng nguyên thể: play."}
+     ]},
+    {"fam": "So sánh", "hook": "Muốn nói nhất trong nhóm, dùng the + tính từ thêm -est hoặc the most + tính từ.", "level": "Band 3.0", "name": "So sánh nhất với the -est và the most",
+     "explain": "Nhìn ví dụ trước nhé. Lan is the tallest girl in my class. This book is the most interesting book I have. Mai is the best student. Sau ví dụ là quy tắc. Tính từ ngắn thêm -est và có the phía trước: tall thành the tallest. Tính từ dài dùng the most + tính từ: the most interesting. Hai trường hợp đặc biệt, học thuộc: good thành the best, bad thành the worst.",
+     "examples": ["Lan is the tallest girl in my class.", "This book is the most interesting book I have.", "Mai is the best student."],
+     "tip": "So sánh nhất luôn có the phía trước.",
+     "model": "My grandma is the best cook in my family, and her pho is the most delicious food I know.",
+     "modelVi": "Bà tôi là người nấu ăn giỏi nhất trong gia đình, và phở của bà là món ngon nhất tôi từng biết.",
+     "quiz": [
+       {"q": "Lan is ___ girl in my class.", "o": ["tall", "taller", "the tallest", "most tall"], "a": 2, "why": "Tính từ ngắn tall thêm -est và có the: the tallest."},
+       {"q": "This book is ___ book I have.", "o": ["interesting", "more interesting", "the most interesting", "interestinger"], "a": 2, "why": "Tính từ dài interesting dùng the most: the most interesting."},
+       {"q": "Mai is ___ student.", "o": ["good", "better", "the best", "most good"], "a": 2, "why": "good là trường hợp đặc biệt: the best."},
+       {"q": "He is ___ boy in the team.", "o": ["fast", "faster", "the fastest", "most fast"], "a": 2, "why": "Tính từ ngắn fast thêm -est và có the: the fastest."},
+       {"q": "This is ___ day of my life.", "o": ["happy", "happier", "the happiest", "most happy"], "a": 2, "why": "happy kết thúc bằng y đổi thành i rồi thêm -est: the happiest."},
+       {"q": "Winter is ___ season in my town.", "o": ["cold", "colder", "the coldest", "most cold"], "a": 2, "why": "Tính từ ngắn cold thêm -est và có the: the coldest."},
+       {"q": "She is ___ friend I have.", "o": ["kind", "kinder", "the kindest", "most kind"], "a": 2, "why": "Tính từ ngắn kind thêm -est và có the: the kindest."},
+       {"q": "That cake is ___ cake in the shop.", "o": ["delicious", "more delicious", "the most delicious", "deliciouser"], "a": 2, "why": "Tính từ dài delicious dùng the most: the most delicious."}
+     ]}
+  ]);
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    {"topic": "Cuộc sống quanh em", "level": "Band 3.0", "title": "A Weekend Trip to the Beach",
+     "text": "Last weekend, Nam's family went to the beach. They went by car, and the trip took two hours.\n\nAt the beach, Nam swam in the sea and built a sandcastle with his sister. His father took photos.\n\nAt noon, they ate seafood at a small restaurant near the beach. Nam liked the grilled fish best.\n\nIn the afternoon, they walked on the beach and picked up pretty shells. Nam found a big pink shell.\n\nOn the way home, Nam said, \"The beach is wonderful! I want to come back next summer.\" His sister agreed.",
+     "questions": [
+       {"type": "MC", "q": "Gia đình Nam đi biển bằng phương tiện gì?", "o": ["Ô tô", "Xe buýt", "Tàu hỏa"], "options": ["Ô tô", "Xe buýt", "Tàu hỏa"], "a": 0, "why": "Đoạn 1: gia đình đi bằng ô tô."},
+       {"type": "TF", "q": "Chuyến đi mất hai giờ.", "o": ["True", "False"], "options": ["True", "False"], "a": 0, "why": "Đoạn 1: chuyến đi mất hai giờ."},
+       {"type": "MATCH", "q": "Bữa trưa, Nam thích nhất món gì?", "o": ["Cá nướng", "Cơm rang", "Mì"], "options": ["Cá nướng", "Cơm rang", "Mì"], "a": 0, "why": "Đoạn 3: Nam thích nhất món cá nướng."},
+       {"type": "COMP", "q": "Nam tìm thấy một vỏ sò lớn màu hồng: a big pink ___.", "answer": "shell", "why": "Đoạn 4: Nam tìm thấy một vỏ sò lớn màu hồng."},
+       {"type": "MC", "q": "Nam xây gì ở bãi biển?", "o": ["Lâu đài cát", "Thuyền", "Ngôi nhà"], "options": ["Lâu đài cát", "Thuyền", "Ngôi nhà"], "a": 0, "why": "Đoạn 2: Nam xây lâu đài cát cùng em gái."}
+     ],
+     "translation": "Cuối tuần trước, gia đình Nam đi biển. Gia đình đi bằng ô tô, chuyến đi mất hai giờ. Ở bãi biển, Nam bơi và xây lâu đài cát cùng em gái, bố chụp ảnh. Buổi trưa, cả nhà ăn hải sản ở một nhà hàng nhỏ gần biển, Nam thích nhất món cá nướng. Buổi chiều, cả nhà đi dạo trên biển và nhặt vỏ sò đẹp, Nam tìm thấy một vỏ sò lớn màu hồng. Trên đường về, Nam nói bãi biển thật tuyệt và muốn quay lại vào hè tới, em gái đồng ý.",
+     "phrases": [{"en": "go to the beach", "vi": "đi biển"}, {"en": "build a sandcastle", "vi": "xây lâu đài cát"}, {"en": "grilled fish", "vi": "cá nướng"}, {"en": "pick up shells", "vi": "nhặt vỏ sò"}, {"en": "on the way home", "vi": "trên đường về nhà"}]},
+    {"topic": "Cuộc sống quanh em", "level": "Band 3.0", "title": "A Brave Little Dog",
+     "text": "Minh has a little dog named Lucky. Lucky is small and brown, with a loud bark.\n\nOne night, Minh's grandma lost her glasses. She looked on the table and under the bed, but she could not find them.\n\nLucky sniffed around the house. He ran to the garden and barked under the big tree.\n\nMinh ran to the tree and found the glasses in the grass. Grandma was very happy.\n\nGrandma says, \"Lucky is a brave little dog! He helps our family.\" Minh gives Lucky a big bone.",
+     "questions": [
+       {"type": "MC", "q": "Chú chó tên gì?", "o": ["Lucky", "Browny", "Happy"], "options": ["Lucky", "Browny", "Happy"], "a": 0, "why": "Đoạn 1: chú chó tên Lucky."},
+       {"type": "TF", "q": "Bà ngoại đánh mất kính vào ban đêm.", "o": ["True", "False"], "options": ["True", "False"], "a": 0, "why": "Đoạn 2: một buổi tối, bà ngoại đánh mất kính."},
+       {"type": "MATCH", "q": "Lucky sủa ở đâu?", "o": ["Dưới gốc cây lớn", "Trong bếp", "Trên giường"], "options": ["Dưới gốc cây lớn", "Trong bếp", "Trên giường"], "a": 0, "why": "Đoạn 3: Lucky chạy ra vườn và sủa dưới gốc cây lớn."},
+       {"type": "COMP", "q": "Minh tìm thấy kính trong ___: in the ___.", "answer": "grass", "why": "Đoạn 4: Minh tìm thấy kính trong cỏ."},
+       {"type": "MC", "q": "Minh cho Lucky cái gì?", "o": ["Một khúc xương lớn", "Một quả bóng mới", "Một chiếc bánh"], "options": ["Một khúc xương lớn", "Một quả bóng mới", "Một chiếc bánh"], "a": 0, "why": "Đoạn 5: Minh cho Lucky một khúc xương lớn."}
+     ],
+     "translation": "Minh có một chú chó nhỏ tên Lucky, nhỏ và nâu, tiếng sủa to. Một buổi tối, bà ngoại đánh mất kính. Bà tìm trên bàn và dưới gầm giường nhưng không thấy. Lucky ngửi quanh nhà, chạy ra vườn và sủa dưới gốc cây lớn. Minh chạy tới gốc cây và tìm thấy kính trong cỏ. Bà rất vui, khen Lucky là một chú chó nhỏ dũng cảm, giúp đỡ cả nhà. Minh cho Lucky một khúc xương lớn.",
+     "phrases": [{"en": "a little dog", "vi": "một chú chó nhỏ"}, {"en": "lose her glasses", "vi": "đánh mất kính"}, {"en": "sniff around", "vi": "ngửi quanh"}, {"en": "in the grass", "vi": "trong cỏ"}, {"en": "a big bone", "vi": "một khúc xương lớn"}]},
+    {"topic": "Cuộc sống quanh em", "level": "Band 3.0", "title": "Learning English with Songs",
+     "text": "Lan likes English, but she finds new words hard to remember. Her teacher gives her a good idea.\n\nThe teacher says, \"Listen to English songs every day. Sing with the songs, and you will remember words.\"\n\nLan listens to one song every morning. She sings the song three times and writes new words in her notebook.\n\nAfter one month, Lan knows many new words. She can sing five songs and understand their stories.\n\nLan says, \"Songs make English fun! Now I learn new words fast, and I love English more.\"",
+     "questions": [
+       {"type": "MC", "q": "Lan thấy điều gì khó?", "o": ["Nhớ từ mới", "Hát", "Viết"], "options": ["Nhớ từ mới", "Hát", "Viết"], "a": 0, "why": "Đoạn 1: Lan thấy từ mới khó nhớ."},
+       {"type": "TF", "q": "Lan nghe một bài hát mỗi buổi sáng.", "o": ["True", "False"], "options": ["True", "False"], "a": 0, "why": "Đoạn 3: Lan nghe một bài hát mỗi buổi sáng."},
+       {"type": "MATCH", "q": "Ai cho Lan một ý hay?", "o": ["Cô giáo", "Mẹ", "Bạn"], "options": ["Cô giáo", "Mẹ", "Bạn"], "a": 0, "why": "Đoạn 1: cô giáo cho Lan một ý hay."},
+       {"type": "COMP", "q": "Lan ghi từ mới vào trong ___: in her ___.", "answer": "notebook", "why": "Đoạn 3: Lan ghi từ mới vào vở."},
+       {"type": "MC", "q": "Sau một tháng, Lan có thể hát bao nhiêu bài?", "o": ["Năm bài", "Ba bài", "Mười bài"], "options": ["Năm bài", "Ba bài", "Mười bài"], "a": 0, "why": "Đoạn 4: Lan có thể hát năm bài và hiểu câu chuyện của chúng."}
+     ],
+     "translation": "Lan thích tiếng Anh, nhưng em thấy từ mới khó nhớ. Cô giáo cho em một ý hay: nghe nhạc tiếng Anh mỗi ngày, hát theo bài hát thì sẽ nhớ từ. Lan nghe một bài hát mỗi buổi sáng, hát bài đó ba lần và ghi từ mới vào vở. Sau một tháng, Lan biết nhiều từ mới, có thể hát năm bài và hiểu câu chuyện của chúng. Lan nói bài hát làm tiếng Anh vui hơn, giờ em học từ mới nhanh và yêu tiếng Anh hơn.",
+     "phrases": [{"en": "find hard", "vi": "thấy khó"}, {"en": "remember words", "vi": "nhớ từ"}, {"en": "sing with the songs", "vi": "hát theo bài hát"}, {"en": "write new words", "vi": "ghi từ mới"}, {"en": "make English fun", "vi": "làm tiếng Anh vui hơn"}]},
+    {"topic": "Cuộc sống quanh em", "level": "Band 3.0", "title": "A Visit to the Water Puppet Show",
+     "text": "Last Sunday, Hoa's class visited a water puppet theatre in the city. The theatre was near a big lake.\n\nThe show started at 9 o'clock. Wooden puppets danced on the water, and drums played loudly.\n\nThe puppets told stories about farmers, fishermen and dragons. The children laughed a lot.\n\nAfter the show, the children met the puppet artists. The artists showed them how the puppets move.\n\nHoa says, \"The water puppet show is wonderful! It is a special art of Vietnam, and I want to see it again.\"",
+     "questions": [
+       {"type": "MC", "q": "Lớp của Hoa đi thăm khi nào?", "o": ["Chủ nhật tuần trước", "Thứ Bảy tuần trước", "Thứ Sáu tuần trước"], "options": ["Chủ nhật tuần trước", "Thứ Bảy tuần trước", "Thứ Sáu tuần trước"], "a": 0, "why": "Đoạn 1: Chủ nhật tuần trước lớp của Hoa thăm nhà hát múa rối nước."},
+       {"type": "TF", "q": "Các con rối múa trên mặt nước.", "o": ["True", "False"], "options": ["True", "False"], "a": 0, "why": "Đoạn 2: các con rối gỗ múa trên mặt nước."},
+       {"type": "MATCH", "q": "Các con rối kể chuyện về ai?", "o": ["Nông dân, ngư dân và rồng", "Vua và hoàng hậu", "Ô tô và tàu hỏa"], "options": ["Nông dân, ngư dân và rồng", "Vua và hoàng hậu", "Ô tô và tàu hỏa"], "a": 0, "why": "Đoạn 3: các con rối kể chuyện về nông dân, ngư dân và rồng."},
+       {"type": "COMP", "q": "Buổi diễn bắt đầu lúc 9 ___: at 9 ___.", "answer": "o'clock", "why": "Đoạn 2: buổi diễn bắt đầu lúc 9 giờ."},
+       {"type": "MC", "q": "Sau buổi diễn, các bạn nhỏ gặp ai?", "o": ["Các nghệ sĩ múa rối", "Quản lý nhà hát", "Ngư dân ở hồ"], "options": ["Các nghệ sĩ múa rối", "Quản lý nhà hát", "Ngư dân ở hồ"], "a": 0, "why": "Đoạn 4: sau buổi diễn các bạn gặp các nghệ sĩ múa rối."}
+     ],
+     "translation": "Chủ nhật tuần trước, lớp của Hoa thăm nhà hát múa rối nước trong thành phố, nhà hát gần một hồ lớn. Buổi diễn bắt đầu lúc 9 giờ, các con rối gỗ múa trên mặt nước, trống đánh vang. Các con rối kể chuyện về nông dân, ngư dân và rồng, các bạn nhỏ cười rất nhiều. Sau buổi diễn, các bạn gặp các nghệ sĩ múa rối, các nghệ sĩ chỉ cho các bạn cách con rối cử động. Hoa nói múa rối nước thật tuyệt, đó là nghệ thuật đặc biệt của Việt Nam và em muốn xem lại lần nữa.",
+     "phrases": [{"en": "water puppet show", "vi": "múa rối nước"}, {"en": "dance on the water", "vi": "múa trên mặt nước"}, {"en": "tell stories", "vi": "kể chuyện"}, {"en": "laugh a lot", "vi": "cười rất nhiều"}, {"en": "see it again", "vi": "xem lại lần nữa"}]}
+  ]);
+  CONTENT.listeningPlus.push.apply(CONTENT.listeningPlus, [
+    {"section": "Section 2", "band": "Band 3.0", "topic": "Thông báo về hội chợ sách ở trường",
+     "text": "Good morning, students. I have good news about a book fair at our school. The book fair is on Saturday, the 15th of June, in the school hall. It starts at 8 o'clock in the morning and finishes at 4 o'clock in the afternoon. There are many books: story books, science books and picture books. Story books cost 30000 dong, and picture books cost 20000 dong. Teachers will help you choose good books. There is also a small reading corner for young children. Students can also meet a famous writer at 10 o'clock. The writer will tell stories and sign books. Parents are welcome to come with their children. Please bring your money and a bag for your books. We hope you enjoy the book fair. Thank you.",
+     "questions": [
+       {"type": "MC", "q": "When is the book fair?", "o": ["On Saturday, the 15th of June", "On Sunday, the 15th of June", "On Friday, the 15th of June", "On Monday, the 15th of June"], "a": 0, "why": "Hội chợ sách diễn ra vào thứ Bảy, ngày 15 tháng 6."},
+       {"type": "MC", "q": "How much are story books?", "o": ["20000 dong", "30000 dong", "40000 dong", "50000 dong"], "a": 1, "why": "Sách truyện giá 30000 đồng, sách tranh giá 20000 đồng."},
+       {"type": "MATCH", "q": "When can students meet the writer?", "o": ["At 10 o'clock", "At 8 o'clock", "At 4 o'clock"], "a": 0, "why": "Học sinh có thể gặp nhà văn nổi tiếng lúc 10 giờ."},
+       {"type": "COMP", "q": "The fair finishes at ___ o'clock in the afternoon.", "answer": "4", "why": "Hội chợ kết thúc lúc 4 giờ chiều."},
+       {"type": "TF", "q": "Parents cannot come to the book fair.", "o": ["True", "False"], "a": 1, "why": "Câu này sai vì phụ huynh được chào đón tới cùng con."}
+     ]},
+    {"section": "Section 2", "band": "Band 3.0", "topic": "Phỏng vấn ngắn về câu lạc bộ đọc sách",
+     "text": "A: Good afternoon, Mai. Can I ask you about the reading club? B: Yes, of course. A: When does the club meet? B: The club meets on Wednesday afternoon, in the library. A: How many members are there? B: There are 25 members. Most of them are in class 6 and class 7. A: What do you do in the club? B: We read stories, talk about books and write short reviews. A: What book are you reading now? B: I am reading a funny story about a cat. A: Who helps the club? B: Miss Hoa helps us. She chooses good books for us. A: Where do you get the books? B: We borrow books from the school library. A: What time does the club finish? B: It finishes at half past four. A: Do new members need to bring anything? B: No, they only need to love books. A: Thank you, Mai. B: You are welcome.",
+     "questions": [
+       {"type": "MC", "q": "When does the reading club meet?", "o": ["On Wednesday afternoon", "On Thursday afternoon", "On Friday afternoon", "On Monday afternoon"], "a": 0, "why": "Câu lạc bộ đọc sách gặp nhau vào chiều thứ Tư, ở thư viện."},
+       {"type": "MC", "q": "How many members are there?", "o": ["15 members", "25 members", "35 members", "45 members"], "a": 1, "why": "Câu lạc bộ có 25 thành viên."},
+       {"type": "MATCH", "q": "Who helps the club?", "o": ["Miss Hoa", "Miss Thu", "Mr Nam"], "a": 0, "why": "Cô Hoa giúp câu lạc bộ và chọn sách hay cho các bạn."},
+       {"type": "COMP", "q": "The club finishes at half past ___.", "answer": "four", "why": "Câu lạc bộ kết thúc lúc bốn giờ rưỡi."},
+       {"type": "TF", "q": "New members must bring books.", "o": ["True", "False"], "a": 1, "why": "Câu này sai vì thành viên mới chỉ cần yêu sách, không cần mang gì."}
+     ]},
+    {"section": "Section 2", "band": "Band 3.0", "topic": "Hướng dẫn đi tham quan bảo tàng",
+     "text": "Welcome to the City Museum. Our museum opens at 8 o'clock in the morning and closes at 5 o'clock in the afternoon. Your visit today has two parts. First, we will visit the history room, where you can see old clothes, old coins and old photos. Next, we will visit the nature room, where you can see big animal models and beautiful stones. Please do not touch the things in the museum. You can take photos, but please do not use the flash. You can buy drinks at the small shop near the main gate. The entrance ticket costs 20000 dong for students and is free for children under 6 years old. Our guides wear blue shirts, so please follow them. Thank you, and enjoy your visit.",
+     "questions": [
+       {"type": "MC", "q": "How many parts does the visit have?", "o": ["One part", "Two parts", "Three parts", "Four parts"], "a": 1, "why": "Chuyến thăm có hai phần: phòng lịch sử và phòng thiên nhiên."},
+       {"type": "MC", "q": "What can visitors see in the history room?", "o": ["Old clothes, old coins and old photos", "Big animal models", "New books", "Pretty flowers"], "a": 0, "why": "Phòng lịch sử có quần áo cũ, tiền xu cũ và ảnh cũ."},
+       {"type": "MATCH", "q": "What colour shirts do the guides wear?", "o": ["Blue shirts", "Green shirts", "Red shirts"], "a": 0, "why": "Hướng dẫn viên mặc áo xanh dương."},
+       {"type": "COMP", "q": "The entrance ticket costs ___ dong for students.", "answer": "20000", "why": "Vé vào cửa cho học sinh giá 20000 đồng."},
+       {"type": "TF", "q": "Visitors can use the flash when they take photos.", "o": ["True", "False"], "a": 1, "why": "Câu này sai vì du khách được chụp ảnh nhưng không được dùng đèn flash."}
+     ]}
+  ]);
+  CONTENT.speaking.push.apply(CONTENT.speaking, [
+    {"partNum": 1, "topicStd": "Kỳ nghỉ và du lịch", "part": "Part 1", "topic": "Holidays - Kỳ nghỉ", "band": "Band 3.0",
+     "lines": [
+       {"who": "Examiner", "en": "Did you have a holiday last summer?", "vi": "Hè năm ngoái bạn có đi nghỉ không?"},
+       {"who": "Candidate", "en": "Yes, I went to the beach with my family last summer.", "vi": "Có, hè năm ngoái tôi đi biển cùng gia đình."},
+       {"who": "Examiner", "en": "What did you do there?", "vi": "Bạn đã làm gì ở đó?"},
+       {"who": "Candidate", "en": "I swam in the sea and built a sandcastle with my sister.", "vi": "Tôi bơi ở biển và xây lâu đài cát cùng em gái."},
+       {"who": "Examiner", "en": "What did you eat there?", "vi": "Bạn đã ăn gì ở đó?"},
+       {"who": "Candidate", "en": "We ate seafood. I liked the grilled fish best.", "vi": "Chúng tôi ăn hải sản. Tôi thích nhất món cá nướng."},
+       {"who": "Examiner", "en": "Do you want to go there again?", "vi": "Bạn có muốn tới đó lần nữa không?"},
+       {"who": "Candidate", "en": "Yes, I want to go back next summer.", "vi": "Có, tôi muốn quay lại vào hè tới."}
+     ],
+     "quiz": [
+       {"q": "Hè năm ngoái Candidate đi đâu?", "o": ["Đi biển cùng gia đình", "Đi núi cùng lớp", "Ở nhà"], "a": 0, "why": "Candidate nói: I went to the beach with my family last summer."},
+       {"q": "Candidate làm gì ở biển?", "o": ["Bơi và xây lâu đài cát cùng em gái", "Câu cá và chèo thuyền", "Đá bóng"], "a": 0, "why": "Candidate nói: I swam in the sea and built a sandcastle with my sister."},
+       {"q": "Candidate có muốn quay lại không?", "o": ["Có, vào hè tới", "Không", "Chưa biết"], "a": 0, "why": "Candidate nói: I want to go back next summer."}
+     ]},
+    {"partNum": 1, "topicStd": "Học tập và giáo dục", "part": "Part 1", "topic": "School Subjects - Các môn học", "band": "Band 3.0",
+     "lines": [
+       {"who": "Examiner", "en": "What is your favourite subject?", "vi": "Môn học yêu thích của bạn là gì?"},
+       {"who": "Candidate", "en": "My favourite subject is English. I like learning new words.", "vi": "Môn yêu thích của tôi là tiếng Anh. Tôi thích học từ mới."},
+       {"who": "Examiner", "en": "Who is your English teacher?", "vi": "Giáo viên tiếng Anh của bạn là ai?"},
+       {"who": "Candidate", "en": "My English teacher is Miss Hoa. She is kind and funny.", "vi": "Cô giáo tiếng Anh của tôi là cô Hoa. Cô tốt bụng và vui tính."},
+       {"who": "Examiner", "en": "What subject is hard for you?", "vi": "Môn nào khó với bạn?"},
+       {"who": "Candidate", "en": "Maths is hard for me, but my friend helps me.", "vi": "Toán khó với tôi, nhưng bạn tôi giúp tôi."},
+       {"who": "Examiner", "en": "What do you study after school?", "vi": "Sau giờ học bạn học gì?"},
+       {"who": "Candidate", "en": "After school, I do my homework and read story books.", "vi": "Sau giờ học, tôi làm bài tập và đọc truyện."}
+     ],
+     "quiz": [
+       {"q": "Môn yêu thích của Candidate là gì?", "o": ["Tiếng Anh", "Toán", "Khoa học"], "a": 0, "why": "Candidate nói: My favourite subject is English."},
+       {"q": "Cô giáo tiếng Anh của Candidate là ai?", "o": ["Cô Hoa", "Cô Thu", "Cô Lan"], "a": 0, "why": "Candidate nói: My English teacher is Miss Hoa."},
+       {"q": "Sau giờ học Candidate làm gì?", "o": ["Làm bài tập và đọc truyện", "Chơi bóng đá", "Nấu ăn"], "a": 0, "why": "Candidate nói: After school, I do my homework and read story books."}
+     ]},
+    {"partNum": 2, "topicStd": "Quà tặng và gia đình", "part": "Part 2", "topic": "Describe a gift you received", "band": "Band 3.0",
+     "lines": [
+       {"who": "Cue card", "en": "Describe a gift you received. You should say: what the gift was, who gave it to you, when you received it, and explain why it was special.", "vi": "Hãy mô tả một món quà bạn đã nhận. Bạn nên nói: món quà là gì, ai tặng bạn, bạn nhận nó khi nào, và giải thích vì sao nó đặc biệt."},
+       {"who": "Candidate", "en": "I am going to talk about a bicycle my parents gave me.", "vi": "Tôi sẽ nói về một chiếc xe đạp bố mẹ tặng tôi."},
+       {"who": "Candidate", "en": "It is a red bicycle with a small bell.", "vi": "Đó là một chiếc xe đạp đỏ có chuông nhỏ."},
+       {"who": "Candidate", "en": "I received it on my birthday last year.", "vi": "Tôi nhận nó vào sinh nhật năm ngoái."},
+       {"who": "Candidate", "en": "On that day, my parents gave me the bicycle in the morning, and I was very happy.", "vi": "Hôm đó, bố mẹ tặng tôi xe đạp vào buổi sáng, và tôi rất vui."},
+       {"who": "Candidate", "en": "I ride the bicycle to the park every weekend with my friends.", "vi": "Tôi đạp xe tới công viên mỗi cuối tuần cùng bạn bè."},
+       {"who": "Candidate", "en": "The bicycle is special because it was my first bicycle, and my parents chose it for me.", "vi": "Chiếc xe đạp đặc biệt vì đó là xe đạp đầu tiên của tôi, và bố mẹ đã chọn nó cho tôi."},
+       {"who": "Candidate", "en": "I keep it clean, and I hope to ride it for a long time.", "vi": "Tôi giữ nó sạch sẽ, và mong sẽ đạp nó thật lâu."}
+     ],
+     "quiz": [
+       {"q": "Món quà là gì?", "o": ["Một chiếc xe đạp đỏ có chuông nhỏ", "Một quả bóng", "Một cuốn sách"], "a": 0, "why": "Candidate nói: a red bicycle with a small bell."},
+       {"q": "Candidate nhận quà khi nào?", "o": ["Vào sinh nhật năm ngoái", "Vào dịp Tết", "Vào ngày khai giảng"], "a": 0, "why": "Candidate nói: I received it on my birthday last year."},
+       {"q": "Vì sao chiếc xe đạp đặc biệt?", "o": ["Vì đó là xe đạp đầu tiên, bố mẹ chọn cho Candidate", "Vì nó đắt nhất", "Vì nó màu đỏ"], "a": 0, "why": "Candidate nói: it was my first bicycle, and my parents chose it for me."}
+     ]},
+    {"partNum": 3, "topicStd": "Đọc sách và truyền thông", "part": "Part 3", "topic": "Reading books vs watching TV - Đọc sách hay xem TV", "band": "Band 3.0",
+     "lines": [
+       {"who": "Examiner", "en": "Do children read books less than before?", "vi": "Trẻ em có đọc sách ít hơn trước không?"},
+       {"who": "Candidate", "en": "Yes, I think so. Many children watch TV or play games instead of reading.", "vi": "Có, tôi nghĩ vậy. Nhiều trẻ em xem TV hoặc chơi trò chơi thay vì đọc sách."},
+       {"who": "Examiner", "en": "Are books better than TV?", "vi": "Sách có tốt hơn TV không?"},
+       {"who": "Candidate", "en": "Books are better in some ways. They help children imagine and learn new words slowly.", "vi": "Sách tốt hơn ở một số mặt. Sách giúp trẻ em tưởng tượng và học từ mới chậm rãi."},
+       {"who": "Examiner", "en": "How can schools help children read more?", "vi": "Trường học có thể giúp trẻ em đọc nhiều hơn bằng cách nào?"},
+       {"who": "Candidate", "en": "Schools can make a reading corner and give children funny books. Teachers can also read stories with them.", "vi": "Trường có thể làm góc đọc sách và cho trẻ em sách vui. Thầy cô cũng có thể đọc truyện cùng các em."}
+     ],
+     "quiz": [
+       {"q": "Theo Candidate, nhiều trẻ em làm gì thay vì đọc sách?", "o": ["Xem TV hoặc chơi trò chơi", "Đi bơi", "Nấu ăn"], "a": 0, "why": "Candidate nói: Many children watch TV or play games instead of reading."},
+       {"q": "Theo Candidate, sách giúp trẻ em điều gì?", "o": ["Tưởng tượng và học từ mới chậm rãi", "Chạy nhanh hơn", "Ngủ ngon hơn"], "a": 0, "why": "Candidate nói: They help children imagine and learn new words slowly."},
+       {"q": "Theo Candidate, trường có thể làm gì?", "o": ["Làm góc đọc sách và cho trẻ em sách vui", "Cấm xem TV", "Cho trẻ em nghỉ học"], "a": 0, "why": "Candidate nói: Schools can make a reading corner and give children funny books."}
+     ]}
+  ]);
+  CONTENT.roleplay.push.apply(CONTENT.roleplay, [
+    {"title": "Đặt vé xe khách về quê - Booking a Coach Ticket Home", "setting": "Bạn muốn đặt vé xe khách về quê vào sáng thứ Bảy. Bạn nói ngày giờ, chọn ghế gần cửa sổ và hỏi giá vé.", "partner": "Nhân viên bến xe", "goal": "Đặt được 2 vé xe khách về quê lúc 8 giờ sáng thứ Bảy, ghế gần cửa sổ.", "band": "Band 3.0",
+     "chunks": ["I want to book two coach tickets", "To my home village", "On Saturday morning", "At eight o'clock", "Window seats, please"],
+     "turns": [
+       {"from": "partner", "text": "Hello! Where do you want to go?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Tôi muốn đặt hai vé xe khách về quê, làm ơn.", "expect": "Hello. I want to book two coach tickets to my home village, please.", "keywords": ["book", "tickets", "village"], "hint": "Hello. I want to book...", "tip": "coach tickets là vé xe khách.", "chunks": ["I want to book two coach tickets", "To my home village"]},
+       {"from": "partner", "text": "When do you want to go?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Sáng thứ Bảy, lúc tám giờ.", "expect": "On Saturday morning, at eight o'clock.", "keywords": ["Saturday", "eight"], "hint": "On Saturday morning,...", "tip": "Nói ngày trước, rồi tới giờ.", "chunks": ["On Saturday morning", "At eight o'clock"]},
+       {"from": "partner", "text": "We have window seats. Two tickets cost 200000 dong."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tốt quá. Tôi lấy hai vé này. Cảm ơn bạn rất nhiều.", "expect": "Good. I take the two tickets. Thank you very much.", "keywords": ["take", "tickets", "thank"], "hint": "Good. I take...", "tip": "Nói Good trước khi nhận vé nghe tự nhiên.", "chunks": ["Window seats, please"]}
+     ]},
+    {"title": "Hỏi mua quà sinh nhật cho mẹ - Asking about a Birthday Gift for Mum", "setting": "Bạn muốn mua một món quà sinh nhật cho mẹ. Bạn hỏi nhân viên cửa hàng, chọn một chiếc khăn xanh và hỏi giá.", "partner": "Nhân viên cửa hàng quà tặng", "goal": "Chọn được một chiếc khăn làm quà sinh nhật cho mẹ với giá 90000 đồng.", "band": "Band 3.0",
+     "chunks": ["I want to buy a birthday gift", "For my mum", "A scarf, please", "How much is the blue scarf", "I take the blue scarf"],
+     "turns": [
+       {"from": "partner", "text": "Hello! What are you looking for?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Tôi muốn mua một món quà sinh nhật cho mẹ tôi.", "expect": "Hello. I want to buy a birthday gift for my mum.", "keywords": ["buy", "gift", "mum"], "hint": "Hello. I want to buy...", "tip": "birthday gift là quà sinh nhật.", "chunks": ["I want to buy a birthday gift", "For my mum"]},
+       {"from": "partner", "text": "What would you like? We have scarves, bags and flowers."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Một chiếc khăn ạ. Chiếc khăn xanh bao nhiêu tiền ạ?", "expect": "A scarf, please. How much is the blue scarf?", "keywords": ["scarf", "how much", "blue"], "hint": "A scarf, please....", "tip": "Hỏi giá bằng How much is...?", "chunks": ["A scarf, please", "How much is the blue scarf"]},
+       {"from": "partner", "text": "It is 90000 dong."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tốt quá. Tôi lấy chiếc khăn xanh. Cảm ơn bạn rất nhiều.", "expect": "Good. I take the blue scarf. Thank you very much.", "keywords": ["take", "scarf", "thank"], "hint": "Good. I take...", "tip": "Nói rõ món mình lấy để nhân viên gói đúng đồ.", "chunks": ["I take the blue scarf"]}
+     ]},
+    {"title": "Xin phép nghỉ học một buổi - Asking for One Day Off School", "setting": "Thứ Sáu này gia đình bạn về quê thăm bà. Bạn xin cô giáo chủ nhiệm nghỉ học một buổi và hứa chép bài đầy đủ.", "partner": "Cô giáo chủ nhiệm", "goal": "Xin phép nghỉ học thứ Sáu vì về quê thăm bà và hứa chép bài đầy đủ.", "band": "Band 3.0",
+     "chunks": ["Can I stay at home on Friday", "My family visits my grandma", "In the village", "I will copy all the lessons", "Thank you very much"],
+     "turns": [
+       {"from": "partner", "text": "Hello. What do you want to tell me?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Thưa cô, thứ Sáu em có thể nghỉ học ở nhà được không ạ?", "expect": "Excuse me, Miss. Can I stay at home on Friday, please?", "keywords": ["stay", "Friday"], "hint": "Excuse me, Miss. Can I stay...", "tip": "Can I...? là câu xin phép lịch sự.", "chunks": ["Can I stay at home on Friday"]},
+       {"from": "partner", "text": "Why? Are you sick?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Không ạ. Gia đình em về quê thăm bà.", "expect": "No, Miss. My family visits my grandma in the village.", "keywords": ["family", "grandma", "village"], "hint": "No, Miss. My family visits...", "tip": "Nói rõ lý do để cô hiểu.", "chunks": ["My family visits my grandma", "In the village"]},
+       {"from": "partner", "text": "OK. But you must copy the lessons."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng ạ. Em sẽ chép đầy đủ bài học. Cảm ơn cô rất nhiều.", "expect": "Yes, Miss. I will copy all the lessons. Thank you very much.", "keywords": ["copy", "lessons", "thank"], "hint": "Yes, Miss. I will copy...", "tip": "Hứa chép bài cho thấy em có trách nhiệm.", "chunks": ["I will copy all the lessons", "Thank you very much"]}
+     ]},
+    {"title": "Thuê xe đạp ở công viên - Renting a Bicycle in the Park", "setting": "Bạn muốn thuê một chiếc xe đạp ở công viên trong hai giờ. Bạn hỏi giá thuê và tiền đặt cọc, rồi trả tiền.", "partner": "Nhân viên cho thuê xe", "goal": "Thuê được một xe đạp trong 2 giờ, hỏi được tiền đặt cọc và giá thuê.", "band": "Band 3.0",
+     "chunks": ["I want to rent a bicycle", "For two hours", "How much is it", "The deposit is 100000 dong", "Here is the money"],
+     "turns": [
+       {"from": "partner", "text": "Hello! Do you want to rent a bicycle?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Tôi muốn thuê một chiếc xe đạp, làm ơn.", "expect": "Hello. I want to rent a bicycle, please.", "keywords": ["want", "rent", "bicycle"], "hint": "Hello. I want to rent...", "tip": "rent a bicycle là thuê xe đạp.", "chunks": ["I want to rent a bicycle"]},
+       {"from": "partner", "text": "For how long?"},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Trong hai giờ. Giá bao nhiêu ạ?", "expect": "For two hours. How much is it?", "keywords": ["hours", "how much"], "hint": "For two hours....", "tip": "Nói thời gian thuê trước, rồi hỏi giá.", "chunks": ["For two hours", "How much is it"]},
+       {"from": "partner", "text": "It is 30000 dong, and the deposit is 100000 dong."},
+       {"from": "learner", "prompt": "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Được ạ. Đây là tiền. Cảm ơn bạn rất nhiều.", "expect": "OK. Here is the money. Thank you very much.", "keywords": ["money", "thank"], "hint": "OK. Here is the money....", "tip": "deposit là tiền đặt cọc, trả lại khi trả xe.", "chunks": ["The deposit is 100000 dong", "Here is the money"]}
+     ]}
+  ]);
+  CONTENT.writing.push.apply(CONTENT.writing, [
+    {"wtype": "Biểu đồ đường", "type": "Task 1", "band": "Band 3.0", "title": "Biểu đồ đường: nhiệt độ trong tuần",
+     "prompt": "The line graph below shows the temperature in Hanoi from Monday to Sunday. Summarise the information in 5-7 simple sentences.",
+     "dataDesc": "Dữ kiện: thứ Hai 28 độ; thứ Ba 30; thứ Tư 32; thứ Năm 31; thứ Sáu 29; thứ Bảy 27; Chủ nhật 26. Cao nhất thứ Tư 32 độ, thấp nhất Chủ nhật 26 độ.",
+     "model": "The line graph shows the temperature in Hanoi from Monday to Sunday.\n\nOn Monday, it was 28 degrees. The temperature went up to 30 degrees on Tuesday and 32 degrees on Wednesday. Wednesday was the hottest day. Then it went down to 31 degrees on Thursday and 29 degrees on Friday. On Saturday it was 27 degrees, and on Sunday it was 26 degrees, the coldest day.\n\nIn short, the temperature went up at the start of the week and went down at the end of the week.",
+     "analysis": "Cấu trúc 3 đoạn: mở bài nêu biểu đồ nói về gì; thân bài nêu số liệu theo thứ tự thời gian, nêu rõ ngày cao nhất và thấp nhất; kết bài tóm tắt xu hướng chung. Điểm ngôn ngữ đáng học: went up (tăng lên), went down (giảm xuống), the hottest day (ngày nóng nhất), the coldest day (ngày lạnh nhất).",
+     "phrases": [{"en": "The line graph shows...", "vi": "Biểu đồ đường cho thấy..."}, {"en": "went up", "vi": "tăng lên"}, {"en": "went down", "vi": "giảm xuống"}, {"en": "the hottest day", "vi": "ngày nóng nhất"}]},
+    {"wtype": "Ý kiến", "type": "Task 2", "band": "Band 3.0", "title": "Opinion: Học sinh mặc đồng phục",
+     "prompt": "Some people think students should wear uniforms at school. Do you agree or disagree? Write 5-7 simple sentences and give reasons.",
+     "dataDesc": "Dàn ý gợi ý: Mở bài — nêu ý kiến (đồng ý). Thân — lý do 1: bình đẳng, không so sánh quần áo; lý do 2: gọn gàng, dễ nhận ra học sinh trường nào. Kết — khẳng định lại ý kiến.",
+     "model": "I agree that students should wear uniforms at school.\n\nFirst, uniforms make students equal. No one compares clothes. Second, uniforms look tidy, and people can see which school the students are from.\n\nIn short, wearing uniforms is good for students and schools.",
+     "analysis": "Cấu trúc 3 đoạn: mở bài nêu ý kiến; thân bài nêu hai lý do, mỗi lý do một câu giải thích; kết bài khẳng định lại. Điểm ngôn ngữ đáng học: make students equal (làm học sinh bình đẳng), compare clothes (so sánh quần áo), look tidy (trông gọn gàng).",
+     "phrases": [{"en": "I agree that...", "vi": "Tôi đồng ý rằng..."}, {"en": "make students equal", "vi": "làm học sinh bình đẳng"}, {"en": "look tidy", "vi": "trông gọn gàng"}, {"en": "In short", "vi": "Tóm lại"}]},
+    {"wtype": "Nguyên nhân và giải pháp", "type": "Task 2", "band": "Band 3.0", "title": "Nguyên nhân và giải pháp: rác thải nhựa ở trường",
+     "prompt": "There is a lot of plastic waste at school. What are the causes, and what can students do? Write 5-7 simple sentences.",
+     "dataDesc": "Dàn ý gợi ý: Nguyên nhân — nhiều chai nhựa, túi ni-lông dùng một lần. Giải pháp — mang bình nước riêng, dùng túi vải, bỏ rác đúng thùng.",
+     "model": "There is a lot of plastic waste at school.\n\nOne cause is plastic bottles. Students buy water in plastic bottles every day. Another cause is plastic bags from shops. Students can solve this problem. They can bring their own water bottles and use cloth bags. They can also put rubbish in the right bins.\n\nIn short, small actions can make our school cleaner.",
+     "analysis": "Cấu trúc 3 đoạn: mở bài nêu vấn đề; thân bài nêu hai nguyên nhân rồi nêu ba giải pháp; kết bài khẳng định hành động nhỏ cũng giúp ích. Điểm ngôn ngữ đáng học: one cause (một nguyên nhân), another cause (một nguyên nhân khác), solve this problem (giải quyết vấn đề này), put rubbish in the right bins (bỏ rác đúng thùng).",
+     "phrases": [{"en": "plastic waste", "vi": "rác thải nhựa"}, {"en": "one cause", "vi": "một nguyên nhân"}, {"en": "bring their own water bottles", "vi": "mang bình nước riêng"}, {"en": "put rubbish in the right bins", "vi": "bỏ rác đúng thùng"}]}
+  ]);
+  CONTENT.writingDrills.push.apply(CONTENT.writingDrills, [
+    {"band": "Band 3.0", "kind": "correct", "title": "Chia động từ quá khứ -ed: cuối tuần", "prompt": "Viết lại câu ở quá khứ đơn với -ed. / Rewrite the sentence in the past simple with -ed.", "given": "Yesterday, I (play) football.", "model": "Yesterday, I played football.", "note": "Quá khứ đơn của động từ có quy tắc: thêm -ed, dùng với yesterday, last week."},
+    {"band": "Band 3.0", "kind": "combine", "title": "Nối câu bằng when: hôm qua", "prompt": "Nối hai câu thành một câu bằng when. / Combine the sentences with when.", "given": "I came home. / It rained.", "model": "When I came home, it rained.", "note": "when nối hai việc xảy ra cùng lúc; mệnh đề when đứng trước, sau đó có dấu phẩy."},
+    {"band": "Band 3.0", "kind": "order", "title": "Sắp xếp thành câu: so sánh nhất", "prompt": "Sắp xếp các từ thành câu đúng. / Put the words in the correct order.", "given": "tallest / the / Lan / is / girl", "model": "Lan is the tallest girl.", "note": "So sánh nhất: chủ ngữ + be + the + tính từ thêm -est."}
+  ]);
+  CONTENT.typing.push.apply(CONTENT.typing, [
+    {"level": "Band 3.0", "title": "Kỳ nghỉ cuối tuần", "sentences": ["Last weekend, we went to the beach.", "We went by car.", "Nam swam in the sea.", "He built a sandcastle.", "We ate seafood at noon.", "Nam liked the grilled fish best.", "We walked on the beach.", "Nam found a big pink shell.", "The beach is wonderful.", "I want to come back next summer."]},
+    {"level": "Band 3.0", "title": "Các môn học ở trường", "sentences": ["My favourite subject is English.", "I like learning new words.", "My English teacher is Miss Hoa.", "Maths is hard for me.", "My friend helps me.", "After school, I do my homework.", "We study in the classroom.", "We read in the library.", "We eat lunch in the canteen.", "We play on the playground."]},
+    {"level": "Band 3.0", "title": "Du lịch và tham quan", "sentences": ["We visit the museum.", "The temple is old.", "The pagoda is quiet.", "We stay in a big hotel.", "Our guide is friendly.", "I take photos with my camera.", "My backpack is heavy.", "We look at a city map.", "It is a long journey.", "We enjoy the trip."]},
+    {"level": "Band 3.0", "title": "Món ăn Việt Nam", "sentences": ["I eat a bowl of pho.", "Spring rolls are crispy.", "We eat sticky rice.", "This banh mi is tasty.", "Mum cooks noodle soup.", "I like fried rice.", "Grilled fish is tasty.", "We eat sour soup.", "This dish is very tasty.", "The food is so delicious."]}
+  ]);
+})();
+
+/* ---------- PHA 3 (27/10/2026): PHA 3 — IELTS CHUONG MONG 3,5/4,0/4,5 (moi chuong +34 buoc; sua tieu de bai doc 'Cooking Rice with Grandma' -> "Grandma's Sunday Rice" de khoi trung voi bai cung ten o thin_a) ---------- */
+// ============================================================
+// phase3_en_thin_b.js — BATCH BỔ SUNG PHA 3 (vòng thin_b)
+// Chương IELTS mỏng nhất đo ngày 27/10/2026: Band 3.5, Band 4.0, Band 4.5.
+// Mỗi chương +34 bước: từ vựng 6 bộ, ngữ pháp 3 trạm, đọc 4 bài,
+// nghe dài 3 bài, nói 4 kịch bản, nhập vai 4, viết 3, luyện viết 3,
+// gõ câu 4 bộ. Nội dung tự soạn 100%, tiếng Việt đơn giản,
+// ví dụ trước quy tắc sau. Chỉ append vào CONTENT, không sửa file chính.
+// ============================================================
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.vocab.push.apply(CONTENT.vocab, [
+    // ---------- BAND 3.5 — TỪ VỰNG ----------
+    { topic: "Người hàng xóm thân thiện", theme: "Người hàng xóm thân thiện - Friendly Neighbours", band: "Band 3.5", cards: [
+      { w: "neighbour", ipa: "/ˈneɪbə/", vi: "hàng xóm", col: "a kind neighbour", ex: "Mrs Lan is a kind neighbour.", exv: "Bà Lan là một người hàng xóm tốt bụng." },
+      { w: "kind", ipa: "/kaɪnd/", vi: "tốt bụng", col: "a kind smile", ex: "He has a kind smile for everyone.", exv: "Anh ấy nở nụ cười hiền với mọi người." },
+      { w: "smile", ipa: "/smaɪl/", vi: "nụ cười; mỉm cười", col: "a warm smile", ex: "Her warm smile makes guests feel welcome.", exv: "Nụ cười ấm áp của cô ấy khiến khách thấy thoải mái." },
+      { w: "helpful", ipa: "/ˈhelpfl/", vi: "hay giúp đỡ", col: "a helpful friend", ex: "My neighbour is helpful when my bike breaks.", exv: "Hàng xóm của tôi hay giúp đỡ khi xe đạp của tôi hỏng." },
+      { w: "polite", ipa: "/pəˈlaɪt/", vi: "lịch sự", col: "polite words", ex: "Please and thank you are polite words.", exv: "Làm ơn và cảm ơn là những lời lịch sự." },
+      { w: "quiet", ipa: "/ˈkwaɪət/", vi: "yên tĩnh; ít nói", col: "a quiet street", ex: "Our street is quiet in the evening.", exv: "Phố của chúng tôi yên tĩnh vào buổi tối." },
+      { w: "noisy", ipa: "/ˈnɔɪzi/", vi: "ồn ào", col: "a noisy dog", ex: "The noisy dog barks at night.", exv: "Con chó ồn ào sủa vào ban đêm." },
+      { w: "tall", ipa: "/tɔːl/", vi: "cao", col: "a tall man", ex: "Mr Ba is a tall man with grey hair.", exv: "Bác Ba là người đàn ông cao với mái tóc bạc." },
+      { w: "short", ipa: "/ʃɔːt/", vi: "thấp; ngắn", col: "short hair", ex: "She has short hair and big eyes.", exv: "Cô ấy có mái tóc ngắn và đôi mắt to." },
+      { w: "slim", ipa: "/slɪm/", vi: "mảnh mai", col: "a slim girl", ex: "The slim girl runs fast in the morning.", exv: "Cô gái mảnh mai chạy nhanh vào buổi sáng." },
+      { w: "curly", ipa: "/ˈkɜːli/", vi: "xoăn", col: "curly hair", ex: "My sister has curly hair.", exv: "Em gái tôi có mái tóc xoăn." },
+      { w: "beard", ipa: "/bɪəd/", vi: "râu", col: "a short beard", ex: "Grandpa has a short beard.", exv: "Ông tôi có bộ râu ngắn." },
+      { w: "glasses", ipa: "/ˈɡlɑːsɪz/", vi: "kính mắt", col: "wear glasses", ex: "My father wears glasses when he reads.", exv: "Bố tôi đeo kính khi đọc sách." },
+      { w: "voice", ipa: "/vɔɪs/", vi: "giọng nói", col: "a soft voice", ex: "She speaks in a soft voice.", exv: "Cô ấy nói bằng giọng nhẹ nhàng." },
+      { w: "laugh", ipa: "/lɑːf/", vi: "tiếng cười; cười", col: "a happy laugh", ex: "His happy laugh fills the small yard.", exv: "Tiếng cười vui vẻ của anh ấy vang khắp sân nhỏ." },
+      { w: "wave", ipa: "/weɪv/", vi: "vẫy tay", col: "wave hello", ex: "We wave hello to our neighbours every morning.", exv: "Chúng tôi vẫy tay chào hàng xóm mỗi sáng." },
+      { w: "greet", ipa: "/ɡriːt/", vi: "chào hỏi", col: "greet a guest", ex: "Children greet guests at the gate.", exv: "Trẻ con chào khách ở cổng." },
+      { w: "chat", ipa: "/tʃæt/", vi: "trò chuyện", col: "chat with friends", ex: "Old friends chat under the big tree.", exv: "Các cụ bạn già trò chuyện dưới gốc cây to." },
+      { w: "borrow", ipa: "/ˈbɒrəʊ/", vi: "mượn", col: "borrow a book", ex: "I borrow a book from Mrs Lan.", exv: "Tôi mượn một cuốn sách của bà Lan." },
+      { w: "lend", ipa: "/lend/", vi: "cho mượn", col: "lend a hand", ex: "Neighbours lend a hand when we move house.", exv: "Hàng xóm giúp một tay khi nhà tôi chuyển nhà." }
+    ] },
+    { topic: "Căn bếp nhà mình", theme: "Căn bếp nhà mình - Our Kitchen", band: "Band 3.5", cards: [
+      { w: "kitchen", ipa: "/ˈkɪtʃɪn/", vi: "nhà bếp", col: "in the kitchen", ex: "Mum cooks in the kitchen every morning.", exv: "Mẹ nấu ăn trong bếp mỗi sáng." },
+      { w: "cooker", ipa: "/ˈkʊkə/", vi: "bếp nấu", col: "turn on the cooker", ex: "Turn on the cooker and boil the water.", exv: "Bật bếp lên và đun sôi nước." },
+      { w: "fridge", ipa: "/frɪdʒ/", vi: "tủ lạnh", col: "in the fridge", ex: "The eggs are in the fridge.", exv: "Trứng ở trong tủ lạnh." },
+      { w: "pan", ipa: "/pæn/", vi: "chảo", col: "a hot pan", ex: "Put some oil in the hot pan.", exv: "Cho một ít dầu vào chảo nóng." },
+      { w: "pot", ipa: "/pɒt/", vi: "nồi", col: "a big pot", ex: "Grandma cooks soup in a big pot.", exv: "Bà nấu canh trong một chiếc nồi to." },
+      { w: "spoon", ipa: "/spuːn/", vi: "thìa", col: "a small spoon", ex: "Stir the soup with a small spoon.", exv: "Khuấy canh bằng một chiếc thìa nhỏ." },
+      { w: "bowl", ipa: "/bəʊl/", vi: "bát", col: "a bowl of rice", ex: "I eat a bowl of rice for lunch.", exv: "Tôi ăn một bát cơm vào bữa trưa." },
+      { w: "plate", ipa: "/pleɪt/", vi: "đĩa", col: "a clean plate", ex: "Put the fish on a clean plate.", exv: "Đặt cá lên một chiếc đĩa sạch." },
+      { w: "chopsticks", ipa: "/ˈtʃɒpstɪks/", vi: "đũa", col: "eat with chopsticks", ex: "We eat rice with chopsticks.", exv: "Chúng tôi ăn cơm bằng đũa." },
+      { w: "towel", ipa: "/ˈtaʊəl/", vi: "khăn lau", col: "a dry towel", ex: "Dry your hands with a dry towel.", exv: "Lau tay bằng khăn khô." },
+      { w: "sink", ipa: "/sɪŋk/", vi: "bồn rửa", col: "wash in the sink", ex: "Wash the bowls in the sink.", exv: "Rửa bát trong bồn rửa." },
+      { w: "soap", ipa: "/səʊp/", vi: "xà phòng", col: "wash with soap", ex: "Wash your hands with soap.", exv: "Rửa tay bằng xà phòng." },
+      { w: "steam", ipa: "/stiːm/", vi: "hơi nước", col: "hot steam", ex: "Hot steam comes from the pot.", exv: "Hơi nước nóng bốc lên từ nồi." },
+      { w: "boil", ipa: "/bɔɪl/", vi: "đun sôi", col: "boil some water", ex: "Please boil some water for tea.", exv: "Hãy đun sôi một ít nước để pha trà." },
+      { w: "fry", ipa: "/fraɪ/", vi: "chiên, rán", col: "fry an egg", ex: "Mum fries an egg for breakfast.", exv: "Mẹ rán một quả trứng cho bữa sáng." },
+      { w: "slice", ipa: "/slaɪs/", vi: "thái lát", col: "slice the bread", ex: "Slice the bread and share it with us.", exv: "Thái lát bánh mì và chia cho chúng tôi." },
+      { w: "peel", ipa: "/piːl/", vi: "gọt vỏ", col: "peel a banana", ex: "The little boy peels a banana himself.", exv: "Cậu bé tự bóc một quả chuối." },
+      { w: "taste", ipa: "/teɪst/", vi: "nếm; vị", col: "taste the soup", ex: "Taste the soup and tell me if it is good.", exv: "Nếm canh và nói cho tôi biết có ngon không." },
+      { w: "salty", ipa: "/ˈsɔːlti/", vi: "mặn", col: "too salty", ex: "This soup is too salty for me.", exv: "Bát canh này quá mặn với tôi." },
+      { w: "sweet", ipa: "/swiːt/", vi: "ngọt", col: "sweet tea", ex: "Grandpa likes sweet tea after lunch.", exv: "Ông thích trà ngọt sau bữa trưa." }
+    ] },
+    { topic: "Buổi sáng ở quê", theme: "Buổi sáng ở quê - A Morning in the Village", band: "Band 3.5", cards: [
+      { w: "dawn", ipa: "/dɔːn/", vi: "bình minh", col: "at dawn", ex: "Farmers wake up at dawn.", exv: "Nông dân thức dậy lúc bình minh." },
+      { w: "mist", ipa: "/mɪst/", vi: "sương mù", col: "morning mist", ex: "Morning mist covers the small pond.", exv: "Sương sớm phủ lên ao nhỏ." },
+      { w: "cock", ipa: "/kɒk/", vi: "gà trống", col: "the cock crows", ex: "The cock crows before the sun rises.", exv: "Gà trống gáy trước khi mặt trời mọc." },
+      { w: "hen", ipa: "/hen/", vi: "gà mái", col: "a brown hen", ex: "A brown hen walks with her chicks.", exv: "Một con gà mái nâu đi cùng đàn gà con." },
+      { w: "pond", ipa: "/pɒnd/", vi: "ao", col: "near the pond", ex: "Children play near the pond after school.", exv: "Trẻ con chơi gần ao sau giờ học." },
+      { w: "bamboo", ipa: "/bæmˈbuː/", vi: "tre", col: "a bamboo fence", ex: "A bamboo fence stands around the garden.", exv: "Hàng rào tre dựng quanh vườn." },
+      { w: "straw", ipa: "/strɔː/", vi: "rơm", col: "a straw hat", ex: "She wears a straw hat in the field sun.", exv: "Cô ấy đội nón rơm dưới nắng đồng." },
+      { w: "lane", ipa: "/leɪn/", vi: "ngõ, đường làng nhỏ", col: "a quiet lane", ex: "We walk home along a quiet lane.", exv: "Chúng tôi đi bộ về nhà dọc ngõ yên tĩnh." },
+      { w: "gate", ipa: "/ɡeɪt/", vi: "cổng", col: "open the gate", ex: "Open the gate and come in, please.", exv: "Hãy mở cổng và vào nhà nhé." },
+      { w: "fence", ipa: "/fens/", vi: "hàng rào", col: "over the fence", ex: "The ball flies over the fence.", exv: "Quả bóng bay qua hàng rào." },
+      { w: "yard", ipa: "/jɑːd/", vi: "sân", col: "in the yard", ex: "Grandma dries rice in the yard.", exv: "Bà phơi thóc ngoài sân." },
+      { w: "harvest", ipa: "/ˈhɑːvɪst/", vi: "thu hoạch; vụ mùa", col: "the rice harvest", ex: "The rice harvest keeps the whole village busy.", exv: "Vụ thu hoạch lúa khiến cả làng bận rộn." },
+      { w: "plant", ipa: "/plɑːnt/", vi: "trồng (cây)", col: "plant some beans", ex: "We plant some beans behind the house.", exv: "Chúng tôi trồng một ít đậu sau nhà." },
+      { w: "feed", ipa: "/fiːd/", vi: "cho ăn", col: "feed the chickens", ex: "My brother feeds the chickens every morning.", exv: "Em trai tôi cho gà ăn mỗi sáng." },
+      { w: "breeze", ipa: "/briːz/", vi: "gió nhẹ", col: "morning breeze", ex: "A morning breeze cools the village lane.", exv: "Gió sớm mát lành thổi qua ngõ làng." },
+      { w: "crow", ipa: "/krəʊ/", vi: "quạ; tiếng gáy (gà)", col: "the cock crows", ex: "At dawn the cock crows and the village wakes.", exv: "Lúc bình minh gà trống gáy và làng thức dậy." },
+      { w: "mud", ipa: "/mʌd/", vi: "bùn", col: "mud on shoes", ex: "There is mud on my shoes after the rain.", exv: "Có bùn trên giày của tôi sau cơn mưa." },
+      { w: "bicycle", ipa: "/ˈbaɪsɪkl/", vi: "xe đạp", col: "ride a bicycle", ex: "Children ride bicycles to school.", exv: "Trẻ con đạp xe tới trường." },
+      { w: "path", ipa: "/pɑːθ/", vi: "lối đi, đường mòn", col: "along the path", ex: "Walk along the path to the small temple.", exv: "Đi dọc lối đi tới ngôi đền nhỏ." },
+      { w: "dew", ipa: "/djuː/", vi: "sương (trên lá)", col: "morning dew", ex: "Morning dew shines on the green leaves.", exv: "Sương sớm long lanh trên lá xanh." }
+    ] },
+    { topic: "Chợ quê buổi sớm", theme: "Chợ quê buổi sớm - The Early Village Market", band: "Band 3.5", cards: [
+      { w: "vendor", ipa: "/ˈvendə/", vi: "người bán hàng", col: "a friendly vendor", ex: "A friendly vendor sells flowers at the gate.", exv: "Một người bán hàng thân thiện bán hoa ở cổng chợ." },
+      { w: "stall", ipa: "/stɔːl/", vi: "quầy hàng", col: "a fruit stall", ex: "The fruit stall opens at five in the morning.", exv: "Quầy hoa quả mở cửa lúc năm giờ sáng." },
+      { w: "scale", ipa: "/skeɪl/", vi: "cái cân", col: "weigh on a scale", ex: "The vendor weighs the pork on a scale.", exv: "Người bán cân thịt lợn trên cân." },
+      { w: "bargain", ipa: "/ˈbɑːɡɪn/", vi: "trả giá", col: "bargain a little", ex: "Mum bargains a little at the market.", exv: "Mẹ trả giá một chút ở chợ." },
+      { w: "change", ipa: "/tʃeɪndʒ/", vi: "tiền thừa", col: "give change", ex: "The vendor gives me my change.", exv: "Người bán đưa lại tiền thừa cho tôi." },
+      { w: "ripe", ipa: "/raɪp/", vi: "chín", col: "ripe mangoes", ex: "These mangoes are ripe and sweet.", exv: "Những quả xoài này chín và ngọt." },
+      { w: "herbs", ipa: "/hɜːbz/", vi: "rau thơm", col: "fresh herbs", ex: "Mum buys fresh herbs for the soup.", exv: "Mẹ mua rau thơm tươi cho bát canh." },
+      { w: "tofu", ipa: "/ˈtəʊfuː/", vi: "đậu phụ", col: "soft tofu", ex: "Soft tofu is good in hot soup.", exv: "Đậu phụ mềm rất hợp với canh nóng." },
+      { w: "pork", ipa: "/pɔːk/", vi: "thịt lợn", col: "a kilo of pork", ex: "We buy a kilo of pork for dinner.", exv: "Chúng tôi mua một cân thịt lợn cho bữa tối." },
+      { w: "shrimp", ipa: "/ʃrɪmp/", vi: "tôm", col: "fresh shrimp", ex: "Fresh shrimp is dear today.", exv: "Tôm tươi hôm nay khá đắt." },
+      { w: "crab", ipa: "/kræb/", vi: "cua", col: "a big crab", ex: "Grandpa catches a big crab in the pond.", exv: "Ông bắt được một con cua to ở ao." },
+      { w: "lotus", ipa: "/ˈləʊtəs/", vi: "sen", col: "lotus flowers", ex: "Lotus flowers bloom in the summer pond.", exv: "Hoa sen nở trong ao vào mùa hè." },
+      { w: "banana", ipa: "/bəˈnɑːnə/", vi: "chuối", col: "a bunch of bananas", ex: "Buy a bunch of bananas for the children.", exv: "Mua một nải chuối cho bọn trẻ." },
+      { w: "papaya", ipa: "/pəˈpaɪə/", vi: "đu đủ", col: "green papaya", ex: "Green papaya is good for salad.", exv: "Đu đủ xanh rất hợp để làm nộm." },
+      { w: "mango", ipa: "/ˈmæŋɡəʊ/", vi: "xoài", col: "a sweet mango", ex: "This mango is sweet and soft.", exv: "Quả xoài này ngọt và mềm." },
+      { w: "coconut", ipa: "/ˈkəʊkənʌt/", vi: "dừa", col: "coconut water", ex: "Coconut water is cool on a hot day.", exv: "Nước dừa mát lạnh trong ngày nóng." },
+      { w: "peanut", ipa: "/ˈpiːnʌt/", vi: "lạc", col: "roasted peanuts", ex: "Roasted peanuts smell very good.", exv: "Lạc rang thơm lắm." },
+      { w: "sesame", ipa: "/ˈsesəmi/", vi: "vừng", col: "sesame seeds", ex: "Sprinkle sesame seeds on the cake.", exv: "Rắc vừng lên bánh." },
+      { w: "ginger", ipa: "/ˈdʒɪndʒə/", vi: "gừng", col: "ginger tea", ex: "Ginger tea warms you on cold days.", exv: "Trà gừng làm ấm người trong ngày lạnh." },
+      { w: "lime", ipa: "/laɪm/", vi: "chanh xanh", col: "a slice of lime", ex: "Add a slice of lime to the fish sauce.", exv: "Thêm một lát chanh vào nước chấm." }
+    ] },
+    { topic: "Việc nhà mỗi ngày", theme: "Việc nhà mỗi ngày - Daily Housework", band: "Band 3.5", cards: [
+      { w: "sweep", ipa: "/swiːp/", vi: "quét", col: "sweep the floor", ex: "I sweep the floor every morning.", exv: "Tôi quét nhà mỗi sáng." },
+      { w: "mop", ipa: "/mɒp/", vi: "lau (bằng cây lau)", col: "mop the floor", ex: "Mum mops the floor after lunch.", exv: "Mẹ lau nhà sau bữa trưa." },
+      { w: "dust", ipa: "/dʌst/", vi: "lau bụi", col: "dust the table", ex: "Please dust the table before guests come.", exv: "Hãy lau bụi bàn trước khi khách tới." },
+      { w: "fold", ipa: "/fəʊld/", vi: "gấp", col: "fold the clothes", ex: "Fold the clothes and put them away.", exv: "Gấp quần áo và cất đi." },
+      { w: "iron", ipa: "/ˈaɪən/", vi: "là (quần áo)", col: "iron a shirt", ex: "Dad irons his shirt for work.", exv: "Bố là áo sơ mi để đi làm." },
+      { w: "laundry", ipa: "/ˈlɔːndri/", vi: "quần áo giặt", col: "do the laundry", ex: "We do the laundry on Sunday.", exv: "Chúng tôi giặt giũ vào Chủ nhật." },
+      { w: "detergent", ipa: "/dɪˈtɜːdʒənt/", vi: "bột giặt", col: "a spoon of detergent", ex: "Add a spoon of detergent to the water.", exv: "Cho một thìa bột giặt vào nước." },
+      { w: "bucket", ipa: "/ˈbʌkɪt/", vi: "xô", col: "a bucket of water", ex: "Carry a bucket of water to the garden.", exv: "Xách một xô nước ra vườn." },
+      { w: "broom", ipa: "/bruːm/", vi: "chổi", col: "a new broom", ex: "Mum buys a new broom at the market.", exv: "Mẹ mua một cây chổi mới ở chợ." },
+      { w: "cloth", ipa: "/klɒθ/", vi: "khăn vải", col: "a clean cloth", ex: "Wipe the table with a clean cloth.", exv: "Lau bàn bằng khăn vải sạch." },
+      { w: "window", ipa: "/ˈwɪndəʊ/", vi: "cửa sổ", col: "open the window", ex: "Open the window and let the air in.", exv: "Mở cửa sổ cho thoáng khí." },
+      { w: "curtain", ipa: "/ˈkɜːtn/", vi: "rèm", col: "draw the curtain", ex: "Draw the curtain when the sun is strong.", exv: "Kéo rèm khi nắng gắt." },
+      { w: "pillow", ipa: "/ˈpɪləʊ/", vi: "gối", col: "a soft pillow", ex: "I sleep on a soft pillow.", exv: "Tôi ngủ trên một chiếc gối mềm." },
+      { w: "blanket", ipa: "/ˈblæŋkɪt/", vi: "chăn", col: "a warm blanket", ex: "Cover yourself with a warm blanket.", exv: "Đắp chăn ấm vào." },
+      { w: "mattress", ipa: "/ˈmætrəs/", vi: "đệm", col: "a hard mattress", ex: "Grandpa likes a hard mattress.", exv: "Ông thích nằm đệm cứng." },
+      { w: "shelf", ipa: "/ʃelf/", vi: "giá, kệ", col: "on the shelf", ex: "The books are on the shelf.", exv: "Sách ở trên giá." },
+      { w: "drawer", ipa: "/drɔː/", vi: "ngăn kéo", col: "in the drawer", ex: "The keys are in the drawer.", exv: "Chìa khóa ở trong ngăn kéo." },
+      { w: "tidy", ipa: "/ˈtaɪdi/", vi: "gọn gàng", col: "a tidy room", ex: "Keep your room tidy every day.", exv: "Hãy giữ phòng gọn gàng mỗi ngày." },
+      { w: "scrub", ipa: "/skrʌb/", vi: "cọ rửa", col: "scrub the pan", ex: "Scrub the pan well after cooking.", exv: "Cọ chảo thật sạch sau khi nấu." },
+      { w: "rinse", ipa: "/rɪns/", vi: "tráng, xả nước", col: "rinse the cups", ex: "Rinse the cups and put them away.", exv: "Tráng cốc rồi cất đi." }
+    ] },
+    { topic: "Chơi cùng em nhỏ", theme: "Chơi cùng em nhỏ - Playing with Little Children", band: "Band 3.5", cards: [
+      { w: "kite", ipa: "/kaɪt/", vi: "diều", col: "fly a kite", ex: "Children fly kites in the open field.", exv: "Trẻ con thả diều ngoài đồng trống." },
+      { w: "marbles", ipa: "/ˈmɑːblz/", vi: "bi (trò chơi bi)", col: "play marbles", ex: "The boys play marbles after school.", exv: "Các cậu bé chơi bi sau giờ học." },
+      { w: "skipping", ipa: "/ˈskɪpɪŋ/", vi: "nhảy dây", col: "a skipping rope", ex: "She jumps with a skipping rope.", exv: "Cô bé nhảy bằng dây nhảy." },
+      { w: "hide", ipa: "/haɪd/", vi: "trốn", col: "hide behind a tree", ex: "The little girl hides behind a tree.", exv: "Cô bé trốn sau gốc cây." },
+      { w: "seek", ipa: "/siːk/", vi: "tìm", col: "seek and find", ex: "We seek our friends in the garden.", exv: "Chúng tôi tìm bạn trong vườn." },
+      { w: "swing", ipa: "/swɪŋ/", vi: "xích đu; đu đưa", col: "on the swing", ex: "The baby laughs on the swing.", exv: "Em bé cười trên xích đu." },
+      { w: "slide", ipa: "/slaɪd/", vi: "cầu trượt", col: "down the slide", ex: "He goes down the slide again and again.", exv: "Cậu bé trượt cầu trượt hết lần này tới lần khác." },
+      { w: "sand", ipa: "/sænd/", vi: "cát", col: "play in the sand", ex: "Children play in the sand at the park.", exv: "Trẻ con chơi cát ở công viên." },
+      { w: "spade", ipa: "/speɪd/", vi: "xẻng nhỏ", col: "a small spade", ex: "Dig the sand with a small spade.", exv: "Đào cát bằng xẻng nhỏ." },
+      { w: "doll", ipa: "/dɒl/", vi: "búp bê", col: "a pretty doll", ex: "Grandma gives her a pretty doll.", exv: "Bà tặng cô bé một con búp bê xinh." },
+      { w: "balloon", ipa: "/bəˈluːn/", vi: "bóng bay", col: "a red balloon", ex: "The red balloon flies up to the sky.", exv: "Quả bóng bay đỏ bay lên trời." },
+      { w: "bubble", ipa: "/ˈbʌbl/", vi: "bong bóng", col: "blow bubbles", ex: "Children blow bubbles in the yard.", exv: "Trẻ con thổi bong bóng ngoài sân." },
+      { w: "puzzle", ipa: "/ˈpʌzl/", vi: "trò xếp hình", col: "a picture puzzle", ex: "We finish a picture puzzle together.", exv: "Chúng tôi cùng xếp xong một bức tranh xếp hình." },
+      { w: "crayon", ipa: "/ˈkreɪən/", vi: "bút sáp màu", col: "draw with crayons", ex: "Draw a house with crayons.", exv: "Vẽ một ngôi nhà bằng bút sáp màu." },
+      { w: "paint", ipa: "/peɪnt/", vi: "sơn; vẽ màu", col: "paint a picture", ex: "She paints a picture of her family.", exv: "Cô bé vẽ một bức tranh về gia đình mình." },
+      { w: "draw", ipa: "/drɔː/", vi: "vẽ", col: "draw a cat", ex: "Draw a cat and colour it orange.", exv: "Vẽ một con mèo và tô màu cam." },
+      { w: "sing", ipa: "/sɪŋ/", vi: "hát", col: "sing a song", ex: "We sing a song before lunch.", exv: "Chúng tôi hát một bài hát trước bữa trưa." },
+      { w: "dance", ipa: "/dɑːns/", vi: "nhảy, múa", col: "dance together", ex: "Children dance together at the party.", exv: "Trẻ con cùng nhảy múa trong buổi liên hoan." },
+      { w: "clap", ipa: "/klæp/", vi: "vỗ tay", col: "clap your hands", ex: "Clap your hands for the little singer.", exv: "Vỗ tay cho ca sĩ nhí." },
+      { w: "cheer", ipa: "/tʃɪə/", vi: "reo hò, cổ vũ", col: "cheer for friends", ex: "We cheer for our friends in the race.", exv: "Chúng tôi cổ vũ bạn trong cuộc đua." }
+    ] }
+  ]);
+})();
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.vocab.push.apply(CONTENT.vocab, [
+    // ---------- BAND 4.0 — TỪ VỰNG ----------
+    { topic: "Thuê phòng trọ", theme: "Thuê phòng trọ - Renting a Room", band: "Band 4.0", cards: [
+      { w: "landlord", ipa: "/ˈlændlɔːd/", vi: "chủ nhà trọ", col: "ask the landlord", ex: "Ask the landlord before you paint the room.", exv: "Hãy hỏi chủ nhà trước khi sơn phòng." },
+      { w: "deposit", ipa: "/dɪˈpɒzɪt/", vi: "tiền đặt cọc", col: "pay a deposit", ex: "We pay a deposit of one month's rent.", exv: "Chúng tôi đóng tiền cọc bằng một tháng tiền thuê." },
+      { w: "rent", ipa: "/rent/", vi: "tiền thuê; thuê", col: "pay the rent", ex: "Pay the rent on the first day of the month.", exv: "Đóng tiền thuê vào ngày đầu tháng." },
+      { w: "contract", ipa: "/ˈkɒntrækt/", vi: "hợp đồng", col: "sign a contract", ex: "Read the contract before you sign it.", exv: "Hãy đọc hợp đồng trước khi ký." },
+      { w: "bill", ipa: "/bɪl/", vi: "hóa đơn", col: "the electricity bill", ex: "The electricity bill comes every month.", exv: "Hóa đơn tiền điện tới mỗi tháng." },
+      { w: "meter", ipa: "/ˈmiːtə/", vi: "đồng hồ (điện, nước)", col: "read the meter", ex: "Read the meter on the last day.", exv: "Ghi số đồng hồ vào ngày cuối tháng." },
+      { w: "faucet", ipa: "/ˈfɔːsɪt/", vi: "vòi nước", col: "a leaking faucet", ex: "A leaking faucet wastes a lot of water.", exv: "Vòi nước rò rỉ làm lãng phí nhiều nước." },
+      { w: "leak", ipa: "/liːk/", vi: "rò rỉ", col: "a leak in the roof", ex: "There is a leak in the roof when it rains.", exv: "Mái nhà bị dột khi trời mưa." },
+      { w: "repair", ipa: "/rɪˈpeə/", vi: "sửa chữa", col: "repair the door", ex: "The landlord will repair the door this week.", exv: "Chủ nhà sẽ sửa cửa trong tuần này." },
+      { w: "lock", ipa: "/lɒk/", vi: "khóa", col: "lock the door", ex: "Always lock the door when you go out.", exv: "Hãy luôn khóa cửa khi ra ngoài." },
+      { w: "roommate", ipa: "/ˈruːmmeɪt/", vi: "bạn cùng phòng", col: "a kind roommate", ex: "My roommate cooks dinner on Sundays.", exv: "Bạn cùng phòng của tôi nấu tối vào Chủ nhật." },
+      { w: "balcony", ipa: "/ˈbælkəni/", vi: "ban công", col: "on the balcony", ex: "We grow flowers on the balcony.", exv: "Chúng tôi trồng hoa ngoài ban công." },
+      { w: "corridor", ipa: "/ˈkɒrɪdɔː/", vi: "hành lang", col: "along the corridor", ex: "Please keep quiet along the corridor.", exv: "Hãy giữ yên lặng dọc hành lang." },
+      { w: "elevator", ipa: "/ˈelɪveɪtə/", vi: "thang máy", col: "take the elevator", ex: "Take the elevator to the fifth floor.", exv: "Đi thang máy lên tầng năm." },
+      { w: "parking", ipa: "/ˈpɑːkɪŋ/", vi: "chỗ đỗ xe", col: "free parking", ex: "The building has free parking for bikes.", exv: "Tòa nhà có chỗ đỗ xe đạp miễn phí." },
+      { w: "notice", ipa: "/ˈnəʊtɪs/", vi: "thông báo", col: "a notice on the board", ex: "Read the notice on the board every week.", exv: "Hãy đọc thông báo trên bảng mỗi tuần." },
+      { w: "receipt", ipa: "/rɪˈsiːt/", vi: "biên lai", col: "keep the receipt", ex: "Keep the receipt after you pay.", exv: "Hãy giữ biên lai sau khi trả tiền." },
+      { w: "refund", ipa: "/ˈriːfʌnd/", vi: "tiền hoàn lại", col: "ask for a refund", ex: "Ask for a refund if you move out early.", exv: "Hãy xin hoàn tiền nếu bạn chuyển đi sớm." },
+      { w: "tenant", ipa: "/ˈtenənt/", vi: "người thuê nhà", col: "a new tenant", ex: "A new tenant moves in next Monday.", exv: "Người thuê mới sẽ chuyển tới vào thứ Hai tới." },
+      { w: "furnish", ipa: "/ˈfɜːnɪʃ/", vi: "trang bị nội thất", col: "furnish a room", ex: "They furnish the room with a bed and a desk.", exv: "Họ trang bị cho phòng một chiếc giường và bàn học." }
+    ] },
+    { topic: "Đi xe buýt trong phố", theme: "Đi xe buýt trong phố - Taking the City Bus", band: "Band 4.0", cards: [
+      { w: "stop", ipa: "/stɒp/", vi: "điểm dừng", col: "at the bus stop", ex: "Wait for me at the bus stop.", exv: "Hãy đợi tôi ở điểm dừng xe buýt." },
+      { w: "route", ipa: "/ruːt/", vi: "tuyến đường", col: "bus route 32", ex: "Bus route 32 goes past our school.", exv: "Tuyến xe buýt 32 đi qua trường chúng tôi." },
+      { w: "timetable", ipa: "/ˈtaɪmteɪbl/", vi: "lịch trình", col: "check the timetable", ex: "Check the timetable before you leave.", exv: "Hãy xem lịch trình trước khi đi." },
+      { w: "fare", ipa: "/feə/", vi: "tiền vé", col: "the bus fare", ex: "The bus fare is seven thousand dong.", exv: "Tiền vé xe buýt là bảy nghìn đồng." },
+      { w: "card", ipa: "/kɑːd/", vi: "thẻ", col: "a bus card", ex: "I pay with a bus card.", exv: "Tôi trả tiền bằng thẻ xe buýt." },
+      { w: "swipe", ipa: "/swaɪp/", vi: "quẹt (thẻ)", col: "swipe your card", ex: "Swipe your card when you get on.", exv: "Quẹt thẻ khi bạn lên xe." },
+      { w: "seat", ipa: "/siːt/", vi: "ghế ngồi", col: "take a seat", ex: "Take a seat near the window.", exv: "Ngồi vào ghế gần cửa sổ." },
+      { w: "aisle", ipa: "/aɪl/", vi: "lối đi giữa xe", col: "stand in the aisle", ex: "Do not stand in the aisle, please.", exv: "Xin đừng đứng ở lối đi." },
+      { w: "rush", ipa: "/rʌʃ/", vi: "giờ cao điểm (rush hour)", col: "rush hour", ex: "Buses are full in rush hour.", exv: "Xe buýt rất đông vào giờ cao điểm." },
+      { w: "delay", ipa: "/dɪˈleɪ/", vi: "chậm trễ", col: "a long delay", ex: "Rain causes a long delay today.", exv: "Mưa gây chậm trễ dài hôm nay." },
+      { w: "announce", ipa: "/əˈnaʊns/", vi: "thông báo", col: "announce the next stop", ex: "The driver announces the next stop.", exv: "Tài xế thông báo điểm dừng tiếp theo." },
+      { w: "board", ipa: "/bɔːd/", vi: "lên xe", col: "board the bus", ex: "Board the bus at the front door.", exv: "Lên xe buýt bằng cửa trước." },
+      { w: "alight", ipa: "/əˈlaɪt/", vi: "xuống xe", col: "alight here", ex: "Please alight here for the museum.", exv: "Hãy xuống xe ở đây để tới bảo tàng." },
+      { w: "transfer", ipa: "/trænsˈfɜː/", vi: "chuyển tuyến", col: "transfer to route 12", ex: "Transfer to route 12 at the crossroads.", exv: "Chuyển sang tuyến 12 ở ngã tư." },
+      { w: "terminal", ipa: "/ˈtɜːmɪnl/", vi: "bến cuối", col: "the bus terminal", ex: "The bus terminal is near the market.", exv: "Bến xe cuối ở gần chợ." },
+      { w: "shelter", ipa: "/ˈʃeltə/", vi: "mái che điểm dừng", col: "under the shelter", ex: "Wait under the shelter when it rains.", exv: "Hãy đợi dưới mái che khi trời mưa." },
+      { w: "queue", ipa: "/kjuː/", vi: "xếp hàng", col: "join the queue", ex: "Join the queue and wait your turn.", exv: "Xếp hàng và đợi tới lượt mình." },
+      { w: "crowded", ipa: "/ˈkraʊdɪd/", vi: "đông đúc", col: "a crowded bus", ex: "The bus is crowded on Monday morning.", exv: "Xe buýt đông đúc vào sáng thứ Hai." },
+      { w: "punctual", ipa: "/ˈpʌŋktʃuəl/", vi: "đúng giờ", col: "always punctual", ex: "Route 32 is always punctual.", exv: "Tuyến 32 luôn đúng giờ." },
+      { w: "exit", ipa: "/ˈeksɪt/", vi: "lối ra", col: "the back exit", ex: "Get off by the back exit.", exv: "Xuống xe bằng lối ra phía sau." }
+    ] },
+    { topic: "Học nhóm ở thư viện", theme: "Học nhóm ở thư viện - Group Study at the Library", band: "Band 4.0", cards: [
+      { w: "librarian", ipa: "/laɪˈbreəriən/", vi: "thủ thư", col: "ask the librarian", ex: "Ask the librarian for help with the catalogue.", exv: "Hãy hỏi thủ thư để được giúp tra mục lục." },
+      { w: "catalogue", ipa: "/ˈkætəlɒɡ/", vi: "mục lục sách", col: "search the catalogue", ex: "Search the catalogue for the book you need.", exv: "Tra mục lục để tìm cuốn sách bạn cần." },
+      { w: "reserve", ipa: "/rɪˈzɜːv/", vi: "đặt trước", col: "reserve a book", ex: "You can reserve a book online.", exv: "Bạn có thể đặt trước sách trên mạng." },
+      { w: "return", ipa: "/rɪˈtɜːn/", vi: "trả lại", col: "return the book", ex: "Return the book before Friday.", exv: "Trả sách trước thứ Sáu." },
+      { w: "overdue", ipa: "/ˌəʊvəˈdjuː/", vi: "quá hạn", col: "an overdue book", ex: "An overdue book costs a small fine.", exv: "Sách quá hạn phải nộp phạt nhỏ." },
+      { w: "fine", ipa: "/faɪn/", vi: "tiền phạt", col: "pay a fine", ex: "Pay a fine if you return the book late.", exv: "Nộp phạt nếu bạn trả sách muộn." },
+      { w: "copy", ipa: "/ˈkɒpi/", vi: "bản sao; sao chép", col: "make a copy", ex: "Make a copy of the important page.", exv: "Sao chép trang quan trọng." },
+      { w: "print", ipa: "/prɪnt/", vi: "in", col: "print the notes", ex: "Print the notes before the lesson.", exv: "In ghi chú trước giờ học." },
+      { w: "scan", ipa: "/skæn/", vi: "quét (tài liệu)", col: "scan the page", ex: "Scan the page and send it to me.", exv: "Quét trang đó và gửi cho tôi." },
+      { w: "chapter", ipa: "/ˈtʃæptə/", vi: "chương (sách)", col: "chapter three", ex: "Read chapter three for tomorrow.", exv: "Đọc chương ba cho ngày mai." },
+      { w: "index", ipa: "/ˈɪndeks/", vi: "chỉ mục cuối sách", col: "look in the index", ex: "Look in the index for the word you need.", exv: "Tra chỉ mục để tìm từ bạn cần." },
+      { w: "glossary", ipa: "/ˈɡlɒsəri/", vi: "bảng giải thích từ", col: "in the glossary", ex: "New words are in the glossary.", exv: "Từ mới nằm trong bảng giải thích từ." },
+      { w: "summary", ipa: "/ˈsʌməri/", vi: "bản tóm tắt", col: "write a summary", ex: "Write a summary of the lesson.", exv: "Viết bản tóm tắt bài học." },
+      { w: "outline", ipa: "/ˈaʊtlaɪn/", vi: "dàn ý", col: "make an outline", ex: "Make an outline before you write.", exv: "Lập dàn ý trước khi viết." },
+      { w: "draft", ipa: "/drɑːft/", vi: "bản nháp", col: "a first draft", ex: "This is only a first draft.", exv: "Đây mới chỉ là bản nháp đầu tiên." },
+      { w: "revise", ipa: "/rɪˈvaɪz/", vi: "ôn lại; sửa lại", col: "revise the notes", ex: "Revise the notes with your group.", exv: "Ôn lại ghi chú cùng nhóm của bạn." },
+      { w: "deadline", ipa: "/ˈdedlaɪn/", vi: "hạn chót", col: "meet the deadline", ex: "We must meet the deadline on Friday.", exv: "Chúng tôi phải kịp hạn chót vào thứ Sáu." },
+      { w: "submit", ipa: "/səbˈmɪt/", vi: "nộp (bài)", col: "submit your work", ex: "Submit your work to the teacher today.", exv: "Nộp bài cho thầy cô hôm nay." },
+      { w: "archive", ipa: "/ˈɑːkaɪv/", vi: "kho lưu trữ", col: "in the archive", ex: "Old newspapers are in the archive.", exv: "Báo cũ nằm trong kho lưu trữ." },
+      { w: "section", ipa: "/ˈsekʃn/", vi: "khu vực (trong thư viện)", col: "the study section", ex: "The study section is quiet all day.", exv: "Khu tự học yên tĩnh cả ngày." }
+    ] },
+    { topic: "Nấu cơm cho cả nhà", theme: "Nấu cơm cho cả nhà - Cooking for the Family", band: "Band 4.0", cards: [
+      { w: "recipe", ipa: "/ˈresəpi/", vi: "công thức nấu ăn", col: "follow a recipe", ex: "Follow the recipe and the soup will be good.", exv: "Làm theo công thức thì canh sẽ ngon." },
+      { w: "ingredient", ipa: "/ɪnˈɡriːdiənt/", vi: "nguyên liệu", col: "fresh ingredients", ex: "Buy fresh ingredients in the morning.", exv: "Mua nguyên liệu tươi vào buổi sáng." },
+      { w: "portion", ipa: "/ˈpɔːʃn/", vi: "phần ăn", col: "a small portion", ex: "Give Grandpa a small portion of rice.", exv: "Cho ông một phần cơm nhỏ." },
+      { w: "simmer", ipa: "/ˈsɪmə/", vi: "ninh nhỏ lửa", col: "simmer the soup", ex: "Simmer the soup for twenty minutes.", exv: "Ninh canh nhỏ lửa trong hai mươi phút." },
+      { w: "stir", ipa: "/stɜː/", vi: "khuấy, đảo", col: "stir well", ex: "Stir well so the sauce does not burn.", exv: "Khuấy đều để nước sốt không bị cháy." },
+      { w: "season", ipa: "/ˈsiːzn/", vi: "nêm gia vị", col: "season to taste", ex: "Season the fish to taste.", exv: "Nêm cá vừa miệng." },
+      { w: "sauce", ipa: "/sɔːs/", vi: "nước sốt", col: "fish sauce", ex: "Fish sauce is on every Vietnamese table.", exv: "Nước mắm có trên mọi bàn ăn Việt Nam." },
+      { w: "garlic", ipa: "/ˈɡɑːlɪk/", vi: "tỏi", col: "crush the garlic", ex: "Crush the garlic before you fry it.", exv: "Đập tỏi trước khi phi." },
+      { w: "chilli", ipa: "/ˈtʃɪli/", vi: "ớt", col: "a little chilli", ex: "Add a little chilli if you like it hot.", exv: "Thêm một chút ớt nếu bạn thích ăn cay." },
+      { w: "pepper", ipa: "/ˈpepə/", vi: "hạt tiêu", col: "black pepper", ex: "Black pepper makes the soup warm.", exv: "Hạt tiêu đen làm canh ấm bụng." },
+      { w: "vinegar", ipa: "/ˈvɪnɪɡə/", vi: "giấm", col: "a spoon of vinegar", ex: "Add a spoon of vinegar to the salad.", exv: "Thêm một thìa giấm vào rau trộn." },
+      { w: "sugar", ipa: "/ˈʃʊɡə/", vi: "đường", col: "a little sugar", ex: "A little sugar makes the sauce soft.", exv: "Một chút đường làm nước sốt dịu lại." },
+      { w: "salt", ipa: "/sɔːlt/", vi: "muối", col: "a pinch of salt", ex: "Add a pinch of salt to the soup.", exv: "Thêm một nhúm muối vào canh." },
+      { w: "oil", ipa: "/ɔɪl/", vi: "dầu ăn", col: "cooking oil", ex: "Heat the cooking oil first.", exv: "Đun nóng dầu ăn trước." },
+      { w: "rice", ipa: "/raɪs/", vi: "cơm; gạo", col: "a bowl of rice", ex: "We eat a bowl of rice with fish.", exv: "Chúng tôi ăn một bát cơm với cá." },
+      { w: "noodle", ipa: "/ˈnuːdl/", vi: "mì, bún", col: "a bowl of noodles", ex: "A bowl of noodles costs little and fills you up.", exv: "Một bát bún rẻ mà no bụng." },
+      { w: "soup", ipa: "/suːp/", vi: "canh, súp", col: "hot soup", ex: "Hot soup is good on rainy days.", exv: "Canh nóng rất hợp trong ngày mưa." },
+      { w: "salad", ipa: "/ˈsæləd/", vi: "rau trộn", col: "a green salad", ex: "Mum makes a green salad for lunch.", exv: "Mẹ làm rau trộn cho bữa trưa." },
+      { w: "dessert", ipa: "/dɪˈzɜːt/", vi: "món tráng miệng", col: "a sweet dessert", ex: "Fruit is a sweet dessert after dinner.", exv: "Trái cây là món tráng miệng ngọt sau bữa tối." },
+      { w: "snack", ipa: "/snæk/", vi: "đồ ăn vặt", col: "an evening snack", ex: "An evening snack of fruit is a good idea.", exv: "Ăn vặt buổi tối bằng trái cây là ý hay." }
+    ] },
+    { topic: "Chăm sóc cây trong sân", theme: "Chăm sóc cây trong sân - Caring for Plants in the Yard", band: "Band 4.0", cards: [
+      { w: "trowel", ipa: "/ˈtraʊəl/", vi: "bay nhỏ (làm vườn)", col: "a small trowel", ex: "Dig a small hole with a trowel.", exv: "Đào một lỗ nhỏ bằng bay làm vườn." },
+      { w: "compost", ipa: "/ˈkɒmpɒst/", vi: "phân ủ", col: "make compost", ex: "We make compost from dry leaves.", exv: "Chúng tôi ủ phân từ lá khô." },
+      { w: "seedling", ipa: "/ˈsiːdlɪŋ/", vi: "cây con", col: "a tiny seedling", ex: "A tiny seedling grows in the pot.", exv: "Một cây con nhỏ mọc trong chậu." },
+      { w: "sprout", ipa: "/spraʊt/", vi: "nảy mầm", col: "sprout in spring", ex: "Beans sprout in spring rain.", exv: "Đậu nảy mầm trong mưa xuân." },
+      { w: "prune", ipa: "/pruːn/", vi: "tỉa cành", col: "prune the rose", ex: "Prune the rose after it blooms.", exv: "Tỉa hồng sau khi hoa nở." },
+      { w: "watering", ipa: "/ˈwɔːtərɪŋ/", vi: "việc tưới nước", col: "morning watering", ex: "Morning watering keeps plants fresh.", exv: "Tưới nước buổi sáng giúp cây tươi." },
+      { w: "sunlight", ipa: "/ˈsʌnlaɪt/", vi: "ánh nắng", col: "in full sunlight", ex: "Roses need full sunlight to bloom.", exv: "Hoa hồng cần đủ nắng để nở." },
+      { w: "shade", ipa: "/ʃeɪd/", vi: "bóng râm", col: "in the shade", ex: "Ferns grow well in the shade.", exv: "Dương xỉ mọc tốt trong bóng râm." },
+      { w: "root", ipa: "/ruːt/", vi: "rễ", col: "deep roots", ex: "Old trees have deep roots.", exv: "Cây cổ thụ có rễ sâu." },
+      { w: "stem", ipa: "/stem/", vi: "thân cây", col: "a strong stem", ex: "A strong stem holds the flower up.", exv: "Thân cây khỏe giữ hoa đứng thẳng." },
+      { w: "petal", ipa: "/ˈpetl/", vi: "cánh hoa", col: "soft petals", ex: "The rose has soft pink petals.", exv: "Hoa hồng có cánh mềm màu hồng." },
+      { w: "blossom", ipa: "/ˈblɒsəm/", vi: "hoa nở", col: "in blossom", ex: "The peach tree is in blossom.", exv: "Cây đào đang nở hoa." },
+      { w: "insect", ipa: "/ˈɪnsekt/", vi: "côn trùng", col: "a small insect", ex: "A small insect sits on the leaf.", exv: "Một con côn trùng nhỏ đậu trên lá." },
+      { w: "ant", ipa: "/ænt/", vi: "kiến", col: "a line of ants", ex: "A line of ants walks to the sugar.", exv: "Một hàng kiến bò tới chỗ đường." },
+      { w: "worm", ipa: "/wɜːm/", vi: "giun", col: "earthworms in soil", ex: "Earthworms in soil help plants grow.", exv: "Giun đất giúp cây mọc tốt." },
+      { w: "fertiliser", ipa: "/ˈfɜːtəlaɪzə/", vi: "phân bón", col: "a little fertiliser", ex: "Add a little fertiliser once a month.", exv: "Bón một chút phân mỗi tháng một lần." },
+      { w: "pick", ipa: "/pɪk/", vi: "hái", col: "pick the tomatoes", ex: "Pick the tomatoes when they turn red.", exv: "Hái cà chua khi chúng chuyển đỏ." },
+      { w: "garden", ipa: "/ˈɡɑːdn/", vi: "vườn", col: "in the garden", ex: "Grandma works in the garden all morning.", exv: "Bà làm vườn cả buổi sáng." },
+      { w: "hose", ipa: "/həʊz/", vi: "vòi tưới", col: "water with a hose", ex: "Water the yard with a hose.", exv: "Tưới sân bằng vòi nước." },
+      { w: "weed", ipa: "/wiːd/", vi: "cỏ dại; nhổ cỏ", col: "pull up weeds", ex: "Pull up weeds before they spread.", exv: "Nhổ cỏ dại trước khi chúng lan ra." }
+    ] },
+    { topic: "Sinh nhật ở nhà", theme: "Sinh nhật ở nhà - A Birthday at Home", band: "Band 4.0", cards: [
+      { w: "candle", ipa: "/ˈkændl/", vi: "nến", col: "blow out candles", ex: "Blow out the candles and make a wish.", exv: "Thổi nến và ước một điều." },
+      { w: "ribbon", ipa: "/ˈrɪbən/", vi: "ruy băng", col: "tie a ribbon", ex: "Tie a ribbon around the gift box.", exv: "Buộc ruy băng quanh hộp quà." },
+      { w: "gift", ipa: "/ɡɪft/", vi: "món quà", col: "a small gift", ex: "A small gift from a friend means a lot.", exv: "Món quà nhỏ của bạn có ý nghĩa lớn." },
+      { w: "wrap", ipa: "/ræp/", vi: "gói (quà)", col: "wrap a gift", ex: "Wrap the gift in bright paper.", exv: "Gói quà bằng giấy màu tươi." },
+      { w: "greeting", ipa: "/ˈɡriːtɪŋ/", vi: "lời chúc (thiệp chúc mừng)", col: "a greeting card", ex: "Write your name in the greeting card.", exv: "Viết tên bạn vào thiệp chúc mừng." },
+      { w: "toast", ipa: "/təʊst/", vi: "nâng ly chúc mừng", col: "raise a toast", ex: "We raise a toast to good health.", exv: "Chúng tôi nâng ly chúc sức khỏe." },
+      { w: "cake", ipa: "/keɪk/", vi: "bánh", col: "a birthday cake", ex: "Mum bakes a birthday cake for me.", exv: "Mẹ nướng bánh sinh nhật cho tôi." },
+      { w: "icing", ipa: "/ˈaɪsɪŋ/", vi: "lớp kem phủ bánh", col: "pink icing", ex: "The cake has pink icing and flowers.", exv: "Bánh có lớp kem hồng và hoa." },
+      { w: "serve", ipa: "/sɜːv/", vi: "dọn, phục vụ", col: "serve the cake", ex: "Serve the cake after dinner.", exv: "Dọn bánh sau bữa tối." },
+      { w: "guest", ipa: "/ɡest/", vi: "khách", col: "welcome the guests", ex: "Welcome the guests at the door.", exv: "Đón khách ở cửa." },
+      { w: "host", ipa: "/həʊst/", vi: "chủ nhà (người tổ chức)", col: "a kind host", ex: "Lan is a kind host to her friends.", exv: "Lan là chủ nhà tốt bụng với bạn bè." },
+      { w: "decorate", ipa: "/ˈdekəreɪt/", vi: "trang trí", col: "decorate the room", ex: "Decorate the room with balloons.", exv: "Trang trí phòng bằng bóng bay." },
+      { w: "invite", ipa: "/ɪnˈvaɪt/", vi: "mời", col: "invite your friends", ex: "Invite your friends to lunch on Sunday.", exv: "Mời bạn bè tới ăn trưa vào Chủ nhật." },
+      { w: "celebrate", ipa: "/ˈselɪbreɪt/", vi: "ăn mừng", col: "celebrate together", ex: "We celebrate together at home.", exv: "Chúng tôi cùng ăn mừng ở nhà." },
+      { w: "memory", ipa: "/ˈmeməri/", vi: "kỷ niệm", col: "a happy memory", ex: "That day is a happy memory for us.", exv: "Ngày đó là kỷ niệm vui của chúng tôi." },
+      { w: "photo", ipa: "/ˈfəʊtəʊ/", vi: "ảnh", col: "take a photo", ex: "Take a photo of the whole family.", exv: "Chụp một tấm ảnh cả gia đình." },
+      { w: "album", ipa: "/ˈælbəm/", vi: "album ảnh", col: "in the album", ex: "Old photos live in the album.", exv: "Ảnh cũ nằm trong album." },
+      { w: "song", ipa: "/sɒŋ/", vi: "bài hát", col: "a birthday song", ex: "We sing a birthday song for Lan.", exv: "Chúng tôi hát bài hát sinh nhật cho Lan." },
+      { w: "wish", ipa: "/wɪʃ/", vi: "lời chúc; ước", col: "make a wish", ex: "Make a wish before you blow the candles.", exv: "Hãy ước một điều trước khi thổi nến." },
+      { w: "cheerful", ipa: "/ˈtʃɪəfl/", vi: "vui vẻ", col: "a cheerful room", ex: "Music makes the room cheerful.", exv: "Âm nhạc khiến căn phòng vui vẻ." }
+    ] }
+  ]);
+})();
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.vocab.push.apply(CONTENT.vocab, [
+    // ---------- BAND 4.5 — TỪ VỰNG ----------
+    { topic: "Sống xanh trong khu phố", theme: "Sống xanh trong khu phố - Green Living in the Neighbourhood", band: "Band 4.5", cards: [
+      { w: "sorting", ipa: "/ˈsɔːtɪŋ/", vi: "việc phân loại", col: "sorting rubbish", ex: "Sorting rubbish helps the collectors a lot.", exv: "Phân loại rác giúp người thu gom rất nhiều." },
+      { w: "bin", ipa: "/bɪn/", vi: "thùng rác", col: "a green bin", ex: "Put paper in the green bin.", exv: "Bỏ giấy vào thùng xanh." },
+      { w: "reuse", ipa: "/riːˈjuːz/", vi: "tái sử dụng", col: "reuse a bottle", ex: "Reuse a bottle instead of buying a new one.", exv: "Dùng lại chai thay vì mua chai mới." },
+      { w: "reduce", ipa: "/rɪˈdjuːs/", vi: "giảm bớt", col: "reduce plastic bags", ex: "Reduce plastic bags when you shop.", exv: "Giảm túi ni lông khi đi mua sắm." },
+      { w: "refill", ipa: "/riːˈfɪl/", vi: "đổ đầy lại", col: "refill a bottle", ex: "Refill a bottle at the water shop.", exv: "Đổ đầy lại chai ở cửa hàng nước." },
+      { w: "bottle", ipa: "/ˈbɒtl/", vi: "chai", col: "a glass bottle", ex: "A glass bottle lasts longer than a plastic one.", exv: "Chai thủy tinh dùng được lâu hơn chai nhựa." },
+      { w: "bag", ipa: "/bæɡ/", vi: "túi", col: "a cloth bag", ex: "Carry a cloth bag to the market.", exv: "Mang túi vải đi chợ." },
+      { w: "secondhand", ipa: "/ˌsekəndˈhænd/", vi: "đồ cũ đã qua sử dụng", col: "a secondhand bike", ex: "A secondhand bike costs much less.", exv: "Xe đạp cũ rẻ hơn nhiều." },
+      { w: "donate", ipa: "/dəʊˈneɪt/", vi: "tặng, quyên góp", col: "donate old books", ex: "Donate old books to the school library.", exv: "Tặng sách cũ cho thư viện trường." },
+      { w: "mend", ipa: "/mend/", vi: "vá, sửa", col: "mend a shirt", ex: "Grandma mends my shirt with care.", exv: "Bà vá áo cho tôi cẩn thận." },
+      { w: "swap", ipa: "/swɒp/", vi: "đổi cho nhau", col: "swap books", ex: "Friends swap books at the end of term.", exv: "Bạn bè đổi sách cho nhau vào cuối học kỳ." },
+      { w: "save", ipa: "/seɪv/", vi: "tiết kiệm", col: "save water", ex: "Save water when you brush your teeth.", exv: "Tiết kiệm nước khi đánh răng." },
+      { w: "electricity", ipa: "/ɪˌlekˈtrɪsəti/", vi: "điện", col: "save electricity", ex: "Turn off the light to save electricity.", exv: "Tắt đèn để tiết kiệm điện." },
+      { w: "tap", ipa: "/tæp/", vi: "vòi nước", col: "turn off the tap", ex: "Turn off the tap while you wash your hands.", exv: "Khóa vòi nước trong khi rửa tay." },
+      { w: "shower", ipa: "/ˈʃaʊə/", vi: "vòi hoa sen; tắm vòi sen", col: "a short shower", ex: "A short shower saves a lot of water.", exv: "Tắm vòi sen ngắn tiết kiệm nhiều nước." },
+      { w: "bike", ipa: "/baɪk/", vi: "xe đạp", col: "ride a bike", ex: "Ride a bike to school when the weather is fine.", exv: "Đạp xe tới trường khi trời đẹp." },
+      { w: "walk", ipa: "/wɔːk/", vi: "đi bộ", col: "walk to the market", ex: "We walk to the market every morning.", exv: "Chúng tôi đi bộ ra chợ mỗi sáng." },
+      { w: "local", ipa: "/ˈləʊkl/", vi: "ở địa phương", col: "local food", ex: "Buy local food to help farmers near you.", exv: "Mua đồ ăn địa phương để giúp nông dân quanh bạn." },
+      { w: "community", ipa: "/kəˈmjuːnəti/", vi: "cộng đồng", col: "our community", ex: "Our community cleans the park every month.", exv: "Cộng đồng của chúng tôi dọn công viên mỗi tháng." },
+      { w: "habit", ipa: "/ˈhæbɪt/", vi: "thói quen", col: "a good habit", ex: "Sorting rubbish is a good habit.", exv: "Phân loại rác là thói quen tốt." }
+    ] },
+    { topic: "Đọc sách và thói quen tốt", theme: "Đọc sách và thói quen tốt - Reading and Good Habits", band: "Band 4.5", cards: [
+      { w: "novel", ipa: "/ˈnɒvl/", vi: "tiểu thuyết", col: "a short novel", ex: "I read a short novel every month.", exv: "Tôi đọc một cuốn tiểu thuyết ngắn mỗi tháng." },
+      { w: "author", ipa: "/ˈɔːθə/", vi: "tác giả", col: "a famous author", ex: "The author writes about village life.", exv: "Tác giả viết về đời sống làng quê." },
+      { w: "preface", ipa: "/ˈprefəs/", vi: "lời mở đầu", col: "read the preface", ex: "Read the preface to know the main idea.", exv: "Đọc lời mở đầu để biết ý chính." },
+      { w: "plot", ipa: "/plɒt/", vi: "cốt truyện", col: "a simple plot", ex: "The novel has a simple plot.", exv: "Cuốn tiểu thuyết có cốt truyện đơn giản." },
+      { w: "character", ipa: "/ˈkærəktə/", vi: "nhân vật", col: "the main character", ex: "The main character is a kind teacher.", exv: "Nhân vật chính là một thầy giáo tốt bụng." },
+      { w: "ending", ipa: "/ˈendɪŋ/", vi: "kết thúc", col: "a happy ending", ex: "The story has a happy ending.", exv: "Câu chuyện có kết thúc vui." },
+      { w: "bookmark", ipa: "/ˈbʊkmɑːk/", vi: "thẻ đánh dấu sách", col: "use a bookmark", ex: "Use a bookmark so you do not lose your place.", exv: "Dùng thẻ đánh dấu để khỏi mất chỗ đang đọc." },
+      { w: "bookcase", ipa: "/ˈbʊkkeɪs/", vi: "tủ sách", col: "a wooden bookcase", ex: "Our bookcase holds two hundred books.", exv: "Tủ sách của chúng tôi chứa hai trăm cuốn sách." },
+      { w: "diary", ipa: "/ˈdaɪəri/", vi: "nhật ký", col: "keep a diary", ex: "Keep a diary in English every day.", exv: "Viết nhật ký bằng tiếng Anh mỗi ngày." },
+      { w: "essay", ipa: "/ˈeseɪ/", vi: "bài luận ngắn", col: "write an essay", ex: "Write an essay about your hometown.", exv: "Viết một bài luận ngắn về quê hương bạn." },
+      { w: "poem", ipa: "/ˈpəʊɪm/", vi: "bài thơ", col: "a short poem", ex: "Mum reads a short poem to us at night.", exv: "Mẹ đọc cho chúng tôi một bài thơ ngắn vào buổi tối." },
+      { w: "verse", ipa: "/vɜːs/", vi: "câu thơ", col: "a lovely verse", ex: "I remember a lovely verse from school.", exv: "Tôi nhớ một câu thơ hay từ thời đi học." },
+      { w: "library", ipa: "/ˈlaɪbrəri/", vi: "thư viện", col: "the school library", ex: "The school library opens at seven.", exv: "Thư viện trường mở cửa lúc bảy giờ." },
+      { w: "silent", ipa: "/ˈsaɪlənt/", vi: "yên lặng", col: "a silent room", ex: "The reading room is silent and cool.", exv: "Phòng đọc yên lặng và mát mẻ." },
+      { w: "focus", ipa: "/ˈfəʊkəs/", vi: "tập trung", col: "focus on reading", ex: "Focus on reading for twenty minutes.", exv: "Tập trung đọc trong hai mươi phút." },
+      { w: "routine", ipa: "/ruːˈtiːn/", vi: "thói quen hằng ngày", col: "a morning routine", ex: "Reading is part of my morning routine.", exv: "Đọc sách là một phần thói quen buổi sáng của tôi." },
+      { w: "morning", ipa: "/ˈmɔːnɪŋ/", vi: "buổi sáng", col: "every morning", ex: "Every morning I read ten pages.", exv: "Mỗi sáng tôi đọc mười trang sách." },
+      { w: "evening", ipa: "/ˈiːvnɪŋ/", vi: "buổi tối", col: "in the evening", ex: "In the evening we read together.", exv: "Buổi tối chúng tôi cùng đọc sách." },
+      { w: "page", ipa: "/peɪdʒ/", vi: "trang sách", col: "turn the page", ex: "Turn the page and keep reading.", exv: "Lật trang và đọc tiếp." },
+      { w: "cover", ipa: "/ˈkʌvə/", vi: "bìa sách", col: "a blue cover", ex: "The book has a blue cover.", exv: "Cuốn sách có bìa màu xanh." }
+    ] },
+    { topic: "Thể thao cuối tuần", theme: "Thể thao cuối tuần - Weekend Sport", band: "Band 4.5", cards: [
+      { w: "jog", ipa: "/dʒɒɡ/", vi: "chạy bộ chậm", col: "jog in the park", ex: "We jog in the park every Sunday.", exv: "Chúng tôi chạy bộ trong công viên mỗi Chủ nhật." },
+      { w: "stretch", ipa: "/stretʃ/", vi: "giãn cơ", col: "stretch your legs", ex: "Stretch your legs before you run.", exv: "Giãn cơ chân trước khi chạy." },
+      { w: "warm", ipa: "/wɔːm/", vi: "khởi động (warm up)", col: "warm up first", ex: "Warm up first or you may hurt your legs.", exv: "Khởi động trước nếu không bạn có thể đau chân." },
+      { w: "coach", ipa: "/kəʊtʃ/", vi: "huấn luyện viên", col: "our coach", ex: "Our coach teaches us to play fair.", exv: "Huấn luyện viên dạy chúng tôi chơi đẹp." },
+      { w: "team", ipa: "/tiːm/", vi: "đội", col: "a football team", ex: "Our team practises on Saturday.", exv: "Đội của chúng tôi tập luyện vào thứ Bảy." },
+      { w: "match", ipa: "/mætʃ/", vi: "trận đấu", col: "win the match", ex: "We hope to win the match on Sunday.", exv: "Chúng tôi mong thắng trận đấu vào Chủ nhật." },
+      { w: "score", ipa: "/skɔː/", vi: "ghi bàn; tỉ số", col: "score a goal", ex: "Lan scores a goal in the last minute.", exv: "Lan ghi bàn ở phút cuối." },
+      { w: "goal", ipa: "/ɡəʊl/", vi: "bàn thắng", col: "the first goal", ex: "The first goal comes after ten minutes.", exv: "Bàn thắng đầu tiên tới sau mười phút." },
+      { w: "court", ipa: "/kɔːt/", vi: "sân (bóng rổ, cầu lông)", col: "on the court", ex: "We play badminton on the court near school.", exv: "Chúng tôi chơi cầu lông trên sân gần trường." },
+      { w: "racket", ipa: "/ˈrækɪt/", vi: "vợt", col: "a new racket", ex: "Dad buys me a new racket.", exv: "Bố mua cho tôi một cây vợt mới." },
+      { w: "net", ipa: "/net/", vi: "lưới", col: "over the net", ex: "Hit the ball over the net.", exv: "Đánh bóng qua lưới." },
+      { w: "referee", ipa: "/ˌrefəˈriː/", vi: "trọng tài", col: "the referee blows", ex: "The referee blows the whistle.", exv: "Trọng tài thổi còi." },
+      { w: "whistle", ipa: "/ˈwɪsl/", vi: "còi", col: "blow the whistle", ex: "Blow the whistle to start the game.", exv: "Thổi còi để bắt đầu trận đấu." },
+      { w: "jersey", ipa: "/ˈdʒɜːzi/", vi: "áo đấu", col: "a blue jersey", ex: "Our team wears blue jerseys.", exv: "Đội chúng tôi mặc áo đấu xanh." },
+      { w: "sneakers", ipa: "/ˈsniːkəz/", vi: "giày thể thao", col: "wear sneakers", ex: "Wear sneakers when you run.", exv: "Mang giày thể thao khi chạy." },
+      { w: "sweat", ipa: "/swet/", vi: "mồ hôi", col: "covered in sweat", ex: "After the game we are covered in sweat.", exv: "Sau trận đấu chúng tôi đẫm mồ hôi." },
+      { w: "stamina", ipa: "/ˈstæmɪnə/", vi: "sức bền", col: "build stamina", ex: "Running every week builds stamina.", exv: "Chạy bộ mỗi tuần giúp tăng sức bền." },
+      { w: "train", ipa: "/treɪn/", vi: "luyện tập", col: "train hard", ex: "We train hard for the school cup.", exv: "Chúng tôi tập luyện chăm chỉ cho cúp trường." },
+      { w: "victory", ipa: "/ˈvɪktəri/", vi: "chiến thắng", col: "a sweet victory", ex: "It is a sweet victory for our small team.", exv: "Đó là chiến thắng ngọt ngào cho đội nhỏ của chúng tôi." },
+      { w: "defeat", ipa: "/dɪˈfiːt/", vi: "thất bại", col: "learn from defeat", ex: "We learn from defeat and play better next time.", exv: "Chúng tôi học từ thất bại và chơi tốt hơn lần sau." }
+    ] },
+    { topic: "Việc làm thêm của sinh viên", theme: "Việc làm thêm của sinh viên - Student Part-Time Jobs", band: "Band 4.5", cards: [
+      { w: "shift", ipa: "/ʃɪft/", vi: "ca làm", col: "a morning shift", ex: "I work a morning shift on Saturdays.", exv: "Tôi làm ca sáng vào thứ Bảy." },
+      { w: "schedule", ipa: "/ˈʃedjuːl/", vi: "lịch làm việc", col: "check the schedule", ex: "Check the schedule before you plan your week.", exv: "Xem lịch làm việc trước khi sắp xếp tuần của bạn." },
+      { w: "uniform", ipa: "/ˈjuːnɪfɔːm/", vi: "đồng phục", col: "wear a uniform", ex: "Staff wear a uniform at the shop.", exv: "Nhân viên mặc đồng phục ở cửa hàng." },
+      { w: "apron", ipa: "/ˈeɪprən/", vi: "tạp dề", col: "tie an apron", ex: "Tie an apron before you cook.", exv: "Buộc tạp dề trước khi nấu." },
+      { w: "trainee", ipa: "/treɪˈniː/", vi: "người đang học việc", col: "a new trainee", ex: "A new trainee learns from the older staff.", exv: "Người học việc mới học hỏi từ nhân viên lớn tuổi hơn." },
+      { w: "supervisor", ipa: "/ˈsuːpəvaɪzə/", vi: "người giám sát", col: "ask your supervisor", ex: "Ask your supervisor if you are unsure.", exv: "Hãy hỏi người giám sát nếu bạn chưa chắc." },
+      { w: "break", ipa: "/breɪk/", vi: "giờ nghỉ", col: "a lunch break", ex: "We get a lunch break at noon.", exv: "Chúng tôi được nghỉ trưa lúc giữa trưa." },
+      { w: "overtime", ipa: "/ˈəʊvətaɪm/", vi: "làm thêm giờ", col: "work overtime", ex: "Students rarely work overtime at school.", exv: "Học sinh hiếm khi làm thêm giờ ở trường." },
+      { w: "wage", ipa: "/weɪdʒ/", vi: "tiền công theo giờ", col: "an hourly wage", ex: "The hourly wage is thirty thousand dong.", exv: "Tiền công theo giờ là ba mươi nghìn đồng." },
+      { w: "tip", ipa: "/tɪp/", vi: "tiền boa", col: "leave a tip", ex: "Happy guests sometimes leave a tip.", exv: "Khách vui vẻ đôi khi để lại tiền boa." },
+      { w: "cashier", ipa: "/kæˈʃɪə/", vi: "thu ngân", col: "pay the cashier", ex: "Pay the cashier at the front desk.", exv: "Trả tiền cho thu ngân ở quầy trước." },
+      { w: "waiter", ipa: "/ˈweɪtə/", vi: "nhân viên phục vụ (nam)", col: "a polite waiter", ex: "A polite waiter brings the menu quickly.", exv: "Nhân viên phục vụ lịch sự mang thực đơn tới nhanh." },
+      { w: "deliver", ipa: "/dɪˈlɪvə/", vi: "giao hàng", col: "deliver food", ex: "Students deliver food by bike in the evening.", exv: "Sinh viên giao đồ ăn bằng xe đạp vào buổi tối." },
+      { w: "order", ipa: "/ˈɔːdə/", vi: "đơn hàng; gọi món", col: "take an order", ex: "Take the order and repeat it back.", exv: "Nhận đơn hàng và nhắc lại cho chắc." },
+      { w: "menu", ipa: "/ˈmenjuː/", vi: "thực đơn", col: "read the menu", ex: "Read the menu before you choose.", exv: "Đọc thực đơn trước khi chọn món." },
+      { w: "client", ipa: "/ˈklaɪənt/", vi: "khách hàng", col: "serve a client", ex: "Serve every client with a smile.", exv: "Phục vụ mọi khách hàng bằng nụ cười." },
+      { w: "interview", ipa: "/ˈɪntəvjuː/", vi: "buổi phỏng vấn", col: "a job interview", ex: "My first job interview lasts twenty minutes.", exv: "Buổi phỏng vấn việc làm đầu tiên của tôi kéo dài hai mươi phút." },
+      { w: "apply", ipa: "/əˈplaɪ/", vi: "nộp đơn xin việc", col: "apply for a job", ex: "Apply for a job at the bookshop.", exv: "Nộp đơn xin việc ở hiệu sách." },
+      { w: "resume", ipa: "/ˈrezjuːmeɪ/", vi: "bản tóm tắt hồ sơ xin việc", col: "write a resume", ex: "Write a short resume with your skills.", exv: "Viết bản hồ sơ ngắn ghi kỹ năng của bạn." },
+      { w: "vacancy", ipa: "/ˈveɪkənsi/", vi: "vị trí còn trống", col: "a vacancy in summer", ex: "There is a vacancy in summer at the cafe.", exv: "Có một vị trí trống vào mùa hè ở quán cà phê." }
+    ] },
+    { topic: "Du lịch bụi trong nước", theme: "Du lịch bụi trong nước - Backpacking Around the Country", band: "Band 4.5", cards: [
+      { w: "backpack", ipa: "/ˈbækpæk/", vi: "ba lô", col: "pack a backpack", ex: "Pack a backpack with water and a raincoat.", exv: "Xếp ba lô với nước và áo mưa." },
+      { w: "hostel", ipa: "/ˈhɒstl/", vi: "nhà nghỉ giá rẻ", col: "stay at a hostel", ex: "We stay at a hostel near the station.", exv: "Chúng tôi ở nhà nghỉ giá rẻ gần ga." },
+      { w: "homestay", ipa: "/ˈhəʊmsteɪ/", vi: "nhà dân cho khách ở", col: "a village homestay", ex: "A village homestay teaches you local life.", exv: "Ở nhà dân trong làng giúp bạn hiểu đời sống địa phương." },
+      { w: "trek", ipa: "/trek/", vi: "đi bộ đường dài", col: "trek in the hills", ex: "We trek in the hills for two days.", exv: "Chúng tôi đi bộ đường núi trong hai ngày." },
+      { w: "trail", ipa: "/treɪl/", vi: "đường mòn", col: "follow the trail", ex: "Follow the trail to the waterfall.", exv: "Đi theo đường mòn tới thác nước." },
+      { w: "waterfall", ipa: "/ˈwɔːtəfɔːl/", vi: "thác nước", col: "a tall waterfall", ex: "A tall waterfall falls into a green pool.", exv: "Thác nước cao đổ xuống hồ nước xanh." },
+      { w: "cave", ipa: "/keɪv/", vi: "hang động", col: "a dark cave", ex: "Bring a lamp into the dark cave.", exv: "Mang đèn vào hang tối." },
+      { w: "temple", ipa: "/ˈtempl/", vi: "đền", col: "an old temple", ex: "An old temple stands on the hill.", exv: "Một ngôi đền cổ đứng trên đồi." },
+      { w: "pagoda", ipa: "/pəˈɡəʊdə/", vi: "chùa", col: "visit a pagoda", ex: "We visit a pagoda in the morning.", exv: "Chúng tôi thăm chùa vào buổi sáng." },
+      { w: "village", ipa: "/ˈvɪlɪdʒ/", vi: "làng", col: "a quiet village", ex: "The quiet village has one small market.", exv: "Làng yên tĩnh có một chợ nhỏ." },
+      { w: "harbour", ipa: "/ˈhɑːbə/", vi: "cảng", col: "at the harbour", ex: "Boats wait at the harbour in the morning.", exv: "Thuyền đợi ở cảng vào buổi sáng." },
+      { w: "ferry", ipa: "/ˈferi/", vi: "phà", col: "take a ferry", ex: "Take a ferry across the wide river.", exv: "Đi phà qua sông rộng." },
+      { w: "sunset", ipa: "/ˈsʌnset/", vi: "hoàng hôn", col: "watch the sunset", ex: "We watch the sunset from the beach.", exv: "Chúng tôi ngắm hoàng hôn từ bãi biển." },
+      { w: "camp", ipa: "/kæmp/", vi: "cắm trại", col: "camp by the lake", ex: "We camp by the lake for one night.", exv: "Chúng tôi cắm trại bên hồ một đêm." },
+      { w: "tent", ipa: "/tent/", vi: "lều", col: "put up a tent", ex: "Put up a tent before it gets dark.", exv: "Dựng lều trước khi trời tối." },
+      { w: "guide", ipa: "/ɡaɪd/", vi: "hướng dẫn viên", col: "a local guide", ex: "A local guide shows us the old streets.", exv: "Hướng dẫn viên địa phương dẫn chúng tôi thăm phố cổ." },
+      { w: "souvenir", ipa: "/ˌsuːvəˈnɪə/", vi: "quà lưu niệm", col: "buy a souvenir", ex: "Buy a souvenir for your family.", exv: "Mua quà lưu niệm cho gia đình bạn." },
+      { w: "haggle", ipa: "/ˈhæɡl/", vi: "mặc cả", col: "haggle politely", ex: "Haggle politely and smile at the vendor.", exv: "Mặc cả lịch sự và mỉm cười với người bán." },
+      { w: "explore", ipa: "/ɪkˈsplɔː/", vi: "khám phá", col: "explore the town", ex: "We explore the town on foot.", exv: "Chúng tôi khám phá thị trấn bằng cách đi bộ." },
+      { w: "adventure", ipa: "/ədˈventʃə/", vi: "chuyến phiêu lưu", col: "a small adventure", ex: "Every trip is a small adventure.", exv: "Mỗi chuyến đi là một cuộc phiêu lưu nhỏ." }
+    ] },
+    { topic: "Mạng xã hội và đời sống", theme: "Mạng xã hội và đời sống - Social Media and Daily Life", band: "Band 4.5", cards: [
+      { w: "post", ipa: "/pəʊst/", vi: "bài đăng", col: "write a post", ex: "Write a post about your weekend trip.", exv: "Viết một bài đăng về chuyến đi cuối tuần của bạn." },
+      { w: "follow", ipa: "/ˈfɒləʊ/", vi: "theo dõi", col: "follow a teacher", ex: "I follow a teacher who shares study tips.", exv: "Tôi theo dõi một thầy giáo hay chia sẻ mẹo học." },
+      { w: "share", ipa: "/ʃeə/", vi: "chia sẻ", col: "share a photo", ex: "Share a photo of your garden.", exv: "Chia sẻ ảnh vườn của bạn." },
+      { w: "comment", ipa: "/ˈkɒment/", vi: "bình luận", col: "leave a comment", ex: "Leave a kind comment on her post.", exv: "Để lại bình luận tử tế dưới bài đăng của cô ấy." },
+      { w: "like", ipa: "/laɪk/", vi: "lượt thích; thích", col: "press like", ex: "Press like if the video helps you.", exv: "Bấm thích nếu video giúp ích cho bạn." },
+      { w: "upload", ipa: "/ʌpˈləʊd/", vi: "tải lên", col: "upload a video", ex: "Upload a video of your class garden.", exv: "Tải lên video về vườn của lớp bạn." },
+      { w: "download", ipa: "/ˌdaʊnˈləʊd/", vi: "tải xuống", col: "download the app", ex: "Download the app before the lesson.", exv: "Tải ứng dụng trước giờ học." },
+      { w: "password", ipa: "/ˈpɑːswɜːd/", vi: "mật khẩu", col: "a strong password", ex: "Use a strong password for your account.", exv: "Dùng mật khẩu mạnh cho tài khoản của bạn." },
+      { w: "account", ipa: "/əˈkaʊnt/", vi: "tài khoản", col: "open an account", ex: "Open an account with your own name.", exv: "Mở tài khoản bằng tên thật của bạn." },
+      { w: "profile", ipa: "/ˈprəʊfaɪl/", vi: "trang cá nhân", col: "a simple profile", ex: "Keep your profile simple and true.", exv: "Giữ trang cá nhân đơn giản và thật." },
+      { w: "timeline", ipa: "/ˈtaɪmlaɪn/", vi: "dòng thời gian (bảng tin)", col: "scroll the timeline", ex: "Do not scroll the timeline all night.", exv: "Đừng lướt dòng thời gian cả đêm." },
+      { w: "story", ipa: "/ˈstɔːri/", vi: "tin ngắn (24 giờ)", col: "post a story", ex: "Post a story about your morning run.", exv: "Đăng tin ngắn về buổi chạy sáng của bạn." },
+      { w: "message", ipa: "/ˈmesɪdʒ/", vi: "tin nhắn", col: "send a message", ex: "Send a message to your group.", exv: "Gửi tin nhắn cho nhóm của bạn." },
+      { w: "inbox", ipa: "/ˈɪnbɒks/", vi: "hộp thư đến", col: "check your inbox", ex: "Check your inbox for the teacher's note.", exv: "Kiểm tra hộp thư đến để xem ghi chú của thầy cô." },
+      { w: "video", ipa: "/ˈvɪdiəʊ/", vi: "video", col: "a short video", ex: "Watch a short video about the lesson.", exv: "Xem video ngắn về bài học." },
+      { w: "channel", ipa: "/ˈtʃænl/", vi: "kênh", col: "a study channel", ex: "This study channel posts every Sunday.", exv: "Kênh học tập này đăng bài mỗi Chủ nhật." },
+      { w: "subscribe", ipa: "/səbˈskraɪb/", vi: "đăng ký kênh", col: "subscribe to the channel", ex: "Subscribe to the channel if it helps you.", exv: "Đăng ký kênh nếu nó giúp ích cho bạn." },
+      { w: "notification", ipa: "/ˌnəʊtɪfɪˈkeɪʃn/", vi: "thông báo", col: "turn off notifications", ex: "Turn off notifications when you study.", exv: "Tắt thông báo khi bạn học." },
+      { w: "privacy", ipa: "/ˈprɪvəsi/", vi: "quyền riêng tư", col: "protect your privacy", ex: "Protect your privacy and do not share your address.", exv: "Bảo vệ riêng tư và đừng chia sẻ địa chỉ của bạn." },
+      { w: "block", ipa: "/blɒk/", vi: "chặn", col: "block a rude user", ex: "Block a rude user and tell an adult.", exv: "Chặn người dùng thô lỗ và nói với người lớn." }
+    ] }
+  ]);
+})();
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.grammar.push.apply(CONTENT.grammar, [
+    // ---------- BAND 3.5 — NGỮ PHÁP ----------
+    { fam: "Câu hỏi và câu trả lời", hook: "Muốn người nghe gật đầu đồng ý, hãy thêm một cái đuôi nhỏ cuối câu như thêm dấu hỏi nhẹ vào cuối lời nói.", level: "Band 3.5", name: "Câu hỏi đuôi đơn giản - ...isn't it? / ...don't you?",
+      explain: "Nghe hai câu này trước: You like pho, don't you? (Bạn thích phở, đúng không?) She is kind, isn't she? (Cô ấy tốt bụng, đúng không?) Sau ví dụ là quy tắc. Câu hỏi đuôi là một đuôi ngắn cuối câu để hỏi lại cho chắc. Câu chính khẳng định thì đuôi phủ định: like thành don't you, is thành isn't she. Câu chính phủ định thì đuôi khẳng định: You do not like tea, do you? Đuôi luôn dùng trợ động từ giống câu chính và chủ ngữ là đại từ: you, she, he, they.",
+      examples: ["You like pho, don't you?", "She is kind, isn't she?"],
+      tip: "Hãy tưởng tượng đuôi câu như một cái gương: câu chính sáng thì gương tối, câu chính tối thì gương sáng — khẳng định đối phủ định, phủ định đối khẳng định.",
+      model: "A: This park is beautiful, isn't it? B: Yes, it is. We walk here every morning.",
+      modelVi: "A: Công viên này đẹp, đúng không? B: Vâng, đúng vậy. Chúng tôi đi dạo ở đây mỗi sáng.",
+      quiz: [
+        { q: "You like pho, ___?", o: ["do you", "don't you", "are you", "isn't you"], a: 1, why: "Câu chính khẳng định với like nên đuôi phủ định là don't you." },
+        { q: "She is kind, ___?", o: ["is she", "isn't she", "does she", "don't she"], a: 1, why: "Câu chính khẳng định với is nên đuôi phủ định là isn't she." },
+        { q: "They live near here, ___?", o: ["do they", "don't they", "are they", "isn't they"], a: 1, why: "Câu chính khẳng định với live nên đuôi phủ định là don't they." },
+        { q: "You do not like tea, ___?", o: ["do you", "don't you", "are you", "isn't you"], a: 0, why: "Câu chính phủ định nên đuôi khẳng định là do you." },
+        { q: "He is not late, ___?", o: ["is he", "isn't he", "does he", "don't he"], a: 0, why: "Câu chính phủ định với is not nên đuôi khẳng định là is he." },
+        { q: "Lan can swim, ___?", o: ["can she", "can't she", "does she", "isn't she"], a: 1, why: "Câu chính khẳng định với can nên đuôi phủ định là can't she." },
+        { q: "We are early, ___?", o: ["are we", "aren't we", "do we", "don't we"], a: 1, why: "Câu chính khẳng định với are nên đuôi phủ định là aren't we." },
+        { q: "It is a sunny day, ___?", o: ["is it", "isn't it", "does it", "don't it"], a: 1, why: "Câu chính khẳng định với is nên đuôi phủ định là isn't it." }
+      ] },
+    { fam: "Miêu tả người và vật", hook: "Khi thấy điều gì đẹp hay đáng yêu, người Anh thường bật ra một câu cảm thán ngắn như tiếng reo lên.", level: "Band 3.5", name: "Câu cảm thán What a...! / How...!",
+      explain: "Nghe hai câu này trước: What a beautiful garden! (Khu vườn đẹp làm sao!) How kind she is! (Cô ấy tốt bụng làm sao!) Sau ví dụ là quy tắc. Khen một vật thì dùng What + a/an + tính từ + danh từ: What a nice day! What a kind teacher! Khen một tính chất thì dùng How + tính từ + chủ ngữ + động từ: How tall he is! How fast she runs! Câu cảm thán luôn có dấu chấm than ở cuối.",
+      examples: ["What a beautiful garden!", "How kind she is!"],
+      tip: "Hãy nhớ: What đi với danh từ (What a...), How đi với tính từ (How...). Thấy danh từ thì chọn What, thấy tính từ đứng một mình thì chọn How.",
+      model: "What a lovely morning! How fresh the air is! We walk to the market together.",
+      modelVi: "Buổi sáng đáng yêu làm sao! Không khí trong lành làm sao! Chúng tôi cùng đi bộ ra chợ.",
+      quiz: [
+        { q: "___ a beautiful flower!", o: ["How", "What", "Which", "Why"], a: 1, why: "Khen một vật (flower) nên dùng What + a + tính từ + danh từ." },
+        { q: "___ kind she is!", o: ["What", "How", "Which", "Who"], a: 1, why: "Khen tính chất (kind) với chủ ngữ và động từ nên dùng How." },
+        { q: "___ a tall boy!", o: ["How", "What", "When", "Where"], a: 1, why: "Tall boy là danh từ nên dùng What a tall boy." },
+        { q: "___ fast he runs!", o: ["What", "How", "Which", "Why"], a: 1, why: "Khen tính chất fast với chủ ngữ và động từ nên dùng How." },
+        { q: "___ a lovely song!", o: ["How", "What", "Who", "When"], a: 1, why: "Song là danh từ nên dùng What a lovely song." },
+        { q: "___ happy they are!", o: ["What", "How", "Which", "Who"], a: 1, why: "Khen tính chất happy với chủ ngữ nên dùng How." },
+        { q: "___ an interesting book!", o: ["How", "What", "When", "Where"], a: 1, why: "Book là danh từ, interesting đứng trước danh từ nên dùng What an interesting book." },
+        { q: "___ big this house is!", o: ["What", "How", "Which", "Why"], a: 1, why: "Khen tính chất big với chủ ngữ và động từ nên dùng How." }
+      ] },
+    { fam: "Giới từ và phương hướng", hook: "Đi qua cầu, đi dọc sông, đi xuyên rừng — mỗi đường đi có một giới từ riêng như mỗi con đường có một biển chỉ dẫn riêng.", level: "Band 3.5", name: "Giới từ chỉ di chuyển - across, along, through, past",
+      explain: "Nghe hai câu này trước: We walk across the bridge. (Chúng tôi đi qua cầu.) We walk along the river. (Chúng tôi đi dọc bờ sông.) Sau ví dụ là quy tắc. Across là đi qua mặt phẳng hoặc từ bên này sang bên kia: across the bridge, across the street. Along là đi dọc theo một đường dài: along the river, along the lane. Through là đi xuyên qua bên trong: through the forest, through the gate. Past là đi ngang qua một vật mà không dừng lại: past the temple, past my house.",
+      examples: ["We walk across the bridge.", "We walk along the river."],
+      tip: "Hãy vẽ trong đầu: across là gạch ngang qua cầu, along là đường thẳng dọc sông, through là mũi tên xuyên qua rừng, past là đi ngang qua mà không ghé vào.",
+      model: "We walk along the river, across the small bridge, and past the old temple to my grandma's house.",
+      modelVi: "Chúng tôi đi dọc bờ sông, qua cây cầu nhỏ, và đi ngang ngôi đền cổ tới nhà bà tôi.",
+      quiz: [
+        { q: "We walk ___ the bridge to the other side.", o: ["along", "across", "past", "through"], a: 1, why: "Đi từ bên này sang bên kia cầu nên dùng across." },
+        { q: "We walk ___ the river every morning.", o: ["across", "along", "through", "past"], a: 1, why: "Đi dọc bờ sông nên dùng along." },
+        { q: "The road goes ___ the forest.", o: ["along", "past", "through", "across"], a: 2, why: "Đi xuyên qua bên trong rừng nên dùng through." },
+        { q: "We walk ___ the temple but we do not stop.", o: ["through", "across", "past", "along"], a: 2, why: "Đi ngang qua mà không dừng lại nên dùng past." },
+        { q: "Swim ___ the pond to the other bank.", o: ["along", "across", "past", "through"], a: 1, why: "Bơi từ bờ này sang bờ kia nên dùng across." },
+        { q: "Children run ___ the lane to school.", o: ["across", "along", "through", "past"], a: 1, why: "Chạy dọc theo ngõ nên dùng along." },
+        { q: "The train goes ___ a long tunnel.", o: ["past", "along", "across", "through"], a: 3, why: "Đi xuyên qua bên trong đường hầm nên dùng through." },
+        { q: "Walk ___ my house and turn left at the gate.", o: ["through", "past", "across", "along"], a: 1, why: "Đi ngang qua nhà tôi rồi rẽ trái nên dùng past." }
+      ] },
+    // ---------- BAND 4.0 — NGỮ PHÁP ----------
+    { fam: "Câu hỏi trong câu", hook: "Hỏi một cách lịch sự giống như gõ cửa trước khi vào nhà: thêm Can you tell me... rồi mới hỏi điều mình cần.", level: "Band 4.0", name: "Câu hỏi gián tiếp đơn giản - Can you tell me...?",
+      explain: "Nghe hai câu này trước: Can you tell me where the library is? (Bạn cho tôi biết thư viện ở đâu được không?) Do you know what time the bus comes? (Bạn có biết xe buýt tới lúc mấy giờ không?) Sau ví dụ là quy tắc. Trong câu hỏi gián tiếp, phần hỏi sau Can you tell me / Do you know trở về thứ tự câu kể: từ hỏi + chủ ngữ + động từ, không đảo trợ động từ lên trước chủ ngữ. Nói Where is the library? khi hỏi trực tiếp, nhưng nói where the library is khi hỏi gián tiếp.",
+      examples: ["Can you tell me where the library is?", "Do you know what time the bus comes?"],
+      tip: "Hãy nhớ: sau Can you tell me và Do you know, câu hỏi cởi áo dấu hỏi ra và mặc áo câu kể vào — chủ ngữ đứng trước động từ.",
+      model: "Excuse me, can you tell me where the bus stop is? Do you know what time the next bus comes?",
+      modelVi: "Xin lỗi, bạn cho tôi biết điểm dừng xe buýt ở đâu được không? Bạn có biết xe buýt tiếp theo tới lúc mấy giờ không?",
+      quiz: [
+        { q: "Can you tell me where the library ___?", o: ["is", "does", "are", "do"], a: 0, why: "Câu hỏi gián tiếp dùng thứ tự câu kể: where the library is." },
+        { q: "Do you know what time the bus ___?", o: ["comes", "come", "does come", "coming"], a: 0, why: "Câu hỏi gián tiếp dùng thứ tự câu kể: what time the bus comes." },
+        { q: "Can you tell me how much this book ___?", o: ["costs", "cost", "does cost", "costing"], a: 0, why: "Câu hỏi gián tiếp dùng thứ tự câu kể: how much this book costs." },
+        { q: "Do you know where Lan ___?", o: ["lives", "live", "does live", "living"], a: 0, why: "Câu hỏi gián tiếp dùng thứ tự câu kể: where Lan lives." },
+        { q: "Can you tell me when the shop ___?", o: ["opens", "open", "does open", "opening"], a: 0, why: "Câu hỏi gián tiếp dùng thứ tự câu kể: when the shop opens." },
+        { q: "Do you know why he ___ late?", o: ["is", "are", "does", "be"], a: 0, why: "Câu hỏi gián tiếp dùng thứ tự câu kể: why he is late." },
+        { q: "Can you tell me who ___ the room?", o: ["cleans", "clean", "does clean", "cleaning"], a: 0, why: "Câu hỏi gián tiếp dùng thứ tự câu kể: who cleans the room." },
+        { q: "Do you know how old the temple ___?", o: ["is", "are", "does", "be"], a: 0, why: "Câu hỏi gián tiếp dùng thứ tự câu kể: how old the temple is." }
+      ] },
+    { fam: "Lượng và mức độ", hook: "Quá nóng thì không ăn được, đủ lớn thì tự nấu được — too và enough là hai cái cân đo mức độ vừa hay quá.", level: "Band 4.0", name: "Too...to và enough to - đủ và quá để làm gì",
+      explain: "Nghe hai câu này trước: The soup is too hot to eat. (Canh quá nóng nên không ăn được.) She is old enough to cook alone. (Cô ấy đủ lớn để tự nấu ăn.) Sau ví dụ là quy tắc. Too + tính từ + to + động từ nghĩa là quá... nên không thể: too small to wear, too tired to walk. Tính từ + enough + to + động từ nghĩa là đủ... để: old enough to cook, strong enough to carry. Chú ý vị trí: too đứng trước tính từ, enough đứng sau tính từ.",
+      examples: ["The soup is too hot to eat.", "She is old enough to cook alone."],
+      tip: "Hãy nhớ: too là quá tải nên đứng trước tính từ, enough là vừa đủ nên đứng sau tính từ — too hot, hot enough.",
+      model: "The bag is too heavy to carry, but my brother is strong enough to help me with it.",
+      modelVi: "Chiếc túi quá nặng nên tôi không xách nổi, nhưng anh tôi đủ khỏe để giúp tôi xách nó.",
+      quiz: [
+        { q: "The soup is too hot ___ eat.", o: ["to", "for", "of", "with"], a: 0, why: "Cấu trúc là too + tính từ + to + động từ: too hot to eat." },
+        { q: "She is old ___ to cook alone.", o: ["too", "enough", "very", "so"], a: 1, why: "Đủ lớn để tự nấu nên dùng tính từ + enough + to: old enough to cook." },
+        { q: "The room is too small ___ all of us.", o: ["to hold", "holding", "hold", "to holding"], a: 0, why: "Cấu trúc là too + tính từ + to + động từ: too small to hold." },
+        { q: "He is tall ___ to reach the shelf.", o: ["too", "enough", "very", "much"], a: 1, why: "Đủ cao để với tới giá nên dùng tall enough to reach." },
+        { q: "It is too dark ___ read here.", o: ["to", "for", "of", "with"], a: 0, why: "Cấu trúc là too + tính từ + to + động từ: too dark to read." },
+        { q: "Lan runs fast ___ to win the race.", o: ["too", "enough", "very", "so"], a: 1, why: "Đủ nhanh để thắng cuộc đua nên dùng fast enough to win." },
+        { q: "The water is too cold ___ swim in.", o: ["to", "for", "of", "with"], a: 0, why: "Cấu trúc là too + tính từ + to + động từ: too cold to swim in." },
+        { q: "My little brother is not strong ___ to carry this box.", o: ["too", "enough", "very", "much"], a: 1, why: "Chưa đủ khỏe để xách hộp nên dùng strong enough với not: not strong enough to carry." }
+      ] },
+    { fam: "Kể chuyện trước - sau", hook: "Kể chuyện giống như xếp hai tấm ảnh theo thứ tự thời gian: tấm ảnh cũ hơn đeo nhãn had + V3.", level: "Band 4.0", name: "Thì quá khứ hoàn thành mở đầu - had + V3",
+      explain: "Nghe hai câu này trước: I had finished my homework before Mum came home. (Tôi đã làm xong bài tập trước khi mẹ về nhà.) She had never seen snow before that trip. (Cô ấy chưa bao giờ thấy tuyết trước chuyến đi đó.) Sau ví dụ là quy tắc. Quá khứ hoàn thành (had + V3) dùng cho việc xảy ra trước một việc khác trong quá khứ. Việc trước dùng had + V3, việc sau dùng quá khứ đơn. Dấu hiệu thường gặp: before, after, by the time, already, never... before.",
+      examples: ["I had finished my homework before Mum came home.", "She had never seen snow before that trip."],
+      tip: "Hãy nhớ: trong hai việc quá khứ, việc nào cũ hơn thì đeo nhãn had — had finished đứng trước came home.",
+      model: "By the time the bus came, we had waited for half an hour and had read two chapters of our book.",
+      modelVi: "Lúc xe buýt tới, chúng tôi đã đợi nửa giờ và đã đọc hai chương sách.",
+      quiz: [
+        { q: "I had finished my homework before Mum ___ home.", o: ["comes", "came", "come", "coming"], a: 1, why: "Việc sau trong quá khứ dùng quá khứ đơn: came, việc trước dùng had finished." },
+        { q: "She ___ never seen snow before that trip.", o: ["has", "have", "had", "having"], a: 2, why: "Việc xảy ra trước một mốc trong quá khứ nên dùng had + V3: had seen." },
+        { q: "By the time we arrived, the film ___.", o: ["starts", "started", "had started", "start"], a: 2, why: "Phim bắt đầu trước lúc chúng tôi tới nên dùng had started." },
+        { q: "He was hungry because he ___ lunch.", o: ["skips", "skipped", "had skipped", "skip"], a: 2, why: "Bỏ bữa trưa xảy ra trước cảm giác đói nên dùng had skipped." },
+        { q: "After Lan ___ the letter, she felt happy.", o: ["reads", "read", "had read", "reading"], a: 2, why: "Đọc thư xảy ra trước cảm giác vui nên dùng had read." },
+        { q: "We had waited for an hour when the rain ___.", o: ["stops", "stopped", "had stopped", "stop"], a: 1, why: "Mưa tạnh là việc sau trong quá khứ nên dùng quá khứ đơn: stopped." },
+        { q: "They ___ the room before the guests arrived.", o: ["clean", "cleaned", "had cleaned", "cleaning"], a: 2, why: "Dọn phòng xảy ra trước khi khách tới nên dùng had cleaned." },
+        { q: "I recognised him because I ___ him before.", o: ["meet", "met", "had met", "meeting"], a: 2, why: "Gặp anh ấy xảy ra trước lúc nhận ra nên dùng had met." }
+      ] },
+    // ---------- BAND 4.5 — NGỮ PHÁP ----------
+    { fam: "Câu bị động", hook: "Khi việc cần làm quan trọng hơn người làm, hãy để việc đứng lên trước: Homework should be finished.", level: "Band 4.5", name: "Bị động với động từ khuyết thiếu - should be done",
+      explain: "Nghe hai câu này trước: Homework should be finished on time. (Bài tập nên được làm xong đúng hạn.) Rubbish should be sorted every day. (Rác nên được phân loại mỗi ngày.) Sau ví dụ là quy tắc. Câu bị động với động từ khuyết thiếu có dạng: chủ ngữ + can/could/should/must + be + V3. Người làm việc không quan trọng hoặc không cần nêu thì bỏ đi. So sánh: We should sort rubbish (chúng ta nên phân loại rác) với Rubbish should be sorted (rác nên được phân loại).",
+      examples: ["Homework should be finished on time.", "Rubbish should be sorted every day."],
+      tip: "Hãy nhớ công thức ba nhịp: động từ khuyết thiếu + be + V3 — should be done, must be kept, can be reused.",
+      model: "Old books can be donated to the library, and plastic bottles should be reused, not thrown away.",
+      modelVi: "Sách cũ có thể được tặng cho thư viện, và chai nhựa nên được dùng lại, không nên vứt đi.",
+      quiz: [
+        { q: "Homework should ___ on time.", o: ["finish", "be finished", "finishing", "finished"], a: 1, why: "Bị động với should có dạng should + be + V3: should be finished." },
+        { q: "Rubbish must ___ every day.", o: ["sort", "be sorted", "sorting", "sorted"], a: 1, why: "Bị động với must có dạng must + be + V3: must be sorted." },
+        { q: "Old bottles can ___ again.", o: ["use", "be used", "using", "used"], a: 1, why: "Bị động với can có dạng can + be + V3: can be used." },
+        { q: "The room should ___ clean.", o: ["keep", "be kept", "keeping", "kept"], a: 1, why: "Bị động với should có dạng should + be + V3: should be kept." },
+        { q: "This letter must ___ today.", o: ["send", "be sent", "sending", "sent"], a: 1, why: "Bị động với must có dạng must + be + V3: must be sent." },
+        { q: "Books could ___ to poor children.", o: ["give", "be given", "giving", "given"], a: 1, why: "Bị động với could có dạng could + be + V3: could be given." },
+        { q: "Water should not ___ wasted.", o: ["waste", "be wasted", "wasting", "wasted"], a: 1, why: "Bị động phủ định với should có dạng should not + be + V3: should not be wasted." },
+        { q: "The rules must ___ by everyone.", o: ["follow", "be followed", "following", "followed"], a: 1, why: "Bị động với must có dạng must + be + V3: must be followed." }
+      ] },
+    { fam: "Thời gian và việc làm", hook: "Nói về thời gian giống như kể tiền tiêu: It takes... là trả bao lâu cho một việc, spend... là tiêu bao lâu vào một việc.", level: "Band 4.5", name: "It takes...to... và spend...V-ing - nói về thời gian",
+      explain: "Nghe hai câu này trước: It takes me twenty minutes to walk to school. (Tôi mất hai mươi phút để đi bộ tới trường.) I spend two hours reading every evening. (Tôi dành hai giờ để đọc sách mỗi tối.) Sau ví dụ là quy tắc. It takes + người + khoảng thời gian + to + động từ: It takes us an hour to cook dinner. Spend + khoảng thời gian + V-ing: She spends thirty minutes jogging. Chú ý: sau spend là V-ing, sau to trong It takes là động từ nguyên thể.",
+      examples: ["It takes me twenty minutes to walk to school.", "I spend two hours reading every evening."],
+      tip: "Hãy nhớ: It takes... to... giống như trả tiền bằng thời gian, spend... V-ing giống như tiêu thời gian vào việc gì — takes đi với to, spend đi với V-ing.",
+      model: "It takes me ten minutes to cycle to the market, and I spend an hour cooking dinner for my family.",
+      modelVi: "Tôi mất mười phút đạp xe ra chợ, và tôi dành một giờ nấu bữa tối cho gia đình.",
+      quiz: [
+        { q: "It takes me twenty minutes ___ to school.", o: ["walk", "to walk", "walking", "walks"], a: 1, why: "Cấu trúc là It takes + người + thời gian + to + động từ: to walk." },
+        { q: "I spend two hours ___ every evening.", o: ["read", "to read", "reading", "reads"], a: 2, why: "Sau spend + thời gian là V-ing: reading." },
+        { q: "It takes us an hour ___ dinner.", o: ["cook", "to cook", "cooking", "cooks"], a: 1, why: "Cấu trúc là It takes + người + thời gian + to + động từ: to cook." },
+        { q: "She spends thirty minutes ___ in the park.", o: ["jog", "to jog", "jogging", "jogs"], a: 2, why: "Sau spend + thời gian là V-ing: jogging." },
+        { q: "It ___ him ten minutes to get to work.", o: ["take", "takes", "taking", "took"], a: 1, why: "Chủ ngữ It đi với takes ở hiện tại đơn: It takes him ten minutes." },
+        { q: "We spend Sunday morning ___ the garden.", o: ["clean", "to clean", "cleaning", "cleans"], a: 2, why: "Sau spend + thời gian là V-ing: cleaning." },
+        { q: "It takes Lan five minutes ___ a letter.", o: ["write", "to write", "writing", "writes"], a: 1, why: "Cấu trúc là It takes + người + thời gian + to + động từ: to write." },
+        { q: "He spends an hour ___ English songs.", o: ["listen", "to listen", "listening", "listens"], a: 2, why: "Sau spend + thời gian là V-ing: listening." }
+      ] },
+    { fam: "So sánh đặc biệt", hook: "Càng đọc nhiều càng biết nhiều từ — so sánh kép nói về hai điều cùng tăng lên như hai đầu của một cái bập bênh.", level: "Band 4.5", name: "So sánh kép - The more...the more...",
+      explain: "Nghe hai câu này trước: The more you read, the more words you learn. (Bạn càng đọc nhiều, bạn càng học được nhiều từ.) The earlier you start, the better you speak. (Bạn bắt đầu càng sớm, bạn nói càng tốt.) Sau ví dụ là quy tắc. So sánh kép có dạng: The + so sánh hơn + chủ ngữ + động từ, the + so sánh hơn + chủ ngữ + động từ. Hai vế đều bắt đầu bằng The và đều có dạng so sánh hơn: more, earlier, better, harder. Đây là cách nói rất hay trong bài viết ý kiến.",
+      examples: ["The more you read, the more words you learn.", "The earlier you start, the better you speak."],
+      tip: "Hãy nhớ: so sánh kép luôn có hai chữ The mở đầu hai vế — The more..., the more... — như hai cái cân cùng nặng lên.",
+      model: "The more carefully you listen, the more clearly you understand, and the more you practise, the more confident you feel.",
+      modelVi: "Bạn nghe càng cẩn thận thì hiểu càng rõ, và bạn luyện tập càng nhiều thì càng cảm thấy tự tin.",
+      quiz: [
+        { q: "The more you read, the ___ words you learn.", o: ["many", "more", "much", "most"], a: 1, why: "So sánh kép dùng dạng so sánh hơn ở cả hai vế: the more... the more." },
+        { q: "The ___ you start, the better you speak.", o: ["early", "earlier", "earliest", "soon"], a: 1, why: "So sánh kép dùng dạng so sánh hơn: earlier, không dùng dạng gốc early." },
+        { q: "The harder you practise, the ___ you play.", o: ["good", "well", "better", "best"], a: 2, why: "So sánh kép dùng dạng so sánh hơn của well là better." },
+        { q: "The more water you drink, the ___ you feel.", o: ["healthy", "healthier", "healthiest", "health"], a: 1, why: "So sánh kép dùng dạng so sánh hơn: healthier." },
+        { q: "The longer you wait, the ___ the bus seems.", o: ["late", "later", "latest", "lately"], a: 1, why: "So sánh kép dùng dạng so sánh hơn: later." },
+        { q: "The more carefully you listen, the ___ you understand.", o: ["clear", "clearly", "more clearly", "most clearly"], a: 2, why: "So sánh kép dùng dạng so sánh hơn của clearly là more clearly." },
+        { q: "The sooner you finish, the ___ you can rest.", o: ["early", "earlier", "earliest", "soon"], a: 1, why: "So sánh kép dùng dạng so sánh hơn ở cả hai vế: sooner... earlier." },
+        { q: "The more books you read, the ___ your vocabulary becomes.", o: ["rich", "richer", "richest", "richly"], a: 1, why: "So sánh kép dùng dạng so sánh hơn: richer." }
+      ] }
+  ]);
+})();
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    // ---------- BAND 3.5 — ĐỌC ----------
+    { topic: "Người quen và hàng xóm", level: "Band 3.5", title: "My Neighbour Mrs Lan",
+      text: "My name is Hoa. I live in a small lane in a village near Hanoi. My neighbour Mrs Lan lives next door. She is sixty years old, and she has a kind smile. Every morning she sweeps her yard and waters her flowers.\n\nMrs Lan knows everyone in our lane. When a new family moves in, she brings them a bowl of soup and shows them the market. She remembers every child's name and asks about school. People say she has a warm heart.\n\nLast week my bicycle broke on the way home. Mrs Lan saw me and called her son. Her son mended the wheel in ten minutes and did not take any money. I thanked them many times, but Mrs Lan only smiled and said, \"Neighbours help each other.\"\n\nOn Sundays Mrs Lan teaches children to plant flowers. She gives each child a small pot and some seeds. The children water the plants every day and watch them grow. At the end of the month, the lane is full of colour.\n\nI am lucky to live next to Mrs Lan. She teaches me that a good neighbour is like a good friend. When we help each other, our small lane feels like one big family.",
+      translation: "Tôi tên là Hoa. Tôi sống trong một ngõ nhỏ ở làng gần Hà Nội. Hàng xóm của tôi là bà Lan sống ngay bên cạnh. Bà sáu mươi tuổi và có nụ cười hiền. Mỗi sáng bà quét sân và tưới hoa.\n\nBà Lan biết mọi người trong ngõ của chúng tôi. Khi một gia đình mới chuyển tới, bà mang cho họ một bát canh và chỉ cho họ chợ. Bà nhớ tên từng đứa trẻ và hỏi han chuyện học hành. Mọi người nói bà có tấm lòng ấm áp.\n\nTuần trước xe đạp của tôi hỏng trên đường về nhà. Bà Lan nhìn thấy tôi và gọi con trai bà. Con trai bà sửa bánh xe trong mười phút và không lấy tiền. Tôi cảm ơn họ nhiều lần, nhưng bà Lan chỉ mỉm cười và nói: \"Hàng xóm giúp đỡ nhau.\"\n\nVào Chủ nhật bà Lan dạy trẻ con trồng hoa. Bà cho mỗi đứa trẻ một chậu nhỏ và một ít hạt giống. Trẻ con tưới cây mỗi ngày và ngắm chúng lớn lên. Cuối tháng, ngõ đầy màu sắc.\n\nTôi thật may mắn khi sống cạnh bà Lan. Bà dạy tôi rằng hàng xóm tốt giống như bạn tốt. Khi chúng tôi giúp đỡ nhau, ngõ nhỏ của chúng tôi giống như một đại gia đình.",
+      phrases: [{ en: "a kind smile", vi: "nụ cười hiền" }, { en: "sweeps her yard", vi: "quét sân của bà" }, { en: "Neighbours help each other", vi: "Hàng xóm giúp đỡ nhau" }, { en: "a small pot", vi: "một chậu nhỏ" }, { en: "one big family", vi: "một đại gia đình" }],
+      questions: [
+        { type: "MC", q: "Where does Hoa live?", o: ["In a small lane in a village near Hanoi", "In a big city", "On a farm far away", "Near the sea"], a: 0, why: "Bài viết: Hoa lives in a small lane in a village near Hanoi." },
+        { type: "MC", q: "What does Mrs Lan bring a new family?", o: ["A bowl of soup", "A new bicycle", "A big cake", "Some flowers"], a: 0, why: "Bài viết: she brings them a bowl of soup." },
+        { type: "MC", q: "What does Mrs Lan teach children on Sundays?", o: ["How to plant flowers", "How to swim", "How to play football", "How to sing songs"], a: 0, why: "Bài viết: On Sundays Mrs Lan teaches children to plant flowers." },
+        { type: "TF", q: "Mrs Lan's son took money for mending the wheel.", o: ["True", "False"], a: 1, why: "Bài viết: her son mended the wheel and did not take any money, nên câu này sai." },
+        { type: "COMP", q: "Mrs Lan says: ___ help each other.", answer: "Neighbours", why: "Bài viết: Mrs Lan says, Neighbours help each other." }
+      ] },
+    { topic: "Ẩm thực gia đình", level: "Band 3.5", title: "Grandma's Sunday Rice",
+      text: "Every Sunday my grandma cooks rice for the whole family. She wakes up early and goes to the market. She buys fresh herbs, pork, and green papaya. Then she comes home with a full basket.\n\nIn the kitchen, Grandma washes the rice three times. She says clean water makes the rice white and soft. While the rice cooks, she cuts the pork into small pieces and fries it with garlic. The smell fills the whole house.\n\nMy job is to wash the herbs and peel the papaya. Grandma shows me how to slice the papaya thinly. She smiles when I do it well and says, \"Slow hands make good food.\" I feel proud when she praises me.\n\nAt noon the whole family sits down together. We eat rice, fried pork, and papaya salad. Grandpa tells stories about his childhood, and the children listen with big eyes. Nobody hurries, because Sunday lunch is a happy time.\n\nAfter lunch I wash the bowls and Grandma rests in a chair. She says cooking for family is her way of showing love. I think she is right, because her food always tastes like home.",
+      translation: "Mỗi Chủ nhật bà tôi nấu cơm cho cả gia đình. Bà dậy sớm và đi chợ. Bà mua rau thơm tươi, thịt lợn và đu đủ xanh. Sau đó bà về nhà với một giỏ đầy.\n\nTrong bếp, bà vo gạo ba lần. Bà nói nước sạch làm gạo trắng và mềm. Trong khi cơm nấu, bà thái thịt lợn thành miếng nhỏ và rán với tỏi. Mùi thơm lan khắp nhà.\n\nViệc của tôi là rửa rau thơm và gọt đu đủ. Bà chỉ cho tôi cách thái đu đủ thật mỏng. Bà mỉm cười khi tôi làm tốt và nói: \"Tay chậm làm ra món ngon.\" Tôi thấy tự hào khi bà khen tôi.\n\nLúc trưa cả gia đình ngồi lại cùng nhau. Chúng tôi ăn cơm, thịt lợn rán và nộm đu đủ. Ông kể chuyện về thời thơ ấu của ông, và trẻ con lắng nghe với đôi mắt mở to. Không ai vội vàng, vì bữa trưa Chủ nhật là thời gian vui vẻ.\n\nSau bữa trưa tôi rửa bát và bà nghỉ ngơi trên ghế. Bà nói nấu ăn cho gia đình là cách bà thể hiện tình yêu. Tôi nghĩ bà nói đúng, vì món ăn của bà luôn có vị như ở nhà.",
+      phrases: [{ en: "washes the rice three times", vi: "vo gạo ba lần" }, { en: "Slow hands make good food", vi: "Tay chậm làm ra món ngon" }, { en: "peel the papaya", vi: "gọt đu đủ" }, { en: "sits down together", vi: "ngồi lại cùng nhau" }, { en: "tastes like home", vi: "có vị như ở nhà" }],
+      questions: [
+        { type: "MC", q: "What does Grandma buy at the market?", o: ["Fresh herbs, pork, and green papaya", "Fish, eggs, and rice", "Fruit, milk, and bread", "Flowers, tea, and cake"], a: 0, why: "Bài viết: She buys fresh herbs, pork, and green papaya." },
+        { type: "MC", q: "What is the child's job in the kitchen?", o: ["Wash the herbs and peel the papaya", "Fry the pork with garlic", "Wash the rice three times", "Buy food at the market"], a: 0, why: "Bài viết: My job is to wash the herbs and peel the papaya." },
+        { type: "MC", q: "When does the whole family eat together?", o: ["At noon", "In the morning", "In the evening", "At midnight"], a: 0, why: "Bài viết: At noon the whole family sits down together." },
+        { type: "TF", q: "Grandma says fast hands make good food.", o: ["True", "False"], a: 1, why: "Bài viết: Grandma says Slow hands make good food, nên câu này sai." },
+        { type: "COMP", q: "Grandma says cooking for family is her way of showing ___.", answer: "love", why: "Bài viết: cooking for family is her way of showing love." }
+      ] },
+    { topic: "Lễ hội quê hương", level: "Band 3.5", title: "The Kite Festival in My Village",
+      text: "Every spring my village holds a kite festival on the open field. Families come from near and far, and children carry kites of many colours. The sky fills with birds, fish, and dragons made of paper.\n\nMy father and I make our kite at home. We use bamboo sticks and thin paper. Father ties the string with care, and I paint a red fish on the paper. Our kite is not the biggest, but it is the brightest.\n\nOn festival day we wake up early. The wind is strong and cool. Father runs with the kite, and I hold the string. After three tries, our fish kite flies high into the blue sky. I shout with joy.\n\nIn the afternoon there is a kite contest. Judges look at the shape, the colour, and how high the kite flies. Our kite does not win the first prize, but it wins a prize for the most beautiful colour. We are very happy.\n\nIn the evening families eat together on the field. We share rice cakes and talk about the kites. The festival ends with music and laughter. I hope next spring will bring an even stronger wind.",
+      translation: "Mỗi mùa xuân làng tôi tổ chức lễ hội thả diều trên cánh đồng trống. Các gia đình tới từ gần và xa, trẻ con mang theo diều nhiều màu sắc. Bầu trời đầy những con chim, con cá và con rồng làm bằng giấy.\n\nBố và tôi làm diều ở nhà. Chúng tôi dùng que tre và giấy mỏng. Bố buộc dây cẩn thận, và tôi vẽ một con cá đỏ lên giấy. Diều của chúng tôi không phải to nhất, nhưng là sáng màu nhất.\n\nVào ngày hội chúng tôi dậy sớm. Gió mạnh và mát. Bố chạy cùng diều, và tôi giữ dây. Sau ba lần thử, diều cá của chúng tôi bay cao lên bầu trời xanh. Tôi reo lên vui sướng.\n\nBuổi chiều có cuộc thi diều. Ban giám khảo xem hình dáng, màu sắc và diều bay cao thế nào. Diều của chúng tôi không giành giải nhất, nhưng giành giải màu đẹp nhất. Chúng tôi rất vui.\n\nBuổi tối các gia đình ăn cùng nhau trên đồng. Chúng tôi chia nhau bánh chưng và nói về những cánh diều. Lễ hội kết thúc bằng âm nhạc và tiếng cười. Tôi mong mùa xuân tới sẽ mang gió mạnh hơn nữa.",
+      phrases: [{ en: "holds a kite festival", vi: "tổ chức lễ hội thả diều" }, { en: "made of paper", vi: "làm bằng giấy" }, { en: "ties the string", vi: "buộc dây" }, { en: "flies high", vi: "bay cao" }, { en: "the most beautiful colour", vi: "màu đẹp nhất" }],
+      questions: [
+        { type: "MC", q: "When does the village hold the kite festival?", o: ["Every spring", "Every summer", "Every autumn", "Every winter"], a: 0, why: "Bài viết: Every spring my village holds a kite festival." },
+        { type: "MC", q: "What kite do the father and child make?", o: ["A red fish kite", "A blue bird kite", "A green dragon kite", "A yellow star kite"], a: 0, why: "Bài viết: I paint a red fish on the paper." },
+        { type: "MC", q: "What prize does their kite win?", o: ["The most beautiful colour", "The biggest kite", "The highest flight", "The funniest shape"], a: 0, why: "Bài viết: it wins a prize for the most beautiful colour." },
+        { type: "TF", q: "Their kite wins the first prize.", o: ["True", "False"], a: 1, why: "Bài viết: Our kite does not win the first prize, nên câu này sai." },
+        { type: "COMP", q: "The festival ends with music and ___.", answer: "laughter", why: "Bài viết: The festival ends with music and laughter." }
+      ] },
+    { topic: "Thư từ và bạn bè", level: "Band 3.5", title: "A Letter from My Cousin in Da Lat",
+      text: "Dear Hoa, How are you? I hope you and your family are well. I am writing from Da Lat, where I live with my aunt now. The weather here is cool all year, and flowers grow everywhere.\n\nMy school is near a small lake. Every morning I walk to school along the lake, and I see mist on the water. My new friends are kind, and my teacher, Mrs Mai, helps me with my lessons. I like my new class very much.\n\nLast Saturday my aunt and I visited a flower garden. We saw roses, sunflowers, and many orchids. I took photos for you, and I will send them with this letter. The garden smelled sweet, and I wished you were there.\n\nI miss our village and our kite games. Do you still fly kites on the field? Please write and tell me about your school and Mrs Lan. Give my love to Grandma and Grandpa.\n\nI hope you can visit Da Lat in the summer. We can walk around the lake and eat hot soup in the cool evening. Write back soon. Your cousin, Linh.",
+      translation: "Hoa thân mến, Bạn có khỏe không? Mình mong bạn và gia đình vẫn khỏe. Mình viết thư từ Đà Lạt, nơi mình đang sống với dì. Thời tiết ở đây mát mẻ quanh năm, và hoa mọc khắp nơi.\n\nTrường của mình gần một hồ nhỏ. Mỗi sáng mình đi bộ tới trường dọc bờ hồ, và mình thấy sương trên mặt nước. Bạn mới của mình rất tốt bụng, và cô giáo của mình, cô Mai, giúp mình học bài. Mình rất thích lớp mới của mình.\n\nThứ Bảy tuần trước dì và mình thăm một vườn hoa. Chúng mình thấy hoa hồng, hoa hướng dương và nhiều hoa lan. Mình chụp ảnh cho bạn, và mình sẽ gửi kèm thư này. Vườn hoa thơm ngọt, và mình ước bạn ở đó.\n\nMình nhớ làng của chúng ta và trò thả diều. Bạn còn thả diều trên đồng không? Hãy viết thư và kể cho mình về trường của bạn và bà Lan. Cho mình gửi lời yêu thương tới ông bà.\n\nMình mong bạn có thể thăm Đà Lạt vào mùa hè. Chúng ta có thể đi dạo quanh hồ và ăn canh nóng trong buổi tối mát mẻ. Viết thư lại sớm nhé. Em họ của bạn, Linh.",
+      phrases: [{ en: "cool all year", vi: "mát mẻ quanh năm" }, { en: "along the lake", vi: "dọc bờ hồ" }, { en: "took photos", vi: "chụp ảnh" }, { en: "I miss our village", vi: "Tôi nhớ làng của chúng ta" }, { en: "Write back soon", vi: "Viết thư lại sớm nhé" }],
+      questions: [
+        { type: "MC", q: "Where does Linh live now?", o: ["In Da Lat with her aunt", "In Hanoi with her grandma", "In a village near Hanoi", "In Ho Chi Minh City"], a: 0, why: "Bài viết: I am writing from Da Lat, where I live with my aunt now." },
+        { type: "MC", q: "What does Linh see on the way to school?", o: ["Mist on the water", "Snow on the road", "A big market", "A kite festival"], a: 0, why: "Bài viết: I see mist on the water." },
+        { type: "MC", q: "What did Linh visit last Saturday?", o: ["A flower garden", "A kite festival", "A new school", "A small lake"], a: 0, why: "Bài viết: Last Saturday my aunt and I visited a flower garden." },
+        { type: "TF", q: "Linh's teacher is Mrs Lan.", o: ["True", "False"], a: 1, why: "Bài viết: my teacher, Mrs Mai, helps me — cô giáo là cô Mai, không phải bà Lan." },
+        { type: "COMP", q: "Linh hopes Hoa can visit Da Lat in the ___.", answer: "summer", why: "Bài viết: I hope you can visit Da Lat in the summer." }
+      ] }
+  ]);
+})();
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    // ---------- BAND 4.0 — ĐỌC ----------
+    { topic: "Nhà ở và thuê phòng", level: "Band 4.0", title: "Renting a Small Room Near College",
+      text: "My name is Tuan. I am a first-year student, and I need a small room near my college. My old room is far away, and the bus takes one hour every morning. I want a room I can walk from.\n\nLast Monday I saw a notice on the college board. A landlord has a small room on the second floor of a house near the market. The rent is two million dong a month, and water and electricity cost extra. The room has a bed, a desk, and a fan.\n\nOn Tuesday I visited the room with my friend Nam. The room is small but clean, and the window looks out on a quiet lane. The landlord is kind and says I can use the kitchen and the washing area. He asks for one month's deposit and a signed contract.\n\nI like the room, but I ask about two things. First, is the house quiet at night? Second, can I keep my bicycle inside? The landlord says yes to both, and shows me the parking place behind the house. I feel happy.\n\nOn Friday I sign the contract and pay the deposit. Now I walk to college in fifteen minutes and save one hour every day. A small room near college makes student life much easier.",
+      translation: "Tôi tên là Tuấn. Tôi là sinh viên năm nhất, và tôi cần một phòng nhỏ gần trường. Phòng cũ của tôi ở xa, và xe buýt mất một giờ mỗi sáng. Tôi muốn một phòng mà tôi có thể đi bộ tới trường.\n\nThứ Hai tuần trước tôi thấy một thông báo trên bảng trường. Một chủ nhà có phòng nhỏ ở tầng hai của một ngôi nhà gần chợ. Tiền thuê là hai triệu đồng một tháng, tiền nước và điện trả thêm. Phòng có giường, bàn và quạt.\n\nThứ Ba tôi tới xem phòng cùng bạn Nam. Phòng nhỏ nhưng sạch, và cửa sổ nhìn ra ngõ yên tĩnh. Chủ nhà tốt bụng và nói tôi có thể dùng bếp và chỗ giặt. Ông yêu cầu tiền cọc một tháng và hợp đồng đã ký.\n\nTôi thích phòng, nhưng tôi hỏi hai điều. Thứ nhất, nhà có yên tĩnh vào ban đêm không? Thứ hai, tôi có thể để xe đạp trong nhà không? Chủ nhà đồng ý cả hai, và chỉ cho tôi chỗ đỗ xe sau nhà. Tôi thấy vui.\n\nThứ Sáu tôi ký hợp đồng và trả tiền cọc. Giờ tôi đi bộ tới trường trong mười lăm phút và tiết kiệm một giờ mỗi ngày. Phòng nhỏ gần trường khiến đời sống sinh viên dễ dàng hơn nhiều.",
+      phrases: [{ en: "a first-year student", vi: "sinh viên năm nhất" }, { en: "on the college board", vi: "trên bảng trường" }, { en: "one month's deposit", vi: "tiền cọc một tháng" }, { en: "a signed contract", vi: "hợp đồng đã ký" }, { en: "save one hour", vi: "tiết kiệm một giờ" }],
+      questions: [
+        { type: "MC", q: "Where is the room Tuan finds?", o: ["On the second floor of a house near the market", "On the first floor of a house near the school", "In a flat near the bus terminal", "In a hostel near the lake"], a: 0, why: "Bài viết: a small room on the second floor of a house near the market." },
+        { type: "MC", q: "How much is the rent a month?", o: ["Two million dong", "One million dong", "Three million dong", "Five hundred thousand dong"], a: 0, why: "Bài viết: The rent is two million dong a month." },
+        { type: "MC", q: "What does the landlord ask for?", o: ["One month's deposit and a signed contract", "Two months' deposit only", "A photo and a student card", "Three months' rent in advance"], a: 0, why: "Bài viết: He asks for one month's deposit and a signed contract." },
+        { type: "TF", q: "The bus from Tuan's old room takes fifteen minutes.", o: ["True", "False"], a: 1, why: "Bài viết: the bus takes one hour every morning; fifteen minutes is the walk from the new room." },
+        { type: "COMP", q: "Now Tuan walks to college in fifteen ___.", answer: "minutes", why: "Bài viết: I walk to college in fifteen minutes." }
+      ] },
+    { topic: "Học tập ngoài lớp", level: "Band 4.0", title: "Our Class Garden Project",
+      text: "Our class has a small garden behind the school. Last month our teacher, Mr Hung, asked us to grow vegetables there. We divided into four groups, and each group cares for one bed of soil.\n\nMy group grows tomatoes and herbs. First we cleaned the bed and pulled up weeds. Then we planted small seedlings and watered them every morning. We wrote the date and the height of each plant in a notebook.\n\nAt first some plants grew slowly because the soil was dry. Mr Hung showed us how to make compost from dry leaves. After two weeks with compost and water, the plants grew tall and green. We felt proud.\n\nLast Friday we picked our first tomatoes. They were small but red and sweet. We washed them and shared them with the whole class. Everyone said our tomatoes tasted better than shop tomatoes.\n\nThe garden project teaches us more than science. We learn to work together, to wait patiently, and to care for living things. Next term we will grow beans and morning glory, and I cannot wait.",
+      translation: "Lớp chúng tôi có một khu vườn nhỏ sau trường. Tháng trước thầy Hùng, giáo viên của chúng tôi, bảo chúng tôi trồng rau ở đó. Chúng tôi chia thành bốn nhóm, và mỗi nhóm chăm sóc một luống đất.\n\nNhóm của tôi trồng cà chua và rau thơm. Đầu tiên chúng tôi dọn luống và nhổ cỏ dại. Sau đó chúng tôi trồng cây con và tưới nước mỗi sáng. Chúng tôi ghi ngày và chiều cao của từng cây vào sổ.\n\nLúc đầu một số cây mọc chậm vì đất khô. Thầy Hùng chỉ cho chúng tôi cách ủ phân từ lá khô. Sau hai tuần có phân ủ và nước, cây mọc cao và xanh. Chúng tôi thấy tự hào.\n\nThứ Sáu tuần trước chúng tôi hái những quả cà chua đầu tiên. Chúng nhỏ nhưng đỏ và ngọt. Chúng tôi rửa chúng và chia cho cả lớp. Mọi người nói cà chua của chúng tôi ngon hơn cà chua mua ở cửa hàng.\n\nDự án vườn dạy chúng tôi nhiều hơn môn khoa học. Chúng tôi học cách làm việc cùng nhau, chờ đợi kiên nhẫn, và chăm sóc sinh vật sống. Học kỳ tới chúng tôi sẽ trồng đậu và rau muống, và tôi rất mong chờ.",
+      phrases: [{ en: "a bed of soil", vi: "một luống đất" }, { en: "pulled up weeds", vi: "nhổ cỏ dại" }, { en: "make compost", vi: "ủ phân" }, { en: "picked our first tomatoes", vi: "hái những quả cà chua đầu tiên" }, { en: "work together", vi: "làm việc cùng nhau" }],
+      questions: [
+        { type: "MC", q: "How many groups does the class divide into?", o: ["Four groups", "Two groups", "Three groups", "Five groups"], a: 0, why: "Bài viết: We divided into four groups." },
+        { type: "MC", q: "What does the narrator's group grow?", o: ["Tomatoes and herbs", "Beans and morning glory", "Roses and sunflowers", "Rice and corn"], a: 0, why: "Bài viết: My group grows tomatoes and herbs." },
+        { type: "MC", q: "Why did some plants grow slowly at first?", o: ["Because the soil was dry", "Because there was no sun", "Because insects ate the leaves", "Because nobody watered them"], a: 0, why: "Bài viết: some plants grew slowly because the soil was dry." },
+        { type: "TF", q: "The first tomatoes were big.", o: ["True", "False"], a: 1, why: "Bài viết: They were small but red and sweet, nên câu này sai." },
+        { type: "COMP", q: "Next term they will grow beans and morning ___.", answer: "glory", why: "Bài viết: Next term we will grow beans and morning glory." }
+      ] },
+    { topic: "Đi lại trong phố", level: "Band 4.0", title: "A Bus Ride Across the City",
+      text: "Last Sunday my mother and I took a bus across the city to visit my aunt. We boarded route 32 at seven in the morning. The bus was not crowded, and we found seats near the window.\n\nThe bus stopped at the market, the school, and the old bridge. At each stop the driver announced the next stop clearly. An old man asked us for help with his bag, and my mother helped him find a seat.\n\nNear the city centre the bus became crowded. A young woman gave her seat to a pregnant lady, and everyone smiled. I thought about how kind strangers can be on a simple bus ride.\n\nAfter one hour we alighted at the terminal near my aunt's house. My aunt waited for us with hot tea and cakes. She laughed and said we looked tired after the long ride.\n\nOn the way home we talked about the trip. A bus ride is cheap and slow, but it shows you the whole city. I like the window seat best, because I can watch streets, shops, and people pass by.",
+      translation: "Chủ nhật tuần trước mẹ và tôi đi xe buýt qua thành phố để thăm dì. Chúng tôi lên tuyến 32 lúc bảy giờ sáng. Xe buýt không đông, và chúng tôi tìm được ghế gần cửa sổ.\n\nXe buýt dừng ở chợ, trường học và cầu cũ. Ở mỗi điểm dừng tài xế thông báo điểm dừng tiếp theo rõ ràng. Một cụ già nhờ chúng tôi giúp xách túi, và mẹ tôi giúp cụ tìm ghế ngồi.\n\nGần trung tâm thành phố xe buýt trở nên đông đúc. Một cô gái trẻ nhường ghế cho một phụ nữ mang thai, và mọi người mỉm cười. Tôi nghĩ về việc người lạ có thể tốt bụng thế nào trên một chuyến xe buýt đơn giản.\n\nSau một giờ chúng tôi xuống xe ở bến cuối gần nhà dì. Dì đợi chúng tôi với trà nóng và bánh. Dì cười và nói chúng tôi trông mệt sau chuyến đi dài.\n\nTrên đường về chúng tôi nói về chuyến đi. Đi xe buýt rẻ và chậm, nhưng nó cho bạn thấy toàn thành phố. Tôi thích ghế cửa sổ nhất, vì tôi có thể ngắm phố, cửa hàng và người qua lại.",
+      phrases: [{ en: "boarded route 32", vi: "lên tuyến 32" }, { en: "announced the next stop", vi: "thông báo điểm dừng tiếp theo" }, { en: "gave her seat", vi: "nhường ghế" }, { en: "alighted at the terminal", vi: "xuống xe ở bến cuối" }, { en: "watch streets pass by", vi: "ngắm phố phường trôi qua" }],
+      questions: [
+        { type: "MC", q: "Which bus route did they take?", o: ["Route 32", "Route 12", "Route 23", "Route 21"], a: 0, why: "Bài viết: We boarded route 32." },
+        { type: "MC", q: "What time did they board the bus?", o: ["At seven in the morning", "At eight in the morning", "At nine in the morning", "At noon"], a: 0, why: "Bài viết: We boarded route 32 at seven in the morning." },
+        { type: "MC", q: "Who did the young woman give her seat to?", o: ["A pregnant lady", "An old man", "A small child", "The driver"], a: 0, why: "Bài viết: A young woman gave her seat to a pregnant lady." },
+        { type: "TF", q: "The bus was crowded at the start of the trip.", o: ["True", "False"], a: 1, why: "Bài viết: The bus was not crowded at the start; it became crowded near the city centre." },
+        { type: "COMP", q: "After one hour they alighted at the ___.", answer: "terminal", why: "Bài viết: we alighted at the terminal near my aunt's house." }
+      ] },
+    { topic: "Ăn uống lành mạnh", level: "Band 4.0", title: "Healthy Lunches at School",
+      text: "Our school canteen sells many kinds of lunch, but not all of them are healthy. Fried chicken and sweet drinks sell fast, while vegetables and fruit stay on the shelves. Our teacher says we should think before we choose.\n\nLast month our class made a healthy lunch plan. We learned that a good lunch has rice or noodles, one protein food like fish or tofu, and many vegetables. Water is better than sweet drinks, because sweet drinks have too much sugar.\n\nEvery Monday we bring a healthy lunch from home. My lunch is rice, fried fish, and boiled morning glory. My friend Mai brings rice, tofu, and papaya salad. We share our food and talk about new recipes.\n\nAfter one month, something changed. More students buy vegetables at the canteen, and fewer buy sweet drinks. The canteen now sells fruit at a low price, and the cook adds a vegetable dish every day.\n\nHealthy lunch is not about eating less or feeling hungry. It is about choosing a balance: enough rice, enough protein, and plenty of vegetables. When we eat well, we learn better and feel stronger in the afternoon.",
+      translation: "Căng tin trường chúng tôi bán nhiều loại bữa trưa, nhưng không phải tất cả đều lành mạnh. Gà rán và đồ uống ngọt bán chạy, trong khi rau và trái cây còn nằm trên kệ. Thầy cô nói chúng tôi nên suy nghĩ trước khi chọn.\n\nTháng trước lớp chúng tôi lập kế hoạch bữa trưa lành mạnh. Chúng tôi học rằng bữa trưa tốt có cơm hoặc bún, một món giàu đạm như cá hoặc đậu phụ, và nhiều rau. Nước tốt hơn đồ uống ngọt, vì đồ uống ngọt có quá nhiều đường.\n\nMỗi thứ Hai chúng tôi mang bữa trưa lành mạnh từ nhà. Bữa trưa của tôi là cơm, cá rán và rau muống luộc. Bạn Mai mang cơm, đậu phụ và nộm đu đủ. Chúng tôi chia sẻ đồ ăn và nói về công thức mới.\n\nSau một tháng, có điều thay đổi. Nhiều học sinh mua rau ở căng tin hơn, và ít người mua đồ uống ngọt hơn. Căng tin giờ bán trái cây với giá rẻ, và đầu bếp thêm một món rau mỗi ngày.\n\nBữa trưa lành mạnh không phải là ăn ít hay cảm thấy đói. Đó là chọn sự cân bằng: đủ cơm, đủ đạm và nhiều rau. Khi ăn tốt, chúng tôi học tốt hơn và cảm thấy khỏe hơn vào buổi chiều.",
+      phrases: [{ en: "sell fast", vi: "bán chạy" }, { en: "think before we choose", vi: "suy nghĩ trước khi chọn" }, { en: "a healthy lunch plan", vi: "kế hoạch bữa trưa lành mạnh" }, { en: "too much sugar", vi: "quá nhiều đường" }, { en: "a balance", vi: "sự cân bằng" }],
+      questions: [
+        { type: "MC", q: "What sells fast at the canteen?", o: ["Fried chicken and sweet drinks", "Vegetables and fruit", "Rice and tofu", "Milk and bread"], a: 0, why: "Bài viết: Fried chicken and sweet drinks sell fast." },
+        { type: "MC", q: "What does a good lunch have?", o: ["Rice or noodles, one protein food, and many vegetables", "Only rice and sweet drinks", "Only fried chicken", "Only fruit"], a: 0, why: "Bài viết: a good lunch has rice or noodles, one protein food like fish or tofu, and many vegetables." },
+        { type: "MC", q: "What does Mai bring for lunch?", o: ["Rice, tofu, and papaya salad", "Rice, fried fish, and morning glory", "Noodles and fried chicken", "Bread and milk"], a: 0, why: "Bài viết: My friend Mai brings rice, tofu, and papaya salad." },
+        { type: "TF", q: "Water is worse than sweet drinks.", o: ["True", "False"], a: 1, why: "Bài viết: Water is better than sweet drinks, nên câu này sai." },
+        { type: "COMP", q: "Healthy lunch is about choosing a ___.", answer: "balance", why: "Bài viết: It is about choosing a balance." }
+      ] }
+  ]);
+})();
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    // ---------- BAND 4.5 — ĐỌC ----------
+    { topic: "Sống xanh khu phố", level: "Band 4.5", title: "Sorting Rubbish in Our Street",
+      text: "Our street has a new rule this year: every home must sort its rubbish. We have three bins: a green bin for paper and cardboard, a blue bin for plastic and cans, and a grey bin for other waste. A poster on the wall shows what goes where.\n\nAt first my family made many mistakes. My father put a plastic bottle in the green bin, and my little brother threw paper into the blue bin. My mother laughed and put a small picture above each bin. Now we rarely make mistakes.\n\nEvery Saturday morning the collectors come. They check the bins and thank homes that sort well. Last month our street won a small prize: ten new trees for the lane. We planted them together on Sunday, and children watered them every evening.\n\nSorting rubbish also saves money. Old paper and cans can be sold, and the money buys new bins and gloves. My neighbour Mrs Hoa says a clean street makes people happier and healthier. I agree with her.\n\nThe rule is simple, but it changes how we live. We buy fewer plastic bags, we reuse bottles, and we think before we throw things away. A small habit in one street can help the whole city breathe more easily.",
+      translation: "Phố của chúng tôi có quy định mới trong năm nay: mỗi nhà phải phân loại rác. Chúng tôi có ba thùng: thùng xanh cho giấy và bìa, thùng xanh dương cho nhựa và lon, và thùng xám cho rác khác. Một tấm áp phích trên tường cho biết cái gì bỏ vào đâu.\n\nLúc đầu gia đình tôi nhầm nhiều. Bố tôi bỏ chai nhựa vào thùng xanh lá, và em trai tôi vứt giấy vào thùng xanh dương. Mẹ tôi cười và dán một hình nhỏ phía trên mỗi thùng. Giờ chúng tôi hiếm khi nhầm.\n\nMỗi sáng thứ Bảy người thu gom tới. Họ kiểm tra thùng và cảm ơn những nhà phân loại tốt. Tháng trước phố chúng tôi giành một giải thưởng nhỏ: mười cây mới cho ngõ. Chúng tôi cùng trồng chúng vào Chủ nhật, và trẻ con tưới nước mỗi tối.\n\nPhân loại rác cũng tiết kiệm tiền. Giấy và lon cũ có thể bán được, và tiền đó mua thùng và găng tay mới. Hàng xóm của tôi, bà Hoa, nói phố sạch khiến mọi người vui vẻ và khỏe mạnh hơn. Tôi đồng ý với bà.\n\nQuy định thì đơn giản, nhưng nó thay đổi cách chúng tôi sống. Chúng tôi mua ít túi ni lông hơn, dùng lại chai, và suy nghĩ trước khi vứt đồ đi. Một thói quen nhỏ ở một con phố có thể giúp cả thành phố thở dễ dàng hơn.",
+      phrases: [{ en: "sort its rubbish", vi: "phân loại rác" }, { en: "what goes where", vi: "cái gì bỏ vào đâu" }, { en: "rarely make mistakes", vi: "hiếm khi nhầm" }, { en: "won a small prize", vi: "giành giải thưởng nhỏ" }, { en: "breathe more easily", vi: "thở dễ dàng hơn" }],
+      questions: [
+        { type: "MC", q: "What goes in the blue bin?", o: ["Plastic and cans", "Paper and cardboard", "Food waste", "Old clothes"], a: 0, why: "Bài viết: a blue bin for plastic and cans." },
+        { type: "MC", q: "What prize did the street win last month?", o: ["Ten new trees for the lane", "Ten new bins", "A money prize", "A new poster"], a: 0, why: "Bài viết: our street won a small prize: ten new trees for the lane." },
+        { type: "MC", q: "How does sorting rubbish save money?", o: ["Old paper and cans can be sold", "Collectors pay every home", "The city gives free bins", "Shops lower their prices"], a: 0, why: "Bài viết: Old paper and cans can be sold, and the money buys new bins and gloves." },
+        { type: "TF", q: "At first the family never made mistakes.", o: ["True", "False"], a: 1, why: "Bài viết: At first my family made many mistakes, nên câu này sai." },
+        { type: "COMP", q: "We buy fewer plastic ___.", answer: "bags", why: "Bài viết: We buy fewer plastic bags." }
+      ] },
+    { topic: "Thể thao cộng đồng", level: "Band 4.5", title: "A Weekend Football Team",
+      text: "Every Sunday morning, a group of neighbours plays football on the school field. The team has no coach and no uniforms, but it has one rule: everyone plays, and everyone has fun. Players are from twelve to sixty years old.\n\nI joined the team last spring. At first I was afraid because I had never played in a team. An old player named Mr Tuan taught me to pass the ball and to run to open space. After one month, I scored my first goal, and the whole team cheered.\n\nThe team also helps the neighbourhood. After each game, players clean the field and pick up rubbish. Once a month, they collect money for poor children in the ward. Last month they bought books and school bags for ten children.\n\nPlaying football changes how I spend my weekend. I wake up early, I exercise, and I meet people I would never meet at work. My neighbour, who is a doctor, plays in goal, and a young student plays beside me in defence.\n\nWinning is nice, but it is not the main thing. The main thing is friendship, health, and a clean field for children. If you live near us, come and join on Sunday. Bring water, wear sneakers, and do not worry about skill.",
+      translation: "Mỗi sáng Chủ nhật, một nhóm hàng xóm chơi bóng đá trên sân trường. Đội không có huấn luyện viên và không có đồng phục, nhưng có một quy định: ai cũng được chơi, và ai cũng vui vẻ. Cầu thủ từ mười hai tới sáu mươi tuổi.\n\nTôi tham gia đội vào mùa xuân năm ngoái. Lúc đầu tôi sợ vì tôi chưa bao giờ chơi trong một đội. Một cầu thủ lớn tuổi tên là bác Tuấn dạy tôi chuyền bóng và chạy tới chỗ trống. Sau một tháng, tôi ghi bàn đầu tiên, và cả đội reo hò.\n\nĐội cũng giúp đỡ khu phố. Sau mỗi trận đấu, cầu thủ dọn sân và nhặt rác. Mỗi tháng một lần, họ quyên tiền cho trẻ em nghèo trong phường. Tháng trước họ mua sách và cặp sách cho mười đứa trẻ.\n\nChơi bóng đá thay đổi cách tôi trải qua cuối tuần. Tôi dậy sớm, tập thể dục, và gặp những người tôi sẽ không bao giờ gặp ở nơi làm việc. Hàng xóm của tôi, một bác sĩ, chơi ở vị trí thủ môn, và một sinh viên trẻ chơi bên cạnh tôi ở hàng phòng ngự.\n\nThắng thì vui, nhưng đó không phải điều chính. Điều chính là tình bạn, sức khỏe, và sân sạch cho trẻ con. Nếu bạn sống gần chúng tôi, hãy tới tham gia vào Chủ nhật. Mang nước, mang giày thể thao, và đừng lo về kỹ năng.",
+      phrases: [{ en: "everyone plays", vi: "ai cũng được chơi" }, { en: "pass the ball", vi: "chuyền bóng" }, { en: "scored my first goal", vi: "ghi bàn đầu tiên" }, { en: "pick up rubbish", vi: "nhặt rác" }, { en: "do not worry about skill", vi: "đừng lo về kỹ năng" }],
+      questions: [
+        { type: "MC", q: "What is the team's one rule?", o: ["Everyone plays, and everyone has fun", "Only good players can play", "Everyone must wear a uniform", "The team must always win"], a: 0, why: "Bài viết: it has one rule: everyone plays, and everyone has fun." },
+        { type: "MC", q: "Who taught the narrator to pass the ball?", o: ["Mr Tuan", "The doctor", "A young student", "The coach"], a: 0, why: "Bài viết: An old player named Mr Tuan taught me to pass the ball." },
+        { type: "MC", q: "What does the team do once a month?", o: ["Collect money for poor children in the ward", "Buy new uniforms", "Play against another city", "Clean the school"], a: 0, why: "Bài viết: Once a month, they collect money for poor children in the ward." },
+        { type: "TF", q: "The team has a professional coach.", o: ["True", "False"], a: 1, why: "Bài viết: The team has no coach, nên câu này sai." },
+        { type: "COMP", q: "Bring water, wear sneakers, and do not worry about ___.", answer: "skill", why: "Bài viết: Bring water, wear sneakers, and do not worry about skill." }
+      ] },
+    { topic: "Việc làm thêm", level: "Band 4.5", title: "A Student's Part-Time Job",
+      text: "My name is Minh, and I am a second-year student. Last summer I looked for a part-time job to pay for my books. I applied to a small bookshop near my college, and after a short interview, I got the job.\n\nI work three evenings a week, from five to nine. My jobs are simple: I greet clients, I put new books on the shelves, and I help people find the books they want. My supervisor, Mrs Thu, is patient and shows me everything slowly.\n\nThe job teaches me more than money. I learn to speak politely to strangers, to work on time, and to solve small problems. Once a client could not find a book, so I searched the catalogue and called another shop. The client thanked me with a smile.\n\nOf course, the job is not always easy. On rainy evenings few clients come, and the shop feels quiet. Sometimes I am tired after classes, but my wage helps me buy books and pay for my bus card. My parents are proud of me.\n\nIf you want a part-time job, start with something you like. A job you like feels less like work and more like learning. For me, a bookshop is the best place, because I love books and I meet people who love them too.",
+      translation: "Tôi tên là Minh, và tôi là sinh viên năm hai. Mùa hè năm ngoái tôi tìm việc làm thêm để trả tiền sách. Tôi nộp đơn vào một hiệu sách nhỏ gần trường, và sau một buổi phỏng vấn ngắn, tôi được nhận.\n\nTôi làm ba buổi tối mỗi tuần, từ năm giờ tới chín giờ. Công việc của tôi đơn giản: tôi chào khách hàng, xếp sách mới lên kệ, và giúp mọi người tìm sách họ muốn. Người giám sát của tôi, cô Thu, kiên nhẫn và chỉ cho tôi mọi thứ từ từ.\n\nCông việc dạy tôi nhiều hơn tiền bạc. Tôi học cách nói chuyện lịch sự với người lạ, làm việc đúng giờ, và giải quyết vấn đề nhỏ. Có lần một khách hàng không tìm thấy sách, nên tôi tra mục lục và gọi cho một cửa hàng khác. Khách hàng cảm ơn tôi bằng nụ cười.\n\nTất nhiên, công việc không phải lúc nào cũng dễ dàng. Vào buổi tối mưa ít khách tới, và cửa hàng cảm thấy yên tĩnh. Đôi khi tôi mệt sau giờ học, nhưng tiền công giúp tôi mua sách và trả tiền thẻ xe buýt. Bố mẹ tôi tự hào về tôi.\n\nNếu bạn muốn việc làm thêm, hãy bắt đầu với thứ bạn thích. Công việc bạn thích ít giống công việc hơn và giống học tập hơn. Với tôi, hiệu sách là nơi tốt nhất, vì tôi yêu sách và tôi gặp những người cũng yêu sách.",
+      phrases: [{ en: "pay for my books", vi: "trả tiền sách" }, { en: "greet clients", vi: "chào khách hàng" }, { en: "solve small problems", vi: "giải quyết vấn đề nhỏ" }, { en: "on rainy evenings", vi: "vào buổi tối mưa" }, { en: "feels less like work", vi: "ít giống công việc hơn" }],
+      questions: [
+        { type: "MC", q: "Where does Minh work?", o: ["At a small bookshop near his college", "At a cafe near his college", "At a big supermarket", "At a library in the city"], a: 0, why: "Bài viết: I applied to a small bookshop near my college." },
+        { type: "MC", q: "When does Minh work?", o: ["Three evenings a week, from five to nine", "Every evening, from six to ten", "Every morning, from seven to eleven", "Two days a week, from nine to five"], a: 0, why: "Bài viết: I work three evenings a week, from five to nine." },
+        { type: "MC", q: "What did Minh do when a client could not find a book?", o: ["Searched the catalogue and called another shop", "Told the client to come back tomorrow", "Asked the client to buy another book", "Closed the shop early"], a: 0, why: "Bài viết: I searched the catalogue and called another shop." },
+        { type: "TF", q: "Minh works every evening.", o: ["True", "False"], a: 1, why: "Bài viết: I work three evenings a week, nên câu này sai." },
+        { type: "COMP", q: "My wage helps me buy books and pay for my bus ___.", answer: "card", why: "Bài viết: my wage helps me buy books and pay for my bus card." }
+      ] },
+    { topic: "Du lịch trong nước", level: "Band 4.5", title: "A Trip to Ha Long by Bus and Boat",
+      text: "Last summer my family travelled to Ha Long by bus and boat. We left home at five in the morning and took a bus from the city terminal. The bus ride took four hours, and we watched rice fields and small towns pass by.\n\nAt noon we reached the harbour and boarded a small boat. The boat moved slowly between tall islands that rise from the sea. Our guide told us the names of the islands and stories about fishermen who live there.\n\nIn the afternoon we visited a big cave. Inside, the cave was cool and dark, and lamps showed strange rock shapes. The guide said one rock looks like a dragon and another looks like a turtle. We took many photos.\n\nIn the evening we ate seafood on the boat and watched the sunset. The sky turned orange and pink, and the water shone like glass. My little sister said it was the most beautiful evening of her life.\n\nThe trip was short, only two days, but it gave us many memories. Travelling together teaches a family to share, to wait, and to enjoy simple things. I hope we can travel together again next summer.",
+      translation: "Mùa hè năm ngoái gia đình tôi đi Hạ Long bằng xe buýt và thuyền. Chúng tôi rời nhà lúc năm giờ sáng và bắt xe buýt từ bến xe thành phố. Chuyến xe buýt mất bốn giờ, và chúng tôi ngắm cánh đồng lúa và thị trấn nhỏ trôi qua.\n\nLúc trưa chúng tôi tới cảng và lên một chiếc thuyền nhỏ. Thuyền trôi chậm giữa những hòn đảo cao nhô lên từ biển. Hướng dẫn viên kể cho chúng tôi tên các đảo và chuyện về ngư dân sống ở đó.\n\nBuổi chiều chúng tôi thăm một hang động lớn. Bên trong, hang mát và tối, và đèn chiếu những hình đá kỳ lạ. Hướng dẫn viên nói một tảng đá trông giống rồng và một tảng khác trông giống rùa. Chúng tôi chụp nhiều ảnh.\n\nBuổi tối chúng tôi ăn hải sản trên thuyền và ngắm hoàng hôn. Bầu trời chuyển cam và hồng, và mặt nước sáng như gương. Em gái nhỏ của tôi nói đó là buổi tối đẹp nhất trong đời em.\n\nChuyến đi ngắn, chỉ hai ngày, nhưng mang lại cho chúng tôi nhiều kỷ niệm. Du lịch cùng nhau dạy gia đình biết chia sẻ, chờ đợi, và tận hưởng những điều giản dị. Tôi mong chúng tôi có thể cùng đi du lịch nữa vào mùa hè tới.",
+      phrases: [{ en: "by bus and boat", vi: "bằng xe buýt và thuyền" }, { en: "rise from the sea", vi: "nhô lên từ biển" }, { en: "looks like a dragon", vi: "trông giống rồng" }, { en: "shone like glass", vi: "sáng như gương" }, { en: "many memories", vi: "nhiều kỷ niệm" }],
+      questions: [
+        { type: "MC", q: "How long did the bus ride take?", o: ["Four hours", "Two hours", "Three hours", "Five hours"], a: 0, why: "Bài viết: The bus ride took four hours." },
+        { type: "MC", q: "What did they visit in the afternoon?", o: ["A big cave", "A small temple", "A flower garden", "A fishing village"], a: 0, why: "Bài viết: In the afternoon we visited a big cave." },
+        { type: "MC", q: "What did the little sister say about the evening?", o: ["It was the most beautiful evening of her life", "It was too long and boring", "It was cold and dark", "It was the first time she saw the sea"], a: 0, why: "Bài viết: My little sister said it was the most beautiful evening of her life." },
+        { type: "TF", q: "The trip lasted one week.", o: ["True", "False"], a: 1, why: "Bài viết: The trip was short, only two days, nên câu này sai." },
+        { type: "COMP", q: "The sky turned orange and ___.", answer: "pink", why: "Bài viết: The sky turned orange and pink." }
+      ] }
+  ]);
+})();
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.listeningPlus.push.apply(CONTENT.listeningPlus, [
+    // ---------- BAND 3.5 — NGHE DÀI ----------
+    { section: "Section 2", band: "Band 3.5", topic: "A neighbour helps a new family move in",
+      text: "A: Good morning! I am Mrs Lan from next door. Welcome to our lane. B: Good morning! Thank you very much. We moved here yesterday, and we still have many boxes to open. A: Do not worry. My son can help you carry the big boxes this afternoon. B: That is very kind of you. Where is the nearest market, please? A: Walk to the end of the lane and turn left. The market is two hundred metres away, on the right side of the street. B: Thank you. And where can my son go to school? A: The primary school is behind the market. It opens at seven in the morning and closes at four in the afternoon. B: Good. My son is eight years old. A: Then he can walk with my grandson. They can go together every morning, and they can play together after school. B: That is wonderful. Thank you for all your help. A: Neighbours help each other. Please come for tea at my house this evening!",
+      questions: [
+        { type: "MC", q: "When did the new family move in?", o: ["Yesterday", "Last week", "This morning", "Last month"], a: 0, why: "Bài nghe: We moved here yesterday." },
+        { type: "MC", q: "Where is the nearest market?", o: ["At the end of the lane, turn left, two hundred metres away", "Behind the school", "Next to the bus stop", "Across the river"], a: 0, why: "Bài nghe: Walk to the end of the lane and turn left. The market is two hundred metres away." },
+        { type: "MC", q: "How old is the new family's son?", o: ["Eight years old", "Six years old", "Ten years old", "Twelve years old"], a: 0, why: "Bài nghe: My son is eight years old." },
+        { type: "TF", q: "Mrs Lan invites the new family for tea this evening.", o: ["True", "False"], a: 0, why: "Bài nghe: Please come for tea at my house this evening." },
+        { type: "COMP", q: "The primary school opens at ___ in the morning.", answer: "seven", why: "Bài nghe: It opens at seven in the morning." }
+      ] },
+    { section: "Section 2", band: "Band 3.5", topic: "Announcements at the weekend sports day",
+      text: "Good morning, everyone, and welcome to our school sports day! The sports day starts at eight o'clock in the morning on the school field. First, we have a running race for children under ten. Then, at nine o'clock, older students run a longer race around the field. At ten o'clock, we have a tug of war between classes, and everyone can join and cheer. Lunch is at eleven thirty in the school yard. Please bring your own water bottle and wear a hat, because the sun is strong. In the afternoon, we have a football game between teachers and parents. It is always funny, and the children love to watch it. Prizes are given at four o'clock in the afternoon, near the main gate. Every child who joins a game gets a small gift. Please keep the field clean and put your rubbish in the bins. Thank you, and have a wonderful sports day!",
+      questions: [
+        { type: "MC", q: "What time does the sports day start?", o: ["At eight o'clock in the morning", "At nine o'clock", "At ten o'clock", "At seven o'clock"], a: 0, why: "Bài nghe: The sports day starts at eight o'clock in the morning." },
+        { type: "MC", q: "What happens at ten o'clock?", o: ["A tug of war between classes", "A running race for children under ten", "A football game", "Prize giving"], a: 0, why: "Bài nghe: At ten o'clock, we have a tug of war between classes." },
+        { type: "MC", q: "What should children bring?", o: ["Their own water bottle and a hat", "A football and a book", "A raincoat and gloves", "A camera and money"], a: 0, why: "Bài nghe: Please bring your own water bottle and wear a hat." },
+        { type: "TF", q: "Prizes are given at four o'clock near the main gate.", o: ["True", "False"], a: 0, why: "Bài nghe: Prizes are given at four o'clock in the afternoon, near the main gate." },
+        { type: "COMP", q: "Lunch is at eleven ___ in the school yard.", answer: "thirty", why: "Bài nghe: Lunch is at eleven thirty in the school yard." }
+      ] },
+    { section: "Section 2", band: "Band 3.5", topic: "A talk about the school lost-and-found box",
+      text: "Hello, children. This is a message about our lost-and-found box. The box is near the school gate, next to the guard's room. If you lose something, please come and look in the box before Friday. This week the box has many things. There is a black umbrella with a broken handle. There is a red hat with a small star on it. There is a blue water bottle with the name Nam on it. There is also a notebook with drawings of fish, and a pair of white gloves. If one of these things is yours, please tell your teacher your name and your class. Your teacher will take you to the box after lunch. Please write your name on your things, so we can find the owner easily. Things that nobody takes after two weeks go to poor children in the ward. Thank you for listening, and please take care of your things.",
+      questions: [
+        { type: "MC", q: "Where is the lost-and-found box?", o: ["Near the school gate, next to the guard's room", "In the library", "In the classroom", "Behind the market"], a: 0, why: "Bài nghe: The box is near the school gate, next to the guard's room." },
+        { type: "MC", q: "What name is on the blue water bottle?", o: ["Nam", "Lan", "Hoa", "Tuan"], a: 0, why: "Bài nghe: a blue water bottle with the name Nam on it." },
+        { type: "MC", q: "What should children do if something is theirs?", o: ["Tell their teacher their name and class", "Take it home at once", "Buy a new one", "Ask the guard for money"], a: 0, why: "Bài nghe: please tell your teacher your name and your class." },
+        { type: "TF", q: "Things nobody takes after two weeks go to poor children.", o: ["True", "False"], a: 0, why: "Bài nghe: Things that nobody takes after two weeks go to poor children in the ward." },
+        { type: "COMP", q: "There is a red hat with a small ___ on it.", answer: "star", why: "Bài nghe: a red hat with a small star on it." }
+      ] },
+    // ---------- BAND 4.0 — NGHE DÀI ----------
+    { section: "Section 2", band: "Band 4.0", topic: "A student asks about a part-time job at the library",
+      text: "A: Good afternoon. I am a student, and I would like to ask about the part-time job at the library. B: Good afternoon. Yes, we need a student to work on Saturday and Sunday mornings. A: What would I do? B: You would put returned books back on the shelves, help visitors find books, and keep the reading room tidy. A: What time would I start and finish? B: You start at eight in the morning and finish at twelve at noon. That is four hours each day. A: How much is the pay? B: The pay is twenty-five thousand dong an hour, and you also get a free library card. A: That sounds good. Do I need experience? B: No, you do not need experience, but you must be careful, polite, and on time. A: I am careful, and I love books. When can I start? B: You can start next Saturday. Please bring your student card and come at half past seven for a short training. A: Thank you very much. I will come on time.",
+      questions: [
+        { type: "MC", q: "When does the library need a student?", o: ["On Saturday and Sunday mornings", "On Monday and Tuesday evenings", "Every afternoon", "On Friday nights"], a: 0, why: "Bài nghe: we need a student to work on Saturday and Sunday mornings." },
+        { type: "MC", q: "What are the working hours?", o: ["From eight in the morning to twelve at noon", "From nine to five", "From one to six", "From seven to eleven"], a: 0, why: "Bài nghe: You start at eight in the morning and finish at twelve at noon." },
+        { type: "MC", q: "How much is the pay an hour?", o: ["Twenty-five thousand dong", "Twenty thousand dong", "Thirty thousand dong", "Fifteen thousand dong"], a: 0, why: "Bài nghe: The pay is twenty-five thousand dong an hour." },
+        { type: "TF", q: "The student needs experience for the job.", o: ["True", "False"], a: 1, why: "Bài nghe: No, you do not need experience." },
+        { type: "COMP", q: "The student also gets a free library ___.", answer: "card", why: "Bài nghe: you also get a free library card." }
+      ] },
+    { section: "Section 2", band: "Band 4.0", topic: "A talk about saving water at home",
+      text: "Good evening, everyone. Today I want to talk about saving water at home, because water is precious and easy to waste. First, take short showers. A shower of five minutes uses much less water than a shower of fifteen minutes. Second, turn off the tap while you brush your teeth. A running tap can waste six litres of water in one minute. Third, fix leaking taps quickly. One small leak can waste twenty litres a day, and that is a lot in one month. Fourth, reuse water when you can. Water from washing vegetables can water the plants in your garden. Finally, wash clothes only when you have a full load, not one or two shirts. If every family in our street saves a little water each day, we can save thousands of litres every month. Saving water also saves money, and it helps our city in the dry season. Thank you for listening, and start with one small habit tonight.",
+      questions: [
+        { type: "MC", q: "How much water can a running tap waste in one minute?", o: ["Six litres", "Two litres", "Ten litres", "Twenty litres"], a: 0, why: "Bài nghe: A running tap can waste six litres of water in one minute." },
+        { type: "MC", q: "How much can one small leak waste a day?", o: ["Twenty litres", "Six litres", "Five litres", "Fifty litres"], a: 0, why: "Bài nghe: One small leak can waste twenty litres a day." },
+        { type: "MC", q: "What can water from washing vegetables do?", o: ["Water the plants in the garden", "Wash the car", "Cook rice", "Clean the floor"], a: 0, why: "Bài nghe: Water from washing vegetables can water the plants in your garden." },
+        { type: "TF", q: "A shower of five minutes uses more water than a shower of fifteen minutes.", o: ["True", "False"], a: 1, why: "Bài nghe: A shower of five minutes uses much less water than a shower of fifteen minutes." },
+        { type: "COMP", q: "Wash clothes only when you have a full ___.", answer: "load", why: "Bài nghe: wash clothes only when you have a full load." }
+      ] },
+    { section: "Section 2", band: "Band 4.0", topic: "Two friends plan a charity book sale",
+      text: "A: Lan, I have an idea. Let us hold a charity book sale at school next Saturday. B: A charity book sale? A: We ask students to donate old books they do not read any more. Then we sell the books cheaply in the school yard, and we give the money to poor children. B: That is a great idea! When do we start collecting books? A: We start on Monday. We put a big box near the library, and students put their books in it all week. B: How much do we sell each book for? A: Ten thousand dong for a small book, and twenty thousand for a big book. B: And what about posters? A: We make posters on Wednesday, and we put them on the school board and at the gate. B: Who helps on Saturday? A: Our group of six friends helps. Two friends sell books, two friends take money, and two friends help visitors. B: Good plan. Let us tell our teacher tomorrow and ask for her help. A: Yes, let us do it.",
+      questions: [
+        { type: "MC", q: "When is the charity book sale?", o: ["Next Saturday", "Next Sunday", "This Friday", "Next Monday"], a: 0, why: "Bài nghe: Let us hold a charity book sale at school next Saturday." },
+        { type: "MC", q: "Where do students put donated books?", o: ["In a big box near the library", "In the classroom", "At the school gate", "In the canteen"], a: 0, why: "Bài nghe: We put a big box near the library." },
+        { type: "MC", q: "How much is a big book?", o: ["Twenty thousand dong", "Ten thousand dong", "Thirty thousand dong", "Five thousand dong"], a: 0, why: "Bài nghe: twenty thousand for a big book." },
+        { type: "TF", q: "The money goes to poor children.", o: ["True", "False"], a: 0, why: "Bài nghe: we give the money to poor children." },
+        { type: "COMP", q: "We make posters on ___.", answer: "Wednesday", why: "Bài nghe: We make posters on Wednesday." }
+      ] },
+    // ---------- BAND 4.5 — NGHE DÀI ----------
+    { section: "Section 3", band: "Band 4.5", topic: "Students discuss the results of a class survey about sleep",
+      text: "A: Our survey is finished. Thirty students answered questions about sleep, and the results are surprising. B: What did you find? A: On average, students sleep only six hours a night, not eight. Most students go to bed after eleven o'clock, and many use their phones in bed for one more hour. B: That explains why so many students feel tired in the morning. A: Yes. Twenty students say they feel sleepy in the first lesson. Only five students say they sleep well every night. B: What do the five students do differently? A: They turn off their phones at nine o'clock, they read a book before bed, and they go to bed at the same time every night. B: That sounds simple, but it is hard to do. A: Our teacher suggests a small change: put the phone outside the bedroom and read for fifteen minutes. B: I will try that tonight. A: Good. Let us ask the class again in two weeks and see if the numbers change.",
+      questions: [
+        { type: "MC", q: "How many students answered the survey?", o: ["Thirty students", "Twenty students", "Forty students", "Fifteen students"], a: 0, why: "Bài nghe: Thirty students answered questions about sleep." },
+        { type: "MC", q: "How many hours do students sleep on average?", o: ["Six hours", "Eight hours", "Seven hours", "Five hours"], a: 0, why: "Bài nghe: students sleep only six hours a night, not eight." },
+        { type: "MC", q: "What do the five students who sleep well do?", o: ["Turn off phones at nine, read before bed, and sleep at the same time", "Drink coffee at night", "Watch films in bed", "Sleep in the afternoon"], a: 0, why: "Bài nghe: They turn off their phones at nine o'clock, they read a book before bed, and they go to bed at the same time every night." },
+        { type: "TF", q: "Twenty students feel sleepy in the first lesson.", o: ["True", "False"], a: 0, why: "Bài nghe: Twenty students say they feel sleepy in the first lesson." },
+        { type: "COMP", q: "Many students use their phones in bed for one more ___.", answer: "hour", why: "Bài nghe: many use their phones in bed for one more hour." }
+      ] },
+    { section: "Section 3", band: "Band 4.5", topic: "A talk about a new bike-sharing station",
+      text: "Good morning. Today I want to tell you about our new bike-sharing station near the market. The station has twenty bikes, and anyone can use them. First, you need a card or an app on your phone. Put your card on the machine, or open the app and scan the code on the bike. Then, take the bike and ride. You can ride for one hour for ten thousand dong. If you ride longer, you pay five thousand dong for each extra hour. You must return the bike to any station in the city, not only this one. Lock the bike well, or you may pay for a lost bike. Children under fourteen must ride with an adult. The station opens at six in the morning and closes at ten at night. Please ride slowly in crowded streets and wear a helmet. Bike sharing is cheap, healthy, and good for our city, because it means fewer cars and cleaner air. Try it this weekend, and tell your friends about it.",
+      questions: [
+        { type: "MC", q: "How many bikes does the station have?", o: ["Twenty bikes", "Ten bikes", "Thirty bikes", "Fifteen bikes"], a: 0, why: "Bài nghe: The station has twenty bikes." },
+        { type: "MC", q: "How much is one hour of riding?", o: ["Ten thousand dong", "Five thousand dong", "Twenty thousand dong", "Fifteen thousand dong"], a: 0, why: "Bài nghe: You can ride for one hour for ten thousand dong." },
+        { type: "MC", q: "Where must you return the bike?", o: ["To any station in the city", "Only to this station", "To your home", "To the market"], a: 0, why: "Bài nghe: You must return the bike to any station in the city." },
+        { type: "TF", q: "Children under fourteen must ride with an adult.", o: ["True", "False"], a: 0, why: "Bài nghe: Children under fourteen must ride with an adult." },
+        { type: "COMP", q: "The station closes at ten at ___.", answer: "night", why: "Bài nghe: closes at ten at night." }
+      ] },
+    { section: "Section 3", band: "Band 4.5", topic: "An interview for a weekend job as a tour guide",
+      text: "A: Good morning, and thank you for coming. You applied for the weekend job as a tour guide, is that right? B: Yes, good morning. I love my city, and I would like to show it to visitors. A: Tell me about your experience. B: Last summer I helped my uncle, who is a guide at the old quarter. I walked with small groups, told stories about old streets, and answered questions in English. A: Good. What languages do you speak? B: I speak Vietnamese and English. My English is not perfect, but visitors understand me well. A: When can you work? B: I can work on Saturdays and Sundays, from eight in the morning to five in the afternoon. A: The job pays forty thousand dong an hour, and you get free lunch on tour days. B: That sounds good. A: What do you do if a visitor is lost? B: I stay calm, call the visitor, and wait at a clear meeting point. A: Thank you. We will call you on Wednesday with our answer.",
+      questions: [
+        { type: "MC", q: "What job did the candidate apply for?", o: ["A weekend job as a tour guide", "A job as a bus driver", "A job at a bookshop", "A job as a teacher"], a: 0, why: "Bài nghe: You applied for the weekend job as a tour guide." },
+        { type: "MC", q: "Where did the candidate help last summer?", o: ["At the old quarter with his uncle", "At a hotel", "At a school", "At a market"], a: 0, why: "Bài nghe: I helped my uncle, who is a guide at the old quarter." },
+        { type: "MC", q: "How much is the pay an hour?", o: ["Forty thousand dong", "Thirty thousand dong", "Twenty-five thousand dong", "Fifty thousand dong"], a: 0, why: "Bài nghe: The job pays forty thousand dong an hour." },
+        { type: "TF", q: "The candidate can work on Saturdays and Sundays.", o: ["True", "False"], a: 0, why: "Bài nghe: I can work on Saturdays and Sundays." },
+        { type: "COMP", q: "We will call you on ___ with our answer.", answer: "Wednesday", why: "Bài nghe: We will call you on Wednesday with our answer." }
+      ] }
+  ]);
+})();
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.speaking.push.apply(CONTENT.speaking, [
+    // ---------- BAND 3.5 — NÓI ----------
+    { partNum: 1, topicStd: "Thức ăn và gia đình", part: "Part 1", topic: "Daily Meals - Bữa ăn hằng ngày", band: "Band 3.5",
+      lines: [
+        { who: "Examiner", en: "Let us talk about daily meals. What do you usually eat for breakfast?", vi: "Chúng ta hãy nói về bữa ăn hằng ngày. Bạn thường ăn gì vào bữa sáng?" },
+        { who: "Candidate", en: "I usually eat rice porridge with pork, or bread with eggs. I drink a glass of milk, too.", vi: "Tôi thường ăn cháo thịt lợn, hoặc bánh mì với trứng. Tôi cũng uống một ly sữa." },
+        { who: "Examiner", en: "Who cooks meals in your family?", vi: "Ai nấu ăn trong gia đình bạn?" },
+        { who: "Candidate", en: "My mother cooks most meals, and my grandmother helps her on Sundays.", vi: "Mẹ tôi nấu hầu hết các bữa ăn, và bà tôi giúp mẹ vào Chủ nhật." },
+        { who: "Examiner", en: "Do you like eating at home or eating out?", vi: "Bạn thích ăn ở nhà hay ăn ngoài?" },
+        { who: "Candidate", en: "I like eating at home, because home food is clean and full of love.", vi: "Tôi thích ăn ở nhà, vì đồ ăn ở nhà sạch sẽ và đầy tình yêu thương." }
+      ],
+      quiz: [
+        { q: "Thí sinh thường ăn gì vào bữa sáng?", o: ["Cháo thịt lợn hoặc bánh mì với trứng", "Chỉ ăn trái cây", "Chỉ uống cà phê"], a: 0, why: "Thí sinh nói: I usually eat rice porridge with pork, or bread with eggs." },
+        { q: "Ai nấu ăn trong gia đình thí sinh?", o: ["Mẹ nấu hầu hết các bữa, bà giúp vào Chủ nhật", "Chỉ có bố nấu", "Thí sinh tự nấu mọi bữa"], a: 0, why: "Thí sinh nói: My mother cooks most meals, and my grandmother helps her on Sundays." },
+        { q: "Thí sinh thích ăn ở nhà hay ăn ngoài?", o: ["Ăn ở nhà", "Ăn ngoài", "Cả hai như nhau"], a: 0, why: "Thí sinh nói: I like eating at home, because home food is clean and full of love." }
+      ] },
+    { partNum: 1, topicStd: "Bạn bè và trường học", part: "Part 1", topic: "My Best Friend at School - Bạn thân ở trường", band: "Band 3.5",
+      lines: [
+        { who: "Examiner", en: "Let us talk about your best friend. Who is your best friend at school?", vi: "Chúng ta hãy nói về bạn thân của bạn. Ai là bạn thân của bạn ở trường?" },
+        { who: "Candidate", en: "My best friend is Mai. She sits next to me in class, and we share books.", vi: "Bạn thân của tôi là Mai. Bạn ấy ngồi cạnh tôi trong lớp, và chúng tôi chia sẻ sách." },
+        { who: "Examiner", en: "What do you do together after school?", vi: "Các bạn làm gì cùng nhau sau giờ học?" },
+        { who: "Candidate", en: "We walk home together and do homework at her house. Sometimes we play badminton.", vi: "Chúng tôi cùng đi bộ về nhà và làm bài tập ở nhà bạn ấy. Đôi khi chúng tôi chơi cầu lông." },
+        { who: "Examiner", en: "Why do you like her?", vi: "Vì sao bạn thích bạn ấy?" },
+        { who: "Candidate", en: "Because she is kind and funny. She helps me when I do not understand a lesson.", vi: "Vì bạn ấy tốt bụng và vui tính. Bạn ấy giúp tôi khi tôi không hiểu bài." }
+      ],
+      quiz: [
+        { q: "Bạn thân ở trường của thí sinh tên là gì?", o: ["Mai", "Lan", "Hoa"], a: 0, why: "Thí sinh nói: My best friend is Mai." },
+        { q: "Hai bạn làm gì sau giờ học?", o: ["Cùng đi bộ về nhà và làm bài tập", "Đi chợ cùng nhau", "Học đàn cùng nhau"], a: 0, why: "Thí sinh nói: We walk home together and do homework at her house." },
+        { q: "Vì sao thí sinh thích Mai?", o: ["Vì Mai tốt bụng, vui tính và hay giúp đỡ", "Vì Mai học giỏi nhất lớp", "Vì Mai nhà gần trường"], a: 0, why: "Thí sinh nói: Because she is kind and funny. She helps me when I do not understand a lesson." }
+      ] },
+    { partNum: 2, topicStd: "Bản thân và gia đình", part: "Part 2", topic: "Describe a person in your family you admire - Mô tả một người trong gia đình bạn ngưỡng mộ", band: "Band 3.5",
+      lines: [
+        { who: "Examiner", en: "Now I will give you a topic. Describe a person in your family you admire. You have one minute to prepare, then speak for one or two minutes.", vi: "Bây giờ tôi sẽ đưa cho bạn một chủ đề. Hãy mô tả một người trong gia đình bạn ngưỡng mộ. Bạn có một phút chuẩn bị, rồi nói trong một tới hai phút." },
+        { who: "Candidate", en: "I admire my grandmother. She is seventy years old, and she lives in our village.", vi: "Tôi ngưỡng mộ bà tôi. Bà bảy mươi tuổi, và bà sống ở làng chúng tôi." },
+        { who: "Examiner", en: "What does she do every day?", vi: "Bà làm gì mỗi ngày?" },
+        { who: "Candidate", en: "She wakes up early, cooks for the family, and grows flowers in the garden.", vi: "Bà dậy sớm, nấu ăn cho gia đình, và trồng hoa trong vườn." },
+        { who: "Examiner", en: "Why do you admire her?", vi: "Vì sao bạn ngưỡng mộ bà?" },
+        { who: "Candidate", en: "Because she works hard and never complains. She teaches me to be kind and patient.", vi: "Vì bà làm việc chăm chỉ và không bao giờ than phiền. Bà dạy tôi sống tốt bụng và kiên nhẫn." }
+      ],
+      quiz: [
+        { q: "Thí sinh ngưỡng mộ ai?", o: ["Bà của thí sinh", "Mẹ của thí sinh", "Cô giáo của thí sinh"], a: 0, why: "Thí sinh nói: I admire my grandmother." },
+        { q: "Bà của thí sinh bao nhiêu tuổi?", o: ["Bảy mươi tuổi", "Sáu mươi tuổi", "Tám mươi tuổi"], a: 0, why: "Thí sinh nói: She is seventy years old." },
+        { q: "Vì sao thí sinh ngưỡng mộ bà?", o: ["Vì bà chăm chỉ, không than phiền, dạy sống tốt bụng và kiên nhẫn", "Vì bà giàu có", "Vì bà sống ở thành phố"], a: 0, why: "Thí sinh nói: Because she works hard and never complains. She teaches me to be kind and patient." }
+      ] },
+    { partNum: 3, topicStd: "Xã hội và cộng đồng", part: "Part 3", topic: "Helping Neighbours - Giúp đỡ hàng xóm", band: "Band 3.5",
+      lines: [
+        { who: "Examiner", en: "Let us talk about helping neighbours. Why is it good to help neighbours?", vi: "Chúng ta hãy nói về giúp đỡ hàng xóm. Vì sao giúp đỡ hàng xóm là điều tốt?" },
+        { who: "Candidate", en: "Because neighbours live close to us, and they can help us quickly when we need help.", vi: "Vì hàng xóm sống gần chúng ta, và họ có thể giúp chúng ta nhanh chóng khi chúng ta cần giúp đỡ." },
+        { who: "Examiner", en: "Do young people help neighbours as much as old people?", vi: "Người trẻ có giúp đỡ hàng xóm nhiều như người già không?" },
+        { who: "Candidate", en: "I think old people help more, because they have more time and know everyone in the lane.", vi: "Tôi nghĩ người già giúp đỡ nhiều hơn, vì họ có nhiều thời gian hơn và biết mọi người trong ngõ." },
+        { who: "Examiner", en: "What can schools do to teach children to help others?", vi: "Trường học có thể làm gì để dạy trẻ em giúp đỡ người khác?" },
+        { who: "Candidate", en: "Schools can organise clean-up days and visits to old people, so children learn by doing.", vi: "Trường học có thể tổ chức ngày dọn dẹp và chuyến thăm người già, để trẻ em học bằng cách làm thật." }
+      ],
+      quiz: [
+        { q: "Vì sao giúp hàng xóm là điều tốt?", o: ["Vì hàng xóm sống gần và có thể giúp nhanh khi cần", "Vì hàng xóm giàu có", "Vì hàng xóm cho quà"], a: 0, why: "Thí sinh nói: neighbours live close to us, and they can help us quickly when we need help." },
+        { q: "Theo thí sinh, ai giúp hàng xóm nhiều hơn?", o: ["Người già", "Người trẻ", "Cả hai như nhau"], a: 0, why: "Thí sinh nói: I think old people help more." },
+        { q: "Trường học có thể làm gì để dạy trẻ giúp người khác?", o: ["Tổ chức ngày dọn dẹp và chuyến thăm người già", "Cho trẻ nghỉ học", "Tăng bài tập về nhà"], a: 0, why: "Thí sinh nói: Schools can organise clean-up days and visits to old people." }
+      ] },
+    // ---------- BAND 4.0 — NÓI ----------
+    { partNum: 1, topicStd: "Thức ăn và gia đình", part: "Part 1", topic: "Cooking at Home - Nấu ăn ở nhà", band: "Band 4.0",
+      lines: [
+        { who: "Examiner", en: "Let us talk about cooking at home. Can you cook?", vi: "Chúng ta hãy nói về nấu ăn ở nhà. Bạn có biết nấu ăn không?" },
+        { who: "Candidate", en: "Yes, I can cook simple food like fried rice, soup, and boiled vegetables.", vi: "Có, tôi có thể nấu món đơn giản như cơm rang, canh và rau luộc." },
+        { who: "Examiner", en: "What did you cook last week?", vi: "Tuần trước bạn đã nấu gì?" },
+        { who: "Candidate", en: "Last week I cooked chicken soup for my family, and everyone said it was tasty.", vi: "Tuần trước tôi nấu canh gà cho gia đình, và mọi người nói nó ngon." },
+        { who: "Examiner", en: "Do you want to learn more recipes?", vi: "Bạn có muốn học thêm công thức nấu ăn không?" },
+        { who: "Candidate", en: "Yes, I want to learn to cook fish and cakes, because my grandmother cooks them very well.", vi: "Có, tôi muốn học nấu cá và làm bánh, vì bà tôi nấu những món đó rất ngon." }
+      ],
+      quiz: [
+        { q: "Thí sinh có thể nấu món gì?", o: ["Cơm rang, canh và rau luộc", "Chỉ nấu mì gói", "Nấu mọi món phức tạp"], a: 0, why: "Thí sinh nói: I can cook simple food like fried rice, soup, and boiled vegetables." },
+        { q: "Tuần trước thí sinh nấu gì?", o: ["Canh gà cho gia đình", "Cơm rang cho bạn bè", "Bánh cho lớp học"], a: 0, why: "Thí sinh nói: Last week I cooked chicken soup for my family." },
+        { q: "Thí sinh muốn học nấu gì thêm?", o: ["Cá và bánh", "Phở và bún chả", "Chè và kem"], a: 0, why: "Thí sinh nói: I want to learn to cook fish and cakes." }
+      ] },
+    { partNum: 1, topicStd: "Học tập và giáo dục", part: "Part 1", topic: "A Place to Study - Nơi học bài", band: "Band 4.0",
+      lines: [
+        { who: "Examiner", en: "Let us talk about studying. Where do you usually study?", vi: "Chúng ta hãy nói về học tập. Bạn thường học bài ở đâu?" },
+        { who: "Candidate", en: "I usually study at the library, because it is quiet and cool.", vi: "Tôi thường học ở thư viện, vì ở đó yên tĩnh và mát mẻ." },
+        { who: "Examiner", en: "Do you study alone or with friends?", vi: "Bạn học một mình hay cùng bạn bè?" },
+        { who: "Candidate", en: "I study with two friends. We help each other and share notes.", vi: "Tôi học cùng hai người bạn. Chúng tôi giúp đỡ nhau và chia sẻ ghi chú." },
+        { who: "Examiner", en: "Is it better to study in the morning or in the evening?", vi: "Học buổi sáng hay buổi tối tốt hơn?" },
+        { who: "Candidate", en: "I think morning is better, because my mind is fresh and the library is not crowded.", vi: "Tôi nghĩ buổi sáng tốt hơn, vì đầu óc tôi tỉnh táo và thư viện không đông." }
+      ],
+      quiz: [
+        { q: "Thí sinh thường học ở đâu?", o: ["Ở thư viện", "Ở quán cà phê", "Ở nhà"], a: 0, why: "Thí sinh nói: I usually study at the library." },
+        { q: "Thí sinh học cùng mấy người bạn?", o: ["Hai người bạn", "Một người bạn", "Năm người bạn"], a: 0, why: "Thí sinh nói: I study with two friends." },
+        { q: "Theo thí sinh, học buổi nào tốt hơn?", o: ["Buổi sáng", "Buổi tối", "Buổi trưa"], a: 0, why: "Thí sinh nói: I think morning is better." }
+      ] },
+    { partNum: 2, topicStd: "Thức ăn và gia đình", part: "Part 2", topic: "Describe a meal you cooked yourself - Mô tả một bữa ăn bạn tự nấu", band: "Band 4.0",
+      lines: [
+        { who: "Examiner", en: "Describe a meal you cooked yourself. What was it, and who did you cook for?", vi: "Hãy mô tả một bữa ăn bạn tự nấu. Đó là món gì, và bạn nấu cho ai?" },
+        { who: "Candidate", en: "I cooked fried rice with eggs and vegetables for my family last Sunday.", vi: "Tôi nấu cơm rang với trứng và rau cho gia đình vào Chủ nhật tuần trước." },
+        { who: "Examiner", en: "How did you cook it?", vi: "Bạn đã nấu nó như thế nào?" },
+        { who: "Candidate", en: "First I fried garlic, then I added rice, eggs, and vegetables, and I seasoned it with fish sauce.", vi: "Đầu tiên tôi phi tỏi, rồi tôi cho cơm, trứng và rau vào, và tôi nêm bằng nước mắm." },
+        { who: "Examiner", en: "How did your family feel about it?", vi: "Gia đình bạn cảm thấy thế nào về món đó?" },
+        { who: "Candidate", en: "They were happy and finished everything. My father said I can cook lunch next Sunday, too.", vi: "Họ rất vui và ăn hết mọi thứ. Bố tôi nói tôi có thể nấu bữa trưa vào Chủ nhật tới nữa." }
+      ],
+      quiz: [
+        { q: "Thí sinh nấu món gì?", o: ["Cơm rang với trứng và rau", "Canh gà", "Phở bò"], a: 0, why: "Thí sinh nói: I cooked fried rice with eggs and vegetables." },
+        { q: "Thí sinh nêm món ăn bằng gì?", o: ["Nước mắm", "Muối", "Đường"], a: 0, why: "Thí sinh nói: I seasoned it with fish sauce." },
+        { q: "Gia đình thí sinh phản ứng thế nào?", o: ["Vui vẻ và ăn hết mọi thứ", "Chê món ăn mặn", "Không ăn"], a: 0, why: "Thí sinh nói: They were happy and finished everything." }
+      ] },
+    { partNum: 3, topicStd: "Công việc và xã hội", part: "Part 3", topic: "Young People and Part-Time Work - Người trẻ và việc làm thêm", band: "Band 4.0",
+      lines: [
+        { who: "Examiner", en: "Let us talk about young people and part-time work. Should students do part-time jobs?", vi: "Chúng ta hãy nói về người trẻ và việc làm thêm. Học sinh có nên làm thêm không?" },
+        { who: "Candidate", en: "Yes, if the job does not hurt their study. A small job teaches them about money and time.", vi: "Có, nếu công việc không ảnh hưởng tới học tập. Một công việc nhỏ dạy các em về tiền bạc và thời gian." },
+        { who: "Examiner", en: "What jobs are good for students?", vi: "Công việc nào tốt cho học sinh?" },
+        { who: "Candidate", en: "Jobs at libraries, bookshops, and cafes are good, because the hours are short and the work is simple.", vi: "Việc ở thư viện, hiệu sách và quán cà phê là tốt, vì giờ làm ngắn và công việc đơn giản." },
+        { who: "Examiner", en: "What problems can part-time work cause?", vi: "Việc làm thêm có thể gây ra vấn đề gì?" },
+        { who: "Candidate", en: "If students work too much, they feel tired and have no time for homework or sleep.", vi: "Nếu học sinh làm việc quá nhiều, các em sẽ mệt và không có thời gian làm bài tập hay ngủ." }
+      ],
+      quiz: [
+        { q: "Theo thí sinh, học sinh có nên làm thêm không?", o: ["Có, nếu công việc không ảnh hưởng tới học tập", "Không, tuyệt đối không", "Chỉ sinh viên đại học mới nên làm"], a: 0, why: "Thí sinh nói: Yes, if the job does not hurt their study." },
+        { q: "Công việc nào tốt cho học sinh?", o: ["Ở thư viện, hiệu sách và quán cà phê", "Ở công trường", "Ở nhà máy ban đêm"], a: 0, why: "Thí sinh nói: Jobs at libraries, bookshops, and cafes are good." },
+        { q: "Việc làm thêm quá nhiều gây vấn đề gì?", o: ["Mệt và không có thời gian làm bài hay ngủ", "Học giỏi hơn", "Có nhiều bạn hơn"], a: 0, why: "Thí sinh nói: If students work too much, they feel tired and have no time for homework or sleep." }
+      ] },
+    // ---------- BAND 4.5 — NÓI ----------
+    { partNum: 1, topicStd: "Công nghệ và đọc sách", part: "Part 1", topic: "Reading on Phones - Đọc trên điện thoại", band: "Band 4.5",
+      lines: [
+        { who: "Examiner", en: "Let us talk about reading on phones. Do you read on your phone?", vi: "Chúng ta hãy nói về đọc trên điện thoại. Bạn có đọc trên điện thoại không?" },
+        { who: "Candidate", en: "Yes, I read short stories and news on my phone every evening.", vi: "Có, tôi đọc truyện ngắn và tin tức trên điện thoại mỗi tối." },
+        { who: "Examiner", en: "Is reading on a phone as good as reading a paper book?", vi: "Đọc trên điện thoại có tốt bằng đọc sách giấy không?" },
+        { who: "Candidate", en: "I think paper books are better for long stories, but phones are good for short news.", vi: "Tôi nghĩ sách giấy tốt hơn cho truyện dài, nhưng điện thoại tốt cho tin ngắn." },
+        { who: "Examiner", en: "Do you think people read less now?", vi: "Bạn có nghĩ mọi người đọc ít hơn bây giờ không?" },
+        { who: "Candidate", en: "No, people read more, but they read short posts, not long books.", vi: "Không, mọi người đọc nhiều hơn, nhưng họ đọc bài ngắn, không phải sách dài." }
+      ],
+      quiz: [
+        { q: "Thí sinh đọc gì trên điện thoại?", o: ["Truyện ngắn và tin tức", "Chỉ xem video", "Chỉ chơi trò chơi"], a: 0, why: "Thí sinh nói: I read short stories and news on my phone every evening." },
+        { q: "Theo thí sinh, sách giấy tốt hơn cho loại nào?", o: ["Truyện dài", "Tin ngắn", "Bài đăng mạng xã hội"], a: 0, why: "Thí sinh nói: paper books are better for long stories." },
+        { q: "Theo thí sinh, mọi người bây giờ đọc nhiều hơn hay ít hơn?", o: ["Nhiều hơn, nhưng đọc bài ngắn", "Ít hơn hẳn", "Không đọc gì cả"], a: 0, why: "Thí sinh nói: people read more, but they read short posts, not long books." }
+      ] },
+    { partNum: 2, topicStd: "Thể thao và sức khỏe", part: "Part 2", topic: "Describe a sport you played with friends - Mô tả một môn thể thao bạn chơi cùng bạn bè", band: "Band 4.5",
+      lines: [
+        { who: "Examiner", en: "Describe a sport you played with friends. What sport was it?", vi: "Hãy mô tả một môn thể thao bạn chơi cùng bạn bè. Đó là môn gì?" },
+        { who: "Candidate", en: "I played badminton with my friends on the school court last Saturday.", vi: "Tôi chơi cầu lông cùng bạn bè trên sân trường vào thứ Bảy tuần trước." },
+        { who: "Examiner", en: "Who did you play with, and how did you feel?", vi: "Bạn chơi với ai, và bạn cảm thấy thế nào?" },
+        { who: "Candidate", en: "I played with Lan and Mai. We laughed a lot, and I felt happy and healthy after the game.", vi: "Tôi chơi với Lan và Mai. Chúng tôi cười rất nhiều, và tôi cảm thấy vui vẻ và khỏe khoắn sau trận đấu." },
+        { who: "Examiner", en: "Will you play again?", vi: "Bạn có chơi lại không?" },
+        { who: "Candidate", en: "Yes, we plan to play every Sunday morning, because it is fun and good exercise.", vi: "Có, chúng tôi dự định chơi mỗi sáng Chủ nhật, vì nó vui và là bài tập tốt." }
+      ],
+      quiz: [
+        { q: "Thí sinh chơi môn thể thao gì?", o: ["Cầu lông", "Bóng đá", "Bơi lội"], a: 0, why: "Thí sinh nói: I played badminton with my friends." },
+        { q: "Thí sinh chơi với ai?", o: ["Lan và Mai", "Hoa và Tuan", "Một mình"], a: 0, why: "Thí sinh nói: I played with Lan and Mai." },
+        { q: "Nhóm bạn dự định chơi khi nào?", o: ["Mỗi sáng Chủ nhật", "Mỗi tối thứ Sáu", "Mỗi tháng một lần"], a: 0, why: "Thí sinh nói: we plan to play every Sunday morning." }
+      ] },
+    { partNum: 2, topicStd: "Công việc và nghề nghiệp", part: "Part 2", topic: "Describe a job you would like to try - Mô tả một công việc bạn muốn thử", band: "Band 4.5",
+      lines: [
+        { who: "Examiner", en: "Describe a job you would like to try. What job is it?", vi: "Hãy mô tả một công việc bạn muốn thử. Đó là công việc gì?" },
+        { who: "Candidate", en: "I would like to try being a tour guide in my city.", vi: "Tôi muốn thử làm hướng dẫn viên du lịch ở thành phố của mình." },
+        { who: "Examiner", en: "Why do you want this job?", vi: "Vì sao bạn muốn công việc này?" },
+        { who: "Candidate", en: "Because I love my city and I want to practise English with visitors.", vi: "Vì tôi yêu thành phố của mình và tôi muốn luyện tiếng Anh với du khách." },
+        { who: "Examiner", en: "What skills do you need for this job?", vi: "Bạn cần kỹ năng gì cho công việc này?" },
+        { who: "Candidate", en: "I need good English, a clear voice, and knowledge about old streets and food.", vi: "Tôi cần tiếng Anh tốt, giọng nói rõ ràng, và hiểu biết về phố cổ và ẩm thực." }
+      ],
+      quiz: [
+        { q: "Thí sinh muốn thử công việc gì?", o: ["Hướng dẫn viên du lịch", "Giáo viên tiếng Anh", "Đầu bếp"], a: 0, why: "Thí sinh nói: I would like to try being a tour guide in my city." },
+        { q: "Vì sao thí sinh muốn công việc này?", o: ["Vì yêu thành phố và muốn luyện tiếng Anh với du khách", "Vì lương cao", "Vì được đi nước ngoài"], a: 0, why: "Thí sinh nói: Because I love my city and I want to practise English with visitors." },
+        { q: "Thí sinh cần kỹ năng gì?", o: ["Tiếng Anh tốt, giọng rõ ràng, hiểu biết về phố cổ và ẩm thực", "Biết lái xe tải", "Biết sửa máy tính"], a: 0, why: "Thí sinh nói: I need good English, a clear voice, and knowledge about old streets and food." }
+      ] },
+    { partNum: 3, topicStd: "Mua sắm và xã hội", part: "Part 3", topic: "Small Shops and Big Supermarkets - Cửa hàng nhỏ và siêu thị lớn", band: "Band 4.5",
+      lines: [
+        { who: "Examiner", en: "Let us talk about shops. Do people prefer small shops or big supermarkets?", vi: "Chúng ta hãy nói về cửa hàng. Mọi người thích cửa hàng nhỏ hay siêu thị lớn hơn?" },
+        { who: "Candidate", en: "Many people prefer supermarkets, because they have many goods in one place.", vi: "Nhiều người thích siêu thị hơn, vì siêu thị có nhiều hàng hóa ở một nơi." },
+        { who: "Examiner", en: "What are the problems of big supermarkets for small shops?", vi: "Siêu thị lớn gây ra vấn đề gì cho cửa hàng nhỏ?" },
+        { who: "Candidate", en: "Small shops lose customers and may close, and streets lose their special character.", vi: "Cửa hàng nhỏ mất khách và có thể đóng cửa, và đường phố mất đi nét đặc biệt của mình." },
+        { who: "Examiner", en: "What can people do to help small shops?", vi: "Mọi người có thể làm gì để giúp cửa hàng nhỏ?" },
+        { who: "Candidate", en: "People can buy local food at small shops sometimes, and small shops can sell special goods that supermarkets do not have.", vi: "Mọi người thỉnh thoảng có thể mua đồ ăn địa phương ở cửa hàng nhỏ, và cửa hàng nhỏ có thể bán hàng đặc biệt mà siêu thị không có." }
+      ],
+      quiz: [
+        { q: "Theo thí sinh, nhiều người thích loại cửa hàng nào hơn?", o: ["Siêu thị lớn", "Cửa hàng nhỏ", "Chợ truyền thống"], a: 0, why: "Thí sinh nói: Many people prefer supermarkets." },
+        { q: "Siêu thị lớn gây vấn đề gì cho cửa hàng nhỏ?", o: ["Cửa hàng nhỏ mất khách, có thể đóng cửa", "Cửa hàng nhỏ bán đắt hơn", "Cửa hàng nhỏ hết hàng"], a: 0, why: "Thí sinh nói: Small shops lose customers and may close." },
+        { q: "Mọi người có thể giúp cửa hàng nhỏ bằng cách nào?", o: ["Thỉnh thoảng mua đồ ăn địa phương ở cửa hàng nhỏ", "Không đi siêu thị nữa", "Mở thêm siêu thị"], a: 0, why: "Thí sinh nói: People can buy local food at small shops sometimes." }
+      ] }
+  ]);
+})();
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.roleplay.push.apply(CONTENT.roleplay, [
+    // ---------- BAND 3.5 — NHẬP VAI ----------
+    { title: "Asking a Neighbour for Help - Nhờ hàng xóm giúp đỡ", setting: "Cuối tuần này bạn đi vắng. Bạn nhờ bác hàng xóm trông nhà và tưới cây giúp.", partner: "Bác hàng xóm", goal: "Nhờ hàng xóm trông nhà, tưới cây, và cảm ơn bác.", band: "Band 3.5",
+      chunks: ["Excuse me", "look after my house", "water the plants", "I will be back on Sunday", "Thank you so much"],
+      turns: [
+        { from: "partner", text: "Hello! How can I help you?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Xin chào, cuối tuần này tôi đi vắng, bác có thể trông nhà giúp tôi không?", expect: "Hello, I will be away this weekend. Can you look after my house, please?", keywords: ["hello", "away", "weekend", "look after", "house"], hint: "Hello, I will be away...", tip: "Nói nhẹ nhàng với please ở cuối để lời nhờ nghe lịch sự.", chunks: ["look after my house"] },
+        { from: "partner", text: "Of course. What should I do?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Làm ơn tưới cây ngoài sân mỗi sáng.", expect: "Please water the plants in the yard every morning.", keywords: ["please", "water", "plants", "yard", "morning"], hint: "Please water the plants...", tip: "Nhấn vào every morning để bác biết việc làm mỗi ngày.", chunks: ["water the plants"] },
+        { from: "partner", text: "No problem. I will do that." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bác nhiều. Tôi sẽ về vào Chủ nhật.", expect: "Thank you so much. I will be back on Sunday.", keywords: ["thank you", "back", "Sunday"], hint: "Thank you so much...", tip: "Giọng xuống ở cuối để lời cảm ơn nghe chân thành.", chunks: ["Thank you so much"] }
+      ] },
+    { title: "Borrowing a Ladder from a Neighbour - Mượn thang của hàng xóm", setting: "Bóng đèn trong bếp bị hỏng. Bạn sang nhà bác hàng xóm mượn thang để sửa.", partner: "Bác hàng xóm", goal: "Mượn thang, nói rõ lý do, và hứa trả thang vào tối nay.", band: "Band 3.5",
+      chunks: ["borrow a ladder", "fix a lamp", "in the kitchen", "this evening", "Thank you"],
+      turns: [
+        { from: "partner", text: "Hi! What do you need?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Xin chào, tôi có thể mượn thang của bác không?", expect: "Hello, can I borrow your ladder, please?", keywords: ["hello", "borrow", "ladder", "please"], hint: "Hello, can I borrow...", tip: "Can I borrow... là mẫu hỏi mượn lịch sự nhất ở trình độ này.", chunks: ["borrow a ladder"] },
+        { from: "partner", text: "Yes, of course. What is it for?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi cần sửa bóng đèn trong bếp.", expect: "I need to fix a lamp in the kitchen.", keywords: ["need", "fix", "lamp", "kitchen"], hint: "I need to fix...", tip: "Nhấn vào lamp và kitchen để bác hiểu rõ việc bạn cần làm.", chunks: ["fix a lamp"] },
+        { from: "partner", text: "Here it is. Be careful on it." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bác. Tôi sẽ trả thang vào tối nay.", expect: "Thank you. I will return the ladder this evening.", keywords: ["thank you", "return", "ladder", "evening"], hint: "Thank you. I will return...", tip: "Hứa rõ thời gian trả đồ khiến người cho mượn yên tâm.", chunks: ["this evening"] }
+      ] },
+    { title: "Asking the Way to the Post Office in a New Town - Hỏi đường tới bưu điện ở thị trấn mới", setting: "Bạn mới tới một thị trấn lạ. Bạn hỏi một người đi đường về bưu điện.", partner: "Người đi đường", goal: "Hỏi đường tới bưu điện, hỏi giờ mở cửa, và cảm ơn.", band: "Band 3.5",
+      chunks: ["Excuse me", "where is the post office", "What time does it open", "at eight", "Thank you very much"],
+      turns: [
+        { from: "partner", text: "Hello! Can I help you?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Xin lỗi, bưu điện ở đâu ạ?", expect: "Excuse me, where is the post office, please?", keywords: ["excuse me", "where", "post office", "please"], hint: "Excuse me, where is...", tip: "Mở đầu bằng Excuse me khi hỏi người lạ ngoài đường.", chunks: ["where is the post office"] },
+        { from: "partner", text: "Go straight and turn left at the market. It is next to the bank." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn. Bưu điện mở cửa lúc mấy giờ?", expect: "Thank you. What time does the post office open?", keywords: ["thank you", "what time", "post office", "open"], hint: "Thank you. What time does...", tip: "Hỏi giờ mở cửa ngay sau khi biết đường đi là cách hỏi tự nhiên.", chunks: ["What time does it open"] },
+        { from: "partner", text: "It opens at eight in the morning." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn rất nhiều. Tôi sẽ tới đó ngay bây giờ.", expect: "Thank you very much. I will go there now.", keywords: ["thank you", "go", "now"], hint: "Thank you very much...", tip: "Kết thúc bằng lời cảm ơn và ý định rõ ràng.", chunks: ["Thank you very much"] }
+      ] },
+    { title: "Inviting a Friend to a Birthday Lunch - Mời bạn dự bữa trưa sinh nhật", setting: "Chủ nhật này là sinh nhật bạn. Bạn mời bạn Lan tới ăn trưa ở nhà.", partner: "Bạn Lan", goal: "Mời bạn dự bữa trưa sinh nhật, nói giờ và địa điểm, và cảm ơn bạn.", band: "Band 3.5",
+      chunks: ["my birthday", "come for lunch", "at eleven o'clock", "at my house", "just come"],
+      turns: [
+        { from: "partner", text: "Hi! How are you?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào Lan, Chủ nhật này là sinh nhật tôi, bạn tới ăn trưa cùng nhé?", expect: "Hi Lan, this Sunday is my birthday. Would you like to come for lunch?", keywords: ["Sunday", "birthday", "come", "lunch"], hint: "Hi Lan, this Sunday is...", tip: "Lời mời dùng Would you like to... nghe lịch sự và thân thiện.", chunks: ["come for lunch"] },
+        { from: "partner", text: "I would love to! What time?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Lúc mười một giờ trưa ở nhà tôi.", expect: "At eleven o'clock at my house.", keywords: ["eleven", "house"], hint: "At eleven o'clock...", tip: "Nói giờ trước, địa điểm sau là thứ tự tự nhiên.", chunks: ["at eleven o'clock"] },
+        { from: "partner", text: "Great! Can I bring anything?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Không cần đâu, chỉ cần bạn tới thôi. Cảm ơn bạn!", expect: "No, just come. Thank you!", keywords: ["just come", "thank you"], hint: "No, just come...", tip: "Câu ngắn, giọng vui vẻ khiến lời mời nghe ấm áp.", chunks: ["just come"] }
+      ] },
+    // ---------- BAND 4.0 — NHẬP VAI ----------
+    { title: "Reporting a Leaking Tap to the Landlord - Báo vòi nước rò rỉ cho chủ nhà", setting: "Vòi nước trong bếp bị rò rỉ. Bạn gọi điện báo cho chủ nhà.", partner: "Chủ nhà", goal: "Báo vòi nước rò rỉ, nói rõ từ khi nào, và hẹn người tới sửa.", band: "Band 4.0",
+      chunks: ["the tap is leaking", "in the kitchen", "started yesterday", "water runs all day", "in the morning"],
+      turns: [
+        { from: "partner", text: "Hello, what is the problem?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Xin chào, vòi nước trong bếp bị rò rỉ.", expect: "Hello, the tap in the kitchen is leaking.", keywords: ["hello", "tap", "kitchen", "leaking"], hint: "Hello, the tap...", tip: "Nói rõ đồ vật và nơi chốn ngay câu đầu để chủ nhà hiểu ngay.", chunks: ["the tap is leaking"] },
+        { from: "partner", text: "I am sorry. When did it start?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Nó bắt đầu từ hôm qua, và nước chảy cả ngày.", expect: "It started yesterday, and water runs all day.", keywords: ["started", "yesterday", "water", "all day"], hint: "It started yesterday...", tip: "Thêm chi tiết thời gian giúp chủ nhà đánh giá mức độ gấp.", chunks: ["started yesterday"] },
+        { from: "partner", text: "I will send someone tomorrow morning." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn ông. Tôi sẽ ở nhà vào buổi sáng.", expect: "Thank you. I will be at home in the morning.", keywords: ["thank you", "home", "morning"], hint: "Thank you. I will be...", tip: "Xác nhận bạn ở nhà để người sửa tới làm việc được.", chunks: ["in the morning"] }
+      ] },
+    { title: "Changing a Bus Ticket Time - Đổi giờ vé xe buýt", setting: "Bạn có vé xe buýt lúc tám giờ sáng nhưng muốn đi lúc ba giờ chiều. Bạn tới quầy vé để đổi.", partner: "Nhân viên bán vé", goal: "Đổi vé sáng thành vé chiều, xác nhận vé mới, và cảm ơn.", band: "Band 4.0",
+      chunks: ["change my ticket", "morning bus ticket", "three in the afternoon", "new ticket", "Thank you very much"],
+      turns: [
+        { from: "partner", text: "Hello, how can I help?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Xin chào, tôi muốn đổi vé xe buýt sáng thành vé chiều.", expect: "Hello, I would like to change my morning bus ticket to an afternoon one.", keywords: ["hello", "change", "morning", "afternoon", "ticket"], hint: "Hello, I would like to change...", tip: "I would like to... là mẫu yêu cầu lịch sự hơn I want.", chunks: ["change my ticket"] },
+        { from: "partner", text: "What time is your ticket now?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vé của tôi lúc tám giờ sáng, tôi muốn đổi sang ba giờ chiều.", expect: "My ticket is at eight in the morning. I would like three in the afternoon, please.", keywords: ["eight", "morning", "three", "afternoon"], hint: "My ticket is at eight...", tip: "Nói giờ cũ trước, giờ mới sau để nhân viên đối chiếu dễ dàng.", chunks: ["three in the afternoon"] },
+        { from: "partner", text: "That is fine. Here is your new ticket." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn rất nhiều.", expect: "Thank you very much.", keywords: ["thank you"], hint: "Thank you very much.", tip: "Câu cảm ơn ngắn, giọng vui vẻ là đủ để kết thúc giao dịch.", chunks: ["Thank you very much"] }
+      ] },
+    { title: "Joining a Weekend Football Team - Xin vào đội bóng cuối tuần", setting: "Bạn muốn tham gia đội bóng đá cuối tuần của khu phố. Bạn nói chuyện với đội trưởng.", partner: "Đội trưởng đội bóng", goal: "Xin vào đội, nói kinh nghiệm của mình, và hẹn buổi tập Chủ nhật.", band: "Band 4.0",
+      chunks: ["join your team", "weekend football team", "played at school", "not very good", "on Sunday morning"],
+      turns: [
+        { from: "partner", text: "Hi! Do you want to join our team?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn, tôi muốn tham gia đội bóng cuối tuần của bạn.", expect: "Hi, I would like to join your weekend football team.", keywords: ["join", "weekend", "football", "team"], hint: "Hi, I would like to join...", tip: "Nói rõ đội nào ngay câu đầu để đội trưởng hiểu bạn muốn gì.", chunks: ["join your team"] },
+        { from: "partner", text: "Great! Have you played before?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi đã chơi ở trường, nhưng không giỏi lắm.", expect: "I played at school, but I am not very good.", keywords: ["played", "school", "not very good"], hint: "I played at school...", tip: "Nói thật về trình độ kèm thái độ khiêm tốn khiến đội dễ nhận bạn.", chunks: ["not very good"] },
+        { from: "partner", text: "No problem. We practise on Sunday morning." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tuyệt vời. Tôi sẽ tới vào sáng Chủ nhật. Cảm ơn bạn!", expect: "Great! I will come on Sunday morning. Thank you!", keywords: ["come", "Sunday morning", "thank you"], hint: "Great! I will come...", tip: "Xác nhận thời gian cụ thể là cách chốt hẹn rõ ràng nhất.", chunks: ["on Sunday morning"] }
+      ] },
+    { title: "Apologising for a Late Homework - Xin lỗi vì nộp bài muộn", setting: "Bạn nộp bài muộn vì hôm qua bị ốm. Bạn xin lỗi cô giáo và hứa nộp vào ngày mai.", partner: "Cô giáo", goal: "Xin lỗi vì nộp bài muộn, giải thích lý do, và hứa nộp vào ngày mai.", band: "Band 4.0",
+      chunks: ["I am sorry", "late homework", "I was ill", "could not finish", "tomorrow"],
+      turns: [
+        { from: "partner", text: "Hello, where is your homework?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Thưa cô, em xin lỗi vì nộp bài muộn.", expect: "Excuse me, teacher. I am sorry for my late homework.", keywords: ["sorry", "late", "homework"], hint: "Excuse me, teacher...", tip: "Xin lỗi trước, giải thích sau — thứ tự này khiến lời xin lỗi nghe chân thành.", chunks: ["I am sorry"] },
+        { from: "partner", text: "Why is it late?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Hôm qua em bị ốm nên không làm xong.", expect: "I was ill yesterday, so I could not finish it.", keywords: ["ill", "yesterday", "could not finish"], hint: "I was ill yesterday...", tip: "Lý do ngắn gọn và thật, không kể dài dòng.", chunks: ["I was ill"] },
+        { from: "partner", text: "I see. When will you finish it?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Em sẽ nộp vào ngày mai, thưa cô. Cảm ơn cô!", expect: "I will hand it in tomorrow, teacher. Thank you!", keywords: ["hand it in", "tomorrow", "thank you"], hint: "I will hand it in...", tip: "Hứa thời gian cụ thể thay vì nói chung chung là sẽ nộp sau.", chunks: ["tomorrow"] }
+      ] },
+    // ---------- BAND 4.5 — NHẬP VAI ----------
+    { title: "Discussing a Group Project Delay - Thảo luận về bài nhóm bị chậm", setting: "Phần bài nhóm của bạn bị chậm vì tuần trước bạn ốm. Bạn bàn với bạn cùng nhóm cách xử lý.", partner: "Bạn cùng nhóm", goal: "Giải thích phần bài bị chậm, đề xuất cách làm tiếp, và chốt hạn hoàn thành.", band: "Band 4.5",
+      chunks: ["my part is late", "I was ill", "finish by Wednesday", "help me check it", "by Friday"],
+      turns: [
+        { from: "partner", text: "Hi, how is our project going?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn, phần của tôi bị chậm vì tôi ốm tuần trước.", expect: "Hi, my part is late because I was ill last week.", keywords: ["part", "late", "ill", "last week"], hint: "Hi, my part is late...", tip: "Nói thẳng vấn đề và lý do ngay đầu để nhóm cùng tìm cách.", chunks: ["my part is late"] },
+        { from: "partner", text: "What can we do now?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi sẽ làm xong phần của tôi vào thứ Tư, bạn có thể giúp tôi kiểm tra không?", expect: "I will finish my part by Wednesday. Can you help me check it?", keywords: ["finish", "Wednesday", "help", "check"], hint: "I will finish my part...", tip: "Đề xuất kèm thời hạn và lời nhờ giúp đỡ cụ thể.", chunks: ["finish by Wednesday"] },
+        { from: "partner", text: "Of course. When do we finish everything?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng ta sẽ hoàn thành mọi thứ vào thứ Sáu. Cảm ơn bạn!", expect: "We will finish everything by Friday. Thank you!", keywords: ["finish", "everything", "Friday", "thank you"], hint: "We will finish everything...", tip: "Chốt hạn chung cho cả nhóm, không chỉ phần của mình.", chunks: ["by Friday"] }
+      ] },
+    { title: "Returning a Book and Paying a Small Fine - Trả sách và nộp phạt nhỏ", setting: "Bạn trả một cuốn sách quá hạn ở thư viện. Bạn hỏi tiền phạt và nộp phạt.", partner: "Thủ thư", goal: "Trả sách quá hạn, nộp tiền phạt, và cảm ơn thủ thư.", band: "Band 4.5",
+      chunks: ["return this book", "it is overdue", "ten thousand dong", "I am sorry", "next week"],
+      turns: [
+        { from: "partner", text: "Hello, can I help you?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Xin chào, tôi muốn trả cuốn sách này, nó đã quá hạn.", expect: "Hello, I would like to return this book. It is overdue.", keywords: ["return", "book", "overdue"], hint: "Hello, I would like to return...", tip: "Nói rõ sách quá hạn ngay đầu để thủ thư tính phạt nhanh.", chunks: ["it is overdue"] },
+        { from: "partner", text: "The fine is ten thousand dong." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Đây là mười nghìn đồng. Tôi xin lỗi vì trả muộn.", expect: "Here is ten thousand dong. I am sorry for returning it late.", keywords: ["ten thousand", "sorry", "late"], hint: "Here is ten thousand dong...", tip: "Nộp tiền kèm lời xin lỗi ngắn gọn là đủ.", chunks: ["ten thousand dong"] },
+        { from: "partner", text: "Thank you. Would you like to borrow another book?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Không, cảm ơn. Tôi sẽ quay lại tuần tới.", expect: "No, thank you. I will come back next week.", keywords: ["thank you", "come back", "next week"], hint: "No, thank you...", tip: "Từ chối lịch sự kèm hẹn quay lại giữ quan hệ tốt với thư viện.", chunks: ["next week"] }
+      ] },
+    { title: "Asking about a Part-Time Job at a Bookshop - Hỏi về việc làm thêm ở hiệu sách", setting: "Bạn tới một hiệu sách để hỏi về vị trí làm thêm cuối tuần.", partner: "Quản lý hiệu sách", goal: "Hỏi vị trí làm thêm, nói thời gian rảnh, và hẹn nộp đơn.", band: "Band 4.5",
+      chunks: ["part-time vacancy", "on Saturday and Sunday mornings", "twenty-five thousand dong", "That sounds good", "apply tomorrow"],
+      turns: [
+        { from: "partner", text: "Hello, welcome to our bookshop." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Xin chào, hiệu sách còn vị trí làm thêm không ạ?", expect: "Hello, do you have a part-time vacancy at the bookshop?", keywords: ["part-time", "vacancy", "bookshop"], hint: "Hello, do you have...", tip: "Hỏi thẳng có vị trí trống không là cách hỏi việc nhanh nhất.", chunks: ["part-time vacancy"] },
+        { from: "partner", text: "Yes, we need help on weekends. When can you work?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi có thể làm vào thứ Bảy và Chủ nhật buổi sáng.", expect: "I can work on Saturday and Sunday mornings.", keywords: ["Saturday", "Sunday", "mornings"], hint: "I can work on...", tip: "Nói rõ ngày và buổi để quản lý xếp lịch ngay.", chunks: ["on Saturday and Sunday mornings"] },
+        { from: "partner", text: "Good. The pay is twenty-five thousand dong an hour." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Nghe tốt đấy ạ. Cảm ơn ông, tôi sẽ nộp đơn vào ngày mai.", expect: "That sounds good. Thank you. I will apply tomorrow.", keywords: ["sounds good", "thank you", "apply", "tomorrow"], hint: "That sounds good...", tip: "Tỏ ý hài lòng rồi hẹn nộp đơn cụ thể.", chunks: ["apply tomorrow"] }
+      ] },
+    { title: "Suggesting a Greener Office Habit - Đề xuất thói quen xanh ở văn phòng", setting: "Bạn đề xuất với đồng nghiệp dùng cốc riêng thay vì cốc nhựa ở văn phòng.", partner: "Đồng nghiệp", goal: "Đề xuất dùng cốc riêng, giải thích lợi ích, và chốt thời gian bắt đầu.", band: "Band 4.5",
+      chunks: ["our own cups", "instead of plastic cups", "reduces plastic waste", "saves money", "start on Monday"],
+      turns: [
+        { from: "partner", text: "Hi, do you have an idea for our office?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn, tôi nghĩ chúng ta nên dùng cốc riêng thay vì cốc nhựa.", expect: "Hi, I think we should use our own cups instead of plastic cups.", keywords: ["should", "own cups", "instead", "plastic"], hint: "Hi, I think we should...", tip: "I think we should... là mẫu đề xuất nhẹ nhàng, không áp đặt.", chunks: ["our own cups"] },
+        { from: "partner", text: "Why is that better?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vì nó giảm rác nhựa và tiết kiệm tiền mỗi tháng.", expect: "Because it reduces plastic waste and saves money every month.", keywords: ["reduces", "plastic waste", "saves money"], hint: "Because it reduces...", tip: "Đưa hai lợi ích: một cho môi trường, một cho túi tiền.", chunks: ["reduces plastic waste"] },
+        { from: "partner", text: "Good idea. When do we start?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng ta có thể bắt đầu từ thứ Hai. Cảm ơn bạn đã lắng nghe!", expect: "We can start on Monday. Thank you for listening!", keywords: ["start", "Monday", "thank you", "listening"], hint: "We can start on...", tip: "Chốt thời gian bắt đầu cụ thể để ý tưởng thành hành động.", chunks: ["start on Monday"] }
+      ] }
+  ]);
+})();
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  CONTENT.writing.push.apply(CONTENT.writing, [
+    // ---------- BAND 3.5 — VIẾT ----------
+    { wtype: "Thư mời", type: "Task 1", band: "Band 3.5", title: "Thư mời bạn về quê chơi",
+      prompt: "Write a letter to your friend Mai. Invite her to visit your village this Sunday, tell her what you will do together, and ask her to reply soon.",
+      dataDesc: "Tình huống: bạn mời bạn Mai về quê chơi vào Chủ nhật. Dàn ý: mở thư hỏi thăm và nêu lời mời; thân thư kể kế hoạch đi chợ, thả diều và ăn trưa cùng gia đình; kết thư mong bạn nhận lời và nhờ trả lời sớm.",
+      model: "Dear Mai,\n\nHow are you? I hope you are well. I am writing to invite you to visit my village this Sunday.\n\nIn the morning, we can walk to the market and buy fresh fruit. In the afternoon, we can fly kites on the open field with my little brother. At noon, my grandma will cook rice and fried fish for us. It will be a happy day.\n\nPlease tell me before Saturday if you can come. I really hope you say yes.\n\nBest wishes,\nHoa",
+      analysis: "Cấu trúc thư rõ ràng: mở thư hỏi thăm và nêu lời mời; thân thư kể kế hoạch theo thời gian trong ngày (morning, afternoon, noon); kết thư nhờ trả lời sớm. Điểm ngôn ngữ đáng học: (1) mẫu mời I am writing to invite you to...; (2) will cho kế hoạch tương lai; (3) Please tell me before Saturday để hẹn thời gian trả lời.",
+      phrases: [{ en: "I am writing to invite you to visit my village.", vi: "Tôi viết thư để mời bạn về thăm làng tôi." }, { en: "In the morning, we can walk to the market.", vi: "Buổi sáng, chúng ta có thể đi bộ ra chợ." }, { en: "My grandma will cook rice and fried fish for us.", vi: "Bà tôi sẽ nấu cơm và cá rán cho chúng ta." }, { en: "Please tell me before Saturday if you can come.", vi: "Hãy cho tôi biết trước thứ Bảy nếu bạn có thể tới." }, { en: "I really hope you say yes.", vi: "Tôi thật sự mong bạn đồng ý." }] },
+    { wtype: "Đoạn văn ý kiến", type: "Task 2", band: "Band 3.5", title: "Vì sao nên giúp đỡ hàng xóm",
+      prompt: "Write a short paragraph (5-7 sentences). Give your opinion: why should we help our neighbours?",
+      dataDesc: "Tình huống: đoạn văn ý kiến ngắn cho người mới học viết. Dàn ý: mở đoạn nêu ý kiến (nên giúp hàng xóm); thân đoạn nêu hai lý do (sống gần nhau, giúp nhau lúc khó khăn) và một ví dụ (bà Lan giúp sửa xe); kết đoạn khẳng định lại ý kiến.",
+      model: "In my opinion, we should help our neighbours. First, neighbours live close to us, so they can help us quickly when we have a problem. Second, helping others makes our street friendly and happy. For example, my neighbour Mrs Lan helped me when my bicycle broke, and her son mended it for free. When we help each other, we feel safe and cared for. So, helping neighbours is good for everyone.",
+      analysis: "Cấu trúc mở - thân - kết rõ ràng: mở đoạn nêu ý kiến bằng In my opinion; thân đoạn nêu lý do bằng First, Second và ví dụ bằng For example; kết đoạn khẳng định lại bằng So. Điểm ngôn ngữ đáng học: (1) từ nối thứ tự First, Second; (2) mẫu câu lý do so they can...; (3) ví dụ cụ thể từ đời sống thật.",
+      phrases: [{ en: "In my opinion, we should help our neighbours.", vi: "Theo ý kiến của tôi, chúng ta nên giúp đỡ hàng xóm." }, { en: "Neighbours live close to us.", vi: "Hàng xóm sống gần chúng ta." }, { en: "Helping others makes our street friendly.", vi: "Giúp đỡ người khác khiến phố của chúng ta thân thiện." }, { en: "For example, my neighbour helped me.", vi: "Ví dụ, hàng xóm của tôi đã giúp tôi." }, { en: "Helping neighbours is good for everyone.", vi: "Giúp đỡ hàng xóm tốt cho mọi người." }] },
+    { wtype: "Mô tả bảng số liệu", type: "Task 1", band: "Band 3.5", title: "Bảng: học sinh tham gia câu lạc bộ",
+      prompt: "The table shows the number of students in four school clubs: Football 25, Reading 18, Music 12, Art 10. Write a short paragraph to describe the table.",
+      dataDesc: "Số liệu: câu lạc bộ bóng đá 25 học sinh, đọc sách 18, âm nhạc 12, mỹ thuật 10. Dàn ý: mở bài nêu chung bảng nói về gì; thân bài nêu cao nhất (bóng đá), tiếp theo (đọc sách), thấp nhất (mỹ thuật); kết bài nêu nhận xét chung (học sinh thích thể thao nhất).",
+      model: "The table shows the number of students in four school clubs. Football has the most students, with 25 students. Reading comes second, with 18 students. Music has 12 students, and Art has the fewest students, with only 10 students. In general, more students like sport than art or music.",
+      analysis: "Cấu trúc mô tả bảng đơn giản: mở bài nêu chung bảng nói về gì; thân bài đi từ cao xuống thấp; kết bài nêu nhận xét chung. Điểm ngôn ngữ đáng học: (1) the most và the fewest cho cao nhất và thấp nhất; (2) comes second cho vị trí thứ hai; (3) with + số để nêu số liệu.",
+      phrases: [{ en: "The table shows the number of students.", vi: "Bảng cho thấy số học sinh." }, { en: "Football has the most students.", vi: "Bóng đá có nhiều học sinh nhất." }, { en: "Reading comes second.", vi: "Đọc sách đứng thứ hai." }, { en: "Art has the fewest students.", vi: "Mỹ thuật có ít học sinh nhất." }, { en: "In general, more students like sport.", vi: "Nhìn chung, nhiều học sinh thích thể thao hơn." }] },
+    // ---------- BAND 4.0 — VIẾT ----------
+    { wtype: "Thư phàn nàn", type: "Task 1", band: "Band 4.0", title: "Thư phàn nàn về phòng trọ ồn ào",
+      prompt: "Write a letter to your landlord. Your room is noisy at night because of loud music next door. Describe the problem, explain how it affects you, and ask the landlord to help.",
+      dataDesc: "Tình huống: phòng trọ ồn ào về đêm do nhạc to từ phòng bên. Dàn ý: mở thư nêu lý do viết thư; thân thư tả vấn đề (nhạc to sau 11 giờ đêm, ba đêm mỗi tuần) và ảnh hưởng (không ngủ được, học kém); kết thư đề nghị chủ nhà nhắc nhở và cảm ơn.",
+      model: "Dear Mr Hung,\n\nI am writing about a problem with noise in my room. Every week, on three nights, loud music comes from the room next door after eleven o'clock at night.\n\nBecause of the noise, I cannot sleep well, and I feel tired in class the next day. I have asked my neighbour to turn the music down, but nothing has changed.\n\nCould you please talk to my neighbour about this problem? I would be very happy if the house is quiet after eleven o'clock. Thank you for your help.\n\nYours sincerely,\nTuan",
+      analysis: "Cấu trúc thư phàn nàn rõ ràng: mở thư nêu vấn đề; thân thư tả chi tiết và ảnh hưởng; kết thư đề nghị giúp đỡ bằng Could you please... Điểm ngôn ngữ đáng học: (1) I am writing about a problem with... để mở thư phàn nàn; (2) Because of... để nêu ảnh hưởng; (3) I have asked... but nothing has changed để cho thấy đã tự xử lý trước.",
+      phrases: [{ en: "I am writing about a problem with noise.", vi: "Tôi viết thư về vấn đề tiếng ồn." }, { en: "Loud music comes from the room next door.", vi: "Nhạc to vọng từ phòng bên cạnh." }, { en: "Because of the noise, I cannot sleep well.", vi: "Vì tiếng ồn, tôi không ngủ ngon được." }, { en: "Could you please talk to my neighbour?", vi: "Ông có thể nói chuyện với hàng xóm của tôi được không?" }, { en: "Thank you for your help.", vi: "Cảm ơn ông đã giúp đỡ." }] },
+    { wtype: "Đoạn văn ý kiến", type: "Task 2", band: "Band 4.0", title: "Học sinh có nên làm thêm cuối tuần?",
+      prompt: "Write a short paragraph (6-8 sentences). Give your opinion: should students do part-time jobs at weekends? Give reasons and an example.",
+      dataDesc: "Tình huống: đoạn văn ý kiến về việc làm thêm cuối tuần. Dàn ý: mở đoạn nêu ý kiến (nên, nếu không ảnh hưởng học tập); thân đoạn nêu lợi ích (hiểu giá trị tiền, quản lý thời gian) và mặt hạn chế (mệt nếu làm quá nhiều) cùng ví dụ (bạn làm ở thư viện); kết đoạn khẳng định lại với điều kiện.",
+      model: "In my opinion, students should do part-time jobs at weekends, but only if the job does not hurt their study. First, a small job teaches students the value of money, because they earn it themselves. Second, it teaches them to plan their time well. For example, my friend works at the library on Sunday mornings, and she still finishes her homework on time. However, if students work too much, they feel tired and cannot study well. So, weekend jobs are good when students work only a few hours and keep study first.",
+      analysis: "Cấu trúc đoạn văn ý kiến có hai mặt: mở đoạn nêu ý kiến kèm điều kiện; thân đoạn nêu lợi ích bằng First, Second và ví dụ bằng For example, rồi nêu mặt hạn chế bằng However; kết đoạn khẳng định lại bằng So. Điểm ngôn ngữ đáng học: (1) only if để nêu điều kiện; (2) However để chuyển sang mặt hạn chế; (3) keep study first để nêu ưu tiên.",
+      phrases: [{ en: "Only if the job does not hurt their study.", vi: "Chỉ khi công việc không ảnh hưởng tới học tập." }, { en: "A small job teaches students the value of money.", vi: "Một công việc nhỏ dạy học sinh giá trị của tiền bạc." }, { en: "It teaches them to plan their time well.", vi: "Nó dạy các em sắp xếp thời gian tốt." }, { en: "However, if students work too much, they feel tired.", vi: "Tuy nhiên, nếu học sinh làm việc quá nhiều, các em sẽ mệt." }, { en: "Keep study first.", vi: "Đặt học tập lên trước." }] },
+    { wtype: "Mô tả biểu đồ cột", type: "Task 1", band: "Band 4.0", title: "Biểu đồ cột: giờ đọc sách mỗi tuần",
+      prompt: "The bar chart shows how many hours four classes read each week: Class A 5 hours, Class B 7 hours, Class C 4 hours, Class D 9 hours. Write a short paragraph to describe the chart.",
+      dataDesc: "Số liệu: lớp A 5 giờ, lớp B 7 giờ, lớp C 4 giờ, lớp D 9 giờ mỗi tuần. Dàn ý: mở bài nêu chung biểu đồ nói về gì; thân bài nêu cao nhất (lớp D), thấp nhất (lớp C), và các lớp ở giữa; kết bài nêu nhận xét chung (lớp D đọc gần gấp đôi lớp C).",
+      model: "The bar chart shows how many hours four classes read each week. Class D reads the most, with 9 hours a week. Class B comes second, with 7 hours. Class A reads 5 hours, and Class C reads the least, with only 4 hours. In general, Class D reads more than twice as much as Class C, which shows a big difference between classes.",
+      analysis: "Cấu trúc mô tả biểu đồ cột: mở bài nêu chung; thân bài đi từ cao xuống thấp; kết bài nêu nhận xét so sánh. Điểm ngôn ngữ đáng học: (1) reads the most và reads the least cho cao nhất và thấp nhất; (2) comes second cho vị trí thứ hai; (3) more than twice as much as để so sánh gấp đôi.",
+      phrases: [{ en: "The bar chart shows how many hours four classes read.", vi: "Biểu đồ cột cho thấy bốn lớp đọc bao nhiêu giờ." }, { en: "Class D reads the most.", vi: "Lớp D đọc nhiều nhất." }, { en: "Class B comes second.", vi: "Lớp B đứng thứ hai." }, { en: "Class C reads the least.", vi: "Lớp C đọc ít nhất." }, { en: "More than twice as much as.", vi: "Nhiều hơn gấp đôi." }] },
+    // ---------- BAND 4.5 — VIẾT ----------
+    { wtype: "Bài ý kiến ngắn", type: "Task 2", band: "Band 4.5", title: "Lợi ích và hạn chế của mua sắm trực tuyến",
+      prompt: "Write a short essay (about 120 words). Discuss the advantages and disadvantages of online shopping. Give your opinion in the conclusion.",
+      dataDesc: "Tình huống: bài ý kiến ngắn về mua sắm trực tuyến. Dàn ý: mở bài nêu chủ đề (mua sắm trực tuyến ngày càng phổ biến); thân bài đoạn 1 nêu lợi ích (tiện lợi, nhiều lựa chọn, giá rẻ hơn), đoạn 2 nêu hạn chế (không thử đồ, chờ giao hàng, dễ mua quá nhiều); kết bài nêu ý kiến (tốt nếu mua có kế hoạch).",
+      model: "Online shopping is more and more popular in our country. It has both advantages and disadvantages.\n\nOn the one hand, online shopping is convenient. People can buy goods at home at any time, and they can choose from many shops. Prices are often lower than in small shops, and buyers can read reviews before they pay.\n\nOn the other hand, buyers cannot try clothes or touch goods before they buy. They must wait for delivery, and sometimes goods arrive late or broken. It is also easy to buy too much, because buying online feels quick and simple.\n\nIn my opinion, online shopping is good if people buy with a plan. They should compare prices, read reviews, and buy only what they need.",
+      analysis: "Cấu trúc bài ý kiến hai mặt: mở bài nêu chủ đề; thân bài đoạn lợi ích mở bằng On the one hand, đoạn hạn chế mở bằng On the other hand; kết bài nêu ý kiến bằng In my opinion. Điểm ngôn ngữ đáng học: (1) cặp từ nối On the one hand / On the other hand; (2) mẫu câu lợi ích với can; (3) kết bài kèm lời khuyên cụ thể.",
+      phrases: [{ en: "Online shopping is more and more popular.", vi: "Mua sắm trực tuyến ngày càng phổ biến." }, { en: "On the one hand, online shopping is convenient.", vi: "Một mặt, mua sắm trực tuyến tiện lợi." }, { en: "On the other hand, buyers cannot try clothes.", vi: "Mặt khác, người mua không thể thử quần áo." }, { en: "It is easy to buy too much.", vi: "Rất dễ mua quá nhiều." }, { en: "Buy only what they need.", vi: "Chỉ mua những gì họ cần." }] },
+    { wtype: "Thư cảm ơn", type: "Task 1", band: "Band 4.5", title: "Thư cảm ơn sau buổi phỏng vấn việc làm thêm",
+      prompt: "Write a letter to the manager of a bookshop. You had an interview for a part-time job yesterday. Thank the manager, say why you want the job, and say you hope to hear from them soon.",
+      dataDesc: "Tình huống: thư cảm ơn sau phỏng vấn ở hiệu sách. Dàn ý: mở thư cảm ơn vì buổi phỏng vấn; thân thư nhắc lại mong muốn (yêu sách, rảnh cuối tuần buổi sáng) và những gì học được từ buổi phỏng vấn; kết thư mong nhận tin sớm và cảm ơn lần nữa.",
+      model: "Dear Mrs Thu,\n\nThank you very much for the interview yesterday. I enjoyed talking with you about the part-time job at your bookshop.\n\nI want this job because I love books, and I can work on Saturday and Sunday mornings. During the interview, I learned that the job needs careful and polite staff, and I believe I can do it well.\n\nI hope to hear from you soon. Thank you again for your time.\n\nYours sincerely,\nMinh",
+      analysis: "Cấu trúc thư cảm ơn sau phỏng vấn: mở thư cảm ơn và nhắc lại buổi phỏng vấn; thân thư nêu lý do muốn việc và điều học được; kết thư mong nhận tin sớm. Điểm ngôn ngữ đáng học: (1) Thank you for the interview để mở thư; (2) I believe I can do it well để thể hiện tự tin nhẹ nhàng; (3) I hope to hear from you soon để kết thư.",
+      phrases: [{ en: "Thank you very much for the interview yesterday.", vi: "Cảm ơn bà rất nhiều vì buổi phỏng vấn hôm qua." }, { en: "I enjoyed talking with you about the job.", vi: "Tôi rất vui khi nói chuyện với bà về công việc." }, { en: "I want this job because I love books.", vi: "Tôi muốn công việc này vì tôi yêu sách." }, { en: "I believe I can do it well.", vi: "Tôi tin mình có thể làm tốt." }, { en: "I hope to hear from you soon.", vi: "Tôi mong sớm nhận tin từ bà." }] },
+    { wtype: "Bài ý kiến ngắn", type: "Task 2", band: "Band 4.5", title: "Thành phố nên có thêm công viên không?",
+      prompt: "Write a short essay (about 120 words). Give your opinion: should cities have more parks? Give reasons and examples.",
+      dataDesc: "Tình huống: bài ý kiến ngắn về công viên trong thành phố. Dàn ý: mở bài nêu ý kiến (nên có thêm công viên); thân bài nêu ba lý do (chỗ tập thể dục, không khí sạch hơn, nơi gặp gỡ cộng đồng) và ví dụ (công viên gần nhà, người già tập dưỡng sinh, trẻ con chơi); kết bài khẳng định lại và kêu gọi hành động nhỏ.",
+      model: "In my opinion, cities should have more parks. Parks are good for health, for air, and for community life.\n\nFirst, parks give people a place to exercise. In the morning, old people practise gentle exercise there, and children play after school. Second, trees in parks clean the air and make hot streets cooler. Third, parks are places where neighbours meet, talk, and help each other.\n\nSome people say land for parks costs a lot of money. However, a healthy and happy community is worth the cost, because people who exercise and meet friends feel better and work better.\n\nSo, cities should build more small parks, even on small empty land. A small park near every home can change city life for the better.",
+      analysis: "Cấu trúc bài ý kiến có phản biện: mở bài nêu ý kiến và ba lý do; thân bài triển khai ba lý do bằng First, Second, Third kèm ví dụ; đoạn phản biện mở bằng Some people say... rồi bác lại bằng However; kết bài khẳng định lại bằng So. Điểm ngôn ngữ đáng học: (1) liệt kê lý do bằng First, Second, Third; (2) mẫu phản biện Some people say... However...; (3) kết bài kèm đề xuất cụ thể.",
+      phrases: [{ en: "Cities should have more parks.", vi: "Thành phố nên có thêm công viên." }, { en: "Parks give people a place to exercise.", vi: "Công viên cho mọi người chỗ tập thể dục." }, { en: "Trees in parks clean the air.", vi: "Cây trong công viên làm sạch không khí." }, { en: "Some people say land for parks costs a lot.", vi: "Một số người nói đất làm công viên tốn nhiều tiền." }, { en: "A small park near every home.", vi: "Một công viên nhỏ gần mỗi nhà." }] }
+  ]);
+  CONTENT.writingDrills.push.apply(CONTENT.writingDrills, [
+    // ---------- LUYỆN VIẾT ----------
+    { band: "Band 3.5", kind: "paraphrase", title: "Viết lại câu bằng từ helpful thay cho kind",
+      prompt: "Viết lại câu bằng từ helpful thay cho kind, giữ nguyên nghĩa. / Rewrite the sentence with helpful instead of kind.",
+      given: "Mrs Lan is a kind neighbour.", model: "Mrs Lan is a helpful neighbour.",
+      note: "Thay tính từ đồng nghĩa mà giữ nguyên cấu trúc câu: chủ ngữ + be + tính từ + danh từ." },
+    { band: "Band 3.5", kind: "combine", title: "Nối câu bằng but: thích bún nhưng không ăn cay được",
+      prompt: "Nối hai câu thành một câu bằng but. / Combine the sentences with but.",
+      given: "I like noodles. / I cannot eat spicy food.", model: "I like noodles, but I cannot eat spicy food.",
+      note: "But nối hai ý đối lập, và nhớ dấu phẩy trước but." },
+    { band: "Band 3.5", kind: "order", title: "Sắp xếp thành câu miêu tả người",
+      prompt: "Sắp xếp các từ thành câu đúng. / Put the words in the correct order.",
+      given: "is / Lan / kind / and / funny", model: "Lan is kind and funny.",
+      note: "Thứ tự câu kể: chủ ngữ + be + tính từ, hai tính từ nối bằng and." },
+    { band: "Band 4.0", kind: "combine", title: "Nối câu bằng when: đang nấu cơm thì mất điện",
+      prompt: "Nối hai câu thành một câu bằng when. / Combine the sentences with when.",
+      given: "We were cooking rice. / The electricity went out.", model: "We were cooking rice when the electricity went out.",
+      note: "When nối việc đang diễn ra (quá khứ tiếp diễn) với việc cắt ngang (quá khứ đơn)." },
+    { band: "Band 4.0", kind: "paraphrase", title: "Viết lại câu bằng bị động: người ta trồng rau ở vườn trường",
+      prompt: "Viết lại câu bằng dạng bị động. / Rewrite the sentence in the passive.",
+      given: "People grow vegetables in the school garden.", model: "Vegetables are grown in the school garden.",
+      note: "Bị động: tân ngữ lên làm chủ ngữ, rồi be + V3; người thực hiện không quan trọng thì bỏ đi." },
+    { band: "Band 4.0", kind: "combine", title: "Nối câu bằng who: cô gái làm ở hiệu sách bán sách",
+      prompt: "Nối hai câu thành một câu bằng who. / Combine the sentences with who.",
+      given: "The girl works at the bookshop. / She sells books.", model: "The girl who works at the bookshop sells books.",
+      note: "Who thay cho she, mệnh đề quan hệ đứng ngay sau danh từ mà nó bổ nghĩa." },
+    { band: "Band 4.5", kind: "paraphrase", title: "Viết lại câu ghép bằng từ đồng nghĩa: reduce thành cut down on",
+      prompt: "Viết lại câu bằng cụm từ cut down on thay cho reduce. / Rewrite the sentence with cut down on instead of reduce.",
+      given: "We should reduce plastic bags.", model: "We should cut down on plastic bags.",
+      note: "Cut down on nghĩa là giảm bớt, đi với danh từ; giữ nguyên should ở đầu." },
+    { band: "Band 4.5", kind: "combine", title: "Nối câu bằng although: bận vẫn tập thể dục",
+      prompt: "Nối hai câu thành một câu bằng although đứng đầu câu. / Combine the sentences with although at the start.",
+      given: "Lan is busy. / She exercises every morning.", model: "Although Lan is busy, she exercises every morning.",
+      note: "Although đứng đầu câu, nhớ dấu phẩy sau mệnh đề although." },
+    { band: "Band 4.5", kind: "order", title: "Sắp xếp câu phức có because: trời mưa nên ở nhà",
+      prompt: "Sắp xếp các từ thành câu đúng. / Put the words in the correct order.",
+      given: "home / because / it / we / rained / stayed", model: "We stayed home because it rained.",
+      note: "Thứ tự: mệnh đề chính trước (We stayed home), rồi because + mệnh đề lý do." }
+  ]);
+  CONTENT.typing.push.apply(CONTENT.typing, [
+    // ---------- GÕ CÂU ----------
+    { level: "Band 3.5", title: "Miêu tả người quen", sentences: [
+      "Mrs Lan is a kind neighbour.",
+      "She has a warm smile for everyone.",
+      "My friend Mai is funny and helpful.",
+      "Grandpa has grey hair and a soft voice.",
+      "The little boy waves hello every morning.",
+      "Our neighbours greet guests at the gate.",
+      "She wears glasses when she reads a book.",
+      "His happy laugh fills the small yard.",
+      "The tall man helps us carry heavy boxes.",
+      "Children chat with old friends under the tree."
+    ] },
+    { level: "Band 3.5", title: "Kể việc hôm qua", sentences: [
+      "Yesterday I went to the market with my mother.",
+      "We bought fresh herbs and green papaya.",
+      "My brother mended my bicycle in ten minutes.",
+      "Grandma cooked rice and fried fish for lunch.",
+      "After lunch we flew a red fish kite.",
+      "The kite flew high into the blue sky.",
+      "In the evening we ate together on the field.",
+      "I thanked Mrs Lan many times for her help.",
+      "The children watered the flowers every day.",
+      "Last Sunday our family visited a flower garden."
+    ] },
+    { level: "Band 3.5", title: "Chỉ đường quanh làng", sentences: [
+      "Go straight and turn left at the market.",
+      "The post office is next to the bank.",
+      "Walk along the river to the small temple.",
+      "Turn right at the crossroads and go past my house.",
+      "The school is behind the market.",
+      "Walk across the small bridge to the other side.",
+      "Go through the gate and turn left.",
+      "The pond is near the bamboo fence.",
+      "Walk along the quiet lane to grandma's house.",
+      "The bus stop is two hundred metres away."
+    ] },
+    { level: "Band 3.5", title: "Cảm ơn và xin lỗi lịch sự", sentences: [
+      "Thank you so much for your help.",
+      "Excuse me, can you help me, please?",
+      "I am sorry for my late homework.",
+      "Please tell me before Saturday if you can come.",
+      "Thank you for your kind words.",
+      "I am sorry, I cannot come this Sunday.",
+      "Please water the plants every morning.",
+      "Thank you very much for the lovely gift.",
+      "Excuse me, where is the post office, please?",
+      "I really hope you say yes."
+    ] },
+    { level: "Band 4.0", title: "Câu điều kiện và lời khuyên", sentences: [
+      "If it rains, we will stay at home.",
+      "If you practise every day, you will speak better.",
+      "You should drink water when you feel thirsty.",
+      "If Lan studies hard, she will pass the exam.",
+      "You should turn off the tap to save water.",
+      "If we leave early, we will catch the bus.",
+      "You should read the contract before you sign it.",
+      "If the soup is too hot, wait a little longer.",
+      "You should keep your room tidy every day.",
+      "If you feel tired, you should rest and sleep early."
+    ] },
+    { level: "Band 4.0", title: "Thuê phòng và sửa đồ", sentences: [
+      "The rent is two million dong a month.",
+      "Please read the contract before you sign it.",
+      "The tap in the kitchen is leaking.",
+      "The landlord will repair the door this week.",
+      "Keep the receipt after you pay the rent.",
+      "My roommate cooks dinner on Sundays.",
+      "Take the elevator to the fifth floor.",
+      "Always lock the door when you go out.",
+      "The room is small but clean and quiet.",
+      "Ask the landlord before you paint the room."
+    ] },
+    { level: "Band 4.0", title: "Đi xe buýt và đổi vé", sentences: [
+      "We boarded route thirty-two at seven in the morning.",
+      "Please swipe your card when you get on the bus.",
+      "The bus fare is seven thousand dong.",
+      "Transfer to route twelve at the crossroads.",
+      "I would like to change my morning ticket to an afternoon one.",
+      "My ticket is at eight in the morning.",
+      "Wait under the shelter when it rains.",
+      "Join the queue and wait for your turn.",
+      "The driver announces the next stop clearly.",
+      "Please alight here for the museum."
+    ] },
+    { level: "Band 4.0", title: "Nấu ăn cho gia đình", sentences: [
+      "Follow the recipe and the soup will be good.",
+      "Simmer the soup for twenty minutes.",
+      "Stir well so the sauce does not burn.",
+      "Add a pinch of salt to the soup.",
+      "Mum fries an egg for breakfast every day.",
+      "We eat a bowl of rice with fish for lunch.",
+      "Season the fish to taste before you fry it.",
+      "Buy fresh ingredients in the morning market.",
+      "Hot soup is good on rainy days.",
+      "Grandma cooks rice for the whole family on Sundays."
+    ] },
+    { level: "Band 4.5", title: "Ý kiến có lý do", sentences: [
+      "In my opinion, cities should have more parks.",
+      "Online shopping is convenient because we can buy at home.",
+      "Parks give people a place to exercise every morning.",
+      "A small job teaches students the value of money.",
+      "Reading every day helps us learn many new words.",
+      "Trees in parks clean the air and cool hot streets.",
+      "Weekend jobs are good when students keep study first.",
+      "Saving water also saves money for every family.",
+      "A healthy lunch helps us learn better in the afternoon.",
+      "Helping neighbours makes our street friendly and safe."
+    ] },
+    { level: "Band 4.5", title: "So sánh kép và nhượng bộ", sentences: [
+      "The more you read, the more words you learn.",
+      "The earlier you start, the better you speak.",
+      "Although Lan is busy, she exercises every morning.",
+      "The more carefully you listen, the more clearly you understand.",
+      "Although it was raining, we went for a walk.",
+      "The harder you practise, the better you play.",
+      "Although the room is small, it is clean and quiet.",
+      "The more books you read, the richer your vocabulary becomes.",
+      "Although he is tired, he finishes his homework on time.",
+      "The sooner you finish, the earlier you can rest."
+    ] },
+    { level: "Band 4.5", title: "Việc làm thêm và thời gian", sentences: [
+      "It takes me twenty minutes to walk to school.",
+      "I spend two hours reading every evening.",
+      "I work three evenings a week, from five to nine.",
+      "The pay is twenty-five thousand dong an hour.",
+      "It takes us an hour to cook dinner for the family.",
+      "She spends thirty minutes jogging in the park.",
+      "My supervisor is patient and shows me everything slowly.",
+      "A part-time job teaches us about money and time.",
+      "I will finish my part by Wednesday.",
+      "We will finish everything by Friday."
+    ] },
+    { level: "Band 4.5", title: "Sống xanh mỗi ngày", sentences: [
+      "Sorting rubbish helps the collectors a lot.",
+      "Reuse a bottle instead of buying a new one.",
+      "Turn off the tap while you brush your teeth.",
+      "Old books can be donated to the school library.",
+      "A short shower saves a lot of water every day.",
+      "Ride a bike to school when the weather is fine.",
+      "We buy fewer plastic bags when we shop.",
+      "Homework should be finished on time.",
+      "Rubbish should be sorted every day.",
+      "A small habit in one street can help the whole city."
+    ] }
+  ]);
+})();
+
+/* ---------- PHA 3 (27/10/2026): PHA 3 — IELTS CHUONG GIUA-CAO 5,0-7,5+ (tong +130 buoc) ---------- */
+// ============================================================
+//  phase3_en_thick.js — VÒNG BỔ SUNG PHA 3 (tiếng Anh, chương 5.0–7.5+)
+//  Nạp SAU content-new.js. Chỉ append vào cuối các mảng CONTENT
+//  (push.apply), không sửa nội dung cũ, không chèn giữa.
+//  Nội dung tự soạn 100%, tiếng Việt đơn giản, ví dụ trước — quy tắc sau.
+//  Band ghi trong bài là nhãn chương của web (chuẩn nội bộ), không phải
+//  điểm thi thật. Không sao chép đề thi thật hay sách có bản quyền.
+// ============================================================
+(function () {
+  if (typeof CONTENT === "undefined") return;
+
+  // ---------------- Band 5.0 — Đọc (3) ----------------
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    {
+      topic: "Ăn sáng ở quán nhỏ",
+      level: "Band 5.0",
+      title: "A Breakfast Stall That Opens Before Sunrise",
+      text: "Every morning, long before most shops open, Mrs Hoa opens her small breakfast stall at the corner of the street. She sells hot rice porridge, boiled eggs and warm soy milk. Her stall has only four small tables, but it is always full before seven o'clock.\n\nMost of her customers are people who live nearby. Workers stop for a quick breakfast before they go to work. School children buy warm soy milk on cold mornings. Old people come slowly, sit down and talk to each other while they eat.\n\nMrs Hoa wakes up at four o'clock every morning. She cooks the porridge herself and buys fresh eggs from a farm near her house. She says good food does not need to be expensive. It only needs to be fresh, hot and clean.\n\nThe price is also very low. A bowl of porridge costs less than a bus ticket. Because of this, even students with little money can eat well in the morning. Mrs Hoa sometimes gives a free egg to a child who has no money that day.\n\nPeople like the stall not only for the food, but also for the warm feeling. Mrs Hoa remembers the name of every regular customer. She asks about their family and their work. For many people, her small stall is the best way to start the day.",
+      questions: [
+        { type: "MC", q: "What does Mrs Hoa sell at her stall?", o: ["Rice porridge, boiled eggs and warm soy milk", "Bread, coffee and cakes", "Noodles, fish and vegetables", "Fruit juice and sandwiches"], options: ["Rice porridge, boiled eggs and warm soy milk", "Bread, coffee and cakes", "Noodles, fish and vegetables", "Fruit juice and sandwiches"], a: 0, why: "Đoạn 1: quán bán cháo nóng, trứng luộc và sữa đậu nành ấm → đáp án đầu tiên đúng." },
+        { type: "TFNG", q: "Mrs Hoa buys her eggs from a farm near her house.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 0, why: "Đoạn 3: cô Hoa mua trứng tươi từ một trang trại gần nhà → câu này đúng." },
+        { type: "MATCH", q: "Who sometimes gets a free egg from Mrs Hoa?", o: ["A worker in a hurry", "A child who has no money that day", "A school teacher"], options: ["A worker in a hurry", "A child who has no money that day", "A school teacher"], a: 1, why: "Đoạn 4: cô Hoa thỉnh thoảng tặng một quả trứng miễn phí cho một đứa trẻ không có tiền hôm đó." },
+        { type: "COMP", q: "Mrs Hoa wakes up at ___ o'clock every morning.", answer: "four|4", why: "Đoạn 3: cô Hoa thức dậy lúc 4 giờ mỗi sáng để nấu cháo." },
+        { type: "MC", q: "Why do people like the stall, besides the food?", o: ["Because it is very big", "Because Mrs Hoa remembers her customers and talks to them", "Because it sells food all day", "Because it is near a bus station"], options: ["Because it is very big", "Because Mrs Hoa remembers her customers and talks to them", "Because it sells food all day", "Because it is near a bus station"], a: 1, why: "Đoạn 5: mọi người thích quán không chỉ vì đồ ăn mà còn vì cảm giác ấm áp — cô Hoa nhớ tên từng khách quen và hỏi thăm họ." }
+      ],
+      translation: "Cô Hoa mở quán ăn sáng nhỏ ở góc phố từ rất sớm, bán cháo nóng, trứng luộc và sữa đậu nành ấm. Khách quen là người dân quanh đó: công nhân, học sinh và người già. Cô dậy từ 4 giờ sáng, tự nấu cháo, mua trứng tươi gần nhà và bán giá rất rẻ. Mọi người thích quán không chỉ vì đồ ăn mà còn vì cô Hoa nhớ tên và hỏi thăm từng khách quen.",
+      phrases: [
+        { en: "before sunrise", vi: "trước khi mặt trời mọc" },
+        { en: "regular customer", vi: "khách quen" },
+        { en: "fresh, hot and clean", vi: "tươi, nóng và sạch" },
+        { en: "less than a bus ticket", vi: "rẻ hơn một vé xe buýt" },
+        { en: "start the day", vi: "bắt đầu ngày mới" }
+      ]
+    },
+    {
+      topic: "Ăn tối cùng gia đình",
+      level: "Band 5.0",
+      title: "Why Many Families Still Eat Dinner Together",
+      text: "In many families today, every person has a different plan. Parents work late. Children have evening classes. Teenagers spend hours on their phones. Because of this, eating dinner together is not easy.\n\nHowever, many families still try to keep this habit. They cook a simple meal at home and sit at the same table. The meal does not need to be big or special. Sometimes it is only rice, vegetables and soup. What matters is that everyone is there.\n\nAt the dinner table, people talk about their day. A child tells a funny story from school. A parent talks about a problem at work. Grandparents give advice in a quiet way. These small talks help family members understand each other better.\n\nDoctors and teachers also say family dinners are good for children. Children who eat with their family often feel safer and happier. They also learn how to listen and how to wait for their turn to speak. These are useful skills for life.\n\nOf course, no family is perfect. Sometimes people are tired and do not want to talk. Sometimes the food is late or not very good. But most families agree on one thing: a shared dinner, even a short one, keeps the family close.",
+      questions: [
+        { type: "MC", q: "Why is eating dinner together not easy for many families today?", o: ["Because food is too expensive", "Because each person has a different plan", "Because families do not like cooking", "Because children do not like rice"], options: ["Because food is too expensive", "Because each person has a different plan", "Because families do not like cooking", "Because children do not like rice"], a: 1, why: "Đoạn 1: mỗi người có một lịch trình khác nhau — bố mẹ làm muộn, trẻ học tối, thanh thiếu niên dùng điện thoại — nên ăn tối cùng nhau không dễ." },
+        { type: "TFNG", q: "A family dinner must be a big and special meal.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 2: bữa ăn không cần to hay đặc biệt, đôi khi chỉ là cơm, rau và canh → câu phát biểu sai." },
+        { type: "MATCH", q: "Who gives advice in a quiet way at the dinner table?", o: ["Children", "Grandparents", "Teachers"], options: ["Children", "Grandparents", "Teachers"], a: 1, why: "Đoạn 3: ông bà đưa ra lời khuyên một cách nhẹ nhàng trong bữa tối." },
+        { type: "COMP", q: "Children who eat with their family often feel safer and ___.", answer: "happier", why: "Đoạn 4: trẻ ăn cùng gia đình thường cảm thấy an toàn hơn và vui vẻ hơn." },
+        { type: "MC", q: "What is the main idea of the last paragraph?", o: ["Family dinners are always perfect", "A short shared dinner still keeps the family close", "Families should eat out more often", "Children should cook dinner alone"], options: ["Family dinners are always perfect", "A short shared dinner still keeps the family close", "Families should eat out more often", "Children should cook dinner alone"], a: 1, why: "Đoạn 5: không gia đình nào hoàn hảo, nhưng một bữa tối chung dù ngắn vẫn giữ gia đình gắn bó." }
+      ],
+      translation: "Ngày nay mỗi người trong gia đình có một lịch trình khác nhau nên ăn tối cùng nhau không dễ. Tuy vậy nhiều gia đình vẫn giữ thói quen nấu một bữa đơn giản và ngồi cùng bàn. Trong bữa tối, mọi người kể chuyện trong ngày và hiểu nhau hơn. Trẻ ăn cùng gia đình thường cảm thấy an toàn, vui vẻ và học cách lắng nghe. Dù không hoàn hảo, một bữa tối chung dù ngắn vẫn giữ gia đình gắn bó.",
+      phrases: [
+        { en: "eat dinner together", vi: "ăn tối cùng nhau" },
+        { en: "what matters is", vi: "điều quan trọng là" },
+        { en: "take turns to speak", vi: "lần lượt nói" },
+        { en: "understand each other better", vi: "hiểu nhau hơn" },
+        { en: "keep the family close", vi: "giữ gia đình gắn bó" }
+      ]
+    },
+    {
+      topic: "Tài xế xe buýt thân thiện",
+      level: "Band 5.0",
+      title: "The Bus Driver Who Knows Everyone's Name",
+      text: "Mr Tuan drives bus number 12 through a small town every day. The bus goes from the market to the hospital, and it stops at the school on the way. Many people take his bus in the morning and in the evening.\n\nMr Tuan is different from other drivers. He says good morning to every passenger. He waits a little longer for an old woman who walks slowly. He helps a mother with a baby to find a safe seat. He never shouts, even when the road is busy.\n\nAfter many years, Mr Tuan knows the names of most regular passengers. He knows that Lan goes to school at seven o'clock. He knows that Mrs Binh goes to the market on Tuesdays. He knows that Mr Hung works at the hospital and finishes work at six.\n\nOne rainy morning, the bus was late. The passengers were worried because they might be late for work and school. Mr Tuan said sorry in a calm voice and drove carefully on the wet road. Nobody was angry, because they knew he always tried his best.\n\nPeople in the town say Mr Tuan is more than a driver. He is a friendly face at the start and the end of the day. His small acts of kindness make a normal bus ride feel warm and safe.",
+      questions: [
+        { type: "MC", q: "Which bus does Mr Tuan drive?", o: ["Bus number 21", "Bus number 12", "Bus number 2", "Bus number 10"], options: ["Bus number 21", "Bus number 12", "Bus number 2", "Bus number 10"], a: 1, why: "Đoạn 1: ông Tuấn lái xe buýt số 12 chạy từ chợ tới bệnh viện, có dừng ở trường học." },
+        { type: "TFNG", q: "Mr Tuan shouts at passengers when the road is busy.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 2: ông không bao giờ quát, ngay cả khi đường đông → câu phát biểu sai." },
+        { type: "MATCH", q: "Who goes to the market on Tuesdays?", o: ["Lan", "Mrs Binh", "Mr Hung"], options: ["Lan", "Mrs Binh", "Mr Hung"], a: 1, why: "Đoạn 3: ông Tuấn biết bà Bình đi chợ vào thứ Ba." },
+        { type: "COMP", q: "Mr Hung works at the ___ and finishes work at six.", answer: "hospital", why: "Đoạn 3: ông Hùng làm việc ở bệnh viện và tan làm lúc 6 giờ." },
+        { type: "MC", q: "Why was nobody angry when the bus was late on a rainy morning?", o: ["Because the bus was free that day", "Because they knew Mr Tuan always tried his best", "Because it was a holiday", "Because the passengers did not need to go to work"], options: ["Because the bus was free that day", "Because they knew Mr Tuan always tried his best", "Because it was a holiday", "Because the passengers did not need to go to work"], a: 1, why: "Đoạn 4: không ai giận vì họ biết ông Tuấn luôn cố gắng hết sức và đã xin lỗi bằng giọng bình tĩnh." }
+      ],
+      translation: "Ông Tuấn lái xe buýt số 12 từ chợ tới bệnh viện, có dừng ở trường học. Khác với các tài xế khác, ông chào buổi sáng từng hành khách, chờ người già đi chậm và giúp bà mẹ bế con tìm ghế an toàn. Sau nhiều năm, ông nhớ tên hầu hết khách quen và biết lịch trình của họ. Một sáng mưa xe tới muộn nhưng không ai giận vì họ biết ông luôn cố gắng hết sức. Người dân coi ông không chỉ là tài xế mà còn là gương mặt thân thiện đầu và cuối ngày.",
+      phrases: [
+        { en: "regular passenger", vi: "hành khách quen" },
+        { en: "wait a little longer", vi: "chờ lâu hơn một chút" },
+        { en: "try one's best", vi: "cố gắng hết sức" },
+        { en: "a friendly face", vi: "một gương mặt thân thiện" },
+        { en: "acts of kindness", vi: "hành động tử tế" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.0 — Viết (3) ----------------
+  CONTENT.writing.push.apply(CONTENT.writing, [
+    {
+      wtype: "Biểu đồ cột",
+      type: "Task 1",
+      band: "Band 5.0",
+      title: "Biểu đồ cột: thời gian học sinh dùng điện thoại mỗi ngày",
+      prompt: "The chart below shows how many hours per day students in three age groups use their phones. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      dataDesc: "Dữ kiện của biểu đồ (cột): Nhóm 12-14 tuổi: 2 giờ mỗi ngày. Nhóm 15-17 tuổi: 4 giờ mỗi ngày. Nhóm 18-20 tuổi: 3 giờ mỗi ngày. Nhóm 15-17 tuổi dùng điện thoại nhiều nhất, gấp đôi nhóm 12-14 tuổi.",
+      model: "The bar chart shows how many hours per day students in three age groups use their phones.\n\nOverall, students aged 15 to 17 use their phones the most, while the youngest students use theirs the least. The time is different in each group, but all three groups use a phone for at least two hours a day.\n\nStudents aged 12 to 14 use their phones for 2 hours a day. This is the lowest figure. In contrast, students aged 15 to 17 use their phones for 4 hours a day, which is double the figure for the youngest group.\n\nThe oldest group, aged 18 to 20, uses a phone for 3 hours a day. This is one hour less than the 15-17 group, but one hour more than the 12-14 group. In short, phone use rises from the youngest group to the middle group, and then falls a little in the oldest group.",
+      analysis: "Cấu trúc 4 đoạn đơn giản cho Band 5.0: (1) Paraphrase đề bài. (2) Overview: nêu nhóm cao nhất và nhóm thấp nhất, không chi tiết. (3) So sánh nhóm trẻ nhất và nhóm giữa. (4) Nói về nhóm lớn nhất và chốt xu hướng chung. Điểm ngôn ngữ đáng học: the most / the least để nói cao nhất và thấp nhất; double the figure để nói gấp đôi; in contrast để đối chiếu hai nhóm.",
+      phrases: [
+        { en: "use their phones the most", vi: "dùng điện thoại nhiều nhất" },
+        { en: "the lowest figure", vi: "con số thấp nhất" },
+        { en: "double the figure", vi: "gấp đôi con số" },
+        { en: "one hour less than", vi: "ít hơn một giờ so với" },
+        { en: "in short", vi: "tóm lại" }
+      ]
+    },
+    {
+      wtype: "Ý kiến",
+      type: "Task 2",
+      band: "Band 5.0",
+      title: "Ý kiến: trẻ em nên giúp việc nhà",
+      prompt: "Some people think that children should help with housework from a young age. Others think children should only focus on studying. Discuss both views and give your own opinion. (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: hai quan điểm trái ngược về việc trẻ em làm việc nhà. Dàn ý: mở bài nêu hai quan điểm; thân bài 1: lợi ích của việc giúp việc nhà (kỹ năng sống, trách nhiệm); thân bài 2: lý do chỉ nên tập trung học (thời gian, áp lực); kết bài: quan điểm của người viết — giúp việc nhà nhẹ nhàng cùng với học tập.",
+      model: "Some people believe children should help with housework from a young age, while others think children should only study. In my opinion, children should do a little housework, but studying should still come first.\n\nOn the one hand, helping with housework teaches children useful life skills. When children wash dishes or clean their room, they learn to be tidy and responsible. They also understand that their parents work hard at home. These skills will help them a lot when they live alone in the future.\n\nOn the other hand, studying is the main job of a child. School lessons take a lot of time, and children also need time to rest and play. If children spend too many hours on housework, they may feel tired and have no time for homework.\n\nIn conclusion, I think a balance is best. Children can help with small jobs, such as washing dishes or tidying their room, for 20 or 30 minutes a day. This way, they learn responsibility without losing time for study.",
+      analysis: "Cấu trúc 4 đoạn cho Band 5.0: (1) Mở bài nêu hai quan điểm và quan điểm của người viết. (2) Thân bài 1: lợi ích của việc nhà. (3) Thân bài 2: lý do chỉ nên học. (4) Kết bài: cân bằng — việc nhà nhẹ nhàng mỗi ngày. Điểm ngôn ngữ đáng học: On the one hand / On the other hand để trình bày hai chiều; a balance is best để đưa ra giải pháp dung hòa; such as để đưa ví dụ cụ thể.",
+      phrases: [
+        { en: "from a young age", vi: "từ khi còn nhỏ" },
+        { en: "on the one hand", vi: "một mặt" },
+        { en: "on the other hand", vi: "mặt khác" },
+        { en: "a balance is best", vi: "cân bằng là tốt nhất" },
+        { en: "such as", vi: "chẳng hạn như" }
+      ]
+    },
+    {
+      wtype: "Ưu và nhược điểm",
+      type: "Task 2",
+      band: "Band 5.0",
+      title: "Ưu và nhược điểm: học nhóm hay học một mình",
+      prompt: "Some students prefer to study in groups, while others prefer to study alone. What are the advantages and disadvantages of studying in a group? (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: học nhóm so với học một mình. Dàn ý: mở bài nêu vấn đề; thân bài 1: ưu điểm của học nhóm (giải thích cho nhau, động lực); thân bài 2: nhược điểm (dễ mất tập trung, tốc độ khác nhau); kết bài: chọn cách phù hợp với từng môn học và từng người.",
+      model: "Many students study in groups, but others like to study alone. Studying in a group has both advantages and disadvantages, and students should choose the way that suits them best.\n\nOne advantage of group study is that students can help each other. When one student does not understand a lesson, another student can explain it in a simple way. Group study also gives students more motivation, because they do not want to be late or unprepared when their friends are waiting.\n\nHowever, group study also has disadvantages. First, it is easy to lose focus. Friends may start to talk about films or games instead of lessons. Second, students learn at different speeds. A fast student may feel bored, while a slow student may feel stressed.\n\nIn conclusion, group study is good for discussing ideas and checking understanding, but it is not good for every subject. For subjects that need quiet thinking, such as writing, studying alone may be better. The best choice depends on the student and the subject.",
+      analysis: "Cấu trúc 4 đoạn cho Band 5.0: (1) Mở bài nêu chủ đề và ý chung. (2) Thân bài 1: hai ưu điểm của học nhóm. (3) Thân bài 2: hai nhược điểm, dùng First / Second để liệt kê. (4) Kết bài: chọn cách phù hợp với môn học và người học. Điểm ngôn ngữ đáng học: both advantages and disadvantages để mở bài dạng ưu-nhược; lose focus để nói mất tập trung; depends on để nói tùy thuộc vào.",
+      phrases: [
+        { en: "both advantages and disadvantages", vi: "cả ưu điểm và nhược điểm" },
+        { en: "lose focus", vi: "mất tập trung" },
+        { en: "at different speeds", vi: "với tốc độ khác nhau" },
+        { en: "depends on", vi: "tùy thuộc vào" },
+        { en: "suits them best", vi: "phù hợp với họ nhất" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.0 — Nhập vai (3) ----------------
+  CONTENT.roleplay.push.apply(CONTENT.roleplay, [
+    {
+      title: "Returning a Faulty Phone Charger - Đổi cục sạc điện thoại bị lỗi",
+      setting: "Bạn mua một cục sạc điện thoại hôm qua nhưng nó không hoạt động. Bạn mang nó tới cửa hàng, giải thích vấn đề và xin đổi sang cục sạc khác một cách lịch sự.",
+      partner: "Nhân viên cửa hàng",
+      goal: "Giải thích rõ vấn đề, xin đổi hàng và kiểm tra cục sạc mới trước khi về.",
+      band: "Band 5.0",
+      chunks: ["I bought this charger yesterday", "It does not work", "Can I change it, please", "Can I try the new one here", "Thank you very much"],
+      turns: [
+        { from: "partner", text: "Good morning. How can I help you?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào buổi sáng. Hôm qua tôi đã mua cục sạc này ở đây, nhưng nó không hoạt động.", expect: "Good morning. I bought this charger yesterday, but it does not work.", keywords: ["bought", "charger", "yesterday", "work"], hint: "Good morning. I bought...", tip: "Câu but nối hai ý trái ngược: đã mua nhưng không dùng được. Nhấn vào yesterday và does not work." , chunks: ["I bought this charger yesterday", "It does not work"] },
+        { from: "partner", text: "I am sorry about that. Do you still have the receipt?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, đây là hóa đơn. Tôi có thể đổi sang cục sạc khác được không ạ?", expect: "Yes, here is the receipt. Can I change it, please?", keywords: ["receipt", "change"], hint: "Yes, here is...", tip: "Câu hỏi Can I... lên giọng nhẹ ở cuối để nghe lịch sự. Receipt đọc là /rɪˈsiːt/, âm t cuối không bật mạnh.", chunks: ["Can I change it, please"] },
+        { from: "partner", text: "Of course. Here is a new charger. Would you like to try it here?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, làm ơn. Tôi muốn thử cục sạc mới ở đây. Cảm ơn bạn rất nhiều.", expect: "Yes, please. Can I try the new one here? Thank you very much.", keywords: ["try", "new", "thank"], hint: "Yes, please. Can I try...", tip: "Thử hàng tại chỗ là thói quen tốt: nói rõ try the new one here trước khi rời cửa hàng.", chunks: ["Can I try the new one here", "Thank you very much"] }
+      ]
+    },
+    {
+      title: "Ordering Lunch at a Small Restaurant - Gọi món trưa ở quán ăn nhỏ",
+      setting: "Bạn vào một quán ăn nhỏ với một người bạn. Bạn gọi hai món, hỏi về món cay và xin thêm nước, rồi thanh toán lịch sự.",
+      partner: "Nhân viên phục vụ",
+      goal: "Gọi món rõ ràng, hỏi về độ cay và thanh toán lịch sự.",
+      band: "Band 5.0",
+      chunks: ["We would like two bowls of noodles", "Is this dish spicy", "Can we have more water, please", "Can I have the bill, please", "Thank you very much"],
+      turns: [
+        { from: "partner", text: "Good afternoon. What would you like to order?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào buổi chiều. Chúng tôi muốn hai bát phở, làm ơn.", expect: "Good afternoon. We would like two bowls of noodles, please.", keywords: ["would", "like", "bowls", "noodles"], hint: "Good afternoon. We would like...", tip: "Would like lịch sự hơn want khi gọi món. Nhấn vào two để nhân viên nghe rõ số lượng.", chunks: ["We would like two bowls of noodles"] },
+        { from: "partner", text: "Would you like the spicy soup or the normal soup?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Món này có cay không ạ? Bạn tôi không ăn được cay.", expect: "Is this dish spicy? My friend cannot eat spicy food.", keywords: ["dish", "spicy", "friend"], hint: "Is this dish...", tip: "Hỏi Is this dish spicy trước khi gọi giúp bạn tránh món cay. Spicy đọc rõ âm s đầu và âm i ngắn.", chunks: ["Is this dish spicy"] },
+        { from: "partner", text: "This one is not spicy. Here is your food. Enjoy your meal!" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn. Chúng tôi có thể xin thêm nước được không? Và cho tôi xin hóa đơn, làm ơn.", expect: "Thank you. Can we have more water, please? And can I have the bill, please?", keywords: ["water", "bill"], hint: "Thank you. Can we have...", tip: "Hai yêu cầu nối bằng And: xin thêm nước rồi xin hóa đơn. Bill là hóa đơn ở nhà hàng.", chunks: ["Can we have more water, please", "Can I have the bill, please", "Thank you very much"] }
+      ]
+    },
+    {
+      title: "Asking a Neighbour to Look After a Cat - Nhờ hàng xóm trông mèo",
+      setting: "Bạn sắp đi thăm gia đình ở quê hai ngày. Bạn sang nhà hàng xóm, nhờ họ cho mèo ăn và tưới cây, rồi cảm ơn và hẹn ngày về.",
+      partner: "Hàng xóm",
+      goal: "Nhờ giúp đỡ rõ ràng, nói rõ ngày đi và ngày về, và cảm ơn chân thành.",
+      band: "Band 5.0",
+      chunks: ["I am going to visit my family", "Could you feed my cat, please", "I will come back on Sunday", "Here is the key", "Thank you so much"],
+      turns: [
+        { from: "partner", text: "Hello! Nice to see you. What is new?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào bạn. Tôi sắp về quê thăm gia đình hai ngày. Bạn có thể giúp tôi một việc được không?", expect: "Hello. I am going to visit my family for two days. Could you help me with something?", keywords: ["visit", "family", "help"], hint: "Hello. I am going to...", tip: "Mở đầu bằng kế hoạch rồi mới nhờ giúp: người nghe hiểu bối cảnh trước khi nghe yêu cầu.", chunks: ["I am going to visit my family"] },
+        { from: "partner", text: "Of course. What do you need?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Bạn có thể cho mèo của tôi ăn và tưới cây giúp tôi được không? Tôi sẽ về vào Chủ nhật.", expect: "Could you feed my cat and water the plants, please? I will come back on Sunday.", keywords: ["feed", "cat", "plants", "sunday"], hint: "Could you feed...", tip: "Could you lịch sự hơn Can you khi nhờ hàng xóm. Nói rõ ngày về (Sunday) để họ biết giúp trong bao lâu.", chunks: ["Could you feed my cat, please", "I will come back on Sunday"] },
+        { from: "partner", text: "No problem. I am happy to help." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Đây là chìa khóa nhà tôi. Cảm ơn bạn rất nhiều.", expect: "Here is the key to my house. Thank you so much.", keywords: ["key", "thank"], hint: "Here is the key...", tip: "Giao chìa khóa thì nói rõ key to my house để tránh nhầm. Cảm ơn bằng Thank you so much nghe chân thành hơn Thank you đơn thuần.", chunks: ["Here is the key", "Thank you so much"] }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.0 — Nghe dài (3) ----------------
+  CONTENT.listeningPlus.push.apply(CONTENT.listeningPlus, [
+    {
+      section: "Section 1",
+      band: "Band 5.0",
+      topic: "Đăng ký thẻ thư viện khu phố",
+      text: "A: Good morning. I would like to join the library, please. B: Good morning. Welcome to Green Street Library. Can I have your name, please? A: My name is Lan Anh, and I live at 45 Green Street. B: Thank you, Lan Anh. The library is open from 8 o'clock in the morning to 8 o'clock in the evening, from Monday to Saturday. A: Is it open on Sunday? B: No, it is closed on Sunday. With a library card, you can borrow three books for two weeks. A: That is good. How much is the card? B: The card is free for students, and it costs 50000 dong a year for other people. A: I am a student, so my card is free. B: Yes. Please bring your student card and a photo next time. You can collect your library card on Friday. A: Thank you very much. B: You are welcome. Enjoy reading!",
+      questions: [
+        { type: "MC", q: "Where does Lan Anh live?", o: ["At 45 Green Street", "At 54 Green Street", "At 45 Park Street", "At 15 Green Street"], a: 0, why: "Lan Anh nói cô ấy sống ở số 45 đường Green khi đăng ký thẻ thư viện." },
+        { type: "MC", q: "When is the library closed?", o: ["On Monday", "On Saturday", "On Sunday", "On Friday"], a: 2, why: "Thư viện đóng cửa vào Chủ nhật vì nhân viên nói rõ thư viện đóng cửa ngày Chủ nhật." },
+        { type: "MATCH", q: "How many books can a member borrow at one time?", o: ["Two books", "Three books", "Five books"], a: 1, why: "Với thẻ thư viện, bạn có thể mượn ba cuốn sách trong hai tuần." },
+        { type: "COMP", q: "You can collect your library card on ___.", answer: "Friday", why: "Nhân viên dặn Lan Anh có thể lấy thẻ thư viện vào thứ Sáu." },
+        { type: "TF", q: "Lan Anh must pay 50000 dong for her card.", o: ["True", "False"], a: 1, why: "Câu này sai vì thẻ miễn phí cho học sinh, và Lan Anh là học sinh nên thẻ của cô ấy miễn phí." }
+      ]
+    },
+    {
+      section: "Section 1",
+      band: "Band 5.0",
+      topic: "Hỏi về lớp học bơi cho trẻ em",
+      text: "A: Good afternoon. I would like some information about swimming classes for children, please. B: Good afternoon. We have classes for children from 6 to 12 years old. The classes are on Saturday and Sunday mornings. A: What time do they start? B: The Saturday class starts at 8 o'clock, and the Sunday class starts at 9 o'clock. Each class lasts one hour. A: How many children are in one class? B: There are ten children in one class, and two teachers help them in the water. A: That sounds safe. How much is one month? B: One month costs 400000 dong, and this includes a swimming cap and goggles. A: My daughter is 8 years old. Can she join the Saturday class? B: Yes, of course. Please bring her to the pool at 7:45 on Saturday, and do not forget a towel and a bottle of water. A: Thank you very much.",
+      questions: [
+        { type: "MC", q: "Who are the swimming classes for?", o: ["Adults only", "Children from 6 to 12 years old", "Children under 5 years old", "Teenagers only"], a: 1, why: "Lớp học bơi dành cho trẻ từ 6 đến 12 tuổi vì nhân viên nói rõ độ tuổi này." },
+        { type: "MC", q: "What time does the Sunday class start?", o: ["At 7:45", "At 8 o'clock", "At 9 o'clock", "At 10 o'clock"], a: 2, why: "Lớp Chủ nhật bắt đầu lúc 9 giờ, trong khi lớp thứ Bảy bắt đầu lúc 8 giờ." },
+        { type: "MATCH", q: "How many teachers help the children in the water?", o: ["One teacher", "Two teachers", "Three teachers"], a: 1, why: "Có hai giáo viên giúp các em trong nước, cùng với 10 em trong một lớp." },
+        { type: "COMP", q: "One month costs ___ dong.", answer: "400000", why: "Học phí một tháng là 400000 đồng, đã gồm mũ bơi và kính bơi." },
+        { type: "TF", q: "The daughter must bring a towel and a bottle of water.", o: ["True", "False"], a: 0, why: "Câu này đúng vì nhân viên dặn mang theo khăn tắm và một chai nước khi tới hồ bơi." }
+      ]
+    },
+    {
+      section: "Section 2",
+      band: "Band 5.0",
+      topic: "Hướng dẫn tham quan nhà văn hóa khu phố",
+      text: "Welcome to our community house. This is a place where people in our neighbourhood meet, learn and have fun together. The community house is open every day from 8 o'clock in the morning to 9 o'clock in the evening. On the ground floor, there is a large room for meetings and parties. On the first floor, there are three classrooms. In the morning, children come here for drawing and singing classes. In the afternoon, old people come here to play chess and read newspapers. In the evening, there are English classes and dance classes for adults. Every month, we also have a free health check for old people in the neighbourhood. If you want to join a class, please write your name on the list at the front desk. Our staff are happy to help you. Thank you, and welcome to our community house!",
+      questions: [
+        { type: "MC", q: "What is the community house for?", o: ["Only for meetings", "Only for children", "For people to meet, learn and have fun together", "Only for English classes"], a: 2, why: "Nhà văn hóa là nơi người dân gặp gỡ, học tập và vui chơi cùng nhau, như lời giới thiệu mở đầu." },
+        { type: "MC", q: "What do old people do in the afternoon?", o: ["Learn English", "Play chess and read newspapers", "Dance", "Draw pictures"], a: 1, why: "Buổi chiều người già tới đây chơi cờ và đọc báo, theo phần giới thiệu tầng một." },
+        { type: "MATCH", q: "Where should people write their name to join a class?", o: ["On the classroom door", "At the front desk", "In the large room"], a: 1, why: "Người muốn tham gia lớp học phải ghi tên vào danh sách ở quầy lễ tân." },
+        { type: "COMP", q: "The community house is open from 8 o'clock in the morning to ___ o'clock in the evening.", answer: "9", why: "Nhà văn hóa mở cửa từ 8 giờ sáng đến 9 giờ tối mỗi ngày." },
+        { type: "TF", q: "There is a free health check for old people every month.", o: ["True", "False"], a: 0, why: "Câu này đúng vì mỗi tháng nhà văn hóa có một buổi kiểm tra sức khỏe miễn phí cho người già trong khu phố." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.0 — Nói (3) ----------------
+  CONTENT.speaking.push.apply(CONTENT.speaking, [
+    {
+      partNum: 1,
+      topicStd: "Đời sống hằng ngày",
+      part: "Part 1",
+      topic: "Weekends - Cuối tuần",
+      band: "Band 5.0",
+      lines: [
+        { who: "Examiner", en: "What do you usually do at the weekend?", vi: "Cuối tuần bạn thường làm gì?" },
+        { who: "Candidate", en: "At the weekend, I usually visit my grandparents and help my mother cook lunch. In the afternoon, I meet my friends and we play football in the park.", vi: "Cuối tuần tôi thường thăm ông bà và giúp mẹ nấu bữa trưa. Buổi chiều tôi gặp bạn bè và chúng tôi chơi bóng đá trong công viên." },
+        { who: "Examiner", en: "Do you prefer to stay at home or go out at the weekend?", vi: "Cuối tuần bạn thích ở nhà hay ra ngoài hơn?" },
+        { who: "Candidate", en: "I prefer to go out, because I can meet my friends and enjoy fresh air. But on rainy days, I like to stay at home and read books.", vi: "Tôi thích ra ngoài hơn vì tôi có thể gặp bạn bè và hít thở không khí trong lành. Nhưng vào ngày mưa, tôi thích ở nhà và đọc sách." },
+        { who: "Examiner", en: "What did you do last weekend?", vi: "Cuối tuần trước bạn đã làm gì?" },
+        { who: "Candidate", en: "Last weekend, I went to the market with my mother in the morning. Then we cooked a big lunch for the whole family.", vi: "Cuối tuần trước tôi đã đi chợ với mẹ vào buổi sáng. Sau đó chúng tôi nấu một bữa trưa thịnh soạn cho cả gia đình." }
+      ],
+      quiz: [
+        { q: "Cụm 'fresh air' trong bài có nghĩa là gì?", o: ["không khí trong lành", "thức ăn tươi", "nước sạch"], a: 0, why: "Fresh air nghĩa là không khí trong lành — Candidate nói đi ra ngoài để enjoy fresh air." },
+        { q: "Câu nào dùng thì quá khứ đơn để kể cuối tuần trước?", o: ["I usually visit my grandparents", "Last weekend, I went to the market", "I prefer to go out"], a: 1, why: "Went là dạng quá khứ của go, dùng để kể việc đã làm cuối tuần trước." },
+        { q: "Khi trời mưa, Candidate thích làm gì?", o: ["Chơi bóng đá", "Ở nhà và đọc sách", "Đi thăm ông bà"], a: 1, why: "Candidate nói: on rainy days, I like to stay at home and read books." }
+      ]
+    },
+    {
+      partNum: 2,
+      topicStd: "Thức ăn và sức khỏe",
+      part: "Part 2",
+      topic: "Describe a meal you cooked yourself - Mô tả một bữa ăn bạn tự nấu",
+      band: "Band 5.0",
+      lines: [
+        { who: "Cue card", en: "Describe a meal you cooked yourself. You should say: what the meal was, when you cooked it, who you cooked it for, and explain how you felt about it.", vi: "Hãy mô tả một bữa ăn bạn tự nấu. Bạn nên nói: bữa ăn đó là gì, bạn nấu khi nào, bạn nấu cho ai, và giải thích bạn cảm thấy thế nào về nó." },
+        { who: "Candidate", en: "I would like to talk about a simple lunch I cooked for my family last Sunday.", vi: "Tôi muốn nói về một bữa trưa đơn giản tôi đã nấu cho gia đình vào Chủ nhật tuần trước." },
+        { who: "Candidate", en: "I cooked fried rice with eggs and vegetables, and a clear vegetable soup.", vi: "Tôi đã nấu cơm rang với trứng và rau, cùng một bát canh rau thanh mát." },
+        { who: "Candidate", en: "I started at ten o'clock in the morning. First, I washed the vegetables and cut them into small pieces. Then I fried the rice with eggs.", vi: "Tôi bắt đầu lúc mười giờ sáng. Đầu tiên tôi rửa rau và cắt chúng thành miếng nhỏ. Sau đó tôi rang cơm với trứng." },
+        { who: "Candidate", en: "My parents were very happy, and they said the food was tasty. I felt proud because it was the first time I cooked a whole meal alone.", vi: "Bố mẹ tôi rất vui và nói đồ ăn ngon. Tôi cảm thấy tự hào vì đó là lần đầu tiên tôi tự nấu cả một bữa ăn." }
+      ],
+      quiz: [
+        { q: "Candidate đã nấu món gì?", o: ["Phở gà", "Cơm rang với trứng và rau, cùng canh rau", "Bánh mì kẹp"], a: 1, why: "Candidate nói: I cooked fried rice with eggs and vegetables, and a clear vegetable soup." },
+        { q: "Từ 'proud' trong bài gần nghĩa với từ nào?", o: ["tự hào", "mệt mỏi", "buồn"], a: 0, why: "Proud nghĩa là tự hào — Candidate cảm thấy tự hào vì lần đầu tự nấu cả bữa ăn." },
+        { q: "Cấu trúc mở bài Part 2 nào được dùng?", o: ["'In my opinion...'", "'I would like to talk about...'", "'First of all...'"], a: 1, why: "Câu đầu: 'I would like to talk about a simple lunch...' là cách mở bài Part 2 đơn giản." }
+      ]
+    },
+    {
+      partNum: 3,
+      topicStd: "Gia đình và xã hội",
+      part: "Part 3",
+      topic: "Family Time - Thời gian gia đình",
+      band: "Band 5.0",
+      lines: [
+        { who: "Examiner", en: "Do families in your country spend a lot of time together?", vi: "Các gia đình ở nước bạn có dành nhiều thời gian bên nhau không?" },
+        { who: "Candidate", en: "I think many families try to spend time together, especially at dinner and at the weekend. But some parents work very late, so they have little time for their children.", vi: "Tôi nghĩ nhiều gia đình cố gắng dành thời gian bên nhau, nhất là vào bữa tối và cuối tuần. Nhưng một số bố mẹ làm việc rất muộn nên họ có ít thời gian cho con cái." },
+        { who: "Examiner", en: "Why is it important for families to eat together?", vi: "Vì sao gia đình ăn cùng nhau lại quan trọng?" },
+        { who: "Candidate", en: "When families eat together, they can talk about their day and understand each other better. Children also learn good manners, like waiting for their turn to speak.", vi: "Khi gia đình ăn cùng nhau, họ có thể kể về ngày của mình và hiểu nhau hơn. Trẻ em cũng học phép lịch sự, như chờ đến lượt mình nói." },
+        { who: "Examiner", en: "How has family life changed in recent years?", vi: "Đời sống gia đình đã thay đổi như thế nào trong những năm gần đây?" },
+        { who: "Candidate", en: "In the past, many families lived together with grandparents. Now, more young families live in small flats in cities, so they see their grandparents less often.", vi: "Trước đây nhiều gia đình sống chung với ông bà. Bây giờ nhiều gia đình trẻ sống trong căn hộ nhỏ ở thành phố nên họ gặp ông bà ít thường xuyên hơn." }
+      ],
+      quiz: [
+        { q: "Theo Candidate, vì sao một số bố mẹ có ít thời gian cho con?", o: ["Vì họ làm việc rất muộn", "Vì họ không thích con cái", "Vì họ sống ở nông thôn"], a: 0, why: "Candidate nói: some parents work very late, so they have little time for their children." },
+        { q: "Trẻ học được gì khi ăn cùng gia đình, theo bài?", o: ["Học nấu ăn ngon", "Học phép lịch sự như chờ đến lượt nói", "Học ngoại ngữ"], a: 1, why: "Candidate nói trẻ học good manners, like waiting for their turn to speak." },
+        { q: "Cụm 'less often' có nghĩa là gì?", o: ["thường xuyên hơn", "ít thường xuyên hơn", "không bao giờ"], a: 1, why: "Less often nghĩa là ít thường xuyên hơn — các gia đình trẻ gặp ông bà less often." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.0 — Ngữ pháp (2) ----------------
+  CONTENT.grammar.push.apply(CONTENT.grammar, [
+    {
+      fam: "Thì và thể của động từ",
+      hook: "Muốn kể chuyện đã xảy ra hôm qua, chỉ cần đổi động từ sang dạng quá khứ: went, watched, cooked.",
+      level: "Band 5.0",
+      name: "Thì quá khứ đơn với yesterday và last week",
+      explain: "Nhìn hai câu này trước nhé: I watched a film yesterday. (Hôm qua tôi đã xem một bộ phim.) She cooked lunch last Sunday. (Chủ nhật tuần trước cô ấy đã nấu bữa trưa.) Sau ví dụ là quy tắc: kể việc đã xong trong quá khứ thì dùng quá khứ đơn. Động từ có quy tắc thêm -ed (watched, cooked), động từ bất quy tắc đổi hẳn dạng (go thành went, see thành saw). Dấu hiệu thường gặp: yesterday, last week, last Sunday, ago.",
+      examples: ["I watched a film yesterday.", "She cooked lunch last Sunday.", "We went to the market last week."],
+      tip: "Hãy tưởng tượng yesterday và last week như hai tấm vé quay ngược thời gian — thấy chúng là biết câu phải ở quá khứ.",
+      model: "A: What did you do last weekend? B: I went to the market with my mother. We bought vegetables and cooked a big lunch.",
+      modelVi: "A: Cuối tuần trước bạn đã làm gì? B: Tôi đã đi chợ với mẹ. Chúng tôi mua rau và nấu một bữa trưa thịnh soạn.",
+      quiz: [
+        { q: "I ___ a film yesterday.", o: ["watch", "watched", "watching"], a: 1, why: "Yesterday là dấu hiệu quá khứ đơn: watched." },
+        { q: "She ___ lunch last Sunday.", o: ["cooks", "cook", "cooked"], a: 2, why: "Last Sunday là quá khứ đơn: cooked." },
+        { q: "We ___ to the market last week.", o: ["go", "went", "going"], a: 1, why: "Go là động từ bất quy tắc, quá khứ là went." },
+        { q: "He ___ his friend yesterday.", o: ["saw", "see", "sees"], a: 0, why: "See đổi thành saw ở quá khứ đơn." },
+        { q: "They ___ football two days ago.", o: ["play", "played", "playing"], a: 1, why: "Ago là dấu hiệu quá khứ đơn: played." },
+        { q: "Chọn câu đúng:", o: ["I watched TV last night.", "I watch TV last night.", "I watching TV last night."], a: 0, why: "Last night là quá khứ nên dùng watched." },
+        { q: "Câu nào sai?", o: ["She went home yesterday.", "She goed home yesterday.", "She cooked dinner yesterday."], a: 1, why: "Goed là sai — quá khứ của go là went, không thêm -ed." },
+        { q: "I ___ my homework last evening.", o: ["do", "did", "doing"], a: 1, why: "Do đổi thành did ở quá khứ đơn." }
+      ]
+    },
+    {
+      fam: "Câu hỏi và câu trả lời",
+      hook: "Muốn hỏi ai đó, chỉ cần đặt do, does hoặc did lên đầu câu: Do you like...? Did you go...?",
+      level: "Band 5.0",
+      name: "Câu hỏi Yes/No và Wh- với do, does, did",
+      explain: "Nhìn hai câu này trước nhé: Do you like football? (Bạn có thích bóng đá không?) Where did you go last weekend? (Cuối tuần trước bạn đã đi đâu?) Sau ví dụ là quy tắc: hỏi ở hiện tại thì dùng Do với I/you/we/they và Does với he/she/it; hỏi ở quá khứ thì dùng Did cho mọi chủ ngữ, và động từ chính trở về dạng gốc (go, không phải went). Câu hỏi Wh- thì đặt từ hỏi (where, when, what, who) lên trước do/does/did.",
+      examples: ["Do you like football?", "Does she work on Sunday?", "Where did you go last weekend?"],
+      tip: "Hãy nhớ: did đã mang nghĩa quá khứ rồi nên động từ sau nó phải về dạng gốc — Did you go, không phải Did you went.",
+      model: "A: Do you like cooking? B: Yes, I do. A: What did you cook yesterday? B: I cooked fried rice.",
+      modelVi: "A: Bạn có thích nấu ăn không? B: Có, tôi thích. A: Hôm qua bạn đã nấu gì? B: Tôi đã nấu cơm rang.",
+      quiz: [
+        { q: "___ you like football?", o: ["Do", "Does", "Did"], a: 0, why: "Chủ ngữ you dùng Do ở hiện tại." },
+        { q: "___ she work on Sunday?", o: ["Do", "Does", "Did"], a: 1, why: "Chủ ngữ she dùng Does ở hiện tại." },
+        { q: "Where ___ you go last weekend?", o: ["do", "does", "did"], a: 2, why: "Last weekend là quá khứ nên dùng did, và go giữ dạng gốc." },
+        { q: "___ you go to school yesterday?", o: ["Do", "Did", "Does"], a: 1, why: "Yesterday là quá khứ nên dùng Did." },
+        { q: "What ___ he eat for lunch?", o: ["do", "does", "did"], a: 1, why: "Hiện tại với he dùng does, động từ eat giữ dạng gốc." },
+        { q: "Chọn câu đúng:", o: ["Did you went home?", "Did you go home?", "Did you goes home?"], a: 1, why: "Sau did, động từ phải về dạng gốc: go." },
+        { q: "Câu hỏi về nơi chốn bắt đầu bằng:", o: ["When", "Where", "Who"], a: 1, why: "Where dùng để hỏi về nơi chốn." },
+        { q: "___ does your mother work?", o: ["When", "Where", "What"], a: 1, why: "Hỏi nơi làm việc thì dùng Where." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.0 — Luyện viết (2) + Gõ câu (2) ----------------
+  CONTENT.writingDrills.push.apply(CONTENT.writingDrills, [
+    {
+      band: "Band 5.0",
+      kind: "combine",
+      title: "Nối câu bằng and và but: thói quen buổi sáng",
+      prompt: "Nối hai câu thành một câu bằng and hoặc but. / Combine the sentences with and or but.",
+      given: "I get up early. / I feel tired in the morning.",
+      model: "I get up early, but I feel tired in the morning.",
+      note: "Kỹ thuật này dùng but để nối hai ý trái ngược trong một câu: dậy sớm nhưng vẫn mệt vào buổi sáng."
+    },
+    {
+      band: "Band 5.0",
+      kind: "order",
+      title: "Sắp xếp thành câu về cuối tuần",
+      prompt: "Sắp xếp các từ thành một câu đúng. / Put the words in the correct order.",
+      given: "weekend / at / friends / meet / I / my / the",
+      model: "I meet my friends at the weekend.",
+      note: "Kỹ thuật này bám vào trật tự chủ ngữ, động từ, tân ngữ rồi trạng ngữ thời gian ở cuối câu."
+    }
+  ]);
+  CONTENT.typing.push.apply(CONTENT.typing, [
+    {
+      level: "Band 5.0",
+      title: "Câu về đời sống gia đình",
+      sentences: [
+        "My family eats dinner together every evening.",
+        "My mother cooks rice and vegetables for lunch.",
+        "My father goes to work at seven o'clock in the morning.",
+        "My little sister helps me wash the dishes after dinner.",
+        "We visit our grandparents every Sunday afternoon.",
+        "My brother and I clean our room on Saturday morning.",
+        "My grandmother tells us funny stories after dinner.",
+        "We watch the news together before we go to bed.",
+        "My family likes to walk in the park at the weekend.",
+        "I love my family very much."
+      ]
+    },
+    {
+      level: "Band 5.0",
+      title: "Câu mô tả ngày cuối tuần",
+      sentences: [
+        "On Saturday morning, I go to the market with my mother.",
+        "In the afternoon, I meet my friends in the park.",
+        "We play football for one hour and then we rest under a tree.",
+        "On Sunday, my family cooks a big lunch together.",
+        "After lunch, I read a book and listen to music.",
+        "In the evening, we watch a film together at home.",
+        "My weekend is simple, but I feel happy and relaxed.",
+        "I go to bed early on Sunday night.",
+        "On Monday morning, I feel ready for a new week.",
+        "A good weekend helps me study better in the next week."
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.5 — Đọc (3) ----------------
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    {
+      topic: "Chợ đêm và người trẻ",
+      level: "Band 5.5",
+      title: "Why Night Markets Attract Young People",
+      text: "When the sun goes down, many streets in big cities come alive. Small stalls open along the pavement, selling food, clothes and handmade gifts. These night markets are now one of the most popular places for young people to spend their evening.\n\nThe first reason is the food. At a night market, visitors can try many different dishes in one evening. They can eat a bowl of noodles, taste a sweet dessert and drink fresh fruit juice, all at a low price. For students with little money, this is much cheaper than eating in a restaurant.\n\nThe second reason is the feeling of freedom. Unlike a shopping centre, a night market is open and noisy. Friends can walk slowly, stop anywhere and talk without any rules. They can also take photos of colourful lights and share them online at once.\n\nHowever, night markets also have problems. The streets can become very crowded, and rubbish is sometimes left on the ground after the market closes. Some sellers also sell low-quality goods at high prices to visitors who do not know the area.\n\nIn spite of these problems, most young people still love night markets. They see them not only as places to buy things, but also as places to meet friends and enjoy the city at night. As long as markets stay clean and honest, they will remain a favourite evening choice.",
+      questions: [
+        { type: "MC", q: "Why is food at night markets popular with students?", o: ["Because it is free", "Because they can try many dishes at a low price", "Because it is served in restaurants", "Because it is only sweet food"], options: ["Because it is free", "Because they can try many dishes at a low price", "Because it is served in restaurants", "Because it is only sweet food"], a: 1, why: "Đoạn 2: ở chợ đêm, khách có thể thử nhiều món trong một buổi tối với giá thấp, rẻ hơn ăn ở nhà hàng." },
+        { type: "TFNG", q: "Night markets are quiet places with strict rules.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 3: chợ đêm mở, ồn ào, bạn bè đi chậm, dừng ở đâu cũng được và nói chuyện không có quy tắc → câu phát biểu sai." },
+        { type: "MATCH", q: "Which problem is mentioned about some sellers?", o: ["They close too early", "They sell low-quality goods at high prices", "They refuse to sell food"], options: ["They close too early", "They sell low-quality goods at high prices", "They refuse to sell food"], a: 1, why: "Đoạn 4: một số người bán bán hàng chất lượng thấp với giá cao cho khách không biết khu vực." },
+        { type: "COMP", q: "Friends can take photos of colourful ___ and share them online.", answer: "lights", why: "Đoạn 3: bạn bè có thể chụp ảnh những ánh đèn đầy màu sắc và chia sẻ lên mạng ngay." },
+        { type: "MC", q: "What is the writer's final opinion?", o: ["Night markets should be closed", "Night markets will stay popular if they stay clean and honest", "Young people should only shop in centres", "Night markets are only for tourists"], options: ["Night markets should be closed", "Night markets will stay popular if they stay clean and honest", "Young people should only shop in centres", "Night markets are only for tourists"], a: 1, why: "Đoạn 5: chỉ cần chợ giữ sạch và trung thực, chúng sẽ vẫn là lựa chọn buổi tối được yêu thích." }
+      ],
+      translation: "Khi mặt trời lặn, nhiều con phố ở thành phố lớn trở nên nhộn nhịp với các gian hàng bán đồ ăn, quần áo và quà thủ công. Chợ đêm thu hút người trẻ trước hết vì đồ ăn: thử nhiều món trong một buổi tối với giá thấp. Thứ hai là cảm giác tự do: không gian mở, ồn ào, có thể đi chậm, dừng ở đâu cũng được và chụp ảnh đèn màu chia sẻ ngay. Tuy vậy chợ đêm cũng có vấn đề đông đúc, rác và hàng kém chất lượng giá cao. Dù vậy, chỉ cần giữ sạch và trung thực, chợ đêm sẽ vẫn là lựa chọn buổi tối được yêu thích.",
+      phrases: [
+        { en: "come alive", vi: "trở nên nhộn nhịp" },
+        { en: "at a low price", vi: "với giá thấp" },
+        { en: "a feeling of freedom", vi: "cảm giác tự do" },
+        { en: "low-quality goods", vi: "hàng chất lượng thấp" },
+        { en: "in spite of these problems", vi: "bất chấp những vấn đề này" }
+      ]
+    },
+    {
+      topic: "Hiệu sách cũ",
+      level: "Band 5.5",
+      title: "How Second-hand Bookshops Survive",
+      text: "In a time when many people read on phones and computers, second-hand bookshops might seem old-fashioned. Yet in many cities, these small shops are still open, and some are even busier than before.\n\nOne reason is price. A new book can be expensive, especially for students. In a second-hand shop, the same book may cost half the price, or even less. Students can buy three or four books for the price of one new book, and then sell them back when they finish reading.\n\nAnother reason is the joy of discovery. In a big online shop, people usually search for a book they already know. In a small second-hand shop, they walk between tall shelves, pick up a book by chance and find a story they never expected. Many readers say this surprise is the best part of visiting the shop.\n\nSecond-hand shops also help the environment in a simple way. When a book is read again by a new person, fewer new books need to be printed. This saves paper and reduces waste. Some shops also give old books to schools and libraries instead of throwing them away.\n\nOf course, these shops face real difficulties. Rent in city centres is high, and fewer people walk past small shops than in the past. But shop owners who organise reading clubs, story evenings and book exchanges often keep their regular customers. For many readers, a second-hand bookshop is not just a shop. It is a quiet corner of the city where stories find new readers.",
+      questions: [
+        { type: "MC", q: "Why do students like second-hand bookshops?", o: ["Because the books are new", "Because the books are much cheaper", "Because the shops are very large", "Because they can read online there"], options: ["Because the books are new", "Because the books are much cheaper", "Because the shops are very large", "Because they can read online there"], a: 1, why: "Đoạn 2: sách cũ có thể rẻ bằng một nửa giá sách mới, sinh viên mua được ba bốn cuốn với giá một cuốn mới." },
+        { type: "TFNG", q: "In a second-hand shop, readers usually search for a book they already know.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 3: ngược lại, ở cửa hàng trực tuyến lớn người ta mới thường tìm sách đã biết; ở hiệu sách cũ, người đọc tình cờ nhặt một cuốn và tìm thấy câu chuyện bất ngờ." },
+        { type: "MATCH", q: "What do some shops do with old books instead of throwing them away?", o: ["Burn them", "Give them to schools and libraries", "Sell them online only"], options: ["Burn them", "Give them to schools and libraries", "Sell them online only"], a: 1, why: "Đoạn 4: một số hiệu sách tặng sách cũ cho trường học và thư viện thay vì vứt đi." },
+        { type: "COMP", q: "Rent in city centres is ___.", answer: "high", why: "Đoạn 5: tiền thuê ở trung tâm thành phố cao là một khó khăn thật sự của các hiệu sách này." },
+        { type: "MC", q: "How do some shop owners keep regular customers?", o: ["By selling only new books", "By organising reading clubs, story evenings and book exchanges", "By closing in the evening", "By raising prices"], options: ["By selling only new books", "By organising reading clubs, story evenings and book exchanges", "By closing in the evening", "By raising prices"], a: 1, why: "Đoạn 5: chủ hiệu tổ chức câu lạc bộ đọc, buổi kể chuyện và đổi sách thường giữ được khách quen." }
+      ],
+      translation: "Vào thời nhiều người đọc trên điện thoại và máy tính, hiệu sách cũ có vẻ lỗi thời nhưng ở nhiều thành phố chúng vẫn mở cửa, thậm chí đông hơn trước. Lý do đầu tiên là giá: sách cũ có thể rẻ bằng một nửa sách mới, đọc xong còn bán lại được. Lý do thứ hai là niềm vui khám phá tình cờ giữa các kệ cao, khác với việc tìm sách đã biết trên mạng. Sách được đọc lại còn giúp môi trường vì in ít sách mới hơn, tiết kiệm giấy và giảm rác. Dù tiền thuê cao và ít người đi ngang qua, các chủ hiệu tổ chức câu lạc bộ đọc và đổi sách vẫn giữ được khách quen.",
+      phrases: [
+        { en: "old-fashioned", vi: "lỗi thời" },
+        { en: "the joy of discovery", vi: "niềm vui khám phá" },
+        { en: "by chance", vi: "tình cờ" },
+        { en: "sell them back", vi: "bán lại chúng" },
+        { en: "find new readers", vi: "tìm độc giả mới" }
+      ]
+    },
+    {
+      topic: "Viết nhật ký mỗi ngày",
+      level: "Band 5.5",
+      title: "Why People Keep a Daily Diary",
+      text: "Keeping a diary is a very old habit. In the past, people wrote in paper notebooks with a pen. Today, many people still write every day, but they often use a phone or a computer instead. The tool has changed, but the reason for writing has stayed the same.\n\nFor many people, a diary is a safe place for thoughts. They can write about a happy day, a difficult problem or a small worry without fear. Nobody else reads these words, so writers can be honest about how they really feel. After writing, many people say they feel calmer and clearer in their mind.\n\nA diary is also a record of life. A short note about a meal with friends, a first day at a new job or a trip to a new city may seem unimportant at the time. Years later, these notes become precious memories. People can read them again and remember details they would otherwise forget.\n\nWriting a diary can also help people learn. When students write about what they studied, they remember it better. When workers write about a mistake at work, they can think about what to do differently next time. In this way, a diary is not only about the past. It also helps people plan for the future.\n\nExperts advise beginners to start small. Five minutes a day is enough. Writers do not need perfect grammar or beautiful words. They only need to be honest and regular. After a few weeks, many beginners find that writing has become a pleasant part of their daily routine.",
+      questions: [
+        { type: "MC", q: "What has changed about keeping a diary?", o: ["The reason for writing", "The tool people use", "The length of entries", "The language people write in"], options: ["The reason for writing", "The tool people use", "The length of entries", "The language people write in"], a: 1, why: "Đoạn 1: công cụ đã thay đổi — trước đây là sổ giấy và bút, nay thường là điện thoại hoặc máy tính — nhưng lý do viết vẫn như cũ." },
+        { type: "TFNG", q: "After writing in a diary, many people feel calmer and clearer in their mind.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 0, why: "Đoạn 2: sau khi viết, nhiều người nói họ cảm thấy bình tĩnh hơn và đầu óc rõ ràng hơn." },
+        { type: "MATCH", q: "Who can remember lessons better by writing about what they studied?", o: ["Workers", "Students", "Doctors"], options: ["Workers", "Students", "Doctors"], a: 1, why: "Đoạn 4: khi học sinh viết về những gì đã học, họ nhớ tốt hơn." },
+        { type: "COMP", q: "Experts advise beginners to start small: ___ minutes a day is enough.", answer: "Five|5", why: "Đoạn 5: chuyên gia khuyên người mới bắt đầu nhỏ thôi — năm phút mỗi ngày là đủ." },
+        { type: "MC", q: "What do beginners need for diary writing, according to the passage?", o: ["Perfect grammar and beautiful words", "Honesty and regularity", "A paper notebook only", "A teacher's help"], options: ["Perfect grammar and beautiful words", "Honesty and regularity", "A paper notebook only", "A teacher's help"], a: 1, why: "Đoạn 5: người viết không cần ngữ pháp hoàn hảo hay từ ngữ đẹp, chỉ cần trung thực và đều đặn." }
+      ],
+      translation: "Viết nhật ký là thói quen rất cũ: trước đây người ta viết vào sổ giấy bằng bút, nay thường dùng điện thoại hoặc máy tính, nhưng lý do viết vẫn như cũ. Với nhiều người, nhật ký là nơi an toàn để viết về ngày vui, vấn đề khó hay nỗi lo nhỏ mà không sợ ai đọc, nhờ đó họ trung thực với cảm xúc thật và cảm thấy bình tĩnh, rõ ràng hơn. Nhật ký cũng là bản ghi cuộc sống: ghi chú ngắn về bữa ăn với bạn bè hay ngày đầu ở việc mới sau nhiều năm trở thành kỷ niệm quý. Viết nhật ký còn giúp học tập: học sinh viết về bài đã học thì nhớ tốt hơn, người đi làm viết về sai lầm thì nghĩ được cách làm khác lần sau. Chuyên gia khuyên người mới bắt đầu nhỏ thôi: năm phút mỗi ngày, không cần ngữ pháp hoàn hảo, chỉ cần trung thực và đều đặn.",
+      phrases: [
+        { en: "a safe place for thoughts", vi: "một nơi an toàn cho suy nghĩ" },
+        { en: "feel calmer and clearer", vi: "cảm thấy bình tĩnh và rõ ràng hơn" },
+        { en: "a record of life", vi: "bản ghi cuộc sống" },
+        { en: "precious memories", vi: "kỷ niệm quý giá" },
+        { en: "start small", vi: "bắt đầu nhỏ thôi" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.5 — Viết (3) ----------------
+  CONTENT.writing.push.apply(CONTENT.writing, [
+    {
+      wtype: "Bảng số liệu",
+      type: "Task 1",
+      band: "Band 5.5",
+      title: "Bảng số liệu: thời gian dùng mạng xã hội theo độ tuổi",
+      prompt: "The table below shows the average time per day spent on social media by people in different age groups. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      dataDesc: "Dữ kiện của bảng: Nhóm 15-24 tuổi: 3,5 giờ mỗi ngày. Nhóm 25-34 tuổi: 2,5 giờ. Nhóm 35-49 tuổi: 1,5 giờ. Nhóm 50 tuổi trở lên: 0,5 giờ. Thời gian giảm dần theo độ tuổi, nhóm trẻ nhất dùng gấp 7 lần nhóm lớn tuổi nhất.",
+      model: "The table shows the average time per day that people in four age groups spend on social media.\n\nOverall, younger people spend much more time on social media than older people. The time falls steadily as age rises, from three and a half hours a day in the youngest group to only half an hour a day in the oldest group.\n\nPeople aged 15 to 24 spend the most time, at 3.5 hours a day. This is one hour more than the 25-34 group, who spend 2.5 hours a day. The gap between the youngest group and the oldest group is very large: the youngest group spends seven times as much time as the oldest group.\n\nIn the older groups, the figures are much lower. People aged 35 to 49 spend 1.5 hours a day, while people aged 50 and over spend only 0.5 hours a day. In short, social media use is highest among teenagers and young adults and lowest among people over 50.",
+      analysis: "Cấu trúc 4 đoạn cho Band 5.5: (1) Paraphrase đề bài. (2) Overview: xu hướng giảm dần theo tuổi + hai con số cực trị. (3) So sánh nhóm trẻ nhất và nhóm 25-34, nhấn mạnh gấp 7 lần. (4) Nói về hai nhóm lớn tuổi và chốt lại. Điểm ngôn ngữ đáng học: falls steadily as age rises để mô tả xu hướng giảm dần; seven times as much as để nói gấp 7 lần; the gap is very large để nói khoảng cách lớn.",
+      phrases: [
+        { en: "falls steadily as age rises", vi: "giảm đều khi độ tuổi tăng" },
+        { en: "seven times as much as", vi: "gấp 7 lần so với" },
+        { en: "the gap is very large", vi: "khoảng cách rất lớn" },
+        { en: "aged 50 and over", vi: "từ 50 tuổi trở lên" },
+        { en: "in short", vi: "tóm lại" }
+      ]
+    },
+    {
+      wtype: "Thảo luận hai chiều",
+      type: "Task 2",
+      band: "Band 5.5",
+      title: "Thảo luận hai chiều: sống ở thành phố hay nông thôn",
+      prompt: "Some people prefer to live in cities, while others prefer to live in the countryside. Discuss both views and give your own opinion. (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: hai quan điểm về nơi sống. Dàn ý: mở bài nêu hai quan điểm; thân bài 1: lợi ích của thành phố (việc làm, dịch vụ); thân bài 2: lợi ích của nông thôn (không khí, yên tĩnh, chi phí thấp); kết bài: quan điểm của người viết — thành phố cho người trẻ, nông thôn cho người muốn yên tĩnh.",
+      model: "Some people like city life, while others prefer the countryside. Both places have clear advantages, and the best choice depends on what a person needs at each stage of life.\n\nOn the one hand, cities offer more jobs and better services. Young people can find work in offices, shops and factories, and they can study at good universities. Cities also have hospitals, cinemas and public transport, which makes daily life convenient. For many young adults, these advantages are the main reason to move to a city.\n\nOn the other hand, the countryside offers a healthier and quieter life. The air is cleaner, the streets are less crowded, and the cost of living is lower. People in villages often know their neighbours well and help each other. For families with small children and for old people, this peaceful life can be more attractive than busy city life.\n\nIn my opinion, there is no single best answer. Young people who need jobs and education may prefer cities, while people who want peace and fresh air may prefer the countryside. The most important thing is to choose a place that fits your work, your family and your health.",
+      analysis: "Cấu trúc 4 đoạn cho Band 5.5: (1) Mở bài nêu hai quan điểm và ý chung: tùy nhu cầu từng giai đoạn đời. (2) Thân bài 1: lợi ích thành phố với ví dụ việc làm, dịch vụ. (3) Thân bài 2: lợi ích nông thôn với ví dụ không khí, chi phí, hàng xóm. (4) Kết bài: không có đáp án duy nhất, chọn nơi phù hợp với công việc, gia đình và sức khỏe. Điểm ngôn ngữ đáng học: depends on để nói tùy thuộc; at each stage of life để nói từng giai đoạn đời; fits your work, family and health để kết bài có chiều sâu.",
+      phrases: [
+        { en: "depends on what a person needs", vi: "tùy thuộc vào nhu cầu của mỗi người" },
+        { en: "at each stage of life", vi: "ở từng giai đoạn của cuộc đời" },
+        { en: "the cost of living is lower", vi: "chi phí sinh hoạt thấp hơn" },
+        { en: "no single best answer", vi: "không có đáp án duy nhất tốt nhất" },
+        { en: "fits your work, your family and your health", vi: "phù hợp với công việc, gia đình và sức khỏe của bạn" }
+      ]
+    },
+    {
+      wtype: "Nguyên nhân và giải pháp",
+      type: "Task 2",
+      band: "Band 5.5",
+      title: "Nguyên nhân và giải pháp: người trẻ ngủ quá ít",
+      prompt: "Many young people today do not get enough sleep. What are the causes of this problem, and what solutions can you suggest? (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: người trẻ thiếu ngủ. Dàn ý: mở bài nêu vấn đề; thân bài 1: nguyên nhân (điện thoại buổi tối, áp lực học tập và công việc, giờ giấc không đều); thân bài 2: giải pháp (không dùng điện thoại một giờ trước khi ngủ, lịch ngủ đều, trường học và công ty bắt đầu muộn hơn); kết bài: cần cả thay đổi cá nhân và thay đổi lịch trình.",
+      model: "Many young people today sleep too little, and this is a serious problem for their health and study. There are two main causes, and both can be reduced with simple changes.\n\nThe first cause is the use of phones and computers late at night. Many young people watch videos or chat with friends in bed, and the bright light from screens makes it hard to fall asleep. The second cause is pressure from study and work. Students have a lot of homework, and young workers often work overtime, so they go to bed late and wake up early.\n\nOne solution is to build a healthy evening routine. Young people should stop using phones one hour before bed and read a book instead. They should also go to bed and wake up at the same time every day, even at the weekend. In addition, schools and companies could start later in the morning, so that young people have more time to sleep.\n\nIn conclusion, lack of sleep among young people is caused mainly by screens at night and heavy pressure during the day. If young people change their evening habits and if schools and companies allow later starts, this problem can be greatly reduced.",
+      analysis: "Cấu trúc 4 đoạn cho Band 5.5: (1) Mở bài nêu vấn đề và hứa hẹn nguyên nhân + giải pháp. (2) Thân bài 1: hai nguyên nhân — màn hình buổi tối và áp lực học tập, công việc. (3) Thân bài 2: ba giải pháp — thói quen buổi tối, lịch ngủ đều, bắt đầu muộn hơn. (4) Kết bài: tóm lại nguyên nhân và điều kiện cải thiện. Điểm ngôn ngữ đáng học: makes it hard to fall asleep để nói khó ngủ; in addition để thêm giải pháp; can be greatly reduced để kết bài dạng bị động.",
+      phrases: [
+        { en: "get enough sleep", vi: "ngủ đủ giấc" },
+        { en: "makes it hard to fall asleep", vi: "khiến khó ngủ" },
+        { en: "a healthy evening routine", vi: "thói quen buổi tối lành mạnh" },
+        { en: "in addition", vi: "thêm vào đó" },
+        { en: "can be greatly reduced", vi: "có thể giảm đi rất nhiều" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.5 — Nhập vai (3) ----------------
+  CONTENT.roleplay.push.apply(CONTENT.roleplay, [
+    {
+      title: "Booking a Birthday Party Room - Đặt phòng tiệc sinh nhật",
+      setting: "Bạn muốn tổ chức sinh nhật cho em gái vào thứ Bảy tới. Bạn gọi điện tới một nhà hàng, hỏi về phòng trống, giá tiền và đồ ăn, rồi đặt phòng.",
+      partner: "Nhân viên nhà hàng",
+      goal: "Hỏi rõ phòng trống, giá và thực đơn, rồi đặt phòng cho thứ Bảy tới.",
+      band: "Band 5.5",
+      chunks: ["I would like to book a room", "How many people can the room hold", "What food do you serve", "I would like to book it for next Saturday", "Thank you very much"],
+      turns: [
+        { from: "partner", text: "Good afternoon. Sunny Restaurant. How can I help you?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào buổi chiều. Tôi muốn đặt một phòng cho tiệc sinh nhật của em gái tôi.", expect: "Good afternoon. I would like to book a room for my sister's birthday party.", keywords: ["book", "room", "sister", "birthday"], hint: "Good afternoon. I would like to book...", tip: "Nói rõ mục đích ngay từ đầu (birthday party) giúp nhân viên tư vấn phòng phù hợp.", chunks: ["I would like to book a room"] },
+        { from: "partner", text: "We have a small room and a large room. How many guests will come?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Khoảng 15 người. Phòng nhỏ chứa được bao nhiêu người ạ? Và nhà hàng phục vụ những món ăn gì?", expect: "About fifteen people. How many people can the small room hold? And what food do you serve?", keywords: ["fifteen", "small", "hold", "food"], hint: "About fifteen people. How many...", tip: "Hai câu hỏi nối bằng And: sức chứa rồi thực đơn. Hold ở đây nghĩa là chứa được bao nhiêu người.", chunks: ["How many people can the room hold", "What food do you serve"] },
+        { from: "partner", text: "The small room holds 20 people. We serve noodles, fried rice and fresh fruit. The price is 200000 dong per person." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Nghe rất tốt. Tôi muốn đặt phòng nhỏ cho thứ Bảy tới, lúc 6 giờ tối. Cảm ơn bạn rất nhiều.", expect: "That sounds good. I would like to book the small room for next Saturday at 6 o'clock in the evening. Thank you very much.", keywords: ["book", "small", "saturday"], hint: "That sounds good. I would like to book...", tip: "Chốt đặt phòng phải có đủ ba thông tin: phòng nào, ngày nào, giờ nào.", chunks: ["I would like to book it for next Saturday", "Thank you very much"] }
+      ]
+    },
+    {
+      title: "Asking for Help at a Train Station - Nhờ giúp đỡ ở ga tàu",
+      setting: "Bạn lần đầu tới một ga tàu lớn và không biết tàu của mình ở sân ga nào. Bạn hỏi một nhân viên, xác nhận lại thông tin và cảm ơn.",
+      partner: "Nhân viên ga tàu",
+      goal: "Hỏi rõ sân ga và giờ tàu chạy, xác nhận lại rồi cảm ơn.",
+      band: "Band 5.5",
+      chunks: ["Excuse me, which platform", "What time does the train leave", "Let me check: platform 4, at 9:20", "Thank you very much"],
+      turns: [
+        { from: "partner", text: "Good morning. Can I help you?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Xin lỗi, tàu đi River Town ở sân ga nào ạ?", expect: "Excuse me, which platform is the train to River Town on?", keywords: ["platform", "train", "river"], hint: "Excuse me, which platform...", tip: "Hỏi sân ga dùng which platform. Tên địa danh River Town giữ nguyên trong câu hỏi.", chunks: ["Excuse me, which platform"] },
+        { from: "partner", text: "The train to River Town leaves from platform 4 at 9:20." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tàu chạy lúc mấy giờ ạ? Để tôi kiểm tra lại: sân ga 4, lúc 9 giờ 20, đúng không ạ?", expect: "What time does the train leave? Let me check: platform 4, at 9:20, right?", keywords: ["time", "leave", "platform"], hint: "What time does the train leave?...", tip: "Xác nhận lại bằng Let me check + right ở cuối là thói quen tốt ở ga tàu: nghe lại số sân ga và giờ tàu.", chunks: ["What time does the train leave", "Let me check: platform 4, at 9:20"] },
+        { from: "partner", text: "Yes, that is right. Have a good journey!" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn rất nhiều. Chúc bạn một ngày tốt lành.", expect: "Thank you very much. Have a nice day.", keywords: ["thank", "nice", "day"], hint: "Thank you very much...", tip: "Đáp lại lời chúc Have a good journey bằng Have a nice day nghe tự nhiên và lịch sự.", chunks: ["Thank you very much"] }
+      ]
+    },
+    {
+      title: "Changing a Flight Ticket by Phone - Đổi vé máy bay qua điện thoại",
+      setting: "Bạn cần đổi vé máy bay từ thứ Sáu sang Chủ nhật vì lịch làm việc thay đổi. Bạn gọi điện tới hãng hàng không, nêu mã đặt chỗ và hỏi về phí đổi vé.",
+      partner: "Nhân viên hãng hàng không",
+      goal: "Nêu rõ mã đặt chỗ, xin đổi ngày bay và hỏi về phí đổi vé.",
+      band: "Band 5.5",
+      chunks: ["I would like to change my flight", "My booking number is", "Is there a fee for changing", "Sunday instead of Friday", "Thank you for your help"],
+      turns: [
+        { from: "partner", text: "Good morning. Sky Airlines. How can I help you?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào buổi sáng. Tôi muốn đổi chuyến bay của tôi từ thứ Sáu sang Chủ nhật. Mã đặt chỗ của tôi là AB123.", expect: "Good morning. I would like to change my flight from Friday to Sunday. My booking number is AB123.", keywords: ["change", "flight", "friday", "sunday", "booking"], hint: "Good morning. I would like to change...", tip: "Đổi vé phải nói đủ: từ ngày nào sang ngày nào + mã đặt chỗ. Booking number đọc từng chữ và số: A B one two three.", chunks: ["I would like to change my flight", "My booking number is", "Sunday instead of Friday"] },
+        { from: "partner", text: "Let me check. Yes, there is a flight on Sunday at 10 o'clock in the morning." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tốt quá. Đổi vé có mất phí không ạ?", expect: "That is great. Is there a fee for changing the ticket?", keywords: ["fee", "changing", "ticket"], hint: "That is great. Is there a fee...", tip: "Fee nghĩa là phí. Hỏi phí đổi vé trước khi xác nhận là bước quan trọng để tránh bất ngờ.", chunks: ["Is there a fee for changing"] },
+        { from: "partner", text: "The fee is 300000 dong. Would you like me to change it now?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, làm ơn đổi giúp tôi. Cảm ơn bạn đã giúp đỡ.", expect: "Yes, please change it for me. Thank you for your help.", keywords: ["change", "thank", "help"], hint: "Yes, please change it...", tip: "Xác nhận đổi vé bằng Yes, please + động từ: ngắn gọn và rõ ràng qua điện thoại.", chunks: ["Thank you for your help"] }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.5 — Nghe dài (4) ----------------
+  CONTENT.listeningPlus.push.apply(CONTENT.listeningPlus, [
+    {
+      section: "Section 1",
+      band: "Band 5.5",
+      topic: "Đặt bàn ở nhà hàng cho gia đình",
+      text: "A: Good evening. Green Garden Restaurant. How can I help you? B: Good evening. I would like to book a table for six people on Saturday evening, please. A: We have tables free at 6 o'clock and at 8 o'clock. Which time would you prefer? B: 6 o'clock, please. We have two small children, so we want to eat early. A: No problem. Can I have your name and phone number, please? B: My name is Thu Trang, and my number is 0987654321. A: Thank you, Thu Trang. Your table is near the window, and it is table number 12. B: That is lovely. Do you have vegetarian food for my mother? A: Yes, we have five vegetarian dishes, including vegetable soup and fried tofu. B: Perfect. Thank you very much. A: You are welcome. We look forward to seeing you on Saturday.",
+      questions: [
+        { type: "MC", q: "How many people will come to the restaurant?", o: ["Four people", "Five people", "Six people", "Twelve people"], a: 2, why: "Thu Trang đặt bàn cho sáu người vào tối thứ Bảy." },
+        { type: "MC", q: "Which time does Thu Trang choose?", o: ["At 5 o'clock", "At 6 o'clock", "At 7 o'clock", "At 8 o'clock"], a: 1, why: "Thu Trang chọn lúc 6 giờ vì gia đình có hai trẻ nhỏ nên muốn ăn sớm." },
+        { type: "MATCH", q: "Which table number is booked?", o: ["Table 6", "Table 12", "Table 21"], a: 1, why: "Bàn đã đặt nằm gần cửa sổ và mang số 12." },
+        { type: "COMP", q: "The restaurant has ___ vegetarian dishes.", answer: "five|5", why: "Nhà hàng có năm món chay, gồm canh rau và đậu phụ chiên." },
+        { type: "TF", q: "Thu Trang's phone number is 0987654321.", o: ["True", "False"], a: 0, why: "Câu này đúng vì Thu Trang đọc số điện thoại này khi đặt bàn." }
+      ]
+    },
+    {
+      section: "Section 2",
+      band: "Band 5.5",
+      topic: "Thông báo lịch mở cửa bể bơi khu phố",
+      text: "Good morning, everyone. This is an announcement about Blue Pool, our neighbourhood swimming pool. From next Monday, the pool will open earlier in the morning. On weekdays, the pool will open at 6 o'clock and close at 9 o'clock in the evening. On Saturday and Sunday, it will open at 7 o'clock and close at 8 o'clock in the evening. There are swimming classes for children on Saturday mornings, and there is a free swimming hour for old people on Sunday mornings from 8 to 9 o'clock. The entrance fee is 30000 dong for adults and 15000 dong for children under 12. Please bring your own towel, and please do not bring food into the pool area. If you have any questions, please ask our staff at the front desk. Thank you, and enjoy swimming at Blue Pool!",
+      questions: [
+        { type: "MC", q: "From next Monday, what time does the pool open on weekdays?", o: ["At 5 o'clock", "At 6 o'clock", "At 7 o'clock", "At 8 o'clock"], a: 1, why: "Từ thứ Hai tới, các ngày trong tuần bể bơi mở cửa lúc 6 giờ sáng và đóng cửa lúc 9 giờ tối." },
+        { type: "MC", q: "When is the free swimming hour for old people?", o: ["On Saturday mornings", "On Sunday mornings from 8 to 9 o'clock", "On weekday evenings", "On Sunday afternoons"], a: 1, why: "Giờ bơi miễn phí cho người già là sáng Chủ nhật từ 8 đến 9 giờ." },
+        { type: "MATCH", q: "How much is the entrance fee for children under 12?", o: ["30000 dong", "15000 dong", "Free"], a: 1, why: "Vé vào cửa cho trẻ dưới 12 tuổi là 15000 đồng, trong khi người lớn là 30000 đồng." },
+        { type: "COMP", q: "Please bring your own ___.", answer: "towel", why: "Thông báo dặn khách mang theo khăn tắm của mình và không mang đồ ăn vào khu vực bể bơi." },
+        { type: "TF", q: "Visitors can bring food into the pool area.", o: ["True", "False"], a: 1, why: "Câu này sai vì thông báo dặn không mang đồ ăn vào khu vực bể bơi." }
+      ]
+    },
+    {
+      section: "Section 2",
+      band: "Band 5.5",
+      topic: "Giới thiệu lớp học vẽ cuối tuần cho người lớn",
+      text: "Welcome to the Weekend Art Club. Our club meets every Saturday afternoon in Room 3 of the community house. The class starts at 2 o'clock and finishes at 4:30. You do not need any experience to join. Our teacher, Miss Lan, will teach you step by step, from drawing simple shapes to painting with watercolours. Each month has a different topic. In May, we will paint flowers and trees. In June, we will draw street scenes and old houses. The monthly fee is 250000 dong, and this includes paper and paint. You only need to bring your own brushes. At the end of each month, we put the best paintings on the wall of the community house for everyone to see. If you want to join, please come to Room 3 next Saturday and speak to Miss Lan. We look forward to meeting you.",
+      questions: [
+        { type: "MC", q: "When does the art club meet?", o: ["Every Saturday afternoon", "Every Sunday morning", "Every Friday evening", "Every weekday"], a: 0, why: "Câu lạc bộ gặp nhau vào chiều thứ Bảy hàng tuần ở phòng 3 của nhà văn hóa." },
+        { type: "MC", q: "What will members paint in May?", o: ["Street scenes and old houses", "Flowers and trees", "People and animals", "Boats and rivers"], a: 1, why: "Tháng Năm, các thành viên sẽ vẽ hoa và cây; tháng Sáu mới vẽ cảnh phố và nhà cũ." },
+        { type: "MATCH", q: "What should members bring themselves?", o: ["Paper and paint", "Their own brushes", "Watercolours"], a: 1, why: "Học phí đã gồm giấy và màu, thành viên chỉ cần mang theo cọ vẽ của mình." },
+        { type: "COMP", q: "The class finishes at ___.", answer: "4:30", why: "Lớp học bắt đầu lúc 2 giờ và kết thúc lúc 4 giờ 30." },
+        { type: "TF", q: "You need experience to join the club.", o: ["True", "False"], a: 1, why: "Câu này sai vì lời giới thiệu nói bạn không cần kinh nghiệm gì để tham gia." }
+      ]
+    },
+    {
+      section: "Section 3",
+      band: "Band 5.5",
+      topic: "Hai sinh viên bàn kế hoạch dã ngoại cuối tuần",
+      text: "A: Have you heard about the class picnic next Sunday? B: Yes, I have. Our teacher said we will go to Green Lake Park. A: That sounds nice. What time will we meet? B: We will meet at the school gate at 7:30 in the morning, and the bus will leave at 8 o'clock. A: What should we bring? B: We should bring food, water and a hat. The teacher also said we should wear comfortable shoes because we will walk around the lake. A: How long is the walk? B: The walk around the lake is about 3 kilometres, and it takes about one hour. A: That is fine. Will we have any games? B: Yes, after lunch we will play team games on the grass. A: Great. How much do we need to pay? B: Each student pays 50000 dong for the bus and lunch. A: OK. I will bring the money tomorrow. B: Good. Do not forget your hat. It may be sunny.",
+      questions: [
+        { type: "MC", q: "Where will the class picnic go?", o: ["To Green Lake Park", "To the beach", "To the museum", "To the mountains"], a: 0, why: "Buổi dã ngoại của lớp sẽ tới công viên hồ Green, theo lời bạn học kể lại lời cô giáo." },
+        { type: "MC", q: "What time will the bus leave?", o: ["At 7:30", "At 8 o'clock", "At 9 o'clock", "At 7 o'clock"], a: 1, why: "Mọi người tập trung ở cổng trường lúc 7 giờ 30 và xe buýt rời đi lúc 8 giờ." },
+        { type: "MATCH", q: "How long is the walk around the lake?", o: ["About 3 kilometres", "About 5 kilometres", "About 1 kilometre"], a: 0, why: "Đoạn đi bộ quanh hồ dài khoảng 3 km và mất khoảng một giờ." },
+        { type: "COMP", q: "Each student pays ___ dong for the bus and lunch.", answer: "50000", why: "Mỗi học sinh đóng 50000 đồng cho tiền xe buýt và bữa trưa." },
+        { type: "TF", q: "Students should wear comfortable shoes for the walk.", o: ["True", "False"], a: 0, why: "Câu này đúng vì cô giáo dặn mang giày thoải mái do cả lớp sẽ đi bộ quanh hồ." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.5 — Nói (3) ----------------
+  CONTENT.speaking.push.apply(CONTENT.speaking, [
+    {
+      partNum: 1,
+      topicStd: "Thức ăn và sức khỏe",
+      part: "Part 1",
+      topic: "Cooking at Home - Nấu ăn ở nhà",
+      band: "Band 5.5",
+      lines: [
+        { who: "Examiner", en: "Do you like cooking?", vi: "Bạn có thích nấu ăn không?" },
+        { who: "Candidate", en: "Yes, I do. I like cooking simple meals at home, especially fried rice and vegetable soup. Cooking helps me relax after a long day.", vi: "Có, tôi thích. Tôi thích nấu những bữa ăn đơn giản ở nhà, nhất là cơm rang và canh rau. Nấu ăn giúp tôi thư giãn sau một ngày dài." },
+        { who: "Examiner", en: "Who usually cooks in your family?", vi: "Trong gia đình bạn, ai thường nấu ăn?" },
+        { who: "Candidate", en: "My mother usually cooks dinner, but at the weekend I often help her. Sometimes my father cooks a special dish for the whole family.", vi: "Mẹ tôi thường nấu bữa tối, nhưng cuối tuần tôi thường giúp mẹ. Thỉnh thoảng bố tôi nấu một món đặc biệt cho cả gia đình." },
+        { who: "Examiner", en: "Do you think it is important for young people to learn to cook?", vi: "Bạn có nghĩ người trẻ nên học nấu ăn không?" },
+        { who: "Candidate", en: "Yes, I think so. When young people can cook, they can eat healthily and save money. They also do not need to depend on fast food every day.", vi: "Vâng, tôi nghĩ vậy. Khi người trẻ biết nấu ăn, họ có thể ăn uống lành mạnh và tiết kiệm tiền. Họ cũng không cần phụ thuộc vào đồ ăn nhanh mỗi ngày." }
+      ],
+      quiz: [
+        { q: "Candidate thích nấu món gì ở nhà?", o: ["Phở và bánh mì", "Cơm rang và canh rau", "Bánh ngọt và chè"], a: 1, why: "Candidate nói: I like cooking simple meals at home, especially fried rice and vegetable soup." },
+        { q: "Theo Candidate, nấu ăn giúp người trẻ điều gì?", o: ["Ăn lành mạnh và tiết kiệm tiền", "Ngủ nhiều hơn", "Học ngoại ngữ nhanh hơn"], a: 0, why: "Candidate nói: they can eat healthily and save money." },
+        { q: "Cụm 'depend on' có nghĩa là gì?", o: ["phụ thuộc vào", "thích thú với", "tránh xa"], a: 0, why: "Depend on nghĩa là phụ thuộc vào — do not need to depend on fast food." }
+      ]
+    },
+    {
+      partNum: 2,
+      topicStd: "Bản thân và gia đình",
+      part: "Part 2",
+      topic: "Describe a neighbour you know well - Mô tả một người hàng xóm bạn biết rõ",
+      band: "Band 5.5",
+      lines: [
+        { who: "Cue card", en: "Describe a neighbour you know well. You should say: who this person is, how long you have known them, what you do together, and explain why you like this neighbour.", vi: "Hãy mô tả một người hàng xóm bạn biết rõ. Bạn nên nói: người đó là ai, bạn biết người đó bao lâu rồi, các bạn cùng làm gì với nhau, và giải thích vì sao bạn thích người hàng xóm này." },
+        { who: "Candidate", en: "I would like to talk about Mrs Binh, who lives next door to my family.", vi: "Tôi muốn nói về bà Bình, người sống ngay cạnh nhà gia đình tôi." },
+        { who: "Candidate", en: "I have known her for about ten years, since my family moved to this street.", vi: "Tôi đã biết bà khoảng mười năm, từ khi gia đình tôi chuyển tới con phố này." },
+        { who: "Candidate", en: "We often talk in the morning when we water our plants, and sometimes she gives my family vegetables from her small garden.", vi: "Chúng tôi thường trò chuyện vào buổi sáng khi tưới cây, và thỉnh thoảng bà tặng gia đình tôi rau từ khu vườn nhỏ của bà." },
+        { who: "Candidate", en: "I like her because she is kind and always ready to help. When my parents are away, she looks after our house and feeds our cat.", vi: "Tôi thích bà vì bà tốt bụng và luôn sẵn sàng giúp đỡ. Khi bố mẹ tôi đi vắng, bà trông nhà và cho mèo của chúng tôi ăn." }
+      ],
+      quiz: [
+        { q: "Candidate đã biết bà Bình bao lâu?", o: ["Khoảng 5 năm", "Khoảng 10 năm", "Khoảng 2 năm"], a: 1, why: "Candidate nói: I have known her for about ten years." },
+        { q: "Bà Bình tặng gia đình Candidate thứ gì từ vườn của bà?", o: ["Hoa", "Rau", "Trái cây"], a: 1, why: "Candidate nói: she gives my family vegetables from her small garden." },
+        { q: "Cụm 'always ready to help' có nghĩa là gì?", o: ["luôn sẵn sàng giúp đỡ", "luôn muốn được giúp", "chỉ giúp khi rảnh"], a: 0, why: "Ready to help nghĩa là sẵn sàng giúp đỡ; always nhấn mạnh là luôn luôn." }
+      ]
+    },
+    {
+      partNum: 3,
+      topicStd: "Sở thích và giải trí",
+      part: "Part 3",
+      topic: "Hobbies and Free Time - Sở thích và thời gian rảnh",
+      band: "Band 5.5",
+      lines: [
+        { who: "Examiner", en: "Do young people today have enough free time?", vi: "Người trẻ ngày nay có đủ thời gian rảnh không?" },
+        { who: "Candidate", en: "I do not think so. Many students have a lot of homework and extra classes, so they only have a little free time in the evening.", vi: "Tôi không nghĩ vậy. Nhiều học sinh có nhiều bài tập và lớp học thêm nên họ chỉ có một chút thời gian rảnh vào buổi tối." },
+        { who: "Examiner", en: "What are the most popular hobbies among young people in your country?", vi: "Những sở thích phổ biến nhất trong giới trẻ ở nước bạn là gì?" },
+        { who: "Candidate", en: "Playing sports, listening to music and watching films are very popular. In recent years, more young people have also started to enjoy cooking and gardening.", vi: "Chơi thể thao, nghe nhạc và xem phim rất phổ biến. Những năm gần đây, nhiều người trẻ cũng bắt đầu thích nấu ăn và làm vườn." },
+        { who: "Examiner", en: "Do you think hobbies are important for a balanced life?", vi: "Bạn có nghĩ sở thích quan trọng cho một cuộc sống cân bằng không?" },
+        { who: "Candidate", en: "Yes, I do. Hobbies help people relax and forget about stress for a while. They also help people meet friends who share the same interests.", vi: "Vâng, tôi nghĩ vậy. Sở thích giúp mọi người thư giãn và quên đi căng thẳng trong một lúc. Sở thích cũng giúp mọi người gặp bạn bè có cùng sở thích." }
+      ],
+      quiz: [
+        { q: "Vì sao nhiều học sinh có ít thời gian rảnh, theo Candidate?", o: ["Vì họ ngủ quá nhiều", "Vì họ có nhiều bài tập và lớp học thêm", "Vì họ không thích sở thích"], a: 1, why: "Candidate nói: Many students have a lot of homework and extra classes." },
+        { q: "Sở thích mới nào được nhắc tới trong những năm gần đây?", o: ["Nấu ăn và làm vườn", "Chơi cờ vua", "Đi du lịch nước ngoài"], a: 0, why: "Candidate nói: more young people have also started to enjoy cooking and gardening." },
+        { q: "Cụm 'share the same interests' có nghĩa là gì?", o: ["có cùng sở thích", "chia sẻ tiền bạc", "sống cùng nhà"], a: 0, why: "Share the same interests nghĩa là có cùng sở thích." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.5 — Ngữ pháp (2) ----------------
+  CONTENT.grammar.push.apply(CONTENT.grammar, [
+    {
+      fam: "Câu bị động",
+      hook: "Muốn nói một việc được làm mà không cần nói ai làm, chỉ cần be + phân từ 2: is made, are grown.",
+      level: "Band 5.5",
+      name: "Bị động hiện tại đơn cho mô tả sự vật",
+      explain: "Nhìn hai câu này trước nhé: Rice is grown in many parts of Vietnam. (Lúa được trồng ở nhiều vùng của Việt Nam.) These books are printed in Hanoi. (Những cuốn sách này được in ở Hà Nội.) Sau ví dụ là quy tắc: câu bị động hiện tại đơn có dạng be + phân từ 2 (is grown, are printed). Dùng bị động khi người làm không quan trọng, hoặc khi muốn nhấn mạnh đối tượng chịu tác động. Chủ ngữ số ít dùng is, chủ ngữ số nhiều dùng are.",
+      examples: ["Rice is grown in many parts of Vietnam.", "These books are printed in Hanoi.", "English is spoken in many countries."],
+      tip: "Hãy tưởng tượng bị động như đổi vai chính: đối tượng chịu tác động lên đầu câu, còn người làm có thể biến mất khỏi câu.",
+      model: "A: Where is this coffee made? B: It is made in a small factory near my town. The beans are grown by local farmers.",
+      modelVi: "A: Cà phê này được làm ở đâu? B: Nó được làm ở một nhà máy nhỏ gần thị trấn tôi. Hạt cà phê được trồng bởi nông dân địa phương.",
+      quiz: [
+        { q: "Rice ___ in many parts of Vietnam.", o: ["is grow", "is grown", "are grown"], a: 1, why: "Bị động hiện tại đơn: is + grown; rice là số ít nên dùng is." },
+        { q: "These books ___ in Hanoi.", o: ["is printed", "are printed", "are print"], a: 1, why: "Chủ ngữ số nhiều books dùng are + printed." },
+        { q: "English ___ in many countries.", o: ["is spoke", "is spoken", "are spoken"], a: 1, why: "Speak đổi thành spoken ở phân từ 2; English là số ít nên dùng is." },
+        { q: "These houses ___ of brick and wood.", o: ["is built", "are built", "are build"], a: 1, why: "Houses số nhiều dùng are + built." },
+        { q: "Chọn câu đúng:", o: ["Cars are make in Japan.", "Cars are made in Japan.", "Cars is made in Japan."], a: 1, why: "Cars số nhiều dùng are + made." },
+        { q: "Câu nào sai?", o: ["Tea is grown in Asia.", "Tea are grown in Asia.", "Tea is drunk in many countries."], a: 1, why: "Tea là số ít nên phải dùng is, không dùng are." },
+        { q: "The doors ___ every morning.", o: ["are opened", "is opened", "are open"], a: 0, why: "Doors số nhiều dùng are + opened." },
+        { q: "Bread ___ from wheat.", o: ["is made", "are made", "is make"], a: 0, why: "Bread là số ít nên dùng is + made." }
+      ]
+    },
+    {
+      fam: "Mệnh đề quan hệ",
+      hook: "Muốn nói rõ một người hay một vật là ai, là cái nào, chỉ cần thêm who, which hoặc that: the woman who helps me.",
+      level: "Band 5.5",
+      name: "Mệnh đề quan hệ who, which, that cơ bản",
+      explain: "Nhìn hai câu này trước nhé: The woman who helps me is my neighbour. (Người phụ nữ giúp tôi là hàng xóm của tôi.) This is the book that I bought yesterday. (Đây là cuốn sách tôi đã mua hôm qua.) Sau ví dụ là quy tắc: who dùng cho người, which dùng cho vật, that dùng được cho cả người và vật. Mệnh đề quan hệ đứng ngay sau danh từ nó mô tả, và giúp câu nói rõ danh từ đó là ai hay là cái nào.",
+      examples: ["The woman who helps me is my neighbour.", "This is the book that I bought yesterday.", "I like the park which is near my house."],
+      tip: "Hãy nhớ: who cho người, which cho vật — nhầm hai từ này là lỗi hay gặp nhất ở mệnh đề quan hệ.",
+      model: "A: Who is that man? B: He is the teacher who taught me English last year. He has a library which has many old books.",
+      modelVi: "A: Người đàn ông đó là ai? B: Ông ấy là giáo viên đã dạy tôi tiếng Anh năm ngoái. Ông ấy có một thư viện có nhiều sách cũ.",
+      quiz: [
+        { q: "The woman ___ helps me is my neighbour.", o: ["who", "which", "what"], a: 0, why: "Woman là người nên dùng who." },
+        { q: "This is the book ___ I bought yesterday.", o: ["who", "that", "where"], a: 1, why: "Book là vật, that dùng được cho vật và đứng trước mệnh đề mô tả cuốn sách." },
+        { q: "I like the park ___ is near my house.", o: ["who", "which", "whose"], a: 1, why: "Park là vật nên dùng which." },
+        { q: "The boy ___ lives next door is my friend.", o: ["which", "who", "that is"], a: 1, why: "Boy là người nên dùng who." },
+        { q: "Chọn câu đúng:", o: ["The car who is red is mine.", "The car which is red is mine.", "The car where is red is mine."], a: 1, why: "Car là vật nên dùng which." },
+        { q: "Câu nào sai?", o: ["The teacher who teaches me is kind.", "The teacher which teaches me is kind.", "The teacher that teaches me is kind."], a: 1, why: "Teacher là người nên không dùng which." },
+        { q: "This is the house ___ my family lives in.", o: ["who", "which", "what"], a: 1, why: "House là vật nên dùng which (that cũng đúng, nhưng trong các lựa chọn thì which là đáp án)." },
+        { q: "Do you know the girl ___ won the prize?", o: ["which", "who", "where"], a: 1, why: "Girl là người nên dùng who." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 5.5 — Luyện viết (2) + Gõ câu (2) ----------------
+  CONTENT.writingDrills.push.apply(CONTENT.writingDrills, [
+    {
+      band: "Band 5.5",
+      kind: "paraphrase",
+      title: "Viết lại bằng too... to: quá mệt để học",
+      prompt: "Viết lại câu giữ nguyên nghĩa, dùng cấu trúc too... to. / Paraphrase with too... to.",
+      given: "He was very tired. He could not study.",
+      model: "He was too tired to study.",
+      note: "Kỹ thuật này gộp hai câu thành một câu too... to: quá mệt đến mức không thể học."
+    },
+    {
+      band: "Band 5.5",
+      kind: "combine",
+      title: "Nối câu bằng when: đang nấu ăn thì bạn gọi",
+      prompt: "Nối hai câu thành một câu bằng when. / Combine the sentences with when.",
+      given: "I was cooking dinner. / My friend called me.",
+      model: "I was cooking dinner when my friend called me.",
+      note: "Kỹ thuật này dùng when để nối hành động đang diễn ra với hành động xen vào: đang nấu thì bạn gọi."
+    }
+  ]);
+  CONTENT.typing.push.apply(CONTENT.typing, [
+    {
+      level: "Band 5.5",
+      title: "Câu nêu ý kiến có lý do đơn giản",
+      sentences: [
+        "In my opinion, children should learn to cook from a young age.",
+        "One reason is that cooking helps them eat more healthily.",
+        "Another reason is that cooking saves money for the family.",
+        "Some people think that young people have no time to cook.",
+        "However, cooking a simple meal only takes thirty minutes.",
+        "For example, fried rice with eggs is quick and easy to make.",
+        "In addition, cooking together helps family members talk more.",
+        "On the other hand, eating fast food every day is bad for health.",
+        "In conclusion, learning to cook is a useful skill for life.",
+        "I believe that schools should teach basic cooking skills."
+      ]
+    },
+    {
+      level: "Band 5.5",
+      title: "Câu về kế hoạch cuối tuần và bạn bè",
+      sentences: [
+        "Next Saturday, my friends and I plan to visit the night market.",
+        "We will meet at the school gate at six o'clock in the evening.",
+        "First, we will try different kinds of street food together.",
+        "Then we will walk slowly and look at the small shops.",
+        "My friend Lan wants to buy a handmade gift for her mother.",
+        "Although the market is crowded, we enjoy the lively feeling.",
+        "We should bring enough money and a bottle of water.",
+        "After the market, we will take photos of the colourful lights.",
+        "We plan to go home before ten o'clock in the evening.",
+        "It will be a fun weekend with my close friends."
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.0 — Đọc (3) ----------------
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    {
+      topic: "Tái chế nước mưa ở thành phố",
+      level: "Band 6.0",
+      title: "How Cities Recycle Rainwater",
+      text: "In many cities, rain falls on roofs and roads and then flows straight into drains. This water is often wasted, even though cities need more water every year for parks, cleaning and toilets. A growing number of cities are now trying a simple idea: catch the rain where it falls and use it again.\n\nThe system is not complicated. Rainwater is collected from rooftops through pipes and stored in large tanks under buildings or parks. Before it is used, the water passes through filters that remove leaves, dust and dirt. The clean water is then used to water plants, wash streets and flush toilets in public buildings.\n\nSingapore is often mentioned as a good example. Because the country has little land for storing fresh water, it has built a network of drains, tanks and treatment plants that collect rain from across the island. As a result, rainwater now supplies a significant share of the water used for non-drinking purposes, such as cleaning and watering gardens.\n\nThere are, however, clear limits to this idea. Rainwater systems cost money to build and maintain, and they work best in places with regular rainfall. In dry seasons, tanks may stay empty for weeks. Moreover, rainwater is not normally safe to drink unless it goes through much stronger treatment.\n\nDespite these limits, experts argue that recycling rainwater is a sensible step for cities facing water shortages. It does not solve the whole problem, but it reduces pressure on rivers and reservoirs and makes cities less dependent on a single source of water. For a city that already receives heavy rain, letting that rain run away unused is, in their view, a waste of a valuable resource.",
+      questions: [
+        { type: "MC", q: "What is the main idea of the passage?", o: ["Cities should stop using rivers", "Cities can catch rainwater and use it again", "Rainwater is safe to drink everywhere", "Cities should build more drains only"], options: ["Cities should stop using rivers", "Cities can catch rainwater and use it again", "Rainwater is safe to drink everywhere", "Cities should build more drains only"], a: 1, why: "Toàn bài nói về ý tưởng thu nước mưa tại chỗ và dùng lại cho tưới cây, rửa đường và xả toilet." },
+        { type: "TFNG", q: "Rainwater is normally safe to drink without strong treatment.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 4: nước mưa thường không an toàn để uống trừ khi qua xử lý mạnh hơn nhiều → câu phát biểu sai." },
+        { type: "MATCH", q: "Which use of recycled rainwater is mentioned for public buildings?", o: ["Cooking meals", "Flushing toilets", "Washing clothes"], options: ["Cooking meals", "Flushing toilets", "Washing clothes"], a: 1, why: "Đoạn 2: nước sạch sau lọc được dùng để tưới cây, rửa đường và xả toilet trong các tòa nhà công cộng." },
+        { type: "COMP", q: "Rainwater passes through ___ that remove leaves, dust and dirt.", answer: "filters", why: "Đoạn 2: trước khi dùng, nước đi qua các bộ lọc loại bỏ lá, bụi và đất bẩn." },
+        { type: "MC", q: "What do experts conclude about recycling rainwater?", o: ["It solves the whole water problem", "It is a sensible step that reduces pressure on other sources", "It is too expensive to try anywhere", "It only works in Singapore"], options: ["It solves the whole water problem", "It is a sensible step that reduces pressure on other sources", "It is too expensive to try anywhere", "It only works in Singapore"], a: 1, why: "Đoạn 5: tái chế nước mưa là bước hợp lý giúp giảm áp lực lên sông và hồ chứa, dù không giải quyết toàn bộ vấn đề." }
+      ],
+      translation: "Ở nhiều thành phố, nước mưa rơi xuống mái nhà và đường rồi chảy thẳng vào cống và bị lãng phí, dù thành phố ngày càng cần nhiều nước cho công viên, vệ sinh và toilet. Ngày càng nhiều thành phố thử ý tưởng đơn giản: hứng mưa tại chỗ và dùng lại. Hệ thống không phức tạp: nước mưa từ mái nhà theo ống xuống bể lớn dưới tòa nhà hoặc công viên, qua bộ lọc loại bỏ lá, bụi và đất rồi dùng để tưới cây, rửa đường và xả toilet công cộng. Singapore được nhắc như ví dụ tốt vì ít đất trữ nước ngọt nên đã xây mạng lưới cống, bể và nhà máy xử lý thu mưa khắp đảo. Tuy vậy ý tưởng này có giới hạn: tốn tiền xây và bảo trì, hiệu quả nhất ở nơi mưa đều, mùa khô bể có thể trống nhiều tuần, và nước mưa thường không uống được nếu không xử lý mạnh. Dù vậy, chuyên gia cho rằng đây là bước hợp lý giúp giảm áp lực lên sông và hồ chứa.",
+      phrases: [
+        { en: "flows straight into drains", vi: "chảy thẳng vào cống" },
+        { en: "catch the rain where it falls", vi: "hứng mưa ngay nơi nó rơi xuống" },
+        { en: "a significant share", vi: "một phần đáng kể" },
+        { en: "less dependent on a single source", vi: "ít phụ thuộc vào một nguồn duy nhất" },
+        { en: "a valuable resource", vi: "một nguồn tài nguyên quý giá" }
+      ]
+    },
+    {
+      topic: "Học nghề vừa làm vừa học",
+      level: "Band 6.0",
+      title: "Apprenticeships: Learning a Job While You Work",
+      text: "For many young people, the usual path after school is university. However, a growing number are choosing a different route: an apprenticeship. In this system, a young person works for a company for several days a week and spends the rest of the week studying at a college. At the end of the programme, they gain both work experience and a qualification.\n\nThe main advantage for learners is that they earn money while they learn. Unlike university students, who often finish their studies with large debts, apprentices receive a salary from their employer. They also learn practical skills that are hard to teach in a classroom, such as how to deal with real customers or how to fix a machine under time pressure.\n\nEmployers also benefit. By training apprentices, a company can teach them its own methods from the start, rather than trying to change the habits of an experienced worker later. Many companies say that apprentices who stay after their training become loyal and skilled staff.\n\nThere are, however, some drawbacks. Apprentices usually earn less than full-time workers, and their work can be repetitive in the first months. In addition, the choice of apprenticeships is still limited in some fields, such as medicine or law, where a university degree remains essential.\n\nDespite these drawbacks, apprenticeships are becoming more respected. Governments in several countries are now funding more places and encouraging schools to present apprenticeships as an equal choice, not as a second-best option. For a young person who prefers practical work to long academic study, this route may offer a faster and more direct path into a career.",
+      questions: [
+        { type: "MC", q: "How does an apprenticeship work?", o: ["Learners study full-time at college", "Learners work for a company and study at college during the week", "Learners work abroad for one year", "Learners only take online courses"], options: ["Learners study full-time at college", "Learners work for a company and study at college during the week", "Learners work abroad for one year", "Learners only take online courses"], a: 1, why: "Đoạn 1: người học làm việc cho công ty vài ngày mỗi tuần và dành phần còn lại để học ở trường cao đẳng." },
+        { type: "TFNG", q: "Apprentices usually finish their programme with large debts.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 2: ngược lại, sinh viên đại học thường tốt nghiệp với khoản nợ lớn, còn học viên học nghề nhận lương từ chủ lao động." },
+        { type: "MATCH", q: "Which benefit for employers is mentioned?", o: ["They pay lower taxes", "They can teach apprentices their own methods from the start", "They do not need to pay salaries"], options: ["They pay lower taxes", "They can teach apprentices their own methods from the start", "They do not need to pay salaries"], a: 1, why: "Đoạn 3: chủ lao động có thể dạy học viên phương pháp riêng của công ty ngay từ đầu." },
+        { type: "COMP", q: "Apprentices usually earn ___ than full-time workers.", answer: "less", why: "Đoạn 4: học viên thường kiếm ít hơn công nhân toàn thời gian và công việc có thể lặp lại trong những tháng đầu." },
+        { type: "MC", q: "What change is mentioned in the last paragraph?", o: ["Governments are funding more apprenticeship places", "Universities are closing apprenticeship programmes", "Companies no longer hire apprentices", "Apprenticeships are only for medicine and law"], options: ["Governments are funding more apprenticeship places", "Universities are closing apprenticeship programmes", "Companies no longer hire apprentices", "Apprenticeships are only for medicine and law"], a: 0, why: "Đoạn 5: chính phủ ở một số nước đang tài trợ thêm chỗ học nghề và khuyến khích trường học coi đó là lựa chọn ngang bằng, không phải lựa chọn hạng hai." }
+      ],
+      translation: "Sau phổ thông, con đường thường thấy là đại học, nhưng ngày càng nhiều người trẻ chọn học nghề: làm việc cho công ty vài ngày mỗi tuần và học ở trường cao đẳng phần còn lại, cuối chương trình vừa có kinh nghiệm làm việc vừa có bằng cấp. Lợi ích chính cho người học là vừa học vừa kiếm tiền, khác với sinh viên đại học thường tốt nghiệp với nợ lớn; họ còn học kỹ năng thực tế khó dạy trong lớp như xử lý khách hàng thật hay sửa máy dưới áp lực thời gian. Chủ lao động cũng có lợi vì dạy phương pháp riêng ngay từ đầu, và học viên ở lại sau đào tạo thường trở thành nhân viên trung thành, tay nghề cao. Nhược điểm là lương thường thấp hơn nhân viên toàn thời gian, công việc đầu có thể lặp lại, và lựa chọn học nghề còn hạn chế ở một số ngành như y hay luật vốn vẫn cần bằng đại học. Dù vậy học nghề ngày càng được tôn trọng, chính phủ tài trợ thêm chỗ và khuyến khích trường học coi đó là lựa chọn ngang bằng.",
+      phrases: [
+        { en: "earn money while they learn", vi: "vừa học vừa kiếm tiền" },
+        { en: "practical skills", vi: "kỹ năng thực tế" },
+        { en: "under time pressure", vi: "dưới áp lực thời gian" },
+        { en: "a second-best option", vi: "lựa chọn hạng hai" },
+        { en: "a direct path into a career", vi: "con đường trực tiếp vào nghề nghiệp" }
+      ]
+    },
+    {
+      topic: "Chi phí ẩn của việc trả hàng thời trang nhanh",
+      level: "Band 6.0",
+      title: "The Hidden Cost of Fast Fashion Returns",
+      text: "Online shopping has made buying clothes easier than ever. With one click, a customer can order five shirts in different sizes, try them at home and send back the ones that do not fit. For shoppers, this feels free and convenient. For the environment, however, the cost is much higher than it appears.\n\nEvery returned item must travel again: from the home to a warehouse, then to a sorting centre, and sometimes to another country. Each journey uses fuel and produces carbon emissions. If the item is damaged, dirty or out of season, it may never be sold again. In many cases, returned clothes are thrown away or burned, even though they are almost new.\n\nThe problem is growing because returns have become a normal part of shopping. Some online shops report that one in three items of clothing is sent back. This habit is encouraged by free return policies, which make customers feel that there is no harm in ordering extra sizes just in case.\n\nSome companies are now trying to reduce returns. They offer better size guides, photos of clothes on different body types, and virtual tools that help shoppers choose the right size. Others charge a small fee for returns, so customers think more carefully before they order.\n\nExperts say shoppers also have a role to play. Checking measurements, reading reviews and ordering only what is really needed can cut returns sharply. A shirt that is kept and worn many times has a far smaller environmental impact than three shirts ordered, tried once and sent back. Convenience, they argue, should not hide the real cost of a return.",
+      questions: [
+        { type: "MC", q: "Why do many customers order extra sizes?", o: ["Because clothes are very cheap", "Because free return policies make it feel harmless", "Because shops force them to", "Because sizes are always wrong"], options: ["Because clothes are very cheap", "Because free return policies make it feel harmless", "Because shops force them to", "Because sizes are always wrong"], a: 1, why: "Đoạn 3: chính sách trả hàng miễn phí khiến khách cảm thấy không có hại gì khi đặt thêm cỡ dự phòng." },
+        { type: "TFNG", q: "All returned clothes are resold to other customers.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 2: nếu hàng bị hỏng, bẩn hoặc hết mùa, nó có thể không bao giờ được bán lại; nhiều trường hợp quần áo trả lại bị vứt hoặc đốt dù gần như mới." },
+        { type: "MATCH", q: "Which company measure helps shoppers choose the right size?", o: ["Free gifts with every order", "Virtual tools for choosing size", "Faster delivery"], options: ["Free gifts with every order", "Virtual tools for choosing size", "Faster delivery"], a: 1, why: "Đoạn 4: một số công ty cung cấp công cụ ảo giúp người mua chọn đúng cỡ." },
+        { type: "COMP", q: "Some online shops report that one in ___ items of clothing is sent back.", answer: "three|3", why: "Đoạn 3: một số cửa hàng trực tuyến báo cáo cứ ba món quần áo thì một món bị trả lại." },
+        { type: "MC", q: "What should shoppers do, according to the last paragraph?", o: ["Order three shirts and keep one", "Check measurements, read reviews and order only what is needed", "Only buy clothes in shops", "Never return any clothes"], options: ["Order three shirts and keep one", "Check measurements, read reviews and order only what is needed", "Only buy clothes in shops", "Never return any clothes"], a: 1, why: "Đoạn 5: kiểm tra số đo, đọc đánh giá và chỉ đặt những gì thật sự cần có thể giảm mạnh lượng trả hàng." }
+      ],
+      translation: "Mua sắm trực tuyến khiến mua quần áo dễ hơn bao giờ hết: một cú nhấp đặt năm áo nhiều cỡ, thử ở nhà và trả lại những chiếc không vừa. Với người mua, việc này có vẻ miễn phí và tiện lợi, nhưng với môi trường, chi phí cao hơn nhiều so với vẻ ngoài. Mỗi món trả lại phải di chuyển lại: từ nhà tới kho, rồi trung tâm phân loại, đôi khi sang nước khác; mỗi hành trình tốn nhiên liệu và thải carbon. Nếu hàng hỏng, bẩn hoặc hết mùa, nó có thể không bao giờ bán lại được; nhiều trường hợp quần áo trả lại bị vứt hoặc đốt dù gần như mới. Vấn đề ngày càng lớn vì trả hàng đã thành bình thường: một số cửa hàng báo cáo cứ ba món thì một món bị trả lại, và chính sách trả miễn phí khuyến khích thói quen này. Một số công ty đang cố giảm trả hàng bằng hướng dẫn cỡ tốt hơn, ảnh quần áo trên nhiều dáng người và công cụ ảo chọn cỡ; số khác thu phí nhỏ cho trả hàng. Chuyên gia nói người mua cũng có vai trò: kiểm tra số đo, đọc đánh giá và chỉ đặt những gì thật sự cần.",
+      phrases: [
+        { en: "just in case", vi: "đề phòng, dự phòng" },
+        { en: "out of season", vi: "hết mùa" },
+        { en: "free return policies", vi: "chính sách trả hàng miễn phí" },
+        { en: "think more carefully before they order", vi: "suy nghĩ kỹ hơn trước khi đặt hàng" },
+        { en: "the real cost of a return", vi: "chi phí thật sự của một lần trả hàng" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.0 — Viết (3) ----------------
+  CONTENT.writing.push.apply(CONTENT.writing, [
+    {
+      wtype: "Biểu đồ đường",
+      type: "Task 1",
+      band: "Band 6.0",
+      title: "Biểu đồ đường: lượng rác tái chế ở một thành phố",
+      prompt: "The chart below shows the amount of waste recycled in Green City between 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      dataDesc: "Dữ kiện của biểu đồ (đường): Năm 2010: 20 nghìn tấn. Năm 2013: 28 nghìn tấn. Năm 2016: 35 nghìn tấn. Năm 2018: 33 nghìn tấn (giảm nhẹ). Năm 2020: 48 nghìn tấn. Xu hướng tăng chung, tăng nhanh nhất giai đoạn 2018-2020.",
+      model: "The line graph shows the amount of waste recycled in Green City over the period from 2010 to 2020.\n\nOverall, recycling in Green City increased substantially during this decade, despite a small fall in 2018. By 2020, the amount recycled was more than double the figure in 2010.\n\nIn 2010, the city recycled 20 thousand tonnes of waste. This figure rose steadily to 28 thousand tonnes in 2013 and to 35 thousand tonnes in 2016. There was then a slight decrease to 33 thousand tonnes in 2018, which may reflect a temporary fall in collection.\n\nHowever, the final two years saw the sharpest growth. Recycling climbed rapidly to 48 thousand tonnes in 2020, the highest figure in the period. This suggests that recent campaigns and better sorting facilities have had a clear effect on recycling behaviour.",
+      analysis: "Cấu trúc 4 đoạn cho Band 6.0: (1) Paraphrase đề bài. (2) Overview: tăng mạnh chung + ngoại lệ nhỏ năm 2018 + gấp hơn đôi. (3) Chi tiết giai đoạn đầu với tăng đều và giảm nhẹ, kèm từ nối However ở đoạn sau. (4) Giai đoạn cuối tăng mạnh nhất và bình luận hàm ý (campaigns, sorting facilities). Điểm ngôn ngữ đáng học: increased substantially, rose steadily, slight decrease, sharpest growth — dải từ mô tả xu hướng đa dạng; despite để nhượng bộ ngắn gọn.",
+      phrases: [
+        { en: "increased substantially", vi: "tăng đáng kể" },
+        { en: "rose steadily", vi: "tăng đều" },
+        { en: "a slight decrease", vi: "mức giảm nhẹ" },
+        { en: "the sharpest growth", vi: "mức tăng mạnh nhất" },
+        { en: "more than double the figure", vi: "gấp hơn đôi con số" }
+      ]
+    },
+    {
+      wtype: "Ý kiến",
+      type: "Task 2",
+      band: "Band 6.0",
+      title: "Ý kiến: đầu tư vào giao thông công cộng hay đường cao tốc",
+      prompt: "Some people think governments should spend more money on public transport, while others think they should build more roads and motorways. Discuss both views and give your own opinion. (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: hai quan điểm về chi tiêu giao thông. Dàn ý: mở bài nêu hai quan điểm; thân bài 1: ủng hộ giao thông công cộng (giảm tắc đường, ô nhiễm, chi phí cho người thu nhập thấp); thân bài 2: ủng hộ đường bộ (vận chuyển hàng hóa, vùng nông thôn, xe cứu thương); kết bài: ưu tiên giao thông công cộng ở thành phố, đường bộ cho vùng xa.",
+      model: "Governments face a difficult choice between investing in public transport and building more roads. While both options have merit, I believe public transport should receive priority in cities, with roads improved mainly for rural and freight transport.\n\nSupporters of public transport argue that buses and trains reduce traffic congestion and air pollution. When people can travel quickly by train, fewer people need to drive, which means fewer traffic jams and cleaner air. Public transport is also fairer, because it gives people on low incomes a cheap and reliable way to travel to work and school.\n\nOn the other hand, those who favour more roads point out that cars and lorries remain essential for many purposes. Goods must be delivered to shops and factories, often in areas that trains do not reach. In rural areas, where buses are rare, a good road may be the only link to a hospital or a market. Emergency vehicles also depend on clear, well-maintained roads.\n\nIn my view, the best approach is to combine both, but with a clear order of priority. In crowded cities, money should first go to buses, trains and cycling lanes. In remote areas, road improvement should come first, because there is no realistic alternative. This balanced plan serves both the environment and people who truly depend on roads.",
+      analysis: "Cấu trúc 4 đoạn cho Band 6.0: (1) Mở bài nêu lựa chọn khó và quan điểm có điều kiện (ưu tiên theo nơi). (2) Thân bài 1: lợi ích giao thông công cộng — tắc đường, ô nhiễm, công bằng. (3) Thân bài 2: vai trò đường bộ — hàng hóa, nông thôn, xe cấp cứu. (4) Kết bài: kết hợp nhưng có thứ tự ưu tiên rõ ràng. Điểm ngôn ngữ đáng học: receive priority, remain essential, order of priority — từ ngữ học thuật mức 6.0; while để nhượng bộ ở mở bài.",
+      phrases: [
+        { en: "receive priority", vi: "được ưu tiên" },
+        { en: "reduce traffic congestion", vi: "giảm tắc đường" },
+        { en: "remain essential for", vi: "vẫn thiết yếu cho" },
+        { en: "order of priority", vi: "thứ tự ưu tiên" },
+        { en: "a balanced plan", vi: "một kế hoạch cân bằng" }
+      ]
+    },
+    {
+      wtype: "Ưu và nhược điểm",
+      type: "Task 2",
+      band: "Band 6.0",
+      title: "Ưu và nhược điểm: học đại học ở nước khác",
+      prompt: "Many students choose to study at university in another country. What are the advantages and disadvantages of this choice? (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: học đại học ở nước ngoài. Dàn ý: mở bài nêu xu hướng; thân bài 1: ưu điểm (ngôn ngữ, độc lập, cơ hội việc làm); thân bài 2: nhược điểm (chi phí cao, nhớ nhà, sốc văn hóa); kết bài: đáng giá nếu chuẩn bị tài chính và tâm lý tốt.",
+      model: "Studying abroad has become a popular choice for many university students. Although this experience offers clear benefits, it also brings serious challenges that students should consider carefully.\n\nOne major advantage is language and personal growth. Students who live in another country must use a foreign language every day, which improves their skills far faster than classroom study alone. Living far from family also teaches independence: students learn to manage money, cook and solve problems on their own.\n\nHowever, the disadvantages should not be ignored. The cost of tuition, housing and travel can be very high, and some students must work part-time to support themselves, which leaves less time for study. In addition, homesickness and culture shock can affect mental health, especially in the first few months, when everything feels unfamiliar.\n\nIn conclusion, studying in another country can be a valuable experience, but only if students prepare well. Those with a clear budget, basic language skills and realistic expectations are more likely to enjoy the benefits and cope with the difficulties.",
+      analysis: "Cấu trúc 4 đoạn cho Band 6.0: (1) Mở bài nêu xu hướng + cân bằng lợi ích và thách thức. (2) Thân bài 1: ưu điểm — ngôn ngữ và trưởng thành cá nhân, kèm so sánh với học trên lớp. (3) Thân bài 2: nhược điểm — chi phí, nhớ nhà, sốc văn hóa, dùng However và In addition. (4) Kết bài có điều kiện: đáng giá nếu chuẩn bị tốt. Điểm ngôn ngữ đáng học: should not be ignored để nhấn mạnh nhược điểm; cope with để nói đối phó với khó khăn; realistic expectations để nói kỳ vọng thực tế.",
+      phrases: [
+        { en: "should not be ignored", vi: "không nên bị bỏ qua" },
+        { en: "culture shock", vi: "sốc văn hóa" },
+        { en: "homesickness", vi: "nỗi nhớ nhà" },
+        { en: "realistic expectations", vi: "kỳ vọng thực tế" },
+        { en: "cope with the difficulties", vi: "đối phó với khó khăn" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.0 — Nhập vai (3) ----------------
+  CONTENT.roleplay.push.apply(CONTENT.roleplay, [
+    {
+      title: "Negotiating a Salary for a First Job - Đàm phán lương cho công việc đầu tiên",
+      setting: "Bạn vừa được nhận vào một công ty sau khi thực tập. Bạn gặp quản lý để trao đổi về mức lương khởi điểm, giờ làm việc và cơ hội đào tạo, một cách tự tin nhưng lịch sự.",
+      partner: "Quản lý nhân sự",
+      goal: "Nêu rõ mong muốn về lương và đào tạo, lắng nghe đề nghị và chốt thỏa thuận lịch sự.",
+      band: "Band 6.0",
+      chunks: ["Thank you for offering me this job", "I was hoping for a slightly higher salary", "What training opportunities are there", "I am happy to accept", "Thank you for your time"],
+      turns: [
+        { from: "partner", text: "Congratulations! We would like to offer you the job, with a starting salary of 8 million dong a month." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn đã giao cho tôi công việc này. Tôi rất vui khi nhận được lời mời. Tôi hy vọng mức lương có thể cao hơn một chút vì tôi đã thực tập ở đây ba tháng.", expect: "Thank you for offering me this job. I am delighted to receive the offer. I was hoping for a slightly higher salary because I interned here for three months.", keywords: ["offering", "delighted", "salary", "interned"], hint: "Thank you for offering...", tip: "Đàm phán lương nên bắt đầu bằng lời cảm ơn, rồi mới nêu mong muốn bằng I was hoping for — mềm mại hơn I want.", chunks: ["Thank you for offering me this job", "I was hoping for a slightly higher salary"] },
+        { from: "partner", text: "We can offer 9 million dong. What else is important to you?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn. Công ty có những cơ hội đào tạo nào cho nhân viên mới ạ?", expect: "Thank you. What training opportunities are there for new staff?", keywords: ["training", "opportunities", "staff"], hint: "Thank you. What training...", tip: "Hỏi về đào tạo cho thấy bạn quan tâm tới phát triển lâu dài, không chỉ lương.", chunks: ["What training opportunities are there"] },
+        { from: "partner", text: "We offer a training course in the first month and a mentor for the first six months." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Nghe rất tốt. Tôi vui vẻ chấp nhận lời mời. Cảm ơn bạn đã dành thời gian.", expect: "That sounds great. I am happy to accept the offer. Thank you for your time.", keywords: ["happy", "accept", "offer", "time"], hint: "That sounds great. I am happy...", tip: "Chốt thỏa thuận bằng I am happy to accept + cảm ơn thời gian của đối phương.", chunks: ["I am happy to accept", "Thank you for your time"] }
+      ]
+    },
+    {
+      title: "Asking a Professor for an Extension - Xin giảng viên gia hạn nộp bài",
+      setting: "Bạn bị ốm một tuần và không kịp nộp bài luận đúng hạn. Bạn gặp giảng viên, giải thích tình hình, xin gia hạn một tuần và cam kết nộp bài đúng ngày mới.",
+      partner: "Giảng viên",
+      goal: "Giải thích lý do chính đáng, xin gia hạn cụ thể và cam kết ngày nộp mới.",
+      band: "Band 6.0",
+      chunks: ["I am afraid I cannot submit on time", "I was ill last week", "Could I have one more week, please", "I will submit it next Friday", "Thank you for understanding"],
+      turns: [
+        { from: "partner", text: "Hello. How can I help you?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào thầy. Em e rằng em không thể nộp bài đúng hạn vì tuần trước em bị ốm.", expect: "Hello, professor. I am afraid I cannot submit the essay on time because I was ill last week.", keywords: ["afraid", "submit", "time", "ill"], hint: "Hello, professor. I am afraid...", tip: "I am afraid mở đầu lời xin lỗi một cách lịch sự trong môi trường học thuật.", chunks: ["I am afraid I cannot submit on time", "I was ill last week"] },
+        { from: "partner", text: "I am sorry to hear that. How much more time do you need?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Thầy có thể cho em thêm một tuần được không ạ? Em sẽ nộp bài vào thứ Sáu tới.", expect: "Could I have one more week, please? I will submit it next Friday.", keywords: ["week", "submit", "friday"], hint: "Could I have one more week...", tip: "Xin gia hạn phải nêu con số cụ thể (one more week) và ngày nộp mới (next Friday) thì mới thuyết phục.", chunks: ["Could I have one more week, please", "I will submit it next Friday"] },
+        { from: "partner", text: "That is fine. Please submit it by next Friday." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn thầy đã thông cảm. Em sẽ nộp bài đúng hạn mới.", expect: "Thank you for understanding. I will submit it by the new deadline.", keywords: ["thank", "understanding", "deadline"], hint: "Thank you for understanding...", tip: "Kết thúc bằng lời cảm ơn sự thông cảm và nhắc lại cam kết nộp đúng hạn mới.", chunks: ["Thank you for understanding"] }
+      ]
+    },
+    {
+      title: "Reporting a Problem with a Rented Flat - Báo sự cố ở nhà thuê",
+      setting: "Vòi nước trong nhà bạn thuê bị rò rỉ hai ngày nay. Bạn gọi điện cho chủ nhà, mô tả sự cố, hỏi khi nào thợ tới sửa và xác nhận lại lịch hẹn.",
+      partner: "Chủ nhà",
+      goal: "Mô tả sự cố rõ ràng, hỏi lịch sửa chữa và xác nhận lại lịch hẹn.",
+      band: "Band 6.0",
+      chunks: ["There is a leak in the bathroom", "It started two days ago", "When can a plumber come", "Thursday morning is fine", "Thank you very much"],
+      turns: [
+        { from: "partner", text: "Hello. This is Mr Hung, your landlord. What is the problem?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào ông Hùng. Vòi nước trong phòng tắm bị rò rỉ. Sự cố bắt đầu từ hai ngày trước.", expect: "Hello, Mr Hung. There is a leak in the bathroom tap. It started two days ago.", keywords: ["leak", "bathroom", "started", "days"], hint: "Hello, Mr Hung. There is a leak...", tip: "Báo sự cố phải nói rõ: cái gì hỏng, ở đâu, từ khi nào.", chunks: ["There is a leak in the bathroom", "It started two days ago"] },
+        { from: "partner", text: "I am sorry about that. When can a plumber come to fix it?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Thợ sửa ống nước có thể tới khi nào ạ? Sáng thứ Năm tôi ở nhà.", expect: "When can a plumber come to fix it? I am at home on Thursday morning.", keywords: ["plumber", "fix", "thursday", "morning"], hint: "When can a plumber come...", tip: "Sau khi hỏi lịch, nêu luôn thời gian bạn ở nhà để chủ nhà xếp lịch nhanh hơn.", chunks: ["When can a plumber come"] },
+        { from: "partner", text: "The plumber can come on Thursday morning at 9 o'clock. Is that OK?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Sáng thứ Năm được ạ. Cảm ơn ông rất nhiều.", expect: "Thursday morning is fine. Thank you very much.", keywords: ["thursday", "morning", "fine", "thank"], hint: "Thursday morning is fine...", tip: "Xác nhận lịch bằng is fine + cảm ơn: ngắn gọn và rõ ràng qua điện thoại.", chunks: ["Thursday morning is fine", "Thank you very much"] }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.0 — Nghe dài (3) ----------------
+  CONTENT.listeningPlus.push.apply(CONTENT.listeningPlus, [
+    {
+      section: "Section 2",
+      band: "Band 6.0",
+      topic: "Giới thiệu chương trình thực tập hè ở công ty công nghệ",
+      text: "Good morning, everyone. I would like to introduce our summer internship programme at BrightTech, a technology company in the city centre. The programme lasts eight weeks, from the 1st of July to the 25th of August. Interns work in small teams of four people, and each team works on a real project, such as designing an app or testing a new website. Interns are not asked to make coffee or copy documents. Instead, they join team meetings, present their ideas and receive feedback from experienced engineers. The programme is open to second-year and third-year university students who study computer science or a related subject. Applicants should send their CV and a short letter explaining why they want to join. The deadline is the 30th of April. Successful applicants will receive 5 million dong a month and a certificate at the end of the programme. If you have any questions, please visit our website or speak to our staff after this talk. Thank you.",
+      questions: [
+        { type: "MC", q: "How long does the internship last?", o: ["Four weeks", "Six weeks", "Eight weeks", "Twelve weeks"], a: 2, why: "Chương trình thực tập kéo dài tám tuần, từ ngày 1 tháng 7 đến ngày 25 tháng 8." },
+        { type: "MC", q: "What do interns work on?", o: ["Making coffee and copying documents", "A real project in a small team", "Only online courses", "Testing phones at home"], a: 1, why: "Thực tập sinh làm việc trong nhóm nhỏ bốn người trên một dự án thật, như thiết kế ứng dụng hoặc kiểm tra trang web mới." },
+        { type: "MATCH", q: "Who can apply for the programme?", o: ["First-year students only", "Second-year and third-year students in computer science or a related subject", "High school students"], a: 1, why: "Chương trình mở cho sinh viên năm hai và năm ba học khoa học máy tính hoặc ngành liên quan." },
+        { type: "COMP", q: "The deadline for applications is the 30th of ___.", answer: "April", why: "Hạn nộp hồ sơ là ngày 30 tháng 4." },
+        { type: "TF", q: "Successful applicants receive a certificate at the end.", o: ["True", "False"], a: 0, why: "Câu này đúng vì ứng viên thành công sẽ nhận 5 triệu đồng một tháng và một chứng chỉ khi kết thúc chương trình." }
+      ]
+    },
+    {
+      section: "Section 3",
+      band: "Band 6.0",
+      topic: "Sinh viên bàn về khảo sát thói quen dùng điện thoại",
+      text: "A: How is your survey about phone use going? B: It is going well. I have collected answers from 120 students so far. A: That is a good number. What is the most surprising result? B: The most surprising result is that students check their phones more than 80 times a day on average. A: Really? That seems very high. Do they know they check so often? B: Most of them do not. When I asked them to guess, they said 20 or 30 times. The real number is much higher. A: Why do you think they check so often? B: I think notifications are the main reason. Every message or update makes people pick up their phones, even when they are studying. A: What will you suggest in your report? B: I will suggest turning off notifications during study time and keeping phones in another room. A: That sounds sensible. When do you need to finish the report? B: I need to finish it by Friday, and I will present the results to the class next Monday. A: Good luck. I look forward to hearing your results.",
+      questions: [
+        { type: "MC", q: "How many students have answered the survey so far?", o: ["80 students", "100 students", "120 students", "200 students"], a: 2, why: "Người làm khảo sát đã thu thập câu trả lời từ 120 sinh viên cho tới nay." },
+        { type: "MC", q: "How often do students check their phones on average?", o: ["20 or 30 times a day", "50 times a day", "More than 80 times a day", "10 times a day"], a: 2, why: "Kết quả đáng ngạc nhiên nhất là sinh viên kiểm tra điện thoại trung bình hơn 80 lần mỗi ngày." },
+        { type: "MATCH", q: "What is the main reason students check so often?", o: ["Boredom", "Notifications", "Lack of homework"], a: 1, why: "Người làm khảo sát cho rằng thông báo là lý do chính: mỗi tin nhắn hay cập nhật khiến người ta cầm điện thoại lên, ngay cả khi đang học." },
+        { type: "COMP", q: "The report must be finished by ___.", answer: "Friday", why: "Báo cáo cần hoàn thành trước thứ Sáu và trình bày trước lớp vào thứ Hai tới." },
+        { type: "TF", q: "Students guessed their phone checks correctly.", o: ["True", "False"], a: 1, why: "Câu này sai vì khi được hỏi đoán, sinh viên nói 20 hoặc 30 lần, trong khi con số thật cao hơn nhiều." }
+      ]
+    },
+    {
+      section: "Section 4",
+      band: "Band 6.0",
+      topic: "Bài giảng về cách thành phố giảm rác thực phẩm",
+      text: "Today, I would like to talk about a problem that affects every city: food waste. In many cities, a large amount of food is thrown away every day by shops, restaurants and households. Some of this food is still good to eat, but it is wasted because it is close to its sell-by date or because people buy more than they need. This waste is a problem for two reasons. First, producing food uses land, water and energy, so throwing food away also wastes these resources. Second, when food rots in landfill sites, it produces a gas that contributes to climate change. Several cities are now trying to reduce food waste in practical ways. Some have created apps that let shops sell food at a lower price near closing time, instead of throwing it away. Others have set up food banks, where supermarkets donate unsold food to people in need. Schools are also teaching children to plan meals and to understand the difference between a sell-by date and a use-by date. These steps do not solve the problem completely, but they show that food waste can be reduced when shops, schools and households work together.",
+      questions: [
+        { type: "MC", q: "Why is food waste a problem, according to the lecture?", o: ["Because food is too expensive", "Because producing food uses resources and rotting food produces a harmful gas", "Because shops have too much food", "Because people do not like cooking"], a: 1, why: "Bài giảng nêu hai lý do: sản xuất thực phẩm tốn đất, nước và năng lượng nên vứt thực phẩm cũng lãng phí các tài nguyên này; và thực phẩm thối rữa ở bãi chôn lấp tạo ra khí góp phần gây biến đổi khí hậu." },
+        { type: "MC", q: "What do some apps let shops do?", o: ["Sell food at a lower price near closing time", "Give food away for free only", "Close earlier", "Buy more food"], a: 0, why: "Một số ứng dụng cho phép cửa hàng bán thực phẩm với giá thấp hơn gần giờ đóng cửa thay vì vứt đi." },
+        { type: "MATCH", q: "What do food banks receive from supermarkets?", o: ["Money", "Unsold food for people in need", "New equipment"], a: 1, why: "Ngân hàng thực phẩm là nơi siêu thị tặng thực phẩm chưa bán cho người cần." },
+        { type: "COMP", q: "Schools teach children to plan ___ and understand date labels.", answer: "meals", why: "Trường học dạy trẻ lập kế hoạch bữa ăn và hiểu sự khác nhau giữa hạn bán và hạn sử dụng." },
+        { type: "TF", q: "These steps solve the food waste problem completely.", o: ["True", "False"], a: 1, why: "Câu này sai vì bài giảng nói các bước này không giải quyết hoàn toàn vấn đề, nhưng cho thấy rác thực phẩm có thể giảm khi các bên cùng làm việc." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.0 — Nói (3) ----------------
+  CONTENT.speaking.push.apply(CONTENT.speaking, [
+    {
+      partNum: 1,
+      topicStd: "Học tập và giáo dục",
+      part: "Part 1",
+      topic: "Study Habits - Thói quen học tập",
+      band: "Band 6.0",
+      lines: [
+        { who: "Examiner", en: "Do you have a regular study routine?", vi: "Bạn có thói quen học tập đều đặn không?" },
+        { who: "Candidate", en: "Yes, I try to study for two hours every evening. I usually start by reviewing my notes, and then I do exercises or write a short summary.", vi: "Có, tôi cố gắng học hai giờ mỗi tối. Tôi thường bắt đầu bằng cách ôn lại ghi chép, sau đó làm bài tập hoặc viết một bản tóm tắt ngắn." },
+        { who: "Examiner", en: "Where do you prefer to study?", vi: "Bạn thích học ở đâu hơn?" },
+        { who: "Candidate", en: "I prefer the library, because it is quiet and I can concentrate better there. At home, I am easily distracted by my phone.", vi: "Tôi thích thư viện hơn vì ở đó yên tĩnh và tôi tập trung tốt hơn. Ở nhà, tôi dễ bị điện thoại làm mất tập trung." },
+        { who: "Examiner", en: "Has your study routine changed recently?", vi: "Thói quen học tập của bạn có thay đổi gần đây không?" },
+        { who: "Candidate", en: "Yes, it has. I used to study late at night, but now I study in the early evening and go to bed earlier. I feel more awake the next morning.", vi: "Có, đã thay đổi. Trước đây tôi thường học khuya, nhưng giờ tôi học vào đầu buổi tối và đi ngủ sớm hơn. Sáng hôm sau tôi cảm thấy tỉnh táo hơn." }
+      ],
+      quiz: [
+        { q: "Candidate thường bắt đầu buổi học bằng việc gì?", o: ["Làm bài tập", "Ôn lại ghi chép", "Viết tóm tắt dài"], a: 1, why: "Candidate nói: I usually start by reviewing my notes." },
+        { q: "Vì sao Candidate thích thư viện hơn ở nhà?", o: ["Vì thư viện gần nhà", "Vì thư viện yên tĩnh và giúp tập trung tốt hơn", "Vì thư viện có nhiều bạn bè"], a: 1, why: "Candidate nói: it is quiet and I can concentrate better there." },
+        { q: "Cụm 'easily distracted by' có nghĩa là gì?", o: ["dễ bị làm mất tập trung bởi", "dễ dàng tập trung vào", "không quan tâm tới"], a: 0, why: "Easily distracted by nghĩa là dễ bị làm mất tập trung bởi — ở nhà, Candidate dễ bị điện thoại làm mất tập trung." }
+      ]
+    },
+    {
+      partNum: 2,
+      topicStd: "Công việc và nghề nghiệp",
+      part: "Part 2",
+      topic: "Describe a job you would like to have in the future - Mô tả một công việc bạn muốn làm trong tương lai",
+      band: "Band 6.0",
+      lines: [
+        { who: "Cue card", en: "Describe a job you would like to have in the future. You should say: what the job is, what skills it needs, why you are interested in it, and explain how you plan to get this job.", vi: "Hãy mô tả một công việc bạn muốn làm trong tương lai. Bạn nên nói: công việc đó là gì, nó cần những kỹ năng nào, vì sao bạn quan tâm tới nó, và giải thích bạn dự định làm thế nào để có công việc này." },
+        { who: "Candidate", en: "I would like to work as a software engineer for a company that develops educational apps.", vi: "Tôi muốn làm kỹ sư phần mềm cho một công ty phát triển ứng dụng giáo dục." },
+        { who: "Candidate", en: "This job needs good programming skills, logical thinking and the ability to work well in a team.", vi: "Công việc này cần kỹ năng lập trình tốt, tư duy logic và khả năng làm việc nhóm tốt." },
+        { who: "Candidate", en: "I am interested in it because I enjoy solving problems, and I believe educational technology can help students in remote areas learn better.", vi: "Tôi quan tâm tới nó vì tôi thích giải quyết vấn đề, và tôi tin công nghệ giáo dục có thể giúp học sinh ở vùng xa học tốt hơn." },
+        { who: "Candidate", en: "To get this job, I plan to finish my computer science degree, build a small portfolio of apps and apply for an internship next summer.", vi: "Để có công việc này, tôi dự định hoàn thành bằng khoa học máy tính, xây dựng một hồ sơ nhỏ gồm các ứng dụng và nộp đơn thực tập vào mùa hè tới." }
+      ],
+      quiz: [
+        { q: "Candidate muốn làm việc cho công ty phát triển loại ứng dụng nào?", o: ["Ứng dụng trò chơi", "Ứng dụng giáo dục", "Ứng dụng mua sắm"], a: 1, why: "Candidate nói: a company that develops educational apps." },
+        { q: "Kỹ năng nào KHÔNG được nhắc tới?", o: ["Kỹ năng lập trình", "Tư duy logic", "Kỹ năng bán hàng"], a: 2, why: "Candidate nhắc tới programming skills, logical thinking và teamwork — không nhắc tới bán hàng." },
+        { q: "Candidate dự định làm gì vào mùa hè tới?", o: ["Đi du lịch", "Nộp đơn thực tập", "Mở công ty riêng"], a: 1, why: "Candidate nói: apply for an internship next summer." }
+      ]
+    },
+    {
+      partNum: 3,
+      topicStd: "Công việc và công nghệ",
+      part: "Part 3",
+      topic: "Work and Technology - Công việc và công nghệ",
+      band: "Band 6.0",
+      lines: [
+        { who: "Examiner", en: "How has technology changed the way people work?", vi: "Công nghệ đã thay đổi cách mọi người làm việc như thế nào?" },
+        { who: "Candidate", en: "Technology has made work much more flexible. Many people can now work from home, attend meetings online and share documents instantly, without travelling to an office every day.", vi: "Công nghệ đã khiến công việc linh hoạt hơn nhiều. Nhiều người giờ có thể làm việc ở nhà, họp trực tuyến và chia sẻ tài liệu ngay lập tức mà không cần tới văn phòng mỗi ngày." },
+        { who: "Examiner", en: "Do you think technology will replace many jobs in the future?", vi: "Bạn có nghĩ công nghệ sẽ thay thế nhiều công việc trong tương lai không?" },
+        { who: "Candidate", en: "Some routine jobs may be replaced, but I do not think technology can replace jobs that need creativity, care and human judgement. New jobs will also appear as technology develops.", vi: "Một số công việc lặp lại có thể bị thay thế, nhưng tôi không nghĩ công nghệ có thể thay thế những việc cần sáng tạo, sự chăm sóc và phán đoán của con người. Công việc mới cũng sẽ xuất hiện khi công nghệ phát triển." },
+        { who: "Examiner", en: "What skills will workers need in the future?", vi: "Người lao động sẽ cần những kỹ năng nào trong tương lai?" },
+        { who: "Candidate", en: "In my opinion, workers will need to keep learning throughout their lives. Digital skills are important, but communication, teamwork and problem-solving will remain equally important.", vi: "Theo ý kiến của tôi, người lao động sẽ cần tiếp tục học hỏi suốt đời. Kỹ năng số quan trọng, nhưng giao tiếp, làm việc nhóm và giải quyết vấn đề vẫn quan trọng không kém." }
+      ],
+      quiz: [
+        { q: "Theo Candidate, công nghệ đã làm cho công việc trở nên thế nào?", o: ["Khó khăn hơn", "Linh hoạt hơn", "Ít quan trọng hơn"], a: 1, why: "Candidate nói: Technology has made work much more flexible." },
+        { q: "Công việc nào khó bị công nghệ thay thế, theo Candidate?", o: ["Công việc lặp lại", "Công việc cần sáng tạo, chăm sóc và phán đoán con người", "Công việc văn phòng"], a: 1, why: "Candidate nói technology cannot replace jobs that need creativity, care and human judgement." },
+        { q: "Cụm 'throughout their lives' có nghĩa là gì?", o: ["trong một thời gian ngắn", "suốt đời", "khi còn trẻ"], a: 1, why: "Throughout their lives nghĩa là suốt đời — keep learning throughout their lives." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.0 — Ngữ pháp (2) ----------------
+  CONTENT.grammar.push.apply(CONTENT.grammar, [
+    {
+      fam: "Mệnh đề danh từ",
+      hook: "Muốn đưa một câu hỏi vào trong câu khẳng định, chỉ cần đổi thứ tự: What surprises me is that prices rose.",
+      level: "Band 6.0",
+      name: "Mệnh đề danh từ với what và that trong Task 2",
+      explain: "Nhìn hai câu này trước nhé: What surprises me is that prices rose so quickly. (Điều làm tôi ngạc nhiên là giá đã tăng nhanh đến vậy.) I believe that education should be free. (Tôi tin rằng giáo dục nên miễn phí.) Sau ví dụ là quy tắc: mệnh đề danh từ đóng vai trò chủ ngữ hoặc tân ngữ trong câu. Khi mệnh đề bắt đầu bằng what, nó giữ thứ tự khẳng định (what surprises me, không phải what does surprise me). Khi mệnh đề bắt đầu bằng that sau động từ như believe, think, argue, that có thể lược bỏ trong văn nói nhưng nên giữ trong văn viết học thuật.",
+      examples: ["What surprises me is that prices rose so quickly.", "I believe that education should be free.", "What matters most is not speed but accuracy."],
+      tip: "Hãy nhớ: mệnh đề danh từ không giữ thứ tự câu hỏi — What you need is practice, không phải What do you need is practice.",
+      model: "What worries many parents is that children spend too much time online. I argue that schools should teach digital skills from an early age.",
+      modelVi: "Điều khiến nhiều phụ huynh lo lắng là trẻ em dành quá nhiều thời gian trực tuyến. Tôi cho rằng trường học nên dạy kỹ năng số từ sớm.",
+      quiz: [
+        { q: "What surprises me ___ that prices rose so quickly.", o: ["is", "are", "does"], a: 0, why: "Mệnh đề what làm chủ ngữ số ít nên động từ là is." },
+        { q: "I believe ___ education should be free.", o: ["what", "that", "which"], a: 1, why: "Sau believe dùng mệnh đề that: I believe that education should be free." },
+        { q: "What matters most ___ not speed but accuracy.", o: ["is", "are", "be"], a: 0, why: "What matters most là chủ ngữ số ít nên dùng is." },
+        { q: "Chọn câu đúng:", o: ["What do you need is practice.", "What you need is practice.", "What you needs is practice."], a: 1, why: "Mệnh đề danh từ giữ thứ tự khẳng định: what you need." },
+        { q: "She thinks ___ public transport should be cheaper.", o: ["what", "that", "who"], a: 1, why: "Sau thinks dùng mệnh đề that." },
+        { q: "Câu nào sai?", o: ["What I like is this book.", "What does I like is this book.", "I know that he is busy."], a: 1, why: "Mệnh đề danh từ không dùng trợ động từ does và không đảo thứ tự." },
+        { q: "What concerns me ___ the amount of time children spend online.", o: ["is", "are", "were"], a: 0, why: "What concerns me là chủ ngữ số ít nên dùng is." },
+        { q: "He argues ___ governments should invest more in schools.", o: ["what", "that", "where"], a: 1, why: "Sau argues dùng mệnh đề that." }
+      ]
+    },
+    {
+      fam: "Tính từ, trạng từ và so sánh",
+      hook: "Muốn nói càng... càng..., chỉ cần the more... the more...: The more you practise, the better you become.",
+      level: "Band 6.0",
+      name: "So sánh kép: the more... the more...",
+      explain: "Nhìn hai câu này trước nhé: The more you practise, the better you become. (Bạn càng luyện tập, bạn càng giỏi.) The earlier we start, the easier the task becomes. (Chúng ta bắt đầu càng sớm, nhiệm vụ càng trở nên dễ dàng.) Sau ví dụ là quy tắc: so sánh kép có hai vế, mỗi vế bắt đầu bằng the + dạng so sánh hơn (more, better, earlier, easier). Vế đầu nêu điều kiện thay đổi, vế sau nêu kết quả thay đổi theo. Hai vế đều không có động từ be thừa và không dùng than.",
+      examples: ["The more you practise, the better you become.", "The earlier we start, the easier the task becomes.", "The more crowded the city is, the higher the rents are."],
+      tip: "Hãy tưởng tượng so sánh kép như một cái cân hai đầu: một đầu nặng lên thì đầu kia cũng thay đổi theo.",
+      model: "The more time students spend reading, the richer their vocabulary becomes. The less sleep they get, the harder it is to concentrate.",
+      modelVi: "Học sinh càng dành nhiều thời gian đọc, vốn từ của họ càng phong phú. Họ càng ngủ ít, việc tập trung càng khó.",
+      quiz: [
+        { q: "The more you practise, the ___ you become.", o: ["good", "better", "best"], a: 1, why: "Vế sau của so sánh kép dùng dạng so sánh hơn: better." },
+        { q: "The earlier we start, the ___ the task becomes.", o: ["easy", "easier", "easiest"], a: 1, why: "So sánh kép dùng easier, không dùng easy hay easiest." },
+        { q: "The more crowded the city is, the ___ the rents are.", o: ["high", "higher", "highest"], a: 1, why: "Vế sau dùng dạng so sánh hơn: higher." },
+        { q: "Chọn câu đúng:", o: ["The more you read, the more you know.", "More you read, more you know.", "The more you read, than more you know."], a: 0, why: "Cả hai vế đều bắt đầu bằng the + so sánh hơn, không dùng than." },
+        { q: "The less sleep they get, the ___ it is to concentrate.", o: ["hard", "harder", "hardest"], a: 1, why: "Vế sau dùng harder." },
+        { q: "Câu nào sai?", o: ["The more she works, the more she earns.", "The more she works, the most she earns.", "The longer you wait, the colder it gets."], a: 1, why: "So sánh kép dùng more ở cả hai vế, không dùng most." },
+        { q: "The ___ books you read, the wider your vocabulary is.", o: ["more", "most", "many"], a: 0, why: "Vế đầu dùng more + danh từ: more books." },
+        { q: "The faster you drive, the ___ dangerous it is.", o: ["more", "most", "much"], a: 0, why: "Vế sau dùng more + tính từ dài: more dangerous." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.0 — Luyện viết (2) + Gõ câu (2) ----------------
+  CONTENT.writingDrills.push.apply(CONTENT.writingDrills, [
+    {
+      band: "Band 6.0",
+      kind: "paraphrase",
+      title: "Viết lại bằng not only... but also",
+      prompt: "Viết lại câu giữ nguyên nghĩa, dùng cấu trúc not only... but also. / Paraphrase with not only... but also.",
+      given: "Public transport is cheap. It is also good for the environment.",
+      model: "Public transport is not only cheap but also good for the environment.",
+      note: "Kỹ thuật này gộp hai ưu điểm vào một câu not only... but also, giúp câu viết có nhịp điệu học thuật hơn."
+    },
+    {
+      band: "Band 6.0",
+      kind: "combine",
+      title: "Nối câu bằng whereas: đối chiếu hai thành phố",
+      prompt: "Nối hai câu thành một câu bằng whereas. / Combine the sentences with whereas.",
+      given: "City A has clean air. / City B has serious pollution.",
+      model: "City A has clean air, whereas City B has serious pollution.",
+      note: "Kỹ thuật này dùng whereas để đối chiếu hai sự thật trái ngược trong cùng một câu, phù hợp với Task 1 và Task 2 mức 6.0."
+    }
+  ]);
+  CONTENT.typing.push.apply(CONTENT.typing, [
+    {
+      level: "Band 6.0",
+      title: "Câu về làm việc nhóm và quản lý thời gian",
+      sentences: [
+        "Working in a team helps students share ideas and solve problems faster.",
+        "However, a team only works well when every member does their part.",
+        "To manage time better, I make a list of tasks every morning.",
+        "First, I finish the most important task before checking my phone.",
+        "Although group discussions take time, they often lead to better decisions.",
+        "Whereas some students prefer to work alone, others learn best in groups.",
+        "A clear plan helps a team avoid confusion and wasted time.",
+        "If a member is late, the whole team should adjust the plan together.",
+        "In my experience, regular short meetings keep a project on track.",
+        "Good teamwork requires patience, clear communication and mutual respect."
+      ]
+    },
+    {
+      level: "Band 6.0",
+      title: "Câu mô tả xu hướng công nghệ và môi trường",
+      sentences: [
+        "The number of people using electric cars has risen sharply in recent years.",
+        "Whereas petrol cars produce harmful gases, electric cars produce far less pollution.",
+        "Recycling rates in many cities have increased steadily since 2015.",
+        "The amount of plastic waste, however, remains a serious problem.",
+        "More households now separate their waste into different bins.",
+        "Online shopping has grown rapidly, but it has also increased packaging waste.",
+        "The more people shop online, the more delivery vehicles appear on the roads.",
+        "Governments should encourage companies to use less plastic packaging.",
+        "In conclusion, technology can help the environment only if people use it wisely.",
+        "Small changes in daily habits can have a large effect over time."
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.5 — Đọc (3) ----------------
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    {
+      topic: "Làm việc sâu trong văn phòng mở",
+      level: "Band 6.5",
+      title: "Why Deep Work Is Hard in an Open Office",
+      text: "Open-plan offices were designed to encourage communication. By removing walls, companies hoped that employees would share ideas more easily and work as a team. In practice, however, many workers report that open offices make one important kind of work much harder: deep work, the focused effort needed to solve a complex problem or write a difficult report.\n\nThe main obstacle is interruption. Research on office behaviour consistently shows that workers in open spaces are interrupted far more often than those in private rooms, by questions, phone calls and background conversations. Each interruption may last only a few minutes, but returning to a complex task can take much longer. As a result, workers often feel busy all day without making real progress on their most important tasks.\n\nNoise is a second problem, but not in the way many people assume. It is not loud noise that causes most damage, but unpredictable noise: a sudden laugh, a phone ringing nearby, or a conversation that is just clear enough to follow. The human brain is naturally drawn to speech, so even quiet talk can pull attention away from a task that requires concentration.\n\nSome companies have responded by creating quiet zones, where talking is discouraged, or by allowing employees to work from home on certain days. Others provide noise-cancelling headphones or bookable focus rooms. These measures help, but they also reveal a tension at the heart of open offices: the same design that supports quick collaboration can undermine the quiet concentration that complex work requires.\n\nThe lesson is not that open offices should be abandoned entirely. Rather, workplaces need a balance between spaces for collaboration and spaces for concentration. When employees can choose the right environment for each task, both teamwork and deep work can flourish. Without that choice, the office may look modern and collaborative while quietly reducing the quality of the work done inside it.",
+      questions: [
+        { type: "MC", q: "What is deep work, according to the passage?", o: ["Quick chatting with colleagues", "Focused effort to solve a complex problem or write a difficult report", "Working overtime in the evening", "Attending many meetings"], options: ["Quick chatting with colleagues", "Focused effort to solve a complex problem or write a difficult report", "Working overtime in the evening", "Attending many meetings"], a: 1, why: "Đoạn 1: deep work là nỗ lực tập trung cần thiết để giải quyết vấn đề phức tạp hoặc viết báo cáo khó." },
+        { type: "TFNG", q: "Returning to a complex task after an interruption is usually quick.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 2: mỗi lần gián đoạn chỉ kéo dài vài phút, nhưng quay lại nhiệm vụ phức tạp có thể mất lâu hơn nhiều → câu phát biểu sai." },
+        { type: "MATCH", q: "Which kind of noise causes most damage, according to the passage?", o: ["Constant loud music", "Unpredictable noise such as a sudden laugh or a nearby phone", "Traffic noise outside"], options: ["Constant loud music", "Unpredictable noise such as a sudden laugh or a nearby phone", "Traffic noise outside"], a: 1, why: "Đoạn 3: không phải tiếng ồn lớn gây hại nhiều nhất mà là tiếng ồn khó đoán: tiếng cười đột ngột, điện thoại reo gần đó, hay cuộc trò chuyện vừa đủ rõ để theo dõi." },
+        { type: "COMP", q: "Some companies have created ___ zones, where talking is discouraged.", answer: "quiet", why: "Đoạn 4: một số công ty đã tạo ra khu vực yên tĩnh, nơi việc nói chuyện không được khuyến khích." },
+        { type: "MC", q: "What is the writer's conclusion?", o: ["Open offices should be abandoned entirely", "Workplaces need a balance between collaboration and concentration spaces", "Employees should always work from home", "Noise-cancelling headphones solve the whole problem"], options: ["Open offices should be abandoned entirely", "Workplaces need a balance between collaboration and concentration spaces", "Employees should always work from home", "Noise-cancelling headphones solve the whole problem"], a: 1, why: "Đoạn 5: bài học không phải bỏ hẳn văn phòng mở, mà nơi làm việc cần cân bằng giữa không gian hợp tác và không gian tập trung." }
+      ],
+      translation: "Văn phòng mở được thiết kế để khuyến khích giao tiếp: bỏ tường ngăn với hy vọng nhân viên chia sẻ ý tưởng dễ hơn và làm việc nhóm. Trên thực tế, nhiều người cho rằng văn phòng mở khiến một loại công việc quan trọng khó hơn nhiều: làm việc sâu — nỗ lực tập trung để giải quyết vấn đề phức tạp hay viết báo cáo khó. Trở ngại chính là gián đoạn: nhân viên ở không gian mở bị ngắt quãng thường xuyên hơn nhiều so với phòng riêng, và quay lại nhiệm vụ phức tạp có thể mất lâu hơn nhiều, khiến họ cảm thấy bận rộn cả ngày mà không tiến triển thật sự. Vấn đề thứ hai là tiếng ồn, nhưng không phải tiếng ồn lớn mà là tiếng ồn khó đoán: tiếng cười đột ngột, điện thoại reo gần đó, hay cuộc trò chuyện vừa đủ rõ để theo dõi — não người tự nhiên bị hút về lời nói. Một số công ty đã đáp lại bằng khu vực yên tĩnh, ngày làm việc ở nhà, tai nghe chống ồn hoặc phòng tập trung đặt trước. Những biện pháp này giúp ích nhưng cũng lộ ra căng thẳng cốt lõi: cùng một thiết kế hỗ trợ hợp tác nhanh lại có thể làm suy yếu sự tập trung yên tĩnh mà công việc phức tạp cần. Bài học không phải bỏ hẳn văn phòng mở, mà cần cân bằng giữa không gian hợp tác và không gian tập trung.",
+      phrases: [
+        { en: "deep work", vi: "làm việc sâu, tập trung" },
+        { en: "returning to a complex task", vi: "quay lại một nhiệm vụ phức tạp" },
+        { en: "unpredictable noise", vi: "tiếng ồn khó đoán" },
+        { en: "noise-cancelling headphones", vi: "tai nghe chống ồn" },
+        { en: "a balance between collaboration and concentration", vi: "sự cân bằng giữa hợp tác và tập trung" }
+      ]
+    },
+    {
+      topic: "Nước biển thành nước uống",
+      level: "Band 6.5",
+      title: "How Seawater Can Become Drinking Water",
+      text: "For coastal cities with little fresh water, the sea looks like an obvious solution. It is vast, it is nearby, and it never runs dry. Turning seawater into drinking water, however, is far more difficult and expensive than it first appears.\n\nThe most common method is reverse osmosis. In this process, seawater is pushed at high pressure through a very fine membrane, a thin layer with holes so small that salt molecules cannot pass through, while water molecules can. The result is fresh water on one side and very salty water, called brine, on the other side.\n\nThe main challenge is energy. Pushing water through membranes at high pressure requires large amounts of electricity. In the past, this made desalination too expensive for most cities. Recently, however, the cost has fallen, thanks to more efficient membranes and to the use of renewable energy, such as solar power, to run the plants.\n\nA second challenge is what to do with the brine. If it is poured back into the sea in large amounts, it can harm marine life, because the water near the outlet becomes much saltier than normal. Some plants now dilute the brine before release, or use it to extract useful minerals, such as magnesium and lithium.\n\nDespite these challenges, desalination is growing rapidly, particularly in dry coastal regions. Experts stress that it should not be seen as a single solution. It works best when combined with saving water, recycling wastewater and protecting natural water sources. Used in this balanced way, the sea can become a reliable backup source, rather than a wasteful replacement for careful water management.",
+      questions: [
+        { type: "MC", q: "What is reverse osmosis?", o: ["Boiling seawater until salt disappears", "Pushing seawater at high pressure through a fine membrane that blocks salt", "Freezing seawater and removing ice", "Mixing seawater with fresh water"], options: ["Boiling seawater until salt disappears", "Pushing seawater at high pressure through a fine membrane that blocks salt", "Freezing seawater and removing ice", "Mixing seawater with fresh water"], a: 1, why: "Đoạn 2: nước biển được đẩy với áp suất cao qua màng rất mịn mà phân tử muối không qua được, chỉ phân tử nước qua được." },
+        { type: "TFNG", q: "Desalination has become cheaper recently.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 0, why: "Đoạn 3: gần đây chi phí đã giảm nhờ màng hiệu quả hơn và dùng năng lượng tái tạo như điện mặt trời để vận hành nhà máy." },
+        { type: "MATCH", q: "What is brine?", o: ["Fresh water after treatment", "Very salty water left after desalination", "Water from a river"], options: ["Fresh water after treatment", "Very salty water left after desalination", "Water from a river"], a: 1, why: "Đoạn 2: kết quả là nước ngọt một bên và nước rất mặn, gọi là brine, ở bên còn lại." },
+        { type: "COMP", q: "Some plants now dilute the brine before ___ or extract useful minerals from it.", answer: "release", why: "Đoạn 4: một số nhà máy pha loãng brine trước khi xả ra, hoặc dùng nó để chiết xuất khoáng chất hữu ích như magie và liti." },
+        { type: "MC", q: "What do experts recommend about desalination?", o: ["Use it as the only water source", "Combine it with saving water, recycling wastewater and protecting natural sources", "Stop building desalination plants", "Use it only in rainy regions"], options: ["Use it as the only water source", "Combine it with saving water, recycling wastewater and protecting natural sources", "Stop building desalination plants", "Use it only in rainy regions"], a: 1, why: "Đoạn 5: khử mặn hiệu quả nhất khi kết hợp với tiết kiệm nước, tái chế nước thải và bảo vệ nguồn nước tự nhiên." }
+      ],
+      translation: "Với thành phố ven biển ít nước ngọt, biển trông như giải pháp hiển nhiên: mênh mông, ở gần và không bao giờ cạn. Nhưng biến nước biển thành nước uống khó và tốn kém hơn nhiều so với vẻ ngoài. Phương pháp phổ biến nhất là thẩm thấu ngược: nước biển được đẩy với áp suất cao qua màng rất mịn mà phân tử muối không qua được, chỉ phân tử nước qua được; kết quả là nước ngọt một bên và nước rất mặn gọi là brine ở bên còn lại. Thách thức chính là năng lượng: đẩy nước qua màng với áp suất cao cần nhiều điện, trước đây khiến khử mặn quá đắt với hầu hết thành phố; gần đây chi phí đã giảm nhờ màng hiệu quả hơn và dùng năng lượng tái tạo như điện mặt trời. Thách thức thứ hai là xử lý brine: đổ trở lại biển với lượng lớn có thể hại sinh vật biển vì nước gần cửa xả mặn hơn bình thường nhiều; một số nhà máy pha loãng brine trước khi xả hoặc dùng nó chiết xuất khoáng chất hữu ích như magie và liti. Dù vậy khử mặn đang tăng nhanh, nhất là ở vùng ven biển khô hạn; chuyên gia nhấn mạnh không nên coi đó là giải pháp duy nhất mà nên kết hợp với tiết kiệm nước, tái chế nước thải và bảo vệ nguồn nước tự nhiên.",
+      phrases: [
+        { en: "reverse osmosis", vi: "thẩm thấu ngược" },
+        { en: "a fine membrane", vi: "màng lọc rất mịn" },
+        { en: "very salty water, called brine", vi: "nước rất mặn, gọi là brine" },
+        { en: "dilute the brine before release", vi: "pha loãng brine trước khi xả ra" },
+        { en: "a reliable backup source", vi: "một nguồn dự phòng đáng tin cậy" }
+      ]
+    },
+    {
+      topic: "Quán cà phê sửa chữa",
+      level: "Band 6.5",
+      title: "The Quiet Rise of Repair Cafes",
+      text: "When a toaster stops working or a chair leg breaks, most people throw the item away and buy a new one. In a growing number of towns, however, a different habit is taking hold. Once a month, volunteers open a repair cafe: a free meeting place where visitors bring broken items and learn how to fix them.\n\nThe idea is simple. Visitors sit with experienced repairers, who show them how to diagnose the problem and use basic tools. A broken lamp may need only a new wire. A jacket with a torn pocket may need only a few stitches. Many visitors are surprised to discover that the repair takes less than an hour and costs almost nothing.\n\nThe benefits go beyond saving money. Repairing an item keeps it out of landfill and reduces the demand for new products, which in turn saves materials and energy. Repair cafes also build community: neighbours meet, share skills and talk while they work. For older volunteers, the cafe is a chance to pass on practical knowledge that younger generations may never have learned.\n\nThere are, of course, limits. Some items, especially modern electronics with glued parts, are deliberately hard to repair. Volunteers cannot fix everything, and visitors sometimes leave disappointed. Safety is another concern: electrical repairs must follow clear rules, and dangerous items are turned away.\n\nNevertheless, the movement is spreading, from small villages to large cities. Supporters argue that repair cafes do more than fix toasters. They quietly challenge a throwaway culture by showing that many broken things are not really broken beyond repair. In a world that buys and discards at high speed, that small lesson may be the most valuable repair of all.",
+      questions: [
+        { type: "MC", q: "What is a repair cafe?", o: ["A shop that sells new tools", "A free meeting place where visitors learn to fix broken items", "A cafe that serves only repaired food", "A factory that recycles metal"], options: ["A shop that sells new tools", "A free meeting place where visitors learn to fix broken items", "A cafe that serves only repaired food", "A factory that recycles metal"], a: 1, why: "Đoạn 1: quán cà phê sửa chữa là nơi gặp gỡ miễn phí, nơi khách mang đồ hỏng tới và học cách sửa chúng." },
+        { type: "TFNG", q: "Most repairs at a repair cafe take less than an hour.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 0, why: "Đoạn 2: nhiều khách ngạc nhiên khi phát hiện việc sửa chữa mất chưa tới một giờ và gần như không tốn gì." },
+        { type: "MATCH", q: "Which example of a simple repair is given?", o: ["A broken lamp needing only a new wire", "A broken phone needing a new screen", "A broken car needing a new engine"], options: ["A broken lamp needing only a new wire", "A broken phone needing a new screen", "A broken car needing a new engine"], a: 0, why: "Đoạn 2: đèn hỏng có thể chỉ cần một đoạn dây mới; áo khoác rách túi có thể chỉ cần vài mũi khâu." },
+        { type: "COMP", q: "Repairing an item keeps it out of ___ and reduces demand for new products.", answer: "landfill", why: "Đoạn 3: sửa chữa một món đồ giúp nó không bị đưa tới bãi chôn lấp và giảm nhu cầu sản phẩm mới." },
+        { type: "MC", q: "What is the writer's final point?", o: ["Repair cafes can fix everything", "Repair cafes challenge a throwaway culture by showing many broken things can be repaired", "Repair cafes should charge high fees", "Modern electronics are easy to repair"], options: ["Repair cafes can fix everything", "Repair cafes challenge a throwaway culture by showing many broken things can be repaired", "Repair cafes should charge high fees", "Modern electronics are easy to repair"], a: 1, why: "Đoạn 5: những người ủng hộ cho rằng quán cà phê sửa chữa lặng lẽ thách thức văn hóa vứt bỏ bằng cách cho thấy nhiều đồ hỏng thật ra không hỏng tới mức không sửa được." }
+      ],
+      translation: "Khi máy nướng bánh mì hỏng hay chân ghế gãy, hầu hết mọi người vứt món đồ đi và mua mới. Ở ngày càng nhiều thị trấn, một thói quen khác đang hình thành: mỗi tháng một lần, tình nguyện viên mở quán cà phê sửa chữa — nơi gặp gỡ miễn phí, nơi khách mang đồ hỏng tới và học cách sửa. Ý tưởng rất đơn giản: khách ngồi cùng thợ sửa có kinh nghiệm, được chỉ cách chẩn đoán vấn đề và dùng dụng cụ cơ bản. Đèn hỏng có thể chỉ cần đoạn dây mới; áo khoác rách túi có thể chỉ cần vài mũi khâu; nhiều khách ngạc nhiên khi việc sửa mất chưa tới một giờ và gần như không tốn gì. Lợi ích vượt xa tiết kiệm tiền: sửa đồ giúp đồ không bị đưa tới bãi chôn lấp và giảm nhu cầu sản phẩm mới, từ đó tiết kiệm vật liệu và năng lượng; quán còn xây dựng cộng đồng khi hàng xóm gặp gỡ, chia sẻ kỹ năng và trò chuyện trong lúc làm việc; với tình nguyện viên lớn tuổi, đây là cơ hội truyền lại kiến thức thực tế mà thế hệ trẻ có thể chưa từng học. Tất nhiên có giới hạn: một số món, nhất là đồ điện tử hiện đại với linh kiện dán keo, cố tình khó sửa; tình nguyện viên không sửa được mọi thứ và khách đôi khi ra về thất vọng; an toàn cũng là vấn đề khi sửa điện phải theo quy tắc rõ ràng và đồ nguy hiểm bị từ chối. Tuy vậy phong trào đang lan rộng từ làng nhỏ tới thành phố lớn, và người ủng hộ cho rằng quán cà phê sửa chữa còn hơn cả sửa máy nướng bánh mì: chúng lặng lẽ thách thức văn hóa vứt bỏ.",
+      phrases: [
+        { en: "taking hold", vi: "đang hình thành, lan rộng" },
+        { en: "diagnose the problem", vi: "chẩn đoán vấn đề" },
+        { en: "keeps it out of landfill", vi: "giúp nó không bị đưa tới bãi chôn lấp" },
+        { en: "a throwaway culture", vi: "văn hóa vứt bỏ" },
+        { en: "beyond repair", vi: "tới mức không sửa được" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.5 — Viết (3) ----------------
+  CONTENT.writing.push.apply(CONTENT.writing, [
+    {
+      wtype: "Quy trình",
+      type: "Task 1",
+      band: "Band 6.5",
+      title: "Quy trình: sản xuất điện từ gió ngoài khơi",
+      prompt: "The diagram below shows how electricity is produced from offshore wind. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      dataDesc: "Dữ kiện của quy trình: (1) Gió thổi làm quay cánh quạt của tuabin ngoài khơi. (2) Chuyển động quay chạy máy phát điện trong thân tuabin, tạo ra điện. (3) Điện đi qua cáp ngầm dưới biển tới trạm trên bờ. (4) Trạm tăng điện áp rồi đưa vào lưới điện quốc gia, tới nhà dân và nhà máy.",
+      model: "The diagram illustrates how electricity is generated from wind turbines located offshore.\n\nOverall, the process involves four main stages, from capturing wind energy at sea to delivering electricity to homes and factories on land. No fuel is burned at any stage, which makes the process relatively clean.\n\nIn the first stage, wind turns the large blades of an offshore turbine. This rotation drives a generator inside the turbine, which converts the movement into electricity. The electricity produced at sea is then sent through cables laid on the seabed towards the shore.\n\nOnce on land, the electricity enters a substation, where its voltage is increased so that it can travel efficiently over long distances. Finally, the electricity is distributed through the national grid to households and factories. In short, offshore wind transforms a natural, renewable resource into usable power through a continuous chain of conversion and transmission.",
+      analysis: "Cấu trúc 4 đoạn cho Band 6.5: (1) Paraphrase đề bài. (2) Overview: bốn giai đoạn + không đốt nhiên liệu. (3) Hai giai đoạn đầu: gió quay cánh, máy phát tạo điện, cáp ngầm. (4) Hai giai đoạn cuối: trạm tăng áp, lưới điện phân phối + câu chốt khái quát hóa (transforms, continuous chain). Điểm ngôn ngữ đáng học: converts... into, laid on the seabed, voltage is increased (bị động quy trình), distributed through — từ ngữ quy trình mức 6.5.",
+      phrases: [
+        { en: "converts the movement into electricity", vi: "chuyển chuyển động thành điện" },
+        { en: "cables laid on the seabed", vi: "cáp đặt dưới đáy biển" },
+        { en: "its voltage is increased", vi: "điện áp của nó được tăng lên" },
+        { en: "distributed through the national grid", vi: "phân phối qua lưới điện quốc gia" },
+        { en: "a continuous chain of conversion and transmission", vi: "một chuỗi liên tục gồm chuyển đổi và truyền tải" }
+      ]
+    },
+    {
+      wtype: "Thảo luận hai chiều",
+      type: "Task 2",
+      band: "Band 6.5",
+      title: "Thảo luận hai chiều: chính phủ hay cá nhân chịu trách nhiệm về môi trường",
+      prompt: "Some people think governments should take most of the responsibility for protecting the environment, while others think individuals should take most of the responsibility. Discuss both views and give your own opinion. (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: trách nhiệm môi trường thuộc về chính phủ hay cá nhân. Dàn ý: mở bài nêu hai quan điểm; thân bài 1: vai trò chính phủ (luật, thuế, đầu tư hạ tầng); thân bài 2: vai trò cá nhân (tiêu dùng, tái chế, đi lại); kết bài: chính phủ tạo khung, cá nhân hành động trong khung đó — cả hai đều cần.",
+      model: "Protecting the environment requires action at every level, but there is disagreement about who should bear most of the responsibility: governments or individuals. In my view, both are essential, but governments must take the lead by creating the rules and systems within which individuals can act effectively.\n\nThose who place responsibility on governments argue that only governments have the power to change systems. A government can introduce laws to limit pollution, tax harmful products and invest in public transport and renewable energy. Without such measures, individual efforts remain small and scattered, because people cannot easily choose green options that do not exist or are too expensive.\n\nOn the other hand, supporters of individual responsibility point out that governments cannot control daily choices. Individuals decide what to buy, how much to waste and whether to drive or cycle. If millions of people change these small habits, the total effect is enormous. Moreover, public pressure from responsible citizens often pushes governments to act in the first place.\n\nIn conclusion, the two levels of responsibility reinforce each other. Governments should set clear targets, provide affordable green choices and penalise serious polluters. Within that framework, individuals should take responsibility for their consumption, waste and travel. Neither side can succeed alone, but together they can produce lasting change.",
+      analysis: "Cấu trúc 4 đoạn cho Band 6.5: (1) Mở bài nêu bất đồng + quan điểm có điều kiện (chính phủ dẫn dắt, cá nhân hành động trong khung). (2) Thân bài 1: sức mạnh hệ thống của chính phủ — luật, thuế, đầu tư; nỗ lực cá nhân rời rạc nếu thiếu hệ thống. (3) Thân bài 2: lựa chọn hằng ngày của cá nhân + áp lực công chúng thúc đẩy chính phủ. (4) Kết bài: hai cấp độ củng cố lẫn nhau + phân công cụ thể. Điểm ngôn ngữ đáng học: bear most of the responsibility, remain small and scattered, reinforce each other, penalise serious polluters — từ ngữ lập luận mức 6.5.",
+      phrases: [
+        { en: "bear most of the responsibility", vi: "gánh phần lớn trách nhiệm" },
+        { en: "remain small and scattered", vi: "vẫn nhỏ lẻ và rời rạc" },
+        { en: "reinforce each other", vi: "củng cố lẫn nhau" },
+        { en: "penalise serious polluters", vi: "xử phạt những đối tượng gây ô nhiễm nghiêm trọng" },
+        { en: "within that framework", vi: "trong khuôn khổ đó" }
+      ]
+    },
+    {
+      wtype: "Ý kiến",
+      type: "Task 2",
+      band: "Band 6.5",
+      title: "Ý kiến: đại học nên dạy kỹ năng mềm ngang với chuyên môn",
+      prompt: "Some people think universities should teach soft skills, such as communication and teamwork, as much as academic subjects. Others think universities should focus only on academic knowledge. Discuss both views and give your own opinion. (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: dạy kỹ năng mềm ở đại học. Dàn ý: mở bài nêu hai quan điểm; thân bài 1: ủng hộ dạy kỹ năng mềm (nhà tuyển dụng cần, làm việc nhóm, thuyết trình); thân bài 2: ủng hộ chỉ tập trung chuyên môn (thời gian có hạn, kỹ năng mềm học qua thực tế); kết bài: lồng ghép kỹ năng mềm vào môn chuyên môn thay vì môn riêng.",
+      model: "There is an ongoing debate about whether universities should give soft skills, such as communication and teamwork, the same weight as academic subjects. While academic knowledge remains the core purpose of a university, I believe soft skills should be developed alongside it, rather than treated as an optional extra.\n\nAdvocates of teaching soft skills argue that employers value them as highly as technical knowledge. A graduate who can present ideas clearly, work in a team and handle disagreement is more likely to succeed at work than a graduate who knows theory but cannot communicate. Furthermore, many workplace failures are caused not by lack of knowledge, but by poor communication and weak teamwork.\n\nCritics, however, argue that university time is limited and should be devoted to deep academic study. In their view, soft skills are best learned through part-time jobs, internships and everyday life, not through lectures. They also warn that adding soft-skills courses could reduce the time available for specialist subjects, which are the main reason students attend university.\n\nIn my opinion, the best solution is integration rather than separation. Instead of creating separate courses, universities can build communication and teamwork into academic work itself: through group projects, presentations and peer feedback. This way, students develop both kinds of skills at the same time, without sacrificing academic depth.",
+      analysis: "Cấu trúc 4 đoạn cho Band 6.5: (1) Mở bài nêu tranh luận + quan điểm dung hòa (phát triển song song, không phải môn tự chọn thêm). (2) Thân bài 1: nhà tuyển dụng coi trọng kỹ năng mềm ngang kiến thức kỹ thuật; thất bại nơi làm việc do giao tiếp kém. (3) Thân bài 2: phản biện — thời gian có hạn, kỹ năng mềm học qua việc làm thêm và thực tập. (4) Kết bài: giải pháp lồng ghép — dự án nhóm, thuyết trình, phản hồi bạn học. Điểm ngôn ngữ đáng học: give... the same weight as, an optional extra, devoted to, integration rather than separation — từ ngữ lập luận mức 6.5.",
+      phrases: [
+        { en: "give soft skills the same weight as", vi: "coi trọng kỹ năng mềm ngang với" },
+        { en: "an optional extra", vi: "một phần thêm không bắt buộc" },
+        { en: "devoted to deep academic study", vi: "dành cho nghiên cứu học thuật sâu" },
+        { en: "integration rather than separation", vi: "lồng ghép thay vì tách riêng" },
+        { en: "without sacrificing academic depth", vi: "mà không hy sinh chiều sâu học thuật" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.5 — Nhập vai (4) ----------------
+  CONTENT.roleplay.push.apply(CONTENT.roleplay, [
+    {
+      title: "Defending a Project Proposal in a Meeting - Bảo vệ đề xuất dự án trong cuộc họp",
+      setting: "Bạn trình bày đề xuất giảm rác nhựa ở trường học trước ban giám hiệu. Một thành viên phản đối vì chi phí. Bạn bảo vệ đề xuất bằng số liệu và giải pháp tiết kiệm, rồi đề nghị thử nghiệm một tháng.",
+      partner: "Thành viên ban giám hiệu",
+      goal: "Trình bày đề xuất rõ ràng, đáp lại phản đối về chi phí và đề nghị thử nghiệm.",
+      band: "Band 6.5",
+      chunks: ["Our proposal aims to reduce plastic waste", "The main cost is for reusable bottles", "We can start with a one-month trial", "We will measure the results", "Thank you for considering our proposal"],
+      turns: [
+        { from: "partner", text: "Thank you for your proposal. Can you summarise the main idea?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Đề xuất của chúng tôi nhằm giảm rác nhựa ở trường bằng cách khuyến khích học sinh dùng bình nước tái sử dụng.", expect: "Our proposal aims to reduce plastic waste at school by encouraging students to use reusable bottles.", keywords: ["proposal", "reduce", "plastic", "reusable"], hint: "Our proposal aims to...", tip: "Mở đầu bảo vệ đề xuất bằng aims to + mục tiêu: ngắn gọn và mang tính học thuật.", chunks: ["Our proposal aims to reduce plastic waste"] },
+        { from: "partner", text: "That sounds good, but I am worried about the cost. Who will pay for the bottles?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chi phí chính là cho bình tái sử dụng, nhưng chúng tôi có thể bắt đầu với thử nghiệm một tháng ở hai lớp trước.", expect: "The main cost is for reusable bottles, but we can start with a one-month trial in two classes first.", keywords: ["cost", "reusable", "trial", "classes"], hint: "The main cost is...", tip: "Đáp lại lo ngại về chi phí bằng but + giải pháp thu hẹp phạm vi: thử nghiệm một tháng ở hai lớp.", chunks: ["The main cost is for reusable bottles", "We can start with a one-month trial"] },
+        { from: "partner", text: "A trial sounds reasonable. How will you know if it works?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng tôi sẽ đo kết quả bằng cách đếm số chai nhựa trong thùng rác mỗi tuần. Cảm ơn bạn đã cân nhắc đề xuất của chúng tôi.", expect: "We will measure the results by counting the number of plastic bottles in the bins each week. Thank you for considering our proposal.", keywords: ["measure", "results", "counting", "bottles"], hint: "We will measure the results...", tip: "Đề xuất thử nghiệm phải kèm cách đo kết quả cụ thể: đếm số chai mỗi tuần.", chunks: ["We will measure the results", "Thank you for considering our proposal"] }
+      ]
+    },
+    {
+      title: "Discussing a Research Finding with a Supervisor - Trao đổi kết quả nghiên cứu với giảng viên hướng dẫn",
+      setting: "Bạn vừa phân tích khảo sát về thói quen đọc sách của sinh viên. Bạn gặp giảng viên hướng dẫn, trình bày kết quả bất ngờ, thừa nhận giới hạn của khảo sát và xin lời khuyên cho bước tiếp theo.",
+      partner: "Giảng viên hướng dẫn",
+      goal: "Trình bày kết quả rõ ràng, thừa nhận giới hạn và xin lời khuyên cụ thể.",
+      band: "Band 6.5",
+      chunks: ["The most surprising finding is", "However, our sample was quite small", "What would you suggest for the next step", "I will revise the questionnaire", "Thank you for your advice"],
+      turns: [
+        { from: "partner", text: "So, what did your survey find?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Kết quả đáng ngạc nhiên nhất là sinh viên đọc sách giấy nhiều hơn sách điện tử, trái với giả thuyết ban đầu của chúng tôi.", expect: "The most surprising finding is that students read paper books more than e-books, contrary to our initial hypothesis.", keywords: ["surprising", "finding", "paper", "hypothesis"], hint: "The most surprising finding is...", tip: "Trình bày kết quả nghiên cứu bằng finding is that + mệnh đề that; contrary to dùng để đối chiếu với giả thuyết.", chunks: ["The most surprising finding is"] },
+        { from: "partner", text: "Interesting. Are there any limitations to your survey?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Có ạ. Tuy nhiên, mẫu của chúng tôi khá nhỏ, chỉ 80 sinh viên từ một khoa.", expect: "Yes. However, our sample was quite small, only 80 students from one department.", keywords: ["sample", "small", "students", "department"], hint: "Yes. However, our sample...", tip: "Thừa nhận giới hạn bằng However + sample was quite small là dấu hiệu của tư duy nghiên cứu trung thực.", chunks: ["However, our sample was quite small"] },
+        { from: "partner", text: "That is an honest point. You could expand the sample next time." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Thầy gợi ý gì cho bước tiếp theo ạ? Tôi sẽ sửa lại bảng câu hỏi và mở rộng mẫu.", expect: "What would you suggest for the next step? I will revise the questionnaire and expand the sample.", keywords: ["suggest", "revise", "questionnaire", "expand"], hint: "What would you suggest...", tip: "Xin lời khuyên bằng What would you suggest + hành động cụ thể bạn sẽ làm (revise, expand).", chunks: ["What would you suggest for the next step", "I will revise the questionnaire", "Thank you for your advice"] }
+      ]
+    },
+    {
+      title: "Negotiating Flexible Working Hours - Đàm phán giờ làm linh hoạt",
+      setting: "Bạn muốn xin làm việc từ 8 giờ sáng tới 4 giờ chiều thay vì 9 giờ tới 5 giờ để kịp đón con. Bạn gặp quản lý, nêu lý do, cam kết vẫn hoàn thành công việc và đề nghị thử nghiệm hai tuần.",
+      partner: "Quản lý",
+      goal: "Nêu lý do cá nhân chính đáng, cam kết hiệu quả công việc và đề nghị thử nghiệm.",
+      band: "Band 6.5",
+      chunks: ["I would like to discuss my working hours", "I need to pick up my child", "I will still complete all my tasks", "Could we try it for two weeks", "Thank you for considering my request"],
+      turns: [
+        { from: "partner", text: "Hello. What would you like to discuss today?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi muốn trao đổi về giờ làm việc của mình. Tôi cần đón con lúc 4 giờ 30 chiều.", expect: "I would like to discuss my working hours. I need to pick up my child at 4:30 in the afternoon.", keywords: ["discuss", "working", "hours", "child"], hint: "I would like to discuss...", tip: "Mở đầu đàm phán bằng I would like to discuss + chủ đề, rồi nêu lý do cụ thể ngay sau đó.", chunks: ["I would like to discuss my working hours", "I need to pick up my child"] },
+        { from: "partner", text: "I understand. But will your work still be finished on time?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, tôi vẫn sẽ hoàn thành mọi nhiệm vụ. Tôi sẽ bắt đầu sớm hơn một giờ vào buổi sáng.", expect: "Yes, I will still complete all my tasks. I will start one hour earlier in the morning.", keywords: ["complete", "tasks", "earlier", "morning"], hint: "Yes, I will still complete...", tip: "Đáp lại lo ngại về hiệu quả bằng cam kết still complete + giải pháp bù giờ (start earlier).", chunks: ["I will still complete all my tasks"] },
+        { from: "partner", text: "That could work. How shall we proceed?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng ta có thể thử trong hai tuần được không ạ? Cảm ơn bạn đã cân nhắc yêu cầu của tôi.", expect: "Could we try it for two weeks? Thank you for considering my request.", keywords: ["try", "weeks", "considering", "request"], hint: "Could we try it...", tip: "Đề nghị thử nghiệm có thời hạn (two weeks) giúp quản lý dễ đồng ý hơn là thay đổi vĩnh viễn ngay.", chunks: ["Could we try it for two weeks", "Thank you for considering my request"] }
+      ]
+    },
+    {
+      title: "Handling a Customer Complaint as a Team Leader - Xử lý khiếu nại khách hàng với vai trò trưởng nhóm",
+      setting: "Một khách hàng phàn nàn vì đơn hàng giao trễ ba ngày và sản phẩm bị lỗi. Với vai trò trưởng nhóm, bạn xin lỗi, đề nghị đổi hàng và giao nhanh miễn phí, rồi cam kết kiểm tra quy trình.",
+      partner: "Khách hàng",
+      goal: "Xin lỗi chân thành, đề nghị giải pháp cụ thể và cam kết cải thiện.",
+      band: "Band 6.5",
+      chunks: ["I sincerely apologise for the delay", "We will replace the faulty item", "We will deliver the replacement free of charge", "I will look into our delivery process", "Thank you for your patience"],
+      turns: [
+        { from: "partner", text: "I am very unhappy. My order arrived three days late, and the item is faulty." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi thành thật xin lỗi vì sự chậm trễ và bất tiện này. Tôi hiểu điều này gây khó chịu như thế nào.", expect: "I sincerely apologise for the delay and the inconvenience. I understand how frustrating this is.", keywords: ["apologise", "delay", "inconvenience", "frustrating"], hint: "I sincerely apologise...", tip: "Xin lỗi với vai trò trưởng nhóm dùng sincerely apologise + nêu rõ delay và inconvenience, rồi thừa nhận cảm xúc khách hàng.", chunks: ["I sincerely apologise for the delay"] },
+        { from: "partner", text: "What are you going to do about it?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng tôi sẽ đổi món hàng lỗi và giao hàng thay thế miễn phí vào ngày mai.", expect: "We will replace the faulty item and deliver the replacement free of charge tomorrow.", keywords: ["replace", "faulty", "deliver", "replacement"], hint: "We will replace...", tip: "Giải pháp phải cụ thể: đổi hàng gì, giao khi nào, có mất phí không (free of charge).", chunks: ["We will replace the faulty item", "We will deliver the replacement free of charge"] },
+        { from: "partner", text: "That is acceptable. But how will you prevent this next time?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi sẽ kiểm tra quy trình giao hàng của chúng tôi và báo lại cho bạn. Cảm ơn bạn đã kiên nhẫn.", expect: "I will look into our delivery process and follow up with you. Thank you for your patience.", keywords: ["look", "delivery", "process", "patience"], hint: "I will look into...", tip: "Kết thúc xử lý khiếu nại bằng cam kết cải thiện quy trình (look into) + follow up + cảm ơn sự kiên nhẫn.", chunks: ["I will look into our delivery process", "Thank you for your patience"] }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.5 — Nghe dài (3) ----------------
+  CONTENT.listeningPlus.push.apply(CONTENT.listeningPlus, [
+    {
+      section: "Section 3",
+      band: "Band 6.5",
+      topic: "Nhóm sinh viên bàn về thí nghiệm tiết kiệm nước ở ký túc xá",
+      text: "A: How is your water-saving experiment going? B: It is going quite well. We installed water-saving shower heads in 40 rooms in the dormitory last month. A: Have you seen any difference yet? B: Yes. In the first two weeks, water use in those rooms fell by about 20 percent compared with the same period last year. A: That is impressive. Did students notice any change in water pressure? B: Some students said the pressure felt a little lower at first, but most of them got used to it within a few days. A: What about the cost? B: Each shower head costs 150000 dong, so the total cost was 6 million dong. We think the dormitory will save that amount in water bills within one year. A: That sounds like a good investment. What is the next step? B: We plan to survey the students about their experience and then write a report for the dormitory manager. If the results are positive, the manager may install the shower heads in all 200 rooms. A: I hope the project expands. It is a simple idea with a clear benefit.",
+      questions: [
+        { type: "MC", q: "How many rooms received water-saving shower heads?", o: ["20 rooms", "40 rooms", "200 rooms", "80 rooms"], a: 1, why: "Nhóm đã lắp vòi sen tiết kiệm nước ở 40 phòng trong ký túc xá tháng trước." },
+        { type: "MC", q: "By how much did water use fall in the first two weeks?", o: ["By about 10 percent", "By about 20 percent", "By about 30 percent", "By about 40 percent"], a: 1, why: "Trong hai tuần đầu, lượng nước dùng ở các phòng đó giảm khoảng 20% so với cùng kỳ năm ngoái." },
+        { type: "MATCH", q: "How long will it take to recover the total cost?", o: ["Within one month", "Within six months", "Within one year"], a: 2, why: "Tổng chi phí 6 triệu đồng, và nhóm nghĩ ký túc xá sẽ tiết kiệm được số tiền đó trong hóa đơn nước trong vòng một năm." },
+        { type: "COMP", q: "Each shower head costs ___ dong.", answer: "150000", why: "Mỗi vòi sen giá 150000 đồng, tổng chi phí là 6 triệu đồng cho 40 phòng." },
+        { type: "TF", q: "The manager may install the shower heads in all 200 rooms if results are positive.", o: ["True", "False"], a: 0, why: "Câu này đúng vì nếu kết quả tích cực, quản lý có thể lắp vòi sen ở cả 200 phòng." }
+      ]
+    },
+    {
+      section: "Section 4",
+      band: "Band 6.5",
+      topic: "Bài giảng về trí tuệ nhân tạo trong tuyển dụng",
+      text: "Today, I would like to discuss a growing trend in recruitment: the use of artificial intelligence to screen job applications. In many large companies, the first stage of hiring is now handled by software, not by people. The software scans CVs for keywords, checks qualifications and ranks candidates before any human sees the applications. Supporters argue that this process is faster and fairer. A computer, they say, does not get tired and does not favour candidates from a particular university. It can review thousands of applications in a few hours, which saves a great deal of time. However, critics raise serious concerns. The software learns from past hiring data, and if that data reflects old biases, the software may repeat them. For example, if a company hired mostly men in the past, the system may rank male candidates higher without any human intending this. There is also a lack of transparency: candidates often do not know why they were rejected. In conclusion, artificial intelligence can support recruitment, but it should not make final decisions alone. Human judgement remains essential, especially when fairness and individual circumstances are at stake.",
+      questions: [
+        { type: "MC", q: "What does recruitment software do first?", o: ["Interview candidates", "Scan CVs for keywords, check qualifications and rank candidates", "Check references", "Negotiate salaries"], a: 1, why: "Phần mềm quét CV tìm từ khóa, kiểm tra bằng cấp và xếp hạng ứng viên trước khi con người xem hồ sơ." },
+        { type: "MC", q: "What advantage do supporters mention?", o: ["It is cheaper than human staff", "It is faster and does not get tired or favour one university", "It can interview candidates", "It always finds the best candidate"], a: 1, why: "Người ủng hộ cho rằng quy trình này nhanh hơn và công bằng hơn: máy tính không mệt và không thiên vị ứng viên từ một trường đại học cụ thể." },
+        { type: "MATCH", q: "What risk is mentioned about past hiring data?", o: ["It is too large to store", "It may reflect old biases that the software repeats", "It is always out of date"], a: 1, why: "Phần mềm học từ dữ liệu tuyển dụng quá khứ, và nếu dữ liệu đó phản ánh thiên kiến cũ, phần mềm có thể lặp lại chúng." },
+        { type: "COMP", q: "Candidates often do not know why they were ___.", answer: "rejected", why: "Bài giảng nói thiếu minh bạch: ứng viên thường không biết vì sao họ bị loại." },
+        { type: "TF", q: "The lecturer concludes that AI should make final hiring decisions alone.", o: ["True", "False"], a: 1, why: "Câu này sai vì kết luận là AI có thể hỗ trợ tuyển dụng nhưng không nên tự đưa ra quyết định cuối cùng; phán đoán con người vẫn thiết yếu." }
+      ]
+    },
+    {
+      section: "Section 2",
+      band: "Band 6.5",
+      topic: "Giới thiệu khóa đào tạo kỹ năng thuyết trình cho nhân viên",
+      text: "Good afternoon, everyone. I would like to tell you about a new training course on presentation skills for staff in our company. The course runs for six weeks, with one two-hour session every Wednesday afternoon, starting on the 5th of May. Each session focuses on a different skill. In the first two weeks, participants learn how to structure a talk with a clear opening, main points and conclusion. In weeks three and four, they practise voice control, eye contact and body language. In the final two weeks, they give a short presentation to the group and receive detailed feedback. The course is limited to 20 participants, so please register early. The fee is 2 million dong, but the company will pay half for staff who complete the course. To register, please send an email to the training team before the 20th of April, with your name, department and one topic you would like to present. I hope many of you will join us.",
+      questions: [
+        { type: "MC", q: "How often are the training sessions?", o: ["Every day", "Once a week on Wednesday afternoons", "Twice a week", "Once a month"], a: 1, why: "Khóa học kéo dài sáu tuần, mỗi chiều thứ Tư một buổi hai giờ, bắt đầu ngày 5 tháng 5." },
+        { type: "MC", q: "What do participants practise in weeks three and four?", o: ["Structuring a talk", "Voice control, eye contact and body language", "Writing reports", "Using presentation software"], a: 1, why: "Tuần ba và bốn, học viên luyện kiểm soát giọng nói, giao tiếp bằng mắt và ngôn ngữ cơ thể." },
+        { type: "MATCH", q: "How many participants can join the course?", o: ["10 participants", "20 participants", "30 participants"], a: 1, why: "Khóa học giới hạn 20 học viên nên cần đăng ký sớm." },
+        { type: "COMP", q: "To register, send an email before the 20th of ___.", answer: "April", why: "Để đăng ký, gửi email cho nhóm đào tạo trước ngày 20 tháng 4, kèm tên, phòng ban và một chủ đề muốn thuyết trình." },
+        { type: "TF", q: "The company will pay the full fee for all staff.", o: ["True", "False"], a: 1, why: "Câu này sai vì công ty chỉ trả một nửa học phí cho nhân viên hoàn thành khóa học, không phải toàn bộ." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.5 — Nói (3) ----------------
+  CONTENT.speaking.push.apply(CONTENT.speaking, [
+    {
+      partNum: 1,
+      topicStd: "Công nghệ và truyền thông",
+      part: "Part 1",
+      topic: "Social Media Use - Dùng mạng xã hội",
+      band: "Band 6.5",
+      lines: [
+        { who: "Examiner", en: "How often do you use social media?", vi: "Bạn dùng mạng xã hội thường xuyên như thế nào?" },
+        { who: "Candidate", en: "I use it every day, mainly to keep in touch with friends and to follow news about technology. However, I try to limit myself to about one hour in the evening.", vi: "Tôi dùng mỗi ngày, chủ yếu để giữ liên lạc với bạn bè và theo dõi tin tức công nghệ. Tuy nhiên, tôi cố gắng giới hạn khoảng một giờ vào buổi tối." },
+        { who: "Examiner", en: "Do you think social media has more advantages or disadvantages for young people?", vi: "Bạn nghĩ mạng xã hội có nhiều ưu điểm hay nhược điểm hơn với người trẻ?" },
+        { who: "Candidate", en: "I think it depends on how people use it. It can help young people learn and connect, but it can also waste a lot of time and affect their confidence if they compare themselves with others too much.", vi: "Tôi nghĩ điều đó tùy thuộc vào cách mọi người dùng nó. Nó có thể giúp người trẻ học hỏi và kết nối, nhưng cũng có thể lãng phí nhiều thời gian và ảnh hưởng tới sự tự tin nếu họ so sánh bản thân với người khác quá nhiều." },
+        { who: "Examiner", en: "Has your use of social media changed in recent years?", vi: "Việc dùng mạng xã hội của bạn có thay đổi trong những năm gần đây không?" },
+        { who: "Candidate", en: "Yes, it has. I used to scroll without thinking, but now I am more selective. I unfollow accounts that make me feel stressed and follow accounts that teach me something useful.", vi: "Có, đã thay đổi. Trước đây tôi thường lướt vô thức, nhưng giờ tôi chọn lọc hơn. Tôi bỏ theo dõi các tài khoản khiến tôi căng thẳng và theo dõi các tài khoản dạy tôi điều gì đó hữu ích." }
+      ],
+      quiz: [
+        { q: "Candidate giới hạn dùng mạng xã hội trong bao lâu mỗi tối?", o: ["Khoảng 30 phút", "Khoảng một giờ", "Khoảng ba giờ"], a: 1, why: "Candidate nói: I try to limit myself to about one hour in the evening." },
+        { q: "Theo Candidate, mạng xã hội ảnh hưởng tới sự tự tin khi nào?", o: ["Khi dùng để học tập", "Khi so sánh bản thân với người khác quá nhiều", "Khi dùng để giữ liên lạc"], a: 1, why: "Candidate nói: it can affect their confidence if they compare themselves with others too much." },
+        { q: "Từ 'selective' trong bài gần nghĩa với từ nào?", o: ["chọn lọc", "vô thức", "thường xuyên"], a: 0, why: "Selective nghĩa là có chọn lọc — now I am more selective." }
+      ]
+    },
+    {
+      partNum: 2,
+      topicStd: "Bản thân và thay đổi",
+      part: "Part 2",
+      topic: "Describe a change you would like to make in your daily routine - Mô tả một thay đổi bạn muốn thực hiện trong thói quen hằng ngày",
+      band: "Band 6.5",
+      lines: [
+        { who: "Cue card", en: "Describe a change you would like to make in your daily routine. You should say: what the change is, why you want to make it, how you plan to make it, and explain how it would improve your life.", vi: "Hãy mô tả một thay đổi bạn muốn thực hiện trong thói quen hằng ngày. Bạn nên nói: thay đổi đó là gì, vì sao bạn muốn thực hiện nó, bạn dự định thực hiện nó như thế nào, và giải thích nó sẽ cải thiện cuộc sống của bạn ra sao." },
+        { who: "Candidate", en: "I would like to change my evening routine by going to bed earlier and reading instead of using my phone.", vi: "Tôi muốn thay đổi thói quen buổi tối bằng cách đi ngủ sớm hơn và đọc sách thay vì dùng điện thoại." },
+        { who: "Candidate", en: "At the moment, I often stay up late watching videos, and I feel tired and unfocused the next morning.", vi: "Hiện tại tôi thường thức khuya xem video, và sáng hôm sau tôi cảm thấy mệt mỏi và khó tập trung." },
+        { who: "Candidate", en: "My plan is simple: I will put my phone in another room at 10 o'clock and read for 30 minutes before sleep. I will also set a regular wake-up time.", vi: "Kế hoạch của tôi rất đơn giản: tôi sẽ để điện thoại ở phòng khác lúc 10 giờ và đọc sách 30 phút trước khi ngủ. Tôi cũng sẽ đặt một giờ thức dậy cố định." },
+        { who: "Candidate", en: "If I succeed, I will sleep better, concentrate better at work and feel more energetic during the day.", vi: "Nếu tôi thành công, tôi sẽ ngủ ngon hơn, tập trung tốt hơn trong công việc và cảm thấy tràn đầy năng lượng hơn trong ngày." }
+      ],
+      quiz: [
+        { q: "Candidate muốn thay đổi thói quen buổi tối như thế nào?", o: ["Xem nhiều video hơn", "Đi ngủ sớm hơn và đọc sách thay vì dùng điện thoại", "Thức khuya hơn"], a: 1, why: "Candidate nói: going to bed earlier and reading instead of using my phone." },
+        { q: "Candidate sẽ để điện thoại ở đâu lúc 10 giờ?", o: ["Dưới gối", "Ở phòng khác", "Trong túi áo"], a: 1, why: "Candidate nói: I will put my phone in another room at 10 o'clock." },
+        { q: "Từ 'unfocused' trong bài gần nghĩa với từ nào?", o: ["khó tập trung", "tràn đầy năng lượng", "buồn ngủ"], a: 0, why: "Unfocused nghĩa là khó tập trung, không tập trung được." }
+      ]
+    },
+    {
+      partNum: 3,
+      topicStd: "Giáo dục và việc làm",
+      part: "Part 3",
+      topic: "Education and the Job Market - Giáo dục và thị trường việc làm",
+      band: "Band 6.5",
+      lines: [
+        { who: "Examiner", en: "Do you think a university degree is still necessary to get a good job?", vi: "Bạn có nghĩ bằng đại học vẫn cần thiết để có công việc tốt không?" },
+        { who: "Candidate", en: "In many fields, such as medicine and engineering, a degree is still essential. However, in areas like technology and design, employers increasingly value a strong portfolio and practical experience as much as a degree.", vi: "Ở nhiều lĩnh vực như y học và kỹ thuật, bằng cấp vẫn thiết yếu. Tuy nhiên, ở các lĩnh vực như công nghệ và thiết kế, nhà tuyển dụng ngày càng coi trọng hồ sơ năng lực tốt và kinh nghiệm thực tế ngang với bằng cấp." },
+        { who: "Examiner", en: "How should schools prepare students for jobs that do not exist yet?", vi: "Trường học nên chuẩn bị cho học sinh những công việc chưa tồn tại như thế nào?" },
+        { who: "Candidate", en: "Schools should focus less on memorising facts and more on teaching students how to learn, adapt and solve new problems. These skills remain useful even when specific jobs disappear.", vi: "Trường học nên ít tập trung vào ghi nhớ sự kiện hơn và tập trung nhiều hơn vào việc dạy học sinh cách học, thích nghi và giải quyết vấn đề mới. Những kỹ năng này vẫn hữu ích ngay cả khi công việc cụ thể biến mất." },
+        { who: "Examiner", en: "Do you think people will need to change careers more often in the future?", vi: "Bạn có nghĩ mọi người sẽ cần đổi nghề thường xuyên hơn trong tương lai không?" },
+        { who: "Candidate", en: "Yes, I think so. As technology changes rapidly, some jobs will disappear and new ones will appear. People who are willing to retrain and learn new skills will adapt more easily.", vi: "Vâng, tôi nghĩ vậy. Khi công nghệ thay đổi nhanh chóng, một số công việc sẽ biến mất và công việc mới sẽ xuất hiện. Những người sẵn sàng đào tạo lại và học kỹ năng mới sẽ thích nghi dễ dàng hơn." }
+      ],
+      quiz: [
+        { q: "Theo Candidate, ở lĩnh vực nào nhà tuyển dụng coi trọng hồ sơ năng lực ngang bằng cấp?", o: ["Y học và kỹ thuật", "Công nghệ và thiết kế", "Luật và tài chính"], a: 1, why: "Candidate nói: in areas like technology and design, employers increasingly value a strong portfolio and practical experience as much as a degree." },
+        { q: "Trường học nên tập trung dạy học sinh điều gì, theo Candidate?", o: ["Ghi nhớ sự kiện", "Cách học, thích nghi và giải quyết vấn đề mới", "Chỉ học ngoại ngữ"], a: 1, why: "Candidate nói: teaching students how to learn, adapt and solve new problems." },
+        { q: "Cụm 'willing to retrain' có nghĩa là gì?", o: ["sẵn sàng đào tạo lại", "không muốn học thêm", "muốn nghỉ việc"], a: 0, why: "Willing to retrain nghĩa là sẵn sàng đào tạo lại." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.5 — Ngữ pháp (2) ----------------
+  CONTENT.grammar.push.apply(CONTENT.grammar, [
+    {
+      fam: "Câu điều kiện và giả định",
+      hook: "Muốn ước về hiện tại bằng quá khứ, chỉ cần wish + quá khứ đơn: I wish I had more time.",
+      level: "Band 6.5",
+      name: "Câu giả định với wish ở hiện tại và quá khứ",
+      explain: "Nhìn hai câu này trước nhé: I wish I had more time. (Ước gì tôi có nhiều thời gian hơn.) I wish I had started earlier. (Ước gì tôi đã bắt đầu sớm hơn.) Sau ví dụ là quy tắc: wish + quá khứ đơn diễn tả ước muốn trái với hiện tại (had more time, trong khi thực tế là không có nhiều thời gian). Wish + quá khứ hoàn thành (had started) diễn tả sự tiếc nuối về quá khứ, việc đã không xảy ra. Chú ý: với wish, ngôi I/he/she dùng were trong văn trang trọng (I wish I were taller), nhưng was cũng được chấp nhận trong văn nói.",
+      examples: ["I wish I had more time.", "I wish I had started earlier.", "I wish I were taller."],
+      tip: "Hãy nhớ công thức lùi một thì: ước hiện tại thì lùi về quá khứ đơn, tiếc quá khứ thì lùi về quá khứ hoàn thành.",
+      model: "A: Are you happy with your English? B: Not really. I wish I spoke more fluently. I wish I had practised speaking every day last year.",
+      modelVi: "A: Bạn có hài lòng với tiếng Anh của mình không? B: Không hẳn. Ước gì tôi nói trôi chảy hơn. Ước gì năm ngoái tôi đã luyện nói mỗi ngày.",
+      quiz: [
+        { q: "I wish I ___ more time.", o: ["have", "had", "has"], a: 1, why: "Ước về hiện tại dùng quá khứ đơn: had." },
+        { q: "I wish I ___ started earlier.", o: ["have", "had", "has"], a: 1, why: "Tiếc về quá khứ dùng quá khứ hoàn thành: had started." },
+        { q: "I wish I ___ taller.", o: ["am", "were", "be"], a: 1, why: "Với wish, dạng trang trọng là were: I wish I were taller." },
+        { q: "She wishes she ___ speak French.", o: ["can", "could", "cans"], a: 1, why: "Ước về khả năng ở hiện tại dùng could." },
+        { q: "Chọn câu đúng:", o: ["I wish I have more money.", "I wish I had more money.", "I wish I has more money."], a: 1, why: "Ước hiện tại lùi về quá khứ đơn: had." },
+        { q: "Câu nào diễn tả tiếc nuối về quá khứ?", o: ["I wish I had more time.", "I wish I had studied harder.", "I wish I were rich."], a: 1, why: "Had studied là quá khứ hoàn thành, diễn tả tiếc nuối về việc đã không học chăm hơn." },
+        { q: "I wish it ___ rain tomorrow.", o: ["does not", "would not", "did not"], a: 1, why: "Ước về tương lai, phàn nàn về thời tiết, dùng would not." },
+        { q: "He wishes he ___ not missed the bus yesterday.", o: ["has", "had", "have"], a: 1, why: "Tiếc về hôm qua dùng quá khứ hoàn thành: had not missed." }
+      ]
+    },
+    {
+      fam: "Câu tường thuật",
+      hook: "Muốn tường thuật ý kiến một cách học thuật, đừng chỉ dùng said — hãy dùng argue, claim, suggest: Researchers argue that...",
+      level: "Band 6.5",
+      name: "Câu tường thuật với động từ tường thuật đa dạng",
+      explain: "Nhìn hai câu này trước nhé: Researchers argue that sleep improves memory. (Các nhà nghiên cứu cho rằng giấc ngủ cải thiện trí nhớ.) The report suggests that cities should invest in cycling lanes. (Báo cáo đề xuất rằng thành phố nên đầu tư vào làn đường xe đạp.) Sau ví dụ là quy tắc: động từ tường thuật mang sắc thái riêng — argue là lập luận có bằng chứng, claim là khẳng định (có thể chưa chứng minh), suggest là đề xuất, warn là cảnh báo. Sau các động từ này thường là mệnh đề that. Chọn đúng động từ giúp bài viết Task 2 và bài nói Part 3 nghe học thuật và chính xác hơn là chỉ dùng said.",
+      examples: ["Researchers argue that sleep improves memory.", "The report suggests that cities should invest in cycling lanes.", "Critics warn that the plan may increase costs."],
+      tip: "Hãy tưởng tượng mỗi động từ tường thuật là một mức độ chắc chắn khác nhau: suggest nhẹ nhất, argue mạnh hơn, warn mang tính cảnh báo.",
+      model: "A recent study claims that short naps improve concentration. However, doctors warn that long naps can disturb night sleep.",
+      modelVi: "Một nghiên cứu gần đây khẳng định rằng giấc ngủ ngắn cải thiện sự tập trung. Tuy nhiên, các Bác sĩ cảnh báo rằng ngủ trưa dài có thể làm rối loạn giấc ngủ ban đêm.",
+      quiz: [
+        { q: "Researchers ___ that sleep improves memory.", o: ["argue", "argues", "arguing"], a: 0, why: "Chủ ngữ số nhiều researchers dùng argue." },
+        { q: "The report ___ that cities should invest in cycling lanes.", o: ["suggest", "suggests", "suggesting"], a: 1, why: "Chủ ngữ số ít report dùng suggests." },
+        { q: "Critics ___ that the plan may increase costs.", o: ["warn", "warns", "warning"], a: 0, why: "Chủ ngữ số nhiều critics dùng warn." },
+        { q: "Động từ nào mang nghĩa cảnh báo?", o: ["suggest", "claim", "warn"], a: 2, why: "Warn nghĩa là cảnh báo." },
+        { q: "Động từ nào mang nghĩa đề xuất?", o: ["argue", "suggest", "warn"], a: 1, why: "Suggest nghĩa là đề xuất." },
+        { q: "Chọn câu đúng:", o: ["The study claims that naps help.", "The study claim that naps help.", "The study claiming that naps help."], a: 0, why: "Chủ ngữ số ít study dùng claims." },
+        { q: "Doctors ___ that long naps can disturb night sleep.", o: ["warn", "warns", "warning"], a: 0, why: "Chủ ngữ số nhiều doctors dùng warn." },
+        { q: "A recent study ___ that short naps improve concentration.", o: ["claim", "claims", "claiming"], a: 1, why: "Chủ ngữ số ít study dùng claims." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 6.5 — Luyện viết (2) + Gõ câu (2) ----------------
+  CONTENT.writingDrills.push.apply(CONTENT.writingDrills, [
+    {
+      band: "Band 6.5",
+      kind: "paraphrase",
+      title: "Viết lại bằng although thành despite",
+      prompt: "Viết lại câu giữ nguyên nghĩa, đổi although thành despite. / Paraphrase although with despite.",
+      given: "Although it was raining, we went for a walk.",
+      model: "Despite the rain, we went for a walk.",
+      note: "Kỹ thuật này đổi mệnh đề although + câu thành despite + danh từ: although it was raining thành despite the rain."
+    },
+    {
+      band: "Band 6.5",
+      kind: "order",
+      title: "Sắp xếp đoạn lập luận có phản biện",
+      prompt: "Sắp xếp các câu thành đoạn lập luận có phản biện. / Put the sentences in a logical argument order.",
+      given: "However, this view ignores the cost. / Some people argue that electric cars are the answer. / Therefore, a balanced policy is needed.",
+      model: "Some people argue that electric cars are the answer. However, this view ignores the cost. Therefore, a balanced policy is needed.",
+      note: "Kỹ thuật này xếp đoạn lập luận theo trình tự: nêu quan điểm, phản biện bằng however, rồi kết luận bằng therefore."
+    }
+  ]);
+  CONTENT.typing.push.apply(CONTENT.typing, [
+    {
+      level: "Band 6.5",
+      title: "Câu lập luận có nhượng bộ và bằng chứng",
+      sentences: [
+        "Although electric cars are expensive, they are becoming more popular every year.",
+        "However, this view ignores the high cost of building charging stations.",
+        "Researchers argue that short naps can improve concentration in the afternoon.",
+        "Nevertheless, long naps may disturb sleep at night and should be avoided.",
+        "What matters most is not speed but the quality of the final result.",
+        "Having finished the report, she presented her findings to the whole team.",
+        "If I had studied harder at school, I would have more choices now.",
+        "The evidence suggests that regular exercise reduces stress and improves memory.",
+        "On the whole, the benefits of the new policy outweigh its drawbacks.",
+        "Critics warn that the plan may increase costs for small businesses."
+      ]
+    },
+    {
+      level: "Band 6.5",
+      title: "Câu về công nghệ và việc làm tương lai",
+      sentences: [
+        "Artificial intelligence is changing the way companies recruit new staff.",
+        "Software can now scan thousands of CVs in a few hours.",
+        "However, human judgement remains essential when fairness is at stake.",
+        "Jobs that require creativity and care are less likely to disappear.",
+        "Workers who are willing to retrain will adapt more easily to change.",
+        "Remote work has made it possible to hire people from different countries.",
+        "Nevertheless, remote teams need clear communication to work well together.",
+        "In the future, lifelong learning will become a normal part of working life.",
+        "Companies that invest in training keep their staff longer and perform better.",
+        "Technology should support workers rather than replace them entirely."
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.0 — Đọc (3) ----------------
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    {
+      topic: "Thuật toán định hình những gì chúng ta đọc",
+      level: "Band 7.0",
+      title: "How Algorithms Shape What We Read",
+      text: "Most readers believe they choose what to read. In practice, a large part of that choice is made for them, by algorithms that decide which articles, videos and posts appear first on their screens. These systems do not simply reflect taste; they actively shape it, by showing us more of what we have already looked at and less of what we have not.\n\nThe mechanism is straightforward. When a reader clicks on an article, watches a video to the end or lingers on a post, the system records this as a sign of interest. It then recommends similar content, on the assumption that past behaviour predicts future preference. Over time, the reader's feed becomes narrower, not because the reader has become less curious, but because the system has learned to play safe.\n\nThis narrowing has subtle consequences. A reader who follows political news from one perspective may gradually see fewer opposing views, not because those views have disappeared, but because the algorithm has judged them less likely to attract a click. The result is not censorship in the traditional sense; no one has banned the opposing articles. Yet the practical effect is similar: the reader encounters a smaller, more agreeable world.\n\nDefenders of these systems argue that personalisation is a service, not a threat. With millions of articles published every day, they say, readers need help to find what matters to them. Without filtering, the sheer volume of information would be overwhelming. From this perspective, the algorithm is a helpful guide, not a hidden editor.\n\nCritics respond that a guide which only shows familiar paths is a poor guide. They argue that a healthy information diet, like a healthy food diet, requires variety, including material that challenges existing views. Some propose simple remedies: a button to see a random selection, or a feed that deliberately mixes perspectives. Whether such remedies will be adopted depends less on technology than on incentives. As long as platforms earn money from attention, they will favour content that keeps readers clicking, even if that content narrows what readers see.",
+      questions: [
+        { type: "MC", q: "What is the main argument of the passage?", o: ["Algorithms simply reflect readers' taste", "Algorithms actively shape what readers see by favouring familiar content", "Readers have become less curious", "Opposing views have been banned"], options: ["Algorithms simply reflect readers' taste", "Algorithms actively shape what readers see by favouring familiar content", "Readers have become less curious", "Opposing views have been banned"], a: 1, why: "Đoạn 1: thuật toán không chỉ phản ánh thị hiếu mà còn chủ động định hình nó bằng cách cho thấy nhiều hơn những gì ta đã xem và ít hơn những gì ta chưa xem." },
+        { type: "TFNG", q: "The narrowing of a feed happens because readers have become less curious.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 2: nguồn tin trở nên hẹp hơn không phải vì người đọc kém tò mò hơn mà vì hệ thống đã học cách chơi an toàn." },
+        { type: "MATCH", q: "Which remedy do critics propose?", o: ["Banning personalised feeds", "A button to see a random selection or a feed mixing perspectives", "Charging readers for news"], options: ["Banning personalised feeds", "A button to see a random selection or a feed mixing perspectives", "Charging readers for news"], a: 1, why: "Đoạn 5: một số người đề xuất biện pháp đơn giản như nút xem lựa chọn ngẫu nhiên hoặc nguồn tin cố tình trộn nhiều góc nhìn." },
+        { type: "COMP", q: "Defenders argue that without filtering, the sheer ___ of information would be overwhelming.", answer: "volume", why: "Đoạn 4: người bảo vệ hệ thống nói rằng nếu không lọc, khối lượng thông tin khổng lồ sẽ gây choáng ngợp." },
+        { type: "MC", q: "Why might platforms resist remedies, according to the last paragraph?", o: ["Because the technology does not exist", "Because they earn money from attention and favour content that keeps readers clicking", "Because readers oppose random feeds", "Because governments forbid changes"], options: ["Because the technology does not exist", "Because they earn money from attention and favour content that keeps readers clicking", "Because readers oppose random feeds", "Because governments forbid changes"], a: 1, why: "Đoạn 5: chỉ cần nền tảng còn kiếm tiền từ sự chú ý, chúng sẽ ưu tiên nội dung giữ chân người đọc nhấp tiếp, ngay cả khi nội dung đó thu hẹp những gì người đọc thấy." }
+      ],
+      translation: "Hầu hết độc giả tin rằng họ tự chọn những gì mình đọc, nhưng trên thực tế phần lớn lựa chọn đó do thuật toán quyết định: thuật toán chọn bài viết, video và bài đăng nào xuất hiện trước trên màn hình. Các hệ thống này không chỉ phản ánh thị hiếu mà còn chủ động định hình thị hiếu bằng cách cho thấy nhiều hơn những gì ta đã xem và ít hơn những gì ta chưa xem. Cơ chế rất thẳng: khi độc giả nhấp vào bài viết, xem hết video hay dừng lâu ở một bài đăng, hệ thống ghi nhận đó là dấu hiệu quan tâm rồi đề xuất nội dung tương tự, giả định hành vi quá khứ dự đoán sở thích tương lai; theo thời gian nguồn tin trở nên hẹp hơn không phải vì độc giả kém tò mò mà vì hệ thống học cách chơi an toàn. Hệ quả tinh tế là độc giả theo dõi tin chính trị từ một góc nhìn có thể dần thấy ít quan điểm đối lập hơn, không phải vì các quan điểm đó biến mất mà vì thuật toán đánh giá chúng ít khả năng thu hút cú nhấp; kết quả không phải kiểm duyệt truyền thống nhưng hiệu quả thực tế tương tự: độc giả gặp một thế giới nhỏ hơn và dễ chịu hơn. Người bảo vệ hệ thống cho rằng cá nhân hóa là dịch vụ chứ không phải mối đe dọa: với hàng triệu bài viết mỗi ngày, độc giả cần trợ giúp tìm điều quan trọng; nếu không lọc, khối lượng thông tin khổng lồ sẽ gây choáng ngợp. Người phê bình đáp lại rằng hướng dẫn viên chỉ cho thấy lối quen thuộc là hướng dẫn viên tồi: chế độ thông tin lành mạnh như chế độ ăn lành mạnh cần đa dạng, kể cả tài liệu thách thức quan điểm hiện có; một số đề xuất nút xem ngẫu nhiên hoặc nguồn tin trộn góc nhìn. Việc các biện pháp này có được áp dụng hay không phụ thuộc ít vào công nghệ hơn vào động lực kinh tế: chỉ cần nền tảng kiếm tiền từ sự chú ý, chúng sẽ ưu tiên nội dung giữ chân người đọc.",
+      phrases: [
+        { en: "actively shape taste", vi: "chủ động định hình thị hiếu" },
+        { en: "play safe", vi: "chơi an toàn" },
+        { en: "a smaller, more agreeable world", vi: "một thế giới nhỏ hơn và dễ chịu hơn" },
+        { en: "the sheer volume of information", vi: "khối lượng thông tin khổng lồ" },
+        { en: "a healthy information diet", vi: "chế độ thông tin lành mạnh" }
+      ]
+    },
+    {
+      topic: "Kinh tế của việc giữ lại tòa nhà cũ",
+      level: "Band 7.0",
+      title: "The Economics of Keeping Old Buildings",
+      text: "When a city decides what to do with an old building, the argument is usually framed as a choice between history and progress. Preservationists speak of heritage and identity; developers speak of jobs and housing. In economic terms, however, the choice is rarely so simple, because old buildings carry costs and benefits that are easy to overlook.\n\nThe most obvious cost is maintenance. Old structures often need specialist repairs, from replacing original timber to strengthening foundations, and these repairs can be far more expensive than building anew. In addition, old buildings may be less energy-efficient, with thin walls and single-glazed windows that lose heat in winter. For a developer, demolition followed by new construction can therefore look like the rational option.\n\nYet demolition also has hidden costs. The first is environmental: demolishing a building wastes the energy and materials already invested in it, often called embodied energy, and sends tonnes of rubble to landfill. A new building, however efficient, must first repay this environmental debt before it can claim to be greener than the building it replaced.\n\nThe second hidden cost is economic in a broader sense. Old buildings often attract visitors, support small businesses and give a district a distinctive character that new developments struggle to imitate. A street of uniform glass towers may offer modern offices, but it rarely offers the sense of place that draws tourists, artists and independent shops. When that character is lost, the long-term economic value of an area can fall, even if the short-term value of a single plot rises.\n\nThe most successful approaches, therefore, tend to combine preservation with adaptation. An old warehouse becomes offices with its brick walls intact; a former school becomes housing with its hall kept as a shared space. Such projects are seldom cheap or simple, but they preserve both the embodied energy of the building and the character of the district. In this view, keeping an old building is not nostalgia. It is a practical calculation, one that weighs immediate construction costs against long-term environmental and economic value.",
+      questions: [
+        { type: "MC", q: "Why can demolition look rational to a developer?", o: ["Because old buildings are always unsafe", "Because specialist repairs can cost far more than building anew", "Because tourists dislike old buildings", "Because new buildings need no maintenance"], options: ["Because old buildings are always unsafe", "Because specialist repairs can cost far more than building anew", "Because tourists dislike old buildings", "Because new buildings need no maintenance"], a: 1, why: "Đoạn 2: sửa chữa chuyên biệt cho công trình cũ có thể tốn kém hơn nhiều so với xây mới." },
+        { type: "TFNG", q: "A new building is immediately greener than the building it replaced.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 3: tòa nhà mới dù hiệu quả tới đâu cũng phải trả trước món nợ môi trường này rồi mới có thể tự nhận xanh hơn tòa nhà nó thay thế." },
+        { type: "MATCH", q: "What is embodied energy?", o: ["Energy used to heat a building", "Energy and materials already invested in a building", "Energy saved by new windows"], options: ["Energy used to heat a building", "Energy and materials already invested in a building", "Energy saved by new windows"], a: 1, why: "Đoạn 3: phá dỡ lãng phí năng lượng và vật liệu đã đầu tư vào tòa nhà, thường gọi là embodied energy." },
+        { type: "COMP", q: "An old warehouse becomes offices with its brick walls ___.", answer: "intact", why: "Đoạn 5: kho cũ thành văn phòng mà tường gạch vẫn nguyên vẹn; trường cũ thành nhà ở mà hội trường được giữ làm không gian chung." },
+        { type: "MC", q: "What is the writer's conclusion?", o: ["Preservation is only nostalgia", "Keeping an old building is a practical calculation weighing immediate costs against long-term value", "Demolition is always cheaper in the long term", "New glass towers always attract more tourists"], options: ["Preservation is only nostalgia", "Keeping an old building is a practical calculation weighing immediate costs against long-term value", "Demolition is always cheaper in the long term", "New glass towers always attract more tourists"], a: 1, why: "Đoạn 5: giữ tòa nhà cũ không phải hoài niệm mà là phép tính thực tế, cân nhắc chi phí xây dựng trước mắt với giá trị môi trường và kinh tế dài hạn." }
+      ],
+      translation: "Khi thành phố quyết định xử lý tòa nhà cũ, tranh luận thường được đặt thành lựa chọn giữa lịch sử và tiến bộ: người bảo tồn nói về di sản và bản sắc, nhà phát triển nói về việc làm và nhà ở. Về kinh tế, lựa chọn hiếm khi đơn giản như vậy vì tòa nhà cũ mang chi phí và lợi ích dễ bị bỏ qua. Chi phí rõ nhất là bảo trì: công trình cũ thường cần sửa chữa chuyên biệt, từ thay gỗ nguyên bản tới gia cố móng, và có thể tốn kém hơn nhiều so với xây mới; ngoài ra tòa nhà cũ có thể kém hiệu quả năng lượng với tường mỏng và cửa sổ kính đơn thất thoát nhiệt mùa đông, nên phá dỡ rồi xây mới có vẻ là lựa chọn hợp lý với nhà phát triển. Tuy vậy phá dỡ cũng có chi phí ẩn: thứ nhất là môi trường — phá dỡ lãng phí năng lượng và vật liệu đã đầu tư vào tòa nhà, thường gọi là embodied energy, và đưa hàng tấn gạch vụn tới bãi chôn lấp; tòa nhà mới dù hiệu quả tới đâu cũng phải trả trước món nợ môi trường này rồi mới có thể tự nhận xanh hơn tòa nhà nó thay thế. Chi phí ẩn thứ hai mang tính kinh tế rộng hơn: tòa nhà cũ thường thu hút khách, hỗ trợ doanh nghiệp nhỏ và tạo bản sắc riêng cho khu vực mà công trình mới khó bắt chước; phố toàn tháp kính đồng nhất có thể có văn phòng hiện đại nhưng hiếm khi có cảm giác về nơi chốn thu hút du khách, nghệ sĩ và cửa hàng độc lập; khi bản sắc đó mất đi, giá trị kinh tế dài hạn của khu vực có thể giảm dù giá trị ngắn hạn của một lô đất tăng. Vì vậy cách tiếp cận thành công nhất thường kết hợp bảo tồn với thích ứng: kho cũ thành văn phòng mà tường gạch vẫn nguyên vẹn, trường cũ thành nhà ở mà hội trường được giữ làm không gian chung. Những dự án như vậy hiếm khi rẻ hay đơn giản, nhưng chúng bảo tồn cả năng lượng hàm chứa của tòa nhà lẫn bản sắc khu vực. Theo quan điểm này, giữ tòa nhà cũ không phải hoài niệm mà là phép tính thực tế.",
+      phrases: [
+        { en: "framed as a choice between", vi: "được đặt thành lựa chọn giữa" },
+        { en: "embodied energy", vi: "năng lượng hàm chứa" },
+        { en: "repay this environmental debt", vi: "trả món nợ môi trường này" },
+        { en: "a sense of place", vi: "cảm giác về nơi chốn" },
+        { en: "preservation with adaptation", vi: "bảo tồn kết hợp với thích ứng" }
+      ]
+    },
+    {
+      topic: "Thành phố mất bầu trời đêm",
+      level: "Band 7.0",
+      title: "Why Cities Are Losing Their Night Skies",
+      text: "A century ago, a child in almost any town could look up and see thousands of stars. Today, in most large cities, only a few dozen are visible, and the Milky Way has vanished entirely. The cause is not clouds or pollution in the usual sense, but light itself: street lamps, advertising screens and office windows that shine upwards and outwards all night.\n\nThis loss is often dismissed as a minor aesthetic complaint, a pity for stargazers but hardly a serious problem. In fact, artificial light at night disrupts far more than astronomy. Many species depend on darkness to navigate, hunt or reproduce. Sea turtle hatchlings, for instance, instinctively crawl towards the brightest horizon, which was once the moonlit sea but is now often a coastal road. Migrating birds, confused by illuminated towers, circle until they collapse from exhaustion.\n\nHumans are affected too, though more subtly. The human body uses darkness as a signal to produce melatonin, a hormone that regulates sleep. When bedrooms are flooded with light from outside, or when people stare at bright screens late at night, this signal is weakened. The result is poorer sleep, which in turn is linked to reduced concentration, weaker immunity and a higher risk of several health problems.\n\nSolutions exist, and they are surprisingly simple. Shielded lamps direct light downwards, where it is needed, instead of upwards into the sky. Motion sensors switch lights off when no one is present. Some cities have adopted curfews for advertising screens after midnight. None of these measures requires giving up safety or convenience; they require only that light be used where and when it is needed.\n\nThe deeper question is cultural. For centuries, darkness was a shared experience, a nightly reminder of humanity's small place in a vast universe. As cities grow brighter, that experience is becoming rare, available only to those who can travel far from urban light. Protecting the night sky, therefore, is not only about stars. It is about preserving a form of darkness that both wildlife and human health quietly depend on.",
+      questions: [
+        { type: "MC", q: "What is the main cause of losing night skies in cities?", o: ["Clouds", "Artificial light shining upwards and outwards all night", "Air pollution from cars", "Tall buildings blocking the view"], options: ["Clouds", "Artificial light shining upwards and outwards all night", "Air pollution from cars", "Tall buildings blocking the view"], a: 1, why: "Đoạn 1: nguyên nhân không phải mây hay ô nhiễm theo nghĩa thường mà chính là ánh sáng: đèn đường, màn hình quảng cáo và cửa sổ văn phòng chiếu lên trên và ra ngoài suốt đêm." },
+        { type: "TFNG", q: "Light pollution only affects astronomers.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 2: mất mát này thường bị coi nhẹ, nhưng ánh sáng nhân tạo ban đêm phá vỡ nhiều hơn thiên văn học: nhiều loài phụ thuộc vào bóng tối để định hướng, săn mồi hay sinh sản." },
+        { type: "MATCH", q: "Why do sea turtle hatchlings crawl towards roads?", o: ["Because they follow food", "Because they instinctively crawl towards the brightest horizon, now often a coastal road", "Because they are attracted by noise"], options: ["Because they follow food", "Because they instinctively crawl towards the brightest horizon, now often a coastal road", "Because they are attracted by noise"], a: 1, why: "Đoạn 2: rùa con theo bản năng bò về phía chân trời sáng nhất, xưa là biển dưới ánh trăng nhưng nay thường là đường ven biển." },
+        { type: "COMP", q: "Shielded lamps direct light ___, where it is needed.", answer: "downwards", why: "Đoạn 4: đèn có chắn hướng ánh sáng xuống dưới, nơi cần thiết, thay vì lên trời." },
+        { type: "MC", q: "What is the writer's deeper point in the last paragraph?", o: ["Darkness is only useful for astronomy", "Protecting the night sky preserves a form of darkness that wildlife and human health depend on", "Cities should turn off all lights", "Travelling far from cities is the only solution"], options: ["Darkness is only useful for astronomy", "Protecting the night sky preserves a form of darkness that wildlife and human health depend on", "Cities should turn off all lights", "Travelling far from cities is the only solution"], a: 1, why: "Đoạn 5: bảo vệ bầu trời đêm không chỉ về sao mà còn về việc giữ một dạng bóng tối mà cả động vật hoang dã và sức khỏe con người đều lặng lẽ phụ thuộc vào." }
+      ],
+      translation: "Một thế kỷ trước, trẻ em ở hầu hết thị trấn đều có thể ngước lên và thấy hàng nghìn ngôi sao; nay ở hầu hết thành phố lớn chỉ thấy vài chục ngôi sao và Dải Ngân hà đã biến mất hoàn toàn. Nguyên nhân không phải mây hay ô nhiễm theo nghĩa thường mà chính là ánh sáng: đèn đường, màn hình quảng cáo và cửa sổ văn phòng chiếu lên trên và ra ngoài suốt đêm. Mất mát này thường bị coi là phàn nàn thẩm mỹ nhỏ, đáng tiếc cho người ngắm sao nhưng không phải vấn đề nghiêm trọng; thực tế ánh sáng nhân tạo ban đêm phá vỡ nhiều hơn thiên văn học: nhiều loài phụ thuộc vào bóng tối để định hướng, săn mồi hay sinh sản — rùa con theo bản năng bò về phía chân trời sáng nhất, xưa là biển dưới ánh trăng nhưng nay thường là đường ven biển; chim di cư bối rối vì tháp sáng, bay vòng cho tới khi kiệt sức mà ngã. Con người cũng bị ảnh hưởng, dù tinh tế hơn: cơ thể dùng bóng tối làm tín hiệu sản xuất melatonin, hormone điều hòa giấc ngủ; khi phòng ngủ ngập ánh sáng từ ngoài hoặc khi người ta nhìn màn hình sáng khuya, tín hiệu này suy yếu, dẫn tới ngủ kém hơn, kéo theo giảm tập trung, miễn dịch yếu hơn và nguy cơ cao hơn với một số vấn đề sức khỏe. Giải pháp tồn tại và đơn giản đến ngạc nhiên: đèn có chắn hướng ánh sáng xuống dưới nơi cần thiết thay vì lên trời; cảm biến chuyển động tắt đèn khi không có ai; một số thành phố áp dụng giờ giới nghiêm cho màn hình quảng cáo sau nửa đêm; không biện pháp nào đòi hỏi từ bỏ an toàn hay tiện lợi, chỉ đòi hỏi dùng ánh sáng đúng nơi và đúng lúc cần. Câu hỏi sâu hơn mang tính văn hóa: trong nhiều thế kỷ bóng tối là trải nghiệm chung, lời nhắc hằng đêm về vị trí nhỏ bé của con người trong vũ trụ bao la; khi thành phố sáng hơn, trải nghiệm đó trở nên hiếm, chỉ còn với những ai có thể đi xa khỏi ánh sáng đô thị. Vì vậy bảo vệ bầu trời đêm không chỉ về sao mà còn về việc giữ một dạng bóng tối mà cả động vật hoang dã và sức khỏe con người đều lặng lẽ phụ thuộc vào.",
+      phrases: [
+        { en: "vanished entirely", vi: "biến mất hoàn toàn" },
+        { en: "dismissed as a minor complaint", vi: "bị coi nhẹ như một phàn nàn nhỏ" },
+        { en: "the brightest horizon", vi: "chân trời sáng nhất" },
+        { en: "shielded lamps", vi: "đèn có chắn sáng" },
+        { en: "a shared experience", vi: "một trải nghiệm chung" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.0 — Viết (3) ----------------
+  CONTENT.writing.push.apply(CONTENT.writing, [
+    {
+      wtype: "Bản đồ",
+      type: "Task 1",
+      band: "Band 7.0",
+      title: "Bản đồ: khuôn viên trường đại học thay đổi",
+      prompt: "The maps below show a university campus in 2005 and in 2025. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      dataDesc: "Dữ kiện của bản đồ: Năm 2005: thư viện ở phía bắc, bãi đỗ xe ở phía đông, sân thể thao ở phía nam, khu nhà giảng đường ở phía tây, không có trung tâm sinh viên. Năm 2025: thư viện mở rộng về phía đông, bãi đỗ xe chuyển xuống phía nam, sân thể thao thu hẹp nhưng có thêm hồ bơi, trung tâm sinh viên mới ở trung tâm, khu giảng đường giữ nguyên vị trí nhưng thêm hai tòa nhà.",
+      model: "The maps illustrate how a university campus changed over a twenty-year period, from 2005 to 2025.\n\nOverall, the campus became more student-centred and compact. The most striking change is the appearance of a new student centre in the middle of the campus, while parking was moved away from the academic core and sports facilities were partly replaced by new buildings.\n\nIn 2005, the library stood in the north, lecture buildings occupied the west, a car park filled the east, and a large sports field covered the south. There was no dedicated student centre, and the layout was spread out, with considerable empty space between buildings.\n\nBy 2025, the picture had changed considerably. The library had expanded eastwards into part of the former car park, which itself had been relocated to the south. The sports field had shrunk to make room for a new swimming pool, and two additional lecture buildings had been added in the west. Above all, a new student centre now stands at the heart of the campus, bringing social and academic life together in one place.",
+      analysis: "Cấu trúc 4 đoạn cho Band 7.0: (1) Paraphrase đề bài. (2) Overview: trở nên hướng tới sinh viên và gọn hơn + hai thay đổi nổi bật nhất, không chi tiết. (3) Mô tả 2005 theo bốn hướng với thì quá khứ đơn và từ vị trí. (4) Mô tả 2025 với quá khứ hoàn thành (had expanded, had been relocated, had shrunk) để so sánh với trạng thái trước, chốt bằng ý tổng hợp (bringing... together). Điểm ngôn ngữ đáng học: thì quá khứ hoàn thành cho thay đổi so với trước; relocated, shrunk, expanded eastwards — động từ mô tả bản đồ mức 7.0.",
+      phrases: [
+        { en: "more student-centred and compact", vi: "hướng tới sinh viên hơn và gọn hơn" },
+        { en: "had been relocated to the south", vi: "đã được chuyển xuống phía nam" },
+        { en: "had shrunk to make room for", vi: "đã thu hẹp để nhường chỗ cho" },
+        { en: "at the heart of the campus", vi: "ở trung tâm khuôn viên" },
+        { en: "bringing social and academic life together", vi: "gắn kết đời sống xã hội và học thuật" }
+      ]
+    },
+    {
+      wtype: "Thảo luận hai chiều",
+      type: "Task 2",
+      band: "Band 7.0",
+      title: "Thảo luận hai chiều: trí tuệ nhân tạo trong chấm thi",
+      prompt: "Some people think artificial intelligence should be used to mark students' exams, while others think only human teachers should mark exams. Discuss both views and give your own opinion. (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: AI chấm thi hay giáo viên chấm thi. Dàn ý: mở bài nêu hai quan điểm; thân bài 1: ủng hộ AI (nhanh, nhất quán, phản hồi ngay); thân bài 2: ủng hộ giáo viên (hiểu ngữ cảnh, sáng tạo, công bằng cho bài mở); kết bài: AI chấm câu đóng và kiểm tra, giáo viên chấm bài mở và quyết định cuối.",
+      model: "As artificial intelligence becomes more capable, some argue that it should take over the marking of exams, while others insist that assessment must remain in human hands. In my view, the strongest model is a hybrid one: AI can handle routine marking efficiently, but human teachers must retain responsibility for open-ended work and final judgements.\n\nSupporters of AI marking emphasise speed and consistency. A computer can mark thousands of multiple-choice papers in minutes, apply the same criteria to every student and return results immediately. This consistency is valuable, because human markers, however careful, can vary with fatigue or unconscious bias. For large-scale tests, AI also frees teachers to spend more time on teaching rather than administration.\n\nCritics, however, argue that assessment is not merely a technical task. A good essay or project may be original in ways that a machine struggles to recognise, and a student who misunderstands a question in an interesting way may still deserve partial credit. Human teachers can also consider context, such as a student's progress over time, which no algorithm can fully capture. Moreover, when students feel judged by a machine, trust in the fairness of assessment may decline.\n\nIn conclusion, neither extreme is satisfactory. AI is well suited to closed questions and to checking factual accuracy, where consistency matters most. For essays, presentations and creative work, however, human judgement remains indispensable. A system that combines both — AI for efficiency, teachers for interpretation — would be faster than the current system without sacrificing the human qualities that make assessment fair.",
+      analysis: "Cấu trúc 4 đoạn cho Band 7.0: (1) Mở bài nêu hai quan điểm + mô hình lai (hybrid) làm quan điểm. (2) Thân bài 1: tốc độ, nhất quán, giải phóng giáo viên khỏi hành chính. (3) Thân bài 2: phản biện — bài mở cần nhận biết tính độc đáo, ngữ cảnh, tín chỉ một phần, lòng tin vào công bằng. (4) Kết bài: phân công theo loại câu hỏi — AI cho câu đóng, giáo viên cho diễn giải. Điểm ngôn ngữ đáng học: retain responsibility, unconscious bias, partial credit, indispensable — từ ngữ lập luận mức 7.0; however careful để nhượng bộ trong mệnh đề.",
+      phrases: [
+        { en: "a hybrid model", vi: "mô hình lai, kết hợp" },
+        { en: "retain responsibility for", vi: "giữ trách nhiệm với" },
+        { en: "unconscious bias", vi: "thiên kiến vô thức" },
+        { en: "deserve partial credit", vi: "xứng đáng được điểm một phần" },
+        { en: "remains indispensable", vi: "vẫn không thể thiếu" }
+      ]
+    },
+    {
+      wtype: "Nguyên nhân và giải pháp",
+      type: "Task 2",
+      band: "Band 7.0",
+      title: "Nguyên nhân và giải pháp: kiệt sức ở nhân viên y tế",
+      prompt: "Healthcare workers in many countries suffer from burnout. What are the causes of this problem, and what solutions can you suggest? (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: kiệt sức ở nhân viên y tế. Dàn ý: mở bài nêu vấn đề; thân bài 1: nguyên nhân (ca dài, thiếu nhân lực, áp lực cảm xúc, thủ tục hành chính); thân bài 2: giải pháp (giới hạn giờ làm, tuyển thêm, hỗ trợ tâm lý, giảm giấy tờ bằng công nghệ); kết bài: giải pháp phải mang tính hệ thống, không chỉ khuyên cá nhân nghỉ ngơi.",
+      model: "Burnout among healthcare workers has become a pressing concern in many countries, affecting both staff wellbeing and the quality of patient care. The causes are largely systemic, and any lasting solution must therefore address working conditions, not merely advise individuals to rest more.\n\nThe most immediate cause is workload. Many healthcare workers regularly work shifts of twelve hours or more, often with too few colleagues to share the burden. On top of clinical duties, they must complete extensive paperwork, which reduces the time available for patients and adds to a sense of frustration. In addition, the emotional weight of the job — caring for seriously ill patients and supporting distressed families — accumulates over time, especially when there is little opportunity to discuss difficult cases with colleagues.\n\nSeveral solutions follow directly from these causes. First, hospitals should enforce limits on consecutive shifts and hire enough staff to make those limits realistic. Second, administrative work should be streamlined, for example by using digital systems that reduce duplicate forms. Third, structured support, such as regular team discussions and access to counselling, should be treated as part of the job, not as a sign of weakness.\n\nIn conclusion, burnout is not simply a personal failure to cope. It is the predictable result of sustained overload combined with emotional strain and bureaucratic burden. Only by reducing hours, increasing staffing and normalising psychological support can healthcare systems protect the people on whom patients most depend.",
+      analysis: "Cấu trúc 4 đoạn cho Band 7.0: (1) Mở bài nêu vấn đề + luận điểm: nguyên nhân mang tính hệ thống. (2) Thân bài 1: ba nguyên nhân — ca dài thiếu nhân lực, giấy tờ, gánh nặng cảm xúc tích lũy. (3) Thân bài 2: ba giải pháp tương ứng — giới hạn ca, tinh gọn hành chính, hỗ trợ có cấu trúc. (4) Kết bài: kiệt sức không phải thất bại cá nhân mà là kết quả có thể dự đoán của quá tải kéo dài. Điểm ngôn ngữ đáng học: systemic, accumulates, streamlined, normalising psychological support — từ ngữ học thuật mức 7.0; not merely để phủ định giải pháp hời hợt.",
+      phrases: [
+        { en: "a pressing concern", vi: "một mối lo cấp bách" },
+        { en: "largely systemic", vi: "phần lớn mang tính hệ thống" },
+        { en: "the emotional weight of the job", vi: "gánh nặng cảm xúc của công việc" },
+        { en: "streamlined", vi: "được tinh gọn" },
+        { en: "not simply a personal failure to cope", vi: "không đơn thuần là thất bại cá nhân trong việc đối phó" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.0 — Nhập vai (4) ----------------
+  CONTENT.roleplay.push.apply(CONTENT.roleplay, [
+    {
+      title: "Chairing a Debate on Remote Work - Điều hành tranh luận về làm việc từ xa",
+      setting: "Bạn điều hành một buổi tranh luận ở công ty về việc có nên cho phép làm việc từ xa ba ngày mỗi tuần hay không. Bạn mở đầu công bằng, mời hai phía phát biểu, tóm tắt và đề nghị bỏ phiếu.",
+      partner: "Đồng nghiệp tham gia tranh luận",
+      goal: "Điều hành công bằng: mở đầu trung lập, mời cả hai phía và chốt bằng bỏ phiếu.",
+      band: "Band 7.0",
+      chunks: ["Welcome to today's debate", "Let us hear arguments from both sides", "Thank you. Now the opposing view", "To summarise, both sides raise valid points", "Let us take a vote"],
+      turns: [
+        { from: "partner", text: "Are we ready to start the debate?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào mừng mọi người tới buổi tranh luận hôm nay. Chủ đề là: công ty có nên cho phép làm việc từ xa ba ngày mỗi tuần hay không?", expect: "Welcome to today's debate. Our topic is: should the company allow remote work three days a week?", keywords: ["welcome", "debate", "topic", "remote"], hint: "Welcome to today's debate...", tip: "Người điều hành mở đầu trung lập: chào mừng + nêu chủ đề dưới dạng câu hỏi, không bộc lộ quan điểm.", chunks: ["Welcome to today's debate"] },
+        { from: "partner", text: "I support remote work. It saves commuting time and helps parents." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn. Bây giờ chúng ta hãy nghe quan điểm đối lập.", expect: "Thank you. Now let us hear the opposing view.", keywords: ["thank", "opposing", "view"], hint: "Thank you. Now let us hear...", tip: "Chuyển phía bằng Thank you + Now let us hear the opposing view: công bằng và gọn.", chunks: ["Thank you. Now the opposing view"] },
+        { from: "partner", text: "I disagree. Remote work weakens teamwork and makes new staff feel isolated." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Để tóm tắt, cả hai phía đều nêu những điểm hợp lý. Chúng ta hãy bỏ phiếu.", expect: "To summarise, both sides raise valid points. Let us take a vote.", keywords: ["summarise", "valid", "points", "vote"], hint: "To summarise, both sides...", tip: "Kết thúc điều hành bằng tóm tắt trung lập (both sides raise valid points) rồi chuyển sang bỏ phiếu.", chunks: ["To summarise, both sides raise valid points", "Let us take a vote"] }
+      ]
+    },
+    {
+      title: "Pitching a Start-up Idea to Investors - Thuyết trình ý tưởng khởi nghiệp với nhà đầu tư",
+      setting: "Bạn trình bày ý tưởng ứng dụng giúp người dân chia sẻ đồ dùng ít dùng với hàng xóm. Bạn nêu vấn đề, giải pháp, thị trường và lời kêu gọi đầu tư, rồi đáp lại câu hỏi về lợi nhuận.",
+      partner: "Nhà đầu tư",
+      goal: "Trình bày ý tưởng thuyết phục: vấn đề, giải pháp, thị trường và đáp lại câu hỏi về lợi nhuận.",
+      band: "Band 7.0",
+      chunks: ["The problem is that many useful items sit unused", "Our app connects neighbours", "Our target market is young families in cities", "We plan to earn revenue from a small fee", "Thank you for your time and consideration"],
+      turns: [
+        { from: "partner", text: "You have five minutes. What is your idea?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vấn đề là nhiều đồ dùng hữu ích nằm không dùng trong khi hàng xóm lại cần chúng. Ứng dụng của chúng tôi kết nối hàng xóm để chia sẻ đồ dùng.", expect: "The problem is that many useful items sit unused while neighbours need them. Our app connects neighbours so they can share items.", keywords: ["problem", "unused", "neighbours", "share"], hint: "The problem is that...", tip: "Bài thuyết trình khởi nghiệp mở bằng problem + solution trong hai câu đầu: vấn đề rồi giải pháp.", chunks: ["The problem is that many useful items sit unused", "Our app connects neighbours"] },
+        { from: "partner", text: "Who will use this app?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Thị trường mục tiêu của chúng tôi là các gia đình trẻ ở thành phố, những người sống trong căn hộ nhỏ và ít không gian lưu trữ.", expect: "Our target market is young families in cities, who live in small flats with little storage space.", keywords: ["target", "market", "families", "cities"], hint: "Our target market is...", tip: "Nêu thị trường mục tiêu kèm đặc điểm cụ thể (small flats, little storage space) thì thuyết phục hơn chỉ nói young people.", chunks: ["Our target market is young families in cities"] },
+        { from: "partner", text: "How will you make money?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng tôi dự định kiếm doanh thu từ một khoản phí nhỏ cho mỗi lần mượn thành công. Cảm ơn bạn đã dành thời gian và cân nhắc.", expect: "We plan to earn revenue from a small fee for each successful borrow. Thank you for your time and consideration.", keywords: ["revenue", "fee", "borrow", "consideration"], hint: "We plan to earn revenue...", tip: "Trả lời câu hỏi lợi nhuận bằng revenue from a small fee + cảm ơn thời gian và sự cân nhắc của nhà đầu tư.", chunks: ["We plan to earn revenue from a small fee", "Thank you for your time and consideration"] }
+      ]
+    },
+    {
+      title: "Mediating a Disagreement Between Two Colleagues - Hòa giải bất đồng giữa hai đồng nghiệp",
+      setting: "Hai đồng nghiệp bất đồng về cách chia công việc trong dự án. Với vai trò trung gian, bạn lắng nghe cả hai, nêu điểm chung, đề nghị phân công mới và xin cả hai xác nhận.",
+      partner: "Đồng nghiệp",
+      goal: "Hòa giải: lắng nghe, nêu điểm chung, đề nghị phân công mới và xin xác nhận.",
+      band: "Band 7.0",
+      chunks: ["I understand both of you feel overloaded", "You both agree the deadline is tight", "What if we redistribute the tasks", "Would you both accept this plan", "Thank you for being open"],
+      turns: [
+        { from: "partner", text: "We cannot agree on who should do the report. I already have too much work." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tôi hiểu cả hai bạn đều cảm thấy quá tải. Cả hai bạn đều đồng ý rằng hạn chót rất gấp.", expect: "I understand both of you feel overloaded. You both agree the deadline is tight.", keywords: ["understand", "overloaded", "agree", "deadline"], hint: "I understand both of you...", tip: "Hòa giải bắt đầu bằng thừa nhận cảm xúc cả hai (both feel overloaded) rồi nêu điểm chung (both agree).", chunks: ["I understand both of you feel overloaded", "You both agree the deadline is tight"] },
+        { from: "partner", text: "Yes, that is true. But what should we do?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Nếu chúng ta phân chia lại nhiệm vụ thì sao? Một người viết báo cáo, người còn lại chuẩn bị bài thuyết trình.", expect: "What if we redistribute the tasks? One person writes the report, and the other prepares the presentation.", keywords: ["redistribute", "tasks", "report", "presentation"], hint: "What if we redistribute...", tip: "Đề nghị giải pháp bằng What if + phân công cụ thể cho từng người.", chunks: ["What if we redistribute the tasks"] },
+        { from: "partner", text: "That seems fair to me." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cả hai bạn có chấp nhận kế hoạch này không? Cảm ơn hai bạn đã cởi mở.", expect: "Would you both accept this plan? Thank you for being open.", keywords: ["accept", "plan", "open"], hint: "Would you both accept...", tip: "Kết thúc hòa giải bằng câu hỏi xác nhận cả hai phía (both accept) + cảm ơn sự cởi mở.", chunks: ["Would you both accept this plan", "Thank you for being open"] }
+      ]
+    },
+    {
+      title: "Explaining a Complex Policy to New Staff - Giải thích chính sách phức tạp cho nhân viên mới",
+      setting: "Bạn giải thích chính sách làm việc linh hoạt mới cho nhân viên mới: ai được áp dụng, cách đăng ký, giới hạn số ngày làm từ xa và cách đo hiệu quả. Bạn kiểm tra xem họ đã hiểu chưa.",
+      partner: "Nhân viên mới",
+      goal: "Giải thích chính sách rõ ràng theo bốn bước và kiểm tra mức độ hiểu.",
+      band: "Band 7.0",
+      chunks: ["Let me walk you through the new policy", "The policy applies to staff who have completed three months", "You need to submit a request one week in advance", "You can work remotely up to two days a week", "Does that make sense"],
+      turns: [
+        { from: "partner", text: "Could you explain the new flexible working policy?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Để tôi hướng dẫn bạn qua chính sách mới. Chính sách áp dụng cho nhân viên đã hoàn thành ba tháng làm việc.", expect: "Let me walk you through the new policy. The policy applies to staff who have completed three months.", keywords: ["walk", "policy", "applies", "months"], hint: "Let me walk you through...", tip: "Giải thích chính sách bắt đầu bằng walk you through (hướng dẫn từng bước) rồi nêu đối tượng áp dụng.", chunks: ["Let me walk you through the new policy", "The policy applies to staff who have completed three months"] },
+        { from: "partner", text: "How do I apply, and how many days can I work remotely?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Bạn cần gửi yêu cầu trước một tuần. Bạn có thể làm việc từ xa tối đa hai ngày mỗi tuần.", expect: "You need to submit a request one week in advance. You can work remotely up to two days a week.", keywords: ["submit", "request", "remotely", "days"], hint: "You need to submit...", tip: "Trả lời hai câu hỏi theo đúng thứ tự: cách đăng ký trước, giới hạn số ngày sau.", chunks: ["You need to submit a request one week in advance", "You can work remotely up to two days a week"] },
+        { from: "partner", text: "I see. And how is performance measured?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Hiệu quả được đo bằng kết quả công việc, không phải số giờ ngồi ở văn phòng. Điều này có rõ ràng không ạ?", expect: "Performance is measured by work outcomes, not by hours spent in the office. Does that make sense?", keywords: ["performance", "measured", "outcomes", "sense"], hint: "Performance is measured by...", tip: "Kết thúc giải thích bằng câu kiểm tra hiểu: Does that make sense? — lịch sự và mở ra cho câu hỏi tiếp theo.", chunks: ["Does that make sense"] }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.0 — Nghe dài (3) ----------------
+  CONTENT.listeningPlus.push.apply(CONTENT.listeningPlus, [
+    {
+      section: "Section 3",
+      band: "Band 7.0",
+      topic: "Trao đổi về khảo sát mức độ hài lòng của sinh viên",
+      text: "A: Have you finished analysing the student satisfaction survey? B: Almost. We received responses from 850 students, which is about 60 percent of all students in the faculty. A: That is a good response rate. What are the main findings? B: Overall satisfaction is quite high: 78 percent of students say they are satisfied or very satisfied with their courses. However, there is a clear difference between years. First-year students are the most satisfied, at 86 percent, while final-year students are the least satisfied, at 68 percent. A: Why do you think final-year students are less satisfied? B: The open comments suggest two reasons: pressure from final projects and limited access to supervisors, who are very busy at this time of year. A: That makes sense. What will you recommend? B: I will recommend more structured supervision meetings in the final semester and clearer guidance on project deadlines. A: Will you present these results to the faculty board? B: Yes, next Thursday. I will also publish a short summary for students, so they can see what action will follow from their feedback.",
+      questions: [
+        { type: "MC", q: "What proportion of students responded to the survey?", o: ["About 40 percent", "About 60 percent", "About 78 percent", "About 86 percent"], a: 1, why: "Khảo sát nhận phản hồi từ 850 sinh viên, tương đương khoảng 60% tổng số sinh viên của khoa." },
+        { type: "MC", q: "Which group is the least satisfied?", o: ["First-year students", "Second-year students", "Final-year students", "Postgraduate students"], a: 2, why: "Sinh viên năm cuối ít hài lòng nhất, ở mức 68%, trong khi sinh viên năm nhất hài lòng nhất ở mức 86%." },
+        { type: "MATCH", q: "Which reason for final-year dissatisfaction is mentioned?", o: ["High tuition fees", "Limited access to busy supervisors", "Poor library facilities"], a: 1, why: "Bình luận mở cho thấy hai lý do: áp lực từ đồ án cuối khóa và hạn chế tiếp cận giảng viên hướng dẫn, những người rất bận vào thời điểm này trong năm." },
+        { type: "COMP", q: "Results will be presented to the faculty board next ___.", answer: "Thursday", why: "Kết quả sẽ được trình bày trước hội đồng khoa vào thứ Năm tới, kèm bản tóm tắt ngắn cho sinh viên." },
+        { type: "TF", q: "Overall, 78 percent of students are satisfied or very satisfied.", o: ["True", "False"], a: 0, why: "Câu này đúng vì mức hài lòng chung khá cao: 78% sinh viên nói hài lòng hoặc rất hài lòng với khóa học." }
+      ]
+    },
+    {
+      section: "Section 4",
+      band: "Band 7.0",
+      topic: "Bài giảng về kinh tế chia sẻ và sở hữu",
+      text: "Today, I would like to examine the sharing economy: the idea that access to a product can be more valuable than ownership of it. Instead of buying a car that sits unused for most of the day, a person can borrow one for a few hours. Instead of owning every tool, a household can borrow tools from neighbours. Digital platforms have made this kind of sharing much easier by matching people who have spare capacity with people who need it. The benefits are clear. Sharing reduces the number of products that need to be manufactured, which saves materials and energy. It can also save money for users and create income for owners. However, the sharing economy also raises difficult questions. When a person rents out a room or a car regularly, are they still a private individual, or have they become a business? Should they pay the same taxes and follow the same safety rules as hotels and taxi companies? Different countries have answered these questions differently, which creates confusion for both users and providers. In my view, the sharing economy is neither a revolution nor a passing fashion. It is a useful addition to traditional ownership, but it needs clear rules so that its benefits are shared fairly and its risks are properly managed.",
+      questions: [
+        { type: "MC", q: "What is the central idea of the sharing economy, according to the lecture?", o: ["Owning as many products as possible", "Access to a product can be more valuable than ownership", "Sharing is only for poor people", "Digital platforms replace all shops"], a: 1, why: "Bài giảng mở đầu: ý tưởng của kinh tế chia sẻ là quyền sử dụng sản phẩm có thể giá trị hơn sở hữu nó." },
+        { type: "MC", q: "What have digital platforms made easier?", o: ["Manufacturing more products", "Matching people with spare capacity to people who need it", "Paying taxes", "Building hotels"], a: 1, why: "Nền tảng số giúp việc chia sẻ dễ hơn nhiều bằng cách kết nối người có năng lực dư thừa với người cần nó." },
+        { type: "MATCH", q: "Which difficult question is raised?", o: ["Whether regular renters are private individuals or businesses", "Whether sharing saves time", "Whether cars are expensive"], a: 0, why: "Bài giảng đặt câu hỏi: khi một người cho thuê phòng hay xe thường xuyên, họ vẫn là cá nhân hay đã trở thành doanh nghiệp?" },
+        { type: "COMP", q: "Sharing reduces the number of products that need to be ___.", answer: "manufactured", why: "Chia sẻ giảm số sản phẩm cần sản xuất, nhờ đó tiết kiệm vật liệu và năng lượng." },
+        { type: "TF", q: "The lecturer calls the sharing economy a revolution.", o: ["True", "False"], a: 1, why: "Câu này sai vì giảng viên nói kinh tế chia sẻ không phải cuộc cách mạng cũng không phải mốt nhất thời, mà là bổ sung hữu ích cho sở hữu truyền thống." }
+      ]
+    },
+    {
+      section: "Section 4",
+      band: "Band 7.0",
+      topic: "Bài giảng về biến đổi khí hậu và di cư",
+      text: "Climate change is often discussed in terms of temperature and sea level, but it also has a profound effect on where people live. When farmland becomes too dry to support crops, or when coastal areas flood repeatedly, families may have no choice but to move. Researchers call this climate-related migration, and they expect it to grow in the coming decades. It is important to distinguish this movement from traditional migration. Traditional migrants often move to seek better jobs or education, and they may plan their journey over months or years. Climate-related migrants, by contrast, may move suddenly after a flood or drought, with little time to prepare and few resources to support themselves in a new place. This makes them particularly vulnerable. Cities that receive climate migrants face their own challenges. They must provide housing, jobs and services for new arrivals, often with limited budgets. If planning is poor, new arrivals may end up in crowded, unsafe areas, which creates further problems. However, with early planning, migration can also bring benefits: new workers, new skills and new cultural energy. The key question for policymakers, therefore, is not whether climate migration will happen, but whether societies will prepare for it in advance or react only after it has already begun.",
+      questions: [
+        { type: "MC", q: "What is climate-related migration?", o: ["Moving to seek better jobs", "Moving because farmland becomes too dry or coastal areas flood repeatedly", "Moving for education", "Moving for holidays"], a: 1, why: "Bài giảng định nghĩa: khi đất nông nghiệp quá khô không trồng được, hoặc vùng ven biển ngập lụt liên tục, gia đình có thể buộc phải di chuyển — đó là di cư liên quan tới khí hậu." },
+        { type: "MC", q: "How does climate-related migration differ from traditional migration?", o: ["It is always planned over years", "It may happen suddenly, with little time to prepare and few resources", "It only affects rich countries", "It never involves families"], a: 1, why: "Khác với di cư truyền thống thường lên kế hoạch nhiều tháng hay nhiều năm, di cư do khí hậu có thể xảy ra đột ngột sau lũ lụt hay hạn hán, ít thời gian chuẩn bị và ít nguồn lực." },
+        { type: "MATCH", q: "Which benefit of migration is mentioned?", o: ["Lower house prices", "New workers, new skills and new cultural energy", "Less traffic"], a: 1, why: "Với quy hoạch sớm, di cư cũng có thể mang lại lợi ích: lao động mới, kỹ năng mới và năng lượng văn hóa mới." },
+        { type: "COMP", q: "Climate-related migrants are particularly ___.", answer: "vulnerable", why: "Di cư đột ngột, ít chuẩn bị và ít nguồn lực khiến nhóm này đặc biệt dễ bị tổn thương." },
+        { type: "TF", q: "The key question is whether climate migration will happen.", o: ["True", "False"], a: 1, why: "Câu này sai vì câu hỏi then chốt với nhà hoạch định chính sách không phải liệu di cư khí hậu có xảy ra hay không, mà là xã hội sẽ chuẩn bị trước hay chỉ phản ứng sau khi nó đã bắt đầu." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.0 — Nói (3) ----------------
+  CONTENT.speaking.push.apply(CONTENT.speaking, [
+    {
+      partNum: 1,
+      topicStd: "Truyền thông và xã hội",
+      part: "Part 1",
+      topic: "News and Current Affairs - Tin tức và thời sự",
+      band: "Band 7.0",
+      lines: [
+        { who: "Examiner", en: "How do you usually get news?", vi: "Bạn thường nhận tin tức bằng cách nào?" },
+        { who: "Candidate", en: "I mainly read news on my phone, through a couple of reliable news apps. I also listen to a short news podcast while I travel to work.", vi: "Tôi chủ yếu đọc tin trên điện thoại qua một vài ứng dụng tin tức đáng tin cậy. Tôi cũng nghe một podcast tin ngắn khi đi làm." },
+        { who: "Examiner", en: "Do you trust the news you read online?", vi: "Bạn có tin vào tin tức bạn đọc trên mạng không?" },
+        { who: "Candidate", en: "Not completely. I try to check important stories in at least two different sources, because a single source may be biased or incomplete.", vi: "Không hoàn toàn. Tôi cố gắng kiểm tra các tin quan trọng ở ít nhất hai nguồn khác nhau, vì một nguồn duy nhất có thể thiên vị hoặc không đầy đủ." },
+        { who: "Examiner", en: "Has the way you follow news changed over time?", vi: "Cách bạn theo dõi tin tức có thay đổi theo thời gian không?" },
+        { who: "Candidate", en: "Yes, it has. I used to watch television news every evening, but now I prefer short, on-demand updates that I can read whenever I have a few free minutes.", vi: "Có, đã thay đổi. Trước đây tôi xem tin truyền hình mỗi tối, nhưng giờ tôi thích các bản cập nhật ngắn, xem khi cần, mà tôi có thể đọc bất cứ khi nào có vài phút rảnh." }
+      ],
+      quiz: [
+        { q: "Candidate chủ yếu nhận tin qua đâu?", o: ["Truyền hình", "Ứng dụng tin tức trên điện thoại và podcast tin ngắn", "Báo giấy"], a: 1, why: "Candidate nói: I mainly read news on my phone, through news apps, and listen to a short news podcast." },
+        { q: "Vì sao Candidate kiểm tra tin ở ít nhất hai nguồn?", o: ["Vì một nguồn có thể thiên vị hoặc không đầy đủ", "Vì tin tức luôn sai", "Vì hai nguồn nhanh hơn"], a: 0, why: "Candidate nói: a single source may be biased or incomplete." },
+        { q: "Cụm 'on-demand updates' gần nghĩa với cụm nào?", o: ["bản cập nhật xem khi cần", "bản tin truyền hình buổi tối", "bản tin in hàng ngày"], a: 0, why: "On-demand nghĩa là xem khi cần, theo nhu cầu của người dùng." }
+      ]
+    },
+    {
+      partNum: 2,
+      topicStd: "Xã hội và pháp luật",
+      part: "Part 2",
+      topic: "Describe a law or rule you think is important - Mô tả một luật hoặc quy định bạn cho là quan trọng",
+      band: "Band 7.0",
+      lines: [
+        { who: "Cue card", en: "Describe a law or rule you think is important. You should say: what the law or rule is, who it affects, why it was introduced, and explain why you think it is important.", vi: "Hãy mô tả một luật hoặc quy định bạn cho là quan trọng. Bạn nên nói: luật hoặc quy định đó là gì, nó ảnh hưởng tới ai, vì sao nó được ban hành, và giải thích vì sao bạn cho rằng nó quan trọng." },
+        { who: "Candidate", en: "I would like to talk about the law that requires motorbike riders to wear helmets.", vi: "Tôi muốn nói về luật yêu cầu người đi xe máy phải đội mũ bảo hiểm." },
+        { who: "Candidate", en: "This law affects almost everyone in my country, because motorbikes are the most common means of transport.", vi: "Luật này ảnh hưởng tới hầu hết mọi người ở nước tôi, vì xe máy là phương tiện giao thông phổ biến nhất." },
+        { who: "Candidate", en: "It was introduced to reduce deaths and serious head injuries in road accidents, which used to be extremely common.", vi: "Nó được ban hành để giảm số người chết và chấn thương đầu nghiêm trọng trong tai nạn giao thông, vốn trước đây cực kỳ phổ biến." },
+        { who: "Candidate", en: "I think it is important because it is a simple measure that saves lives every day. It also shows that a small change in behaviour, enforced consistently, can have a very large effect on public safety.", vi: "Tôi cho rằng nó quan trọng vì đây là biện pháp đơn giản cứu sống người mỗi ngày. Nó cũng cho thấy một thay đổi nhỏ trong hành vi, khi được thực thi nhất quán, có thể có tác động rất lớn tới an toàn công cộng." }
+      ],
+      quiz: [
+        { q: "Candidate nói về luật nào?", o: ["Luật cấm hút thuốc", "Luật bắt buộc đội mũ bảo hiểm khi đi xe máy", "Luật giới hạn tốc độ"], a: 1, why: "Candidate nói: the law that requires motorbike riders to wear helmets." },
+        { q: "Luật này được ban hành để làm gì?", o: ["Để giảm ùn tắc", "Để giảm số người chết và chấn thương đầu nghiêm trọng trong tai nạn", "Để tăng thuế"], a: 1, why: "Candidate nói: to reduce deaths and serious head injuries in road accidents." },
+        { q: "Cụm 'enforced consistently' có nghĩa là gì?", o: ["được thực thi nhất quán", "được ban hành một lần", "được mọi người tự nguyện tuân theo"], a: 0, why: "Enforced consistently nghĩa là được thực thi một cách nhất quán, đều đặn." }
+      ]
+    },
+    {
+      partNum: 3,
+      topicStd: "Công nghệ và xã hội",
+      part: "Part 3",
+      topic: "Technology and Privacy - Công nghệ và quyền riêng tư",
+      band: "Band 7.0",
+      lines: [
+        { who: "Examiner", en: "Do people worry enough about their privacy online?", vi: "Mọi người có lo lắng đủ về quyền riêng tư trực tuyến của mình không?" },
+        { who: "Candidate", en: "I do not think so. Most people accept privacy policies without reading them, because they want to use an app quickly. They only start to worry when their personal data is misused.", vi: "Tôi không nghĩ vậy. Hầu hết mọi người chấp nhận chính sách riêng tư mà không đọc chúng, vì họ muốn dùng ứng dụng nhanh chóng. Họ chỉ bắt đầu lo lắng khi dữ liệu cá nhân của họ bị lạm dụng." },
+        { who: "Examiner", en: "Should companies be allowed to collect personal data for free services?", vi: "Các công ty có nên được phép thu thập dữ liệu cá nhân để cung cấp dịch vụ miễn phí không?" },
+        { who: "Candidate", en: "To some extent, yes, but only with clear consent and strong protection. Users should know exactly what is collected, why it is needed and how long it will be kept.", vi: "Ở một mức độ nào đó, có, nhưng chỉ khi có sự đồng ý rõ ràng và biện pháp bảo vệ mạnh mẽ. Người dùng nên biết chính xác dữ liệu nào được thu thập, vì sao cần nó và nó sẽ được giữ trong bao lâu." },
+        { who: "Examiner", en: "How might attitudes to privacy change in the future?", vi: "Thái độ với quyền riêng tư có thể thay đổi như thế nào trong tương lai?" },
+        { who: "Candidate", en: "I suspect people will become more careful as data leaks become more common. At the same time, younger generations, who have grown up sharing online, may accept less privacy as a normal price for convenience.", vi: "Tôi ngờ rằng mọi người sẽ cẩn thận hơn khi rò rỉ dữ liệu trở nên phổ biến hơn. Đồng thời, thế hệ trẻ, những người lớn lên cùng việc chia sẻ trực tuyến, có thể chấp nhận ít riêng tư hơn như một cái giá bình thường cho sự tiện lợi." }
+      ],
+      quiz: [
+        { q: "Theo Candidate, khi nào mọi người mới bắt đầu lo về dữ liệu?", o: ["Khi đọc chính sách riêng tư", "Khi dữ liệu cá nhân bị lạm dụng", "Khi dùng ứng dụng mới"], a: 1, why: "Candidate nói: They only start to worry when their personal data is misused." },
+        { q: "Người dùng nên biết những gì về dữ liệu của mình, theo Candidate?", o: ["Chỉ biết tên công ty", "Biết chính xác dữ liệu nào được thu thập, vì sao cần và giữ trong bao lâu", "Chỉ biết giá dịch vụ"], a: 1, why: "Candidate nói: Users should know exactly what is collected, why it is needed and how long it will be kept." },
+        { q: "Từ 'consent' trong bài gần nghĩa với từ nào?", o: ["sự đồng ý", "sự từ chối", "sự nghi ngờ"], a: 0, why: "Consent nghĩa là sự đồng ý — only with clear consent." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.0 — Ngữ pháp (2) ----------------
+  CONTENT.grammar.push.apply(CONTENT.grammar, [
+    {
+      fam: "Mệnh đề quan hệ",
+      hook: "Muốn thêm thông tin phụ vào câu mà không làm đứt ý chính, chỉ cần mệnh đề quan hệ không xác định giữa hai dấu phẩy: my brother, who lives in Hanoi, ...",
+      level: "Band 7.0",
+      name: "Mệnh đề quan hệ không xác định và rút gọn",
+      explain: "Nhìn hai câu này trước nhé: My brother, who lives in Hanoi, is a doctor. (Anh trai tôi, người sống ở Hà Nội, là Bác sĩ.) The book written in 2020 is still popular. (Cuốn sách được viết năm 2020 vẫn phổ biến.) Sau ví dụ là quy tắc: mệnh đề quan hệ không xác định thêm thông tin phụ về danh từ đã xác định, đặt giữa hai dấu phẩy và không dùng that. Bỏ mệnh đề này đi, câu chính vẫn đầy đủ nghĩa. Dạng rút gọn bỏ đại từ quan hệ và trợ động từ be: the book which was written in 2020 thành the book written in 2020; the students who are studying abroad thành the students studying abroad.",
+      examples: ["My brother, who lives in Hanoi, is a doctor.", "The book written in 2020 is still popular.", "The students studying abroad will return next year."],
+      tip: "Hãy kiểm tra bằng cách bỏ mệnh đề giữa hai dấu phẩy: nếu câu chính vẫn trọn nghĩa thì đó là mệnh đề không xác định, dùng đúng rồi.",
+      model: "Hanoi, which is the capital of Vietnam, attracts millions of visitors. The report published last month highlights the same problem.",
+      modelVi: "Hà Nội, thủ đô của Việt Nam, thu hút hàng triệu du khách. Báo cáo được công bố tháng trước nhấn mạnh cùng một vấn đề.",
+      quiz: [
+        { q: "My brother, ___ lives in Hanoi, is a doctor.", o: ["that", "who", "which"], a: 1, why: "Mệnh đề không xác định về người dùng who và đặt giữa hai dấu phẩy; that không dùng trong mệnh đề không xác định." },
+        { q: "Hanoi, ___ is the capital of Vietnam, attracts millions of visitors.", o: ["who", "which", "that"], a: 1, why: "Hanoi là nơi chốn đã xác định, mệnh đề phụ dùng which giữa hai dấu phẩy." },
+        { q: "The book ___ in 2020 is still popular.", o: ["written", "writing", "writes"], a: 0, why: "Dạng rút gọn bị động: the book written in 2020 (which was written in 2020)." },
+        { q: "The students ___ abroad will return next year.", o: ["study", "studied", "studying"], a: 2, why: "Dạng rút gọn chủ động: the students studying abroad (who are studying abroad)." },
+        { q: "Chọn câu đúng:", o: ["My teacher, that lives near me, is kind.", "My teacher, who lives near me, is kind.", "My teacher who lives near me, is kind."], a: 1, why: "Mệnh đề không xác định dùng who và có dấu phẩy ở cả hai đầu." },
+        { q: "Câu nào sai?", o: ["The report, which was published last month, is useful.", "The report that was published last month is useful.", "The report, that was published last month, is useful."], a: 2, why: "Mệnh đề giữa hai dấu phẩy là không xác định nên không dùng that." },
+        { q: "Bỏ mệnh đề giữa hai dấu phẩy trong 'My brother, who lives in Hanoi, is a doctor', câu còn lại là:", o: ["My brother is a doctor.", "My brother lives in Hanoi.", "My brother is Hanoi."], a: 0, why: "Mệnh đề không xác định chỉ thêm thông tin phụ; bỏ nó đi, câu chính vẫn đầy đủ: My brother is a doctor." },
+        { q: "The report ___ last month highlights the same problem.", o: ["publishing", "published", "publish"], a: 1, why: "Dạng rút gọn bị động: the report published last month." }
+      ]
+    },
+    {
+      fam: "Động từ khuyết thiếu",
+      hook: "Muốn nói mức độ chắc chắn một cách tinh tế, đừng chỉ dùng must — hãy phân biệt must, should và ought to.",
+      level: "Band 7.0",
+      name: "Sắc thái động từ khuyết thiếu trong lập luận",
+      explain: "Nhìn hai câu này trước nhé: Governments must act now. (Chính phủ phải hành động ngay.) Governments should consider the cost. (Chính phủ nên cân nhắc chi phí.) Sau ví dụ là quy tắc: must diễn tả bắt buộc mạnh hoặc kết luận chắc chắn; should diễn tả lời khuyên hoặc kỳ vọng hợp lý, nhẹ hơn must; ought to gần nghĩa với should nhưng trang trọng hơn và ít dùng trong văn nói. Trong lập luận Task 2, dùng must cho mọi đề xuất nghe áp đặt; xen kẽ should và ought to giúp giọng văn cân bằng và thuyết phục hơn.",
+      examples: ["Governments must act now.", "Governments should consider the cost.", "Students ought to read widely, not only for exams."],
+      tip: "Hãy xếp mức độ mạnh dần: could (có thể) — should/ought to (nên) — must (phải) — và chọn đúng mức cho từng lập luận.",
+      model: "Cities must protect green spaces. At the same time, planners should listen to residents, and developers ought to explain their plans clearly.",
+      modelVi: "Thành phố phải bảo vệ không gian xanh. Đồng thời, nhà quy hoạch nên lắng nghe cư dân, và nhà phát triển nên giải thích kế hoạch của mình một cách rõ ràng.",
+      quiz: [
+        { q: "Governments ___ act now. (bắt buộc mạnh)", o: ["should", "must", "could"], a: 1, why: "Must diễn tả bắt buộc mạnh." },
+        { q: "Governments ___ consider the cost. (lời khuyên)", o: ["must", "should", "have to"], a: 1, why: "Should diễn tả lời khuyên, nhẹ hơn must." },
+        { q: "Students ___ to read widely. (trang trọng, gần nghĩa should)", o: ["ought", "must", "can"], a: 0, why: "Ought to gần nghĩa với should nhưng trang trọng hơn." },
+        { q: "Động từ nào nhẹ nhất trong ba từ: could, should, must?", o: ["must", "should", "could"], a: 2, why: "Could chỉ khả năng, nhẹ nhất; should là nên; must là phải." },
+        { q: "Chọn câu đúng:", o: ["Students ought read widely.", "Students ought to read widely.", "Students ought reading widely."], a: 1, why: "Ought luôn đi với to: ought to read." },
+        { q: "Câu nào nghe áp đặt nhất?", o: ["Cities should protect green spaces.", "Cities must protect green spaces.", "Cities could protect green spaces."], a: 1, why: "Must mạnh nhất trong ba câu." },
+        { q: "Planners ___ listen to residents. (lời khuyên)", o: ["must", "should", "will"], a: 1, why: "Lời khuyên dùng should." },
+        { q: "Động từ nào diễn tả kết luận chắc chắn từ bằng chứng?", o: ["must", "could", "might"], a: 0, why: "Must còn dùng để diễn tả kết luận chắc chắn, ví dụ: He must be tired after such a long day." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.0 — Luyện viết (2) + Gõ câu (2) ----------------
+  CONTENT.writingDrills.push.apply(CONTENT.writingDrills, [
+    {
+      band: "Band 7.0",
+      kind: "combine",
+      title: "Nối câu bằng mệnh đề quan hệ không xác định (which)",
+      prompt: "Nối hai câu thành một câu bằng mệnh đề quan hệ không xác định với which. / Combine with a non-defining which clause.",
+      given: "Hanoi is the capital of Vietnam. / It attracts millions of visitors.",
+      model: "Hanoi, which is the capital of Vietnam, attracts millions of visitors.",
+      note: "Kỹ thuật này gộp câu thứ hai thành mệnh đề phụ giữa hai dấu phẩy, giúp câu viết mức 7.0 gọn và tinh tế hơn."
+    },
+    {
+      band: "Band 7.0",
+      kind: "paraphrase",
+      title: "Viết lại bằng cấu trúc đảo ngữ với Not only",
+      prompt: "Viết lại câu giữ nguyên nghĩa, dùng cấu trúc đảo ngữ với Not only. / Paraphrase with Not only inversion.",
+      given: "The policy saves money. It also protects the environment.",
+      model: "Not only does the policy save money, but it also protects the environment.",
+      note: "Kỹ thuật này đảo trợ động từ lên trước chủ ngữ sau Not only, tạo nhịp nhấn mạnh cho mở bài và kết bài Task 2."
+    }
+  ]);
+  CONTENT.typing.push.apply(CONTENT.typing, [
+    {
+      level: "Band 7.0",
+      title: "Câu phản biện cân bằng cho Task 2 band 7",
+      sentences: [
+        "While artificial intelligence can mark tests quickly, it cannot judge creativity fairly.",
+        "Supporters argue that online learning is flexible, whereas critics warn about isolation.",
+        "On the one hand, cities offer more opportunities; on the other hand, they bring stress and pollution.",
+        "It is widely believed that education should prepare students for jobs that do not exist yet.",
+        "What matters most is not the technology itself but how teachers use it.",
+        "Not only does regular reading improve vocabulary, but it also broadens general knowledge.",
+        "However careful human markers are, they can vary with fatigue or unconscious bias.",
+        "A system that combines both approaches would be faster without sacrificing fairness.",
+        "Neither extreme is satisfactory when the issue affects millions of students.",
+        "In conclusion, the strongest argument is for balance rather than a single solution."
+      ]
+    },
+    {
+      level: "Band 7.0",
+      title: "Câu về dữ liệu và hàm ý cho Task 1 band 7",
+      sentences: [
+        "The figure rose steadily from 20 thousand tonnes in 2010 to 48 thousand tonnes in 2020.",
+        "Despite a slight decrease in 2018, the overall trend was clearly upward.",
+        "By 2020, the amount recycled was more than double the figure in 2010.",
+        "The library had expanded eastwards into part of the former car park.",
+        "Whereas the sports field shrank, the new student centre became the heart of the campus.",
+        "This suggests that recent campaigns have had a clear effect on recycling behaviour.",
+        "The most striking feature is the sharp growth in the final two years.",
+        "In terms of location, the north of the campus changed the least.",
+        "Overall, the campus became more student-centred and compact over twenty years.",
+        "These changes reflect a shift from car use towards shared and social spaces."
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.5+ — Đọc (3) ----------------
+  CONTENT.reading.push.apply(CONTENT.reading, [
+    {
+      topic: "Sự chú ý trở thành tài nguyên khan hiếm",
+      level: "Band 7.5+",
+      title: "Why Attention Has Become a Scarce Resource",
+      text: "Economists have long treated land, labour and capital as scarce resources. In the digital age, a fourth scarcity has quietly joined them: human attention. Information, once expensive and hard to obtain, is now abundant and almost free. Attention, by contrast, remains strictly limited. A person has only so many waking hours, and only a fraction of them can be devoted to focused thought. When supply explodes and the capacity to absorb it does not, attention becomes the bottleneck of the whole system.\n\nThis shift explains much of the design of modern media. If attention is scarce, then the rational strategy for a platform is not to inform, but to capture. Headlines become more dramatic, notifications more frequent, and feeds more personalised — not because readers have asked for drama, but because drama reliably holds the eye for a few seconds longer. The competition is no longer between true and false, but between engaging and boring, and engagement is a poor proxy for importance.\n\nThe consequences extend beyond wasted time. Sustained attention is a precondition for deep reading, careful judgement and democratic deliberation. When attention is fragmented into short bursts, complex arguments become harder to follow, not because people are less intelligent, but because the environment rewards skimming over sustained focus. A society that cannot attend for long may still be well informed in the narrow sense of knowing many facts, while becoming less capable of weighing them.\n\nIt would be a mistake, however, to treat this as a purely technological problem with a purely technological fix. Attention has always been contested: newspapers once competed with church bells, and television once competed with books. What is new is the scale and precision of the competition. Modern systems do not merely attract attention; they measure it in real time and adjust their tactics accordingly, learning which stimuli work on which individuals.\n\nThe most promising responses, therefore, are likely to be cultural as much as technical. They include redesigning feeds to reward depth rather than speed, teaching readers to notice when their attention is being harvested, and protecting spaces — classrooms, libraries, quiet hours — where sustained focus is the norm rather than the exception. Attention, in this view, is not merely a personal virtue. It is a shared resource, and like clean air or clean water, it deteriorates when everyone is free to exploit it without restraint.",
+      questions: [
+        { type: "MC", q: "Why has attention become scarce, according to the passage?", o: ["Because people have less free time than before", "Because information supply exploded while the capacity to absorb it did not", "Because newspapers disappeared", "Because people became less intelligent"], options: ["Because people have less free time than before", "Because information supply exploded while the capacity to absorb it did not", "Because newspapers disappeared", "Because people became less intelligent"], a: 1, why: "Đoạn 1: thông tin nay dồi dào và gần như miễn phí, trong khi sự chú ý vẫn bị giới hạn nghiêm ngặt; khi nguồn cung bùng nổ mà khả năng tiếp nhận không tăng, sự chú ý trở thành nút thắt của toàn hệ thống." },
+        { type: "TFNG", q: "Complex arguments become harder to follow because people are less intelligent.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 3: lập luận phức tạp trở nên khó theo dõi hơn không phải vì con người kém thông minh hơn mà vì môi trường thưởng cho việc đọc lướt hơn là tập trung bền bỉ." },
+        { type: "MATCH", q: "Which historical comparison is made about attention?", o: ["Newspapers once competed with church bells, and television once competed with books", "Radio once competed with cinema", "Letters once competed with telegrams"], options: ["Newspapers once competed with church bells, and television once competed with books", "Radio once competed with cinema", "Letters once competed with telegrams"], a: 0, why: "Đoạn 4: sự chú ý luôn bị tranh giành — báo chí từng cạnh tranh với chuông nhà thờ, và truyền hình từng cạnh tranh với sách." },
+        { type: "COMP", q: "Engagement is a poor ___ for importance.", answer: "proxy", why: "Đoạn 2: cuộc cạnh tranh không còn giữa đúng và sai mà giữa hấp dẫn và nhàm chán, và mức độ hấp dẫn là chỉ báo thay thế kém cho tầm quan trọng." },
+        { type: "MC", q: "What is the writer's final view of attention?", o: ["It is merely a personal virtue", "It is a shared resource that deteriorates when exploited without restraint", "It can be fixed by technology alone", "It is no longer scarce"], options: ["It is merely a personal virtue", "It is a shared resource that deteriorates when exploited without restraint", "It can be fixed by technology alone", "It is no longer scarce"], a: 1, why: "Đoạn 5: sự chú ý không chỉ là đức tính cá nhân mà là tài nguyên chung, và giống như không khí hay nước sạch, nó suy thoái khi ai cũng được tự do khai thác mà không kiềm chế." }
+      ],
+      translation: "Các nhà kinh tế từ lâu coi đất đai, lao động và vốn là tài nguyên khan hiếm; trong thời đại số, một sự khan hiếm thứ tư đã lặng lẽ gia nhập: sự chú ý của con người. Thông tin, xưa đắt đỏ và khó có được, nay dồi dào và gần như miễn phí; sự chú ý ngược lại vẫn bị giới hạn nghiêm ngặt — con người chỉ có bấy nhiêu giờ thức, và chỉ một phần trong đó dành được cho tư duy tập trung; khi nguồn cung bùng nổ mà khả năng tiếp nhận không tăng, sự chú ý trở thành nút thắt của toàn hệ thống. Sự dịch chuyển này giải thích phần lớn thiết kế của truyền thông hiện đại: nếu sự chú ý khan hiếm thì chiến lược hợp lý của nền tảng không phải thông tin mà là chiếm giữ — tiêu đề trở nên kịch tính hơn, thông báo thường xuyên hơn, nguồn tin cá nhân hóa hơn, không phải vì độc giả yêu cầu kịch tính mà vì kịch tính giữ mắt nhìn lâu hơn vài giây một cách đáng tin cậy; cuộc cạnh tranh không còn giữa đúng và sai mà giữa hấp dẫn và nhàm chán, và mức độ hấp dẫn là chỉ báo thay thế kém cho tầm quan trọng. Hệ quả vượt xa thời gian lãng phí: sự chú ý bền bỉ là điều kiện tiên quyết cho đọc sâu, phán đoán cẩn thận và thảo luận dân chủ; khi sự chú ý bị phân mảnh thành từng đợt ngắn, lập luận phức tạp trở nên khó theo dõi hơn không phải vì con người kém thông minh mà vì môi trường thưởng cho đọc lướt hơn tập trung bền bỉ; một xã hội không thể chú ý lâu vẫn có thể biết nhiều sự kiện theo nghĩa hẹp, trong khi kém khả năng cân nhắc chúng hơn. Tuy vậy sẽ là sai lầm nếu coi đây thuần túy là vấn đề công nghệ với giải pháp thuần túy công nghệ: sự chú ý luôn bị tranh giành — báo chí từng cạnh tranh với chuông nhà thờ, truyền hình từng cạnh tranh với sách; điều mới là quy mô và độ chính xác của cuộc cạnh tranh — hệ thống hiện đại không chỉ thu hút sự chú ý mà còn đo lường nó theo thời gian thực và điều chỉnh chiến thuật tương ứng, học xem kích thích nào hiệu quả với cá nhân nào. Vì vậy phản ứng triển vọng nhất có lẽ vừa mang tính văn hóa vừa mang tính kỹ thuật: thiết kế lại nguồn tin để thưởng cho chiều sâu thay vì tốc độ, dạy độc giả nhận ra khi sự chú ý của mình đang bị khai thác, và bảo vệ những không gian — lớp học, thư viện, giờ yên tĩnh — nơi tập trung bền bỉ là chuẩn mực chứ không phải ngoại lệ. Theo quan điểm này, sự chú ý không chỉ là đức tính cá nhân mà là tài nguyên chung, và giống như không khí hay nước sạch, nó suy thoái khi ai cũng được tự do khai thác mà không kiềm chế.",
+      phrases: [
+        { en: "a scarce resource", vi: "một tài nguyên khan hiếm" },
+        { en: "the bottleneck of the whole system", vi: "nút thắt của toàn hệ thống" },
+        { en: "a poor proxy for importance", vi: "một chỉ báo thay thế kém cho tầm quan trọng" },
+        { en: "sustained attention", vi: "sự chú ý bền bỉ" },
+        { en: "without restraint", vi: "mà không kiềm chế" }
+      ]
+    },
+    {
+      topic: "Tuyến thương mại cổ xưa định hình thành phố",
+      level: "Band 7.5+",
+      title: "How Ancient Trade Routes Still Shape Cities",
+      text: "Modern maps suggest that cities grow where geography dictates: at river crossings, natural harbours or fertile plains. History tells a subtler story. Many cities that seem geographically unremarkable owe their existence to routes that no longer exist — caravan trails, pilgrimage paths and imperial roads whose original purpose has vanished, but whose urban legacy remains.\n\nThe mechanism is one of path dependence. A route, once established, attracts inns, markets, warehouses and workshops. These, in turn, attract people, who build houses, temples and schools. Even when the route itself declines — because a new port opens, a border moves or a faster road is built elsewhere — the settlement it created does not simply disappear. Its buildings, institutions and networks persist, and new activities grow around the old core.\n\nConsider a desert oasis town that once served camel caravans. The caravans are gone, but the town's wells, storage buildings and reputation as a safe stopping place remain. Modern tourists arrive by bus rather than by camel, yet they follow a strikingly similar pattern: they stop, rest, buy supplies and move on. The town has adapted its old function — serving travellers — to a new kind of traveller.\n\nThe same logic applies to port cities whose harbours have silted up and to railway towns bypassed by high-speed lines. In each case, the initial advantage was temporary, but the urban infrastructure it generated proved durable. Streets laid out for carts now carry delivery vans; warehouses built for grain now house studios and start-ups. The past, in this sense, is not merely preserved in museums. It is embedded in street plans, building stock and commercial habits.\n\nThis perspective has practical implications for urban planning. A city that understands its own history is less likely to erase it casually in the name of modernisation. New roads and districts work best when they connect to existing patterns of movement rather than ignoring them. Conversely, a city that treats its past as an obstacle may discover, too late, that it has destroyed the very qualities — centrality, familiarity, a sense of place — that made it attractive in the first place.",
+      questions: [
+        { type: "MC", q: "What is path dependence, as described in the passage?", o: ["Roads always follow rivers", "A route attracts buildings and people, and the settlement persists even after the route declines", "Cities only grow at harbours", "Old routes are always preserved as museums"], options: ["Roads always follow rivers", "A route attracts buildings and people, and the settlement persists even after the route declines", "Cities only grow at harbours", "Old routes are always preserved as museums"], a: 1, why: "Đoạn 2: tuyến đường một khi hình thành sẽ thu hút quán trọ, chợ, kho và xưởng; rồi thu hút con người xây nhà, đền và trường; ngay cả khi tuyến đường suy tàn, khu định cư nó tạo ra không đơn giản biến mất." },
+        { type: "TFNG", q: "Modern tourists in the oasis town follow a completely different pattern from old caravans.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 3: du khách hiện đại tới bằng xe buýt thay vì lạc đà, nhưng họ theo mô hình tương tự một cách đáng kể: dừng lại, nghỉ ngơi, mua đồ dùng và đi tiếp." },
+        { type: "MATCH", q: "Which modern use of old warehouses is mentioned?", o: ["Museums only", "Studios and start-ups", "Car parks"], options: ["Museums only", "Studios and start-ups", "Car parks"], a: 1, why: "Đoạn 4: kho xây cho ngũ cốc nay chứa studio và công ty khởi nghiệp; đường kẻ cho xe ngựa nay chở xe tải giao hàng." },
+        { type: "COMP", q: "Streets laid out for carts now carry delivery ___.", answer: "vans", why: "Đoạn 4: đường kẻ cho xe ngựa nay chở xe tải giao hàng." },
+        { type: "MC", q: "What planning implication does the writer draw?", o: ["Cities should erase their past for modernisation", "New roads and districts work best when they connect to existing patterns of movement", "History should only be preserved in museums", "Old cities cannot adapt to new travellers"], options: ["Cities should erase their past for modernisation", "New roads and districts work best when they connect to existing patterns of movement", "History should only be preserved in museums", "Old cities cannot adapt to new travellers"], a: 1, why: "Đoạn 5: đường và quận mới hoạt động tốt nhất khi kết nối với mô hình di chuyển hiện có thay vì phớt lờ chúng." }
+      ],
+      translation: "Bản đồ hiện đại gợi ý thành phố mọc lên nơi địa lý quy định: chỗ qua sông, cảng tự nhiên hay đồng bằng màu mỡ. Lịch sử kể câu chuyện tinh tế hơn: nhiều thành phố trông không có gì đặc biệt về địa lý lại tồn tại nhờ các tuyến đường không còn nữa — đường mòn đoàn lữ hành, đường hành hương và đường đế quốc mà mục đích ban đầu đã biến mất, nhưng di sản đô thị vẫn còn. Cơ chế là phụ thuộc vào lộ trình: tuyến đường một khi hình thành sẽ thu hút quán trọ, chợ, kho và xưởng; rồi thu hút con người xây nhà, đền và trường; ngay cả khi tuyến đường suy tàn — vì cảng mới mở, biên giới dịch chuyển hay đường nhanh hơn xây ở nơi khác — khu định cư nó tạo ra không đơn giản biến mất; công trình, thể chế và mạng lưới của nó tồn tại, và hoạt động mới mọc lên quanh lõi cũ. Hãy xét thị trấn ốc đảo sa mạc từng phục vụ đoàn lạc đà: đoàn lữ hành đã đi rồi, nhưng giếng nước, nhà kho và danh tiếng là điểm dừng an toàn vẫn còn; du khách hiện đại tới bằng xe buýt thay vì lạc đà, nhưng họ theo mô hình tương tự một cách đáng kể: dừng lại, nghỉ ngơi, mua đồ dùng và đi tiếp; thị trấn đã thích ứng chức năng cũ — phục vụ lữ khách — với loại lữ khách mới. Logic tương tự áp dụng cho thành phố cảng mà bến cảng đã bồi lấp và thị trấn đường sắt bị tuyến cao tốc bỏ qua: lợi thế ban đầu chỉ tạm thời, nhưng hạ tầng đô thị nó tạo ra lại bền bỉ — đường kẻ cho xe ngựa nay chở xe tải giao hàng, kho xây cho ngũ cốc nay chứa studio và công ty khởi nghiệp; quá khứ theo nghĩa này không chỉ được bảo tồn trong bảo tàng mà còn gắn trong quy hoạch đường phố, kho công trình và thói quen thương mại. Quan điểm này có hàm ý thực tiễn cho quy hoạch đô thị: thành phố hiểu lịch sử của mình ít có khả năng xóa nó một cách tùy tiện nhân danh hiện đại hóa; đường và quận mới hoạt động tốt nhất khi kết nối với mô hình di chuyển hiện có thay vì phớt lờ chúng; ngược lại, thành phố coi quá khứ là trở ngại có thể phát hiện quá muộn rằng mình đã phá hủy chính những phẩm chất — vị trí trung tâm, sự quen thuộc, cảm giác về nơi chốn — vốn khiến nó hấp dẫn ngay từ đầu.",
+      phrases: [
+        { en: "path dependence", vi: "phụ thuộc vào lộ trình" },
+        { en: "urban legacy", vi: "di sản đô thị" },
+        { en: "a safe stopping place", vi: "một điểm dừng an toàn" },
+        { en: "embedded in street plans", vi: "gắn trong quy hoạch đường phố" },
+        { en: "a sense of place", vi: "cảm giác về nơi chốn" }
+      ]
+    },
+    {
+      topic: "Lao động ẩn sau điện thoại thông minh",
+      level: "Band 7.5+",
+      title: "The Hidden Labour Behind Your Smartphone",
+      text: "A smartphone feels weightless and clean: a smooth screen, a silent chip, a battery that charges overnight. Its supply chain tells a different story. Before a phone reaches a shop, it passes through dozens of hands and places, many of them invisible to the person who eventually holds it. To understand the true cost of a phone, it is necessary to follow it backwards, from the shop to the mine.\n\nThe journey begins with raw materials. A single phone contains dozens of elements, including cobalt, lithium and rare earth metals, extracted in mines across several continents. Mining is dangerous, poorly paid work in many regions, and it carries severe environmental costs: rivers polluted by chemical runoff, forests cleared for access roads, and communities displaced by expanding pits. The metals are then refined and shipped to factories, where the environmental burden shifts but does not disappear.\n\nIn factories, the work is different but no less demanding. Assembly lines run around the clock, and workers repeat the same precise task thousands of times a day. The pressure to meet launch deadlines can lead to excessive overtime and intense surveillance. Although factory conditions have improved in some places, audits repeatedly find gaps between company codes of conduct and daily reality, particularly for temporary workers who have the least bargaining power.\n\nBeyond factories lies a third, often overlooked workforce: the people who moderate content, label data and clean up the digital world that phones connect to. These workers review disturbing material, tag images to train algorithms and answer support queries, often for low pay and with little recognition. Their labour makes the phone feel intelligent and safe, yet it is rarely mentioned in product launches.\n\nNone of this means that smartphones should be abandoned. They have brought education, healthcare and connection to millions of people. It does mean, however, that the price on the box is an incomplete measure of cost. A fairer assessment would include the health of miners, the working hours of assemblers and the wellbeing of digital moderators. Until companies, regulators and consumers take that fuller accounting seriously, the phone will remain, in an important sense, too cheap — not because it costs too little money, but because others pay the difference.",
+      questions: [
+        { type: "MC", q: "What does the writer mean by following a phone backwards?", o: ["Returning a faulty phone", "Tracing it from the shop to the mine to understand its true cost", "Recycling old phones", "Reading the user manual"], options: ["Returning a faulty phone", "Tracing it from the shop to the mine to understand its true cost", "Recycling old phones", "Reading the user manual"], a: 1, why: "Đoạn 1: để hiểu chi phí thật sự của điện thoại, cần lần theo nó ngược lại, từ cửa hàng tới mỏ." },
+        { type: "TFNG", q: "Factory conditions always match company codes of conduct.", o: ["True", "False", "Not Given"], options: ["True", "False", "Not Given"], a: 1, why: "Đoạn 3: kiểm toán liên tục phát hiện khoảng cách giữa quy tắc ứng xử của công ty và thực tế hằng ngày, nhất là với lao động tạm thời." },
+        { type: "MATCH", q: "Which group is described as the third, often overlooked workforce?", o: ["Miners", "Factory assemblers", "Content moderators, data labellers and support workers"], options: ["Miners", "Factory assemblers", "Content moderators, data labellers and support workers"], a: 2, why: "Đoạn 4: ngoài nhà máy còn lực lượng lao động thứ ba thường bị bỏ qua: người kiểm duyệt nội dung, gắn nhãn dữ liệu và dọn dẹp thế giới số mà điện thoại kết nối tới." },
+        { type: "COMP", q: "The price on the box is an ___ measure of cost.", answer: "incomplete", why: "Đoạn 5: giá trên hộp là thước đo chi phí chưa đầy đủ." },
+        { type: "MC", q: "What is the writer's conclusion?", o: ["Smartphones should be abandoned", "The phone remains too cheap in an important sense because others pay the difference", "Supply chains are fully transparent", "Only miners bear the hidden cost"], options: ["Smartphones should be abandoned", "The phone remains too cheap in an important sense because others pay the difference", "Supply chains are fully transparent", "Only miners bear the hidden cost"], a: 1, why: "Đoạn 5: điện thoại vẫn còn, theo một nghĩa quan trọng, quá rẻ — không phải vì nó tốn quá ít tiền mà vì người khác trả phần chênh lệch." }
+      ],
+      translation: "Điện thoại thông minh có cảm giác nhẹ và sạch: màn hình mịn, chip im lặng, pin sạc qua đêm. Chuỗi cung ứng của nó kể câu chuyện khác: trước khi tới cửa hàng, điện thoại đi qua hàng chục bàn tay và địa điểm, nhiều nơi vô hình với người cuối cùng cầm nó. Để hiểu chi phí thật sự, cần lần theo nó ngược lại, từ cửa hàng tới mỏ. Hành trình bắt đầu với nguyên liệu thô: một chiếc điện thoại chứa hàng chục nguyên tố, gồm coban, liti và kim loại đất hiếm, khai thác ở mỏ trên nhiều châu lục. Khai mỏ là công việc nguy hiểm, trả lương thấp ở nhiều vùng, và mang chi phí môi trường nghiêm trọng: sông ô nhiễm do nước thải hóa chất, rừng bị phá để mở đường, cộng đồng bị di dời do hố mỏ mở rộng. Kim loại sau đó được tinh chế và vận chuyển tới nhà máy, nơi gánh nặng môi trường chuyển dịch chứ không biến mất. Trong nhà máy, công việc khác đi nhưng không kém phần đòi hỏi: dây chuyền lắp ráp chạy suốt ngày đêm, công nhân lặp lại cùng một thao tác chính xác hàng nghìn lần mỗi ngày; áp lực đáp ứng hạn ra mắt có thể dẫn tới tăng ca quá mức và giám sát gắt gao; dù điều kiện nhà máy đã cải thiện ở một số nơi, kiểm toán liên tục phát hiện khoảng cách giữa quy tắc ứng xử của công ty và thực tế hằng ngày, nhất là với lao động tạm thời có sức thương lượng thấp nhất. Ngoài nhà máy còn lực lượng lao động thứ ba thường bị bỏ qua: người kiểm duyệt nội dung, gắn nhãn dữ liệu và dọn dẹp thế giới số mà điện thoại kết nối tới — họ xem xét tài liệu gây khó chịu, gắn thẻ hình ảnh để huấn luyện thuật toán và trả lời yêu cầu hỗ trợ, thường với lương thấp và ít được công nhận; lao động của họ khiến điện thoại có vẻ thông minh và an toàn, nhưng hiếm khi được nhắc tới trong buổi ra mắt sản phẩm. Không điều nào trong số này có nghĩa điện thoại nên bị bỏ đi: chúng đã mang giáo dục, y tế và kết nối tới hàng triệu người. Nhưng điều đó có nghĩa giá trên hộp là thước đo chi phí chưa đầy đủ: đánh giá công bằng hơn sẽ gồm sức khỏe thợ mỏ, giờ làm của công nhân lắp ráp và phúc lợi của người kiểm duyệt số. Cho tới khi công ty, cơ quan quản lý và người tiêu dùng coi trọng cách tính đầy đủ hơn này, điện thoại sẽ vẫn còn, theo một nghĩa quan trọng, quá rẻ — không phải vì nó tốn quá ít tiền mà vì người khác trả phần chênh lệch.",
+      phrases: [
+        { en: "follow it backwards", vi: "lần theo nó ngược lại" },
+        { en: "from the shop to the mine", vi: "từ cửa hàng tới mỏ" },
+        { en: "the least bargaining power", vi: "sức thương lượng thấp nhất" },
+        { en: "an incomplete measure of cost", vi: "một thước đo chi phí chưa đầy đủ" },
+        { en: "others pay the difference", vi: "người khác trả phần chênh lệch" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.5+ — Viết (3) ----------------
+  CONTENT.writing.push.apply(CONTENT.writing, [
+    {
+      wtype: "Quy trình",
+      type: "Task 1",
+      band: "Band 7.5+",
+      title: "Quy trình: tái chế pin điện thoại cũ",
+      prompt: "The diagram below shows how old phone batteries are recycled. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      dataDesc: "Dữ kiện của quy trình: (1) Thu gom pin cũ từ cửa hàng và điểm thu gom. (2) Tháo vỏ và tách các bộ phận, loại bỏ nhựa và kim loại thường. (3) Nghiền phần lõi thành bột đen chứa kim loại quý. (4) Chiết xuất coban, liti và niken bằng hóa chất. (5) Tinh chế kim loại và dùng lại để sản xuất pin mới, giảm nhu cầu khai mỏ.",
+      model: "The diagram illustrates the stages involved in recycling old phone batteries.\n\nOverall, the process transforms waste that would otherwise go to landfill into valuable raw materials for new batteries. It is a closed loop in the sense that the output of the final stage feeds directly back into manufacturing, thereby reducing the need for fresh mining.\n\nThe process begins with collection: used batteries are gathered from shops and collection points and transported to a recycling plant. There, the outer cases are removed, and ordinary plastics and metals are separated for separate treatment. The remaining core is then crushed into a fine black powder, which contains the valuable metals in concentrated form.\n\nIn the subsequent chemical stage, cobalt, lithium and nickel are extracted from this powder using chemical solutions. These metals are then refined to a purity suitable for reuse. Finally, the recovered metals are supplied to battery manufacturers, who use them to produce new batteries. The cycle is thus complete: a material that began its life in one phone can begin a second life in another, with considerably less environmental damage than mining the same metals anew.",
+      analysis: "Cấu trúc 4 đoạn cho Band 7.5+: (1) Paraphrase đề bài. (2) Overview khái quát hóa: vòng kín (closed loop), đầu ra của giai đoạn cuối quay lại sản xuất, giảm nhu cầu khai mỏ. (3) Hai giai đoạn đầu: thu gom, tháo tách, nghiền thành bột đen. (4) Giai đoạn hóa học + tinh chế + cung cấp cho nhà sản xuất + câu chốt vòng đời thứ hai. Điểm ngôn ngữ đáng học: a closed loop, in concentrated form, in the subsequent chemical stage, considerably less environmental damage — từ ngữ quy trình mức cao, kết hợp bị động và danh hóa.",
+      phrases: [
+        { en: "a closed loop", vi: "một vòng kín" },
+        { en: "in concentrated form", vi: "ở dạng cô đặc" },
+        { en: "in the subsequent chemical stage", vi: "ở giai đoạn hóa học tiếp theo" },
+        { en: "to a purity suitable for reuse", vi: "tới độ tinh khiết phù hợp để tái sử dụng" },
+        { en: "begin a second life", vi: "bắt đầu một vòng đời thứ hai" }
+      ]
+    },
+    {
+      wtype: "Ý kiến",
+      type: "Task 2",
+      band: "Band 7.5+",
+      title: "Ý kiến: thuế carbon có phải cách công bằng nhất để giảm khí thải",
+      prompt: "Some people think a carbon tax is the fairest way to reduce greenhouse gas emissions. Others think it unfairly burdens low-income households. Discuss both views and give your own opinion. (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: thuế carbon công bằng hay không. Dàn ý: mở bài nêu hai quan điểm; thân bài 1: ủng hộ thuế carbon (người gây ô nhiễm trả tiền, khuyến khích tiết kiệm, doanh thu đầu tư xanh); thân bài 2: phản đối (hộ thu nhập thấp chịu tỷ lệ cao hơn, vùng xa ít lựa chọn); kết bài: thuế carbon công bằng chỉ khi kèm hoàn trả cho hộ nghèo và đầu tư giao thông công cộng.",
+      model: "Putting a price on carbon is often presented as the most efficient way to cut emissions, but its fairness is hotly contested. While a carbon tax has clear advantages over blunt regulation, it can only be considered fair if its burden is deliberately offset for those least able to bear it.\n\nAdvocates argue that a carbon tax embodies a simple principle: the polluter pays. By making fossil fuels more expensive, it gives every household and company a direct incentive to use less energy, switch to cleaner alternatives and invest in efficiency. Unlike a ban, which treats all users alike regardless of need, a tax allows people to choose how to respond. Moreover, the revenue it raises can be invested in renewable energy and public transport, thereby accelerating the very transition it encourages.\n\nCritics, however, point to a regressive flaw. Low-income households spend a larger share of their income on heating, cooking and transport, so a flat carbon tax takes proportionally more from them than from the wealthy. The problem is sharpest in rural areas, where public transport is scarce and residents have little choice but to drive. For these households, the tax may feel less like an incentive and more like a penalty for circumstances beyond their control.\n\nIn my view, the fairest design combines the tax with compensation. Part of the revenue should be returned directly to low-income households, and part should fund affordable public transport in underserved areas. Under such a design, the price signal remains — polluting activities still cost more — but the distributional harm is substantially reduced. A carbon tax, on its own, is efficient but incomplete; paired with redistribution, it can be both efficient and fair.",
+      analysis: "Cấu trúc 4 đoạn cho Band 7.5+: (1) Mở bài nêu tranh luận + quan điểm có điều kiện (chỉ công bằng khi bù đắp có chủ đích). (2) Thân bài 1: nguyên tắc người gây ô nhiễm trả tiền, khuyến khích trực tiếp, doanh thu đầu tư chuyển đổi. (3) Thân bài 2: phản biện — tính lũy thoái, hộ nghèo chi tỷ lệ thu nhập cao hơn, vùng xa ít lựa chọn, cảm giác như hình phạt. (4) Kết bài: thiết kế kết hợp thuế + hoàn trả + đầu tư giao thông, giữ tín hiệu giá nhưng giảm tác hại phân phối. Điểm ngôn ngữ đáng học: embodies a simple principle, a regressive flaw, distributional harm, paired with redistribution — từ ngữ lập luận mức cao; hotly contested để mở bài.",
+      phrases: [
+        { en: "the polluter pays", vi: "người gây ô nhiễm trả tiền" },
+        { en: "a regressive flaw", vi: "một khiếm khuyết lũy thoái" },
+        { en: "a flat carbon tax", vi: "thuế carbon đồng mức" },
+        { en: "deliberately offset", vi: "được bù đắp một cách có chủ đích" },
+        { en: "paired with redistribution", vi: "kết hợp với phân phối lại" }
+      ]
+    },
+    {
+      wtype: "Câu hỏi hai phần",
+      type: "Task 2",
+      band: "Band 7.5+",
+      title: "Câu hỏi hai phần: vì sao người trẻ ít đọc báo in và điều này có đáng lo",
+      prompt: "Fewer young people read printed newspapers than in the past. Why is this the case, and is this a positive or negative development? (Band ước lượng nội bộ của web, không phải điểm thi thật.)",
+      dataDesc: "Tình huống: người trẻ ít đọc báo in. Dàn ý: mở bài nêu xu hướng; thân bài 1: nguyên nhân (tin miễn phí tức thì trên điện thoại, báo in chậm và tốn tiền, thói quen video ngắn); thân bài 2: đánh giá — mặt tích cực (tiếp cận rộng, đa dạng nguồn) và mặt tiêu cực (đọc lướt, tin giả, mất báo chí điều tra sâu); kết bài: xu hướng trung tính về hình thức nhưng tiêu cực nếu đọc sâu biến mất.",
+      model: "The decline of printed newspapers among young readers is one of the clearest media trends of recent decades. It is driven less by a loss of interest in news than by a transformation in how news is delivered and consumed, and its significance depends on what replaces print rather than on the decline itself.\n\nThe causes are largely practical. News on a phone is immediate, free and constantly updated, whereas a printed paper is fixed at the moment of printing and costs money. Young readers, who have grown up with on-demand media, naturally prefer a format that fits into short gaps in the day. In addition, video and social feeds have trained many readers to expect news in brief, visual form, which print, with its long articles and static layout, does not easily provide.\n\nWhether this shift is positive or negative is more complex. On the positive side, digital news is more accessible and diverse: a young reader can compare several sources in minutes and follow stories from around the world that a local paper would never cover. On the negative side, the shift encourages skimming rather than sustained reading, and it exposes readers to misinformation that spreads faster than corrections. Perhaps most seriously, the business model that once funded in-depth investigative reporting — advertising in print — has weakened, and no digital model has fully replaced it.\n\nIn conclusion, the move away from print is, in itself, neither good nor bad; it is a change of medium. It becomes negative only to the extent that it erodes deep reading and investigative journalism. If digital platforms can preserve those qualities — through subscriptions, public funding or new formats for long-form reporting — then young readers may lose paper without losing the public benefits that newspapers once provided.",
+      analysis: "Cấu trúc 4 đoạn cho Band 7.5+: (1) Mở bài nêu xu hướng + luận điểm: ý nghĩa phụ thuộc vào thứ thay thế báo in, không phải sự suy giảm tự thân. (2) Thân bài 1: nguyên nhân thực tiễn — tức thì, miễn phí, cập nhật liên tục so với báo in cố định và tốn tiền; thói quen video ngắn. (3) Thân bài 2: đánh giá hai mặt — tích cực (tiếp cận, đa dạng) và tiêu cực (đọc lướt, tin giả, mô hình kinh doanh báo chí điều tra suy yếu). (4) Kết bài có điều kiện: thay đổi phương tiện tự thân trung tính, chỉ tiêu cực khi đọc sâu và báo chí điều tra bị xói mòn + điều kiện bảo tồn qua thuê bao, tài trợ công hay định dạng mới. Điểm ngôn ngữ đáng học: to the extent that, erodes deep reading, in itself neither good nor bad — cấu trúc lập luận mức cao.",
+      phrases: [
+        { en: "on-demand media", vi: "truyền thông xem khi cần" },
+        { en: "in brief, visual form", vi: "ở dạng ngắn gọn, trực quan" },
+        { en: "in-depth investigative reporting", vi: "báo chí điều tra chuyên sâu" },
+        { en: "to the extent that", vi: "tới mức mà" },
+        { en: "erodes deep reading", vi: "xói mòn việc đọc sâu" }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.5+ — Nhập vai (4) ----------------
+  CONTENT.roleplay.push.apply(CONTENT.roleplay, [
+    {
+      title: "Negotiating a Research Partnership Between Two Universities - Đàm phán hợp tác nghiên cứu giữa hai trường đại học",
+      setting: "Bạn đại diện cho trường mình đàm phán hợp tác nghiên cứu với một trường đối tác: chia sẻ dữ liệu, phân chia kinh phí và quyền tác giả. Bạn đề nghị nguyên tắc chung, đáp lại lo ngại về dữ liệu nhạy cảm và chốt biên bản ghi nhớ.",
+      partner: "Đại diện trường đối tác",
+      goal: "Đàm phán: nêu nguyên tắc chung, xử lý lo ngại về dữ liệu và chốt biên bản ghi nhớ.",
+      band: "Band 7.5+",
+      chunks: ["Our proposal is based on three principles", "Data sharing must follow strict safeguards", "We suggest splitting the funding equally", "Authorship will reflect actual contribution", "Let us record this in a memorandum"],
+      turns: [
+        { from: "partner", text: "Thank you for coming. What principles should guide our partnership?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Đề xuất của chúng tôi dựa trên ba nguyên tắc: minh bạch, chia sẻ công bằng và tôn trọng quyền tác giả.", expect: "Our proposal is based on three principles: transparency, fair sharing and respect for authorship.", keywords: ["proposal", "principles", "transparency", "authorship"], hint: "Our proposal is based on...", tip: "Đàm phán cấp cao mở bằng nguyên tắc chung trước khi bàn chi tiết: transparency, fair sharing, respect for authorship.", chunks: ["Our proposal is based on three principles"] },
+        { from: "partner", text: "We agree on principles. But we are concerned about sharing sensitive data." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Việc chia sẻ dữ liệu phải tuân theo biện pháp bảo vệ nghiêm ngặt, và chỉ dữ liệu đã ẩn danh mới được chia sẻ.", expect: "Data sharing must follow strict safeguards, and only anonymised data will be shared.", keywords: ["sharing", "safeguards", "anonymised", "shared"], hint: "Data sharing must follow...", tip: "Đáp lại lo ngại bằng must follow strict safeguards + giới hạn rõ (only anonymised data).", chunks: ["Data sharing must follow strict safeguards"] },
+        { from: "partner", text: "That addresses our concern. What about funding and authorship?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng tôi đề nghị chia kinh phí đều nhau. Quyền tác giả sẽ phản ánh đóng góp thực tế. Chúng ta hãy ghi lại điều này trong biên bản ghi nhớ.", expect: "We suggest splitting the funding equally. Authorship will reflect actual contribution. Let us record this in a memorandum.", keywords: ["splitting", "funding", "authorship", "memorandum"], hint: "We suggest splitting...", tip: "Chốt đàm phán bằng ba câu ngắn: chia kinh phí, quyền tác giả, ghi vào biên bản ghi nhớ.", chunks: ["We suggest splitting the funding equally", "Authorship will reflect actual contribution", "Let us record this in a memorandum"] }
+      ]
+    },
+    {
+      title: "Presenting a Policy Brief to Senior Officials - Trình bày bản tóm tắt chính sách với quan chức cấp cao",
+      setting: "Bạn trình bày bản tóm tắt chính sách về giảm rác thực phẩm với quan chức cấp cao: nêu vấn đề trong một phút, đề xuất ba giải pháp theo thứ tự ưu tiên và xin quyết định về bước đầu tiên.",
+      partner: "Quan chức cấp cao",
+      goal: "Trình bày ngắn gọn: vấn đề, ba giải pháp theo thứ tự ưu tiên và xin quyết định.",
+      band: "Band 7.5+",
+      chunks: ["The core problem is food waste in cities", "Our first recommendation is", "Our second and third recommendations are", "We seek a decision on the first step", "Thank you for your attention"],
+      turns: [
+        { from: "partner", text: "You have three minutes. What is the core problem?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vấn đề cốt lõi là rác thực phẩm ở thành phố: thực phẩm tốt vẫn bị vứt trong khi nhiều người cần nó.", expect: "The core problem is food waste in cities: good food is still thrown away while many people need it.", keywords: ["core", "problem", "waste", "cities"], hint: "The core problem is...", tip: "Trình bày với quan chức cấp cao mở bằng core problem trong một câu, kèm nghịch lý (good food thrown away while people need it).", chunks: ["The core problem is food waste in cities"] },
+        { from: "partner", text: "What do you recommend?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Khuyến nghị đầu tiên của chúng tôi là cho phép cửa hàng bán thực phẩm giảm giá gần giờ đóng cửa. Khuyến nghị thứ hai và thứ ba là mở rộng ngân hàng thực phẩm và dạy lập kế hoạch bữa ăn ở trường học.", expect: "Our first recommendation is to allow shops to sell food at a reduced price near closing time. Our second and third recommendations are to expand food banks and to teach meal planning in schools.", keywords: ["recommendation", "reduced", "banks", "planning"], hint: "Our first recommendation is...", tip: "Nêu giải pháp theo thứ tự ưu tiên: first recommendation rồi second and third — quan chức thấy rõ đâu là bước đầu tiên.", chunks: ["Our first recommendation is", "Our second and third recommendations are"] },
+        { from: "partner", text: "These are sensible. What do you need from us?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng tôi xin quyết định về bước đầu tiên trong tháng này. Cảm ơn bạn đã lắng nghe.", expect: "We seek a decision on the first step within this month. Thank you for your attention.", keywords: ["decision", "step", "month", "attention"], hint: "We seek a decision...", tip: "Kết thúc trình bày chính sách bằng lời xin quyết định cụ thể (first step, within this month) thay vì chỉ cảm ơn chung chung.", chunks: ["We seek a decision on the first step", "Thank you for your attention"] }
+      ]
+    },
+    {
+      title: "Handling a Media Interview After a Crisis - Trả lời phỏng vấn báo chí sau khủng hoảng",
+      setting: "Sau sự cố rò rỉ dữ liệu nhỏ ở công ty, bạn trả lời phỏng vấn báo chí: thừa nhận sự cố, nêu rõ phạm vi ảnh hưởng, giải thích biện pháp khắc phục và cam kết minh bạch, không đổ lỗi hay suy đoán.",
+      partner: "Phóng viên",
+      goal: "Trả lời khủng hoảng: thừa nhận, nêu phạm vi, giải thích khắc phục và cam kết minh bạch.",
+      band: "Band 7.5+",
+      chunks: ["We acknowledge that an incident occurred", "The incident affected a limited number of accounts", "We have taken immediate steps to secure the system", "We will keep the public informed", "Thank you for your questions"],
+      turns: [
+        { from: "partner", text: "Can you confirm reports of a data leak at your company?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng tôi thừa nhận đã xảy ra sự cố. Sự cố ảnh hưởng tới một số lượng tài khoản hạn chế.", expect: "We acknowledge that an incident occurred. The incident affected a limited number of accounts.", keywords: ["acknowledge", "incident", "affected", "accounts"], hint: "We acknowledge that...", tip: "Trả lời khủng hoảng mở bằng acknowledge (thừa nhận) + phạm vi hạn chế (limited number) — không phủ nhận, không phóng đại.", chunks: ["We acknowledge that an incident occurred", "The incident affected a limited number of accounts"] },
+        { from: "partner", text: "What have you done about it?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng tôi đã thực hiện các bước ngay lập tức để bảo mật hệ thống và thông báo cho những người dùng bị ảnh hưởng.", expect: "We have taken immediate steps to secure the system and to notify the affected users.", keywords: ["immediate", "steps", "secure", "notify"], hint: "We have taken immediate steps...", tip: "Nêu biện pháp khắc phục bằng have taken immediate steps + hai hành động: secure the system, notify users.", chunks: ["We have taken immediate steps to secure the system"] },
+        { from: "partner", text: "Will you keep the public informed?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vâng, chúng tôi sẽ liên tục thông tin cho công chúng khi có thêm thông tin. Cảm ơn bạn đã đặt câu hỏi.", expect: "Yes, we will keep the public informed as more information becomes available. Thank you for your questions.", keywords: ["public", "informed", "information", "questions"], hint: "Yes, we will keep...", tip: "Kết thúc phỏng vấn khủng hoảng bằng cam kết minh bạch liên tục (keep informed as more information becomes available).", chunks: ["We will keep the public informed", "Thank you for your questions"] }
+      ]
+    },
+    {
+      title: "Chairing an International Conference Panel - Điều hành phiên thảo luận hội nghị quốc tế",
+      setting: "Bạn điều hành phiên thảo luận quốc tế về giáo dục và công nghệ với ba diễn giả. Bạn giới thiệu chủ đề, mời từng diễn giả phát biểu ngắn, mời câu hỏi từ khán giả và tóm tắt kết luận.",
+      partner: "Diễn giả hội nghị",
+      goal: "Điều hành hội nghị: giới thiệu, mời diễn giả, mời câu hỏi và tóm tắt.",
+      band: "Band 7.5+",
+      chunks: ["Welcome to this panel on education and technology", "Our first speaker will address", "We now open the floor to questions", "To conclude, our speakers agree that", "Thank you to our speakers and audience"],
+      turns: [
+        { from: "partner", text: "Good afternoon. Shall we begin the panel?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chào mừng mọi người tới phiên thảo luận về giáo dục và công nghệ. Diễn giả đầu tiên của chúng ta sẽ trình bày về học tập trực tuyến.", expect: "Welcome to this panel on education and technology. Our first speaker will address online learning.", keywords: ["welcome", "panel", "education", "technology"], hint: "Welcome to this panel...", tip: "Điều hành hội nghị mở bằng Welcome to this panel on + chủ đề, rồi giới thiệu diễn giả đầu tiên và chủ đề của họ.", chunks: ["Welcome to this panel on education and technology", "Our first speaker will address"] },
+        { from: "partner", text: "Thank you. Online learning can expand access, but it cannot replace teachers." },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Cảm ơn bạn. Bây giờ chúng ta mở sàn cho câu hỏi từ khán giả.", expect: "Thank you. We now open the floor to questions from the audience.", keywords: ["open", "floor", "questions", "audience"], hint: "Thank you. We now open...", tip: "Chuyển sang phần hỏi đáp bằng open the floor to questions from the audience — cụm từ chuẩn của điều hành hội nghị.", chunks: ["We now open the floor to questions"] },
+        { from: "partner", text: "A question from the audience: will technology replace teachers?" },
+        { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Để kết luận, các diễn giả của chúng ta đồng ý rằng công nghệ nên hỗ trợ giáo viên chứ không thay thế họ. Cảm ơn các diễn giả và khán giả.", expect: "To conclude, our speakers agree that technology should support teachers rather than replace them. Thank you to our speakers and audience.", keywords: ["conclude", "agree", "support", "audience"], hint: "To conclude, our speakers agree...", tip: "Kết thúc phiên thảo luận bằng To conclude + điểm đồng thuận (agree that) + cảm ơn cả diễn giả và khán giả.", chunks: ["To conclude, our speakers agree that", "Thank you to our speakers and audience"] }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.5+ — Nghe dài (3) ----------------
+  CONTENT.listeningPlus.push.apply(CONTENT.listeningPlus, [
+    {
+      section: "Section 4",
+      band: "Band 7.5+",
+      topic: "Bài giảng về đạo đức của chỉnh sửa gene",
+      text: "Today, I would like to discuss one of the most difficult ethical questions in modern science: should we edit the genes of future children? The technology, known as gene editing, allows scientists to change specific parts of DNA with remarkable precision. In principle, it could prevent serious inherited diseases before a child is even born. That prospect explains much of the enthusiasm for the technology. However, the same precision raises profound concerns. A change made to an embryo would be passed on to all future generations, who cannot consent to it. Moreover, the line between preventing disease and enhancing traits — such as intelligence or appearance — is far from clear. Once the technology is permitted for medical reasons, pressure to use it for enhancement may be difficult to resist. Different societies have responded differently. Some have banned heritable gene editing entirely, while others allow research under strict conditions. What is striking is that there is no global agreement, even though the consequences of a decision in one country could affect the whole human gene pool. In my view, the debate should not focus only on what is technically possible. It should focus on what kind of future we want to create, and who should have the right to decide it.",
+      questions: [
+        { type: "MC", q: "What could gene editing prevent in principle?", o: ["All diseases", "Serious inherited diseases before a child is born", "Ageing", "Injuries"], a: 1, why: "Bài giảng nói về nguyên tắc, chỉnh sửa gene có thể ngăn ngừa bệnh di truyền nghiêm trọng trước khi đứa trẻ ra đời." },
+        { type: "MC", q: "Why is editing an embryo particularly concerning?", o: ["Because it is expensive", "Because the change would be passed to all future generations who cannot consent", "Because it is slow", "Because it only works on adults"], a: 1, why: "Thay đổi ở phôi sẽ được truyền cho mọi thế hệ tương lai, những người không thể đồng ý với nó." },
+        { type: "MATCH", q: "Which distinction is described as far from clear?", o: ["Between research and teaching", "Between preventing disease and enhancing traits", "Between medicine and surgery"], a: 1, why: "Ranh giới giữa ngăn ngừa bệnh và tăng cường đặc điểm — như trí thông minh hay ngoại hình — còn xa mới rõ ràng." },
+        { type: "COMP", q: "Some countries have banned heritable gene editing ___.", answer: "entirely", why: "Một số nước đã cấm hoàn toàn chỉnh sửa gene di truyền, trong khi số khác cho phép nghiên cứu với điều kiện nghiêm ngặt." },
+        { type: "TF", q: "There is a global agreement on heritable gene editing.", o: ["True", "False"], a: 1, why: "Câu này sai vì điều đáng chú ý là không có thỏa thuận toàn cầu, dù hậu quả của quyết định ở một nước có thể ảnh hưởng tới toàn bộ vốn gene con người." }
+      ]
+    },
+    {
+      section: "Section 4",
+      band: "Band 7.5+",
+      topic: "Bài giảng về nền kinh tế ban đêm và thành phố 24 giờ",
+      text: "We usually think of a city's economy as daytime: offices, shops and factories. Yet a growing share of economic activity now takes place after dark. Restaurants, theatres, hospitals, transport and delivery all operate through the night, creating what researchers call the night-time economy. This economy has clear benefits. It provides jobs for people who prefer or need to work at night, and it offers services to residents whose lives do not follow a standard daytime schedule. A city that functions at night can also feel safer, because streets with people, lights and open businesses tend to deter crime more effectively than empty, dark streets. However, the night-time economy also creates tensions. Residents who live near busy nightlife areas may suffer from noise and disturbed sleep, which can affect their health and work. Night workers themselves may face health risks from disrupted sleep patterns and limited access to services that close at night, such as childcare. Policymakers, therefore, face a balancing act. They must support the benefits of a 24-hour city while protecting residents' and workers' sleep. Some cities have appointed night mayors to mediate between businesses, residents and workers. Whether this model succeeds may determine whether the 24-hour city becomes a sign of vitality or a source of chronic conflict.",
+      questions: [
+        { type: "MC", q: "What is the night-time economy?", o: ["Only bars and clubs", "Economic activity after dark, including restaurants, theatres, hospitals, transport and delivery", "Only night markets", "Only emergency services"], a: 1, why: "Bài giảng liệt kê: nhà hàng, nhà hát, bệnh viện, dịch vụ vận tải và mạng lưới giao hàng đều hoạt động suốt đêm, tạo nên nền kinh tế ban đêm." },
+        { type: "MC", q: "Why can a city functioning at night feel safer?", o: ["Because police work more at night", "Because streets with people, lights and open businesses deter crime more effectively", "Because criminals sleep at night", "Because cameras work better at night"], a: 1, why: "Thành phố hoạt động về đêm có thể cảm thấy an toàn hơn vì đường phố có người, ánh sáng và cửa hàng mở có xu hướng ngăn chặn tội phạm hiệu quả hơn đường phố trống và tối." },
+        { type: "MATCH", q: "Which health risk for night workers is mentioned?", o: ["Back pain", "Health risks from disrupted sleep patterns", "Eye strain"], a: 1, why: "Người làm việc ban đêm có thể đối mặt rủi ro sức khỏe từ mô hình giấc ngủ bị phá vỡ và hạn chế tiếp cận dịch vụ đóng cửa về đêm như giữ trẻ." },
+        { type: "COMP", q: "Some cities have appointed night ___ to mediate between businesses, residents and workers.", answer: "mayors", why: "Một số thành phố đã bổ nhiệm thị trưởng ban đêm để hòa giải giữa doanh nghiệp, cư dân và người lao động." },
+        { type: "TF", q: "The night-time economy has only benefits and no tensions.", o: ["True", "False"], a: 1, why: "Câu này sai vì nền kinh tế ban đêm cũng tạo ra căng thẳng: cư dân gần khu vực giải trí về đêm có thể chịu tiếng ồn và giấc ngủ bị quấy rầy." }
+      ]
+    },
+    {
+      section: "Section 3",
+      band: "Band 7.5+",
+      topic: "Trao đổi học thuật về độ tin cậy của khảo sát trực tuyến",
+      text: "A: I am worried about the reliability of our online survey. We received 2000 responses in two days, which seems too fast. B: That speed is suspicious, but it does not necessarily mean the data is useless. What concerns you most? A: First, we cannot verify who responded. The same person could answer several times, and we have no way to check their age or background. B: That is a valid concern for open online surveys. However, we can look for patterns: identical answers in a very short time, or responses from the same device, may indicate duplicates. A: We did find 150 responses that were completed in under one minute, which is almost impossible for a 30-question survey. B: Those should probably be excluded. What about the rest of the data? A: The remaining responses show a consistent pattern across age groups, which suggests that most respondents took the survey seriously. B: That is reassuring. Still, we should acknowledge the limitation in our report. We can state clearly that the sample was self-selected, not random, and therefore the results cannot be generalised to the whole population. A: I agree. Transparency about limitations is better than pretending the data is perfect. B: Exactly. A survey with honest limitations is far more credible than one that hides them.",
+      questions: [
+        { type: "MC", q: "Why is the researcher worried about the survey?", o: ["Because too few people responded", "Because 2000 responses arrived in two days, which seems too fast", "Because the survey was too long", "Because nobody answered"], a: 1, why: "Nhà nghiên cứu lo lắng vì khảo sát nhận 2000 phản hồi trong hai ngày, có vẻ quá nhanh." },
+        { type: "MC", q: "Which responses should probably be excluded?", o: ["Responses from old people", "150 responses completed in under one minute", "Responses from students", "The first 100 responses"], a: 1, why: "Nhóm tìm thấy 150 phản hồi hoàn thành dưới một phút, gần như không thể với khảo sát 30 câu hỏi, nên có lẽ cần loại bỏ." },
+        { type: "MATCH", q: "What suggests most respondents took the survey seriously?", o: ["The high number of responses", "A consistent pattern across age groups in the remaining responses", "The short completion time"], a: 1, why: "Các phản hồi còn lại cho thấy mô hình nhất quán giữa các nhóm tuổi, cho thấy hầu hết người trả lời đã làm khảo sát nghiêm túc." },
+        { type: "COMP", q: "The sample was self-selected, not ___, so results cannot be generalised.", answer: "random", why: "Báo cáo nên nêu rõ mẫu tự chọn, không phải ngẫu nhiên, nên kết quả không thể khái quát cho toàn bộ dân số." },
+        { type: "TF", q: "The researchers agree that hiding limitations makes a survey more credible.", o: ["True", "False"], a: 1, why: "Câu này sai vì hai người đồng ý rằng minh bạch về hạn chế tốt hơn giả vờ dữ liệu hoàn hảo, và khảo sát có hạn chế trung thực đáng tin hơn nhiều so với khảo sát che giấu chúng." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.5+ — Nói (3) ----------------
+  CONTENT.speaking.push.apply(CONTENT.speaking, [
+    {
+      partNum: 2,
+      topicStd: "Bản thân và giải quyết vấn đề",
+      part: "Part 2",
+      topic: "Describe a complex problem you solved - Mô tả một vấn đề phức tạp bạn đã giải quyết",
+      band: "Band 7.5+",
+      lines: [
+        { who: "Cue card", en: "Describe a complex problem you solved. You should say: what the problem was, why it was complex, what steps you took, and explain what you learned from the experience.", vi: "Hãy mô tả một vấn đề phức tạp bạn đã giải quyết. Bạn nên nói: vấn đề đó là gì, vì sao nó phức tạp, bạn đã thực hiện những bước nào, và giải thích bạn đã học được gì từ trải nghiệm đó." },
+        { who: "Candidate", en: "I would like to talk about a project at work where our team had to reduce delivery delays without increasing costs.", vi: "Tôi muốn nói về một dự án ở nơi làm việc, nơi nhóm của tôi phải giảm chậm giao hàng mà không tăng chi phí." },
+        { who: "Candidate", en: "The problem was complex because it involved several departments, each with its own priorities, and because any change in one area affected the others.", vi: "Vấn đề phức tạp vì nó liên quan tới nhiều phòng ban, mỗi phòng có ưu tiên riêng, và vì bất kỳ thay đổi nào ở một khu vực cũng ảnh hưởng tới các khu vực khác." },
+        { who: "Candidate", en: "We began by mapping the whole delivery process and identifying the two stages where delays were longest. Then we tested a small change in one warehouse before applying it more widely.", vi: "Chúng tôi bắt đầu bằng cách vẽ toàn bộ quy trình giao hàng và xác định hai giai đoạn chậm nhất. Sau đó chúng tôi thử một thay đổi nhỏ ở một kho trước khi áp dụng rộng rãi hơn." },
+        { who: "Candidate", en: "The result was a 20 percent reduction in delays within three months. What I learned is that complex problems are best tackled by breaking them into smaller parts and testing solutions on a small scale first.", vi: "Kết quả là chậm giao hàng giảm 20% trong ba tháng. Điều tôi học được là vấn đề phức tạp nên được xử lý tốt nhất bằng cách chia thành phần nhỏ hơn và thử giải pháp ở quy mô nhỏ trước." }
+      ],
+      quiz: [
+        { q: "Vì sao vấn đề phức tạp, theo Candidate?", o: ["Vì thiếu tiền", "Vì liên quan nhiều phòng ban với ưu tiên riêng, và thay đổi ở một khu vực ảnh hưởng tới khu vực khác", "Vì thiếu nhân viên"], a: 1, why: "Candidate nói: it involved several departments, each with its own priorities, and any change in one area affected the others." },
+        { q: "Nhóm đã bắt đầu bằng bước nào?", o: ["Tăng chi phí", "Vẽ toàn bộ quy trình giao hàng và xác định hai giai đoạn chậm nhất", "Sa thải nhân viên"], a: 1, why: "Candidate nói: We began by mapping the whole delivery process and identifying the two stages where delays were longest." },
+        { q: "Cụm 'tackled by breaking them into smaller parts' có nghĩa là gì?", o: ["xử lý bằng cách chia thành phần nhỏ hơn", "bỏ qua vấn đề", "giao vấn đề cho người khác"], a: 0, why: "Tackled by breaking into smaller parts nghĩa là xử lý bằng cách chia thành phần nhỏ hơn." }
+      ]
+    },
+    {
+      partNum: 3,
+      topicStd: "Toàn cầu hóa và văn hóa",
+      part: "Part 3",
+      topic: "Globalisation and Local Identity - Toàn cầu hóa và bản sắc địa phương",
+      band: "Band 7.5+",
+      lines: [
+        { who: "Examiner", en: "Does globalisation threaten local cultures?", vi: "Toàn cầu hóa có đe dọa văn hóa địa phương không?" },
+        { who: "Candidate", en: "It can, but the effect is not uniform. In some places, global brands and media have displaced local traditions. In others, global platforms have actually helped local artists reach a wider audience than ever before.", vi: "Nó có thể, nhưng tác động không đồng đều. Ở một số nơi, thương hiệu và truyền thông toàn cầu đã thay thế truyền thống địa phương. Ở nơi khác, nền tảng toàn cầu thực tế đã giúp nghệ sĩ địa phương tiếp cận khán giả rộng hơn bao giờ hết." },
+        { who: "Examiner", en: "Should governments protect local cultures?", vi: "Chính phủ có nên bảo vệ văn hóa địa phương không?" },
+        { who: "Candidate", en: "To some extent, yes — for example, by funding local arts and teaching local languages in schools. However, protection should not become isolation. A culture that never changes risks becoming a museum piece rather than a living tradition.", vi: "Ở một mức độ nào đó, có — chẳng hạn bằng cách tài trợ nghệ thuật địa phương và dạy ngôn ngữ địa phương ở trường học. Tuy nhiên, bảo vệ không nên trở thành cô lập. Một nền văn hóa không bao giờ thay đổi có nguy cơ trở thành hiện vật bảo tàng thay vì truyền thống sống." },
+        { who: "Examiner", en: "Will local identities survive in a globalised world?", vi: "Bản sắc địa phương có tồn tại được trong thế giới toàn cầu hóa không?" },
+        { who: "Candidate", en: "I believe they will, but in changed form. Identities have always adapted to new influences, and globalisation is simply the latest, albeit the fastest, wave of influence. The local cultures that survive will be those that adapt without losing their core values.", vi: "Tôi tin chúng sẽ tồn tại, nhưng dưới hình thức đã thay đổi. Bản sắc luôn thích nghi với ảnh hưởng mới, và toàn cầu hóa đơn giản là làn sóng ảnh hưởng mới nhất, dù là nhanh nhất. Văn hóa địa phương tồn tại được sẽ là những văn hóa thích nghi mà không đánh mất giá trị cốt lõi." }
+      ],
+      quiz: [
+        { q: "Theo Candidate, tác động của toàn cầu hóa lên văn hóa địa phương như thế nào?", o: ["Luôn tiêu cực", "Không đồng đều: có nơi truyền thống bị thay thế, có nơi nghệ sĩ địa phương tiếp cận khán giả rộng hơn", "Không có tác động gì"], a: 1, why: "Candidate nói: the effect is not uniform — có nơi global brands displaced local traditions, có nơi global platforms helped local artists reach a wider audience." },
+        { q: "Theo Candidate, bảo vệ văn hóa không nên trở thành điều gì?", o: ["Tài trợ nghệ thuật", "Sự cô lập", "Dạy ngôn ngữ địa phương"], a: 1, why: "Candidate nói: protection should not become isolation." },
+        { q: "Cụm 'a museum piece rather than a living tradition' có nghĩa là gì?", o: ["hiện vật bảo tàng thay vì truyền thống sống", "truyền thống sống động", "bảo tàng nghệ thuật"], a: 0, why: "Cụm này đối chiếu a museum piece (hiện vật bảo tàng, tĩnh) với a living tradition (truyền thống sống)." }
+      ]
+    },
+    {
+      partNum: 3,
+      topicStd: "Khoa học và đạo đức",
+      part: "Part 3",
+      topic: "Science, Ethics and Society - Khoa học, đạo đức và xã hội",
+      band: "Band 7.5+",
+      lines: [
+        { who: "Examiner", en: "Should there be limits on scientific research?", vi: "Có nên đặt giới hạn cho nghiên cứu khoa học không?" },
+        { who: "Candidate", en: "Yes, but the limits should be based on risk and consent, not on fear alone. Research that could cause irreversible harm, or that affects people who cannot consent, needs particularly careful oversight.", vi: "Có, nhưng giới hạn nên dựa trên rủi ro và sự đồng ý, chứ không chỉ dựa trên nỗi sợ. Nghiên cứu có thể gây hại không thể đảo ngược, hoặc ảnh hưởng tới những người không thể đồng ý, cần được giám sát đặc biệt cẩn thận." },
+        { who: "Examiner", en: "Who should decide these limits: scientists, governments or the public?", vi: "Ai nên quyết định các giới hạn này: nhà khoa học, chính phủ hay công chúng?" },
+        { who: "Candidate", en: "No single group should decide alone. Scientists understand the technical risks, governments can enforce rules, and the public has a legitimate stake in decisions that affect future generations. A balanced process needs all three.", vi: "Không nhóm đơn lẻ nào nên tự quyết định. Nhà khoa học hiểu rủi ro kỹ thuật, chính phủ có thể thực thi quy tắc, và công chúng có lợi ích chính đáng trong các quyết định ảnh hưởng tới thế hệ tương lai. Một quy trình cân bằng cần cả ba." },
+        { who: "Examiner", en: "Does the public understand science well enough to take part in such decisions?", vi: "Công chúng có hiểu khoa học đủ để tham gia các quyết định như vậy không?" },
+        { who: "Candidate", en: "Not always in technical detail, but the public does not need to understand every mechanism to judge values: whether a technology is fair, who benefits and who bears the risk. Those are ethical questions, not purely technical ones.", vi: "Không phải lúc nào cũng ở chi tiết kỹ thuật, nhưng công chúng không cần hiểu mọi cơ chế để phán xét giá trị: liệu công nghệ có công bằng không, ai hưởng lợi và ai chịu rủi ro. Đó là câu hỏi đạo đức, không thuần túy kỹ thuật." }
+      ],
+      quiz: [
+        { q: "Theo Candidate, giới hạn nghiên cứu nên dựa trên điều gì?", o: ["Chỉ dựa trên nỗi sợ", "Dựa trên rủi ro và sự đồng ý", "Dựa trên chi phí"], a: 1, why: "Candidate nói: limits should be based on risk and consent, not on fear alone." },
+        { q: "Theo Candidate, ai nên quyết định giới hạn?", o: ["Chỉ nhà khoa học", "Chỉ chính phủ", "Cả ba: nhà khoa học, chính phủ và công chúng"], a: 2, why: "Candidate nói: No single group should decide alone; a balanced process needs all three." },
+        { q: "Công chúng không cần hiểu mọi cơ chế để phán xét điều gì, theo Candidate?", o: ["Chi tiết kỹ thuật", "Giá trị: công nghệ có công bằng không, ai hưởng lợi và ai chịu rủi ro", "Cách viết báo cáo"], a: 1, why: "Candidate nói: the public does not need to understand every mechanism to judge values: whether a technology is fair, who benefits and who bears the risk." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.5+ — Ngữ pháp (2) ----------------
+  CONTENT.grammar.push.apply(CONTENT.grammar, [
+    {
+      fam: "Cấu trúc nhấn mạnh và đặc biệt",
+      hook: "Muốn viết câu phức nhiều tầng mà không làm người đọc lạc, chỉ cần giữ một ý chính và để các mệnh đề phụ phục vụ nó.",
+      level: "Band 7.5+",
+      name: "Câu phức nhiều tầng với mệnh đề lồng nhau",
+      explain: "Nhìn hai câu này trước nhé: The policy, which was introduced to reduce waste, failed because shops, which feared losing customers, refused to cooperate. (Chính sách, vốn được đưa ra để giảm rác, đã thất bại vì các cửa hàng, vốn sợ mất khách, từ chối hợp tác.) The book that I bought yesterday, which my friend recommended, is about cities that grew along ancient trade routes. (Cuốn sách tôi mua hôm qua, mà bạn tôi giới thiệu, nói về các thành phố mọc lên dọc tuyến thương mại cổ.) Sau ví dụ là quy tắc: câu nhiều tầng lồng mệnh đề quan hệ vào trong mệnh đề chính. Để câu không rối, mỗi mệnh đề phụ phải bám sát danh từ ngay trước nó, và ý chính của câu (policy failed; book is about cities) phải đọc được ngay khi bỏ các mệnh đề phụ đi. Lỗi hay gặp nhất là lồng quá nhiều tầng khiến người đọc quên mất chủ ngữ chính là ai.",
+      examples: ["The policy, which was introduced to reduce waste, failed because shops refused to cooperate.", "The book that I bought yesterday is about cities that grew along ancient trade routes.", "Cities that understand their history are less likely to erase it."],
+      tip: "Hãy kiểm tra bằng cách bỏ mọi mệnh đề phụ: nếu câu chính còn lại vẫn trọn nghĩa và rõ ràng thì câu nhiều tầng của bạn đã đạt.",
+      model: "The attention that readers give to news, which is now fragmented by feeds, shapes what journalists choose to publish.",
+      modelVi: "Sự chú ý độc giả dành cho tin tức, vốn nay bị phân mảnh bởi nguồn tin, định hình những gì nhà báo chọn đăng.",
+      quiz: [
+        { q: "Trong câu 'The policy, which was introduced to reduce waste, failed', ý chính là:", o: ["The policy was introduced", "The policy failed", "Waste was reduced"], a: 1, why: "Bỏ mệnh đề phụ which was introduced to reduce waste, câu chính còn lại là The policy failed." },
+        { q: "Mệnh đề 'which feared losing customers' trong ví dụ mô tả danh từ nào?", o: ["policy", "shops", "customers"], a: 1, why: "Mệnh đề quan hệ đứng ngay sau danh từ nó mô tả: shops, which feared losing customers." },
+        { q: "Trong câu 'The book that I bought yesterday is about cities', mệnh đề 'that I bought yesterday' mô tả:", o: ["cities", "book", "yesterday"], a: 1, why: "That I bought yesterday đứng sau và mô tả book." },
+        { q: "Lỗi hay gặp nhất khi viết câu nhiều tầng là:", o: ["Dùng quá ít mệnh đề", "Lồng quá nhiều tầng khiến người đọc quên chủ ngữ chính", "Dùng câu quá ngắn"], a: 1, why: "Phần explain nêu rõ lỗi hay gặp nhất là lồng quá nhiều tầng khiến người đọc quên mất chủ ngữ chính là ai." },
+        { q: "Chọn câu nhiều tầng đúng:", o: ["The city that grew along the river, which traders used, is now a port.", "The city that grew along the river which traders used is now a port, which.", "The city, that grew along the river, is now a port."], a: 0, why: "Mệnh đề that grew along the river xác định city, mệnh đề which traders used phụ thêm về river và đặt giữa dấu phẩy đúng cách." },
+        { q: "Câu nào sai?", o: ["Cities that understand their history are less likely to erase it.", "Cities, that understand their history, are less likely to erase it.", "The book, which my friend recommended, is excellent."], a: 1, why: "Mệnh đề that understand their history là xác định (xác định cities nào) nên không đặt giữa hai dấu phẩy." },
+        { q: "Bỏ mệnh đề phụ trong 'The attention that readers give to news shapes publishing', câu chính là:", o: ["The attention shapes publishing.", "Readers give attention.", "News shapes publishing."], a: 0, why: "Bỏ that readers give to news, câu chính còn lại là The attention shapes publishing." },
+        { q: "Mệnh đề quan hệ nên đứng ở đâu?", o: ["Ở cuối câu, xa danh từ nó mô tả", "Ngay sau danh từ nó mô tả", "Ở đầu câu, trước chủ ngữ"], a: 1, why: "Quy tắc: mỗi mệnh đề phụ phải bám sát danh từ ngay trước nó." }
+      ]
+    },
+    {
+      fam: "Giới từ và liên từ",
+      hook: "Muốn nối ý một cách tinh tế ở band cao, đừng chỉ dùng but và however — hãy dùng nevertheless, notwithstanding và albeit.",
+      level: "Band 7.5+",
+      name: "Từ nối học thuật tinh tế: nevertheless, notwithstanding, albeit",
+      explain: "Nhìn ba câu này trước nhé: The plan is expensive. Nevertheless, it is worth trying. (Kế hoạch tốn kém. Tuy vậy, nó đáng thử.) Notwithstanding the cost, the plan is worth trying. (Bất chấp chi phí, kế hoạch đáng thử.) The plan, albeit expensive, is worth trying. (Kế hoạch, dù tốn kém, đáng thử.) Sau ví dụ là quy tắc: nevertheless là trạng từ nối, đứng đầu câu hoặc sau chủ ngữ, nghĩa là tuy vậy; notwithstanding là giới từ, đứng trước danh từ hoặc cụm danh từ, nghĩa là bất chấp; albeit là liên từ rút gọn, đứng trước tính từ hoặc cụm tính từ, nghĩa là dù. Ba từ này cùng diễn tả nhượng bộ nhưng khác nhau về vị trí và dạng từ đi kèm — nhầm vị trí là lỗi hay gặp nhất.",
+      examples: ["The plan is expensive. Nevertheless, it is worth trying.", "Notwithstanding the cost, the plan is worth trying.", "The plan, albeit expensive, is worth trying."],
+      tip: "Hãy nhớ theo dạng từ đi kèm: nevertheless + cả câu, notwithstanding + danh từ, albeit + tính từ.",
+      model: "The survey, albeit limited in size, provides useful insights. Notwithstanding its limitations, the report is widely cited. Nevertheless, its conclusions should be treated with care.",
+      modelVi: "Khảo sát, dù quy mô hạn chế, cung cấp thông tin hữu ích. Bất chấp hạn chế của nó, báo cáo được trích dẫn rộng rãi. Tuy vậy, kết luận của nó nên được xử lý thận trọng.",
+      quiz: [
+        { q: "The plan is expensive. ___, it is worth trying.", o: ["Albeit", "Notwithstanding", "Nevertheless"], a: 2, why: "Nevertheless là trạng từ nối đứng đầu câu thứ hai, nghĩa là tuy vậy." },
+        { q: "___ the cost, the plan is worth trying.", o: ["Nevertheless", "Notwithstanding", "Albeit"], a: 1, why: "Notwithstanding là giới từ đứng trước danh từ the cost, nghĩa là bất chấp." },
+        { q: "The plan, ___ expensive, is worth trying.", o: ["nevertheless", "notwithstanding", "albeit"], a: 2, why: "Albeit đứng trước tính từ expensive trong mệnh đề rút gọn." },
+        { q: "The survey, ___ limited in size, provides useful insights.", o: ["albeit", "nevertheless", "notwithstanding the"], a: 0, why: "Albeit + cụm tính từ limited in size." },
+        { q: "Chọn câu đúng:", o: ["Albeit the cost, the plan is worth trying.", "Notwithstanding the cost, the plan is worth trying.", "Nevertheless the cost, the plan is worth trying."], a: 1, why: "Trước danh từ the cost phải dùng giới từ notwithstanding." },
+        { q: "Câu nào sai?", o: ["Nevertheless, the report is widely cited.", "Notwithstanding its limitations, the report is widely cited.", "The report, nevertheless expensive, is widely cited."], a: 2, why: "Trước tính từ expensive phải dùng albeit, không dùng nevertheless." },
+        { q: "Từ nào có nghĩa là bất chấp và đi với danh từ?", o: ["nevertheless", "notwithstanding", "albeit"], a: 1, why: "Notwithstanding nghĩa là bất chấp và là giới từ đi với danh từ." },
+        { q: "Từ nào có nghĩa là tuy vậy và đứng đầu câu?", o: ["albeit", "notwithstanding", "nevertheless"], a: 2, why: "Nevertheless nghĩa là tuy vậy và thường đứng đầu câu thứ hai." }
+      ]
+    }
+  ]);
+
+  // ---------------- Band 7.5+ — Luyện viết (2) + Gõ câu (2) ----------------
+  CONTENT.writingDrills.push.apply(CONTENT.writingDrills, [
+    {
+      band: "Band 7.5+",
+      kind: "combine",
+      title: "Nối câu bằng notwithstanding: nhượng bộ tinh tế",
+      prompt: "Nối hai câu thành một câu bằng notwithstanding. / Combine the sentences with notwithstanding.",
+      given: "The plan is expensive. / It is worth trying.",
+      model: "Notwithstanding the cost, the plan is worth trying.",
+      note: "Kỹ thuật này đổi câu 'The plan is expensive' thành cụm danh từ the cost sau notwithstanding, tạo câu nhượng bộ tinh tế mức band cao."
+    },
+    {
+      band: "Band 7.5+",
+      kind: "order",
+      title: "Sắp xếp câu phức nhiều tầng",
+      prompt: "Sắp xếp các mảnh thành câu phức nhiều tầng đúng. / Put the parts in the correct order for a multi-clause sentence.",
+      given: "is about cities / The book / that I bought yesterday / that grew along ancient trade routes",
+      model: "The book that I bought yesterday is about cities that grew along ancient trade routes.",
+      note: "Kỹ thuật này đặt mỗi mệnh đề quan hệ ngay sau danh từ nó mô tả: that I bought yesterday sau book, that grew along ancient trade routes sau cities."
+    }
+  ]);
+  CONTENT.typing.push.apply(CONTENT.typing, [
+    {
+      level: "Band 7.5+",
+      title: "Câu học thuật sắc thái và nhượng bộ tinh tế",
+      sentences: [
+        "Notwithstanding the cost, the plan is worth trying for its long-term benefits.",
+        "The policy, albeit expensive, nevertheless deserves serious consideration.",
+        "Attention, in this view, is not merely a personal virtue but a shared resource.",
+        "What is striking is that there is no global agreement on this question.",
+        "The past is not merely preserved in museums but embedded in street plans.",
+        "A culture that never changes risks becoming a museum piece rather than a living tradition.",
+        "It would be a mistake to treat this as a purely technological problem.",
+        "The most promising responses are likely to be cultural as much as technical.",
+        "Until companies take fuller accounting seriously, the price will remain incomplete.",
+        "In conclusion, the fairest design combines efficiency with deliberate compensation."
+      ]
+    },
+    {
+      level: "Band 7.5+",
+      title: "Câu kết luận có chiều sâu cho Task 2 band cao",
+      sentences: [
+        "In conclusion, neither extreme is satisfactory when the issue affects millions of people.",
+        "A system that combines both approaches would be faster without sacrificing fairness.",
+        "The move away from print is, in itself, neither good nor bad; it is a change of medium.",
+        "It becomes negative only to the extent that it erodes deep reading and investigative journalism.",
+        "On the whole, the benefits of the policy outweigh its drawbacks when compensation is included.",
+        "Whether this model succeeds may determine whether the city becomes vibrant or divided.",
+        "The key question is not whether change will happen but whether societies will prepare for it.",
+        "A fairer assessment would include the health of workers throughout the supply chain.",
+        "Such a design preserves efficiency while substantially reducing distributional harm.",
+        "Ultimately, lasting change requires both clear rules and responsible individual action."
+      ]
+    }
+  ]);
+
+})();
+/* PHA 3 — VA (27/10/2026): thong nhat loi hskNote cho cac bo HSK2/HSK3 moi cua pha 3.
+   Ly do: 4 bo pha 3 (HSK2 x2, HSK3 x2) ghi "khong mao nhan tung tu nam trong khung
+   tu vung chinh thuc" — trung thuc nhung thieu dung cum "khong phai xac nhan" ma
+   test_zh_sets_hsk23 A8 (va cac bo cu) dung de khang dinh nhan HSK chi la muc dat
+   theo chu de. Va nay chi THEM cum do vao cuoi ghi chu san co, khong doi nghia,
+   khong doi so luong bo/the, khong cham vao bo HSK1 (ghi chu HSK1 giu nguyen).
+   Dieu kien hep: chi cac bo co hskNote chua cum "khong mao nhan" VA hsk la HSK2/HSK3
+   VA chua co cum "khong phai xac nhan" — dung 4 bo pha 3, khong anh huong bo cu. */
+(function () {
+  var list = (typeof CONTENT !== "undefined" && CONTENT.zhVocab) || [];
+  list.forEach(function (s) {
+    if (!s || !s.hskNote) return;
+    if ((s.hsk === "HSK2" || s.hsk === "HSK3")
+      && s.hskNote.indexOf("không mạo nhận") >= 0
+      && s.hskNote.indexOf("không phải xác nhận") < 0) {
+      s.hskNote += " Nhãn này là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức.";
+    }
+  });
+})();
