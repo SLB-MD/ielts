@@ -2057,7 +2057,7 @@ function notesHTML() {
   h += '<p>Band chung là trung bình 4 tiêu chí. Phát âm neo điểm pronounce: điểm pronounce cao thì band Phát âm cao, thấp thì band thấp, không bịa ngược.</p>';
   h += '<p>Kiểm tra phát âm đầu vào: kết quả chỉ là ước lượng tại chỗ, không tính đạt chuẩn.</p>';
   h += '<p>Thẻ từ: quyền camera/mic bị từ chối thì không tính đạt chuẩn.</p>';
-  h += '<p>AI chấm tiếng Trung đang chờ nâng cấp hàm chấm — chưa có điểm, không tính đạt cũng không tính chưa đạt.</p>';
+  h += '<p>AI chấm tiếng Trung (hàm chấm bản mới): chấm theo từng âm tiết, thanh điệu là chiều riêng; thẻ từ cần AI ≥ 80 mới qua bước phát âm. Nếu máy chủ chưa nâng cấp hàm chấm thì tạm chưa tính điểm AI.</p>';
   h += '<h4>Mốc qua bài</h4>';
   h += '<p>Kiểm tra cuối chương mở khi xong 80% số bước chương (làm tròn lên: cần Math.ceil(số bước × 0,8) bước; chương 1 cần 4/5 bước). Kiểm tra cuối chặng tiếng Trung mở khi xong 80% số bước chặng; mỗi phần cần từ 50% đúng lần đầu mới tính qua, chưa qua chỉ cần học lại đúng phần yếu.</p>';
   h += '<h4>Bảng XP và cấp</h4><ul>' + xpItems + '</ul>';
@@ -3008,7 +3008,9 @@ function sendChatReport(reason, note, startedAt) {
     }, function () { reject({ code: "login", msg: loginMsg }); });
   });
 }
-function callPronounce(audioBase64, mimeType, referenceText) {
+function callPronounce(audioBase64, mimeType, referenceText, opts) {
+  var pronBody = { audioBase64: audioBase64, mimeType: mimeType, referenceText: referenceText };
+  if (opts) { if (opts.language) pronBody.language = opts.language; if (opts.referencePinyin) pronBody.referencePinyin = opts.referencePinyin; }
   return new Promise(function (resolve, reject) {
     var loginMsg = "Cần đăng nhập để dùng chấm phát âm AI (đăng nhập ở mục Của tôi → Tài khoản).";
     var ready = window.__supabaseReady;
@@ -3018,7 +3020,7 @@ function callPronounce(audioBase64, mimeType, referenceText) {
       client.auth.getSession().then(function (res) {
         var sess = res && res.data && res.data.session;
         if (!sess || !sess.access_token) { reject(loginMsg); return; }
-        fetch(supabaseFnUrl("pronounce"), { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + sess.access_token, "apikey": window.SUPABASE_ANON_KEY || "" }, body: JSON.stringify({ audioBase64: audioBase64, mimeType: mimeType, referenceText: referenceText }) })
+        fetch(supabaseFnUrl("pronounce"), { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + sess.access_token, "apikey": window.SUPABASE_ANON_KEY || "" }, body: JSON.stringify(pronBody) })
           .then(function (resp) {
             if (!resp.ok) return aiReject(resp, loginMsg);
             return resp.json();
@@ -3930,7 +3932,17 @@ function vkEnPanelHTML(vk, c, cards, pos) {
   h += '<div class="row" style="margin-top:8px"><button class="btn" id="vocabSkipBtn">Bỏ qua thẻ này</button></div>';
   return h;
 }
-function vkZhPanelHTML(vk, c, cards, pos) {
+/* DOT pronounce v5 (27/10/2026): diem AI tieng Trung theo the, luu tren may nay
+   (khong dong bo server). Cong the Trung: chi qua buoc phat am khi AI zh >= 80
+   (may chu da la ban v5, nhan biet qua gradedLanguage "zh"). Neu may chu cu
+   (tra ve khong co gradedLanguage) thi tam giu cach cu: ghi am la qua buoc,
+   khong lay diem rac cua prompt tieng Anh lam chuan. */
+var ZH_PRON = {};
+function zhPronGet(d, pos) { return ZH_PRON[d.key + ":" + pos] || null; }
+function zhPronPass(d, pos) { var p = zhPronGet(d, pos); return !!(p && p.gradedLanguage === "zh" && p.score >= 80); }
+function zhPronLegacy(d, pos) { var p = zhPronGet(d, pos); return !!(p && !p.gradedLanguage); }
+function zhPronCanFinish(d, pos, zvk) { return zhPronPass(d, pos) || (zhPronLegacy(d, pos) && zvk.pronRecorded); }
+function vkZhPanelHTML(vk, c, cards, pos, d) {
   var names = ["Lật thẻ", "Gõ pinyin", "Chọn đáp án (1/2)", "Chọn đáp án (2/2)", "Soi gương + ghi âm"];
   var h = '<p class="mut">Học từ này qua nhiều kiểu · Bước ' + (vk.step + 1) + '/5: ' + names[vk.step] + (vk.pronRecorded ? ' · Đã ghi âm xong ✓' : '') + '</p>';
   if (vk.step === 0) {
@@ -3948,10 +3960,18 @@ function vkZhPanelHTML(vk, c, cards, pos) {
     if (vk.choiceWhy) h += '<div class="why show" id="zhChoiceWhy">' + esc(vk.choiceWhy) + '</div>';
     if (vk.choiceAnswered) h += '<button class="btn btn-primary" id="zhChoiceNext">' + (vk.step === 2 ? 'Câu tiếp theo →' : 'Sang bước ghi âm →') + '</button>';
   } else {
-    h += '<p>Bước cuối: bấm “Soi gương + ghi âm” ở hàng nút dưới, đọc to chữ Hán rồi bấm dừng để kết thúc lượt ghi.</p>';
-    h += '<p class="mut">AI chấm tiếng Trung đang chờ nâng cấp hàm chấm — chưa có điểm, không tính đạt cũng không tính chưa đạt.</p>';
-    if (vk.pronRecorded) h += '<p>Đã ghi xong ✓ — bản ghi đã có, qua được bước phát âm.</p><button class="btn btn-primary" id="zhMultiFinish">Xong thẻ →</button>';
-    else {
+    h += '<p>Bước cuối: bấm “Soi gương + ghi âm” ở hàng nút dưới, đọc to chữ Hán rồi bấm dừng để AI chấm.</p>';
+    var zp = d ? zhPronGet(d, pos) : null;
+    if (zp && zp.gradedLanguage === "zh" && zp.score != null) {
+      if (zp.score >= 80) h += '<p>AI chấm: ' + zp.score + '% — đã đạt chuẩn 80, qua được bước phát âm.</p><button class="btn btn-primary" id="zhMultiFinish">Xong thẻ →</button>';
+      else h += '<p>AI chấm: ' + zp.score + '% — chưa đạt 80, tập lại từ đỏ rồi bấm “Soi gương + ghi âm” chấm lại.</p>';
+    } else if (zp && !zp.gradedLanguage) {
+      h += '<p class="mut">Hàm chấm trên máy chủ chưa phải bản mới — tạm chưa tính điểm AI.</p>';
+      if (vk.pronRecorded) h += '<p>Đã ghi xong ✓ — bản ghi đã có, qua được bước phát âm.</p><button class="btn btn-primary" id="zhMultiFinish">Xong thẻ →</button>';
+    } else {
+      h += '<p class="mut">Chưa có điểm AI — bấm “Soi gương + ghi âm”, đọc to chữ Hán rồi bấm dừng để AI chấm; chưa có điểm AI thì chưa qua bước phát âm.</p>';
+    }
+    if (!((zp && zp.gradedLanguage === "zh" && zp.score >= 80) || (zp && !zp.gradedLanguage && vk.pronRecorded))) {
       h += '<button class="btn" id="zhPronCheck">Đã ghi xong, kiểm tra bản ghi</button>';
       if (vk.pronWhy) h += '<div class="why show" id="zhPronWhy">' + esc(vk.pronWhy) + '</div>';
     }
@@ -5747,8 +5767,10 @@ function mrLocalAudioEstimate(transcript, ref) {
   if (words.indexOf(r) >= 0) return { score: 90, note: "nghe đúng từ ví dụ “" + ref + "” — bản ghi trình duyệt chỉ là ước lượng, chưa phải AI chấm" };
   return { score: 40, note: "nghe được “" + t + "” nhưng chưa đúng từ ví dụ “" + ref + "” — bản ghi trình duyệt chỉ là ước lượng, chưa phải AI chấm" };
 }
-function mrCallPronounce(audioBase64, mimeType, referenceText) {
+function mrCallPronounce(audioBase64, mimeType, referenceText, opts) {
   /* Chi dung cho guong — KHONG cham vao stub callPronounce (buoc 7 phat am). */
+  var pronBody = { audioBase64: audioBase64, mimeType: mimeType, referenceText: referenceText };
+  if (opts) { if (opts.language) pronBody.language = opts.language; if (opts.referencePinyin) pronBody.referencePinyin = opts.referencePinyin; }
   return new Promise(function (resolve, reject) {
     var loginMsg = "Cần đăng nhập để dùng chấm phát âm AI (đăng nhập ở mục Của tôi → Tài khoản).";
     var ready = window.__supabaseReady;
@@ -5758,7 +5780,7 @@ function mrCallPronounce(audioBase64, mimeType, referenceText) {
       client.auth.getSession().then(function (res) {
         var sess = res && res.data && res.data.session;
         if (!sess || !sess.access_token) { reject(new Error(loginMsg)); return; }
-        fetch(supabaseFnUrl("pronounce"), { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + sess.access_token, "apikey": window.SUPABASE_ANON_KEY || "" }, body: JSON.stringify({ audioBase64: audioBase64, mimeType: mimeType, referenceText: referenceText }) })
+        fetch(supabaseFnUrl("pronounce"), { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + sess.access_token, "apikey": window.SUPABASE_ANON_KEY || "" }, body: JSON.stringify(pronBody) })
           .then(function (resp) {
             if (!resp.ok) return aiReject(resp, loginMsg);
             return resp.json();
@@ -5845,9 +5867,39 @@ function mrFinishAudio(slot) {
     var zhHtml = '';
     if (MR.audioBlob) { try { var zurl = URL.createObjectURL(MR.audioBlob); zhHtml += '<p><b>Nghe lại bản ghi của bạn:</b></p><audio controls src="' + zurl + '"></audio>'; } catch (e) { zhHtml += '<p class="mut">Chưa ghi được âm thanh — bật mic rồi tập lại.</p>'; } }
     else zhHtml += '<p class="mut">Chưa ghi được âm thanh — bật mic rồi tập lại.</p>';
-    zhHtml += '<p class="mut">AI chấm tiếng Trung đang chờ nâng cấp hàm chấm — chưa có điểm, không tính đạt cũng không tính chưa đạt.</p>';
     mrRenderSessionBox(slot, zhHtml);
     var zr = document.querySelector("#zhMirrorResult"); if (zr) zr.innerHTML = zhHtml;
+    if (MR.audioBlob) {
+      // DOT pronounce v5 (27/10/2026): goi ham cham bang tieng Trung (language "zh",
+      // kem pinyin chuan). Neu may chu tra gradedLanguage "zh" thi lay diem lam chuan
+      // cong the; neu may chu cu (khong co gradedLanguage) thi tam giu cach cu.
+      mrBlobToBase64(MR.audioBlob, function (b64) {
+        if (!b64) return;
+        mrCallPronounce(b64, MR.audioBlob.type || "audio/webm", MR.zhWord || "", { language: "zh", referencePinyin: MR.zhPinyin || "" }).then(function (r) {
+          var sc = (r.score != null) ? Math.round(r.score) : null;
+          var extra = '';
+          if (r.gradedLanguage === "zh" && sc != null) {
+            extra = '<p><b>Điểm tiếng (AI chấm): ' + sc + '%</b>' + (r.transcript ? ' — nghe được: “' + esc(r.transcript) + '”' : '') + '</p>';
+            if (r.words && r.words.length) extra += pronWordChipsHTML(r.words, r.issues);
+            if (r.toneIssues && r.toneIssues.length) extra += '<p class="mut">Thanh điệu cần sửa: ' + r.toneIssues.map(function (t) { return esc(t.char) + ' (' + esc(t.pinyin) + ') — bạn nói thanh ' + t.heardTone; }).join('; ') + '.</p>';
+            if (MR.zhKey) ZH_PRON[MR.zhKey] = { score: sc, gradedLanguage: "zh", toneIssues: r.toneIssues || [] };
+            extra += sc >= 80
+              ? '<p class="mut">Đã đạt chuẩn AI 80 — bấm “Thẻ tiếp theo” để qua thẻ.</p>'
+              : '<p class="mut">Chưa đạt 80 — tập lại từ đỏ rồi bấm “Soi gương + ghi âm” chấm lại.</p>';
+            if (MR.zhKey && sc >= 80) { var nb = document.querySelector("#zhNext"); if (nb) { nb.disabled = false; nb.className = "btn btn-primary"; } }
+          } else {
+            extra = '<p class="mut">Hàm chấm trên máy chủ chưa phải bản mới — tạm chưa tính điểm AI, ghi âm là qua bước.</p>';
+            if (MR.zhKey) ZH_PRON[MR.zhKey] = { score: null, gradedLanguage: null };
+          }
+          mrRenderSessionBox(slot, zhHtml + extra);
+          var zr2 = document.querySelector("#zhMirrorResult"); if (zr2) zr2.innerHTML = zhHtml + extra;
+        }, function (err) {
+          var extra = '<p class="mut">AI chấm chưa được (' + esc((err && err.message) || String(err)) + ') — đăng nhập rồi bấm “Soi gương + ghi âm” chấm lại; chưa có điểm AI thì chưa qua bước phát âm.</p>';
+          mrRenderSessionBox(slot, zhHtml + extra);
+          var zr2 = document.querySelector("#zhMirrorResult"); if (zr2) zr2.innerHTML = zhHtml + extra;
+        });
+      });
+    }
     return;
   }
   var ref = RB_PH_ALL_EXAMPLES[MR.sym] || "";
@@ -6593,7 +6645,7 @@ function renderQuickcheck(app, l) {
    số 49 xác nhận nhãn dạng Nghe + neo quy đổi; số 20 soi luồng Viết 3 bước
    (Plan → Write → Revise); số 15 soi 4 tiêu chí Nói + Part 1→3 tăng dần.
    Không đưa vào: bài mẫu/công thức của sách 39/59/68 (chỉ đối chiếu khung phân loại). */
-var RB_READ_TYPE_VN = { MC: "Trắc nghiệm", TFNG: "Đúng/Sai/Không có thông tin", SC: "Hoàn thành bản tóm tắt", MH: "Nối tiêu đề", YNNG: "Có/Không/Không có thông tin (theo tác giả)", TCOMP: "Hoàn thành câu/bảng", MINFO: "Tìm thông tin theo đoạn", MSEND: "Hoàn thành câu", MF: "Nối đặc điểm", DLC: "Điền từ vào sơ đồ", SAQ: "Trả lời ngắn" };
+var RB_READ_TYPE_VN = { MC: "Trắc nghiệm", TFNG: "Đúng/Sai/Không có thông tin", SC: "Hoàn thành bản tóm tắt", MH: "Nối tiêu đề", YNNG: "Có/Không/Không có thông tin (theo tác giả)", TCOMP: "Hoàn thành câu/bảng", MINFO: "Tìm thông tin theo đoạn", MSEND: "Hoàn thành câu", MF: "Nối đặc điểm", DLC: "Điền từ vào sơ đồ", SAQ: "Trả lời ngắn", TF: "Đúng / Sai", MATCH: "Nối thông tin", COMP: "Điền từ vào câu" };
 function readTypesLine(r) {
   var seen = {};
   (r.questions || []).forEach(function (q) { seen[q.type] = true; });
@@ -9129,7 +9181,7 @@ function viewRoadmapZh(app) {
 }
 function zhSkillPracticeHTML(kind) {
   var out = "";
-  [2, 3, 4].forEach(function (stage) {
+  [2, 3, 4, 5, 6].forEach(function (stage) {
     var nodes = "";
     if (kind === "gram") (ZH_GRAMMAR || []).forEach(function (g, i) { if (g.stage === stage) nodes += zhModNodeHTML("zhGram", i, g, stage); });
     else if (kind === "read") (ZH_READING || []).forEach(function (r, i) { if (r.stage === stage) nodes += zhModNodeHTML("zhRead", i, r, stage); });
@@ -9146,24 +9198,25 @@ function viewPracticeZh(app) {
   var html = trackSwitchHTML() + '<h2>Luyện tập · Tiếng Trung</h2>'
     + '<section class="card next-card" id="zhPracticeNextCard"><p class="eyebrow">TIẾP THEO NÊN LUYỆN</p><h3>' + esc(t.title) + '</h3><p class="mut">' + esc(t.type) + '</p><button class="btn btn-primary" id="zhPracticeNextBtn">Tiếp theo nên luyện</button></section>';
   html += '<section class="card" id="zhDictCard"><h3>🔍 Tra từ</h3><p class="mut">Tra trong kho từ vựng track Trung (bộ khởi động + các bộ HSK): gõ chữ Hán, pinyin (gõ không dấu cũng được) hoặc nghĩa tiếng Việt.</p><div class="row"><input type="text" id="zhDictInput" placeholder="Ví dụ: 你, nihao, cảm ơn..."><button class="btn" id="zhDictBtn">Tra từ</button></div><div id="zhDictResults"></div></section>';
-  html += '<section class="card" id="zhStrokeCard"><h3>✍️ Viết chữ</h3><p class="mut">Đợt 1: 30 chữ nét đơn giản — sẽ bổ sung dần. Bấm vào một chữ để xem hoạt hình thứ tự nét và tập viết.</p><div class="row">' + zhStrokesList().map(function (e) { return '<button class="btn" data-zhstroke-list="' + e.han + '"><span style="font-size:22px">' + e.han + '</span> ' + esc(e.py) + '</button>'; }).join("") + '</div></section>';
+  html += '<section class="card" id="zhStrokeCard"><h3>✍️ Viết chữ</h3><p class="mut">Đợt 1: 30 chữ nét đơn giản — sẽ bổ sung dần. Bấm vào một chữ để xem video mẫu cách viết và tập viết.</p><div class="row">' + zhStrokesList().map(function (e) { return '<button class="btn" data-zhstroke-list="' + e.han + '"><span style="font-size:22px">' + e.han + '</span> ' + esc(e.py) + '</button>'; }).join("") + '</div></section>';
   html += '<details open><summary><b>Mạch pinyin chặng 1</b></summary><div class="path-v">';
   ZH_PH_STEPS.forEach(function (s, i) { html += zhPhNodeHTML(i); });
   html += '</div></details>';
   var starter = zhSetByKey("starter");
-  html += '<details><summary><b>Từ vựng chặng 1</b></summary><div class="path-v">' + zhSetNodeHTML(starter) + '</div></details>';
+  var s1Sets = zhStageSets(1);
+  html += '<details><summary><b>Từ vựng chặng 1 (' + (1 + s1Sets.length) + ' bộ)</b></summary><div class="path-v">' + zhSetNodeHTML(starter) + s1Sets.map(function (d) { return zhSetNodeHTML(d); }).join("") + '</div></details>';
   [2, 3, 4, 5, 6].forEach(function (st) {
     var sets = zhStageSets(st);
     html += '<details><summary><b>Từ vựng chặng ' + st + ' (' + sets.length + ' bộ)</b></summary><div class="path-v">';
     sets.forEach(function (d) { html += zhSetNodeHTML(d); });
     html += '</div></details>';
   });
-  html += '<details><summary><b>Ngữ pháp chặng 2–4 (' + ZH_GRAMMAR.length + ' trạm)</b></summary>' + zhSkillPracticeHTML("gram") + '</details>';
-  html += '<details><summary><b>Đọc chặng 2–4 (' + ZH_READING.length + ' bài)</b></summary>' + zhSkillPracticeHTML("read") + '</details>';
-  html += '<details><summary><b>Nghe chặng 2–4 (' + ZH_LISTENING.length + ' đoạn)</b></summary>' + zhSkillPracticeHTML("listen") + '</details>';
-  html += '<details><summary><b>Nói chặng 2–4 (' + ZH_SPEAK.length + ' kịch bản)</b></summary>' + zhSkillPracticeHTML("speak") + '</details>';
-  html += '<details><summary><b>Nhập vai chặng 2–4 (' + ZH_ROLE.length + ' tình huống)</b></summary>' + zhSkillPracticeHTML("role") + '</details>';
-  html += '<details><summary><b>Viết chặng 2–4 (' + ZH_WRITE.length + ' bài)</b></summary>' + zhSkillPracticeHTML("write") + '</details>';
+  html += '<details><summary><b>Ngữ pháp chặng 2–6 (' + ZH_GRAMMAR.length + ' trạm)</b></summary>' + zhSkillPracticeHTML("gram") + '</details>';
+  html += '<details><summary><b>Đọc chặng 2–6 (' + ZH_READING.length + ' bài)</b></summary>' + zhSkillPracticeHTML("read") + '</details>';
+  html += '<details><summary><b>Nghe chặng 2–6 (' + ZH_LISTENING.length + ' đoạn)</b></summary>' + zhSkillPracticeHTML("listen") + '</details>';
+  html += '<details><summary><b>Nói chặng 2–6 (' + ZH_SPEAK.length + ' kịch bản)</b></summary>' + zhSkillPracticeHTML("speak") + '</details>';
+  html += '<details><summary><b>Nhập vai chặng 2–6 (' + ZH_ROLE.length + ' tình huống)</b></summary>' + zhSkillPracticeHTML("role") + '</details>';
+  html += '<details><summary><b>Viết chặng 2–6 (' + ZH_WRITE.length + ' bài)</b></summary>' + zhSkillPracticeHTML("write") + '</details>';
   html += '<details><summary><b>🎓 Thi — kiểm tra cuối chặng + thi thử HSK (bản rút gọn)</b></summary>' + zhPracticeExamHTML() + '</details>';
   html += '<details class="card" id="zhGameCardPractice"><summary><b>🎬 Giải trí — 6 game + video hoạt hình track Trung</b></summary>'
     + '<p class="mut">Chơi bằng nội dung tiếng Trung: nối chữ Hán với nghĩa, giải mã pinyin, nghe chữ Hán đoán nghĩa, gõ chữ Hán, xếp câu, quiz ngữ pháp/đọc/nghe. Trả lời sai trong game cũng vào Sổ lỗi sai track Trung. Kỷ lục tách riêng theo track (không trộn với track Anh), lưu trên máy này.</p><div class="row">'
@@ -9408,10 +9461,11 @@ function renderZhQuiz(app, l, qs, onFinish, finishExtra, opts) {
 }
 /* ---------- DOT 2f (26/10/2026): Tu dien bam tra + Viet chu tuong tac track Trung ----------
    Du lieu net o content-new.js (ZH_STROKES, 30 chu). Khong them khoa state nao:
-   buoc net dang ve chi nam trong lesson hien tai (l.shown), khong luu state.
+   Bai Viet chu hien video mau (ZH_WRITE_VIDEOS) thay cho hoat hinh net ve tu 27/10/2026 (lenh Bui: bo net ve AI); du lieu net ZH_STROKES chi con lam tham chieu cham diem noi bo.
    Session target (zhSessionTarget) KHONG doi trong dot nay: viet chu / tra tu
    chi mo tu tab Luyen tap, the tu, popup — khong chen vao luong chang.
-   Khong cham diem net ve: khung tap viet chi de tu so mat voi mau. */
+   Cham diem net ve: khung tap viet co nut Cham diem, cham bang may uoc luong
+   tu net mau ZH_STROKES (xem zhScoreStrokes). Net ve luu trong l.writeStrokes. */
 function zhStrokesList() { return (typeof ZH_STROKES !== "undefined") ? ZH_STROKES : []; }
 function zhStrokeByHan(ch) {
   var list = zhStrokesList();
@@ -9423,10 +9477,21 @@ function zhStrokeCharsOf(han) {
   String(han || "").split("").forEach(function (ch) { if (zhStrokeByHan(ch) && out.indexOf(ch) < 0) out.push(ch); });
   return out;
 }
+function zhWriteVideoId(han) {
+  var m = (typeof ZH_WRITE_VIDEOS !== "undefined") ? ZH_WRITE_VIDEOS : null;
+  var id = (m && m[han]) || null;
+  return (id && /^[A-Za-z0-9_-]{11}$/.test(id)) ? id : null;
+}
+function zhStrokeVideoHTML(e) {
+  var id = zhWriteVideoId(e.han);
+  if (!id) return '<div id="zhStrokeVideo"><p>Chưa có video mẫu cho chữ ' + esc(e.han) + ' — báo lại cho người quản trị để bổ sung, đừng tập theo trí nhớ.</p></div>';
+  return '<div id="zhStrokeVideo"><iframe id="zhStrokeVideoFrame" src="https://www.youtube-nocookie.com/embed/' + id + '?rel=0" loading="lazy" allowfullscreen></iframe>'
+    + '<p class="mut">Video mẫu cách viết chữ ' + esc(e.han) + ' — xem kỹ từng nét rồi tập viết ở khung bên dưới.</p></div>';
+}
 function zhStrokeAreaHTML(c) {
   var chars = zhStrokeCharsOf(c.han);
   if (!chars.length) return '<p class="mut">Chưa có thứ tự nét cho chữ này</p>';
-  return '<div class="row">' + chars.map(function (ch) { return '<button class="btn" data-zhstroke="' + ch + '">✍️ Xem thứ tự nét: ' + ch + '</button>'; }).join("") + '</div>';
+  return '<div class="row">' + chars.map(function (ch) { return '<button class="btn" data-zhstroke="' + ch + '">✍️ Xem cách viết: ' + ch + '</button>'; }).join("") + '</div>';
 }
 function zhDictNorm(s) {
   var t = String(s || "").toLowerCase();
@@ -9455,7 +9520,7 @@ function zhDictSearchAll(q) {
 var zhDictLastResults = [];
 function zhDictResultHTML(r, i) {
   var strokes = zhStrokeCharsOf(r.han);
-  var strokeBtn = strokes.length ? '<button class="btn" data-zhdictstroke="' + strokes[0] + '">✍️ Xem thứ tự nét: ' + strokes[0] + '</button>' : '';
+  var strokeBtn = strokes.length ? '<button class="btn" data-zhdictstroke="' + strokes[0] + '">✍️ Xem cách viết: ' + strokes[0] + '</button>' : '';
   return '<div class="qblock"><p class="zh-han">' + esc(r.han) + '</p><p><b>' + esc(r.pinyin) + '</b> — ' + esc(r.vi) + '</p>'
     + '<p class="mut">Cụm đi kèm: ' + esc(r.col || "") + '</p><p>Ví dụ: ' + esc(r.ex || "") + '</p><p class="mut">' + esc(r.exv || "") + '</p>'
     + '<p class="mut">Bộ: ' + esc(r.topic) + '</p><div class="row"><button class="btn btn-primary" data-zhdictgoto="' + i + '">Tới thẻ →</button>' + strokeBtn + '</div></div>';
@@ -9495,7 +9560,7 @@ function zhShowDictPopup(card, d) {
   div.setAttribute("style", "position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,.45);z-index:99;display:flex;align-items:center;justify-content:center;padding:12px");
   var strokes = zhStrokeCharsOf(card.han);
   var strokePart = strokes.length
-    ? strokes.map(function (ch) { return '<button class="btn" data-zhpopstroke="' + ch + '">✍️ Xem thứ tự nét: ' + ch + '</button>'; }).join(" ")
+    ? strokes.map(function (ch) { return '<button class="btn" data-zhpopstroke="' + ch + '">✍️ Xem cách viết: ' + ch + '</button>'; }).join(" ")
     : '<p class="mut">Chưa có thứ tự nét cho chữ này</p>';
   div.innerHTML = '<div class="card" style="max-width:520px;background:#fff"><p class="zh-han">' + esc(card.han) + '</p><p><b>' + esc(card.pinyin) + '</b> — ' + esc(card.vi) + '</p>'
     + '<p class="mut">Cụm đi kèm: ' + esc(card.col || "") + '</p><p>Ví dụ: ' + esc(card.ex || "") + '</p><p class="mut">' + esc(card.exv || "") + '</p>'
@@ -9505,97 +9570,229 @@ function zhShowDictPopup(card, d) {
   var pl = $("#zhPopListen"); if (pl) pl.onclick = function () { zhSpeak(card.han); };
   div.querySelectorAll("[data-zhpopstroke]").forEach(function (b) { b.onclick = function () { div.remove(); openLesson({ type: "zhStroke", han: b.dataset.zhpopstroke }); }; });
 }
-function zhStrokeSVG(e, shown) {
-  var grid = '<rect x="1" y="1" width="98" height="98" fill="none" stroke="#ddd" stroke-width="1"/>'
-    + '<line x1="0" y1="50" x2="100" y2="50" stroke="#ddd" stroke-width="1" stroke-dasharray="4 3"/>'
-    + '<line x1="50" y1="0" x2="50" y2="100" stroke="#ddd" stroke-width="1" stroke-dasharray="4 3"/>';
-  var paths = e.d.map(function (pth, i) {
-    var on = i < shown;
-    var m = pth.match(/M\s*([\d.]+),([\d.]+)/);
-    var label = "";
-    if (on && m) {
-      var lx = parseFloat(m[1]) + 3, ly = parseFloat(m[2]);
-      ly = (ly < 14) ? ly + 14 : ly - 3;
-      label = '<text x="' + lx + '" y="' + ly + '" font-size="12" fill="#c00">' + (i + 1) + '</text>';
+/* ---------- Cham diem net ve (khung tap viet tu do) ----------
+   Du lieu tham chieu: ZH_STROKES (content-new.js) — moi chu co mang d la cac
+   path SVG (khong gian 100x100) theo dung thu tu net, va mang st la ten net.
+   Thuat toan: parse path M/L/Q thanh polyline -> resample 32 diem theo do dai
+   cung -> chuan hoa tung net (ve trong tam, scale ve hop 100) de so hinh dang
+   khong phu thuoc vi tri/co chu ve; diem hinh = 100*(1 - khoang cach/60).
+   Them diem vi tri tuong doi: trong tam net trong hop toan chu chuan hoa.
+   Diem net = 0.7*hinh + 0.3*vi tri. Tong = tong diem cac cap ghep / max(so net
+   ve, so net mau) — thieu net tinh 0, thua net khong cong diem.
+   Khi so net bang nhau: ghep theo chi so (kiem tra thu tu); neu ghep tham lam
+   (khong ke thu tu) tot hon >= 20 diem thi bao "sai thu tu net".
+   Diem la MAY UOC LUONG tu net mau ve tay (khong phai font in chuan), khong
+   phai cham tuyet doi nhu nguoi that. */
+function zhStrokeNameVi(cn) {
+  var m = { "横": "ngang", "竖": "sổ", "撇": "phẩy", "捺": "mác", "点": "chấm", "横折": "ngang gập", "竖钩": "sổ móc", "竖弯钩": "sổ cong móc", "撇点": "phẩy chấm", "横撇": "ngang phẩy", "撇折": "phẩy gập", "提": "hất", "竖折折钩": "sổ gập gập móc" };
+  return m[cn] || cn || "";
+}
+function zhPathToPoints(d) {
+  var toks = String(d || "").match(/[MLQ]|-?\d*\.?\d+/g) || [];
+  var pts = [], cmd = "", i = 0;
+  function num() { return parseFloat(toks[i++]); }
+  while (i < toks.length) {
+    var t = toks[i++];
+    if (t === "M" || t === "L" || t === "Q") { cmd = t; continue; }
+    var x = parseFloat(t);
+    if (cmd === "L" || cmd === "M") { pts.push({ x: x, y: num() }); }
+    else if (cmd === "Q") {
+      var cx = x, cy = num(), ex = num(), ey = num();
+      var p0 = pts.length ? pts[pts.length - 1] : { x: cx, y: cy };
+      for (var s = 1; s <= 12; s++) {
+        var u = s / 12, a = (1 - u) * (1 - u), b = 2 * u * (1 - u), c = u * u;
+        pts.push({ x: a * p0.x + b * cx + c * ex, y: a * p0.y + b * cy + c * ey });
+      }
     }
-    var col = (i === shown - 1) ? "#c00" : "#222";
-    return '<path d="' + pth + '" fill="none" stroke="' + col + '" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" style="' + (on ? "" : "display:none") + '"/>' + label;
+  }
+  return pts;
+}
+function zhResample(pts, n) {
+  if (!pts || !pts.length) return [];
+  var total = 0, i;
+  for (i = 1; i < pts.length; i++) total += Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);
+  if (total <= 0) { var o = []; for (var k = 0; k < n; k++) o.push({ x: pts[0].x, y: pts[0].y }); return o; }
+  var step = total / (n - 1);
+  var out = [{ x: pts[0].x, y: pts[0].y }];
+  var P = pts.slice(), idx = 1, dist = 0;
+  while (out.length < n - 1 && idx < P.length) {
+    var d = Math.hypot(P[idx].x - P[idx - 1].x, P[idx].y - P[idx - 1].y);
+    if (dist + d >= step) {
+      var r = d > 0 ? (step - dist) / d : 0;
+      var np = { x: P[idx - 1].x + r * (P[idx].x - P[idx - 1].x), y: P[idx - 1].y + r * (P[idx].y - P[idx - 1].y) };
+      out.push(np);
+      P.splice(idx, 0, np);
+      dist = 0;
+      idx++;
+    } else { dist += d; idx++; }
+  }
+  while (out.length < n) out.push({ x: pts[pts.length - 1].x, y: pts[pts.length - 1].y });
+  return out;
+}
+function zhNormStroke(pts) {
+  if (!pts || !pts.length) return [];
+  var cx = 0, cy = 0, i;
+  for (i = 0; i < pts.length; i++) { cx += pts[i].x; cy += pts[i].y; }
+  cx /= pts.length; cy /= pts.length;
+  var minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  for (i = 0; i < pts.length; i++) {
+    if (pts[i].x < minX) minX = pts[i].x;
+    if (pts[i].x > maxX) maxX = pts[i].x;
+    if (pts[i].y < minY) minY = pts[i].y;
+    if (pts[i].y > maxY) maxY = pts[i].y;
+  }
+  var sc = Math.max(maxX - minX, maxY - minY);
+  if (!(sc > 0)) sc = 1;
+  sc = 100 / sc;
+  return pts.map(function (p) { return { x: (p.x - cx) * sc, y: (p.y - cy) * sc }; });
+}
+function zhStrokeDist(a, b) {
+  var s = 0, n = Math.min(a.length, b.length), i;
+  for (i = 0; i < n; i++) s += Math.hypot(a[i].x - b[i].x, a[i].y - b[i].y);
+  return n ? s / n : 999;
+}
+function zhCentroid(pts) {
+  var cx = 0, cy = 0, i;
+  for (i = 0; i < pts.length; i++) { cx += pts[i].x; cy += pts[i].y; }
+  return pts.length ? { x: cx / pts.length, y: cy / pts.length } : { x: 0, y: 0 };
+}
+function zhNormCharMap(allPts) {
+  var minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity, i;
+  for (i = 0; i < allPts.length; i++) {
+    if (allPts[i].x < minX) minX = allPts[i].x;
+    if (allPts[i].x > maxX) maxX = allPts[i].x;
+    if (allPts[i].y < minY) minY = allPts[i].y;
+    if (allPts[i].y > maxY) maxY = allPts[i].y;
+  }
+  var sc = Math.max(maxX - minX, maxY - minY);
+  if (!(sc > 0)) sc = 1;
+  sc = 100 / sc;
+  return function (p) { return { x: (p.x - minX) * sc, y: (p.y - minY) * sc }; };
+}
+function zhScoreStrokes(userStrokes, refEntry) {
+  var U = (userStrokes || []).filter(function (s) { return s && s.length > 0; });
+  var R = (refEntry && refEntry.d) || [];
+  if (!U.length || !R.length) return null;
+  var N = 32, i, j;
+  var refPolys = R.map(function (d) { return zhResample(zhPathToPoints(d), N); });
+  var refNorm = refPolys.map(function (p) { return zhNormStroke(p); });
+  var userPolys = U.map(function (s) { return zhResample(s, N); });
+  var userNorm = userPolys.map(function (p) { return zhNormStroke(p); });
+  var refAll = [], userAll = [];
+  refPolys.forEach(function (p) { p.forEach(function (q) { refAll.push(q); }); });
+  userPolys.forEach(function (p) { p.forEach(function (q) { userAll.push(q); }); });
+  var refMap = zhNormCharMap(refAll), userMap = zhNormCharMap(userAll);
+  var refCent = refPolys.map(function (p) { return refMap(zhCentroid(p)); });
+  var userCent = userPolys.map(function (p) { return userMap(zhCentroid(p)); });
+  function pairScore(ri, uj) {
+    var shape = zhStrokeDist(refNorm[ri], userNorm[uj]);
+    var shapeScore = Math.max(0, Math.min(100, 100 * (1 - shape / 60)));
+    var ld = Math.hypot(refCent[ri].x - userCent[uj].x, refCent[ri].y - userCent[uj].y);
+    var layScore = Math.max(0, Math.min(100, 100 * (1 - ld / 70)));
+    var rev = zhStrokeDist(refNorm[ri], userNorm[uj].slice().reverse());
+    return { shape: shape, rev: rev, score: Math.round(0.7 * shapeScore + 0.3 * layScore) };
+  }
+  function greedyPairs() {
+    var used = {}, pairs = [], ri, uj;
+    for (ri = 0; ri < R.length; ri++) {
+      var best = -1, bestD = Infinity;
+      for (uj = 0; uj < U.length; uj++) {
+        if (used[uj]) continue;
+        var d = zhStrokeDist(refNorm[ri], userNorm[uj]);
+        if (d < bestD) { bestD = d; best = uj; }
+      }
+      if (best >= 0) { used[best] = true; pairs.push({ ri: ri, uj: best, ps: pairScore(ri, best) }); }
+    }
+    return pairs;
+  }
+  var pairs, total, orderIssue = false;
+  if (U.length === R.length) {
+    pairs = [];
+    var idxSum = 0;
+    for (i = 0; i < R.length; i++) { var pp = { ri: i, uj: i, ps: pairScore(i, i) }; pairs.push(pp); idxSum += pp.ps.score; }
+    total = Math.round(idxSum / R.length);
+    var gPairs = greedyPairs(), gSum = 0;
+    gPairs.forEach(function (p) { gSum += p.ps.score; });
+    if (Math.round(gSum / R.length) - total >= 20) orderIssue = true;
+  } else {
+    pairs = greedyPairs();
+    var sum = 0;
+    pairs.forEach(function (p) { sum += p.ps.score; });
+    total = Math.round(sum / Math.max(U.length, R.length));
+  }
+  var per = [], matched = {};
+  pairs.forEach(function (p) { matched[p.ri] = true; });
+  for (i = 0; i < R.length; i++) {
+    var name = zhStrokeNameVi((refEntry.st || [])[i]);
+    var pr = null;
+    for (j = 0; j < pairs.length; j++) if (pairs[j].ri === i) pr = pairs[j];
+    if (!pr) { per.push({ ri: i, name: name, score: 0, status: "missing" }); continue; }
+    var ps = pr.ps, status = "ok";
+    if (ps.score < 50) status = "low";
+    else if (ps.score < 80) status = "mid";
+    if (ps.rev < ps.shape * 0.6 && ps.shape > 15) status = "reversed";
+    per.push({ ri: i, name: name, score: ps.score, status: status });
+  }
+  var missing = R.length - pairs.length, extra = U.length - pairs.length;
+  return { total: total, per: per, refCount: R.length, userCount: U.length, missing: missing > 0 ? missing : 0, extra: extra > 0 ? extra : 0, orderIssue: orderIssue };
+}
+function zhScoreResultHTML(res, e) {
+  var lines = res.per.map(function (p) {
+    var nm = p.name ? " (" + esc(p.name) + ")" : "";
+    if (p.status === "missing") return "<p>Nét " + (p.ri + 1) + nm + ": chưa vẽ (0 điểm).</p>";
+    var note = "";
+    if (p.status === "reversed") note = " — có thể vẽ ngược hướng, thử vẽ ngược lại.";
+    else if (p.status === "low") note = " — xem lại hình nét mẫu.";
+    else if (p.status === "mid") note = " — gần đúng, xem lại hình.";
+    return "<p>Nét " + (p.ri + 1) + nm + ": " + p.score + " điểm." + note + "</p>";
   }).join("");
-  return '<svg viewBox="0 0 100 100" width="220" height="220" style="border:1px solid #ccc;background:#fff">' + grid + paths + '</svg>';
-}
-function zhStrokeRenderStage(l) {
-  var e = zhStrokeByHan(l.han); if (!e) return;
-  var stage = $("#zhStrokeStage"), info = $("#zhStrokeInfo");
-  if (stage) stage.innerHTML = zhStrokeSVG(e, l.shown);
-  if (info) {
-    if (l.shown <= 0) info.textContent = "Nét 0/" + e.d.length + " — chưa vẽ. Bấm Phát hoặc Nét tiếp theo.";
-    else if (l.shown < e.d.length) info.textContent = "Nét " + l.shown + "/" + e.d.length + ": " + e.st[l.shown - 1] + " (nét đang vẽ).";
-    else info.textContent = "Đã vẽ xong " + e.d.length + "/" + e.d.length + " nét.";
-  }
-}
-var zhStrokeTimerId = null;
-function zhStrokeStopTimer() { if (zhStrokeTimerId) { try { clearTimeout(zhStrokeTimerId); } catch (e) {} zhStrokeTimerId = null; } }
-function zhStrokeTick(l) {
-  zhStrokeTimerId = null;
-  if (curLesson !== l) return;
-  var e = zhStrokeByHan(l.han); if (!e) return;
-  if (l.shown < e.d.length) {
-    l.shown++;
-    zhStrokeRenderStage(l);
-    zhStrokeTimerId = setTimeout(function () { zhStrokeTick(l); }, 450);
-  }
-}
-function zhStrokePlay(l) {
-  var e = zhStrokeByHan(l.han); if (!e) return;
-  zhStrokeStopTimer();
-  if (l.shown >= e.d.length) { l.shown = 0; zhStrokeRenderStage(l); }
-  zhStrokeTimerId = setTimeout(function () { zhStrokeTick(l); }, 450);
-}
-function zhStrokeReplay(l) { zhStrokeStopTimer(); l.shown = 0; zhStrokeRenderStage(l); zhStrokePlay(l); }
-function zhStrokeStep(l, dir) {
-  var e = zhStrokeByHan(l.han); if (!e) return;
-  zhStrokeStopTimer();
-  l.shown = Math.max(0, Math.min(e.d.length, l.shown + dir));
-  zhStrokeRenderStage(l);
+  var extra = "";
+  if (res.orderIssue) extra += "<p>Thứ tự nét chưa đúng — xem lại hoạt hình thứ tự nét ở trên rồi vẽ lại theo thứ tự.</p>";
+  if (res.missing > 0) extra += "<p>Còn thiếu " + res.missing + " nét (nét chưa vẽ tính 0 điểm).</p>";
+  if (res.extra > 0) extra += "<p>Thừa " + res.extra + " nét (nét thừa không cộng điểm).</p>";
+  return "<p><b>Tổng: " + res.total + "/100</b> — Máy ước lượng.</p>" + lines + extra
+    + '<p class="mut">Điểm ước lượng từ nét mẫu vẽ tay của web, không phải chấm tuyệt đối như người thật. Muốn chắc hơn, so mắt lại với hoạt hình thứ tự nét ở trên.</p>';
 }
 function renderZhStroke(app, l) {
-  zhStrokeStopTimer();
   var e = zhStrokeByHan(l.han);
   if (!e) { curLesson = null; render(); return; }
-  if (l.shown == null) l.shown = 0;
   var list = zhStrokesList();
   var idx = list.indexOf(e);
   var prev = list[(idx - 1 + list.length) % list.length];
   var next = list[(idx + 1) % list.length];
   var html = lessonHead({ title: "Viết chữ: " + e.han, type: "Tiếng Trung · Viết chữ" });
-  html += '<p class="mut">Đợt 1: 30 chữ nét đơn giản — sẽ bổ sung dần. Nét vẽ tay minh họa thứ tự nét (không phải font chữ in).</p>';
+  html += '<p class="mut">Đợt 1: 30 chữ nét đơn giản — sẽ bổ sung dần. Xem video mẫu cách viết đúng chuẩn, rồi tập viết ở khung bên dưới.</p>';
   html += '<div class="qblock"><p class="zh-han">' + esc(e.han) + '</p><p><b>' + esc(e.py) + '</b> — ' + esc(e.vi) + '</p>'
     + '<p class="mut">' + esc(e.src) + '</p>' + (e.note ? '<p class="mut">' + esc(e.note) + '</p>' : '')
-    + '<div id="zhStrokeStage"></div><p id="zhStrokeInfo"></p>'
-    + '<div class="row"><button class="btn btn-primary" id="zhStrokePlay">▶ Phát</button><button class="btn" id="zhStrokePause">⏸ Tạm dừng</button><button class="btn" id="zhStrokeReplay">↺ Phát lại</button><button class="btn" id="zhStrokePrev">← Nét trước</button><button class="btn" id="zhStrokeNext">Nét tiếp theo →</button><button class="btn" id="zhStrokeListen">🔊 Nghe đọc chữ</button></div>'
+    + zhStrokeVideoHTML(e)
+    + '<div class="row"><button class="btn" id="zhStrokeListen">🔊 Nghe đọc chữ</button></div>'
     + '<p class="mut">Tổng số nét: ' + e.d.length + '</p>'
     + '<div class="row"><button class="btn" id="zhStrokePrevChar">← Chữ trước: ' + prev.han + '</button><button class="btn" id="zhStrokeNextChar">Chữ sau: ' + next.han + ' →</button><button class="btn" id="zhStrokeBackList">Về danh sách viết chữ</button></div>'
     + '</div>';
-  html += '<div class="qblock"><h3>Khung tập viết tự do</h3><p class="mut">Tự so mắt với mẫu — web không chấm điểm nét vẽ, không báo điểm chính xác.</p>'
+  html += '<div class="qblock"><h3>Khung tập viết tự do</h3><p class="mut">Vẽ theo mẫu rồi bấm Chấm điểm. Điểm do máy ước lượng từ nét mẫu vẽ tay, không phải chấm tuyệt đối như người thật.</p>'
     + '<canvas id="zhWriteCanvas" width="300" height="300" style="border:1px solid #ccc;background:#fff;touch-action:none"></canvas>'
-    + '<div class="row"><button class="btn" id="zhCanvasModel">Hiện mẫu mờ</button><button class="btn" id="zhCanvasClear">Xóa</button></div></div>';
+    + '<div class="row"><button class="btn" id="zhCanvasModel">Hiện mẫu mờ</button><button class="btn" id="zhCanvasClear">Xóa</button><button class="btn btn-primary" id="zhCanvasScore">Chấm điểm</button></div><div id="zhCanvasScoreBox"></div></div>';
   app.innerHTML = html;
   wireBack();
-  var bb = $("#btnBack"); if (bb) { var oldBack = bb.onclick; bb.onclick = function () { zhStrokeStopTimer(); if (oldBack) oldBack(); }; }
-  zhStrokeRenderStage(l);
-  $("#zhStrokePlay").onclick = function () { zhStrokePlay(l); };
-  $("#zhStrokePause").onclick = function () { zhStrokeStopTimer(); };
-  $("#zhStrokeReplay").onclick = function () { zhStrokeReplay(l); };
-  $("#zhStrokePrev").onclick = function () { zhStrokeStep(l, -1); };
-  $("#zhStrokeNext").onclick = function () { zhStrokeStep(l, 1); };
   $("#zhStrokeListen").onclick = function () { zhSpeak(e.han); };
   $("#zhStrokePrevChar").onclick = function () { openLesson({ type: "zhStroke", han: prev.han }); };
   $("#zhStrokeNextChar").onclick = function () { openLesson({ type: "zhStroke", han: next.han }); };
-  $("#zhStrokeBackList").onclick = function () { zhStrokeStopTimer(); go("practice"); };
+  $("#zhStrokeBackList").onclick = function () { go("practice"); };
   var cv = $("#zhWriteCanvas");
   var ctx = null;
   try { ctx = cv && cv.getContext ? cv.getContext("2d") : null; } catch (err) { ctx = null; }
   var modelOn = false;
+  if (!l.writeStrokes) l.writeStrokes = [];
+  var drawUserStrokes = function () {
+    if (!ctx) return;
+    ctx.strokeStyle = "#222"; ctx.lineWidth = 4; ctx.lineCap = "round"; ctx.lineJoin = "round";
+    (l.writeStrokes || []).forEach(function (st) {
+      if (st.length < 2) return;
+      ctx.beginPath(); ctx.moveTo(st[0].x, st[0].y);
+      for (var i = 1; i < st.length; i++) ctx.lineTo(st[i].x, st[i].y);
+      ctx.stroke();
+    });
+  };
   var drawGuide = function () {
     if (!ctx) return;
     ctx.clearRect(0, 0, 300, 300);
@@ -9609,25 +9806,43 @@ function renderZhStroke(app, l) {
       ctx.textAlign = "center"; ctx.textBaseline = "middle";
       ctx.fillText(e.han, 150, 155);
     }
+    drawUserStrokes();
   };
   drawGuide();
   var mb = $("#zhCanvasModel"); if (mb) mb.onclick = function () { modelOn = !modelOn; mb.textContent = modelOn ? "Ẩn mẫu mờ" : "Hiện mẫu mờ"; drawGuide(); };
-  var cb = $("#zhCanvasClear"); if (cb) cb.onclick = function () { drawGuide(); };
+  var cb = $("#zhCanvasClear"); if (cb) cb.onclick = function () { l.writeStrokes = []; var sbx = $("#zhCanvasScoreBox"); if (sbx) sbx.innerHTML = ""; drawGuide(); };
+  var sb = $("#zhCanvasScore"); if (sb) sb.onclick = function () {
+    var box = $("#zhCanvasScoreBox"); if (!box) return;
+    var res = zhScoreStrokes(l.writeStrokes, e);
+    if (!res) { box.innerHTML = "<p>Vẽ vào khung trước đã, rồi bấm Chấm điểm.</p>"; return; }
+    box.innerHTML = zhScoreResultHTML(res, e);
+  };
   if (ctx && cv) {
-    var drawing = false, lastX = 0, lastY = 0;
+    var drawing = false, lastX = 0, lastY = 0, curStroke = null;
     var posOf = function (ev) {
       var r = cv.getBoundingClientRect();
       return { x: (ev.clientX - r.left) * (cv.width / (r.width || 300)), y: (ev.clientY - r.top) * (cv.height / (r.height || 300)) };
     };
-    cv.addEventListener("pointerdown", function (ev) { var p = posOf(ev); drawing = true; lastX = p.x; lastY = p.y; });
+    cv.addEventListener("pointerdown", function (ev) { var p = posOf(ev); drawing = true; lastX = p.x; lastY = p.y; curStroke = [p]; });
     cv.addEventListener("pointermove", function (ev) {
       if (!drawing) return;
       var p = posOf(ev);
+      if (curStroke) { var lp = curStroke[curStroke.length - 1]; if (Math.hypot(p.x - lp.x, p.y - lp.y) >= 2) curStroke.push(p); }
       ctx.strokeStyle = "#222"; ctx.lineWidth = 4; ctx.lineCap = "round";
       ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(p.x, p.y); ctx.stroke();
       lastX = p.x; lastY = p.y;
     });
-    var stopDraw = function () { drawing = false; };
+    var stopDraw = function () {
+      if (drawing && curStroke) {
+        var len = 0;
+        for (var i = 1; i < curStroke.length; i++) len += Math.hypot(curStroke[i].x - curStroke[i - 1].x, curStroke[i].y - curStroke[i - 1].y);
+        if (curStroke.length >= 2 && len >= 6) {
+          l.writeStrokes.push(curStroke);
+          var sbx2 = $("#zhCanvasScoreBox"); if (sbx2) sbx2.innerHTML = "";
+        }
+      }
+      drawing = false; curStroke = null;
+    };
     cv.addEventListener("pointerup", stopDraw);
     cv.addEventListener("pointerleave", stopDraw);
   }
@@ -9658,10 +9873,10 @@ function renderZhVocab(app, l) {
     + '<p class="mut">Cụm đi kèm: ' + esc(c.col || "") + '</p>'
     + '<p>Ví dụ: ' + esc(c.ex || "") + '</p><p class="mut">' + esc(c.exv || "") + '</p>'
     + '</div>'
-    + '<div id="zhMulti">' + vkZhPanelHTML(zvk, c, cards, pos) + '</div>'
+    + '<div id="zhMulti">' + vkZhPanelHTML(zvk, c, cards, pos, d) + '</div>'
     + '</div>'
     + '<div class="vocab-pron">' + nativeVideoHTML(c.han, "chinese") + '<div id="zhMirrorSlot" style="display:none"></div><div id="zhMirrorResult"></div></div>'
-    + '<div class="vocab-actions row"><button class="btn" id="zhListen">🔊 Nghe</button><button class="btn" id="zhCardDictBtn">🔍 Tra từ</button><button class="btn" id="zhMirrorBtn">🎤 Soi gương + ghi âm</button><button class="btn" id="zhHardBtn">' + (isHard ? 'Đã đánh dấu khó ✓' : 'Đánh dấu khó') + '</button><button class="btn" id="zhPrev"' + (pos === 0 ? ' disabled' : '') + '>← Thẻ trước</button><button class="' + ((zvk.step === 4 && zvk.pronRecorded) || isHard ? 'btn btn-primary' : 'btn') + '" id="zhNext"' + (((zvk.step === 4 && zvk.pronRecorded) || isHard) ? '' : ' disabled') + '>Thẻ tiếp theo →</button></div>'
+    + '<div class="vocab-actions row"><button class="btn" id="zhListen">🔊 Nghe</button><button class="btn" id="zhCardDictBtn">🔍 Tra từ</button><button class="btn" id="zhMirrorBtn">🎤 Soi gương + ghi âm</button><button class="btn" id="zhHardBtn">' + (isHard ? 'Đã đánh dấu khó ✓' : 'Đánh dấu khó') + '</button><button class="btn" id="zhPrev"' + (pos === 0 ? ' disabled' : '') + '>← Thẻ trước</button><button class="' + ((zvk.step === 4 && zhPronCanFinish(d, pos, zvk)) || isHard ? 'btn btn-primary' : 'btn') + '" id="zhNext"' + (((zvk.step === 4 && zhPronCanFinish(d, pos, zvk)) || isHard) ? '' : ' disabled') + '>Thẻ tiếp theo →</button></div>'
     + '<div id="zhStrokeArea" style="margin-top:8px">' + zhStrokeAreaHTML(c) + '</div>'
     + '<div class="vocab-foot"><p class="mut">Thẻ ' + (pos + 1) + '/' + cards.length + ' trong bộ này' + (d.set.hsk ? ' · ' + esc(d.set.hsk) : '') + '</p></div>'
     + '</div></div>';
@@ -9689,7 +9904,7 @@ function renderZhVocab(app, l) {
     var b = $("#zhMirrorBtn"); if (b) b.textContent = "🎤 Soi gương + ghi âm";
     var res = $("#zhMirrorResult");
     if (res) res.innerHTML = '<p class="mut">Đang xử lý bản ghi…</p>';
-    setTimeout(function () { var r2 = $("#zhMirrorResult"); if (r2 && r2.textContent.indexOf("Đang xử lý") >= 0) { r2.innerHTML = '<p class="mut">Chưa ghi được âm thanh — bật mic rồi tập lại.</p><details class="guide-more"><summary><b>Xem thêm</b></summary><p class="mut">AI chấm tiếng Trung đang chờ nâng cấp hàm chấm — xem chi tiết trong Cài đặt → Ghi chú.</p></details>'; } }, 1500);
+    setTimeout(function () { var r2 = $("#zhMirrorResult"); if (r2 && r2.textContent.indexOf("Đang xử lý") >= 0) { r2.innerHTML = '<p class="mut">Chưa ghi được âm thanh — bật mic rồi tập lại.</p><details class="guide-more"><summary><b>Xem thêm</b></summary><p class="mut">Chưa có điểm AI — bấm lại “Soi gương + ghi âm”, đọc to chữ Hán rồi bấm dừng để AI chấm.</p></details>'; } }, 1500);
   };
   $("#zhMirrorBtn").onclick = function () {
     var slot = $("#zhMirrorSlot"), res = $("#zhMirrorResult");
@@ -9698,12 +9913,12 @@ function renderZhVocab(app, l) {
     if (!mrSupported()) { if (res) res.innerHTML = '<p>Trình duyệt này chưa hỗ trợ camera/mic — không tính đạt chuẩn.</p>'; return; }
     zhMirOn = true; this.textContent = "⏹ Dừng + nghe lại";
     slot.style.display = "block"; slot.innerHTML = phPracticeSlotHTML("zh");
-    MR.zhWord = c.han; MR.micWant = true;
+    MR.zhWord = c.han; MR.zhPinyin = c.pinyin; MR.zhKey = d.key + ":" + pos; MR.micWant = true;
     mirrorStart(slot);
   };
   $("#zhHardBtn").onclick = function () { try { mirrorStop(); } catch (e) {} if (isHard) delete state.zhHard[hardKey]; else state.zhHard[hardKey] = { kind: "card", han: c.han, pinyin: c.pinyin, vi: c.vi, setKey: d.key, idx: pos, fails: 0, streak: 0, level: 0, due: "" }; saveState(); render(); };
   $("#zhPrev").onclick = function () { try { mirrorStop(); } catch (e) {} state.zhPos[d.key] = Math.max(0, pos - 1); saveState(); render(); };
-  $("#zhNext").onclick = function () { if (!((zvk.step === 4 && zvk.pronRecorded) || isHard)) { toast("Hãy học hết 5 bước của thẻ này, hoặc bấm “Bỏ qua thẻ này” để thẻ vào Sổ lỗi sai rồi mới qua thẻ khác."); return; } try { mirrorStop(); } catch (e) {} state.zhPos[d.key] = pos + 1; saveState(); render(); };
+  $("#zhNext").onclick = function () { if (!((zvk.step === 4 && zhPronCanFinish(d, pos, zvk)) || isHard)) { toast("Hãy học hết 5 bước của thẻ này, hoặc bấm “Bỏ qua thẻ này” để thẻ vào Sổ lỗi sai rồi mới qua thẻ khác."); return; } try { mirrorStop(); } catch (e) {} state.zhPos[d.key] = pos + 1; saveState(); render(); };
 }
 function renderZhPh(app, l) {
   var step = ZH_PH_STEPS[l.idx];
@@ -9904,14 +10119,14 @@ function renderZhSpeak(app, l) {
       try { mirrorStop(); } catch (e) {}
       mirOnIdx = -1; b.textContent = "🎤 Soi gương + ghi âm";
       if (res) res.innerHTML = '<p class="mut">Đang xử lý bản ghi…</p>';
-      setTimeout(function () { var r2 = $("#zhSpeakMirrorResult-" + li); if (r2 && r2.textContent.indexOf("Đang xử lý") >= 0) { r2.innerHTML = '<p class="mut">Chưa ghi được âm thanh — bật mic rồi tập lại.</p><p class="mut">AI chấm tiếng Trung đang chờ nâng cấp — chưa có điểm, không tính đạt cũng không tính chưa đạt.</p>'; } }, 1500);
+      setTimeout(function () { var r2 = $("#zhSpeakMirrorResult-" + li); if (r2 && r2.textContent.indexOf("Đang xử lý") >= 0) { r2.innerHTML = '<p class="mut">Chưa ghi được âm thanh — bật mic rồi tập lại.</p><p class="mut">Chưa có điểm AI — bấm lại nút gương, đọc to rồi bấm dừng để AI chấm.</p>'; } }, 1500);
       return;
     }
-    if (!mrSupported()) { if (res) res.innerHTML = '<p>Trình duyệt này chưa hỗ trợ camera/mic — không tính đạt chuẩn.</p><p class="mut">AI chấm tiếng Trung đang chờ nâng cấp — chưa có điểm, không tính đạt cũng không tính chưa đạt.</p>'; return; }
+    if (!mrSupported()) { if (res) res.innerHTML = '<p>Trình duyệt này chưa hỗ trợ camera/mic — không tính đạt chuẩn.</p>'; return; }
     if (mirOnIdx >= 0) { try { mirrorStop(); } catch (e) {} $$("[data-zhspeakmirror]").forEach(function (pb) { pb.textContent = "🎤 Soi gương + ghi âm"; }); }
     mirOnIdx = li; b.textContent = "⏹ Dừng + nghe lại";
     slot.style.display = "block"; slot.innerHTML = phPracticeSlotHTML("zh");
-    MR.zhWord = s.lines[li].han; MR.micWant = true;
+    MR.zhWord = s.lines[li].han; MR.zhPinyin = s.lines[li].py; MR.zhKey = null; MR.micWant = true;
     mirrorStart(slot);
   }; });
 
