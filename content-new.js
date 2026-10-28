@@ -3990,6 +3990,64 @@ var GRAMMAR_VIDEOS = {
   "listenLongEp:52": { id: "KkrhHUeMjIU", title: "Are you addicted to your smartphone?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: khảo sát thói quen dùng điện thoại" },
   "listenLongEp:7": { id: "vezrsZv5UcE", title: "The circular economy", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: kinh tế tuần hoàn" }
 };
+/* B6 (28/10/2026): tu video Giai tri — du lieu goc duy nhat cho ca dong
+   "Hoc tu video nay" va nut Luu; khong chep them tu ngoai video. */
+var ZH_VIDEO_WORDS = {
+  see: { title: "I See (\u6211\u770b\u5230)", lead: "Ví dụ nhìn quanh rồi kể lại: ", words: [
+    { han: "\u770b\u5230", py: "kàndào", vi: "nhìn thấy" },
+    { han: "\u773c\u775b", py: "yǎnjing", vi: "mắt" },
+    { han: "\u82b1", py: "huā", vi: "hoa" },
+    { han: "\u9e1f", py: "niǎo", vi: "con chim" } ] },
+  soup: { title: "Delicious Soup (\u597d\u559d\u7684\u6c64)", lead: "Ví dụ ăn canh nóng rồi khen: ", words: [
+    { han: "\u6c64", py: "tāng", vi: "canh, súp" },
+    { han: "\u597d\u559d", py: "hǎohē", vi: "ngon, uống ngon" },
+    { han: "\u70ed", py: "rè", vi: "nóng" },
+    { han: "\u559d", py: "hē", vi: "uống" } ] },
+  kelly: { title: "Mrs. Kelly's Class 20: What's That?", lead: "Ví dụ chỉ vào đồ vật rồi hỏi: ", words: [
+    { han: "\u8fd9\u662f\u4ec0\u4e48", py: "zhè shì shénme", vi: "đây là cái gì" },
+    { han: "\u90a3\u662f\u4ec0\u4e48", py: "nà shì shénme", vi: "kia là cái gì" },
+    { han: "\u82f9\u679c", py: "píngguǒ", vi: "quả táo" },
+    { han: "\u732b", py: "māo", vi: "con mèo" } ] },
+  xiyou: { title: "\u897f\u6e38\u8bb0 1-4", lead: "Ví dụ kể về chuyến đi xa: ", words: [
+    { han: "\u5b59\u609f\u7a7a", py: "Sūn Wùkōng", vi: "nhân vật khỉ tài giỏi trong truyện" },
+    { han: "\u5e08\u7236", py: "shīfu", vi: "thầy" },
+    { han: "\u53bb\u897f\u5929\u53d6\u7ecf", py: "qù Xītiān qǔjīng", vi: "đi về phía Tây để thỉnh kinh" } ] }
+};
+function zhVideoWordsHTML(vid) {
+  var v = ZH_VIDEO_WORDS[vid]; if (!v) return "";
+  var saved = 0;
+  (v.words || []).forEach(function (wd) { if (state.zhHard && state.zhHard["video:" + vid + ":" + wd.han]) saved++; });
+  var txt = '<p><b>Học từ video này:</b> ' + v.lead + (v.words || []).map(function (wd) { return wd.han + " (" + wd.py + ") — " + wd.vi; }).join("; ") + '.</p>';
+  txt += '<div class="row"><button class="btn" data-zhvideo-save="' + vid + '"' + (saved >= v.words.length ? ' disabled' : '') + '>' + (saved >= v.words.length ? 'Đã lưu ✓' : '💾 Lưu các từ video này vào Ôn tập') + '</button></div>';
+  return txt;
+}
+function zhFindCardForHan(han) {
+  var found = null;
+  try {
+    zhSets().forEach(function (sd) {
+      if (found) return;
+      (sd.set.cards || []).forEach(function (c, ci) { if (!found && c.han === han) found = { setKey: sd.key, idx: ci }; });
+    });
+  } catch (e) {}
+  return found;
+}
+function zhSaveVideoWords(vid) {
+  var v = ZH_VIDEO_WORDS[vid]; if (!v) return { added: 0, skipped: 0 };
+  var added = 0, skipped = 0;
+  (v.words || []).forEach(function (wd) {
+    var key = "video:" + vid + ":" + wd.han;
+    if (state.zhHard && state.zhHard[key]) { skipped++; return; }
+    var ref = zhFindCardForHan(wd.han);
+    var entry = { kind: "video", video: vid, title: v.title, han: wd.han, pinyin: wd.py, vi: wd.vi, streak: 0, level: 0, fails: 0, due: todayStr() };
+    if (ref) { entry.setKey = ref.setKey; entry.idx = ref.idx; }
+    if (!state.zhHard) state.zhHard = {};
+    state.zhHard[key] = entry;
+    added++;
+  });
+  saveState();
+  return { added: added, skipped: skipped };
+}
+
 
 // Câu luyện HSKK Sơ cấp: nghe–nhắc lại (tự soạn, chào hỏi/giới thiệu cơ bản).
 var ZH_HSKK_SENTENCES = [
@@ -4049,8 +4107,7 @@ var ZH_ENTRY_QS = [
 // chac chan dung trinh do HSK2-HSK3; ly hop tu (离合词) va bo ngu ket qua/xu huong
 // de dot sau de giu dung 12 tram tap trung. Tien trinh dung lai zhDone san co
 // (khoa zhGram:/zhRead:/zhListen:) nen dong bo Supabase theo dung mau row rb zhDone.
-var ZH_GRAMMAR = [
- {
+var ZH_GRAMMAR = [ {
   "id": "le",
   "stage": 2,
   "title": "了 — đã / rồi",
@@ -5059,8 +5116,7 @@ var ZH_GRAMMAR = [
   ]
  }
 ];
-var ZH_READING = [
- {
+var ZH_READING = [ {
   "id": "nha",
   "stage": 2,
   "title": "Nhà của Tiểu Minh",
@@ -5581,8 +5637,7 @@ var ZH_READING = [
   ]
  }
 ];
-var ZH_LISTENING = [
- {
+var ZH_LISTENING = [ {
   "id": "hen",
   "stage": 2,
   "title": "Hẹn nhau xem phim",
@@ -6429,13 +6484,15 @@ function zhEntryStageFor(score, total) {
 // Tu soan 100% theo chu de doi song cua Giao trinh chuan HSK (he 6 cap cu),
 // trinh do HSK2-HSK3; khong trich nguyen van giao trinh hay trang khac.
 // Nghe/noi dung giong doc may zh-CN (zhSpeak), khong phai audio thu san.
-// AI cham tieng Trung DANG CHO nang cap (parent bao pronounce v5): moi cho
-// can cham AI deu ghi ro cho nang cap, khong tinh dat cung khong tinh
-// chua dat, khong noi ham cham tieng Anh vao. Tien trinh dung lai zhDone
-// san co (khoa zhSpeak:/zhRole:/zhWrite:) + zhAwardOnce, dong bo theo
-// dung mau row rb zhDone, khong them khoa state moi.
-var ZH_SPEAK = [
- {
+// DOT pronounce v5 (28/10/2026): cham phat am AI tieng Trung DA NOI XONG:
+// guong + the tu vung gui language "zh" + pinyin chuan, cong 80, chi tinh
+// khi may chu tra gradedLanguage "zh" (xem zhPronPass, mrFinishAudio).
+// Rieng bai Noi/Nhap vai/Viet (ZH_SPEAK/ZH_ROLE/ZH_WRITE) van la tu luyen
+// chua cham diem, khong tu cham. Tien trinh dung lai zhDone san co
+// (khoa zhSpeak:/zhRole:/zhWrite:) + zhAwardOnce, dong bo theo dung mau
+// row rb zhDone, khong them khoa state moi. Con cho: kiem chung live
+// bang JWT that (chua co).
+var ZH_SPEAK = [ {
   "id": "chaohoi", "stage": 2, "title": "Chào hỏi và làm quen", "topic": "Chào hỏi",
   "hook": "“你好！你叫什么名字？” — chào hỏi và hỏi tên là câu mở đầu quen thuộc nhất.",
   "lines": [
@@ -6571,8 +6628,7 @@ var ZH_SPEAK = [
   "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
   }
  ];
-var ZH_ROLE = [
- {
+var ZH_ROLE = [ {
   "id": "cuahang", "stage": 2, "title": "Ở cửa hàng", "setting": "Cửa hàng quần áo",
   "you": "Khách mua hàng", "partner": "Nhân viên cửa hàng",
   "goal": "Hỏi giá, mặc thử rồi mua một cái áo.",
@@ -6701,8 +6757,7 @@ var ZH_ROLE = [
   "note": "Tình huống tự soạn theo chủ đề đời sống trình độ HSK3 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Thoại đối tác nghe bằng giọng đọc máy zh-CN. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
   }
  ];
-var ZH_WRITE = [
- {
+var ZH_WRITE = [ {
   "id": "sapxep-chaohoi", "stage": 2, "title": "Sắp xếp: Hôm nay đi học", "kind": "order",
   "prompt": "Sắp xếp các từ thành câu đúng: hôm nay tôi đi học ở trường.",
   "words": ["我", "今天", "去", "学校", "上课"],
@@ -8649,7 +8704,32 @@ ZH_GRAMMAR.push.apply(ZH_GRAMMAR, [
 {"q": "Câu nào dùng 与此同时 đúng?", "o": ["网课越来越多，与此同时，学生也需要学会自己安排时间", "网课与此同时越来越多，学生也需要学会自己安排时间", "网课越来越多，学生与此同时也需要学会自己安排时间不对", "与此同时网课越来越多学生也需要学会自己安排时间"], "a": 0, "why": "与此同时 đứng đầu vế sau."},
 {"q": "Muốn nối hai sự việc song song của hai chủ thể khác nhau dùng từ nào?", "o": ["与此同时", "一边…一边…", "先…再…", "与其…不如…"], "a": 0, "why": "Hai sự việc song song dùng 与此同时; một người hai việc dùng 一边…一边…."}
 ]
-}
+},
+ {
+  "id": "shi-ma-bu",
+  "stage": 1,
+  "title": "是 · 吗 · 不 — là / không / hỏi",
+  "hook": "“我是学生” — tôi là học sinh: 是 nối người với thân phận; thêm 吗 là thành câu hỏi.",
+  "examples": [
+   "我是学生。(Wǒ shì xuésheng.) — Tôi là học sinh.",
+   "他是我的朋友。(Tā shì wǒ de péngyou.) — Anh ấy là bạn của tôi.",
+   "你是学生吗？(Nǐ shì xuésheng ma?) — Bạn có phải là học sinh không?",
+   "我不是老师。(Wǒ bú shì lǎoshī.) — Tôi không phải là thầy giáo.",
+   "你呢？(Nǐ ne?) — Còn bạn thì sao?"
+  ],
+  "speak": "我是学生。他是我的朋友。你是学生吗？我不是老师。你呢？",
+  "rule": "是 nối chủ ngữ với thân phận (我是学生); 吗 đặt cuối câu trần thuật thành câu hỏi (你是学生吗？); 不 đứng trước 是 để phủ định (我不是老师); 呢 hỏi lại đối phương (你呢？).",
+  "tip": "Đừng nói 是 rồi bỏ lửng: 是 luôn cần có nội dung đằng sau (là ai, là cái gì).",
+  "note": "Trạm tự soạn theo điểm ngữ pháp trình độ HSK1 (hệ 6 cấp cũ); ví dụ tự viết, không trích nguyên văn giáo trình. Câu ví dụ chỉ dùng từ chặng 1 (kèm hư từ 的/在/很 đã gặp trong cụm đi kèm của thẻ).",
+  "quiz": [
+   {"q": "Câu nào nói đúng 'Tôi là học sinh'?", "o": ["我是学生", "我学生是", "我是学", "学生我是"], "a": 0, "why": "是 đứng giữa chủ ngữ và thân phận: 我是学生。"},
+   {"q": "Muốn hỏi 'Bạn có phải là học sinh không?' thì nói?", "o": ["你是学生吗", "你是学生", "你吗是学生", "学生你是吗"], "a": 0, "why": "吗 đặt cuối câu trần thuật thành câu hỏi: 你是学生吗？"},
+   {"q": "Câu nào phủ định đúng 'Tôi không phải là thầy giáo'?", "o": ["我不是老师", "我不老师是", "我是老师不", "我老师不是"], "a": 0, "why": "不 đứng trước 是: 我不是老师。"},
+   {"q": "'Cô ấy là mẹ tôi' nói thế nào?", "o": ["她是我的妈妈", "她妈妈是我", "她是妈妈我", "我妈妈是她"], "a": 0, "why": "她是我的妈妈：cô ấy là mẹ của tôi."},
+   {"q": "'Còn bạn thì sao?' (hỏi lại) nói thế nào?", "o": ["你呢", "你吗", "你不", "你是"], "a": 0, "why": "呢 hỏi lại đối phương: 你呢？— còn bạn thì sao?"},
+   {"q": "Câu nào hỏi đúng 'Anh ấy có phải là bạn của tôi không?'?", "o": ["他是我的朋友吗", "他是我的朋友", "他吗是我的朋友", "我的朋友是他吗"], "a": 0, "why": "他是我的朋友吗？— thêm 吗 cuối câu trần thuật thành câu hỏi."}
+  ]
+ }
 ]);
 
 ZH_READING.push.apply(ZH_READING, [
@@ -8809,7 +8889,24 @@ ZH_READING.push.apply(ZH_READING, [
 {"q": "Cuộc sống thành phố cho người trẻ những gì?", "o": ["Nhiều cơ hội và nhiều áp lực", "Chỉ cơ hội", "Chỉ áp lực", "Không có gì"], "a": 0, "why": "城市生活给了年轻人很多机会，也给了他们很多压力."},
 {"q": "Câu hỏi cuối của bài là gì?", "o": ["Làm sao tìm được cân bằng giữa cơ hội và áp lực", "Làm sao đi làm nhanh hơn", "Làm sao ăn nhanh hơn", "Làm sao nghỉ việc"], "a": 0, "why": "怎么在机会和压力之间找到平衡."}
 ]
-}
+},
+ {
+  "id": "wo-de-jia",
+  "stage": 1,
+  "title": "Nhà của tôi",
+  "topic": "Gia đình",
+  "text": "我是学生。爸爸、妈妈、姐姐、我，我们是四个人。爸爸是老师，妈妈是老师。姐姐是学生，我是学生。早上，爸爸去学校，妈妈去商店。我在家学习汉语。晚上，我们在家吃饭。爸爸吃米饭，妈妈吃面条，我吃饺子。我的老师很好，我的同学是我的朋友。",
+  "pinyin": "Wǒ shì xuésheng. Bàba, māma, jiějie, wǒ, wǒmen shì sì gè rén. Bàba shì lǎoshī, māma shì lǎoshī. Jiějie shì xuésheng, wǒ shì xuésheng. Zǎoshang, bàba qù xuéxiào, māma qù shāngdiàn. Wǒ zài jiā xuéxí Hànyǔ. Wǎnshang, wǒmen zài jiā chī fàn. Bàba chī mǐfàn, māma chī miàntiáo, wǒ chī jiǎozi. Wǒ de lǎoshī hěn hǎo, wǒ de tóngxué shì wǒ de péngyou.",
+  "vi": "Tôi là học sinh. Bố, mẹ, chị gái và tôi — chúng tôi là 4 người. Bố là thầy giáo, mẹ là cô giáo. Chị gái là học sinh, tôi là học sinh. Buổi sáng, bố đến trường, mẹ đến cửa hàng. Tôi ở nhà học tiếng Trung. Buổi tối, chúng tôi ở nhà ăn cơm. Bố ăn cơm, mẹ ăn mì sợi, tôi ăn bánh chẻo. Thầy cô của tôi rất tốt, bạn học của tôi là bạn của tôi.",
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK1 (hệ 6 cấp cũ); đoạn văn và câu hỏi tự viết, không trích nguyên văn giáo trình. Đoạn văn chỉ dùng từ chặng 1 (kèm hư từ 的/在/很 đã gặp trong cụm đi kèm của thẻ).",
+  "questions": [
+   {"q": "Nhà tôi có mấy người?", "o": ["3 người", "4 người", "5 người", "2 người"], "a": 1, "why": "我们是四个人：chúng tôi là 4 người."},
+   {"q": "Bố làm nghề gì?", "o": ["Bác sĩ", "Thầy giáo", "Học sinh", "Bạn học"], "a": 1, "why": "爸爸是老师：bố là thầy giáo."},
+   {"q": "Buổi sáng mẹ đi đâu?", "o": ["Đi trường", "Đi cửa hàng", "Ở nhà", "Đi công viên"], "a": 1, "why": "妈妈去商店：mẹ đi cửa hàng."},
+   {"q": "Buổi tối cả nhà làm gì?", "o": ["Học tiếng Trung", "Ăn cơm", "Uống trà", "Đi bộ"], "a": 1, "why": "晚上，我们在家吃饭：buổi tối, chúng tôi ở nhà ăn cơm."},
+   {"q": "Thầy cô của tôi thế nào?", "o": ["Rất tốt", "Không tốt", "Rất bận", "Không đến trường"], "a": 0, "why": "我的老师很好：thầy cô của tôi rất tốt."}
+  ]
+ }
 ]);
 
 ZH_LISTENING.push.apply(ZH_LISTENING, [
@@ -9035,7 +9132,28 @@ ZH_LISTENING.push.apply(ZH_LISTENING, [
 {"q": "Ví dụ lớp phải học ở trường là lớp nào?", "o": ["Lớp làm thí nghiệm", "Lớp học online", "Lớp tự học", "Lớp thể dục"], "a": 0, "why": "比如做实验的课."},
 {"q": "Kết luận “rốt cuộc” của hai người là gì?", "o": ["Lớp học online tốt hay không, phải xem dùng thế nào", "Lớp học online lúc nào cũng tốt", "Lớp học online lúc nào cũng xấu", "Không nên dùng lớp học online"], "a": 0, "why": "归根到底，网课好不好，要看怎么用."}
 ]
-}
+},
+ {
+  "id": "chi-fan",
+  "stage": 1,
+  "title": "Ăn cơm ở nhà",
+  "topic": "Ăn uống",
+  "lines": [
+   {"sp": "A", "han": "你饿吗？", "py": "Nǐ è ma?", "vi": "Bạn có đói không?"},
+   {"sp": "B", "han": "我饿。我们吃饭。", "py": "Wǒ è. Wǒmen chī fàn.", "vi": "Tôi đói. Chúng mình ăn cơm đi."},
+   {"sp": "A", "han": "我们吃米饭，好吗？", "py": "Wǒmen chī mǐfàn, hǎo ma?", "vi": "Chúng mình ăn cơm nhé, được không?"},
+   {"sp": "B", "han": "好。我吃米饭，你呢？", "py": "Hǎo. Wǒ chī mǐfàn, nǐ ne?", "vi": "Được. Tôi ăn cơm, còn bạn?"},
+   {"sp": "A", "han": "我吃面条。我喝茶。", "py": "Wǒ chī miàntiáo. Wǒ hē chá.", "vi": "Tôi ăn mì sợi. Tôi uống trà."},
+   {"sp": "B", "han": "我喝牛奶。牛奶很好喝。", "py": "Wǒ hē niúnǎi. Niúnǎi hěn hǎohē.", "vi": "Tôi uống sữa. Sữa rất ngon."}
+  ],
+  "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK1 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Lời thoại chỉ dùng từ chặng 1.",
+  "questions": [
+   {"q": "Lúc đầu B nói gì về mình?", "o": ["Tôi đói", "Tôi khát", "Tôi no rồi", "Tôi muốn ngủ"], "a": 0, "why": "我饿：tôi đói."},
+   {"q": "Hai người quyết định ăn gì?", "o": ["Ăn mì sợi", "Ăn cơm", "Ăn bánh chẻo", "Ăn trái cây"], "a": 1, "why": "我们吃米饭：chúng mình ăn cơm."},
+   {"q": "B uống gì?", "o": ["Trà", "Sữa", "Nước", "Cà phê"], "a": 1, "why": "我喝牛奶：tôi uống sữa."},
+   {"q": "A ăn gì?", "o": ["Mì sợi", "Cơm", "Bánh chẻo", "Trái cây"], "a": 0, "why": "我吃面条：tôi ăn mì sợi."}
+  ]
+ }
 ]);
 
 ZH_SPEAK.push.apply(ZH_SPEAK, [
@@ -9206,7 +9324,19 @@ ZH_SPEAK.push.apply(ZH_SPEAK, [
 {"sp": "B", "han": "对，不管在哪儿，都要认真工作，好好生活。", "py": "Duì, bùguǎn zài nǎr, dōu yào rènzhēn gōngzuò, hǎohāo shēnghuó.", "vi": "Đúng, dù ở đâu, đều phải làm việc nghiêm túc, sống thật tốt."}
 ],
 "note": spNote(6)
-}
+},
+ {
+  "id": "zai-xuexiao", "stage": 1, "title": "Ở trường", "topic": "Trường học",
+  "hook": "“我是学生” — tự giới thiệu mình là học sinh, rồi hỏi thăm thầy cô và bạn học.",
+  "lines": [
+   {"sp": "A", "han": "你好！我是学生。你呢？", "py": "Nǐ hǎo! Wǒ shì xuésheng. Nǐ ne?", "vi": "Chào bạn! Tôi là học sinh. Còn bạn?"},
+   {"sp": "B", "han": "你好！我是学生。我学习汉语。", "py": "Nǐ hǎo! Wǒ shì xuésheng. Wǒ xuéxí Hànyǔ.", "vi": "Chào bạn! Tôi là học sinh. Tôi học tiếng Trung."},
+   {"sp": "A", "han": "你的老师好吗？", "py": "Nǐ de lǎoshī hǎo ma?", "vi": "Thầy cô của bạn có tốt không?"},
+   {"sp": "B", "han": "我的老师很好。你的同学是你的朋友吗？", "py": "Wǒ de lǎoshī hěn hǎo. Nǐ de tóngxué shì nǐ de péngyou ma?", "vi": "Thầy cô của tôi rất tốt. Bạn học của bạn có phải là bạn của bạn không?"},
+   {"sp": "A", "han": "是。我的同学是我的朋友。", "py": "Shì. Wǒ de tóngxué shì wǒ de péngyou.", "vi": "Đúng. Bạn học của tôi là bạn của tôi."}
+  ],
+  "note": "Kịch bản tự soạn theo chủ đề đời sống trình độ HSK1 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Lời thoại chỉ dùng từ chặng 1. Bài này là tự luyện nói nhại, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ }
 ]);
 
 ZH_ROLE.push.apply(ZH_ROLE, [
@@ -9400,7 +9530,21 @@ ZH_ROLE.push.apply(ZH_ROLE, [
 ],
 "chunks": ["你有什么建议？ (Nǐ yǒu shénme jiànyì?) — Bạn có gợi ý gì?", "对你来说，住在学校附近最方便。 (Duì nǐ lái shuō, zhù zài xuéxiào fùjìn zuì fāngbiàn.) — Đối với bạn, sống gần trường là tiện nhất.", "看清楚再签合同。 (Kàn qīngchu zài qiān hétong.) — Xem rõ rồi hãy ký hợp đồng."],
 "tip": RO_TIP, "note": roNote(6)
-}
+},
+ {
+  "id": "wan-shang", "stage": 1, "title": "Ăn tối ở nhà", "setting": "Ở nhà",
+  "you": "Con", "partner": "Mẹ", "goal": "Nói với mẹ tối nay mình muốn ăn gì, uống gì.",
+  "turns": [
+   {"from": "partner", "han": "晚上吃米饭，好吗？", "py": "Wǎnshang chī mǐfàn, hǎo ma?", "vi": "Tối ăn cơm nhé, được không?"},
+   {"from": "you", "han": "好。我吃米饭。", "py": "Hǎo. Wǒ chī mǐfàn.", "vi": "Được. Tôi ăn cơm."},
+   {"from": "partner", "han": "你喝茶吗？", "py": "Nǐ hē chá ma?", "vi": "Bạn uống trà không?"},
+   {"from": "you", "han": "不。我喝牛奶。", "py": "Bù. Wǒ hē niúnǎi.", "vi": "Không. Tôi uống sữa."},
+   {"from": "partner", "han": "好。牛奶很好喝。", "py": "Hǎo. Niúnǎi hěn hǎohē.", "vi": "Được. Sữa rất ngon."}
+  ],
+  "chunks": ["晚上吃米饭，好吗？", "我吃米饭。", "你喝茶吗？", "不。我喝牛奶。"],
+  "tip": "Ở nhà, cứ nói ngắn như vậy là đủ: món ăn + 好吗 để rủ, 不 để từ chối nhẹ nhàng.",
+  "note": "Tình huống tự soạn theo chủ đề đời sống trình độ HSK1 (hệ 6 cấp cũ); lời thoại tự viết, không trích nguyên văn giáo trình. Lời thoại chỉ dùng từ chặng 1. Tình huống này không chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt."
+ }
 ]);
 
 ZH_WRITE.push.apply(ZH_WRITE, [
@@ -9511,7 +9655,18 @@ ZH_WRITE.push.apply(ZH_WRITE, [
 "phrases": ["最近几年，河内的天气变化很大。 (Zuìjìn jǐ nián, Hénèi de tiānqì biànhuà hěn dà.) — Mấy năm gần đây, thời tiết Hà Nội thay đổi rất lớn.", "归根到底，天气我们不能改变。 (Guī gēn dào dǐ, tiānqì wǒmen bù néng gǎibiàn.) — Rốt cuộc, thời tiết chúng ta không thể thay đổi.", "这样，身体才会更健康。 (Zhèyàng, shēntǐ cái huì gèng jiànkāng.) — Như vậy, cơ thể mới khỏe hơn."],
 "why": "Bài mẫu dùng đủ 4 ý trong đề: ảnh hưởng chung → hè/đông đối chiếu → nên làm gì → kết luận 归根到底, mỗi ý rõ ràng, không lan man.",
 "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK6 (hệ 6 cấp cũ); đề và bài mẫu tự viết, không trích nguyên văn giáo trình. Nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Phần này chỉ đối chiếu bài mẫu, chưa có AI chấm tiếng Trung — AI chấm đang chờ nâng cấp, không có điểm, không tính đạt cũng không tính chưa đạt."
-}
+},
+ {
+  "id": "tian-ci-jia", "stage": 1, "title": "Điền từ: Nhà và trường", "kind": "fill",
+  "prompt": "Chọn từ đúng điền vào chỗ trống trong các câu về nhà và trường.",
+  "questions": [
+   {"q": "我是___。(Tôi là học sinh.)", "o": ["学生", "老师", "朋友", "妈妈"], "a": 0, "why": "我是学生：tôi là học sinh."},
+   {"q": "我___汉语。(Tôi học tiếng Trung.)", "o": ["学习", "吃", "喝", "去"], "a": 0, "why": "学习汉语：học tiếng Trung."},
+   {"q": "爸爸去___。(Bố đến trường.)", "o": ["学校", "商店", "公园", "教室"], "a": 0, "why": "爸爸去学校：bố đến trường."},
+   {"q": "我喝___。(Tôi uống sữa.)", "o": ["牛奶", "米饭", "面条", "苹果"], "a": 0, "why": "我喝牛奶：tôi uống sữa."}
+  ],
+  "note": "Bài tự soạn theo chủ đề đời sống trình độ HSK1 (hệ 6 cấp cũ); câu và đáp án tự viết, không trích nguyên văn giáo trình. Chấm đúng/sai ngay theo đáp án; câu sai vào Sổ lỗi sai để ôn giãn cách."
+ }
 ]);
 })();
 
