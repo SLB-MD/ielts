@@ -219,8 +219,8 @@ details>summary:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 <p class="mut" id="tutorFloatStatus"></p>
 </div>
 <div id="bottombar" style="display:none"><button class="btn" id="bbBack">← Quay lại</button></div>
-<script src="config.js"></script>
-<script src="content.js"></script>
+<script src="../english-web-standalone/config.js"></script>
+<script src="../english-web-standalone/content.js"></script>
 <script src="content-new.js"></script>
 <script>
 "use strict";
@@ -1322,7 +1322,7 @@ function viewHome(app) {
   html += '<p id="homeGreet">' + (fresh ? 'Hôm nay 2812 cùng bạn học nhé.' : 'Chào bạn! Hôm nay mình cùng 2812 học tiếp nhé.') + '</p>';
   if (fresh) {
     html += '<section class="card" id="u7Welcome">'
-      + '<details id="u7WhyCard"><summary><b>Vì sao học kiểu này nhớ lâu — bấm để mở</b></summary><p><b>Ôn đúng lúc sắp quên:</b> câu nào sai sẽ vào Sổ lỗi sai và ôn lại đúng ngày — xem chi tiết ở Cài đặt → Ghi chú.</p><p><b>Học theo dạng bài:</b> mỗi dạng bài có cách làm riêng trước, rồi mới luyện trộn nhiều dạng như đi thi thật.</p><p><b>Chẩn đoán trước khi học:</b> bài kiểm tra nhanh đầu chặng cho biết bạn yếu chỗ nào, để lộ trình xếp dạng bài yếu lên trước.</p></details>'
+      + '<details id="u7WhyCard"><summary><b>Vì sao học kiểu này nhớ lâu — bấm để mở</b></summary><p><b>Ôn đúng lúc sắp quên:</b> câu nào sai sẽ vào Sổ lỗi sai và ôn lại đúng ngày theo lịch 1-3-7-14-30 ngày — xem chi tiết ở Cài đặt → Ghi chú.</p><p><b>Học theo dạng bài:</b> mỗi dạng bài có cách làm riêng trước, rồi mới luyện trộn nhiều dạng như đi thi thật.</p><p><b>Chẩn đoán trước khi học:</b> bài kiểm tra nhanh đầu chặng cho biết bạn yếu chỗ nào, để lộ trình xếp dạng bài yếu lên trước.</p></details>'
       + '<details id="u7Faq"><summary><b>Câu hỏi thường gặp — bấm để mở</b></summary><p><b>Mỗi ngày học bao lâu?</b> Khoảng 10-20 phút một buổi là đủ, học đều mỗi ngày quan trọng hơn học dồn một lúc.</p><p><b>Làm sai có sao không?</b> Không sao cả — câu sai vào Sổ lỗi sai để ôn lại, không bị trừ điểm hay khóa bài.</p><p><b>"Band ước lượng" nghĩa là gì?</b> Là điểm web tự tính để bạn tham khảo trình độ, không phải điểm thi thật — IELTS không công bố bảng quy đổi cố định.</p></details></section>';
   }
   if (fresh) {
@@ -1705,7 +1705,7 @@ function viewPractice(app) {
   });
   html += '</details>';
   /* --- Doc --- */
-  var readLevels = ["Band 0", "Band 2.0", "Band 2.5", "Band 3.0", "Band 3.5", "Band 4.0", "Band 4.5", "Band 5.0", "Band 5.5", "Band 6.0", "Band 6.5", "Band 7.0", "Band 7.5+"];
+  var readLevels = ["Band 0", "Band 2,0", "Band 2,5", "Band 3,0", "Band 3,5", "Band 4,0", "Band 4,5", "Band 5,0", "Band 5,5", "Band 6,0", "Band 6,5", "Band 7,0", "Band 7,5+"];
   var readByLevel = {};
   CONTENT.reading.forEach(function (r, i) { (readByLevel[r.level] = readByLevel[r.level] || []).push(i); });
   var readNextItems = [];
@@ -2097,7 +2097,8 @@ function sourcesHTML() {
   h += '<p>Cổng 80% mở kiểm tra, band ước lượng, lịch ôn 1-3-7-14-30 ngày và bảng XP đều là chuẩn nội bộ của web, không phải chuẩn IELTS hay HSK chính thức. Cách tính chi tiết xem trong Cài đặt → Ghi chú.</p>';
   h += '<h3>Nguồn video</h3>';
   h += '<p>Video người bản địa nói từ: nguồn YouGlish, dùng video YouTube; chế độ hạn chế đã bật. Video mở trong trang, không rời khỏi bài học.</p>';
-  h += '<p>Video lý thuyết pinyin: Sắp có — video sẽ gắn ở đây trong đợt video sau, chỉ video đã kiểm chứng từ kênh chính thức, không link ra YouTube.</p>';
+  h += '<p><b>Video lý thuyết pinyin</b> (mở trong trang, không link ra YouTube):</p>';
+  h += videoSlotIf("zhPh:tones") + videoSlotIf("zhPh:pairs") + videoSlotIf("zhPh:sandhi") + videoSlotIf("zhPh:bu") + videoSlotIf("zhPh:song");
   h += '</details>';
   return h;
 }
@@ -3391,7 +3392,7 @@ function renderSkillGramOld(app, l) {
   if (!g) { toast("Trạm ngữ pháp này chưa có."); backFromLesson(); return; }
   if (l.quiz) { renderQuizEngine(app, l, g.quiz, "skill", "gramOld:" + l.idx, 2); return; }
   var misOld = (typeof RB_GRAMMAR_MISTAKES !== "undefined") ? RB_GRAMMAR_MISTAKES[l.idx] : "";
-  app.innerHTML = skillHead(l.title || g.name, (g.fam || "") + " · " + (g.level || "")) + phaseBarHTML(1) + '<div class="qblock"><p class="mut">' + esc(g.hook || "") + '</p><p><b>Ví dụ trước:</b></p>' + (g.examples || []).map(function (e) { return '<p>· ' + esc(e) + '</p>'; }).join("") + '<p><b>Quy tắc:</b> ' + esc(g.explain || "") + '</p>' + (misOld ? '<p><b>Lỗi hay gặp:</b> ' + esc(misOld) + '</p>' : "") + videoSlotHTML() + '<p class="mut">Bài này có ' + (g.quiz || []).length + ' câu hỏi thực hành.</p><p><button class="btn btn-primary" id="gramOldStart">Vào luyện tập →</button> <button class="btn" id="gramOldAi">AI giải thích điểm ngữ pháp này</button></p><div class="why" id="gramOldAiOut"></div></div>';
+  app.innerHTML = skillHead(l.title || g.name, (g.fam || "") + " · " + (g.level || "")) + phaseBarHTML(1) + '<div class="qblock"><p class="mut">' + esc(g.hook || "") + '</p><p><b>Ví dụ trước:</b></p>' + (g.examples || []).map(function (e) { return '<p>· ' + esc(e) + '</p>'; }).join("") + '<p><b>Quy tắc:</b> ' + esc(g.explain || "") + '</p>' + (misOld ? '<p><b>Lỗi hay gặp:</b> ' + esc(misOld) + '</p>' : "") + videoSlotHTML("gramOld:" + l.idx) + '<p class="mut">Bài này có ' + (g.quiz || []).length + ' câu hỏi thực hành.</p><p><button class="btn btn-primary" id="gramOldStart">Vào luyện tập →</button> <button class="btn" id="gramOldAi">AI giải thích điểm ngữ pháp này</button></p><div class="why" id="gramOldAiOut"></div></div>';
   wireBack();
   $("#gramOldStart").onclick = function () { l.quiz = true; lessonStart = Date.now(); render(); };
   $("#gramOldAi").onclick = function () { var out = $("#gramOldAiOut"); out.textContent = "AI đang giải thích…"; out.classList.add("show"); callAiTutorMode("grammar", "Giải thích điểm ngữ pháp IELTS này bằng tiếng Việt đơn giản, ví dụ trước - quy tắc sau: " + g.name + ". Quy tắc: " + (g.explain || "")).then(function (r) { out.textContent = r; }, function (err) { out.textContent = err; }); };
@@ -4104,7 +4105,7 @@ function renderGrammar(app, l) {
     + '<p>💡 <b>Mẹo hình ảnh:</b> ' + esc(g.tip) + '</p></details>'
     + '<div class="sumcard"><b>Làm mẫu:</b><p>' + esc(g.model) + '</p><p class="mut">' + esc(g.modelVi) + '</p></div>'
     + ((typeof RB_NEW_GRAMMAR_MISTAKES !== "undefined" && RB_NEW_GRAMMAR_MISTAKES[l.gIdx]) ? '<p><b>Lỗi hay gặp:</b> ' + esc(RB_NEW_GRAMMAR_MISTAKES[l.gIdx]) + '</p>' : "")
-    + videoSlotHTML()
+    + videoSlotHTML("gramNew:" + l.gIdx)
     + '<p class="mut">Bài này có 8 câu hỏi thực hành.</p><button class="btn btn-primary" id="gramStart">Vào luyện tập →</button></div>';
   app.innerHTML = html;
   wireBack();
@@ -4135,7 +4136,12 @@ function phaseBarHTML(phase) {
   var p2 = phase === 2 ? "<b>2. Thực hành</b>" : "2. Thực hành";
   return '<p class="mut">Pha: ' + p1 + " \u2192 " + p2 + "</p>";
 }
-function videoSlotHTML() {
+function videoSlotIf(key) { /* khung video CHỈ khi bản đồ có clip cho khóa này; màn chưa có video thì không hiện khung trống (khác khung "Sắp có" của trạm ngữ pháp) */
+  return (typeof GRAMMAR_VIDEOS !== "undefined" && GRAMMAR_VIDEOS[key]) ? videoSlotHTML(key) : "";
+}
+function videoSlotHTML(key) {
+  var v = (key && typeof GRAMMAR_VIDEOS !== "undefined") ? GRAMMAR_VIDEOS[key] : null;
+  if (v) return '<div class="sumcard"><p><b>Video lý thuyết:</b></p><iframe src="https://www.youtube-nocookie.com/embed/' + v.id + '?rel=0" loading="lazy" allowfullscreen></iframe><p class="mut">' + esc(v.title) + ' (' + esc(v.channel) + ') — ' + esc(v.note) + '</p></div>';
   return '<div class="sumcard"><p><b>Video lý thuyết:</b> <span class="mut">Sắp có — video sẽ gắn ở đây trong đợt video sau, chỉ video đã kiểm chứng từ kênh chính thức, không link ra YouTube.</span></p></div>';
 }
 function readTheoryHTML(r) {
@@ -4146,7 +4152,7 @@ function readTheoryHTML(r) {
     return '<div class="sumcard"><b>' + esc(g.t) + '</b><p>' + esc(g.how) + '</p><p class="mut">Ví dụ mini: ' + esc(g.ex) + '</p>'
       + (g.trap ? '<details class="why-more"><summary>Xem thêm: bẫy thường gặp</summary><p>' + esc(g.trap) + '</p></details>' : '') + '</div>';
   }).join("");
-  return '<div class="qblock"><p>Học cách làm dạng bài này trước, rồi mới vào bài đọc.</p>' + body + '</div>';
+  return '<div class="qblock"><p>Học cách làm dạng bài này trước, rồi mới vào bài đọc.</p>' + body + videoSlotIf("read:strategies") + (CONTENT.reading.indexOf(r) === 0 ? videoSlotIf("read:tips0") : "") + videoSlotIf("readEp:" + CONTENT.reading.indexOf(r)) + '</div>';
 }
 function listenShortTheoryHTML() {
   var g = RB_LISTEN_SHORT_GUIDE;
@@ -4161,18 +4167,25 @@ function listenLongTheoryHTML(r) {
     return '<div class="sumcard"><b>' + esc(g.t) + '</b><p>' + esc(g.how) + '</p><p class="mut">Ví dụ mini: ' + esc(g.ex) + '</p>'
       + (g.trap ? '<details class="why-more"><summary>Xem thêm: bẫy thường gặp</summary><p>' + esc(g.trap) + '</p></details>' : '') + '</div>';
   }).join("");
-  return '<div class="qblock"><p>Nghe lấy ý chính trước, rồi mới nghe bắt chi tiết. Transcript chỉ mở để đối chiếu sau khi làm xong.</p>' + body + '</div>';
+  var li = CONTENT.listeningPlus.indexOf(r);
+  return '<div class="qblock"><p>Nghe lấy ý chính trước, rồi mới nghe bắt chi tiết. Transcript chỉ mở để đối chiếu sau khi làm xong.</p>' + body + videoSlotIf("listenLong:MC") + (li === 16 ? videoSlotIf("listenLong:16") : "") + (li === 15 ? videoSlotIf("listenLong:map1") + videoSlotIf("listenLong:map2") : "") + videoSlotIf("listenLongEp:" + li) + '</div>';
 }
 function speakTheoryHTML(s) {
   var f = RB_SPEAK_PART_FRAME[s.partNum] || RB_SPEAK_PART_FRAME[1];
   return '<div class="qblock"><p><b>Khung trả lời:</b> ' + esc(f.frame) + '</p>'
     + '<p><b>Cụm câu dùng được:</b> ' + f.phrases.map(function (x) { return esc(x); }).join(" · ") + '</p>'
     + '<p><b>4 tiêu chí chấm nói (mỗi tiêu chí 25%):</b> ' + esc(RB_SPEAK_CRITERIA_TXT) + '</p>'
+    + '<p><b>Video giới thiệu từng tiêu chí:</b></p>'
+    + videoSlotIf("speakCrit:flu") + videoSlotIf("speakCrit:lex") + videoSlotIf("speakCrit:gram") + videoSlotIf("speakCrit:pron")
+    + videoSlotIf("speakMind:2") + videoSlotIf("speakCrit:mistakes")
+    + (s.partNum === 1 ? videoSlotIf("speak:part1tips") : "")
+    + videoSlotIf("speakEp:" + CONTENT.speaking.indexOf(s))
     + '<p class="mut">Học khung và cụm câu trước, rồi mới vào bài mẫu và tập nói.</p></div>';
 }
 function roleplayTheoryHTML(r) {
   return '<div class="qblock"><p><b>Bối cảnh:</b> ' + esc(r.setting) + '</p><p><b>Mục tiêu:</b> ' + esc(r.goal) + '</p>'
     + '<p><b>Cụm câu dùng trong tình huống này:</b> ' + r.chunks.map(function (ch) { return esc(ch); }).join(" · ") + '</p>'
+    + videoSlotIf("roleEp:" + CONTENT.roleplay.indexOf(r))
     + '<p class="mut">Học bối cảnh và cụm câu trước, rồi mới vào vai.</p></div>';
 }
 function drillTheoryHTML(d) {
@@ -4186,6 +4199,11 @@ function writeTheoryHTML(w) {
   var g = RB_WRITE_STRUCT[w.type] || RB_WRITE_STRUCT["Task 2"];
   return '<div class="qblock"><p><b>Cấu trúc dạng bài này:</b> ' + esc(g.struct) + '</p>'
     + '<p><b>4 tiêu chí chấm viết (mỗi tiêu chí 25%):</b> ' + esc(RB_WRITE_CRITERIA_TXT) + '</p>'
+    + ((w.type === "Task 1" || w.type === "Task 2") ? videoSlotIf("writeCrit:task") + videoSlotIf("writeCrit:gram") : "")
+    + (w.type === "Task 1" ? videoSlotIf("write:Task 1") : "")
+    + (w.type === "Task 2" ? videoSlotIf("write:Task 2") : "")
+    + (w.type === "Task 1" && (w.title || "").indexOf("Biểu đồ cột") >= 0 ? videoSlotIf("write:barchart") : "")
+    + (w.type === "Task 1" && (w.title || "").indexOf("Biểu đồ tròn") >= 0 ? videoSlotIf("write:piechart") : "")
     + '<p class="mut">Học cấu trúc trước, rồi mới vào luồng viết 3 bước: viết nháp → AI chấm + đối chiếu bài mẫu → viết lại bản sửa.</p></div>';
 }
 function typingTheoryHTML(set) {
@@ -4229,6 +4247,7 @@ function setWhy(el, text) {
   el.innerHTML = "<b>" + esc(head) + "</b> <details class=\"why-more\"><summary>Xem giải thích đầy đủ</summary><p>" + esc(t) + "</p></details>";
 }
 function renderQuizEngine(app, l, questions, mode, lessonId, phase) {
+  BAR_NEXT = null; /* Q6: khong sot nut thanh duoi cua cau truoc / man tong ket. */
   var qs = (l.clRetry ? (l.clRetryQs || []) : (questions || [])).map(normSkillQ);
   if (!l.clRetryOrig) l.clRetryOrig = questions || [];
   var step = l.step || { id: lessonId, title: "", type: "" };
@@ -4329,7 +4348,8 @@ function renderQuizEngine(app, l, questions, mode, lessonId, phase) {
     l.streak = 0;
     if (runFirstTry[qi] === undefined) { runFirstTry[qi] = false; if (runWrong.indexOf(qi) < 0) runWrong.push(qi); if (!l.clRetry) recordQuizError(lessonId, qi, q); }
   };
-  var showNext = function () { var nx0 = $("#quizNext"); if (nx0) nx0.style.display = "inline-block"; };
+  var quizAdvance = function () { l.qi = qi + 1; l.wrongs = 0; l.revealed = false; l.answered = false; l.hint = ""; BAR_NEXT = null; render(); };
+  var showNext = function () { var nx0 = $("#quizNext"); if (nx0) nx0.style.display = "inline-block"; BAR_NEXT = { label: "Tiếp tục →", fn: quizAdvance }; updateBottomBar(); };
   var showDiff = function () { var dr = $("#diffRow"); if (dr) dr.style.display = "flex"; };
   var bumpStreak = function () {
     l.streak = (l.streak || 0) + 1;
@@ -4402,7 +4422,8 @@ function renderQuizEngine(app, l, questions, mode, lessonId, phase) {
     };
   }
   var nx = $("#quizNext");
-  if (nx) nx.onclick = function () { l.qi = qi + 1; l.wrongs = 0; l.revealed = false; l.answered = false; l.hint = ""; render(); };
+  if (nx) nx.onclick = quizAdvance;
+  if (answered) showNext();
 }
 
 
@@ -4679,7 +4700,7 @@ function phPracticeFinish(app, step, l, sym, aiScore, mirrorScore) {
   if (!chk.ok) setBarResult({ retry: null, skip: function () { phSkipSound(app, step, l, sym); }, skipLabel: 'Bỏ qua âm này' });
   else clearBarResult();
   var st = $("#phPassStatus");
-  if (st) st.textContent = chk.ok ? "Đang chuyển sang âm sau…" : "Bấm lại nút “Phát âm” để tập lại.";
+  if (st) st.textContent = chk.ok ? "Đang chuyển sang âm sau…" : "Chưa đạt chuẩn — bấm lại nút “Phát âm” để tập lại.";
   if (!chk.ok) return chk;
   if (!MR.sessionMoment) phCompleteSound(app, step, l, sym);
   else phSaveCombinedPassRecord(sym, l.aiScore, mirrorScore).then(function () { phCompleteSound(app, step, l, sym); }, function () { phCompleteSound(app, step, l, sym); });
@@ -4719,6 +4740,10 @@ function renderPron(app, l) {
       html += '<h3>' + tri[1] + ' (' + RB_PH_WAVES[tri[2]].length + ' âm)</h3><p class="mut"><b>' + esc(note.t) + '</b></p><details class="guide-more"><summary><b>Xem thêm</b></summary><p class="mut">' + esc(note.d) + '</p></details><div class="ph-table" id="phTable">' + RB_PH_WAVES[tri[2]].map(phBtnHTML).join("") + '</div>';
     });
   }
+  html += '<section class="card"><h3>🎯 Phát âm nâng cao — vượt ngoài 44 âm</h3><p class="mut">Nối âm, trọng âm, schwa và nuốt âm: xem người bản địa nói rồi nhại theo. Mỗi video một chủ điểm.</p>'
+    + videoSlotIf("pronAdv:linking") + videoSlotIf("pronAdv:stress") + videoSlotIf("pronAdv:schwa") + videoSlotIf("pronAdv:elision")
+    + '<details><summary><b>Toàn bộ series Tim\'s Pronunciation Workshop (26 video)</b></summary>'
+    + videoSlotIf("pronAdv:wasWere") + videoSlotIf("pronAdv:assimTP") + videoSlotIf("pronAdv:intrusiveR") + videoSlotIf("pronAdv:cvLinking") + videoSlotIf("pronAdv:the2ways") + videoSlotIf("pronAdv:linkingR") + videoSlotIf("pronAdv:wouldYou") + videoSlotIf("pronAdv:haveTo") + videoSlotIf("pronAdv:linkingW") + videoSlotIf("pronAdv:andFluent") + videoSlotIf("pronAdv:assimNP") + videoSlotIf("pronAdv:dDisappear") + videoSlotIf("pronAdv:assimTJ") + videoSlotIf("pronAdv:haveAux") + videoSlotIf("pronAdv:nd") + videoSlotIf("pronAdv:linkingJ") + videoSlotIf("pronAdv:assimDG") + videoSlotIf("pronAdv:plosives") + videoSlotIf("pronAdv:been") + videoSlotIf("pronAdv:sSound") + videoSlotIf("pronAdv:canFluent") + videoSlotIf("pronAdv:assimS") + videoSlotIf("pronAdv:hWords") + videoSlotIf("pronAdv:assimTK") + videoSlotIf("pronAdv:twinningT") + videoSlotIf("pronAdv:assimDB") + '</details></section>';
   if (state.phSkipped && state.phSkipped.length) {
     html += '<h3>Đã bỏ qua (phát âm)</h3><p class="mut">Các âm bạn bấm vào khi chưa tới lượt — học xong âm trước rồi quay lại:</p><div id="phSkippedList">';
     state.phSkipped.forEach(function (sym) {
@@ -6754,6 +6779,8 @@ function renderSkillSpeak(app, l) {
   l.sub = s.part + (s.band ? " · " + s.band : "") + " · " + (s.quiz || []).length + " câu hỏi từ bài mẫu";
   if (!l.theoryDone) {
     app.innerHTML = skillHead(l.title, l.sub) + phaseBarHTML(1) + speakTheoryHTML(s)
+      + (l.idx === 1 ? videoSlotIf("speak:1") : "")
+      + (l.idx === 3 ? videoSlotIf("speak:dailyroutine") : "")
       + '<div class="qblock"><button class="btn btn-primary" id="spTheoryGo">Vào luyện tập →</button></div>';
     wireBack();
     $("#spTheoryGo").onclick = function () { l.theoryDone = true; render(); };
@@ -8095,6 +8122,7 @@ function renderMockTest(app, l) {
       + '<p><b>Viết:</b> Task 1 — ' + esc(mockRun.write.t1.title) + ' · Task 2 — ' + esc(mockRun.write.t2.title) + ' (đồng hồ 60 phút)</p>'
       + '<p><b>Nói:</b> Part 1 — ' + esc(mockRun.speak.scripts[0].topic) + ' · Part 2 — ' + esc(mockRun.speak.scripts[1].topic) + ' · Part 3 — ' + esc(mockRun.speak.scripts[2].topic) + ' (đồng hồ 14 phút)</p>'
       + '<p class="mut">Nghe/Đọc chấm theo đáp án (quy về thang 40). Nói AI chấm 4 tiêu chí (ghi rõ "Máy ước lượng") kèm AI chấm phát âm từng chữ; Viết AI chấm 4 tiêu chí (ghi rõ "Máy ước lượng"). Phần Nghe: trong lúc nghe câu hỏi hiện đủ hết và chọn được ngay; nghe hết bài rồi đồng hồ mới tính giờ và mở nút Nộp bài. Mỗi phần thi có đồng hồ đếm ngược chạy thật, hết giờ bài tự nộp.</p>'
+      + videoSlotIf("mockHub:listenTut")
       + '<button class="btn btn-primary" id="mkStart">Bắt đầu thi thử</button></div>';
     wireBack();
     $("#mkStart").onclick = function () { mockRun.stage = "listen"; mockRun.times.listenStart = Date.now(); lessonStart = Date.now(); runWrong = []; runFirstTry = {}; render(); };
@@ -8265,6 +8293,7 @@ function renderMockTest(app, l) {
         + '<p>Nói: <b>' + fmtBandComma(sb) + '</b> ' + (mockRun.speak.ai ? '(Máy ước lượng)' : '(Tự đánh giá)') + (mockRun.speak.revisedBand != null ? ' · chấm lại bản sửa: Band ' + fmtBandComma(mockRun.speak.revisedBand) + ' (chỉ luyện thêm)' : '') + (mockRun.speak.aiParts && mockRun.speak.aiParts.some(function (p) { return p.score != null; }) ? ' · AI phát âm: ' + mockRun.speak.aiParts.map(function (p) { return 'Part ' + p.part + ' ' + (p.score != null ? p.score + '%' : 'chưa chấm'); }).join(', ') + ' (Máy ước lượng)' : '') + '</p>'
         + '<p><b>Overall ước lượng: ' + fmtBandComma(overall) + '</b></p>'
         + '<p class="mut">' + RB_BAND_NOTE + ' Các câu sai đã vào Sổ lỗi sai để ôn lại.</p>'
+        + '<div class="qblock"><p><b>Xem thêm sau thi thử — bài thi mẫu để đối chiếu:</b></p>' + videoSlotIf("mockSheet:lizMock") + videoSlotIf("mockSheet:band9") + videoSlotIf("mockSheet:band7") + '</div>'
         + u8AppealHTML("mock:" + l.milestone) + '<div class="row" style="margin-top:10px"><button class="btn btn-primary" id="mkBack">Về Luyện tập</button></div></div>';
       wireBack();
       $("#mkBack").onclick = function () { backFromLesson(); };
@@ -8278,6 +8307,7 @@ function renderMockTest(app, l) {
       + '<p><b>Overall ước lượng: ' + fmtBandComma(overall) + '</b></p>'
       + tRow("Nghe", mockRun.times.listen || 0, 30) + tRow("Đọc", mockRun.times.read || 0, 60) + tRow("Viết", mockRun.times.write || 0, 60) + tRow("Nói", mockRun.times.speak || 0, 14)
       + '<p class="mut">' + RB_BAND_NOTE + ' Các câu sai đã vào Sổ lỗi sai để ôn lại.</p>'
+      + '<div class="qblock"><p><b>Xem thêm sau thi thử — bài thi mẫu để đối chiếu:</b></p>' + videoSlotIf("mockSheet:lizMock") + videoSlotIf("mockSheet:band9") + videoSlotIf("mockSheet:band7") + '</div>'
       + '<div class="row" style="margin-top:10px"><button class="btn btn-primary" id="mkSave">Lưu mốc thi thử</button></div></div>';
     wireBack();
     $("#mkSave").onclick = function () {
@@ -9103,9 +9133,9 @@ function zhHskkHTML() {
   return '<section class="card" id="zhHskkCard"><h3>Luyện HSKK — thi nói riêng</h3>'
     + '<p class="mut">HSKK là bài thi nói riêng, thi bằng ghi âm, gồm 3 cấp: Sơ cấp, Trung cấp, Cao cấp. Web giữ mục này riêng, không gộp nói vào đề từng cấp — xem ghi chú nghiên cứu trong Cài đặt → Ghi chú.</p>'
     + '<p><b>Sơ cấp:</b> 27 câu / 20 phút (gồm 7 phút chuẩn bị): nghe nhắc lại 15 câu, nghe trả lời 10 câu, trả lời câu hỏi 2 câu.</p>'
-    + '<p><b>Trung cấp và Cao cấp:</b> format chi tiết sẽ bổ sung khi có nguồn chính thức; hiện web mới có bài luyện Sơ cấp.</p>'
+    + '<p><b>Trung cấp và Cao cấp:</b> web đã có bài luyện nghe–nhắc lại tự soạn (mỗi cấp 10 câu mẫu); format đề đầy đủ sẽ bổ sung khi có nguồn chính thức.</p>'
     + '<p class="mut">Ghi chú: HSK 3.0 ra mắt toàn cầu ngày 13/12/2026 — sau mốc này cần kiểm tra lại cấu trúc đề và HSKK.</p>'
-    + '<div class="row"><button class="btn" id="zhHskkBtn">Luyện nghe–nhắc lại Sơ cấp (10 câu mẫu)</button></div>'
+    + '<div class="row"><button class="btn" id="zhHskkBtn">Luyện nghe–nhắc lại Sơ cấp (10 câu mẫu)</button><button class="btn" id="zhHskkBtnInter">Luyện HSKK Trung cấp (10 câu mẫu)</button><button class="btn" id="zhHskkBtnAdv">Luyện HSKK Cao cấp (10 câu mẫu)</button></div>'
     + '<p class="mut">Bài luyện này là tự luyện nghe–nhắc lại, chưa chấm điểm — chấm nói AI cho track Trung sẽ có ở đợt sau.</p></section>';
 }
 function wireZhMap(scope) {
@@ -9135,6 +9165,8 @@ function wireZhMap(scope) {
 }
 function wireZhHskk() {
   var hb = $("#zhHskkBtn"); if (hb) hb.onclick = function () { openLesson({ type: "zhHskk" }); };
+  var hi = $("#zhHskkBtnInter"); if (hi) hi.onclick = function () { openLesson({ type: "zhHskk", hskkLevel: "inter" }); };
+  var ha = $("#zhHskkBtnAdv"); if (ha) ha.onclick = function () { openLesson({ type: "zhHskk", hskkLevel: "adv" }); };
 }
 function viewHomeZh(app) {
   var fresh = isZhNewUser();
@@ -9151,7 +9183,8 @@ function viewHomeZh(app) {
     html += '<section class="card next-card" id="zhNextCard"><div class="hero-pair">' + mascPairHTML(false) + '<div class="hero-text"><p class="eyebrow">▶ TIẾP THEO · TIẾNG TRUNG</p><h2>' + esc(t.title) + '</h2><p class="mut">' + esc(t.type) + '</p><button class="btn btn-primary" id="zhNextBtn">Học tiếp: ' + esc(t.title) + ' →' + zhXp + '</button></div></div></section>';
   }
   html += '<section id="zhHomePath">' + zhMapHTML(false) + '</section>';
-  html += zhHskkHTML();
+  /* D3b: Trang chu chi giu link gon toi HSKK; the day du chi o Ban do. */
+  html += '<section class="card" id="zhHomeHskkLink"><h3>Luyện HSKK — thi nói riêng</h3><p class="mut">Thi nói riêng theo cấp, luyện nghe–nhắc lại — xem bản đầy đủ ở Bản đồ.</p><div class="row"><button class="btn" id="zhHomeHskkBtn">Xem luyện HSKK ở Bản đồ →</button></div></section>';
   html += zhSystemEHTML();
   html += '<details class="card" id="zhHomeMore"><summary><b>Xem thêm</b></summary>'
     + '<p>' + (fresh ? '' : '<button class="dimlink" id="zhEntryRedoLink">Làm lại kiểm tra đầu vào HSK</button> · ') + '<button class="dimlink" id="zhToRoadmap">Xem bản đồ tiếng Trung →</button> · <button class="dimlink" id="zhLoginLink">Đăng nhập</button></p>'
@@ -9165,13 +9198,14 @@ function viewHomeZh(app) {
   var erl = $("#zhEntryRedoLink"); if (erl) erl.onclick = function () { openLesson({ type: "zhEntry" }); };
   var spl = $("#statProgressLink"); if (spl) spl.onclick = function () { go("mine"); };
   var mg = $("#zhToRoadmap"); if (mg) mg.onclick = function () { go("roadmap"); };
+  var hhb = $("#zhHomeHskkBtn"); if (hhb) hhb.onclick = function () { go("roadmap"); };
   var lg = $("#zhLoginLink"); if (lg) lg.onclick = function () { go("mine"); };
   wireZhMap(app);
   wireZhHskk();
 }
 function viewRoadmapZh(app) {
   var html = trackSwitchHTML() + '<h2>Bản đồ tiếng Trung</h2>';
-  html += '<p class="mut">6 chặng theo Giáo trình chuẩn HSK (hệ 6 cấp cũ) + lớp bổ sung HSK 3.0 hệ E. Chặng 2–3 đã có bộ từ riêng cùng ngữ pháp, đọc, nghe, nói, nhập vai, viết, kiểm tra cuối chặng và thi thử HSK (bản rút gọn); viết chữ (đợt 1: 30 chữ nét đơn giản) và từ điển bấm tra đã mở trong tab Luyện tập.</p>';
+  html += '<p class="mut">6 chặng theo Giáo trình chuẩn HSK (hệ 6 cấp cũ) + lớp bổ sung HSK 3.0 hệ E. Chặng 2–6 đã có bộ từ riêng cùng ngữ pháp, đọc, nghe, nói, nhập vai, viết, kiểm tra cuối chặng và thi thử HSK (bản rút gọn); viết chữ (đợt 1: 30 chữ nét đơn giản) và từ điển bấm tra đã mở trong tab Luyện tập.</p>';
   html += zhMapHTML(true);
   html += zhHskkHTML();
   html += zhSystemEHTML();
@@ -9198,7 +9232,7 @@ function viewPracticeZh(app) {
   var html = trackSwitchHTML() + '<h2>Luyện tập · Tiếng Trung</h2>'
     + '<section class="card next-card" id="zhPracticeNextCard"><p class="eyebrow">TIẾP THEO NÊN LUYỆN</p><h3>' + esc(t.title) + '</h3><p class="mut">' + esc(t.type) + '</p><button class="btn btn-primary" id="zhPracticeNextBtn">Tiếp theo nên luyện</button></section>';
   html += '<section class="card" id="zhDictCard"><h3>🔍 Tra từ</h3><p class="mut">Tra trong kho từ vựng track Trung (bộ khởi động + các bộ HSK): gõ chữ Hán, pinyin (gõ không dấu cũng được) hoặc nghĩa tiếng Việt.</p><div class="row"><input type="text" id="zhDictInput" placeholder="Ví dụ: 你, nihao, cảm ơn..."><button class="btn" id="zhDictBtn">Tra từ</button></div><div id="zhDictResults"></div></section>';
-  html += '<section class="card" id="zhStrokeCard"><h3>✍️ Viết chữ</h3><p class="mut">Đợt 1: 30 chữ nét đơn giản — sẽ bổ sung dần. Bấm vào một chữ để xem video mẫu cách viết và tập viết.</p><div class="row">' + zhStrokesList().map(function (e) { return '<button class="btn" data-zhstroke-list="' + e.han + '"><span style="font-size:22px">' + e.han + '</span> ' + esc(e.py) + '</button>'; }).join("") + '</div></section>';
+  html += '<section class="card" id="zhStrokeCard"><h3>✍️ Viết chữ</h3><p class="mut">Đợt 1: 30 chữ nét đơn giản — sẽ bổ sung dần. Bấm vào một chữ để xem video mẫu cách viết và tập viết.</p><div class="row">' + zhStrokesList().map(function (e) { return '<button class="btn" data-zhstroke-list="' + e.han + '"><span style="font-size:22px">' + e.han + '</span> ' + esc(e.py) + '</button>'; }).join("") + '</div><div class="qblock"><p><b>Video nền tảng viết chữ (xem trước khi tập từng chữ):</b></p>' + videoSlotIf("zhPractice:janus1") + videoSlotIf("zhPractice:janus2") + videoSlotIf("zhPractice:janus3") + '</div></section>';
   html += '<details open><summary><b>Mạch pinyin chặng 1</b></summary><div class="path-v">';
   ZH_PH_STEPS.forEach(function (s, i) { html += zhPhNodeHTML(i); });
   html += '</div></details>';
@@ -9211,9 +9245,10 @@ function viewPracticeZh(app) {
     sets.forEach(function (d) { html += zhSetNodeHTML(d); });
     html += '</div></details>';
   });
-  html += '<details><summary><b>Ngữ pháp chặng 2–6 (' + ZH_GRAMMAR.length + ' trạm)</b></summary>' + zhSkillPracticeHTML("gram") + '</details>';
+  html += '<details><summary><b>Ngữ pháp chặng 2–6 (' + ZH_GRAMMAR.length + ' trạm)</b></summary><div class="qblock"><p><b>Video mở đầu phần Ngữ pháp:</b></p>' + videoSlotIf("zhPractice:wordorder") + '</div>' + zhSkillPracticeHTML("gram") + '</details>';
   html += '<details><summary><b>Đọc chặng 2–6 (' + ZH_READING.length + ' bài)</b></summary>' + zhSkillPracticeHTML("read") + '</details>';
-  html += '<details><summary><b>Nghe chặng 2–6 (' + ZH_LISTENING.length + ' đoạn)</b></summary>' + zhSkillPracticeHTML("listen") + '</details>';
+  html += '<details><summary><b>Nghe chặng 2–6 (' + ZH_LISTENING.length + ' đoạn)</b></summary><div class="qblock"><p><b>Nghe thêm (ngoài các đoạn hội thoại trong bài):</b></p>' + videoSlotIf("zhPractice:listenExtra1") + videoSlotIf("zhPractice:listenExtra2") + videoSlotIf("zhPractice:listenExtra3") + videoSlotIf("zhPractice:listenExtra4") + videoSlotIf("zhPractice:listenExtra5") + videoSlotIf("zhPractice:listenExtra6") + videoSlotIf("zhPractice:listenExtra7") + videoSlotIf("zhPractice:listenExtra8") + videoSlotIf("zhPractice:listenExtra9") + videoSlotIf("zhPractice:listenExtra10") + videoSlotIf("zhPractice:listenExtra11") + '</div>' + zhSkillPracticeHTML("listen") + '</details>';
+  html += '<details><summary><b>Luyện nghe và đọc HSK1 trong 30 ngày (29 tập — thiếu Ngày 17)</b></summary><div class="qblock"><p><b>Nghe + đọc theo ngày, từ dễ đến khó:</b></p><p class="mut">Dải gốc 30 ngày nhưng trang playlist thiếu Ngày 17 nên chỉ gắn được 29 tập. Kênh hiển thị: Listening Chinese With Me.</p>' + videoSlotIf("zhPractice:xiaoyun01") + videoSlotIf("zhPractice:xiaoyun02") + videoSlotIf("zhPractice:xiaoyun03") + videoSlotIf("zhPractice:xiaoyun04") + videoSlotIf("zhPractice:xiaoyun05") + videoSlotIf("zhPractice:xiaoyun06") + videoSlotIf("zhPractice:xiaoyun07") + videoSlotIf("zhPractice:xiaoyun08") + videoSlotIf("zhPractice:xiaoyun09") + videoSlotIf("zhPractice:xiaoyun10") + videoSlotIf("zhPractice:xiaoyun11") + videoSlotIf("zhPractice:xiaoyun12") + videoSlotIf("zhPractice:xiaoyun13") + videoSlotIf("zhPractice:xiaoyun14") + videoSlotIf("zhPractice:xiaoyun15") + videoSlotIf("zhPractice:xiaoyun16") + videoSlotIf("zhPractice:xiaoyun18") + videoSlotIf("zhPractice:xiaoyun19") + videoSlotIf("zhPractice:xiaoyun20") + videoSlotIf("zhPractice:xiaoyun21") + videoSlotIf("zhPractice:xiaoyun22") + videoSlotIf("zhPractice:xiaoyun23") + videoSlotIf("zhPractice:xiaoyun24") + videoSlotIf("zhPractice:xiaoyun25") + videoSlotIf("zhPractice:xiaoyun26") + videoSlotIf("zhPractice:xiaoyun27") + videoSlotIf("zhPractice:xiaoyun28") + videoSlotIf("zhPractice:xiaoyun29") + videoSlotIf("zhPractice:xiaoyun30") + '</div></details>';
   html += '<details><summary><b>Nói chặng 2–6 (' + ZH_SPEAK.length + ' kịch bản)</b></summary>' + zhSkillPracticeHTML("speak") + '</details>';
   html += '<details><summary><b>Nhập vai chặng 2–6 (' + ZH_ROLE.length + ' tình huống)</b></summary>' + zhSkillPracticeHTML("role") + '</details>';
   html += '<details><summary><b>Viết chặng 2–6 (' + ZH_WRITE.length + ' bài)</b></summary>' + zhSkillPracticeHTML("write") + '</details>';
@@ -9348,7 +9383,11 @@ function viewReviewZh(app) {
     html += '<section class="card"><h3>Đến hạn hôm nay (' + due.length + ')</h3><p class="mut">Xếp theo: sai nhiều nhất trước, rồi tới ngày đến hạn sớm nhất.</p>';
     due.forEach(function (it) {
       var h = it.h;
-      if (h.kind === "quiz") {
+      if (h.kind === "gram") {
+        html += '<div class="sumcard"><b>Ngữ pháp: ' + esc(h.title || it.key) + '</b>'
+          + ((h.fails || 0) > 0 ? '<div class="mut">Đã sai ' + h.fails + ' lần</div>' : '')
+          + '<div class="row"><button class="btn" data-zhhard-review="' + esc(it.key) + '">Ôn lại trạm này</button><button class="btn" data-zhhard-done="' + esc(it.key) + '">Đã nhớ rồi</button></div></div>';
+      } else if (h.kind === "quiz") {
         html += '<div class="sumcard"><b>' + esc(h.q || it.key) + '</b>'
           + ((h.fails || 0) >= 3 ? '<div><span class="chip">Đã sai ' + h.fails + ' lần — ôn trước</span></div>' : ((h.fails || 0) > 0 ? '<div class="mut">Đã sai ' + h.fails + ' lần</div>' : ""))
           + (h.options ? '<details class="why-more"><summary>Xem đáp án + lý do</summary><p class="mut">Đáp án đúng: ' + esc(h.options[h.a]) + ' — ' + esc(h.why || "") + '</p></details>' : "")
@@ -9369,7 +9408,12 @@ function viewReviewZh(app) {
     html += '<section class="card"><h3>Sổ lỗi sai · Thẻ khó (' + bookItems.length + ')</h3><p class="mut">Các mục chưa đến hạn chỉ xem lại ở đây; nút "Đã nhớ rồi" chỉ hiện ở mục Đến hạn hôm nay khi đúng ngày ôn. Bấm "Đã nhớ rồi" tính là ôn đúng 1 lần cách quãng — đủ 2 lần mới hết đến hạn, không tự tốt nghiệp sau 1 lần bấm.</p>';
     bookItems.forEach(function (k) {
       var h = state.zhHard[k];
-      if (h.kind === "quiz") {
+      if (h.kind === "gram") {
+        html += '<div class="sumcard"><b>Ngữ pháp: ' + esc(h.title || k) + '</b>'
+          + ((h.fails || 0) > 0 ? '<div class="mut">Đã sai ' + h.fails + ' lần</div>' : '')
+          + (h.due ? '<div class="mut">Đến hạn: ' + esc(h.due) + '</div>' : '<div class="mut">Đến hạn ngay</div>')
+          + '<div class="row"><button class="btn" data-zhhard-review="' + esc(k) + '">Ôn lại trạm này</button></div></div>';
+      } else if (h.kind === "quiz") {
         html += '<div class="sumcard"><b>' + esc(h.q || k) + '</b>'
           + ((h.fails || 0) > 0 ? '<div class="mut">Đã sai ' + h.fails + ' lần' + (h.due ? ' · Đến hạn: ' + esc(h.due) : ' · Đến hạn ngay') + '</div>' : '')
           + (h.options ? '<details class="why-more"><summary>Xem đáp án + lý do</summary><p class="mut">Đáp án đúng: ' + esc(h.options[h.a]) + ' — ' + esc(h.why || "") + '</p></details>' : "")
@@ -9384,6 +9428,8 @@ function viewReviewZh(app) {
     html += '</section><div class="row"><button class="' + (due.length ? 'btn' : 'btn btn-primary') + '" id="zhReviewNextBtn">Học tiếp bước kế tiếp</button></div>';
   }
   if (!due.length && items.length) html += '<section class="card"><p>Hôm nay không có mục nào đến hạn ôn. Tốt lắm! Cứ học tiếp, mục khó sẽ tự về đây đúng ngày.</p></section>';
+  html += '<section class="card"><h3>🎬 Video ôn thêm (HSK1)</h3><p class="mut">Ôn từ vựng bằng video — xem cho vui mà vẫn ôn, không tính điểm, không gắn vào từng thẻ.</p>' + videoSlotIf("zhReview:words300") + videoSlotIf("zhReview:family") + videoSlotIf("zhReview:objects") + '</section>';
+  html += '<section class="card"><h3>🎬 Video ôn thêm (HSK3)</h3><p class="mut">Ôn từ vựng HSK3 bằng video — xem cho vui mà vẫn ôn, không tính điểm, không gắn vào từng thẻ.</p>' + videoSlotIf("zhReview:hsk3words") + '</section>';
   app.innerHTML = html;
   var rb = $("#zhReviewNextBtn"); if (rb) rb.onclick = function () { zhOpenTarget(zhSessionTarget()); };
   var sb = $("#zhReviewStartBtn"); if (sb) sb.onclick = function () { lessonStart = Date.now(); openLesson({ type: "zhReviewSession" }); };
@@ -9391,6 +9437,8 @@ function viewReviewZh(app) {
     var h = state.zhHard[b.dataset.zhhardReview];
     if (!h) return;
     if (h.kind === "quiz") { lessonStart = Date.now(); openLesson({ type: "zhReviewSession" }); return; }
+    if (h.kind === "gram") { lessonStart = Date.now(); openLesson({ type: "zhGram", idx: h.gramIdx }); return; }
+    if (h.kind === "stroke" && h.han) { lessonStart = Date.now(); openLesson({ type: "zhStroke", han: h.han }); return; }
     state.zhPos[h.setKey] = h.idx; saveState(); openLesson({ type: "zhVocab", setKey: h.setKey, idx: h.idx });
   }; });
   /* DOT 2a: "Da nho roi" KHONG xoa thang nua — tinh 1 lan on dung cach quang
@@ -9461,11 +9509,14 @@ function renderZhQuiz(app, l, qs, onFinish, finishExtra, opts) {
 }
 /* ---------- DOT 2f (26/10/2026): Tu dien bam tra + Viet chu tuong tac track Trung ----------
    Du lieu net o content-new.js (ZH_STROKES, 30 chu). Khong them khoa state nao:
-   Bai Viet chu hien video mau (ZH_WRITE_VIDEOS) thay cho hoat hinh net ve tu 27/10/2026 (lenh Bui: bo net ve AI); du lieu net ZH_STROKES chi con lam tham chieu cham diem noi bo.
+   Bai Viet chu hien video mau (ZH_WRITE_VIDEOS) thay cho hoat hinh net ve tu 27/10/2026 (lenh Bui: bo net ve AI).
    Session target (zhSessionTarget) KHONG doi trong dot nay: viet chu / tra tu
    chi mo tu tab Luyen tap, the tu, popup — khong chen vao luong chang.
-   Cham diem net ve: khung tap viet co nut Cham diem, cham bang may uoc luong
-   tu net mau ZH_STROKES (xem zhScoreStrokes). Net ve luu trong l.writeStrokes. */
+   28/10/2026 (lenh Bui: cham diem may khong dat cuc chinh xac thi bo): BO HAN nut
+   Cham diem + ham cham (kiem chung doi khang: chu thu nho 0.3x van 100 diem,
+   ve 入 thay cho 人 van 82 diem — may khong phan biet duoc). Thay bang bai tap
+   nho kieu tu vung: Viet tu tri nho -> So voi mau -> tu danh dau Nho roi /
+   Chua nho (vao hang doi on SRS zhHard kind "stroke"). Net ve luu trong l.writeStrokes. */
 function zhStrokesList() { return (typeof ZH_STROKES !== "undefined") ? ZH_STROKES : []; }
 function zhStrokeByHan(ch) {
   var list = zhStrokesList();
@@ -9607,152 +9658,6 @@ function zhPathToPoints(d) {
   }
   return pts;
 }
-function zhResample(pts, n) {
-  if (!pts || !pts.length) return [];
-  var total = 0, i;
-  for (i = 1; i < pts.length; i++) total += Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y);
-  if (total <= 0) { var o = []; for (var k = 0; k < n; k++) o.push({ x: pts[0].x, y: pts[0].y }); return o; }
-  var step = total / (n - 1);
-  var out = [{ x: pts[0].x, y: pts[0].y }];
-  var P = pts.slice(), idx = 1, dist = 0;
-  while (out.length < n - 1 && idx < P.length) {
-    var d = Math.hypot(P[idx].x - P[idx - 1].x, P[idx].y - P[idx - 1].y);
-    if (dist + d >= step) {
-      var r = d > 0 ? (step - dist) / d : 0;
-      var np = { x: P[idx - 1].x + r * (P[idx].x - P[idx - 1].x), y: P[idx - 1].y + r * (P[idx].y - P[idx - 1].y) };
-      out.push(np);
-      P.splice(idx, 0, np);
-      dist = 0;
-      idx++;
-    } else { dist += d; idx++; }
-  }
-  while (out.length < n) out.push({ x: pts[pts.length - 1].x, y: pts[pts.length - 1].y });
-  return out;
-}
-function zhNormStroke(pts) {
-  if (!pts || !pts.length) return [];
-  var cx = 0, cy = 0, i;
-  for (i = 0; i < pts.length; i++) { cx += pts[i].x; cy += pts[i].y; }
-  cx /= pts.length; cy /= pts.length;
-  var minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-  for (i = 0; i < pts.length; i++) {
-    if (pts[i].x < minX) minX = pts[i].x;
-    if (pts[i].x > maxX) maxX = pts[i].x;
-    if (pts[i].y < minY) minY = pts[i].y;
-    if (pts[i].y > maxY) maxY = pts[i].y;
-  }
-  var sc = Math.max(maxX - minX, maxY - minY);
-  if (!(sc > 0)) sc = 1;
-  sc = 100 / sc;
-  return pts.map(function (p) { return { x: (p.x - cx) * sc, y: (p.y - cy) * sc }; });
-}
-function zhStrokeDist(a, b) {
-  var s = 0, n = Math.min(a.length, b.length), i;
-  for (i = 0; i < n; i++) s += Math.hypot(a[i].x - b[i].x, a[i].y - b[i].y);
-  return n ? s / n : 999;
-}
-function zhCentroid(pts) {
-  var cx = 0, cy = 0, i;
-  for (i = 0; i < pts.length; i++) { cx += pts[i].x; cy += pts[i].y; }
-  return pts.length ? { x: cx / pts.length, y: cy / pts.length } : { x: 0, y: 0 };
-}
-function zhNormCharMap(allPts) {
-  var minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity, i;
-  for (i = 0; i < allPts.length; i++) {
-    if (allPts[i].x < minX) minX = allPts[i].x;
-    if (allPts[i].x > maxX) maxX = allPts[i].x;
-    if (allPts[i].y < minY) minY = allPts[i].y;
-    if (allPts[i].y > maxY) maxY = allPts[i].y;
-  }
-  var sc = Math.max(maxX - minX, maxY - minY);
-  if (!(sc > 0)) sc = 1;
-  sc = 100 / sc;
-  return function (p) { return { x: (p.x - minX) * sc, y: (p.y - minY) * sc }; };
-}
-function zhScoreStrokes(userStrokes, refEntry) {
-  var U = (userStrokes || []).filter(function (s) { return s && s.length > 0; });
-  var R = (refEntry && refEntry.d) || [];
-  if (!U.length || !R.length) return null;
-  var N = 32, i, j;
-  var refPolys = R.map(function (d) { return zhResample(zhPathToPoints(d), N); });
-  var refNorm = refPolys.map(function (p) { return zhNormStroke(p); });
-  var userPolys = U.map(function (s) { return zhResample(s, N); });
-  var userNorm = userPolys.map(function (p) { return zhNormStroke(p); });
-  var refAll = [], userAll = [];
-  refPolys.forEach(function (p) { p.forEach(function (q) { refAll.push(q); }); });
-  userPolys.forEach(function (p) { p.forEach(function (q) { userAll.push(q); }); });
-  var refMap = zhNormCharMap(refAll), userMap = zhNormCharMap(userAll);
-  var refCent = refPolys.map(function (p) { return refMap(zhCentroid(p)); });
-  var userCent = userPolys.map(function (p) { return userMap(zhCentroid(p)); });
-  function pairScore(ri, uj) {
-    var shape = zhStrokeDist(refNorm[ri], userNorm[uj]);
-    var shapeScore = Math.max(0, Math.min(100, 100 * (1 - shape / 60)));
-    var ld = Math.hypot(refCent[ri].x - userCent[uj].x, refCent[ri].y - userCent[uj].y);
-    var layScore = Math.max(0, Math.min(100, 100 * (1 - ld / 70)));
-    var rev = zhStrokeDist(refNorm[ri], userNorm[uj].slice().reverse());
-    return { shape: shape, rev: rev, score: Math.round(0.7 * shapeScore + 0.3 * layScore) };
-  }
-  function greedyPairs() {
-    var used = {}, pairs = [], ri, uj;
-    for (ri = 0; ri < R.length; ri++) {
-      var best = -1, bestD = Infinity;
-      for (uj = 0; uj < U.length; uj++) {
-        if (used[uj]) continue;
-        var d = zhStrokeDist(refNorm[ri], userNorm[uj]);
-        if (d < bestD) { bestD = d; best = uj; }
-      }
-      if (best >= 0) { used[best] = true; pairs.push({ ri: ri, uj: best, ps: pairScore(ri, best) }); }
-    }
-    return pairs;
-  }
-  var pairs, total, orderIssue = false;
-  if (U.length === R.length) {
-    pairs = [];
-    var idxSum = 0;
-    for (i = 0; i < R.length; i++) { var pp = { ri: i, uj: i, ps: pairScore(i, i) }; pairs.push(pp); idxSum += pp.ps.score; }
-    total = Math.round(idxSum / R.length);
-    var gPairs = greedyPairs(), gSum = 0;
-    gPairs.forEach(function (p) { gSum += p.ps.score; });
-    if (Math.round(gSum / R.length) - total >= 20) orderIssue = true;
-  } else {
-    pairs = greedyPairs();
-    var sum = 0;
-    pairs.forEach(function (p) { sum += p.ps.score; });
-    total = Math.round(sum / Math.max(U.length, R.length));
-  }
-  var per = [], matched = {};
-  pairs.forEach(function (p) { matched[p.ri] = true; });
-  for (i = 0; i < R.length; i++) {
-    var name = zhStrokeNameVi((refEntry.st || [])[i]);
-    var pr = null;
-    for (j = 0; j < pairs.length; j++) if (pairs[j].ri === i) pr = pairs[j];
-    if (!pr) { per.push({ ri: i, name: name, score: 0, status: "missing" }); continue; }
-    var ps = pr.ps, status = "ok";
-    if (ps.score < 50) status = "low";
-    else if (ps.score < 80) status = "mid";
-    if (ps.rev < ps.shape * 0.6 && ps.shape > 15) status = "reversed";
-    per.push({ ri: i, name: name, score: ps.score, status: status });
-  }
-  var missing = R.length - pairs.length, extra = U.length - pairs.length;
-  return { total: total, per: per, refCount: R.length, userCount: U.length, missing: missing > 0 ? missing : 0, extra: extra > 0 ? extra : 0, orderIssue: orderIssue };
-}
-function zhScoreResultHTML(res, e) {
-  var lines = res.per.map(function (p) {
-    var nm = p.name ? " (" + esc(p.name) + ")" : "";
-    if (p.status === "missing") return "<p>Nét " + (p.ri + 1) + nm + ": chưa vẽ (0 điểm).</p>";
-    var note = "";
-    if (p.status === "reversed") note = " — có thể vẽ ngược hướng, thử vẽ ngược lại.";
-    else if (p.status === "low") note = " — xem lại hình nét mẫu.";
-    else if (p.status === "mid") note = " — gần đúng, xem lại hình.";
-    return "<p>Nét " + (p.ri + 1) + nm + ": " + p.score + " điểm." + note + "</p>";
-  }).join("");
-  var extra = "";
-  if (res.orderIssue) extra += "<p>Thứ tự nét chưa đúng — xem lại hoạt hình thứ tự nét ở trên rồi vẽ lại theo thứ tự.</p>";
-  if (res.missing > 0) extra += "<p>Còn thiếu " + res.missing + " nét (nét chưa vẽ tính 0 điểm).</p>";
-  if (res.extra > 0) extra += "<p>Thừa " + res.extra + " nét (nét thừa không cộng điểm).</p>";
-  return "<p><b>Tổng: " + res.total + "/100</b> — Máy ước lượng.</p>" + lines + extra
-    + '<p class="mut">Điểm ước lượng từ nét mẫu vẽ tay của web, không phải chấm tuyệt đối như người thật. Muốn chắc hơn, so mắt lại với hoạt hình thứ tự nét ở trên.</p>';
-}
 function renderZhStroke(app, l) {
   var e = zhStrokeByHan(l.han);
   if (!e) { curLesson = null; render(); return; }
@@ -9760,18 +9665,36 @@ function renderZhStroke(app, l) {
   var idx = list.indexOf(e);
   var prev = list[(idx - 1 + list.length) % list.length];
   var next = list[(idx + 1) % list.length];
-  var html = lessonHead({ title: "Viết chữ: " + e.han, type: "Tiếng Trung · Viết chữ" });
+  var recalling = !!l.recallMode && !l.compared;
+  var html = lessonHead({ title: recalling ? "Viết chữ từ trí nhớ" : "Viết chữ: " + e.han, type: "Tiếng Trung · Viết chữ" });
   html += '<p class="mut">Đợt 1: 30 chữ nét đơn giản — sẽ bổ sung dần. Xem video mẫu cách viết đúng chuẩn, rồi tập viết ở khung bên dưới.</p>';
-  html += '<div class="qblock"><p class="zh-han">' + esc(e.han) + '</p><p><b>' + esc(e.py) + '</b> — ' + esc(e.vi) + '</p>'
-    + '<p class="mut">' + esc(e.src) + '</p>' + (e.note ? '<p class="mut">' + esc(e.note) + '</p>' : '')
-    + zhStrokeVideoHTML(e)
-    + '<div class="row"><button class="btn" id="zhStrokeListen">🔊 Nghe đọc chữ</button></div>'
-    + '<p class="mut">Tổng số nét: ' + e.d.length + '</p>'
-    + '<div class="row"><button class="btn" id="zhStrokePrevChar">← Chữ trước: ' + prev.han + '</button><button class="btn" id="zhStrokeNextChar">Chữ sau: ' + next.han + ' →</button><button class="btn" id="zhStrokeBackList">Về danh sách viết chữ</button></div>'
-    + '</div>';
-  html += '<div class="qblock"><h3>Khung tập viết tự do</h3><p class="mut">Vẽ theo mẫu rồi bấm Chấm điểm. Điểm do máy ước lượng từ nét mẫu vẽ tay, không phải chấm tuyệt đối như người thật.</p>'
+  if (recalling) {
+    html += '<div class="qblock"><p>Viết từ trí nhớ chữ có pinyin <b>' + esc(e.py) + '</b> — nghĩa: ' + esc(e.vi) + '</p>'
+      + '<p class="mut">Tổng số nét: ' + e.d.length + '</p>'
+      + '<div class="row"><button class="btn" id="zhStrokeListen">🔊 Nghe đọc chữ</button></div>'
+      + '<div class="row"><button class="btn" id="zhStrokePrevChar">← Chữ trước: ' + prev.han + '</button><button class="btn" id="zhStrokeNextChar">Chữ sau: ' + next.han + ' →</button><button class="btn" id="zhStrokeBackList">Về danh sách viết chữ</button></div>'
+      + '</div>';
+  } else {
+    html += '<div class="qblock"><p class="zh-han">' + esc(e.han) + '</p><p><b>' + esc(e.py) + '</b> — ' + esc(e.vi) + '</p>'
+      + '<p class="mut">' + esc(e.src) + '</p>' + (e.note ? '<p class="mut">' + esc(e.note) + '</p>' : '')
+      + zhStrokeVideoHTML(e)
+      + '<div class="row"><button class="btn" id="zhStrokeListen">🔊 Nghe đọc chữ</button></div>'
+      + '<p class="mut">Tổng số nét: ' + e.d.length + '</p>'
+      + '<div class="row"><button class="btn" id="zhStrokePrevChar">← Chữ trước: ' + prev.han + '</button><button class="btn" id="zhStrokeNextChar">Chữ sau: ' + next.han + ' →</button><button class="btn" id="zhStrokeBackList">Về danh sách viết chữ</button></div>'
+      + '</div>';
+  }
+  var frameTitle = l.compared ? "So với mẫu" : (recalling ? "Viết từ trí nhớ" : "Khung tập viết tự do");
+  var frameNote = l.compared ? "Mẫu mờ hiện đè lên bài viết của bạn — so mắt từng nét rồi tự đánh dấu."
+    : (recalling ? "Chỉ hiện pinyin và nghĩa — viết chữ vào khung từ trí nhớ, rồi bấm So với mẫu."
+    : "Xem video mẫu, bật mẫu mờ rồi tập viết. Khi thuộc rồi, bấm Viết từ trí nhớ để kiểm tra.");
+  var frameBtns = l.compared
+    ? '<button class="btn btn-primary" id="zhRememberedBtn">Nhớ rồi ✓</button><button class="btn" id="zhForgotBtn">Chưa nhớ, ôn lại</button><button class="btn" id="zhRewriteBtn">Viết lại</button>'
+    : (recalling
+    ? '<button class="btn" id="zhCanvasClear">Xóa</button><button class="btn btn-primary" id="zhCompareBtn">So với mẫu</button><button class="btn" id="zhRecallBackBtn">Xem lại bài</button>'
+    : '<button class="btn" id="zhCanvasModel">Hiện mẫu mờ</button><button class="btn" id="zhCanvasClear">Xóa</button><button class="btn btn-primary" id="zhRecallBtn">Viết từ trí nhớ →</button>');
+  html += '<div class="qblock"><h3>' + frameTitle + '</h3><p class="mut">' + frameNote + '</p>'
     + '<canvas id="zhWriteCanvas" width="300" height="300" style="border:1px solid #ccc;background:#fff;touch-action:none"></canvas>'
-    + '<div class="row"><button class="btn" id="zhCanvasModel">Hiện mẫu mờ</button><button class="btn" id="zhCanvasClear">Xóa</button><button class="btn btn-primary" id="zhCanvasScore">Chấm điểm</button></div><div id="zhCanvasScoreBox"></div></div>';
+    + '<div class="row">' + frameBtns + '</div><div id="zhRecallMsg"></div></div>';
   app.innerHTML = html;
   wireBack();
   $("#zhStrokeListen").onclick = function () { zhSpeak(e.han); };
@@ -9781,7 +9704,7 @@ function renderZhStroke(app, l) {
   var cv = $("#zhWriteCanvas");
   var ctx = null;
   try { ctx = cv && cv.getContext ? cv.getContext("2d") : null; } catch (err) { ctx = null; }
-  var modelOn = false;
+  var modelOn = !!l.modelOn;
   if (!l.writeStrokes) l.writeStrokes = [];
   var drawUserStrokes = function () {
     if (!ctx) return;
@@ -9809,14 +9732,30 @@ function renderZhStroke(app, l) {
     drawUserStrokes();
   };
   drawGuide();
-  var mb = $("#zhCanvasModel"); if (mb) mb.onclick = function () { modelOn = !modelOn; mb.textContent = modelOn ? "Ẩn mẫu mờ" : "Hiện mẫu mờ"; drawGuide(); };
-  var cb = $("#zhCanvasClear"); if (cb) cb.onclick = function () { l.writeStrokes = []; var sbx = $("#zhCanvasScoreBox"); if (sbx) sbx.innerHTML = ""; drawGuide(); };
-  var sb = $("#zhCanvasScore"); if (sb) sb.onclick = function () {
-    var box = $("#zhCanvasScoreBox"); if (!box) return;
-    var res = zhScoreStrokes(l.writeStrokes, e);
-    if (!res) { box.innerHTML = "<p>Vẽ vào khung trước đã, rồi bấm Chấm điểm.</p>"; return; }
-    box.innerHTML = zhScoreResultHTML(res, e);
+  var mb = $("#zhCanvasModel"); if (mb) mb.onclick = function () { modelOn = !modelOn; l.modelOn = modelOn; mb.textContent = modelOn ? "Ẩn mẫu mờ" : "Hiện mẫu mờ"; drawGuide(); };
+  var cb = $("#zhCanvasClear"); if (cb) cb.onclick = function () { l.writeStrokes = []; drawGuide(); };
+  var rb = $("#zhRecallBtn"); if (rb) rb.onclick = function () { l.recallMode = true; l.compared = false; l.writeStrokes = []; l.modelOn = false; render(); };
+  var rbb = $("#zhRecallBackBtn"); if (rbb) rbb.onclick = function () { l.recallMode = false; l.compared = false; l.writeStrokes = []; render(); };
+  var cpb = $("#zhCompareBtn"); if (cpb) cpb.onclick = function () {
+    var msg = $("#zhRecallMsg");
+    if (!l.writeStrokes || !l.writeStrokes.length) { if (msg) msg.innerHTML = "<p>Viết vào khung trước đã, rồi bấm So với mẫu.</p>"; return; }
+    l.compared = true; l.modelOn = true; render();
   };
+  var rmb = $("#zhRememberedBtn"); if (rmb) rmb.onclick = function () {
+    var key = "stroke:" + e.han;
+    if (state.zhHard && state.zhHard[key]) zhHardJudge(key, true);
+    try { awardXp(1); } catch (err) {}
+    openLesson({ type: "zhStroke", han: next.han });
+  };
+  var fgb = $("#zhForgotBtn"); if (fgb) fgb.onclick = function () {
+    var key = "stroke:" + e.han;
+    if (!state.zhHard) state.zhHard = {};
+    if (!state.zhHard[key]) state.zhHard[key] = { kind: "stroke", han: e.han, pinyin: e.py, vi: e.vi, fails: 1, streak: 0, level: 0, due: addDaysStr(todayStr(), 1) };
+    else { var he = state.zhHard[key]; he.fails = (he.fails || 0) + 1; he.streak = 0; if (he.done) { he.done = false; he.level = 0; } he.due = addDaysStr(todayStr(), 1); }
+    saveState();
+    openLesson({ type: "zhStroke", han: next.han });
+  };
+  var rwb = $("#zhRewriteBtn"); if (rwb) rwb.onclick = function () { l.compared = false; l.writeStrokes = []; l.modelOn = false; render(); };
   if (ctx && cv) {
     var drawing = false, lastX = 0, lastY = 0, curStroke = null;
     var posOf = function (ev) {
@@ -9838,7 +9777,6 @@ function renderZhStroke(app, l) {
         for (var i = 1; i < curStroke.length; i++) len += Math.hypot(curStroke[i].x - curStroke[i - 1].x, curStroke[i].y - curStroke[i - 1].y);
         if (curStroke.length >= 2 && len >= 6) {
           l.writeStrokes.push(curStroke);
-          var sbx2 = $("#zhCanvasScoreBox"); if (sbx2) sbx2.innerHTML = "";
         }
       }
       drawing = false; curStroke = null;
@@ -9895,7 +9833,8 @@ function renderZhVocab(app, l) {
   var zhCL = $("#zhChoiceListen"); if (zhCL) zhCL.onclick = function () { zhSpeak(c.han); };
   var zhCN = $("#zhChoiceNext"); if (zhCN) zhCN.onclick = function () { zvk.choiceDone++; zvk.choiceAnswered = false; zvk.choiceWhy = ""; zvk.step = zvk.step + 1; render(); };
   var zhPC = $("#zhPronCheck"); if (zhPC) zhPC.onclick = function () { var res = $("#zhMirrorResult"); var t = res ? res.textContent : ""; if (t.indexOf("Nghe lại bản ghi") >= 0) { zvk.pronRecorded = true; zvk.pronDone = true; zvk.pronWhy = ""; } else if (t.indexOf("Chưa ghi được âm thanh") >= 0) { zvk.pronWhy = "Chưa ghi được âm thanh — bật mic rồi bấm “Soi gương + ghi âm”, đọc to chữ Hán rồi bấm dừng để kết thúc lượt ghi."; } else { zvk.pronWhy = "Chưa thấy bản ghi — bấm “Soi gương + ghi âm”, đọc to chữ Hán rồi bấm dừng để kết thúc lượt ghi, sau đó bấm lại nút này."; } render(); };
-  var zhFin = $("#zhMultiFinish"); if (zhFin) zhFin.onclick = function () { try { mirrorStop(); } catch (e) {} state.zhPos[d.key] = pos + 1; saveState(); render(); };
+  /* B6b: the hoc xong tron 5 buoc tu hen on lai theo SRS (1-3-7-14-30, dung 2 lan cach quang moi tot nghiep) — cung khuon muc kho, khong reset muc da co. */
+  var zhFin = $("#zhMultiFinish"); if (zhFin) zhFin.onclick = function () { try { mirrorStop(); } catch (e) {} var hk = d.key + ":" + pos; if (!state.zhHard) state.zhHard = {}; if (!state.zhHard[hk]) state.zhHard[hk] = { kind: "card", han: c.han, pinyin: c.pinyin, vi: c.vi, setKey: d.key, idx: pos, fails: 0, streak: 0, level: 0, due: addDaysStr(todayStr(), 1) }; state.zhPos[d.key] = pos + 1; saveState(); render(); };
   var zhSk = $("#zhSkipBtn"); if (zhSk) zhSk.onclick = function () { zhSkipCard(); };
   var zhMirOn = false;
   var zhMirStop = function () {
@@ -9938,7 +9877,7 @@ function renderZhPh(app, l) {
       state.zhPhDone[step.id] = true;
       zhAwardOnce("ph:" + step.id);
     }, null, {
-      listen: true, barNext: true, repeatWrong: true,
+      listen: true, barNext: false, repeatWrong: true,
       onSkip: function () {
         if (state.zhPhSkipped.indexOf(step.id) < 0) state.zhPhSkipped.push(step.id);
         saveState();
@@ -9983,7 +9922,8 @@ function renderZhGram(app, l) {
   if (l.quiz) {
     l.title = "Ngữ pháp: " + g.title; l.typeLabel = "Tiếng Trung · Ngữ pháp chặng " + g.stage;
     l.recordErrors = true; l.zhQuizLesson = "zhGram:" + g.id;
-    renderZhQuiz(app, l, g.quiz, function (score, total) { zhAwardOnce("zhGram:" + g.id); }, null, {});
+    /* B6c: tram ngu phap lam dung het tu hen on lai theo SRS (nhu the tu). */
+    renderZhQuiz(app, l, g.quiz, function (score, total) { zhAwardOnce("zhGram:" + g.id); if (score === total) { var gk = "zhGram:" + g.id; if (!state.zhHard) state.zhHard = {}; if (!state.zhHard[gk]) state.zhHard[gk] = { kind: "gram", gramIdx: l.idx, title: g.title, streak: 0, level: 0, fails: 0, due: addDaysStr(todayStr(), 1) }; } }, null, {});
     return;
   }
   var html = lessonHead({ title: "Ngữ pháp: " + g.title, type: "Tiếng Trung · Ngữ pháp chặng " + g.stage }, g.note || "");
@@ -9991,6 +9931,7 @@ function renderZhGram(app, l) {
     + '<p><b>Ví dụ trước:</b></p>' + g.examples.map(function (e) { return '<p>· ' + esc(e) + '</p>'; }).join("")
     + '<div class="row"><button class="btn" id="zhGramListen">🔊 Nghe ví dụ</button></div>'
     + '<details class="rule-more"><summary><b>Xem quy tắc + mẹo</b></summary><p><b>Quy tắc:</b> ' + esc(g.rule) + '</p><p>💡 <b>Mẹo:</b> ' + esc(g.tip) + '</p></details>'
+    + videoSlotIf("zhGram:" + g.id)
     + '<p class="mut">Bài này có ' + g.quiz.length + ' câu hỏi thực hành.</p>'
     + '<div class="row"><button class="btn btn-primary" id="zhGramStart">Vào luyện tập →</button></div></div>';
   app.innerHTML = html;
@@ -10030,6 +9971,7 @@ function renderZhListen(app, l) {
   if (!l.quiz) {
     var html = lessonHead({ title: "Nghe: " + r.title, type: "Tiếng Trung · Nghe chặng " + r.stage + " · " + r.topic }, r.note || "");
     html += phaseBarHTML(1) + '<div class="qblock"><p>Đoạn hội thoại có ' + r.lines.length + ' lượt nói, ' + r.questions.length + ' câu hỏi. Nghe toàn đoạn trước, nghe lấy ý chính rồi mới vào làm bài — transcript chỉ mở để đối chiếu sau khi làm xong.</p>'
+      + videoSlotIf("zhListen:" + r.id)
       + '<p class="mut">Nghe bằng giọng đọc máy zh-CN (như nút Nghe của HSKK), không phải audio thu sẵn.</p>'
       + '<div class="row"><button class="btn" id="zhLisListen">🔊 Nghe toàn đoạn</button><button class="btn btn-primary" id="zhLisStart">Vào làm bài →</button></div></div>';
     app.innerHTML = html;
@@ -10060,7 +10002,10 @@ function renderZhEntry(app, l) {
         : (st >= 2)
           ? 'Nút "Bài tiếp theo" ở thanh dưới sẽ đưa bạn tới bộ từ đầu tiên của chặng ' + st + '.'
           : 'Nút "Bài tiếp theo" ở thanh dưới sẽ đưa bạn tới bước phát âm đầu tiên chặng 1.';
-      return '<p><b>Kết quả này xếp bạn bắt đầu ở chặng ' + st + '.</b> (Đúng ' + score + '/' + total + ': 0–3 → chặng 1, 4–6 → chặng 2, 7–8 → chặng 3, 9–10 → chặng 4.)</p><p class="mut">Đây là kiểm tra xếp chặng nội bộ của web, không phải đề thi HSK thật. ' + nextNote + '</p>';
+      var nearSet = null;
+      if (st >= 2) { var allSets = zhSets(); for (var si = 0; si < allSets.length; si++) { if (allSets[si].stage === st) { nearSet = allSets[si]; break; } } }
+      var nearNote = nearSet ? '<p>Học nối: kết quả này xếp bạn vào chặng ' + st + ' — bạn bắt đầu từ bộ từ gần nhất với trình độ này là “' + esc(nearSet.set.topic) + '”, không cần học lại từ đầu.</p>' : '';
+      return '<p><b>Kết quả này xếp bạn bắt đầu ở chặng ' + st + '.</b> (Đúng ' + score + '/' + total + ': 0–3 → chặng 1, 4–6 → chặng 2, 7–8 → chặng 3, 9–10 → chặng 4.)</p>' + nearNote + '<p class="mut">Đây là kiểm tra xếp chặng nội bộ của web, không phải đề thi HSK thật. ' + nextNote + '</p>';
     });
     return;
   }
@@ -10099,7 +10044,9 @@ function renderZhSpeak(app, l) {
     + '<p>Bước 3: nghe toàn đoạn rồi nói lại cả đoạn.</p>'
     + '<p>Bước 4: muốn soi miệng thì bấm 🎤 Soi gương + ghi âm ở lượt muốn tập.</p>'
     + '<p class="mut">Bài này không khóa, không chấm điểm AI — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt cũng không tính chưa đạt.</p>'
-    + '<div class="row"><button class="btn" id="zhSpeakAll">🔊 Nghe toàn đoạn</button></div></div>';
+    + '<div class="row"><button class="btn" id="zhSpeakAll">🔊 Nghe toàn đoạn</button></div>'
+    + (s.id === "chaohoi" ? videoSlotIf("zhSpeak:chaohoi1") + videoSlotIf("zhSpeak:chaohoi2") + videoSlotIf("zhSpeak:chaohoi3") : "")
+    + '</div>';
   (s.lines || []).forEach(function (ln, i) {
     html += '<div class="qblock"><p><b>Lượt ' + (i + 1) + '/' + s.lines.length + ' · ' + esc(ln.sp) + ' nói:</b></p><div class="zh-han">' + esc(ln.han) + '</div><p><b>' + esc(ln.py) + '</b></p><p class="mut">' + esc(ln.vi) + '</p>'
       + '<div class="row"><button class="btn" data-zhspeakline="' + i + '">🔊 Nghe lượt này</button><button class="btn" data-zhspeakmirror="' + i + '">🎤 Soi gương + ghi âm</button></div>'
@@ -10150,6 +10097,7 @@ function renderZhRole(app, l) {
       + '<p><b>Cụm câu dùng được:</b> ' + r.chunks.map(function (ch) { return esc(ch); }).join(" · ") + '</p>'
       + '<p>💡 <b>Mẹo thực chiến:</b> ' + esc(r.tip) + '</p>'
       + '<p class="mut">Tình huống này không chấm điểm — luyện nói tự do, nói thành tiếng theo lượt của bạn.</p>'
+      + videoSlotIf("zhRole:" + r.id)
       + '<div class="row"><button class="btn btn-primary" id="zhRoleStart">Vào luyện tập →</button></div></div>';
     wireBack();
     $("#zhRoleStart").onclick = function () { l.theoryDone = true; render(); };
@@ -10569,22 +10517,25 @@ function renderZhMock(app, l) {
 }
 
 function renderZhHskk(app, l) {
-  var ss = ZH_HSKK_SENTENCES;
+  var lv = l.hskkLevel || "elem";
+  var meta = { elem: { ss: ZH_HSKK_SENTENCES, name: "Sơ cấp", done: "hskk:elem" }, inter: { ss: ZH_HSKK_INTER, name: "Trung cấp", done: "hskk:inter" }, adv: { ss: ZH_HSKK_ADV, name: "Cao cấp", done: "hskk:adv" } }[lv] || { ss: ZH_HSKK_SENTENCES, name: "Sơ cấp", done: "hskk:elem" };
+  var ss = meta.ss;
   var i = l.i || 0;
   if (i >= ss.length) {
-    zhAwardOnce("hskk:elem");
+    zhAwardOnce(meta.done);
     l.zhNext = true;
-    app.innerHTML = lessonHead({ title: "Luyện HSKK Sơ cấp", type: "Tiếng Trung · HSKK" }) + finishSummaryHTML("Xong bài luyện HSKK Sơ cấp!", '<p>Bạn đã nghe–nhắc lại ' + ss.length + ' câu trong ' + elapsedText() + '.</p><p class="mut">Bài này là tự luyện, chưa chấm điểm — chấm nói AI cho track Trung sẽ có ở đợt sau.</p>', "");
+    app.innerHTML = lessonHead({ title: "Luyện HSKK " + meta.name, type: "Tiếng Trung · HSKK" }) + finishSummaryHTML("Xong bài luyện HSKK " + meta.name + "!", '<p>Bạn đã nghe–nhắc lại ' + ss.length + ' câu trong ' + elapsedText() + '.</p><p class="mut">Bài này là tự luyện, chưa chấm điểm — chấm nói AI cho track Trung sẽ có ở đợt sau.</p>', "");
     wireBack();
     var rb = $("#btnRedo"); if (rb) rb.onclick = function () { l.i = 0; render(); };
     return;
   }
   var s = ss[i];
-  app.innerHTML = lessonHead({ title: "Luyện HSKK Sơ cấp", type: "Tiếng Trung · HSKK" }) + '<div class="qblock"><p class="mut">Nghe câu mẫu rồi nhắc lại thành tiếng. Câu ' + (i + 1) + '/' + ss.length + '.</p>'
+  var hskkHeard = !!(l.hskkHeard || {})[i]; /* C6b: HSKK la nghe-nhac lai — khoa nut qua cau toi khi hoc vien bam Nghe cua chinh cau nay. */
+  app.innerHTML = lessonHead({ title: "Luyện HSKK " + meta.name, type: "Tiếng Trung · HSKK" }) + '<div class="qblock"><p class="mut">Nghe câu mẫu rồi nhắc lại thành tiếng. Câu ' + (i + 1) + '/' + ss.length + '.</p>'
     + '<div class="zh-han">' + esc(s.han) + '</div><p><b>' + esc(s.pinyin) + '</b></p><p class="mut">' + esc(s.vi) + '</p>'
-    + '<div class="row"><button class="btn" id="zhHskkListen">🔊 Nghe</button><button class="btn btn-primary" id="zhHskkNext">Câu tiếp theo →</button></div></div>';
+    + '<div class="row"><button class="btn" id="zhHskkListen">🔊 Nghe</button><button class="btn btn-primary" id="zhHskkNext"' + (hskkHeard ? '' : ' disabled') + '>Câu tiếp theo →</button></div></div>';
   wireBack();
-  $("#zhHskkListen").onclick = function () { zhSpeak(s.han); };
+  $("#zhHskkListen").onclick = function () { zhSpeak(s.han); if (!l.hskkHeard) l.hskkHeard = {}; l.hskkHeard[i] = true; var nx = $("#zhHskkNext"); if (nx) nx.disabled = false; };
   $("#zhHskkNext").onclick = function () { l.i = i + 1; render(); };
 }
 
