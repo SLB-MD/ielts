@@ -3797,11 +3797,11 @@ var ZH_WRITE_VIDEOS = {
 // 2 phần dùng 2 khóa riêng); màn chưa có video thì KHÔNG hiện khung (xem videoSlotIf),
 // riêng trạm ngữ pháp cũ vẫn hiện khung "Sắp có" như trước.
 var GRAMMAR_VIDEOS = {
-  "gramOld:6": { id: "mzu9uCSIjes", title: "BOX SET: The present perfect tenses — 8 English grammar lessons in 46 minutes!", channel: "BBC Learning English", note: "Tuyển tập 8 bài về thì hiện tại hoàn thành — xem bài phù hợp với trạm này." },
-  "gramOld:47": { id: "mzu9uCSIjes", title: "BOX SET: The present perfect tenses — 8 English grammar lessons in 46 minutes!", channel: "BBC Learning English", note: "Tuyển tập 8 bài về thì hiện tại hoàn thành — xem bài phù hợp với trạm này." },
-  "gramOld:52": { id: "mzu9uCSIjes", title: "BOX SET: The present perfect tenses — 8 English grammar lessons in 46 minutes!", channel: "BBC Learning English", note: "Tuyển tập 8 bài về thì hiện tại hoàn thành — xem bài phù hợp với trạm này." },
-  "gramOld:54": { id: "mzu9uCSIjes", title: "BOX SET: The present perfect tenses — 8 English grammar lessons in 46 minutes!", channel: "BBC Learning English", note: "Tuyển tập 8 bài về thì hiện tại hoàn thành — xem bài phù hợp với trạm này." },
-  "gramOld:78": { id: "gnK57GP62YI", title: "BOX SET: The past perfect tense - 5 English grammar lessons in 23 minutes!", channel: "BBC Learning English", note: "Tuyển tập 5 bài về thì quá khứ hoàn thành — xem bài phù hợp với trạm này." },
+  "gramOld:6": { id: "y73F5oV9MJQ", title: "4 phút học xong Thì HIỆN TẠI HOÀN THÀNH", channel: "Viral English", note: "Cô Anne dạy bằng tiếng Việt, đúng một chủ đề thì hiện tại hoàn thành — 4 phút 46 giây." },
+  "gramOld:47": { id: "y73F5oV9MJQ", title: "4 phút học xong Thì HIỆN TẠI HOÀN THÀNH", channel: "Viral English", note: "Cô Anne dạy bằng tiếng Việt, đúng một chủ đề thì hiện tại hoàn thành — 4 phút 46 giây." },
+  "gramOld:52": { id: "y73F5oV9MJQ", title: "4 phút học xong Thì HIỆN TẠI HOÀN THÀNH", channel: "Viral English", note: "Cô Anne dạy bằng tiếng Việt, đúng một chủ đề thì hiện tại hoàn thành — 4 phút 46 giây." },
+  "gramOld:54": { id: "y73F5oV9MJQ", title: "4 phút học xong Thì HIỆN TẠI HOÀN THÀNH", channel: "Viral English", note: "Cô Anne dạy bằng tiếng Việt, đúng một chủ đề thì hiện tại hoàn thành — 4 phút 46 giây." },
+  "gramOld:78": { id: "WyH2K2y6c0c", title: "Học Tiếng Anh Online | Thì Quá Khứ Hoàn Thành", channel: "Lấy Gốc Tiếng Anh Ms Hạnh", note: "Cô Hạnh dạy bằng tiếng Việt, đúng một chủ đề thì quá khứ hoàn thành — 1 phút 48 giây." },
   "speakCrit:flu": { id: "2SI0twnNEN8", title: "IELTS: Improve English & prepare for IELTS Speaking: Fluency & Coherence", channel: "British Council Teacher Trainer", note: "Giới thiệu tiêu chí Nói trôi chảy và mạch lạc." },
   "speakCrit:lex": { id: "LQQE2hWrl98", title: "IELTS Speaking: Improve English & prepare for IELTS - Vocabulary", channel: "British Council Teacher Trainer", note: "Giới thiệu tiêu chí Từ vựng." },
   "speakCrit:gram": { id: "Yq6IZBtM4IU", title: "Introduction to passing the IELTS Speaking test: grammatical criteria", channel: "TakeIELTS Official", note: "Giới thiệu tiêu chí Ngữ pháp." },
