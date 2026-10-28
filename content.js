@@ -13,7 +13,7 @@
 const CONTENT = {
  "typing": [
   {
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "title": "Câu nền tảng cho Task 2",
    "sentences": [
     "Many people think that students should study at university.",
@@ -29,7 +29,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "title": "Mô tả biểu đồ đơn giản (Task 1)",
    "sentences": [
     "The chart shows the number of students in three schools.",
@@ -45,7 +45,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Câu mở bài và câu chủ đề",
    "sentences": [
     "In recent years, the question of whether university education should be free has sparked considerable debate.",
@@ -61,7 +61,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Câu nguyên nhân - kết quả",
    "sentences": [
     "Because more people own cars, traffic congestion is getting worse.",
@@ -77,7 +77,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Câu dữ liệu Task 1",
    "sentences": [
     "The proportion of elderly people rose steadily from 10% in 1980 to 18% in 2020.",
@@ -93,7 +93,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Câu nhượng bộ",
    "sentences": [
     "Although electric cars are expensive, they are becoming more popular.",
@@ -109,7 +109,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Câu phức cho Task 2",
    "sentences": [
     "Students who study abroad often develop a broader understanding of different cultures.",
@@ -125,7 +125,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Câu kết bài và giải pháp",
    "sentences": [
     "In conclusion, while the internet offers enormous benefits, its risks should not be underestimated.",
@@ -141,7 +141,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Câu học thuật: bị động và danh hóa",
    "sentences": [
     "It is widely acknowledged that economic growth does not necessarily lead to happiness.",
@@ -157,7 +157,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Paraphrase band cao cho mở bài",
    "sentences": [
     "The question of whether animals should be kept in zoos remains highly controversial.",
@@ -173,7 +173,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Cấu trúc band 8-9: đảo ngữ và câu chẻ",
    "sentences": [
     "Not only does remote work offer flexibility, but it also enables companies to recruit talent globally.",
@@ -189,7 +189,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Văn phong học thuật band 8-9",
    "sentences": [
     "The evidence suggests a correlation between social deprivation and poorer health outcomes.",
@@ -205,7 +205,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "title": "Câu nêu quan điểm cơ bản",
    "sentences": [
     "I think children should learn a second language at primary school.",
@@ -221,7 +221,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "title": "Câu so sánh đơn giản cho Task 1",
    "sentences": [
     "The number of buses was higher than the number of trains in 2010.",
@@ -237,7 +237,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "title": "Câu về nguyên nhân thường gặp",
    "sentences": [
     "Many young people leave villages because there are few jobs there.",
@@ -253,7 +253,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "title": "Câu kết luận đơn giản",
    "sentences": [
     "In conclusion, city life offers more jobs but also more stress.",
@@ -269,7 +269,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Câu mở bài Task 1",
    "sentences": [
     "The bar chart compares the daily water use of three large cities.",
@@ -285,7 +285,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Câu nêu lợi ích và hạn chế",
    "sentences": [
     "One clear benefit of working from home is the time saved on travelling.",
@@ -301,7 +301,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Câu ví dụ và giải thích",
    "sentences": [
     "For example, many pupils in Finland start school at the age of seven.",
@@ -317,7 +317,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Câu dự đoán xu hướng",
    "sentences": [
     "The number of electric cars is likely to rise sharply in the next decade.",
@@ -333,7 +333,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Câu phức với mệnh đề quan hệ",
    "sentences": [
     "Teachers who receive regular training tend to use more effective methods in class.",
@@ -349,7 +349,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Câu điều kiện trong Task 2",
    "sentences": [
     "If governments taxed sugary drinks, consumption would fall among young people.",
@@ -365,7 +365,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Câu dữ liệu: tỉ lệ và xếp hạng",
    "sentences": [
     "Food accounted for the largest proportion of household spending, at just over a third.",
@@ -381,7 +381,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Câu chuyển ý mạch lạc",
    "sentences": [
     "However, this approach may be too expensive for smaller towns to adopt.",
@@ -397,7 +397,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Câu bị động học thuật",
    "sentences": [
     "A new community centre is being built on the site of the old market.",
@@ -413,7 +413,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Câu nhượng bộ nâng cao",
    "sentences": [
     "Although the scheme has clear environmental benefits, its initial cost remains prohibitively high.",
@@ -429,7 +429,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Câu đề xuất giải pháp",
    "sentences": [
     "One practical solution would be to provide free training courses for unemployed adults.",
@@ -445,7 +445,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Câu tổng hợp hai ý đối lập",
    "sentences": [
     "On balance, the benefits of tourism for local economies appear to outweigh the cultural costs.",
@@ -461,7 +461,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Câu danh hóa trong Writing",
    "sentences": [
     "The expansion of online services has transformed access to banking in rural areas.",
@@ -477,7 +477,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Câu paraphrase mở bài band 7",
    "sentences": [
     "Whether children should be allowed unrestricted access to the internet is a matter of ongoing debate.",
@@ -493,7 +493,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Câu hedging thận trọng",
    "sentences": [
     "Regular exposure to a second language may enhance children's cognitive flexibility to some extent.",
@@ -509,7 +509,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Câu số liệu chính xác Task 1",
    "sentences": [
     "The proportion climbed from 12.4% in 2001 to 27.9% a decade later.",
@@ -525,7 +525,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Câu đảo ngữ và nhấn mạnh",
    "sentences": [
     "Not only did the reform reduce costs, but it also improved access for rural patients.",
@@ -541,7 +541,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Câu chẻ band 8-9",
    "sentences": [
     "It is early intervention that makes the greatest difference to a disadvantaged child's prospects.",
@@ -557,7 +557,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Câu phức hợp nhiều tầng",
    "sentences": [
     "Although the data that were collected over a decade suggest a clear trend, caution is needed because several key variables were not controlled.",
@@ -573,7 +573,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Văn phong học thuật đỉnh cao",
    "sentences": [
     "The literature converges on the conclusion that inequality is both a cause and a consequence of poor health.",
@@ -605,7 +605,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 2.0",
+   "level": "Band 2,0",
    "title": "Chặng 2 - Cơ bản: giới thiệu bản thân",
    "sentences": [
     "My name is Nam.",
@@ -621,7 +621,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 2.5",
+   "level": "Band 2,5",
    "title": "Chặng 3 - Câu đơn giản: sinh hoạt hằng ngày",
    "sentences": [
     "I get up at six o'clock.",
@@ -637,7 +637,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 4.0",
+   "level": "Band 4,0",
    "title": "Chặng 4 - Tiền IELTS: câu hoàn chỉnh",
    "sentences": [
     "I learn English because I want a good job.",
@@ -653,7 +653,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 3.0",
+   "level": "Band 3,0",
    "title": "Chào hỏi và xã giao hằng ngày",
    "sentences": [
     "Good morning, it is lovely to see you again after the holiday.",
@@ -669,7 +669,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 3.5",
+   "level": "Band 3,5",
    "title": "Lịch sự nhờ giúp đỡ",
    "sentences": [
     "Could you please help me carry this heavy bag upstairs?",
@@ -685,7 +685,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 3.0",
+   "level": "Band 3,0",
    "title": "Mua sắm ở chợ và siêu thị",
    "sentences": [
     "How much does this blue shirt cost in your shop?",
@@ -701,7 +701,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 3.0",
+   "level": "Band 3,0",
    "title": "Hỏi đường trong thành phố",
    "sentences": [
     "Excuse me, how can I get to the nearest train station?",
@@ -717,7 +717,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 2.5",
+   "level": "Band 2,5",
    "title": "Ăn uống và gọi món",
    "sentences": [
     "I would like a bowl of chicken soup and some bread.",
@@ -733,7 +733,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 2.5",
+   "level": "Band 2,5",
    "title": "Gia đình và việc nhà",
    "sentences": [
     "My older brother helps my mother wash the dishes every evening.",
@@ -749,7 +749,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 3.0",
+   "level": "Band 3,0",
    "title": "Trường học và lớp học",
    "sentences": [
     "Our teacher explains the lesson clearly and answers all our questions.",
@@ -765,7 +765,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 2.5",
+   "level": "Band 2,5",
    "title": "Thời tiết và trang phục",
    "sentences": [
     "It is sunny and warm today, perfect for a walk outside.",
@@ -781,7 +781,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 3.5",
+   "level": "Band 3,5",
    "title": "Sức khỏe và cảm giác cơ thể",
    "sentences": [
     "I have a headache today, so I will rest at home.",
@@ -797,7 +797,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 3.5",
+   "level": "Band 3,5",
    "title": "Kế hoạch cuối tuần vui vẻ",
    "sentences": [
     "This weekend, we plan to visit our grandparents in the countryside.",
@@ -813,7 +813,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Công việc văn phòng cơ bản",
    "sentences": [
     "Please send me the report by email before the meeting starts.",
@@ -829,7 +829,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Điện thoại và tin nhắn nhanh",
    "sentences": [
     "I missed your call this morning because my phone was silent.",
@@ -845,7 +845,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Du lịch và đặt phòng khách sạn",
    "sentences": [
     "We booked a double room with breakfast for three nights.",
@@ -861,7 +861,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Dịch vụ khách hàng và đổi trả",
    "sentences": [
     "I would like to return this shirt because it is too small.",
@@ -877,7 +877,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Thói quen và sở thích cá nhân",
    "sentences": [
     "Every morning, I go jogging in the park before breakfast.",
@@ -893,7 +893,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Đưa ra ý kiến đơn giản",
    "sentences": [
     "In my opinion, learning English online is both fun and useful.",
@@ -909,7 +909,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Nguyên nhân kết quả đời thường",
    "sentences": [
     "Because the traffic was terrible, we arrived at work very late.",
@@ -925,7 +925,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "So sánh trong đời sống",
    "sentences": [
     "This phone is more expensive than the one I bought last year.",
@@ -941,7 +941,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Lời mời và hẹn gặp bạn bè",
    "sentences": [
     "Would you like to join us for dinner this Friday evening?",
@@ -957,7 +957,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Trải nghiệm cá nhân đáng nhớ",
    "sentences": [
     "Last summer, I volunteered at a small school in the mountains.",
@@ -973,7 +973,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Cụm từ công việc trong bối cảnh thật",
    "sentences": [
     "She was offered a promotion after she consistently met her targets.",
@@ -989,7 +989,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Học tập hiệu quả với cụm bản địa",
    "sentences": [
     "Students who make steady progress usually review their notes every day.",
@@ -1005,7 +1005,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Công nghệ trong cuộc sống hằng ngày",
    "sentences": [
     "Please back up your files regularly in case your laptop breaks.",
@@ -1021,7 +1021,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Tiền bạc và chi tiêu thông minh",
    "sentences": [
     "We try to save a small amount of money every single month.",
@@ -1037,7 +1037,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Sức khỏe và lối sống cân bằng",
    "sentences": [
     "Eating a balanced diet plays a key role in staying healthy.",
@@ -1053,7 +1053,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Môi trường quanh nhà và khu phố",
    "sentences": [
     "Please sort your rubbish and recycle plastic, glass and paper separately.",
@@ -1069,7 +1069,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Truyền thông và mạng xã hội",
    "sentences": [
     "The news report gave a clear account of what had happened.",
@@ -1085,7 +1085,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Du lịch trải nghiệm sâu hơn",
    "sentences": [
     "We wandered through the old streets and discovered a hidden cafe.",
@@ -1101,7 +1101,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Quan hệ xã hội và kết bạn",
    "sentences": [
     "Good friends are always there for you in difficult times.",
@@ -1117,7 +1117,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Kế hoạch tương lai gần và xa",
    "sentences": [
     "In the next five years, I hope to run my own business.",
@@ -1133,7 +1133,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Quan điểm có nhượng bộ khéo léo",
    "sentences": [
     "Although online shopping is convenient, it can never fully replace local shops.",
@@ -1149,7 +1149,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Giải pháp cho đời sống và xã hội",
    "sentences": [
     "Local councils could reduce congestion by making public transport cheaper for residents.",
@@ -1165,7 +1165,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Giao tiếp trang trọng và paraphrase",
    "sentences": [
     "Could you possibly let me know when the meeting has been confirmed?",
@@ -1181,7 +1181,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Câu điều kiện thực tế trong đời sống",
    "sentences": [
     "If you practise speaking every day, your confidence will grow very quickly.",
@@ -1197,7 +1197,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Tường thuật lại lời người khác",
    "sentences": [
     "She told me that she had finished her degree the previous year.",
@@ -1213,7 +1213,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Mô tả xu hướng và thay đổi",
    "sentences": [
     "The number of people working from home has risen steadily in recent years.",
@@ -1229,7 +1229,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "So sánh nâng cao và đối chiếu",
    "sentences": [
     "Urban life is considerably more fast paced than life in a small village.",
@@ -1245,7 +1245,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Kết luận lịch sự và thuyết phục",
    "sentences": [
     "In conclusion, a balanced approach is likely to bring the greatest benefits overall.",
@@ -1261,7 +1261,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Bị động và danh hóa nhẹ nhàng",
    "sentences": [
     "A new health clinic is being built near the central bus station this year.",
@@ -1277,7 +1277,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Hedging nhẹ nhàng trong tranh luận",
    "sentences": [
     "Regular exercise may help to improve sleep quality for many adults generally.",
@@ -1293,7 +1293,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Câu chẻ cơ bản để nhấn mạnh",
    "sentences": [
     "It is regular practice that makes the biggest difference to a learner's fluency.",
@@ -1309,7 +1309,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Paraphrase mở đầu bài nói và viết",
    "sentences": [
     "Whether homework benefits young children is a topic that divides parents and teachers.",
@@ -1325,7 +1325,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Liên kết ý nâng cao mạch lạc",
    "sentences": [
     "Furthermore, well designed parks encourage residents to exercise and socialise outdoors regularly.",
@@ -1341,7 +1341,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Quan điểm cân bằng và đa chiều",
    "sentences": [
     "Weighing the evidence, I find the case for school uniforms slightly more persuasive overall.",
@@ -1357,7 +1357,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Đảo ngữ thông dụng để nhấn mạnh",
    "sentences": [
     "Not only did she pass with distinction, but she also won a scholarship.",
@@ -1373,7 +1373,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Nhấn mạnh tinh tế và hiệu quả",
    "sentences": [
     "It is precisely this patience that sets outstanding nurses apart from the rest.",
@@ -1389,7 +1389,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Văn phong học thuật chuẩn mực",
    "sentences": [
     "The study draws on interviews conducted with teachers across twelve secondary schools nationally.",
@@ -1405,7 +1405,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Hedging nâng cao trong học thuật",
    "sentences": [
     "The observed improvement may, to a considerable extent, reflect changes in teaching methods.",
@@ -1421,7 +1421,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Câu dài cân bằng và chặt chẽ",
    "sentences": [
     "Although the programme that was piloted in three districts showed early promise, its success depended heavily on the commitment of local staff.",
@@ -1437,7 +1437,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Diễn đạt tinh tế và sắc thái",
    "sentences": [
     "From this angle, punctuality operates less as mere courtesy than as a quiet signal of respect.",
@@ -1453,7 +1453,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 2.0",
+   "level": "Band 2,0",
    "title": "Số đếm, thời gian và gia đình",
    "sentences": [
     "I have two brothers and one sister.",
@@ -1469,7 +1469,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 4.0",
+   "level": "Band 4,0",
    "title": "Câu hoàn chỉnh mức B1 - trải nghiệm và điều kiện",
    "sentences": [
     "I have never travelled by plane before.",
@@ -1485,7 +1485,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 4.5",
+   "level": "Band 4,5",
    "title": "Câu bị động trong đời sống",
    "sentences": [
     "This bridge was built more than fifty years ago.",
@@ -1501,7 +1501,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 4.5",
+   "level": "Band 4,5",
    "title": "Câu phức mức B1 - nối ý và mệnh đề quan hệ",
    "sentences": [
     "Although it was raining, the children played outside.",
@@ -1517,7 +1517,7 @@ const CONTENT = {
    ]
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Câu giao tiếp y tế - hỏi bệnh và dặn dò bệnh nhân",
    "sentences": [
     "How long have you had this pain?",
@@ -1537,7 +1537,7 @@ const CONTENT = {
   {
    "topic": "Học tập và giáo dục",
    "theme": "Education - Giáo dục",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "cards": [
     {
      "w": "curriculum",
@@ -1704,7 +1704,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Environment - Môi trường",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "cards": [
     {
      "w": "pollution",
@@ -1871,7 +1871,7 @@ const CONTENT = {
   {
    "topic": "Thức ăn và sức khỏe",
    "theme": "Health - Sức khỏe",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "obesity",
@@ -2038,7 +2038,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Technology - Công nghệ",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "cards": [
     {
      "w": "innovation",
@@ -2205,7 +2205,7 @@ const CONTENT = {
   {
    "topic": "Công việc và nghề nghiệp",
    "theme": "Work & Careers - Công việc và sự nghiệp",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "career",
@@ -2372,7 +2372,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Society - Xã hội",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "cards": [
     {
      "w": "community",
@@ -2539,7 +2539,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Crime & Law - Tội phạm và luật pháp",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "crime",
@@ -2706,7 +2706,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Science - Khoa học",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "cards": [
     {
      "w": "research",
@@ -2873,7 +2873,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Culture & Arts - Văn hóa và nghệ thuật",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "heritage",
@@ -3040,7 +3040,7 @@ const CONTENT = {
   {
    "topic": "Mua sắm và tiền bạc",
    "theme": "Business & Marketing - Kinh doanh và tiếp thị",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "cards": [
     {
      "w": "brand",
@@ -3207,7 +3207,7 @@ const CONTENT = {
   {
    "topic": "Du lịch và giao thông",
    "theme": "Transport - Giao thông vận tải",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "commute",
@@ -3374,7 +3374,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Media & Advertising - Truyền thông và quảng cáo",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "cards": [
     {
      "w": "broadcast",
@@ -3541,7 +3541,7 @@ const CONTENT = {
   {
    "topic": "Thức ăn và sức khỏe",
    "theme": "Food & Nutrition - Thực phẩm và dinh dưỡng",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "nutrient",
@@ -3708,7 +3708,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Psychology - Tâm lý học",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "behaviour",
@@ -3875,7 +3875,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Geography - Địa lý",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "continent",
@@ -4042,7 +4042,7 @@ const CONTENT = {
   {
    "topic": "Du lịch và giao thông",
    "theme": "Tourism - Du lịch",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "destination",
@@ -4209,7 +4209,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Agriculture - Nông nghiệp",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "harvest",
@@ -4376,7 +4376,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Energy - Năng lượng",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "consumption",
@@ -4543,7 +4543,7 @@ const CONTENT = {
   {
    "topic": "Nhà ở và nơi sống",
    "theme": "Urbanisation - Đô thị hóa",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "metropolis",
@@ -4710,7 +4710,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Globalisation - Toàn cầu hóa",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "cards": [
     {
      "w": "multinational",
@@ -4877,7 +4877,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Animals & Wildlife - Động vật hoang dã",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "cards": [
     {
      "w": "predator",
@@ -5044,7 +5044,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "History & Heritage - Lịch sử và di sản",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "ancient",
@@ -5211,7 +5211,7 @@ const CONTENT = {
   {
    "topic": "Thể thao và vận động",
    "theme": "Sports & Leisure - Thể thao và giải trí",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "athlete",
@@ -5378,7 +5378,7 @@ const CONTENT = {
   {
    "topic": "Bản thân và gia đình",
    "theme": "Family & Relationships - Gia đình và các mối quan hệ",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "sibling",
@@ -5874,7 +5874,7 @@ const CONTENT = {
      "exv": "Hôm nay anh ấy đi học muộn."
     }
    ],
-   "band": "Band 2.0"
+   "band": "Band 2,0"
   },
   {
    "topic": "Bản thân và gia đình",
@@ -6041,7 +6041,7 @@ const CONTENT = {
      "exv": "Tài xế xe buýt rất cẩn thận."
     }
    ],
-   "band": "Band 2.0"
+   "band": "Band 2,0"
   },
   {
    "topic": "Bản thân và gia đình",
@@ -6208,12 +6208,12 @@ const CONTENT = {
      "exv": "Hôm nay các em nhỏ rất vui."
     }
    ],
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "topic": "Công việc và nghề nghiệp",
    "theme": "Workplace Communication - Giao tiếp nơi công sở",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "agenda",
@@ -6380,7 +6380,7 @@ const CONTENT = {
   {
    "topic": "Công việc và nghề nghiệp",
    "theme": "Job Interviews and Careers - Phỏng vấn xin việc và nghề nghiệp",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "vacancy",
@@ -6547,7 +6547,7 @@ const CONTENT = {
   {
    "topic": "Du lịch và giao thông",
    "theme": "Travel and Hotels - Du lịch và khách sạn",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "reception",
@@ -6714,7 +6714,7 @@ const CONTENT = {
   {
    "topic": "Du lịch và giao thông",
    "theme": "Airports and Getting Around - Sân bay và di chuyển",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "boarding pass",
@@ -6881,7 +6881,7 @@ const CONTENT = {
   {
    "topic": "Thức ăn và sức khỏe",
    "theme": "At the Clinic and Pharmacy - Khám bệnh và hiệu thuốc",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "appointment",
@@ -7048,7 +7048,7 @@ const CONTENT = {
   {
    "topic": "Thức ăn và sức khỏe",
    "theme": "Health and Daily Habits - Sức khỏe và thói quen hằng ngày",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "stretch",
@@ -7215,7 +7215,7 @@ const CONTENT = {
   {
    "topic": "Công việc và nghề nghiệp",
    "theme": "Customer Service - Dịch vụ khách hàng",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "complaint",
@@ -7382,7 +7382,7 @@ const CONTENT = {
   {
    "topic": "Mua sắm và tiền bạc",
    "theme": "Banking and Money - Ngân hàng và tiền bạc",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "account",
@@ -7549,7 +7549,7 @@ const CONTENT = {
   {
    "topic": "Thức ăn và sức khỏe",
    "theme": "Restaurants and Ordering Food - Nhà hàng và gọi món",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "menu",
@@ -7716,7 +7716,7 @@ const CONTENT = {
   {
    "topic": "Mua sắm và tiền bạc",
    "theme": "Shopping and Bargaining - Mua sắm và mặc cả",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "price tag",
@@ -7883,7 +7883,7 @@ const CONTENT = {
   {
    "topic": "Bản thân và gia đình",
    "theme": "Feelings and Emotions - Cảm xúc và tâm trạng",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "excited",
@@ -8050,7 +8050,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Social Small Talk - Trò chuyện xã giao",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "introduce",
@@ -8217,7 +8217,7 @@ const CONTENT = {
   {
    "topic": "Học tập và giáo dục",
    "theme": "Study Skills - Kỹ năng học tập",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "highlight",
@@ -8384,7 +8384,7 @@ const CONTENT = {
   {
    "topic": "Học tập và giáo dục",
    "theme": "Basic Academic Words - Từ học thuật cơ bản",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "approach",
@@ -8551,7 +8551,7 @@ const CONTENT = {
   {
    "topic": "Bản thân và gia đình",
    "theme": "Native Chunks 1: Verb and Noun Pairs - Cụm bản địa 1: động từ đi với danh từ",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "make a reservation",
@@ -8718,7 +8718,7 @@ const CONTENT = {
   {
    "topic": "Bản thân và gia đình",
    "theme": "Native Chunks 2: Everyday Fixed Phrases - Cụm bản địa 2: cụm cố định hằng ngày",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "it depends on",
@@ -8885,7 +8885,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Native Chunks 3: Polite and Social Phrases - Cụm bản địa 3: cụm lịch sự và xã giao",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "would you mind if",
@@ -9052,7 +9052,7 @@ const CONTENT = {
   {
    "topic": "Công việc và nghề nghiệp",
    "theme": "Native Chunks 4: Chunks at Work - Cụm bản địa 4: cụm dùng nơi công việc",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "let us get started",
@@ -9219,7 +9219,7 @@ const CONTENT = {
   {
    "topic": "Nhà ở và nơi sống",
    "theme": "Renting a Home - Thuê nhà và chỗ ở",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "landlord",
@@ -9386,7 +9386,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Phone Calls and Messages - Gọi điện và nhắn tin",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "missed call",
@@ -9553,7 +9553,7 @@ const CONTENT = {
   {
    "topic": "Sở thích và giải trí",
    "theme": "Weekend Activities - Hoạt động cuối tuần",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "lie-in",
@@ -9720,7 +9720,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Weather in Daily Life - Thời tiết trong đời sống",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "sunshine",
@@ -9887,7 +9887,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Technology in Daily Life - Công nghệ trong đời sống",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "charger",
@@ -10054,7 +10054,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Safety and Emergencies - An toàn và tình huống khẩn cấp",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "first aid",
@@ -10221,7 +10221,7 @@ const CONTENT = {
   {
    "topic": "Du lịch và giao thông",
    "theme": "Getting Around the City - Đi lại trong thành phố",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "traffic light",
@@ -10388,7 +10388,7 @@ const CONTENT = {
   {
    "topic": "Học tập và giáo dục",
    "theme": "School Friends and Teachers - Bạn bè và thầy cô ở trường",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "classmate",
@@ -10555,7 +10555,7 @@ const CONTENT = {
   {
    "topic": "Bản thân và gia đình",
    "theme": "Family Events and Festivals - Sự kiện gia đình và lễ tết",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "family reunion",
@@ -10722,7 +10722,7 @@ const CONTENT = {
   {
    "topic": "Mua sắm và tiền bạc",
    "theme": "Online Shopping - Mua sắm trực tuyến",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "online store",
@@ -10889,7 +10889,7 @@ const CONTENT = {
   {
    "topic": "Nhà ở và nơi sống",
    "theme": "Looking After Your Home - Chăm sóc nhà cửa",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "sweep the floor",
@@ -11056,7 +11056,7 @@ const CONTENT = {
   {
    "topic": "Công việc và nghề nghiệp",
    "theme": "Presentations and Meetings - Thuyết trình và họp nhóm",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "slide",
@@ -11223,7 +11223,7 @@ const CONTENT = {
   {
    "topic": "Du lịch và giao thông",
    "theme": "Travel Experiences - Trải nghiệm du lịch",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "solo travel",
@@ -11390,7 +11390,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Public Services - Dịch vụ công cộng",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "post office",
@@ -11557,7 +11557,7 @@ const CONTENT = {
   {
    "topic": "Nhà ở và nơi sống",
    "theme": "Việc nhà và khả năng - Housework and Abilities",
-   "band": "Band 2.5",
+   "band": "Band 2,5",
    "cards": [
     {
      "w": "cook",
@@ -11724,7 +11724,7 @@ const CONTENT = {
   {
    "topic": "Bản thân và gia đình",
    "theme": "Thời gian và quá khứ - Time and the Past",
-   "band": "Band 3.0",
+   "band": "Band 3,0",
    "cards": [
     {
      "w": "yesterday",
@@ -11891,7 +11891,7 @@ const CONTENT = {
   {
    "topic": "Bản thân và gia đình",
    "theme": "Miêu tả người và đồ vật - Describing People and Things",
-   "band": "Band 3.0",
+   "band": "Band 3,0",
    "cards": [
     {
      "w": "tall",
@@ -12058,7 +12058,7 @@ const CONTENT = {
   {
    "topic": "Du lịch và giao thông",
    "theme": "Du lịch và phương tiện - Travel and Transport",
-   "band": "Band 3.5",
+   "band": "Band 3,5",
    "cards": [
     {
      "w": "journey",
@@ -12225,7 +12225,7 @@ const CONTENT = {
   {
    "topic": "Bản thân và gia đình",
    "theme": "Kế hoạch và tương lai gần - Plans and the Near Future",
-   "band": "Band 3.5",
+   "band": "Band 3,5",
    "cards": [
     {
      "w": "plan",
@@ -12392,7 +12392,7 @@ const CONTENT = {
   {
    "topic": "Học tập và giáo dục",
    "theme": "Học tập và công việc - Study and Work B1",
-   "band": "Band 4.0",
+   "band": "Band 4,0",
    "cards": [
     {
      "w": "subject",
@@ -12559,7 +12559,7 @@ const CONTENT = {
   {
    "topic": "Thức ăn và sức khỏe",
    "theme": "Cơ thể và sức khỏe - Body and Health B1",
-   "band": "Band 4.0",
+   "band": "Band 4,0",
    "cards": [
     {
      "w": "headache",
@@ -12726,7 +12726,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Thiên nhiên và môi trường - Nature and Environment B1",
-   "band": "Band 4.5",
+   "band": "Band 4,5",
    "cards": [
     {
      "w": "forest",
@@ -12893,7 +12893,7 @@ const CONTENT = {
   {
    "topic": "Bản thân và gia đình",
    "theme": "Cảm xúc và ý kiến - Feelings and Opinions B1",
-   "band": "Band 4.5",
+   "band": "Band 4,5",
    "cards": [
     {
      "w": "proud",
@@ -13061,7 +13061,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Technology and Society - Công nghệ và xã hội",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "cards": [
     {
      "w": "automation",
@@ -13228,7 +13228,7 @@ const CONTENT = {
   {
    "topic": "Học tập và giáo dục",
    "theme": "Advanced Education - Giáo dục nâng cao",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "cards": [
     {
      "w": "postgraduate",
@@ -13395,7 +13395,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Media and Social Change - Truyền thông và biến đổi xã hội",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "cards": [
     {
      "w": "broadcast",
@@ -13562,7 +13562,7 @@ const CONTENT = {
   {
    "topic": "Môi trường và thiên nhiên",
    "theme": "Environment and Climate - Môi trường và khí hậu",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "cards": [
     {
      "w": "emission",
@@ -13729,7 +13729,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Globalisation and Culture - Toàn cầu hóa và văn hóa",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "cards": [
     {
      "w": "globalisation",
@@ -13896,7 +13896,7 @@ const CONTENT = {
   {
    "topic": "Mua sắm và tiền bạc",
    "theme": "Economics and Business - Kinh tế và kinh doanh",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "cards": [
     {
      "w": "inflation",
@@ -14063,7 +14063,7 @@ const CONTENT = {
   {
    "topic": "Học tập và giáo dục",
    "theme": "Abstract Academic Concepts - Khái niệm học thuật trừu tượng",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "cards": [
     {
      "w": "phenomenon",
@@ -14230,7 +14230,7 @@ const CONTENT = {
   {
    "topic": "Công nghệ và truyền thông",
    "theme": "Science and Research - Khoa học và nghiên cứu",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "cards": [
     {
      "w": "specimen",
@@ -14397,7 +14397,7 @@ const CONTENT = {
   {
    "topic": "Xã hội và văn hóa",
    "theme": "Philosophy and Life Values - Triết lý và giá trị sống",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "cards": [
     {
      "w": "morality",
@@ -14564,7 +14564,7 @@ const CONTENT = {
   {
    "topic": "Y tế và chăm sóc sức khỏe",
    "theme": "Từ vựng y tế 1 - Khám bệnh và triệu chứng",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "symptom",
@@ -14731,7 +14731,7 @@ const CONTENT = {
   {
    "topic": "Y tế và chăm sóc sức khỏe",
    "theme": "Từ vựng y tế 2 - Bệnh viện và điều trị",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "cards": [
     {
      "w": "diagnosis",
@@ -14898,7 +14898,7 @@ const CONTENT = {
   {
    "topic": "Logistics và chuỗi cung ứng",
    "theme": "Từ vựng logistics 1 - Chuỗi cung ứng cơ bản",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "cards": [
     {
      "w": "supply chain management",
@@ -15065,7 +15065,7 @@ const CONTENT = {
   {
    "topic": "Logistics và chuỗi cung ứng",
    "theme": "Từ vựng logistics 2 - Kho bãi và đóng gói",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "pallet",
@@ -15232,7 +15232,7 @@ const CONTENT = {
   {
    "topic": "Logistics và chuỗi cung ứng",
    "theme": "Từ vựng logistics 3 - Vận chuyển và giao nhận",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "customs declaration",
@@ -15399,7 +15399,7 @@ const CONTENT = {
   {
    "topic": "Logistics và chuỗi cung ứng",
    "theme": "Từ vựng logistics 4 - Quản trị logistics",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "cards": [
     {
      "w": "procurement",
@@ -15566,7 +15566,7 @@ const CONTENT = {
   {
    "topic": "Y tế và chăm sóc sức khỏe",
    "theme": "Từ vựng y tế 3 - Khoa phòng và nhân sự",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "cards": [
     {
      "w": "cardiology",
@@ -15733,7 +15733,7 @@ const CONTENT = {
   {
    "topic": "Y tế và chăm sóc sức khỏe",
    "theme": "Từ vựng y tế 4 - Xét nghiệm và chẩn đoán hình ảnh",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "cards": [
     {
      "w": "blood test",
@@ -15900,7 +15900,7 @@ const CONTENT = {
   {
    "topic": "Y tế và chăm sóc sức khỏe",
    "theme": "Từ vựng y tế 5 - Y tế công cộng và dịch bệnh",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "cards": [
     {
      "w": "endemic",
@@ -16067,7 +16067,7 @@ const CONTENT = {
   {
    "topic": "Y tế và chăm sóc sức khỏe",
    "theme": "Từ vựng y tế 6 - Nghiên cứu y khoa và y đức",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "cards": [
     {
      "w": "clinical trial",
@@ -16236,7 +16236,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Việc xảy ra mỗi ngày dùng hiện tại đơn như mặt trời mọc mỗi sáng; việc đang diễn ra ngay lúc này thì thêm -ing như nước đang sôi trên bếp.",
-   "level": "Band 4.0",
+   "level": "Band 4,0",
    "name": "Hiện tại đơn và hiện tại tiếp diễn",
    "explain": "Nhìn hai câu này trước nhé: The sun rises in the east (Mặt trời mọc ở hướng đông - sự thật luôn đúng). More and more people are choosing to work from home (Ngày càng nhiều người đang chọn làm việc ở nhà - việc đang diễn ra quanh lúc này). Sau ví dụ là quy tắc. Việc là sự thật hoặc thói quen lặp lại thì dùng hiện tại đơn (rises). Việc đang xảy ra ngay lúc này, hoặc chỉ là xu hướng tạm thời, thì dùng hiện tại tiếp diễn (are choosing). Trong IELTS, hai thì này hay dùng để mở bài, mô tả quy trình và nói về thói quen.",
    "examples": [
@@ -16349,7 +16349,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Biểu đồ đã qua là câu chuyện đã kể xong: cứ lùi về quá khứ đơn, như đóng cuốn sách lại và kể từ đầu đến cuối.",
-   "level": "Band 4.0",
+   "level": "Band 4,0",
    "name": "Quá khứ đơn cho biểu đồ Task 1",
    "explain": "Ví dụ trước nhé: The number rose in 2005, then fell in 2010 (Con số tăng vào năm 2005, rồi giảm vào năm 2010). Sau ví dụ là quy tắc. Hầu hết biểu đồ Task 1 nói về số liệu của những năm đã qua, nên động từ phải lùi về quá khứ đơn (rose, fell, remained). Khi nêu số liệu quá khứ, nhớ ghi rõ năm để người đọc biết con số thuộc thời điểm nào.",
    "examples": [
@@ -16462,7 +16462,7 @@ const CONTENT = {
   {
    "fam": "Tính từ, trạng từ và so sánh",
    "hook": "So sánh giống cái cân hai đĩa: một bên nặng hơn thì thêm -er hoặc more, muốn nặng nhất thì dùng -est hoặc the most.",
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "name": "So sánh cho Task 1",
    "explain": "Ví dụ trước nhé: The figure for Vietnam was higher than for Thailand, and the highest figure was in Singapore (Con số của Việt Nam cao hơn của Thái Lan, và con số cao nhất là ở Singapore). Sau ví dụ là quy tắc. Bài Task 1 nào cũng phải so sánh các con số với nhau: cao hơn thì dùng higher than, cao nhất thì dùng the highest. Muốn nói gấp đôi thì dùng twice as much as. Muốn nói chênh ít hay chênh nhiều thì thêm slightly (hơn một chút) hoặc considerably (hơn hẳn) trước từ so sánh.",
    "examples": [
@@ -16575,7 +16575,7 @@ const CONTENT = {
   {
    "fam": "Câu bị động",
    "hook": "Bị động là ống kính quay vào đồ vật: cái bánh được làm ra quan trọng hơn người làm bánh, nên be + V3 được đưa lên trước.",
-   "level": "Band 4.5",
+   "level": "Band 4,5",
    "name": "Câu bị động nền tảng",
    "explain": "Ví dụ trước nhé: The glass is heated (Thủy tinh được nung nóng). Sau ví dụ là quy tắc. Khi không cần nói ai làm, hoặc không biết ai làm, ta đưa vật bị tác động lên đầu câu và dùng be + V3 - đó là câu bị động. Dạng này gặp rất nhiều trong bài Task 1 miêu tả quy trình và trong văn học thuật nói chung.",
    "examples": [
@@ -16688,7 +16688,7 @@ const CONTENT = {
   {
    "fam": "Mẫu động từ",
    "hook": "Động từ khuyết thiếu như núm chỉnh âm lượng cho ý kiến: might là nói khẽ, should là nói chắc, must là nói to nhất.",
-   "level": "Band 4.5",
+   "level": "Band 4,5",
    "name": "Động từ khuyết thiếu nêu quan điểm",
    "explain": "Ví dụ trước nhé: Governments should invest in public transport (Chính phủ nên đầu tư vào giao thông công cộng). This may lead to cleaner air (Điều này có thể giúp không khí sạch hơn). Sau ví dụ là quy tắc. Khi nêu ý kiến trong Task 2, các từ should (nên), must (phải), can (có thể), may (có thể - chưa chắc) giúp bạn nói rõ mức chắc chắn của ý mình. Sau các từ này, động từ luôn để nguyên dạng gốc, không thêm s hay to.",
    "examples": [
@@ -16801,7 +16801,7 @@ const CONTENT = {
   {
    "fam": "Giới từ và liên từ",
    "hook": "Liên từ là cầu nối hai bờ câu: because bắc cầu lý do, but là cầu quặt ngược lại, so là cầu đi thẳng tới kết quả.",
-   "level": "Band 4.0",
+   "level": "Band 4,0",
    "name": "Liên từ cơ bản: because, although, so, but",
    "explain": "Ví dụ trước nhé: I study English because I want to work abroad (Tôi học tiếng Anh vì tôi muốn làm việc ở nước ngoài). Sau ví dụ là quy tắc. Bốn từ because (vì), although (mặc dù), so (nên), but (nhưng) dùng để nối hai ý thành một câu dài hơn. Nối được như vậy là bước đầu để bài viết thoát cảnh toàn câu ngắn cụt - rất quan trọng trong IELTS Writing.",
    "examples": [
@@ -16914,7 +16914,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Hiện tại hoàn thành là sợi dây nối quá khứ với hôm nay: việc bắt đầu ngày xưa mà kết quả vẫn còn đứng ngay trước mặt.",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "name": "Hiện tại hoàn thành cho xu hướng",
    "explain": "Ví dụ trước nhé: Prices have risen a lot this year (Giá cả năm nay đã tăng nhiều - và đến giờ vẫn còn cao). Sau ví dụ là quy tắc. Khi một việc bắt đầu trong quá khứ mà kết quả còn kéo tới hôm nay, ta dùng hiện tại hoàn thành: have hoặc has + V3. Dạng này cũng dùng để nói kinh nghiệm đã từng hoặc chưa từng làm, như has never been (chưa từng đến). Nó rất hay gặp khi mở bài và mô tả xu hướng dài hạn trong Task 1.",
    "examples": [
@@ -17027,7 +17027,7 @@ const CONTENT = {
   {
    "fam": "Câu điều kiện và giả định",
    "hook": "Điều kiện loại 1 là dự báo thời tiết có thể thành thật, loại 2 là giấc mơ giữa ban ngày: If I were you chỉ sống trong tưởng tượng.",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "name": "Câu điều kiện loại 1 và 2",
    "explain": "Nhìn hai câu này nhé: If the city builds more parks, people will be healthier (Nếu thành phố xây thêm công viên, người dân sẽ khỏe hơn - việc này có thể xảy ra thật). If I were rich, I would travel the world (Nếu tôi giàu, tôi sẽ đi khắp thế giới - chỉ là giả sử, hiện tại tôi không giàu). Sau ví dụ là quy tắc. Loại 1: If + hiện tại đơn, will + động từ gốc - nói hệ quả có thật trong tương lai, rất hợp để đề xuất giải pháp trong Task 2. Loại 2: If + quá khứ đơn, would + động từ gốc - giả sử một điều trái với hiện tại.",
    "examples": [
@@ -17140,7 +17140,7 @@ const CONTENT = {
   {
    "fam": "Mệnh đề quan hệ",
    "hook": "Mệnh đề quan hệ như sợi dây buộc thêm thông tin vào danh từ: who buộc vào người, which buộc vào vật, that buộc được cả hai.",
-   "level": "Band 4.5",
+   "level": "Band 4,5",
    "name": "Mệnh đề quan hệ cơ bản",
    "explain": "Ví dụ trước nhé: The teacher who helped me is very kind (Cô giáo - người đã giúp tôi - rất tốt bụng). Sau ví dụ là quy tắc. Muốn nói thêm về một người hay một vật ngay trong cùng một câu, ta gắn thêm một mệnh đề quan hệ: who cho người, which cho vật, that dùng được cho cả hai. Nối ý được như vậy giúp câu dài và phong phú hơn - đúng tiêu chí độ đa dạng ngữ pháp (Grammatical Range) mà IELTS chấm.",
    "examples": [
@@ -17253,7 +17253,7 @@ const CONTENT = {
   {
    "fam": "Giới từ và liên từ",
    "hook": "Cụm giới từ như biển chỉ đường trong câu: in terms of, as a result of giúp ý đi đúng hướng mà không lạc đường.",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "name": "Cụm giới từ học thuật",
    "explain": "Ví dụ trước nhé: In terms of cost, buses are cheaper than taxis (Xét về chi phí, xe buýt rẻ hơn taxi). Sau ví dụ là quy tắc. Các cụm in terms of (xét về), due to (do, bởi vì), as a result of (do kết quả của), in addition to (thêm vào đó) là những cụm nối ý quen thuộc trong văn học thuật. Dùng đúng chúng, bài viết nghe trang trọng và mạch lạc hơn hẳn.",
    "examples": [
@@ -17366,7 +17366,7 @@ const CONTENT = {
   {
    "fam": "Danh từ và lượng từ",
    "hook": "Lượng từ trong Task 1 như gia vị nêm vừa tay: the number of cho thứ đếm được từng cái, the amount of cho thứ đong bằng lượng.",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "name": "Lượng từ và danh từ số liệu trong Task 1",
    "explain": "Ví dụ trước nhé: The number of students is rising, but the amount of water is falling (Số học sinh đang tăng, nhưng lượng nước đang giảm). Sau ví dụ là quy tắc. Đếm được từng cái thì dùng the number of, như the number of students (số học sinh). Không đếm được, chỉ đong đo được, thì dùng the amount of, như the amount of water (lượng nước). Nói về tỷ lệ thì dùng proportion hoặc percentage. Dùng đúng lượng từ là điểm ngữ pháp được chấm trực tiếp trong Task 1.",
    "examples": [
@@ -17479,7 +17479,7 @@ const CONTENT = {
   {
    "fam": "Giới từ và liên từ",
    "hook": "However, therefore, moreover như biển báo rẽ trên đường viết: báo trước câu sắp đối lập, sắp ra kết quả hay sắp bồi thêm ý.",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "name": "Phó từ liên kết: however, therefore, moreover",
    "explain": "Ví dụ trước nhé: The course was expensive. However, it was worth it. (Khóa học đắt. Tuy nhiên, nó đáng tiền.) Sau ví dụ là quy tắc. However (tuy nhiên), therefore (vì vậy), moreover (hơn nữa) là các từ nối đứng ở đầu một câu mới: trước chúng là dấu chấm hoặc chấm phẩy, sau chúng là dấu phẩy. Nhiều bạn hay viết hai câu dính liền không có dấu ngăn - lỗi này gọi là chạy câu (run-on), rất dễ mất điểm.",
    "examples": [
@@ -17592,7 +17592,7 @@ const CONTENT = {
   {
    "fam": "Giới từ và liên từ",
    "hook": "When, while, as như đèn tín hiệu thời gian: bật lên là biết hai việc xảy ra cùng lúc hay nối đuôi nhau.",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "name": "Mệnh đề trạng ngữ thời gian",
    "explain": "Ví dụ trước nhé: While the water is heating, add the powder (Trong lúc nước đang nóng lên, hãy cho bột vào). Sau ví dụ là quy tắc. Các từ when (khi), while (trong lúc), before (trước khi), after (sau khi), until (cho tới khi), as soon as (ngay khi) giúp bạn nói rõ việc nào xảy ra trước, việc nào xảy ra sau, trong cùng một câu. Rất hữu ích khi kể trình tự các bước trong bài quy trình Task 1.",
    "examples": [
@@ -17705,7 +17705,7 @@ const CONTENT = {
   {
    "fam": "Câu bị động",
    "hook": "Quy trình làm giấy hay làm sô-cô-la không cần nêu ai làm: bị động giúp các bước tự nối nhau như dây chuyền trong nhà máy.",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "name": "Bị động cho quy trình Task 1",
    "explain": "Ví dụ trước nhé: First, the clay is dug from the ground. Then it is baked in a large oven. (Đầu tiên, đất sét được đào lên khỏi mặt đất. Sau đó, nó được nung trong một lò lớn.) Sau ví dụ là quy tắc. Đề quy trình (process) gần như bắt buộc dùng câu bị động: không ai hỏi ai là người làm, quan trọng là các bước nối tiếp nhau. Nhớ thêm từ chỉ thứ tự như First, Then, After that, Finally để các bước đi liền mạch.",
    "examples": [
@@ -17818,7 +17818,7 @@ const CONTENT = {
   {
    "fam": "Tính từ, trạng từ và so sánh",
    "hook": "So sánh nâng cao như thước đo có nhiều nấc nhỏ: considerably là hơn hẳn một đoạn, slightly chỉ hơn một chút xíu.",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "name": "So sánh nâng cao",
    "explain": "Ví dụ trước nhé: This model is considerably more expensive than the old one (Mẫu này đắt hơn hẳn mẫu cũ). The more you practise, the better you write (Càng luyện nhiều, bạn viết càng tốt). Sau ví dụ là quy tắc. Muốn nhấn mạnh chênh lệch lớn thì đặt much, far hoặc considerably trước từ so sánh. Cấu trúc the more..., the more... nghĩa là càng... càng... Còn so sánh bằng thì dùng as + tính từ + as, ví dụ as tall as (cao bằng). Dùng linh hoạt các dạng này giúp Task 1 và Task 2 chạm dải Band 6 trở lên.",
    "examples": [
@@ -17931,7 +17931,7 @@ const CONTENT = {
   {
    "fam": "Giới từ và liên từ",
    "hook": "Whereas đặt hai ý lên hai đĩa cân, nevertheless nghĩa là dù vậy vẫn tiến lên, consequently là quân domino đổ tới kết quả.",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "name": "Liên từ học thuật: whereas, nevertheless, consequently",
    "explain": "Ví dụ trước nhé: Whereas men prefer team sports, women often choose yoga (Trong khi nam giới thích thể thao đồng đội, nữ giới thường chọn yoga). Sau ví dụ là quy tắc. Whereas dùng để đặt hai sự thật cạnh nhau mà đối chiếu - rất hợp với biểu đồ Task 1. Nevertheless nghĩa là tuy nhiên, trang trọng hơn however. Consequently nghĩa là do đó. Dùng đúng ba từ này giúp bài viết mạch lạc hơn và vốn từ được đánh giá cao hơn.",
    "examples": [
@@ -18044,7 +18044,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Đổi từ loại như đổi áo cho ý: grow khoác áo danh từ thành growth, câu trông mới hẳn mà nghĩa vẫn nguyên.",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "name": "Paraphrase bằng cách đổi từ loại",
    "explain": "Ví dụ trước nhé: Đề bài nói prices increase (giá tăng). Bạn viết lại: There has been an increase in prices (Đã có một sự tăng lên ở giá cả) - ý nguyên vẹn, mặt câu khác hẳn. Sau ví dụ là quy tắc. Paraphrase (viết lại cùng một ý bằng cách nói khác) là kỹ năng cốt lõi của IELTS. Một cách dễ làm là đổi từ loại: increase (động từ) thành an increase (danh từ), decide thành make a decision. Bài mở đầu tốt luôn viết lại đề bài bằng lời của mình như vậy.",
    "examples": [
@@ -18157,7 +18157,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Đường biểu đồ chưa vẽ hết thì dùng will và is expected to, như nhìn mây đoán mưa cho những năm sắp tới.",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "name": "Dự đoán tương lai cho biểu đồ",
    "explain": "Ví dụ trước nhé: The figure is expected to reach 50% by 2030 (Con số được dự đoán sẽ chạm 50% vào năm 2030). Sau ví dụ là quy tắc. Khi biểu đồ kéo dài tới tương lai, hoặc đề bài yêu cầu dự đoán, đừng kể như chuyện đã xảy ra rồi. Hãy dùng will, is expected to (được dự đoán sẽ), is predicted to hoặc is likely to (có khả năng sẽ) để nói rõ đây là dự đoán.",
    "examples": [
@@ -18270,7 +18270,7 @@ const CONTENT = {
   {
    "fam": "Mệnh đề quan hệ",
    "hook": "Mệnh đề quan hệ nâng cao như dòng chú thích dưới trang sách: bổ sung ý phụ êm ái mà không làm đứt mạch câu chính.",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "name": "Mệnh đề quan hệ nâng cao",
    "explain": "Ví dụ trước nhé: He passed the exam, which surprised everyone (Anh ấy thi đỗ, điều đó làm mọi người ngạc nhiên). Sau ví dụ là quy tắc. Ở mức nâng cao, which còn dùng để bình luận cả ý vừa nói ở vế trước, như ví dụ trên. Trong văn trang trọng, giới từ có thể đứng ngay trước which hoặc whom: the reason for which (lý do mà vì nó), the people with whom (những người mà cùng với họ).",
    "examples": [
@@ -18383,7 +18383,7 @@ const CONTENT = {
   {
    "fam": "Câu điều kiện và giả định",
    "hook": "Điều kiện loại 3 là cỗ máy thời gian không có thật: If I had studied gợi tiếc nuối chuyện đã rồi, chỉ để rút bài học.",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "name": "Điều kiện loại 3 và điều kiện trong lập luận",
    "explain": "Ví dụ trước nhé: If governments had acted earlier, the problem would have been smaller (Nếu chính phủ hành động sớm hơn, vấn đề đã nhỏ hơn nhiều - tiếc là thực tế đã khác). Sau ví dụ là quy tắc. Câu điều kiện loại 3: If + had + V3, would have + V3 - dùng để giả sử một chuyện trong quá khứ đã xảy ra khác đi, thường kèm ý tiếc nuối. Đưa dạng này vào Task 2 giúp lập luận sâu hơn và cấu trúc câu đa dạng hơn.",
    "examples": [
@@ -18496,7 +18496,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Liệt kê song song như hàng quân đứng đều hàng: các ý cùng một khuôn ngữ pháp thì đoạn văn nhìn ngay ngắn, dễ đọc.",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "name": "Cấu trúc song song khi liệt kê",
    "explain": "Ví dụ trước nhé: She enjoys reading books, listening to music and playing sports (Cô ấy thích đọc sách, nghe nhạc và chơi thể thao - cả ba việc đều ở dạng V-ing). Sau ví dụ là quy tắc. Khi liệt kê nhiều ý trong một câu, các ý phải cùng một khuôn ngữ pháp: danh từ đi với danh từ, V-ing đi với V-ing. Lệch khuôn - ý này danh từ, ý kia động từ nguyên thể - là lỗi bị trừ điểm khá nặng trong Writing.",
    "examples": [
@@ -18609,9 +18609,9 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Hedging là đi nhẹ nói khẽ trong học thuật: tend to, may, often giúp câu không khẳng định quá tay.",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "name": "Hedging - ngôn ngữ thận trọng học thuật",
-   "explain": "Ví dụ trước nhé: Đừng viết People always choose... (Người ta luôn chọn...) một cách tuyệt đối. Hãy viết: People tend to choose... (Người ta thường có xu hướng chọn...). Sau ví dụ là quy tắc. Văn học thuật tránh khẳng định chắc nịch 100%. Các từ tend to (thường có xu hướng), may, might (có thể), generally (nhìn chung), in most cases (trong đa số trường hợp) giúp câu mềm và thận trọng đúng mực. Biết nói khẽ như vậy là dấu hiệu của dải Band 6.5 trở lên trong Writing và Speaking Part 3.",
+   "explain": "Ví dụ trước nhé: Đừng viết People always choose... (Người ta luôn chọn...) một cách tuyệt đối. Hãy viết: People tend to choose... (Người ta thường có xu hướng chọn...). Sau ví dụ là quy tắc. Văn học thuật tránh khẳng định chắc nịch 100%. Các từ tend to (thường có xu hướng), may, might (có thể), generally (nhìn chung), in most cases (trong đa số trường hợp) giúp câu mềm và thận trọng đúng mực. Biết nói khẽ như vậy là dấu hiệu của dải Band 6,5 trở lên trong Writing và Speaking Part 3.",
    "examples": [
     "People tend to spend more when the economy is strong.",
     "This policy may benefit rural areas in most cases."
@@ -18722,7 +18722,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Danh hóa là ép lấy nước cốt: decide vắt thành decision, câu văn đặc lại, trang trọng hơn hẳn.",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "name": "Danh hóa - nominalisation",
    "explain": "Ví dụ trước nhé: Câu thường: The city grew quickly, so traffic got worse. Viết kiểu danh hóa: The rapid growth of the city made traffic worse (Sự tăng trưởng nhanh của thành phố làm giao thông tệ hơn). Sau ví dụ là quy tắc. Danh hóa là biến động từ hoặc tính từ thành cụm danh từ: decide thành decision, grow thành the growth of. Câu văn nhờ đó ngắn gọn và trang trọng hơn - một đặc trưng rõ của văn phong band cao.",
    "examples": [
@@ -18835,7 +18835,7 @@ const CONTENT = {
   {
    "fam": "Giới từ và liên từ",
    "hook": "Câu chủ đề như biển hiệu đầu đoạn: nhìn vào biết ngay đoạn nói về gì, còn từ nối là lối đi nối các phòng ý với nhau.",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "name": "Câu chủ đề và từ nối trong đoạn văn",
    "explain": "Ví dụ trước nhé: Một đoạn thân bài nên mở đầu kiểu: Firstly, studying abroad helps students become independent. (Trước hết, du học giúp sinh viên trở nên tự lập.) Đọc câu đầu là biết cả đoạn nói gì. Sau ví dụ là quy tắc. Câu mở đoạn như vậy gọi là câu chủ đề (topic sentence). Sau câu chủ đề, bạn giải thích thêm rồi cho một ví dụ. Các từ nối như For instance (ví dụ như), As a result (kết quả là) giúp các câu trong đoạn đi liền mạch.",
    "examples": [
@@ -18948,7 +18948,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Câu chẻ như đèn sân khấu chiếu đúng một điểm: It was X that... để mọi ánh mắt dồn vào điều cần nhấn mạnh.",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "name": "Câu chẻ nhấn mạnh (cleft sentences)",
    "explain": "Ví dụ trước nhé: Câu thường: The cost surprised everyone most. Viết kiểu câu chẻ: It was the cost that surprised everyone (Chính chi phí mới là thứ làm mọi người ngạc nhiên). Sau ví dụ là quy tắc. Câu chẻ dùng khung It is hoặc It was + điều muốn nhấn mạnh + that... để dồn sự chú ý vào đúng một điểm. Dạng What matters most is... (Điều quan trọng nhất là...) cũng rất hiệu quả khi mở ý trong Task 2.",
    "examples": [
@@ -19061,7 +19061,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Never và rarely đứng đầu câu thì trợ động từ phải đảo lên trước như cúi chào: Never have I seen... nghe trang trọng hơn hẳn.",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "name": "Đảo ngữ sau trạng từ phủ định",
    "explain": "Ví dụ trước nhé: Câu thường: I have never seen such a crowd. Viết kiểu đảo ngữ: Never have I seen such a crowd (Chưa bao giờ tôi thấy một đám đông như vậy). Sau ví dụ là quy tắc. Khi câu bắt đầu bằng một từ phủ định như Never (chưa bao giờ), Rarely, Seldom (hiếm khi), trợ động từ phải nhảy lên trước chủ ngữ. Đây là cấu trúc nhấn mạnh của dải Band 7 trở lên - dùng đúng một, hai lần trong bài là đủ gây ấn tượng.",
    "examples": [
@@ -19174,7 +19174,7 @@ const CONTENT = {
   {
    "fam": "Câu bị động",
    "hook": "It is said that như câu mở đầu bản tin: người ta nói rằng, không cần nêu tên người nói mà vẫn đáng tin cậy.",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "name": "Bị động tường thuật (passive reporting)",
    "explain": "Ví dụ trước nhé: It is believed that exercise improves memory (Người ta tin rằng tập thể dục giúp trí nhớ tốt hơn). Sau ví dụ là quy tắc. Khi muốn dẫn một quan điểm chung mà không cần nêu ai nói, hãy dùng It is believed/said/thought that... (Người ta tin/nói/nghĩ rằng...). Dạng rút gọn là be believed to + động từ. Cách viết này nghe khách quan, rất hợp để mở bài và dẫn ý trong Task 2.",
    "examples": [
@@ -19287,7 +19287,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Mệnh đề phân từ là câu được gấp gọn như vali nén: Walking home thay cho While I was walking home mà nghĩa không vơi đi.",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "name": "Mệnh đề phân từ (participle clauses)",
    "explain": "Ví dụ trước nhé: Câu dài: While I was walking home, I met an old friend. Rút gọn: Walking home, I met an old friend (Đang đi bộ về nhà, tôi gặp một người bạn cũ). Sau ví dụ là quy tắc. Khi hai vế có cùng chủ ngữ, vế phụ có thể rút thành cụm phân từ: đang làm gì thì dùng V-ing; được làm gì thì dùng V3, như Built in 1900, the house... (Được xây năm 1900, ngôi nhà...). Câu nhờ đó gọn và đa dạng hơn - dấu hiệu của Band 7.",
    "examples": [
@@ -19400,7 +19400,7 @@ const CONTENT = {
   {
    "fam": "Câu điều kiện và giả định",
    "hook": "Had I known chính là If I had known đã bỏ chữ if và đội chiếc nón trang trọng, hay gặp trong văn viết band cao.",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "name": "Đảo ngữ trong câu điều kiện",
    "explain": "Ví dụ trước nhé: Had I known, I would have prepared better (Giá mà tôi biết trước, tôi đã chuẩn bị tốt hơn) - đây chính là If I had known viết theo kiểu trang trọng. Sau ví dụ là quy tắc. Trong văn rất trang trọng, chữ If có thể bỏ đi và trợ động từ đảo lên đầu câu: Had I known, Were it not for... (nếu không nhờ có...), Should you need... (nếu bạn cần...). Dạng này hay xuất hiện trong các bài viết Band 8 trở lên.",
    "examples": [
@@ -19513,7 +19513,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "It và there như giá đỡ mở màn: It is clear that, there is giúp câu đứng vững trước khi ý chính bước ra.",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "name": "Cấu trúc It và There học thuật",
    "explain": "Ví dụ trước nhé: There is evidence that sleep improves learning (Có bằng chứng cho thấy giấc ngủ giúp học tốt hơn). Sau ví dụ là quy tắc. Các khung It is important to note that... (Cần lưu ý rằng...), It appears that... (Có vẻ như...), There is evidence that... (Có bằng chứng rằng...), There has been a tendency to... (Đã có xu hướng...) là những cách mở câu khách quan, được dùng như xương sống của văn học thuật band cao.",
    "examples": [
@@ -19626,7 +19626,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Đảo ngữ toàn diện như mặc lễ phục cho câu: trật tự lạ mắt nhưng đúng nghi thức, dành cho lúc muốn thật trang trọng.",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "name": "Đảo ngữ nâng cao toàn diện",
    "explain": "Ví dụ trước nhé: Only after the lesson did I understand (Chỉ sau buổi học tôi mới hiểu). So tired was he that he slept at once (Anh ấy mệt đến mức ngủ ngay lập tức). Sau ví dụ là quy tắc. Đây là các dạng đảo ngữ nâng cao: sau Only after hoặc Only when (chỉ sau khi, chỉ khi), trợ động từ đảo lên trước chủ ngữ; So + tính từ đặt lên đầu câu để nhấn mạnh mức độ; Such + be cũng dùng như vậy. Dùng tiết chế một, hai lần trong cả bài là đủ tạo ấn tượng band cao, đừng lạm dụng.",
    "examples": [
@@ -19739,9 +19739,9 @@ const CONTENT = {
   {
    "fam": "Câu điều kiện và giả định",
    "hook": "Thể giả định nghe như lời vua chúa ngày xưa: It is essential that he be present, động từ trở về nguyên mẫu, không chia.",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "name": "Thể giả định trong văn trang trọng",
-   "explain": "Ví dụ trước nhé: It is essential that he be present (Điều thiết yếu là anh ấy phải có mặt - để ý động từ là be, không chia thành is). Sau ví dụ là quy tắc. Sau các từ như demand (yêu cầu), suggest (đề nghị), essential (thiết yếu), insist (khăng khăng), mệnh đề that dùng động từ nguyên thể không chia. Đây là điểm ngữ pháp tinh tế, thường chỉ xuất hiện ở dải Band 7.5 trở lên.",
+   "explain": "Ví dụ trước nhé: It is essential that he be present (Điều thiết yếu là anh ấy phải có mặt - để ý động từ là be, không chia thành is). Sau ví dụ là quy tắc. Sau các từ như demand (yêu cầu), suggest (đề nghị), essential (thiết yếu), insist (khăng khăng), mệnh đề that dùng động từ nguyên thể không chia. Đây là điểm ngữ pháp tinh tế, thường chỉ xuất hiện ở dải Band 7,5 trở lên.",
    "examples": [
     "The committee insisted that the report be rewritten.",
     "It is vital that every child receive a good education."
@@ -19852,7 +19852,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Cụm tuyệt đối như diễn viên phụ đứng cạnh cảnh chính: Weather permitting, we will go - thêm bối cảnh mà không tốn một câu riêng.",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "name": "Cụm tuyệt đối và rút gọn nâng cao",
    "explain": "Ví dụ trước nhé: With prices rising, many families spend less (Khi giá cả tăng, nhiều gia đình chi tiêu ít đi). Sau ví dụ là quy tắc. Cụm tuyệt đối là một cụm danh từ + phân từ đứng riêng để thêm bối cảnh cho câu chính, như The weather being fine, we set off early (Thời tiết đẹp, chúng tôi lên đường sớm). Dạng With + danh từ + phân từ cũng dùng như vậy. Đây là cấu trúc văn viết tinh gọn ở bậc cao.",
    "examples": [
@@ -19965,7 +19965,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Thêm do trước động từ như gạch chân bằng bút đỏ: I do agree nghĩa là tôi thật sự đồng ý, không phải nói cho qua chuyện.",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "name": "Nhấn mạnh bằng trợ động từ do",
    "explain": "Ví dụ trước nhé: I do agree, but I see one problem (Tôi thật sự đồng ý, nhưng tôi thấy một vấn đề). Sau ví dụ là quy tắc. Thêm do, does hoặc did trước động từ thường là cách nhấn mạnh rằng ý mình nói là thật lòng, hoặc để mở đầu một ý đối lập một cách lịch sự: He does work hard (Anh ấy quả thật làm việc chăm chỉ). Chi tiết nhỏ này hay gặp trong Speaking Part 3 và lập luận Task 2.",
    "examples": [
@@ -20078,7 +20078,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Dấu chấm phẩy là dấu phẩy học cao hơn một bậc, nối hai ý ngang hàng; dấu hai chấm là cánh cửa mở ra phần giải thích.",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "name": "Dấu chấm phẩy và dấu hai chấm trong câu dài",
    "explain": "Ví dụ trước nhé: The city is growing fast; traffic is getting worse (Thành phố đang lớn nhanh; giao thông ngày càng tệ). Sau ví dụ là quy tắc. Dấu chấm phẩy nối hai câu độc lập có liên quan chặt với nhau, thay cho dấu chấm. Dấu hai chấm mở ra phần giải thích hoặc một danh sách: There are two reasons: ... (Có hai lý do: ...). Dùng đúng hai dấu này giúp câu dài nhiều mệnh đề vẫn sạch, không bị lỗi chạy câu.",
    "examples": [
@@ -20191,7 +20191,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Paraphrase band cao như kể lại một bộ phim bằng lời của chính mình: đổi cấu trúc, đổi từ ngữ, giữ nguyên cốt truyện.",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "name": "Paraphrase trình độ cao",
    "explain": "Ví dụ trước nhé: Câu gốc: Many people think technology harms children. Viết lại ở mức cao: It is often the case that technology is blamed for harming children (Người ta thường cho rằng công nghệ gây hại cho trẻ em) - đổi cả cấu trúc câu, không chỉ đổi vài từ. Sau ví dụ là quy tắc. Ở dải band cao, paraphrase nghĩa là viết lại toàn bộ cấu trúc: chủ động đổi sang bị động, mệnh đề đổi thành cụm danh từ, và thay từ bằng các cụm đồng nghĩa học thuật như a significant number of (một số lượng đáng kể).",
    "examples": [
@@ -20304,7 +20304,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Be là xương sống của câu: am đi với I, is đi với một người hay một vật, are đi với nhiều người và nhiều vật.",
-   "level": "Band 2.0",
+   "level": "Band 2,0",
    "name": "Động từ be - am, is, are",
    "explain": "Nhìn ví dụ trước nhé. Mẹ đi chợ về và nói: I am tired. Lan giới thiệu bố: He is a farmer. Cả nhà đang ở nhà: We are at home. Sau ví dụ là quy tắc. Ta dùng động từ be (là, thì, ở - động từ đặc biệt dùng để giới thiệu và mô tả) để giới thiệu và tả người hay vật. I đi với am. He, she, it và một người hay một vật đi với is. You, we, they và nhiều người hay nhiều vật đi với are.",
    "examples": [
@@ -20397,7 +20397,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Thói quen mỗi ngày như đồng hồ báo thức điểm giờ đều đặn: I get up, she gets up - nhớ cộng thêm s cho ngôi thứ ba số ít.",
-   "level": "Band 2.0",
+   "level": "Band 2,0",
    "name": "Hiện tại đơn cơ bản - thói quen mỗi ngày",
    "explain": "Nhìn ví dụ trước nhé. Sáng nào mẹ cũng dậy sớm: My mother gets up at five. Em trai đi học bằng xe buýt mỗi ngày: My brother goes to school by bus. Sau ví dụ là quy tắc. Ta dùng thì hiện tại đơn (cách nói về việc làm lặp lại hằng ngày) cho thói quen. I, you, we, they dùng động từ gốc. He, she, it thì thêm s hoặc es vào động từ.",
    "examples": [
@@ -20490,7 +20490,7 @@ const CONTENT = {
   {
    "fam": "Danh từ và lượng từ",
    "hook": "Một vật chưa rõ thì gọi a hoặc an, vật đã rõ thì gọi the, nhiều vật thì thêm s: như điểm danh từng món đồ trong phòng.",
-   "level": "Band 3.0",
+   "level": "Band 3,0",
    "name": "Danh từ số nhiều và a, an, the",
    "explain": "Nhìn ví dụ trước nhé. Minh mua một quyển sách ở hiệu sách: Minh buys a book. Lan ăn một quả táo ở nhà: Lan eats an apple. Quyển sách trên bàn của cô giáo thì ai cũng biết rõ: The book is on the desk. Sau ví dụ là quy tắc. Mạo từ (từ nhỏ đứng trước danh từ: a, an, the) đứng trước danh từ. Dùng a trước từ bắt đầu bằng phụ âm. Dùng an trước từ bắt đầu bằng nguyên âm a, e, i, o, u. Dùng the khi người nghe đã biết rõ vật đó. Danh từ số nhiều thường thêm s. Từ kết thúc bằng s, ch, sh, x thì thêm es.",
    "examples": [
@@ -20583,7 +20583,7 @@ const CONTENT = {
   {
    "fam": "Danh từ và lượng từ",
    "hook": "My, your, his, her như nhãn dán tên trên đồ đạc: nhìn nhãn là biết của ai, khỏi phải nhắc lại tên người sở hữu.",
-   "level": "Band 3.0",
+   "level": "Band 3,0",
    "name": "Đại từ và tính từ sở hữu",
    "explain": "Nhìn ví dụ trước nhé. Lan tự giới thiệu: I am Lan. Lan chỉ vào cặp của mình: This is my bag. Nam rất yêu mẹ của mình: He loves his mother. Sau ví dụ là quy tắc. Đại từ (từ thay cho tên người/vật: I, you, he, she) dùng thay cho tên người. I là tôi, you là bạn, he là anh ấy, she là cô ấy, we là chúng ta, they là họ. Tính từ sở hữu (từ chỉ của ai: my, your, his, her) đứng trước danh từ. My là của tôi, your là của bạn, his là của anh ấy, her là của cô ấy, our là của chúng ta, their là của họ.",
    "examples": [
@@ -20676,7 +20676,7 @@ const CONTENT = {
   {
    "fam": "Giới từ và liên từ",
    "hook": "In như chiếc hộp lớn chứa tháng và năm, on là mặt bàn chứa ngày tháng, at là chấm nhỏ chứa giờ: hộp càng to, giới từ càng là in.",
-   "level": "Band 2.5",
+   "level": "Band 2,5",
    "name": "Giới từ in, on, at",
    "explain": "Nhìn ví dụ trước nhé. Lớp học bắt đầu lúc bảy giờ: The class starts at seven. Gia đình tôi sống ở Hà Nội: My family lives in Hanoi. Quyển sách nằm trên bàn học: The book is on the desk. Sau ví dụ là quy tắc. Giới từ (từ chỉ vị trí/thời gian: in, on, at) là từ nhỏ chỉ nơi chốn và thời gian. In dùng cho tháng, năm, thành phố và buổi trong ngày. On dùng cho thứ trong tuần và bề mặt. At dùng cho giờ cụ thể và các cụm quen thuộc như at home và at school.",
    "examples": [
@@ -20769,7 +20769,7 @@ const CONTENT = {
   {
    "fam": "Mẫu động từ",
    "hook": "Can là giơ tay xung phong nói tôi làm được, can't là lắc đầu nói chưa làm được; muốn hỏi thì đưa can lên đầu câu.",
-   "level": "Band 2.5",
+   "level": "Band 2,5",
    "name": "Can và can't, câu hỏi đơn giản",
    "explain": "Nhìn ví dụ trước nhé. Em gái tôi biết bơi ở bể bơi gần nhà: My sister can swim. Bố tôi không biết lái xe ô tô: My father can't drive a car. Bạn hỏi bạn cùng lớp: Can you ride a bike? Sau ví dụ là quy tắc. Can nghĩa là có thể làm được một việc. Can't nghĩa là không thể làm được. Sau can luôn dùng động từ gốc, không thêm to và không thêm s. Muốn hỏi thì đưa Can lên đầu câu. Các câu hỏi quen thuộc khác là What is your name, Where are you from và Do you like music.",
    "examples": [
@@ -20862,7 +20862,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Việc đang làm lúc này thì mặc chiếc áo -ing: I am cooking, như khói bếp đang bốc ngay trước mắt bạn.",
-   "level": "Band 3.0",
+   "level": "Band 3,0",
    "name": "Hiện tại tiếp diễn cơ bản",
    "explain": "Nghe ví dụ đời thường trước nhé. Mẹ đang nấu cơm trong bếp: My mother is cooking now. Các em đang chơi ở sân trường: The children are playing at school. Sau ví dụ là quy tắc. Ta dùng thì hiện tại tiếp diễn (cách nói về việc đang xảy ra ngay lúc này) khi việc đang diễn ra. Cách làm rất đơn giản. Dùng am, is hoặc are rồi cộng động từ thêm ing. I đi với am. He, she, it và một người hay một vật đi với is. You, we, they và nhiều người hay nhiều vật đi với are.",
    "examples": [
@@ -20955,7 +20955,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Việc hôm qua đã khép lại như trang sách đã lật qua: thêm -ed hoặc dùng động từ bất quy tắc, rồi nhẹ nhàng đóng sách.",
-   "level": "Band 3.5",
+   "level": "Band 3,5",
    "name": "Quá khứ đơn cơ bản - kể việc đã qua",
    "explain": "Nhớ lại chuyện hôm qua nhé. Hôm qua tôi đi chợ với mẹ: I went to the market yesterday. Tuần trước cả nhà ăn phở ở quán gần nhà: My family ate pho last week. Sau ví dụ là quy tắc. Ta dùng thì quá khứ đơn (cách nói về việc đã xảy ra và đã kết thúc) cho việc đã xong. Nhiều động từ chỉ cần thêm ed, ví dụ work thành worked và watch thành watched. Một số động từ đổi hẳn dạng và phải nhớ riêng. Go thành went, have thành had, see thành saw và eat thành ate.",
    "examples": [
@@ -21048,7 +21048,7 @@ const CONTENT = {
   {
    "fam": "Câu tường thuật",
    "hook": "Tường thuật như người đưa tin lùi lại một bước: is thành was, today thành that day, vì ta kể lại lời người khác về sau.",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "name": "Câu tường thuật cơ bản và đầy đủ",
    "explain": "Ví dụ đời sống trước nhé: Mẹ nói với Hùng: 'Mẹ sẽ nấu cơm lúc sáu giờ tối nay.' Hùng kể lại cho chị gái: Hùng said his mother would cook dinner at six that night. Bạn thấy will đã thành would và tonight đã thành that night. Đó là câu tường thuật (câu kể lại lời của người khác mà không chép nguyên văn). Quy tắc một: với câu trần thuật (câu kể lại một sự việc), động từ thường lùi thì (lùi về quá khứ một nấc, như is thành was và will thành would). Quy tắc hai: với câu hỏi yes/no (câu hỏi chỉ cần đáp có hoặc không), ta dùng if hoặc whether rồi viết tiếp như câu kể, không đảo trợ động từ (từ phụ như do hay did) lên trước chủ ngữ. Quy tắc ba: với câu hỏi có từ hỏi như what, where hay when, ta giữ nguyên từ hỏi rồi cũng viết tiếp như câu kể. Quy tắc bốn: với câu mệnh lệnh và câu yêu cầu (câu bảo hoặc nhờ ai làm một việc), ta dùng tell hoặc ask rồi cộng to và động từ nguyên thể (dạng gốc chưa chia của động từ). Các từ chỉ thời gian cũng đổi theo lúc kể, như today thành that day và tomorrow thành the next day.",
    "examples": [
@@ -21161,7 +21161,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Used to là thói quen đã về hưu: ngày xưa hay làm, giờ không làm nữa, như chiếc xe đạp cũ dựng yên trong kho.",
-   "level": "Band 4.5",
+   "level": "Band 4,5",
    "name": "Used to - thói quen và trạng thái trong quá khứ",
    "explain": "Ví dụ đời sống trước nhé: Khi còn ở quê, ông tôi thường dậy lúc bốn giờ sáng để ra đồng, nhưng nay ông sống ở thành phố nên không dậy sớm nữa. Câu tiếng Anh là: My grandfather used to get up at four in the morning. Quy tắc một: used to cộng động từ nguyên thể (dạng gốc chưa chia của động từ) tả một thói quen hoặc một trạng thái (một tình trạng kéo dài, như từng rất nhút nhát) ở quá khứ mà nay không còn nữa. Quy tắc hai: câu phủ định (câu nói không) là did not use to, bỏ chữ d ở used vì đã có did. Quy tắc ba: câu hỏi là Did cộng chủ ngữ cộng use to, cũng bỏ chữ d ở used. Cần phân biệt nhẹ: be used to cộng động từ thêm ing nghĩa là đã quen với một việc ở hiện tại, như I am used to getting up early nghĩa là tôi đã quen dậy sớm.",
    "examples": [
@@ -21274,7 +21274,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Quá khứ tiếp diễn là cảnh nền đang chạy thì một việc khác chen vào: I was sleeping when the phone rang.",
-   "level": "Band 4.5",
+   "level": "Band 4,5",
    "name": "Quá khứ tiếp diễn",
    "explain": "Ví dụ đời sống trước nhé: Tối qua lúc tám giờ, cả nhà đang ăn cơm thì bỗng mất điện. Câu tiếng Anh là: We were having dinner when the lights went out. Quy tắc một: thì quá khứ tiếp diễn (thì tả một việc đang diễn ra dở dang tại một lúc trong quá khứ) có dạng was hoặc were cộng động từ thêm ing. Quy tắc hai: một việc ngắn đã xong xen vào thường dùng thì quá khứ đơn (thì kể một việc đã xong hẳn trong quá khứ), như the lights went out trong ví dụ trên. Quy tắc ba: hai việc cùng đang diễn ra song song trong quá khứ thì nối bằng while (từ nối nghĩa là trong lúc), và cả hai việc đều dùng quá khứ tiếp diễn.",
    "examples": [
@@ -21387,7 +21387,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Quá khứ đơn là tấm ảnh chụp một thời điểm đã qua, hiện tại hoàn thành là cuộn phim kéo dài từ quá khứ tới tận bây giờ.",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "name": "Hiện tại hoàn thành đối chiếu quá khứ đơn",
    "explain": "Ví dụ đời sống trước nhé: Sáng nay Lan nói: 'Em làm mất chìa khóa rồi, bây giờ không vào nhà được.' Câu tiếng Anh là: I have lost my key. Không ai nói rõ Lan mất chìa khóa lúc mấy giờ, điều quan trọng là kết quả ở hiện tại: bây giờ Lan không vào nhà được. Nhưng nếu kể kèm một mốc giờ rõ ràng thì khác hẳn: Lan lost her key yesterday. Quy tắc một: thì hiện tại hoàn thành (thì nối một việc đã làm xong với kết quả còn thấy ở hiện tại) có dạng have hoặc has cộng phân từ hai (dạng thứ ba của động từ, như done hay lost). Quy tắc hai: thì quá khứ đơn (thì kể một việc đã xong hẳn) bắt buộc dùng khi có mốc thời gian rõ như yesterday, last week hay in 2019. Quy tắc ba: các dấu hiệu just, already, yet, ever và since thường đi với hiện tại hoàn thành.",
    "examples": [
@@ -21500,7 +21500,7 @@ const CONTENT = {
   {
    "fam": "Mệnh đề quan hệ",
    "hook": "Whose nói về đồ của ai, whom chỉ người ở vị trí tân ngữ: như hai chiếc chìa khóa mở hai ổ khóa khác nhau trong câu dài.",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "name": "Mệnh đề quan hệ chuyên sâu: whose, whom và giới từ đứng trước",
    "explain": "Ví dụ đời sống trước nhé: Bà Tư ở đầu ngõ có con trai làm bác sĩ ở Đà Nẵng, ai cũng quý bà. Câu tiếng Anh là: The woman whose son is a doctor in Da Nang is my neighbour. Quy tắc một: whose (từ thay cho tên người hoặc vật và cho biết của ai) luôn đứng trước một danh từ, như whose son hay whose roof. Quy tắc hai: whom (từ thay cho tên người khi người đó là người nhận hành động, hay gặp trong văn trang trọng) đứng sau động từ hoặc sau giới từ (từ nhỏ như to, with hay for đứng trước danh từ). Quy tắc ba: khi giới từ đứng ngay trước từ thay thế thì chỉ dùng whom cho người và which cho vật, không dùng that hay who. Quy tắc bốn: mệnh đề quan hệ không xác định (phần thêm thông tin phụ, bỏ đi vẫn hiểu đang nói về ai, luôn có dấu phẩy ở hai đầu hoặc một đầu) không dùng that và không bỏ được từ thay thế.",
    "examples": [
@@ -21613,7 +21613,7 @@ const CONTENT = {
   {
    "fam": "Mạo từ",
    "hook": "The giống ngón tay chỉ vào đúng một vật mà cả hai người cùng thấy; khi nói điều chung chung như water hay honesty thì bỏ mạo từ.",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "name": "Mạo từ nâng cao",
    "explain": "Ví dụ đời sống trước nhé: Mỗi tối, em gái tôi ngồi vào đàn và chơi piano rất hay: My sister plays the piano. Nhưng khi em đi học thì ta nói go to school, không có the trước school. Quy tắc một: mạo từ (từ nhỏ a, an hoặc the đặt ngay trước danh từ) là the dùng với nhạc cụ, với biển, sông và đại dương, và trong cụm the cộng tính từ để chỉ cả một nhóm người, như the elderly nghĩa là những người cao tuổi. Quy tắc hai: mạo từ rỗng (trường hợp không đặt mạo từ nào trước danh từ) dùng khi nói trường học, bệnh viện hay nhà thờ theo đúng mục đích chính, như đi học hay đi khám chữa bệnh, và cũng dùng cho bữa ăn, môn thể thao và tên ngôn ngữ. Quy tắc ba: a hay an chọn theo âm nghe được đầu tiên, không theo chữ cái, nên ta nói an hour vì chữ h không phát âm, nhưng a university vì từ này bắt đầu bằng âm yu.",
    "examples": [
@@ -21726,7 +21726,7 @@ const CONTENT = {
   {
    "fam": "Tính từ, trạng từ và so sánh",
    "hook": "So sánh hơn như cuộc chạy đua hai người: taller là cao hơn đối thủ, the tallest là cao nhất trong cả đoàn.",
-   "level": "Band 3.5",
+   "level": "Band 3,5",
    "name": "So sánh cơ bản - hơn và nhất",
    "explain": "Nhìn ví dụ trước nhé. Anh trai cao hơn em gái: My brother is taller than my sister. Hà Nội là thành phố lớn nhất miền Bắc trong ba thành phố được nhắc: Hanoi is the biggest city of the three. Sau ví dụ là quy tắc. Khi so sánh hai người hay hai vật, ta thêm -er vào tính từ ngắn (từ chỉ tính chất như tall, big) rồi thêm than (hơn). Khi nói một người hay vật đứng đầu trong một nhóm, ta dùng the và thêm -est: the tallest (cao nhất). Tính từ dài như beautiful thì dùng more (hơn) và the most (nhất): more beautiful, the most beautiful. Ba từ hay gặp bất quy tắc (không theo quy tắc chung): good thành better, the best; bad thành worse, the worst.",
    "examples": [
@@ -21841,7 +21841,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Going to là kế hoạch đã ghi vào sổ tay: I am going to travel - ý định rõ ràng hơn will buột miệng nói ngay lúc nghĩ.",
-   "level": "Band 3.5",
+   "level": "Band 3,5",
    "name": "Going to - kế hoạch và dự đoán gần",
    "explain": "Nhìn ví dụ trước nhé. Tối nay Lan đã mua vé xem phim và nói: I am going to watch a film tonight. Nhìn trời đầy mây đen, bố nói: It is going to rain. Sau ví dụ là quy tắc. Ta dùng be going to (sắp, sẽ - nói về việc đã có dự định hoặc sắp xảy ra) khi nói về kế hoạch đã nghĩ trước, hoặc dự đoán dựa trên điều mắt đang thấy. Cách tạo: chủ ngữ + am/is/are + going to + động từ nguyên thể (động từ gốc chưa chia). Câu hỏi: đảo am/is/are lên đầu câu. Phủ định: thêm not sau am/is/are. Đừng nhầm với will: will hay dùng cho quyết định ngay lúc nói, còn going to dùng cho việc đã định trước.",
    "examples": [
@@ -21956,7 +21956,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Have hoặc has cộng V3 như cánh cửa mở từ quá khứ tới hiện tại: I have eaten nghĩa là đã ăn rồi và bụng còn no đến giờ.",
-   "level": "Band 4.0",
+   "level": "Band 4,0",
    "name": "Hiện tại hoàn thành mở đầu - have, has + V3",
    "explain": "Nhìn ví dụ trước nhé. Tuấn khoe: I have visited Hue twice. Cô giáo hỏi: Have you finished your homework? Sau ví dụ là quy tắc. Thì hiện tại hoàn thành (cách nói về việc đã làm xong hoặc đã từng làm, mà kết quả còn liên quan đến bây giờ) tạo bằng have hoặc has + V3 (động từ ở cột thứ ba, dạng đã chia sẵn như visited, finished, seen). I, you, we, they đi với have. He, she, it đi với has. Ta dùng thì này khi nói kinh nghiệm đã từng làm (đã đi, đã ăn, đã xem) mà không nói rõ thời điểm, hoặc việc vừa xong và kết quả còn đây. Khác với quá khứ đơn: quá khứ đơn luôn gắn với một mốc thời gian đã qua như yesterday, last week.",
    "examples": [
@@ -22071,7 +22071,7 @@ const CONTENT = {
   {
    "fam": "Câu điều kiện và giả định",
    "hook": "Điều kiện loại 1 như lời hẹn có thật: If it rains tomorrow, we will stay home - mưa có thể xảy ra thật, kết quả cũng thật.",
-   "level": "Band 4.0",
+   "level": "Band 4,0",
    "name": "Câu điều kiện loại 1 - việc có thể xảy ra",
    "explain": "Nhìn ví dụ trước nhé. Mẹ dặn: If it rains tomorrow, we will stay at home. Bạn hứa: If I have time, I will help you. Sau ví dụ là quy tắc. Câu điều kiện loại 1 (câu 'nếu... thì...' nói về việc thật sự có thể xảy ra trong tương lai) có hai vế: vế if (vế điều kiện, phần bắt đầu bằng if - nếu) dùng hiện tại đơn, vế chính dùng will + động từ nguyên thể. Đừng dùng will trong vế if. Hai vế đổi chỗ cho nhau được: We will stay at home if it rains tomorrow - khi vế if đứng sau thì không cần dấu phẩy. Ngoài will, vế chính còn dùng can hoặc should khi muốn nói khả năng hay lời khuyên.",
    "examples": [
@@ -22186,7 +22186,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Since chỉ mốc bắt đầu như ngày khắc trên thân cây, for chỉ độ dài như thước đo: since 2020, for three years.",
-   "level": "Band 4.5",
+   "level": "Band 4,5",
    "name": "Hiện tại hoàn thành - for, since, just, already, yet",
    "explain": "Nhìn ví dụ trước nhé. Cô ấy nói: I have known Mai since 2020. Anh ấy khoe: I have lived here for ten years. Sau ví dụ là quy tắc. Với thì hiện tại hoàn thành, ta dùng for (trong khoảng - đi với một khoảng thời gian như for two weeks, for a long time) và since (từ khi - đi với một mốc thời gian như since Monday, since 2019). Ba từ hay đi kèm nữa: just (vừa mới - việc vừa xảy ra xong), already (đã rồi - việc xong sớm hơn mong đợi), yet (chưa - chỉ dùng trong câu phủ định và câu hỏi, đặt cuối câu). Nhớ phân biệt: muốn nói một việc đã kết thúc hẳn ở một thời điểm rõ ràng trong quá khứ thì quay về quá khứ đơn, không dùng hiện tại hoàn thành.",
    "examples": [
@@ -22302,7 +22302,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "There is như đưa tay giới thiệu một vật: There is a cat. Nhiều vật thì there are, như mở ra cả một hộp đồ.",
-   "level": "Band 2.0",
+   "level": "Band 2,0",
    "name": "There is và there are - giới thiệu đồ vật và nơi chốn",
    "explain": "Ví dụ trước nhé: There is a book on the table (Có một quyển sách trên bàn). There are three chairs in the room (Có ba chiếc ghế trong phòng). Sau ví dụ là quy tắc. Muốn nói có cái gì ở đâu: một vật thì dùng there is, nhiều vật thì dùng there are. Mẫu câu này rất hay dùng khi miêu tả phòng, lớp học và thành phố trong IELTS Speaking Part 1.",
    "examples": [
@@ -22395,7 +22395,7 @@ const CONTENT = {
   {
    "fam": "Cấu trúc nhấn mạnh và đặc biệt",
    "hook": "Mệnh lệnh là câu ra lệnh ngắn gọn: Sit down. Còn let's là lời rủ rê: Let's go, như nắm tay kéo bạn đi cùng.",
-   "level": "Band 2.0",
+   "level": "Band 2,0",
    "name": "Câu mệnh lệnh và lời rủ rê - imperatives và let's",
    "explain": "Ví dụ trước nhé: Sit down, please (Mời ngồi xuống). Let's go (Chúng ta đi thôi). Sau ví dụ là quy tắc. Câu mệnh lệnh dùng động từ nguyên thể để bảo hoặc nhắc ai làm gì. Lời rủ rê dùng Let's + động từ nguyên thể. Hai mẫu câu này xuất hiện rất nhiều trong lớp học và đời sống hằng ngày.",
    "examples": [
@@ -22488,7 +22488,7 @@ const CONTENT = {
   {
    "fam": "Câu hỏi và phủ định",
    "hook": "Do và does như người trợ giúp mở cửa cho câu hỏi: does đi với he, she, it và động từ chính trở về nguyên mẫu.",
-   "level": "Band 2.5",
+   "level": "Band 2,5",
    "name": "Câu hỏi và câu phủ định ở hiện tại đơn - do, does",
    "explain": "Ví dụ trước nhé: Does she like coffee? (Cô ấy có thích cà phê không?) Để ý: động từ like không thêm s, vì đã có does đứng trước gánh phần chia động từ rồi. Sau ví dụ là quy tắc. Muốn hỏi hoặc phủ định ở hiện tại đơn, ta mượn do (với I, you, we, they) và does (với he, she, it). Sau do và does, động từ chính luôn trở về nguyên thể.",
    "examples": [
@@ -22581,7 +22581,7 @@ const CONTENT = {
   {
    "fam": "Danh từ và lượng từ",
    "hook": "Many đếm từng cái một, much đong cả thể không đếm được, some dùng trong câu khẳng định, any hay đi với câu hỏi và phủ định.",
-   "level": "Band 2.5",
+   "level": "Band 2,5",
    "name": "Lượng từ đời sống - much, many, some, any",
    "explain": "Ví dụ trước nhé: I have some friends here (Tôi có vài người bạn ở đây). Do you have any questions? (Bạn có câu hỏi nào không?). Sau ví dụ là quy tắc. Many đi với danh từ đếm được số nhiều (many books - nhiều quyển sách), much đi với danh từ không đếm được (much water - nhiều nước). Some thường dùng trong câu khẳng định, any dùng trong câu hỏi và câu phủ định.",
    "examples": [
@@ -22674,9 +22674,9 @@ const CONTENT = {
   {
    "fam": "Tính từ, trạng từ và so sánh",
    "hook": "Tính từ tô màu cho danh từ như sơn lên tường, trạng từ thêm -ly chỉ cách làm việc: quick là nhanh, quickly là làm một cách nhanh.",
-   "level": "Band 3.0",
+   "level": "Band 3,0",
    "name": "Tính từ và trạng từ - miêu tả và cách thức",
-   "explain": "Tính từ đứng trước danh từ hoặc sau động từ be để miêu tả: a careful driver (một tài xế cẩn thận), she is careful (cô ấy cẩn thận). Trạng từ thường thêm -ly vào tính từ và bổ nghĩa cho động từ, cho biết hành động xảy ra như thế nào: He drives carefully (Anh ấy lái xe cẩn thận). Một số trạng từ có dạng đặc biệt cần nhớ riêng: good - well, fast - fast, hard - hard.",
+   "explain": "Nhìn ví dụ trước nhé. Một tài xế cẩn thận: a careful driver. Cô ấy cẩn thận: she is careful. Anh ấy lái xe cẩn thận: He drives carefully. Sau ví dụ là quy tắc. Tính từ đứng trước danh từ hoặc sau động từ be để miêu tả. Trạng từ thường thêm -ly vào tính từ và bổ nghĩa cho động từ, cho biết hành động xảy ra như thế nào. Một số trạng từ có dạng đặc biệt cần nhớ riêng: good - well, fast - fast, hard - hard.",
    "examples": [
     "She is a good student and she studies hard.",
     "The teacher speaks slowly and clearly."
@@ -22767,7 +22767,7 @@ const CONTENT = {
   {
    "fam": "Thì và thể của động từ",
    "hook": "Động từ bất quy tắc như những người bạn cá tính: go thành went, see thành saw - không theo luật thêm -ed, phải nhớ từng bạn một.",
-   "level": "Band 3.5",
+   "level": "Band 3,5",
    "name": "Động từ bất quy tắc thường gặp ở quá khứ đơn",
    "explain": "Ví dụ trước nhé: Yesterday I went to the market and bought some fruit (Hôm qua tôi đi chợ và mua ít trái cây) - go thành went, buy thành bought, không thêm -ed. Sau ví dụ là quy tắc. Nhiều động từ quen thuộc không thêm -ed ở quá khứ mà đổi hẳn dạng: go - went, see - saw, take - took, have - had, make - made. Muốn kể chuyện quá khứ trôi chảy trong IELTS Speaking Part 2, bạn cần thuộc lòng các động từ bất quy tắc hay gặp nhất.",
    "examples": [
@@ -22880,9 +22880,9 @@ const CONTENT = {
   {
    "fam": "Mạo từ",
    "hook": "A là một vật bất kỳ mới nhắc lần đầu, the là chính vật đó khi nhắc lại: như nhân vật xuất hiện lần hai trong truyện thì được gọi rõ tên.",
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "name": "Mạo từ a, an, the và không mạo từ - dùng đúng trong bài viết",
-   "explain": "Ví dụ trước nhé: I study at a university (Tôi học ở một trường đại học - nhắc lần đầu, chưa xác định là trường nào). The university is in Hanoi (Trường đại học đó ở Hà Nội - nhắc lại, đã rõ là trường nào). Sau ví dụ là quy tắc. Mạo từ là lỗi nhỏ nhưng rất hay bị trừ điểm ở dải Band 5.0-6.0. Ba nguyên tắc cốt lõi: dùng a hoặc an khi nhắc một vật lần đầu chưa xác định (a university, an hour - chú ý nhìn vào âm đầu tiên chứ không phải chữ đầu tiên); dùng the khi người đọc đã biết rõ đang nói về vật nào; không dùng mạo từ trước danh từ nói về khái niệm chung (Education is important). Nắm chắc ba điều này, bài Writing sẽ sạch lỗi hơn hẳn.",
+   "explain": "Ví dụ trước nhé: I study at a university (Tôi học ở một trường đại học - nhắc lần đầu, chưa xác định là trường nào). The university is in Hanoi (Trường đại học đó ở Hà Nội - nhắc lại, đã rõ là trường nào). Sau ví dụ là quy tắc. Mạo từ là lỗi nhỏ nhưng rất hay bị trừ điểm ở dải Band 5,0-6.0. Ba nguyên tắc cốt lõi: dùng a hoặc an khi nhắc một vật lần đầu chưa xác định (a university, an hour - chú ý nhìn vào âm đầu tiên chứ không phải chữ đầu tiên); dùng the khi người đọc đã biết rõ đang nói về vật nào; không dùng mạo từ trước danh từ nói về khái niệm chung (Education is important). Nắm chắc ba điều này, bài Writing sẽ sạch lỗi hơn hẳn.",
    "examples": [
     "She is a doctor, and she works at the hospital near my house.",
     "Honesty is an important quality in life."
@@ -22993,9 +22993,9 @@ const CONTENT = {
   {
    "fam": "Mẫu động từ",
    "hook": "Want rủ to đi cùng, enjoy lại thích đi với -ing: mỗi động từ có bạn đồng hành riêng, học theo cặp thì nhớ rất lâu.",
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "name": "Mẫu động từ - V + to V và V + V-ing",
-   "explain": "Ví dụ trước nhé: I decided to study abroad (Tôi quyết định đi du học - decide đi với to). She enjoys reading (Cô ấy thích đọc sách - enjoy đi với -ing). Sau ví dụ là quy tắc. Khi hai động từ đứng cạnh nhau, động từ thứ hai phải đi theo mẫu của động từ đứng trước: want, decide, hope đi với to V; enjoy, avoid, finish đi với V-ing. Một số động từ như stop và remember còn đổi nghĩa theo mẫu đi kèm. Điểm này xuất hiện dày đặc trong Writing Task 2 ở dải Band 5.0-6.5 nên cần nắm thật chắc.",
+   "explain": "Ví dụ trước nhé: I decided to study abroad (Tôi quyết định đi du học - decide đi với to). She enjoys reading (Cô ấy thích đọc sách - enjoy đi với -ing). Sau ví dụ là quy tắc. Khi hai động từ đứng cạnh nhau, động từ thứ hai phải đi theo mẫu của động từ đứng trước: want, decide, hope đi với to V; enjoy, avoid, finish đi với V-ing. Một số động từ như stop và remember còn đổi nghĩa theo mẫu đi kèm. Điểm này xuất hiện dày đặc trong Writing Task 2 ở dải Band 5,0-6.5 nên cần nắm thật chắc.",
    "examples": [
     "Many students hope to study at a good university.",
     "Young people should avoid spending too much time on social media."
@@ -23106,9 +23106,9 @@ const CONTENT = {
   {
    "fam": "Giới từ và liên từ",
    "hook": "Despite như mang ô đi xuyên qua mưa: Despite the rain, ta vẫn đi - sau despite là danh từ hoặc V-ing, không phải cả câu đầy đủ.",
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "name": "Despite và in spite of - nhượng bộ với danh từ và V-ing",
-   "explain": "Ví dụ trước nhé: Despite the rain, we went out (Mặc cho trời mưa, chúng tôi vẫn ra ngoài). Sau ví dụ là quy tắc. Although đi với một mệnh đề đầy đủ: Although it rained, we went out. Còn despite và in spite of chỉ đi với danh từ hoặc V-ing. Lẫn lộn hai mẫu này là lỗi kinh điển ở dải Band 5.0-5.5. Dùng đúng despite và in spite of giúp câu văn gọn và học thuật hơn trong Writing Task 2.",
+   "explain": "Ví dụ trước nhé: Despite the rain, we went out (Mặc cho trời mưa, chúng tôi vẫn ra ngoài). Sau ví dụ là quy tắc. Although đi với một mệnh đề đầy đủ: Although it rained, we went out. Còn despite và in spite of chỉ đi với danh từ hoặc V-ing. Lẫn lộn hai mẫu này là lỗi kinh điển ở dải Band 5,0-5.5. Dùng đúng despite và in spite of giúp câu văn gọn và học thuật hơn trong Writing Task 2.",
    "examples": [
     "Despite the high cost, many families send their children to private schools.",
     "In spite of working hard, he failed the exam."
@@ -23220,7 +23220,7 @@ const CONTENT = {
  "reading": [
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "The Rise of Urban Farming",
    "text": "In recent decades, cities around the world have witnessed an unexpected agricultural movement: urban farming. Rooftops, abandoned warehouses and even underground tunnels are being converted into spaces where vegetables and herbs are grown. Supporters argue that producing food inside cities reduces the distance food travels, known as 'food miles', and therefore cuts carbon emissions.\n\nOne of the most advanced forms of urban farming is vertical farming, in which crops are grown in stacked layers under artificial light. Because the environment is fully controlled, vertical farms use up to 95 per cent less water than traditional fields and can produce crops throughout the year, regardless of the weather outside. However, the electricity needed to power the lights is expensive, and critics point out that this can cancel out the environmental benefits.\n\nDespite these challenges, urban farming is unlikely to disappear. In Singapore, which imports more than 90 per cent of its food, the government aims to produce 30 per cent of the country's nutritional needs locally by 2030. Experts stress that urban farms will never completely replace rural agriculture, but they can play an important supporting role, especially for fresh produce such as leafy greens and herbs.",
    "questions": [
@@ -23308,7 +23308,7 @@ const CONTENT = {
   },
   {
    "topic": "Thức ăn và sức khỏe",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Why We Sleep",
    "text": "For most of human history, sleep was regarded simply as a passive state in which the body rested. Modern neuroscience has overturned this view. During sleep, the brain is remarkably active: it sorts through the experiences of the day, strengthens important memories and discards information that is not needed.\n\nOne influential theory is that sleep helps to flush toxic waste products from the brain. In experiments on mice, researchers found that during sleep, the spaces between brain cells expand, allowing fluid to wash away proteins that build up during waking hours. Some of these proteins are associated with Alzheimer's disease, which may explain why long-term sleep deprivation is linked to a higher risk of dementia.\n\nSleep also regulates hormones that control hunger. People who sleep for fewer than six hours a night tend to produce more ghrelin, a hormone that stimulates appetite, and less leptin, which signals fullness. As a result, chronic lack of sleep is strongly connected with weight gain and obesity.\n\nDespite this evidence, modern lifestyles increasingly cut into sleep. Artificial light, shift work and the constant presence of screens have reduced average sleep duration in many countries. Sleep scientists warn that treating sleep as a luxury, rather than a biological necessity, may carry serious long-term costs for public health.",
    "questions": [
@@ -23396,7 +23396,7 @@ const CONTENT = {
   },
   {
    "topic": "Du lịch và giao thông",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "The History of the Bicycle",
    "text": "A. The earliest bicycle, built in Germany in 1817, had two wooden wheels and no pedals. Riders pushed themselves along with their feet. Despite its simple design, it quickly became popular with young men of fashion in London and Paris.\n\nB. In the 1860s, French engineers added pedals to the front wheel, creating the machine known as the 'boneshaker' because of its hard wooden wheels and iron frame. Riding it over rough roads was so uncomfortable that many riders preferred to walk.\n\nC. The 1870s saw the arrival of the penny-farthing, with its enormous front wheel. It could travel fast, but mounting and stopping were dangerous, and falls often caused serious injuries. Cycling at this time remained a sport for daring young men rather than the general public.\n\nD. The breakthrough came in the 1880s with the 'safety bicycle', which had two equal wheels and a chain driving the back wheel. With the later addition of air-filled tyres, cycling became comfortable and affordable. By the 1890s, millions of ordinary people, including women, had taken up cycling, and the bicycle began to transform daily transport.",
    "questions": [
@@ -23485,7 +23485,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "The Plastic Problem in Our Oceans",
    "text": "Every year, an estimated eight million tonnes of plastic enter the world's oceans. Much of it begins its journey far inland, carried by rivers from cities where waste collection is poor or non-existent. Once at sea, larger items are broken down by sunlight and waves into tiny fragments known as microplastics, which have now been found in the most remote waters on Earth, and even in Arctic ice.\n\nThe impact on wildlife is severe. Sea turtles mistake plastic bags for jellyfish, a favourite food, while seabirds feed fragments of plastic to their chicks. Perhaps more worrying is what happens to microplastics: they are eaten by tiny sea creatures, which are in turn eaten by fish, meaning plastic particles move up the food chain and may eventually reach human dinner tables, although the health effects are not yet fully understood.\n\nEfforts to tackle the problem operate at several levels. Some countries have banned single-use items such as plastic straws and bags, or introduced deposit schemes that pay consumers to return bottles. Meanwhile, engineers have developed floating barriers designed to collect plastic in rivers before it reaches the sea. Environmental groups argue, however, that the only long-term solution is to reduce the production of plastic in the first place, since recycling rates remain low worldwide.",
    "questions": [
@@ -23574,7 +23574,7 @@ const CONTENT = {
   },
   {
    "topic": "Xã hội và văn hóa",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "The Psychology of Colour",
    "text": "A. Colour surrounds us, yet its influence on behaviour is only partly understood. Psychologists have long debated whether responses to colour are learned through culture or rooted in biology. Red, for instance, is associated with danger and excitement in many societies, but with luck and prosperity in China.\n\nB. The strongest evidence concerns the colour red in competitive situations. In one well-known study, athletes wearing red won significantly more contests than those in blue, a finding the researchers linked to red's association with dominance. Similar results have been reported in academic settings, where students exposed to red before a test sometimes performed worse, possibly because red triggers avoidance of failure.\n\nC. Marketers have exploited colour psychology for decades. Fast-food chains famously favour red and yellow, colours said to stimulate appetite and a sense of urgency. By contrast, banks and technology firms often choose blue, which conveys trust and stability, while green is used to suggest environmental responsibility - sometimes, critics argue, misleadingly.\n\nD. More recently, researchers have urged caution. Many early studies were small, and their results have proved hard to replicate. Individual experience, context and culture all shape how a colour is perceived, so broad claims that a particular shade will always produce a particular effect should be treated with scepticism. Colour matters, it seems, but rarely in the simple way that popular accounts suggest.",
    "questions": [
@@ -23664,7 +23664,7 @@ const CONTENT = {
   },
   {
    "topic": "Thức ăn và sức khỏe",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Coffee: A Global Habit",
    "text": "Legend has it that coffee was first discovered in Ethiopia, where a goat herder noticed his animals becoming unusually lively after eating red berries from a certain bush. Whether or not the story is true, coffee drinking spread from Ethiopia to the Arabian Peninsula, and by the seventeenth century coffee houses had appeared across Europe, where they became centres of business and debate.\n\nToday, coffee is one of the most valuable trading goods in the world, second only to oil in some estimates. More than two billion cups are consumed every day. The industry employs around 25 million farmers, most of them in developing countries in Africa, Asia and Latin America, where coffee is often a vital source of income.\n\nHowever, the future of coffee is uncertain. The coffee plant grows best in a narrow range of temperatures, and climate change is shrinking the areas where it can be cultivated. Scientists are working to breed new varieties that can survive hotter, drier conditions. Without such efforts, the world's favourite drink could become a luxury that few can afford.",
    "questions": [
@@ -23752,7 +23752,7 @@ const CONTENT = {
   },
   {
    "topic": "Học tập và giáo dục",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "The Future of Public Libraries",
    "text": "A. When public libraries first opened in the nineteenth century, their purpose was clear: to lend books to people who could not afford to buy them. For over a hundred years, rows of shelves and silent reading rooms defined what a library was.\n\nB. The arrival of the internet led many commentators to predict the death of the library. Why visit a building, they asked, when almost any book or fact is available on a screen at home? Library budgets were cut in many countries, and hundreds of branches closed.\n\nC. Yet reports of the library's death appear to have been exaggerated. Many libraries have reinvented themselves as community hubs. Alongside books, they now offer computer classes for the elderly, homework clubs for teenagers, language conversation groups and even help with filling in official forms. In some cities, libraries lend tools, musical instruments and seeds, not just books.\n\nD. Librarians argue that the library's core value was never really the books themselves, but free and equal access to knowledge and a shared public space. As long as those needs exist, they suggest, the library will survive, though its shelves may look very different from those of a century ago.",
    "questions": [
@@ -23842,7 +23842,7 @@ const CONTENT = {
   },
   {
    "topic": "Thức ăn và sức khỏe",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Antibiotic Resistance: A Silent Threat",
    "text": "When Alexander Fleming discovered penicillin in 1928, medicine entered a new era. Infections that had once killed millions became routinely curable, and surgery grew far safer. Few at the time could have predicted that, less than a century later, doctors would be warning of a return to a pre-antibiotic age.\n\nThe problem is evolution. When antibiotics are used, most bacteria die, but a few with natural resistance survive and multiply. The more often antibiotics are used, the faster resistant strains spread. This process has been accelerated by decades of over-prescription for minor illnesses, and by the widespread use of antibiotics in farming, where they are given to healthy animals to promote growth.\n\nThe consequences are already visible. Infections such as tuberculosis are reappearing in forms that resist standard drugs, requiring treatments that are longer, more toxic and far more expensive. The World Health Organization estimates that resistant infections already contribute to millions of deaths each year.\n\nFinding new antibiotics is scientifically difficult and commercially unattractive: a new drug may be held in reserve and used rarely, so pharmaceutical companies struggle to recover their investment. Experts argue that governments must create new incentives for research, while also reducing unnecessary use. Without coordinated global action, they warn, routine operations and even minor injuries could once again become life-threatening.",
    "questions": [
@@ -23930,7 +23930,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Cooling Our Cities",
    "text": "Cities are often several degrees warmer than the countryside around them, a phenomenon known as the urban heat island effect. The main causes are dark surfaces such as asphalt, which absorb heat during the day and release it at night, and a lack of vegetation. As climate change raises global temperatures, already hot cities are becoming increasingly uncomfortable, and in extreme cases dangerous, particularly for the elderly.\n\nOne of the simplest remedies is to plant more trees. A single large tree can provide the cooling effect of several air conditioners, shading buildings and releasing moisture into the air. Cities such as Singapore and Melbourne have set ambitious targets to expand their tree cover, treating urban forests as essential infrastructure rather than decoration.\n\nTechnology also offers solutions. 'Cool pavements' made of reflective materials can lower surface temperatures substantially, while green roofs, covered in plants, insulate buildings and absorb rainwater. In Los Angeles, streets have even been painted white in experimental projects to reflect sunlight.\n\nSuch measures are not merely about comfort. Heatwaves already kill more people in many countries than any other weather-related disaster, and air conditioning, the obvious individual response, worsens the problem by consuming huge amounts of energy and pushing hot air outside. Cooling our cities, planners argue, is fast becoming a public health necessity.",
    "questions": [
@@ -24019,7 +24019,7 @@ const CONTENT = {
   },
   {
    "topic": "Thức ăn và sức khỏe",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "The Science of Habit",
    "text": "Why is it so difficult to break a bad habit, even when we know it harms us? Behavioural scientists argue that habits are not stored in the same way as conscious decisions. Once a behaviour has been repeated in a stable context, it becomes linked to environmental cues - a place, a time of day, the preceding action - and can be triggered automatically, with little conscious thought.\n\nThis automaticity explains both the power and the persistence of habits. In a classic experiment, cinema-goers ate stale popcorn they did not even like, simply because the cinema context triggered their popcorn-eating habit. When the same people ate in a meeting room, the effect disappeared. Intention, it seemed, mattered less than environment.\n\nSuch findings have practical implications. Rather than relying on willpower, behaviour-change programmes increasingly focus on redesigning environments: placing fruit at eye level in canteens, for example, or making staircases more visible than lifts. If cues drive behaviour, changing the cues may be more effective than lecturing people about their choices.\n\nNone of this denies personal responsibility, but it reframes it. The most successful changers appear to be those who engineer their surroundings so that the desired behaviour becomes the easy, default option. Willpower, in this view, is less a matter of character than of design.",
    "questions": [
@@ -24108,7 +24108,7 @@ const CONTENT = {
   },
   {
    "topic": "Thức ăn và sức khỏe",
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "title": "The Story of Chocolate",
    "text": "Chocolate comes from cacao beans. These beans grow on small trees in hot countries in Central America. Long ago, the Maya people used the beans to make a drink. The drink was bitter and had no sugar. The Aztec people also liked cacao. They used the beans as money to buy food in markets. They picked the beans by hand.\n\nPeople from Spain took cacao to Europe about 500 years ago. At first, only rich people drank chocolate because it was very expensive. Later, people added sugar to the drink, so it tasted sweet. Chocolate became popular in Spain, France and England. People met in special shops to drink it and talk with friends.\n\nThen, in the 1800s, new machines changed chocolate. The machines could make hard chocolate bars. A company in England sold the first bar in 1847. Big factories made chocolate faster and cheaper. Workers in the factories made many bars every day. Soon, normal families could buy it too. Children liked it as a small treat after meals.\n\nToday, people all over the world eat chocolate. Most cacao now grows in West Africa, in countries like Ivory Coast and Ghana. Dark chocolate can be good for the heart in small amounts. But many chocolate bars have a lot of sugar and fat. Doctors say we should not eat too much. It is best to eat a little at a time and choose dark chocolate.",
    "questions": [
@@ -24198,7 +24198,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "title": "Why Cities Need Parks",
    "text": "Every big city needs parks. A park is a green place with trees, grass and paths. People go there to walk, sit and rest. The air in a park is clean and cool. Trees take in bad gases and give out oxygen. In summer, the park is cooler than busy streets with many cars.\n\nParks are good for our health. Doctors tell people to walk in the park every day. People can run, ride a bike or play football there for free. Children can play outside with friends. This helps them grow strong and happy. People also feel calm in a park. They sleep better at night after time in green places.\n\nAnimals and insects also need parks. Birds can live in old trees and find food there. Bees and butterflies visit flowers in the grass. Some parks do not cut the grass in some areas. This helps small animals find a safe home in the middle of the city. Ponds give water to birds and frogs.\n\nIt costs money to build a park and look after it. Some city leaders want to sell park land for shops or flats. But this is a bad idea. Homes near a nice park cost more money. Local shops also earn more from visitors to the park. A park is not a waste of land. It keeps people healthy, helps nature and makes the city a better place to live.",
    "questions": [
@@ -24287,7 +24287,7 @@ const CONTENT = {
   },
   {
    "topic": "Công nghệ và truyền thông",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "The Postal Service: A History",
    "text": "Long before telephones and the internet, letters were the main way for people to communicate over long distances. In ancient Egypt and China, rulers employed messengers who travelled on foot or on horseback to carry official messages. These early systems served only kings and governments. Ordinary people had to find a traveller who was willing to carry a letter for them, and delivery could take many months.\n\nThe first public postal service in Britain began in 1635, when anyone could pay to send a letter through royal messengers. At that time, the person who received the letter usually paid the charge, and the price depended on the distance and the number of pages. Because of this system, some people refused letters they did not want, and the service lost money.\n\nA major reform came in 1840 with the introduction of the postage stamp. Sir Rowland Hill suggested that the sender should pay a single low price for any letter inside the country, whatever the distance. The first stamp, known as the Penny Black, showed the head of Queen Victoria. Letter writing quickly became popular, and the number of letters sent in Britain doubled within a few years.\n\nIn the twentieth century, aeroplanes made international mail much faster, and sorting machines replaced workers who had sorted letters by hand. Today, email and messaging applications have greatly reduced the number of personal letters. Nevertheless, postal services remain busy delivering parcels, as online shopping continues to grow around the world. The modern post is therefore less about letters and more about packages in most countries today.",
    "questions": [
@@ -24377,7 +24377,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "How Volcanoes Shape the Earth",
    "text": "A volcano begins deep below the surface of the Earth, where extremely hot rock, called magma, collects in underground chambers. Pressure builds slowly over hundreds or thousands of years. When the pressure becomes too great, the magma forces its way upwards through cracks and erupts at the surface as lava, ash and gas. Some eruptions are gentle flows, while others explode with a force greater than any weapon made by humans.\n\nOver long periods, volcanic activity creates new land. The Hawaiian Islands, for example, were formed entirely by underwater volcanoes that grew until they rose above the sea. Lava that cools and hardens adds fresh layers of rock, so an island can continue to grow with each eruption. Volcanoes also form rich soil, because ash breaks down into minerals that plants need. This explains why farmers often live and work on volcanic slopes, despite the obvious dangers.\n\nThose dangers, however, are considerable. In 1991, Mount Pinatubo in the Philippines produced one of the largest eruptions of the twentieth century. Ash clouds reduced global temperatures by about 0.5 degrees Celsius for more than a year, because tiny particles blocked sunlight. Fast-moving flows of hot gas have destroyed whole towns in minutes, and poisonous gases can remain a threat long after an eruption has ended.\n\nToday, scientists monitor active volcanoes with instruments that measure small earthquakes, ground movement and gas emissions. These observations cannot prevent an eruption, but they can provide warnings that save lives by allowing towns to be evacuated in time. Understanding volcanoes is therefore essential, both for appreciating how the surface of our planet was built and for protecting the millions of people who live in its shadow.",
    "questions": [
@@ -24466,7 +24466,7 @@ const CONTENT = {
   },
   {
    "topic": "Sở thích và giải trí",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "The Revival of Vinyl Records",
    "text": "For most of the twentieth century, music lovers bought their favourite songs on vinyl records. These black discs were played on turntables. A needle read tiny grooves in the surface. Then, in the 1980s, compact discs arrived. They had cleaner sound and greater convenience. Vinyl almost disappeared from shops, and many people thought it would never return.\n\nThose people were wrong. Sales of vinyl records have risen every year since the mid-2000s. In several countries, they now earn more money than compact discs. Young listeners grew up with downloads and streaming. They are among the most enthusiastic buyers. In record shops, customers enjoy looking through boxes of albums and talking about music with staff. A phone screen cannot give this experience.\n\nSeveral reasons explain this revival. Many fans say vinyl gives a warmer and richer sound. But scientists say people cannot always hear the difference. Other fans like the large album covers. The covers show artwork and song information, and digital music does not have these. Buying a record also feels like a deliberate act of support for musicians. Streaming pays artists only a tiny amount for each play.\n\nThe revival has created problems as well. Demand is now so high that pressing factories cannot produce records quickly enough. Most of these factories closed many years ago. New releases may be delayed for months, and prices have risen sharply. Even so, industry experts believe vinyl will remain a healthy specialist market, coexisting with streaming rather than replacing it. The old black disc still has a long life ahead.",
    "questions": [
@@ -24556,7 +24556,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Coral Reefs under Threat",
    "text": "Coral reefs occupy less than one per cent of the ocean floor, yet they support roughly a quarter of all marine species. Corals may look like colourful rocks, but they are in fact colonies of tiny animals. Each animal builds a hard skeleton around itself, and over thousands of years these skeletons grow into the complex structures that shelter fish, turtles, sharks and countless smaller creatures. For this reason, scientists often describe reefs as the cities of the sea.\n\nThe greatest threat to reefs today is warming water. Corals live in partnership with microscopic algae, which provide them with food and give them their bright colours. When the sea becomes too warm for too long, corals expel these algae and turn white, a process known as bleaching. Without their partners, corals starve and may die. The Great Barrier Reef in Australia, the largest reef system on Earth, has suffered several mass bleaching events since 2016.\n\nHuman activity adds further pressure. Fertilisers washed from farms encourage the growth of seaweed, which blocks the sunlight that corals need. Careless tourism damages fragile colonies, and plastic waste is increasingly found even on remote reefs. In addition, the ocean absorbs much of the carbon dioxide that humans produce, becoming more acidic. Acidic water makes it harder for corals to build their skeletons, slowing their growth still further.\n\nDespite these problems, there are signs of hope. Marine reserves where fishing is banned allow damaged reefs to recover surprisingly quickly. Scientists are also breeding corals that can tolerate warmer water and planting them on damaged reefs. Such projects cannot succeed, however, unless global emissions fall. Protecting reefs therefore requires action at every level, from individual tourists to international governments.",
    "questions": [
@@ -24645,7 +24645,7 @@ const CONTENT = {
   },
   {
    "topic": "Học tập và giáo dục",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "The Science of Memory",
    "text": "Human memory is not a single system but a set of connected processes. Psychologists usually divide it into three stages: taking in information, storing it, and retrieving it when needed. Short-term memory holds only a small amount of material, typically about seven items, for less than a minute. Long-term memory, by contrast, appears to have almost no limit, although finding a particular item within it can be surprisingly difficult.\n\nOne of the most reliable findings in memory research is that repetition alone is a poor way to learn. Students who simply reread their notes often feel confident, yet they forget most of the material within days. Far more effective is retrieval practice, in which learners test themselves and actively recall answers. Experiments consistently show that a single test after studying produces better long-term results than several extra hours of rereading.\n\nSleep also plays a crucial role. During deep sleep, the brain replays the experiences of the day and transfers selected information from short-term storage into long-term memory, a process called consolidation. People who sleep well after learning a new skill, such as playing a piece of music, usually perform it more accurately the next day than those who stay awake. This is one reason why studying all night before an examination is often counterproductive.\n\nMemory is not a perfect recording, however. Each time we recall an event, we partly rebuild it, and details from later conversations or photographs can be absorbed into the original memory. Psychologists call these errors false memories, and they explain why eyewitnesses in court cases sometimes describe events with great confidence but limited accuracy. Understanding that memory is reconstructive, rather than reproductive, has important consequences for education, medicine and the law.",
    "questions": [
@@ -24735,7 +24735,7 @@ const CONTENT = {
   },
   {
    "topic": "Công nghệ và truyền thông",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Drones in Modern Agriculture",
    "text": "Unmanned aerial vehicles, commonly known as drones, are rapidly changing the way farmers manage their land. Equipped with cameras and sensors, a drone can survey hundreds of hectares in a single morning, collecting images that would take a worker days to gather on foot. Modern software then converts these images into detailed maps showing crop health, soil moisture and the early signs of disease or insect damage.\n\nThe greatest advantage of this technology is precision. Instead of spraying an entire field with fertiliser or pesticide, farmers can treat only the small areas that actually need it. Trials in several countries suggest that targeted spraying can reduce chemical use by as much as 30 per cent, lowering costs while limiting the pollution of nearby rivers. Drones fitted with special cameras can even identify individual plants that are short of water, allowing irrigation to be directed exactly where it is required.\n\nDrones are also beginning to perform physical tasks. Larger models can carry tanks of liquid or bags of seed, planting rice in flooded fields that are difficult for heavy machinery to enter. In mountainous regions of Japan and China, drones deliver supplies to isolated farms and monitor terraces for landslides after heavy rain. Such applications are especially valuable where the agricultural workforce is ageing and young people are leaving villages for city jobs.\n\nNevertheless, significant obstacles remain. Professional drones are expensive, batteries typically last less than an hour, and strict aviation regulations limit where and how high they may fly. There are also concerns about privacy when drones cross neighbouring properties. Most specialists therefore predict a gradual adoption: drones will complement, rather than wholly replace, traditional farming knowledge for many years to come.",
    "questions": [
@@ -24825,7 +24825,7 @@ const CONTENT = {
   },
   {
    "topic": "Du lịch và giao thông",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "The Economics of Tourism",
    "text": "Tourism is one of the largest industries in the world, employing roughly one in ten workers globally. Visitors spend money on hotels, restaurants, transport and entertainment, and that spending supports jobs far beyond the businesses they visit directly. When a hotel buys food from local farmers or hires local builders, tourist money circulates through the wider economy. Economists call this the multiplier effect, and it is the main reason governments invest heavily in promoting their countries abroad.\n\nThe benefits, however, are not shared equally. In many developing destinations, a large proportion of tourist spending leaks abroad. International hotel chains may import food, employ foreign managers and transfer their profits to another country. This process, known as economic leakage, explains why some resorts that welcome millions of visitors each year leave nearby communities with relatively low incomes and poorly paid seasonal work.\n\nTourism also imposes costs that rarely appear in official statistics. Popular cities must pay for extra cleaning, policing and road repairs, while residents may face rising rents as flats are converted into short-term holiday lets. Environmental damage is another hidden cost: flights generate substantial carbon emissions, and fragile sites can be worn away by sheer numbers of feet. Several destinations, including Venice and Barcelona, have therefore introduced entry charges or strict limits on visitor numbers.\n\nThe challenge for policy makers is to keep the economic gains while reducing the losses. Encouraging visitors to stay longer, travel outside the peak season and spend money with locally owned businesses can all help. So can tourism taxes, provided the revenue is visibly reinvested in the community. Tourism will remain a powerful economic force, but its long-term success depends on managing it as carefully as any other industry.",
    "questions": [
@@ -24914,7 +24914,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Rewilding: Bringing Nature Back",
    "text": "Rewilding is an approach to conservation that aims to restore ecosystems by allowing natural processes to resume with minimal human management. Unlike traditional conservation, which often tries to preserve a landscape exactly as it is, rewilding accepts change. Its central technique is the reintroduction of keystone species - animals whose behaviour shapes the whole environment. When such species disappear, ecosystems simplify; when they return, complexity and diversity frequently follow.\n\nThe most celebrated example began in 1995, when wolves were reintroduced to Yellowstone National Park in the United States after an absence of some seventy years. The wolves reduced deer numbers and, more importantly, changed deer behaviour, as herds avoided valleys where they could easily be ambushed. Trees and shrubs that had been heavily grazed began to recover along riverbanks. This stabilised the soil, altered the course of rivers, and created habitats for beavers, songbirds and fish - a chain of effects scientists call a trophic cascade.\n\nIn Europe, rewilding projects have reintroduced bison to the Carpathian Mountains and beavers to British rivers, from which they had been absent for centuries. Supporters argue that these animals perform ecological work - grazing, damming and disturbing the soil - far more cheaply and continuously than human teams with machinery. Farmers, however, sometimes object: beavers flood fields, wolves occasionally kill livestock, and expanding wild populations require land that agriculture also needs.\n\nWhether rewilding can be applied at a scale large enough to address biodiversity loss and climate change remains an open question. Critics warn against romanticising a wilderness that never truly existed, since human influence stretches back thousands of years. Supporters reply that rewilding is not about recreating the past but about securing a richer future. The debate continues, but the early evidence suggests that giving nature more autonomy can deliver benefits that intensive management cannot.",
    "questions": [
@@ -25004,7 +25004,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "How Trees Communicate",
    "text": "A forest looks like a collection of individuals competing for light and space, yet research over the past three decades has revealed that trees are connected in ways that resemble a community. Beneath the soil, the roots of most trees are joined by networks of fungi. In return for sugars produced by photosynthesis, the fungi supply trees with water and minerals gathered from a far larger area of soil than roots alone could reach.\n\nThese fungal networks, sometimes nicknamed the wood wide web, do more than distribute food. Experiments using radioactive carbon have demonstrated that older trees can transfer nutrients to shaded seedlings of their own species, effectively subsidising the young plants until they reach the light. Trees under attack by insects release chemical signals into the network - and into the air - prompting neighbours to raise the levels of defensive compounds in their leaves before the insects arrive.\n\nSuch findings have forced scientists to reconsider what competition means in a forest. It is now clear that natural selection has favoured not only rivalry but also a degree of cooperation, since a healthy surrounding forest protects each tree from wind, drought and disease. Nevertheless, some researchers urge caution. They point out that the amounts of nutrients transferred are often small, and they question whether describing trees as talking or altruistic misleads the public by importing human social language into biology.\n\nWhatever terminology is preferred, the practical implications are significant. Forestry practices that clear entire areas and plant a single species destroy fungal networks that may take decades to rebuild. Managers who retain some mature trees when harvesting, by contrast, preserve the network and help newly planted seedlings to establish themselves. The hidden life of the forest, once understood, changes how it should be treated.",
    "questions": [
@@ -25094,7 +25094,7 @@ const CONTENT = {
   },
   {
    "topic": "Công nghệ và truyền thông",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "The Ethics of Artificial Intelligence",
    "text": "Artificial intelligence systems now influence decisions that were once reserved for human judgement, from selecting candidates for a job interview to approving loans and even recommending medical treatment. Because these systems learn patterns from enormous quantities of past data, they can operate at a speed and scale no human team could match. Yet this very strength raises an ethical problem: if the data reflect historical prejudice, the system will reproduce that prejudice, often in ways that are difficult to detect.\n\nA frequently cited concern is bias in recruitment software. If a company has historically hired mostly men for senior technical roles, an algorithm trained on its records may learn to favour male applicants, even though gender was never explicitly supplied as a criterion. Similarly, facial recognition systems have repeatedly been shown to perform less accurately on darker skin tones, because the images used to train them were not sufficiently diverse. Such errors are not merely technical faults; they can deny people opportunities and reinforce existing inequalities.\n\nA second challenge is accountability. When a self-driving car causes an accident, who bears responsibility - the owner, the manufacturer, or the programmer who wrote the code? Traditional legal frameworks assume a human decision maker, but an AI system may reach a conclusion through a process so complex that even its designers cannot fully explain it. This opacity, often called the black box problem, undermines public trust and complicates the search for compensation after harm has occurred.\n\nGovernments are beginning to respond. The European Union has introduced legislation that classifies AI applications by risk and imposes the strictest requirements on those affecting health, safety and fundamental rights. Ethicists argue, however, that regulation alone is insufficient. Developers must test systems for bias before release, companies must allow independent audits, and affected individuals must have a genuine right to appeal. Only by combining law with professional responsibility can societies gain the benefits of AI without surrendering fairness.",
    "questions": [
@@ -25183,7 +25183,7 @@ const CONTENT = {
   },
   {
    "topic": "Xã hội và văn hóa",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "What Makes a Language Die?",
    "text": "Of the roughly 7,000 languages spoken in the world today, linguists estimate that one disappears approximately every two weeks. A language is considered dead not when its last elderly speaker passes away, but earlier, at the moment when children cease to learn it as their mother tongue. Once that intergenerational transmission is broken, the countdown becomes almost impossible to reverse, because a language survives only through daily use in homes, markets and playgrounds.\n\nThe forces behind this collapse are rarely mysterious. Economic pressure is usually foremost: parents rationally conclude that fluency in a dominant language such as English, Mandarin or Spanish will secure better employment for their children, and so they stop speaking the ancestral language at home. Formal education reinforces the shift when schools teach exclusively in the national language and treat local tongues as obstacles to progress. Mass media and, more recently, social platforms intensify the effect by rewarding competence in majority languages with visibility and status.\n\nWhat is lost when a language dies extends far beyond vocabulary. Many indigenous languages encode sophisticated ecological knowledge - names for plants with medicinal properties, classifications of soil, and seasonal calendars refined over centuries - that has never been written down in any other form. Languages also embody distinct ways of carving up reality: some oblige speakers to specify the source of their knowledge, while others organise space by absolute directions rather than by left and right. When the language vanishes, an entire framework for interpreting the world vanishes with it.\n\nRevival is difficult but not hopeless. Hebrew, once confined largely to religious texts, was successfully restored as an everyday vernacular in the twentieth century, and Welsh and Maori have both been strengthened by immersion schools in which young children are taught entirely through the threatened language. Such programmes succeed only when communities themselves demand them and when governments fund them over decades, not years. The fate of a language, ultimately, is decided less by linguists than by the daily choices of ordinary families.",
    "questions": [
@@ -25273,7 +25273,7 @@ const CONTENT = {
   },
   {
    "topic": "Xã hội và văn hóa",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Why Time Seems to Speed Up",
    "text": "Most adults share a curious impression: the years appear to pass more rapidly now than they did in childhood, when a single summer holiday could feel almost endless. Psychologists argue that this acceleration is not an illusion in any simple sense, but a predictable consequence of how the brain records experience. Subjective time, unlike clock time, is constructed retrospectively from memory, and it expands or contracts according to the density of memorable events a period contains.\n\nThe most influential explanation is known as the proportional theory. For a ten-year-old, one year represents a tenth of an entire lifetime, whereas for a fifty-year-old it represents merely a fiftieth. Each new year therefore feels proportionally smaller against the accumulated total. Although elegant, this theory cannot be the whole story, since it predicts a smooth, steady acceleration, while people in fact report sudden changes - decades that crawl in routine jobs and months that vanish during periods of upheaval.\n\nA complementary account focuses on novelty and attention. The brain devotes little encoding effort to familiar, repetitive activity: a commuter who has driven the same route a thousand times will retain almost nothing of today's journey, and in retrospect the week compresses into a blur. Novel experiences, by contrast, are encoded in rich detail. This is why the first days in an unfamiliar city feel long - the mind is registering an unusually large number of distinct impressions - and why returning travellers often insist their holiday lasted far longer than the calendar allows.\n\nThese insights carry practical implications that are almost paradoxical. To make life feel longer, one should not attempt to cram more activity into each day, since frantic busyness without reflection leaves few durable memories. Instead, researchers recommend deliberately introducing modest novelty - a new route, a new skill, regular breaks in routine - and periodically reviewing photographs or journals to consolidate what happened. Time cannot be slowed, but the remembered life can be lengthened, and for human beings it is the remembered life that ultimately counts.",
    "questions": [
@@ -25363,7 +25363,7 @@ const CONTENT = {
   },
   {
    "topic": "Bản thân và gia đình",
-   "level": "Band 2.0",
+   "level": "Band 2,0",
    "title": "My Family",
    "text": "My name is Lan. I live in Hanoi with my family. There are four people in my family.\n\nMy father is a teacher. He works at a school. My mother is a doctor. She works at a hospital. I have one brother. His name is Minh. He is ten years old.\n\nWe are happy together. In the evening, we eat dinner and talk. I love my family very much.",
    "questions": [
@@ -25449,7 +25449,7 @@ const CONTENT = {
   },
   {
    "topic": "Bản thân và gia đình",
-   "level": "Band 2.5",
+   "level": "Band 2,5",
    "title": "My Day",
    "text": "I am Nam. I am a student. I get up at six o'clock every day.\n\nI go to school at seven o'clock. At school, I learn English and maths. I like English very much. I have lunch at school with my friends.\n\nIn the evening, I do my homework. Then I read a book. I go to bed at nine o'clock. I feel happy every day.",
    "questions": [
@@ -25535,7 +25535,7 @@ const CONTENT = {
   },
   {
    "topic": "Mua sắm và tiền bạc",
-   "level": "Band 3.0",
+   "level": "Band 3,0",
    "title": "At the Market",
    "text": "Today I go to the market with my mother. The market is near my house. There are many people there.\n\nWe buy vegetables and fruit. We buy tomatoes, carrots and bananas. The tomatoes are red and the bananas are yellow.\n\nThe tomatoes cost ten thousand dong. The bananas cost fifteen thousand dong. We go home and cook lunch together. I like the market very much.",
    "questions": [
@@ -25621,7 +25621,7 @@ const CONTENT = {
   },
   {
    "topic": "Sở thích và giải trí",
-   "level": "Band 4.0",
+   "level": "Band 4,0",
    "title": "A Picnic Invitation from a Friend",
    "text": "Hi Linh,\n\nHow are you? I hope you are well. I am writing to invite you to a picnic this Saturday afternoon in Green Park. My brother Tom and I want to spend a sunny day outside and we hope you can join us.\n\nWe will meet at the park gate at 11 a.m. and walk to a quiet place near the lake. Tom will bring sandwiches and fruit, and I will bring cakes and orange juice. Please bring a hat and a bottle of water because the weather will be warm and sunny.\n\nAfter lunch, we can play badminton and take photos near the flowers. If it rains, we will go to my house and watch a film instead. I really hope the weather stays fine.\n\nPlease tell me before Thursday evening if you can come, so I can buy enough food. You can bring your cousin Mai if you want. The more friends we have, the more fun we will have.\n\nI am really looking forward to seeing you soon.\n\nBest wishes,\nAnna",
    "translation": "Chào Linh,\n\nBạn có khỏe không? Mình mong bạn vẫn khỏe. Mình viết thư này để mời bạn đi dã ngoại vào chiều thứ Bảy này tại công viên Green Park. Anh trai mình là Tom và mình muốn tận hưởng một ngày nắng đẹp ở ngoài trời và chúng mình mong bạn có thể tham gia.\n\nChúng ta sẽ gặp nhau ở cổng công viên lúc 11 giờ sáng và đi bộ tới một nơi yên tĩnh gần hồ. Tom sẽ mang bánh mì kẹp và trái cây, còn mình sẽ mang bánh ngọt và nước cam. Bạn hãy mang theo mũ và một chai nước vì thời tiết sẽ ấm và có nắng.\n\nSau bữa trưa, chúng ta có thể chơi cầu lông và chụp ảnh gần những khóm hoa. Nếu trời mưa, chúng ta sẽ về nhà mình và xem phim thay vào đó. Mình thật sự mong thời tiết vẫn đẹp.\n\nBạn hãy cho mình biết trước tối thứ Năm nếu bạn có thể đến, để mình mua đủ đồ ăn. Bạn có thể dẫn theo em họ Mai của bạn nếu bạn muốn. Càng có nhiều bạn bè, chúng ta sẽ càng vui.\n\nMình rất mong sớm được gặp bạn.\n\nChúc bạn mọi điều tốt đẹp,\nAnna",
@@ -25712,7 +25712,7 @@ const CONTENT = {
   },
   {
    "topic": "Học tập và giáo dục",
-   "level": "Band 4.0",
+   "level": "Band 4,0",
    "title": "Asking about an English Course",
    "text": "Dear Sir or Madam,\n\nI am writing to ask for information about your English course for teachers at the Riverdale Language Centre. I saw your advertisement in a local newspaper last week and I am very interested in joining the course in September.\n\nI would like to know the exact starting date and the total cost of the course. Could you also tell me whether the price includes textbooks and examination fees? I have a degree in education and three years of teaching experience, so I would also like to ask whether I can join the advanced class directly.\n\nIn addition, I live outside the city, so I need information about accommodation near the centre. Does the centre help students find a room, and how much does a single room usually cost each month?\n\nFinally, could you send me an application form and tell me the deadline for applying? I would be grateful if you could reply before the end of this month, as I need to ask my school for leave.\n\nThank you for your help. I look forward to hearing from you.\n\nYours faithfully,\nNguyen Thanh Ha",
    "translation": "Kính gửi Ông hoặc Bà,\n\nTôi viết thư này để hỏi thông tin về khóa học tiếng Anh dành cho giáo viên của quý trung tâm tại Trung tâm Ngoại ngữ Riverdale. Tôi đã thấy quảng cáo của quý trung tâm trên một tờ báo địa phương vào tuần trước và tôi rất muốn tham gia khóa học vào tháng Chín.\n\nTôi muốn biết ngày khai giảng chính xác và tổng chi phí của khóa học. Quý trung tâm cũng có thể cho tôi biết giá đó đã bao gồm sách giáo khoa và lệ phí thi hay chưa? Tôi có bằng đại học về giáo dục và ba năm kinh nghiệm giảng dạy, vì vậy tôi cũng muốn hỏi liệu tôi có thể vào thẳng lớp nâng cao hay không.\n\nNgoài ra, tôi sống ở ngoài thành phố nên tôi cần thông tin về chỗ ở gần trung tâm. Trung tâm có giúp học viên tìm phòng không, và một phòng đơn thường có giá bao nhiêu mỗi tháng?\n\nCuối cùng, quý trung tâm có thể gửi cho tôi mẫu đơn đăng ký và cho tôi biết hạn chót nộp đơn không? Tôi sẽ rất biết ơn nếu quý trung tâm có thể trả lời trước cuối tháng này, vì tôi cần xin trường cho nghỉ phép.\n\nCảm ơn sự giúp đỡ của quý trung tâm. Tôi mong nhận được phản hồi từ quý trung tâm.\n\nTrân trọng,\nNguyen Thanh Ha",
@@ -25801,7 +25801,7 @@ const CONTENT = {
   },
   {
    "topic": "Học tập và giáo dục",
-   "level": "Band 4.5",
+   "level": "Band 4,5",
    "title": "School Library Hours and New Clubs",
    "text": "Greenfield School Notice - Library Hours and New Clubs\n\nFrom this Monday, the school library will open from 7:30 a.m. to 5:30 p.m. on school days. Students can borrow up to three books at a time and keep them for two weeks. Books must be returned on time, and students who return books late will pay a small fine of five thousand dong per day. The library will also open on Saturday mornings from 8 a.m. to 11 a.m. for students who want a quiet place to study.\n\nWe are also happy to announce two new clubs this term. The Gardening Club will meet every Tuesday afternoon in the school garden, and the Chess Club will meet every Thursday in Room 12. Both clubs are free and open to all students from Grade 6 to Grade 9. Students who want to join should write their names on the list outside the library before Friday.\n\nPlease remember to keep your library card safe and to stay quiet inside the library so that everyone can read and study comfortably.",
    "translation": "Thông báo của Trường Greenfield - Giờ mở cửa thư viện và các câu lạc bộ mới\n\nTừ thứ Hai này, thư viện trường sẽ mở cửa từ 7 giờ 30 sáng đến 5 giờ 30 chiều vào các ngày học. Học sinh có thể mượn tối đa ba cuốn sách mỗi lần và giữ chúng trong hai tuần. Sách phải được trả đúng hạn, và học sinh trả sách muộn sẽ phải nộp một khoản phạt nhỏ là năm nghìn đồng mỗi ngày. Thư viện cũng sẽ mở cửa vào các buổi sáng thứ Bảy từ 8 giờ đến 11 giờ cho những học sinh muốn có một nơi yên tĩnh để học.\n\nChúng tôi cũng vui mừng thông báo hai câu lạc bộ mới trong học kỳ này. Câu lạc bộ Làm vườn sẽ sinh hoạt vào mỗi chiều thứ Ba tại vườn trường, và Câu lạc bộ Cờ vua sẽ sinh hoạt vào mỗi thứ Năm tại Phòng 12. Cả hai câu lạc bộ đều miễn phí và dành cho tất cả học sinh từ lớp 6 đến lớp 9. Học sinh muốn tham gia nên ghi tên mình vào danh sách bên ngoài thư viện trước thứ Sáu.\n\nCác em hãy nhớ giữ thẻ thư viện cẩn thận và giữ yên lặng bên trong thư viện để mọi người có thể đọc và học một cách thoải mái.",
@@ -25892,7 +25892,7 @@ const CONTENT = {
   },
   {
    "topic": "Công việc và nghề nghiệp",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "A New Flexible Working Policy",
    "text": "Company Announcement: Flexible Working from Next Month\n\nDear colleagues,\n\nFrom 1 June, our company will introduce a new flexible working policy for all office staff. Employees may work from home on up to two days each week, as long as they attend all team meetings either in person or online. Staff who wish to work from home must inform their manager at least one day in advance and must be available by phone and email during normal working hours.\n\nCore hours will remain from 10 a.m. to 3 p.m., when everyone must be working, either in the office or at home. Outside these hours, employees can choose to start earlier or finish later, provided they complete eight hours of work each day.\n\nThe office will stay open five days a week for staff who prefer to work there. However, the company will close the third floor to save energy, so staff who come in must book a desk on the second floor through the company app.\n\nWe believe this policy will reduce travel time, help parents with young children, and make our company a better place to work. Managers will review the policy after three months and ask staff for their opinions before making any changes.",
    "translation": "Thông báo của công ty: Làm việc linh hoạt từ tháng sau\n\nCác đồng nghiệp thân mến,\n\nTừ ngày 1 tháng Sáu, công ty chúng ta sẽ áp dụng chính sách làm việc linh hoạt mới cho toàn bộ nhân viên văn phòng. Nhân viên có thể làm việc tại nhà tối đa hai ngày mỗi tuần, miễn là họ tham dự mọi cuộc họp nhóm trực tiếp hoặc trực tuyến. Nhân viên muốn làm việc tại nhà phải báo cho quản lý của mình trước ít nhất một ngày và phải sẵn sàng liên lạc qua điện thoại và email trong giờ làm việc bình thường.\n\nGiờ làm việc chính sẽ vẫn từ 10 giờ sáng đến 3 giờ chiều, khi mọi người đều phải làm việc, dù ở văn phòng hay ở nhà. Ngoài khung giờ này, nhân viên có thể chọn bắt đầu sớm hơn hoặc kết thúc muộn hơn, miễn là họ hoàn thành tám giờ làm việc mỗi ngày.\n\nVăn phòng sẽ vẫn mở cửa năm ngày một tuần cho những nhân viên thích làm việc tại đó. Tuy nhiên, công ty sẽ đóng cửa tầng ba để tiết kiệm năng lượng, vì vậy nhân viên đến văn phòng phải đặt bàn làm việc ở tầng hai qua ứng dụng của công ty.\n\nChúng tôi tin rằng chính sách này sẽ giảm thời gian đi lại, giúp đỡ các bậc cha mẹ có con nhỏ, và biến công ty chúng ta thành một nơi làm việc tốt hơn. Các quản lý sẽ xem xét lại chính sách sau ba tháng và hỏi ý kiến nhân viên trước khi thực hiện bất kỳ thay đổi nào.",
@@ -25980,7 +25980,7 @@ const CONTENT = {
   },
   {
    "topic": "Học tập và giáo dục",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Learn a Language with LinguaGo",
    "text": "Learn a Language Anywhere with LinguaGo!\n\nDo you want to speak English, French or Japanese with confidence? LinguaGo is a friendly language app that helps you learn a little every day, wherever you are. With more than two million users around the world, LinguaGo turns short breaks into useful study time.\n\nEach lesson takes only ten minutes and focuses on real-life conversations, such as ordering food, asking for directions and talking about your job. New words are introduced with clear pictures and native-speaker recordings, so you can practise listening and pronunciation at the same time. The app also sends you gentle reminders and interesting quizzes to test your progress each week.\n\nYou can download LinguaGo for free and use the basic lessons without paying anything. If you want full access to all courses, grammar guides and speaking tests, Premium membership costs only 6 dollars a month. New users who register this month will receive the first Premium month free of charge.\n\nDownload LinguaGo today from your app store and start your first lesson in minutes. Learning a language has never been easier or more fun!",
    "translation": "Học ngoại ngữ ở bất cứ đâu với LinguaGo!\n\nBạn có muốn nói tiếng Anh, tiếng Pháp hoặc tiếng Nhật một cách tự tin không? LinguaGo là một ứng dụng học ngôn ngữ thân thiện giúp bạn học một chút mỗi ngày, ở bất cứ nơi nào bạn ở. Với hơn hai triệu người dùng trên khắp thế giới, LinguaGo biến những khoảng nghỉ ngắn thành thời gian học tập hữu ích.\n\nMỗi bài học chỉ kéo dài mười phút và tập trung vào các cuộc hội thoại đời thực, chẳng hạn như gọi món ăn, hỏi đường và nói về công việc của bạn. Từ mới được giới thiệu kèm hình ảnh rõ ràng và bản ghi âm của người bản xứ, vì vậy bạn có thể luyện nghe và phát âm cùng một lúc. Ứng dụng cũng gửi cho bạn những lời nhắc nhẹ nhàng và các bài kiểm tra ngắn thú vị để kiểm tra tiến độ của bạn mỗi tuần.\n\nBạn có thể tải LinguaGo miễn phí và sử dụng các bài học cơ bản mà không phải trả bất cứ khoản nào. Nếu bạn muốn truy cập đầy đủ mọi khóa học, hướng dẫn ngữ pháp và bài kiểm tra nói, gói thành viên Premium chỉ có giá 6 đô la một tháng. Người dùng mới đăng ký trong tháng này sẽ được miễn phí tháng Premium đầu tiên.\n\nHãy tải LinguaGo ngay hôm nay từ cửa hàng ứng dụng của bạn và bắt đầu bài học đầu tiên trong vài phút. Học một ngôn ngữ chưa bao giờ dễ dàng và thú vị hơn thế!",
@@ -26071,7 +26071,7 @@ const CONTENT = {
   },
   {
    "topic": "Nhà ở và nơi sống",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Sunrise Apartments for Rent",
    "text": "Sunrise Apartments - Modern Living near the City Centre\n\nAre you looking for a comfortable home within walking distance of the city centre? Sunrise Apartments offers one-bedroom and two-bedroom flats for rent in a quiet street, just ten minutes on foot from Central Station and the main shopping area.\n\nEach flat has a bright living room, a modern kitchen with a cooker and fridge, and a bathroom with a shower. Two-bedroom flats also have a small balcony where you can enjoy your morning coffee. All flats are furnished, and rents include water and internet bills. Electricity is paid separately by the tenant.\n\nResidents can use a shared garden, a bicycle storage room and a laundry room in the basement. Parking spaces are available in the underground garage for an extra charge of 50 dollars a month. Small pets are welcome, but tenants must inform the manager in advance.\n\nOne-bedroom flats cost 700 dollars a month and two-bedroom flats cost 950 dollars a month. A deposit equal to one month of rent is required before moving in. The minimum rental period is six months. To arrange a viewing, please call our office between 9 a.m. and 6 p.m. from Monday to Saturday.",
    "translation": "Căn hộ Sunrise - Cuộc sống hiện đại gần trung tâm thành phố\n\nBạn đang tìm một ngôi nhà thoải mái trong khoảng cách đi bộ tới trung tâm thành phố phải không? Căn hộ Sunrise cho thuê các căn hộ một phòng ngủ và hai phòng ngủ trên một con phố yên tĩnh, chỉ cách Ga Trung tâm và khu mua sắm chính mười phút đi bộ.\n\nMỗi căn hộ có một phòng khách sáng sủa, một nhà bếp hiện đại với bếp nấu và tủ lạnh, và một phòng tắm có vòi sen. Các căn hộ hai phòng ngủ còn có một ban công nhỏ nơi bạn có thể thưởng thức cà phê buổi sáng. Tất cả các căn hộ đều có sẵn nội thất, và tiền thuê đã bao gồm tiền nước và tiền internet. Tiền điện do người thuê trả riêng.\n\nCư dân có thể sử dụng một khu vườn chung, một phòng để xe đạp và một phòng giặt ở tầng hầm. Chỗ đậu xe có sẵn trong ga ra ngầm với phụ phí 50 đô la một tháng. Thú cưng nhỏ được chào đón, nhưng người thuê phải báo cho quản lý trước.\n\nCăn hộ một phòng ngủ có giá 700 đô la một tháng và căn hộ hai phòng ngủ có giá 950 đô la một tháng. Cần đặt cọc một khoản bằng một tháng tiền thuê trước khi chuyển vào. Thời gian thuê tối thiểu là sáu tháng. Để đặt lịch xem nhà, vui lòng gọi văn phòng của chúng tôi từ 9 giờ sáng đến 6 giờ chiều, từ thứ Hai đến thứ Bảy.",
@@ -26159,7 +26159,7 @@ const CONTENT = {
   },
   {
    "topic": "Thức ăn và sức khỏe",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Saigon Corner - A Vietnamese Restaurant in London",
    "text": "SAIGON CORNER - Vietnamese Restaurant, London\n\nWelcome to Saigon Corner, a small family restaurant in east London serving fresh Vietnamese food every day. Our most popular dish is pho, a hot noodle soup with beef or chicken, fresh herbs and soft rice noodles. We also serve crispy spring rolls, grilled pork with rice, and banh mi sandwiches with pickled vegetables.\n\nVegetarian guests can choose tofu pho, vegetable curry with rice, or a fresh papaya salad. Most main dishes cost between 9 and 13 pounds. A set lunch with a main dish, spring rolls and a drink is available on weekdays for only 11 pounds.\n\nHow to order: First, choose your table and take a menu. Then write your table number and your choices on the order card and give it to a waiter. Drinks and spring rolls usually arrive within five minutes, and main dishes take about fifteen minutes. Please tell our staff if you have any food allergies, especially to peanuts or seafood, because many sauces contain these ingredients.\n\nWe are open from 11 a.m. to 10 p.m. from Tuesday to Sunday and closed on Mondays. You can book a table by phone or just walk in.",
    "translation": "SAIGON CORNER - Nhà hàng Việt Nam tại London\n\nChào mừng bạn đến với Saigon Corner, một nhà hàng gia đình nhỏ ở phía đông London, phục vụ món ăn Việt Nam tươi ngon mỗi ngày. Món được ưa chuộng nhất của chúng tôi là phở, một món súp nóng với bánh phở, thịt bò hoặc thịt gà, rau thơm tươi và sợi phở mềm. Chúng tôi cũng phục vụ nem rán giòn, thịt lợn nướng với cơm, và bánh mì kẹp với rau củ muối chua.\n\nKhách ăn chay có thể chọn phở đậu phụ, cà ri rau củ với cơm, hoặc gỏi đu đủ tươi. Hầu hết các món chính có giá từ 9 đến 13 bảng Anh. Một suất ăn trưa gồm một món chính, nem rán và một đồ uống có vào các ngày trong tuần với giá chỉ 11 bảng Anh.\n\nCách gọi món: Đầu tiên, hãy chọn bàn của bạn và lấy thực đơn. Sau đó ghi số bàn và các món bạn chọn vào thẻ gọi món rồi đưa cho nhân viên phục vụ. Đồ uống và nem rán thường được mang ra trong vòng năm phút, và các món chính mất khoảng mười lăm phút. Vui lòng cho nhân viên của chúng tôi biết nếu bạn bị dị ứng thực phẩm, đặc biệt là với đậu phộng hoặc hải sản, vì nhiều loại nước sốt chứa các nguyên liệu này.\n\nChúng tôi mở cửa từ 11 giờ sáng đến 10 giờ tối, từ thứ Ba đến Chủ nhật và đóng cửa vào thứ Hai. Bạn có thể đặt bàn qua điện thoại hoặc cứ đến trực tiếp.",
@@ -26250,7 +26250,7 @@ const CONTENT = {
   },
   {
    "topic": "Nhà ở và nơi sống",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "How to Use a Self-Service Laundry",
    "text": "BrightWash Self-Service Laundry - How to Use Our Machines\n\nWelcome to BrightWash. Our laundry is open every day from 6 a.m. to 11 p.m., and staff are available until 8 p.m. if you need help. Follow these steps to wash your clothes quickly and safely.\n\nFirst, choose a machine of the right size. Small machines hold up to 6 kilograms and are suitable for everyday clothes, while large machines hold 12 kilograms and are better for blankets and curtains. Put your clothes inside and close the door firmly. Next, add washing powder to the drawer marked A. Do not use more than the recommended amount, as too much powder can damage the machine and leave marks on your clothes.\n\nThen pay at the central payment machine with coins or a bank card and select your programme. A normal wash at 40 degrees takes 35 minutes. Machines cannot be opened once the programme has started, so check your pockets carefully before you begin.\n\nWhen the wash finishes, please remove your clothes promptly so that other customers can use the machine. Tumble dryers are available next to the washing machines and cost 1 pound for ten minutes.\n\nFor the comfort of everyone, eating and smoking are not allowed inside, children must stay with an adult at all times, and the laundry accepts no responsibility for clothes left unattended for more than 24 hours.",
    "translation": "Tiệm giặt tự phục vụ BrightWash - Cách sử dụng máy của chúng tôi\n\nChào mừng bạn đến với BrightWash. Tiệm giặt của chúng tôi mở cửa mỗi ngày từ 6 giờ sáng đến 11 giờ đêm, và nhân viên có mặt đến 8 giờ tối nếu bạn cần giúp đỡ. Hãy làm theo các bước sau để giặt quần áo nhanh chóng và an toàn.\n\nĐầu tiên, hãy chọn máy có kích cỡ phù hợp. Máy nhỏ chứa tối đa 6 ki-lô-gam và phù hợp với quần áo hằng ngày, trong khi máy lớn chứa 12 ki-lô-gam và tốt hơn cho chăn và rèm cửa. Cho quần áo vào trong và đóng cửa thật chặt. Tiếp theo, cho bột giặt vào ngăn kéo đánh dấu A. Không dùng quá lượng được khuyến nghị, vì quá nhiều bột có thể làm hỏng máy và để lại vết trên quần áo của bạn.\n\nSau đó thanh toán tại máy thanh toán trung tâm bằng xu hoặc thẻ ngân hàng và chọn chương trình giặt. Một lần giặt thường ở 40 độ mất 35 phút. Máy không thể mở ra một khi chương trình đã bắt đầu, vì vậy hãy kiểm tra túi áo quần cẩn thận trước khi bắt đầu.\n\nKhi giặt xong, vui lòng lấy quần áo của bạn ra ngay để khách hàng khác có thể dùng máy. Máy sấy quần áo có sẵn bên cạnh các máy giặt và có giá 1 bảng Anh cho mười phút.\n\nVì sự thoải mái của mọi người, ăn uống và hút thuốc không được phép ở bên trong, trẻ em phải ở cùng người lớn mọi lúc, và tiệm giặt không chịu trách nhiệm đối với quần áo để không có người trông quá 24 giờ.",
@@ -26338,7 +26338,7 @@ const CONTENT = {
   },
   {
    "topic": "Học tập và giáo dục",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Planning a Group Presentation",
    "text": "Two students, Minh and Sarah, are planning a group presentation about renewable energy.\n\nMinh: Hi Sarah. We have only two weeks before our presentation, so I think we should divide the work today.\nSarah: I agree. There are three main parts: solar energy, wind energy and the conclusion. I have already found some useful articles about solar energy, so I can prepare that part if you like.\nMinh: That sounds good. I will research wind energy, then. My uncle works at a wind farm, so I can interview him this weekend and use his answers in my slides.\nSarah: Great idea. Who will write the conclusion? Perhaps we should do that together next Tuesday after we finish our own parts.\nMinh: Yes, let us meet in the library at 4 p.m. on Tuesday. I will book a study room. We also need to decide who will design the slides. I am not very good at design, but I can prepare the charts and numbers.\nSarah: I can design the slides, then. I enjoy choosing colours and pictures. But please send me your charts by Monday evening so I have enough time.\nMinh: No problem. One more thing - we should practise together at least twice before the real presentation, and each part should take about five minutes.\nSarah: Agreed. Let us practise on Thursday and again on Friday morning in the empty classroom.",
    "translation": "Hai sinh viên, Minh và Sarah, đang lên kế hoạch cho một bài thuyết trình nhóm về năng lượng tái tạo.\n\nMinh: Chào Sarah. Chúng ta chỉ còn hai tuần trước buổi thuyết trình, nên mình nghĩ hôm nay chúng ta nên phân chia công việc.\nSarah: Mình đồng ý. Có ba phần chính: năng lượng mặt trời, năng lượng gió và phần kết luận. Mình đã tìm được một số bài viết hữu ích về năng lượng mặt trời, nên mình có thể chuẩn bị phần đó nếu bạn đồng ý.\nMinh: Nghe hay đấy. Vậy mình sẽ nghiên cứu năng lượng gió. Chú của mình làm việc ở một trang trại điện gió, nên mình có thể phỏng vấn chú vào cuối tuần này và dùng câu trả lời của chú trong slide của mình.\nSarah: Ý hay đấy. Ai sẽ viết phần kết luận? Có lẽ chúng ta nên làm phần đó cùng nhau vào thứ Ba tới, sau khi hoàn thành các phần riêng của mình.\nMinh: Ừ, chúng ta hãy gặp nhau ở thư viện lúc 4 giờ chiều thứ Ba. Mình sẽ đặt một phòng học nhóm. Chúng ta cũng cần quyết định ai sẽ thiết kế slide. Mình không giỏi thiết kế lắm, nhưng mình có thể chuẩn bị các biểu đồ và số liệu.\nSarah: Vậy mình sẽ thiết kế slide. Mình thích chọn màu sắc và hình ảnh. Nhưng bạn hãy gửi biểu đồ cho mình trước tối thứ Hai để mình có đủ thời gian nhé.\nMinh: Không vấn đề gì. Còn một việc nữa - chúng ta nên luyện tập cùng nhau ít nhất hai lần trước buổi thuyết trình thật, và mỗi phần nên kéo dài khoảng năm phút.\nSarah: Đồng ý. Chúng ta hãy luyện tập vào thứ Năm và một lần nữa vào sáng thứ Sáu trong lớp học trống.",
@@ -26429,7 +26429,7 @@ const CONTENT = {
   },
   {
    "topic": "Mua sắm và tiền bạc",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "A Delayed Delivery - A Support Call",
    "text": "A customer, Mr David Lee, is calling the customer support line of an online shop about a delayed order.\n\nAgent: Good morning, ShopFast customer support. My name is Emma. How can I help you?\nDavid: Good morning. I ordered a laptop bag on 3 May, and the website said delivery would take three to five working days. It is now 12 May and my parcel has still not arrived.\nAgent: I am very sorry about that, Mr Lee. Could I have your order number, please?\nDavid: Yes, it is SF-20481.\nAgent: Thank you. Let me check. I can see that your parcel left our warehouse on 5 May, but it was delayed at the delivery centre because the address label was damaged. A new label was printed yesterday, and the parcel is now out for delivery.\nDavid: When will it arrive, then?\nAgent: It should arrive tomorrow before noon. If it does not arrive by 1 p.m., please call us again and we will contact the driver directly.\nDavid: I need the bag for a business trip on Thursday. Tomorrow is fine, but what happens if it is late again?\nAgent: In that case, we can offer you a full refund or a replacement bag sent by express delivery at no extra cost. As an apology for this delay, we will also add a 10 per cent discount code to your account for your next order.\nDavid: That sounds fair. Thank you for your help.\nAgent: You are welcome, Mr Lee. Is there anything else I can do for you today?",
    "translation": "Một khách hàng, anh David Lee, đang gọi đến đường dây hỗ trợ khách hàng của một cửa hàng trực tuyến về một đơn hàng bị giao chậm.\n\nNhân viên: Xin chào, đây là bộ phận hỗ trợ khách hàng của ShopFast. Tôi tên là Emma. Tôi có thể giúp gì cho anh?\nDavid: Xin chào. Tôi đã đặt một chiếc túi đựng máy tính xách tay vào ngày 3 tháng Năm, và trang web nói thời gian giao hàng sẽ mất từ ba đến năm ngày làm việc. Bây giờ đã là ngày 12 tháng Năm mà kiện hàng của tôi vẫn chưa đến.\nNhân viên: Tôi rất xin lỗi về điều đó, anh Lee. Anh có thể cho tôi mã đơn hàng được không?\nDavid: Được, mã là SF-20481.\nNhân viên: Cảm ơn anh. Để tôi kiểm tra. Tôi thấy kiện hàng của anh đã rời kho của chúng tôi vào ngày 5 tháng Năm, nhưng nó bị chậm tại trung tâm giao hàng vì nhãn địa chỉ bị hư. Một nhãn mới đã được in hôm qua, và kiện hàng hiện đang trên đường giao.\nDavid: Vậy khi nào nó sẽ đến?\nNhân viên: Nó sẽ đến vào ngày mai trước buổi trưa. Nếu đến 1 giờ chiều nó vẫn chưa đến, anh hãy gọi lại cho chúng tôi và chúng tôi sẽ liên lạc trực tiếp với tài xế.\nDavid: Tôi cần chiếc túi cho một chuyến công tác vào thứ Năm. Ngày mai thì được, nhưng nếu nó lại bị chậm nữa thì sao?\nNhân viên: Trong trường hợp đó, chúng tôi có thể hoàn lại toàn bộ tiền cho anh hoặc gửi một chiếc túi thay thế bằng dịch vụ giao hàng nhanh mà anh không phải trả thêm chi phí. Để xin lỗi về sự chậm trễ này, chúng tôi cũng sẽ thêm một mã giảm giá 10 phần trăm vào tài khoản của anh cho đơn hàng tiếp theo.\nDavid: Nghe hợp lý đấy. Cảm ơn bạn đã giúp đỡ.\nNhân viên: Không có gì, anh Lee. Hôm nay tôi còn có thể giúp gì thêm cho anh không?",
@@ -26518,7 +26518,7 @@ const CONTENT = {
   },
   {
    "topic": "Thức ăn và sức khỏe",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Short Naps and Memory",
    "text": "For many people, a short sleep in the early afternoon is seen as a sign of laziness. However, research in recent decades suggests that a brief nap can be a powerful tool for the brain. Studies of students, pilots and office workers all point in the same direction: people who nap for a short period often remember new information better than those who stay awake for the same length of time. Far from wasting time, a well-timed nap may help the mind organise what it has just learned.\n\nIn one well-known experiment, volunteers learned a list of word pairs in the morning and were tested again in the evening. One group was allowed to sleep for about one hour after lunch, while the other group watched a film. The nap group remembered significantly more word pairs than the group that stayed awake. Similar results have been found with motor skills: after a short sleep, participants typed a learned sequence faster and with fewer mistakes than participants who had only rested.\n\nScientists believe these benefits are linked to what the brain does during sleep. Even in a short nap, the brain enters light sleep and begins to replay recent experiences. This replay is thought to strengthen the connections between brain cells and to move information from short-term storage towards more stable long-term memory, a process known as consolidation. A nap that is too short may not allow this process to begin, which is why naps of around twenty minutes are often recommended.\n\nNevertheless, napping is not a cure for poor sleep at night, and longer is not always better. People who sleep for more than an hour in the afternoon often wake up feeling heavy and confused, a state called sleep inertia, and they may then find it harder to fall asleep at night. Experts therefore advise keeping naps short, taking them before 3 p.m., and treating them as a supplement to, rather than a replacement for, a full night of rest.",
    "translation": "Đối với nhiều người, một giấc ngủ ngắn vào đầu buổi chiều bị xem là dấu hiệu của sự lười biếng. Tuy nhiên, các nghiên cứu trong những thập kỷ gần đây cho thấy một giấc ngủ trưa ngắn có thể là một công cụ mạnh mẽ cho não bộ. Các nghiên cứu trên sinh viên, phi công và nhân viên văn phòng đều chỉ về cùng một hướng: những người ngủ trưa trong một khoảng thời gian ngắn thường ghi nhớ thông tin mới tốt hơn những người thức trong cùng khoảng thời gian đó. Không hề lãng phí thời gian, một giấc ngủ trưa đúng lúc có thể giúp tâm trí sắp xếp những gì nó vừa học.\n\nTrong một thí nghiệm nổi tiếng, các tình nguyện viên học một danh sách các cặp từ vào buổi sáng và được kiểm tra lại vào buổi tối. Một nhóm được phép ngủ khoảng một giờ sau bữa trưa, trong khi nhóm còn lại xem phim. Nhóm ngủ trưa ghi nhớ được nhiều cặp từ hơn hẳn so với nhóm thức. Kết quả tương tự cũng được tìm thấy với các kỹ năng vận động: sau một giấc ngủ ngắn, người tham gia gõ một chuỗi đã học nhanh hơn và ít lỗi hơn so với những người chỉ nghỉ ngơi.\n\nCác nhà khoa học tin rằng những lợi ích này liên quan đến những gì não bộ làm trong khi ngủ. Ngay cả trong một giấc ngủ trưa ngắn, não bộ cũng đi vào giấc ngủ nhẹ và bắt đầu tái hiện những trải nghiệm gần đây. Việc tái hiện này được cho là giúp củng cố các mối liên kết giữa các tế bào não và chuyển thông tin từ nơi lưu trữ ngắn hạn tới trí nhớ dài hạn ổn định hơn, một quá trình gọi là củng cố trí nhớ. Một giấc ngủ trưa quá ngắn có thể không cho phép quá trình này bắt đầu, đó là lý do vì sao những giấc ngủ trưa khoảng hai mươi phút thường được khuyến nghị.\n\nTuy nhiên, ngủ trưa không phải là cách chữa cho giấc ngủ kém vào ban đêm, và ngủ lâu hơn không phải lúc nào cũng tốt hơn. Những người ngủ hơn một giờ vào buổi chiều thường thức dậy với cảm giác nặng nề và mơ hồ, một trạng thái gọi là quán tính giấc ngủ, và sau đó họ có thể khó ngủ hơn vào ban đêm. Vì vậy, các chuyên gia khuyên nên giữ giấc ngủ trưa ngắn, ngủ trước 3 giờ chiều, và coi chúng là phần bổ sung cho một đêm nghỉ ngơi đầy đủ, chứ không phải là sự thay thế.",
@@ -26609,7 +26609,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Green Cities and Green Roofs",
    "text": "Modern cities are often several degrees warmer than the countryside around them, a phenomenon known as the urban heat island effect. Roads, pavements and dark roofs absorb heat from the sun during the day and release it slowly at night, while air conditioners push even more warm air into the streets. As climate change makes heatwaves longer and more intense, city governments are searching for practical ways to cool their streets and protect public health.\n\nOne increasingly popular solution is the green roof, in which the top of a building is partly or completely covered with plants growing in a shallow layer of soil. The plants shade the roof surface and release water vapour into the air, which lowers the temperature of the roof itself by as much as 30 degrees on a hot day. Inside the building, the soil and plants act as insulation, so rooms below stay cooler in summer and warmer in winter.\n\nThe advantages of green roofs extend well beyond temperature control. During heavy rain, the soil absorbs a large share of the water that falls on the roof, reducing the pressure on city drains and lowering the risk of flooding. Plants also filter dust and pollutants from the air, and a roof garden can provide a valuable habitat for bees, butterflies and birds in areas where ground-level green space is scarce. For building owners, lower energy bills for heating and cooling can gradually repay the cost of installation.\n\nGreen roofs nevertheless present real challenges. They are considerably more expensive to install than a conventional roof, and older buildings may need structural work to support the extra weight of wet soil. The plants also require regular care, including watering during dry periods and the removal of unwanted weeds. Despite these difficulties, cities such as Toronto and Copenhagen now require green roofs on many new buildings, and most specialists expect them to become a standard feature of urban design rather than a rare experiment.",
    "translation": "Các thành phố hiện đại thường ấm hơn vài độ so với vùng nông thôn xung quanh, một hiện tượng gọi là hiệu ứng đảo nhiệt đô thị. Đường sá, vỉa hè và những mái nhà sẫm màu hấp thụ nhiệt từ mặt trời vào ban ngày và tỏa ra chậm rãi vào ban đêm, trong khi máy điều hòa đẩy thêm nhiều khí nóng ra đường phố. Khi biến đổi khí hậu khiến các đợt nắng nóng kéo dài hơn và gay gắt hơn, chính quyền các thành phố đang tìm kiếm những cách thiết thực để làm mát đường phố và bảo vệ sức khỏe cộng đồng.\n\nMột giải pháp ngày càng phổ biến là mái nhà xanh, trong đó phần đỉnh của một tòa nhà được phủ một phần hoặc toàn bộ bằng cây trồng trong một lớp đất mỏng. Cây cối che bóng cho bề mặt mái và tỏa hơi nước vào không khí, điều này làm giảm nhiệt độ của chính mái nhà tới 30 độ vào một ngày nóng. Bên trong tòa nhà, đất và cây cối đóng vai trò như lớp cách nhiệt, vì vậy các phòng bên dưới mát hơn vào mùa hè và ấm hơn vào mùa đông.\n\nLợi ích của mái nhà xanh vượt xa việc kiểm soát nhiệt độ. Khi mưa lớn, đất hấp thụ một phần lớn lượng nước rơi trên mái, làm giảm áp lực lên hệ thống thoát nước của thành phố và giảm nguy cơ ngập lụt. Cây cối cũng lọc bụi và các chất ô nhiễm khỏi không khí, và một khu vườn trên mái có thể cung cấp môi trường sống quý giá cho ong, bướm và chim ở những khu vực khan hiếm không gian xanh ở mặt đất. Đối với chủ tòa nhà, hóa đơn năng lượng thấp hơn cho việc sưởi ấm và làm mát có thể dần bù lại chi phí lắp đặt.\n\nTuy nhiên, mái nhà xanh cũng đặt ra những thách thức thực sự. Chúng đắt hơn đáng kể khi lắp đặt so với một mái nhà thông thường, và các tòa nhà cũ có thể cần gia cố kết cấu để chịu thêm trọng lượng của đất ướt. Cây cối cũng cần được chăm sóc thường xuyên, bao gồm tưới nước trong những giai đoạn khô hạn và loại bỏ cỏ dại không mong muốn. Bất chấp những khó khăn này, các thành phố như Toronto và Copenhagen hiện nay yêu cầu mái nhà xanh ở nhiều tòa nhà mới, và hầu hết các chuyên gia kỳ vọng chúng sẽ trở thành một đặc điểm tiêu chuẩn của thiết kế đô thị chứ không phải một thử nghiệm hiếm hoi.",
@@ -26702,7 +26702,7 @@ const CONTENT = {
   },
   {
    "topic": "Học tập và giáo dục",
-   "level": "Band 2.0",
+   "level": "Band 2,0",
    "title": "My School",
    "text": "My name is Nam. I am ten years old. I am a student at a small school in my town.\n\nMy school has eight classrooms, one library and a big yard. There are 200 students and 12 teachers in my school. My classroom is on the second floor. It has 30 desks and a green board.\n\nSchool starts at 7 o'clock in the morning. I go to school by bike with my friend Tuan. My favourite subject is maths because I love numbers. After school, I play football in the yard with my classmates.",
    "questions": [
@@ -26789,7 +26789,7 @@ const CONTENT = {
   },
   {
    "topic": "Bản thân và gia đình",
-   "level": "Band 2.5",
+   "level": "Band 2,5",
    "title": "Lucy and Her Dog",
    "text": "Lucy is twelve years old. She lives in a small house with her parents and her dog, Milo.\n\nEvery morning, Lucy gets up at 6 o'clock. She feeds Milo and takes him to the park. Milo can run very fast, and he can catch a ball. Lucy walks to school at 7.30. She studies English, maths and art. She can draw nice pictures, but she cannot sing very well.\n\nIn the evening, Lucy does her homework and reads a book. Milo sleeps under her desk. At the weekend, Lucy and her father take Milo to the river. Milo can swim, and he loves the water.",
    "questions": [
@@ -26876,7 +26876,7 @@ const CONTENT = {
   },
   {
    "topic": "Bản thân và gia đình",
-   "level": "Band 3.0",
+   "level": "Band 3,0",
    "title": "A Rainy Day",
    "text": "Yesterday was a rainy day. In the morning, the sky was dark and the wind was strong. Anna looked out of the window and saw big black clouds.\n\nAnna's mother said, 'Take your umbrella. It is raining now.' Anna walked to the bus stop with her red umbrella. The streets were wet, and many people were waiting for the bus. A little boy was jumping in the water and laughing.\n\nAt school, Anna's clothes were a little wet, but she was happy. In the art lesson, the children drew pictures of the rain. Anna drew her red umbrella and the happy little boy. Her teacher said, 'What a lovely picture!'",
    "questions": [
@@ -26963,7 +26963,7 @@ const CONTENT = {
   },
   {
    "topic": "Học tập và giáo dục",
-   "level": "Band 3.5",
+   "level": "Band 3,5",
    "title": "The Class Trip to the Farm",
    "text": "Last Saturday, our class went on a trip to a farm near the mountains. We left school at 7 o'clock in the morning and travelled by bus. The journey took two hours, but we sang songs and looked at the green fields, so nobody felt bored.\n\nAt the farm, a friendly farmer showed us his animals. We fed the chickens and gave grass to the goats. Then we picked strawberries in a big garden. The strawberries were redder and sweeter than the ones in the shops. After lunch, we rode horses around a small lake. My horse was slower than my friend's horse, but it was very gentle.\n\nWe arrived home at 6 o'clock in the evening. Everyone was tired but happy. It was the most interesting trip of the year, and we all want to go back next spring.",
    "questions": [
@@ -27050,7 +27050,7 @@ const CONTENT = {
   },
   {
    "topic": "Bản thân và gia đình",
-   "level": "Band 3.5",
+   "level": "Band 3,5",
    "title": "Tom's Plan for the Summer",
    "text": "Tom is fourteen, and the summer holiday is coming. This year, he has many plans. 'I am going to learn to swim,' he says. 'My cousin is a good swimmer, and he is going to teach me at the town pool.'\n\nTom is also going to help his grandfather in the garden. They are going to plant tomatoes and beans. In the evenings, Tom is going to read two English books and write about them in a small notebook. 'The books are going to be difficult,' he says, 'but I am going to try.'\n\nOn the last weekend of the holiday, Tom's family is going to travel to the sea. They are going to stay in a small hotel near the beach for three days. Tom hopes the weather is going to be sunny, because he wants to swim in the sea with his new skill.",
    "questions": [
@@ -27137,7 +27137,7 @@ const CONTENT = {
   },
   {
    "topic": "Mua sắm và tiền bạc",
-   "level": "Band 4.5",
+   "level": "Band 4,5",
    "title": "The Night Market in Our Town",
    "text": "Every Saturday evening, a night market opens in the main square of our town. It has been a popular meeting place for local people since 2010. More than eighty stalls sell food, clothes and handmade gifts, and the smell of grilled corn and fresh bread fills the air.\n\nThe market is especially famous for its food. Visitors can try dishes from different regions of the country in one place. The most popular stall belongs to Mrs Lan, who has sold noodle soup there for ten years. Her soup is cheaper than the soup in restaurants, but many people say it tastes even better.\n\nFor young people, the market is more than a place to shop. Musicians play traditional songs in the centre of the square, and families sit on small plastic chairs, talking and laughing together. In my opinion, the night market shows the warm heart of our town better than any modern shopping centre.",
    "questions": [
@@ -27222,7 +27222,7 @@ const CONTENT = {
   },
   {
    "topic": "Thức ăn và sức khỏe",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "The Science of Sleep and Dreams",
    "text": "For roughly a third of our lives, we are asleep, yet the purpose of sleep puzzled scientists for centuries. Only in the last few decades has research begun to reveal how much work the sleeping brain quietly performs. Far from being a period of inactivity, sleep is now understood as an active, highly organised state that supports memory, emotion and physical repair.\n\nOne of the most important discoveries concerns memory consolidation. During deep sleep, the brain replays experiences from the day and transfers selected information from short-term storage into long-term memory. Students who sleep well after studying consistently recall more than those who stay up late revising, a finding that challenges the culture of the all-night study session. Sleep, in other words, is not the enemy of learning but one of its essential stages.\n\nDreams occur mainly during rapid eye movement, or REM, sleep, when the brain is almost as active as it is while awake. Some researchers argue that dreams help us process emotions, allowing painful experiences to be revisited in a calmer chemical state. Others are more cautious: they point out that most dreams are forgotten within minutes and may simply be the by-product of the brain tidying its memory stores.\n\nWhat is clear is that modern life is steadily eroding sleep. Artificial light, late-night screens and irregular working hours have cut average sleep by more than an hour compared with a century ago. The consequences reach beyond tiredness: chronic sleep loss is linked to obesity, weakened immunity and a higher risk of accidents.\n\nIn my view, societies should treat sleep as seriously as diet and exercise. Schools start too early for teenage brains, and employers who praise exhausted workers are, I believe, damaging both health and productivity. Recognising sleep as a public health priority would be a small step with enormous benefits.",
    "questions": [
@@ -27304,7 +27304,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "title": "Why Cities Are Planting Urban Forests",
    "text": "A. In the summer of 2023, several European capitals recorded temperatures above 40°C, and the streets with the least shade suffered most. In response, city governments have begun an ambitious experiment: planting forests inside the city itself. Paris plans to add 170,000 trees, while Milan has promised three million. These are not decorative parks but dense, carefully designed woodlands intended to cool neighbourhoods, clean the air and restore urban wildlife.\n\nB. The science behind the movement is persuasive. A single mature tree can absorb around 22 kilograms of carbon dioxide a year, and a canopy of leaves can reduce the temperature of the street below by several degrees. In districts where trees have been planted, residents report sleeping better during heatwaves, and local shops even record higher sales because people linger longer in pleasant, shaded streets.\n\nC. Critics, however, raise practical objections. Young trees need years of watering and care, and in dry cities this consumes scarce water. Others worry that greener districts become more fashionable, pushing rents up and forcing poorer residents out - a process known as green gentrification. A forest planted for everyone, they argue, may end up serving only the wealthy.\n\nD. Supporters accept these risks but insist they can be managed. Choosing native species reduces water needs, and planting first in the poorest districts prevents greening from becoming a luxury. What matters, they say, is that cities plan for decades ahead: a tree planted today will give its greatest benefits to people not yet born.\n\nE. Personally, I find the movement hopeful. For two centuries, progress meant replacing nature with concrete; now the most advanced cities compete to bring nature back. If governments protect these young forests with the same energy they protect new roads, future generations will inherit cooler, kinder cities.",
    "questions": [
@@ -27394,7 +27394,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Growing Food on City Roofs",
    "text": "A. On the roof of a supermarket in Montreal, rows of tomatoes and lettuces grow under the open sky. The store below sells the vegetables on the same day they are picked, and customers can watch their food growing through a glass floor. This rooftop farm, one of the largest in the world, symbolises a movement that is spreading through cities on every continent: urban farming.\n\nB. The reasons for the trend are partly environmental. Food in a typical supermarket may travel 2,000 kilometres before it reaches the shelf, producing large amounts of carbon emissions. Vegetables grown on a roof travel only a few metres. Urban farms also use far less water than traditional agriculture, because modern systems recycle the water that plants do not absorb.\n\nC. There are social benefits, too. Community gardens have appeared on empty land in poor districts, where fresh vegetables were once expensive or unavailable. Elderly residents gain gentle exercise and company, while children who plant seeds often become more willing to taste the vegetables they have grown themselves. Several studies suggest that such gardens reduce stress and even local crime.\n\nD. Nevertheless, urban farming faces real limits. Land in cities is expensive, and a rooftop cannot feed a whole population. Critics point out that growing salad leaves is easy, but producing the grains and potatoes that supply most of our calories will always require countryside fields. Urban farms, in their view, are a useful addition, not a replacement.\n\nE. Whatever its limits, urban farming has changed how many city dwellers think about food. A generation that once saw vegetables only in plastic packaging is now learning how food grows. That knowledge, farmers say, may be the movement's most valuable harvest of all.",
    "questions": [
@@ -27479,7 +27479,7 @@ const CONTENT = {
   },
   {
    "topic": "Sở thích và giải trí",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "How Music Training Changes the Brain",
    "text": "A. Parents who pay for piano lessons often hope their child will simply learn to play an instrument. Research in the last twenty years suggests the benefits go much further. Children who receive regular musical training show measurable differences in the brain, particularly in areas connected with language, memory and attention.\n\nB. Learning an instrument is a demanding workout for the brain. Both hands must perform different movements, the eyes must read symbols, and the ears must judge sound - all at the same time. Studies using brain scans have found that the connection between the two halves of the brain is thicker in musicians, allowing information to travel faster between them.\n\nC. The effects on language are among the most surprising. Because music and speech share several processing systems, musically trained children often find it easier to distinguish similar sounds in a foreign language and to remember new words. Some schools have therefore introduced music programmes specifically to support reading skills among struggling pupils.\n\nD. Sceptics warn that the evidence is not perfect. Families who can afford music lessons are often wealthier and better educated, so their children might succeed for other reasons. Careful recent studies that compare children from similar backgrounds, however, still find advantages for the musical groups, though the effects are smaller than early headlines suggested.\n\nE. The conclusion most scientists now accept is modest but encouraging: music training will not turn an average child into a genius, but it strengthens real abilities in a way few other activities can match. Few hobbies, after all, train the body, the senses and the mind in a single hour.",
    "questions": [
@@ -27569,7 +27569,7 @@ const CONTENT = {
   },
   {
    "topic": "Du lịch và giao thông",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "The Bicycle: A Simple Machine That Changed Travel",
    "text": "A. Few inventions have changed everyday life as quietly as the bicycle. The earliest version appeared in Germany in 1817: a wooden machine with two wheels that the rider pushed along with his feet. It had no pedals, no chain and no brakes, yet it allowed people to travel two or three times faster than walking.\n\nB. In the 1860s, French makers added pedals to the front wheel, creating the machine nicknamed the boneshaker because of its hard wooden wheels on rough stone roads. Then, in the 1870s, came the penny-farthing, with an enormous front wheel that let riders travel faster but made falling dangerous and mounting difficult. Cycling at this stage remained a sport for daring young men.\n\nC. The breakthrough arrived in 1885 with the safety bicycle, whose design - two equal wheels, a chain driving the back wheel and a diamond-shaped frame - is recognisably the bicycle we know today. A few years later, air-filled tyres made riding comfortable. Prices fell rapidly, and factories began producing bicycles by the hundred thousand.\n\nD. The social effects were enormous, especially for women. The bicycle offered freedom of movement that many had never known: a woman could visit friends, attend classes or reach a job without depending on anyone. Fashion changed, too, as long skirts made cycling impossible and simpler clothes became acceptable. Some doctors at the time even warned against cycling, which only made it more attractive to the young.\n\nE. Today there are an estimated two billion bicycles in the world. In rich cities they are returning as a serious form of transport, supported by bike-sharing schemes and protected lanes. Two centuries after that first wooden machine, the bicycle remains one of humanity's simplest and smartest answers to moving around.",
    "questions": [
@@ -27655,7 +27655,7 @@ const CONTENT = {
   },
   {
    "topic": "Học tập và giáo dục",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "Learning a Second Language as an Adult",
    "text": "Many adults believe they have missed their chance to learn a foreign language. Children, they say, absorb languages like sponges, while adult brains are simply too old. Language researchers, however, paint a more balanced picture: adults and children learn in different ways, and each group has its own advantages.\n\nChildren are certainly better at acquiring a perfect accent. A child who grows up hearing two languages will usually speak both without a foreign accent, something very few adult learners achieve. Children also learn through play and imitation, without worrying about mistakes. For an adult sitting in a classroom, that fear of embarrassment can be the biggest obstacle of all.\n\nAdults, on the other hand, bring powerful tools to the task. They understand grammar rules, can compare the new language with their own, and usually have clearer reasons for learning - a job, an exam or travel. In studies, adults actually learn vocabulary and grammar faster than children in the first year. It is mainly pronunciation, not overall ability, where children keep their advantage.\n\nExperience also matters. An adult learner already knows how the world works: a Turkish businessman learning English, for example, already understands meetings and negotiations, and only needs the words. A child must learn the concept and the word together.\n\nIn my opinion, adults should stop comparing themselves with children and start using their strengths. Progress may be slower in accent, but with regular practice, clear goals and a willingness to make mistakes, adult learners can reach a very high level. Age, I believe, is an excuse far more often than it is a real barrier.",
    "questions": [
@@ -27744,7 +27744,7 @@ const CONTENT = {
   },
   {
    "topic": "Thức ăn và sức khỏe",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Chocolate: From Bitter Drink to Sweet Treat",
    "text": "A. Chocolate is loved all over the world, but it began as something quite different: a bitter drink. Around 3,000 years ago, people in Central America grew cacao trees and used the beans to make a spicy, frothy drink. The beans were so valuable that they were even used as money.\n\nB. In the 1500s, Spanish explorers brought cacao beans back to Europe. At first, only rich people could afford the drink, which was served in special chocolate houses in cities like London and Paris. Sugar was added to make it sweeter, but chocolate remained a luxury for more than 200 years.\n\nC. The Industrial Revolution changed everything. New machines could press the beans and mix them quickly, so chocolate became cheaper. In 1847, a British company produced the first modern chocolate bar, and milk chocolate followed thirty years later in Switzerland. Chocolate was no longer just a drink for the rich; it was a sweet for everyone.\n\nD. Today, most cacao comes from West Africa, where millions of small farmers grow the trees. Growing cacao is hard work: the pods must be cut by hand and the beans dried under the sun. Fair-trade schemes try to make sure farmers receive a fair price, but many still earn very little.\n\nE. Modern research has added one more chapter to the story. Dark chocolate contains substances that appear to be good for the heart, though scientists warn that chocolate also contains sugar and fat. In my view, a small piece of good chocolate, enjoyed slowly, is one of life's simple and harmless pleasures.",
    "questions": [
@@ -27828,7 +27828,7 @@ const CONTENT = {
   },
   {
    "topic": "Xã hội và văn hóa",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Volunteering in the Local Community",
    "text": "Last year, our town library started a programme that has quietly changed many lives. Every Saturday morning, volunteers of all ages meet there to help their neighbours. Some teach elderly people to use smartphones, some read stories to children, and others repair broken bicycles in the yard outside.\n\nThe programme began with just six volunteers. The idea came from Mrs Hoa, a retired teacher who believed that older people had skills the town was wasting. 'A retired electrician can fix lamps,' she said. 'A retired cook can teach young families to make cheap, healthy meals. Everyone knows something useful.'\n\nToday there are more than eighty regular volunteers, and the library lends tools as well as books. A recent survey found that volunteers themselves feel happier and less lonely than before. Students who help on Saturdays also report better communication skills, which several local employers say makes them stronger job candidates.\n\nThe programme is not expensive to run. The library provides the rooms, local shops donate materials, and a small town grant pays for insurance. What it really costs is time - and, as Mrs Hoa points out, time given to neighbours is rarely time wasted.\n\nOther towns have begun to copy the model. Their experience suggests that successful volunteering depends less on money than on organisation: clear tasks, regular hours and a warm welcome for newcomers.",
    "questions": [
@@ -27912,7 +27912,7 @@ const CONTENT = {
   },
   {
    "topic": "Thể thao và vận động",
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "title": "The Benefits of Daily Walking",
    "text": "A. Walking is the simplest form of exercise in the world. It needs no special equipment, no gym membership and no training. Yet doctors agree that a daily walk of about thirty minutes can improve health in many different ways.\n\nB. The first benefit is for the heart. Regular walking makes the heart stronger and reduces the risk of heart disease. Studies show that people who walk to work are generally fitter than people who drive, even if the walk is quite short.\n\nC. Walking also helps the mind. After a walk in a park, people usually feel calmer and think more clearly. Many writers and scientists in history took long walks every day because their best ideas came to them while they were moving.\n\nD. A daily walk is also good for the body in smaller ways. It keeps the legs and back strong, helps people control their weight, and improves sleep at night. Unlike running, walking is gentle, so it is suitable for older people and beginners.\n\nE. For all these reasons, health experts advise everyone to find time to walk. You do not need to walk far. The important thing is to walk a little every day and to make it part of your normal routine.",
    "questions": [
@@ -27998,7 +27998,7 @@ const CONTENT = {
  ,{"level":"Band 0","title":"Hello! I Am Nam","topic":"Bản thân và gia đình","text":"Hello! My name is Nam. I am a student. I am from Vietnam. I live in a small town.\n\nThis is my friend. Her name is Anna. She is from England. She is a student too.\n\nWe say hello every morning. We are happy at school.","questions":[{"type":"MC","q":"What is the boy's name?","options":["Nam","Anna","Minh"],"a":0,"why":"Trong bài, bạn nam tự giới thiệu tên là Nam. Vì vậy đáp án đúng là Nam."},{"type":"MC","q":"Where is Nam from?","options":["England","Vietnam","Japan"],"a":1,"why":"Trong bài, Nam nói mình đến từ Việt Nam. Vì vậy đáp án đúng là Việt Nam."},{"type":"MC","q":"What is Anna?","options":["A teacher","A doctor","A student"],"a":2,"why":"Trong bài, Anna cũng là học sinh. Vì vậy đáp án đúng là học sinh."},{"type":"MC","q":"Where is Anna from?","options":["Vietnam","England","France"],"a":1,"why":"Trong bài, Anna đến từ nước Anh. Vì vậy đáp án đúng là nước Anh."},{"type":"MC","q":"When do Nam and Anna say hello?","options":["In the evening","At night","Every morning"],"a":2,"why":"Trong bài, hai bạn chào nhau vào mỗi buổi sáng. Vì vậy đáp án đúng là mỗi buổi sáng."}],"translation":"Xin chào! Tên tôi là Nam. Tôi là học sinh. Tôi đến từ Việt Nam. Tôi sống ở một thị trấn nhỏ.\n\nĐây là bạn của tôi. Bạn ấy tên là Anna. Bạn ấy đến từ nước Anh. Bạn ấy cũng là học sinh.\n\nChúng tôi chào nhau vào mỗi buổi sáng. Chúng tôi vui vẻ ở trường.","phrases":[{"en":"My name is Nam","vi":"Tên tôi là Nam"},{"en":"I am from Vietnam","vi":"Tôi đến từ Việt Nam"},{"en":"This is my friend","vi":"Đây là bạn của tôi"},{"en":"every morning","vi":"mỗi buổi sáng"}]},{"level":"Band 0","title":"My Classroom","topic":"Học tập và giáo dục","text":"This is my classroom. It is small and clean.\n\nThis is my desk. My book is on the desk. My pen is red. My bag is blue. There are ten chairs in the classroom.\n\nI like my classroom. I learn English here every day.","questions":[{"type":"MC","q":"How is the classroom?","options":["Big","Small","Old"],"a":1,"why":"Trong bài, lớp học được tả là nhỏ và sạch. Vì vậy đáp án đúng là nhỏ."},{"type":"MC","q":"What colour is the pen?","options":["Blue","Green","Red"],"a":2,"why":"Trong bài, cây bút có màu đỏ. Vì vậy đáp án đúng là màu đỏ."},{"type":"MC","q":"What colour is the bag?","options":["Red","Blue","Black"],"a":1,"why":"Trong bài, chiếc cặp có màu xanh dương. Vì vậy đáp án đúng là màu xanh dương."},{"type":"MC","q":"How many chairs are there in the classroom?","options":["Ten","Five","Two"],"a":0,"why":"Trong bài, lớp học có mười chiếc ghế. Vì vậy đáp án đúng là mười."},{"type":"MC","q":"Where is the book?","options":["In the bag","Under the desk","On the desk"],"a":2,"why":"Trong bài, quyển sách nằm trên bàn học. Vì vậy đáp án đúng là trên bàn học."}],"translation":"Đây là lớp học của tôi. Lớp học nhỏ và sạch.\n\nĐây là bàn học của tôi. Quyển sách của tôi ở trên bàn. Cây bút của tôi màu đỏ. Chiếc cặp của tôi màu xanh dương. Trong lớp có mười chiếc ghế.\n\nTôi thích lớp học của mình. Tôi học tiếng Anh ở đây mỗi ngày.","phrases":[{"en":"my classroom","vi":"lớp học của tôi"},{"en":"on the desk","vi":"trên bàn học"},{"en":"My pen is red","vi":"Cây bút của tôi màu đỏ"},{"en":"every day","vi":"mỗi ngày"}]},
   {
    "topic": "Du lịch và giao thông",
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "title": "The Night Trains of Europe Are Back",
    "text": "For decades, night trains were disappearing from Europe. Cheap flights and fast day trains pushed sleeper services out of business, and many routes closed completely. In recent years, however, the night train has returned. Travellers who worry about the climate are choosing the train again, and operators are reopening routes that had been closed for years.\n\nThree operators now lead this revival, but each follows a different strategy. A. ÖBB Nightjet, the Austrian operator, has invested in brand-new carriages with private mini-cabins for passengers who want more comfort and privacy. B. SNCF, the French operator, has taken a different approach, selling couchette tickets from 29 euros to attract younger travellers with little money. C. SJ, the Swedish operator, runs some of the longest routes, including a service from Stockholm to the Arctic Circle for tourists who hope to see the northern lights.\n\nThe design of a modern sleeper carriage is shown in railway diagrams. By the door there is a luggage area for large suitcases, so passengers do not block the way. Along one side of the carriage runs a narrow corridor, and on the other side are the compartments. Each compartment contains bunk beds that are folded down at night, a small washbasin with a mirror, and reading lights above every bed.\n\nRunning night trains is still expensive, because the carriages earn money only at night and staff costs are high. Nevertheless, bookings keep rising, especially on holiday routes, and several governments now support sleeper services as part of their climate plans. The night train, it seems, has a future again.",
    "questions": [
@@ -28075,7 +28075,7 @@ const CONTENT = {
   },
   {
    "topic": "Môi trường và thiên nhiên",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "The Dance of the Honeybees",
    "text": "When a honeybee finds a rich source of food, she returns to the hive and performs a remarkable dance that tells the other bees where the food is. This behaviour, known as the waggle dance, has fascinated scientists for more than a century, because it is one of the few examples of symbolic communication in insects.\n\nThree researchers shaped the modern understanding of the dance. A. Karl von Frisch, an Austrian scientist, argued that the dance is a true language: the direction of its central run shows the direction of the food, and the length of the run shows the distance. B. Adrian Wenner, an American researcher, disagreed strongly. In his view, returning bees mainly follow odours carried back by successful bees, and the dance itself tells the colony very little. C. James Gould, also from the United States, designed careful experiments in the 1970s which convinced most scientists that von Frisch was largely correct, although smell also plays a smaller part.\n\nThe dance itself takes place on the vertical surface of the honeycomb and follows the shape of a figure eight. In the middle of the pattern, the bee walks in a straight line called the waggle run, shaking her abdomen quickly from side to side. She then loops back, first on one side and then on the other, and begins again. The angle between the waggle run and the vertical line on the comb represents the angle between the sun and the food source.\n\nModern technology has added new details. Using tiny radar devices, scientists have tracked bees that watched a dance and confirmed that most of them fly directly to the place the dancer described. The waggle dance, once a complete mystery, is now one of the best understood forms of animal communication.",
    "questions": [
@@ -28152,7 +28152,7 @@ const CONTENT = {
   },
   {
    "topic": "Xã hội và văn hóa",
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "title": "Great Rivers, Great Civilisations",
    "text": "The world's great rivers have shaped human history. Civilisations grew along their banks because rivers provide water, fertile soil and a natural road for trade. Yet each of the three rivers below has played a quite different role.\n\nA. The Nile, at about 6,650 kilometres, is generally considered the longest river on Earth. It flows through eleven African countries before reaching the Mediterranean Sea, and its annual floods once made farming possible in the Egyptian desert. B. The Amazon, in South America, is far shorter than the Nile but carries more water than any other river on the planet; indeed, it carries more than the next seven largest rivers combined. C. The Mekong flows through six countries in Southeast Asia, and its waters support rice farming and fishing for more than sixty million people.\n\nThe journey of a river follows a clear pattern, shown in geography diagrams of a river course. Every river begins at its source, often high in the mountains, where the water is cold and flows fast. As the land becomes flatter, the river slows and bends into wide curves called meanders. Finally, the river reaches the sea and drops the mud and sand it has carried, slowly building a flat area of new land known as a delta.\n\nRivers now face serious threats. Dams block the movement of fish and change the flow of water, while pollution and climate change reduce the amount of water available. Protecting the great rivers, scientists argue, means protecting the communities that still depend on them.",
    "questions": [
@@ -28229,7 +28229,7 @@ const CONTENT = {
   },
   {
    "topic": "Y tế và chăm sóc sức khỏe",
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "title": "Regular Health Check-ups and the Prevention of Disease",
    "text": "Many people only visit a doctor when they feel ill. However, doctors around the world agree that regular health check-ups are one of the simplest ways to protect our health. A check-up usually includes measuring blood pressure, testing the blood, and checking weight and heart rate. These simple tests take less than an hour, but they can reveal problems long before any symptoms appear.\n\nEarly detection is the main benefit of regular check-ups. Serious diseases such as diabetes and high blood pressure often develop slowly and silently. A person may feel completely healthy while the disease is already damaging the body. If doctors discover these conditions early, treatment is usually easier, cheaper and more successful. In contrast, late treatment often requires surgery or long stays in hospital.\n\nCheck-ups are also a chance to build healthy habits. During the visit, doctors can advise patients about diet, exercise and sleep, and remind them about vaccinations. Studies show that people who attend regular check-ups are more likely to quit smoking and control their weight. In this way, the check-up is not only about finding disease, but also about preventing it.\n\nHow often should we have a check-up? Most doctors recommend once a year for adults, although older people and those with chronic conditions may need to go more often. The appointment is short and the cost is small, but the benefit, a longer and healthier life, is enormous.",
    "questions": [
@@ -28318,7 +28318,7 @@ const CONTENT = {
   },
   {
    "topic": "Y tế và chăm sóc sức khỏe",
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "title": "Antibiotic Resistance: A Global Health Threat",
    "text": "Antibiotics are among the most important medicines ever discovered, saving millions of lives since the 1940s. However, the bacteria they are designed to kill are learning to resist them, and this growing problem, known as antibiotic resistance, is now considered one of the greatest threats to global health.\n\nA. The main cause of resistance is the overuse and misuse of antibiotics in humans. Too often, patients demand antibiotics for viral infections such as colds, against which the drugs have no effect. Others stop taking their medicine as soon as they feel better, leaving the strongest bacteria alive. These surviving bacteria multiply and pass their resistance to future generations.\n\nB. Agriculture is another major driver of the crisis. On many farms, antibiotics are given to healthy animals not to cure disease but to make them grow faster and to prevent infection in crowded conditions. In some countries, more antibiotics are used in animals than in people, and resistant bacteria can reach humans through food and water.\n\nC. The consequences are already visible in hospitals worldwide. Infections that were once easy to treat, such as pneumonia and urinary infections, are becoming harder and sometimes impossible to cure. Patients must stay in hospital longer, doctors are forced to use stronger and more expensive drugs, and the risk of death rises, particularly for the elderly and those with weak immune systems.\n\nD. Solving the problem requires action at every level. Governments should restrict the use of antibiotics in farming and invest in research into new drugs. Doctors must prescribe antibiotics only when they are truly necessary, and patients should always finish the full course of treatment. Meanwhile, better hygiene, clean water and vaccination can reduce the number of infections and therefore the need for antibiotics in the first place.",
    "questions": [
@@ -28413,7 +28413,7 @@ const CONTENT = {
    "section": "Section 1",
    "topic": "Đăng ký phòng tập",
    "text": "Good morning. I'd like to join the fitness centre, please.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
@@ -28425,565 +28425,565 @@ const CONTENT = {
    "section": "Section 1",
    "topic": "Đăng ký phòng tập",
    "text": "I live at 42 Bridge Street, next to the post office.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký phòng tập",
    "text": "The monthly membership costs thirty-five pounds, including all classes.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Thuê nhà",
    "text": "We're looking for a two-bedroom flat within walking distance of the station.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 1",
    "topic": "Thuê nhà",
    "text": "The rent is eight hundred pounds a month, not including electricity.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 1",
    "topic": "Thuê nhà",
    "text": "We'd like to move in on the fifteenth of September.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Đặt tour du lịch",
    "text": "The coach tour leaves at a quarter past eight from the main square.",
-   "band": "Band 3.5"
+   "band": "Band 3,5"
   },
   {
    "section": "Section 1",
    "topic": "Đặt tour du lịch",
    "text": "Lunch is included in the price, but drinks are extra.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Đặt tour du lịch",
    "text": "You should bring a waterproof jacket, as the weather can change quickly.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi thông tin khóa học",
    "text": "The photography course starts on Monday the third of October.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi thông tin khóa học",
    "text": "Students need to bring their own camera, but tripods are provided.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu bảo tàng",
    "text": "Welcome to the City Museum, which first opened its doors in nineteen twenty-three.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu bảo tàng",
    "text": "On the ground floor, you'll find the exhibition of local history.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu bảo tàng",
    "text": "The museum is closed on Mondays, except during public holidays.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu bảo tàng",
    "text": "Photography is allowed in most galleries, but please do not use flash.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn an toàn ở bể bơi",
    "text": "Children under the age of eight must be accompanied by an adult at all times.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn an toàn ở bể bơi",
    "text": "The deep end of the pool is two metres, so diving is only permitted there.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo sự kiện cộng đồng",
    "text": "This year's summer festival will take place in Riverside Park on the last weekend of July.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo sự kiện cộng đồng",
    "text": "Entry is free, although there is a small charge for the boat rides.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu thư viện",
    "text": "Members may borrow up to ten books at a time for a period of three weeks.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu thư viện",
    "text": "The computer room on the second floor is open until nine in the evening.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu thư viện",
    "text": "If you lose your library card, a replacement will cost five pounds.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo sự kiện cộng đồng",
    "text": "Volunteers are needed to help set up the stalls on Friday afternoon.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
    "text": "I think we should divide the presentation into three equal parts.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
    "text": "The deadline for the essay has been extended to the end of next week.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
    "text": "According to our survey, most students prefer studying in the library.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi ý kiến giảng viên",
    "text": "Your introduction is clear, but the conclusion needs to summarise the main findings.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi ý kiến giảng viên",
    "text": "I'd suggest adding more recent data to support your argument.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
    "text": "We interviewed forty local residents for the project last month.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 3",
    "topic": "Chọn đề tài nghiên cứu",
    "text": "The topic is interesting, but the scope might be too broad for one semester.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 3",
    "topic": "Chọn đề tài nghiên cứu",
    "text": "Let's focus on the effects of social media on teenagers' study habits.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi ý kiến giảng viên",
    "text": "Remember to reference all your sources using the Harvard system.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
    "text": "The results were surprising because they contradicted our original hypothesis.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 3",
    "topic": "Chọn đề tài nghiên cứu",
    "text": "We could compare the reading habits of children in urban and rural areas.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi ý kiến giảng viên",
    "text": "Your methodology section should explain exactly how the data was collected.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: kiến trúc bền vững",
    "text": "In today's lecture, we shall examine how buildings can be designed to reduce energy consumption.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: kiến trúc bền vững",
    "text": "Passive houses maintain a comfortable temperature without conventional heating systems.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: tâm lý học hành vi",
    "text": "Behavioural economics challenges the traditional assumption that consumers always act rationally.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: tâm lý học hành vi",
    "text": "Studies show that people tend to value losses more heavily than equivalent gains.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: hải dương học",
    "text": "Ocean currents play a crucial role in regulating the climate of coastal regions.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: hải dương học",
    "text": "The melting of polar ice is contributing to a gradual rise in sea levels worldwide.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: lịch sử y học",
    "text": "Before the discovery of antibiotics, even minor infections could prove fatal.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: lịch sử y học",
    "text": "The introduction of anaesthesia in the nineteenth century transformed surgical practice.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: ngôn ngữ học",
    "text": "Children acquire their first language through interaction rather than formal instruction.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: ngôn ngữ học",
    "text": "It is estimated that a language disappears somewhere in the world every two weeks.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: thiên văn học",
    "text": "The telescope, first used by Galileo in sixteen oh nine, revolutionised our view of the universe.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: thiên văn học",
    "text": "Distances in space are so vast that astronomers measure them in light years.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Đặt lịch khám răng",
    "text": "Hello, I'd like to book a dental appointment for next Tuesday at half past ten, if possible.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Mua vé tàu",
    "text": "Could I have a return ticket to Manchester, leaving on the 8:15 train tomorrow morning, please?",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký thẻ thư viện",
    "text": "I'd like to apply for a library card, and I have brought my passport and a recent electricity bill.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Thuê xe đạp",
    "text": "How much does it cost to hire a bicycle for three days, and is a helmet included in the price?",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Đặt bàn nhà hàng",
    "text": "I'd like to reserve a table for five people at seven o'clock on Saturday evening, near the window.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi giờ mở cửa ngân hàng",
    "text": "Excuse me, could you tell me what time the bank opens on Saturday mornings during the winter?",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký lớp học nấu ăn",
    "text": "I'm interested in joining the Italian cooking class that starts on 12 March at the community centre.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Mua bảo hiểm du lịch",
    "text": "I need travel insurance for a two-week holiday in Spain, starting from 5 July, for two adults.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Đặt phòng khách sạn",
    "text": "I'd like to book a double room with breakfast for three nights, from the 18th to the 21st of April.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi thông tin bưu điện",
    "text": "How much would it cost to send this parcel to Australia, and how long will it take to arrive?",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký tài khoản ngân hàng",
    "text": "I'd like to open a savings account, please, and I've got my driving licence and proof of address with me.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Thuê thiết bị cắm trại",
    "text": "We'd like to hire a four-person tent and two sleeping bags for the weekend of the 24th and 25th.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu công viên quốc gia",
    "text": "Welcome to Snowdonia National Park, which covers over 800 square miles and welcomes two million visitors each year.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn tham quan nhà máy",
    "text": "During today's factory tour, please stay with your guide at all times and wear the safety helmet provided.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo hội chợ việc làm",
    "text": "The annual jobs fair will take place at the exhibition centre on Friday 9 May, with over sixty employers attending.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu câu lạc bộ nhiếp ảnh",
    "text": "Our photography club meets every Thursday evening at 7:30 in Room 4, and new members of all levels are welcome.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu trang trại hữu cơ",
    "text": "Greenfield Organic Farm produces fresh vegetables without chemicals and delivers boxes to homes every Wednesday.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn tham quan lâu đài",
    "text": "The castle tour begins at the main gate at eleven o'clock and lasts approximately ninety minutes in total.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo lễ hội ẩm thực",
    "text": "This year's food festival runs from 14 to 16 June in Market Square, featuring chefs from twelve different countries.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu trung tâm thể thao",
    "text": "The new sports centre includes a 25-metre swimming pool, two gyms and six badminton courts for public use.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn đi xe buýt thành phố",
    "text": "To travel across the city, take bus number 42 from Central Station and get off at the stop opposite the museum.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo triển lãm nghệ thuật",
    "text": "The art exhibition opens on 3 October at the City Gallery and displays more than one hundred modern paintings.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu vườn bách thảo",
    "text": "Founded in 1820, the botanical garden is home to over 8,000 plant species from five continents around the world.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn an toàn khi đi biển",
    "text": "For your safety at the beach, always swim between the red and yellow flags and never swim alone after dark.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận đề tài thuyết trình",
    "text": "I think our presentation should focus on renewable energy in rural areas, because the data are easier to find.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi giảng viên về hạn nộp bài",
    "text": "Excuse me, Dr Carter, could you confirm whether the essay deadline is the 28th or the 30th of November?",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Chọn phương pháp khảo sát",
    "text": "Shall we use an online questionnaire for our survey, or would face-to-face interviews give us better results?",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Phân công việc nhóm học kỳ",
    "text": "I'll write the introduction this week, and you could prepare the charts for the second part of the report.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận kết quả thí nghiệm",
    "text": "The results were surprising because the temperature rose much faster in the second experiment than in the first.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Chuẩn bị hội thảo khoa học",
    "text": "We need to submit our poster for the science conference by Friday, so let's check the layout this afternoon.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Chọn sách tham khảo",
    "text": "The tutor recommended the 2021 edition of this textbook, as it includes a useful chapter on research methods.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận chương trình thực tập",
    "text": "My internship starts in June at a local charity, where I'll work three days a week with the marketing team.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Đánh giá bài thuyết trình nhóm",
    "text": "Our group presentation went well overall, although we spoke a little too quickly during the final section.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Lên kế hoạch nghiên cứu thực địa",
    "text": "For the field trip next month, we should visit the river valley first and collect water samples in the morning.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận cách chia điểm nhóm",
    "text": "Do you think the tutor will mark us as a group, or will each member receive an individual grade this time?",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Xin gia hạn nộp bài tập",
    "text": "I'm sorry, but could I have a two-day extension for this assignment, as I've been unwell since Monday?",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: biến đổi khí hậu ven biển",
    "text": "In this lecture, we will consider how rising sea levels threaten coastal cities and low-lying farmland worldwide.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: hành vi động vật",
    "text": "Today we examine how elephants communicate over long distances using sounds that humans cannot easily hear.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: kinh tế học cơ bản",
    "text": "This lecture introduces the basic principle of supply and demand and how it influences prices in a free market.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: lịch sử điện ảnh",
    "text": "In today's lecture, we trace the development of cinema from silent black-and-white films to modern digital productions.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: dinh dưỡng học",
    "text": "We shall now discuss why a balanced diet requires proteins, vitamins and minerals in the correct proportions daily.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: thám hiểm vũ trụ",
    "text": "This lecture explores how space exploration changed after the first human landing on the Moon in July 1969.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: nghệ thuật thời Phục hưng",
    "text": "Today's lecture focuses on Renaissance art in Italy and the artists who transformed painting during the 15th century.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: quản lý nguồn nước",
    "text": "In this lecture, we look at how governments manage water resources in regions that suffer from frequent droughts.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: sự phát triển của ngôn ngữ",
    "text": "We will examine how languages develop over centuries through contact between different cultures and trading nations.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: robot trong y học",
    "text": "This lecture considers how robots are now assisting surgeons to perform operations with greater precision and safety.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: khảo cổ học",
    "text": "Today we shall investigate how archaeologists use carbon dating to estimate the age of ancient tools and bones.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Bài giảng: âm nhạc cổ điển",
    "text": "In this lecture, we explore how classical composers such as Mozart structured their symphonies in the 18th century.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 1",
@@ -29001,55 +29001,55 @@ const CONTENT = {
    "section": "Section 1",
    "topic": "Hỏi tuổi",
    "text": "How old are you? I am twenty years old.",
-   "band": "Band 2.0"
+   "band": "Band 2,0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi giờ",
    "text": "Excuse me, what time is it now?",
-   "band": "Band 2.0"
+   "band": "Band 2,0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi đường đi",
    "text": "Excuse me, where is the bus station?",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Mua cà phê",
    "text": "Can I have a cup of coffee, please?",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi giá tiền",
    "text": "How much is this book, please?",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Số điện thoại",
    "text": "My phone number is zero nine eight five.",
-   "band": "Band 2.0"
+   "band": "Band 2,0"
   },
   {
    "section": "Section 1",
    "topic": "Ngày tháng",
    "text": "Today is Monday, the fifth of May.",
-   "band": "Band 2.0"
+   "band": "Band 2,0"
   },
   {
    "section": "Section 1",
    "topic": "Thời tiết hôm nay",
    "text": "It is sunny and warm today.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Gia đình tôi",
    "text": "I have one brother and one sister.",
-   "band": "Band 2.0"
+   "band": "Band 2,0"
   },
   {
    "section": "Section 1",
@@ -29061,583 +29061,583 @@ const CONTENT = {
    "section": "Section 1",
    "topic": "Đặt lịch cắt tóc",
    "text": "A: Good morning, Sunny Hair Salon. How can I help you? B: Hi, I would like to book a haircut for this Saturday, please. A: We have two free slots on Saturday, one at 9.30 in the morning and one at 3.15 in the afternoon. B: I will take the morning one, please. A: May I have your name and phone number? B: It is Lan Anh, and my number is 0912 345 678. A: Thank you. A standard cut is 150,000 dong, and it takes about 40 minutes.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi thuê phòng trọ",
    "text": "A: Hello, I saw your advert for a room in Alley 12, Nguyen Trai Street. Is it still available? B: Yes, it is. The room is 20 square metres, with its own bathroom and a small balcony. A: How much is the rent? B: It is 3,500,000 dong a month, plus electricity at 3,500 dong per unit. A: Can I come and see it tomorrow evening? B: Of course. I am free after 6 pm. Just call me when you arrive at the gate.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Mua vé xem phim",
    "text": "A: Two tickets for the 7.45 show of The Last Journey, please. B: I am sorry, that show is sold out. The next one starts at 9.20 tonight. A: That is a bit late, but okay. Can we have seats in the middle? B: Row G, seats 8 and 9 are still free. That is 90,000 dong per ticket. A: Here is my card. B: Thank you. Please arrive 10 minutes early, because the doors close at 9.15.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký lớp yoga",
    "text": "A: I would like to join the beginners yoga class, please. B: The beginners class runs on Tuesday and Thursday evenings, from 6.00 to 7.00. A: How many people are in each class? B: A maximum of 12, and our teacher, Ms Hoa, has 8 years of experience. A: What is the fee? B: 600,000 dong for 8 sessions. You also need to bring your own mat. A: No problem. Can I start next Tuesday?",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi đường ra bến xe",
    "text": "A: Excuse me, could you tell me the way to the central bus station? B: Sure. Go straight along this road for about 300 metres, then turn left at the traffic lights. A: Is it far from here? B: Not really. It is only a 10-minute walk. You will see a big blue sign with a white bus on it. A: Thank you very much. B: You are welcome. The station is open from 5 am to 10 pm every day.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Đặt bánh sinh nhật",
    "text": "A: I would like to order a birthday cake for my daughter, please. B: What size would you like? Our most popular one serves 10 people and costs 350,000 dong. A: That size is fine. Can it be a chocolate cake with strawberries on top? B: Certainly. What name should we write on the cake? A: Please write Happy Birthday, Mai Phuong. I will collect it at 4 pm on Friday. B: Perfect. We need a deposit of 100,000 dong today, please.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Đổi size áo",
    "text": "A: Excuse me, I bought this shirt yesterday, but it is too small. Can I exchange it for a larger size? B: Of course. Do you have the receipt with you? A: Yes, here it is. The shirt was 280,000 dong. B: Let me check. We have size L in the same colour, dark blue. A: Great, that is the colour I want. B: Here you are. Please try it on in fitting room number 2, just to be sure.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi giá gửi xe",
    "text": "A: Excuse me, how much is it to park a motorbike here for the whole day? B: It is 5,000 dong during the day, until 6 pm. After 6 pm, the price is 10,000 dong. A: And what about overnight parking? B: Overnight is 20,000 dong, and you must collect your bike before 8 am the next day. A: I see. Do you accept card payments? B: Sorry, we only take cash or bank transfer at the moment.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Đăng ký thẻ xe buýt",
    "text": "A: I would like to apply for a monthly bus pass, please. B: You need one photo, your ID card, and this form. The pass costs 200,000 dong a month. A: I am a student. Is there a discount? B: Yes, students pay only 100,000 dong if they show a valid student card. A: Here is my student card. How long does it take? B: Your pass will be ready in 3 working days. You can pick it up at this counter.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Hẹn sửa ống nước",
    "text": "A: Hello, the tap in my kitchen is leaking badly. Can you send a plumber today? B: We can come this afternoon between 2 and 4 pm. What is your address? A: Flat 506, Building C, Green Valley Apartments. B: Our call-out fee is 100,000 dong, and repairs start from 150,000 dong, depending on the problem. A: That is fine. Please call me 15 minutes before you arrive. B: No problem. My name is Tuan, and I will be your plumber today.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Mua hoa tặng mẹ",
    "text": "A: I am looking for a bunch of flowers for my mother. It is her birthday today. B: How about pink roses? They are very fresh this morning, 25,000 dong each. A: Ten roses would be lovely. Could you add some white baby breath as well? B: Of course. With wrapping and a card, the total is 280,000 dong. A: Perfect. Can I pick them up at 5.30 this evening? B: Yes, we will keep them in water until you come.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi thủ tục làm hộ chiếu",
    "text": "A: Good morning. I need to apply for a passport for the first time. What documents do I need? B: You need your ID card, your household registration book, and two photos sized 4 by 6 centimetres. A: Do I have to book an appointment online first? B: Yes, please register on the portal and choose a time slot. The fee is 200,000 dong. A: How long will I wait for the passport? B: Eight working days. We will send it to your home address by post if you wish.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn an toàn bể bơi",
    "text": "Welcome to Riverside Swimming Pool. Before you get into the water, please listen carefully to our safety rules. Children under 10 must be with an adult at all times. The shallow end is 1.2 metres deep, while the deep end is 2.5 metres, so please do not dive at the shallow end. Our lifeguards are on duty from 6 am to 8 pm, and swimming is not allowed outside these hours. Finally, please shower before entering the pool and do not run on the wet floor.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu chợ cuối tuần",
    "text": "If you are free on Saturday morning, come and visit the Riverside Weekend Market in District 2. The market opens at 7 am and closes at 1 pm, and entry is completely free. More than 60 stalls sell fresh vegetables, homemade cakes, flowers and handmade gifts. This Saturday, there is also a small cooking class for children at 9 am, but places are limited to 15 children, so please register at the information desk early. Parking is available behind the community hall for 5,000 dong per motorbike.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo trên tàu",
    "text": "Good afternoon, ladies and gentlemen. This is the SE4 train from Sai Gon to Ha Noi. We will arrive at Nha Trang station in about 15 minutes, at 3.40 pm. Passengers getting off at Nha Trang, please check that you have all your luggage with you. The dining car is now open on coach number 8 and serves hot meals until 9 pm. Our next stop after Nha Trang will be Dieu Tri, where we expect to arrive at 6.25 pm. Thank you for travelling with us.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu câu lạc bộ sách",
    "text": "Hello everyone, and welcome to the Sunrise Book Club. We meet on the first Friday of every month at 7 pm in Room 204 of the city library. Each month we choose one book together, and next month we will discuss a famous travel novel chosen by our members. Membership costs 50,000 dong a year, which covers tea, coffee and printed discussion notes. New members are very welcome, and you do not need to finish the whole book before your first meeting. Just come, listen, and share what you think.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn tham quan nông trại",
    "text": "Welcome to Green Valley Farm. Our guided tour starts every hour from 8 am, and the last tour leaves at 4 pm. The tour lasts about 90 minutes and costs 80,000 dong for adults and 40,000 dong for children. During the tour, you will feed the goats, collect eggs and learn how we grow vegetables without chemicals. Please stay with your guide at all times and do not feed the animals with food from outside the farm. At the end of the tour, you can taste our fresh milk in the farm shop.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo thư viện",
    "text": "This is an announcement from the Central Library. From next Monday, the 15th, our opening hours will change. We will open at 7.30 am and close at 9 pm from Monday to Friday. At weekends, we close earlier, at 5.30 pm. Also, the reading room on the third floor will be closed for repairs from the 20th to the 27th, but all other floors will stay open as normal. Please remember that you can renew your books online, so you do not need to come to the library in person.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu phòng gym mới",
    "text": "Welcome to FitLife Gym, the newest gym in our neighbourhood. We are open every day from 5.30 am to 10 pm. On the first floor, you will find over 40 exercise machines and a large area for free weights. The second floor is for group classes, including spinning at 6 pm and Zumba at 7 pm on weekdays. This month only, new members pay just 299,000 dong for the first month, with no joining fee. Your membership also includes one free session with a personal trainer.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn phân loại rác",
    "text": "Good morning, residents. From the 1st of next month, our building will start separating rubbish into three groups. Green bins are for food waste, such as fruit skins and leftover rice, and they are emptied every evening at 7 pm. Blue bins are for things we can recycle, like paper, plastic bottles and cans. Black bins are for everything else. Please tie your bags carefully and put them in the correct bin on the ground floor. This small habit will keep our building clean and help protect the environment.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu lễ hội ẩm thực",
    "text": "The annual City Food Festival returns to Flower Park this weekend, from Friday the 12th to Sunday the 14th. This year, more than 100 food stalls will offer dishes from 12 different countries. The festival opens at 10 am and closes at 10 pm, and entry tickets cost 30,000 dong for adults, while children under 6 get in free. Do not miss the cooking show by Chef Andre Nguyen at 5 pm on Saturday. Please note that the festival is cashless, so bring a bank card or your phone to pay.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo thay đổi giờ xe buýt",
    "text": "Attention, passengers. From Monday the 22nd, bus number 14 will follow a new timetable. On weekdays, the first bus will leave the station at 5.15 am instead of 5.45 am, and buses will run every 12 minutes in the morning rush hour. The last bus of the day will leave at 10.30 pm. At weekends, the timetable stays the same as before. We are making this change because more and more students and office workers are using this route early in the morning.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu khóa học sơ cứu",
    "text": "Our First Aid Course for beginners will take place on Saturday the 20th at the Community Health Centre on Le Loi Street. The course runs from 8 am to 4.30 pm, with a one-hour lunch break. You will learn how to help someone who is choking, how to treat small burns, and how to do CPR correctly. The course costs 450,000 dong, including a handbook and a certificate. There are only 20 places, and you must register at least 3 days before the course starts.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn dùng ứng dụng đặt xe",
    "text": "Booking a car with the GoRide app is quick and easy. First, open the app and type your destination in the box at the top of the screen. Next, choose the type of car you want: a standard car carries 4 people, while a large car is better for groups of 6 or 7. The app will show you the price before you confirm, so there are no surprises. After your trip, please rate your driver from 1 to 5 stars. If you leave something in the car, tap Help and we will contact the driver for you.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 3",
    "topic": "Bàn nguồn tài liệu bài luận",
    "text": "Minh: For our essay on air pollution, I think we should use at least 8 sources. Linh: I agree, but our teacher said academic journals count more than newspapers. Minh: I found three good journal articles in the library database yesterday. Linh: Great. I will look for government reports on the health ministry website, because they have the latest numbers. Minh: Let us meet on Thursday at 3 pm to check the reference list together, before the draft is due on Monday.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Phản hồi bản nháp thuyết trình",
    "text": "Tutor: I have read your draft slides. The structure is clear, but your introduction is too long. Student: Should I cut the background section, then? Tutor: Yes, keep only two background points, and move faster to your main argument. Student: What about the chart on slide 6? Tutor: The chart is useful, but the numbers are too small to read. Make the font at least size 24. Student: Thank you. I will send you the new version by Friday morning.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Chọn phương pháp khảo sát",
    "text": "Ha: Should we use an online questionnaire or face-to-face interviews for our survey? Duc: Online is cheaper and faster. We can reach 200 students in one week. Ha: True, but people often skip questions online. Interviews give us deeper answers. Duc: Then let us do both: a questionnaire for 200 students, plus 10 short interviews. Ha: That sounds balanced. I will design the questionnaire tonight, and you can write the interview questions.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Bàn lịch học nhóm",
    "text": "Trang: Our group needs a fixed study time before the exam on the 18th. Khoa: I am free on Monday and Wednesday afternoons, after 2 pm. Trang: Wednesday is better for me. Mai has a part-time job on Mondays. Khoa: Let us meet every Wednesday from 3 to 5 pm in the library, room B. Trang: Good. Each week, one person prepares 10 practice questions. I will start this week with the grammar unit. Khoa: Deal. I will book the room today.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Tranh luận về học trực tuyến",
    "text": "An: I think online learning is better because students can study anytime, anywhere. Binh: I disagree. In a real classroom, you can ask the teacher questions immediately. An: But online courses are cheaper, and students in small towns can learn from top teachers. Binh: That is true, but many students lose motivation without classmates around them. An: Maybe the best answer is a mix: lectures online, and discussions in class. Binh: I can agree with that.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Chuẩn bị thực địa",
    "text": "Teacher: Next Tuesday, our class will visit the river delta for fieldwork. Please listen to the plan. Student: What time do we leave, teacher? Teacher: The bus leaves the main gate at 6.30 am, so be there by 6.15. Each group needs a notebook, a camera, and sample bottles. Student: Should we bring our own lunch? Teacher: Yes, and wear boots, because the ground near the river is wet. We will be back at school by 4 pm.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Phân công bài tập lớn",
    "text": "Phuc: Our group project has four parts, and the deadline is the 30th. Let us divide the work today. Yen: I am good at numbers, so I will do the data analysis. Phuc: Then I will write the introduction and the conclusion. What about the presentation slides? Yen: Son can design the slides, he is fast with design tools. Phuc: And we all meet on the 25th to practise. Yen: Agreed. If anyone falls behind, tell the group early, not at the last minute.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Bàn câu hỏi phỏng vấn nghiên cứu",
    "text": "Nga: For our research interviews, our questions must be open questions, not yes-no questions. Tam: Right. Instead of asking Do you like the canteen, we should ask What do you think about the food in the canteen? Nga: Exactly. We also need to avoid two questions in one sentence. Tam: How many questions should we prepare? Nga: About 12 main questions, and the whole interview should last no more than 20 minutes, so people do not get tired.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Đánh giá bài thuyết trình thử",
    "text": "Tutor: Your practice presentation was much better than last week. Your voice was clear and you looked at the audience. Student: Thank you. Which part was still weak? Tutor: The ending. You stopped suddenly without a summary. Add one final slide with your three main points. Student: I also spoke too fast in the middle part. Tutor: Yes, about 160 words a minute. Try to slow down to around 130, and pause after each main point.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Chọn chủ đề hội thảo",
    "text": "Vy: Our department seminar is in November, and we must choose a topic this week. Long: Last year the topic was technology in education. Let us choose something new. Vy: What about mental health for first-year students? Many new students feel stressed. Long: That is a strong topic, and we can invite a doctor from the university hospital as a speaker. Vy: Good idea. I will write a short proposal and send it to our teacher by Friday.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Bàn ngân sách dự án sinh viên",
    "text": "Quan: Our student project has a total budget of 5,000,000 dong. We need to plan carefully. Hanh: The room rental is 1,200,000 dong for one day. Printing posters costs about 600,000 dong. Quan: That leaves us 3,200,000 dong for speakers, water and gifts. Hanh: We should keep 500,000 dong aside for unexpected costs. Quan: Agreed. I will make a simple budget table tonight and share it in our group chat, so everyone can check the numbers.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 3",
    "topic": "Chuẩn bị bảo vệ đồ án",
    "text": "Student: Teacher, my thesis defence is in two weeks. I am worried about the questions from the panel. Teacher: That is normal. Prepare short answers for three common questions: why you chose the topic, your method, and the limits of your study. Student: How long should my presentation be? Teacher: No more than 15 minutes, with about 12 slides. And bring two printed copies of your thesis. Student: Thank you, teacher. I will practise with my classmates this weekend.",
-   "band": "Band 6.5"
+   "band": "Band 6,5"
   },
   {
    "section": "Section 4",
    "topic": "Lịch sử của cà phê",
    "text": "Coffee was first discovered in Ethiopia more than a thousand years ago, when a farmer noticed his goats became energetic after eating red coffee berries. From Ethiopia, coffee travelled to Yemen, where people began roasting the beans and brewing them as a drink. By the 17th century, coffee houses had opened across Europe and became popular places to meet and exchange news. Today, coffee is grown in more than 70 countries, and Brazil is the largest producer in the world. Every day, people drink over two billion cups of coffee worldwide.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Giấc ngủ và trí nhớ",
    "text": "Sleep is not just rest for the body; it is also essential for the memory. While we sleep, the brain sorts the information we learned during the day and moves important facts into long-term memory. Studies show that students who sleep well after studying remember more than those who stay up all night. Most adults need between 7 and 9 hours of sleep each night. Going to bed at the same time every day also helps the brain work better the next morning.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Kiến trúc nhà sàn",
    "text": "Stilt houses are a traditional type of home found in many parts of Southeast Asia. The house stands on tall wooden posts, usually two to three metres above the ground. This design protects families from floods and keeps wild animals away at night. The space under the house is often used to store tools or to keep chickens and pigs. The roof is large and steep, so heavy rain runs off quickly. Even today, many families in mountain areas still choose this simple and practical design.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Vi nhựa trong đại dương",
    "text": "Microplastics are tiny pieces of plastic, smaller than five millimetres, that pollute our oceans. They come from plastic bottles, bags and clothes that slowly break into smaller and smaller pieces. Fish and sea birds often mistake these pieces for food, which can harm their health. Scientists have found microplastics in sea salt, drinking water and even in the air we breathe. Reducing single-use plastic is one of the most effective ways to slow this growing problem.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Ngôn ngữ ký hiệu",
    "text": "Sign language is a complete and natural language that uses hand shapes, movements and facial expressions instead of sounds. It is the main language of many deaf communities around the world. Interestingly, sign languages are not the same everywhere; British Sign Language and American Sign Language are quite different from each other. Children who learn sign language early can communicate with their families from a very young age. Today, more schools are teaching basic signs to all students, so that deaf and hearing children can play and learn together.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Năng lượng thủy triều",
    "text": "Tidal energy uses the natural rise and fall of the sea to produce electricity. Twice a day, tides move huge amounts of water near the coast, and special turbines under the water can turn this movement into power. Unlike solar or wind energy, tides are easy to predict years in advance. However, building tidal power stations is expensive, and the equipment must survive in salty sea water. Countries such as South Korea and France already operate large tidal power plants.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Hành vi của ong mật",
    "text": "Honeybees live in large colonies that may contain up to 60,000 bees. Each colony has one queen, whose main job is to lay eggs, sometimes as many as 2,000 in a single day. Worker bees collect nectar from flowers and, in doing so, help plants produce seeds and fruit. When a worker bee finds a good source of flowers, she performs a special dance to tell the others where it is. Bees are responsible for pollinating about one third of the food we eat, so protecting them is vital.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Thư viện công cộng đầu tiên",
    "text": "The first free public libraries appeared in the 19th century, when towns in Britain and America decided that everyone should be able to read books for free. Before that, most libraries charged a fee, so only wealthy people could use them. In 1850, Britain passed a law allowing towns to build libraries with public money. The idea spread quickly, and by the early 20th century, thousands of public libraries had opened around the world. Today, public libraries also offer computers, study rooms and free classes to their communities.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Nhiếp ảnh đường phố",
    "text": "Street photography captures real moments of everyday life in public places. The photographer usually works quietly with a small camera, waiting for interesting light, gestures or expressions. Unlike studio photography, nothing is arranged in advance, so each picture is a surprise. Famous street photographers often spend many hours walking the same streets, learning how people move at different times of day. Many people believe street photography is important because it records how our cities and our daily lives change over time.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Kinh tế chia sẻ",
    "text": "The sharing economy allows people to rent things they own to others, often through a mobile app. A family might rent out a spare room to travellers, or a driver might use his own car to carry passengers. This model became popular after 2008, when smartphones made it easy to connect strangers safely. Supporters say the sharing economy saves money and reduces waste. Critics, however, worry about workers rights, because many people in this economy have no fixed salary or insurance.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Âm nhạc và não bộ",
    "text": "Listening to music is one of the few activities that uses almost every part of the brain at the same time. Music can change our heart rate, reduce stress and even help people remember old memories. Patients with memory problems sometimes remember songs from their youth even when they have forgotten names and faces. Learning an instrument as a child can also improve language skills and concentration. For these reasons, many doctors now use music as part of treatment in hospitals.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 4",
    "topic": "Bản đồ số",
    "text": "Digital maps have changed the way we travel in less than twenty years. In the past, drivers used thick paper maps and often had to stop and ask for directions. Today, a phone can show our exact position using satellites and can update the route when traffic changes. Digital maps do more than guide drivers; they help ambulances find patients faster and help scientists track floods and forest fires. However, experts warn that we should still learn basic map skills, in case the battery dies or the signal is lost.",
-   "band": "Band 7.0"
+   "band": "Band 7,0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi số nhà",
    "text": "My house is number twenty-four, Green Street.",
-   "band": "Band 2.0"
+   "band": "Band 2,0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi ngày sinh nhật",
    "text": "Her birthday is on the third of June.",
-   "band": "Band 2.0"
+   "band": "Band 2,0"
   },
   {
    "section": "Section 1",
    "topic": "Giới thiệu anh chị em",
    "text": "I have one older brother and two younger sisters.",
-   "band": "Band 2.0"
+   "band": "Band 2,0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi khả năng bơi",
    "text": "Can you swim? Yes, I can swim very well.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Thói quen buổi sáng",
    "text": "She gets up at six and has breakfast at half past six.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Tìm đồ vật trong phòng",
    "text": "Your keys are on the table, next to the phone.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi giờ tàu chạy",
    "text": "The train to Hue leaves at a quarter past nine.",
-   "band": "Band 2.5"
+   "band": "Band 2,5"
   },
   {
    "section": "Section 1",
    "topic": "Kể việc hôm qua",
    "text": "Yesterday, we visited the zoo and saw the elephants.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 1",
    "topic": "Mua sắm cuối tuần trước",
    "text": "Last Saturday, I bought a new shirt at the market.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 1",
    "topic": "Việc đang xảy ra",
    "text": "Look! The children are playing football in the park.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 1",
    "topic": "Miêu tả căn phòng",
    "text": "My room is small but bright, with a desk near the window.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 1",
    "topic": "Điện thoại lúc đang nấu ăn",
    "text": "I am cooking dinner now, so I cannot talk for long.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo ở trường",
    "text": "The school library is now open from seven in the morning to eight in the evening.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu công viên",
    "text": "This park was built in nineteen ninety and is famous for its old trees.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn ở bể bơi",
    "text": "Children under ten must swim with an adult at all times.",
-   "band": "Band 3.0"
+   "band": "Band 3,0"
   },
   {
    "section": "Section 1",
    "topic": "Kể chuyến đi tuần trước",
    "text": "Last week, we drove to the beach and stayed there for two days.",
-   "band": "Band 3.5"
+   "band": "Band 3,5"
   },
   {
    "section": "Section 1",
    "topic": "So sánh hai chiếc xe đạp",
    "text": "This bike is lighter and faster than the red one.",
-   "band": "Band 3.5"
+   "band": "Band 3,5"
   },
   {
    "section": "Section 1",
    "topic": "Kế hoạch tối nay",
    "text": "We are going to watch the football match at my friend's house tonight.",
-   "band": "Band 3.5"
+   "band": "Band 3,5"
   },
   {
    "section": "Section 1",
    "topic": "Dự đoán thời tiết",
    "text": "Look at the sky. I think it is going to rain this afternoon.",
-   "band": "Band 3.5"
+   "band": "Band 3,5"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo chuyến tham quan",
    "text": "The school trip to the farm is going to start at seven thirty on Saturday.",
-   "band": "Band 3.5"
+   "band": "Band 3,5"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu chợ cuối tuần",
    "text": "The weekend market is bigger than the morning market and sells more kinds of fruit.",
-   "band": "Band 3.5"
+   "band": "Band 3,5"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn đi xe buýt",
    "text": "Bus number twelve is the fastest way to get to the city centre.",
-   "band": "Band 3.5"
+   "band": "Band 3,5"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo thay đổi giờ học",
    "text": "The English class moved from Tuesday to Thursday because the teacher was ill last week.",
-   "band": "Band 3.5"
+   "band": "Band 3,5"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo thư viện mới",
    "text": "The new library has just opened and already has more than five hundred members.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu khóa học nấu ăn",
    "text": "If you join the cooking course this week, you will get a free recipe book.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo về kỳ thi",
    "text": "Students who have finished their essays can leave them at the front desk.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận bài tập nhóm",
    "text": "We have already collected the data, but we have not written the report yet.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi về kinh nghiệm làm việc",
    "text": "Have you ever worked in a shop or a restaurant before?",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 3",
    "topic": "Bàn kế hoạch cuối tuần",
    "text": "If the weather is fine on Saturday, we will cycle to the lake.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 3",
    "topic": "Xin tư vấn chọn sách",
    "text": "I have read this novel twice because the story is so interesting.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận hạn nộp bài",
    "text": "Our teacher has given us three more days to finish the project.",
-   "band": "Band 4.0"
+   "band": "Band 4,0"
   },
   {
    "section": "Section 2",
    "topic": "Giới thiệu cây cầu cổ",
    "text": "This bridge was built in nineteen twenty and is still used by thousands of people every day.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 2",
    "topic": "Thông báo về bảo tàng",
    "text": "The museum, which was repaired last year, now opens seven days a week.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 3",
    "topic": "Kể về thói quen ngày xưa",
    "text": "My grandfather used to walk five kilometres to school every day.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận về cuốn sách",
    "text": "The book that I borrowed from the library is about the history of our town.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 3",
    "topic": "Bàn về kết quả khảo sát",
    "text": "Most students said that homework should not be given at weekends.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 3",
    "topic": "Hỏi ý kiến giảng viên",
    "text": "While we were doing the experiment, the lights suddenly went out.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 3",
    "topic": "Thảo luận phương tiện đi lại",
    "text": "Bicycles are cheaper than motorbikes and are better for the environment.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 3",
    "topic": "Chuẩn bị thuyết trình",
    "text": "The slides were prepared by Lan, who is the best designer in our group.",
-   "band": "Band 4.5"
+   "band": "Band 4,5"
   },
   {
    "section": "Section 1",
    "topic": "Kể triệu chứng với bác sĩ",
    "text": "I have had a terrible headache and a high fever since Monday.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Hỏi về dị ứng thuốc",
    "text": "Before I prescribe anything, I need to know if you are allergic to any medicine.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Dặn dò uống thuốc",
    "text": "Take one tablet twice a day after meals, and finish the whole course.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 1",
    "topic": "Hẹn tái khám",
    "text": "Please come back in one week so that I can check your blood pressure again.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 2",
    "topic": "Hướng dẫn tiêm chủng",
    "text": "The vaccination is free for all patients over sixty-five this winter.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Khai tiền sử bệnh gia đình",
    "text": "My father has had diabetes for ten years, and he takes medicine every day.",
-   "band": "Band 5.5"
+   "band": "Band 5,5"
   },
   {
    "section": "Section 1",
    "topic": "Đo thân nhiệt",
    "text": "The nurse took my temperature and told me it was slightly above normal.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 2",
    "topic": "Lời khuyên phòng bệnh",
    "text": "Regular exercise and enough sleep are the simplest ways to strengthen your immune system.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   },
   {
    "section": "Section 1",
    "topic": "Triệu chứng cảm cúm",
    "text": "She has been coughing all night, so she could not sleep properly.",
-   "band": "Band 5.0"
+   "band": "Band 5,0"
   },
   {
    "section": "Section 2",
    "topic": "Tác dụng phụ của thuốc",
    "text": "This medicine may make you feel sleepy, so you should not drive after taking it.",
-   "band": "Band 6.0"
+   "band": "Band 6,0"
   }
  ],
  "speaking": [
@@ -29646,7 +29646,7 @@ const CONTENT = {
    "topicStd": "Nhà ở và nơi sống",
    "part": "Part 1",
    "topic": "Hometown - Quê hương",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Examiner",
@@ -29717,7 +29717,7 @@ const CONTENT = {
    "topicStd": "Công việc và nghề nghiệp",
    "part": "Part 1",
    "topic": "Work and Study - Công việc và học tập",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Examiner",
@@ -29788,7 +29788,7 @@ const CONTENT = {
    "topicStd": "Sở thích và giải trí",
    "part": "Part 1",
    "topic": "Hobbies - Sở thích",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Examiner",
@@ -29859,7 +29859,7 @@ const CONTENT = {
    "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "Daily Routine - Thói quen hằng ngày",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Examiner",
@@ -29930,7 +29930,7 @@ const CONTENT = {
    "topicStd": "Sở thích và giải trí",
    "part": "Part 2",
    "topic": "Describe a book you enjoyed reading",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Cue card",
@@ -30011,7 +30011,7 @@ const CONTENT = {
    "topicStd": "Du lịch và giao thông",
    "part": "Part 2",
    "topic": "Describe a place you visited and liked",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Cue card",
@@ -30092,7 +30092,7 @@ const CONTENT = {
    "topicStd": "Học tập và giáo dục",
    "part": "Part 2",
    "topic": "Describe a skill you would like to learn",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Cue card",
@@ -30168,7 +30168,7 @@ const CONTENT = {
    "topicStd": "Bản thân và gia đình",
    "part": "Part 2",
    "topic": "Describe a person who has influenced you",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Cue card",
@@ -30244,7 +30244,7 @@ const CONTENT = {
    "topicStd": "Học tập và giáo dục",
    "part": "Part 3",
    "topic": "Education - Giáo dục trong tương lai",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Examiner",
@@ -30315,7 +30315,7 @@ const CONTENT = {
    "topicStd": "Công nghệ và truyền thông",
    "part": "Part 3",
    "topic": "Technology and Society - Công nghệ và xã hội",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "lines": [
     {
      "who": "Examiner",
@@ -30386,7 +30386,7 @@ const CONTENT = {
    "topicStd": "Môi trường và thiên nhiên",
    "part": "Part 3",
    "topic": "Environment - Ai chịu trách nhiệm bảo vệ môi trường?",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Examiner",
@@ -30457,7 +30457,7 @@ const CONTENT = {
    "topicStd": "Bản thân và gia đình",
    "part": "Part 3",
    "topic": "Success and Happiness - Thành công và hạnh phúc",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "lines": [
     {
      "who": "Examiner",
@@ -30528,7 +30528,7 @@ const CONTENT = {
    "topicStd": "Sở thích và giải trí",
    "part": "Part 1",
    "topic": "Music - Âm nhạc",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Examiner",
@@ -30599,7 +30599,7 @@ const CONTENT = {
    "topicStd": "Môi trường và thiên nhiên",
    "part": "Part 1",
    "topic": "Weather - Thời tiết",
-   "band": "Band 4.5",
+   "band": "Band 4,5",
    "lines": [
     {
      "who": "Examiner",
@@ -30670,7 +30670,7 @@ const CONTENT = {
    "topicStd": "Mua sắm và tiền bạc",
    "part": "Part 1",
    "topic": "Shopping - Mua sắm",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Examiner",
@@ -30741,7 +30741,7 @@ const CONTENT = {
    "topicStd": "Sở thích và giải trí",
    "part": "Part 1",
    "topic": "Books - Sách",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "lines": [
     {
      "who": "Examiner",
@@ -30812,7 +30812,7 @@ const CONTENT = {
    "topicStd": "Du lịch và giao thông",
    "part": "Part 1",
    "topic": "Travel - Du lịch",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Examiner",
@@ -30883,7 +30883,7 @@ const CONTENT = {
    "topicStd": "Công nghệ và truyền thông",
    "part": "Part 1",
    "topic": "Mobile Phones - Điện thoại di động",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Examiner",
@@ -30954,7 +30954,7 @@ const CONTENT = {
    "topicStd": "Bản thân và gia đình",
    "part": "Part 2",
    "topic": "Describe a gift you received that you liked - Mô tả một món quà bạn nhận được mà bạn thích",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Cue card",
@@ -31030,7 +31030,7 @@ const CONTENT = {
    "topicStd": "Du lịch và giao thông",
    "part": "Part 2",
    "topic": "Describe a journey you took that you remember well - Mô tả một chuyến đi bạn nhớ rõ",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Cue card",
@@ -31106,7 +31106,7 @@ const CONTENT = {
    "topicStd": "Công nghệ và truyền thông",
    "part": "Part 2",
    "topic": "Describe a piece of technology you find useful - Mô tả một thiết bị công nghệ bạn thấy hữu ích",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Cue card",
@@ -31182,7 +31182,7 @@ const CONTENT = {
    "topicStd": "Xã hội và văn hóa",
    "part": "Part 2",
    "topic": "Describe a traditional festival in your country - Mô tả một lễ hội truyền thống ở đất nước bạn",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Cue card",
@@ -31258,7 +31258,7 @@ const CONTENT = {
    "topicStd": "Công việc và nghề nghiệp",
    "part": "Part 2",
    "topic": "Describe a person who is good at their job - Mô tả một người giỏi trong công việc của mình",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Cue card",
@@ -31334,7 +31334,7 @@ const CONTENT = {
    "topicStd": "Môi trường và thiên nhiên",
    "part": "Part 2",
    "topic": "Describe a garden or park you enjoy visiting - Mô tả một khu vườn hoặc công viên bạn thích đến",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Cue card",
@@ -31410,7 +31410,7 @@ const CONTENT = {
    "topicStd": "Nhà ở và nơi sống",
    "part": "Part 3",
    "topic": "Housing - Nhà ở và đô thị",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Examiner",
@@ -31481,7 +31481,7 @@ const CONTENT = {
    "topicStd": "Thức ăn và sức khỏe",
    "part": "Part 3",
    "topic": "Food and Health - Ẩm thực và sức khỏe",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Examiner",
@@ -31552,7 +31552,7 @@ const CONTENT = {
    "topicStd": "Du lịch và giao thông",
    "part": "Part 3",
    "topic": "Future Transport - Tương lai của giao thông",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "lines": [
     {
      "who": "Examiner",
@@ -31623,7 +31623,7 @@ const CONTENT = {
    "topicStd": "Sở thích và giải trí",
    "part": "Part 3",
    "topic": "Reading Habits - Thói quen đọc sách",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Examiner",
@@ -31694,7 +31694,7 @@ const CONTENT = {
    "topicStd": "Xã hội và văn hóa",
    "part": "Part 3",
    "topic": "Older People in Society - Người cao tuổi trong xã hội",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "lines": [
     {
      "who": "Examiner",
@@ -31765,7 +31765,7 @@ const CONTENT = {
    "topicStd": "Xã hội và văn hóa",
    "part": "Part 3",
    "topic": "Fame - Sự nổi tiếng",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Examiner",
@@ -31978,7 +31978,7 @@ const CONTENT = {
    "topicStd": "Du lịch và giao thông",
    "part": "Part 1",
    "topic": "Asking the Way and Time - Hỏi đường và hỏi giờ",
-   "band": "Band 2.0",
+   "band": "Band 2,0",
    "lines": [
     {
      "who": "Examiner",
@@ -32049,7 +32049,7 @@ const CONTENT = {
    "topicStd": "Công việc và nghề nghiệp",
    "part": "Roleplay",
    "topic": "Part-time Job Interview - Phỏng vấn xin việc bán thời gian",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Interviewer",
@@ -32206,7 +32206,7 @@ const CONTENT = {
    "topicStd": "Du lịch và giao thông",
    "part": "Roleplay",
    "topic": "Checking in at a Hotel - Nhận phòng khách sạn và hỏi dịch vụ",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "lines": [
     {
      "who": "Receptionist",
@@ -32363,7 +32363,7 @@ const CONTENT = {
    "topicStd": "Thức ăn và sức khỏe",
    "part": "Roleplay",
    "topic": "Booking a Clinic Appointment by Phone - Gọi điện đặt lịch hẹn với phòng khám",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "lines": [
     {
      "who": "Staff",
@@ -32518,7 +32518,7 @@ const CONTENT = {
    "topicStd": "Thức ăn và sức khỏe",
    "part": "Roleplay",
    "topic": "At the Doctor - Đi khám bệnh và kể triệu chứng cho Bác sĩ",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "lines": [
     {
      "who": "Doctor",
@@ -32678,7 +32678,7 @@ const CONTENT = {
    "topicStd": "Du lịch và giao thông",
    "part": "Roleplay",
    "topic": "Asking the Way and Choosing Transport - Hỏi đường và chọn phương tiện đi lại",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "lines": [
     {
      "who": "You",
@@ -32840,7 +32840,7 @@ const CONTENT = {
    "topicStd": "Học tập và giáo dục",
    "part": "Roleplay",
    "topic": "Class Product Presentation - Thuyết trình giới thiệu sản phẩm trong lớp học",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Host",
@@ -32995,7 +32995,7 @@ const CONTENT = {
    "topicStd": "Công việc và nghề nghiệp",
    "part": "Roleplay",
    "topic": "Small Talk with a New Colleague - Trò chuyện xã giao với đồng nghiệp mới",
-   "band": "Band 4.5",
+   "band": "Band 4,5",
    "lines": [
     {
      "who": "Colleague",
@@ -33150,7 +33150,7 @@ const CONTENT = {
    "topicStd": "Học tập và giáo dục",
    "part": "Roleplay",
    "topic": "Group Meeting: Dividing Project Work - Họp nhóm phân công bài tập",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Teammate",
@@ -33317,7 +33317,7 @@ const CONTENT = {
    "topicStd": "Thức ăn và sức khỏe",
    "part": "Roleplay",
    "topic": "A Polite Complaint about Food Delivery - Phàn nàn lịch sự về dịch vụ giao đồ ăn",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "lines": [
     {
      "who": "Staff",
@@ -33479,7 +33479,7 @@ const CONTENT = {
    "topicStd": "Mua sắm và tiền bạc",
    "part": "Roleplay",
    "topic": "Shopping and Bargaining at the Market - Mua sắm và trả giá ở chợ",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "lines": [
     {
      "who": "Seller",
@@ -33641,7 +33641,7 @@ const CONTENT = {
    "topicStd": "Du lịch và giao thông",
    "part": "Roleplay",
    "topic": "Checking in at the Airport - Làm thủ tục ở sân bay",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "lines": [
     {
      "who": "Airline Staff",
@@ -33808,7 +33808,7 @@ const CONTENT = {
    "topicStd": "Nhà ở và nơi sống",
    "part": "Roleplay",
    "topic": "Viewing a Flat and Agreeing the Rent - Đi xem phòng và thỏa thuận thuê nhà",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Landlord",
@@ -33970,7 +33970,7 @@ const CONTENT = {
    "topicStd": "Thức ăn và sức khỏe",
    "part": "Part 1",
    "topic": "Tea and Coffee - Trà và cà phê",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "lines": [
     {
      "who": "Examiner",
@@ -34103,7 +34103,7 @@ const CONTENT = {
    "topicStd": "Du lịch và giao thông",
    "part": "Part 1",
    "topic": "Public Transport - Phương tiện công cộng",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Examiner",
@@ -34236,7 +34236,7 @@ const CONTENT = {
    "topicStd": "Thức ăn và sức khỏe",
    "part": "Part 2",
    "topic": "Describe a meal you enjoyed with your family - Mô tả một bữa ăn ngon với gia đình",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Examiner",
@@ -34365,7 +34365,7 @@ const CONTENT = {
    "topicStd": "Bản thân và gia đình",
    "part": "Part 2",
    "topic": "Describe a decision that changed your life - Mô tả một quyết định đã thay đổi cuộc đời bạn",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Examiner",
@@ -34492,7 +34492,7 @@ const CONTENT = {
    "topicStd": "Nhà ở và nơi sống",
    "part": "Part 3",
    "topic": "Housing and Future Cities - Nhà ở và thành phố tương lai",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "lines": [
     {
      "who": "Examiner",
@@ -34638,7 +34638,7 @@ const CONTENT = {
    "topicStd": "Công nghệ và truyền thông",
    "part": "Part 3",
    "topic": "Media and Truth - Truyền thông và sự thật",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "lines": [
     {
      "who": "Examiner",
@@ -34786,7 +34786,7 @@ const CONTENT = {
    "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "Family - Gia đình",
-   "band": "Band 2.0",
+   "band": "Band 2,0",
    "lines": [
     {
      "who": "Examiner",
@@ -34896,7 +34896,7 @@ const CONTENT = {
    "topicStd": "Học tập và giáo dục",
    "part": "Part 1",
    "topic": "School - Trường học",
-   "band": "Band 2.0",
+   "band": "Band 2,0",
    "lines": [
     {
      "who": "Examiner",
@@ -35005,7 +35005,7 @@ const CONTENT = {
    "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "My Day - Một ngày của tôi",
-   "band": "Band 2.5",
+   "band": "Band 2,5",
    "lines": [
     {
      "who": "Examiner",
@@ -35115,7 +35115,7 @@ const CONTENT = {
    "topicStd": "Sở thích và giải trí",
    "part": "Part 1",
    "topic": "Free Time - Thời gian rảnh",
-   "band": "Band 2.5",
+   "band": "Band 2,5",
    "lines": [
     {
      "who": "Examiner",
@@ -35223,7 +35223,7 @@ const CONTENT = {
    "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "Yesterday - Hôm qua của tôi",
-   "band": "Band 3.0",
+   "band": "Band 3,0",
    "lines": [
     {
      "who": "Examiner",
@@ -35333,7 +35333,7 @@ const CONTENT = {
    "topicStd": "Môi trường và thiên nhiên",
    "part": "Part 1",
    "topic": "The Weather Today - Thời tiết hôm nay",
-   "band": "Band 3.0",
+   "band": "Band 3,0",
    "lines": [
     {
      "who": "Examiner",
@@ -35443,7 +35443,7 @@ const CONTENT = {
    "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "A Happy Memory - Một kỷ niệm vui",
-   "band": "Band 3.5",
+   "band": "Band 3,5",
    "lines": [
     {
      "who": "Examiner",
@@ -35554,7 +35554,7 @@ const CONTENT = {
    "topicStd": "Bản thân và gia đình",
    "part": "Part 1",
    "topic": "My Future Plans - Kế hoạch tương lai của tôi",
-   "band": "Band 3.5",
+   "band": "Band 3,5",
    "lines": [
     {
      "who": "Examiner",
@@ -35665,7 +35665,7 @@ const CONTENT = {
    "topicStd": "Học tập và giáo dục",
    "part": "Part 1",
    "topic": "Learning English - Học tiếng Anh",
-   "band": "Band 4.0",
+   "band": "Band 4,0",
    "lines": [
     {
      "who": "Examiner",
@@ -35775,7 +35775,7 @@ const CONTENT = {
    "topicStd": "Nhà ở và nơi sống",
    "part": "Part 1",
    "topic": "My Neighbourhood - Khu phố của tôi",
-   "band": "Band 4.0",
+   "band": "Band 4,0",
    "lines": [
     {
      "who": "Examiner",
@@ -35886,7 +35886,7 @@ const CONTENT = {
    "topicStd": "Sở thích và giải trí",
    "part": "Part 1",
    "topic": "Photos - Ảnh chụp",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "lines": [
     {
      "who": "Examiner",
@@ -35996,7 +35996,7 @@ const CONTENT = {
    "topicStd": "Mua sắm và tiền bạc",
    "part": "Part 1",
    "topic": "Shopping Habits - Thói quen mua sắm",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "lines": [
     {
      "who": "Examiner",
@@ -36105,7 +36105,7 @@ const CONTENT = {
    "topicStd": "Du lịch và giao thông",
    "part": "Part 2",
    "topic": "Describe a Trip That Was Special to You - Một chuyến đi đặc biệt với bạn",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "lines": [
     {
      "who": "Examiner",
@@ -36217,7 +36217,7 @@ const CONTENT = {
    "topicStd": "Học tập và giáo dục",
    "part": "Part 2",
    "topic": "Describe a Skill You Learned as a Child - Một kỹ năng bạn học khi còn nhỏ",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "lines": [
     {
      "who": "Examiner",
@@ -36329,7 +36329,7 @@ const CONTENT = {
    "topicStd": "Thể thao và vận động",
    "part": "Part 1",
    "topic": "Sports and Exercise - Thể thao và vận động",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "lines": [
     {
      "who": "Examiner",
@@ -36462,7 +36462,7 @@ const CONTENT = {
    "topicStd": "Thể thao và vận động",
    "part": "Part 2",
    "topic": "Describe a sport you enjoy watching or playing - Mô tả một môn thể thao bạn thích xem hoặc chơi",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Cue card",
@@ -36589,7 +36589,7 @@ const CONTENT = {
    "topicStd": "Thể thao và vận động",
    "part": "Part 3",
    "topic": "Sports and Society - Thể thao và xã hội",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Examiner",
@@ -36681,7 +36681,7 @@ const CONTENT = {
    "topicStd": "Y tế và chăm sóc sức khỏe",
    "part": "Part 1",
    "topic": "Health and Daily Life - Sức khỏe và đời sống",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "lines": [
     {
      "who": "Examiner",
@@ -36813,7 +36813,7 @@ const CONTENT = {
    "topicStd": "Y tế và chăm sóc sức khỏe",
    "part": "Part 2",
    "topic": "Describe a medical professional you admire - Mô tả một nhân viên y tế mà bạn ngưỡng mộ",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "lines": [
     {
      "who": "Cue card",
@@ -36931,7 +36931,7 @@ const CONTENT = {
    "topicStd": "Y tế và chăm sóc sức khỏe",
    "part": "Part 3",
    "topic": "Healthcare Systems - Hệ thống y tế",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "lines": [
     {
      "who": "Examiner",
@@ -37063,12 +37063,12 @@ const CONTENT = {
   {
    "wtype": "Biểu đồ đường",
    "type": "Task 1",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Biểu đồ đường: người dùng Internet",
    "prompt": "The chart below shows the percentage of the population using the Internet in Vietnam between 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Dữ kiện của biểu đồ (đường): Năm 2000: 0,3% dân số dùng Internet. Năm 2005: 13%. Năm 2010: 31%. Năm 2015: 52%. Năm 2020: 70%. Xu hướng tăng đều, tăng nhanh nhất giai đoạn 2010-2020.",
    "model": "The line graph illustrates the proportion of Vietnamese people who used the Internet over a twenty-year period, from 2000 to 2020.\n\nOverall, Internet use in Vietnam rose dramatically throughout the period. Although the figure was negligible at the start, well over two-thirds of the population were online by 2020.\n\nIn 2000, only 0.3% of Vietnamese people had access to the Internet, making it a rarity at the time. Over the following five years, this figure climbed steadily to 13%, and by 2010 it had more than doubled, reaching 31%.\n\nThe growth accelerated in the second half of the period. By 2015, just over half of the population (52%) were Internet users. The upward trend continued, and the period ended with the figure peaking at 70% in 2020, meaning that Internet access had become the norm rather than the exception.",
-   "analysis": "Cấu trúc 4 đoạn chuẩn Task 1: (1) Paraphrase đề bài bằng từ đồng nghĩa (proportion, used). (2) Overview: nêu xu hướng tổng thể + con số nổi bật nhất, KHÔNG chi tiết - đây là đoạn quyết định band điểm Task Achievement. (3) Chi tiết giai đoạn đầu (2000-2010). (4) Chi tiết giai đoạn sau (2015-2020). Lưu ý: chia số liệu thành 2 nhóm theo thời gian giúp bài mạch lạc; dùng đa dạng cấu trúc so sánh và xu hướng (climbed, more than doubled, peaking at).",
+   "analysis": "Cấu trúc 4 đoạn chuẩn Task 1: (1) Paraphrase đề bài bằng từ đồng nghĩa (proportion, used). (2) Overview: nêu xu hướng tổng thể + con số nổi bật nhất, KHÔNG chi tiết - đây là đoạn quyết định band điểm Task Achievement. (3) Chi tiết giai đoạn đầu (2000-2010). (4) Chi tiết giai đoạn sau (2015-2020). Lưu ý: chia số liệu thành 2 nhóm theo thời gian giúp bài mạch lạc; dùng đa dạng cấu trúc so sánh và xu hướng (climbed, more than doubled, peaking at). Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "The line graph illustrates...",
@@ -37095,12 +37095,12 @@ const CONTENT = {
   {
    "wtype": "Biểu đồ cột",
    "type": "Task 1",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Biểu đồ cột: phương tiện đi lại",
    "prompt": "The bar chart below shows the percentage of journeys made by car, bus and bicycle in a European city in 1990 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Dữ kiện của biểu đồ (cột, % số chuyến đi): 1990 - Ô tô 45%, Xe buýt 35%, Xe đạp 20%. 2020 - Ô tô 55%, Xe buýt 25%, Xe đạp 20%. Ô tô tăng và vẫn cao nhất; xe buýt giảm; xe đạp không đổi.",
    "model": "The bar chart compares how people travelled in a European city in 1990 and 2020, in terms of car, bus and bicycle journeys.\n\nOverall, the car was the most popular means of transport in both years, and its share increased over the period. In contrast, bus travel became less common, whereas the proportion of bicycle journeys remained unchanged.\n\nIn 1990, cars accounted for 45% of all journeys, which was ten percentage points higher than the figure for buses, at 35%. Bicycles were the least popular option, representing one in five journeys.\n\nBy 2020, the dominance of the car had grown, rising to 55% of journeys. Meanwhile, the bus figure fell by ten percentage points, to 25%. Interestingly, cycling remained stable at 20% in both years, despite the growth in car use.",
-   "analysis": "Cấu trúc 4 đoạn: paraphrase, overview (nêu phương tiện cao nhất + 3 xu hướng chính), chi tiết năm 1990, chi tiết năm 2020 + đối chiếu. Điểm ghi điểm: nhóm số liệu theo năm thay vì theo phương tiện (dễ so sánh), dùng 'percentage points' khi nói chênh lệch %, đa dạng cách diễn đạt tỉ lệ (accounted for, representing, one in five).",
+   "analysis": "Cấu trúc 4 đoạn: paraphrase, overview (nêu phương tiện cao nhất + 3 xu hướng chính), chi tiết năm 1990, chi tiết năm 2020 + đối chiếu. Điểm ghi điểm: nhóm số liệu theo năm thay vì theo phương tiện (dễ so sánh), dùng 'percentage points' khi nói chênh lệch %, đa dạng cách diễn đạt tỉ lệ (accounted for, representing, one in five). Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "accounted for 45% of all journeys",
@@ -37127,12 +37127,12 @@ const CONTENT = {
   {
    "wtype": "Bảng số liệu",
    "type": "Task 1",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Bảng số liệu: chi tiêu hộ gia đình",
    "prompt": "The table below shows the average monthly spending (in US dollars) of households in three countries on four categories in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Dữ kiện của bảng (USD/tháng): Nhà ở - Nhật 950, Đức 820, Brazil 410. Ăn uống - Nhật 620, Đức 540, Brazil 385. Đi lại - Nhật 210, Đức 260, Brazil 150. Giải trí - Nhật 180, Đức 230, Brazil 95. Tổng Nhật cao nhất (1.960), Đức 1.850, Brazil 1.040. Nhà ở là khoản chi lớn nhất ở cả ba nước.",
    "model": "The table compares the average monthly household expenditure in Japan, Germany and Brazil in 2022, across four categories.\n\nOverall, Japanese households spent the most in total, while Brazilian households spent the least by a considerable margin. In all three countries, housing was by far the largest expense.\n\nIn terms of housing, Japanese families spent $950 per month, somewhat more than German households ($820), and more than double the figure for Brazil ($410). A similar pattern was seen in food spending, where Japan again led with $620, followed by Germany at $540 and Brazil at $385.\n\nTransport and entertainment, however, showed a different pattern. German households spent the most on transport ($260) and entertainment ($230), slightly ahead of Japan in both cases. Brazilian spending remained the lowest in every category, with entertainment costing just $95 per month.",
-   "analysis": "Bảng số liệu cần CHỌN LỌC: không liệt kê hết 12 con số. Bài mẫu nhóm theo hạng mục (nhà ở + ăn uống một đoạn; đi lại + giải trí một đoạn) và chỉ nêu số liệu tiêu biểu. Overview nêu tổng cao nhất/thấp nhất + đặc điểm chung lớn nhất (nhà ở chiếm nhiều nhất). Cụm so sánh đa dạng: by far the largest, more than double, slightly ahead of.",
+   "analysis": "Bảng số liệu cần CHỌN LỌC: không liệt kê hết 12 con số. Bài mẫu nhóm theo hạng mục (nhà ở + ăn uống một đoạn; đi lại + giải trí một đoạn) và chỉ nêu số liệu tiêu biểu. Overview nêu tổng cao nhất/thấp nhất + đặc điểm chung lớn nhất (nhà ở chiếm nhiều nhất). Cụm so sánh đa dạng: by far the largest, more than double, slightly ahead of. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "by a considerable margin",
@@ -37159,12 +37159,12 @@ const CONTENT = {
   {
    "wtype": "Biểu đồ tròn",
    "type": "Task 1",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Biểu đồ tròn: nguồn năng lượng",
    "prompt": "The two pie charts below show the sources of electricity generation in a country in 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Dữ kiện (2 biểu đồ tròn, % điện sản xuất): 2000 - Than 45%, Khí đốt 25%, Thủy điện 18%, Hạt nhân 8%, Năng lượng tái tạo khác 4%. 2020 - Than 28%, Khí đốt 27%, Thủy điện 16%, Hạt nhân 7%, Tái tạo khác 22%. Than giảm mạnh, tái tạo tăng mạnh nhất, khí đốt gần như giữ nguyên và vươn lên thứ hai.",
    "model": "The pie charts compare the different sources used to generate electricity in a country in 2000 and 2020.\n\nOverall, coal was the main source of electricity in 2000, but its share fell significantly over the twenty years. By contrast, renewable energy saw the most dramatic growth, while natural gas remained relatively stable.\n\nIn 2000, coal accounted for nearly half of all electricity, at 45%. Natural gas was the second-largest source, with a quarter of the total, followed by hydro power at 18%. Nuclear power and other renewables made up the remainder, at 8% and 4% respectively.\n\nBy 2020, the picture had changed considerably. Coal's share had dropped to 28%, although it remained the single largest source. The proportion from renewables had risen more than fivefold to 22%. Meanwhile, natural gas edged up slightly to 27%, overtaking hydro power, which slipped to 16%.",
-   "analysis": "Hai biểu đồ tròn: Overview so sánh 'ảnh lớn' của hai năm. Thân bài chia theo năm, trong mỗi năm xếp nguồn từ lớn đến nhỏ. Chú ý: 'overtaking' dùng khi thứ hạng thay đổi; 'respectively' liệt kê số liệu khớp thứ tự đã nêu; 'more than fivefold' diễn đạt mức tăng gấp nhiều lần.",
+   "analysis": "Hai biểu đồ tròn: Overview so sánh 'ảnh lớn' của hai năm. Thân bài chia theo năm, trong mỗi năm xếp nguồn từ lớn đến nhỏ. Chú ý: 'overtaking' dùng khi thứ hạng thay đổi; 'respectively' liệt kê số liệu khớp thứ tự đã nêu; 'more than fivefold' diễn đạt mức tăng gấp nhiều lần. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "accounted for nearly half of...",
@@ -37191,7 +37191,7 @@ const CONTENT = {
   {
    "wtype": "Quy trình",
    "type": "Task 1",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Quy trình: tái chế giấy",
    "prompt": "The diagram below shows how paper is recycled. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Dữ kiện quy trình (6 bước): 1) Giấy đã qua sử dụng được thu gom từ gia đình và văn phòng. 2) Phân loại thủ công, loại bỏ nhựa và kim loại. 3) Nghiền nhỏ và trộn với nước tạo thành bột giấy. 4) Rửa lọc nhiều lần để tẩy mực. 5) Bột giấy được cán mỏng, sấy khô bằng trục nóng. 6) Cuộn thành cuộn lớn, cắt và đóng gói thành giấy mới. Quy trình khép kín, giấy mới lại được sử dụng rồi quay lại bước 1.",
@@ -37223,7 +37223,7 @@ const CONTENT = {
   {
    "wtype": "Bản đồ",
    "type": "Task 1",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Bản đồ: sự thay đổi của một ngôi làng",
    "prompt": "The two maps below show a village in 1990 and the same village in 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Dữ kiện bản đồ: 1990 - làng nhỏ: một đường chính, cửa hàng nhỏ, trường học, cánh đồng lớn phía đông, rừng phía bắc. 2020 - đường chính mở rộng, siêu thị thay cửa hàng nhỏ, trường học giữ nguyên và mở rộng thêm, cánh đồng phía đông thành khu nhà ở mới, rừng phía bắc bị chặt một phần để làm bãi đỗ xe, thêm một phòng khám gần trung tâm.",
@@ -37255,12 +37255,12 @@ const CONTENT = {
   {
    "wtype": "Ý kiến",
    "type": "Task 2",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Opinion: Đại học miễn phí",
    "prompt": "Some people believe that university education should be free for all students. To what extent do you agree or disagree?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase đề + nêu lập trường (đồng ý một phần: miễn phí cho người nghèo và ngành thiết yếu, không miễn phí toàn bộ). Thân 1 - lợi ích của miễn phí: bình đẳng cơ hội, nguồn nhân lực chất lượng cho xã hội. Thân 2 - vấn đề: gánh nặng ngân sách, giảm giá trị bằng cấp, người giàu cũng được hưởng lợi không cần thiết. Kết bài - khẳng định lại lập trường + hướng trung hòa (học bổng, hỗ trợ theo điều kiện).",
    "model": "It is sometimes argued that a university education ought to be provided free of charge to every student. While free tuition would undoubtedly widen access to education, I believe it should be targeted at those who need it most, rather than offered universally.\n\nOn the one hand, abolishing tuition fees would make higher education fairer. At present, talented students from poor families may be discouraged from applying simply because they cannot afford the cost. Society would benefit in the long run, because a better-educated workforce tends to be more productive and innovative, and graduates generally pay more tax over their lifetimes.\n\nOn the other hand, making university entirely free would place an enormous burden on public finances. Universities still require funding, and if students do not pay, taxpayers must, including many who never attended university themselves. Moreover, when education costs nothing, some students may take their studies less seriously, and degrees could lose value if the number of graduates rises too sharply.\n\nIn conclusion, I would argue against universal free tuition. A fairer approach would be to offer generous scholarships and loans to students from disadvantaged backgrounds, and to waive fees in fields where there is a shortage of workers, such as medicine and teaching.",
-   "analysis": "Dạng Opinion: lập trường rõ ngay ở mở bài ('should be targeted... rather than offered universally') và giữ nhất quán đến kết luận. Mỗi đoạn thân bài: câu chủ đề - giải thích - hệ quả/ví dụ. Chú ý cách paraphrase 'free of charge' thay 'free', 'abolishing tuition fees'. Kết luận không đưa ý mới, chỉ khẳng định lại + gợi ý giải pháp trung hòa.",
+   "analysis": "Dạng Opinion: lập trường rõ ngay ở mở bài ('should be targeted... rather than offered universally') và giữ nhất quán đến kết luận. Mỗi đoạn thân bài: câu chủ đề - giải thích - hệ quả/ví dụ. Chú ý cách paraphrase 'free of charge' thay 'free', 'abolishing tuition fees'. Kết luận không đưa ý mới, chỉ khẳng định lại + gợi ý giải pháp trung hòa. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "It is sometimes argued that...",
@@ -37287,12 +37287,12 @@ const CONTENT = {
   {
    "wtype": "Thảo luận hai chiều",
    "type": "Task 2",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Discussion: Công nghệ gắn kết hay cô lập?",
    "prompt": "Some people think that modern technology has made people more isolated, while others believe it has brought people closer together. Discuss both views and give your own opinion.",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase + nói sẽ bàn hai phía và đưa ý kiến. Thân 1 - phía cô lập: dùng điện thoại trong bữa ăn, giao tiếp mặt đối mặt giảm, quan hệ hời hợt. Thân 2 - phía gắn kết: giữ liên lạc xa, cộng đồng trực tuyến, người già/bệnh nhân kết nối. Đoạn ý kiến (gộp vào thân 2 hoặc đoạn riêng) - công cụ trung tính, tùy cách dùng; xu hướng gắn kết mạnh hơn. Kết bài - tóm lại hai phía + nhắc lại ý kiến.",
    "model": "The impact of technology on human relationships is widely debated. Some argue that devices have left us more isolated than ever, whereas others claim they have brought us closer together. I tend to side with the latter view, although the concern about isolation is not groundless.\n\nThose who fear isolation point to everyday scenes: families sitting together in silence, each member absorbed in a separate screen. Communication, they argue, has become shallower, with brief messages replacing the long conversations of the past. There is also evidence that heavy social media use is linked to loneliness, partly because people compare their ordinary lives with the highlights of others.\n\nNevertheless, technology has clearly expanded our ability to connect. Grandparents can now video-call grandchildren on another continent, something impossible a generation ago. Online communities allow people with rare interests, or rare illnesses, to find support that their local community cannot provide. During lockdowns, such tools were a lifeline for millions.\n\nIn conclusion, technology is a tool whose effects depend largely on how it is used. While it can certainly encourage shallow interaction, on balance I believe it has strengthened more relationships than it has damaged.",
-   "analysis": "Dạng Discussion bắt buộc bàn ĐỦ hai phía và có ý kiến cá nhân rõ ràng. Bài mẫu: thân 1 = phía A (kèm thừa nhận), thân 2 = phía B kèm ý kiến người viết, kết luận nhấn lại. Cụm chuyển đoạn: 'Those who fear isolation point to...', 'Nevertheless...'. Câu 'I tend to side with the latter view' ở mở bài báo trước lập trường - giám khảo đánh giá cao sự rõ ràng này.",
+   "analysis": "Dạng Discussion bắt buộc bàn ĐỦ hai phía và có ý kiến cá nhân rõ ràng. Bài mẫu: thân 1 = phía A (kèm thừa nhận), thân 2 = phía B kèm ý kiến người viết, kết luận nhấn lại. Cụm chuyển đoạn: 'Those who fear isolation point to...', 'Nevertheless...'. Câu 'I tend to side with the latter view' ở mở bài báo trước lập trường - giám khảo đánh giá cao sự rõ ràng này. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "absorbed in a separate screen",
@@ -37319,12 +37319,12 @@ const CONTENT = {
   {
    "wtype": "Nguyên nhân và giải pháp",
    "type": "Task 2",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Problem-Solution: Ùn tắc giao thông",
    "prompt": "Traffic congestion is a growing problem in many cities around the world. What are the causes of this problem, and what solutions can be implemented?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase. Thân 1 (nguyên nhân): số lượng ô tô tăng theo thu nhập; giao thông công cộng yếu nên người dân không có lựa chọn; đô thị hóa tập trung việc làm vào trung tâm. Thân 2 (giải pháp): đầu tư metro/xe buýt nhanh; thu phí vào trung tâm giờ cao điểm; khuyến khích làm việc từ xa và đi chung xe. Kết bài - tóm tắt: cần kết hợp nhiều giải pháp.",
    "model": "In many major cities, traffic jams have become a daily frustration for millions of commuters. This essay will examine the main causes of congestion and suggest several measures that could reduce it.\n\nThe principal cause is the rapid growth in car ownership. As incomes rise, more families can afford a car, but road space in older cities cannot expand at the same pace. This problem is made worse by poor public transport: when buses are slow and unreliable, people understandably choose to drive. In addition, jobs are heavily concentrated in city centres, so huge numbers of people travel in the same direction at the same time each morning.\n\nSeveral solutions are available. Firstly, governments should invest in efficient public transport, such as metro systems and dedicated bus lanes, to offer a genuine alternative to driving. Secondly, congestion charging, which requires drivers to pay to enter the centre at peak times, has proved effective in cities such as London and Singapore. Finally, employers could encourage working from home and flexible hours, spreading travel demand more evenly.\n\nIn conclusion, congestion results mainly from rising car use combined with inadequate alternatives. A combination of better public transport, targeted charges and more flexible working patterns offers the best hope of keeping our cities moving.",
-   "analysis": "Dạng Problem-Solution: chia thân bài rõ 2 phần - đoạn nguyên nhân, đoạn giải pháp; mỗi giải pháp nên 'bắt cặp' với một nguyên nhân đã nêu. Dùng khung: 'The principal cause is...', 'This problem is made worse by...', 'Firstly / Secondly / Finally' cho giải pháp, nêu ví dụ thật (London, Singapore) để tăng tính thuyết phục.",
+   "analysis": "Dạng Problem-Solution: chia thân bài rõ 2 phần - đoạn nguyên nhân, đoạn giải pháp; mỗi giải pháp nên 'bắt cặp' với một nguyên nhân đã nêu. Dùng khung: 'The principal cause is...', 'This problem is made worse by...', 'Firstly / Secondly / Finally' cho giải pháp, nêu ví dụ thật (London, Singapore) để tăng tính thuyết phục. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "a daily frustration for millions of commuters",
@@ -37351,12 +37351,12 @@ const CONTENT = {
   {
    "wtype": "Ưu và nhược điểm",
    "type": "Task 2",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Advantages-Disadvantages: Làm việc tại nhà",
    "prompt": "Many employees are now able to work from home rather than travelling to an office every day. Do the advantages of this development outweigh the disadvantages?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase + lập trường (lợi thế nhỉnh hơn). Thân 1 (lợi thế): tiết kiệm thời gian/tiền đi lại; linh hoạt chăm sóc gia đình; một số người tập trung hơn. Thân 2 (bất lợi): thiếu giao tiếp đồng nghiệp, dễ sao nhãng, ranh giới công việc - đời sống mờ; nhưng có thể khắc phục bằng làm việc kết hợp. Kết bài - nhắc lập trường: mô hình kết hợp là tối ưu.",
    "model": "Working from home has become increasingly common in recent years. While this trend involves certain drawbacks, I believe its advantages are greater, particularly when employees can combine home and office work.\n\nThe benefits of remote work are considerable. Most obviously, employees save the time and money they would otherwise spend commuting, which can amount to several hours a week. They also gain flexibility: parents, for instance, can collect their children from school more easily. Furthermore, many people report that they concentrate better at home, free from office interruptions.\n\nThere are, however, genuine disadvantages. Working alone can be isolating, and spontaneous conversations with colleagues, which often generate new ideas, are largely lost. At home, some employees struggle with distractions, while others find it hard to switch off in the evening because their office is also their living room. That said, these problems can be reduced by a hybrid pattern, in which staff come into the office on certain days.\n\nIn conclusion, the drawbacks of home working are real but manageable, whereas its gains in time, money and flexibility are substantial. For this reason, the advantages outweigh the disadvantages.",
-   "analysis": "Dạng Advantages/Disadvantages có thêm 'outweigh' = phải CHỌN bên thắng và nói rõ ở mở bài lẫn kết luận. Kỹ thuật nâng điểm: thừa nhận bất lợi thật ('genuine disadvantages') rồi hóa giải một phần bằng giải pháp (hybrid) - lập luận hai chiều luôn thuyết phục hơn một chiều. Cụm 'That said' và 'For this reason' giúp chuyển ý mượt.",
+   "analysis": "Dạng Advantages/Disadvantages có thêm 'outweigh' = phải CHỌN bên thắng và nói rõ ở mở bài lẫn kết luận. Kỹ thuật nâng điểm: thừa nhận bất lợi thật ('genuine disadvantages') rồi hóa giải một phần bằng giải pháp (hybrid) - lập luận hai chiều luôn thuyết phục hơn một chiều. Cụm 'That said' và 'For this reason' giúp chuyển ý mượt. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "Do the advantages outweigh the disadvantages?",
@@ -37383,12 +37383,12 @@ const CONTENT = {
   {
    "wtype": "Ý kiến",
    "type": "Task 2",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Opinion: Trẻ em và điện thoại thông minh",
    "prompt": "Some people believe that children should not be given smartphones until they are at least 14 years old. To what extent do you agree or disagree?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase + đồng ý phần lớn. Thân 1 (tác hại sớm): ảnh hưởng tập trung học tập; nội dung không phù hợp và bắt nạt trực tuyến; thiếu ngủ. Thân 2 (thừa nhận nhu cầu liên lạc): cha mẹ cần liên lạc, an toàn khi đi lại - hóa giải bằng điện thoại cơ bản không internet. Kết bài - khẳng định: giới hạn đến 14 tuổi là hợp lý, kèm giải pháp thay thế.",
    "model": "In recent years, it has become common for children as young as eight or nine to own a smartphone. I largely agree with the suggestion that this age is too young, and that smartphones should be withheld until children are at least fourteen.\n\nThere are several risks associated with early smartphone use. Firstly, these devices are highly distracting: games and social media compete directly with homework and reading, and teachers increasingly report shorter attention spans in class. Secondly, young children are poorly equipped to handle online dangers, including inappropriate content and cyberbullying, which can cause serious distress. Finally, phones in the bedroom frequently disturb sleep, which is essential for healthy development.\n\nAdmittedly, parents have a legitimate need to contact their children, particularly when they travel to school alone. However, this need can easily be met by a basic phone that allows calls and texts but not unrestricted Internet access. Such a device provides safety without exposing the child to the addictive features of a smartphone.\n\nIn conclusion, delaying smartphone ownership until the age of fourteen is a sensible measure. The developmental risks clearly outweigh the convenience, especially as safer alternatives are available.",
-   "analysis": "Dạng Opinion với 'largely agree' (đồng ý phần lớn) - vẫn phải nhất quán. Kỹ thuật mạnh: đoạn 2 dùng cấu trúc thừa nhận + hóa giải (Admittedly... However...) để xử lý luận điểm phản bác thay vì né tránh - giám khảo đánh giá đây là tư duy trưởng thành. Cụm 'poorly equipped to handle' và 'clearly outweigh' là collocation band 7+.",
+   "analysis": "Dạng Opinion với 'largely agree' (đồng ý phần lớn) - vẫn phải nhất quán. Kỹ thuật mạnh: đoạn 2 dùng cấu trúc thừa nhận + hóa giải (Admittedly... However...) để xử lý luận điểm phản bác thay vì né tránh - giám khảo đánh giá đây là tư duy trưởng thành. Cụm 'poorly equipped to handle' và 'clearly outweigh' là collocation band 7+. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "should be withheld until...",
@@ -37415,12 +37415,12 @@ const CONTENT = {
   {
    "wtype": "Thảo luận hai chiều",
    "type": "Task 2",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "title": "Discussion: Bảo tàng miễn phí hay thu phí?",
    "prompt": "Some people believe museums and art galleries should be free for everyone, while others argue that visitors should pay an entrance fee. Discuss both views and give your own opinion.",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase + ý kiến (miễn phí cho cư dân, thu phí du khách). Thân 1 - phía miễn phí: văn hóa là quyền của mọi người; khuyến khích giáo dục, đặc biệt học sinh nghèo; bảo tàng đã được tài trợ từ thuế. Thân 2 - phía thu phí: chi phí vận hành và bảo tồn rất lớn; thu phí giúp bảo tàng tự chủ, nâng chất lượng; người không quan tâm vẫn phải đóng thuế nuôi. Kết - giải pháp hai tầng + nhắc ý kiến.",
    "model": "Whether the public should pay to enter museums is a matter of ongoing debate. Supporters of free entry regard culture as a basic right, while others insist that visitors should contribute to the considerable costs of running such institutions. My own view is that a mixed approach works best.\n\nThose in favour of free admission argue, firstly, that museums belong to everyone, since their collections are usually funded by taxpayers and built up over generations. Charging at the door excludes poorer families and schoolchildren, precisely the groups who may benefit most. Free entry also encourages casual visits, transforming museums from occasional destinations into part of everyday cultural life.\n\nOn the other hand, maintaining historic buildings and preserving fragile objects is extremely expensive, and government budgets are limited. Entrance fees provide a reliable income that can be reinvested in exhibitions and conservation. There is also a question of fairness: why should taxpayers who never visit a museum subsidise those who do?\n\nIn my opinion, the ideal solution is to keep museums free for local residents and students, while charging tourists a reasonable fee. This preserves equal access to culture while recognising that visitors who can afford to pay should help sustain these valuable institutions.",
-   "analysis": "Bài mẫu band 7.5+: lập trường 'mixed approach' được cụ thể hóa rõ ràng (miễn phí cho cư dân/học sinh, thu phí khách du lịch) - không mơ hồ kiểu 'cả hai đều đúng'. Từ vựng chủ đề văn hóa dày: collections, admission, conservation, subsidise, sustain. Câu phức có mệnh đề quan hệ rút gọn và câu điều kiện ngầm 'precisely the groups who...'.",
+   "analysis": "Bài mẫu band 7.5+: lập trường 'mixed approach' được cụ thể hóa rõ ràng (miễn phí cho cư dân/học sinh, thu phí khách du lịch) - không mơ hồ kiểu 'cả hai đều đúng'. Từ vựng chủ đề văn hóa dày: collections, admission, conservation, subsidise, sustain. Câu phức có mệnh đề quan hệ rút gọn và câu điều kiện ngầm 'precisely the groups who...'. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "a matter of ongoing debate",
@@ -37447,12 +37447,12 @@ const CONTENT = {
   {
    "wtype": "Nguyên nhân và giải pháp",
    "type": "Task 2",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Problem-Solution: Béo phì ở trẻ em",
    "prompt": "Childhood obesity has become a serious problem in many countries. What are the main causes of this problem, and what measures can be taken to solve it?",
    "dataDesc": "Dàn ý gợi ý: Nguyên nhân - thực phẩm chế biến sẵn rẻ và nhiều; quảng cáo đồ ăn nhắm vào trẻ; lối sống ít vận động (màn hình, ít chơi ngoài trời); cha mẹ bận rộn nấu ăn ít. Giải pháp - trường học: giáo dục dinh dưỡng, tăng giờ thể dục, căng tin lành mạnh; chính phủ: thuế đồ uống có đường, hạn chế quảng cáo; gia đình: ăn chung, giới hạn thời gian màn hình. Kết - trách nhiệm chung.",
    "model": "In numerous countries, the number of children who are seriously overweight has risen sharply, and the issue is now regarded as a public health crisis. This essay will outline the principal causes and propose measures to address them.\n\nTwo factors stand out. The first is diet: processed food that is high in sugar and fat is cheap, heavily advertised and available everywhere, while many busy parents have little time to cook fresh meals. The second is inactivity. Children today spend far more time in front of screens than previous generations did, and many are driven to school rather than walking or cycling, so daily exercise has declined dramatically.\n\nTackling the problem requires action on several fronts. Schools can teach nutrition and protect time for sport, while ensuring that canteens serve healthy food. Governments can tax sugary drinks, as several countries have successfully done, and restrict advertising aimed at children. Parents, for their part, can set limits on screen time and encourage active play.\n\nIn conclusion, childhood obesity is driven mainly by poor diet and sedentary lifestyles. Because the causes are social as much as individual, the solutions must involve schools, governments and families working together.",
-   "analysis": "Dạng Problem-Solution band 7: nguyên nhân trình bày theo CẶP rõ ràng ('Two factors stand out. The first... The second...'), giải pháp gán cho từng chủ thể (Schools can... Governments can... Parents...). Câu kết nâng tầm: 'the causes are social as much as individual' - nhận định tổng quát thay vì lặp lại máy móc.",
+   "analysis": "Dạng Problem-Solution band 7: nguyên nhân trình bày theo CẶP rõ ràng ('Two factors stand out. The first... The second...'), giải pháp gán cho từng chủ thể (Schools can... Governments can... Parents...). Câu kết nâng tầm: 'the causes are social as much as individual' - nhận định tổng quát thay vì lặp lại máy móc. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "a public health crisis",
@@ -37479,12 +37479,12 @@ const CONTENT = {
   {
    "wtype": "Câu hỏi hai phần",
    "type": "Task 2",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "title": "Câu hỏi hai phần: Thành công đo bằng tiền?",
    "prompt": "Nowadays, many people measure success purely in terms of salary. Why is this? Is this a positive or negative development?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase + trả lời luôn cả hai phần (nguyên nhân + xu hướng tiêu cực). Thân 1 (vì sao): tiền dễ đo và so sánh; xã hội tiêu dùng gắn giá trị với vật chất; mạng xã hội phô trương lối sống; áp lực chi phí sống. Thân 2 (tích cực hay tiêu cực): có mặt tích cực nhỏ - động lực làm việc; nhưng chủ yếu tiêu cực: bỏ qua sức khỏe/gia đình, nghề ý nghĩa nhưng lương thấp bị coi nhẹ, căng thẳng và so sánh không hồi kết. Kết - nhắc lại: thước đo hẹp gây hại nhiều hơn lợi.",
    "model": "Success has traditionally been a broad concept, yet today it is increasingly reduced to a single figure: how much a person earns. This essay will explore the reasons behind this trend before arguing that, on the whole, it is a negative development.\n\nThere are several explanations. Salary is attractive as a measure because it is precise and easy to compare, unlike fulfilment or reputation. In addition, consumer culture constantly associates personal worth with possessions, which are bought with money, so income becomes a convenient scoreboard. Social media reinforces this by broadcasting the expensive holidays and homes of the apparently successful, while the high cost of housing in major cities means money occupies people's thoughts more than ever.\n\nAdmittedly, ambition for a higher salary can motivate people to study and work hard. Nevertheless, the overall effects strike me as harmful. When income is the sole criterion, valuable but modestly paid professions, such as nursing and teaching, are undervalued, and individuals may sacrifice their health and family life in pursuit of status. Worse still, because comparisons have no ceiling, even the well-paid may feel like failures.\n\nIn conclusion, salary dominates our idea of success because it is measurable and because modern culture equates worth with wealth. In my view, this narrow definition does more harm than good, and a richer account of success would include health, relationships and contribution to society.",
-   "analysis": "Dạng hai câu hỏi (two-part question): PHẢI trả lời cả hai câu, bài mẫu dành hẳn một đoạn thân bài cho mỗi câu hỏi và tuyên bố đáp án cho cả hai ngay ở mở bài. Cụm 'strike me as harmful' và 'comparisons have no ceiling' là diễn đạt band 8. Kết luận 'a richer account of success would include...' mở rộng khái niệm thay vì lặp lại.",
+   "analysis": "Dạng hai câu hỏi (two-part question): PHẢI trả lời cả hai câu, bài mẫu dành hẳn một đoạn thân bài cho mỗi câu hỏi và tuyên bố đáp án cho cả hai ngay ở mở bài. Cụm 'strike me as harmful' và 'comparisons have no ceiling' là diễn đạt band 8. Kết luận 'a richer account of success would include...' mở rộng khái niệm thay vì lặp lại. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "reduced to a single figure",
@@ -37511,7 +37511,7 @@ const CONTENT = {
   {
    "wtype": "Biểu đồ đường",
    "type": "Task 1",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Biểu đồ đường: lượng khí thải carbon",
    "prompt": "The chart below shows carbon dioxide emissions in millions of tonnes in three countries between 1990 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Biểu đồ đường gồm 3 quốc gia, đơn vị triệu tấn CO2, 4 mốc năm. Đức: năm 1990 là 1020 triệu tấn, năm 2000 là 860 triệu tấn, năm 2010 là 760 triệu tấn, năm 2020 là 640 triệu tấn. Nhật Bản: năm 1990 là 1150 triệu tấn, năm 2000 là 1240 triệu tấn, năm 2010 là 1180 triệu tấn, năm 2020 là 1030 triệu tấn. Brazil: năm 1990 là 210 triệu tấn, năm 2000 là 340 triệu tấn, năm 2010 là 460 triệu tấn, năm 2020 là 530 triệu tấn. Xu hướng chính: Đức giảm liên tục, Nhật Bản tăng đến năm 2000 rồi giảm, Brazil tăng liên tục trong cả giai đoạn.",
@@ -37543,7 +37543,7 @@ const CONTENT = {
   {
    "wtype": "Biểu đồ cột",
    "type": "Task 1",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Biểu đồ cột: thời gian rảnh của học sinh",
    "prompt": "The chart below shows the average number of hours per week spent on four leisure activities by students in two age groups. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Biểu đồ cột, đơn vị giờ mỗi tuần, 4 hoạt động và 2 nhóm tuổi 11-14 tuổi và 15-18 tuổi. Nhóm 11-14 tuổi: xem truyền hình và video trực tuyến 9,5 giờ, mạng xã hội 7,0 giờ, thể thao 6,5 giờ, đọc sách 3,5 giờ. Nhóm 15-18 tuổi: xem truyền hình và video trực tuyến 7,0 giờ, mạng xã hội 12,5 giờ, thể thao 4,0 giờ, đọc sách 2,0 giờ. Xu hướng chính: học sinh lớn tuổi hơn dành nhiều thời gian cho mạng xã hội hơn hẳn nhưng ít thời gian hơn cho 3 hoạt động còn lại, đọc sách là hoạt động ít phổ biến nhất ở cả hai nhóm.",
@@ -37575,7 +37575,7 @@ const CONTENT = {
   {
    "wtype": "Bảng số liệu",
    "type": "Task 1",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Bảng số liệu: cơ cấu việc làm theo ngành",
    "prompt": "The table below shows the proportion of the workforce employed in three sectors of the economy in a European country in 1980, 2000 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Bảng số liệu tỉ lệ phần trăm lực lượng lao động theo 3 ngành tại một nước châu Âu, 3 mốc năm, tổng mỗi năm là 100%. Năm 1980: nông nghiệp 48,5%, công nghiệp 21,0%, dịch vụ 30,5%. Năm 2000: nông nghiệp 32,0%, công nghiệp 28,5%, dịch vụ 39,5%. Năm 2020: nông nghiệp 14,5%, công nghiệp 33,0%, dịch vụ 52,5%. Xu hướng chính: nông nghiệp giảm mạnh và liên tục, dịch vụ tăng liên tục và trở thành ngành lớn nhất từ năm 2000, công nghiệp tăng chậm và ổn định.",
@@ -37607,7 +37607,7 @@ const CONTENT = {
   {
    "wtype": "Quy trình",
    "type": "Task 1",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Quy trình: sản xuất sô-cô-la",
    "prompt": "The diagram below shows the process by which chocolate is produced from cacao beans. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Sơ đồ quy trình sản xuất sô-cô-la gồm 8 bước nối tiếp. Bước 1: hạt ca cao được thu hoạch từ quả ca cao chín trên cây. Bước 2: hạt được lên men trong thùng gỗ khoảng 5-7 ngày. Bước 3: hạt được phơi khô dưới nắng. Bước 4: hạt được rang ở nhiệt độ cao để tạo hương vị. Bước 5: hạt rang được tách vỏ và nghiền thành khối ca cao lỏng. Bước 6: khối ca cao được trộn với đường và bơ ca cao, sau đó được nghiền mịn và ủ ở nhiệt độ kiểm soát. Bước 7: hỗn hợp lỏng được rót vào khuôn và làm lạnh cho đông lại. Bước 8: thanh sô-cô-la thành phẩm được đóng gói và phân phối tới cửa hàng. Toàn bộ quy trình là tuyến tính, không có bước quay vòng.",
@@ -37639,7 +37639,7 @@ const CONTENT = {
   {
    "wtype": "Ý kiến",
    "type": "Task 2",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Opinion: Học trực tuyến có thay thế lớp học truyền thống?",
    "prompt": "Some people believe that online learning will completely replace traditional classroom teaching in the future. To what extent do you agree or disagree with this opinion?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase đề, nêu lập trường đồng ý một phần, học trực tuyến sẽ phổ biến hơn nhưng không thay thế hoàn toàn lớp học truyền thống. Thân bài 1 - lý do học trực tuyến phát triển mạnh: linh hoạt thời gian và địa điểm, tiết kiệm chi phí đi lại, phù hợp người đi làm và học viên ở xa. Thân bài 2 - lý do lớp học truyền thống vẫn cần thiết: tương tác trực tiếp và phản hồi tức thì, kỷ luật và động lực học tập, thực hành và làm việc nhóm, đặc biệt quan trọng với học sinh nhỏ tuổi. Thân bài 3 - mô hình kết hợp là hướng đi thực tế nhất. Kết luận - khẳng định lại lập trường, hai hình thức sẽ cùng tồn tại và bổ sung cho nhau.",
@@ -37671,7 +37671,7 @@ const CONTENT = {
   {
    "wtype": "Thảo luận hai chiều",
    "type": "Task 2",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "title": "Discussion: Du lịch quốc tế và văn hóa bản địa",
    "prompt": "Some people argue that international tourism strengthens local cultures by creating interest in traditions and heritage. Others claim that it weakens local cultures by turning them into commercial products. Discuss both views and give your own opinion.",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase hai quan điểm trái chiều, nêu lập trường cá nhân là tác động tích cực chiếm ưu thế nếu du lịch được quản lý tốt. Thân bài 1 - bàn quan điểm tích cực: doanh thu giúp bảo tồn di tích và nghề thủ công, tạo việc làm, khơi dậy niềm tự hào văn hóa ở thế hệ trẻ. Thân bài 2 - bàn quan điểm tiêu cực: thương mại hóa lễ hội và nghi lễ, biểu diễn bị rút ngắn và biến dạng để chiều khách, giá cả và lối sống bị xáo trộn. Thân bài 3 - quan điểm cá nhân: yếu tố quyết định là cách quản lý, ví dụ giới hạn khách, thu phí bảo tồn, để cộng đồng địa phương làm chủ sản phẩm du lịch. Kết luận - tóm tắt hai mặt và khẳng định lại lập trường.",
@@ -37703,7 +37703,7 @@ const CONTENT = {
   {
    "wtype": "Nguyên nhân và giải pháp",
    "type": "Task 2",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Problem-Solution: Ô nhiễm tiếng ồn ở đô thị",
    "prompt": "Noise pollution in many large cities has reached serious levels in recent years. What are the main causes of this problem, and what measures could be taken to solve it?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase vấn đề, báo trước bài viết sẽ nêu nguyên nhân và giải pháp. Thân bài 1 - nguyên nhân chính: giao thông đông đúc và tiếng còi xe, công trình xây dựng kéo dài, hoạt động giải trí và thương mại về đêm, mật độ dân cư cao. Thân bài 2 - giải pháp tương ứng: chính quyền cải thiện giao thông công cộng, quy định giờ thi công và vùng yên tĩnh, doanh nghiệp dùng tường chắn âm và vật liệu cách âm, cá nhân nâng cao ý thức. Kết luận - tóm tắt, nhấn mạnh cần kết hợp nhiều giải pháp và thực thi nghiêm.",
@@ -37735,7 +37735,7 @@ const CONTENT = {
   {
    "wtype": "Ưu và nhược điểm",
    "type": "Task 2",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Advantages-Disadvantages: Mạng xã hội với thanh thiếu niên",
    "prompt": "Social media platforms are now an important part of the daily lives of most teenagers. Do the advantages of this development outweigh the disadvantages?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase đề, nêu lập trường là lợi ích lớn hơn bất lợi nếu sử dụng có kiểm soát. Thân bài 1 - lợi ích: giữ liên lạc với bạn bè và người thân ở xa, tiếp cận thông tin và hỗ trợ học tập, cơ hội thể hiện sáng tạo. Thân bài 2 - bất lợi: tốn thời gian và gây xao nhãng học tập, nguy cơ bị bắt nạt trực tuyến, so sánh bản thân gây lo âu. Thân bài 3 - cân nhắc và khẳng định lập trường: bất lợi chủ yếu do dùng quá mức và thiếu hướng dẫn, có thể giảm bằng giới hạn thời gian và giáo dục kỹ năng số. Kết luận - khẳng định lại lợi ích chiếm ưu thế kèm điều kiện.",
@@ -37767,7 +37767,7 @@ const CONTENT = {
   {
    "wtype": "Câu hỏi hai phần",
    "type": "Task 2",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Câu hỏi hai phần: Ổn định hay lương cao?",
    "prompt": "When choosing a job, some people value job security more than a high salary, while others prioritise pay above all else. Which factor do you think is more important when choosing a job? Why do many people change jobs frequently nowadays?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase đề hai phần, báo trước quan điểm cá nhân là ổn định quan trọng hơn với đa số người, nhất là về lâu dài. Thân bài 1 - trả lời câu hỏi 1: phân tích giá trị của ổn định (thu nhập đều để lo cho gia đình, phúc lợi và hưu trí, ít căng thẳng), đồng thời thừa nhận lương cao hấp dẫn ở giai đoạn đầu sự nghiệp. Thân bài 2 - trả lời câu hỏi 2: lý do nhảy việc thường xuyên gồm tìm lương và thăng tiến tốt hơn, môi trường làm việc không phù hợp, công nghệ tạo ngành nghề mới, người trẻ coi trọng trải nghiệm và cân bằng cuộc sống. Kết luận - tóm tắt đáp án cả hai câu hỏi.",
@@ -37799,7 +37799,7 @@ const CONTENT = {
   {
    "wtype": "Ý kiến",
    "type": "Task 2",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "title": "Opinion: Bảo tồn di sản hay phát triển hiện đại?",
    "prompt": "Some people believe that governments should spend public money on restoring historic buildings, while others argue that this money would be better spent on constructing modern housing and infrastructure. To what extent do you agree or disagree with the view that historic buildings should be preserved?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase tranh luận, nêu lập trường đồng ý mạnh với bảo tồn nhưng không bảo tồn bằng mọi giá. Thân bài 1 - lý do bảo tồn: giá trị lịch sử và bản sắc không thể thay thế, sụp đổ là mất vĩnh viễn, lợi ích giáo dục cho thế hệ sau. Thân bài 2 - giá trị kinh tế và thực tiễn của bảo tồn: du lịch di sản tạo doanh thu, công trình cũ có thể cải tạo thành bảo tàng, thư viện, nhà ở, chi phí môi trường thấp hơn xây mới. Thân bài 3 - nhượng bộ và giới hạn: ngân sách có hạn, nhà ở và hạ tầng cấp bách ở nơi thiếu thốn, chỉ nên ưu tiên công trình có giá trị thật sự, công trình xuống cấp không ý nghĩa có thể thay thế. Kết luận - khẳng định lại lập trường có thứ tự ưu tiên rõ ràng.",
@@ -37831,12 +37831,12 @@ const CONTENT = {
   {
    "wtype": "Thư và email",
    "type": "Email trang trọng",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "title": "Email hỏi thông tin và đăng ký khóa học ngắn hạn",
    "prompt": "You want to join a short English course for office workers at a local language centre. Write an email to the centre (120-180 words). In your email: ask about the course dates and fee, ask about class size and the level test, and say that you would like to register this week if there is a free place.",
    "dataDesc": "Tình huống: bạn thấy khóa học tiếng Anh văn phòng 6 tuần trên website của trung tâm và muốn đăng ký. Dàn ý: đoạn 1 nêu lý do viết thư; đoạn 2 hỏi ngày khai giảng, học phí gồm sách hay chưa, sĩ số lớp; đoạn 3 hỏi về bài kiểm tra xếp lớp và nói rõ mong muốn đăng ký trong tuần này; cuối thư cảm ơn và chờ phản hồi. Lưu ý dùng giọng trang trọng, xưng hô Dear Sir or Madam vì chưa biết tên người nhận.",
    "model": "Dear Sir or Madam,\n\nI am writing to ask for information about your short English course for office workers and to register if possible.\n\nI saw the course on your website. It starts on 3 March and lasts six weeks, with classes on Monday and Wednesday evenings. Could you please confirm the total fee, including course books? I would also like to know the maximum number of students in each class, and whether I need to take a level test before the course starts.\n\nI finished high school English two years ago, so my level is probably intermediate. My office is near your centre, so evening classes are very convenient for me.\n\nIf there is a free place, I would like to register this week. Please tell me which documents I need to bring with me.\n\nThank you for your time. I look forward to your reply.\n\nYours faithfully,\nNguyen Thanh Tung",
-   "analysis": "Bài mẫu đạt Band 6.0 vì trả lời đủ cả ba yêu cầu của đề, bố cục 4 đoạn rõ ràng, lời chào và kết thư đúng thể thức trang trọng. Điểm ghi điểm: câu hỏi gián tiếp lịch sự (Could you please confirm..., I would also like to know...), câu điều kiện loại 1 (If there is a free place, I would like to register...) và từ nối đơn giản nhưng chính xác (also, so, whether). Lỗi cần tránh: viết tắt kiểu thân mật như I'm, don't trong thư trang trọng; quên kết thư Yours faithfully khi mở đầu bằng Dear Sir or Madam; hỏi dồn quá nhiều câu hỏi trong một đoạn.",
+   "analysis": "Bài mẫu đạt Band 6,0 vì trả lời đủ cả ba yêu cầu của đề, bố cục 4 đoạn rõ ràng, lời chào và kết thư đúng thể thức trang trọng. Điểm ghi điểm: câu hỏi gián tiếp lịch sự (Could you please confirm..., I would also like to know...), câu điều kiện loại 1 (If there is a free place, I would like to register...) và từ nối đơn giản nhưng chính xác (also, so, whether). Lỗi cần tránh: viết tắt kiểu thân mật như I'm, don't trong thư trang trọng; quên kết thư Yours faithfully khi mở đầu bằng Dear Sir or Madam; hỏi dồn quá nhiều câu hỏi trong một đoạn.",
    "phrases": [
     {
      "en": "I am writing to ask for information about...",
@@ -37863,12 +37863,12 @@ const CONTENT = {
   {
    "wtype": "Thư và email",
    "type": "Email trang trọng",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Email khiếu nại về sản phẩm giao trễ và bị lỗi",
    "prompt": "You ordered a coffee machine from an online shop two weeks ago. It arrived five days late and the glass pot was broken. Write an email to the shop (150-200 words). In your email: describe what you ordered and when, explain both problems clearly, and say what you would like the shop to do.",
    "dataDesc": "Tình huống: bạn đặt máy pha cà phê trực tuyến, hàng đến trễ 5 ngày và bình thủy tinh bị vỡ. Dàn ý: đoạn 1 nêu số đơn hàng, ngày đặt, ngày nhận thực tế; đoạn 2 trình bày hai vấn đề theo thứ tự, giữ giọng bình tĩnh, đưa sự kiện cụ thể thay vì cảm xúc; đoạn 3 đề xuất cách giải quyết rõ ràng (gửi bình mới hoặc hoàn tiền một phần) kèm thời hạn mong muốn; kết thư lịch sự nhưng dứt khoát. Lưu ý: khiếu nại hiệu quả là nhờ cụ thể và lịch sự, không đe dọa.",
    "model": "Dear Customer Service Team,\n\nI am writing to complain about a coffee machine that I ordered from your online shop two weeks ago.\n\nMy order number is CF-2841, and I placed the order on 2 October. Your website promised delivery within three working days, but the machine only arrived on 9 October, five days later than promised. Unfortunately, that was not the only problem. When I opened the box, I found that the glass pot was broken, so I cannot use the machine at all.\n\nI have taken photos of the broken pot and I can send them to you if needed. I would be grateful if you could send me a new glass pot within seven days. If a replacement is not available, I would prefer a full refund to my original payment card.\n\nI have been a regular customer of your shop for two years, and I hope we can solve this problem quickly.\n\nYours sincerely,\nTran Thu Hien",
-   "analysis": "Bài mẫu đạt Band 6.5 vì trình bày vấn đề theo trình tự thời gian rất rõ, có chi tiết kiểm chứng được như số đơn hàng và ngày tháng, và đề xuất giải quyết cụ thể kèm thời hạn. Điểm ghi điểm: giọng văn lịch sự nhưng kiên quyết (I would be grateful if you could..., I would prefer a full refund...), thì quá khứ dùng chính xác, từ nối tương phản và hệ quả tự nhiên (but, Unfortunately, so, If...). Lỗi cần tránh: dùng từ cảm xúc mạnh như angry, terrible service; đổ lỗi cá nhân; chỉ phàn nàn mà không nói mình muốn được giải quyết thế nào.",
+   "analysis": "Bài mẫu đạt Band 6,5 vì trình bày vấn đề theo trình tự thời gian rất rõ, có chi tiết kiểm chứng được như số đơn hàng và ngày tháng, và đề xuất giải quyết cụ thể kèm thời hạn. Điểm ghi điểm: giọng văn lịch sự nhưng kiên quyết (I would be grateful if you could..., I would prefer a full refund...), thì quá khứ dùng chính xác, từ nối tương phản và hệ quả tự nhiên (but, Unfortunately, so, If...). Lỗi cần tránh: dùng từ cảm xúc mạnh như angry, terrible service; đổ lỗi cá nhân; chỉ phàn nàn mà không nói mình muốn được giải quyết thế nào.",
    "phrases": [
     {
      "en": "I am writing to complain about...",
@@ -37895,12 +37895,12 @@ const CONTENT = {
   {
    "wtype": "Thư và email",
    "type": "Email thân mật",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "title": "Email kể về chuyến đi và rủ bạn đi cùng lần tới",
    "prompt": "You have just come back from a short trip with your family. Write an email to your friend (120-160 words). In your email: tell your friend where you went and what you did, say what you liked most, and invite your friend to join you next time.",
    "dataDesc": "Tình huống: bạn vừa đi Đà Lạt 3 ngày cùng gia đình và muốn kể cho bạn thân, đồng thời rủ bạn đi cùng chuyến sau vào mùa hè. Dàn ý: mở đầu thân mật, hỏi thăm bạn; đoạn giữa kể lịch trình ngắn gọn theo ngày, nêu một hai chi tiết đáng nhớ nhất thay vì liệt kê tất cả; đoạn cuối đưa lời mời cụ thể kèm thời gian dự kiến để bạn dễ trả lời. Lưu ý giọng thân mật được dùng từ viết tắt và câu hỏi trực tiếp, nhưng vẫn cần chia đoạn rõ ràng.",
    "model": "Hi Ngoc,\n\nHow are you? I have just got back from a three-day trip to Da Lat with my family, and I really want to tell you about it.\n\nWe left Ha Noi early on Friday morning. On the first day, we visited a strawberry farm and picked strawberries ourselves. It was great fun! On Saturday, we walked around Xuan Huong Lake and drank hot soya milk in the night market. The weather was cool all day, about 18 degrees, so different from Ha Noi.\n\nI liked the strawberry farm most, because the fruit was sweet and the owner was very friendly.\n\nMy family is planning another trip in July, maybe to the beach this time. Would you like to come with us? I think you will love it. Let me know soon!\n\nLove,\nPhuong Anh",
-   "analysis": "Bài mẫu đạt Band 5.5 vì kể chuyện mạch lạc theo trình tự thời gian, dùng tốt thì quá khứ đơn và hiện tại hoàn thành ở câu mở đầu (I have just got back...), từ vựng đời thường chính xác. Điểm ghi điểm: mở và kết đúng chất thư bạn bè (Hi Ngoc, Love), có câu cảm thán và câu hỏi tạo sự gần gũi, lời mời ở đoạn cuối cụ thể về thời gian. Lỗi cần tránh: kể lịch trình như danh sách khô khan không có cảm xúc; lẫn thì quá khứ và hiện tại trong cùng một câu chuyện; quên nêu lời mời mà đề yêu cầu.",
+   "analysis": "Bài mẫu đạt Band 5,5 vì kể chuyện mạch lạc theo trình tự thời gian, dùng tốt thì quá khứ đơn và hiện tại hoàn thành ở câu mở đầu (I have just got back...), từ vựng đời thường chính xác. Điểm ghi điểm: mở và kết đúng chất thư bạn bè (Hi Ngoc, Love), có câu cảm thán và câu hỏi tạo sự gần gũi, lời mời ở đoạn cuối cụ thể về thời gian. Lỗi cần tránh: kể lịch trình như danh sách khô khan không có cảm xúc; lẫn thì quá khứ và hiện tại trong cùng một câu chuyện; quên nêu lời mời mà đề yêu cầu.",
    "phrases": [
     {
      "en": "I have just got back from a three-day trip to...",
@@ -37927,12 +37927,12 @@ const CONTENT = {
   {
    "wtype": "Thư và email",
    "type": "Email thân mật",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "title": "Email cảm ơn và xin lỗi vì đến muộn",
    "prompt": "Last Sunday, your friend Mai invited you to her birthday dinner, but you arrived 40 minutes late because of traffic. Write an email to Mai (110-150 words). In your email: thank her for the dinner, apologise for being late and explain why, and suggest meeting again soon.",
    "dataDesc": "Tình huống: bạn đến bữa tối sinh nhật của bạn Mai muộn 40 phút vì tắc đường. Dàn ý: đoạn 1 cảm ơn chân thành về bữa tối và món ăn; đoạn 2 xin lỗi, giải thích ngắn gọn lý do đến muộn, nhận lỗi thay vì đổ hết cho hoàn cảnh; đoạn 3 đề xuất một buổi gặp bù cụ thể (mời bạn cà phê cuối tuần này) để kết thư tích cực. Lưu ý: lời xin lỗi thân mật nên ngắn, thành thật, và đi kèm đề xuất bù đắp.",
    "model": "Dear Mai,\n\nThank you so much for your lovely birthday dinner last Sunday. The food was delicious, especially the fish your mum cooked, and I had a really good time with everyone.\n\nI am writing to say sorry again for arriving 40 minutes late. There was a serious traffic jam near the bridge, and my bus did not move for nearly half an hour. I should have left home earlier, and I felt terrible when I walked in and everyone was already eating.\n\nPlease let me make it up to you. Are you free this Saturday afternoon? I would love to invite you for coffee at the small café near your house, my treat this time.\n\nThanks again for a wonderful evening, and sorry once more for being late.\n\nBest wishes,\nKhanh Linh",
-   "analysis": "Bài mẫu đạt Band 5.5 vì làm đủ ba việc theo thứ tự tự nhiên: cảm ơn, xin lỗi kèm lý do, và đề xuất gặp lại. Điểm ghi điểm: lời xin lỗi có nhận phần trách nhiệm (I should have left home earlier) nên nghe chân thành; cụm đền bù rất bản địa (Please let me make it up to you, my treat this time); thì quá khứ dùng nhất quán khi kể lại sự việc. Lỗi cần tránh: xin lỗi quá dài dòng hoặc viện quá nhiều lý do; dùng giọng trang trọng cứng nhắc với bạn bè; quên cảm ơn trước khi xin lỗi.",
+   "analysis": "Bài mẫu đạt Band 5,5 vì làm đủ ba việc theo thứ tự tự nhiên: cảm ơn, xin lỗi kèm lý do, và đề xuất gặp lại. Điểm ghi điểm: lời xin lỗi có nhận phần trách nhiệm (I should have left home earlier) nên nghe chân thành; cụm đền bù rất bản địa (Please let me make it up to you, my treat this time); thì quá khứ dùng nhất quán khi kể lại sự việc. Lỗi cần tránh: xin lỗi quá dài dòng hoặc viện quá nhiều lý do; dùng giọng trang trọng cứng nhắc với bạn bè; quên cảm ơn trước khi xin lỗi.",
    "phrases": [
     {
      "en": "Thank you so much for your lovely dinner.",
@@ -37959,12 +37959,12 @@ const CONTENT = {
   {
    "wtype": "Thư và email",
    "type": "Tin nhắn công việc",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "title": "Tin nhắn xin đổi ca làm và xác nhận lại lịch",
    "prompt": "You work part-time at a café. You have a family event on Saturday morning, so you need to swap your shift with a colleague. Write a short series of messages to your colleague (about 6-8 short messages in total): ask to swap your Saturday morning shift for their Sunday afternoon shift, explain briefly why, and confirm the new plan after they agree.",
    "dataDesc": "Tình huống: bạn làm thêm tại quán cà phê, sáng thứ Bảy có việc gia đình nên cần đổi ca sáng thứ Bảy lấy ca chiều Chủ Nhật của đồng nghiệp Tuấn. Dàn ý theo lượt nhắn: chào và nêu thẳng yêu cầu kèm ca cụ thể; giải thích ngắn lý do; chờ đồng ý; chốt lại lịch mới bằng một tin xác nhận rõ ngày giờ để tránh hiểu nhầm; cảm ơn. Lưu ý tin nhắn công việc cần ngắn, một ý trong một tin, và luôn có tin cuối xác nhận lại lịch đã chốt.",
    "model": "You: Hi Tuan, are you free to chat for a minute? I need a small favour.\nTuan: Sure, what is it?\nYou: I am working the Saturday morning shift this week, from 7 to 12, but my family has an important event that morning. Could we swap shifts? I can take your Sunday afternoon shift, from 1 to 6, instead.\nTuan: Let me check... Yes, that works for me. Sunday afternoon is yours, and I will do Saturday morning.\nYou: Thank you so much! So to confirm: you work Saturday 7.00-12.00, and I work Sunday 13.00-18.00. I have also told our manager, and she said it is fine.\nTuan: Perfect, see you on Sunday then.\nYou: Thanks again, I owe you one!",
-   "analysis": "Bài mẫu đạt Band 5.5 vì tin nhắn ngắn, rõ, đúng văn hóa nhắn tin công việc: nêu yêu cầu ngay tin đầu, có giờ ca cụ thể cả khi xin đổi và khi xác nhận. Điểm ghi điểm: mẫu câu đề nghị lịch sự dùng được ngay (Could we swap shifts? I can take your ... instead), tin xác nhận tóm lại cả hai ca kèm việc đã báo quản lý, lời cảm ơn có kèm ý sẵn sàng giúp lại (I owe you one). Lỗi cần tránh: nhắn mơ hồ kiểu cuối tuần này bạn rảnh không; đổi ca mà không báo quản lý; không có tin xác nhận cuối nên hai bên hiểu hai lịch khác nhau.",
+   "analysis": "Bài mẫu đạt Band 5,5 vì tin nhắn ngắn, rõ, đúng văn hóa nhắn tin công việc: nêu yêu cầu ngay tin đầu, có giờ ca cụ thể cả khi xin đổi và khi xác nhận. Điểm ghi điểm: mẫu câu đề nghị lịch sự dùng được ngay (Could we swap shifts? I can take your ... instead), tin xác nhận tóm lại cả hai ca kèm việc đã báo quản lý, lời cảm ơn có kèm ý sẵn sàng giúp lại (I owe you one). Lỗi cần tránh: nhắn mơ hồ kiểu cuối tuần này bạn rảnh không; đổi ca mà không báo quản lý; không có tin xác nhận cuối nên hai bên hiểu hai lịch khác nhau.",
    "phrases": [
     {
      "en": "I need a small favour.",
@@ -37991,12 +37991,12 @@ const CONTENT = {
   {
    "wtype": "Thư và email",
    "type": "Tin nhắn công việc",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "title": "Tin nhắn báo cáo tiến độ và xin gia hạn một ngày",
    "prompt": "You are preparing a sales report for your team leader, due at 5 pm today. The data from one department arrived late, so you cannot finish on time. Write a short series of messages to your team leader (about 5-7 short messages): report what is done, explain the problem, and ask for a one-day extension with a clear new deadline.",
    "dataDesc": "Tình huống: báo cáo bán hàng phải nộp lúc 17 giờ hôm nay, nhưng số liệu của một phòng ban gửi trễ nên bạn không kịp hoàn thành. Dàn ý theo lượt nhắn: tin đầu báo tiến độ phần đã xong kèm con số phần trăm; tin hai nêu vấn đề và nguyên nhân ngắn gọn, không đổ lỗi dài dòng; tin ba xin gia hạn đúng 1 ngày kèm giờ nộp mới cụ thể và cam kết; kết thúc bằng cảm ơn và khẳng định sẽ cập nhật tiếp. Lưu ý: xin gia hạn thuyết phục nhất khi đi kèm tiến độ đã hoàn thành và mốc giờ mới rõ ràng.",
    "model": "You: Good afternoon, Ms Dung. A quick update on the monthly sales report.\nYou: I have finished about 80 percent of it: the sales figures and charts for three regions are done and checked.\nYou: However, the data from the North region only arrived at 3 pm today, two days later than planned, so I still need to add and check that section.\nYou: Could I have one more day, please? I will send you the complete report by 11 am tomorrow at the latest.\nLeader: That is fine. Please send the finished parts to me now, and the full report tomorrow morning.\nYou: Of course, I am sending the finished parts right now. Thank you for understanding, and I will confirm as soon as the full report is sent tomorrow.",
-   "analysis": "Bài mẫu đạt Band 6.0 vì báo cáo theo đúng cấu trúc người quản lý cần: đã xong bao nhiêu, vướng ở đâu, xin thêm bao lâu và nộp chính xác khi nào. Điểm ghi điểm: con số cụ thể (80 percent, by 11 am tomorrow at the latest) tạo độ tin cậy; mẫu câu xin gia hạn mềm mà rõ (Could I have one more day, please?); biết chủ động gửi phần đã xong ngay khi quản lý yêu cầu. Lỗi cần tránh: đến sát giờ nộp mới báo trễ; xin gia hạn không kèm mốc giờ mới; giải thích dài dòng và đổ lỗi cho phòng ban khác.",
+   "analysis": "Bài mẫu đạt Band 6,0 vì báo cáo theo đúng cấu trúc người quản lý cần: đã xong bao nhiêu, vướng ở đâu, xin thêm bao lâu và nộp chính xác khi nào. Điểm ghi điểm: con số cụ thể (80 percent, by 11 am tomorrow at the latest) tạo độ tin cậy; mẫu câu xin gia hạn mềm mà rõ (Could I have one more day, please?); biết chủ động gửi phần đã xong ngay khi quản lý yêu cầu. Lỗi cần tránh: đến sát giờ nộp mới báo trễ; xin gia hạn không kèm mốc giờ mới; giải thích dài dòng và đổ lỗi cho phòng ban khác.",
    "phrases": [
     {
      "en": "A quick update on...",
@@ -38023,12 +38023,12 @@ const CONTENT = {
   {
    "wtype": "Thư và email",
    "type": "Thư xin việc",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Thư xin việc vị trí trợ lý bán hàng bán thời gian",
    "prompt": "A fashion shop near your university is looking for a part-time sales assistant to work on weekends. Write a short cover letter (180-230 words). In your letter: say where you saw the job, describe your relevant experience and skills, and explain why you are suitable for weekend work.",
    "dataDesc": "Tình huống: cửa hàng thời trang gần trường tuyển trợ lý bán hàng bán thời gian ca cuối tuần, bạn là sinh viên năm ba. Dàn ý: đoạn 1 nêu vị trí ứng tuyển và nguồn tin; đoạn 2 nêu kinh nghiệm liên quan (bán hàng online, hỗ trợ quầy tại hội chợ trường) và kỹ năng giao tiếp, tính tiền cẩn thận; đoạn 3 nhấn mạnh lịch học trống cuối tuần và nhà gần cửa hàng; đoạn cuối bày tỏ mong muốn phỏng vấn. Lưu ý: thư xin việc bán thời gian cần nhấn mạnh độ tin cậy và khung giờ rảnh cụ thể, không chỉ nói chung là chăm chỉ.",
    "model": "Dear Shop Manager,\n\nI am writing to apply for the part-time sales assistant position at your fashion shop on Tran Hung Dao Street, which I saw advertised in the shop window last week.\n\nI am a third-year student at the University of Economics, and I have two years of experience in sales. I sell clothes through my own online page, where I answer customer questions, prepare orders and deal with exchanges. Last summer, I also worked at a clothing stall during my university fair, and we served more than 100 customers a day. These jobs have taught me to be patient, polite and careful with money.\n\nI believe I am suitable for this position because my classes are only from Monday to Friday, so I am free every Saturday and Sunday, including holidays. I also live just 10 minutes from the shop, so I can arrive on time even for early shifts.\n\nI am available to start work immediately, including this coming weekend if needed. I would be very happy to attend an interview at any time that suits you. Thank you for considering my application.\n\nYours faithfully,\nDo Quoc Bao",
-   "analysis": "Bài mẫu đạt Band 6.5 vì mỗi đoạn làm đúng một nhiệm vụ của thư xin việc và mọi khẳng định đều có bằng chứng cụ thể: bán hàng online 2 năm, hội chợ trường phục vụ hơn 100 khách một ngày. Điểm ghi điểm: cụm động từ đúng chuyên ngành tuyển dụng (apply for the position, deal with exchanges), lý do phù hợp được gắn với ca cuối tuần một cách thực tế (lịch học, khoảng cách nhà), kết thư đúng thể thức. Lỗi cần tránh: chép nguyên văn hồ sơ cá nhân vào thư; khen bản thân bằng tính từ trống như hard-working mà không có ví dụ; quên nói rõ khung giờ có thể làm việc.",
+   "analysis": "Bài mẫu đạt Band 6,5 vì mỗi đoạn làm đúng một nhiệm vụ của thư xin việc và mọi khẳng định đều có bằng chứng cụ thể: bán hàng online 2 năm, hội chợ trường phục vụ hơn 100 khách một ngày. Điểm ghi điểm: cụm động từ đúng chuyên ngành tuyển dụng (apply for the position, deal with exchanges), lý do phù hợp được gắn với ca cuối tuần một cách thực tế (lịch học, khoảng cách nhà), kết thư đúng thể thức. Lỗi cần tránh: chép nguyên văn hồ sơ cá nhân vào thư; khen bản thân bằng tính từ trống như hard-working mà không có ví dụ; quên nói rõ khung giờ có thể làm việc.",
    "phrases": [
     {
      "en": "I am writing to apply for the position of...",
@@ -38055,12 +38055,12 @@ const CONTENT = {
   {
    "wtype": "Thư và email",
    "type": "Thư xin việc",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Thư xin việc vị trí điều phối viên dự án tại tổ chức giáo dục",
    "prompt": "An education charity is looking for a project coordinator for its community learning programme. Write a cover letter (220-280 words). In your letter: explain your interest in the organisation, present your coordination experience with measurable results, and connect your skills to the main duties of the role.",
-   "dataDesc": "Tình huống: một tổ chức thiện nguyện về giáo dục tuyển điều phối viên cho chương trình lớp học cộng đồng, bạn đã có 3 năm điều phối dự án sinh viên. Dàn ý: đoạn 1 nêu vị trí và lý do quan tâm thật sự tới sứ mệnh của tổ chức; đoạn 2 trình bày kinh nghiệm điều phối kèm kết quả đo được (số tình nguyện viên, số học viên, đúng tiến độ); đoạn 3 nối từng kỹ năng với nhiệm vụ chính của vị trí như lập kế hoạch, quản lý ngân sách nhỏ, báo cáo nhà tài trợ; đoạn cuối khẳng định cam kết và mời phỏng vấn. Lưu ý ở Band 7.0, điểm khác biệt là kết quả định lượng và cách nối kinh nghiệm với yêu cầu công việc, không chỉ liệt kê.",
+   "dataDesc": "Tình huống: một tổ chức thiện nguyện về giáo dục tuyển điều phối viên cho chương trình lớp học cộng đồng, bạn đã có 3 năm điều phối dự án sinh viên. Dàn ý: đoạn 1 nêu vị trí và lý do quan tâm thật sự tới sứ mệnh của tổ chức; đoạn 2 trình bày kinh nghiệm điều phối kèm kết quả đo được (số tình nguyện viên, số học viên, đúng tiến độ); đoạn 3 nối từng kỹ năng với nhiệm vụ chính của vị trí như lập kế hoạch, quản lý ngân sách nhỏ, báo cáo nhà tài trợ; đoạn cuối khẳng định cam kết và mời phỏng vấn. Lưu ý ở Band 7,0, điểm khác biệt là kết quả định lượng và cách nối kinh nghiệm với yêu cầu công việc, không chỉ liệt kê.",
    "model": "Dear Ms Pham,\n\nI am writing to apply for the position of Project Coordinator for your Community Learning Programme, advertised on your website on 5 October. Having volunteered as a weekend tutor with your organisation in 2023, I have seen at first hand how your classes change the lives of children in difficult circumstances, and I would be proud to contribute in a full-time role.\n\nFor the past three years, I have coordinated student projects at my university. Most recently, I led a team of 12 volunteers who ran free evening classes for 85 children in two community centres. I was responsible for planning the timetable, training new volunteers and managing a small budget. Under my coordination, the programme finished on schedule for four consecutive terms, and attendance rose by 30 percent in the final year.\n\nThese experiences match the main duties of the role closely. I am confident in building work plans, monitoring progress against deadlines and writing clear reports for sponsors, which I have done every term for our faculty. I am also used to working with local partners and solving practical problems calmly when plans change.\n\nI have attached my CV and two reference letters for your review. I would welcome the opportunity to discuss how my experience could support your programme. Thank you for your time and consideration.\n\nYours sincerely,\nVu Minh Chau",
-   "analysis": "Bài mẫu đạt Band 7.0 vì thư được viết riêng cho đúng tổ chức này: mở đầu gắn với trải nghiệm tình nguyện thật, thân bài dùng kết quả định lượng (đội 12 tình nguyện viên, 85 học viên, tỉ lệ đi học tăng 30 phần trăm) và đoạn ba nối từng kỹ năng với nhiệm vụ của vị trí. Điểm ghi điểm: cấu trúc câu đa dạng và chính xác (câu phân từ mở đầu Having volunteered..., mệnh đề quan hệ which I have done...), vốn từ công việc tự nhiên (responsible for, on schedule, at first hand). Lỗi cần tránh: dùng một thư mẫu chung cho mọi nơi tuyển; liệt kê kỹ năng không gắn với nhiệm vụ cụ thể; nêu thành tích không có con số nên khó tin.",
+   "analysis": "Bài mẫu đạt Band 7,0 vì thư được viết riêng cho đúng tổ chức này: mở đầu gắn với trải nghiệm tình nguyện thật, thân bài dùng kết quả định lượng (đội 12 tình nguyện viên, 85 học viên, tỉ lệ đi học tăng 30 phần trăm) và đoạn ba nối từng kỹ năng với nhiệm vụ của vị trí. Điểm ghi điểm: cấu trúc câu đa dạng và chính xác (câu phân từ mở đầu Having volunteered..., mệnh đề quan hệ which I have done...), vốn từ công việc tự nhiên (responsible for, on schedule, at first hand). Lỗi cần tránh: dùng một thư mẫu chung cho mọi nơi tuyển; liệt kê kỹ năng không gắn với nhiệm vụ cụ thể; nêu thành tích không có con số nên khó tin.",
    "phrases": [
     {
      "en": "Having volunteered with your organisation, I have seen at first hand...",
@@ -38087,7 +38087,7 @@ const CONTENT = {
   {
    "wtype": "Biểu đồ hỗn hợp",
    "type": "Task 1",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Biểu đồ hỗn hợp cột và đường: khách du lịch và nhiệt độ",
    "prompt": "The chart below shows the number of visitors to a seaside town and the average temperature in four months in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Biểu đồ hỗn hợp gồm cột và đường tại một thị trấn ven biển năm 2023, gồm 4 tháng. Cột là số khách, đơn vị nghìn người: tháng 1 là 18 nghìn, tháng 4 là 32 nghìn, tháng 7 là 58 nghìn, tháng 10 là 40 nghìn. Đường là nhiệt độ trung bình, đơn vị độ C: tháng 1 là 21 độ, tháng 4 là 25 độ, tháng 7 là 31 độ, tháng 10 là 27 độ. Xu hướng chính: cả hai chỉ số đều cao nhất vào tháng 7 và thấp nhất vào tháng 1, số khách tăng giảm cùng chiều với nhiệt độ.",
@@ -38119,7 +38119,7 @@ const CONTENT = {
   {
    "wtype": "Biểu đồ hỗn hợp",
    "type": "Task 1",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Biểu đồ hỗn hợp cột và đường: sản lượng lúa mì và lượng mưa",
    "prompt": "The chart below shows wheat production and annual rainfall in a farming region in 2010, 2014, 2018 and 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Biểu đồ hỗn hợp gồm cột và đường tại một vùng nông nghiệp, gồm 4 mốc năm. Cột là sản lượng lúa mì, đơn vị triệu tấn: năm 2010 là 4,2 triệu tấn, năm 2014 là 5,1 triệu tấn, năm 2018 là 4,6 triệu tấn, năm 2022 là 5,8 triệu tấn. Đường là lượng mưa hằng năm, đơn vị mi-li-mét: năm 2010 là 620 mi-li-mét, năm 2014 là 710 mi-li-mét, năm 2018 là 560 mi-li-mét, năm 2022 là 740 mi-li-mét. Xu hướng chính: sản lượng và lượng mưa biến động cùng chiều, cùng giảm vào năm 2018 và cùng đạt mức cao nhất vào năm 2022.",
@@ -38151,7 +38151,7 @@ const CONTENT = {
   {
    "wtype": "Biểu đồ tròn",
    "type": "Task 1",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Biểu đồ tròn: chi tiêu của hộ gia đình",
    "prompt": "The pie chart below shows how an average household in a large city spent its money on six categories in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Biểu đồ tròn gồm 6 nhóm chi tiêu của một hộ gia đình trung bình tại một thành phố lớn năm 2024, tổng là 100%. Thực phẩm chiếm 32%, nhà ở chiếm 28%, đi lại chiếm 15%, giáo dục chiếm 11%, giải trí chiếm 8%, chăm sóc sức khỏe chiếm 6%. Xu hướng chính: thực phẩm và nhà ở cộng lại chiếm 60%, tức là hơn một nửa ngân sách, trong khi chăm sóc sức khỏe là nhóm nhỏ nhất.",
@@ -38183,7 +38183,7 @@ const CONTENT = {
   {
    "wtype": "Bản đồ",
    "type": "Task 1",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Bản đồ: một thị trấn thay đổi từ năm 1995 đến năm 2024",
    "prompt": "The maps below show a small town in 1995 and the same town in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Hai bản đồ của cùng một thị trấn năm 1995 và năm 2024. Năm 1995: phía bắc là đất nông nghiệp rộng, góc đông bắc có một khu rừng nhỏ, đường chính chạy ngang từ tây sang đông ở giữa thị trấn, trường học nằm ở trung tâm sát đường chính, phía nam trường là đất trống, góc tây nam sát sông là đất trống, giữa thị trấn có quảng trường chợ cũ, con sông chảy qua phía nam. Năm 2024: đất nông nghiệp phía bắc được thay bằng hai dãy nhà ở mới, khu rừng bị chặt để xây siêu thị và bãi đỗ xe, đường chính được kéo dài lên phía bắc, phía nam trường học có thêm trung tâm y tế, góc tây nam có trung tâm thể thao mới cạnh sông, quảng trường chợ ở trung tâm thành khu đi bộ và có thêm bến xe buýt ngay bên cạnh, trường học được mở rộng nhưng giữ nguyên vị trí, con sông không thay đổi.",
@@ -38215,7 +38215,7 @@ const CONTENT = {
   {
    "wtype": "Biểu đồ cột",
    "type": "Task 1",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Biểu đồ cột: tỷ lệ hộ gia đình tái chế rác",
    "prompt": "The bar chart below shows the percentage of households that recycled in four cities in 2015 and 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Biểu đồ cột nhóm, đơn vị phần trăm hộ gia đình có tái chế rác, gồm 4 thành phố A, B, C, D và 2 mốc năm. Năm 2015: thành phố A là 50%, thành phố B là 42%, thành phố C là 35%, thành phố D là 20%. Năm 2023: thành phố A là 68%, thành phố B là 60%, thành phố C là 52%, thành phố D là 45%. Xu hướng chính: tỷ lệ tăng ở cả 4 thành phố, thành phố A luôn cao nhất, thành phố D luôn thấp nhất nhưng có mức tăng lớn nhất, từ 20% lên 45%, tức là tăng 25 điểm phần trăm và hơn gấp đôi.",
@@ -38247,7 +38247,7 @@ const CONTENT = {
   {
    "wtype": "Quy trình",
    "type": "Task 1",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "title": "Quy trình: tái chế chai nhựa",
    "prompt": "The diagram below shows how plastic bottles are recycled and turned into new products. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Sơ đồ quy trình tái chế chai nhựa gồm 7 bước nối tiếp. Bước 1: chai nhựa đã qua sử dụng được thu gom từ hộ gia đình và thùng rác tái chế rồi chở bằng xe tải tới nhà máy. Bước 2: chai được phân loại theo màu và rửa sạch để loại bỏ nhãn và chất bẩn. Bước 3: chai sạch được nghiền và cắt thành các mảnh nhựa nhỏ. Bước 4: các mảnh nhựa được nấu chảy ở nhiệt độ cao thành nhựa lỏng đặc. Bước 5: nhựa lỏng được lọc để loại bỏ tạp chất còn lại rồi ép qua các lỗ nhỏ thành sợi nhựa dài. Bước 6: sợi nhựa được làm nguội trong nước, cắt thành hạt nhỏ và kiểm tra chất lượng. Bước 7: hạt nhựa được bán cho nhà máy để nung và đúc thành chai mới và các sản phẩm nhựa khác. Toàn bộ quy trình là tuyến tính, vật liệu loại ra ở khâu kiểm tra được đưa đi xử lý riêng.",
@@ -38279,12 +38279,12 @@ const CONTENT = {
   {
    "wtype": "Ý kiến",
    "type": "Task 2",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "title": "Opinion: Chi tiền cho phòng bệnh thay vì chữa bệnh",
    "prompt": "Some people believe that governments should spend more money on preventing diseases than on treating them. To what extent do you agree or disagree?",
    "dataDesc": "Dàn ý gợi ý: Mở bài - paraphrase đề bài và nêu quan điểm đồng ý phần lớn. Thân 1 (phòng bệnh hiệu quả hơn): chương trình tiêm chủng rẻ mà bảo vệ cả cộng đồng; sàng lọc định kỳ phát hiện sớm tiểu đường và ung thư khi còn dễ chữa và ít tốn kém; điều trị muộn cần phẫu thuật, nằm viện dài và thuốc đắt, gây quá tải bệnh viện. Thân 2 (thừa nhận điều trị vẫn thiết yếu): người đã mắc bệnh nặng cần chăm sóc ngay, không thể cắt giảm chi tiêu điều trị trong một sớm một chiều; cần đầu tư cả hai, nhưng cán cân nên chuyển dần sang phòng bệnh. Kết bài - khẳng định chuyển trọng tâm ngân sách sang phòng bệnh là chính sách dài hạn khôn ngoan.",
    "model": "In many countries, most of the health budget is spent on hospitals and treatment, while only a small part goes to prevention. I largely agree that governments should increase spending on preventing diseases rather than focusing mainly on curing them.\n\nPrevention is usually far cheaper and more effective than treatment. A vaccination programme, for example, costs very little per person, yet it can protect a whole community from dangerous diseases. Similarly, regular screening can detect conditions such as diabetes and cancer at an early stage, when they are easier and less expensive to treat. By contrast, late treatment often requires surgery, long hospital stays and costly medicines, which puts enormous pressure on hospitals.\n\nAdmittedly, spending on treatment cannot be reduced overnight. Patients who are already seriously ill need immediate care, and investment in hospitals, emergency services and medical research remains essential. Prevention works slowly over many years, so governments must fund both areas at the same time. The key point is that the balance should gradually change.\n\nIn conclusion, although treatment will always be necessary, shifting more money towards prevention is a wise long-term policy. It saves public money, reduces suffering and leads to a healthier population.",
-   "analysis": "Dạng Opinion với lập trường 'largely agree' (đồng ý phần lớn) và giữ nhất quán từ mở bài đến kết bài. Thân 1 dùng cặp ví dụ song song vaccination programme và regular screening, kèm cấu trúc đối chiếu By contrast để so sánh chi phí. Thân 2 thừa nhận vai trò không thể thay thế của điều trị (cannot be reduced overnight) rồi hóa giải bằng ý 'the balance should gradually change'. Cụm đắt giá: puts enormous pressure on hospitals, at an early stage, a wise long-term policy.",
+   "analysis": "Dạng Opinion với lập trường 'largely agree' (đồng ý phần lớn) và giữ nhất quán từ mở bài đến kết bài. Thân 1 dùng cặp ví dụ song song vaccination programme và regular screening, kèm cấu trúc đối chiếu By contrast để so sánh chi phí. Thân 2 thừa nhận vai trò không thể thay thế của điều trị (cannot be reduced overnight) rồi hóa giải bằng ý 'the balance should gradually change'. Cụm đắt giá: puts enormous pressure on hospitals, at an early stage, a wise long-term policy. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "spending on preventing diseases",
@@ -38311,12 +38311,12 @@ const CONTENT = {
   {
    "wtype": "Biểu đồ cột",
    "type": "Task 1",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "title": "Biểu đồ cột: số lượt khám ngoại trú tại một bệnh viện",
    "prompt": "The bar chart below shows the number of outpatient visits at a city hospital from 2020 to 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
    "dataDesc": "Biểu đồ cột đơn, đơn vị nghìn lượt khám ngoại trú tại một bệnh viện thành phố qua 4 năm. Năm 2020: 120 nghìn lượt. Năm 2021: giảm xuống 105 nghìn lượt, mức thấp nhất của cả giai đoạn. Năm 2022: tăng trở lại lên 140 nghìn lượt, tức tăng 35 nghìn lượt so với năm trước. Năm 2023: đạt 165 nghìn lượt, mức cao nhất, cao hơn năm thấp nhất 60 nghìn lượt và cao hơn năm 2020 là 45 nghìn lượt, tương đương mức tăng 37,5%. Xu hướng chính: giảm nhẹ vào năm 2021 rồi tăng liên tục và rõ rệt trong hai năm cuối.",
    "model": "The bar chart shows how many outpatient visits were recorded at a city hospital between 2020 and 2023.\n\nOverall, the number of visits fell slightly in 2021, but then rose steadily over the following two years. The highest figure was recorded in 2023, while the lowest was in 2021.\n\nIn 2020, the hospital received 120 thousand outpatient visits. In the following year, this figure dropped to 105 thousand, the lowest level of the whole period.\n\nFrom 2021 onwards, however, the trend reversed. Visits climbed to 140 thousand in 2022, an increase of 35 thousand compared with the previous year. The growth continued in 2023, when the hospital recorded 165 thousand visits. This final figure was 60 thousand higher than the lowest point in 2021 and 45 thousand above the level in 2020.",
-   "analysis": "Cấu trúc 4 đoạn chuẩn Task 1: đoạn 1 paraphrase đề bài, đoạn 2 overview nêu xu hướng chung cùng điểm cao nhất và thấp nhất, đoạn 3 mô tả hai năm đầu có xu hướng giảm, đoạn 4 mô tả giai đoạn tăng. Điểm ghi điểm: dùng the trend reversed để đánh dấu điểm đảo chiều xu hướng, và luôn kèm số chênh lệch tuyệt đối (an increase of 35 thousand) thay vì chỉ lặp lại số gốc. Đơn vị thousand được giữ nhất quán trong toàn bài.",
+   "analysis": "Cấu trúc 4 đoạn chuẩn Task 1: đoạn 1 paraphrase đề bài, đoạn 2 overview nêu xu hướng chung cùng điểm cao nhất và thấp nhất, đoạn 3 mô tả hai năm đầu có xu hướng giảm, đoạn 4 mô tả giai đoạn tăng. Điểm ghi điểm: dùng the trend reversed để đánh dấu điểm đảo chiều xu hướng, và luôn kèm số chênh lệch tuyệt đối (an increase of 35 thousand) thay vì chỉ lặp lại số gốc. Đơn vị thousand được giữ nhất quán trong toàn bài. Ghi chú độ dài: bài mẫu này ngắn hơn chuẩn thi thật (Task 1 tối thiểu 150 từ, Task 2 tối thiểu 250 từ). Bài mẫu ngắn dùng để học cấu trúc và ngôn ngữ; khi luyện thi thật, hãy viết đủ số từ tối thiểu.",
    "phrases": [
     {
      "en": "the number of outpatient visits",
@@ -38343,7 +38343,7 @@ const CONTENT = {
  ],
  "trial": [
   {
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "q": "Từ nào đồng nghĩa với 'important' trong văn phong học thuật?",
    "options": [
     "significant",
@@ -38354,7 +38354,7 @@ const CONTENT = {
    "why": "'Significant' là từ học thuật thay cho 'important' - cặp paraphrase kinh điển trong IELTS."
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "q": "Chọn câu đúng ngữ pháp: 'The number of students ___ increased since 2010.'",
    "options": [
     "has",
@@ -38365,7 +38365,7 @@ const CONTENT = {
    "why": "Chủ ngữ 'The number' là số ít → 'has increased'."
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "q": "Đọc: 'Although initially expensive, solar panels have fallen sharply in price.' Yếu tố nào khiến panel mặt trời từng là vấn đề?",
    "options": [
     "Giá cao ban đầu",
@@ -38376,7 +38376,7 @@ const CONTENT = {
    "why": "'initially expensive' - ban đầu đắt; cụm nhượng bộ although báo hiệu ý đối lập."
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "q": "Chọn câu paraphrase tốt nhất cho: 'Many people believe that cities are too crowded.'",
    "options": [
     "It is widely believed that urban areas are overpopulated.",
@@ -38387,7 +38387,7 @@ const CONTENT = {
    "why": "Paraphrase chuẩn IELTS: bị động tường thuật 'It is widely believed that...' + từ đồng nghĩa 'urban areas', 'overpopulated'."
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "q": "Cụm nào thể hiện quan điểm thận trọng (hedging) đúng chuẩn học thuật?",
    "options": [
     "The data suggests that the policy may have contributed to the decline.",
@@ -38398,7 +38398,7 @@ const CONTENT = {
    "why": "'suggests' + 'may have contributed' là hedging - tránh khẳng định tuyệt đối, đặc trưng band 7+."
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "q": "Chọn câu dùng cấu trúc nhấn mạnh (cleft sentence) đúng:",
    "options": [
     "It was the lack of funding that forced the project to stop.",
@@ -38409,7 +38409,7 @@ const CONTENT = {
    "why": "Câu chẻ: It + be + phần nhấn mạnh + that... - cấu trúc ghi điểm band cao."
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "q": "Điền từ đúng vào chỗ trống để tạo cụm từ cố định (collocation): 'After discussing the problem for an hour, the team finally ___ a decision.'",
    "options": [
     "make",
@@ -38420,7 +38420,7 @@ const CONTENT = {
    "why": "'Make a decision' là collocation cố định trong tiếng Anh, nghĩa là đưa ra quyết định. Không nói 'do a decision' hay 'give a decision' trong trường hợp này."
   },
   {
-   "level": "Band 5.5",
+   "level": "Band 5,5",
    "q": "Đọc câu sau: 'The percentage of commuters travelling by train fell steadily from 38% in 2005 to 24% in 2015.' Xu hướng được mô tả trong câu là gì?",
    "options": [
     "Tăng dần từ 24% lên 38%",
@@ -38431,7 +38431,7 @@ const CONTENT = {
    "why": "Động từ 'fell' nghĩa là giảm, và số liệu đi từ 38% xuống 24% nên đây là xu hướng giảm dần. 'Steadily' cho biết mức giảm diễn ra đều đặn."
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "q": "Trong bài Writing Task 1 mô tả một quy trình sản xuất, câu bị động nào dưới đây đúng ngữ pháp và phù hợp nhất?",
    "options": [
     "The glass is recycle after it is collected from homes.",
@@ -38442,7 +38442,7 @@ const CONTENT = {
    "why": "Câu bị động đúng có dạng 'are + quá khứ phân từ' - 'are sorted'. Câu đầu sai vì 'recycle' chưa chia ở dạng quá khứ phân từ, còn câu thứ hai là câu chủ động nên không phù hợp để mô tả quy trình."
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "q": "Trong văn phong học thuật, cụm nào thay thế đúng nhất cho 'a lot of' trong câu 'A lot of researchers support this view', khi đi với danh từ đếm được số nhiều 'researchers'?",
    "options": [
     "A considerable number of researchers",
@@ -38453,7 +38453,7 @@ const CONTENT = {
    "why": "'A considerable number of' đi với danh từ đếm được số nhiều như 'researchers'. 'Amount of' chỉ dùng với danh từ không đếm được, còn 'much' cũng không đi trực tiếp với danh từ đếm được số nhiều như vậy."
   },
   {
-   "level": "Band 7.0",
+   "level": "Band 7,0",
    "q": "Câu gốc: 'Regular exercise improves both physical health and mental well-being.' Câu nào paraphrase tốt nhất câu này, giữ nguyên ý và dùng từ vựng học thuật?",
    "options": [
     "Exercise is only beneficial for the body and has little effect on the mind.",
@@ -38464,7 +38464,7 @@ const CONTENT = {
    "why": "Câu đúng thay 'regular exercise' bằng 'engaging in physical activity on a regular basis' và 'improves' bằng 'enhances', đồng thời giữ đủ cả hai ý sức khỏe thể chất và tinh thần. Câu đầu đổi ngược ý, câu cuối thêm thông tin 'doctors recommend' không có trong câu gốc."
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "q": "Chọn câu đảo ngữ (inversion) đúng ngữ pháp với cấu trúc 'Not only...':",
    "options": [
     "Not only she speaks three languages, but also she plays the piano well.",
@@ -38475,7 +38475,7 @@ const CONTENT = {
    "why": "Khi 'Not only' đứng đầu câu, phải đảo trợ động từ lên trước chủ ngữ: 'does she speak'. Sau 'does', động từ chính giữ dạng nguyên thể 'speak', nên câu dùng 'speaks' là sai."
   },
   {
-   "level": "Band 5.0",
+   "level": "Band 5,0",
    "q": "Bạn đang rất khát nước ở quán cà phê và nói: 'Could I have a ___ of water, please?' Điền từ đúng nhất.",
    "options": [
     "bowl",
@@ -38486,7 +38486,7 @@ const CONTENT = {
    "why": "Vì nước uống đựng trong cốc thủy tinh gọi là a glass of water trong giao tiếp hằng ngày."
   },
   {
-   "level": "Band 6.0",
+   "level": "Band 6,0",
    "q": "Đọc tình huống: Chị Hoa đặt vé xe trực tuyến lúc chín giờ tối. Tin nhắn xác nhận ghi xe khởi hành lúc sáu giờ sáng hôm sau từ bến Mỹ Đình và hành khách cần có mặt trước ba mươi phút. Chị Hoa cần có mặt ở bến lúc mấy giờ?",
    "options": [
     "6 giờ sáng",
@@ -38497,7 +38497,7 @@ const CONTENT = {
    "why": "Vì xe khởi hành lúc sáu giờ và hành khách phải có mặt trước ba mươi phút nên chị Hoa cần đến lúc năm giờ ba mươi sáng."
   },
   {
-   "level": "Band 6.5",
+   "level": "Band 6,5",
    "q": "Chọn động từ đúng để tạo cụm từ tự nhiên: 'Regular exercise can ___ a big difference to your health.'",
    "options": [
     "make",
@@ -38508,7 +38508,7 @@ const CONTENT = {
    "why": "Vì make a difference là cụm cố định nghĩa là tạo ra thay đổi rõ rệt."
   },
   {
-   "level": "Band 7.5+",
+   "level": "Band 7,5+",
    "q": "Chọn câu đảo ngữ đúng với cấu trúc No sooner:",
    "options": [
     "No sooner we had sat down than the phone rang.",
@@ -38525,7 +38525,7 @@ const CONTENT = {
    "setting": "Bạn đến phỏng vấn cho một công việc bán thời gian tại một cửa hàng. Người phỏng vấn hỏi về kinh nghiệm, thời gian rảnh và lý do bạn muốn công việc này.",
    "partner": "Nhà tuyển dụng",
    "goal": "Trả lời rõ ràng, lịch sự và thuyết phục để được nhận vào làm.",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "chunks": [
     "I am looking for part-time work",
     "I am used to working with customers",
@@ -38646,7 +38646,7 @@ const CONTENT = {
    "setting": "Bạn vừa đến một khách sạn sau chuyến đi dài và làm thủ tục nhận phòng, hỏi về bữa sáng, wifi và giờ trả phòng.",
    "partner": "Lễ tân khách sạn",
    "goal": "Nhận phòng suôn sẻ và hỏi đủ các thông tin cần thiết cho kỳ nghỉ.",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "chunks": [
     "I have a booking under the name",
     "Could you tell me what time",
@@ -38766,7 +38766,7 @@ const CONTENT = {
    "setting": "Bạn gọi điện đến phòng khám để đặt lịch hẹn vì không khỏe, cần nói rõ nhu cầu và chọn giờ phù hợp.",
    "partner": "Nhân viên phòng khám",
    "goal": "Đặt được lịch hẹn và nắm rõ những gì cần mang theo khi đến khám.",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "chunks": [
     "I would like to make an appointment",
     "suits me better",
@@ -38885,7 +38885,7 @@ const CONTENT = {
    "setting": "Bạn đến phòng khám và kể cho Bác sĩ nghe các triệu chứng của mình, trả lời câu hỏi và nghe dặn dò.",
    "partner": "Bác sĩ",
    "goal": "Mô tả đúng triệu chứng để Bác sĩ chẩn đoán và kê đơn phù hợp.",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "chunks": [
     "I have had a bad cough",
     "a sore throat",
@@ -39003,7 +39003,7 @@ const CONTENT = {
    "setting": "Bạn là khách du lịch bị lạc ở một thành phố lạ và hỏi một người dân địa phương đường đến nơi cần đến cùng cách đi tiện nhất.",
    "partner": "Người dân địa phương",
    "goal": "Hiểu đúng chỉ đường và chọn được phương tiện phù hợp.",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "chunks": [
     "I am trying to get to",
     "Which way should I go from here",
@@ -39113,7 +39113,7 @@ const CONTENT = {
    "setting": "Trong buổi học, bạn thuyết trình ngắn giới thiệu một sản phẩm hữu ích trước lớp và trả lời một câu hỏi ở cuối.",
    "partner": "Người dẫn chương trình",
    "goal": "Trình bày có mở đầu, ba ý chính, kết luận rõ ràng và trả lời được câu hỏi.",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "chunks": [
     "I would like to introduce",
     "First of all",
@@ -39266,7 +39266,7 @@ const CONTENT = {
    "setting": "Bạn mới chuyển đến một công ty và trò chuyện làm quen với một đồng nghiệp trong giờ nghỉ.",
    "partner": "Đồng nghiệp mới",
    "goal": "Bắt chuyện tự nhiên, hỏi đáp qua lại và giữ không khí thân thiện.",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "chunks": [
     "welcome to the company",
     "in the first few weeks",
@@ -39386,7 +39386,7 @@ const CONTENT = {
    "setting": "Nhóm của bạn họp để phân công bài tập lớn: ai làm phần nào, hạn chót và lịch gặp lại.",
    "partner": "Bạn cùng nhóm",
    "goal": "Thống nhất được phần việc của mình và lịch trình của cả nhóm.",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "chunks": [
     "divide the work clearly",
     "I am happy to write the introduction",
@@ -39503,7 +39503,7 @@ const CONTENT = {
    "setting": "Đồ ăn bạn đặt giao đến rất chậm và còn sai món. Bạn gọi điện phàn nàn một cách lịch sự với nhân viên nhà hàng.",
    "partner": "Nhân viên nhà hàng",
    "goal": "Nói rõ vấn đề và đạt được cách xử lý thỏa đáng mà vẫn giữ thái độ lịch sự.",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "chunks": [
     "I am calling about",
     "instead of",
@@ -39621,7 +39621,7 @@ const CONTENT = {
    "setting": "Bạn mua một món đồ lưu niệm ở chợ và muốn mặc cả để được giá tốt hơn một chút.",
    "partner": "Người bán hàng",
    "goal": "Thương lượng khéo để mua được món đồ với giá hợp lý.",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "chunks": [
     "How much are the mangoes per kilo",
     "a bit expensive for me",
@@ -39740,7 +39740,7 @@ const CONTENT = {
    "setting": "Bạn làm thủ tục check-in tại sân bay cho một chuyến bay và hỏi về hành lý, ghế ngồi và cổng lên máy bay.",
    "partner": "Nhân viên hãng bay",
    "goal": "Hoàn tất check-in và nắm rõ giờ có mặt ở cổng lên máy bay.",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "chunks": [
     "window seat or an aisle seat",
     "still available",
@@ -39855,7 +39855,7 @@ const CONTENT = {
    "setting": "Bạn đi xem một căn phòng cho thuê và hỏi chủ nhà về giá, đồ đạc, hóa đơn và quy định trước khi quyết định.",
    "partner": "Chủ nhà",
    "goal": "Hỏi đủ thông tin quan trọng để quyết định có thuê hay không.",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "chunks": [
     "look around",
     "bigger than I expected",
@@ -40194,7 +40194,7 @@ const CONTENT = {
    "setting": "Bạn ứng tuyển vị trí chuyên viên truyền thông tại một công ty lớn. Buổi phỏng vấn đi sâu vào kinh nghiệm, cách xử lý khó khăn, điểm yếu và định hướng nghề nghiệp của bạn.",
    "partner": "Nhà tuyển dụng",
    "goal": "Trả lời sâu, có ví dụ cụ thể và giữ thái độ chuyên nghiệp, trung thực trong suốt buổi phỏng vấn.",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "chunks": [
     "my greatest strength is",
     "a concrete example of this is",
@@ -40316,7 +40316,7 @@ const CONTENT = {
    "setting": "Bạn thuyết trình kết quả nghiên cứu về mảng xanh trong đô thị trước hội đồng và khán giả chuyên môn. Sau phần trình bày, bạn phải trả lời các câu hỏi chất vấn khó về bằng chứng, chi phí và tính khả thi.",
    "partner": "Người điều phối và khán giả chất vấn",
    "goal": "Trình bày mạch lạc, bảo vệ luận điểm bằng bằng chứng và xử lý chất vấn một cách điềm tĩnh, thuyết phục.",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "chunks": [
     "the central argument of this presentation is",
     "the evidence consistently suggests that",
@@ -40437,7 +40437,7 @@ const CONTENT = {
    "setting": "Bạn đến một phòng gym gần nhà để hỏi đăng ký thẻ thành viên. Nhân viên lễ tân giới thiệu các gói tập và giá tiền, giờ mở cửa, các lớp học nhóm và chính sách tập thử miễn phí trước khi bạn quyết định.",
    "partner": "Nhân viên lễ tân phòng gym",
    "goal": "Hỏi rõ giá các gói, giờ mở cửa, các lớp học và buổi tập thử, rồi đăng ký gói phù hợp nhất với lịch của mình.",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "chunks": [
     "How much is the membership",
     "What time do you open and close",
@@ -40558,7 +40558,7 @@ const CONTENT = {
    "setting": "Bạn cảm thấy không khỏe đã ba ngày nay nên đến một phòng khám gần nhà. Bác sĩ hỏi về các triệu chứng, đo thân nhiệt, kiểm tra tiền sử dị ứng và kê đơn thuốc cho bạn.",
    "partner": "Bác sĩ tại phòng khám",
    "goal": "Kể rõ các triệu chứng của mình (đau họng, ho và sốt ba ngày), nói rõ tiền sử dị ứng penicillin và hỏi rõ cách uống thuốc cùng lịch tái khám.",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "chunks": [
     "I have had a sore throat",
     "my temperature is 38.5 degrees",
@@ -40679,7 +40679,7 @@ const CONTENT = {
    "setting": "Bạn là bác sĩ điều trị. Bệnh nhân của bạn vừa được chẩn đoán viêm phế quản và đang lo lắng. Bạn cần giải thích phác đồ điều trị, cách uống kháng sinh, tác dụng phụ có thể gặp và lịch tái khám bằng lời lẽ đơn giản, dễ hiểu.",
    "partner": "Bệnh nhân đang lo lắng",
    "goal": "Giải thích rõ phác đồ: uống kháng sinh hai lần một ngày sau bữa ăn trong 7 ngày và phải uống đủ liệu trình, thuốc có thể gây buồn ngủ, tái khám sau một tuần hoặc quay lại ngay nếu sốt cao hơn.",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "chunks": [
     "You have a mild chest infection",
     "take this antibiotic twice a day",
@@ -40800,7 +40800,7 @@ const CONTENT = {
    "setting": "Bạn gọi điện đến phòng khám tim mạch để đặt lịch khám cho bố của mình. Lễ tân hỏi về giấy giới thiệu từ bác sĩ gia đình, bảo hiểm y tế và đề xuất các khung giờ còn trống.",
    "partner": "Lễ tân phòng khám tim mạch",
    "goal": "Đặt được lịch khám chuyên khoa tim mạch cho bố: xác nhận có giấy giới thiệu từ bác sĩ gia đình và thẻ bảo hiểm y tế, rồi chọn khung giờ sớm nhất còn trống vào sáng thứ Ba.",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "chunks": [
     "book an appointment with a cardiologist",
     "a referral letter from his GP",
@@ -40980,7 +40980,7 @@ const CONTENT = {
   },
   {
    "section": "Section 1",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "topic": "Đặt lịch khám với Bác sĩ Lan",
    "text": "A: Good morning, Green Clinic, how can I help you today? B: Hello, I would like an appointment with Doctor Lan on Friday morning. A: Doctor Lan is free at 9:30 on Friday and the consultation fee is 200000 dong. B: That time suits me and my name is Thanh Ha. A: Your booking number is 18, so please bring your health card with you. B: Thank you, I will arrive at 9:15 and wait at the reception desk.",
    "questions": [
@@ -41040,7 +41040,7 @@ const CONTENT = {
   },
   {
    "section": "Section 2",
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "topic": "Thông báo chuyến tham quan bảo tàng khoa học",
    "text": "Welcome to the City Science Museum tour on Saturday the 18th. The bus leaves the main gate at 8:00 and returns at 4:30 in the afternoon. Tickets cost 120000 dong for adults and 60000 dong for children under 12 years old. Visitors will watch a 20 minute film and then join a hands-on workshop in Room 3. Please wear comfortable shoes and bring a bottle of water with you. Booking closes on Thursday at 5:00, so please register early at the front desk.",
    "questions": [
@@ -41100,7 +41100,7 @@ const CONTENT = {
   },
   {
    "section": "Section 2",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "topic": "Chương trình tình nguyện đọc sách tại thư viện",
    "text": "The Central Library will launch a volunteer reading programme for children on 3 March. Volunteers will read stories to groups of 6 to 8 children every Tuesday and Thursday evening. Each session lasts 45 minutes and takes place in the children's room on the second floor. The library needs 15 volunteers and will provide two training sessions on 24 and 26 February. Volunteers must be at least 16 years old and should enjoy working with young readers. Anyone interested can sign up at the information desk before 28 February.",
    "questions": [
@@ -41160,7 +41160,7 @@ const CONTENT = {
   },
   {
    "section": "Section 3",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "topic": "Bàn phương pháp nghiên cứu về giấc ngủ của sinh viên",
    "text": "A: For our project on student sleep, we collected data from 240 students during March. B: Did you use a questionnaire or interviews as the main method? A: We used an online questionnaire with 18 questions and then interviewed 12 students in depth. B: That combination is useful because numbers show the pattern and interviews explain the reasons. A: Our results show that 62 percent of students sleep less than 7 hours before exams. B: We should compare that figure with the national study from 2022 in the discussion section. A: Agreed, and we will present the charts on Tuesday at 2:00 in Lab 4.",
    "questions": [
@@ -41220,7 +41220,7 @@ const CONTENT = {
   },
   {
    "section": "Section 3",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "topic": "Trao đổi về chương phương pháp của luận văn không gian xanh",
    "text": "A: I have revised the methodology chapter of my dissertation on urban green spaces in District 7. B: Did you keep the sample of 35 residents who were interviewed last semester? A: Yes, and I added survey responses from 180 park users collected in April. B: That larger sample should strengthen the validity of your comparison between the two parks. A: My supervisor suggested adding a short section on research limitations before the conclusion. B: That is sensible because the survey was only carried out on weekday mornings. A: I will submit the full draft to Dr Pham by Friday the 9th at noon.",
    "questions": [
@@ -41280,7 +41280,7 @@ const CONTENT = {
   },
   {
    "section": "Section 4",
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "topic": "Bài giảng về vùng đất ngập nước đô thị và chống ngập",
    "text": "Good morning, and today we examine how urban wetlands protect cities from flooding. A wetland acts like a natural sponge, absorbing excess rainwater and releasing it slowly into rivers. In one recent case, a restored wetland of 42 hectares reduced peak flood levels by nearly 18 percent. Wetlands also trap sediment and filter pollutants, which improves water quality for nearby neighbourhoods. However, their performance depends on careful maintenance, because blocked channels can reduce storage capacity within a few years. For this reason, city planners now treat wetlands as essential infrastructure rather than unused land.",
    "questions": [
@@ -41340,7 +41340,7 @@ const CONTENT = {
   },
   {
    "section": "Section 4",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "topic": "Bài giảng về kinh tế tuần hoàn trong ngành điện tử",
    "text": "This lecture considers the circular economy as an alternative to the traditional model of production in the electronics industry. Instead of discarding devices after a short period of use, manufacturers design products that can be repaired, upgraded and eventually disassembled for valuable materials. Research in 2023 estimated that recovering metals from discarded phones could meet up to twelve point five percent of demand for certain rare materials in Europe. The economic argument is persuasive, yet collection systems remain inefficient, with fewer than 22 percent of electronic devices being formally recycled worldwide. Effective policy therefore requires producers to finance collection, while consumers need clear information about repair options and product lifespan. Without such coordination, the circular model risks becoming a marketing label rather than a genuine transformation of production.",
    "questions": [
@@ -41401,7 +41401,7 @@ const CONTENT = {
  ,
   {
    "section": "Section 1",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "topic": "Đăng ký lớp học nấu ăn tại trung tâm cộng đồng",
    "text": "A: Good afternoon, City Community Centre. How can I help you? B: Hello, I would like to join a cooking class, please. A: We have three classes each week. The Monday class is for Italian food, the Wednesday class is for Vietnamese food, and the Friday class is for baking. B: I love Italian food, but I work on Mondays, so I cannot come then. A: Then the Friday baking class may suit you. It starts at 6:30 in the evening and costs 300000 dong for four lessons. B: That sounds good. My name is Minh Anh. A: Thank you, Minh Anh. Please bring an apron and arrive fifteen minutes early for the first lesson.",
    "questions": [
@@ -41456,7 +41456,7 @@ const CONTENT = {
   },
   {
    "section": "Section 2",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "topic": "Giới thiệu trung tâm thể thao Riverside mới mở",
    "text": "Welcome to the Riverside Sports Centre. Before your tour begins, let me explain where everything is. On the ground floor, you will find the swimming pool and the children's play area. The fitness gym is on the first floor, together with the yoga studio. On the second floor, there is a large hall for badminton and table tennis. Membership costs 500000 dong a month for adults, but students receive a 20 percent discount. This weekend, all new members can try one class completely free, so please book at reception before Friday to save your place.",
    "questions": [
@@ -41512,7 +41512,7 @@ const CONTENT = {
   },
   {
    "section": "Section 3",
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "topic": "Nhóm sinh viên phân công dự án năng lượng gió",
    "text": "A: Let's plan your wind energy project. Who is going to collect the wind speed data? B: Tuan will collect the data from the weather station because he lives near the coast. A: Good. And who will design the model turbine? B: Mai will design the turbine blades, and Linh will prepare the poster for the presentation. A: What about the written report? B: I will write the first draft of the report, and Tuan will check the calculations. A: Remember, the deadline for the whole project is the 15th of May, and our next meeting is in Room 204 on Thursday.",
    "questions": [
@@ -41572,7 +41572,7 @@ const CONTENT = {
   },
   {
    "section": "Section 4",
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "topic": "Bài giảng về hiệu ứng đảo nhiệt đô thị",
    "text": "This lecture examines the urban heat island effect, the observation that cities are significantly warmer than the countryside around them. In large cities, the difference can reach seven degrees Celsius on calm summer nights. Three factors explain the effect. First, dark surfaces such as asphalt roads absorb heat during the day and release it slowly at night. Second, tall buildings block the wind that would otherwise cool the streets. Third, vehicles and air conditioners produce waste heat directly. The consequences are serious: energy demand rises, and elderly residents face greater health risks during heatwaves. Researchers have tested several solutions. Green roofs, where plants cover the top of buildings, can reduce indoor temperatures, while pale pavements reflect sunlight instead of absorbing it. Interestingly, a single large park can cool the surrounding streets by up to two degrees, which is why many planners now argue that green space should be treated as essential infrastructure rather than decoration.",
    "questions": [
@@ -41622,7 +41622,7 @@ const CONTENT = {
   },
   {
    "section": "Section 1",
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "topic": "Bệnh nhân đặt lịch khám qua điện thoại",
    "text": "A: Good morning, City Medical Clinic. How can I help you? B: Good morning. I would like to book an appointment with a doctor, please. A: Certainly. May I have your full name, please? B: It is Nguyen Thanh Hoa. A: Thank you. And your date of birth? B: The 12th of March, 1990. A: Thank you. And what is the problem? B: I have had a bad cough and a sore throat for four days. A: I see. Doctor Pham can see you tomorrow, Thursday, at 10:30 in the morning. Is that convenient for you? B: Yes, that is perfect. Thank you. A: Please bring your health insurance card and arrive ten minutes early.",
    "questions": [
@@ -41660,7 +41660,7 @@ const CONTENT = {
   },
   {
    "section": "Section 2",
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "topic": "Giới thiệu chương trình tiêm chủng tại phòng khám",
    "text": "Good afternoon, everyone. My name is Doctor Linh, and I would like to introduce our clinic's new vaccination programme for this winter. The programme offers free flu vaccines to all patients over sixty-five, as well as to young children and people with chronic diseases such as diabetes. Vaccination protects not only you, but also the people around you, because it slows the spread of the virus in the community. This year, the programme will run from the 1st of October to the end of November, from Monday to Saturday. There is no need to book an appointment; you can simply come to the clinic with your health card. After the injection, please stay in the waiting room for fifteen minutes so that our nurses can check that you feel fine. A small number of people may have a sore arm or a mild fever for a day, but serious side effects are extremely rare. Thank you for listening, and please help us spread the word to your family and neighbours.",
    "questions": [
@@ -41717,7 +41717,7 @@ const CONTENT = {
  ],
  "writingDrills": [
   {
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "kind": "combine",
    "title": "Nối câu nhân quả bằng so",
    "prompt": "Nối hai câu thành một câu bằng so. / Combine the sentences with so.",
@@ -41726,7 +41726,7 @@ const CONTENT = {
    "note": "Kỹ thuật này giúp nối nguyên nhân và kết quả bằng so trong một câu rõ ràng."
   },
   {
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "kind": "combine",
    "title": "Nối câu nguyên nhân bằng because",
    "prompt": "Nối hai câu thành một câu, đặt because ở đầu câu. / Combine with because.",
@@ -41735,7 +41735,7 @@ const CONTENT = {
    "note": "Kỹ thuật này đặt mệnh đề nguyên nhân lên trước để người đọc thấy lý do ngay từ đầu câu."
   },
   {
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "kind": "paraphrase",
    "title": "Viết lại bằng cụm từ trái nghĩa phủ định",
    "prompt": "Viết lại câu giữ nguyên nghĩa bằng not far from. / Paraphrase with not far from.",
@@ -41744,7 +41744,7 @@ const CONTENT = {
    "note": "Kỹ thuật này dùng phủ định của từ trái nghĩa để giữ nguyên nghĩa mà vẫn đổi cách diễn đạt."
   },
   {
-   "band": "Band 5.0",
+   "band": "Band 5,0",
    "kind": "order",
    "title": "Sắp xếp thành câu khẳng định đơn giản",
    "prompt": "Sắp xếp các mảnh thành một câu đúng. / Put the words in the correct order.",
@@ -41753,7 +41753,7 @@ const CONTENT = {
    "note": "Kỹ thuật này bám vào trật tự chủ ngữ, động từ rồi bổ ngữ để xếp câu cơ bản cho đúng."
   },
   {
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "kind": "combine",
    "title": "Nối câu tương phản bằng although",
    "prompt": "Nối hai câu thành một câu bằng although. / Combine with although.",
@@ -41762,7 +41762,7 @@ const CONTENT = {
    "note": "Kỹ thuật này dùng although để nối hai ý trái ngược trong cùng một câu."
   },
   {
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "kind": "paraphrase",
    "title": "Viết lại bằng câu bị động đơn giản",
    "prompt": "Viết lại câu bằng thể bị động, giữ nguyên nghĩa. / Rewrite in the passive.",
@@ -41771,7 +41771,7 @@ const CONTENT = {
    "note": "Kỹ thuật này đưa đối tượng chịu tác động lên đầu câu bị động, và Bác sĩ trong câu nguồn trở thành tác nhân ở cuối câu."
   },
   {
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "kind": "paraphrase",
    "title": "Viết lại bằng cấu trúc sở hữu",
    "prompt": "Viết lại câu bằng cấu trúc have, giữ nguyên nghĩa. / Paraphrase with have.",
@@ -41780,7 +41780,7 @@ const CONTENT = {
    "note": "Kỹ thuật này đổi cấu trúc there are thành chủ ngữ sở hữu để câu ngắn gọn và tự nhiên hơn."
   },
   {
-   "band": "Band 5.5",
+   "band": "Band 5,5",
    "kind": "order",
    "title": "Sắp xếp thành câu hỏi nơi chốn",
    "prompt": "Sắp xếp các mảnh thành một câu hỏi đúng. / Put the words in the correct order.",
@@ -41789,7 +41789,7 @@ const CONTENT = {
    "note": "Kỹ thuật này đặt từ hỏi lên đầu rồi đến trợ động từ, chủ ngữ và động từ chính."
   },
   {
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "kind": "combine",
    "title": "Nối ba câu bằng although và because",
    "prompt": "Nối ba câu thành một câu dùng although và because. / Combine with although and because.",
@@ -41798,7 +41798,7 @@ const CONTENT = {
    "note": "Kỹ thuật này gộp nhượng bộ và nguyên nhân vào một câu để tránh viết ba câu ngắn rời rạc."
   },
   {
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "kind": "paraphrase",
    "title": "Viết lại bằng cấu trúc it is said that",
    "prompt": "Viết lại câu bằng It is said that, giữ nguyên nghĩa. / Paraphrase with It is said that.",
@@ -41807,7 +41807,7 @@ const CONTENT = {
    "note": "Kỹ thuật này dùng cấu trúc bị động không ngôi để trình bày thông tin chung một cách khách quan."
   },
   {
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "kind": "order",
    "title": "Sắp xếp câu có trạng từ tần suất",
    "prompt": "Sắp xếp các mảnh thành một câu đúng. / Put the words in the correct order.",
@@ -41816,7 +41816,7 @@ const CONTENT = {
    "note": "Kỹ thuật này đặt trạng từ tần suất ngay trước động từ chính và cụm nơi chốn, thời gian ở cuối câu."
   },
   {
-   "band": "Band 6.0",
+   "band": "Band 6,0",
    "kind": "order",
    "title": "Sắp xếp đoạn quy trình ngắn",
    "prompt": "Sắp xếp ba câu thành đoạn đúng thứ tự. / Put the sentences in the correct order.",
@@ -41825,7 +41825,7 @@ const CONTENT = {
    "note": "Kỹ thuật này dựa vào các từ nối trình tự để khôi phục thứ tự logic của một quy trình ngắn."
   },
   {
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "kind": "combine",
    "title": "Nối câu bằng mệnh đề quan hệ who",
    "prompt": "Nối hai câu bằng mệnh đề quan hệ who. / Combine with a relative clause.",
@@ -41834,7 +41834,7 @@ const CONTENT = {
    "note": "Kỹ thuật này lồng mệnh đề quan hệ ngay sau danh từ được mô tả để câu liền mạch hơn."
   },
   {
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "kind": "combine",
    "title": "Nối câu tương phản về du lịch",
    "prompt": "Nối hai câu thành một câu bằng although. / Combine with although.",
@@ -41843,7 +41843,7 @@ const CONTENT = {
    "note": "Kỹ thuật này cân bằng hai mặt của cùng một vấn đề trong một câu phức rõ ràng."
   },
   {
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "kind": "paraphrase",
    "title": "Viết lại bằng unless",
    "prompt": "Viết lại câu bằng unless, giữ nguyên nghĩa. / Paraphrase with unless.",
@@ -41852,7 +41852,7 @@ const CONTENT = {
    "note": "Kỹ thuật này thay if và not bằng unless để diễn đạt điều kiện phủ định ngắn gọn hơn."
   },
   {
-   "band": "Band 6.5",
+   "band": "Band 6,5",
    "kind": "order",
    "title": "Sắp xếp câu phức có because",
    "prompt": "Sắp xếp các mảnh thành một câu đúng. / Put the words in the correct order.",
@@ -41861,7 +41861,7 @@ const CONTENT = {
    "note": "Kỹ thuật này xác định mệnh đề chính trước rồi gắn mệnh đề nguyên nhân bằng because vào sau."
   },
   {
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "kind": "combine",
    "title": "Nối câu bằng cụm phân từ hoàn thành",
    "prompt": "Nối ba câu thành một câu, mở đầu bằng Having. / Combine with Having.",
@@ -41870,7 +41870,7 @@ const CONTENT = {
    "note": "Kỹ thuật này dùng cụm phân từ hoàn thành để gộp hành động xảy ra trước mà vẫn giữ rõ chủ ngữ chung."
   },
   {
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "kind": "paraphrase",
    "title": "Viết lại bằng danh hóa và bị động",
    "prompt": "Viết lại câu bằng bị động và danh hóa investment. / Paraphrase with the passive.",
@@ -41879,7 +41879,7 @@ const CONTENT = {
    "note": "Kỹ thuật này chuyển động từ thành danh từ và dùng bị động để câu mang văn phong học thuật hơn."
   },
   {
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "kind": "paraphrase",
    "title": "Viết lại bằng cấu trúc enough to",
    "prompt": "Viết lại câu bằng not old enough to, giữ nguyên nghĩa. / Paraphrase with enough.",
@@ -41888,7 +41888,7 @@ const CONTENT = {
    "note": "Kỹ thuật này đổi too và tính từ thành not, tính từ trái nghĩa và enough để giữ nguyên giới hạn ý nghĩa."
   },
   {
-   "band": "Band 7.0",
+   "band": "Band 7,0",
    "kind": "order",
    "title": "Sắp xếp câu đảo ngữ với only after",
    "prompt": "Sắp xếp các mảnh thành một câu đúng. / Put the words in the correct order.",
@@ -41897,7 +41897,7 @@ const CONTENT = {
    "note": "Kỹ thuật này đặt cụm nhấn mạnh lên đầu câu rồi đảo trợ động từ lên trước chủ ngữ."
   },
   {
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "kind": "combine",
    "title": "Nối câu bằng despite và mệnh đề nguyên nhân",
    "prompt": "Nối ba câu thành một câu dùng Despite và because. / Combine with Despite and because.",
@@ -41906,7 +41906,7 @@ const CONTENT = {
    "note": "Kỹ thuật này kết hợp danh hóa sau despite với mệnh đề nguyên nhân để gộp ba ý vào một câu học thuật."
   },
   {
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "kind": "paraphrase",
    "title": "Viết lại bằng danh hóa nâng cao",
    "prompt": "Viết lại câu bằng danh hóa incompleteness, giữ nguyên nghĩa. / Paraphrase with nominalisation.",
@@ -41915,7 +41915,7 @@ const CONTENT = {
    "note": "Kỹ thuật này biến tính từ thành danh từ trừu tượng làm chủ ngữ để nâng độ trang trọng của câu."
   },
   {
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "kind": "order",
    "title": "Sắp xếp đoạn văn theo logic lập luận",
    "prompt": "Sắp xếp bốn câu thành một đoạn đúng thứ tự. / Put the sentences in the correct order.",
@@ -41924,7 +41924,7 @@ const CONTENT = {
    "note": "Kỹ thuật này sắp xếp đoạn theo chuỗi bối cảnh, hệ quả rồi kết luận có therefore ở câu cuối."
   },
   {
-   "band": "Band 7.5+",
+   "band": "Band 7,5+",
    "kind": "order",
    "title": "Sắp xếp câu nhấn mạnh dạng chẻ",
    "prompt": "Sắp xếp các mảnh thành một câu nhấn mạnh đúng. / Put the words in the correct order.",
