@@ -116,59 +116,59 @@ var RB_PH_WAVES = {
   3: ["æ", "ɜ:", "θ", "ð", "ʒ", "ʃ"]
 };
 // Dữ liệu đợt 1: ký hiệu, từ ví dụ, nghĩa, lời giải thích bằng lời thường, câu mẫu,
-// mốc đoạn video BBC (PH_SEG, gắn theo ký hiệu âm) và tham số khẩu hình cũ (hình vẽ đã bỏ, chỉ giữ để đối chiếu).
+// video riêng từng âm (vid, dạy bằng tiếng Việt, thấy rõ miệng) + mốc đoạn video BBC cũ (seg, chỉ giữ để đối chiếu) và tham số khẩu hình cũ (hình vẽ đã bỏ, chỉ giữ để đối chiếu).
 // Lời giải thích f/j/k/ɡ/ŋ là bản viết lại đã kiểm chứng; các âm còn lại giữ lời giải thích cũ đã tốt.
 var RB_PH1 = [
-  { s: "m", w: "man", vi: "người đàn ông", ex: "Hai môi mím lại, hơi đi qua mũi, có rung. Giống âm m tiếng Việt.", sen: "The man is my father.", senVi: "Người đàn ông đó là bố tôi.", seg: [3506, 3625], h: .4, f: .5, r: 0, o: .05, tip: .1, teeth: 0 },
-  { s: "n", w: "no", vi: "không", ex: "Đầu lưỡi chạm nướu trên, hơi đi qua mũi. Giống âm n tiếng Việt.", sen: "No, thank you.", senVi: "Không, cảm ơn bạn.", seg: [3625, 3750], h: .5, f: .8, r: 0, o: .2, tip: .85, teeth: 1 },
-  { s: "p", w: "pen", vi: "cái bút", ex: "Hai môi mím chặt rồi bật mở đẩy hơi ra. Âm không rung dây thanh.", sen: "This is my pen.", senVi: "Đây là bút của tôi.", seg: [1723, 1860], h: .4, f: .5, r: 0, o: .1, tip: .1, teeth: 0 },
-  { s: "b", w: "bag", vi: "cái túi", ex: "Giống âm p nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung.", sen: "My bag is red.", senVi: "Túi của tôi màu đỏ.", seg: [1860, 1994], h: .4, f: .5, r: 0, o: .1, tip: .1, teeth: 0 },
-  { s: "f", w: "fish", vi: "con cá", ex: "Tiếng Việt đã có âm này: chữ 'ph' trong 'phở' chính là /f/. Răng trên chạm nhẹ vào môi dưới, thổi hơi qua khe hẹp. Chỉ cần chú ý bật rõ âm cuối trong tiếng Anh (ví dụ 'life' phải nghe rõ /f/ cuối từ — tiếng Việt thường nuốt âm cuối).", sen: "I like fish.", senVi: "Tôi thích cá.", seg: [2684, 2780], h: .4, f: .7, r: 0, o: .15, tip: .3, teeth: 1 },
-  { s: "s", w: "see", vi: "nhìn thấy", ex: "Đầu lưỡi gần nướu trên, hai hàm răng gần khép, thổi hơi xì dài và mảnh.", sen: "I see a cat.", senVi: "Tôi nhìn thấy một con mèo.", seg: [3113, 3209], h: .6, f: .8, r: 0, o: .15, tip: .7, teeth: 1 },
-  { s: "h", w: "hat", vi: "cái mũ", ex: "Miệng mở theo hình của nguyên âm sau nó, đẩy hơi từ cổ họng ra nhẹ nhàng như thở dài.", sen: "This is my hat.", senVi: "Đây là mũ của tôi.", seg: [3879, 3945], h: .4, f: .5, r: 0, o: .5, tip: .1, teeth: 0 },
-  { s: "l", w: "leg", vi: "cái chân", ex: "Đầu lưỡi chạm nướu trên, hơi đi qua hai bên lưỡi. Giống âm l tiếng Việt khi ở đầu từ.", sen: "I have two legs.", senVi: "Tôi có hai chân.", seg: [3945, 4160], h: .5, f: .8, r: 0, o: .25, tip: .85, teeth: 1 },
-  { s: "t", w: "ten", vi: "số mười", ex: "Đầu lưỡi chạm vào nướu sau răng trên rồi bật ra kèm hơi mạnh.", sen: "I am ten years old.", senVi: "Tôi mười tuổi.", seg: [1994, 2124], h: .5, f: .8, r: 0, o: .25, tip: .85, teeth: 1 },
-  { s: "d", w: "dog", vi: "con chó", ex: "Giống âm t nhưng có rung cổ họng.", sen: "The dog is big.", senVi: "Con chó to.", seg: [2124, 2249], h: .5, f: .8, r: 0, o: .25, tip: .85, teeth: 1 },
-  { s: "k", w: "key", vi: "chìa khóa", ex: "Phần vòm miệng mềm ở phía trong cùng nâng lên chặn hơi rồi bật ra. Miệng mở vừa.", sen: "This is a key.", senVi: "Đây là một chiếc chìa khóa.", seg: [2459, 2579], h: .45, f: .15, r: 0, o: .4, tip: 0, teeth: 0 },
-  { s: "ɡ", w: "go", vi: "đi", ex: "Giống âm k nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung. Phần vòm miệng mềm ở phía trong cùng nâng lên chặn hơi rồi bật ra.", sen: "I go to school.", senVi: "Tôi đi học.", seg: [2579, 2684], h: .45, f: .15, r: 0, o: .4, tip: 0, teeth: 0 },
-  { s: "ŋ", w: "sing", vi: "hát", ex: "Phần vòm miệng mềm ở phía trong cùng nâng lên chặn hơi, hơi đi qua mũi. Là âm ng ở cuối từ, đừng thêm g phía sau.", sen: "I sing a song.", senVi: "Tôi hát một bài hát.", seg: [3750, 3879], h: .45, f: .15, r: 0, o: .3, tip: 0, teeth: 0 },
-  { s: "j", w: "yes", vi: "vâng", ex: "Gần giống âm 'i' đọc thật nhanh rồi trượt sang âm sau. Lưỡi nâng cao ra trước rồi trượt nhanh sang nguyên âm sau.", sen: "Yes, I am ready.", senVi: "Vâng, tôi sẵn sàng.", seg: [4490, null], h: .85, f: .9, r: 0, o: .25, tip: .25, teeth: 0 },
-  { s: "i:", w: "see", vi: "nhìn thấy", ex: "Môi dẹt và kéo sang hai bên như đang cười. Lưỡi cao và đưa ra trước, đầu lưỡi chạm nhẹ răng dưới.", sen: "I see a bird.", senVi: "Tôi nhìn thấy một con chim.", seg: [0, 131], h: .95, f: .95, r: 0, o: .18, tip: .3, teeth: 0 },
-  { s: "e", w: "bed", vi: "cái giường", ex: "Miệng mở vừa, môi thả lỏng. Lưỡi ở giữa, đầu lưỡi chạm răng dưới. Âm ngắn.", sen: "The bed is soft.", senVi: "Chiếc giường mềm.", seg: [345, 455], h: .55, f: .8, r: 0, o: .45, tip: .25, teeth: 0 },
-  { s: "ɑ:", w: "car", vi: "xe hơi", ex: "Miệng mở to, lưỡi thấp và lùi hẳn về sau. Âm dài, nghe như tiếng a kéo dài từ cổ họng.", sen: "My father has a car.", senVi: "Bố tôi có một chiếc xe hơi.", seg: [957, 996], h: .1, f: .1, r: 0, o: .9, tip: 0, teeth: 0 },
-  { s: "ɔ:", w: "horse", vi: "con ngựa", ex: "Âm dài hơn ɒ. Môi tròn vừa, lưỡi lùi về sau và hơi nâng lên. Âm dài.", sen: "The horse is white.", senVi: "Con ngựa màu trắng.", seg: [750, 800], h: .4, f: .15, r: .55, o: .5, tip: 0, teeth: 0 },
-  { s: "u:", w: "food", vi: "thức ăn", ex: "Môi tròn và chu mạnh ra trước như thổi nến. Lưỡi cao và lùi hẳn về sau. Âm dài.", sen: "I like this food.", senVi: "Tôi thích món ăn này.", seg: [292, 345], h: .92, f: .08, r: 1, o: .22, tip: 0, teeth: 0 },
-  { s: "eɪ", w: "day", vi: "ngày", ex: "Bắt đầu như âm e rồi trượt nhẹ lên âm ɪ. Môi hơi dẹt dần khi trượt.", sen: "Today is a good day.", senVi: "Hôm nay là một ngày đẹp.", seg: [1103, 1205], h: .6, f: .85, r: 0, o: .4, tip: .25, teeth: 0 },
-  { s: "aɪ", w: "night", vi: "ban đêm", ex: "Bắt đầu như âm a (miệng mở to) rồi trượt lên âm ɪ (miệng khép và dẹt lại).", sen: "Good night!", senVi: "Chúc ngủ ngon!", seg: [1526, 1586], h: .3, f: .6, r: 0, o: .7, tip: .2, teeth: 0 },
-  { s: "aʊ", w: "now", vi: "bây giờ", ex: "Bắt đầu như âm a rồi trượt về âm ʊ, môi tròn lại và miệng khép dần.", sen: "I am ready now.", senVi: "Bây giờ tôi đã sẵn sàng.", seg: [1586, 1723], h: .35, f: .35, r: .5, o: .65, tip: .05, teeth: 0 },
-  { s: "ɔɪ", w: "boy", vi: "cậu bé", ex: "Bắt đầu như âm ɔ (môi hơi tròn) rồi trượt lên âm ɪ (môi dẹt ra).", sen: "The boy is happy.", senVi: "Cậu bé vui vẻ.", seg: [1259, 1313], h: .45, f: .5, r: .3, o: .5, tip: .1, teeth: 0 }
+  { s: "m", vid: "8meCF9Hrj4U", vch: "Dan Hauer", w: "man", vi: "người đàn ông", ex: "Hai môi mím lại, hơi đi qua mũi, có rung. Giống âm m tiếng Việt.", sen: "The man is my father.", senVi: "Người đàn ông đó là bố tôi.", seg: [3506, 3625], h: .4, f: .5, r: 0, o: .05, tip: .1, teeth: 0 },
+  { s: "n", vid: "AbAk0jnUMlg", vch: "Dan Hauer", w: "no", vi: "không", ex: "Đầu lưỡi chạm nướu trên, hơi đi qua mũi. Giống âm n tiếng Việt.", sen: "No, thank you.", senVi: "Không, cảm ơn bạn.", seg: [3625, 3750], h: .5, f: .8, r: 0, o: .2, tip: .85, teeth: 1 },
+  { s: "p", vid: "CxtAwAfEhao", vch: "Dan Hauer", w: "pen", vi: "cái bút", ex: "Hai môi mím chặt rồi bật mở đẩy hơi ra. Âm không rung dây thanh.", sen: "This is my pen.", senVi: "Đây là bút của tôi.", seg: [1723, 1860], h: .4, f: .5, r: 0, o: .1, tip: .1, teeth: 0 },
+  { s: "b", vid: "fCenV8TgWpQ", vch: "Dan Hauer", w: "bag", vi: "cái túi", ex: "Giống âm p nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung.", sen: "My bag is red.", senVi: "Túi của tôi màu đỏ.", seg: [1860, 1994], h: .4, f: .5, r: 0, o: .1, tip: .1, teeth: 0 },
+  { s: "f", vid: "pz7QO_Ye3YQ", vch: "Dan Hauer", w: "fish", vi: "con cá", ex: "Tiếng Việt đã có âm này: chữ 'ph' trong 'phở' chính là /f/. Răng trên chạm nhẹ vào môi dưới, thổi hơi qua khe hẹp. Chỉ cần chú ý bật rõ âm cuối trong tiếng Anh (ví dụ 'life' phải nghe rõ /f/ cuối từ — tiếng Việt thường nuốt âm cuối).", sen: "I like fish.", senVi: "Tôi thích cá.", seg: [2684, 2780], h: .4, f: .7, r: 0, o: .15, tip: .3, teeth: 1 },
+  { s: "s", vid: "Yof1BQPaRc4", vch: "Dan Hauer", w: "see", vi: "nhìn thấy", ex: "Đầu lưỡi gần nướu trên, hai hàm răng gần khép, thổi hơi xì dài và mảnh.", sen: "I see a cat.", senVi: "Tôi nhìn thấy một con mèo.", seg: [3113, 3209], h: .6, f: .8, r: 0, o: .15, tip: .7, teeth: 1 },
+  { s: "h", vid: "2AvwyD-bihM", vch: "Dan Hauer", w: "hat", vi: "cái mũ", ex: "Miệng mở theo hình của nguyên âm sau nó, đẩy hơi từ cổ họng ra nhẹ nhàng như thở dài.", sen: "This is my hat.", senVi: "Đây là mũ của tôi.", seg: [3879, 3945], h: .4, f: .5, r: 0, o: .5, tip: .1, teeth: 0 },
+  { s: "l", vid: "7Ma-SGB3fug", vch: "Dan Hauer", w: "leg", vi: "cái chân", ex: "Đầu lưỡi chạm nướu trên, hơi đi qua hai bên lưỡi. Giống âm l tiếng Việt khi ở đầu từ.", sen: "I have two legs.", senVi: "Tôi có hai chân.", seg: [3945, 4160], h: .5, f: .8, r: 0, o: .25, tip: .85, teeth: 1 },
+  { s: "t", vid: "EDfOv-WhWmE", vch: "Dan Hauer", w: "ten", vi: "số mười", ex: "Đầu lưỡi chạm vào nướu sau răng trên rồi bật ra kèm hơi mạnh.", sen: "I am ten years old.", senVi: "Tôi mười tuổi.", seg: [1994, 2124], h: .5, f: .8, r: 0, o: .25, tip: .85, teeth: 1 },
+  { s: "d", vid: "xPPGX4dv5Eo", vch: "Dan Hauer", w: "dog", vi: "con chó", ex: "Giống âm t nhưng có rung cổ họng.", sen: "The dog is big.", senVi: "Con chó to.", seg: [2124, 2249], h: .5, f: .8, r: 0, o: .25, tip: .85, teeth: 1 },
+  { s: "k", vid: "eMlci4X6SeI", vch: "Dan Hauer", w: "key", vi: "chìa khóa", ex: "Phần vòm miệng mềm ở phía trong cùng nâng lên chặn hơi rồi bật ra. Miệng mở vừa.", sen: "This is a key.", senVi: "Đây là một chiếc chìa khóa.", seg: [2459, 2579], h: .45, f: .15, r: 0, o: .4, tip: 0, teeth: 0 },
+  { s: "ɡ", vid: "hIm7BwZMqPo", vch: "Dan Hauer", w: "go", vi: "đi", ex: "Giống âm k nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung. Phần vòm miệng mềm ở phía trong cùng nâng lên chặn hơi rồi bật ra.", sen: "I go to school.", senVi: "Tôi đi học.", seg: [2579, 2684], h: .45, f: .15, r: 0, o: .4, tip: 0, teeth: 0 },
+  { s: "ŋ", vid: "wnxutoJOLoQ", vch: "Dan Hauer", w: "sing", vi: "hát", ex: "Phần vòm miệng mềm ở phía trong cùng nâng lên chặn hơi, hơi đi qua mũi. Là âm ng ở cuối từ, đừng thêm g phía sau.", sen: "I sing a song.", senVi: "Tôi hát một bài hát.", seg: [3750, 3879], h: .45, f: .15, r: 0, o: .3, tip: 0, teeth: 0 },
+  { s: "j", vid: "MTXxsNEE8EY", vch: "Dan Hauer", w: "yes", vi: "vâng", ex: "Gần giống âm 'i' đọc thật nhanh rồi trượt sang âm sau. Lưỡi nâng cao ra trước rồi trượt nhanh sang nguyên âm sau.", sen: "Yes, I am ready.", senVi: "Vâng, tôi sẵn sàng.", seg: [4490, null], h: .85, f: .9, r: 0, o: .25, tip: .25, teeth: 0 },
+  { s: "i:", vid: "PjnoeDmSO_w", vch: "Dan Hauer", w: "see", vi: "nhìn thấy", ex: "Môi dẹt và kéo sang hai bên như đang cười. Lưỡi cao và đưa ra trước, đầu lưỡi chạm nhẹ răng dưới.", sen: "I see a bird.", senVi: "Tôi nhìn thấy một con chim.", seg: [0, 131], h: .95, f: .95, r: 0, o: .18, tip: .3, teeth: 0 },
+  { s: "e", vid: "kmNc8FGNGMk", vch: "Dan Hauer", w: "bed", vi: "cái giường", ex: "Miệng mở vừa, môi thả lỏng. Lưỡi ở giữa, đầu lưỡi chạm răng dưới. Âm ngắn.", sen: "The bed is soft.", senVi: "Chiếc giường mềm.", seg: [345, 455], h: .55, f: .8, r: 0, o: .45, tip: .25, teeth: 0 },
+  { s: "ɑ:", vid: "guge8DCl8ho", vch: "Dan Hauer", w: "car", vi: "xe hơi", ex: "Miệng mở to, lưỡi thấp và lùi hẳn về sau. Âm dài, nghe như tiếng a kéo dài từ cổ họng.", sen: "My father has a car.", senVi: "Bố tôi có một chiếc xe hơi.", seg: [957, 996], h: .1, f: .1, r: 0, o: .9, tip: 0, teeth: 0 },
+  { s: "ɔ:", vid: "hUIpo2hD8b0", vch: "Dan Hauer", w: "horse", vi: "con ngựa", ex: "Âm dài hơn ɒ. Môi tròn vừa, lưỡi lùi về sau và hơi nâng lên. Âm dài.", sen: "The horse is white.", senVi: "Con ngựa màu trắng.", seg: [750, 800], h: .4, f: .15, r: .55, o: .5, tip: 0, teeth: 0 },
+  { s: "u:", vid: "HOZngteqqzM", vch: "Dan Hauer", w: "food", vi: "thức ăn", ex: "Môi tròn và chu mạnh ra trước như thổi nến. Lưỡi cao và lùi hẳn về sau. Âm dài.", sen: "I like this food.", senVi: "Tôi thích món ăn này.", seg: [292, 345], h: .92, f: .08, r: 1, o: .22, tip: 0, teeth: 0 },
+  { s: "eɪ", vid: "26zPMG2rzuI", vch: "Dan Hauer", w: "day", vi: "ngày", ex: "Bắt đầu như âm e rồi trượt nhẹ lên âm ɪ. Môi hơi dẹt dần khi trượt.", sen: "Today is a good day.", senVi: "Hôm nay là một ngày đẹp.", seg: [1103, 1205], h: .6, f: .85, r: 0, o: .4, tip: .25, teeth: 0 },
+  { s: "aɪ", vid: "Y4uYs85BoLU", vch: "Dan Hauer", w: "night", vi: "ban đêm", ex: "Bắt đầu như âm a (miệng mở to) rồi trượt lên âm ɪ (miệng khép và dẹt lại).", sen: "Good night!", senVi: "Chúc ngủ ngon!", seg: [1526, 1586], h: .3, f: .6, r: 0, o: .7, tip: .2, teeth: 0 },
+  { s: "aʊ", vid: "8wSdmU8CmLU", vch: "Dan Hauer", w: "now", vi: "bây giờ", ex: "Bắt đầu như âm a rồi trượt về âm ʊ, môi tròn lại và miệng khép dần.", sen: "I am ready now.", senVi: "Bây giờ tôi đã sẵn sàng.", seg: [1586, 1723], h: .35, f: .35, r: .5, o: .65, tip: .05, teeth: 0 },
+  { s: "ɔɪ", vid: "aH1QN2CmkY0", vch: "Dan Hauer", w: "boy", vi: "cậu bé", ex: "Bắt đầu như âm ɔ (môi hơi tròn) rồi trượt lên âm ɪ (môi dẹt ra).", sen: "The boy is happy.", senVi: "Cậu bé vui vẻ.", seg: [1259, 1313], h: .45, f: .5, r: .3, o: .5, tip: .1, teeth: 0 }
 ];
 // ---------- 11b. GIAI ĐOẠN 1.6: BÀI HỌC ĐỦ 44 ÂM (đợt 2/3, dữ kiện cũ) ----------
 // ex lấy từ mô tả khẩu hình của web cũ, đã chuẩn hóa: không nói "giống" khi chỉ
 // gần giống (trừ cặp rung/không rung cùng cách đặt miệng, ghi rõ "cách đặt miệng
 // giống"); ʌ/ə/ʃ dùng đúng bản đã kiểm chứng trong trường ex của RB_PH2.
 var RB_PH2 = [
-  { s: "ɪ", w: "ship", vi: "con tàu", ex: "Giống âm i: nhưng ngắn và thả lỏng hơn. Miệng mở hơi rộng hơn một chút, lưỡi thấp hơn một chút.", sen: "The ship is big.", senVi: "Con tàu lớn.", seg: [131, 251], h: .8, f: .85, r: 0, o: .3, tip: .25, teeth: 0 },
-  { s: "ʊ", w: "book", vi: "quyển sách", ex: "Môi tròn nhẹ và hơi chu ra, lưỡi lùi về sau, ở giữa cao. Âm ngắn và thả lỏng.", sen: "This is my book.", senVi: "Đây là quyển sách của tôi.", seg: [251, 292], h: .65, f: .2, r: .6, o: .3, tip: 0, teeth: 0 },
-  { s: "ʌ", w: "cup", vi: "cái cốc", ex: "Âm này tiếng Việt không có; nghe gần giống âm 'ă' nhưng miệng mở khác và lưỡi đặt khác — nghe nút loa mới là chuẩn, chữ 'ă' chỉ là điểm tựa ban đầu. Miệng mở vừa, môi thả lỏng, lưỡi ở giữa và hơi lùi, âm ngắn.", sen: "My cup is red.", senVi: "Cái cốc của tôi màu đỏ.", seg: [846, 957], h: .35, f: .4, r: 0, o: .55, tip: .15, teeth: 0 },
-  { s: "ɒ", w: "hot", vi: "nóng", ex: "Môi hơi tròn nhẹ, miệng mở rộng, lưỡi thấp và lùi về sau. Âm ngắn.", sen: "It is hot today.", senVi: "Hôm nay trời nóng.", seg: [996, 1036], h: .12, f: .15, r: .35, o: .75, tip: 0, teeth: 0 },
-  { s: "ɪə", w: "here", vi: "ở đây", ex: "Bắt đầu như âm ɪ rồi trượt nhẹ về âm ə ở giữa miệng. Lưỡi hạ dần.", sen: "Come here, please.", senVi: "Đến đây nào.", seg: [1036, 1103], h: .65, f: .6, r: 0, o: .35, tip: .15, teeth: 0 },
-  { s: "eə", w: "hair", vi: "tóc", ex: "Bắt đầu như âm e rồi trượt về âm ə. Miệng mở dần một chút.", sen: "Her hair is long.", senVi: "Tóc của cô ấy dài.", seg: [1423, 1526], h: .5, f: .6, r: 0, o: .45, tip: .15, teeth: 0 },
-  { s: "ʊə", w: "sure", vi: "chắc chắn", ex: "Bắt đầu như âm ʊ (môi hơi tròn) rồi trượt về âm ə, môi thả lỏng dần.", sen: "I am sure.", senVi: "Tôi chắc chắn.", seg: [1205, 1259], h: .6, f: .35, r: .3, o: .35, tip: .05, teeth: 0 },
-  { s: "əʊ", w: "go", vi: "đi", ex: "Bắt đầu ở giữa miệng rồi trượt về sau, môi tròn dần lên như âm ʊ.", sen: "Let's go home.", senVi: "Đi về nhà thôi.", seg: [1313, 1423], h: .6, f: .3, r: .5, o: .35, tip: .05, teeth: 0 },
-  { s: "ə", w: "about", vi: "về", ex: "Âm chỉ xuất hiện ở vần đọc lướt, không nhấn mạnh — khác với âm ơ đầy đủ của tiếng Việt. Miệng gần như thả lỏng hoàn toàn, lưỡi ở giữa. Ví dụ âm đầu của 'about' đọc lướt, không đọc rõ thành 'ơ-bao'.", sen: "Tell me about you.", senVi: "Kể cho tôi nghe về bạn.", seg: [455, 696], h: .5, f: .5, r: 0, o: .35, tip: .1, teeth: 0 },
-  { s: "v", w: "van", vi: "xe tải nhỏ", ex: "Cách đặt miệng giống âm f, nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung.", sen: "The van is blue.", senVi: "Chiếc xe tải nhỏ màu xanh dương.", seg: [2780, 2970], h: .4, f: .7, r: 0, o: .15, tip: .3, teeth: 1 },
-  { s: "z", w: "zoo", vi: "sở thú", ex: "Cách đặt miệng giống âm s, nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung.", sen: "We go to the zoo.", senVi: "Chúng tôi đi sở thú.", seg: [3209, 3305], h: .6, f: .8, r: 0, o: .15, tip: .7, teeth: 1 },
-  { s: "tʃ", w: "chair", vi: "cái ghế", ex: "Đầu lưỡi chạm nướu trên như âm t rồi thả hơi xì ra như âm ʃ nối tiếp, môi hơi chu.", sen: "This chair is new.", senVi: "Chiếc ghế này mới.", seg: [2249, 2354], h: .55, f: .7, r: .35, o: .3, tip: .8, teeth: 1 },
-  { s: "dʒ", w: "job", vi: "công việc", ex: "Cách đặt miệng giống âm tʃ, nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung.", sen: "I like my job.", senVi: "Tôi thích công việc của tôi.", seg: [2354, 2459], h: .55, f: .7, r: .35, o: .3, tip: .8, teeth: 1 },
-  { s: "r", w: "red", vi: "màu đỏ", ex: "Đầu lưỡi cong lên và lùi vào giữa, không chạm vào đâu cả, môi hơi tròn. Không rung lưỡi và không đọc như chữ r giọng Hà Nội (âm /z/).", sen: "The pen is red.", senVi: "Cây bút màu đỏ.", seg: [4160, 4367], h: .55, f: .55, r: .4, o: .3, tip: .5, teeth: 0 },
-  { s: "w", w: "water", vi: "nước", ex: "Môi tròn và chu mạnh như âm u: rồi mở nhanh sang nguyên âm sau. Bắt đầu bằng môi, không phải răng.", sen: "I drink water.", senVi: "Tôi uống nước.", seg: [4367, 4490], h: .7, f: .2, r: .9, o: .25, tip: 0, teeth: 0 },
-  { s: "æ", w: "cat", vi: "con mèo", ex: "Miệng mở khá rộng, hàm hạ xuống. Lưỡi thấp và ra trước. Đây là âm giữa a và e.", sen: "The cat is black.", senVi: "Con mèo màu đen.", seg: [800, 846], h: .25, f: .85, r: 0, o: .8, tip: .2, teeth: 0 },
-  { s: "ɜ:", w: "bird", vi: "con chim", ex: "Môi thả lỏng, lưỡi ở giữa miệng không chạm đâu cả. Âm dài, nghe như ơ kéo dài.", sen: "The bird can sing.", senVi: "Con chim biết hót.", seg: [696, 750], h: .55, f: .5, r: .1, o: .4, tip: .1, teeth: 0 },
-  { s: "θ", w: "think", vi: "nghĩ", ex: "Đầu lưỡi đặt giữa hai hàm răng, thò ra một chút, thổi hơi qua. Người Việt hay đọc thành âm 'th' kiểu tiếng Việt hoặc âm t.", sen: "I think so.", senVi: "Tôi nghĩ vậy.", seg: [2970, 3041], h: .4, f: .95, r: 0, o: .2, tip: 1, teeth: 1 },
-  { s: "ð", w: "this", vi: "cái này", ex: "Cách đặt miệng giống âm θ (lưỡi giữa hai răng), nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung.", sen: "This pen is mine.", senVi: "Cây bút này là của tôi.", seg: [3041, 3113], h: .4, f: .95, r: 0, o: .2, tip: 1, teeth: 1 },
-  { s: "ʒ", w: "television", vi: "ti vi", ex: "Cách đặt miệng giống âm ʃ, nhưng có rung cổ họng. Âm này ít gặp, hay ở giữa từ.", sen: "I watch television.", senVi: "Tôi xem ti vi.", seg: [3462, 3506], h: .6, f: .6, r: .45, o: .25, tip: .55, teeth: 0 },
-  { s: "ʃ", w: "she", vi: "cô ấy", ex: "Âm này tiếng Việt chuẩn không có; người miền Nam nghe chữ 's' của mình gần giống âm này, nhưng để đọc đúng 'she' thì lưỡi phải đặt sau lợi trên và thổi hẹp hơn. Lưỡi nâng ở giữa, môi hơi chu ra, thổi hơi xì tròn và mềm hơn âm s.", sen: "She is my friend.", senVi: "Cô ấy là bạn của tôi.", seg: [3305, 3462], h: .6, f: .6, r: .45, o: .25, tip: .55, teeth: 0 }
+  { s: "ɪ", vid: "HsKWHxhSwnc", vch: "Dan Hauer", w: "ship", vi: "con tàu", ex: "Giống âm i: nhưng ngắn và thả lỏng hơn. Miệng mở hơi rộng hơn một chút, lưỡi thấp hơn một chút.", sen: "The ship is big.", senVi: "Con tàu lớn.", seg: [131, 251], h: .8, f: .85, r: 0, o: .3, tip: .25, teeth: 0 },
+  { s: "ʊ", vid: "cnqb2qGhdbU", vch: "Dan Hauer", w: "book", vi: "quyển sách", ex: "Môi tròn nhẹ và hơi chu ra, lưỡi lùi về sau, ở giữa cao. Âm ngắn và thả lỏng.", sen: "This is my book.", senVi: "Đây là quyển sách của tôi.", seg: [251, 292], h: .65, f: .2, r: .6, o: .3, tip: 0, teeth: 0 },
+  { s: "ʌ", vid: "5cOVsoZiuU0", vch: "Dan Hauer", w: "cup", vi: "cái cốc", ex: "Âm này tiếng Việt không có; nghe gần giống âm 'ă' nhưng miệng mở khác và lưỡi đặt khác — nghe nút loa mới là chuẩn, chữ 'ă' chỉ là điểm tựa ban đầu. Miệng mở vừa, môi thả lỏng, lưỡi ở giữa và hơi lùi, âm ngắn.", sen: "My cup is red.", senVi: "Cái cốc của tôi màu đỏ.", seg: [846, 957], h: .35, f: .4, r: 0, o: .55, tip: .15, teeth: 0 },
+  { s: "ɒ", vid: "-YdaPHOeXqI", vch: "Mrs Chung English", w: "hot", vi: "nóng", ex: "Môi hơi tròn nhẹ, miệng mở rộng, lưỡi thấp và lùi về sau. Âm ngắn.", sen: "It is hot today.", senVi: "Hôm nay trời nóng.", seg: [996, 1036], h: .12, f: .15, r: .35, o: .75, tip: 0, teeth: 0 },
+  { s: "ɪə", vid: "HiwVDA-tjfo", vch: "Dan Hauer", w: "here", vi: "ở đây", ex: "Bắt đầu như âm ɪ rồi trượt nhẹ về âm ə ở giữa miệng. Lưỡi hạ dần.", sen: "Come here, please.", senVi: "Đến đây nào.", seg: [1036, 1103], h: .65, f: .6, r: 0, o: .35, tip: .15, teeth: 0 },
+  { s: "eə", vid: "pHARyStoz3w", vch: "Dan Hauer", w: "hair", vi: "tóc", ex: "Bắt đầu như âm e rồi trượt về âm ə. Miệng mở dần một chút.", sen: "Her hair is long.", senVi: "Tóc của cô ấy dài.", seg: [1423, 1526], h: .5, f: .6, r: 0, o: .45, tip: .15, teeth: 0 },
+  { s: "ʊə", vid: "a66rvhBXBd4", vch: "Ngoại Ngữ Vnn", w: "sure", vi: "chắc chắn", ex: "Bắt đầu như âm ʊ (môi hơi tròn) rồi trượt về âm ə, môi thả lỏng dần.", sen: "I am sure.", senVi: "Tôi chắc chắn.", seg: [1205, 1259], h: .6, f: .35, r: .3, o: .35, tip: .05, teeth: 0 },
+  { s: "əʊ", vid: "hS6I--dmtkM", vch: "Dan Hauer", w: "go", vi: "đi", ex: "Bắt đầu ở giữa miệng rồi trượt về sau, môi tròn dần lên như âm ʊ.", sen: "Let's go home.", senVi: "Đi về nhà thôi.", seg: [1313, 1423], h: .6, f: .3, r: .5, o: .35, tip: .05, teeth: 0 },
+  { s: "ə", vid: "8gwWFwxbJNw", vch: "Dan Hauer", w: "about", vi: "về", ex: "Âm chỉ xuất hiện ở vần đọc lướt, không nhấn mạnh — khác với âm ơ đầy đủ của tiếng Việt. Miệng gần như thả lỏng hoàn toàn, lưỡi ở giữa. Ví dụ âm đầu của 'about' đọc lướt, không đọc rõ thành 'ơ-bao'.", sen: "Tell me about you.", senVi: "Kể cho tôi nghe về bạn.", seg: [455, 696], h: .5, f: .5, r: 0, o: .35, tip: .1, teeth: 0 },
+  { s: "v", vid: "ui-UtFPZYds", vch: "Dan Hauer", w: "van", vi: "xe tải nhỏ", ex: "Cách đặt miệng giống âm f, nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung.", sen: "The van is blue.", senVi: "Chiếc xe tải nhỏ màu xanh dương.", seg: [2780, 2970], h: .4, f: .7, r: 0, o: .15, tip: .3, teeth: 1 },
+  { s: "z", vid: "dGTIMhKR4n0", vch: "Dan Hauer", w: "zoo", vi: "sở thú", ex: "Cách đặt miệng giống âm s, nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung.", sen: "We go to the zoo.", senVi: "Chúng tôi đi sở thú.", seg: [3209, 3305], h: .6, f: .8, r: 0, o: .15, tip: .7, teeth: 1 },
+  { s: "tʃ", vid: "WIvIrCz-k1M", vch: "Dan Hauer", w: "chair", vi: "cái ghế", ex: "Đầu lưỡi chạm nướu trên như âm t rồi thả hơi xì ra như âm ʃ nối tiếp, môi hơi chu.", sen: "This chair is new.", senVi: "Chiếc ghế này mới.", seg: [2249, 2354], h: .55, f: .7, r: .35, o: .3, tip: .8, teeth: 1 },
+  { s: "dʒ", vid: "m8jaDyWq4zk", vch: "Dan Hauer", w: "job", vi: "công việc", ex: "Cách đặt miệng giống âm tʃ, nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung.", sen: "I like my job.", senVi: "Tôi thích công việc của tôi.", seg: [2354, 2459], h: .55, f: .7, r: .35, o: .3, tip: .8, teeth: 1 },
+  { s: "r", vid: "ZMV0aNx-1Jg", vch: "Dan Hauer", w: "red", vi: "màu đỏ", ex: "Đầu lưỡi cong lên và lùi vào giữa, không chạm vào đâu cả, môi hơi tròn. Không rung lưỡi và không đọc như chữ r giọng Hà Nội (âm /z/).", sen: "The pen is red.", senVi: "Cây bút màu đỏ.", seg: [4160, 4367], h: .55, f: .55, r: .4, o: .3, tip: .5, teeth: 0 },
+  { s: "w", vid: "HpfPSzMF63Q", vch: "Dan Hauer", w: "water", vi: "nước", ex: "Môi tròn và chu mạnh như âm u: rồi mở nhanh sang nguyên âm sau. Bắt đầu bằng môi, không phải răng.", sen: "I drink water.", senVi: "Tôi uống nước.", seg: [4367, 4490], h: .7, f: .2, r: .9, o: .25, tip: 0, teeth: 0 },
+  { s: "æ", vid: "ouMXAWG8hZ0", vch: "Dan Hauer", w: "cat", vi: "con mèo", ex: "Miệng mở khá rộng, hàm hạ xuống. Lưỡi thấp và ra trước. Đây là âm giữa a và e.", sen: "The cat is black.", senVi: "Con mèo màu đen.", seg: [800, 846], h: .25, f: .85, r: 0, o: .8, tip: .2, teeth: 0 },
+  { s: "ɜ:", vid: "Mhb55KK8P1g", vch: "Dan Hauer", w: "bird", vi: "con chim", ex: "Môi thả lỏng, lưỡi ở giữa miệng không chạm đâu cả. Âm dài, nghe như ơ kéo dài.", sen: "The bird can sing.", senVi: "Con chim biết hót.", seg: [696, 750], h: .55, f: .5, r: .1, o: .4, tip: .1, teeth: 0 },
+  { s: "θ", vid: "iDlbkyzJNcY", vch: "Dan Hauer", w: "think", vi: "nghĩ", ex: "Đầu lưỡi đặt giữa hai hàm răng, thò ra một chút, thổi hơi qua. Người Việt hay đọc thành âm 'th' kiểu tiếng Việt hoặc âm t.", sen: "I think so.", senVi: "Tôi nghĩ vậy.", seg: [2970, 3041], h: .4, f: .95, r: 0, o: .2, tip: 1, teeth: 1 },
+  { s: "ð", vid: "kCHZoPZcPXg", vch: "Dan Hauer", w: "this", vi: "cái này", ex: "Cách đặt miệng giống âm θ (lưỡi giữa hai răng), nhưng có rung cổ họng: đặt tay lên cổ sẽ thấy rung.", sen: "This pen is mine.", senVi: "Cây bút này là của tôi.", seg: [3041, 3113], h: .4, f: .95, r: 0, o: .2, tip: 1, teeth: 1 },
+  { s: "ʒ", vid: "mUCFMXqU43o", vch: "Dan Hauer", w: "television", vi: "ti vi", ex: "Cách đặt miệng giống âm ʃ, nhưng có rung cổ họng. Âm này ít gặp, hay ở giữa từ.", sen: "I watch television.", senVi: "Tôi xem ti vi.", seg: [3462, 3506], h: .6, f: .6, r: .45, o: .25, tip: .55, teeth: 0 },
+  { s: "ʃ", vid: "cN4ZkIktnTo", vch: "Dan Hauer", w: "she", vi: "cô ấy", ex: "Âm này tiếng Việt chuẩn không có; người miền Nam nghe chữ 's' của mình gần giống âm này, nhưng để đọc đúng 'she' thì lưỡi phải đặt sau lợi trên và thổi hẹp hơn. Lưỡi nâng ở giữa, môi hơi chu ra, thổi hơi xì tròn và mềm hơn âm s.", sen: "She is my friend.", senVi: "Cô ấy là bạn của tôi.", seg: [3305, 3462], h: .6, f: .6, r: .45, o: .25, tip: .55, teeth: 0 }
 ];
 // Độ mở hàm tương đối do trang tự gán (thang 0-4) + âm đích của nguyên âm đôi (dùng cho hình trượt).
 var RB_PH_JAW = { "i:": 1, "ɪ": 1.5, "e": 2, "æ": 3.5, "ɑ:": 4, "ɒ": 3.5, "ɔ:": 2.5, "ʊ": 1.5, "u:": 1, "ʌ": 2.5, "ɜ:": 2, "ə": 1.5, "eɪ": 2, "aɪ": 3.5, "ɔɪ": 2.5, "əʊ": 1.5, "aʊ": 3.5, "ɪə": 1.5, "eə": 2, "ʊə": 1.5, "p": 0.5, "b": 0.5, "t": 1, "d": 1, "k": 1.5, "ɡ": 1.5, "tʃ": 1.5, "dʒ": 1.5, "f": 0.5, "v": 0.5, "θ": 1, "ð": 1, "s": 0.5, "z": 0.5, "ʃ": 1, "ʒ": 1, "h": 2, "m": 0.5, "n": 1, "ŋ": 1.5, "l": 1, "r": 1.5, "w": 1, "j": 0.5 };
@@ -431,19 +431,111 @@ function typingModeOfLevel(lv) {
   if (lv.indexOf("5,0") >= 0 || lv.indexOf("5.0") >= 0 || lv.indexOf("5,5") >= 0 || lv.indexOf("5.5") >= 0) return "coban";
   return "nentang";
 }
-var RB_CH_STEP_TYPES = ["Từ vựng", "Ngữ pháp", "Đọc", "Nghe ngắn", "Nghe dài", "Nói", "Nhập vai", "Viết", "Luyện viết", "Gõ câu"];
+var RB_CH_STEP_TYPES = ["Từ vựng", "Ngữ pháp", "Đọc", "Nghe ngắn", "Nghe dài", "Phát âm", "Nói", "Nhập vai", "Viết", "Luyện viết", "Gõ câu", "Ôn xen kẽ"];
 var RB_CH_STEPS_CACHE = null;
+
+// P0-4: 5 bai Noi Part 3 o band thap (2,0-4,0) chi la "lam quen" — Part 3 chinh thuc
+// tu 4,5+. Cac buoc nay van hoc duoc nhung KHONG tinh vao cong 80% (rbGateSteps).
+// DOT trung 28/10/2026 (T-V6): them 2 bai Part 2 o 2,0/2,5 (idx 81, 85) lam quen —
+// Part 2 chinh thuc tu 3,0 theo lo trinh chuan (2,0 chi Part 1 don gian;
+// 2,5 chi Part 1 mo rong; 3,0 moi co Part 2 ngan).
+var RB_SPEAK_FAMILIAR = { 81: 1, 82: 1, 85: 1, 86: 1, 90: 1, 94: 1, 98: 1 };
+// P0-8: mach phat am ngan moi chuong tu 2,0+ — moi chuong 1 buoc nho (vi du truoc,
+// quy tac sau, nghe mau, 2 cau hoi thuc hanh). Noi dung tu soan, khong chep sach.
+var RB_PRON_TOPICS = [
+  { band: "Band 2,0", title: "Phát âm — Trọng âm từ", explain: "Trọng âm rơi vào âm tiết nào thì âm đó đọc to, rõ, dài hơn; đổi trọng âm có thể đổi nghĩa hoặc đổi từ loại. Ví dụ: REcord là danh từ (bản ghi), reCORD là động từ (ghi lại).", examples: ["This is a record.", "Please record this song.", "I have a present for you."], quiz: [
+    { q: "Từ “record” làm danh từ (bản ghi) thì nhấn âm nào?", o: ["Âm đầu: REcord", "Âm sau: reCORD"], a: 0, why: "Danh từ record nhấn âm đầu: REcord. Động từ mới nhấn âm sau: reCORD." },
+    { q: "Câu “She will present her idea tomorrow” — present là động từ nên nhấn âm nào?", o: ["Âm đầu: PREsent", "Âm sau: preSENT"], a: 1, why: "Động từ present nhấn âm sau: preSENT. Danh từ (món quà) mới nhấn âm đầu: PREsent." } ] },
+  { band: "Band 2,5", title: "Phát âm — Trọng âm câu", explain: "Trong câu, từ mang nghĩa chính (danh từ, động từ, tính từ) đọc mạnh; từ chức năng (a, the, to, of) đọc nhẹ, lướt. Ví dụ: “I LOVE cats” nhấn LOVE, “I love CATS” nhấn CATS — nhấn từ nào thì ý nhấn vào đó.", examples: ["I want a cup of COFFEE.", "She is going to SCHOOL.", "I bought a new BOOK."], quiz: [
+    { q: "Trong câu “I bought a new BOOK”, từ nào đọc mạnh nhất?", o: ["a", "bought", "BOOK"], a: 2, why: "BOOK là từ mang nghĩa chính cuối câu nên đọc mạnh nhất; a là từ chức năng nên đọc nhẹ." },
+    { q: "Từ “to” trong “I want to go” đọc thế nào?", o: ["Đọc mạnh, rõ /tu:/", "Đọc nhẹ, lướt /tə/"], a: 1, why: "“to” là từ chức năng, khi không nhấn thì đọc dạng yếu /tə/, nhẹ và lướt." } ] },
+  { band: "Band 3,0", title: "Phát âm — Ngữ điệu lên và xuống", explain: "Câu hỏi Yes/No lên giọng cuối câu; câu trần thuật xuống giọng cuối câu. Ví dụ: “You are coming? ↗” là hỏi, “You are coming. ↘” là khẳng định.", examples: ["Are you ready?", "I am ready.", "Do you like tea?"], quiz: [
+    { q: "Câu hỏi “Can you help me?” cuối câu lên hay xuống?", o: ["Lên giọng", "Xuống giọng"], a: 0, why: "Câu hỏi Yes/No lên giọng cuối câu để báo là đang hỏi." },
+    { q: "Câu “My name is Lan.” cuối câu lên hay xuống?", o: ["Lên giọng", "Xuống giọng"], a: 1, why: "Câu trần thuật xuống giọng cuối câu để báo là khẳng định, hết ý." } ] },
+  { band: "Band 3,5", title: "Phát âm — Nối âm", explain: "Từ kết thúc bằng phụ âm + từ bắt đầu bằng nguyên âm thì nối liền, không ngắt. Ví dụ: “go on” đọc liền thành “go-won”, “an apple” thành “a-napple”.", examples: ["Pick it up.", "Turn it off.", "I like it a lot."], quiz: [
+    { q: "“Turn off” đọc nối thế nào?", o: ["Ngắt: turn / off", "Nối: tur-noff"], a: 1, why: "“turn” kết thúc bằng n (phụ âm), “off” bắt đầu bằng o (nguyên âm) nên nối liền: tur-noff." },
+    { q: "Nối âm xảy ra khi nào?", o: ["Từ trước kết thúc bằng nguyên âm, từ sau bắt đầu bằng phụ âm", "Từ trước kết thúc bằng phụ âm, từ sau bắt đầu bằng nguyên âm"], a: 1, why: "Nối âm nối phụ âm cuối của từ trước với nguyên âm đầu của từ sau." } ] },
+  { band: "Band 4,0", title: "Phát âm — Dạng yếu", explain: "Từ chức năng (to, of, and, for) khi không nhấn thì đọc dạng yếu, ngắn, nhẹ. Ví dụ: “to” trong “I want to go” đọc /tə/, không phải /tu:/; “of” trong “a cup of tea” đọc /əv/.", examples: ["Bread and butter.", "This is for you.", "I want to go home."], quiz: [
+    { q: "“and” trong “fish and chips” đọc thế nào?", o: ["Rõ /ænd/", "Nhẹ /ən/"], a: 1, why: "“and” không nhấn nên đọc dạng yếu /ən/, nhẹ và lướt." },
+    { q: "Khi nào từ chức năng đọc dạng mạnh, rõ?", o: ["Khi được nhấn mạnh", "Khi đứng giữa câu"], a: 0, why: "Chỉ khi người nói nhấn mạnh từ đó (ví dụ để đối lập) thì từ chức năng mới đọc dạng mạnh." } ] },
+  { band: "Band 4,5", title: "Phát âm — Ngữ điệu và thái độ", explain: "Cùng một câu, lên giọng cuối = hỏi lại, ngạc nhiên, chưa chắc; xuống giọng cuối = chắc chắn, kết luận. Ví dụ: “Really? ↗” là ngạc nhiên hỏi lại, “Really. ↘” là khẳng định chắc chắn.", examples: ["You won?", "You won.", "Oh, really?"], quiz: [
+    { q: "“You are joking? ↗” — người nói đang...", o: ["Khẳng định chắc chắn", "Ngạc nhiên, hỏi lại"], a: 1, why: "Lên giọng cuối câu báo là người nói ngạc nhiên và đang hỏi lại, chưa tin hẳn." },
+    { q: "Muốn tỏ ra chắc chắn khi kết luận thì cuối câu...", o: ["Lên giọng", "Xuống giọng"], a: 1, why: "Xuống giọng cuối câu báo là khẳng định chắc chắn, hết ý." } ] },
+  { band: "Band 5,0", title: "Phát âm — Trọng âm trong từ dài và từ ghép", explain: "Hậu tố -y/-ic/-tion thường kéo trọng âm về trước nó: PHOtograph thành phoTOgraphy. Từ ghép (danh từ + danh từ) thường nhấn từ đầu: GREENhouse là nhà kính, còn green HOUSE là ngôi nhà màu xanh.", examples: ["I love photography.", "The greenhouse is warm.", "That is a green house."], quiz: [
+    { q: "“photography” nhấn âm nào?", o: ["PHO", "TO", "GRA"], a: 1, why: "Thêm -y kéo trọng âm về trước nó: phoTOgraphy (khác với PHOtograph)." },
+    { q: "“greenhouse” (nhà kính) nhấn từ nào?", o: ["green", "house"], a: 0, why: "Từ ghép chỉ một vật (nhà kính) nhấn từ đầu: GREENhouse. “Green house” (ngôi nhà màu xanh) mới nhấn house." } ] },
+  { band: "Band 5,5", title: "Phát âm — Nhịp điệu câu", explain: "Tiếng Anh có nhịp: các từ được nhấn rơi vào nhịp đều nhau, từ không nhấn chen giữa đọc nhanh, lướt. Ví dụ: “I WANT to GO to SCHOOL” — WANT, GO, SCHOOL cách đều, còn to và to đọc lướt.", examples: ["She wants to go home.", "We are going to the market tomorrow.", "I want to buy a book."], quiz: [
+    { q: "Nhịp điệu tiếng Anh dựa vào...", o: ["Số từ trong câu", "Các từ được nhấn"], a: 1, why: "Nhịp nằm ở các từ được nhấn, cách đều nhau; từ không nhấn chen giữa đọc nhanh lại." },
+    { q: "Từ không nhấn trong câu đọc thế nào?", o: ["Đọc to, chậm", "Đọc nhanh, lướt"], a: 1, why: "Từ không nhấn đọc nhanh, lướt để nhường nhịp cho từ được nhấn." } ] },
+  { band: "Band 6,0", title: "Phát âm — Nối âm nâng cao và nuốt âm", explain: "Khi nói nhanh, tự nhiên, âm cuối có thể biến mất (nuốt âm) hoặc biến đổi cho dễ nối. Ví dụ: “next day” nghe như “nex day” (nuốt t), “ten people” nghe như “tem people” (n thành m trước p).", examples: ["See you next week.", "Ten people are here.", "Good morning."], quiz: [
+    { q: "“next day” nói nhanh nghe như...", o: ["next day, rõ từng âm", "nex day"], a: 1, why: "Nói nhanh thì t cuối của “next” bị nuốt trước d: nex day." },
+    { q: "Nuốt âm xảy ra khi...", o: ["Nói chậm, rõ từng từ", "Nói nhanh, tự nhiên"], a: 1, why: "Nuốt âm và biến đổi âm là hiện tượng của nói nhanh, tự nhiên, không phải nói chậm." } ] },
+  { band: "Band 6,5", title: "Phát âm — Ngữ điệu trong câu hỏi đuôi và lựa chọn", explain: "Hỏi đuôi lên giọng = hỏi thật (chưa biết); xuống giọng = xác nhận (đã biết, chờ đồng tình). Câu lựa chọn: lựa chọn đầu lên, lựa chọn cuối xuống. Ví dụ: “Tea or coffee?” — tea ↗, coffee ↘.", examples: ["You like tea, don't you?", "She is coming, isn't she?", "Tea or coffee?"], quiz: [
+    { q: "“You are ready, aren't you? ↘” — người nói...", o: ["Chưa biết, hỏi thật", "Đã biết, chờ đồng tình"], a: 1, why: "Xuống giọng ở hỏi đuôi báo là người nói đã biết và chỉ chờ người nghe đồng tình." },
+    { q: "“Coffee or tea?” — “coffee” lên hay xuống?", o: ["Lên giọng", "Xuống giọng"], a: 0, why: "Trong câu lựa chọn, lựa chọn đầu lên giọng, lựa chọn cuối xuống giọng." } ] },
+  { band: "Band 7,0", title: "Phát âm — Ngữ điệu và thái độ tinh tế", explain: "Nhấn từ đối lập để sửa hiểu lầm: “I said THIS book, not THAT book”. Thái độ (đồng tình, nghi ngờ, mỉa mai nhẹ) tạo bởi ngữ điệu + ngữ cảnh + từ ngữ, không phải chỉ giọng lên hay xuống.", examples: ["I wanted the RED one.", "Well, that was interesting.", "I said THIS book, not THAT book."], quiz: [
+    { q: "Muốn sửa hiểu lầm từ “cuốn kia” thành “cuốn này” thì nhấn từ nào?", o: ["said", "THIS", "book"], a: 1, why: "Nhấn từ đối lập THIS để sửa đúng chỗ hiểu lầm." },
+    { q: "Thái độ qua ngữ điệu phụ thuộc vào...", o: ["Chỉ giọng lên hay xuống", "Giọng + ngữ cảnh + từ ngữ"], a: 1, why: "Cùng một ngữ điệu, khác ngữ cảnh và từ ngữ thì thái độ khác nhau." } ] },
+  { band: "Band 7,5+", title: "Phát âm — Ngữ điệu trong tranh luận học thuật", explain: "Nói học thuật: ngắt theo nhóm ý (thought groups), nhấn từ mang luận điểm, xuống giọng ở kết luận. Ví dụ: “Although the cost is high, | the benefits are greater.” — ngắt nhẹ giữa hai nhóm ý, xuống giọng cuối câu khẳng định.", examples: ["Although the cost is high, the benefits are greater.", "On the one hand, it saves time. On the other hand, it costs a lot.", "The evidence suggests that this policy works."], quiz: [
+    { q: "Khi trình bày luận điểm dài, nên...", o: ["Nói một hơi không ngắt", "Ngắt theo nhóm ý"], a: 1, why: "Ngắt theo nhóm ý giúp người nghe theo kịp luận điểm dài." },
+    { q: "Kết luận khẳng định thì cuối câu...", o: ["Lên giọng", "Xuống giọng"], a: 1, why: "Kết luận khẳng định xuống giọng để báo là lập trường đã chốt." } ] }
+];
+var RB_PRON_TOPICS_BY_BAND = {};
+RB_PRON_TOPICS.forEach(function (t) { RB_PRON_TOPICS_BY_BAND[t.band] = t; });
+// P0-3/P0-5: sap xep on dinh khoi buoc cung loai trong chuong (khong doi doneKey).
+function rbSortBlock(steps, type, rankFn) {
+  var idxs = [];
+  steps.forEach(function (st, i) { if (st.type === type) idxs.push(i); });
+  if (idxs.length < 2) return;
+  var block = idxs.map(function (i) { return steps[i]; });
+  block.sort(function (a, b) { return rankFn(a) - rankFn(b); });
+  idxs.forEach(function (pos, k) { steps[pos] = block[k]; });
+}
+function rbReadRank(st) {
+  var r = CONTENT.reading[st.lesson.idx];
+  var qs = (r && r.questions) || [];
+  var hasTF = false, hasMatch = false, hasSC = false;
+  qs.forEach(function (q) {
+    if (q.type === "TFNG" || q.type === "TF") hasTF = true;
+    if (q.type === "MATCH" || q.type === "MINFO") hasMatch = true;
+    if (q.type === "SC") hasSC = true;
+  });
+  if (hasTF) return 0;
+  if (hasMatch) return 1;
+  if (hasSC) return 2;
+  return 3;
+}
+function rbListenLongRank(st) {
+  var r = CONTENT.listeningPlus[st.lesson.idx];
+  var sec = r && r.section;
+  var n = parseInt(String(sec || "").replace(/[^0-9]/g, ""), 10);
+  return isNaN(n) ? 99 : n;
+}
+function rbWriteRank(st) {
+  var w = CONTENT.writing[st.lesson.idx];
+  if (!w) return 99;
+  // DOT trung 28/10/2026 (T-V6): doan van nen tang (track N) xep TRUOC Task 1
+  // trong khoi Viet — truoc day track != A ve 99 nen nen tang luon sau Task 1.
+  if (w.wtype === "Đoạn văn ngắn") return -1;
+  if (w.track !== "A") return 99;
+  var single = { "Biểu đồ đường": 1, "Biểu đồ cột": 1, "Bảng số liệu": 1, "Biểu đồ tròn": 1, "Mô tả bảng số liệu": 1, "Mô tả biểu đồ cột": 1 };
+  if (single[w.wtype]) return 0;
+  if (w.wtype === "Quy trình") return 2;
+  if (w.wtype === "Bản đồ") return 3;
+  if (w.wtype === "Biểu đồ hỗn hợp") return 4;
+  return 1; // tang 1 (so sanh nhieu bieu do) chua co bai nao mang nhan do — giu cho.
+}
 function rbBuildChSteps() {
   var out = {};
   if (typeof CONTENT === "undefined") return out;
   var bands = ["Band 2,0", "Band 2,5", "Band 3,0", "Band 3,5", "Band 4,0", "Band 4,5",
                "Band 5,0", "Band 5,5", "Band 6,0", "Band 6,5", "Band 7,0", "Band 7,5+"];
   bands.forEach(function (b) { out[b] = []; });
-  function add(band, title, type, lesson, doneKey) {
+  function add(band, title, type, lesson, doneKey, extra) {
     // Kho ghi band kieu "Band 2,0" (cham), ban do chuong ghi "Band 2,0" (phay):
     // chuan hoa ve dang phay de khop chuong.
     band = String(band || "").replace(".", ",");
-    if (out[band]) out[band].push({ title: title, type: type, lesson: lesson, doneKey: doneKey });
+    if (out[band]) { var st = { title: title, type: type, lesson: lesson, doneKey: doneKey }; if (extra) Object.keys(extra).forEach(function (k) { st[k] = extra[k]; }); out[band].push(st); }
   }
   (CONTENT.vocab || []).forEach(function (s, i) {
     if (s.band) add(s.band, s.topic + " (" + s.cards.length + " từ)", "Từ vựng",
@@ -463,8 +555,17 @@ function rbBuildChSteps() {
     if (r.band) add(r.band, r.section + " — " + r.topic, "Nghe dài",
       { type: "skillListenLong", idx: i }, "listenLong:" + i);
   });
+  RB_PRON_TOPICS.forEach(function (t) {
+    add(t.band, t.title, "Phát âm",
+      { type: "skillPronTopic", band: t.band, title: t.title }, "pronTopic:" + t.band);
+  });
+  // DOT trung 28/10/2026 (T-V5): bo qua speaking co part Roleplay khi them buoc
+  // "Noi" — 12 kich ban nay da co buoc "Nhap vai" rieng (dinh dang nhap vai co
+  // luot thoai + cum cau, phong phu hon); giu nguyen du lieu speaking/roleplay
+  // de khoi doi chi so va vo doneKey theo chi so (speak:i).
   (CONTENT.speaking || []).forEach(function (s, i) {
-    if (s.band) add(s.band, s.topic, "Nói", { type: "skillSpeak", idx: i }, "speak:" + i);
+    if (s.band && s.part !== "Roleplay") add(s.band, s.topic, "Nói", { type: "skillSpeak", idx: i }, "speak:" + i,
+      RB_SPEAK_FAMILIAR[i] ? { familiar: true } : null);
   });
   (CONTENT.roleplay || []).forEach(function (r, i) {
     if (r.band) add(r.band, r.title, "Nhập vai", { type: "skillRoleplay", idx: i }, "roleplay:" + i);
@@ -481,15 +582,36 @@ function rbBuildChSteps() {
   });
   Object.keys(modeLists).forEach(function (m) {
     modeLists[m].forEach(function (it, j) {
-      add(it.s.level, it.s.title, "Gõ câu",
+      add(it.s.chBand || it.s.level, it.s.title, "Gõ câu",
         { type: "skillTyping", mode: m, setIdx: j }, "typing:" + m + ":" + j);
     });
+  });
+  // P0-3: trong chuong, buoc Doc xep TFNG/TF truoc, roi noi (MATCH/MINFO), roi SC, roi MC.
+  // P0-5: buoc Viet Task 1 xep theo tang dang (don -> quy trinh -> ban do -> hon hop);
+  // Task 2/thu/doan van giu nguyen vi tri tuong doi (sau Task 1, on dinh).
+  // DOT trung 28/10/2026 (T-V6): buoc Nghe dai xep theo so Section tang dan trong
+  // chuong (sap xep on dinh, khong doi doneKey) — sua dut diem lan lon trong
+  // chuong o 5,5/6,5/7,5+; thut nguyen chuong o 5,0 sua bang doi nhan Section.
+  Object.keys(out).forEach(function (b) {
+    rbSortBlock(out[b], "Đọc", rbReadRank);
+    rbSortBlock(out[b], "Viết", rbWriteRank);
+    rbSortBlock(out[b], "Nghe dài", rbListenLongRank);
+  });
+  // ROADMAP-N7: diem on xen ke giua chuong (kieu Headway Stop and Check) —
+  // 1 buoc/chuong, dat cuoi chuong truoc khi thi, tron ngu phap + tu vung cua
+  // chuong, KHONG tinh vao cong 80% (co review:true; rbGateSteps loai ra).
+  Object.keys(out).forEach(function (b) {
+    out[b].push({ title: "Ôn xen kẽ — trộn ngữ pháp + từ vựng chương " + b, type: "Ôn xen kẽ", lesson: { type: "skillReview", band: b }, doneKey: "review:" + b, review: true });
   });
   return out;
 }
 function rbChSteps(band) {
   if (!RB_CH_STEPS_CACHE) RB_CH_STEPS_CACHE = rbBuildChSteps();
   return RB_CH_STEPS_CACHE[band] || [];
+}
+// P0-4/P0-9: buoc tinh cong 80% = toan bo buoc tru buoc "lam quen" (familiar).
+function rbGateSteps(band) {
+  return rbChSteps(band).filter(function (st) { return !st.familiar && !st.review; });
 }
 function rbChMissing(band) {
   var have = {};
@@ -577,13 +699,16 @@ function skillCounts() {
     readingItems: (CONTENT.reading || []).length, readingQs: readQs,
     listenSingles: (CONTENT.listening || []).length,
     listenLongItems: (CONTENT.listeningPlus || []).length, listenLongQs: lpQs,
-    speakP1: (CONTENT.speaking || []).filter(function (s) { return s.partNum === 1; }).length,
-    speakP2: (CONTENT.speaking || []).filter(function (s) { return s.partNum === 2; }).length,
-    speakP3: (CONTENT.speaking || []).filter(function (s) { return s.partNum === 3; }).length,
-    speakTotal: (CONTENT.speaking || []).length, roleplay: (CONTENT.roleplay || []).length,
-    writeT1: (CONTENT.writing || []).filter(function (w) { return w.type === "Task 1"; }).length,
-    writeT2: (CONTENT.writing || []).filter(function (w) { return w.type === "Task 2"; }).length,
-    writeMail: (CONTENT.writing || []).filter(function (w) { return w.type !== "Task 1" && w.type !== "Task 2"; }).length,
+    /* DOT work1-M8 29/10/2026: dem cho tab Luyen tap — loai 12 ban part Roleplay
+       trung voi muc Nhap vai (du lieu goc, buoc chuong 1127/1108 va pool thi khong doi). */
+    speakP1: (CONTENT.speaking || []).filter(function (s) { return s.partNum === 1 && s.part !== "Roleplay"; }).length,
+    speakP2: (CONTENT.speaking || []).filter(function (s) { return s.partNum === 2 && s.part !== "Roleplay"; }).length,
+    speakP3: (CONTENT.speaking || []).filter(function (s) { return s.partNum === 3 && s.part !== "Roleplay"; }).length,
+    speakTotal: (CONTENT.speaking || []).filter(function (s) { return s.part !== "Roleplay"; }).length, roleplay: (CONTENT.roleplay || []).length,
+    writeT1: (CONTENT.writing || []).filter(function (w) { return w.track === "A"; }).length,
+    writeT2: (CONTENT.writing || []).filter(function (w) { return w.track === "AG"; }).length,
+    writeMail: (CONTENT.writing || []).filter(function (w) { return w.track === "G"; }).length,
+    writeBase: (CONTENT.writing || []).filter(function (w) { return w.track === "N"; }).length,
     writeTotal: (CONTENT.writing || []).length, writeDrills: (CONTENT.writingDrills || []).length
   };
 }
@@ -3699,7 +3824,7 @@ var ZH_PH_STEPS = [
   { id: "rules", title: "Quy tắc viết pinyin hay nhầm",
     hook: "Viết pinyin có vài chỗ gọn lại — nhớ 4 quy tắc này là đủ đọc đúng.",
     examples: ["ü sau j, q, x, y → u: ju, qu, xu, yu", "iou có thanh mẫu → iu: jiu (không viết jiou)", "uen có thanh mẫu → un: lun (không viết luen)", "i đứng một mình → yi; u đứng một mình → wu; ü đứng một mình → yu"],
-    rule: "Các quy tắc gọn này chỉ đổi CÁCH VIẾT, không đổi cách đọc. Ngoài ra: hai thanh 3 liền nhau thì thanh đầu đọc thành thanh 2. Biến điệu 不 và 一 (đọc đổi thanh, viết đổi luôn trong pinyin): 不 trước thanh 4 đọc thành bú (ví dụ 不会 bú huì), trước thanh 1/2/3 đọc thành bù (ví dụ 对不起 duìbùqǐ); 一 trước thanh 4 đọc thành yí (ví dụ 星期一到星期五 Xīngqī yí dào), trước thanh 1/2/3 đọc thành yì (ví dụ 一边 yìbiān, 十一点 shíyì diǎn). Riêng biến điệu 3+3 thì chỉ đổi cách đọc, không đổi cách viết (vẫn viết nǐ hǎo, đọc thành ní hǎo).",
+    rule: "Các quy tắc gọn này chỉ đổi CÁCH VIẾT, không đổi cách đọc. Ngoài ra: hai thanh 3 liền nhau thì thanh đầu đọc thành thanh 2. Biến điệu 不 và 一 (đọc đổi thanh, viết đổi luôn trong pinyin): 不 trước thanh 4 đọc thành bú (ví dụ 不会 bú huì), trước thanh 1/2/3 đọc thành bù (ví dụ 对不起 duìbùqǐ); 一 trước thanh 4 đọc thành yí (ví dụ 一个 yí gè — một cái), trước thanh 1/2/3 đọc thành yì (ví dụ 一边 yìbiān, 十一点 shíyì diǎn). Riêng biến điệu 3+3 thì chỉ đổi cách đọc, không đổi cách viết (vẫn viết nǐ hǎo, đọc thành ní hǎo).",
     tip: "Gặp pinyin lạ thì tách ra: thanh mẫu + vận mẫu + dấu thanh, đọc từng phần rồi nối lại.",
     quiz: [
       { q: "“ü” sau j, q, x, y viết thành gì?", o: ["ü", "u", "v", "yu"], a: 1, why: "Bỏ hai chấm: ju, qu, xu, yu.", speak: "句" },
@@ -3783,13 +3908,13 @@ var ZH_STROKES = [
 // nguyen lam tham chieu cham diem noi bo). Nhung youtube-nocookie, phat trong
 // trang, khong link "Mo tren YouTube". ID lay tu bao cao video-viet-chu.
 var ZH_WRITE_VIDEOS = {
-  "人": "hIZjig-uYMI", "上": "nlOf7i1B8n4", "女": "5eZHd2Tz6uU", "子": "QAP6Z0ixPHw",
+  "人": "Yhihx--4_-Q", "上": "nlOf7i1B8n4", "女": "5eZHd2Tz6uU", "子": "QAP6Z0ixPHw",
   "小": "l1cnYiaYjAo", "马": "hHKxBC2fKRA", "不": "APJTsV1-lko", "天": "gaV0eD_4MCc",
   "午": "LmYiRKMnAGg", "见": "3CmqNEm_Ys8", "车": "zUqGROvV-uk", "水": "3ItQ5xCJWK4",
   "火": "zpQ8suiml-Q", "牛": "D5zSJmF4aMQ", "开": "YOjLIvKCWi4", "友": "Sc3kn5KghtE",
   "今": "aLFfXMXBF-8", "付": "a_D-qhiZzxA", "打": "BWCqWT4CPWk", "外": "XTJXSaa1qSk",
   "市": "0RfEt6J1_rQ", "好": "NVtxHUrcMqA", "吗": "6nsPzQMby4g", "妈": "GQRGhQsGzpc",
-  "年": "VZSGPLFCcXM", "早": "PGtfgSLAePE", "自": "DnpmT7vHd88", "灯": "7O7WA6i4LSA",
+  "年": "VZSGPLFCcXM", "早": "PGtfgSLAePE", "自": "qxPz2hGWP6M", "灯": "7O7WA6i4LSA",
   "再": "_TMefRod3-8", "米": "dbFj1sPn8Ig"
 };
 // Video lý thuyết cho các màn học (điền vào khung videoSlotHTML sẵn có):
@@ -3802,56 +3927,56 @@ var GRAMMAR_VIDEOS = {
   "gramOld:52": { id: "y73F5oV9MJQ", title: "4 phút học xong Thì HIỆN TẠI HOÀN THÀNH", channel: "Viral English", note: "Cô Anne dạy bằng tiếng Việt, đúng một chủ đề thì hiện tại hoàn thành — 4 phút 46 giây." },
   "gramOld:54": { id: "y73F5oV9MJQ", title: "4 phút học xong Thì HIỆN TẠI HOÀN THÀNH", channel: "Viral English", note: "Cô Anne dạy bằng tiếng Việt, đúng một chủ đề thì hiện tại hoàn thành — 4 phút 46 giây." },
   "gramOld:78": { id: "WyH2K2y6c0c", title: "Học Tiếng Anh Online | Thì Quá Khứ Hoàn Thành", channel: "Lấy Gốc Tiếng Anh Ms Hạnh", note: "Cô Hạnh dạy bằng tiếng Việt, đúng một chủ đề thì quá khứ hoàn thành — 1 phút 48 giây." },
-  "speakCrit:flu": { id: "2SI0twnNEN8", title: "IELTS: Improve English & prepare for IELTS Speaking: Fluency & Coherence", channel: "British Council Teacher Trainer", note: "Giới thiệu tiêu chí Nói trôi chảy và mạch lạc." },
-  "speakCrit:lex": { id: "LQQE2hWrl98", title: "IELTS Speaking: Improve English & prepare for IELTS - Vocabulary", channel: "British Council Teacher Trainer", note: "Giới thiệu tiêu chí Từ vựng." },
-  "speakCrit:gram": { id: "Yq6IZBtM4IU", title: "Introduction to passing the IELTS Speaking test: grammatical criteria", channel: "TakeIELTS Official", note: "Giới thiệu tiêu chí Ngữ pháp." },
-  "speakCrit:pron": { id: "UawwTSzaZzk", title: "Improve English for the IELTS Speaking test : Pronunciation", channel: "TakeIELTS Official", note: "Giới thiệu tiêu chí Phát âm." },
+  "speakCrit:flu": { id: "COfFzy0oa94", title: "Nói trôi chảy và mạch lạc (Fluency & Coherence)", channel: "The IELTS Workshop", note: "Dạy bằng tiếng Việt: tiêu chí Nói trôi chảy và mạch lạc. CỜ: mốc end=95 là ước lượng — nội dung chính kết thúc trước đoạn kêu gọi theo dõi rồi video lặp lại, thời lượng trang phát 107.", start: 0, end: 95 },
+  "speakCrit:lex": { id: "qTbR33lFZh4", title: "Từ vựng cho Speaking (Lexical Resource)", channel: "The IELTS Workshop", note: "Dạy bằng tiếng Việt: tiêu chí Từ vựng cho Speaking.", start: 0, end: 146 },
+  "speakCrit:gram": { id: "EBbkxdJDXXg", title: "Ngữ pháp cho Speaking (Grammatical Range)", channel: "The IELTS Workshop", note: "Dạy bằng tiếng Việt: tiêu chí Ngữ pháp cho Speaking.", start: 0, end: 103 },
+  "speakCrit:pron": { id: "ea9_vZbBRp8", title: "Phát âm cho Speaking (Pronunciation)", channel: "The IELTS Workshop", note: "Dạy bằng tiếng Việt: tiêu chí Phát âm cho Speaking.", start: 0, end: 95 },
   "speakMind:2": { id: "2f6DVDAMw04", title: "IELTS SPEAKING - TƯ DUY NỀN TẢNG - PHẦN 2", channel: "Enfreenity", note: "Phần 2 — tư duy nền tảng khi nói (hướng dẫn tiếng Việt)." },
   "speak:1": { id: "NQ9kUOtz7Iw", title: "Luyện Thi IELTS Speaking Part 1, 2 & 3 - Chủ Đề: Công Việc | IELTS Langmaster", channel: "Học Tiếng Anh Langmaster", note: "Luyện nói theo chủ đề Công việc (đủ Part 1, 2, 3; hướng dẫn tiếng Việt)." },
-  "write:Task 1": { id: "VQluL1IRDbY", title: "The Ultimate Guide to IELTS Academic Writing Task 1", channel: "Fastrack IELTS", note: "Tổng quan Task 1 — xem trước khi vào từng dạng bài." },
-  "write:Task 2": { id: "kCwsDUzDqPw", title: "Tips on how to improve your IELTS writing performance - task 2", channel: "TakeIELTS Official", note: "Mở đầu Task 2 — mẹo tổng quan trước khi vào từng dạng." },
-  "write:barchart": { id: "QC8vN3GVQhI", title: "IELTS Writing Task 1: How to describe BAR GRAPHS", channel: "English with Emma · engVid", note: "Cách mô tả biểu đồ cột." },
-  "writeCrit:task": { id: "oSENKzdGYa0", title: "IELTS Writing: Task response/Task achievement", channel: "British Council Teacher Trainer", note: "Giới thiệu tiêu chí Trả lời đúng yêu cầu đề." },
-  "writeCrit:gram": { id: "70xfxRxFRcE", title: "IELTS Writing: Grammar - improve your English and IELTS writing", channel: "British Council Teacher Trainer", note: "Giới thiệu tiêu chí Ngữ pháp và câu." },
-  "read:strategies": { id: "m9x9fZCBIMY", title: "IELTS Academic Reading: Question types, strategies and tips | TakeIELTS Preparation", channel: "TakeIELTS Official", note: "Chiến lược làm các dạng câu hỏi Đọc." },
-  "read:tips0": { id: "NpLRXo-BxQI", title: "Some advice for preparing for the IELTS Reading test on your own", channel: "TakeIELTS Official", note: "Lời khuyên tự ôn Đọc — xem ở bài Đọc đầu tiên." },
-  "listenLong:MC": { id: "AkW0IeF46cA", title: "IELTS Listening Tips: Multiple Choice", channel: "IELTS Liz", note: "Mẹo dạng trắc nghiệm Multiple Choice." },
-  "listenLong:16": { id: "HYp08TMG5uw", title: "IELTS Listening: Problems with numbers", channel: "IELTS Liz", note: "Mẹo nghe số liệu — điểm yếu kinh điển của người Việt." },
-  "listenLong:map1": { id: "IpSQwnGhzrI", title: "IELTS Listening Tips || Labelling a Map", channel: "Asad Yaqub IELTS", note: "Phần 1 — cách làm dạng gắn nhãn bản đồ." },
-  "listenLong:map2": { id: "SYvFHQNPI5s", title: "IELTS Listening Tips || How to Complete a Map or Plan Part 02", channel: "Asad Yaqub IELTS", note: "Phần 2 — cách làm dạng gắn nhãn bản đồ/sơ đồ." },
-  "mockHub:listenTut": { id: "oVOgzN1O__I", title: "IELTS Online Listening test tutorial", channel: "IELTS Official", note: "Hướng dẫn thi Nghe trên máy — xem trước khi bắt đầu thi thử." },
-  "mockSheet:lizMock": { id: "n5ohxW5lTIs", title: "IELTS Speaking Test: Practice & Model Answers", channel: "IELTS Liz", note: "Bài thi mẫu để luyện — đây là mẫu luyện, không phải thi thật." },
-  "mockSheet:band9": { id: "9KrJux6z-Fg", title: "IELTS Expert Breaks Down Band 9 Answers", channel: "IELTS Advantage", note: "Phân tích đáp án Band 9 — đối chiếu sau khi thi thử." },
-  "mockSheet:band7": { id: "gjp9PgIugrw", title: "IELTS Speaking Band 7 Full Test: What Keeps This Candidate at a 7?", channel: "BayRen Education", note: "Bài thi mẫu Band 7 kèm phân tích — đây là mẫu luyện, không phải thi thật." },
-  "pronAdv:linking": { id: "KJFC6ZgoPKo", title: "Top tips for better pronunciation: Tim's Pronunciation Workshop", channel: "BBC Learning English", note: "Phát âm nâng cao: nối âm (chặng 5.5–6.5+)." },
-  "pronAdv:stress": { id: "EPZ9i1Pe4fw", title: "How to use stress to communicate - a Mini English Lesson", channel: "British Council | English", note: "Phát âm nâng cao: trọng âm." },
-  "pronAdv:schwa": { id: "KwDJnXt3ZVQ", title: "👄 Tim's Pronunciation Workshop: The Schwa", channel: "BBC Learning English", note: "Phát âm nâng cao: âm schwa /ə/." },
+  "write:Task 1": { id: "QWMXRJAN-Gs", title: "Tổng quan Writing Task 1", channel: "The IELTS Workshop", note: "Dạy bằng tiếng Việt: tổng quan Task 1, xem trước khi vào từng dạng bài.", start: 0, end: 665 },
+  "write:Task 2": { id: "VbJAEjZb8T0", title: "Mẹo tổng quan Writing Task 2", channel: "IELTS Thanh Loan", note: "Dạy bằng tiếng Việt: mẹo tổng quan Task 2, xem trước khi vào từng dạng bài.", start: 0, end: 911 },
+  "write:barchart": { id: "6j-1ZYXAjcQ", title: "Cách mô tả biểu đồ cột", channel: "IELTS TUTOR", note: "Dạy bằng tiếng Việt: cách mô tả biểu đồ cột. Kênh nhỏ (677 đăng ký); kênh chính thức không bắt buộc nên vẫn đạt.", start: 0, end: 812 },
+  "writeCrit:task": { id: "BsMiwxRs4y0", title: "Tiêu chí Task Response (Task 2)", channel: "YouPass", note: "Dạy bằng tiếng Việt. Giới hạn: bao quát Task Response cho Task 2, không trình bày riêng cách gọi Task Achievement cho Task 1.", start: 0, end: 872 },
+  "writeCrit:gram": { id: "wQE8li_eX4Y", title: "Ngữ pháp và câu trong Writing", channel: "IELTS Quang Trần", note: "Dạy bằng tiếng Việt: tiêu chí Ngữ pháp và câu trong Writing. Kênh nhỏ (944 đăng ký); kênh chính thức không bắt buộc nên vẫn đạt.", start: 0, end: 1268 },
+  "read:strategies": { id: "x16oGwaYBkE", title: "Chiến lược làm các dạng câu hỏi Reading", channel: "Alice's life", note: "Dạy bằng tiếng Việt: chiến lược làm các dạng câu hỏi Đọc.", start: 0, end: 1683 },
+  "read:tips0": { id: "itiSuzW8vgI", title: "Lời khuyên tự ôn Reading", channel: "IELTS Nguyễn Huyền", note: "Dạy bằng tiếng Việt: lời khuyên tự ôn Đọc.", start: 0, end: 808 },
+  "listenLong:MC": { id: "T9bUadni5GM", title: "Mẹo dạng trắc nghiệm Multiple Choice (Listening)", channel: "ACE IELTS", note: "Dạy bằng tiếng Việt: mẹo dạng trắc nghiệm Multiple Choice.", start: 0, end: 712 },
+  "listenLong:16": { id: "hTj3bvbit3U", title: "Phân biệt số đếm và số thứ tự khi nghe", channel: "IELTS Fighter", note: "Dạy bằng tiếng Việt. Góc tiếp cận: phân biệt số đếm/số thứ tự, không phải bản sao tiêu đề gốc về vấn đề với số.", start: 0, end: 553 },
+  "listenLong:map1": { id: "_KLGlBMUDJk", title: "Dạng gắn nhãn bản đồ — phần 1", channel: "Tự Học IELTS", note: "Dạy bằng tiếng Việt: phần 1 — cách làm dạng gắn nhãn bản đồ.", start: 0, end: 938 },
+  "listenLong:map2": { id: "KQNi-jWJmdc", title: "Dạng gắn nhãn bản đồ/sơ đồ — phần 2", channel: "IELTS Tactics", note: "Dạy bằng tiếng Việt: phần 2 — cách làm dạng gắn nhãn bản đồ/sơ đồ. Khác kênh/góc với khóa map1, giữ 2 khóa riêng.", start: 0, end: 1500 },
+  "mockHub:listenTut": { id: "g-qi2PQtius", title: "Hướng dẫn thi Listening online", channel: "Testuru", note: "Dạy bằng tiếng Việt: hướng dẫn thi Listening online, không phải video mẹo chung.", start: 0, end: 164 },
+  "mockSheet:lizMock": { id: "IZlFuWcwzGE", title: "Bài mocktest Speaking đủ 3 phần kèm phản hồi", channel: "IELTS Fighter", note: "CỜ BẮT BUỘC GHI RÕ: video là bài mocktest Speaking đủ 3 phần kèm phản hồi tiếng Việt ở cuối; phần thí sinh nói tiếng Anh là bản chất của bài thi, tiêu chí tiếng Việt áp cho phần khung/phản hồi của giáo viên.", start: 0, end: 967 },
+  "mockSheet:band9": { id: "EPARK9w7lvM", title: "Bài giải đề chủ đề Beauty (giáo viên 9.0 Speaking)", channel: "The IELTS Workshop TPHCM", note: "Dạy bằng tiếng Việt. Giới hạn: bài giải đề một chủ đề Beauty của giáo viên 9.0 Speaking, không phải tổng hợp nhiều đáp án Band 9.", start: 0, end: 2671 },
+  "mockSheet:band7": { id: "ZmAMh5vmhD8", title: "Bài thi mẫu Speaking Band 7 kèm phân tích", channel: "The IELTS Workshop", note: "Dạy bằng tiếng Việt: bài thi mẫu Band 7 kèm phân tích. CỜ: mới nghe đoạn đầu ~50 giây của video dài 64 phút, chưa nghe hết toàn bộ.", start: 0, end: 3862 },
+  "pronAdv:linking": { id: "gHe4Gm2Qs5E", title: "Nối âm: 4 nguyên tắc nối âm", channel: "Ms Hoa Giao Tiếp", note: "Dạy bằng tiếng Việt: nối âm chung, 4 nguyên tắc. Thấy rõ mặt + khẩu hình.", start: 0, end: 573 },
+  "pronAdv:stress": { id: "iAUm827SuVw", title: "Trọng âm để giao tiếp", channel: "Ms Hoa Giao Tiếp", note: "Dạy bằng tiếng Việt. CỜ VÀNG: trang video có nhãn “Bản lồng tiếng tự động”; đoạn kiểm chứng nghe được lời Việt nhưng không khẳng định về bản âm thanh khác. Thấy rõ mặt + khẩu hình.", start: 0, end: 215 },
+  "pronAdv:schwa": { id: "CBVV_L7eU94", title: "Âm schwa /ə/", channel: "Tiếng Anh Cô Sương", note: "Dạy bằng tiếng Việt: âm schwa /ə/. Thấy rõ mặt + khẩu hình.", start: 0, end: 566 },
   "pronAdv:elision": { id: "c1l4HRaCMdw", title: "Pronunciation: Elision of /t/", channel: "BBC Learning English", note: "Phát âm nâng cao: nuốt âm /t/." },
-  "zhGram:le": { id: "QHFSJbiFzDM", title: "【MinuteMandarin】Lesson 33: 了 Le As a Change of State Marker", channel: "PeggyTeachesChinese", note: "Điểm ngữ pháp 了 (dấu hiệu thay đổi trạng thái) — video ngắn, tập trung." },
+  "zhGram:le": { id: "k6xcu7ULDvY", title: "了 le: dấu hiệu thay đổi trạng thái", channel: "Trung Tâm Tiếng Trung SOFL", note: "Dạy bằng tiếng Việt: 了 làm dấu hiệu thay đổi trạng thái", start: 0, end: 259 },
   "zhListen:anuong": { id: "ku4M-KpAUpA", title: "Chinese on the Street - Do you like to eat Chinese food?", channel: "Yoyo Chinese", note: "Hội thoại thật ngoài đường, chủ đề ăn uống (có phụ đề)." },
-  "zhRole:nhahang": { id: "gtOFg6mTSJ8", title: "How to order food in Chinese | 在中国点餐，听懂店员怎么问", channel: "WEN Chinese", note: "Tình huống gọi món + nghe hiểu nhân viên hỏi." },
-  "zhSpeak:chaohoi1": { id: "BpKcUecpG3Y", title: "P01 – Greetings & Introductions | Ep 05 – Chào đón khách - Welcoming a Guest", channel: "Learn Chinese 90 Seconds", note: "Micro-lesson 90 giây — tình huống chào đón khách." },
-  "zhSpeak:chaohoi2": { id: "Io3aJWbHZt8", title: "P01 – Greetings & Introductions | Ep 02 – Gặp gỡ và kết bạn - Meeting and Making Friends", channel: "Learn Chinese 90 Seconds", note: "Micro-lesson 90 giây — tình huống gặp gỡ kết bạn." },
-  "zhPractice:wordorder": { id: "2fFYObYJG1k", title: "Chinese Grammar Lesson | The Golden Rule of Chinese Word Order", channel: "Yoyo Chinese", note: "Quy tắc vàng về trật tự từ — xem trước khi vào các trạm ngữ pháp." },
+  "zhRole:nhahang": { id: "LfbZjYeIa78", title: "Gọi món trong nhà hàng", channel: "Tiếng Trung Ánh Dương", note: "Dạy bằng tiếng Việt: gọi món chung", start: 0, end: 500 },
+  "zhSpeak:chaohoi1": { id: "_2n07_QNnQM", title: "Chào hỏi 1", channel: "Tiếng Trung Ánh Dương", note: "Dạy bằng tiếng Việt: chào hỏi", start: 0, end: 614 },
+  "zhSpeak:chaohoi2": { id: "vyxCWX7O5Fc", title: "Chào hỏi 2", channel: "Tiếng Trung Ánh Dương", note: "Song ngữ chú thích (tiếng Việt trên màn hình/phụ đề), chưa phải giảng tiếng Việt đầy đủ — gắn theo chuẩn dự phòng", start: 0, end: 488 },
+  "zhPractice:wordorder": { id: "1DPc65qpJYI", title: "Trật tự từ trong câu", channel: "Sweden Chinese Center", note: "Dạy bằng tiếng Việt: trật tự từ", start: 0, end: 660 },
   "zhPractice:listenExtra1": { id: "z9YYq6e9cLU", title: "[HSK 1] Easy Chinese Listening Story | My Phone Died in China | Mike in China #2", channel: "Chinese For Real", note: "Nghe thêm: truyện dễ HSK1." },
   "zhPractice:listenExtra2": { id: "qE5jbV1JdXA", title: "Legend of Nian -  The Story of Chinese New Year | Slow Chinese Listening & Reading", channel: "Everyday Chinese", note: "Nghe thêm: truyện dân gian nghe chậm." },
   "zhPractice:listenExtra3": { id: "gnCXffOg7T8", title: "🇨🇳 25 分钟日常生活中文对话 (HSK 1-2) | 简单普通话", channel: "Say Mandarin", note: "Nghe thêm: hội thoại đời sống đơn giản HSK1–2 (25 phút)." },
   "zhPractice:listenExtra4": { id: "_YAmMuyPhPk", title: "Slow Chinese Vlog | Visiting Tech Giant Tencent: Testing AI & Eating at Company Cafeteria (HSK3-4)", channel: "Chinese with Nicole", note: "Nghe thêm: vlog chậm HSK3–4, chủ đề công nghệ." },
-  "zhPractice:janus1": { id: "ZemMzFxYIG4", title: "Learn All the Basics of Chinese Writing Part 1 - Strokes | How to Write Chinese Characters (Hanzi)", channel: "Janus Academy", note: "Video nền tảng: các nét cơ bản." },
-  "zhPractice:janus2": { id: "iia5jcW0PBo", title: "Learn All the Basics of Chinese Writing Part 2 - Radicals | How to Write Chinese Characters (Hanzi)", channel: "Janus Academy", note: "Video nền tảng: bộ thủ." },
-  "zhPractice:janus3": { id: "xsarqZa_Os0", title: "Learn All the Basics of Chinese Writing Part 3 - Simple Characters | How to Write Chinese Characters", channel: "Janus Academy", note: "Video nền tảng: chữ đơn giản." },
+  "zhPractice:janus1": { id: "WWisN7FNbF8", title: "Các nét cơ bản", channel: "Tiếng Trung 21 Ngày", note: "Dạy bằng tiếng Việt: chỉ đoạn nét (phần sau là quy tắc viết nên đã cắt bỏ)", start: 25, end: 478 },
+  "zhPractice:janus2": { id: "I-HI6D1ZFQo", title: "Bộ thủ", channel: "Khoai Tây yêu tiếng Trung", note: "Dạy bằng tiếng Việt: bộ thủ", start: 0, end: 1372 },
+  "zhPractice:janus3": { id: "2E_Cf4iDwdY", title: "Chữ đơn giản", channel: "Đất Việt ABC", note: "Song ngữ chú thích (tiếng Việt trên màn hình/phụ đề), chưa phải giảng tiếng Việt đầy đủ — gắn theo chuẩn dự phòng", start: 0, end: 989 },
   "zhReview:words300": { id: "5SrKsutuPf4", title: "TỔNG HỢP 300 TỪ VỰNG HSK1 KHUNG MỚI 3.0 THEO CHỦ ĐỀ", channel: "Tiếng Trung 247", note: "Ôn tổng hợp 300 từ HSK1 theo chủ đề (dải ôn, không gắn vào từng thẻ)." },
-  "zhReview:family": { id: "esxcTuxO8sA", title: "Practice 14 HSK 1 (3.0) Family Words | Chinese Listen & Repeat", channel: "I Heart Mandarin", note: "Ôn thêm: nghe nhắc lại từ vựng HSK1 chủ đề gia đình." },
-  "zhReview:objects": { id: "wER9yp2-UMw", title: "Practice 21 HSK 1(3.0) Object Words | Chinese Listen & Repeat", channel: "I Heart Mandarin", note: "Ôn thêm: nghe nhắc lại từ vựng HSK1 chủ đề đồ vật." },
-  "zhPh:tones": { id: "b783_f6QlKI", title: "Ask a Chinese Teacher -  What are Chinese Tones?", channel: "Learn Chinese with ChineseClass101.com", note: "Giới thiệu thanh điệu." },
+  "zhReview:family": { id: "xqNqqzkH6bw", title: "Ôn từ chủ đề gia đình", channel: "Tiếng Trung Dương Châu", note: "Dạy bằng tiếng Việt: ôn từ gia đình (rộng hơn danh sách HSK 1 gốc nhưng cùng chủ điểm)", start: 0, end: 677 },
+  "zhReview:objects": { id: "FkBqj0hanTY", title: "Ôn từ chủ đề đồ vật", channel: "Tiếng Trung Dương Châu", note: "Dạy bằng tiếng Việt: ôn từ đồ vật (rộng hơn danh sách gốc nhưng cùng chủ điểm)", start: 0, end: 774 },
+  "zhPh:tones": { id: "xUiCa25MsJ0", title: "Thanh điệu", channel: "Tiếng Trung 21 Ngày", note: "Dạy bằng tiếng Việt: thanh điệu", start: 0, end: 347 },
   "zhPh:pairs": { id: "3wV8B4bx1lM", title: "Learn Chinese Tone Pairs: How to Practice and Master Mandarin Tones", channel: "Yoyo Chinese", note: "Luyện cặp thanh điệu." },
-  "zhPh:sandhi": { id: "rxNHIdn_xjE", title: "Learn Chinese - Chinese Tone Changing rules - Google Hangout with Yangyang", channel: "Yoyo Chinese", note: "Quy tắc biến điệu — xem thêm ghi chú biến điệu trong bài học pinyin (bước Quy tắc)." },
+  "zhPh:sandhi": { id: "3EGz8TjLG_I", title: "Biến điệu", channel: "Tiếng Trung 21 Ngày", note: "Dạy bằng tiếng Việt: quy tắc biến điệu", start: 0, end: 442 },
   "zhPh:bu": { id: "TsohG90lZcc", title: "b1 biến điệu chữ bu (ngữ pháp 12 khóa online Hán 12)", channel: "Chinese King", note: "Biến điệu chữ 不 (tiếng Việt, chuyên sâu) — xem thêm ghi chú biến điệu trong bài học pinyin." },
   "zhPh:song": { id: "ImpcIT0WizQ", title: "Learn about Chinese for Beginners 2021⎮Chinese Tones Song 2021⎮Chinese Pinyin Song 2021 ⎮声调歌", channel: "Learn Mandarin Chinese 中文 with AliMiMi", note: "Bài hát thanh điệu — chỉ hỗ trợ nhớ, không thay bài học." },
-  "speakCrit:mistakes": { id: "BQP_uHMoXBg", title: "IELTS Speaking secrets: common mistakes and how to fix them", channel: "TakeIELTS Official", note: "Lỗi thường gặp khi Nói" },
-  "speak:part1tips": { id: "HqfjgbeJMME", title: "IELTS Speaking Part 1: Stop Going Blank After Sentence One | Band 6-Style", channel: "ScorePilot English", note: "Công thức chống bí ý ở Part 1" },
+  "speakCrit:mistakes": { id: "ZlZVz5reiUo", title: "Lỗi thường gặp khi Nói và cách sửa", channel: "Luyện Thi IELTS LangGo", note: "Dạy bằng tiếng Việt: lỗi thường gặp khi Nói và cách sửa.", start: 0, end: 319 },
+  "speak:part1tips": { id: "_aEgFrW2uNE", title: "Mẹo Part 1: không bí ý sau câu đầu", channel: "Saigon IELTS", note: "Dạy bằng tiếng Việt: công thức chống bí ý ở Part 1. Kênh rất nhỏ (14 đăng ký); kênh chính thức không bắt buộc nên vẫn đạt.", start: 0, end: 678 },
   "speak:dailyroutine": { id: "i4bYVKLkL1c", title: "Luyện speaking ielts part 1 cùng cô Minh - 19/35", channel: "Minh Luu", note: "Nói Part 1 — chủ đề Daily Routine, hướng dẫn tiếng Việt" },
-  "write:piechart": { id: "Dz9uUds4I14", title: "IELTS Writing task 1: Pie chart lesson", channel: "IELTS Mentoring", note: "Chiến thuật + phân tích mẫu cho biểu đồ tròn" },
+  "write:piechart": { id: "y2WNnp5nZ54", title: "Cách làm bài biểu đồ tròn", channel: "The Forum", note: "Dạy bằng tiếng Việt: chiến thuật + phân tích mẫu cho biểu đồ tròn.", start: 0, end: 349 },
   "zhSpeak:chaohoi3": { id: "Wx9u8Ky1oGc", title: "Learn Business Mandarin in 10 minutes|All the Basics you need-Lesson 1", channel: "Elite Mandarin Education Centre", note: "Chào hỏi/giới thiệu trong thương mại (HSK3+)" },
   "zhReview:hsk3words": { id: "mAI8uLWL2Mk", title: "Hsk 3 Test Vocabulary List with Pronunciation", channel: "GLLC languages", note: "Dải ôn từ HSK3 kèm phát âm (chữ + pinyin + nghĩa Anh trên màn)" },
   "zhPractice:listenExtra5": { id: "0773HgHPQaI", title: "HSK 1-3｜用中文说出真实的感受 | Stop Saying \"I'm Fine\" in Chinese! Say How You Really Feel | Chinese Podcast", channel: "Chinese Teahouse", note: "Nghe thêm: nói cảm xúc thật (HSK1-3, phụ đề Việt)" },
@@ -3861,49 +3986,49 @@ var GRAMMAR_VIDEOS = {
   "zhPractice:listenExtra9": { id: "fNL3uuZyxdw", title: "Chinese Podcast HSK 3-4 | Healthy Habits | Mandarin Chinese Listening Practice", channel: "Mandarin Hero", note: "Nghe thêm: thói quen lành mạnh (HSK3-4, phụ đề Việt)" },
   "zhPractice:listenExtra10": { id: "sDLxVUOMpDM", title: "Being a Returned Student  | Yoyo Chinese Upper Intermediate Conversational Course: Unit 39, Lesson 2", channel: "Yoyo Chinese", note: "Nghe thêm: hội thoại trung cấp cao — du học sinh về nước, xem độc lập được" },
   "zhPractice:listenExtra11": { id: "8WkMzOjor1w", title: "[HSK 4-5] If You Could Turn Back Time, What Would You Change? 如果时间可以倒退 - Chinese Listening Practice", channel: "Xiaobai (Chinese podcast)", note: "Nghe thêm: quay ngược thời gian (HSK4-5, chữ + pinyin trên màn)" },
-  "gramOld:0": { id: "OsW5sV3GMDM", title: "Present Simple and Present Continuous: The Grammar Gameshow Episode 1", channel: "BBC Learning English", note: "Gameshow ngữ pháp: hiện tại đơn + tiếp diễn" },
-  "gramOld:45": { id: "gb2P04ZfAjc", title: "Used to and Would: The Grammar Gameshow Episode 3", channel: "BBC Learning English", note: "Gameshow ngữ pháp: used to + would" },
-  "gramOld:51": { id: "qT5Ul3tMjDA", title: "Be Going To: The Grammar Gameshow Episode 6", channel: "BBC Learning English", note: "Gameshow ngữ pháp: be going to" },
-  "gramOld:62": { id: "S595XIgg4ss", title: "Verb Patterns: The Grammar Gameshow Episode 7", channel: "BBC Learning English", note: "Gameshow ngữ pháp: mẫu động từ V + to V / V-ing" },
-  "gramOld:58": { id: "FtruQRWZ44U", title: "Some and Any: The Grammar Gameshow Episode 8", channel: "BBC Learning English", note: "Gameshow ngữ pháp: some + any" },
-  "gramOld:46": { id: "MGLedoA3SSE", title: "The Past Continuous Tense: The Grammar Gameshow Episode 9", channel: "BBC Learning English", note: "Gameshow ngữ pháp: quá khứ tiếp diễn" },
-  "gramOld:53": { id: "tcOLyvkBc48", title: "The First Conditional: The Grammar Gameshow Episode 10", channel: "BBC Learning English", note: "Gameshow ngữ pháp: câu điều kiện loại 1" },
-  "gramOld:8": { id: "bpYTihB4bqc", title: "Relative Clauses: The Grammar Gameshow Episode 11", channel: "BBC Learning English", note: "Gameshow ngữ pháp: mệnh đề quan hệ cơ bản" },
-  "gramOld:18": { id: "QICgIltwsWs", title: "Relative Clauses 2: The Grammar Gameshow Episode 12", channel: "BBC Learning English", note: "Gameshow ngữ pháp: mệnh đề quan hệ nâng cao" },
-  "gramOld:3": { id: "mAFd4jjo0YU", title: "Present and Past Passives: The Grammar Gameshow Episode 16", channel: "BBC Learning English", note: "Gameshow ngữ pháp: bị động hiện tại + quá khứ" },
-  "gramOld:59": { id: "zX4xVqhMoEg", title: "Adjectives: The Grammar Gameshow Episode 18", channel: "BBC Learning English", note: "Gameshow ngữ pháp: tính từ" },
-  "gramOld:40": { id: "aizd-rWx1Zg", title: "Prepositions: The Grammar Gameshow Episode 19", channel: "BBC Learning English", note: "Gameshow ngữ pháp: giới từ" },
-  "gramOld:72": { id: "zfQh-Dg2Ggo", title: "Superlatives: The Grammar Gameshow Episode 21", channel: "BBC Learning English", note: "Gameshow ngữ pháp: so sánh nhất" },
-  "gramOld:73": { id: "RpunLrghIjo", title: "Question Tags: The Grammar Gameshow Episode 22", channel: "BBC Learning English", note: "Gameshow ngữ pháp: câu hỏi đuôi" },
-  "gramOld:83": { id: "Ue16zUM3O6c", title: "Questions: The Grammar Gameshow Episode 23", channel: "BBC Learning English", note: "Gameshow ngữ pháp: câu hỏi Yes/No + Wh-" },
-  "gramOld:41": { id: "cO51ghRAWLI", title: "Can: The Grammar Gameshow Episode 24", channel: "BBC Learning English", note: "Gameshow ngữ pháp: can / can't" },
-  "gramOld:44": { id: "cetrtFDN2Zg", title: "Reported Speech: The Grammar Gameshow Episode 25", channel: "BBC Learning English", note: "Gameshow ngữ pháp: câu tường thuật" },
-  "gramOld:4": { id: "P6R1V2uQM4M", title: "Should: The Grammar Gameshow episode 26. Can you answer all the questions?", channel: "BBC Learning English", note: "Gameshow ngữ pháp: should" },
-  "gramOld:61": { id: "9fgQaoDNU2k", title: "Articles: The Grammar Gameshow Episode 28", channel: "BBC Learning English", note: "Gameshow ngữ pháp: mạo từ a/an/the" },
-  "gramOld:67": { id: "cGfF6jIl_dU", title: "Comparatives: The Grammar Gameshow Episode 15", channel: "BBC Learning English", note: "Gameshow ngữ pháp: so sánh hơn" },
-  "pronAdv:wasWere": { id: "psI7E_J1zPo", title: "👄 Tim's Pronunciation Workshop: 'was' and 'were'", channel: "BBC Learning English", note: "Xưởng phát âm: was/were" },
+  "gramOld:0": { id: "DPtvsmMW8WE", title: "Hiện tại đơn và hiện tại tiếp diễn", channel: "Elight Learning English", note: "Dạy bằng tiếng Việt: phân biệt 2 thì", start: 0, end: 333 },
+  "gramOld:45": { id: "g-mZPcZfq_E", title: "Used to — thói quen và trạng thái trong quá khứ", channel: "Tiếng Anh Đơn Giản", note: "Dạy bằng tiếng Việt: thói quen cũ nay không còn", start: 0, end: 144 },
+  "gramOld:51": { id: "k6OTc2m6d6c", title: "Going to — kế hoạch và dự đoán gần", channel: "Tiếng Anh Đơn Giản", note: "Dạy bằng tiếng Việt: việc đã quyết từ trước và dự đoán từ dấu hiệu hiện tại", start: 0, end: 112 },
+  "gramOld:62": { id: "temh6BgOUDY", title: "Mẫu động từ: V + to V và V + V-ing", channel: "TAK12", note: "Dạy bằng tiếng Việt: động từ theo sau là to V hay V-ing tùy nghĩa động từ trước", start: 0, end: 164 },
+  "gramOld:58": { id: "-ayMo2by-co", title: "Lượng từ much, many, some, any", channel: "Sinh Hub", note: "Dạy bằng tiếng Việt: chọn lượng từ theo danh từ đếm được hay không", start: 0, end: 660 },
+  "gramOld:46": { id: "ygcboZ7Jpvs", title: "Quá khứ tiếp diễn", channel: "ZIM Academy", note: "Dạy bằng tiếng Việt: miêu tả sự việc trong quá khứ", start: 0, end: 240 },
+  "gramOld:53": { id: "sXjd9Uy4qDY", title: "Câu điều kiện loại 1", channel: "Elight Learning English", note: "Dạy bằng tiếng Việt: việc có thể xảy ra", start: 0, end: 276 },
+  "gramOld:8": { id: "Tn0_E8ZGEaU", title: "Mệnh đề quan hệ cơ bản (who/which/that)", channel: "KISS English Center", note: "Dạy bằng tiếng Việt (Ms Thủy): who/whom/which", start: 0, end: 360 },
+  "gramOld:18": { videos: [{ id: "hVmkGO_jsjE", title: "Mệnh đề quan hệ nâng cao: giới từ đứng trước which/whom", channel: "5+ English", note: "Điểm 1 — giới từ đặt trước đại từ quan hệ", start: 1790, end: 2125 }, { id: "GzEBihxtshA", title: "Mệnh đề quan hệ: WHICH thay thế cho cả mệnh đề", channel: "ANH NGỮ MS. THẢO", note: "Điểm 2 — which bình luận cả vế trước (mệnh đề có dấu phẩy)", start: 0, end: 533 }] },
+  "gramOld:3": { id: "rdu7VpPfkjk", title: "Câu bị động nền tảng", channel: "ZIM Academy", note: "Dạy bằng tiếng Việt: định nghĩa và nguyên tắc chuyển đổi", start: 0, end: 325 },
+  "gramOld:59": { id: "UbaYCTuETjg", title: "Tính từ và trạng từ", channel: "English Amom", note: "Dạy bằng tiếng Việt: phân biệt tính từ và trạng từ", start: 0, end: 606 },
+  "gramOld:40": { id: "j1PgzsfQk8M", title: "Giới từ in, on, at", channel: "Elight Learning English", note: "Dạy bằng tiếng Việt: giới từ chỉ thời gian và nơi chốn", start: 0, end: 424 },
+  "gramOld:72": { id: "A9bbEC8f13M", title: "So sánh nhất với the -est và the most", channel: "KISS English Center", note: "Dạy bằng tiếng Việt (Ms Thủy): cách dùng dạng so sánh nhất", start: 0, end: 542 },
+  "gramOld:73": { id: "E-kvSj98uto", title: "Câu hỏi đuôi đơn giản", channel: "ZIM Academy", note: "Dạy bằng tiếng Việt: câu hỏi ngắn đính kèm sau câu trần thuật", start: 0, end: 208 },
+  "gramOld:83": { id: "AwUdcUax8Wo", title: "Câu hỏi Yes/No và Wh- với do, does, did", channel: "TAK12", note: "Dạy bằng tiếng Việt: hai loại câu hỏi và cấu trúc", start: 0, end: 367 },
+  "gramOld:41": { id: "hlqP5tQ91jg", title: "Can và can't — khả năng và câu hỏi đơn giản", channel: "Tiếng Anh LIME", note: "Dạy bằng tiếng Việt: cách đọc can/can't và ví dụ hỏi đáp", start: 0, end: 238 },
+  "gramOld:44": { id: "SpoCci0wSAc", title: "Câu tường thuật cơ bản và đầy đủ", channel: "KISS English Center", note: "Dạy bằng tiếng Việt: 5 cấu trúc câu tường thuật kèm ví dụ", start: 0, end: 1297 },
+  "gramOld:4": { id: "2jRQNC-243o", title: "Should và shouldn't", channel: "TAK12", note: "Dạy bằng tiếng Việt: đặc điểm và cấu trúc của should/shouldn't", start: 0, end: 131 },
+  "gramOld:61": { id: "UJ1fXlDdauA", title: "Mạo từ a, an, the và không mạo từ", channel: "Daily English", note: "Dạy bằng tiếng Việt: a/an/the và trường hợp không dùng mạo từ", start: 0, end: 347 },
+  "gramOld:67": { id: "56q4XAGayZg", title: "So sánh hơn với -er và more", channel: "KISS English Center", note: "Dạy bằng tiếng Việt (Ms Thủy): tính từ ngắn và tính từ dài", start: 0, end: 897 },
+  "pronAdv:wasWere": { id: "sJhFmKDQ3rQ", title: "Cách đọc was/were", channel: "Lesh Phát Âm Chuẩn Giọng Mỹ", note: "Dạy bằng tiếng Việt: cách đọc was/were. Thấy rõ mặt + khẩu hình.", start: 0, end: 278 },
   "pronAdv:assimTP": { id: "i_ohrkQmzdQ", title: "👄 Tim's Pronunciation Workshop: Assimilation of /t/ and /p/", channel: "BBC Learning English", note: "Xưởng phát âm: đồng hóa /t/ + /p/" },
   "pronAdv:intrusiveR": { id: "DCJrFM3hdlg", title: "Pronunciation: The intrusive /r/", channel: "BBC Learning English", note: "Xưởng phát âm: /r/ chen ngang" },
-  "pronAdv:cvLinking": { id: "mV_CEIroJs8", title: "👄 Tim's pronunciation workshop: Consonant - vowel linking", channel: "BBC Learning English", note: "Xưởng phát âm: nối phụ âm + nguyên âm" },
+  "pronAdv:cvLinking": { id: "gHe4Gm2Qs5E", title: "Nối âm: phụ âm nối sang nguyên âm (nguyên tắc 1)", channel: "Ms Hoa Giao Tiếp", note: "Dạy bằng tiếng Việt: chỉ nguyên tắc 1 phụ âm–nguyên âm. Cùng video với khóa nối âm chung nhưng đoạn khác.", start: 28, end: 166 },
   "pronAdv:the2ways": { id: "CQrH4a9Tx4o", title: "Pronunciation: Two different ways to pronounce the English word 'the'", channel: "BBC Learning English", note: "Xưởng phát âm: hai cách đọc 'the'" },
   "pronAdv:linkingR": { id: "wLprxwzWtc4", title: "👄 The linking /r/: Tim's pronunciation workshop", channel: "BBC Learning English", note: "Xưởng phát âm: nối âm /r/" },
   "pronAdv:wouldYou": { id: "3rXlFsd-yUA", title: "How to pronounce 'would you...?' Tim's Pronunciation Workshop", channel: "BBC Learning English", note: "Xưởng phát âm: would you" },
   "pronAdv:haveTo": { id: "IC-mO3QcAOY", title: "Pronunciation: 'Have to'", channel: "BBC Learning English", note: "Xưởng phát âm: have to" },
-  "pronAdv:linkingW": { id: "cu-VK3JlgAk", title: "Pronunciation: Linking /w/", channel: "BBC Learning English", note: "Xưởng phát âm: nối âm /w/" },
+  "pronAdv:linkingW": { id: "4G5erQS-J-c", title: "Nối âm /w/", channel: "Tiếng Anh Tiếng Em", note: "Dạy bằng tiếng Việt: chỉ đoạn thêm /w/. Giáo viên lên hình khung nhỏ bên phải nhưng mặt rõ, miệng đang nói.", start: 402, end: 451 },
   "pronAdv:andFluent": { id: "m-lWwRomisk", title: "Pronunciation: How do fluent speakers pronounce 'and'?", channel: "BBC Learning English", note: "Xưởng phát âm: and trong nói trôi chảy" },
   "pronAdv:assimNP": { id: "Yrzg7DDo0ao", title: "Pronunciation: Assimilation of /n/ followed by /p/", channel: "BBC Learning English", note: "Xưởng phát âm: đồng hóa /n/ + /p/" },
   "pronAdv:dDisappear": { id: "M_tKuYaE620", title: "👄 Why does the /d/ sound sometimes disappear? Tim's Pronunciation Workshop", channel: "BBC Learning English", note: "Xưởng phát âm: /d/ biến mất" },
   "pronAdv:assimTJ": { id: "DzCvN1dJP1Y", title: "Pronunciation: Assimilation of /t/ and /j/", channel: "BBC Learning English", note: "Xưởng phát âm: đồng hóa /t/ + /j/" },
   "pronAdv:haveAux": { id: "z7Ya1BFLRmg", title: "Pronunciation: How to pronounce 'have' when it's an auxiliary", channel: "BBC Learning English", note: "Xưởng phát âm: have làm trợ động từ" },
-  "pronAdv:nd": { id: "pzze3JfGDoA", title: "Pronunciation: pronouncing 'nd'", channel: "BBC Learning English", note: "Xưởng phát âm: nd" },
-  "pronAdv:linkingJ": { id: "2Oi0NLl5Fdg", title: "Pronunciation: The linking /j/", channel: "BBC Learning English", note: "Xưởng phát âm: nối âm /j/" },
+  "pronAdv:nd": { id: "fUM9Uupg6uo", title: "Cách đọc cụm nd", channel: "Huyen Mai", note: "Dạy bằng tiếng Việt: cách đọc cụm nd. Thấy rõ mặt + khẩu hình.", start: 0, end: 551 },
+  "pronAdv:linkingJ": { id: "tsPH5fUEKwI", title: "Nối âm /j/", channel: "Moon ESL", note: "Dạy bằng tiếng Việt: nối âm /j/. Thấy rõ mặt + khẩu hình.", start: 0, end: 109 },
   "pronAdv:assimDG": { id: "sDDV01W20bo", title: "Pronunciation: Assimilation of /d/ to /g/", channel: "BBC Learning English", note: "Xưởng phát âm: đồng hóa /d/ thành /g/" },
   "pronAdv:plosives": { id: "vW77q1IGlmI", title: "Pronunciation: How fluent speakers pronounce plosives", channel: "BBC Learning English", note: "Xưởng phát âm: phụ âm bật" },
   "pronAdv:been": { id: "ZNsWDzoAffA", title: "Pronunciation: How fluent speakers pronounce 'been'", channel: "BBC Learning English", note: "Xưởng phát âm: been trong nói trôi chảy" },
-  "pronAdv:sSound": { id: "IOfEQjlKH64", title: "Pronunciation: The sound /s/", channel: "BBC Learning English", note: "Xưởng phát âm: âm /s/" },
-  "pronAdv:canFluent": { id: "hbu6X_TYqMQ", title: "Pronunciation: How fluent speakers pronounce 'can'", channel: "BBC Learning English", note: "Xưởng phát âm: can trong nói trôi chảy" },
+  "pronAdv:sSound": { id: "Yof1BQPaRc4", title: "Luyện âm /s/", channel: "Dan Hauer", note: "Dạy bằng tiếng Việt: tập âm /s/. Thấy rõ mặt + khẩu hình.", start: 0, end: 111 },
+  "pronAdv:canFluent": { id: "18iXHaEBIc0", title: "Can nói tự nhiên đối chiếu với can't", channel: "Moon ESL", note: "Dạy bằng tiếng Việt. Giới hạn: dạy can tự nhiên đối chiếu với can't, không phải chỉ riêng can. Thấy rõ mặt + khẩu hình.", start: 0, end: 107 },
   "pronAdv:assimS": { id: "t-8FkAqstTU", title: "Pronunciation: Assimilation of /s/", channel: "BBC Learning English", note: "Xưởng phát âm: đồng hóa /s/" },
-  "pronAdv:hWords": { id: "x6wLCnaHsJU", title: "Pronunciation: How to pronounce words beginning with /h/", channel: "BBC Learning English", note: "Xưởng phát âm: từ bắt đầu bằng /h/" },
+  "pronAdv:hWords": { id: "2AvwyD-bihM", title: "Luyện âm /h/ (từ bắt đầu bằng /h/)", channel: "Dan Hauer", note: "Dạy bằng tiếng Việt: tập âm /h/. Thấy rõ mặt + khẩu hình.", start: 0, end: 97 },
   "pronAdv:assimTK": { id: "lc2eOCVJMuQ", title: "Pronunciation: Assimilation of /t/ followed by /k/", channel: "BBC Learning English", note: "Xưởng phát âm: đồng hóa /t/ + /k/" },
   "pronAdv:twinningT": { id: "BI0RTH6sA_k", title: "Pronunciation: The twinning of /t/", channel: "BBC Learning English", note: "Xưởng phát âm: nhân đôi /t/" },
   "pronAdv:assimDB": { id: "Wiz1YeLMjyA", title: "Pronunciation: Assimilation of /d/ and /b/", channel: "BBC Learning English", note: "Xưởng phát âm: đồng hóa /d/ + /b/" },
@@ -3936,7 +4061,7 @@ var GRAMMAR_VIDEOS = {
   "zhPractice:xiaoyun28": { id: "K_0xIPFtkBs", title: "Ngày 28: Nếu mình có thể bay", channel: "Listening Chinese With Me", note: "Luyện nghe và đọc HSK1 trong 30 ngày — Ngày 28" },
   "zhPractice:xiaoyun29": { id: "dcPvENnQ79U", title: "Ngày 29: Hôm nay mình mặc gì?", channel: "Listening Chinese With Me", note: "Luyện nghe và đọc HSK1 trong 30 ngày — Ngày 29" },
   "zhPractice:xiaoyun30": { id: "p88J5dsBmuw", title: "Ngày 30: Những điều tôi học được sau 30 ngày", channel: "Listening Chinese With Me", note: "Luyện nghe và đọc HSK1 trong 30 ngày — Ngày 30" },
-  "speakEp:65": { id: "R3oVOu-sxHE", title: "Talking about exercise", channel: "BBC Learning English", note: "Video trò chuyện cùng chủ đề: thể thao và vận động" },
+  "speakEp:65": { id: "XofMgQwf3Zc", title: "Tập luyện và thể lực: từ vựng chủ đề Exercise & Fitness", channel: "Ms Ngoan Tận Tâm", note: "Dạy bằng tiếng Việt: từ vựng/chủ đề tập luyện và thể lực. Khớp ở mức chủ đề chung. CỜ: video dài 84 phút, chưa kiểm tra điểm giữa nên chưa khẳng định không chuyển chủ đề.", start: 0, end: 5054 },
   "speakEp:12": { id: "Mqnlb_yj3bY", title: "Why do people like sad music?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: âm nhạc" },
   "speakEp:11": { id: "uxtXEuK05-w", title: "What is the key to happiness?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: thành công và hạnh phúc" },
   "speakEp:57": { id: "JjESWHykTJQ", title: "What makes you happy?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: kỷ niệm vui" },
@@ -3949,14 +4074,14 @@ var GRAMMAR_VIDEOS = {
   "speakEp:13": { id: "l1DLZhZXsw0", title: "Controlling the weather", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: thời tiết" },
   "speakEp:120": { id: "obpKWRcXezA", title: "Restoring trust in science", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: khoa học, đạo đức và xã hội" },
   "speakEp:49": { id: "GUGtU7Ii1yk", title: "Could humans live in underwater cities?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: nhà ở và thành phố tương lai" },
-  "speakEp:10": { id: "uhfVT5iAtMM", title: "How can I help the environment?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: môi trường" },
+  "speakEp:10": { id: "ULyT4Q5IdMU", title: "Từ vựng chủ đề môi trường", channel: "IELTS Fighter", note: "Dạy bằng tiếng Việt: từ vựng môi trường chung, không riêng luận điểm giúp môi trường. Khớp ở mức chủ đề chung.", start: 0, end: 1020 },
   "speakEp:26": { id: "YY1mN_ibteU", title: "The future of transport", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: giao thông tương lai" },
   "speakEp:76": { id: "bJq9kPc_-tw", title: "Keeping cars out of city centres", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: giao thông thành phố" },
   "speakEp:77": { id: "oviVRMuVgAs", title: "The soothing power of books", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: đọc sách" },
-  "readEp:1": { id: "HZd53TJpmoQ", title: "What to do when you can't sleep", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: vì sao chúng ta ngủ" },
-  "readEp:45": { id: "j2PdEQpu5js", title: "Why you need a good night's sleep", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: khoa học về giấc ngủ và giấc mơ" },
+  "readEp:1": { id: "2-AbC5el0zM", title: "Từ vựng chủ đề giấc ngủ", channel: "Tracey's Home", note: "Dạy bằng tiếng Việt: từ vựng giấc ngủ chung, không riêng mẹo khi không ngủ được. Khớp ở mức chủ đề chung.", start: 0, end: 693 },
+  "readEp:45": { id: "2-AbC5el0zM", title: "Từ vựng chủ đề giấc ngủ", channel: "Tracey's Home", note: "Dạy bằng tiếng Việt: từ vựng giấc ngủ chung, không riêng lợi ích giấc ngủ ngon. Cùng video và đoạn với khóa readEp:1. Khớp ở mức chủ đề chung.", start: 0, end: 693 },
   "readEp:112": { id: "7F1iJZr-p4E", title: "Are you drinking enough water?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: nước biển thành nước uống" },
-  "readEp:31": { id: "-XcALxwXJVY", title: "Can apps teach you a language?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: học ngôn ngữ bằng ứng dụng" },
+  "readEp:31": { id: "MrJuEllkuck", title: "Bàn về ứng dụng Duolingo", channel: "Danh Startup", note: "Dạy bằng tiếng Việt: bàn về Duolingo cụ thể, không đánh giá ứng dụng học ngôn ngữ nói chung. Khớp ở mức chủ đề chung.", start: 0, end: 770 },
   "readEp:102": { id: "C830bmzNjDc", title: "Is breakfast the most important meal of the day?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: quầy ăn sáng" },
   "readEp:118": { id: "E8VSFuirfzA", title: "The criminal trade in ancient objects", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: tuyến thương mại cổ đại" },
   "readEp:69": { id: "RMHxQOzb9Lc", title: "How can we help wild bees?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: ong và trang trại" },
@@ -3968,20 +4093,20 @@ var GRAMMAR_VIDEOS = {
   "readEp:3": { id: "mpxwlItsDA8", title: "Can we live without plastic?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: vấn đề nhựa trong đại dương" },
   "readEp:0": { id: "XMfNMnH8KyQ", title: "Elephant-proof farming", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: nông nghiệp đô thị" },
   "readEp:22": { id: "8P_ya85lxzw", title: "Losing your mother tongue", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: vì sao ngôn ngữ biến mất" },
-  "readEp:4": { id: "0YpwaYUGF94", title: "How colour affects us", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: tâm lý màu sắc" },
+  "readEp:4": { id: "LwIDnQ1Xsd4", title: "Tên màu, phát âm và thành ngữ về màu", channel: "KISS English Center", note: "Dạy bằng tiếng Việt: tên màu/phát âm/thành ngữ về màu, không dạy tâm lý màu sắc ảnh hưởng con người. Khớp ở mức chủ đề chung.", start: 0, end: 574 },
   "readEp:20": { id: "fGeQH4_lH3Q", title: "Do trees have memories?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: cây giao tiếp" },
   "readEp:114": { id: "KNhwmHq1asM", title: "Algorithms", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: thuật toán định hình cách đọc" },
   "readEp:30": { id: "8E8DQnmd4zs", title: "Flexible working", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: chính sách làm việc linh hoạt" },
-  "readEp:5": { id: "gUuDZ5U8P0k", title: "What are the benefits of drinking coffee and caffeinated drinks?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: cà phê — thói quen toàn cầu" },
+  "readEp:5": { id: "HEFzKmhQGpg", title: "Từ vựng chủ đề cà phê", channel: "SmartEnglish Channel", note: "Dạy bằng tiếng Việt: từ vựng cà phê chung, không riêng lợi ích cà phê/caffeine. Khớp ở mức chủ đề chung.", start: 0, end: 733 },
   "readEp:21": { id: "tyvMjvvrq74", title: "Artificial Intelligence - what can and can't it do?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: đạo đức trí tuệ nhân tạo" },
   "readEp:110": { id: "3-icphihD6Y", title: "Could you give up fast fashion?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: chi phí ẩn của thời trang nhanh" },
-  "readEp:18": { id: "UhR-Bn4UII0", title: "Is tourism harmful?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: kinh tế du lịch" },
-  "readEp:99": { id: "uziFF8NSxaQ", title: "Women's football", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: đội bóng cuối tuần" },
-  "readEp:16": { id: "we4KiShNjlA", title: "Improving your memory", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: khoa học về trí nhớ" },
+  "readEp:18": { id: "xf8uCw1YceA", title: "Từ vựng chủ đề du lịch", channel: "IELTS Fighter", note: "Dạy bằng tiếng Việt: từ vựng du lịch chung, không riêng luận điểm du lịch có hại hay không. Khớp ở mức chủ đề chung.", start: 0, end: 780 },
+  "readEp:99": { id: "sY-zYLd3y4k", title: "Từ vựng bóng đá qua Euro 2024", channel: "SmartEnglish Channel", note: "Dạy bằng tiếng Việt: từ vựng bóng đá chung qua Euro 2024, không riêng bóng đá nữ. Khớp ở mức chủ đề chung.", start: 0, end: 908 },
+  "readEp:16": { id: "IYLhR7qOjTI", title: "Kỹ thuật Memory Palace", channel: "English Đơn Giản", note: "Dạy bằng tiếng Việt: chỉ kỹ thuật Memory Palace, không tổng quan mọi cách cải thiện trí nhớ. Khớp ở mức chủ đề chung.", start: 0, end: 372 },
   "readEp:17": { id: "z3OykfkE_R0", title: "New uses for drones", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: drone trong nông nghiệp" },
-  "readEp:50": { id: "wkjSBC-_bDA", title: "How do you learn to speak a language?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: học ngoại ngữ khi trưởng thành" },
-  "roleEp:49": { id: "Ag7-U4ga9mA", title: "The right way to say sorry", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: xin lỗi vì nộp bài muộn" },
-  "roleEp:26": { id: "0VPwGqiWT04", title: "Are you good at complaining?", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: phàn nàn về món ăn" },
+  "readEp:50": { id: "RMoF5uRgu8Q", title: "Lộ trình tự học nói tiếng Anh", channel: "Trương Phương", note: "Dạy bằng tiếng Việt: lộ trình tự học nói tiếng Anh cụ thể, không phải học nói ngôn ngữ nói chung. Khớp ở mức chủ đề chung.", start: 0, end: 777 },
+  "roleEp:49": { id: "lCl7rm0vfaI", title: "Các cách nói lời xin lỗi và đáp lại", channel: "Moon ESL", note: "Dạy bằng tiếng Việt: các cách nói lời xin lỗi và đáp lại, không phải bài luận sâu về cách xin lỗi đúng. Khớp ở mức chủ đề chung.", start: 0, end: 94 },
+  "roleEp:26": { id: "KVZoTyPeEws", title: "Cách phàn nàn lịch sự", channel: "KISS English Center", note: "Dạy bằng tiếng Việt: cách phàn nàn lịch sự, không phải bài bàn luận bạn có giỏi phàn nàn không. Khớp ở mức chủ đề chung.", start: 0, end: 676 },
   "listenLongEp:59": { id: "Dfc3ZqVwrNc", title: "How climate change affects animal migration", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: biến đổi khí hậu và di cư" },
   "listenLongEp:54": { id: "JFIhleM0Kbo", title: "Saving water in the driest place on Earth", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: thí nghiệm tiết kiệm nước ở ký túc xá" },
   "listenLongEp:23": { id: "H4yeMxZ07zY", title: "Less salt, better health", channel: "BBC Learning English", note: "6 Minute English cùng chủ đề: tư vấn ăn uống lành mạnh" },
@@ -4011,7 +4136,23 @@ var ZH_VIDEO_WORDS = {
   xiyou: { title: "\u897f\u6e38\u8bb0 1-4", lead: "Ví dụ kể về chuyến đi xa: ", words: [
     { han: "\u5b59\u609f\u7a7a", py: "Sūn Wùkōng", vi: "nhân vật khỉ tài giỏi trong truyện" },
     { han: "\u5e08\u7236", py: "shīfu", vi: "thầy" },
-    { han: "\u53bb\u897f\u5929\u53d6\u7ecf", py: "qù Xītiān qǔjīng", vi: "đi về phía Tây để thỉnh kinh" } ] }
+    { han: "\u53bb\u897f\u5929\u53d6\u7ecf", py: "qù Xītiān qǔjīng", vi: "đi về phía Tây để thỉnh kinh" } ] },
+  taydu90: { title: "Tây Du Ký Tập 90: Kế hoạch của bọn yêu quái", lead: "Ví dụ gặp yêu quái thì nói: ", words: [
+    { han: "妖怪", py: "yāoguài", vi: "yêu quái" },
+    { han: "计划", py: "jìhuà", vi: "kế hoạch" },
+    { han: "抓", py: "zhuā", vi: "bắt" } ] },
+  doraemon: { title: "Doraemon: Ngôi nhà biến thành Robot", lead: "Ví dụ nhà biến thành robot thì nói: ", words: [
+    { han: "房子", py: "fángzi", vi: "ngôi nhà" },
+    { han: "机器人", py: "jīqìrén", vi: "robot" },
+    { han: "变", py: "biàn", vi: "biến thành" } ] },
+  peppazh: { title: "Peppa Pig: Bữa trưa [Vietsub + Pinyin]", lead: "Ví dụ lúc ăn trưa thì nói: ", words: [
+    { han: "午饭", py: "wǔfàn", vi: "bữa trưa" },
+    { han: "吃", py: "chī", vi: "ăn" },
+    { han: "饿", py: "è", vi: "đói" } ] },
+  shinzh: { title: "Shin: Nhiều Ô Quá!", lead: "Ví dụ nhiều ô quá thì nói: ", words: [
+    { han: "多", py: "duō", vi: "nhiều" },
+    { han: "格子", py: "gézi", vi: "ô vuông" },
+    { han: "看", py: "kàn", vi: "nhìn" } ] }
 };
 function zhVideoWordsHTML(vid) {
   var v = ZH_VIDEO_WORDS[vid]; if (!v) return "";
@@ -7988,11 +8129,11 @@ var ZH_S6_NOTE_SPEAK = "Kịch bản tự soạn theo chủ đề đời sống 
 var ZH_S6_NOTE_ROLE = "Bài này là tự luyện nhập vai, chưa chấm điểm — AI chấm tiếng Trung đang chờ nâng cấp, không tính đạt.";
 var ZH_S6_NOTE_FREE = "Bài tự soạn theo chủ đề đời sống trình độ HSK6, không trích nguyên văn giáo trình; nhãn HSK là mức đặt theo chủ đề/trình độ, không phải xác nhận từng từ nằm trong khung từ vựng HSK 2.0 chính thức. Bài viết tự do đối chiếu với đoạn mẫu, không chấm điểm tự động. Phần này chỉ đối chiếu bài mẫu, chưa có AI chấm tiếng Trung — AI chấm đang chờ nâng cấp, không có điểm, không tính đạt cũng không tính chưa đạt.";
 ZH_GRAMMAR.push(
-{ "id": "s6-jinguan", "stage": 6, "title": "尽管…还是 — dù… vẫn…", "hook": "“尽管下雨，他还是来了” — dù trời mưa, anh ấy vẫn đến: khó khăn không đổi quyết định.", "examples": [ "尽管下雨，他还是来了。(Jǐnguǎn xià yǔ, tā háishi lái le.) — Dù trời mưa, anh ấy vẫn đến.", "尽管工作很忙，她还是坚持每天读书。(Jǐnguǎn gōngzuò hěn máng, tā háishi jiānchí měitiān dú shū.) — Dù công việc rất bận, cô ấy vẫn kiên trì đọc sách mỗi ngày.", "尽管路很远，我们还是走到了山顶。(Jǐnguǎn lù hěn yuǎn, wǒmen háishi zǒu dào le shāndǐng.) — Dù đường rất xa, chúng tôi vẫn đi đến đỉnh núi.", "尽管大家都反对，他还是决定试一试。(Jǐnguǎn dàjiā dōu fǎnduì, tā háishi juédìng shì yí shì.) — Dù mọi người đều phản đối, anh ấy vẫn quyết định thử một lần." ], "speak": "尽管下雨，他还是来了。尽管工作很忙，她还是坚持每天读书。尽管路很远，我们还是走到了山顶。尽管大家都反对，他还是决定试一试。", "rule": "尽管 nêu khó khăn ở vế đầu, 还是 nêu quyết định không đổi ở vế sau. Khác với 虽然 ở chỗ 尽管 nhấn mạnh khó khăn lớn hơn.", "tip": "Hãy nhớ: 尽管 là “dù…”, 还是 là “vẫn…” — khó khăn càng lớn càng hợp với 尽管.", "note": ZH_S6_NOTE, "quiz": [
+{ "id": "s6-jinguan", "stage": 6, "title": "尽管…还是 — dù… vẫn…", "hook": "“尽管下雨，他还是来了” — dù trời mưa, anh ấy vẫn đến: khó khăn không đổi quyết định.", "examples": [ "尽管下雨，他还是来了。(Jǐnguǎn xià yǔ, tā háishi lái le.) — Dù trời mưa, anh ấy vẫn đến.", "尽管工作很忙，她还是坚持每天读书。(Jǐnguǎn gōngzuò hěn máng, tā háishi jiānchí měitiān dú shū.) — Dù công việc rất bận, cô ấy vẫn kiên trì đọc sách mỗi ngày.", "尽管路很远，我们还是走到了山顶。(Jǐnguǎn lù hěn yuǎn, wǒmen háishi zǒu dào le shāndǐng.) — Dù đường rất xa, chúng tôi vẫn đi đến đỉnh núi.", "尽管大家都反对，他还是决定试一试。(Jǐnguǎn dàjiā dōu fǎnduì, tā háishi juédìng shì yí shì.) — Dù mọi người đều phản đối, anh ấy vẫn quyết định thử một lần." ], "speak": "尽管下雨，他还是来了。尽管工作很忙，她还是坚持每天读书。尽管路很远，我们还是走到了山顶。尽管大家都反对，他还是决定试一试。", "rule": "尽管 nêu khó khăn ở vế đầu, 还是 nêu quyết định không đổi ở vế sau. Khác với 虽然 ở chỗ 尽管 trang trọng hơn, dùng nhiều trong văn viết.", "tip": "Hãy nhớ: 尽管 là “dù…”, 还是 là “vẫn…” — 尽管 trang trọng hơn 虽然, dùng được cả văn nói và văn viết.", "note": ZH_S6_NOTE, "quiz": [
 { "q": "Câu nào dùng 尽管…还是 đúng?", "o": [ "尽管下雨，他还是来了。", "尽管下雨，但是他来了。", "尽管下雨，所以他来了。", "尽管下雨，可是他来了。" ], "a": 0, "why": "尽管 đi cặp với 还是: dù mưa vẫn đến." },
 { "q": "Điền vào chỗ trống: 尽管工作很忙，她 ___ 坚持每天读书。", "o": [ "还是", "但是", "否则", "所以" ], "a": 0, "why": "Vế sau là quyết định không đổi, dùng 还是." },
 { "q": "“Dù đường rất xa, chúng tôi vẫn đi đến đỉnh núi” viết thế nào?", "o": [ "尽管路很远，我们还是走到了山顶。", "尽管路很远，但是我们走到了山顶。", "如果路很远，我们走到了山顶。", "虽然路很远，我们走到了山顶。" ], "a": 0, "why": "“Dù… vẫn…” nhấn mạnh khó khăn là 尽管…还是." },
-{ "q": "尽管 có nghĩa là gì?", "o": [ "Dù… (khó khăn lớn)", "Mặc dù (nhẹ)", "Trừ phi", "Đã…" ], "a": 0, "why": "尽管 = dù, nhấn mạnh khó khăn lớn hơn 虽然." },
+{ "q": "尽管 có nghĩa là gì?", "o": [ "Dù… (trang trọng hơn)", "Mặc dù (thân mật hơn)", "Trừ phi", "Đã…" ], "a": 0, "why": "尽管 = dù, trang trọng hơn 虽然." },
 { "q": "Câu nào SAI?", "o": [ "尽管大家都反对，他还是决定试一试。", "尽管大家都反对，但是他决定试一试。", "尽管下雨，他还是来了。", "尽管路很远，我们还是走到了山顶。" ], "a": 1, "why": "尽管 đi với 还是, không đi với 但是." },
 { "q": "“Dù mọi người phản đối, anh ấy vẫn thử” — “vẫn” là:", "o": [ "还是", "但是", "否则", "所以" ], "a": 0, "why": "还是 = vẫn, đi cặp với 尽管." } ] },
 { "id": "s6-nanmian", "stage": 6, "title": "难免 — khó tránh khỏi", "hook": "“刚开始工作，难免会出错” — mới bắt đầu làm việc, khó tránh khỏi sai sót: chuyện bình thường.", "examples": [ "刚开始工作，难免会出错。(Gāng kāishǐ gōngzuò, nánmiǎn huì chū cuò.) — Mới bắt đầu làm việc, khó tránh khỏi sai sót.", "学习一门新语言，难免会遇到困难。(Xuéxí yì mén xīn yǔyán, nánmiǎn huì yùdào kùnnan.) — Học một ngôn ngữ mới, khó tránh khỏi gặp khó khăn.", "人多的时候，难免会有不同的意见。(Rén duō de shíhou, nánmiǎn huì yǒu bù tóng de yìjiàn.) — Khi đông người, khó tránh khỏi có ý kiến khác nhau.", "搬到一个新城市，难免会想家。(Bān dào yí gè xīn chéngshì, nánmiǎn huì xiǎng jiā.) — Chuyển đến một thành phố mới, khó tránh khỏi nhớ nhà." ], "speak": "刚开始工作，难免会出错。学习一门新语言，难免会遇到困难。人多的时候，难免会有不同的意见。搬到一个新城市，难免会想家。", "rule": "难免 đứng trước động từ, nói một kết quả khó tránh trong hoàn cảnh đó. Dùng để an ủi hoặc giải thích chuyện bình thường.", "tip": "Hãy nhớ: 难免 là “khó tránh khỏi” — chuyện ai cũng gặp thì mới dùng 难免.", "note": ZH_S6_NOTE, "quiz": [
@@ -8244,7 +8385,7 @@ ZH_WRITE.push(
     {"han": "千", "pinyin": "qiān", "vi": "nghìn", "col": "一千页", "ex": "这本书有一千页。", "exv": "Quyển sách này có một nghìn trang."},
     {"han": "今天", "pinyin": "jīntiān", "vi": "hôm nay", "col": "今天天气很好", "ex": "今天天气很好。", "exv": "Hôm nay thời tiết rất đẹp."},
     {"han": "点", "pinyin": "diǎn", "vi": "giờ (chỉ giờ)", "col": "三点", "ex": "我们三点见。", "exv": "Chúng ta gặp nhau lúc ba giờ."},
-    {"han": "分", "pinyin": "fēn", "vi": "phút", "col": "五分", "ex": "现在是两点五分。", "exv": "Bây giờ là hai giờ năm phút."},
+    {"han": "分", "pinyin": "fēn", "vi": "phút", "col": "五分", "ex": "现在是两点零五分。", "exv": "Bây giờ là hai giờ năm phút."},
     {"han": "现在", "pinyin": "xiànzài", "vi": "bây giờ", "col": "现在是八点", "ex": "现在是八点。", "exv": "Bây giờ là tám giờ."},
     {"han": "早上", "pinyin": "zǎoshang", "vi": "buổi sáng", "col": "早上六点", "ex": "我早上六点起床。", "exv": "Tôi dậy lúc sáu giờ sáng."},
     {"han": "晚上", "pinyin": "wǎnshang", "vi": "buổi tối", "col": "晚上看书", "ex": "我晚上看书。", "exv": "Buổi tối tôi đọc sách."},
@@ -9149,7 +9290,7 @@ ZH_LISTENING.push.apply(ZH_LISTENING, [
   "note": "Đoạn hội thoại tự soạn theo chủ đề đời sống trình độ HSK1 (hệ 6 cấp cũ); lời thoại và câu hỏi tự viết, không trích nguyên văn giáo trình. Nghe bằng giọng đọc máy zh-CN, không phải audio thu sẵn. Lời thoại chỉ dùng từ chặng 1.",
   "questions": [
    {"q": "Lúc đầu B nói gì về mình?", "o": ["Tôi đói", "Tôi khát", "Tôi no rồi", "Tôi muốn ngủ"], "a": 0, "why": "我饿：tôi đói."},
-   {"q": "Hai người quyết định ăn gì?", "o": ["Ăn mì sợi", "Ăn cơm", "Ăn bánh chẻo", "Ăn trái cây"], "a": 1, "why": "我们吃米饭：chúng mình ăn cơm."},
+   {"q": "A rủ B ăn gì?", "o": ["Ăn mì sợi", "Ăn cơm", "Ăn bánh chẻo", "Ăn trái cây"], "a": 1, "why": "A hỏi: 我们吃米饭，好吗？— chúng mình ăn cơm nhé, được không?"},
    {"q": "B uống gì?", "o": ["Trà", "Sữa", "Nước", "Cà phê"], "a": 1, "why": "我喝牛奶：tôi uống sữa."},
    {"q": "A ăn gì?", "o": ["Mì sợi", "Cơm", "Bánh chẻo", "Trái cây"], "a": 0, "why": "我吃面条：tôi ăn mì sợi."}
   ]
@@ -14726,6 +14867,668 @@ ZH_WRITE.push.apply(ZH_WRITE, [
         var s = CONTENT.vocab[r[0]];
         if (s && s.cards && s.cards[r[1]]) Object.assign(s.cards[r[1]], r[2]);
       });
+    }
+  } catch (e) {}
+})();
+
+
+// ---------- P0 (28/10/2026): sap xep lai noi dung IELTS theo de xuat ra soat ----------
+// Chi doi nhan / thu tu / cong, KHONG doi noi dung bai hoc, dap an, chi so mang.
+// Tien trinh theo chi so (vocabPos:i, gramOld:i, write:i...) nen doi band/topic/name
+// van giu nguyen doneKey. Patch chay cuoi file, sau moi dot append, nen cac chi so
+// duoi day la chi so sau khi nap day du. Cac hieu ung co guard chong chay 2 lan.
+(function () {
+  if (typeof CONTENT === "undefined") return;
+  // ---- P0-1: nhan Academic / General Training cho bai Viet (uu tien wtype cho thu) ----
+  // 3 thu bi gan nham type "Task 1" (#67/#70/#74) duoc phan loai dung nho wtype.
+  // Khong doi type (mock chon bai Viet theo type) — chi them track + hau to tieu de.
+  var LETTER_WT = { "Thư và email": 1, "Thư mời": 1, "Thư phàn nàn": 1, "Thư cảm ơn": 1 };
+  var LETTER_TY = { "Email trang trọng": 1, "Email thân mật": 1, "Tin nhắn công việc": 1, "Thư xin việc": 1, "Thư cảm ơn": 1, "Thư mời": 1, "Thư xin lỗi": 1, "Thư yêu cầu": 1 };
+  (CONTENT.writing || []).forEach(function (w) {
+    var track, suf;
+    if (LETTER_WT[w.wtype] || LETTER_TY[w.type]) { track = "G"; suf = " · General Training"; }
+    else if (w.type === "Task 1") { track = "A"; suf = " · Academic"; }
+    else if (w.type === "Task 2") { track = "AG"; suf = " · Academic + General Training"; }
+    else { track = "N"; suf = " · Nền tảng"; }
+    w.track = track;
+    if (w.title && w.title.indexOf(suf) < 0) w.title += suf;
+  });
+  // ---- P0-2: tram ngu phap lap -> "on + nang cao: <phan moi>" (tram dau giu nguyen) ----
+  var GRAM_REVIEW = {
+    72: "so sánh nhất (the -est/the most, good→best, bad→worst)",
+    50: "ôn lại hơn và nhất trong cùng một bài, so sánh trong nhóm 3",
+    81: "so sánh kép the more... the more...",
+    2: "so sánh số liệu trong Task 1 (higher than, the highest, twice as much as)",
+    14: "nhấn mạnh chênh lệch (much/far/considerably) và so sánh bằng (as...as)",
+    87: "so sánh kép nâng cao (vế điều kiện — kết quả, the more crowded... the higher...)",
+    43: "kể việc đã qua với động từ đổi dạng (went, had)",
+    60: "động từ bất quy tắc (go-went, see-saw, take-took)",
+    1: "quá khứ đơn cho biểu đồ Task 1 (rose/fell/remained + ghi rõ năm)",
+    82: "ôn lại quá khứ đơn với mốc thời gian (yesterday, last week, ago)",
+    85: "ôn lại who/which/that, mệnh đề đứng ngay sau danh từ",
+    18: "which bình luận cả vế trước, giới từ đứng trước which/whom",
+    48: "whose/whom và giới từ đứng trước",
+    90: "mệnh đề không xác định (dấu phẩy, không dùng that) và dạng rút gọn",
+    61: "khi nào không dùng mạo từ, dùng đúng trong bài viết",
+    49: "mạo từ với nhạc cụ, biển/sông, the + tính từ chỉ nhóm người; bỏ the trước school",
+    89: "động từ tường thuật đa dạng (argue, claim, suggest, warn)",
+    54: "for/since/just/already/yet",
+    6: "hiện tại hoàn thành cho xu hướng dài hạn trong Task 1",
+    47: "đối chiếu hiện tại hoàn thành với quá khứ đơn (có mốc giờ rõ ràng thì dùng quá khứ đơn)",
+    41: "câu hỏi với Can (khả năng)",
+    57: "câu hỏi và phủ định với do/does",
+    71: "câu hỏi Wh- ở quá khứ đơn (did + động từ gốc)",
+    83: "ôn lại câu hỏi Yes/No và Wh- với do/does/did",
+    79: "bị động với động từ khuyết thiếu (should be done)",
+    84: "bị động hiện tại đơn mô tả sự vật (is grown, are printed)",
+    13: "bị động cho quy trình Task 1 + từ chỉ thứ tự (First, Then, Finally)",
+    26: "bị động tường thuật (It is believed that...)",
+    7: "loại 1 và 2 (giả sử trái hiện tại với were/would)",
+    19: "loại 3 (had + V3, would have + V3) và điều kiện trong lập luận Task 2",
+    28: "đảo ngữ trong câu điều kiện (Had I known, Were it not for...)",
+    88: "câu giả định với wish (wish + quá khứ đơn/hoàn thành)",
+    31: "thể giả định sau demand/suggest/essential (động từ nguyên thể không chia)",
+    42: "hiện tại tiếp diễn (đang làm gì ngay lúc này)",
+    0: "phân biệt hiện tại đơn (sự thật/thói quen) với tiếp diễn (đang diễn ra/xu hướng tạm thời)",
+    10: "lượng từ cho số liệu Task 1 (the number of, the amount of)",
+    5: "liên từ because/although/so/but trong câu phức",
+    11: "phó từ liên kết (however, therefore, moreover)",
+    15: "liên từ học thuật (whereas, nevertheless, consequently)",
+    23: "từ nối trong đoạn văn (câu chủ đề, firstly...)",
+    93: "từ nối học thuật tinh tế (notwithstanding, albeit)",
+    35: "paraphrase trình độ cao",
+    30: "đảo ngữ nâng cao toàn diện (Only after..., So tired was he...)"
+  };
+  Object.keys(GRAM_REVIEW).forEach(function (k) {
+    var g = CONTENT.grammar[+k];
+    if (g && g.name.indexOf("ôn + nâng cao:") < 0) g.name += " — ôn + nâng cao: " + GRAM_REVIEW[k];
+  });
+  // ---- P0-5: doi dang luan Task 2 kho len band cao (5,5 da co thao luan/nguyen nhan-giai phap) ----
+  [63, 66].forEach(function (i) { if (CONTENT.writing[i]) CONTENT.writing[i].band = "Band 5,5"; });
+  // ---- P0-6: doi ten bo tu trung theo chu de con (ten dat theo the thuc te trong bo) ----
+  // 4 bo doi chu de lon cho dung noi dung the: #7/#77 ve Khoa hoc, #25 ve So va thoi gian,
+  // #27/#60 ve Doi song hang ngay. Cac bo khac giu chu de lon, them chu de con sau " — ".
+  var VOCAB_TOPIC = {
+    0: "Học tập và giáo dục — hệ thống giáo dục",
+    40: "Học tập và giáo dục — kỹ năng học tập",
+    41: "Học tập và giáo dục — từ học thuật thường dùng",
+    53: "Học tập và giáo dục — đời sống học đường",
+    65: "Học tập và giáo dục — học tập và công việc",
+    71: "Học tập và giáo dục — đại học và sau đại học",
+    76: "Học tập và giáo dục — khái niệm học thuật",
+    1: "Môi trường và thiên nhiên — ô nhiễm và biến đổi khí hậu",
+    14: "Môi trường và thiên nhiên — địa lý tự nhiên",
+    16: "Môi trường và thiên nhiên — nông nghiệp",
+    17: "Môi trường và thiên nhiên — năng lượng",
+    20: "Môi trường và thiên nhiên — động vật hoang dã",
+    49: "Môi trường và thiên nhiên — thời tiết",
+    67: "Môi trường và thiên nhiên — thiên nhiên cơ bản",
+    73: "Môi trường và thiên nhiên — bảo tồn và bền vững",
+    2: "Thức ăn và sức khỏe — sức khỏe và bệnh tật",
+    12: "Thức ăn và sức khỏe — dinh dưỡng và ẩm thực",
+    32: "Thức ăn và sức khỏe — khám bệnh và thuốc",
+    33: "Thức ăn và sức khỏe — lối sống lành mạnh",
+    36: "Thức ăn và sức khỏe — ăn ngoài và nhà hàng",
+    66: "Thức ăn và sức khỏe — cơ thể và sức khỏe cơ bản",
+    3: "Công nghệ và truyền thông — công nghệ số đời sống",
+    7: "Khoa học — nghiên cứu và phát hiện",
+    11: "Công nghệ và truyền thông — báo chí và truyền hình",
+    47: "Công nghệ và truyền thông — gọi điện và nhắn tin",
+    50: "Công nghệ và truyền thông — thiết bị và ứng dụng",
+    70: "Công nghệ và truyền thông — công nghệ mới và an ninh mạng",
+    72: "Công nghệ và truyền thông — truyền thông và dư luận",
+    77: "Khoa học — phương pháp nghiên cứu",
+    4: "Công việc và nghề nghiệp — nghề nghiệp và việc làm",
+    28: "Công việc và nghề nghiệp — giao tiếp văn phòng",
+    29: "Công việc và nghề nghiệp — tìm việc và tuyển dụng",
+    34: "Công việc và nghề nghiệp — dịch vụ khách hàng",
+    45: "Công việc và nghề nghiệp — cụm câu họp hành",
+    57: "Công việc và nghề nghiệp — thuyết trình và họp",
+    5: "Xã hội và văn hóa — xã hội và đời sống",
+    6: "Xã hội và văn hóa — pháp luật và tội phạm",
+    8: "Xã hội và văn hóa — nghệ thuật và di sản",
+    13: "Xã hội và văn hóa — tâm lý và cảm xúc",
+    19: "Xã hội và văn hóa — thương mại toàn cầu",
+    21: "Xã hội và văn hóa — lịch sử và khảo cổ",
+    39: "Xã hội và văn hóa — giao tiếp xã giao",
+    44: "Xã hội và văn hóa — lịch sự và hỏi xin",
+    51: "Xã hội và văn hóa — an toàn và khẩn cấp",
+    59: "Xã hội và văn hóa — dịch vụ công cộng",
+    74: "Xã hội và văn hóa — toàn cầu hóa",
+    78: "Xã hội và văn hóa — giá trị và triết lý sống",
+    9: "Mua sắm và tiền bạc — kinh doanh",
+    35: "Mua sắm và tiền bạc — ngân hàng",
+    37: "Mua sắm và tiền bạc — mua sắm",
+    55: "Mua sắm và tiền bạc — mua sắm trực tuyến",
+    75: "Mua sắm và tiền bạc — kinh tế",
+    10: "Du lịch và giao thông — giao thông và hạ tầng",
+    15: "Du lịch và giao thông — du lịch và kỳ nghỉ",
+    30: "Du lịch và giao thông — khách sạn",
+    31: "Du lịch và giao thông — đi lại và phương tiện",
+    52: "Du lịch và giao thông — đường phố và chỉ đường",
+    58: "Du lịch và giao thông — trải nghiệm du lịch",
+    63: "Du lịch và giao thông — du lịch cơ bản",
+    18: "Nhà ở và nơi sống — thành phố và đô thị",
+    46: "Nhà ở và nơi sống — thuê nhà",
+    56: "Nhà ở và nơi sống — việc nhà",
+    60: "Đời sống hằng ngày — động từ cơ bản",
+    23: "Bản thân và gia đình — quan hệ gia đình",
+    25: "Số và thời gian — số đếm và thời gian",
+    26: "Bản thân và gia đình — người thân và mọi người",
+    27: "Đời sống hằng ngày — từ cơ bản",
+    38: "Bản thân và gia đình — cảm xúc nâng cao",
+    42: "Bản thân và gia đình — cụm động từ đời sống",
+    43: "Bản thân và gia đình — cụm câu giao tiếp",
+    54: "Bản thân và gia đình — lễ hội và dịp sum họp",
+    61: "Bản thân và gia đình — thời gian và mốc thời gian",
+    62: "Bản thân và gia đình — miêu tả người",
+    64: "Bản thân và gia đình — kế hoạch và dự định",
+    68: "Bản thân và gia đình — cảm xúc và ý kiến",
+    79: "Y tế và chăm sóc sức khỏe — khám bệnh và triệu chứng",
+    80: "Y tế và chăm sóc sức khỏe — điều trị và chăm sóc",
+    85: "Y tế và chăm sóc sức khỏe — chuyên khoa và nhân viên y tế",
+    86: "Y tế và chăm sóc sức khỏe — xét nghiệm và chẩn đoán",
+    87: "Y tế và chăm sóc sức khỏe — dịch bệnh và y tế công cộng",
+    88: "Y tế và chăm sóc sức khỏe — nghiên cứu y học",
+    81: "Logistics và chuỗi cung ứng — chuỗi cung ứng cơ bản",
+    82: "Logistics và chuỗi cung ứng — kho bãi",
+    83: "Logistics và chuỗi cung ứng — vận chuyển và hải quan",
+    84: "Logistics và chuỗi cung ứng — quản trị nâng cao"
+  };
+  Object.keys(VOCAB_TOPIC).forEach(function (k) { var s = CONTENT.vocab[+k]; if (s) s.topic = VOCAB_TOPIC[k]; });
+  /* UI 28/10 (A-G1): bo 25 "So va thoi gian" thieu four-nine (chi co
+     one/two/three roi nhay sang ten/hundred). Them 6 the vao CUOI mang
+     (khong chen giua) de chi so the cu 0-19 va tien trinh dang hoc theo
+     so luong khong lech. Guard chong them trung. Tong the 2646 -> 2652. */
+  (function () {
+    var s25 = CONTENT.vocab && CONTENT.vocab[25];
+    if (s25 && s25.cards && s25.cards.every(function (c) { return c.w !== "four"; })) {
+      s25.cards.push(
+        { w: "four", ipa: "/fɔː(r)/", vi: "bốn", col: "four apples", ex: "I have four apples in my bag.", exv: "Tôi có bốn quả táo trong túi." },
+        { w: "five", ipa: "/faɪv/", vi: "năm", col: "five books", ex: "She has five books on the desk.", exv: "Cô ấy có năm quyển sách trên bàn." },
+        { w: "six", ipa: "/sɪks/", vi: "sáu", col: "six days", ex: "We stay here for six days.", exv: "Chúng ta ở đây sáu ngày." },
+        { w: "seven", ipa: "/ˈsevn/", vi: "bảy", col: "seven days", ex: "There are seven days in a week.", exv: "Một tuần có bảy ngày." },
+        { w: "eight", ipa: "/eɪt/", vi: "tám", col: "eight hours", ex: "I sleep for eight hours at night.", exv: "Tôi ngủ tám tiếng vào ban đêm." },
+        { w: "nine", ipa: "/naɪn/", vi: "chín", col: "nine students", ex: "Nine students are in the class today.", exv: "Hôm nay có chín học sinh trong lớp." }
+      );
+    }
+  })();
+  // San tai Band 5,0 (20 bo): #39/#44 xuong 4,5 (giao tiep xa giao, lich su — muc do phu hop 4,5),
+  // #31/#52 sang 5,5 (di lai, duong pho). Ket qua: 4,5: 8 -> 10; 5,0: 20 -> 16; 5,5: 14 -> 16.
+  [39, 44].forEach(function (i) { if (CONTENT.vocab[i]) CONTENT.vocab[i].band = "Band 4,5"; });
+  [31, 52].forEach(function (i) { if (CONTENT.vocab[i]) CONTENT.vocab[i].band = "Band 5,5"; });
+  // ---- P0-7: drills ve dung thang; go cau ve band thap qua chBand (KHONG doi level) ----
+  // Doi level cua typing se xao tron setIdx/doneKey trong mode nen chi ghi de chBand
+  // cho viec xep chuong (rbBuildChSteps uu tien chBand); tab Luyen tap van chia theo level.
+  [0, 1, 2, 3, 54, 55].forEach(function (i) { if (CONTENT.writingDrills[i]) CONTENT.writingDrills[i].band = "Band 3,0"; });
+  [4, 5, 6, 7, 56, 57].forEach(function (i) { if (CONTENT.writingDrills[i]) CONTENT.writingDrills[i].band = "Band 5,0"; });
+  var TYPING_CHBAND = { 122: "Band 2,0", 54: "Band 2,0", 58: "Band 2,0", 59: "Band 2,5", 57: "Band 2,5", 52: "Band 3,0", 51: "Band 3,0", 53: "Band 3,5", 94: "Band 3,5", 50: "Band 4,0", 56: "Band 4,0", 55: "Band 4,5", 121: "Band 4,5" };
+  Object.keys(TYPING_CHBAND).forEach(function (k) { var s = CONTENT.typing[+k]; if (s) s.chBand = TYPING_CHBAND[k]; });
+})();
+
+/* ============ DOT LO TRINH CHUAN (28/10/2026) ============
+   Viet lo trinh chuan vao web theo file lo-trinh-chuan-20261028.md
+   (da kiem chung 28/10, do lai ban nhap hien tai truoc khi viet).
+   Chuan doi chieu: Cambridge Empower (neo chinh) + Oxford English File
+   (doi chieu mach phat am va ngu phap). Chi hoc CAU TRUC/TRINH TU cua
+   giao trinh chuan; moi cau vi du deu tu soan, khong chep sach.
+   Khoi nay chay SAU khoi P0 (cuoi file), ghi de len du lieu cu theo
+   dung kieu P0 (doi band/topic qua override, khong sua content.js goc)
+   de dot day live van chi can day 3 file nhu cu.
+   Noi dung khoi:
+   - ROADMAP-1: can-do moi theo lo trinh chuan (13 chuong, N10).
+   - ROADMAP-2: thong tin chang chuan hien o man Lo trinh (ten chang,
+     viec chinh, CEFR, hoc gi, buoc tiep theo, chuan theo, doc them).
+   - ROADMAP-3: sua mach phat am P0 theo thang N1 (khong them buoc).
+   - ROADMAP-4: doi tram/bai ve dung band chuan (menh de quan he 4.5->3.5,
+     nhan manh do 7.5+->4.5, tu chuyen nganh 6.0->6.5, quy trinh/ban do ve 5.5).
+   - ROADMAP-5: san go cau band cao (giu 8 bo/chuong, con lai chi o Luyen tap).
+   - ROADMAP-6: them tram/bai moi (ho tu N3, rut gon N3, mediation N4,
+     nghe nhanh N5, doc suy luan N8).
+   - ROADMAP-7: dang doc suy luan (INF) cho ly thuyet dang bai.
+   Quyet dinh da chot, khong hoi lai: Academic/GT chi gan nhan + loc;
+   Part 3 chinh thuc tu 4.5+, band thap "lam quen" khong tinh cong;
+   "xong 80%" = xong bai; cum chu de de giai doan 2 (khong lam dot nay).
+   Hieu chinh so voi file lo trinh (do lai 28/10): hedging KHONG phai
+   "0 tram" nhu file lo trinh ghi — tram #21 "Hedging" co san o 6.5 (B2),
+   du 10 cau quiz, nen N6 khong them tram trung; chi ghi nhan tram co san. */
+
+/* ---- ROADMAP-2: thong tin chang chuan (man Lo trinh doc bang nay) ---- */
+/* easyBand = band cua bai doc them (de hon mot nac, khong tinh diem). */
+var RB_STAGE_INFO = {
+  "Band 0": { stage: "Chặng 0 — Làm quen", job: "Nhận mặt chữ, nghe quen tai, nói được câu chào hỏi.", cefr: "Pre-A1", learn: "Phát âm: 44 âm, từng âm một, thấy rõ miệng. Từ vựng: từ đơn quanh bản thân (gia đình, số, màu, đồ vật). Ngữ pháp: chỉ học qua câu mẫu, chưa học quy tắc. Nghe: nghe từ đơn, chọn đúng từ. Nói: nhắc lại theo mẫu, chào hỏi theo mẫu.", next: "Sang Chặng 1 để học câu đơn hoàn chỉnh ở thì hiện tại.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 0" },
+  "Band 2,0": { stage: "Chặng 1 — Câu đơn hiện tại", job: "Nói và viết được câu đơn ở thì hiện tại về bản thân.", cefr: "A1", learn: "Ngữ pháp: be + hiện tại đơn, a/the, số nhiều, there is/are, can. Từ vựng: bản thân, gia đình, hàng ngày, số, thời gian. Phát âm: âm đơn còn yếu + trọng âm từ. Đọc: biển báo, nhãn, tin nhắn ngắn. Nghe: hội thoại ngắn, điền form đơn giản. Nói: Part 1 mức đơn giản. Viết: câu đơn, rồi đoạn 3-5 câu.", next: "Sang Chặng 2 để kể chuyện đã xảy ra ở thì quá khứ.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 0" },
+  "Band 2,5": { stage: "Chặng 2 — Kể chuyện đã qua", job: "Kể được chuyện đã xảy ra hôm qua, tuần trước.", cefr: "A1+", learn: "Ngữ pháp: quá khứ đơn, hiện tại tiếp diễn, going to. Từ vựng: du lịch, thời gian quá khứ, cảm xúc đơn giản. Phát âm: trọng âm từ (tiếp) + bắt đầu nghe trọng âm câu. Đọc: đoạn kể chuyện ngắn, đúng/sai đơn giản. Nghe: hội thoại kể chuyện, nắm ý chính. Nói: Part 1 mở rộng. Viết: đoạn kể chuyện có thứ tự trước-sau.", next: "Sang Chặng 3 để nói về kinh nghiệm và việc đã từng làm.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 2,0" },
+  "Band 3,0": { stage: "Chặng 3 — Kinh nghiệm và so sánh", job: "Nói được mình đã từng làm gì, và so sánh người/vật.", cefr: "A2-", learn: "Ngữ pháp: hiện tại hoàn thành (kinh nghiệm), so sánh hơn/nhất, used to. Từ vựng: kinh nghiệm sống, du lịch, so sánh, công việc. Phát âm: trọng âm câu + dạng yếu. Đọc: đoạn ngắn, đúng/sai/không có thông tin. Nghe: Section 1. Nói: Part 1 vững + Part 2 ngắn. Viết: thư ngắn (General Training) + đoạn mở-thân-kết.", next: "Sang Chặng 4 để nói về kế hoạch, dự định và điều kiện đơn giản.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 2,5" },
+  "Band 3,5": { stage: "Chặng 4 — Kế hoạch và giả định đơn giản", job: "Nói được kế hoạch tương lai và điều “nếu... thì...” đơn giản.", cefr: "A2", learn: "Ngữ pháp: will so với going to, điều kiện loại 1, mệnh đề quan hệ who/which/that, bị động hiện tại + quá khứ đơn, have to/must/should. Từ vựng: kế hoạch, thời tiết, lời khuyên, môi trường. Phát âm: dạng yếu (tiếp) + nối âm đơn giản. Đọc: đoạn dài hơn, nối thông tin đơn giản. Nghe: Section 1 vững + Section 2. Nói: Part 2 đầy đủ hơn. Viết: thư ngắn đầy đủ + đoạn nêu ý kiến đơn giản.", next: "Sang Chặng 5 để nói về việc đang kéo dài và việc đã làm xong.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 3,0" },
+  "Band 4,0": { stage: "Chặng 5 — Việc kéo dài và việc đã xong", job: "Phân biệt “đang làm dở” với “đã làm xong”, kể chuyện có nền.", cefr: "A2+ → B1-", learn: "Ngữ pháp: quá khứ tiếp diễn, hiện tại hoàn thành tiếp diễn, quá khứ hoàn thành (mở đầu), mệnh đề quan hệ whose/where, cụm động từ. Từ vựng: học tập, công việc, thời gian kéo dài + bắt đầu họ từ. Phát âm: nối âm + ngữ điệu câu hỏi/trần thuật. Đọc: nối tiêu đề + trắc nghiệm đoạn ngắn. Nghe: Section 2 vững + làm quen Section 3 + nghe nhanh đầu tiên. Nói: Part 2 vững + làm quen Part 3 đơn giản. Viết: Task 2 đơn giản + Task 1 General Training (thư) chắc.", next: "Sang Chặng 6 để viết Task 1 học thuật đầu tiên (biểu đồ đơn).", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 3,5" },
+  "Band 4,5": { stage: "Chặng 6 — Biểu đồ đầu tiên và ý kiến có lý do", job: "Mô tả được một biểu đồ đơn và viết bài luận có lý do rõ ràng.", cefr: "B1-", learn: "Ngữ pháp: câu tường thuật, bị động đủ thì cơ bản, câu hỏi đuôi, mạo từ nâng cao. Từ vựng: số liệu, xu hướng, từ học thuật cơ bản. Phát âm: ngữ điệu (tiếp) + nói nối liền trong cụm quen thuộc. Đọc: nối thông tin + trắc nghiệm đoạn vừa. Nghe: Section 2-3, điền từ vào ghi chú. Nói: Part 2 vững + Part 3 chính thức bắt đầu. Viết: Task 1 Academic ĐẦY ĐỦ đầu tiên (biểu đồ đơn, overview + chi tiết) + Task 2 có cấu trúc rõ. Nhập vai: mediation đầu tiên (đọc lịch trình rồi giải thích lại cho bạn).", next: "Sang Chặng 7 để so sánh nhiều biểu đồ và viết luận nhiều mặt.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 4,0" },
+  "Band 5,0": { stage: "Chặng 7 — So sánh và lập luận nhiều mặt", job: "So sánh được nhiều số liệu và viết luận nhìn từ hai phía.", cefr: "B1", learn: "Ngữ pháp: điều kiện loại 2, khuyết thiếu hoàn thành (mở đầu), bị động nâng cao. Từ vựng: so sánh, đối lập, nguyên nhân-kết quả, từ học thuật mở rộng. Phát âm: nói nối liền + ngữ điệu biểu thái độ. Đọc: nối tiêu đề + nối thông tin vững + trắc nghiệm đoạn dài. Nghe: Section 3 vững + làm quen Section 4. Nói: Part 3 chủ đề quen thuộc. Viết: Task 1 so sánh bảng và biểu đồ + Task 2 luận hai mặt + ý kiến.", next: "Sang Chặng 8 để mô tả quy trình, bản đồ và viết luận cân bằng.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 4,5" },
+  "Band 5,5": { stage: "Chặng 8 — Quy trình, bản đồ và lập luận cân bằng", job: "Mô tả được quy trình và bản đồ, viết luận cân bằng nhiều quan điểm.", cefr: "B1+", learn: "Ngữ pháp: bị động nâng cao + mệnh đề phân từ (mở đầu), điều kiện loại 3 (mở đầu). Từ vựng: quy trình, thay đổi, địa điểm, collocation mở rộng. Phát âm: nói nối liền vững + trọng âm nhấn ý. Đọc: tóm tắt đoạn văn (mức đơn giản) + Yes/No/Not Given. Nghe: Section 3-4, nối ý và điền câu. Nói: Part 3 sâu hơn. Viết: Task 1 quy trình + bản đồ (bắt đầu ở đây) + Task 2 luận cân bằng.", next: "Sang Chặng 9 để viết luận phức và nghe bài giảng dài.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 5,0" },
+  "Band 6,0": { stage: "Chặng 9 — Lập luận phức và bài giảng dài", job: "Viết luận có lập luận chặt và nghe hiểu bài giảng dài.", cefr: "B2-", learn: "Ngữ pháp: điều kiện loại 3 đầy đủ + hỗn hợp, wish, đảo ngữ (mở đầu), danh hóa. Từ vựng: từ học thuật, cụm cố định, từ đa nghĩa. Phát âm: ngữ điệu thái độ vững + ngắt cụm khi nói câu dài. Đọc: tóm tắt + Yes/No/Not Given vững + đọc suy luận (mức đơn giản). Nghe: Section 4 vững. Nói: Part 3 trừu tượng mức vừa. Viết: Task 1 hỗn hợp + Task 2 luận phức có phản biện.", next: "Sang Chặng 10 để viết học thuật tinh và thảo luận trừu tượng sâu.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 5,5" },
+  "Band 6,5": { stage: "Chặng 10 — Viết học thuật tinh và thảo luận sâu", job: "Viết như người học thuật (khách quan, chặt, có sắc thái) và thảo luận trừu tượng.", cefr: "B2", learn: "Ngữ pháp: khuyết thiếu hoàn thành đầy đủ, tương lai hoàn thành/tiếp diễn, mệnh đề phân từ đầy đủ, câu chẻ (mở đầu), hedging/boosting. Từ vựng: từ học thuật nâng cao, sắc thái nghĩa. Phát âm: ngắt cụm + ngữ điệu tinh tế theo ngữ cảnh. Đọc: đọc suy luận (dạng riêng) + nối nhiều đoạn. Nghe: bài giảng dài + trắc nghiệm + nối ý phức. Nói: Part 3 trừu tượng sâu. Viết: Task 1 hỗn hợp phức + Task 2 học thuật có hedging, phản biện.", next: "Sang Chặng 11 để viết luận đa quan điểm và dùng cấu trúc phức tự nhiên.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 6,0" },
+  "Band 7,0": { stage: "Chặng 11 — Đa quan điểm và cấu trúc phức tự nhiên", job: "Viết và nói như người dùng thành thạo ở mức cao — nhiều quan điểm, cấu trúc phức nhưng tự nhiên.", cefr: "B2+", learn: "Ngữ pháp: đảo ngữ đầy đủ, câu chẻ đầy đủ, tỉnh lược và thay thế, giả định trong câu trang trọng, cụm danh từ phức. Từ vựng: từ đa nghĩa sâu, thành ngữ học thuật, sắc thái tinh tế. Phát âm: ngữ điệu tinh tế + giọng điệu theo ngữ cảnh. Đọc: suy luận phức, thái độ tác giả, nối nhiều đoạn khó. Nghe: bài giảng dài + thảo luận nhiều người nói. Nói: Part 3 mức cao. Viết: Task 1 hỗn hợp khó + Task 2 đa quan điểm.", next: "Sang Chặng 12 để chạm mức C1 — dùng tiếng Anh linh hoạt cho học thuật và nghề nghiệp.", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp).", easyBand: "Band 6,5" },
+  "Band 7,5+": { stage: "Chặng 12 — Linh hoạt như người dùng cao cấp", job: "Dùng tiếng Anh linh hoạt, chính xác, có sắc thái — cho học thuật, công việc và thảo luận sâu.", cefr: "C1-", learn: "Ngữ pháp: ôn toàn bộ hệ thống ở mức tinh (khuyết thiếu sắc thái, đảo ngữ tinh tế, phân từ tinh tế, cụm danh từ phức, hedging/boosting mức cao). Từ vựng: từ hiếm gặp đúng ngữ cảnh, từ đa nghĩa sâu, thành ngữ. Phát âm: giọng điệu tinh tế + ngắt cụm tự nhiên. Đọc: văn bản dài khó nhiều quan điểm + ý ngầm sâu. Nghe: bài giảng + thảo luận dài nhiều người nói tốc độ thật. Nói: Part 3 mức cao nhất. Viết: Task 1 + Task 2 mức khó nhất.", next: "Hết lộ trình IELTS của web — tiếp tục bằng thi thử đầy đủ, đọc/nghe thêm ở mức C1, hoặc học chuyên sâu theo nhu cầu (học thuật, nghề nghiệp).", std: "Cambridge Empower (neo chính) + Oxford English File (đối chiếu mạch phát âm và ngữ pháp). Lưu ý: chặng này mới là đầu C1, chưa phải C2.", easyBand: "Band 7,0" }
+};
+
+(function () {
+  /* ---- ROADMAP-1: can-do moi theo lo trinh chuan (N10, dau chuong) ---- */
+  /* Can-do cuoi chuong hien o man ket qua kiem tra cuoi chuong (index.html). */
+  var RB_CAN_ROADMAP = {
+    "Band 0": ["Đọc được bảng chữ cái, nhận ra các âm cơ bản và đọc được từ đơn quen thuộc", "Chào hỏi, giới thiệu tên, hỏi thăm đơn giản", "Nghe và nhắc lại được từ đơn, cụm ngắn"],
+    "Band 2,0": ["Giới thiệu bản thân, gia đình, công việc, thói quen hàng ngày bằng câu đơn", "Hỏi và trả lời câu hỏi đơn giản: bạn làm gì, bạn thích gì, bạn ở đâu", "Đọc được biển báo, tin nhắn ngắn; viết được đoạn 3-5 câu về bản thân"],
+    "Band 2,5": ["Kể lại một ngày, một chuyến đi, một kỷ niệm bằng câu quá khứ đơn", "Hỏi về chuyện đã qua: “Bạn đã đi đâu cuối tuần rồi?”", "Đọc đoạn văn ngắn kể chuyện; viết đoạn văn kể chuyện có mở đầu và kết thúc"],
+    "Band 3,0": ["Nói về kinh nghiệm: “Tôi đã từng đi Đà Lạt.” / “Tôi chưa bao giờ ăn món này.”", "So sánh: “Hà Nội đông hơn Huế.” / “Đây là cuốn sách hay nhất của tôi.”", "Viết thư ngắn hỏi thăm, cảm ơn, mời mọc"],
+    "Band 3,5": ["Nói kế hoạch: “Cuối tuần này tôi sẽ về quê.” / “Tôi định học thêm tiếng Anh.”", "Đặt điều kiện đơn giản: “Nếu trời mưa, chúng ta ở nhà.”", "Mô tả người/vật bằng mệnh đề quan hệ: “Đây là người đã giúp tôi.”"],
+    "Band 4,0": ["Kể chuyện có hai lớp thời gian: “Lúc tôi đang đi bộ thì trời đổ mưa.”", "Nói việc kéo dài tới giờ: “Tôi đã học tiếng Anh được 2 năm rồi.”", "Đọc bài văn miêu tả và tìm ý chính; viết đoạn văn có lập luận đơn giản"],
+    "Band 4,5": ["Nhìn biểu đồ cột/đường đơn giản và viết đoạn mô tả: tăng, giảm, cao nhất, thấp nhất", "Viết bài luận: nêu ý kiến, cho lý do, cho ví dụ, kết luận", "Thảo luận ngắn về chủ đề quen thuộc: nêu ý kiến và giải thích vì sao"],
+    "Band 5,0": ["So sánh hai biểu đồ/bảng: cái nào cao hơn, xu hướng nào khác nhau, vì sao", "Viết luận hai mặt: mặt lợi, mặt hại, rồi nêu ý kiến của mình", "Thảo luận: đồng ý một phần, phản đối một phần, có lý do"],
+    "Band 5,5": ["Mô tả quy trình: các bước theo thứ tự, dùng câu bị động", "Mô tả bản đồ: thay đổi theo thời gian (trước đây - bây giờ)", "Viết luận: trình bày cả hai quan điểm rồi nêu quan điểm của mình có cân nhắc"],
+    "Band 6,0": ["Viết luận: luận điểm rõ, luận cứ chặt, có phản biện lại ý trái chiều", "Nghe bài giảng 5-10 phút và ghi được ý chính + ý phụ", "Thảo luận: bảo vệ quan điểm bằng 2-3 luận cứ, có ví dụ cụ thể"],
+    "Band 6,5": ["Viết luận học thuật: giọng khách quan, dùng bị động và danh hóa đúng chỗ, dùng từ làm mềm ý kiến (hedging) thay vì khẳng định tuyệt đối", "Thảo luận trừu tượng: so sánh quan điểm, dự đoán xu hướng, đánh giá giải pháp", "Đọc bài nghị luận dài và nắm được lập luận của tác giả, kể cả ý ngầm"],
+    "Band 7,0": ["Viết luận: cân bằng 2-3 quan điểm, lập luận chặt, giọng học thuật ổn định từ đầu tới cuối, ít lỗi", "Nói: thảo luận trừu tượng trôi chảy, chuyển ý mượt, dùng cấu trúc phức mà không gượng", "Đọc và nghe: nắm ý ngầm, thái độ tác giả/người nói, lập luận ẩn sau câu chữ"],
+    "Band 7,5+": ["Hiểu văn bản dài, khó, kể cả ý ngầm và sắc thái mỉa mai, hoài nghi", "Diễn đạt trôi chảy, không phải dừng tìm từ; dùng ngôn ngữ linh hoạt theo ngữ cảnh (trang trọng khi cần, thân mật khi phù hợp)", "Viết và nói: lập luận phức, cân bằng, có chiều sâu, ít lỗi, đa dạng cấu trúc"]
+  };
+  RB_CHAPTER_MAP.forEach(function (ch) { if (RB_CAN_ROADMAP[ch.band]) ch.can = RB_CAN_ROADMAP[ch.band]; });
+
+  /* ---- ROADMAP-3: sua mach phat am P0 theo thang N1 (khong them buoc) ---- */
+  /* Thang N1: A1 am don + trong am tu -> A2 trong am cau + dang yeu ->
+     B1 noi am + ngu dieu cau hoi/tran thuat -> B2 noi lien + ngu dieu thai do ->
+     C1 ngat cum + sac thai. P0 lech: ngu dieu o 3.0 (som), dang yeu o 4.0
+     (muon), thai do o 4.5 (som), trong am tu dai/tu ghep o 5.0 (khong co
+     trong thang N1 — bo vai tro buoc rieng, trong am tu da co o 2.0/2.5).
+     Sua bang cach ghi de noi dung tung buoc (cung object nen ca
+     RB_PRON_TOPICS va RB_PRON_TOPICS_BY_BAND deu doi theo); doneKey
+     pronTopic:<band> giu nguyen nen tien trinh cu khong vo. */
+  var RB_PRON_FIX = {
+    "Band 2,5": { title: "Phát âm — Trọng âm từ (tiếp) + trọng âm câu (mở đầu)", explain: "Ôn trọng âm từ trước: âm tiết được nhấn đọc to, rõ, dài hơn. Rồi bắt đầu nghe trọng âm câu: trong câu, từ mang nghĩa chính (danh từ, động từ, tính từ) đọc mạnh; từ chức năng (a, the, to, of) đọc nhẹ, lướt. Ví dụ: “I LOVE cats” nhấn LOVE, “I love CATS” nhấn CATS — nhấn từ nào thì ý nhấn vào đó.", examples: ["I want a cup of COFFEE.", "She is going to SCHOOL.", "I bought a new BOOK."], quiz: [
+      { q: "Trong câu “I bought a new BOOK”, từ nào đọc mạnh nhất?", o: ["a", "bought", "BOOK"], a: 2, why: "BOOK là từ mang nghĩa chính cuối câu nên đọc mạnh nhất; a là từ chức năng nên đọc nhẹ." },
+      { q: "Câu “She is going to SCHOOL” — từ nào đọc mạnh nhất?", o: ["is", "going", "SCHOOL"], a: 2, why: "SCHOOL là từ mang nghĩa chính cuối câu nên đọc mạnh nhất; is là từ chức năng nên đọc nhẹ." } ] },
+    "Band 3,0": { title: "Phát âm — Trọng âm câu + dạng yếu", explain: "Trong câu, từ mang nghĩa chính đọc mạnh, từ chức năng đọc nhẹ. Từ chức năng khi không nhấn thì đọc dạng yếu, ngắn, nhẹ: “to” trong “I want to go” đọc /tə/, không phải /tu:/; “have” trong “I have seen it” đọc nhẹ, gần như không nghe rõ. Nghe quen dạng yếu thì nghe nhanh mới không bị mất dấu.", examples: ["She bought a NEW dress.", "We are going to the PARK.", "I want some bread and cheese."], quiz: [
+      { q: "Trong câu “She bought a NEW dress”, từ nào được nhấn để nhấn mạnh?", o: ["She", "bought", "NEW"], a: 2, why: "NEW được nhấn để nhấn mạnh cái mới; She đọc nhẹ, bought đọc bình thường." },
+      { q: "“and” trong “bread and cheese” đọc thế nào?", o: ["Rõ /ænd/", "Nhẹ /ən/"], a: 1, why: "“and” không nhấn nên đọc dạng yếu /ən/, nhẹ và lướt." } ] },
+    "Band 3,5": { title: "Phát âm — Dạng yếu (tiếp) + nối âm đơn giản", explain: "Ôn dạng yếu: từ chức năng không nhấn đọc ngắn, nhẹ (“of” trong “a cup of tea” đọc /əv/). Rồi nối âm đơn giản trong cụm quen thuộc: từ kết thúc bằng phụ âm + từ bắt đầu bằng nguyên âm thì nối liền, không ngắt. Ví dụ: “go on” đọc liền thành “go-won”, “an apple” thành “a-napple”.", examples: ["A cup of tea, please.", "Pick it up.", "Turn it off."], quiz: [
+      { q: "“of” trong “a cup of tea” đọc thế nào?", o: ["Rõ /ɒv/", "Nhẹ /əv/"], a: 1, why: "“of” không nhấn nên đọc dạng yếu /əv/." },
+      { q: "“Turn off” đọc nối thế nào?", o: ["Ngắt: turn / off", "Nối: tur-noff"], a: 1, why: "“turn” kết thúc bằng n (phụ âm), “off” bắt đầu bằng o (nguyên âm) nên nối liền: tur-noff." } ] },
+    "Band 4,0": { title: "Phát âm — Nối âm + ngữ điệu câu hỏi và câu trần thuật", explain: "Nối âm: phụ âm cuối nối với nguyên âm đầu của từ sau (“come on” thành “co-mon”). Ngữ điệu: câu hỏi Yes/No lên giọng cuối câu; câu trần thuật xuống giọng cuối câu. Ví dụ: “You are coming? ↗” là hỏi, “You are coming. ↘” là khẳng định.", examples: ["Come on in.", "Are you ready?", "I am ready."], quiz: [
+      { q: "“Come on” đọc nối thế nào?", o: ["Ngắt: come / on", "Nối: co-mon"], a: 1, why: "“come” kết thúc bằng m (phụ âm), “on” bắt đầu bằng o (nguyên âm) nên nối liền: co-mon." },
+      { q: "Câu hỏi “Can you help me?” cuối câu lên hay xuống?", o: ["Lên giọng", "Xuống giọng"], a: 0, why: "Câu hỏi Yes/No lên giọng cuối câu để báo là đang hỏi." } ] },
+    "Band 4,5": { title: "Phát âm — Ngữ điệu (tiếp) + nói nối liền trong cụm quen thuộc", explain: "Ngữ điệu tiếp: cùng một câu, lên giọng cuối = hỏi lại, ngạc nhiên, chưa chắc; xuống giọng cuối = chắc chắn, kết luận. Ví dụ: “You got the job? ↗” là ngạc nhiên hỏi lại, “You got the job. ↘” là khẳng định chắc chắn. Nói nối liền: trong cụm quen thuộc, các từ nối liền thành một nhịp, không ngắt từng từ. Ví dụ: “a lot of” nghe liền thành “a-lo-tof”.", examples: ["You got the job?", "You got the job.", "I need a lot of time."], quiz: [
+      { q: "“You got the job? ↗” — người nói đang...", o: ["Khẳng định chắc chắn", "Ngạc nhiên, hỏi lại"], a: 1, why: "Lên giọng cuối câu báo là người nói ngạc nhiên và đang hỏi lại, chưa tin hẳn." },
+      { q: "“a lot of” nói nối liền nghe như...", o: ["Ngắt từng từ: a / lot / of", "Nối liền: a-lo-tof"], a: 1, why: "Trong cụm quen thuộc, các từ nối liền thành một nhịp, không ngắt từng từ." } ] },
+    "Band 5,0": { title: "Phát âm — Nói nối liền + ngữ điệu biểu thái độ", explain: "Nói nối liền: từ nối nhau thành nhịp tự nhiên, không ngắt từng từ (“Come on in” nghe liền một nhịp). Ngữ điệu biểu thái độ: ngạc nhiên, đồng tình, hoài nghi cũng nằm ở ngữ điệu. Ví dụ: “You mean it? ↗” là ngạc nhiên hỏi lại, “You mean it. ↘” là đồng tình chắc chắn.", examples: ["Come on in, please.", "You mean it?", "You mean it."], quiz: [
+      { q: "“Come on in” nói tự nhiên thì...", o: ["Ngắt từng từ rõ ràng", "Nối liền thành một nhịp"], a: 1, why: "Nói tự nhiên thì các từ trong cụm quen thuộc nối liền thành một nhịp." },
+      { q: "Muốn tỏ ra đồng tình chắc chắn thì cuối câu...", o: ["Lên giọng", "Xuống giọng"], a: 1, why: "Xuống giọng cuối câu báo là khẳng định chắc chắn, đồng tình thật." } ] },
+    "Band 5,5": { title: "Phát âm — Nói nối liền vững + trọng âm nhấn ý", explain: "Nói nối liền vững: cả câu dài cũng nối liền nhịp nhàng, từ không nhấn đọc nhanh, lướt. Trọng âm nhấn ý: nhấn từ nào thì ý nhấn vào đó. Ví dụ: “I want COFFEE, not tea” — nhấn COFFEE để đối lập với tea; “I want coffee, not TEA” thì ý lại khác.", examples: ["They are going to the cinema tonight.", "I want COFFEE, not tea.", "She bought a NEW car, not an old one."], quiz: [
+      { q: "Câu dài nói nối liền vững thì từ không nhấn đọc thế nào?", o: ["Đọc to, chậm", "Đọc nhanh, lướt"], a: 1, why: "Từ không nhấn đọc nhanh, lướt để nhường nhịp cho từ được nhấn." },
+      { q: "“I want COFFEE, not tea” — người nói nhấn ý nào?", o: ["Nhấn là muốn cà phê (không phải trà)", "Nhấn là muốn trà"], a: 0, why: "Nhấn COFFEE để đối lập với tea — ý là muốn cà phê, không phải trà." } ] },
+    "Band 6,0": { title: "Phát âm — Ngữ điệu thái độ vững + ngắt cụm khi nói câu dài", explain: "Ngữ điệu thái độ vững: cùng một câu, ngữ điệu khác nhau thì thái độ khác nhau (đồng tình chắc chắn, hoài nghi, mỉa mai nhẹ) — phải nghe cả ngữ cảnh. Ngắt cụm: câu dài ngắt theo nhóm ý (thought groups), mỗi nhóm ý là một nhịp thở. Ví dụ: “When I finish my homework, | I will watch a film.” — ngắt nhẹ giữa hai nhóm ý.", examples: ["That is interesting. ↘", "That is interesting? ↗", "When I finish my homework, I will watch a film."], quiz: [
+      { q: "“That is interesting? ↗” khác “That is interesting. ↘” ở chỗ nào?", o: ["Khác từ ngữ", "Khác thái độ (hoài nghi so với đồng tình chắc chắn)"], a: 1, why: "Cùng một câu, lên giọng cuối báo hoài nghi, xuống giọng báo đồng tình chắc chắn — thái độ nằm ở ngữ điệu + ngữ cảnh." },
+      { q: "Khi nói câu dài, nên...", o: ["Nói một hơi không ngắt", "Ngắt theo nhóm ý"], a: 1, why: "Ngắt theo nhóm ý giúp người nghe theo kịp câu dài." } ] },
+    "Band 6,5": { title: "Phát âm — Ngắt cụm + ngữ điệu tinh tế (hỏi đuôi, lựa chọn)", explain: "Ngắt cụm: câu dài ngắt theo nhóm ý, nhấn từ mang luận điểm. Ngữ điệu tinh tế: hỏi đuôi lên giọng = hỏi thật (chưa biết); xuống giọng = xác nhận (đã biết, chờ đồng tình). Câu lựa chọn: lựa chọn đầu lên, lựa chọn cuối xuống. Ví dụ: “Tea or coffee?” — tea ↗, coffee ↘.", examples: ["Although the cost is high, the benefits are greater.", "You like tea, don't you?", "Tea or coffee?"], quiz: [
+      { q: "Câu dài “Although the cost is high, the benefits are greater” nên ngắt ở đâu?", o: ["Không ngắt, nói một hơi", "Ngắt nhẹ sau “high” (giữa hai nhóm ý)"], a: 1, why: "Ngắt nhẹ giữa hai nhóm ý (mệnh đề nhượng bộ và mệnh đề chính) giúp người nghe theo kịp." },
+      { q: "“Coffee or tea?” — “coffee” lên hay xuống?", o: ["Lên giọng", "Xuống giọng"], a: 0, why: "Trong câu lựa chọn, lựa chọn đầu lên giọng, lựa chọn cuối xuống giọng." } ] },
+    "Band 7,0": { title: "Phát âm — Ngữ điệu tinh tế + giọng điệu theo ngữ cảnh", explain: "Nhấn từ đối lập để sửa hiểu lầm: “I said THIS book, not THAT book”. Giọng điệu theo ngữ cảnh: trang trọng, thân mật, thuyết phục dùng từ ngữ + ngữ điệu khác nhau. Ví dụ: xin phép trang trọng nói “Could you please help me?” (lịch sự, nhẹ nhàng), rủ bạn thân mật nói “Can you help me?” (ngắn, tự nhiên). Thái độ tạo bởi ngữ điệu + ngữ cảnh + từ ngữ, không phải chỉ giọng lên hay xuống.", examples: ["I wanted the RED one.", "Could you please help me?", "Can you help me?"], quiz: [
+      { q: "Muốn sửa hiểu lầm từ “cuốn kia” thành “cuốn này” thì nhấn từ nào?", o: ["said", "THIS", "book"], a: 1, why: "Nhấn từ đối lập THIS để sửa đúng chỗ hiểu lầm." },
+      { q: "“Could you please help me?” so với “Can you help me?” thì...", o: ["Giống nhau, chỉ khác từ", "Trang trọng và lịch sự hơn (hợp ngữ cảnh trang trọng)"], a: 1, why: "“Could you please...” lịch sự hơn, hợp ngữ cảnh trang trọng; “Can you...?” ngắn, tự nhiên, hợp bạn bè." } ] },
+    "Band 7,5+": { title: "Phát âm — Giọng điệu tinh tế + ngắt cụm tự nhiên", explain: "Nói học thuật: ngắt theo nhóm ý tự nhiên như người bản xứ, nhấn từ mang luận điểm, xuống giọng ở kết luận. Giọng điệu tinh tế: trang trọng khi cần, thân mật khi phù hợp, thuyết phục khi tranh luận — chuyển giọng mượt theo ngữ cảnh. Ví dụ: “Although the cost is high, | the benefits are greater.” — ngắt nhẹ giữa hai nhóm ý, xuống giọng cuối câu khẳng định.", examples: ["Although the cost is high, the benefits are greater.", "On the one hand, it saves time. On the other hand, it costs a lot.", "The evidence suggests that this policy works."], quiz: [
+      { q: "Khi trình bày luận điểm dài, nên...", o: ["Nói một hơi không ngắt", "Ngắt theo nhóm ý"], a: 1, why: "Ngắt theo nhóm ý giúp người nghe theo kịp luận điểm dài." },
+      { q: "Kết luận khẳng định thì cuối câu...", o: ["Lên giọng", "Xuống giọng"], a: 1, why: "Kết luận khẳng định xuống giọng để báo là lập trường đã chốt." } ] }
+  };
+  Object.keys(RB_PRON_FIX).forEach(function (b) {
+    var t = RB_PRON_TOPICS_BY_BAND[b];
+    if (!t) return;
+    var f = RB_PRON_FIX[b];
+    t.title = f.title; t.explain = f.explain; t.examples = f.examples; t.quiz = f.quiz;
+  });
+
+  /* ---- ROADMAP-4: doi tram/bai ve dung band chuan ---- */
+  /* Menh de quan he: chuan A2 day who/which/that o 3.5 (web de o 4.5,
+     muon mot chang) -> doi tram "day" #8 ve 3.5. Tram on #85 o 5.5,
+     nang cao #18/#48 o 6.5, khong xac dinh + rut gon #90 o 7.0 giu nguyen.
+     doneKey gramOld:<chi so> khong doi nen tien trinh cu khong vo. */
+  if (CONTENT.grammar[8]) CONTENT.grammar[8].level = "Band 3,5";
+  /* Nhan manh bang do: "I do agree" la ngu phap B1, khong phai ngu phap
+     moi C1 -> doi #33 ve 4.5 (B1-). 7.5+ chi con cau truc thuoc C1 that
+     (dao ngu nang cao, gia dinh, cum tuyet doi, cau phuc nhieu tang,
+     tu noi hoc thuat tinh te) + 2 ky nang viet (dau cau, paraphrase). */
+  if (CONTENT.grammar[33]) CONTENT.grammar[33].level = "Band 4,5";
+  /* San tai tu 6.0 (19 bo, cao nhat lo trinh): doi 3 bo chuyen nganh
+     (lich su/khao co #21, logistics #83, y te chuyen sau #86) sang 6.5.
+     Ket qua: 6.0: 19 -> 16 bo (320 the, ngang 5.0/5.5); 6.5: 8 -> 11 bo. */
+  [21, 83, 86].forEach(function (i) { if (CONTENT.vocab[i]) CONTENT.vocab[i].band = "Band 6,5"; });
+  /* Quy trinh/ban do Task 1 ve 5.5 (chuan B1+): doi bai quy trinh dau tien
+     #85 (6.5) va bai ban do dau tien #5 (7.0) ve 5.5. 6.5 het bai quy trinh
+     (da gap o 5.5); 7.0 con 2 quy trinh + 2 ban do luyen them; 7.5+ con 1
+     quy trinh kho. Thu tu trong chuong 5.5 do rbWriteRank xep san: don ->
+     quy trinh -> ban do -> hon hop. */
+  if (CONTENT.writing[85]) CONTENT.writing[85].band = "Band 5,5";
+  if (CONTENT.writing[5]) CONTENT.writing[5].band = "Band 5,5";
+
+  /* ---- ROADMAP-5: san go cau band cao (chi ghi de chBand, KHONG doi level) ---- */
+  /* Ly do nhu P0-7: doi level se xao tron setIdx/doneKey trong mode.
+     Giu 8 bo dau moi band (mau cau cot loi); cac bo con lai chi con o tab
+     Luyen tap (chia theo level, khong phu thuoc chBand) — van luyen duoc,
+     chi khong con la buoc chuong. Ket qua: 6.0: 18 -> 8; 6.5: 16 -> 8;
+     7.0: 14 -> 8; 7.5+: 14 -> 8 buoc go cau/chuong. */
+  var TYPING_CHBAND_ROADMAP = { 62: "none", 63: "none", 64: "none", 65: "none", 66: "none", 67: "none", 68: "none", 69: "none", 123: "none", 124: "none", 72: "none", 73: "none", 74: "none", 75: "none", 76: "none", 77: "none", 125: "none", 126: "none", 80: "none", 81: "none", 82: "none", 83: "none", 127: "none", 128: "none", 86: "none", 87: "none", 88: "none", 89: "none", 129: "none", 130: "none" };
+  Object.keys(TYPING_CHBAND_ROADMAP).forEach(function (k) { var s = CONTENT.typing[+k]; if (s) s.chBand = TYPING_CHBAND_ROADMAP[k]; });
+
+  /* ---- ROADMAP-6a: mach ho tu N3 (tu 3.0+) + rut gon N3 (5.5) ---- */
+  /* Ho tu: "mot goc, nhieu tu". Moi tram la 1 buoc Ngu phap trong chuong
+     (doneKey gramOld:<chi so moi>, khong dung do tien trinh cu). */
+  CONTENT.grammar.push(
+    { fam: "Họ từ", hook: "Một gốc, nhiều từ: từ một động từ, thêm đuôi là ra người làm việc đó.", level: "Band 3,0", name: "Họ từ: người làm việc (-er/-or)", explain: "Ví dụ trước: teach (dạy) → teacher (giáo viên); work (làm việc) → worker (công nhân); employ (thuê) → employer (người thuê). Sau ví dụ là quy tắc: thêm -er hoặc -or vào động từ là ra danh từ chỉ người làm việc đó. -or thường đi với động từ gốc Latin (act → actor, visit → visitor).", examples: ["My teacher is very kind.", "The worker finished the job early.", "The employer gave us a day off."], quiz: [
+      { q: "teach + -er = ?", o: ["teacher", "teachen", "teachment"], a: 0, why: "teach + -er = teacher (giáo viên)." },
+      { q: "“Người thuê lao động” là...?", o: ["employee", "employer", "employment"], a: 1, why: "employer là người thuê; employee mới là người được thuê." },
+      { q: "act + -or = ?", o: ["acter", "actor", "action"], a: 1, why: "act + -or = actor (diễn viên)." },
+      { q: "Từ nào chỉ người?", o: ["employment", "worker", "working"], a: 1, why: "worker là người làm việc; employment là việc làm; working là đang làm." },
+      { q: "visit → visitor. visitor nghĩa là...?", o: ["chuyến thăm", "khách thăm", "đã thăm"], a: 1, why: "visitor là người đến thăm (khách)." },
+      { q: "Chọn từ đúng: “She is a good ___.” (dạy)", o: ["teach", "teacher", "teaching"], a: 1, why: "Cần danh từ chỉ người: teacher." },
+      { q: "employ → employer. Đuôi -er/-or thêm vào...?", o: ["danh từ", "động từ", "tính từ"], a: 1, why: "-er/-or thêm vào động từ để ra người làm việc đó." },
+      { q: "Từ nào KHÔNG phải người?", o: ["actor", "visitor", "employment"], a: 2, why: "employment là việc làm (sự việc), không phải người." } ] },
+    { fam: "Họ từ", hook: "Một gốc, nhiều từ: employ → employee (người được thuê), employment (việc làm).", level: "Band 4,0", name: "Họ từ: người được thuê và việc làm (-ee/-ment)", explain: "Ví dụ trước: employ (thuê) → employee (người được thuê, -ee là người nhận tác động); employ → employment (việc làm, -ment biến động từ thành danh từ chỉ sự việc). Sau ví dụ là quy tắc: -ee = người nhận (interview → interviewee là người được phỏng vấn); -ment = sự việc (develop → development, improve → improvement).", examples: ["The employee works in the office.", "Employment is rising in this city.", "The interviewee answered well."], quiz: [
+      { q: "employ + -ee = ?", o: ["employer", "employee", "employment"], a: 1, why: "-ee là người nhận: employee là người được thuê." },
+      { q: "interviewee là...?", o: ["người phỏng vấn", "người được phỏng vấn", "buổi phỏng vấn"], a: 1, why: "-ee là người nhận tác động: người được phỏng vấn." },
+      { q: "develop + -ment = ?", o: ["developer", "development", "developing"], a: 1, why: "-ment ra danh từ chỉ sự việc: development (sự phát triển)." },
+      { q: "“Việc làm” là...?", o: ["employer", "employee", "employment"], a: 2, why: "employment là việc làm." },
+      { q: "improve → improvement. improvement là...?", o: ["người cải tiến", "sự cải tiến", "đang cải tiến"], a: 1, why: "-ment ra sự việc: sự cải tiến." },
+      { q: "Chọn từ đúng: “The ___ gave a speech.” (người thuê)", o: ["employee", "employer", "employment"], a: 1, why: "Cần người thuê: employer." },
+      { q: "Đuôi -ee khác -er ở chỗ nào?", o: ["-ee là người làm, -er là người nhận", "-ee là người nhận, -er là người làm", "Giống nhau"], a: 1, why: "-ee nhận tác động (employee được thuê); -er làm tác động (employer thuê)." },
+      { q: "Từ nào chỉ sự việc?", o: ["employee", "development", "interviewer"], a: 1, why: "development là sự phát triển; hai từ kia chỉ người." } ] },
+    { fam: "Họ từ", hook: "Một gốc, nhiều từ: happy → unhappy (không vui), correct → incorrect (không đúng), inform → information (thông tin).", level: "Band 5,0", name: "Họ từ: phủ định (un-/in-) và danh từ (-tion)", explain: "Ví dụ trước: happy (vui) → unhappy (không vui, un- phủ định); correct (đúng) → incorrect (không đúng, in- phủ định); inform (thông báo) → information (thông tin, -tion biến động từ thành danh từ). Sau ví dụ là quy tắc: un-/in-/im-/ir- đứng trước từ để phủ định (unhappy, incorrect, impossible, irregular); -tion/-sion đứng sau động từ để ra danh từ (educate → education, decide → decision).", examples: ["He was unhappy with the result.", "That answer is incorrect.", "This is important information."], quiz: [
+      { q: "happy → unhappy. un- có nghĩa là...?", o: ["rất", "không", "lại"], a: 1, why: "un- phủ định: unhappy là không vui." },
+      { q: "correct → incorrect. in- có nghĩa là...?", o: ["không", "rất", "trước"], a: 0, why: "in- phủ định: incorrect là không đúng." },
+      { q: "inform + -tion = ?", o: ["informer", "information", "informing"], a: 1, why: "-tion ra danh từ: information (thông tin)." },
+      { q: "educate → education. education là...?", o: ["người dạy", "sự giáo dục", "đang dạy"], a: 1, why: "-tion ra sự việc: sự giáo dục." },
+      { q: "possible → impossible. impossible nghĩa là...?", o: ["có thể", "không thể", "rất có thể"], a: 1, why: "im- (dạng của in-) phủ định: không thể." },
+      { q: "Chọn từ đúng: “His answer was ___.” (không đúng)", o: ["correct", "incorrect", "correction"], a: 1, why: "Cần tính từ phủ định: incorrect." },
+      { q: "decide → decision. decision là...?", o: ["người quyết định", "sự quyết định", "đang quyết định"], a: 1, why: "-sion ra danh từ: sự quyết định." },
+      { q: "Từ nào KHÔNG mang nghĩa phủ định?", o: ["unhappy", "irregular", "information"], a: 2, why: "information là thông tin (danh từ từ inform), không có tiền tố phủ định." } ] },
+    { fam: "Họ từ", hook: "Một gốc, nhiều từ: happy → happiness, active → activity, inform → information — viết học thuật dùng danh từ thay vì động từ.", level: "Band 6,0", name: "Họ từ: danh hóa (-ness/-ity/-tion) cho viết học thuật", explain: "Ví dụ trước: happy (vui, tính từ) → happiness (niềm vui, danh từ); active (năng động) → activity (hoạt động); inform (thông báo) → information (thông tin). Sau ví dụ là quy tắc: danh hóa là biến tính từ/động từ thành danh từ (-ness: happy → happiness, dark → darkness; -ity: active → activity, able → ability; -tion: inform → information). Viết học thuật thích danh từ vì nghe khách quan, chặt chẽ: thay vì “People use water a lot” thì viết “The consumption of water is high”.", examples: ["Happiness is important for health.", "The activity starts at 9 am.", "The information is useful."], quiz: [
+      { q: "happy → happiness. -ness biến...?", o: ["tính từ thành danh từ", "danh từ thành tính từ", "động từ thành người"], a: 0, why: "-ness biến tính từ thành danh từ: happiness là niềm vui." },
+      { q: "active → activity. -ity biến...?", o: ["động từ thành người", "tính từ thành danh từ", "danh từ thành động từ"], a: 1, why: "-ity biến tính từ thành danh từ: activity là hoạt động." },
+      { q: "able → ability. ability nghĩa là...?", o: ["có thể", "khả năng", "người có thể"], a: 1, why: "ability là khả năng (danh từ)." },
+      { q: "Viết học thuật thích danh từ vì...?", o: ["nghe khách quan, chặt chẽ", "ngắn hơn", "dễ đọc hơn"], a: 0, why: "Danh từ làm câu nghe khách quan, chặt chẽ — hợp giọng học thuật." },
+      { q: "dark → darkness. darkness là...?", o: ["tối (tính từ)", "bóng tối (danh từ)", "làm tối"], a: 1, why: "-ness ra danh từ: bóng tối." },
+      { q: "Chọn danh từ đúng: “The ___ of water is high.” (tiêu thụ)", o: ["consume", "consumption", "consumer"], a: 1, why: "Cần danh từ: consumption (sự tiêu thụ); consumer là người tiêu dùng." },
+      { q: "inform → information. Đuôi -tion biến...?", o: ["động từ thành danh từ", "tính từ thành động từ", "danh từ thành người"], a: 0, why: "-tion biến động từ thành danh từ: information." },
+      { q: "Từ nào là danh từ chỉ sự việc?", o: ["happy", "happiness", "happily"], a: 1, why: "happiness là danh từ (niềm vui); happy là tính từ; happily là trạng từ." } ] },
+    { fam: "Mệnh đề quan hệ", hook: "Một câu dài, rút gọn lại: “The book that was written in 2020” rút thành “The book written in 2020”.", level: "Band 5,5", name: "Mệnh đề quan hệ rút gọn (V-ing/V-ed)", explain: "Ví dụ trước: “The man who is standing there is my teacher” rút thành “The man standing there is my teacher” (bỏ who is, giữ V-ing). “The book that was written in 2020” rút thành “The book written in 2020” (bỏ that was, giữ V-ed). Sau ví dụ là quy tắc: mệnh đề quan hệ chủ động rút thành V-ing (người/vật đang làm); bị động rút thành V-ed (người/vật được làm). Chỉ rút khi mệnh đề không có dấu phẩy (mệnh đề xác định) — mệnh đề không xác định (có dấu phẩy) không rút.", examples: ["The girl wearing a red dress is my sister.", "The house built in 1990 is very old.", "Students studying English need practice."], quiz: [
+      { q: "“The man who is standing there” rút thành...?", o: ["The man stands there", "The man standing there", "The man stood there"], a: 1, why: "Chủ động rút thành V-ing: standing." },
+      { q: "“The book that was written in 2020” rút thành...?", o: ["The book writing in 2020", "The book written in 2020", "The book writes in 2020"], a: 1, why: "Bị động rút thành V-ed: written." },
+      { q: "“The girl wearing a red dress” — wearing là dạng...?", o: ["rút gọn chủ động (V-ing)", "rút gọn bị động (V-ed)", "thì hiện tại tiếp diễn"], a: 0, why: "wearing là V-ing rút gọn của “who is wearing”." },
+      { q: "“The house built in 1990” — built là dạng...?", o: ["V-ing", "V-ed bị động", "quá khứ đơn"], a: 1, why: "built là V-ed rút gọn của “that was built”." },
+      { q: "Chọn câu rút gọn đúng: “The students who study English...”", o: ["The students study English...", "The students studying English...", "The students studied English..."], a: 1, why: "Chủ động rút thành V-ing: studying." },
+      { q: "Mệnh đề nào KHÔNG rút được?", o: ["The book that I bought yesterday", "My brother, who lives in Hanoi, is a doctor", "The man who is waiting outside"], a: 1, why: "Mệnh đề có dấu phẩy (không xác định) không rút gọn." },
+      { q: "“Students studying English need practice” — studying rút từ...?", o: ["who study", "who studied", "who are studied"], a: 0, why: "studying rút từ “who study” (chủ động)." },
+      { q: "Rút gọn dùng để làm gì?", o: ["Câu ngắn gọn hơn mà vẫn đủ ý", "Đổi nghĩa câu", "Bỏ hẳn mệnh đề"], a: 0, why: "Rút gọn làm câu ngắn gọn hơn mà vẫn giữ đủ ý." } ] }
+  );
+
+  /* ---- ROADMAP-6b: mediation N4 (tu 4.5+) ---- */
+  /* Mediation = doc/nghe thong tin roi chuyen lai bang loi cua minh cho
+     nguoi khac (chuong trinh CEFR Companion Volume). Moi bai la 1 buoc
+     Nhap vai trong chuong (doneKey roleplay:<chi so moi>). Tinh huong
+     khong cham diem (nhu moi bai nhap vai tieng Anh cua web). */
+  CONTENT.roleplay.push(
+    { title: "Mediation — Đọc lịch trình rồi giải thích lại cho bạn", setting: "Bạn nhận được lịch trình chuyến đi dã ngoại của lớp. Bạn của bạn chưa đọc lịch trình và hỏi bạn về giờ giấc, địa điểm, đồ cần mang.", partner: "Bạn cùng lớp", goal: "Đọc lịch trình rồi giải thích lại bằng lời của mình, đủ giờ giấc, địa điểm, đồ cần mang — không đọc nguyên văn lịch trình.", band: "Band 4,5", chunks: ["The trip starts at...", "We will meet at...", "Don't forget to bring...", "In other words,...", "So, the plan is..."], turns: [
+      { from: "partner", text: "Hi! I haven't read the trip plan yet. What time do we start tomorrow?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chuyến đi bắt đầu lúc 7 giờ sáng. Chúng ta gặp nhau ở cổng trường. Bạn nhớ mang theo nước uống và mũ.", expect: "The trip starts at 7 in the morning. We will meet at the school gate. Don't forget to bring water and a hat.", keywords: ["trip", "7", "school gate", "water", "hat"], hint: "The trip starts at 7...", tip: "Nói lại bằng lời của mình, không cần đọc nguyên văn — mediation là chuyển thông tin sang lời của mình." },
+      { from: "partner", text: "Thanks! And where are we going? What should I wear?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Chúng ta đi công viên gần hồ. Bạn nên mặc quần áo thoải mái và đi giày thể thao.", expect: "We are going to the park near the lake. You should wear comfortable clothes and sports shoes.", keywords: ["park", "lake", "comfortable", "sports shoes"], hint: "We are going to the park...", tip: "Giải thích ngắn gọn, đủ ý chính là được." } ] },
+    { title: "Mediation — Đọc thông báo rồi tóm tắt cho đồng nghiệp", setting: "Công ty dán thông báo đổi giờ làm việc tuần tới. Đồng nghiệp của bạn chưa đọc và hỏi bạn có gì thay đổi.", partner: "Đồng nghiệp", goal: "Tóm tắt thông báo bằng lời của mình: đổi giờ nào, từ khi nào, ai bị ảnh hưởng.", band: "Band 5,0", chunks: ["The notice says...", "From next week,...", "The working hours will change to...", "In short,...", "This affects..."], turns: [
+      { from: "partner", text: "I saw a new notice on the board, but I didn't read it. What does it say?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Thông báo nói rằng từ tuần tới, giờ làm việc đổi thành 8 giờ sáng đến 5 giờ chiều. Thứ Bảy được nghỉ.", expect: "The notice says that from next week, the working hours will change to 8 in the morning to 5 in the afternoon. Saturdays are days off.", keywords: ["next week", "8", "5", "saturday"], hint: "The notice says...", tip: "Tóm tắt ý chính, bỏ chi tiết rườm rà." },
+      { from: "partner", text: "Does it affect everyone, or only our team?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Thông báo áp dụng cho mọi người trong công ty, không chỉ nhóm mình. Nếu có thắc mắc thì hỏi phòng nhân sự.", expect: "It applies to everyone in the company, not only our team. If you have questions, ask the HR office.", keywords: ["everyone", "company", "hr"], hint: "It applies to everyone...", tip: "Nói rõ phạm vi áp dụng để bạn không hiểu lầm." } ] },
+    { title: "Mediation — Đọc bảng số liệu rồi nói lại bằng lời cho bạn", setting: "Bạn xem bảng số liệu về thời gian dùng mạng xã hội theo độ tuổi. Bạn của bạn hỏi: nhóm nào dùng nhiều nhất, ít nhất, và khác nhau thế nào.", partner: "Bạn cùng lớp", goal: "Nhìn bảng số liệu rồi nói lại bằng lời: cao nhất, thấp nhất, so sánh — không đọc số liệu nguyên văn từng ô.", band: "Band 5,5", chunks: ["According to the table,...", "The highest is...", "The lowest is...", "In comparison,...", "Overall,..."], turns: [
+      { from: "partner", text: "You looked at the table about social media use. Which age group uses it the most?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Theo bảng, nhóm 18 đến 24 tuổi dùng nhiều nhất, trung bình 3 giờ mỗi ngày. Nhóm trên 60 tuổi dùng ít nhất, dưới 1 giờ.", expect: "According to the table, the 18 to 24 age group uses it the most, about 3 hours a day on average. The over-60 group uses it the least, under 1 hour.", keywords: ["18", "24", "most", "3 hours", "over-60", "least"], hint: "According to the table...", tip: "Nói xu hướng và so sánh, không cần đọc hết từng con số." },
+      { from: "partner", text: "Interesting! Is there a big difference between young people and older people?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Có, khác nhau nhiều. Người trẻ dùng gấp khoảng 3 lần người lớn tuổi, chủ yếu để xem video và nhắn tin.", expect: "Yes, there is a big difference. Young people use it about 3 times more than older people, mainly to watch videos and send messages.", keywords: ["difference", "3 times", "videos", "messages"], hint: "Yes, there is a big difference...", tip: "So sánh bằng “times more” cho rõ mức chênh lệch." } ] },
+    { title: "Mediation — Đọc bài báo ngắn rồi giải thích cho người chưa đọc", setting: "Bạn đọc một bài báo ngắn về nông nghiệp đô thị. Một người bạn chưa đọc hỏi bài báo nói gì và tác giả nghĩ sao.", partner: "Bạn cùng lớp", goal: "Tóm tắt bài báo bằng lời của mình + nêu thái độ của tác giả (ủng hộ hay còn nghi ngờ).", band: "Band 6,0", chunks: ["The article is about...", "The main point is...", "The author thinks...", "However, the author also notes...", "In my own words,..."], turns: [
+      { from: "partner", text: "I heard you read an article about urban farming. What is it about?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Bài báo nói về trồng rau trong thành phố, trên mái nhà và nhà kho bỏ hoang. Ý chính là trồng gần nơi ở giúp giảm quãng đường vận chuyển thực phẩm.", expect: "The article is about growing vegetables in cities, on rooftops and in old warehouses. The main point is that growing food near home reduces the distance food travels.", keywords: ["urban farming", "rooftops", "reduces", "distance"], hint: "The article is about...", tip: "Tóm tắt ý chính trước, chi tiết sau." },
+      { from: "partner", text: "Does the author fully support it, or are there doubts?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tác giả ủng hộ nhưng cũng lưu ý một điểm yếu: điện cho đèn trồng cây tốn kém, có thể làm mất lợi ích môi trường.", expect: "The author supports it, but also notes one weakness: the electricity for growing lights is expensive and may cancel out the environmental benefits.", keywords: ["supports", "electricity", "expensive", "benefits"], hint: "The author supports it, but...", tip: "Nêu cả hai mặt: ủng hộ + nghi ngờ — đó là thái độ thật của tác giả." } ] },
+    { title: "Mediation — Đọc hai quan điểm rồi trình bày cân bằng cho nhóm", setting: "Nhóm bạn đang bàn: có nên cấm xe máy ở trung tâm thành phố không. Bạn đã đọc hai quan điểm trái nhau và được nhờ trình bày cân bằng cả hai phía.", partner: "Trưởng nhóm thảo luận", goal: "Trình bày cả hai quan điểm cân bằng, không nghiêng về một phía, rồi nêu câu hỏi để nhóm quyết định.", band: "Band 6,5", chunks: ["On the one hand,...", "On the other hand,...", "Supporters argue that...", "Critics point out that...", "So, the question for us is..."], turns: [
+      { from: "partner", text: "You read both sides about banning motorbikes downtown. Can you sum them up fairly for the group?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Một mặt, người ủng hộ nói cấm xe máy sẽ giảm tắc đường và ô nhiễm. Mặt khác, người phản đối nói nhiều người cần xe máy để đi làm và giao hàng.", expect: "On the one hand, supporters argue that banning motorbikes will reduce traffic jams and pollution. On the other hand, critics point out that many people need motorbikes to go to work and deliver goods.", keywords: ["supporters", "traffic", "pollution", "critics", "deliver"], hint: "On the one hand...", tip: "Trình bày cân bằng: mỗi phía một câu rõ ràng, không thêm ý kiến riêng." },
+      { from: "partner", text: "Thanks, that's fair. What should our group decide first?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Nhóm nên quyết định trước: chúng ta ưu tiên giảm ô nhiễm hay ưu tiên việc đi lại thuận tiện cho mọi người.", expect: "Our group should decide first: do we prioritise reducing pollution, or making travel convenient for everyone?", keywords: ["decide", "pollution", "convenient"], hint: "Our group should decide first...", tip: "Kết bằng câu hỏi mở để nhóm thảo luận tiếp — mediation không áp đặt kết luận." } ] },
+    { title: "Mediation — Đọc báo cáo rồi tóm tắt và nêu ý kiến cho cuộc họp", setting: "Bạn đọc báo cáo về làm việc từ xa: năng suất tăng nhưng nhân viên cảm thấy cô đơn. Sếp nhờ bạn tóm tắt báo cáo và nêu ý kiến của mình trong cuộc họp.", partner: "Quản lý", goal: "Tóm tắt báo cáo (số liệu + ý chính) rồi nêu ý kiến riêng có lý do, phân biệt rõ đâu là báo cáo nói, đâu là ý của mình.", band: "Band 7,0", chunks: ["According to the report,...", "The figures show...", "In my opinion,...", "The reason is...", "I suggest that we..."], turns: [
+      { from: "partner", text: "You read the remote work report. What does it say, and what do you think?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Theo báo cáo, năng suất tăng 15% khi làm việc từ xa, nhưng 40% nhân viên cảm thấy cô đơn. Theo tôi, công ty nên cho làm việc kết hợp: 3 ngày ở nhà, 2 ngày ở văn phòng.", expect: "According to the report, productivity rose by 15% with remote work, but 40% of staff feel lonely. In my opinion, the company should use a hybrid model: 3 days at home and 2 days in the office.", keywords: ["15%", "40%", "lonely", "hybrid", "3 days"], hint: "According to the report...", tip: "Phân biệt rõ: “According to the report” là báo cáo nói; “In my opinion” là ý của bạn." },
+      { from: "partner", text: "Why hybrid, and not fully remote?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Vì làm việc kết hợp giữ được năng suất cao mà vẫn có gặp mặt trực tiếp, giúp mọi người đỡ cô đơn và phối hợp tốt hơn.", expect: "Because a hybrid model keeps productivity high while still giving people face-to-face contact, which reduces loneliness and improves teamwork.", keywords: ["hybrid", "productivity", "loneliness", "teamwork"], hint: "Because a hybrid model...", tip: "Nêu lý do bằng “because” + 2 lợi ích cụ thể." } ] },
+    { title: "Mediation — Đọc văn bản học thuật rồi giải thích sắc thái cho đồng nghiệp", setting: "Đồng nghiệp đọc một văn bản học thuật về biến đổi khí hậu nhưng không hiểu giọng điệu: tác giả thực sự lo ngại hay chỉ trình bày trung lập? Bạn giải thích sắc thái và ý ngầm.", partner: "Đồng nghiệp", goal: "Giải thích giọng điệu và ý ngầm của văn bản học thuật: tác giả lo ngại ở đâu, trung lập ở đâu, bằng chứng là từ ngữ nào.", band: "Band 7,5+", chunks: ["The tone here is...", "The author implies that...", "Words like... suggest...", "This is not neutral because...", "In other words, the hidden message is..."], turns: [
+      { from: "partner", text: "I read that climate text, but I can't tell: is the author worried, or just neutral?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Tác giả có vẻ lo ngại. Từ “urgent” và “irreversible” cho thấy tác giả nghĩ tình hình nghiêm trọng và khó đảo ngược, không chỉ trình bày trung lập.", expect: "The author seems worried. Words like “urgent” and “irreversible” suggest the author thinks the situation is serious and hard to reverse, not just neutrally presented.", keywords: ["worried", "urgent", "irreversible", "serious"], hint: "The author seems worried...", tip: "Giải thích sắc thái bằng bằng chứng từ ngữ: trích từ rồi nói từ đó gợi ý gì." },
+      { from: "partner", text: "Is there any part where the author stays neutral?" },
+      { from: "learner", prompt: "Lượt của bạn - hãy nói bằng tiếng Anh ý này: Có, phần trình bày số liệu thì trung lập: tác giả chỉ nêu con số, không bình luận. Giọng lo ngại chỉ rõ ở phần kết luận và khuyến nghị.", expect: "Yes, the data section stays neutral: the author only gives figures without comment. The worried tone is clearest in the conclusion and recommendations.", keywords: ["neutral", "figures", "conclusion", "recommendations"], hint: "Yes, the data section...", tip: "Phân biệt phần trung lập (số liệu) với phần có thái độ (kết luận) — đó là đọc sắc thái." } ] }
+  );
+
+  /* ---- ROADMAP-6c: mach nghe nhanh N5 (tu 4.0+) ---- */
+  /* Moi bai la 1 cau nghe ngan (section rieng "Nghe nhanh" de dap an nhieu
+     cung la cau nghe nhanh) + ghi chu noi am/nuot am. Nghe bang giong
+     trinh duyet that (toc do 1.15 cho bai nghe nhanh); phan day "noi nhanh
+     nghe nhu..." nam o ghi chu, vi giong may khong noi nhanh nhu nguoi that. */
+  CONTENT.listening.push(
+    { section: "Nghe nhanh", topic: "Nghe nhanh: going to → gonna", text: "What are you going to do this weekend?", band: "Band 4,0", fast: true, note: "Nói nhanh nghe như “Whaddaya gonna do this weekend?” — “what are you” nối thành “whaddaya”, “going to” nối thành “gonna”. Nghe bắt từ khóa: weekend (cuối tuần)." },
+    { section: "Nghe nhanh", topic: "Nghe nhanh: want to → wanna", text: "I want to go to the market with you tomorrow.", band: "Band 4,5", fast: true, note: "Nói nhanh nghe như “I wanna go to the market with you tomorrow.” — “want to” nối thành “wanna”. Nghe bắt từ khóa: market (chợ), tomorrow (ngày mai)." },
+    { section: "Nghe nhanh", topic: "Nghe nhanh: a lot of → a lotta", text: "She has a lot of homework to do tonight.", band: "Band 5,0", fast: true, note: "Nói nhanh nghe như “She has a lotta homework to do tonight.” — “a lot of” nối thành “a lotta”, âm /v/ của “of” gần như biến mất. Nghe bắt từ khóa: homework (bài tập về nhà)." },
+    { section: "Nghe nhanh", topic: "Nghe nhanh: nuốt âm t trong “next day”", text: "Let's meet the next day after the exam.", band: "Band 5,5", fast: true, note: "Nói nhanh nghe như “nex day” — âm /t/ cuối “next” bị nuốt trước “day”. Nghe bắt từ khóa: meet (gặp), exam (kỳ thi)." },
+    { section: "Nghe nhanh", topic: "Nghe nhanh: ten people → tem people", text: "Ten people are waiting outside the office.", band: "Band 6,0", fast: true, note: "Nói nhanh nghe như “Tem people are waiting...” — âm /n/ cuối “ten” biến thành /m/ trước /p/ của “people” cho dễ nối. Nghe bắt từ khóa: waiting (đang chờ), office (văn phòng)." },
+    { section: "Nghe nhanh", topic: "Nghe nhanh: did you → didja", text: "Did you finish your report yesterday?", band: "Band 6,5", fast: true, note: "Nói nhanh nghe như “Didja finish your report yesterday?” — “did you” nối thành “didja”. Nghe bắt từ khóa: finish (hoàn thành), report (báo cáo)." },
+    { section: "Nghe nhanh", topic: "Nghe nhanh: should have → should've", text: "You should have called me before you came.", band: "Band 7,0", fast: true, note: "Nói nhanh nghe như “You should've called me...” — “should have” rút thành “should've”, âm /h/ của “have” gần như biến mất. Nghe bắt từ khóa: called (đã gọi), came (đã đến)." },
+    { section: "Nghe nhanh", topic: "Nghe nhanh: câu dài nhiều nối âm", text: "A lot of people are going to attend the conference next week.", band: "Band 7,5+", fast: true, note: "Nói nhanh nghe như “A lotta people are gonna attend the conference nex week.” — nhiều chỗ nối cùng lúc: a lot of → a lotta, going to → gonna, next → nex (nuốt t). Nghe bắt từ khóa: conference (hội nghị), next week (tuần tới)." }
+  );
+
+  /* ---- ROADMAP-6d: doc suy luan N8 (dang rieng o 6.5+, muc don gian o 6.0) ---- */
+  /* Cau hoi dang INF dung dinh dang options nhu cau MC cua kho Doc
+     (quiz engine chuan hoa qua normSkillQ); nhan dang hien nho
+     RB_READ_TYPE_VN.INF va ly thuyet dang bai RB_READ_FORM_GUIDE.INF. */
+  CONTENT.reading.push(
+    { topic: "Xã hội và đời sống", level: "Band 6,0", title: "The Quiet Neighbour", text: "Mrs Lan lives alone in the last house on our street. She never comes to neighbourhood parties. She never chats over the fence. For years, I thought she simply did not like us.\n\nThen, last winter, my mother caught a bad flu. On the second morning, we found a pot of chicken soup at our door. No note. No knock. The next day, another pot. On the third day, rice porridge with ginger. My mother smiled and said, “That is Mrs Lan. She does this for everyone who is sick.”\n\nI started to notice. When Mr Ba broke his leg, a basket of fruit appeared at his door. When the new family moved in with a small baby, a pot of soft porridge arrived the same evening. Mrs Lan never stayed to talk. She never waited for thanks.\n\nNow I understand. Some people show kindness loudly, with parties and speeches. Mrs Lan shows it quietly, with soup at the door. Kindness does not need noise.", questions: [
+      { type: "INF", q: "What can be inferred about Mrs Lan's character?", options: ["She dislikes her neighbours", "She is kind but quiet", "She is too busy to care", "She wants attention"], a: 1, why: "Bà Lan không dự tiệc nhưng luôn để đồ ăn trước cửa khi hàng xóm ốm — suy ra bà tốt bụng nhưng lặng lẽ, không phải ghét hàng xóm hay muốn được chú ý." },
+      { type: "INF", q: "What does the narrator probably think at the end?", options: ["Kindness must be loud to count", "Quiet people cannot be kind", "Kindness does not need noise", "Neighbours should party more"], a: 2, why: "Người kể nhận ra bà Lan giúp đỡ lặng lẽ — suy ra lòng tốt không cần ồn ào." },
+      { type: "INF", q: "Why does the author mention the food at the door?", options: ["To show Mrs Lan is a good cook", "To prove quiet kindness is real", "To complain about the food", "To describe a party"], a: 1, why: "Chi tiết đồ ăn là bằng chứng cho lòng tốt lặng lẽ — không phải để khoe nấu ăn hay kể về tiệc." },
+      { type: "MC", q: "How often does Mrs Lan join neighbourhood parties?", options: ["Every week", "Never", "Once a month", "Only at Tet"], a: 1, why: "Trong bài: bà không bao giờ dự tiệc." },
+      { type: "MC", q: "What does Mrs Lan leave at sick neighbours' doors?", options: ["Medicine", "Food", "Flowers", "Letters"], a: 1, why: "Trong bài: bà để đồ ăn trước cửa." } ], translation: "Bà Lan sống một mình ở cuối phố, không bao giờ dự tiệc hay trò chuyện qua hàng rào. Mùa đông năm ngoái, khi mẹ người kể bị cúm nặng, một nồi súp gà xuất hiện trước cửa mà không có lời nhắn hay tiếng gõ. Người kể dần nhận ra: bà Lan luôn để đồ ăn trước cửa nhà ai bị ốm, không bao giờ ở lại chờ cảm ơn. Lòng tốt không cần ồn ào.", phrases: [{ en: "catch a bad flu", vi: "bị cúm nặng" }, { en: "show kindness", vi: "thể hiện lòng tốt" }, { en: "wait for thanks", vi: "chờ được cảm ơn" }] },
+    { topic: "Công nghệ và xã hội", level: "Band 6,5", title: "The Office That Never Sleeps", text: "BrightOffice, a small software company, proudly announced “total freedom” last year: staff could work anytime, anywhere. No fixed hours. No office clock. Productivity rose by 20 per cent in six months, and the director called it a success.\n\nBut the office lights never go off now. At midnight, the chat channel is still busy. Emails arrive at 2 am, marked “urgent”. One young developer told me she checks her phone before breakfast and after midnight, “just in case”. She laughed when she said it. Her eyes did not.\n\nWhen a colleague logged off at 6 pm last Friday, the manager smiled and said, “Leaving early today?” The smile stayed on his face. The question stayed in the air. The colleague logged back in at 9 pm.\n\nBrightOffice calls this freedom. The lights, the midnight emails and the manager's smile tell a different story: when work never stops, freedom is only a word.", questions: [
+      { type: "INF", q: "What can be inferred about the company's “freedom”?", options: ["It is real freedom", "It is a trap: staff work more, not less", "It only applies to managers", "It was cancelled"], a: 1, why: "Đèn không tắt, email nửa đêm, nhân viên đăng nhập lại sau câu hỏi của quản lý — suy ra “tự do” này khiến nhân viên làm nhiều hơn, không ít hơn." },
+      { type: "INF", q: "What does the manager's smile suggest when someone logs off early?", options: ["Approval", "Disapproval", "Indifference", "Surprise"], a: 1, why: "Câu “Leaving early today?” + nụ cười giữ nguyên + đồng nghiệp đăng nhập lại lúc 9 giờ tối — suy ra quản lý không đồng tình." },
+      { type: "INF", q: "What is the author's attitude toward always-on work?", options: ["Fully supportive", "Critical and worried", "Neutral", "Amused"], a: 1, why: "Câu cuối “freedom is only a word” + chi tiết mắt nhân viên không cười — suy ra tác giả phê phán và lo ngại, không ủng hộ hay trung lập." },
+      { type: "INF", q: "What does “the office never sleeps” imply?", options: ["The office has no beds", "Work never truly stops", "The lights are broken", "Staff never sleep at all"], a: 1, why: "Đèn sáng cả đêm, tin nhắn nửa đêm — “không ngủ” là ý ngầm: công việc không bao giờ thực sự dừng." },
+      { type: "INF", q: "What will probably happen to staff who always work late?", options: ["They will be promoted quickly", "They will burn out", "They will get more holidays", "They will change jobs happily"], a: 1, why: "Làm việc cả trước bữa sáng và sau nửa đêm “just in case” — suy ra kiệt sức là hệ quả có căn cứ, không phải thăng chức hay thêm ngày nghỉ." } ], translation: "Công ty phần mềm BrightOffice tuyên bố “tự do hoàn toàn”: nhân viên làm việc bất cứ lúc nào, ở đâu. Năng suất tăng 20% sau sáu tháng. Nhưng đèn văn phòng không bao giờ tắt, email “khẩn” đến lúc 2 giờ sáng, nhân viên kiểm tra điện thoại cả trước bữa sáng và sau nửa đêm. Khi một đồng nghiệp đăng xuất lúc 6 giờ chiều, quản lý cười hỏi “Hôm nay về sớm nhỉ?” — và người đó đăng nhập lại lúc 9 giờ tối. “Tự do” ở đây chỉ là một từ.", phrases: [{ en: "log off", vi: "đăng xuất, ngừng làm việc" }, { en: "marked “urgent”", vi: "đánh dấu “khẩn”" }, { en: "just in case", vi: "phòng khi cần" }] },
+    { topic: "Môi trường và tiêu dùng", level: "Band 6,5", title: "The Green Label", text: "Last month, a famous drink brand launched a new “green” bottle. The label is green. The advertisement shows forests, rivers and happy birds. The slogan says: “Drink green. Live green.” Sales rose by 30 per cent in three weeks.\n\nThe fine print, printed in tiny grey letters at the back, says something else: the bottle contains 5 per cent recycled material. The other 95 per cent is new plastic. The factory that makes the bottle stands beside a river that local people say smells of chemicals.\n\nThe company says it “cares about the planet”. It does not say it will use more recycled material next year. It does not say it will clean the river. It says the bottle is “green”.\n\nA green label is easy to print. A green product is harder to make. Careful shoppers are learning to read the back of the bottle, not just the front.", questions: [
+      { type: "INF", q: "What can be inferred about the “green” label?", options: ["It proves the product is fully green", "It is mostly marketing", "It is required by law", "It means 100% recycled"], a: 1, why: "Nhãn xanh + quảng cáo rừng sông nhưng chỉ 5% tái chế — suy ra nhãn chủ yếu là tiếp thị, không chứng minh sản phẩm xanh thật." },
+      { type: "INF", q: "What does the fine print suggest?", options: ["The product is 95% new material", "The product is fully recycled", "The factory is clean", "The label is honest"], a: 0, why: "Dòng chữ nhỏ ghi 5% tái chế — suy ra 95% còn lại là nhựa mới." },
+      { type: "INF", q: "What is the author's attitude?", options: ["Trusting", "Skeptical", "Excited", "Indifferent"], a: 1, why: "Câu “A green label is easy to print. A green product is harder to make.” + đối chiếu mặt trước/mặt sau — suy ra tác giả hoài nghi, không tin nhãn xanh." },
+      { type: "INF", q: "Why does the author mention the river?", options: ["To praise the factory's location", "To contrast the green image with reality", "To describe a nice view", "To explain the water supply"], a: 1, why: "Sông có mùi hóa chất đặt cạnh hình ảnh xanh — để đối lập hình ảnh xanh với thực tế." },
+      { type: "INF", q: "What will a careful shopper probably do?", options: ["Buy it at once", "Read the fine print first", "Trust the green colour", "Ignore all labels"], a: 1, why: "Câu cuối “read the back of the bottle, not just the front” — người mua cẩn thận đọc dòng chữ nhỏ trước khi tin nhãn." } ], translation: "Một hãng đồ uống nổi tiếng ra mắt chai “xanh”: nhãn màu xanh, quảng cáo có rừng, sông và chim. Doanh số tăng 30% sau ba tuần. Nhưng dòng chữ nhỏ ở mặt sau ghi: chai chỉ chứa 5% vật liệu tái chế, 95% còn lại là nhựa mới; nhà máy đứng bên một con sông mà dân địa phương nói có mùi hóa chất. Công ty nói “quan tâm đến hành tinh” nhưng không hứa dùng nhiều vật liệu tái chế hơn hay làm sạch sông. Người mua cẩn thận đang học cách đọc mặt sau của chai, không chỉ mặt trước.", phrases: [{ en: "fine print", vi: "dòng chữ nhỏ (điều khoản in nhỏ)" }, { en: "recycled material", vi: "vật liệu tái chế" }, { en: "care about the planet", vi: "quan tâm đến hành tinh" }] }
+  );
+
+  /* ---- ROADMAP-7: dang doc suy luan cho ly thuyet dang bai ---- */
+  RB_READ_FORM_GUIDE.INF = { t: "Suy luận — đọc ý ngầm", how: "Ví dụ: bài không nói thẳng “bà Lan tốt bụng” mà kể bà để súp trước cửa nhà người ốm. Cách làm: tìm chi tiết trong bài, rồi hỏi “chi tiết này cho thấy điều gì?” — đáp án suy luận phải có căn cứ trong bài, không đoán mò.", ex: "Bà Lan không dự tiệc nhưng luôn giúp người ốm → suy ra bà tốt bụng nhưng lặng lẽ.", trap: "Chọn suy luận quá xa (bài không có căn cứ) hoặc chọn ý bài nói thẳng (đó không phải suy luận)." };
+})();
+
+/* DOT trung 28/10/2026 (T-V6): doi nhan Section cua 6 bai Nghe dai Band 5,0
+   (noi dung/cau hoi/band giu nguyen) — lo trinh chuan chot 5,0 = Section 3 vung
+   + lam quen Section 4; truoc day 5 bai S1 + 1 bai S2 thut nguyen chuong sau
+   chuong S3 (4,5). Chi doi nhan, khong doi noi dung bai. Guard theo section cu
+   de chay lai khong doi lan 2. */
+(function () {
+  var TOPICS = ["Đặt lịch khám với Bác sĩ Lan","Đăng ký lớp học nấu ăn tại trung tâm cộng đồng","Bệnh nhân đặt lịch khám qua điện thoại","Đăng ký thẻ thư viện khu phố","Hỏi về lớp học bơi cho trẻ em","Hướng dẫn tham quan nhà văn hóa khu phố"];
+  (CONTENT.listeningPlus || []).forEach(function (x) {
+    if (x.band === "Band 5,0" && TOPICS.indexOf(x.topic) >= 0 && /^Section [12]$/.test(x.section || "")) x.section = "Section 3";
+  });
+})();
+/* DOT trung 28/10/2026 (T-V4): viet lai 5 tram ngu phap chang 4 — truoc day
+   cau vi du ngan don gian nhu chang 3 (s4-ba trung nguyen van 2/4 vi du chang 3);
+   ban moi dung menh de dai, bien the nang cao (phu dinh 没把, 把…给, 得 muc do,
+   虽然 sau chu ngu + 却/可是, 不但…而且还, 如果…的话/那么/否则, 被…过, 是…被…的).
+   Giu nguyen id/stage/tieu de (ke ca "(nang cao)" cua ba/bei) va note. */
+(function () {
+  var NEW = {"s4-suiran":{"hook":"“虽然他昨天晚上工作到很晚，但是今天早上他还是第一个到办公室的人” — mệt thì mệt, nhưng sáng nay vẫn đến văn phòng sớm nhất: tuy… nhưng… ở chặng này nói mệnh đề dài, có thể đổi 但是 thành 却/可是, hoặc đặt chủ ngữ trước 虽然.","rule":"虽然 có thể đứng đầu câu hoặc sau chủ ngữ (他虽然…). Vế sau dùng 但是/可是/却 đều được, và thường thêm 还是 trước động từ để nhấn mạnh “vẫn”. Mệnh đề dài hơn, có thể có hai ý trái ngược nối nhau.","tip":"Hãy nhớ ba biến thể: 虽然…但是 / 虽然…可是 / 虽然…却 — và 还是 đứng trước động từ để nhấn “vẫn làm”.","examples":["虽然他昨天晚上工作到很晚，但是今天早上他还是第一个到办公室的人。(Suīrán tā zuótiān wǎnshang gōngzuò dào hěn wǎn, dànshì jīntiān zǎoshang tā háishi dì yí gè dào bàngōngshì de rén.) — Tuy tối qua anh ấy làm việc đến rất muộn, nhưng sáng nay anh ấy vẫn là người đầu tiên đến văn phòng.","他虽然中文说得不太流利，可是跟中国朋友聊天的时候一点儿也不害怕。(Tā suīrán Zhōngwén shuō de bú tài liúlì, kěshì gēn Zhōngguó péngyou liáotiān de shíhou yìdiǎnr yě bú hàipà.) — Tuy tiếng Trung của anh ấy nói chưa lưu loát lắm, nhưng khi trò chuyện với bạn Trung Quốc thì chẳng sợ chút nào.","虽然这件衣服的价格比去年贵了很多，但是质量比以前好，我还是决定买下来。(Suīrán zhè jiàn yīfu de jiàgé bǐ qùnián guì le hěn duō, dànshì zhìliàng bǐ yǐqián hǎo, wǒ háishi juédìng mǎi xiàlai.) — Tuy giá chiếc áo này đắt hơn năm ngoái nhiều, nhưng chất lượng tốt hơn trước nên tôi vẫn quyết định mua.","虽然外面下着大雨，路上很堵，但是他们还是按时到了学校，没有迟到。(Suīrán wàimian xià zhe dàyǔ, lùshang hěn dǔ, dànshì tāmen háishi ànshí dào le xuéxiào, méiyǒu chídào.) — Tuy ngoài trời mưa to, đường rất tắc, nhưng họ vẫn đến trường đúng giờ, không muộn."],"quiz":[{"q":"Điền chỗ trống: 他虽然中文说得不太流利，___ 跟中国朋友聊天的时候一点儿也不害怕。","o":["但是","可是","如果","而且"],"a":1,"why":"虽然…可是 cũng là cặp nói hai mặt trái ngược; chủ ngữ 他 đứng trước 虽然."},{"q":"Câu nào dùng 虽然…却 đúng?","o":["虽然下着大雨，他却按时到了学校","虽然下着大雨，他如果按时到了学校","虽然下着大雨，他而且按时到了学校","虽然下着大雨，他因为按时到了学校"],"a":0,"why":"虽然…却: tuy mưa to nhưng anh ấy vẫn đến trường đúng giờ."},{"q":"“虽然这件衣服的价格比去年贵了很多，但是质量比以前好，我还是决定买下来” nghĩa là gì?","o":["Tuy áo đắt hơn năm ngoái nhiều nhưng chất lượng tốt hơn nên tôi vẫn quyết định mua","Vì áo đắt hơn năm ngoái nên tôi không mua nữa","Nếu áo đắt hơn năm ngoái thì tôi sẽ mua","Không những áo đắt mà chất lượng còn tốt"],"a":0,"why":"虽然 = tuy, 但是 = nhưng, 还是 = vẫn: tuy đắt nhưng chất lượng tốt hơn nên vẫn mua."},{"q":"Điền chỗ trống: 虽然外面下着大雨，路上很堵，___ 他们还是按时到了学校。","o":["如果","但是","而且","因为"],"a":1,"why":"虽然 đi với 但是: tuy mưa to, đường tắc, nhưng họ vẫn đến trường đúng giờ."},{"q":"虽然 có thể đứng ở đâu trong câu?","o":["Chỉ đầu câu","Đầu câu hoặc sau chủ ngữ","Chỉ cuối câu","Thay cho động từ"],"a":1,"why":"他虽然… cũng đúng: chủ ngữ đứng trước 虽然."},{"q":"Chọn câu viết đúng mẫu 虽然…但是 với mệnh đề dài:","o":["虽然他昨天晚上工作到很晚，但是今天早上他还是第一个到办公室的人","虽然他昨天晚上工作到很晚，如果今天早上他还是第一个到办公室的人","虽然他昨天晚上工作到很晚，而且今天早上他还是第一个到办公室的人","虽然他昨天晚上工作到很晚，因为今天早上他还是第一个到办公室的人"],"a":0,"why":"虽然…但是 nói hai mặt trái ngược: tuy làm muộn nhưng sáng vẫn đến sớm nhất."}]},"s4-budan":{"hook":"“他不但每天早上跑步锻炼身体，而且还坚持写日记” — không những chạy bộ mỗi sáng mà còn kiên trì viết nhật ký: chặng này nói cụm động từ dài và thêm 还 để nhấn vế sau.","rule":"不但…而且还…: vế sau thêm 还 để nhấn mạnh. Hai vế có thể là cụm động từ dài hoặc hai mệnh đề; điểm sau vẫn mạnh hơn điểm trước.","tip":"Muốn nhấn vế sau thì thêm 还 trước động từ: 不但…而且还….","examples":["他不但每天早上跑步锻炼身体，而且还坚持写日记，记录自己的进步。(Tā búdàn měitiān zǎoshang pǎobù duànliàn shēntǐ, érqiě hái jiānchí xiě rìjì, jìlù zìjǐ de jìnbù.) — Anh ấy không những mỗi sáng chạy bộ rèn luyện sức khỏe, mà còn kiên trì viết nhật ký, ghi lại tiến bộ của mình.","这家新开的饭馆不但菜做得好吃，价格也不贵，而且服务员的态度还特别好。(Zhè jiā xīn kāi de fànguǎn búdàn cài zuò de hǎochī, jiàgé yě bú guì, érqiě fúwùyuán de tàidu hái tèbié hǎo.) — Nhà hàng mới mở này không những món ăn ngon, giá không đắt, mà thái độ phục vụ còn đặc biệt tốt.","她不但能用中文流利地介绍自己的家乡，而且能用英文跟外国朋友讨论中国文化。(Tā búdàn néng yòng Zhōngwén liúlì de jièshào zìjǐ de jiāxiāng, érqiě néng yòng Yīngwén gēn wàiguó péngyou tǎolùn Zhōngguó wénhuà.) — Cô ấy không những có thể dùng tiếng Trung giới thiệu lưu loát quê hương mình, mà còn có thể dùng tiếng Anh thảo luận văn hóa Trung Quốc với bạn nước ngoài.","学习一门外语不但需要记住很多单词和语法，而且需要多听多说，在实际交流中慢慢提高。(Xuéxí yì mén wàiyǔ búdàn xūyào jìzhu hěn duō dāncí hé yǔfǎ, érqiě xūyào duō tīng duō shuō, zài shíjì jiāoliú zhōng mànmàn tígāo.) — Học một ngoại ngữ không những cần nhớ nhiều từ vựng và ngữ pháp, mà còn cần nghe nhiều nói nhiều, nâng cao dần trong giao tiếp thực tế."],"quiz":[{"q":"Điền chỗ trống: 他不但每天早上跑步锻炼身体，___ 坚持写日记。","o":["而且","而且还","但是","如果"],"a":1,"why":"不但…而且还…: vế sau thêm 还 để nhấn mạnh việc kiên trì viết nhật ký."},{"q":"Câu nào dùng 不但…而且 đúng với cụm dài?","o":["她不但能用中文流利地介绍自己的家乡，而且能用英文跟外国朋友讨论中国文化","她不但能用中文流利地介绍自己的家乡，但是能用英文跟外国朋友讨论中国文化","她不但能用中文流利地介绍自己的家乡，如果能用英文跟外国朋友讨论中国文化","她不但能用中文流利地介绍自己的家乡，因为能用英文跟外国朋友讨论中国文化"],"a":0,"why":"不但…而且 nói hai điểm tốt cùng lúc: giới thiệu bằng tiếng Trung và thảo luận bằng tiếng Anh."},{"q":"“学习一门外语不但需要记住很多单词和语法，而且需要多听多说” nghĩa là gì?","o":["Học ngoại ngữ không những cần nhớ nhiều từ và ngữ pháp mà còn cần nghe nói nhiều","Học ngoại ngữ chỉ cần nhớ từ vựng là đủ","Vì học ngoại ngữ khó nên phải nghe nhiều","Tuy học ngoại ngữ cần nhớ từ nhưng không cần nói"],"a":0,"why":"不但 = không những, 而且 = mà còn: nhớ từ và ngữ pháp, lại còn cần nghe nói nhiều."},{"q":"Điền chỗ trống: 这家饭馆不但菜做得好吃，价格也不贵，___ 服务员的态度还特别好。","o":["如果","而且","但是","因为"],"a":1,"why":"不但…而且: không những món ngon, giá rẻ, mà thái độ phục vụ còn tốt."},{"q":"还 trong 不但…而且还… có tác dụng gì?","o":["Nhấn mạnh vế sau","Phủ định vế trước","Nói điều kiện","Nối hai câu hỏi"],"a":0,"why":"而且还…: 还 nhấn mạnh vế sau mạnh hơn vế trước."},{"q":"Chọn câu viết đúng mẫu 不但…而且还…:","o":["他不但每天早上跑步锻炼身体，而且还坚持写日记，记录自己的进步","他不但每天早上跑步锻炼身体，但是还坚持写日记，记录自己的进步","他不但每天早上跑步锻炼身体，如果还坚持写日记，记录自己的进步","他不但每天早上跑步锻炼身体，因为还坚持写日记，记录自己的进步"],"a":0,"why":"不但…而且还…: không những chạy bộ mà còn kiên trì viết nhật ký."}]},"s4-ruguo":{"hook":"“如果你明天有时间的话，就来我家一起吃晚饭” — nếu… thì… ở chặng này thêm 的话, dùng 那么/否则 và cả câu hỏi điều kiện.","rule":"如果…的话 làm điều kiện mềm hơn (的话 đứng cuối vế điều kiện). Vế sau dùng 就/便/那么 đều được; 否则 = “không thì” đứng đầu vế nói hậu quả xấu. Điều kiện cũng có thể đặt thành câu hỏi.","tip":"的话 đứng cuối vế điều kiện; 否则 đứng đầu vế hậu quả xấu.","examples":["如果你明天有时间的话，就来我家一起吃晚饭，我们可以一边吃一边练习中文。(Rúguǒ nǐ míngtiān yǒu shíjiān de huà, jiù lái wǒ jiā yìqǐ chī wǎnfàn, wǒmen kěyǐ yìbiān chī yìbiān liànxí Zhōngwén.) — Nếu ngày mai bạn có thời gian thì đến nhà tôi ăn tối cùng nhau, chúng ta vừa ăn vừa luyện tiếng Trung.","如果已经下雨了，就不要骑自行车去学校了，不然衣服会淋湿，还可能感冒。(Rúguǒ yǐjīng xià yǔ le, jiù búyào qí zìxíngchē qù xuéxiào le, bùrán yīfu huì lín shī, hái kěnéng gǎnmào.) — Nếu đã mưa rồi thì đừng đạp xe đi học nữa, không thì quần áo sẽ ướt, còn có thể bị cảm.","如果你想把中文说得更流利，那么每天至少要跟别人说半个小时，不要只看书不说话。(Rúguǒ nǐ xiǎng bǎ Zhōngwén shuō de gèng liúlì, nàme měitiān zhìshǎo yào gēn biéren shuō bàn gè xiǎoshí, búyào zhǐ kàn shū bù shuōhuà.) — Nếu bạn muốn nói tiếng Trung lưu loát hơn thì mỗi ngày ít nhất phải nói với người khác nửa tiếng, đừng chỉ đọc sách mà không nói.","如果考试的时候遇到不会的题，你会怎么办？先做会的题，还是马上问老师？(Rúguǒ kǎoshì de shíhou yùdào bú huì de tí, nǐ huì zěnme bàn? Xiān zuò huì de tí, háishi mǎshàng wèn lǎoshī?) — Nếu lúc thi gặp câu không biết làm thì bạn sẽ làm sao? Làm câu biết trước, hay hỏi thầy ngay?"],"quiz":[{"q":"Điền chỗ trống: 如果你明天有时间___，就来我家一起吃晚饭。","o":["的话","的时候","以后","以前"],"a":0,"why":"如果…的话: 的话 đứng cuối vế điều kiện, làm điều kiện mềm hơn."},{"q":"否则 nghĩa là gì?","o":["Không thì","Vì vậy","Tuy nhiên","Không những"],"a":0,"why":"否则 = không thì, dùng để nói hậu quả xấu nếu điều kiện không xảy ra."},{"q":"Câu nào dùng 如果…那么 đúng?","o":["如果你想把中文说得更流利，那么每天至少要跟别人说半个小时","如果你想把中文说得更流利，但是每天至少要跟别人说半个小时","如果你想把中文说得更流利，而且每天至少要跟别人说半个小时","如果你想把中文说得更流利，因为每天至少要跟别人说半个小时"],"a":0,"why":"如果…那么: nếu muốn nói lưu loát hơn thì mỗi ngày phải nói nửa tiếng."},{"q":"Điền chỗ trống: 如果已经下雨了，___ 不要骑自行车去学校了，不然衣服会淋湿。","o":["如果","就","而且","但是"],"a":1,"why":"如果…就: nếu đã mưa rồi thì đừng đạp xe đi học nữa."},{"q":"“如果考试的时候遇到不会的题，你会怎么办？” là loại câu gì?","o":["Câu hỏi điều kiện","Câu phủ định","Câu cảm thán","Câu mệnh lệnh"],"a":0,"why":"如果…怎么办: đặt điều kiện rồi hỏi sẽ làm sao."},{"q":"Chọn câu viết đúng mẫu 如果…就 với điều kiện đã hoàn thành:","o":["如果已经下雨了，就不要骑自行车去学校了","如果已经下雨了，但是不要骑自行车去学校了","如果已经下雨了，而且不要骑自行车去学校了","如果已经下雨了，因为不要骑自行车去学校了"],"a":0,"why":"如果已经…就…: nếu đã mưa rồi thì đừng đạp xe nữa."}]},"s4-ba":{"hook":"“昨天晚上我没把作业做完” — tối qua chưa làm xong bài tập: 把 ở chặng này có phủ định, có 给 người nhận, có bổ ngữ 得 và câu dài có thời gian.","rule":"Phủ định việc đã qua dùng 没把… (không dùng 不把 cho việc đã xảy ra). 把…给… đưa vật cho ai (给 + người sau 把 + vật). 把 + vật + động từ + 得 + mức độ. Câu dài thêm thời gian/địa điểm trước 把.","tip":"Chưa làm xong việc đã qua thì nói 没把…做完; muốn nói “đưa cho ai” thì thêm 给 + người sau 把 + vật.","examples":["昨天晚上我没把作业做完，今天早上只好早点儿起床，抓紧时间补上。(Zuótiān wǎnshang wǒ méi bǎ zuòyè zuò wán, jīntiān zǎoshang zhǐhǎo zǎo diǎnr qǐchuáng, zhuājǐn shíjiān bǔ shang.) — Tối qua tôi chưa làm xong bài tập, sáng nay đành dậy sớm, tranh thủ thời gian làm bù.","请你把这本书给坐在前面的那个同学，他刚才一直在找这本书。(Qǐng nǐ bǎ zhè běn shū gěi zuò zài qiánmian de nà gè tóngxué, tā gāngcái yìzhí zài zhǎo zhè běn shū.) — Nhờ bạn đưa cuốn sách này cho bạn ngồi phía trước, bạn ấy vừa nãy vẫn đang tìm cuốn sách này.","老师把这个故事讲得非常生动，全班同学都听得入了迷，连下课铃响了都没注意到。(Lǎoshī bǎ zhège gùshi jiǎng de fēicháng shēngdòng, quán bān tóngxué dōu tīng de rù le mí, lián xiàkè líng xiǎng le dōu méi zhùyì dào.) — Cô giáo kể câu chuyện này rất sinh động, cả lớp nghe mê mẩn, đến chuông hết giờ reo cũng không để ý.","妈妈每天早上都把早饭做好放在桌子上，然后才叫我们起床吃饭。(Māma měitiān zǎoshang dōu bǎ zǎofàn zuò hǎo fàng zài zhuōzi shang, ránhòu cái jiào wǒmen qǐchuáng chīfàn.) — Mỗi sáng mẹ đều làm xong bữa sáng đặt lên bàn, rồi mới gọi chúng tôi dậy ăn."],"quiz":[{"q":"Điền chỗ trống: 昨天晚上我___把作业做完，今天早上只好早点儿起床。","o":["没","把","在","给"],"a":0,"why":"Phủ định việc đã qua dùng 没把…: tối qua chưa làm xong bài tập."},{"q":"Câu nào dùng 把…给… đúng?","o":["请你把这本书给坐在前面的那个同学","请你把这本书在坐在前面的那个同学","请你给这本书把坐在前面的那个同学","请你把坐在前面的那个同学这本书"],"a":0,"why":"把 + 这本书 + 给 + 同学: đưa sách cho bạn ngồi phía trước."},{"q":"“老师把这个故事讲得非常生动” — 得 ở đây chỉ gì?","o":["Mức độ sinh động của việc kể","Phương hướng của câu chuyện","Thời gian kể chuyện","Người nghe chuyện"],"a":0,"why":"讲得非常生动: 得 + mức độ — kể rất sinh động."},{"q":"Điền chỗ trống: 妈妈每天早上都把早饭做好___桌子上，然后才叫我们起床。","o":["放在","在放","给放","得放"],"a":0,"why":"把早饭做好放在桌子上: làm xong bữa sáng rồi đặt lên bàn."},{"q":"Vì sao câu “我把书放” là sai?","o":["Vì sau động từ thiếu thành phần kết quả hoặc phương hướng","Vì câu thiếu chữ 把","Vì câu thiếu chủ ngữ","Vì câu thiếu đồ vật"],"a":0,"why":"Câu 把: động từ không đứng trơ một mình, phải có thêm như 在桌子上."},{"q":"Câu nào nói việc tối qua CHƯA làm xong bằng 把?","o":["昨天晚上我没把作业做完","昨天晚上我不把作业做完","昨天晚上我把作业没做完","昨天晚上我把没作业做完"],"a":0,"why":"Việc đã qua chưa xong dùng 没把…: tối qua chưa làm xong bài tập."}]},"s4-bei":{"hook":"“他的钱包去年在地铁上被小偷偷过一次” — ví từng bị trộm một lần: 被 ở chặng này có kinh nghiệm 过, có 是…被…的 nói mục đích, có khoảng thời gian và cả cách nói văn nói “bị lừa”.","rule":"被…过… nói kinh nghiệm đã từng bị. 是…被…的 nói mục đích/cách thức (是 trước 被, 的 cuối câu). Sau động từ có thể thêm khoảng thời gian (批评了一个小时). Văn nói dùng 被骗/被偷 nói việc không may.","tip":"Muốn nói “từng bị” thì thêm 过 sau động từ; muốn nói mục đích thì dùng 是…被…的.","examples":["他的钱包去年在地铁上被小偷偷过一次，从那以后他坐车的时候总是特别小心。(Tā de qiánbāo qùnián zài dìtiě shang bèi xiǎotōu tōu guò yí cì, cóng nà yǐhòu tā zuò chē de shíhou zǒngshì tèbié xiǎoxīn.) — Ví của anh ấy năm ngoái trên tàu điện ngầm từng bị trộm lấy một lần, từ đó mỗi khi đi xe anh ấy luôn đặc biệt cẩn thận.","这封信是被妈妈特意放在桌子上的，怕我早上出门的时候忘记带走。(Zhè fēng xìn shì bèi māma tèyì fàng zài zhuōzi shang de, pà wǒ zǎoshang chūmén de shíhou wàngjì dài zǒu.) — Lá thư này là mẹ cố ý đặt lên bàn, sợ sáng tôi ra khỏi nhà quên mang theo.","他被老师批评了整整一个小时，出来的时候脸都红了，一句话也不敢说。(Tā bèi lǎoshī pīpíng le zhěngzhěng yí gè xiǎoshí, chūlai de shíhou liǎn dōu hóng le, yí jù huà yě bù gǎn shuō.) — Anh ấy bị thầy phê bình suốt cả một tiếng, lúc đi ra mặt đỏ bừng, một câu cũng không dám nói.","网上卖的东西太便宜了要小心，很多人就是这样被骗了钱，还不知道找谁去要回来。(Wǎng shang mài de dōngxi tài piányi le yào xiǎoxīn, hěn duō rén jiùshì zhèyàng bèi piàn le qián, hái bù zhīdào zhǎo shéi qù yào huílai.) — Đồ bán trên mạng rẻ quá thì phải cẩn thận, nhiều người cứ thế bị lừa mất tiền, còn không biết tìm ai đòi lại."],"quiz":[{"q":"Điền chỗ trống: 他的钱包去年在地铁上被小偷偷___一次，从那以后他坐车的时候总是特别小心。","o":["过","了","着","的"],"a":0,"why":"被…过… nói kinh nghiệm đã từng bị: ví từng bị trộm một lần."},{"q":"Câu nào dùng 是…被…的 nói mục đích đúng?","o":["这封信是被妈妈特意放在桌子上的","这封信是妈妈特意放在桌子上的被","这封信被是妈妈特意放在桌子上的","这封信妈妈是被特意放在桌子上的"],"a":0,"why":"是…被…的: 是 trước 被, 的 cuối câu — thư là mẹ cố ý đặt lên bàn."},{"q":"“他被老师批评了整整一个小时” — 一个小时 chỉ gì?","o":["Khoảng thời gian bị phê bình","Người phê bình","Lý do bị phê bình","Địa điểm bị phê bình"],"a":0,"why":"批评了一个小时: khoảng thời gian bị phê bình là cả một tiếng."},{"q":"Điền chỗ trống: 网上卖的东西太便宜了要小心，很多人就是这样被___了钱。","o":["骗","偷","拿","找"],"a":0,"why":"被骗了钱: bị lừa mất tiền (cách nói văn nói)."},{"q":"Trong câu chữ 被, đồ vật chịu tác động đứng ở đâu?","o":["Trước chữ 被","Sau chữ 被","Cuối câu","Thay cho động từ"],"a":0,"why":"Đồ vật chịu tác động đứng trước 被, người làm ra việc (nếu có) đứng sau 被."},{"q":"Chọn câu chữ 被 viết đúng với kinh nghiệm:","o":["他的钱包去年在地铁上被小偷偷过一次","他的钱包去年在地铁上被小偷偷了一次过","他的钱包去年在地铁上过被小偷偷了一次","他的钱包去年在地铁上被过小偷偷了一次"],"a":0,"why":"被…偷过一次: từng bị trộm một lần — 过 đứng sau động từ."}]}};
+  (ZH_GRAMMAR || []).forEach(function (g) {
+    if (NEW[g.id]) { g.hook = NEW[g.id].hook; g.rule = NEW[g.id].rule; g.tip = NEW[g.id].tip; g.examples = NEW[g.id].examples; g.quiz = NEW[g.id].quiz; }
+  });
+})();
+/* DOT trung 28/10/2026 (T-V9): can lai ty le MC o Doc band thap — chuyen 34
+   cau MC thanh TFNG (dung/sai/khong co thong tin) co kiem chung theo bai doc:
+   TRUE tu dap an dung, FALSE tu phuong an sai ma bai bac bo, NOT GIVEN tu y bai
+   khong nhac toi. Khong doi so cau/bai, khong doi dap an cac cau con lai.
+   Tim cau theo dung text cau hoi (khong theo chi so) de khoi lech khi kho doi. */
+(function () {
+  function repRead(passIdx, oldQ, tfng) {
+    var p = CONTENT.reading && CONTENT.reading[passIdx];
+    if (!p || !p.questions) return;
+    for (var j = 0; j < p.questions.length; j++) {
+      if (p.questions[j].q === oldQ) { p.questions[j] = tfng; return; }
+    }
+  }
+  repRead(24, "How many people are there in Lan's family?", {"type":"TFNG","q":"There are five people in Lan's family.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “There are four people in my family.” — gia đình Lan có 4 người, không phải 5."});
+  repRead(24, "What do Lan and her family do in the evening?", {"type":"TFNG","q":"Lan's family has a dog.","options":["True","False","Not Given"],"a":2,"why":"Bài chỉ nói gia đình có 4 người: cha, mẹ, Lan và Minh — không nhắc tới chó."});
+  repRead(39, "How many students are there in Nam's school?", {"type":"TFNG","q":"There are 30 students in Nam's school.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “There are 200 students” — 30 là số bàn trong lớp học của Nam, không phải số học sinh toàn trường."});
+  repRead(39, "Why does Nam like maths?", {"type":"TFNG","q":"Nam likes maths because his teacher is kind.","options":["True","False","Not Given"],"a":2,"why":"Bài nói “because I love numbers” — không nhắc tới thầy cô có tốt bụng hay không."});
+  repRead(25, "What time does Nam get up?", {"type":"TFNG","q":"Nam gets up at seven o'clock every day.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “I get up at six o'clock every day.” — Nam dậy lúc 6 giờ, 7 giờ là giờ đi học."});
+  repRead(25, "What does Nam do in the evening?", {"type":"TFNG","q":"Nam does his homework in the evening.","options":["True","False","Not Given"],"a":0,"why":"Trong bài: “In the evening, I do my homework.” — buổi tối Nam làm bài tập."});
+  repRead(40, "What can Milo do?", {"type":"TFNG","q":"Milo can sing songs.","options":["True","False","Not Given"],"a":2,"why":"Bài chỉ nói Milo chạy nhanh, bắt bóng và bơi — không nhắc tới việc hát. (Người hát không hay là Lucy.)"});
+  repRead(40, "What can Lucy NOT do well?", {"type":"TFNG","q":"Lucy can sing very well.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “she cannot sing very well” — Lucy hát không hay."});
+  repRead(63, "What is the main idea of the whole text?", {"type":"TFNG","q":"Skimming means reading every word carefully.","options":["True","False","Not Given"],"a":1,"why":"Đoạn 1: “When you skim, you do not read every word.” — đọc lướt là đọc nhanh lấy ý chính, không phải đọc kỹ từng chữ."});
+  repRead(63, "What is the main idea of paragraph 4?", {"type":"TFNG","q":"Skimming saves time when you only need the main idea.","options":["True","False","Not Given"],"a":0,"why":"Đoạn 4: “skimming saves time and helps you understand a text quickly” khi chỉ cần ý chính."});
+  repRead(26, "What do we buy at the market?", {"type":"TFNG","q":"They buy meat and fish at the market.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “We buy vegetables and fruit.” — họ mua rau và trái cây, không mua thịt cá."});
+  repRead(26, "How much do the tomatoes cost?", {"type":"TFNG","q":"The tomatoes cost fifteen thousand dong.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: cà chua 10 nghìn, chuối mới 15 nghìn."});
+  repRead(41, "What was the weather like yesterday morning?", {"type":"TFNG","q":"Yesterday morning was sunny and hot.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “the sky was dark and the wind was strong” — trời tối và gió mạnh, không nắng nóng."});
+  repRead(41, "What was the little boy doing?", {"type":"TFNG","q":"The little boy was running to school.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “A little boy was jumping in the water and laughing.” — cậu bé đang nhảy trong nước, không phải chạy tới trường."});
+  repRead(65, "How much is a ticket for an adult?", {"type":"TFNG","q":"A ticket for an adult costs 10,000 dong.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: vé người lớn 20.000 đồng; 10.000 đồng là giá nước ép của sạp Mr Tuan."});
+  repRead(65, "Who sings at the music show at the end of the festival?", {"type":"TFNG","q":"Mai Anh sings at the music show at the end of the festival.","options":["True","False","Not Given"],"a":0,"why":"Trong bài: “The singer is Mai Anh” trong chương trình ca nhạc cuối lễ hội."});
+  repRead(42, "How long was the journey?", {"type":"TFNG","q":"The journey to the farm took three hours.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “The journey took two hours.”"});
+  repRead(42, "What did the students give to the goats?", {"type":"TFNG","q":"The students gave bread to the goats.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “gave grass to the goats” — cho dê ăn cỏ, không phải bánh mì."});
+  repRead(42, "How were the strawberries on the farm?", {"type":"TFNG","q":"The strawberries on the farm were redder and sweeter than the ones in the shops.","options":["True","False","Not Given"],"a":0,"why":"Trong bài: “redder and sweeter than the ones in the shops”."});
+  repRead(42, "When did they arrive home?", {"type":"TFNG","q":"The class arrived home at 9 o'clock in the evening.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “We arrived home at 6 o'clock in the evening.”"});
+  repRead(43, "Who is going to teach Tom?", {"type":"TFNG","q":"Tom's teacher is going to teach him to swim.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “My cousin is a good swimmer, and he is going to teach me” — người dạy là anh họ, không phải thầy giáo."});
+  repRead(43, "What are Tom and his grandfather going to plant?", {"type":"TFNG","q":"Tom and his grandfather are going to plant flowers and beans.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “plant tomatoes and beans” — trồng cà chua và đậu, không phải hoa."});
+  repRead(43, "What is Tom going to do in the evenings?", {"type":"TFNG","q":"Tom is going to read two English books in the evenings.","options":["True","False","Not Given"],"a":0,"why":"Trong bài: “In the evenings, Tom is going to read two English books and write about them”."});
+  repRead(43, "How long is the family going to stay near the beach?", {"type":"TFNG","q":"The family is going to stay near the beach for one week.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “stay in a small hotel near the beach for three days” — ở 3 ngày, không phải 1 tuần."});
+  repRead(27, "When will the picnic take place?", {"type":"TFNG","q":"The picnic will take place on Sunday morning.","options":["True","False","Not Given"],"a":1,"why":"Thư mời: picnic “this Saturday afternoon” — chiều thứ Bảy, không phải sáng Chủ nhật."});
+  repRead(28, "Why is Thanh Ha writing this email?", {"type":"TFNG","q":"Thanh Ha is writing to complain about a course.","options":["True","False","Not Given"],"a":1,"why":"Thư mở đầu: “I am writing to ask for information about your English course” — hỏi thông tin, không phải phàn nàn."});
+  repRead(94, "How much is the rent a month?", {"type":"TFNG","q":"The rent is one million dong a month.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “The rent is two million dong a month.”"});
+  repRead(95, "Why did some plants grow slowly at first?", {"type":"TFNG","q":"Some plants grew slowly at first because nobody watered them.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: cây chậm lớn “because the soil was dry” — nhóm tưới nước mỗi sáng, đất khô mới là lý do."});
+  repRead(96, "Which bus route did they take?", {"type":"TFNG","q":"They took bus route 12 across the city.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “We boarded route 32 at seven in the morning.”"});
+  repRead(29, "When does the library open on Saturdays?", {"type":"TFNG","q":"The library opens all day on Saturdays.","options":["True","False","Not Given"],"a":1,"why":"Thông báo: thứ Bảy thư viện chỉ mở buổi sáng “from 8 a.m. to 11 a.m.”"});
+  repRead(44, "How many stalls are there in the market?", {"type":"TFNG","q":"There are exactly one hundred stalls in the market.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “More than eighty stalls” — hơn 80 sạp, không nói đúng 100."});
+  repRead(98, "What goes in the blue bin?", {"type":"TFNG","q":"Paper and cardboard go in the blue bin.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: thùng xanh dương đựng “plastic and cans”; giấy và bìa đựng thùng xanh lá."});
+  repRead(99, "What does the team do once a month?", {"type":"TFNG","q":"Once a month, the team buys new uniforms.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: mỗi tháng một lần đội “collect money for poor children in the ward” — đội không có đồng phục."});
+  repRead(100, "When does Minh work?", {"type":"TFNG","q":"Minh works every evening, from six to ten.","options":["True","False","Not Given"],"a":1,"why":"Trong bài: “I work three evenings a week, from five to nine.”"});
+})();
+/* DOT trung 28/10/2026 (T-V6): tu band thap vuot cap — thay 20 tu tai cho bang
+   tu phu hop band 2,0-2,5 (giu nguyen vi tri, du 6 truong, IPA Anh-Anh) va DOI
+   THE CU nguyen ven len bo band cao (them vao CUOI bo dich, khong doi vi tri the
+   cu trong bo dich). Guard theo tu cu + kiem tra bo dich chua co tu cu nen chay
+   lai khong thay lan 2, khong gan trung. Tong the 2626 -> 2646; so bo van 131. */
+(function () {
+  function repVocab(setIdx, pos, oldW, nw) {
+    var s = CONTENT.vocab && CONTENT.vocab[setIdx];
+    if (!s || !s.cards[pos] || s.cards[pos].w !== oldW) return null;
+    var old = {};
+    ["w", "ipa", "vi", "col", "ex", "exv"].forEach(function (k) { old[k] = s.cards[pos][k]; });
+    Object.assign(s.cards[pos], nw);
+    return old;
+  }
+  function pushOld(setIdx, old) {
+    if (!old) return;
+    var d = CONTENT.vocab && CONTENT.vocab[setIdx];
+    if (!d) return;
+    if (d.cards.some(function (c) { return c.w === old.w; })) return;
+    d.cards.push({ w: old.w, ipa: old.ipa, vi: old.vi, col: old.col, ex: old.ex, exv: old.exv });
+  }
+  var old;
+  old = repVocab(95, 15, "flannel", {"w":"towel","ipa":"/ˈtaʊəl/","vi":"cái khăn","col":"a clean towel","ex":"She dries her hands with a clean towel.","exv":"Cô ấy lau tay bằng một chiếc khăn sạch."});
+    pushOld(114, old);
+  old = repVocab(95, 16, "soap", {"w":"tray","ipa":"/treɪ/","vi":"cái khay","col":"a food tray","ex":"She puts the cups on a tray.","exv":"Cô ấy đặt các cốc lên khay."});
+    pushOld(114, old);
+  old = repVocab(96, 1, "soak", {"w":"wash","ipa":"/wɒʃ/","vi":"rửa","col":"wash your hands","ex":"Wash your hands before breakfast.","exv":"Rửa tay trước bữa sáng."});
+    pushOld(115, old);
+  old = repVocab(96, 16, "tram", {"w":"bus","ipa":"/bʌs/","vi":"xe buýt","col":"by bus","ex":"We go to school by bus.","exv":"Chúng tôi đi học bằng xe buýt."});
+    pushOld(120, old);
+  old = repVocab(97, 2, "buddy", {"w":"classmate","ipa":"/ˈklɑːsmeɪt/","vi":"bạn cùng lớp","col":"my classmate","ex":"My classmate sits next to me.","exv":"Bạn cùng lớp ngồi cạnh tôi."});
+    pushOld(39, old);
+  old = repVocab(97, 18, "hum", {"w":"chat","ipa":"/tʃæt/","vi":"trò chuyện","col":"chat with friends","ex":"We chat with friends after class.","exv":"Chúng tôi trò chuyện với bạn bè sau giờ học."});
+    pushOld(48, old);
+  old = repVocab(97, 19, "doodle", {"w":"lesson","ipa":"/ˈlesn/","vi":"bài học","col":"a new lesson","ex":"Today we learn a new lesson.","exv":"Hôm nay chúng tôi học một bài học mới."});
+    pushOld(48, old);
+  old = repVocab(100, 17, "talon", {"w":"paw","ipa":"/pɔː/","vi":"bàn chân (thú)","col":"the dog's paw","ex":"The dog hurt its paw.","exv":"Con chó bị đau chân."});
+    pushOld(14, old);
+  old = repVocab(101, 0, "sanitise", {"w":"clean","ipa":"/kliːn/","vi":"dọn sạch","col":"clean the room","ex":"Mum asks me to clean the room.","exv":"Mẹ nhờ tôi dọn sạch phòng."});
+    pushOld(56, old);
+  old = repVocab(101, 2, "spotless", {"w":"tidy","ipa":"/ˈtaɪdi/","vi":"gọn gàng","col":"a tidy room","ex":"Keep your room tidy.","exv":"Giữ phòng của bạn gọn gàng."});
+    pushOld(56, old);
+  old = repVocab(101, 6, "groom", {"w":"brush","ipa":"/brʌʃ/","vi":"chải (lông)","col":"brush the dog","ex":"She brushes the dog every morning.","exv":"Cô ấy chải lông cho chó mỗi sáng."});
+    pushOld(56, old);
+  old = repVocab(102, 0, "sweltering", {"w":"warm","ipa":"/wɔːm/","vi":"ấm","col":"warm weather","ex":"It is warm today.","exv":"Hôm nay trời ấm."});
+    pushOld(49, old);
+  old = repVocab(102, 2, "murky", {"w":"cloudy","ipa":"/ˈklaʊdi/","vi":"nhiều mây","col":"a cloudy day","ex":"It is a cloudy day.","exv":"Hôm nay trời nhiều mây."});
+    pushOld(49, old);
+  old = repVocab(102, 7, "tempest", {"w":"storm","ipa":"/stɔːm/","vi":"cơn bão","col":"a big storm","ex":"A big storm is coming.","exv":"Một cơn bão lớn đang đến."});
+    pushOld(49, old);
+  old = repVocab(102, 19, "gale", {"w":"wind","ipa":"/wɪnd/","vi":"gió","col":"strong wind","ex":"There is a strong wind today.","exv":"Hôm nay gió mạnh."});
+    pushOld(49, old);
+  old = repVocab(103, 19, "crawl", {"w":"ride","ipa":"/raɪd/","vi":"đi (xe)","col":"ride a bike","ex":"I ride a bike to school.","exv":"Tôi đạp xe đi học."});
+    pushOld(31, old);
+  old = repVocab(106, 0, "migraine", {"w":"headache","ipa":"/ˈhedeɪk/","vi":"đau đầu","col":"a bad headache","ex":"I have a bad headache today.","exv":"Hôm nay tôi bị đau đầu nặng."});
+    pushOld(79, old);
+  old = repVocab(106, 4, "tremble", {"w":"cough","ipa":"/kɒf/","vi":"ho","col":"a bad cough","ex":"He has a bad cough.","exv":"Anh ấy bị ho nặng."});
+    pushOld(79, old);
+  old = repVocab(106, 8, "physician", {"w":"doctor","ipa":"/ˈdɒktə/","vi":"bác sĩ","col":"see a doctor","ex":"You should see a doctor.","exv":"Bạn nên đi gặp bác sĩ."});
+    pushOld(85, old);
+  old = repVocab(106, 9, "orderly", {"w":"nurse","ipa":"/nɜːs/","vi":"y tá","col":"the nurse","ex":"The nurse checks my temperature.","exv":"Y tá đo nhiệt độ cho tôi."});
+    pushOld(85, old);
+})();
+/* DOT trung 28/10/2026 (T-V9b): quet nang why len khuon U7 cho cac cau Doc/Nghe
+   CHUA co whyU7 — gom 34 cau TFNG moi chuyen o dot nay (patch Doc o tren chay
+   SAU khoi U7/DOT 3 nen chua duoc nang) va 15 cau cu (INF/MC) them sau DOT 3
+   nen cung chua duoc nang. Dung dung logic DOT 3 (whyOrig giu why goc, why moi
+   dang "Vi du: ... Vi vay dap an ... dung. Cach lam: ..."), khong sua noi dung
+   cau hoi/dap an. Cau nao khong co why thi bo qua nhu DOT 3. */
+(function () {
+  function u7Method(q, listen) {
+    var t = q.type || "";
+    if (t === "TFNG" || t === "TF" || t === "YNNG") return listen ? "nghe kỹ rồi đối chiếu từng ý trong câu hỏi với những gì nghe được. Nghe đúng như vậy thì câu này đúng." : "đối chiếu từng ý trong câu hỏi với đúng câu trong bài. Bài nói đúng như vậy thì câu này đúng.";
+    if (q.options || q.o) return listen ? "nghe kỹ câu hỏi rồi tìm chỗ trong đoạn nghe nói giống đáp án. Đáp án nghe quen nhưng đoạn nghe không nói thì không chọn." : "đọc kỹ câu hỏi rồi tìm đúng câu trong bài nói giống đáp án. Đáp án nghe quen nhưng bài không nói thì không chọn.";
+    return listen ? "tìm chỗ trong đoạn nghe nói tới ý này rồi điền đúng từ trong đoạn nghe, đừng điền từ mình đoán." : "tìm đúng chỗ trong bài nói tới ý này rồi điền đúng từ trong bài, đừng điền từ mình đoán.";
+  }
+  function u7Answer(q) {
+    var opts = q.options || q.o;
+    if (opts && opts[q.a] !== undefined) return String(opts[q.a]);
+    if (typeof q.answer === "string") return q.answer.split("|")[0];
+    if (typeof q.a === "string") return q.a;
+    return "";
+  }
+  function u7Clean(s) {
+    s = String(s || "").replace(/^Đoạn\s*\d+\s*:\s*/, "");
+    s = s.replace(/→/g, "").replace(/\s+/g, " ").trim();
+    s = s.replace(/[.\"”\s]+$/, "");
+    return s;
+  }
+  function u7Upgrade(list, listen) {
+    (list || []).forEach(function (b) {
+      (b.questions || []).forEach(function (q) {
+        if (!q || q.whyU7 === true) return;
+        var fact = u7Clean(q.why);
+        if (!fact) return;
+        var ans = u7Clean(u7Answer(q));
+        q.whyOrig = q.why;
+        q.why = "Ví dụ: " + fact + ". Vì vậy đáp án “" + ans + "” đúng. Cách làm: " + u7Method(q, listen);
+        q.whyU7 = true;
+      });
+    });
+  }
+  try {
+    if (typeof CONTENT !== "undefined" && CONTENT) {
+      u7Upgrade(CONTENT.reading);
+      u7Upgrade(CONTENT.listeningPlus, true);
     }
   } catch (e) {}
 })();
