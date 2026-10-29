@@ -1468,7 +1468,7 @@ function viewHome(app) {
       html += '<button class="path-node ' + stt + '" data-path-rstep="' + esc(info.band) + ':' + si + '"><span class="dotwrap"><span class="dot">' + icon2 + '</span></span><span><span class="pn-title">' + esc(st.title) + '</span><br><span class="pn-type">' + esc(st.type) + '</span><br><span class="pn-st">' + stTxt2 + '</span></span></button>';
     });
   }
-  html += '</div><p><button class="dimlink" id="pathAllLink">Xem toàn bộ lộ trình 13 chương →</button></p></section>';
+  html += '</div></section>';
   html += u8DailyHTML();
   html += '<details class="card" id="homeMore"><summary><b>Xem thêm</b></summary>'
     + '<p><button class="btn" id="u7PlayNow">🎮 Chơi thử ngay</button></p>'
@@ -1483,7 +1483,6 @@ function viewHome(app) {
   var esb = $("#entryStartBtn"); if (esb) esb.onclick = function () { openLesson({ type: "entryPlace" }); };
   var erl = $("#entryRedoLink"); if (erl) erl.onclick = function () { openLesson({ type: "entryPlace" }); };
   var spl = $("#statProgressLink"); if (spl) spl.onclick = function () { go("mine"); };
-  var pal = $("#pathAllLink"); if (pal) pal.onclick = function () { go("roadmap"); };
   $$("#homePath [data-path-step]").forEach(function (b) { b.onclick = function () { openStep(stepById(b.dataset.pathStep)); }; });
   $$("#homePath [data-path-test]").forEach(function (b) { b.onclick = function () { openStep(stepById("test")); }; });
   $$("#homePath [data-path-rstep]").forEach(function (b) { b.onclick = function () { var parts = b.dataset.pathRstep.split(":"); var st = rbChSteps(parts[0])[+parts[1]]; if (st) openRoadmapStepLesson(st.lesson); }; });
@@ -1641,10 +1640,6 @@ function viewRoadmap(app) {
   var done = doneLearnCount(), total = learningSteps().length;
   var html = trackSwitchHTML() + '<h2>Bản đồ</h2>';
   html += '<section class="card" id="myPathLink"><h3>Lộ trình riêng của bạn</h3><button class="btn" id="myPathGo">Mở lộ trình riêng</button></section>';
-  html += '<section class="card"><h3>Sổ tay chương 1</h3><div class="row"><button class="btn" data-gbopen="ch1">📖 Mở sổ tay chương</button></div><details id="ch1Guidebook"><summary><b>Xem chi tiết sổ tay</b></summary><p><b>Mục tiêu:</b> ' + esc(RB_CH1_GUIDEBOOK.goal) + '</p>'
-    + '<p><b>Ngữ pháp chính:</b> ' + esc(RB_CH1_GUIDEBOOK.grammar.join(" · ")) + '</p>'
-    + '<p><b>Cụm câu then chốt:</b> ' + esc(RB_CH1_GUIDEBOOK.phrases.join(" · ")) + '</p>'
-    + '<p><b>Lỗi người Việt hay mắc:</b> ' + esc(RB_CH1_GUIDEBOOK.mistakes.join(" · ")) + '</p></details></section>';
   html += '<section class="card"><h3>Chương 1: Chào hỏi và 44 âm — ' + done + '/' + total + ' bước</h3><div id="roadmapBox">';
   var clCur = nextLearnStep(); var clCurIdx = clCur ? stepIdx(clCur.id) : -1;
   RB_CH1_STEPS.forEach(function (s, i) {
@@ -1731,7 +1726,7 @@ function viewRoadmap(app) {
   });
   var gb = $("#gateBtn"); if (gb) gb.onclick = function () { openStep(stepById("test")); };
   $$("[data-gbopen]").forEach(function (btn) { btn.onclick = function () {
-    var t = btn.dataset.gbopen === "ch1" ? document.getElementById("ch1Guidebook") : document.querySelector('[data-cl-gb="' + btn.dataset.gbopen + '"]');
+    var t = document.querySelector('[data-cl-gb="' + btn.dataset.gbopen + '"]');
     if (t) { t.open = true; if (t.scrollIntoView) t.scrollIntoView(); }
   }; });
   var mrB = $("#midReviewBtn"); if (mrB) mrB.onclick = function () { lessonStart = Date.now(); runWrong = []; runFirstTry = {}; openLesson({ type: "midReview" }); };
@@ -2846,7 +2841,7 @@ function authDoResetPassword() {
 function accountCardHTML() {
   var known = Object.keys(state.cards).filter(function (k) { return state.cards[k].box >= 1; }).length;
   var hardN = Object.keys(state.hard).filter(function (k) { return !state.hard[k].done; }).length;
-  var h = '<section class="card" id="accCard"><h3>Tài khoản</h3>';
+  var h = '<section class="card" id="accCard">';
   if (!authState.user) {
     h += '<p>Chưa đăng nhập — đang học ở chế độ khách.</p>'
       + '<p class="mut">Tiến trình khách lưu trên máy này (thẻ đã thuộc: ' + known + ' · mục khó chưa xong: ' + hardN + ' · ' + (state.xp || 0) + ' XP) và không mất khi tắt trang. Đăng nhập để đồng bộ theo tài khoản; tiến trình khách sẽ gộp lên tài khoản (phần tài khoản đã có được giữ nguyên).</p>'
