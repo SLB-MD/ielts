@@ -116,7 +116,6 @@ iframe{width:100%;aspect-ratio:16/9;border:1.5px solid var(--line2);border-radiu
 .path-node .pn-st{font-size:13px}
 .path-node.done .pn-st{color:#147A4E;font-weight:700}
 .path-node.cur .pn-st{color:#8A6100;font-weight:700}
-.tracksw{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tracksw .btn.on{background:#FFC800;border-color:#E0A800}
 body.landing-on #tabBar,body.landing-on #previewBanner,body.landing-on #tutorFloatBtn{display:none}
 .land-grid{display:grid;gap:12px;margin:16px 0}
 @media(min-width:700px){.land-grid{grid-template-columns:1fr 1fr}}
@@ -219,6 +218,7 @@ details>summary:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 <button class="tab" data-tab="mypath">Lộ trình riêng</button>
 <button class="tab" data-tab="practice">Luyện tập</button>
 <button class="tab" data-tab="review">Ôn tập</button>
+<button class="tab" data-tab="native">Giao tiếp bản địa</button>
 <button class="tab" data-tab="mine">Của tôi</button>
 </nav>
 <main id="app"><div class="card"><p>Đang tải bài học…</p></div></main>
@@ -1121,6 +1121,7 @@ function render() {
   else if (curTab === "mypath") viewMyPath(app);
   else if (curTab === "practice") { if (state.track === "zh") viewPracticeZh(app); else if (state.track === "tc") viewPracticeTc(app); else if (state.track === "tp") viewPracticeTp(app); else viewPractice(app); }
   else if (curTab === "review") { if (state.track === "zh") viewReviewZh(app); else if (state.track === "tc") viewReviewTc(app); else if (state.track === "tp") viewReviewTp(app); else viewReview(app); }
+  else if (curTab === "native") viewNative(app);
   else viewMine(app);
   u7PositionUpdate(); updateBottomBar(); wireTrackSwitch();
 }
@@ -1389,7 +1390,7 @@ function zhPositionText() {
     if (p) return base + " · Chặng " + p.stage + " · " + p.done + "/" + p.total + " bước đã xong" + phSeg;
     return base;
   }
-  var tabMap = { home: "Màn chính", roadmap: "Bản đồ", mypath: "Lộ trình riêng", practice: "Luyện tập", review: "Ôn tập", mine: "Của tôi" };
+  var tabMap = { home: "Màn chính", roadmap: "Bản đồ", mypath: "Lộ trình riêng", practice: "Luyện tập", review: "Ôn tập", native: "Giao tiếp bản địa", mine: "Của tôi" };
   var cur = zhPositionCurrent();
   if (cur) return "Vị trí: " + (tabMap[curTab] || curTab) + " · Chặng " + cur.stage + " · " + cur.done + "/" + cur.total + " bước đã xong" + phSeg;
   return "Vị trí: " + (tabMap[curTab] || curTab);
@@ -1461,7 +1462,7 @@ function u7PositionText() {
     if (hp && hp.band) return "Vị trí: " + label + " · " + enChapterLabel(hp.band) + " · " + hp.done + "/" + hp.total + " bước đã xong";
     return "Vị trí: " + label;
   }
-  var tabMap = { home: "Màn chính", roadmap: "Bản đồ", mypath: "Lộ trình riêng", practice: "Luyện tập", review: "Ôn tập", mine: "Của tôi" };
+  var tabMap = { home: "Màn chính", roadmap: "Bản đồ", mypath: "Lộ trình riêng", practice: "Luyện tập", review: "Ôn tập", native: "Giao tiếp bản địa", mine: "Của tôi" };
   var hp2 = null; try { hp2 = homePathInfo(); } catch (e) {}
   if (hp2 && hp2.band) return "Vị trí: " + (tabMap[curTab] || curTab) + " · " + enChapterLabel(hp2.band) + " · " + hp2.done + "/" + hp2.total + " bước đã xong";
   return "Vị trí: " + (tabMap[curTab] || curTab);
@@ -1694,7 +1695,7 @@ function personalPathCardHTML() {
    Khach chua dang nhap chi thay loi moi dang nhap + nut sang the Tai khoan,
    khong hien lo trinh rieng cua ai, khong tu bia tien trinh. */
 function viewMyPath(app) {
-  var html = '<h2>Lộ trình riêng</h2>';
+  var html = trackSwitchHTML() + '<h2>Lộ trình riêng</h2>';
   if (typeof authState === "undefined" || !authState.user) {
     html += '<section class="card" id="myPathGuest"><div class="hero-pair"><svg class="dragon sm masc-bob" aria-hidden="true" focusable="false"><use href="#msc-dragon"/></svg><div class="hero-text"><h3>Lộ trình riêng — Cá nhân hóa cực chi tiết</h3></div></div>'
       + '<p class="mut">Lộ trình riêng chỉ mở khi bạn đăng nhập — khách dùng lộ trình ' + (state.track === "zh" ? "6 chặng" : "13 chương") + ' chuẩn ở trang Bản đồ. Đăng nhập ở thẻ Tài khoản để mở lộ trình riêng của bạn.</p>'
@@ -1797,11 +1798,13 @@ function viewRoadmap(app) {
       var lastType = "";
       var rows = "";
       var titleSeen = {};
+      var firstUndone = true;
       chSteps.forEach(function (st, si) {
         if (st.type !== lastType) { rows += '<p style="margin:10px 0 2px"><b>' + esc(st.type) + '</b></p>'; lastType = st.type; }
         titleSeen[st.title] = (titleSeen[st.title] || 0) + 1;
         var suf2 = titleSeen[st.title] > 1 ? ' · phần ' + titleSeen[st.title] : '';
-        rows += '<button class="step-row" data-rstep="' + esc(ch.band) + ':' + si + '"><span><b>' + esc(st.title) + suf2 + (st.familiar ? ' · làm quen' : '') + (st.review ? ' · không tính cổng' : '') + '</b><br><span class="mut">' + esc(st.type) + '</span></span><span class="st">' + (rbStepDone(st) ? "✓" : "→") + '</span></button>';
+        var isNext = firstUndone && !rbStepDone(st); if (isNext) firstUndone = false;
+        rows += '<button class="step-row' + (isNext ? ' cur' : '') + '" data-rstep="' + esc(ch.band) + ':' + si + '"><span><b>' + esc(st.title) + suf2 + (st.familiar ? ' · làm quen' : '') + (st.review ? ' · không tính cổng' : '') + '</b><br><span class="mut">' + esc(st.type) + '</span>' + (isNext ? '<span class="chip cl-flag">Tiếp theo</span>' : '') + '</span><span class="st">' + (rbStepDone(st) ? "✓" : "→") + '</span></button>';
       });
       var missing = rbChMissing(ch.band);
       html += '<details class="ch-steps" data-ch-steps="' + esc(ch.band) + '" style="margin-top:8px"><summary><b>Các bước (' + chSteps.length + ')</b> — bấm để mở</summary><div>' + rows + '</div></details>'
@@ -1830,7 +1833,7 @@ function viewRoadmap(app) {
   });
   html += '<section class="card" id="bkRoadmapCard"><h3>📚 Nội dung mới theo nghiên cứu sách</h3><p class="mut">Nội dung tự soạn của web — xem nguồn trong Cài đặt → Nguồn nội dung.</p><details><summary><b>Xem thêm</b></summary><p class="mut">Lỗi người Việt có ở các chặng từ Band 0 tới Band 6,5; ví dụ đời sống người Việt có ở Band 2,0 tới Band 6,0; sắc thái và phong cách chỉ ở chặng 7,5+ — không đưa xuống chặng thấp hơn. Mở ở tab Luyện tập.</p></details><button class="btn" id="bkRoadmapGo">Mở ở tab Luyện tập</button></section>';
   html += '<section class="card" id="clCanDo"><h3>Trang cấp độ — bạn làm được gì ở mỗi cấp</h3><details><summary><b>Xem năng lực từng cấp</b></summary>' + RB_CHAPTER_MAP.map(function (ch) { return '<p><b>' + esc(ch.band) + ' — ' + esc(ch.title) + ':</b> ' + esc(ch.can.join("; ")) + '</p>'; }).join("") + '</details></section>';
-  html += '<section class="card"><h3>Trò chuyện tự do với AI</h3><details><summary><b>Xem thêm</b></summary><p class="mut">Gõ tay (chỉ gõ chữ) và nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mở ngay qua Luyện tập → Nói.</p></details><div class="row"><button class="btn" id="mapChatType">Mở trò chuyện gõ tay</button><button class="btn" id="mapChatVoice">Mở trò chuyện nói live</button></div></section>';
+  html += '<section class="card"><h3>Trò chuyện tự do với AI</h3><details><summary><b>Xem thêm</b></summary><p class="mut">Nói tự do với AI đã dời sang trang riêng Giao tiếp bản địa (giữa Ôn tập và Của tôi): gõ tay hoặc nói live, không chấm điểm trong lúc nói.</p></details><div class="row"><button class="btn" id="mapToNative">Sang trang Giao tiếp bản địa →</button></div></section>';
   app.innerHTML = html;
   $$("#roadmapBox .step-row[data-step]").forEach(function (btn) {
     btn.onclick = function () { openStep(stepById(btn.dataset.step)); };
@@ -1861,8 +1864,7 @@ function viewRoadmap(app) {
   $$("[data-readeasy]").forEach(function (btn) {
     btn.onclick = function () { lessonStart = Date.now(); runWrong = []; runFirstTry = {}; openLesson({ type: "skillReadEasy", idx: +btn.dataset.readeasy }); };
   });
-  var mct = $("#mapChatType"); if (mct) mct.onclick = function () { openLesson({ type: "chat", chatMode: "type" }); };
-  var mcv = $("#mapChatVoice"); if (mcv) mcv.onclick = function () { openLesson({ type: "chat", chatMode: "voice" }); };
+  var mtn = $("#mapToNative"); if (mtn) mtn.onclick = function () { go("native"); };
   var mpg = $("#myPathGo"); if (mpg) mpg.onclick = function () { go("mypath"); };
   var bkg = $("#bkRoadmapGo"); if (bkg) bkg.onclick = function () { go("practice"); };
   $$("#skippedList .step-row[data-skip]").forEach(function (btn) {
@@ -2010,7 +2012,7 @@ function viewPractice(app) {
   html += '<details class="card" id="practiceGrpSpeak"><summary><b>🗣️ Nói — ' + c.speakTotal + ' kịch bản (Part 1: ' + c.speakP1 + ' · Part 2: ' + c.speakP2 + ' · Part 3: ' + c.speakP3 + ') + ' + c.roleplay + ' tình huống nhập vai' + nextTxt(speakNextItems) + '</b></summary>'
     + '<details style="margin-top:8px"><summary><b>Xem thêm</b></summary>'
     + '<p class="mut">Mỗi kịch bản: đọc hội thoại mẫu (giám khảo – thí sinh, kèm tiếng Việt), nghe từng câu, rồi làm câu hỏi từ vựng và cấu trúc rút ra từ chính bài mẫu. Nói Part 3 là thảo luận mở rộng, khó hơn Part 1. Part 3 chính thức từ Band 4,5; các bài Part 3 ở band thấp là “làm quen”, không tính vào cổng 80%.</p>'
-    + '<p class="mut">Trò chuyện tự do với AI: gõ tay (chỉ gõ chữ) hoặc nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Mô hình nguồn chính là AI trò chuyện liên tục (không phải người thật). Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p></details>';
+    + '<p class="mut">Muốn nói tự do với AI? Sang trang Giao tiếp bản địa (giữa Ôn tập và Của tôi): gõ tay hoặc nói live, không chấm điểm trong lúc nói.</p></details>';
   [1, 2, 3].forEach(function (p) {
     var idxs = []; CONTENT.speaking.forEach(function (s, i) { if (s.partNum === p && s.part !== "Roleplay") idxs.push(i); });
     idxs.sort(function (a, b) { var ba = bandSortVal(CONTENT.speaking[a].band), bb = bandSortVal(CONTENT.speaking[b].band); return ba - bb || a - b; });
@@ -2021,7 +2023,7 @@ function viewPractice(app) {
   html += '<details style="margin-top:8px"><summary><b>Nhập vai · ' + c.roleplay + ' tình huống</b></summary><div class="row" style="margin-top:6px">';
   CONTENT.roleplay.forEach(function (r, i) { html += '<button class="btn" data-skillroleplay="' + i + '">' + esc(r.title) + skillDoneMark("roleplay:" + i) + '</button>'; });
   html += '</div></details>';
-  html += '<div class="row" style="margin-top:10px"><button class="btn" data-chat="type">Trò chuyện gõ tay với AI — Đang mở</button><button class="btn" data-chat="voice">Trò chuyện nói live với AI — Đang mở</button></div></details>';
+  html += '<div class="row" style="margin-top:10px"><button class="btn" id="speakToNative">Sang trang Giao tiếp bản địa →</button></div></details>';
   /* --- Viet --- */
   var writeNextItems = [];
   [["Task 1 — Academic", "A"], ["Task 2 — Academic + General Training", "AG"], ["Thư và email — General Training", "G"], ["Đoạn văn ngắn — Nền tảng", "N"]].forEach(function (grp) {
@@ -2129,9 +2131,7 @@ function viewPractice(app) {
   $$("[data-practice]").forEach(function (btn) {
     btn.onclick = function () { openStep(stepById(btn.dataset.practice)); };
   });
-  $$("[data-chat]").forEach(function (btn) {
-    btn.onclick = function () { openLesson({ type: "chat", chatMode: btn.dataset.chat }); };
-  });
+  var stn = $("#speakToNative"); if (stn) stn.onclick = function () { go("native"); };
   $$("[data-spectutor]").forEach(function (btn) {
     btn.onclick = function () { lessonStart = Date.now(); runWrong = []; runFirstTry = {}; openLesson({ type: "specTutor", tutorKind: btn.dataset.spectutor }); };
   });
@@ -2332,6 +2332,26 @@ function sourcesHTML() {
   return h;
 }
 
+/* ---------- GIAO TIEP BAN DIA (dot chuan hoa 30/10): trang rieng cho noi tu do
+   voi AI, dat giua On tap va Cua toi. Gom ca 2 loai cu: go tay + noi live.
+   GIU NGUYEN hop dong tro chuyen tu do: AI tu nhan la AI (khong phai nguoi
+   that); noi live luan phien chat, CHI TIENG ANH, mic khoa khi AI dang noi,
+   khong cham diem trong luc noi; can dang nhap moi dung. */
+function viewNative(app) {
+  var html = trackSwitchHTML() + '<h2>Giao tiếp bản địa</h2>'
+    + '<section class="card"><h3>Nói tự do với AI — như nói với người bản địa</h3>'
+    + '<p class="mut">Nói tự do, thích gì nói đó, không chấm điểm trong lúc nói. Người trò chuyện với bạn là AI trò chuyện liên tục — không phải người thật, và AI sẽ tự nói rõ điều đó khi bạn hỏi.</p>'
+    + '<details style="margin-top:8px"><summary><b>Xem thêm — 2 loại nói khác nhau thế nào</b></summary>'
+    + '<p class="mut"><b>Gõ tay:</b> chỉ gõ chữ, không mic, không giọng nói. AI trả lời bằng tiếng Anh đơn giản là chính, chêm tiếng Việt khi bạn dùng tiếng Việt hoặc bí từ.</p>'
+    + '<p class="mut"><b>Nói live:</b> luân phiên chặt, CHỈ TIẾNG ANH — mic khóa trong lúc AI đang nói, AI nói xong mic mới mở lại; không có nút bấm gửi, ngừng ở câu đã rõ ý (khoảng 1,2 giây) là tự gửi, AI đáp 100% tiếng Anh bằng giọng Anh, không chêm tiếng Việt.</p>'
+    + '<p class="mut">Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản). Câu bạn bấm ⭐ sẽ lưu trên máy này vào mục "Câu hay dùng lại".</p></details>'
+    + '<div class="row" style="margin-top:10px"><button class="btn" data-chat="type">Trò chuyện gõ tay với AI — Đang mở</button><button class="btn" data-chat="voice">Trò chuyện nói live với AI — Đang mở</button></div></section>';
+  app.innerHTML = html;
+  $$("[data-chat]").forEach(function (btn) {
+    btn.onclick = function () { openLesson({ type: "chat", chatMode: btn.dataset.chat }); };
+  });
+}
+
 function viewMine(app) {
   var lv = xpLevel(state.xp || 0);
   var known = Object.keys(state.cards).filter(function (k) { return state.cards[k].box >= 1; }).length;
@@ -2342,7 +2362,7 @@ function viewMine(app) {
   var remainMins = remain.reduce(function (a, s) { return a + s.mins; }, 0);
   var goal = state.goal || 30;
   var weeks = Math.max(1, Math.ceil(Math.ceil(remainMins / goal) / 7));
-  var html = '<h2>Của tôi</h2>';
+  var html = trackSwitchHTML() + '<h2>Của tôi</h2>';
   var mineT = (state.track === "zh") ? zhSessionTarget() : practiceNextTarget();
   html += '<section class="card next-card" id="mineNextCard"><p class="eyebrow">TIẾP THEO</p><h3>' + esc(mineT.title) + '</h3><p class="mut">' + esc(mineT.type) + '</p><button class="btn btn-primary" id="mineNextBtn">Học tiếp</button></section>';
   html += guideLine("mineIntro", "Tiến trình, mục tiêu và cài đặt của bạn — mở nhóm cần xem.");
@@ -2406,7 +2426,7 @@ function viewMine(app) {
   html += '<details style="margin-top:8px"><summary><b>🧭 AI Coach — 3 gợi ý tiếp theo</b></summary>' + u8CoachHTML() + '</details>';
   html += '<details style="margin-top:8px"><summary><b>Gia sư AI</b></summary><section class="card"><h3>Gia sư AI</h3><p>' + esc(RB_AI.tutor.label) + '.</p><p class="mut">Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p>'
     + '<button class="btn" id="tutorTry">Thử gọi gia sư</button><p style="margin-top:10px"><textarea id="tutorModeInp" rows="2" style="width:100%" placeholder="Gõ câu hoặc câu hỏi cần gia sư giúp..."></textarea></p><p><button class="btn" id="tutorExplainBtn">AI giải thích</button> <button class="btn" id="tutorFixBtn">AI sửa câu của tôi</button></p><div class="why" id="tutorModeOut"></div></section></details>';
-  html += '<details style="margin-top:8px"><summary><b>Trò chuyện với AI</b></summary><section class="card"><h3>Trò chuyện với AI</h3><p class="mut">Trò chuyện tự do với AI đã mở: vào Luyện tập → Nói, chọn 1 trong 2 loại riêng — gõ tay (chỉ gõ chữ) hoặc nói live (mic mở liên tục, nói rồi ngừng là tự gửi, AI trả lời bằng giọng, nói chen được). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mô hình nguồn là AI trò chuyện liên tục, không phải người thật. Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p></section></details>';
+  html += '<details style="margin-top:8px"><summary><b>Trò chuyện với AI</b></summary><section class="card"><h3>Trò chuyện với AI</h3><p class="mut">Trò chuyện tự do với AI đã mở ở trang Giao tiếp bản địa (giữa Ôn tập và Của tôi): chọn 1 trong 2 loại riêng — gõ tay (chỉ gõ chữ) hoặc nói live (luân phiên chặt, chỉ tiếng Anh, mic khóa khi AI đang nói). Nói tự do thích gì nói đó, không chấm điểm trong lúc nói. Mô hình nguồn là AI trò chuyện liên tục, không phải người thật. Cần đăng nhập để dùng (đăng nhập ở mục Của tôi → Tài khoản).</p></section></details>';
   html += '</details>';
   html += notesHTML() + sourcesHTML();
   app.innerHTML = html;
@@ -7044,12 +7064,12 @@ function renderChatSummary(app, l) {
     + '<h3>Câu hay dùng lại (bạn đã bấm ⭐)</h3>'
     + (stars.length ? stars.map(function (s) { return '<p>· ' + esc(s.text) + '</p>'; }).join("") : '<p class="mut">Chưa giữ câu nào — trong phiên, bấm ⭐ ở tin nhắn của AI để giữ câu hay lại đây.</p>')
     + '<h3>Ghi chú lỗi</h3><div id="chatNotes"><p class="mut">' + esc(l.notes === null ? "Đang tạo ghi chú lỗi…" : l.notes) + '</p></div>'
-    + '<div class="row" style="margin-top:10px"><button class="btn btn-primary" id="chatAgain">Trò chuyện tiếp</button><button class="btn" id="chatToPractice">Về Luyện tập</button></div></div>'
+    + '<div class="row" style="margin-top:10px"><button class="btn btn-primary" id="chatAgain">Trò chuyện tiếp</button><button class="btn" id="chatToNative">Về Giao tiếp bản địa</button></div></div>'
     + '<h3>Transcript đầy đủ</h3>' + l.msgs.map(function (m) { return '<p><b>' + (m.role === "user" ? "Bạn" : "AI") + ':</b> ' + esc(m.text) + '</p>'; }).join("");
   app.innerHTML = html;
   wireBack();
   $("#chatAgain").onclick = function () { l.ended = false; if (l.chatMode === "voice") { var vv = chatVoiceState(l); vv.active = true; vv.manuallyStopped = false; } render(); };
-  $("#chatToPractice").onclick = function () { chatVoiceCleanup(l); backFromLesson(); go("practice"); };
+  $("#chatToNative").onclick = function () { chatVoiceCleanup(l); backFromLesson(); go("native"); };
   if (l.notes === null && !l.notesLoading) {
     l.notesLoading = true;
     var reqMsgs = l.msgs.concat([{ role: "user", text: "Hãy tóm tắt ngắn gọn bằng tiếng Việt những lỗi tiếng Anh tôi hay mắc trong đoạn hội thoại trên (tối đa 5 gạch đầu dòng), kèm câu đúng cho mỗi lỗi." }]);
@@ -7069,11 +7089,11 @@ function chapterTestOpen(band) {
 function chapterTestQuestions(band) {
   var parts = [], gQs = [], rQs = [], lQs = [];
   CONTENT.grammar.forEach(function (g) { if (normBandStr(g.level) === band) (g.quiz || []).forEach(function (q) { gQs.push(q); }); });
-  if (gQs.length) parts.push({ name: "Ngữ pháp", qs: gQs.slice(0, 8) });
+  if (gQs.length) parts.push({ name: "Ngữ pháp", qs: gQs.slice(0, 10) });
   CONTENT.reading.forEach(function (r) { if (normBandStr(r.level) === band) (r.questions || []).forEach(function (q) { rQs.push(q); }); });
-  if (rQs.length) parts.push({ name: "Đọc", qs: rQs.slice(0, 6) });
+  if (rQs.length) parts.push({ name: "Đọc", qs: rQs.slice(0, 10) });
   CONTENT.listeningPlus.forEach(function (r) { if (normBandStr(r.band) === band) (r.questions || []).forEach(function (q) { lQs.push(q); }); });
-  if (lQs.length) parts.push({ name: "Nghe dài", qs: lQs.slice(0, 6) });
+  if (lQs.length) parts.push({ name: "Nghe dài", qs: lQs.slice(0, 10) });
   return parts;
 }
 /* ROADMAP-N10: can-do cuoi chuong — hien khi qua kiem tra cuoi chuong. */
@@ -11508,6 +11528,7 @@ function zhMockBuild(hsk) {
   }
   var lQs1 = []; listens.slice(0, 4).forEach(function (sg) { (sg.questions || []).forEach(function (qq) { lQs1.push(qq); }); });
   var rQs1 = []; reads.slice(0, 4).forEach(function (r) { (r.questions || []).forEach(function (qq) { rQs1.push(qq); }); });
+  wQs = wQs.slice(0, 4); // SUA 31/10 dot expand15: HSK1 cat Viet ve 4 cau dau, giu tong mock 40 (16+20+4) nhu cu
   return { hsk: hsk, listen: { qs: lQs1, n: lQs1.length, segments: listens.slice(0, 4) }, read: { qs: rQs1, n: rQs1.length, passages: reads.slice(0, 4) }, write: { qs: wQs, n: wQs.length }, total: lQs1.length + rQs1.length + wQs.length };
 }
 var ZH_MOCK_MIN = { listen: 10, read: 15, write: 10 };
