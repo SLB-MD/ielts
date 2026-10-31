@@ -2467,7 +2467,7 @@ function viewMine(app) {
   var aL = $("#accLogin"); if (aL) aL.onclick = function () { authDoSignIn(); };
   var aG = $("#accGuest"); if (aG) aG.onclick = function () { state.authSkipped = true; saveState(); toast("Bạn đang học ở chế độ khách — tiến trình lưu trên máy này."); go("home"); };
   var aS = $("#accSignup"); if (aS) aS.onclick = function () { authDoSignUp(); };
-  var aF = $("#accForgot"); if (aF) aF.onclick = function () { authDoResetPassword(); };
+  var aF = $("#accForgot"); if (aF) { aF.onclick = function () { authDoResetPassword(); }; if (window.__accForgotSending) { aF.disabled = true; aF.textContent = "Đang gửi..."; } else if (window.__accForgotRetryAt && window.__accForgotRetryAt > Date.now()) { authForgotCountdown(Math.ceil((window.__accForgotRetryAt - Date.now()) / 1000)); } }
   var aC = $("#accChangePw"); if (aC) aC.onclick = function () { authDoChangePassword(); };
   var aO = $("#accLogout"); if (aO) aO.onclick = function () { authDoSignOut(); };
   var aY = $("#accSync"); if (aY) aY.onclick = function () { syncPush().then(function (ok) { authState.sync = ok ? "Đã đồng bộ." : "Chưa đồng bộ được — tiến trình vẫn lưu trên máy."; render(); }); };
@@ -2510,6 +2510,7 @@ function authErrorText(e) {
   if (/already registered|already exists/i.test(m)) return "Email này đã đăng ký rồi — hãy đăng nhập.";
   if (/at least 6 characters/i.test(m)) return "Mật khẩu phải từ 6 ký tự trở lên.";
   if (/rate limit/i.test(m)) return "Gửi quá nhiều — hãy thử lại sau ít phút.";
+  if (/For security purposes/i.test(m)) { var sec = m.match(/after (\d+) seconds/i); if (sec) return "Bạn vừa yêu cầu đặt lại mật khẩu rồi — hãy đợi khoảng " + sec[1] + " giây nữa rồi bấm lại một lần. Nếu đã nhận được email thì mở email đó (kiểm tra cả hộp thư rác)."; return "Bạn vừa yêu cầu rồi — hãy đợi khoảng 1 phút rồi bấm lại một lần."; }
   if (/expired|invalid link/i.test(m)) return "Link đã hết hạn — hãy gửi lại email đặt lại mật khẩu.";
   if (/Failed to fetch|NetworkError|network/i.test(m)) return "Mất mạng — hãy kiểm tra kết nối rồi thử lại.";
   if (/Cần đăng nhập/i.test(m)) return m;
@@ -3004,15 +3005,52 @@ function authDoChangePassword() {
     }, function (e) { toast(authErrorText(e)); });
   });
 }
+function authForgotCountdown(sec) {
+  var btn = $("#accForgot"), wait = $("#accForgotWait");
+  if (!btn) return;
+  var end = Date.now() + Math.max(1, sec) * 1000;
+  window.__accForgotRetryAt = end;
+  if (window.__accForgotTimer) clearInterval(window.__accForgotTimer);
+  function tick() {
+    var left = Math.max(0, Math.ceil((end - Date.now()) / 1000));
+    if (wait) { wait.style.display = left > 0 ? "" : "none"; wait.textContent = left > 0 ? "Vui lòng chờ " + left + " giây nữa mới gửi lại được." : ""; }
+    btn.disabled = left > 0;
+    btn.textContent = left > 0 ? "Quên mật khẩu (" + left + " giây)" : "Quên mật khẩu";
+    if (left <= 0) { clearInterval(window.__accForgotTimer); window.__accForgotTimer = null; window.__accForgotRetryAt = 0; }
+  }
+  tick();
+  window.__accForgotTimer = setInterval(tick, 1000);
+}
 function authDoResetPassword() {
   var email = ($("#accEmail") && $("#accEmail").value || "").trim();
   if (!email) { toast("Hãy nhập email rồi bấm Quên mật khẩu."); return; }
+  if (window.__accForgotSending) { toast("Đang gửi email — hãy đợi một chút."); return; }
+  var btn = $("#accForgot");
+  if (btn) { btn.disabled = true; btn.textContent = "Đang gửi..."; }
+  window.__accForgotSending = true;
+  function doneSending() { window.__accForgotSending = false; }
+  function rateWait(m) {
+    var sec = String(m || "").match(/after (\d+) seconds/i);
+    return (/For security purposes/i.test(String(m || "")) && sec) ? parseInt(sec[1], 10) : 0;
+  }
   supaClientPromise().then(function (client) {
-    if (!client || !client.auth || !client.auth.resetPasswordForEmail) { toast("Chưa có cấu hình đăng nhập — hãy kiểm tra config.js."); return; }
-    client.auth.resetPasswordForEmail(email, { redirectTo: "https://slb-md.github.io/ielts/" }).then(function (res) {
-      if (res.error) { toast(authErrorText(res.error)); return; }
+    if (!client || !client.auth || !client.auth.resetPasswordForEmail) { toast("Chưa có cấu hình đăng nhập — hãy kiểm tra config.js."); doneSending(); if (btn) { btn.disabled = false; btn.textContent = "Quên mật khẩu"; } return; }
+    client.auth.resetPasswordForEmail(email, { redirectTo: "https://emu2812.github.io/hoctieng/" }).then(function (res) {
+      doneSending();
+      if (res.error) {
+        var w = rateWait(res.error && res.error.message);
+        toast(authErrorText(res.error));
+        if (w) authForgotCountdown(w); else if (btn) { btn.disabled = false; btn.textContent = "Quên mật khẩu"; }
+        return;
+      }
       toast("Đã gửi email đặt lại mật khẩu — hãy kiểm tra hộp thư.");
-    }, function (e) { toast(authErrorText(e)); });
+      authForgotCountdown(60);
+    }, function (e) {
+      doneSending();
+      var w = rateWait(e && e.message);
+      toast(authErrorText(e));
+      if (w) authForgotCountdown(w); else if (btn) { btn.disabled = false; btn.textContent = "Quên mật khẩu"; }
+    });
   });
 }
 function accountCardHTML() {
@@ -3025,6 +3063,7 @@ function accountCardHTML() {
       + '<p><input type="text" id="accEmail" placeholder="Email" autocomplete="email"> <input type="password" id="accPw" placeholder="Mật khẩu (từ 6 ký tự)"></p>'
       + '<p><b>Chọn một trong hai:</b> Đăng nhập để đồng bộ tiến trình theo tài khoản, hoặc Dùng tài khoản khách để học tiếp ngay không cần đăng nhập.</p>'
       + '<div class="row"><button class="btn" id="accLogin">Đăng nhập</button><button class="btn" id="accSignup">Đăng ký</button><button class="btn" id="accForgot">Quên mật khẩu</button></div>'
+      + '<p class="mut" id="accForgotWait" style="display:none"></p>'
       + '<div class="row"><button class="btn" id="accGuest">Dùng tài khoản khách</button></div>'
      ;
   } else {
